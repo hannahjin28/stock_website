@@ -3,18 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Monitoring</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>My Coding Blog</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>My Stock Portfolio</h1>
-    <ul id="stock-list"></ul>
-    <script src="scripts/main.js"></script>
-    <script>
-        // Initialize stock data on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            fetchStockData();
-        });
-    </script>
+    <header>
+        <h1>Welcome to My Coding Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pacman.html">Play Pac-Man</a></li>
+                <li><a href="papers.html">Latest ArXiv Papers</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>About This Blog</h2>
+            <p>Welcome to my coding journey! Here you'll find my projects, experiments, and latest updates in the world of programming.</p>
+        </section>
+        <section class="featured">
+            <h2>Featured Content</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Pac-Man Game</h3>
+                    <p>Try out my implementation of the classic Pac-Man game!</p>
+                    <a href="pacman.html" class="button">Play Now</a>
+                </div>
+                <div class="card">
+                    <h3>ArXiv Papers</h3>
+                    <p>Browse the latest research papers in computer science.</p>
+                    <a href="papers.html" class="button">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Coding Blog</p>
+        <p>Last updated: <span id="timestamp"></span></p>
+        <script>
+            document.getElementById('timestamp').textContent = new Date().toLocaleString();
+        </script>
+    </footer>
 </body>
 </html>
