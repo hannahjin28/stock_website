@@ -122,9 +122,6 @@ function drawBoard() {
     }
 }
 
-let pacman = new Pacman();
-let score = 0;
-
 document.addEventListener('keydown', (e) => {
     switch(e.key) {
         case 'ArrowLeft':
@@ -152,17 +149,14 @@ function gameLoop() {
     pacman.move();
     pacman.draw();
     
-    // Debug info
-    console.log(`Pacman position: (${pacman.x}, ${pacman.y})`);
-    
     requestAnimationFrame(gameLoop);
 }
 
-// Initialize canvas dimensions before starting the game
+// Initialize canvas dimensions and game
 canvas.width = GRID_WIDTH * CELL_SIZE;
 canvas.height = GRID_HEIGHT * CELL_SIZE;
-
-// Create Pacman instance and start the game
-let pacman = new Pacman();
 let score = 0;
+let pacman = new Pacman();
+
+// Start the game loop
 gameLoop();
