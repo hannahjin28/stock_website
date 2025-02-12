@@ -43,19 +43,30 @@ class Pacman {
         this.x = CELL_SIZE * 14;
         this.y = CELL_SIZE * 23;
         this.direction = 0;
-        this.speed = 3;
+        this.speed = 2;  // Reduced speed for better control
         this.mouthOpen = 0.2;
         this.mouthDir = 0.02;
+        this.radius = CELL_SIZE / 2;  // Added explicit radius
     }
 
     draw() {
+        // Save the current context state
+        ctx.save();
+        
+        // Move to Pac-Man's position
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.direction);
+        
+        // Draw Pac-Man
         ctx.beginPath();
-        ctx.arc(this.x, this.y, CELL_SIZE/2, this.mouthOpen * Math.PI + this.direction, 
-                (2 - this.mouthOpen) * Math.PI + this.direction);
-        ctx.lineTo(this.x, this.y);
+        ctx.arc(0, 0, this.radius, this.mouthOpen * Math.PI, (2 - this.mouthOpen) * Math.PI);
+        ctx.lineTo(0, 0);
         ctx.fillStyle = "yellow";
         ctx.fill();
         ctx.closePath();
+        
+        // Restore the context state
+        ctx.restore();
 
         // Animate mouth
         this.mouthOpen += this.mouthDir;
@@ -132,16 +143,26 @@ document.addEventListener('keydown', (e) => {
 });
 
 function gameLoop() {
+    // Clear the entire canvas
     ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
+    // Draw game elements
     drawBoard();
     pacman.move();
     pacman.draw();
     
+    // Debug info
+    console.log(`Pacman position: (${pacman.x}, ${pacman.y})`);
+    
     requestAnimationFrame(gameLoop);
 }
 
+// Initialize canvas dimensions before starting the game
 canvas.width = GRID_WIDTH * CELL_SIZE;
 canvas.height = GRID_HEIGHT * CELL_SIZE;
+
+// Create Pacman instance and start the game
+let pacman = new Pacman();
+let score = 0;
 gameLoop();
