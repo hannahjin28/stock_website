@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pac-Man Game</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        #gameCanvas {
+            border: 2px solid blue;
+            background: black;
+        }
+        .score {
+            font-size: 24px;
+            margin-top: 1rem;
+            color: yellow;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .instructions {
+            margin-top: 1rem;
+            text-align: center;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,6 +44,10 @@
         <div class="game-container">
             <canvas id="gameCanvas" width="448" height="496"></canvas>
             <div class="score">Score: <span id="score">0</span></div>
+            <div class="instructions">
+                Use arrow keys to move Pac-Man<br>
+                Collect all dots to win!
+            </div>
         </div>
     </main>
     <script src="pacman.js"></script>
