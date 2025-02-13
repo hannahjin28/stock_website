@@ -100,7 +100,7 @@ class Pacman {
 
         // Check if next position is valid (not a wall)
         if (gridX >= 0 && gridX < GRID_WIDTH && gridY >= 0 && gridY < GRID_HEIGHT && 
-            gameBoard[gridY][gridX] !== 0) {
+            gameBoard[gridY][gridX] !== undefined && gameBoard[gridY][gridX] !== 0) {
             this.x = nextX;
             this.y = nextY;
 
