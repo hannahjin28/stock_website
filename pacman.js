@@ -122,41 +122,53 @@ function drawBoard() {
     }
 }
 
-document.addEventListener('keydown', (e) => {
-    switch(e.key) {
-        case 'ArrowLeft':
-            pacman.direction = Math.PI;
-            break;
-        case 'ArrowRight':
-            pacman.direction = 0;
-            break;
-        case 'ArrowUp':
-            pacman.direction = Math.PI/2;
-            break;
-        case 'ArrowDown':
-            pacman.direction = 3*Math.PI/2;
-            break;
-    }
+// Initialize game variables first
+let score = 0;
+let pacman = null;
+
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize canvas dimensions
+    canvas.width = GRID_WIDTH * CELL_SIZE;
+    canvas.height = GRID_HEIGHT * CELL_SIZE;
+    
+    // Create Pacman instance
+    pacman = new Pacman();
+    
+    // Add keyboard controls
+    document.addEventListener('keydown', (e) => {
+        if (!pacman) return;
+        
+        switch(e.key) {
+            case 'ArrowLeft':
+                pacman.direction = Math.PI;
+                break;
+            case 'ArrowRight':
+                pacman.direction = 0;
+                break;
+            case 'ArrowUp':
+                pacman.direction = Math.PI/2;
+                break;
+            case 'ArrowDown':
+                pacman.direction = 3*Math.PI/2;
+                break;
+        }
+    });
+    
+    // Start the game loop
+    gameLoop();
 });
 
 function gameLoop() {
-    // Clear the entire canvas
     ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    // Draw game elements
     drawBoard();
-    pacman.move();
-    pacman.draw();
+    
+    if (pacman) {
+        pacman.move();
+        pacman.draw();
+    }
     
     requestAnimationFrame(gameLoop);
 }
-
-// Initialize canvas dimensions and game
-canvas.width = GRID_WIDTH * CELL_SIZE;
-canvas.height = GRID_HEIGHT * CELL_SIZE;
-let score = 0;
-let pacman = new Pacman();
-
-// Start the game loop
-gameLoop();
