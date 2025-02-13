@@ -1,0 +1,178 @@
+{
+  "last_updated": "2025-02-13T00:45:32.572364",
+  "papers": [
+    {
+      "title": "Distributional Instrumental Variable Method",
+      "authors": [
+        "Anastasiia Holovchak",
+        "Sorawit Saengkyongam",
+        "Nicolai Meinshausen",
+        "Xinwei Shen"
+      ],
+      "abstract": "The instrumental variable (IV) approach is commonly used to infer causal\neffects in the presence of unmeasured confounding. Conventional IV models\ncommonly make the additive noise assumption, which is hard to ensure in\npractice, but also typically lack flexibility if the causal effects are\ncomplex. Further, the vast majority of the existing methods aims to estimate\nthe mean causal effects only, a few other methods focus on the quantile\neffects. This work aims for estimation of the entire interventional\ndistribution. We propose a novel method called distributional instrumental\nvariables (DIV), which leverages generative modelling in a nonlinear\ninstrumental variable setting. We establish identifiability of the\ninterventional distribution under general assumptions and demonstrate an\n`under-identified' case where DIV can identify the causal effects while\ntwo-step least squares fails to. Our empirical results show that the DIV method\nperforms well for a broad range of simulated data, exhibiting advantages over\nexisting IV approaches in terms of the identifiability and estimation error of\nthe mean or quantile treatment effects. Furthermore, we apply DIV to an\neconomic data set to examine the causal relation between institutional quality\nand economic development and our results that closely align with the original\nstudy. We also apply DIV to a single-cell data set, where we study the\ngeneralizability and stability in predicting gene expression under unseen\ninterventions. The software implementations of DIV are available in R and\nPython.",
+      "pdf_url": "http://arxiv.org/pdf/2502.07641v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.07641v1",
+      "published": "2025-02-11",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Causal-Informed Contrastive Learning: Towards Bias-Resilient Pre-training under Concept Drift",
+      "authors": [
+        "Xiaoyu Yang",
+        "Jie Lu",
+        "En Yu"
+      ],
+      "abstract": "The evolution of large-scale contrastive pre-training propelled by top-tier\ndatasets has reached a transition point in the scaling law. Consequently,\nsustaining and enhancing a model's pre-training capabilities in drift\nenvironments have surfaced as a notable challenge. In this paper, we initially\nuncover that contrastive pre-training methods are significantly impacted by\nconcept drift wherein distributions change unpredictably, resulting in notable\nbiases in the feature space of the pre-trained model. Empowered by causal\ninference, we construct a structural causal graph to analyze the impact of\nconcept drift to contrastive pre-training systemically, and propose the causal\ninterventional contrastive objective. Upon achieving this, we devise a\nresilient contrastive pre-training approach to accommodate the data stream of\nconcept drift, with simple and scalable implementation. Extensive experiments\non various downstream tasks demonstrate our resilient contrastive pre-training\neffectively mitigates the bias stemming from the concept drift data stream.\nCodes are available at https://anonymous.4open.science/r/ResilientCL/.",
+      "pdf_url": "http://arxiv.org/pdf/2502.07620v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.07620v1",
+      "published": "2025-02-11",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Distilling heterogeneous treatment effects: Stable subgroup estimation in causal inference",
+      "authors": [
+        "Melody Huang",
+        "Tiffany M. Tang",
+        "Ana M. Kenney"
+      ],
+      "abstract": "Recent methodological developments have introduced new black-box approaches\nto better estimate heterogeneous treatment effects; however, these methods fall\nshort of providing interpretable characterizations of the underlying\nindividuals who may be most at risk or benefit most from receiving the\ntreatment, thereby limiting their practical utility. In this work, we introduce\na novel method, causal distillation trees (CDT), to estimate interpretable\nsubgroups. CDT allows researchers to fit any machine learning model of their\nchoice to estimate the individual-level treatment effect, and then leverages a\nsimple, second-stage tree-based model to \"distill\" the estimated treatment\neffect into meaningful subgroups. As a result, CDT inherits the improvements in\npredictive performance from black-box machine learning models while preserving\nthe interpretability of a simple decision tree. We derive theoretical\nguarantees for the consistency of the estimated subgroups using CDT, and\nintroduce stability-driven diagnostics for researchers to evaluate the quality\nof the estimated subgroups. We illustrate our proposed method on a randomized\ncontrolled trial of antiretroviral treatment for HIV from the AIDS Clinical\nTrials Group Study 175 and show that CDT out-performs state-of-the-art\napproaches in constructing stable, clinically relevant subgroups.",
+      "pdf_url": "http://arxiv.org/pdf/2502.07275v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.07275v1",
+      "published": "2025-02-11",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Learning Counterfactual Outcomes Under Rank Preservation",
+      "authors": [
+        "Peng Wu",
+        "Haoxuan Li",
+        "Chunyuan Zheng",
+        "Yan Zeng",
+        "Jiawei Chen",
+        "Yang Liu",
+        "Ruocheng Guo",
+        "Kun Zhang"
+      ],
+      "abstract": "Counterfactual inference aims to estimate the counterfactual outcome at the\nindividual level given knowledge of an observed treatment and the factual\noutcome, with broad applications in fields such as epidemiology, econometrics,\nand management science. Previous methods rely on a known structural causal\nmodel (SCM) or assume the homogeneity of the exogenous variable and strict\nmonotonicity between the outcome and exogenous variable. In this paper, we\npropose a principled approach for identifying and estimating the counterfactual\noutcome. We first introduce a simple and intuitive rank preservation assumption\nto identify the counterfactual outcome without relying on a known structural\ncausal model. Building on this, we propose a novel ideal loss for theoretically\nunbiased learning of the counterfactual outcome and further develop a\nkernel-based estimator for its empirical estimation. Our theoretical analysis\nshows that the rank preservation assumption is not stronger than the\nhomogeneity and strict monotonicity assumptions, and shows that the proposed\nideal loss is convex, and the proposed estimator is unbiased. Extensive\nsemi-synthetic and real-world experiments are conducted to demonstrate the\neffectiveness of the proposed method.",
+      "pdf_url": "http://arxiv.org/pdf/2502.06398v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.06398v1",
+      "published": "2025-02-10",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Causal Lifting of Neural Representations: Zero-Shot Generalization for Causal Inferences",
+      "authors": [
+        "Riccardo Cadei",
+        "Ilker Demirel",
+        "Piersilvio De Bartolomeis",
+        "Lukas Lindorfer",
+        "Sylvia Cremer",
+        "Cordelia Schmid",
+        "Francesco Locatello"
+      ],
+      "abstract": "A plethora of real-world scientific investigations is waiting to scale with\nthe support of trustworthy predictive models that can reduce the need for\ncostly data annotations. We focus on causal inferences on a target experiment\nwith unlabeled factual outcomes, retrieved by a predictive model fine-tuned on\na labeled similar experiment. First, we show that factual outcome estimation\nvia Empirical Risk Minimization (ERM) may fail to yield valid causal inferences\non the target population, even in a randomized controlled experiment and\ninfinite training samples. Then, we propose to leverage the observed\nexperimental settings during training to empower generalization to downstream\ninterventional investigations, ``Causal Lifting'' the predictive model. We\npropose Deconfounded Empirical Risk Minimization (DERM), a new simple learning\nprocedure minimizing the risk over a fictitious target population, preventing\npotential confounding effects. We validate our method on both synthetic and\nreal-world scientific data. Notably, for the first time, we zero-shot\ngeneralize causal inferences on ISTAnt dataset (without annotation) by causal\nlifting a predictive model on our experiment variant.",
+      "pdf_url": "http://arxiv.org/pdf/2502.06343v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.06343v1",
+      "published": "2025-02-10",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Causal Inference under Interference: Regression Adjustment and Optimality",
+      "authors": [
+        "Xinyuan Fan",
+        "Chenlei Leng",
+        "Weichi Wu"
+      ],
+      "abstract": "In randomized controlled trials without interference, regression adjustment\nis widely used to enhance the efficiency of treatment effect estimation. This\npaper extends this efficiency principle to settings with network interference,\nwhere a unit's response may depend on the treatments assigned to its neighbors\nin a network. We make three key contributions: (1) we establish a central limit\ntheorem for a linear regression-adjusted estimator and prove its optimality in\nachieving the smallest asymptotic variance within a class of linear\nadjustments; (2) we develop a novel, consistent estimator for the asymptotic\nvariance of this linear estimator; and (3) we propose a nonparametric estimator\nthat integrates kernel smoothing and trimming techniques, demonstrating its\nasymptotic normality and its optimality in minimizing asymptotic variance\nwithin a broader class of nonlinear adjustments. Extensive simulations validate\nthe superior performance of our estimators, and a real-world data application\nillustrates their practical utility. Our findings underscore the power of\nregression-based methods and reveal the potential of kernel-and-trimming-based\napproaches for further enhancing efficiency under network interference.",
+      "pdf_url": "http://arxiv.org/pdf/2502.06008v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.06008v1",
+      "published": "2025-02-09",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Mechanistic Interpretability of Emotion Inference in Large Language Models",
+      "authors": [
+        "Ala N. Tak",
+        "Amin Banayeeanzade",
+        "Anahita Bolourani",
+        "Mina Kian",
+        "Robin Jia",
+        "Jonathan Gratch"
+      ],
+      "abstract": "Large language models (LLMs) show promising capabilities in predicting human\nemotions from text. However, the mechanisms through which these models process\nemotional stimuli remain largely unexplored. Our study addresses this gap by\ninvestigating how autoregressive LLMs infer emotions, showing that emotion\nrepresentations are functionally localized to specific regions in the model.\nOur evaluation includes diverse model families and sizes and is supported by\nrobustness checks. We then show that the identified representations are\npsychologically plausible by drawing on cognitive appraisal theory, a\nwell-established psychological framework positing that emotions emerge from\nevaluations (appraisals) of environmental stimuli. By causally intervening on\nconstrued appraisal concepts, we steer the generation and show that the outputs\nalign with theoretical and intuitive expectations. This work highlights a novel\nway to causally intervene and precisely shape emotional text generation,\npotentially benefiting safety and alignment in sensitive affective domains.",
+      "pdf_url": "http://arxiv.org/pdf/2502.05489v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.05489v1",
+      "published": "2025-02-08",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Pulling back the curtain: the road from statistical estimand to machine-learning based estimator for epidemiologists (no wizard required)",
+      "authors": [
+        "Audrey Renson",
+        "Lina Montoya",
+        "Dana E. Goin",
+        "Iván Díaz",
+        "Rachael K. Ross"
+      ],
+      "abstract": "Epidemiologists increasingly use causal inference methods that rely on\nmachine learning, as these approaches can relax unnecessary model specification\nassumptions. While deriving and studying asymptotic properties of such\nestimators is a task usually associated with statisticians, it is useful for\nepidemiologists to understand the steps involved, as epidemiologists are often\nat the forefront of defining important new research questions and translating\nthem into new parameters to be estimated. In this paper, our goal was to\nprovide a relatively accessible guide through the process of (i) deriving an\nestimator based on the so-called efficient influence function (which we define\nand explain), and (ii) showing such an estimator's ability to validly\nincorporate machine learning, by demonstrating the so-called rate double\nrobustness property. The derivations in this paper rely mainly on algebra and\nsome foundational results from statistical inference, which are explained.",
+      "pdf_url": "http://arxiv.org/pdf/2502.05363v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.05363v1",
+      "published": "2025-02-07",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Semiparametric Inference for Partially Identifiable Data Fusion Estimands via Double Machine Learning",
+      "authors": [
+        "Yicong Jiang",
+        "Lucas Janson"
+      ],
+      "abstract": "Many statistical estimands of interest (e.g., in regression or causality) are\nfunctions of the joint distribution of multiple random variables. But in some\napplications, data is not available that measures all random variables on each\nsubject, and instead the only possible approach is one of data fusion, where\nmultiple independent data sets, each measuring a subset of the random variables\nof interest, are combined for inference. In general, since all random variables\nare never observed jointly, their joint distribution, and hence also the\nestimand which is a function of it, is only partially identifiable.\nUnfortunately, the endpoints of the partially identifiable region depend in\ngeneral on entire conditional distributions, rendering them hard both\noperationally and statistically to estimate. To address this, we present a\nnovel outer-bound on the region of partial identifiability (and establish\nconditions under which it is tight) that depends only on certain conditional\nfirst and second moments. This allows us to derive semiparametrically efficient\nestimators of our endpoint outer-bounds that only require the standard machine\nlearning toolbox which learns conditional means. We prove asymptotic normality\nand semiparametric efficiency of our estimators and provide consistent\nestimators of their variances, enabling asymptotically valid confidence\ninterval construction for our original partially identifiable estimand. We\ndemonstrate the utility of our method in simulations and a data fusion problem\nfrom economics.",
+      "pdf_url": "http://arxiv.org/pdf/2502.05319v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.05319v1",
+      "published": "2025-02-07",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "GST-UNet: Spatiotemporal Causal Inference with Time-Varying Confounders",
+      "authors": [
+        "Miruna Oprescu",
+        "David K. Park",
+        "Xihaier Luo",
+        "Shinjae Yoo",
+        "Nathan Kallus"
+      ],
+      "abstract": "Estimating causal effects from spatiotemporal data is a key challenge in\nfields such as public health, social policy, and environmental science, where\ncontrolled experiments are often infeasible. However, existing causal inference\nmethods relying on observational data face significant limitations: they depend\non strong structural assumptions to address spatiotemporal challenges\n$\\unicode{x2013}$ such as interference, spatial confounding, and temporal\ncarryover effects $\\unicode{x2013}$ or fail to account for\n$\\textit{time-varying confounders}$. These confounders, influenced by past\ntreatments and outcomes, can themselves shape future treatments and outcomes,\ncreating feedback loops that complicate traditional adjustment strategies. To\naddress these challenges, we introduce the $\\textbf{GST-UNet}$\n($\\textbf{G}$-computation $\\textbf{S}$patio-$\\textbf{T}$emporal\n$\\textbf{UNet}$), a novel end-to-end neural network framework designed to\nestimate treatment effects in complex spatial and temporal settings. The\nGST-UNet leverages regression-based iterative G-computation to explicitly\nadjust for time-varying confounders, providing valid estimates of potential\noutcomes and treatment effects. To the best of our knowledge, the GST-UNet is\nthe first neural model to account for complex, non-linear dynamics and\ntime-varying confounders in spatiotemporal interventions. We demonstrate the\neffectiveness of the GST-UNet through extensive simulation studies and showcase\nits practical utility with a real-world analysis of the impact of wildfire\nsmoke on respiratory hospitalizations during the 2018 California Camp Fire. Our\nresults highlight the potential of GST-UNet to advance spatiotemporal causal\ninference across a wide range of policy-driven and scientific applications.",
+      "pdf_url": "http://arxiv.org/pdf/2502.05295v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.05295v1",
+      "published": "2025-02-07",
+      "categories": [
+        "cs.LG",
+        "stat.ME"
+      ]
+    }
+  ]
+}
