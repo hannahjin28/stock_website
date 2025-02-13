@@ -1,8 +1,15 @@
-const canvas = document.getElementById('gameCanvas');
-const ctx = canvas.getContext('2d');
+// Game constants
 const CELL_SIZE = 20;
 const GRID_WIDTH = 28;
 const GRID_HEIGHT = 31;
+
+// Game state
+let score = 0;
+let pacman = null;
+let gameLoop = null;
+let isInitialized = false;
+let canvas = null;
+let ctx = null;
 
 // 0 = wall, 1 = dot, 2 = empty
 const gameBoard = [
@@ -39,7 +46,8 @@ const gameBoard = [
 ];
 
 class Pacman {
-    constructor() {
+    constructor(ctx) {
+        this.ctx = ctx;  // Store context in the instance
         this.x = CELL_SIZE * 14;
         this.y = CELL_SIZE * 23;
         this.direction = 0;
@@ -51,20 +59,20 @@ class Pacman {
 
     draw() {
         try {
-            ctx.save();
+            this.ctx.save();
             
             // Draw Pacman body
-            ctx.translate(this.x, this.y);
-            ctx.rotate(this.direction);
+            this.ctx.translate(this.x, this.y);
+            this.ctx.rotate(this.direction);
             
-            ctx.beginPath();
-            ctx.arc(0, 0, this.radius, this.mouthOpen * Math.PI, (2 - this.mouthOpen) * Math.PI);
-            ctx.lineTo(0, 0);
-            ctx.fillStyle = "yellow";
-            ctx.fill();
-            ctx.closePath();
+            this.ctx.beginPath();
+            this.ctx.arc(0, 0, this.radius, this.mouthOpen * Math.PI, (2 - this.mouthOpen) * Math.PI);
+            this.ctx.lineTo(0, 0);
+            this.ctx.fillStyle = "yellow";
+            this.ctx.fill();
+            this.ctx.closePath();
             
-            ctx.restore();
+            this.ctx.restore();
 
             // Animate mouth
             this.mouthOpen += this.mouthDir;
@@ -106,7 +114,7 @@ class Pacman {
     }
 }
 
-function drawBoard() {
+function drawBoard(ctx) {
     for (let y = 0; y < GRID_HEIGHT; y++) {
         for (let x = 0; x < GRID_WIDTH; x++) {
             if (gameBoard[y][x] === 0) {
@@ -124,12 +132,6 @@ function drawBoard() {
     }
 }
 
-// Game state and initialization flags
-let score = 0;
-let pacman = null;
-let gameLoop = null;
-let isInitialized = false;
-
 // Debug function
 function debug(msg) {
     const debugEl = document.getElementById('debug');
@@ -144,36 +146,38 @@ function initGame() {
         debug('Starting initialization...');
         
         // Get canvas element
-        const canvas = document.getElementById('gameCanvas');
+        canvas = document.getElementById('gameCanvas');
         if (!canvas) {
             throw new Error('Canvas element not found');
         }
         
         // Get context
-        const ctx = canvas.getContext('2d');
+        ctx = canvas.getContext('2d');
         if (!ctx) {
             throw new Error('Could not get canvas context');
         }
-        
-        // Reset game state
-        score = 0;
-        document.getElementById('score').textContent = '0';
         
         // Set canvas dimensions
         canvas.width = GRID_WIDTH * CELL_SIZE;
         canvas.height = GRID_HEIGHT * CELL_SIZE;
         
-        // Create new Pacman
-        pacman = new Pacman();
+        // Reset game state
+        score = 0;
+        document.getElementById('score').textContent = '0';
+        
+        // Create new Pacman with context
+        pacman = new Pacman(ctx);
         
         // Mark as initialized
         isInitialized = true;
         
-        debug('Game initialized, starting game loop...');
-        
         // Initial draw
-        drawBoard();
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        drawBoard(ctx);
         pacman.draw();
+        
+        debug('Game initialized, starting game loop...');
         
         // Start game loop
         gameLoop = requestAnimationFrame(runGame);
@@ -185,22 +189,19 @@ function initGame() {
 }
 
 function runGame() {
-    if (!isInitialized) {
+    if (!isInitialized || !ctx || !canvas) {
         debug('Game not properly initialized, retrying...');
         setTimeout(initGame, 100);
         return;
     }
     
     try {
-        const canvas = document.getElementById('gameCanvas');
-        const ctx = canvas.getContext('2d');
-        
         // Clear canvas
         ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
         // Draw game elements
-        drawBoard();
+        drawBoard(ctx);
         
         if (pacman) {
             pacman.move();
