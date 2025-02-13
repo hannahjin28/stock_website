@@ -122,49 +122,64 @@ function drawBoard() {
     }
 }
 
-// Initialize game variables first
+// Game state
 let score = 0;
 let pacman = null;
 
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize canvas dimensions
+// Initialize game
+function initGame() {
+    console.log('Initializing game...'); // Debug log
+    
+    // Set canvas size
     canvas.width = GRID_WIDTH * CELL_SIZE;
     canvas.height = GRID_HEIGHT * CELL_SIZE;
     
-    // Create Pacman instance
+    // Create Pac-Man
     pacman = new Pacman();
+    score = 0;
+    document.getElementById('score').textContent = '0';
     
-    // Add keyboard controls
-    document.addEventListener('keydown', (e) => {
-        if (!pacman) return;
-        
-        switch(e.key) {
-            case 'ArrowLeft':
-                pacman.direction = Math.PI;
-                break;
-            case 'ArrowRight':
-                pacman.direction = 0;
-                break;
-            case 'ArrowUp':
-                pacman.direction = Math.PI/2;
-                break;
-            case 'ArrowDown':
-                pacman.direction = 3*Math.PI/2;
-                break;
-        }
-    });
+    // Draw initial state
+    drawBoard();
+    pacman.draw();
     
-    // Start the game loop
-    gameLoop();
+    // Start game loop
+    requestAnimationFrame(gameLoop);
+}
+
+// Make sure game starts when everything is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, starting game...'); // Debug log
+    initGame();
+});
+
+// Key controls
+document.addEventListener('keydown', (e) => {
+    if (!pacman) return;
+    
+    switch(e.key) {
+        case 'ArrowLeft':
+            pacman.direction = Math.PI;
+            break;
+        case 'ArrowRight':
+            pacman.direction = 0;
+            break;
+        case 'ArrowUp':
+            pacman.direction = Math.PI/2;
+            break;
+        case 'ArrowDown':
+            pacman.direction = 3*Math.PI/2;
+            break;
+    }
 });
 
 function gameLoop() {
+    // Clear canvas
     ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
+    // Draw game elements
     drawBoard();
-    
     if (pacman) {
         pacman.move();
         pacman.draw();
@@ -172,3 +187,6 @@ function gameLoop() {
     
     requestAnimationFrame(gameLoop);
 }
+
+// Start game when page loads
+window.onload = initGame;
