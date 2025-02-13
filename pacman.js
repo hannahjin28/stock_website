@@ -100,7 +100,7 @@ class Pacman {
 
         // Check if next position is valid (not a wall)
         if (gridX >= 0 && gridX < GRID_WIDTH && gridY >= 0 && gridY < GRID_HEIGHT && 
-            gameBoard[gridY][gridX] !== undefined && gameBoard[gridY][gridX] !== 0) {
+            gameBoard[gridY] !== undefined && gameBoard[gridY][gridX] !== undefined && gameBoard[gridY][gridX] !== 0) {
             this.x = nextX;
             this.y = nextY;
 
@@ -117,16 +117,20 @@ class Pacman {
 function drawBoard(ctx) {
     for (let y = 0; y < GRID_HEIGHT; y++) {
         for (let x = 0; x < GRID_WIDTH; x++) {
-            if (gameBoard[y][x] === 0) {
-                ctx.fillStyle = 'blue';
-                ctx.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
-            } else if (gameBoard[y][x] === 1) {
-                ctx.beginPath();
-                ctx.arc(x * CELL_SIZE + CELL_SIZE/2, y * CELL_SIZE + CELL_SIZE/2, 
-                       3, 0, Math.PI * 2);
-                ctx.fillStyle = 'white';
-                ctx.fill();
-                ctx.closePath();
+            if (gameBoard[y] !== undefined && gameBoard[y][x] !== undefined) {
+                if (gameBoard[y][x] === 0) {
+                    ctx.fillStyle = 'blue';
+                    ctx.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+                } else if (gameBoard[y][x] === 1) {
+                    ctx.beginPath();
+                    ctx.arc(x * CELL_SIZE + CELL_SIZE/2, y * CELL_SIZE + CELL_SIZE/2, 
+                           3, 0, Math.PI * 2);
+                    ctx.fillStyle = 'white';
+                    ctx.fill();
+                    ctx.closePath();
+                }
+            } else {
+                debug(`Invalid gameBoard access at (${x}, ${y})`);
             }
         }
     }
