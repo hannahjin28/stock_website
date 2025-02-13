@@ -124,10 +124,11 @@ function drawBoard() {
     }
 }
 
-// Game state
+// Game state and initialization flags
 let score = 0;
 let pacman = null;
 let gameLoop = null;
+let isInitialized = false;
 
 // Debug function
 function debug(msg) {
@@ -142,6 +143,18 @@ function initGame() {
     try {
         debug('Starting initialization...');
         
+        // Get canvas element
+        const canvas = document.getElementById('gameCanvas');
+        if (!canvas) {
+            throw new Error('Canvas element not found');
+        }
+        
+        // Get context
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+            throw new Error('Could not get canvas context');
+        }
+        
         // Reset game state
         score = 0;
         document.getElementById('score').textContent = '0';
@@ -152,18 +165,19 @@ function initGame() {
         
         // Create new Pacman
         pacman = new Pacman();
-        debug(`Pacman created at: (${pacman.x}, ${pacman.y})`);
+        
+        // Mark as initialized
+        isInitialized = true;
+        
+        debug('Game initialized, starting game loop...');
         
         // Initial draw
         drawBoard();
         pacman.draw();
         
-        // Start game loop if not already running
-        if (!gameLoop) {
-            gameLoop = requestAnimationFrame(runGame);
-        }
+        // Start game loop
+        gameLoop = requestAnimationFrame(runGame);
         
-        debug('Game fully initialized!');
     } catch (error) {
         debug(`Error during initialization: ${error.message}`);
         console.error(error);
@@ -171,7 +185,16 @@ function initGame() {
 }
 
 function runGame() {
+    if (!isInitialized) {
+        debug('Game not properly initialized, retrying...');
+        setTimeout(initGame, 100);
+        return;
+    }
+    
     try {
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
         // Clear canvas
         ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -214,9 +237,8 @@ document.addEventListener('keydown', (e) => {
     debug(`Key pressed: ${e.key}, new direction: ${pacman.direction}`);
 });
 
-// Start game when document is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    debug('Document loaded, initializing game...');
-    // Short delay to ensure canvas is ready
+// Wait for window to fully load before starting the game
+window.addEventListener('load', () => {
+    debug('Window loaded, waiting for DOM...');
     setTimeout(initGame, 100);
 });
