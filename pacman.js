@@ -50,28 +50,30 @@ class Pacman {
     }
 
     draw() {
-        // Save the current context state
-        ctx.save();
-        
-        // Move to Pac-Man's position
-        ctx.translate(this.x, this.y);
-        ctx.rotate(this.direction);
-        
-        // Draw Pac-Man
-        ctx.beginPath();
-        ctx.arc(0, 0, this.radius, this.mouthOpen * Math.PI, (2 - this.mouthOpen) * Math.PI);
-        ctx.lineTo(0, 0);
-        ctx.fillStyle = "yellow";
-        ctx.fill();
-        ctx.closePath();
-        
-        // Restore the context state
-        ctx.restore();
+        try {
+            ctx.save();
+            
+            // Draw Pacman body
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.direction);
+            
+            ctx.beginPath();
+            ctx.arc(0, 0, this.radius, this.mouthOpen * Math.PI, (2 - this.mouthOpen) * Math.PI);
+            ctx.lineTo(0, 0);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.closePath();
+            
+            ctx.restore();
 
-        // Animate mouth
-        this.mouthOpen += this.mouthDir;
-        if (this.mouthOpen > 0.3 || this.mouthOpen < 0.05) {
-            this.mouthDir *= -1;
+            // Animate mouth
+            this.mouthOpen += this.mouthDir;
+            if (this.mouthOpen > 0.3 || this.mouthOpen < 0.05) {
+                this.mouthDir *= -1;
+            }
+        } catch (error) {
+            debug(`Error drawing Pacman: ${error.message}`);
+            console.error(error);
         }
     }
 
@@ -125,32 +127,70 @@ function drawBoard() {
 // Game state
 let score = 0;
 let pacman = null;
+let gameLoop = null;
 
 // Debug function
 function debug(msg) {
     const debugEl = document.getElementById('debug');
-    if (debugEl) debugEl.textContent = msg;
+    if (debugEl) {
+        debugEl.textContent = msg;
+        console.log(msg); // Also log to console for debugging
+    }
 }
 
-// Initialize game
 function initGame() {
-    debug('Initializing game...');
-    
-    // Clear any existing game state
-    score = 0;
-    document.getElementById('score').textContent = '0';
-    
-    // Create new Pacman instance
-    pacman = new Pacman();
-    
-    // Force canvas dimensions
-    canvas.width = GRID_WIDTH * CELL_SIZE;
-    canvas.height = GRID_HEIGHT * CELL_SIZE;
-    
-    debug('Game initialized, starting game loop...');
-    
-    // Start the game loop
-    gameLoop();
+    try {
+        debug('Starting initialization...');
+        
+        // Reset game state
+        score = 0;
+        document.getElementById('score').textContent = '0';
+        
+        // Set canvas dimensions
+        canvas.width = GRID_WIDTH * CELL_SIZE;
+        canvas.height = GRID_HEIGHT * CELL_SIZE;
+        
+        // Create new Pacman
+        pacman = new Pacman();
+        debug(`Pacman created at: (${pacman.x}, ${pacman.y})`);
+        
+        // Initial draw
+        drawBoard();
+        pacman.draw();
+        
+        // Start game loop if not already running
+        if (!gameLoop) {
+            gameLoop = requestAnimationFrame(runGame);
+        }
+        
+        debug('Game fully initialized!');
+    } catch (error) {
+        debug(`Error during initialization: ${error.message}`);
+        console.error(error);
+    }
+}
+
+function runGame() {
+    try {
+        // Clear canvas
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw game elements
+        drawBoard();
+        
+        if (pacman) {
+            pacman.move();
+            pacman.draw();
+            debug(`Pacman at: (${Math.round(pacman.x)}, ${Math.round(pacman.y)})`);
+        }
+        
+        // Continue loop
+        gameLoop = requestAnimationFrame(runGame);
+    } catch (error) {
+        debug(`Error in game loop: ${error.message}`);
+        console.error(error);
+    }
 }
 
 // Key controls
@@ -171,33 +211,12 @@ document.addEventListener('keydown', (e) => {
             pacman.direction = 3*Math.PI/2;
             break;
     }
+    debug(`Key pressed: ${e.key}, new direction: ${pacman.direction}`);
 });
 
-function gameLoop() {
-    // Clear the entire canvas
-    ctx.fillStyle = 'black';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
-    // Draw the board
-    drawBoard();
-    
-    // Update and draw Pacman
-    if (pacman) {
-        debug(`Pacman at: (${Math.round(pacman.x)}, ${Math.round(pacman.y)})`);
-        pacman.move();
-        pacman.draw();
-    } else {
-        debug('No Pacman instance!');
-    }
-    
-    // Continue the game loop
-    requestAnimationFrame(gameLoop);
-}
-
-// Keep existing key event listener
-
-// Make sure game starts when everything is loaded
-window.addEventListener('load', () => {
-    debug('Window loaded, starting game...');
-    initGame();
+// Start game when document is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    debug('Document loaded, initializing game...');
+    // Short delay to ensure canvas is ready
+    setTimeout(initGame, 100);
 });

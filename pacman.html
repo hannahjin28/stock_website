@@ -18,10 +18,7 @@
         #gameCanvas {
             border: 2px solid blue;
             background: black;
-            margin: 0 auto;
             display: block;
-            width: 560px;  /* 28 cells * 20px */
-            height: 620px; /* 31 cells * 20px */
         }
         .score {
             font-size: 24px;
@@ -50,7 +47,7 @@
     <main>
         <div class="game-container">
             <div id="debug" style="color: white; margin-bottom: 10px;"></div>
-            <canvas id="gameCanvas" width="560" height="620"></canvas>
+            <canvas id="gameCanvas"></canvas>
             <div class="score">Score: <span id="score">0</span></div>
             <div class="instructions">
                 Use arrow keys to move Pac-Man<br>
