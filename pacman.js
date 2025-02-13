@@ -126,32 +126,32 @@ function drawBoard() {
 let score = 0;
 let pacman = null;
 
+// Debug function
+function debug(msg) {
+    const debugEl = document.getElementById('debug');
+    if (debugEl) debugEl.textContent = msg;
+}
+
 // Initialize game
 function initGame() {
-    console.log('Initializing game...'); // Debug log
+    debug('Initializing game...');
     
-    // Set canvas size
-    canvas.width = GRID_WIDTH * CELL_SIZE;
-    canvas.height = GRID_HEIGHT * CELL_SIZE;
-    
-    // Create Pac-Man
-    pacman = new Pacman();
+    // Clear any existing game state
     score = 0;
     document.getElementById('score').textContent = '0';
     
-    // Draw initial state
-    drawBoard();
-    pacman.draw();
+    // Create new Pacman instance
+    pacman = new Pacman();
     
-    // Start game loop
-    requestAnimationFrame(gameLoop);
+    // Force canvas dimensions
+    canvas.width = GRID_WIDTH * CELL_SIZE;
+    canvas.height = GRID_HEIGHT * CELL_SIZE;
+    
+    debug('Game initialized, starting game loop...');
+    
+    // Start the game loop
+    gameLoop();
 }
-
-// Make sure game starts when everything is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded, starting game...'); // Debug log
-    initGame();
-});
 
 // Key controls
 document.addEventListener('keydown', (e) => {
@@ -174,19 +174,30 @@ document.addEventListener('keydown', (e) => {
 });
 
 function gameLoop() {
-    // Clear canvas
+    // Clear the entire canvas
     ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    // Draw game elements
+    // Draw the board
     drawBoard();
+    
+    // Update and draw Pacman
     if (pacman) {
+        debug(`Pacman at: (${Math.round(pacman.x)}, ${Math.round(pacman.y)})`);
         pacman.move();
         pacman.draw();
+    } else {
+        debug('No Pacman instance!');
     }
     
+    // Continue the game loop
     requestAnimationFrame(gameLoop);
 }
 
-// Start game when page loads
-window.onload = initGame;
+// Keep existing key event listener
+
+// Make sure game starts when everything is loaded
+window.addEventListener('load', () => {
+    debug('Window loaded, starting game...');
+    initGame();
+});
