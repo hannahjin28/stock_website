@@ -1,16 +1,36 @@
 async function fetchPapers() {
-    const response = await fetch('papers.json');
-    const papers = await response.json();
-    
-    const container = document.getElementById('papers-list');
-    container.innerHTML = papers.map(paper => `
-        <article class="paper">
-            <h2>${paper.title}</h2>
-            <p class="authors">${paper.authors}</p>
-            <p class="abstract">${paper.abstract}</p>
-            <a href="${paper.pdf_url}" class="button" target="_blank">Download PDF</a>
-        </article>
-    `).join('');
+    try {
+        const response = await fetch('papers.json');
+        const data = await response.json();
+        
+        // Update last fetched time
+        const lastUpdated = new Date(data.last_updated);
+        document.getElementById('last-updated').textContent = 
+            lastUpdated.toLocaleString();
+        
+        // Render papers
+        const container = document.getElementById('papers-list');
+        container.innerHTML = data.papers.map(paper => `
+            <article class="paper-card">
+                <h2>${paper.title}</h2>
+                <p class="authors">Authors: ${paper.authors.join(', ')}</p>
+                <p class="categories">Categories: ${paper.categories.join(', ')}</p>
+                <p class="published">Published: ${paper.published}</p>
+                <div class="abstract">
+                    <h3>Abstract:</h3>
+                    <p>${paper.abstract}</p>
+                </div>
+                <div class="paper-links">
+                    <a href="${paper.arxiv_url}" class="button" target="_blank">View on arXiv</a>
+                    <a href="${paper.pdf_url}" class="button" target="_blank">Download PDF</a>
+                </div>
+            </article>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading papers:', error);
+        document.getElementById('papers-list').innerHTML = 
+            '<p class="error">Error loading papers. Please try again later.</p>';
+    }
 }
 
-fetchPapers();
+document.addEventListener('DOMContentLoaded', fetchPapers);

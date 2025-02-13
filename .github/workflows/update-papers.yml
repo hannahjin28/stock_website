@@ -8,19 +8,25 @@ on:
 jobs:
   update-papers:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      
+      - uses: actions/setup-python@v3
         with:
           python-version: '3.x'
+          
       - name: Install dependencies
         run: pip install arxiv
+        
       - name: Update papers
         run: python update_papers.py
-      - name: Commit changes
+        
+      - name: Commit and push if changed
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add papers.json
-          git commit -m "Update ArXiv papers" || exit 0
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update ArXiv papers"
           git push
