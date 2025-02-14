@@ -2,10 +2,13 @@
 const CELL_SIZE = 20;
 const GRID_WIDTH = 28;
 const GRID_HEIGHT = 31;
+const GHOST_COUNT = 4;
 
 // Game state
 let score = 0;
+let lives = 3;
 let pacman = null;
+let ghosts = [];
 let gameLoop = null;
 let isInitialized = false;
 let canvas = null;
@@ -114,6 +117,142 @@ class Pacman {
     }
 }
 
+class Ghost {
+    constructor(ctx, x, y, color) {
+        this.ctx = ctx;
+        this.x = x;
+        this.y = y;
+        this.color = color;
+        this.direction = 0;  // Will be set during initialization
+        this.speed = 1.5;
+        this.radius = CELL_SIZE / 2;
+        this.lastDirection = this.direction;
+        this.stuckCounter = 0;
+    }
+
+    draw() {
+        try {
+            this.ctx.save();
+            
+            // Draw Ghost body
+            this.ctx.translate(this.x, this.y);
+            
+            this.ctx.beginPath();
+            this.ctx.arc(0, 0, this.radius, 0, Math.PI * 2);
+            this.ctx.fillStyle = this.color;
+            this.ctx.fill();
+            this.ctx.closePath();
+            
+            this.ctx.restore();
+        } catch (error) {
+            debug(`Error drawing Ghost: ${error.message}`);
+            console.error(error);
+        }
+    }
+
+    move() {
+        const currentX = this.x;
+        const currentY = this.y;
+        
+        // Try to move in current direction
+        let nextX = this.x;
+        let nextY = this.y;
+
+        if (this.direction === 0) nextX += this.speed;
+        if (this.direction === Math.PI) nextX -= this.speed;
+        if (this.direction === Math.PI/2) nextY -= this.speed;
+        if (this.direction === 3*Math.PI/2) nextY += this.speed;
+
+        // Get current and next grid positions
+        const currentGridX = Math.floor(this.x / CELL_SIZE);
+        const currentGridY = Math.floor(this.y / CELL_SIZE);
+        const nextGridX = Math.floor(nextX / CELL_SIZE);
+        const nextGridY = Math.floor(nextY / CELL_SIZE);
+
+        // Check if next position is valid
+        if (this.isValidPosition(nextGridX, nextGridY)) {
+            this.x = nextX;
+            this.y = nextY;
+            this.stuckCounter = 0;
+        } else {
+            // If we hit a wall, find a new valid direction
+            const availableDirections = this.getAvailableDirections(currentGridX, currentGridY);
+            if (availableDirections.length > 0) {
+                // Prefer directions that don't lead backwards unless it's the only option
+                const forwardDirections = availableDirections.filter(dir => 
+                    Math.abs(dir - this.lastDirection) !== Math.PI
+                );
+                
+                if (forwardDirections.length > 0) {
+                    this.direction = forwardDirections[Math.floor(Math.random() * forwardDirections.length)];
+                } else {
+                    this.direction = availableDirections[Math.floor(Math.random() * availableDirections.length)];
+                }
+            }
+            this.stuckCounter++;
+        }
+
+        // If ghost is stuck, instead of teleporting to center, 
+        // move to nearest valid position
+        if (this.stuckCounter > 60) {
+            const nearestPath = this.findNearestValidPosition();
+            if (nearestPath) {
+                this.x = nearestPath.x * CELL_SIZE;
+                this.y = nearestPath.y * CELL_SIZE;
+                this.direction = Math.floor(Math.random() * 4) * (Math.PI / 2);
+            }
+            this.stuckCounter = 0;
+        }
+
+        this.lastDirection = this.direction;
+    }
+
+    isValidPosition(gridX, gridY) {
+        return gridX >= 0 && gridX < GRID_WIDTH && 
+               gridY >= 0 && gridY < GRID_HEIGHT && 
+               gameBoard[gridY] && 
+               (gameBoard[gridY][gridX] === 1 || gameBoard[gridY][gridX] === 2);
+    }
+
+    getAvailableDirections(gridX, gridY) {
+        const directions = [];
+        const possibleMoves = [
+            { dir: 0, dx: 1, dy: 0 },      // Right
+            { dir: Math.PI, dx: -1, dy: 0 }, // Left
+            { dir: Math.PI/2, dx: 0, dy: -1 }, // Up
+            { dir: 3*Math.PI/2, dx: 0, dy: 1 }  // Down
+        ];
+
+        possibleMoves.forEach(move => {
+            if (this.isValidPosition(gridX + move.dx, gridY + move.dy)) {
+                directions.push(move.dir);
+            }
+        });
+
+        return directions;
+    }
+
+    findNearestValidPosition() {
+        const currentX = Math.floor(this.x / CELL_SIZE);
+        const currentY = Math.floor(this.y / CELL_SIZE);
+        
+        // Search in expanding squares around current position
+        for (let dist = 1; dist < Math.max(GRID_WIDTH, GRID_HEIGHT); dist++) {
+            for (let i = -dist; i <= dist; i++) {
+                for (let j = -dist; j <= dist; j++) {
+                    const checkX = currentX + i;
+                    const checkY = currentY + j;
+                    
+                    if (this.isValidPosition(checkX, checkY)) {
+                        return { x: checkX, y: checkY };
+                    }
+                }
+            }
+        }
+        return null;
+    }
+}
+
 function drawBoard(ctx) {
     for (let y = 0; y < GRID_HEIGHT; y++) {
         for (let x = 0; x < GRID_WIDTH; x++) {
@@ -167,10 +306,32 @@ function initGame() {
         
         // Reset game state
         score = 0;
+        lives = 3;
         document.getElementById('score').textContent = '0';
+        document.getElementById('lives').textContent = '3';
         
         // Create new Pacman with context
         pacman = new Pacman(ctx);
+        
+        // Create ghosts with corner starting positions
+        ghosts = [];
+        const ghostConfigs = [
+            { color: 'red', x: 1, y: 1, direction: 0 },                    // Top-left
+            { color: 'pink', x: GRID_WIDTH - 2, y: 1, direction: Math.PI }, // Top-right
+            { color: 'cyan', x: 1, y: GRID_HEIGHT - 2, direction: 0 },     // Bottom-left
+            { color: 'orange', x: GRID_WIDTH - 2, y: GRID_HEIGHT - 2, direction: Math.PI }  // Bottom-right
+        ];
+        
+        for (let config of ghostConfigs) {
+            const ghost = new Ghost(
+                ctx,
+                config.x * CELL_SIZE,
+                config.y * CELL_SIZE,
+                config.color
+            );
+            ghost.direction = config.direction;  // Set initial direction
+            ghosts.push(ghost);
+        }
         
         // Mark as initialized
         isInitialized = true;
@@ -180,6 +341,7 @@ function initGame() {
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         drawBoard(ctx);
         pacman.draw();
+        ghosts.forEach(ghost => ghost.draw());
         
         debug('Game initialized, starting game loop...');
         
@@ -210,7 +372,54 @@ function runGame() {
         if (pacman) {
             pacman.move();
             pacman.draw();
-            debug(`Pacman at: (${Math.round(pacman.x)}, ${Math.round(pacman.y)})`);
+        }
+        
+        let collision = false;
+        ghosts.forEach(ghost => {
+            ghost.move();
+            ghost.draw();
+            
+            // Improved collision detection
+            const dx = ghost.x - pacman.x;
+            const dy = ghost.y - pacman.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < CELL_SIZE * 0.8) { // Slightly smaller than cell size for better precision
+                collision = true;
+            }
+        });
+
+        // Handle collision outside the ghost loop
+        if (collision) {
+            lives--;
+            document.getElementById('lives').textContent = lives;
+            
+            if (lives <= 0) {
+                debug('Game Over');
+                cancelAnimationFrame(gameLoop);
+                alert('Game Over');
+                return;
+            } else {
+                // Reset positions
+                pacman.x = CELL_SIZE * 14;
+                pacman.y = CELL_SIZE * 23;
+                pacman.direction = 0;
+                
+                // Reset ghosts to their starting positions
+                ghosts.forEach((ghost, index) => {
+                    const ghostConfigs = [
+                        { x: 1, y: 1 },                        // Top-left
+                        { x: GRID_WIDTH - 2, y: 1 },          // Top-right
+                        { x: 1, y: GRID_HEIGHT - 2 },         // Bottom-left
+                        { x: GRID_WIDTH - 2, y: GRID_HEIGHT - 2 }  // Bottom-right
+                    ];
+                    ghost.x = ghostConfigs[index].x * CELL_SIZE;
+                    ghost.y = ghostConfigs[index].y * CELL_SIZE;
+                    ghost.direction = Math.floor(Math.random() * 4) * (Math.PI / 2);
+                });
+                
+                debug('Life lost! Remaining lives: ' + lives);
+            }
         }
         
         // Continue loop
