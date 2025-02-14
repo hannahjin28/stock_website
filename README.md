@@ -27,7 +27,7 @@ To set up the project locally, follow these steps:
 3. **Open the website:**
     - You can open `index.html` in your browser to view the homepage.
     - To play the Pac-Man game, open `pacman.html`.
-    - To view the latest ArXiv papers, open `papers.html`.
+    - To view the latest ArXiv papers, open https://hannahjin28.github.io/stock_website/ in your browser and click the "Latest ArXiv Papers" tab.
 
 ## Usage
 
