@@ -1,6 +1,23 @@
 {
-  "last_updated": "2025-02-14T00:45:01.471726",
+  "last_updated": "2025-02-15T00:44:24.048569",
   "papers": [
+    {
+      "title": "Treatment response as a latent variable",
+      "authors": [
+        "Christopher Tosh",
+        "Boyuan Zhang",
+        "Wesley Tansey"
+      ],
+      "abstract": "Scientists often need to analyze the samples in a study that responded to\ntreatment in order to refine their hypotheses and find potential causal drivers\nof response. Natural variation in outcomes makes teasing apart responders from\nnon-responders a statistical inference problem. To handle latent responses, we\nintroduce the causal two-groups (C2G) model, a causal extension of the\nclassical two-groups model. The C2G model posits that treated samples may or\nmay not experience an effect, according to some prior probability. We propose\ntwo empirical Bayes procedures for the causal two-groups model, one under\nsemi-parametric conditions and another under fully nonparametric conditions.\nThe semi-parametric model assumes additive treatment effects and is\nidentifiable from observed data. The nonparametric model is unidentifiable, but\nwe show it can still be used to test for response in each treated sample. We\nshow empirically and theoretically that both methods for selecting responders\ncontrol the false discovery rate at the target level with near-optimal power.\nWe also propose two novel estimands of interest and provide a strategy for\nderiving estimand intervals in the unidentifiable nonparametric model. On a\ncancer immunotherapy dataset, the nonparametric C2G model recovers\nclinically-validated predictive biomarkers of both positive and negative\noutcomes. Code is available at https://github.com/tansey-lab/causal2groups.",
+      "pdf_url": "http://arxiv.org/pdf/2502.08776v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.08776v1",
+      "published": "2025-02-12",
+      "categories": [
+        "stat.ME",
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Difference-in-Differences and Changes-in-Changes with Sample Selection",
       "authors": [
@@ -107,9 +124,9 @@
         "Zach Nussbaum",
         "Brandon Duderstadt"
       ],
-      "abstract": "Transformer-based text embedding models have improved their performance on\nbenchmarks like MIRACL and BEIR by increasing their parameter counts. However,\nthis scaling approach introduces significant deployment challenges, including\nincreased inference latency and memory usage. These challenges are particularly\nsevere in retrieval-augmented generation (RAG) applications, where large\nmodels' increased memory requirements constrain dataset ingestion capacity, and\ntheir higher latency directly impacts query-time performance. While causal\nlanguage models have addressed similar efficiency challenges using Mixture of\nExperts (MoE) architectures, this approach hasn't been successfully adapted to\nthe general text embedding setting. In this paper, we introduce Nomic Embed v2,\nthe first general purpose MoE text embedding model. Our model outperforms\nmodels in the same parameter class on both monolingual and multilingual\nbenchmarks while also maintaining competitive performance with models twice its\nsize. We open-source all code, models, and evaluation data to ensure full\nreproducibility of our training pipeline.",
-      "pdf_url": "http://arxiv.org/pdf/2502.07972v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.07972v1",
+      "abstract": "Transformer-based text embedding models have improved their performance on\nbenchmarks like MIRACL and BEIR by increasing their parameter counts. However,\nthis scaling approach introduces significant deployment challenges, including\nincreased inference latency and memory usage. These challenges are particularly\nsevere in retrieval-augmented generation (RAG) applications, where large\nmodels' increased memory requirements constrain dataset ingestion capacity, and\ntheir higher latency directly impacts query-time performance. While causal\nlanguage models have addressed similar efficiency challenges using Mixture of\nExperts (MoE) architectures, this approach hasn't been successfully adapted to\nthe general text embedding setting. In this paper, we introduce Nomic Embed v2,\nthe first general purpose MoE text embedding model. Our model outperforms\nmodels in the same parameter class on both monolingual and multilingual\nbenchmarks while also maintaining competitive performance with models twice its\nsize. We open-source all code, models, and evaluation data to ensure full\nreproducibility of our training pipeline at\n\\href{https://github.com/nomic-ai/contrastors}{https://github.com/nomic-ai/contrastors}.",
+      "pdf_url": "http://arxiv.org/pdf/2502.07972v2",
+      "arxiv_url": "http://arxiv.org/abs/2502.07972v2",
       "published": "2025-02-11",
       "categories": [
         "cs.CL",
@@ -148,21 +165,6 @@
       "categories": [
         "cs.LG",
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Distilling heterogeneous treatment effects: Stable subgroup estimation in causal inference",
-      "authors": [
-        "Melody Huang",
-        "Tiffany M. Tang",
-        "Ana M. Kenney"
-      ],
-      "abstract": "Recent methodological developments have introduced new black-box approaches\nto better estimate heterogeneous treatment effects; however, these methods fall\nshort of providing interpretable characterizations of the underlying\nindividuals who may be most at risk or benefit most from receiving the\ntreatment, thereby limiting their practical utility. In this work, we introduce\na novel method, causal distillation trees (CDT), to estimate interpretable\nsubgroups. CDT allows researchers to fit any machine learning model of their\nchoice to estimate the individual-level treatment effect, and then leverages a\nsimple, second-stage tree-based model to \"distill\" the estimated treatment\neffect into meaningful subgroups. As a result, CDT inherits the improvements in\npredictive performance from black-box machine learning models while preserving\nthe interpretability of a simple decision tree. We derive theoretical\nguarantees for the consistency of the estimated subgroups using CDT, and\nintroduce stability-driven diagnostics for researchers to evaluate the quality\nof the estimated subgroups. We illustrate our proposed method on a randomized\ncontrolled trial of antiretroviral treatment for HIV from the AIDS Clinical\nTrials Group Study 175 and show that CDT out-performs state-of-the-art\napproaches in constructing stable, clinically relevant subgroups.",
-      "pdf_url": "http://arxiv.org/pdf/2502.07275v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.07275v1",
-      "published": "2025-02-11",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
