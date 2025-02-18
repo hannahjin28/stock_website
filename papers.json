@@ -1,6 +1,94 @@
 {
-  "last_updated": "2025-02-17T00:48:20.813014",
+  "last_updated": "2025-02-18T00:44:55.423988",
   "papers": [
+    {
+      "title": "A Mechanistic Framework for Collider Detection in Observational Data",
+      "authors": [
+        "Soumik Purkayastha",
+        "Peter X. -K. Song"
+      ],
+      "abstract": "Understanding directionality is crucial for identifying causal structures\nfrom observational data. A key challenge lies in detecting collider structures,\nwhere a $V$--structure is formed between a child node $Z$ receiving directed\nedges from parents $X$ and $Y$, denoted by $X \\rightarrow Z \\leftarrow Y$.\nTraditional causal discovery approaches, such as constraint-based and\nscore-based structure learning algorithms, do not provide statistical inference\non estimated pathways and are often sensitive to latent confounding. To\novercome these issues, we introduce methodology to quantify directionality in\ncollider structures using a pair of conditional asymmetry coefficients to\nsimultaneously examine validity of the pathways $Y \\rightarrow Z$ and $X\n\\rightarrow Z$ in the collider structure. These coefficients are based on\nShannon's differential entropy. Leveraging kernel-based conditional density\nestimation and a nonparametric smoothing technique, we utilise our proposed\nmethod to estimate collider structures and provide uncertainty quantification.\n  Simulation studies demonstrate that our method outperforms existing structure\nlearning algorithms in accurately identifying collider structures. We further\napply our approach to investigate the role of blood pressure as a collider in\nepigenetic DNA methylation, uncovering novel insights into the genetic\nregulation of blood pressure. This framework represents a significant\nadvancement in causal structure learning, offering a robust, nonparametric\nmethod for collider detection with practical applications in biostatistics and\nepidemiology.",
+      "pdf_url": "http://arxiv.org/pdf/2502.10317v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.10317v1",
+      "published": "2025-02-14",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "A Latent Causal Inference Framework for Ordinal Variables",
+      "authors": [
+        "Martina Scauda",
+        "Jack Kuipers",
+        "Giusi Moffa"
+      ],
+      "abstract": "Ordinal variables, such as on the Likert scale, are common in applied\nresearch. Yet, existing methods for causal inference tend to target nominal or\ncontinuous data. When applied to ordinal data, this fails to account for the\ninherent ordering or imposes well-defined relative magnitudes. Hence, there is\na need for specialised methods to compute interventional effects between\nordinal variables while accounting for their ordinality. One potential\nframework is to presume a latent Gaussian Directed Acyclic Graph (DAG) model:\nthat the ordinal variables originate from marginally discretizing a set of\nGaussian variables whose latent covariance matrix is constrained to satisfy the\nconditional independencies inherent in a DAG. Conditioned on a given latent\ncovariance matrix and discretisation thresholds, we derive a closed-form\nfunction for ordinal causal effects in terms of interventional distributions in\nthe latent space. Our causal estimation combines naturally with algorithms to\nlearn the latent DAG and its parameters, like the Ordinal Structural EM\nalgorithm. Simulations demonstrate the applicability of the proposed approach\nin estimating ordinal causal effects both for known and unknown structures of\nthe latent graph. As an illustration of a real-world use case, the method is\napplied to survey data of 408 patients from a study on the functional\nrelationships between symptoms of obsessive-compulsive disorder and depression.",
+      "pdf_url": "http://arxiv.org/pdf/2502.10276v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.10276v1",
+      "published": "2025-02-14",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Do Large Language Models Reason Causally Like Us? Even Better?",
+      "authors": [
+        "Hanna M. Dettki",
+        "Brenden M. Lake",
+        "Charley M. Wu",
+        "Bob Rehder"
+      ],
+      "abstract": "Causal reasoning is a core component of intelligence. Large language models\n(LLMs) have shown impressive capabilities in generating human-like text,\nraising questions about whether their responses reflect true understanding or\nstatistical patterns. We compared causal reasoning in humans and four LLMs\nusing tasks based on collider graphs, rating the likelihood of a query variable\noccurring given evidence from other variables. We find that LLMs reason\ncausally along a spectrum from human-like to normative inference, with\nalignment shifting based on model, context, and task. Overall, GPT-4o and\nClaude showed the most normative behavior, including \"explaining away\", whereas\nGemini-Pro and GPT-3.5 did not. Although all agents deviated from the expected\nindependence of causes - Claude the least - they exhibited strong associative\nreasoning and predictive inference when assessing the likelihood of the effect\ngiven its causes. These findings underscore the need to assess AI biases as\nthey increasingly assist human decision-making.",
+      "pdf_url": "http://arxiv.org/pdf/2502.10215v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.10215v1",
+      "published": "2025-02-14",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal Information Prioritization for Efficient Reinforcement Learning",
+      "authors": [
+        "Hongye Cao",
+        "Fan Feng",
+        "Tianpei Yang",
+        "Jing Huo",
+        "Yang Gao"
+      ],
+      "abstract": "Current Reinforcement Learning (RL) methods often suffer from\nsample-inefficiency, resulting from blind exploration strategies that neglect\ncausal relationships among states, actions, and rewards. Although recent causal\napproaches aim to address this problem, they lack grounded modeling of\nreward-guided causal understanding of states and actions for goal-orientation,\nthus impairing learning efficiency. To tackle this issue, we propose a novel\nmethod named Causal Information Prioritization (CIP) that improves sample\nefficiency by leveraging factored MDPs to infer causal relationships between\ndifferent dimensions of states and actions with respect to rewards, enabling\nthe prioritization of causal information. Specifically, CIP identifies and\nleverages causal relationships between states and rewards to execute\ncounterfactual data augmentation to prioritize high-impact state features under\nthe causal understanding of the environments. Moreover, CIP integrates a\ncausality-aware empowerment learning objective, which significantly enhances\nthe agent's execution of reward-guided actions for more efficient exploration\nin complex environments. To fully assess the effectiveness of CIP, we conduct\nextensive experiments across 39 tasks in 5 diverse continuous control\nenvironments, encompassing both locomotion and manipulation skills learning\nwith pixel-based and sparse reward settings. Experimental results demonstrate\nthat CIP consistently outperforms existing RL methods across a wide range of\nscenarios.",
+      "pdf_url": "http://arxiv.org/pdf/2502.10097v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.10097v1",
+      "published": "2025-02-14",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Object-Centric Latent Action Learning",
+      "authors": [
+        "Albina Klepach",
+        "Alexander Nikulin",
+        "Ilya Zisman",
+        "Denis Tarasov",
+        "Alexander Derevyagin",
+        "Andrei Polubarov",
+        "Nikita Lyubaykin",
+        "Vladislav Kurenkov"
+      ],
+      "abstract": "Leveraging vast amounts of internet video data for Embodied AI is currently\nbottle-necked by the lack of action annotations and the presence of\naction-correlated distractors. We propose a novel object-centric latent action\nlearning approach, based on VideoSaur and LAPO, that employs self-supervised\ndecomposition of scenes into object representations and annotates video data\nwith proxy-action labels. This method effectively disentangles causal\nagent-object interactions from irrelevant background noise and reduces the\nperformance degradation of latent action learning approaches caused by\ndistractors. Our preliminary experiments with the Distracting Control Suite\nshow that latent action pretraining based on object decompositions improve the\nquality of inferred latent actions by x2.7 and efficiency of downstream\nfine-tuning with a small set of labeled actions, increasing return by x2.6 on\naverage.",
+      "pdf_url": "http://arxiv.org/pdf/2502.09680v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.09680v1",
+      "published": "2025-02-13",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Treatment response as a latent variable",
       "authors": [
@@ -78,93 +166,6 @@
       "categories": [
         "cs.LG",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "ACCESS : A Benchmark for Abstract Causal Event Discovery and Reasoning",
-      "authors": [
-        "Vy Vo",
-        "Lizhen Qu",
-        "Tao Feng",
-        "Yuncheng Hua",
-        "Xiaoxi Kang",
-        "Songhai Fan",
-        "Tim Dwyer",
-        "Lay-Ki Soon",
-        "Gholamreza Haffari"
-      ],
-      "abstract": "Identifying cause-and-effect relationships is critical to understanding\nreal-world dynamics and ultimately causal reasoning. Existing methods for\nidentifying event causality in NLP, including those based on Large Language\nModels (LLMs), exhibit difficulties in out-of-distribution settings due to the\nlimited scale and heavy reliance on lexical cues within available benchmarks.\nModern benchmarks, inspired by probabilistic causal inference, have attempted\nto construct causal graphs of events as a robust representation of causal\nknowledge, where \\texttt{CRAB} \\citep{romanou2023crab} is one such recent\nbenchmark along this line. In this paper, we introduce \\texttt{ACCESS}, a\nbenchmark designed for discovery and reasoning over abstract causal events.\nUnlike existing resources, \\texttt{ACCESS} focuses on causality of everyday\nlife events on the abstraction level. We propose a pipeline for identifying\nabstractions for event generalizations from \\texttt{GLUCOSE}\n\\citep{mostafazadeh-etal-2020-glucose}, a large-scale dataset of implicit\ncommonsense causal knowledge, from which we subsequently extract $1,4$K causal\npairs. Our experiments highlight the ongoing challenges of using statistical\nmethods and/or LLMs for automatic abstraction identification and causal\ndiscovery in NLP. Nonetheless, we demonstrate that the abstract causal\nknowledge provided in \\texttt{ACCESS} can be leveraged for enhancing QA\nreasoning performance in LLMs.",
-      "pdf_url": "http://arxiv.org/pdf/2502.08148v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.08148v1",
-      "published": "2025-02-12",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Simulating Longitudinal Data from Marginal Structural Models",
-      "authors": [
-        "Xi Lin",
-        "Daniel de Vassimon Manela",
-        "Chase Mathis",
-        "Jens Magelund Tarp",
-        "Robin J. Evans"
-      ],
-      "abstract": "Simulating longitudinal data from specified marginal structural models is a\ncrucial but challenging task for evaluating causal inference methods and\ndesigning clinical trials. While data generation typically proceeds in a fully\nconditional manner using structural equations according to a temporal ordering,\nmarginal structural models require capturing causal effects that are marginal\nover time-dependent confounders, making it difficult to align conditional\ndistributions with target marginal quantities. To address this, we propose a\nflexible and efficient algorithm for simulating longitudinal data that adheres\nexactly to a specified marginal structural model. Recognizing the importance of\ntime-to-event outcomes in clinical trials, we extend the method to accommodate\nsurvival models. Compared to existing approaches, our method offers several key\nadvantages: it enables exact simulation from a known causal model rather than\nrelying on approximations; it avoids imposing restrictive assumptions on the\ndata-generating process; and it is efficient as we need only evaluate analytic\nfunctions. This last benefit contrasts with methods that use computationally\nintensive techniques such as Monte Carlo approximations or numerical\nintegration. Through simulation studies replicating realistic scenarios, we\nvalidate the method's accuracy and utility. Our method will allow researchers\nto effectively simulate data with target causal structures for their specific\nscenarios.",
-      "pdf_url": "http://arxiv.org/pdf/2502.07991v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.07991v1",
-      "published": "2025-02-11",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Training Sparse Mixture Of Experts Text Embedding Models",
-      "authors": [
-        "Zach Nussbaum",
-        "Brandon Duderstadt"
-      ],
-      "abstract": "Transformer-based text embedding models have improved their performance on\nbenchmarks like MIRACL and BEIR by increasing their parameter counts. However,\nthis scaling approach introduces significant deployment challenges, including\nincreased inference latency and memory usage. These challenges are particularly\nsevere in retrieval-augmented generation (RAG) applications, where large\nmodels' increased memory requirements constrain dataset ingestion capacity, and\ntheir higher latency directly impacts query-time performance. While causal\nlanguage models have addressed similar efficiency challenges using Mixture of\nExperts (MoE) architectures, this approach hasn't been successfully adapted to\nthe general text embedding setting. In this paper, we introduce Nomic Embed v2,\nthe first general purpose MoE text embedding model. Our model outperforms\nmodels in the same parameter class on both monolingual and multilingual\nbenchmarks while also maintaining competitive performance with models twice its\nsize. We open-source all code, models, and evaluation data to ensure full\nreproducibility of our training pipeline at\n\\href{https://github.com/nomic-ai/contrastors}{https://github.com/nomic-ai/contrastors}.",
-      "pdf_url": "http://arxiv.org/pdf/2502.07972v2",
-      "arxiv_url": "http://arxiv.org/abs/2502.07972v2",
-      "published": "2025-02-11",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Distributional Instrumental Variable Method",
-      "authors": [
-        "Anastasiia Holovchak",
-        "Sorawit Saengkyongam",
-        "Nicolai Meinshausen",
-        "Xinwei Shen"
-      ],
-      "abstract": "The instrumental variable (IV) approach is commonly used to infer causal\neffects in the presence of unmeasured confounding. Conventional IV models\ncommonly make the additive noise assumption, which is hard to ensure in\npractice, but also typically lack flexibility if the causal effects are\ncomplex. Further, the vast majority of the existing methods aims to estimate\nthe mean causal effects only, a few other methods focus on the quantile\neffects. This work aims for estimation of the entire interventional\ndistribution. We propose a novel method called distributional instrumental\nvariables (DIV), which leverages generative modelling in a nonlinear\ninstrumental variable setting. We establish identifiability of the\ninterventional distribution under general assumptions and demonstrate an\n`under-identified' case where DIV can identify the causal effects while\ntwo-step least squares fails to. Our empirical results show that the DIV method\nperforms well for a broad range of simulated data, exhibiting advantages over\nexisting IV approaches in terms of the identifiability and estimation error of\nthe mean or quantile treatment effects. Furthermore, we apply DIV to an\neconomic data set to examine the causal relation between institutional quality\nand economic development and our results that closely align with the original\nstudy. We also apply DIV to a single-cell data set, where we study the\ngeneralizability and stability in predicting gene expression under unseen\ninterventions. The software implementations of DIV are available in R and\nPython.",
-      "pdf_url": "http://arxiv.org/pdf/2502.07641v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.07641v1",
-      "published": "2025-02-11",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Causal-Informed Contrastive Learning: Towards Bias-Resilient Pre-training under Concept Drift",
-      "authors": [
-        "Xiaoyu Yang",
-        "Jie Lu",
-        "En Yu"
-      ],
-      "abstract": "The evolution of large-scale contrastive pre-training propelled by top-tier\ndatasets has reached a transition point in the scaling law. Consequently,\nsustaining and enhancing a model's pre-training capabilities in drift\nenvironments have surfaced as a notable challenge. In this paper, we initially\nuncover that contrastive pre-training methods are significantly impacted by\nconcept drift wherein distributions change unpredictably, resulting in notable\nbiases in the feature space of the pre-trained model. Empowered by causal\ninference, we construct a structural causal graph to analyze the impact of\nconcept drift to contrastive pre-training systemically, and propose the causal\ninterventional contrastive objective. Upon achieving this, we devise a\nresilient contrastive pre-training approach to accommodate the data stream of\nconcept drift, with simple and scalable implementation. Extensive experiments\non various downstream tasks demonstrate our resilient contrastive pre-training\neffectively mitigates the bias stemming from the concept drift data stream.\nCodes are available at https://anonymous.4open.science/r/ResilientCL/.",
-      "pdf_url": "http://arxiv.org/pdf/2502.07620v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.07620v1",
-      "published": "2025-02-11",
-      "categories": [
-        "cs.LG",
-        "cs.CV"
       ]
     }
   ]
