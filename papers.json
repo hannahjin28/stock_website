@@ -1,6 +1,82 @@
 {
-  "last_updated": "2025-02-18T00:44:55.423988",
+  "last_updated": "2025-02-19T00:45:21.558634",
   "papers": [
+    {
+      "title": "Unifying Explainable Anomaly Detection and Root Cause Analysis in Dynamical Systems",
+      "authors": [
+        "Yue Sun",
+        "Rick S. Blum",
+        "Parv Venkitasubramaniam"
+      ],
+      "abstract": "Dynamical systems, prevalent in various scientific and engineering domains,\nare susceptible to anomalies that can significantly impact their performance\nand reliability. This paper addresses the critical challenges of anomaly\ndetection, root cause localization, and anomaly type classification in\ndynamical systems governed by ordinary differential equations (ODEs). We define\ntwo categories of anomalies: cyber anomalies, which propagate through\ninterconnected variables, and measurement anomalies, which remain localized to\nindividual variables. To address these challenges, we propose the Interpretable\nCausality Ordinary Differential Equation (ICODE) Networks, a model-intrinsic\nexplainable learning framework. ICODE leverages Neural ODEs for anomaly\ndetection while employing causality inference through an explanation channel to\nperform root cause analysis (RCA), elucidating why specific time periods are\nflagged as anomalous. ICODE is designed to simultaneously perform anomaly\ndetection, RCA, and anomaly type classification within a single, interpretable\nframework. Our approach is grounded in the hypothesis that anomalies alter the\nunderlying ODEs of the system, manifesting as changes in causal relationships\nbetween variables. We provide a theoretical analysis of how perturbations in\nlearned model parameters can be utilized to identify anomalies and their root\ncauses in time series data. Comprehensive experimental evaluations demonstrate\nthe efficacy of ICODE across various dynamical systems, showcasing its ability\nto accurately detect anomalies, classify their types, and pinpoint their\norigins.",
+      "pdf_url": "http://arxiv.org/pdf/2502.12086v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.12086v1",
+      "published": "2025-02-17",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Causal Inference for Qualitative Outcomes",
+      "authors": [
+        "Riccardo Di Francesco",
+        "Giovanni Mellace"
+      ],
+      "abstract": "Causal inference methods such as instrumental variables, regression\ndiscontinuity, and difference-in-differences are widely used to estimate\ntreatment effects. However, their application to qualitative outcomes poses\nfundamental challenges, as standard causal estimands are ill-defined in this\ncontext. This paper highlights these issues and introduces an alternative\nframework that focuses on well-defined and interpretable estimands that\nquantify how treatment affects the probability distribution over outcome\ncategories. We establish that standard identification assumptions are\nsufficient for identification and propose simple, intuitive estimation\nstrategies that remain fully compatible with conventional econometric methods.\nTo facilitate implementation, we provide an open-source R package,\n$\\texttt{causalQual}$, which is publicly available on GitHub.",
+      "pdf_url": "http://arxiv.org/pdf/2502.11691v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.11691v1",
+      "published": "2025-02-17",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "CounterBench: A Benchmark for Counterfactuals Reasoning in Large Language Models",
+      "authors": [
+        "Yuefei Chen",
+        "Vivek K. Singh",
+        "Jing Ma",
+        "Ruxiang Tang"
+      ],
+      "abstract": "Counterfactual reasoning is widely recognized as one of the most challenging\nand intricate aspects of causality in artificial intelligence. In this paper,\nwe evaluate the performance of large language models (LLMs) in counterfactual\nreasoning. In contrast to previous studies that primarily focus on commonsense\ncausal reasoning, where LLMs often rely on prior knowledge for inference, we\nspecifically assess their ability to perform counterfactual inference using a\nset of formal rules. To support this evaluation, we introduce a new benchmark\ndataset, CounterBench, comprising 1K counterfactual reasoning questions. The\ndataset is designed with varying levels of difficulty, diverse causal graph\nstructures, distinct types of counterfactual questions, and multiple\nnonsensical name variants. Our experiments demonstrate that counterfactual\nreasoning poses a significant challenge for LLMs, with most models performing\nat levels comparable to random guessing. To enhance LLM's counterfactual\nreasoning ability, we propose a novel reasoning paradigm, CoIn, which guides\nLLMs through iterative reasoning and backtracking to systematically explore\ncounterfactual solutions. Experimental results show that our method\nsignificantly improves LLM performance on counterfactual reasoning tasks and\nconsistently enhances performance across different LLMs.Our dataset is\navailable at https://huggingface.co/datasets/CounterBench/CounterBench.",
+      "pdf_url": "http://arxiv.org/pdf/2502.11008v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.11008v1",
+      "published": "2025-02-16",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Model-assisted inference for dynamic causal effects in staggered rollout cluster randomized experiments",
+      "authors": [
+        "Xinyuan Chen",
+        "Fan Li"
+      ],
+      "abstract": "Staggered rollout cluster randomized experiments (SR-CREs) are increasingly\nused for their practical feasibility and logistical convenience. These designs\ninvolve staggered treatment adoption across clusters, requiring analysis\nmethods that account for an exhaustive class of dynamic causal effects,\nanticipation, and non-ignorable cluster-period sizes. Without imposing outcome\nmodeling assumptions, we study regression estimators using individual data,\ncluster-period averages, and scaled cluster-period totals, with and without\ncovariate adjustment from a design-based perspective, where only the treatment\nadoption time is random. We establish consistency and asymptotic normality of\neach regression estimator under a finite-population framework and formally\nprove that the associated variance estimators are asymptotically conservative\nin the Lowner ordering. Furthermore, we conduct a unified efficiency comparison\nof the estimators and provide practical recommendations. We highlight the\nefficiency advantage of using estimators based on scaled cluster-period totals\nwith covariate adjustment over their counterparts using individual-level data\nand cluster-period averages. Our results rigorously justify linear regression\nestimators as model-assisted methods to address an entire class of dynamic\ncausal effects in SR-CREs and significantly expand those developed for\nparallel-arm CREs by Su and Ding (JRSSB, 2021) to accommodate a wider class of\ncomplex experimental settings with staggered randomization.",
+      "pdf_url": "http://arxiv.org/pdf/2502.10939v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.10939v1",
+      "published": "2025-02-16",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Batch-Adaptive Annotations for Causal Inference with Complex-Embedded Outcomes",
+      "authors": [
+        "Ezinne Nwankwo",
+        "Lauri Goldkind",
+        "Angela Zhou"
+      ],
+      "abstract": "Estimating the causal effects of an intervention on outcomes is crucial. But\noften in domains such as healthcare and social services, this critical\ninformation about outcomes is documented by unstructured text, e.g. clinical\nnotes in healthcare or case notes in social services. For example, street\noutreach to homeless populations is a common social services intervention, with\nambiguous and hard-to-measure outcomes. Outreach workers compile case note\nrecords which are informative of outcomes. Although experts can succinctly\nextract relevant information from such unstructured case notes, it is costly or\ninfeasible to do so for an entire corpus, which can span millions of notes.\nRecent advances in large language models (LLMs) enable scalable but potentially\ninaccurate annotation of unstructured text data. We leverage the decision of\nwhich datapoints should receive expert annotation vs. noisy imputation under\nbudget constraints in a \"design-based\" estimator combining limited expert and\nplentiful noisy imputation data via \\textit{causal inference with missing\noutcomes}. We develop a two-stage adaptive algorithm that optimizes the expert\nannotation probabilities, estimating the ATE with optimal asymptotic variance.\nWe demonstrate how expert labels and LLM annotations can be combined\nstrategically, efficiently and responsibly in a causal estimator. We run\nexperiments on simulated data and two real-world datasets, including one on\nstreet outreach, to show the versatility of our proposed method.",
+      "pdf_url": "http://arxiv.org/pdf/2502.10605v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.10605v1",
+      "published": "2025-02-14",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
     {
       "title": "A Mechanistic Framework for Collider Detection in Observational Data",
       "authors": [
@@ -86,85 +162,6 @@
       "published": "2025-02-13",
       "categories": [
         "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Treatment response as a latent variable",
-      "authors": [
-        "Christopher Tosh",
-        "Boyuan Zhang",
-        "Wesley Tansey"
-      ],
-      "abstract": "Scientists often need to analyze the samples in a study that responded to\ntreatment in order to refine their hypotheses and find potential causal drivers\nof response. Natural variation in outcomes makes teasing apart responders from\nnon-responders a statistical inference problem. To handle latent responses, we\nintroduce the causal two-groups (C2G) model, a causal extension of the\nclassical two-groups model. The C2G model posits that treated samples may or\nmay not experience an effect, according to some prior probability. We propose\ntwo empirical Bayes procedures for the causal two-groups model, one under\nsemi-parametric conditions and another under fully nonparametric conditions.\nThe semi-parametric model assumes additive treatment effects and is\nidentifiable from observed data. The nonparametric model is unidentifiable, but\nwe show it can still be used to test for response in each treated sample. We\nshow empirically and theoretically that both methods for selecting responders\ncontrol the false discovery rate at the target level with near-optimal power.\nWe also propose two novel estimands of interest and provide a strategy for\nderiving estimand intervals in the unidentifiable nonparametric model. On a\ncancer immunotherapy dataset, the nonparametric C2G model recovers\nclinically-validated predictive biomarkers of both positive and negative\noutcomes. Code is available at https://github.com/tansey-lab/causal2groups.",
-      "pdf_url": "http://arxiv.org/pdf/2502.08776v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.08776v1",
-      "published": "2025-02-12",
-      "categories": [
-        "stat.ME",
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Difference-in-Differences and Changes-in-Changes with Sample Selection",
-      "authors": [
-        "Javier Viviens"
-      ],
-      "abstract": "Sample selection arises endogenously in causal research when the treatment\naffects whether certain units are observed. It is a common pitfall in\nlongitudinal studies, particularly in settings where treatment assignment is\nconfounded. In this paper, I highlight the drawbacks of one of the most popular\nidentification strategies in such settings: Difference-in-Differences (DiD).\nSpecifically, I employ principal stratification analysis to show that the\nconventional ATT estimand may not be well defined, and the DiD estimand cannot\nbe interpreted causally without additional assumptions. To address these\nissues, I develop an identification strategy to partially identify causal\neffects on the subset of units with well-defined and observed outcomes under\nboth treatment regimes. I adapt Lee bounds to the Changes-in-Changes (CiC)\nsetting (Athey & Imbens, 2006), leveraging the time dimension of the data to\nrelax the unconfoundedness assumption in the original trimming strategy of Lee\n(2009). This setting has the DiD identification strategy as a particular case,\nwhich I also implement in the paper. Additionally, I explore how to leverage\nmultiple sources of sample selection to relax the monotonicity assumption in\nLee (2009), which may be of independent interest. Alongside the identification\nstrategy, I present estimators and inference results. I illustrate the\nrelevance of the proposed methodology by analyzing a job training program in\nColombia.",
-      "pdf_url": "http://arxiv.org/pdf/2502.08614v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.08614v1",
-      "published": "2025-02-12",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Causal Analysis of ASR Errors for Children: Quantifying the Impact of Physiological, Cognitive, and Extrinsic Factors",
-      "authors": [
-        "Vishwanath Pratap Singh",
-        "Md. Sahidullah",
-        "Tomi Kinnunen"
-      ],
-      "abstract": "The increasing use of children's automatic speech recognition (ASR) systems\nhas spurred research efforts to improve the accuracy of models designed for\nchildren's speech in recent years. The current approach utilizes either\nopen-source speech foundation models (SFMs) directly or fine-tuning them with\nchildren's speech data. These SFMs, whether open-source or fine-tuned for\nchildren, often exhibit higher word error rates (WERs) compared to adult\nspeech. However, there is a lack of systemic analysis of the cause of this\ndegraded performance of SFMs. Understanding and addressing the reasons behind\nthis performance disparity is crucial for improving the accuracy of SFMs for\nchildren's speech. Our study addresses this gap by investigating the causes of\naccuracy degradation and the primary contributors to WER in children's speech.\nIn the first part of the study, we conduct a comprehensive benchmarking study\non two self-supervised SFMs (Wav2Vec2.0 and Hubert) and two weakly supervised\nSFMs (Whisper and MMS) across various age groups on two children speech\ncorpora, establishing the raw data for the causal inference analysis in the\nsecond part. In the second part of the study, we analyze the impact of\nphysiological factors (age, gender), cognitive factors (pronunciation ability),\nand external factors (vocabulary difficulty, background noise, and word count)\non SFM accuracy in children's speech using causal inference. The results\nindicate that physiology (age) and particular external factor (number of words\nin audio) have the highest impact on accuracy, followed by background noise and\npronunciation ability. Fine-tuning SFMs on children's speech reduces\nsensitivity to physiological and cognitive factors, while sensitivity to the\nnumber of words in audio persists.\n  Keywords: Children's ASR, Speech Foundational Models, Causal Inference,\nPhysiology, Cognition, Pronunciation",
-      "pdf_url": "http://arxiv.org/pdf/2502.08587v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.08587v1",
-      "published": "2025-02-12",
-      "categories": [
-        "eess.AS"
-      ]
-    },
-    {
-      "title": "Tutorial for Surrogate Endpoint Validation Using Joint modeling and Mediation Analysis",
-      "authors": [
-        "Quentin Le Coent",
-        "Virginie Rondeau",
-        "Catherine Legrand"
-      ],
-      "abstract": "The use of valid surrogate endpoints is an important stake in clinical\nresearch to help reduce both the duration and cost of a clinical trial and\nspeed up the evaluation of interesting treatments. Several methods have been\nproposed in the statistical literature to validate putative surrogate\nendpoints. Two main approaches have been proposed: the meta-analytic approach\nand the mediation analysis approach. The former uses data from meta-analyses to\nderive associations measures between the surrogate and the final endpoint at\nthe individual and trial levels. The latter rather uses the proportion of the\ntreatment effect on the final endpoint through the surrogate as a measure of\nsurrogacy in a causal inference framework. Both approaches have remained\nseparated as the meta-analytic approach does not estimate the treatment effect\non the final endpoint through the surrogate while the mediation analysis\napproach have been limited to single-trial setting. However, these two\napproaches are complementary. In this work we propose an approach that combines\nthe meta-analytic and mediation analysis approaches using joint modeling for\nsurrogate validation. We focus on the cases where the final endpoint is a\ntime-to-event endpoint (such as time-to-death) and the surrogate is either a\ntime-to-event or a longitudinal biomarker. Two new joint models were proposed\ndepending on the nature of the surrogate. These model are implemented in the R\npackage frailtypack. We illustrate the developed approaches in three\napplications on real datasets in oncology.",
-      "pdf_url": "http://arxiv.org/pdf/2502.08443v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.08443v1",
-      "published": "2025-02-12",
-      "categories": [
-        "stat.ME",
-        "stat.AP",
-        "stat.CO"
-      ]
-    },
-    {
-      "title": "Individualised Treatment Effects Estimation with Composite Treatments and Composite Outcomes",
-      "authors": [
-        "Vinod Kumar Chauhan",
-        "Lei Clifton",
-        "Gaurav Nigam",
-        "David A. Clifton"
-      ],
-      "abstract": "Estimating individualised treatment effect (ITE) -- that is the causal effect\nof a set of variables (also called exposures, treatments, actions, policies, or\ninterventions), referred to as \\textit{composite treatments}, on a set of\noutcome variables of interest, referred to as \\textit{composite outcomes}, for\na unit from observational data -- remains a fundamental problem in causal\ninference with applications across disciplines, such as healthcare, economics,\neducation, social science, marketing, and computer science. Previous work in\ncausal machine learning for ITE estimation is limited to simple settings, like\nsingle treatments and single outcomes. This hinders their use in complex\nreal-world scenarios; for example, consider studying the effect of different\nICU interventions, such as beta-blockers and statins for a patient admitted for\nheart surgery, on different outcomes of interest such as atrial fibrillation\nand in-hospital mortality. The limited research into composite treatments and\noutcomes is primarily due to data scarcity for all treatments and outcomes. To\naddress the above challenges, we propose a novel and innovative\nhypernetwork-based approach, called \\emph{H-Learner}, to solve ITE estimation\nunder composite treatments and composite outcomes, which tackles the data\nscarcity issue by dynamically sharing information across treatments and\noutcomes. Our empirical analysis with binary and arbitrary composite treatments\nand outcomes demonstrates the effectiveness of the proposed approach compared\nto existing methods.",
-      "pdf_url": "http://arxiv.org/pdf/2502.08282v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.08282v1",
-      "published": "2025-02-12",
-      "categories": [
-        "cs.LG",
         "cs.AI"
       ]
     }
