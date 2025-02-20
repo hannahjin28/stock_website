@@ -1,6 +1,65 @@
 {
-  "last_updated": "2025-02-19T00:45:21.558634",
+  "last_updated": "2025-02-20T00:45:56.621304",
   "papers": [
+    {
+      "title": "Robust Disentangled Counterfactual Learning for Physical Audiovisual Commonsense Reasoning",
+      "authors": [
+        "Mengshi Qi",
+        "Changsheng Lv",
+        "Huadong Ma"
+      ],
+      "abstract": "In this paper, we propose a new Robust Disentangled Counterfactual Learning\n(RDCL) approach for physical audiovisual commonsense reasoning. The task aims\nto infer objects' physics commonsense based on both video and audio input, with\nthe main challenge being how to imitate the reasoning ability of humans, even\nunder the scenario of missing modalities. Most of the current methods fail to\ntake full advantage of different characteristics in multi-modal data, and\nlacking causal reasoning ability in models impedes the progress of implicit\nphysical knowledge inferring. To address these issues, our proposed RDCL method\ndecouples videos into static (time-invariant) and dynamic (time-varying)\nfactors in the latent space by the disentangled sequential encoder, which\nadopts a variational autoencoder (VAE) to maximize the mutual information with\na contrastive loss function. Furthermore, we introduce a counterfactual\nlearning module to augment the model's reasoning ability by modeling physical\nknowledge relationships among different objects under counterfactual\nintervention. To alleviate the incomplete modality data issue, we introduce a\nrobust multimodal learning method to recover the missing data by decomposing\nthe shared features and model-specific features. Our proposed method is a\nplug-and-play module that can be incorporated into any baseline including VLMs.\nIn experiments, we show that our proposed method improves the reasoning\naccuracy and robustness of baseline methods and achieves the state-of-the-art\nperformance.",
+      "pdf_url": "http://arxiv.org/pdf/2502.12425v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.12425v1",
+      "published": "2025-02-18",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Time Series Treatment Effects Analysis with Always-Missing Controls",
+      "authors": [
+        "Juan Shu",
+        "Qiyu Han",
+        "George Chen",
+        "Xihao Cao",
+        "Kangming Luo",
+        "Dan Pallotta",
+        "Shivam Agrawal",
+        "Yuping Lu",
+        "Xiaoyu Zhang",
+        "Jawad Mansoor",
+        "Jyoti Anand"
+      ],
+      "abstract": "Estimating treatment effects in time series data presents a significant\nchallenge, especially when the control group is always unobservable. For\nexample, in analyzing the effects of Christmas on retail sales, we lack direct\nobservation of what would have occurred in late December without the Christmas\nimpact. To address this, we try to recover the control group in the event\nperiod while accounting for confounders and temporal dependencies. Experimental\nresults on the M5 Walmart retail sales data demonstrate robust estimation of\nthe potential outcome of the control group as well as accurate predicted\nholiday effect. Furthermore, we provided theoretical guarantees for the\nestimated treatment effect, proving its consistency and asymptotic normality.\nThe proposed methodology is applicable not only to this always-missing control\nscenario but also in other conventional time series causal inference settings.",
+      "pdf_url": "http://arxiv.org/pdf/2502.12393v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.12393v1",
+      "published": "2025-02-18",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "The impact of job stability on monetary poverty in Italy: causal small area estimation",
+      "authors": [
+        "Katarzyna Reluga",
+        "Dehan Kong",
+        "Setareh Ranjbar",
+        "Nicola Salvati",
+        "Mark van der Laan"
+      ],
+      "abstract": "Job stability - encompassing secure contracts, adequate wages, social\nbenefits, and career opportunities - is a critical determinant in reducing\nmonetary poverty, as it provides households with reliable income and enhances\neconomic well-being. This study leverages EU-SILC survey and census data to\nestimate the causal effect of job stability on monetary poverty across Italian\nprovinces, quantifying its influence and analyzing regional disparities. We\nintroduce a novel causal small area estimation (CSAE) framework that integrates\nglobal and local estimation strategies for heterogeneous treatment effect\nestimation, effectively addressing data sparsity at the provincial level.\nFurthermore, we develop a general bootstrap scheme to construct reliable\nconfidence intervals, applicable regardless of the method used for estimating\nnuisance parameters. Extensive simulation studies demonstrate that our proposed\nestimators outperform classical causal inference methods in terms of stability\nwhile maintaining computational scalability for large datasets. Applying this\nmethodology to real-world data, we uncover significant relationships between\njob stability and poverty across six Italian regions, offering critical\ninsights into regional disparities and their implications for evidence-based\npolicy design.",
+      "pdf_url": "http://arxiv.org/pdf/2502.12376v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.12376v1",
+      "published": "2025-02-17",
+      "categories": [
+        "stat.AP",
+        "62P20, 62F40, 62D20, 62D05"
+      ]
+    },
     {
       "title": "Unifying Explainable Anomaly Detection and Root Cause Analysis in Dynamical Systems",
       "authors": [
@@ -107,62 +166,6 @@
       "categories": [
         "stat.ME",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Do Large Language Models Reason Causally Like Us? Even Better?",
-      "authors": [
-        "Hanna M. Dettki",
-        "Brenden M. Lake",
-        "Charley M. Wu",
-        "Bob Rehder"
-      ],
-      "abstract": "Causal reasoning is a core component of intelligence. Large language models\n(LLMs) have shown impressive capabilities in generating human-like text,\nraising questions about whether their responses reflect true understanding or\nstatistical patterns. We compared causal reasoning in humans and four LLMs\nusing tasks based on collider graphs, rating the likelihood of a query variable\noccurring given evidence from other variables. We find that LLMs reason\ncausally along a spectrum from human-like to normative inference, with\nalignment shifting based on model, context, and task. Overall, GPT-4o and\nClaude showed the most normative behavior, including \"explaining away\", whereas\nGemini-Pro and GPT-3.5 did not. Although all agents deviated from the expected\nindependence of causes - Claude the least - they exhibited strong associative\nreasoning and predictive inference when assessing the likelihood of the effect\ngiven its causes. These findings underscore the need to assess AI biases as\nthey increasingly assist human decision-making.",
-      "pdf_url": "http://arxiv.org/pdf/2502.10215v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.10215v1",
-      "published": "2025-02-14",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Information Prioritization for Efficient Reinforcement Learning",
-      "authors": [
-        "Hongye Cao",
-        "Fan Feng",
-        "Tianpei Yang",
-        "Jing Huo",
-        "Yang Gao"
-      ],
-      "abstract": "Current Reinforcement Learning (RL) methods often suffer from\nsample-inefficiency, resulting from blind exploration strategies that neglect\ncausal relationships among states, actions, and rewards. Although recent causal\napproaches aim to address this problem, they lack grounded modeling of\nreward-guided causal understanding of states and actions for goal-orientation,\nthus impairing learning efficiency. To tackle this issue, we propose a novel\nmethod named Causal Information Prioritization (CIP) that improves sample\nefficiency by leveraging factored MDPs to infer causal relationships between\ndifferent dimensions of states and actions with respect to rewards, enabling\nthe prioritization of causal information. Specifically, CIP identifies and\nleverages causal relationships between states and rewards to execute\ncounterfactual data augmentation to prioritize high-impact state features under\nthe causal understanding of the environments. Moreover, CIP integrates a\ncausality-aware empowerment learning objective, which significantly enhances\nthe agent's execution of reward-guided actions for more efficient exploration\nin complex environments. To fully assess the effectiveness of CIP, we conduct\nextensive experiments across 39 tasks in 5 diverse continuous control\nenvironments, encompassing both locomotion and manipulation skills learning\nwith pixel-based and sparse reward settings. Experimental results demonstrate\nthat CIP consistently outperforms existing RL methods across a wide range of\nscenarios.",
-      "pdf_url": "http://arxiv.org/pdf/2502.10097v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.10097v1",
-      "published": "2025-02-14",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Object-Centric Latent Action Learning",
-      "authors": [
-        "Albina Klepach",
-        "Alexander Nikulin",
-        "Ilya Zisman",
-        "Denis Tarasov",
-        "Alexander Derevyagin",
-        "Andrei Polubarov",
-        "Nikita Lyubaykin",
-        "Vladislav Kurenkov"
-      ],
-      "abstract": "Leveraging vast amounts of internet video data for Embodied AI is currently\nbottle-necked by the lack of action annotations and the presence of\naction-correlated distractors. We propose a novel object-centric latent action\nlearning approach, based on VideoSaur and LAPO, that employs self-supervised\ndecomposition of scenes into object representations and annotates video data\nwith proxy-action labels. This method effectively disentangles causal\nagent-object interactions from irrelevant background noise and reduces the\nperformance degradation of latent action learning approaches caused by\ndistractors. Our preliminary experiments with the Distracting Control Suite\nshow that latent action pretraining based on object decompositions improve the\nquality of inferred latent actions by x2.7 and efficiency of downstream\nfine-tuning with a small set of labeled actions, increasing return by x2.6 on\naverage.",
-      "pdf_url": "http://arxiv.org/pdf/2502.09680v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.09680v1",
-      "published": "2025-02-13",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
       ]
     }
   ]
