@@ -1,6 +1,55 @@
 {
-  "last_updated": "2025-02-21T00:46:00.243522",
+  "last_updated": "2025-02-22T00:43:51.194943",
   "papers": [
+    {
+      "title": "Internal Incoherency Scores for Constraint-based Causal Discovery Algorithms",
+      "authors": [
+        "Sofia Faltenbacher",
+        "Jonas Wahl",
+        "Rebecca Herman",
+        "Jakob Runge"
+      ],
+      "abstract": "Causal discovery aims to infer causal graphs from observational or\nexperimental data. Methods such as the popular PC algorithm are based on\nconditional independence testing and utilize enabling assumptions, such as the\nfaithfulness assumption, for their inferences. In practice, these assumptions,\nas well as the functional assumptions inherited from the chosen conditional\nindependence test, are typically taken as a given and not further tested for\ntheir validity on the data. In this work, we propose internal coherency scores\nthat allow testing for assumption violations and finite sample errors, whenever\ndetectable without requiring ground truth or further statistical tests. We\nprovide a complete classification of erroneous results, including a distinction\nbetween detectable and undetectable errors, and prove that the detectable\nerroneous results can be measured by our scores. We illustrate our coherency\nscores on the PC algorithm with simulated and real-world datasets, and envision\nthat testing for internal coherency can become a standard tool in applying\nconstraint-based methods, much like a suite of tests is used to validate the\nassumptions of classical regression analysis.",
+      "pdf_url": "http://arxiv.org/pdf/2502.14719v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.14719v1",
+      "published": "2025-02-20",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Outlier Detection in Mendelian Randomisation",
+      "authors": [
+        "Maximilian M Mandl",
+        "Anne-Laure Boulesteix",
+        "Stephen Burgess",
+        "Verena Zuber"
+      ],
+      "abstract": "Mendelian Randomisation (MR) uses genetic variants as instrumental variables\nto infer causal effects of exposures on an outcome. One key assumption of MR is\nthat the genetic variants used as instrumental variables are independent of the\noutcome conditional on the risk factor and unobserved confounders. Violations\nof this assumption, i.e. the effect of the instrumental variables on the\noutcome through a path other than the risk factor included in the model (which\ncan be caused by pleiotropy), are common phenomena in human genetics. Genetic\nvariants, which deviate from this assumption, appear as outliers to the MR\nmodel fit and can be detected by the general heterogeneity statistics proposed\nin the literature, which are known to suffer from overdispersion, i.e. too many\ngenetic variants are declared as false outliers. We propose a method that\ncorrects for overdispersion of the heterogeneity statistics in uni- and\nmultivariable MR analysis by making use of the estimated inflation factor to\ncorrectly remove outlying instruments and therefore account for pleiotropic\neffects. Our method is applicable to summary-level data.",
+      "pdf_url": "http://arxiv.org/pdf/2502.14716v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.14716v1",
+      "published": "2025-02-20",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Optimal word order for non-causal text generation with Large Language Models: the Spanish case",
+      "authors": [
+        "Andrea Busto-Castiñeira",
+        "Silvia García-Méndez",
+        "Francisco de Arriba-Pérez",
+        "Francisco J. González-Castaño"
+      ],
+      "abstract": "Natural Language Generation (NLG) popularity has increased owing to the\nprogress in Large Language Models (LLMs), with zero-shot inference\ncapabilities. However, most neural systems utilize decoder-only causal\n(unidirectional) transformer models, which are effective for English but may\nreduce the richness of languages with less strict word order, subject omission,\nor different relative clause attachment preferences. This is the first work\nthat analytically addresses optimal text generation order for non-causal\nlanguage models. We present a novel Viterbi algorithm-based methodology for\nmaximum likelihood word order estimation. We analyze the non-causal\nmost-likelihood order probability for NLG in Spanish and, then, the probability\nof generating the same phrases with Spanish causal NLG. This comparative\nanalysis reveals that causal NLG prefers English-like SVO structures. We also\nanalyze the relationship between optimal generation order and causal\nleft-to-right generation order using Spearman's rank correlation. Our results\ndemonstrate that the ideal order predicted by the maximum likelihood estimator\nis not closely related to the causal order and may be influenced by the\nsyntactic structure of the target sentence.",
+      "pdf_url": "http://arxiv.org/pdf/2502.14451v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.14451v1",
+      "published": "2025-02-20",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "Robust Counterfactual Inference in Markov Decision Processes",
       "authors": [
@@ -119,50 +168,6 @@
       "categories": [
         "cs.LG",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Causal Inference for Qualitative Outcomes",
-      "authors": [
-        "Riccardo Di Francesco",
-        "Giovanni Mellace"
-      ],
-      "abstract": "Causal inference methods such as instrumental variables, regression\ndiscontinuity, and difference-in-differences are widely used to estimate\ntreatment effects. However, their application to qualitative outcomes poses\nfundamental challenges, as standard causal estimands are ill-defined in this\ncontext. This paper highlights these issues and introduces an alternative\nframework that focuses on well-defined and interpretable estimands that\nquantify how treatment affects the probability distribution over outcome\ncategories. We establish that standard identification assumptions are\nsufficient for identification and propose simple, intuitive estimation\nstrategies that remain fully compatible with conventional econometric methods.\nTo facilitate implementation, we provide an open-source R package,\n$\\texttt{causalQual}$, which is publicly available on GitHub.",
-      "pdf_url": "http://arxiv.org/pdf/2502.11691v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.11691v1",
-      "published": "2025-02-17",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "CounterBench: A Benchmark for Counterfactuals Reasoning in Large Language Models",
-      "authors": [
-        "Yuefei Chen",
-        "Vivek K. Singh",
-        "Jing Ma",
-        "Ruxiang Tang"
-      ],
-      "abstract": "Counterfactual reasoning is widely recognized as one of the most challenging\nand intricate aspects of causality in artificial intelligence. In this paper,\nwe evaluate the performance of large language models (LLMs) in counterfactual\nreasoning. In contrast to previous studies that primarily focus on commonsense\ncausal reasoning, where LLMs often rely on prior knowledge for inference, we\nspecifically assess their ability to perform counterfactual inference using a\nset of formal rules. To support this evaluation, we introduce a new benchmark\ndataset, CounterBench, comprising 1K counterfactual reasoning questions. The\ndataset is designed with varying levels of difficulty, diverse causal graph\nstructures, distinct types of counterfactual questions, and multiple\nnonsensical name variants. Our experiments demonstrate that counterfactual\nreasoning poses a significant challenge for LLMs, with most models performing\nat levels comparable to random guessing. To enhance LLM's counterfactual\nreasoning ability, we propose a novel reasoning paradigm, CoIn, which guides\nLLMs through iterative reasoning and backtracking to systematically explore\ncounterfactual solutions. Experimental results show that our method\nsignificantly improves LLM performance on counterfactual reasoning tasks and\nconsistently enhances performance across different LLMs.Our dataset is\navailable at https://huggingface.co/datasets/CounterBench/CounterBench.",
-      "pdf_url": "http://arxiv.org/pdf/2502.11008v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.11008v1",
-      "published": "2025-02-16",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Model-assisted inference for dynamic causal effects in staggered rollout cluster randomized experiments",
-      "authors": [
-        "Xinyuan Chen",
-        "Fan Li"
-      ],
-      "abstract": "Staggered rollout cluster randomized experiments (SR-CREs) are increasingly\nused for their practical feasibility and logistical convenience. These designs\ninvolve staggered treatment adoption across clusters, requiring analysis\nmethods that account for an exhaustive class of dynamic causal effects,\nanticipation, and non-ignorable cluster-period sizes. Without imposing outcome\nmodeling assumptions, we study regression estimators using individual data,\ncluster-period averages, and scaled cluster-period totals, with and without\ncovariate adjustment from a design-based perspective, where only the treatment\nadoption time is random. We establish consistency and asymptotic normality of\neach regression estimator under a finite-population framework and formally\nprove that the associated variance estimators are asymptotically conservative\nin the Lowner ordering. Furthermore, we conduct a unified efficiency comparison\nof the estimators and provide practical recommendations. We highlight the\nefficiency advantage of using estimators based on scaled cluster-period totals\nwith covariate adjustment over their counterparts using individual-level data\nand cluster-period averages. Our results rigorously justify linear regression\nestimators as model-assisted methods to address an entire class of dynamic\ncausal effects in SR-CREs and significantly expand those developed for\nparallel-arm CREs by Su and Ding (JRSSB, 2021) to accommodate a wider class of\ncomplex experimental settings with staggered randomization.",
-      "pdf_url": "http://arxiv.org/pdf/2502.10939v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.10939v1",
-      "published": "2025-02-16",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
