@@ -1,6 +1,64 @@
 {
-  "last_updated": "2025-02-24T00:48:01.319257",
+  "last_updated": "2025-02-25T00:46:47.195743",
   "papers": [
+    {
+      "title": "Predicting gene essentiality and drug response from perturbation screens in preclinical cancer models with LEAP: Layered Ensemble of Autoencoders and Predictors",
+      "authors": [
+        "Barbara Bodinier",
+        "Gaetan Dissez",
+        "Linus Bleistein",
+        "Antonin Dauvin"
+      ],
+      "abstract": "Preclinical perturbation screens, where the effects of genetic, chemical, or\nenvironmental perturbations are systematically tested on disease models, hold\nsignificant promise for machine learning-enhanced drug discovery due to their\nscale and causal nature. Predictive models can infer perturbation responses for\npreviously untested disease models based on molecular profiles. These in silico\nlabels can expand databases and guide experimental prioritization.\n  However, modelling perturbation-specific effects and generating robust\nprediction performances across diverse biological contexts remain elusive. We\nintroduce LEAP (Layered Ensemble of Autoencoders and Predictors), a novel\nensemble framework to improve robustness and generalization. LEAP leverages\nmultiple DAMAE (Data Augmented Masked Autoencoder) representations and LASSO\nregressors. By combining diverse gene expression representation models learned\nfrom different random initializations, LEAP consistently outperforms\nstate-of-the-art approaches in predicting gene essentiality or drug responses\nin unseen cell lines, tissues and disease models. Notably, our results show\nthat ensembling representation models, rather than prediction models alone,\nyields superior predictive performance.\n  Beyond its performance gains, LEAP is computationally efficient, requires\nminimal hyperparameter tuning and can therefore be readily incorporated into\ndrug discovery pipelines to prioritize promising targets and support\nbiomarker-driven stratification. The code and datasets used in this work are\nmade publicly available.",
+      "pdf_url": "http://arxiv.org/pdf/2502.15646v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.15646v1",
+      "published": "2025-02-21",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "EigenShield: Causal Subspace Filtering via Random Matrix Theory for Adversarially Robust Vision-Language Models",
+      "authors": [
+        "Nastaran Darabi",
+        "Devashri Naik",
+        "Sina Tayebati",
+        "Dinithi Jayasuriya",
+        "Ranganath Krishnan",
+        "Amit Ranjan Trivedi"
+      ],
+      "abstract": "Vision-Language Models (VLMs) inherit adversarial vulnerabilities of Large\nLanguage Models (LLMs), which are further exacerbated by their multimodal\nnature. Existing defenses, including adversarial training, input\ntransformations, and heuristic detection, are computationally expensive,\narchitecture-dependent, and fragile against adaptive attacks. We introduce\nEigenShield, an inference-time defense leveraging Random Matrix Theory to\nquantify adversarial disruptions in high-dimensional VLM representations.\nUnlike prior methods that rely on empirical heuristics, EigenShield employs the\nspiked covariance model to detect structured spectral deviations. Using a\nRobustness-based Nonconformity Score (RbNS) and quantile-based thresholding, it\nseparates causal eigenvectors, which encode semantic information, from\ncorrelational eigenvectors that are susceptible to adversarial artifacts. By\nprojecting embeddings onto the causal subspace, EigenShield filters adversarial\nnoise without modifying model parameters or requiring adversarial training.\nThis architecture-independent, attack-agnostic approach significantly reduces\nthe attack success rate, establishing spectral analysis as a principled\nalternative to conventional defenses. Our results demonstrate that EigenShield\nconsistently outperforms all existing defenses, including adversarial training,\nUNIGUARD, and CIDER.",
+      "pdf_url": "http://arxiv.org/pdf/2502.14976v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.14976v1",
+      "published": "2025-02-20",
+      "categories": [
+        "cs.LG",
+        "cs.CR",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Symmetric observations without symmetric causal explanations",
+      "authors": [
+        "Christian William",
+        "Patrick Remy",
+        "Jean-Daniel Bancal",
+        "Yu Cai",
+        "Nicolas Brunner",
+        "Alejandro Pozas-Kerstjens"
+      ],
+      "abstract": "Inferring causal models from observed correlations is a challenging task,\ncrucial to many areas of science. In order to alleviate the effort, it is\nimportant to know whether symmetries in the observations correspond to\nsymmetries in the underlying realization. Via an explicit example, we answer\nthis question in the negative. We use a tripartite probability distribution\nover binary events that is realized by using three (different) independent\nsources of classical randomness. We prove that even removing the condition that\nthe sources distribute systems described by classical physics, the requirements\nthat i) the sources distribute the same physical systems, ii) these physical\nsystems respect relativistic causality, and iii) the correlations are the\nobserved ones, are incompatible.",
+      "pdf_url": "http://arxiv.org/pdf/2502.14950v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.14950v1",
+      "published": "2025-02-20",
+      "categories": [
+        "quant-ph",
+        "cs.LG",
+        "math.ST",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
     {
       "title": "Internal Incoherency Scores for Constraint-based Causal Discovery Algorithms",
       "authors": [
@@ -108,66 +166,6 @@
       "published": "2025-02-18",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Time Series Treatment Effects Analysis with Always-Missing Controls",
-      "authors": [
-        "Juan Shu",
-        "Qiyu Han",
-        "George Chen",
-        "Xihao Cao",
-        "Kangming Luo",
-        "Dan Pallotta",
-        "Shivam Agrawal",
-        "Yuping Lu",
-        "Xiaoyu Zhang",
-        "Jawad Mansoor",
-        "Jyoti Anand"
-      ],
-      "abstract": "Estimating treatment effects in time series data presents a significant\nchallenge, especially when the control group is always unobservable. For\nexample, in analyzing the effects of Christmas on retail sales, we lack direct\nobservation of what would have occurred in late December without the Christmas\nimpact. To address this, we try to recover the control group in the event\nperiod while accounting for confounders and temporal dependencies. Experimental\nresults on the M5 Walmart retail sales data demonstrate robust estimation of\nthe potential outcome of the control group as well as accurate predicted\nholiday effect. Furthermore, we provided theoretical guarantees for the\nestimated treatment effect, proving its consistency and asymptotic normality.\nThe proposed methodology is applicable not only to this always-missing control\nscenario but also in other conventional time series causal inference settings.",
-      "pdf_url": "http://arxiv.org/pdf/2502.12393v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.12393v1",
-      "published": "2025-02-18",
-      "categories": [
-        "stat.ME",
-        "cs.AI",
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "The impact of job stability on monetary poverty in Italy: causal small area estimation",
-      "authors": [
-        "Katarzyna Reluga",
-        "Dehan Kong",
-        "Setareh Ranjbar",
-        "Nicola Salvati",
-        "Mark van der Laan"
-      ],
-      "abstract": "Job stability - encompassing secure contracts, adequate wages, social\nbenefits, and career opportunities - is a critical determinant in reducing\nmonetary poverty, as it provides households with reliable income and enhances\neconomic well-being. This study leverages EU-SILC survey and census data to\nestimate the causal effect of job stability on monetary poverty across Italian\nprovinces, quantifying its influence and analyzing regional disparities. We\nintroduce a novel causal small area estimation (CSAE) framework that integrates\nglobal and local estimation strategies for heterogeneous treatment effect\nestimation, effectively addressing data sparsity at the provincial level.\nFurthermore, we develop a general bootstrap scheme to construct reliable\nconfidence intervals, applicable regardless of the method used for estimating\nnuisance parameters. Extensive simulation studies demonstrate that our proposed\nestimators outperform classical causal inference methods in terms of stability\nwhile maintaining computational scalability for large datasets. Applying this\nmethodology to real-world data, we uncover significant relationships between\njob stability and poverty across six Italian regions, offering critical\ninsights into regional disparities and their implications for evidence-based\npolicy design.",
-      "pdf_url": "http://arxiv.org/pdf/2502.12376v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.12376v1",
-      "published": "2025-02-17",
-      "categories": [
-        "stat.AP",
-        "62P20, 62F40, 62D20, 62D05"
-      ]
-    },
-    {
-      "title": "Unifying Explainable Anomaly Detection and Root Cause Analysis in Dynamical Systems",
-      "authors": [
-        "Yue Sun",
-        "Rick S. Blum",
-        "Parv Venkitasubramaniam"
-      ],
-      "abstract": "Dynamical systems, prevalent in various scientific and engineering domains,\nare susceptible to anomalies that can significantly impact their performance\nand reliability. This paper addresses the critical challenges of anomaly\ndetection, root cause localization, and anomaly type classification in\ndynamical systems governed by ordinary differential equations (ODEs). We define\ntwo categories of anomalies: cyber anomalies, which propagate through\ninterconnected variables, and measurement anomalies, which remain localized to\nindividual variables. To address these challenges, we propose the Interpretable\nCausality Ordinary Differential Equation (ICODE) Networks, a model-intrinsic\nexplainable learning framework. ICODE leverages Neural ODEs for anomaly\ndetection while employing causality inference through an explanation channel to\nperform root cause analysis (RCA), elucidating why specific time periods are\nflagged as anomalous. ICODE is designed to simultaneously perform anomaly\ndetection, RCA, and anomaly type classification within a single, interpretable\nframework. Our approach is grounded in the hypothesis that anomalies alter the\nunderlying ODEs of the system, manifesting as changes in causal relationships\nbetween variables. We provide a theoretical analysis of how perturbations in\nlearned model parameters can be utilized to identify anomalies and their root\ncauses in time series data. Comprehensive experimental evaluations demonstrate\nthe efficacy of ICODE across various dynamical systems, showcasing its ability\nto accurately detect anomalies, classify their types, and pinpoint their\norigins.",
-      "pdf_url": "http://arxiv.org/pdf/2502.12086v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.12086v1",
-      "published": "2025-02-17",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
       ]
     }
   ]
