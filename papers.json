@@ -1,6 +1,116 @@
 {
-  "last_updated": "2025-02-25T00:46:47.195743",
+  "last_updated": "2025-02-26T00:46:16.453546",
   "papers": [
+    {
+      "title": "Joint Value Estimation and Bidding in Repeated First-Price Auctions",
+      "authors": [
+        "Yuxiao Wen",
+        "Yanjun Han",
+        "Zhengyuan Zhou"
+      ],
+      "abstract": "We study regret minimization in repeated first-price auctions (FPAs), where a\nbidder observes only the realized outcome after each auction -- win or loss.\nThis setup reflects practical scenarios in online display advertising where the\nactual value of an impression depends on the difference between two potential\noutcomes, such as clicks or conversion rates, when the auction is won versus\nlost. We analyze three outcome models: (1) adversarial outcomes without\nfeatures, (2) linear potential outcomes with features, and (3) linear treatment\neffects in features. For each setting, we propose algorithms that jointly\nestimate private values and optimize bidding strategies, achieving near-optimal\nregret bounds. Notably, our framework enjoys a unique feature that the\ntreatments are also actively chosen, and hence eliminates the need for the\noverlap condition commonly required in causal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2502.17292v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.17292v1",
+      "published": "2025-02-24",
+      "categories": [
+        "cs.LG",
+        "cs.GT",
+        "cs.IT",
+        "math.IT",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Teleology-Driven Affective Computing: A Causal Framework for Sustained Well-Being",
+      "authors": [
+        "Bin Yin",
+        "Chong-Yi Liu",
+        "Liya Fu",
+        "Jinkun Zhang"
+      ],
+      "abstract": "Affective computing has made significant strides in emotion recognition and\ngeneration, yet current approaches mainly focus on short-term pattern\nrecognition and lack a comprehensive framework to guide affective agents toward\nlong-term human well-being. To address this, we propose a teleology-driven\naffective computing framework that unifies major emotion theories (basic\nemotion, appraisal, and constructivist approaches) under the premise that\naffect is an adaptive, goal-directed process that facilitates survival and\ndevelopment. Our framework emphasizes aligning agent responses with both\npersonal/individual and group/collective well-being over extended timescales.\nWe advocate for creating a \"dataverse\" of personal affective events, capturing\nthe interplay between beliefs, goals, actions, and outcomes through real-world\nexperience sampling and immersive virtual reality. By leveraging causal\nmodeling, this \"dataverse\" enables AI systems to infer individuals' unique\naffective concerns and provide tailored interventions for sustained well-being.\nAdditionally, we introduce a meta-reinforcement learning paradigm to train\nagents in simulated environments, allowing them to adapt to evolving affective\nconcerns and balance hierarchical goals - from immediate emotional needs to\nlong-term self-actualization. This framework shifts the focus from statistical\ncorrelations to causal reasoning, enhancing agents' ability to predict and\nrespond proactively to emotional challenges, and offers a foundation for\ndeveloping personalized, ethically aligned affective systems that promote\nmeaningful human-AI interactions and societal well-being.",
+      "pdf_url": "http://arxiv.org/pdf/2502.17172v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.17172v1",
+      "published": "2025-02-24",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "H.1.2, J.4",
+        "H.1.2; J.4"
+      ]
+    },
+    {
+      "title": "A tutorial on optimal dynamic treatment regimes",
+      "authors": [
+        "Chunyu Wang",
+        "Brian DM Tom"
+      ],
+      "abstract": "A dynamic treatment regime is a sequence of treatment decision rules tailored\nto an individual's evolving status over time. In precision medicine, much focus\nhas been placed on finding an optimal dynamic treatment regime which, if\nfollowed by everyone in the population, would yield the best outcome on\naverage; and extensive investigation has been conducted from both\nmethodological and applications standpoints. The aim of this tutorial is to\nprovide readers who are interested in optimal dynamic treatment regimes with a\nsystematic, detailed but accessible introduction, including the formal\ndefinition and formulation of this topic within the framework of causal\ninference, identification assumptions required to link the causal quantity of\ninterest to the observed data, existing statistical models and estimation\nmethods to learn the optimal regime from data, and application of these methods\nto both simulated and real data.",
+      "pdf_url": "http://arxiv.org/pdf/2502.16988v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.16988v1",
+      "published": "2025-02-24",
+      "categories": [
+        "stat.OT",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Time Series Domain Adaptation via Latent Invariant Causal Mechanism",
+      "authors": [
+        "Ruichu Cai",
+        "Junxian Huang",
+        "Zhenhui Yang",
+        "Zijian Li",
+        "Emadeldeen Eldele",
+        "Min Wu",
+        "Fuchun Sun"
+      ],
+      "abstract": "Time series domain adaptation aims to transfer the complex temporal\ndependence from the labeled source domain to the unlabeled target domain.\nRecent advances leverage the stable causal mechanism over observed variables to\nmodel the domain-invariant temporal dependence. However, modeling precise\ncausal structures in high-dimensional data, such as videos, remains\nchallenging. Additionally, direct causal edges may not exist among observed\nvariables (e.g., pixels). These limitations hinder the applicability of\nexisting approaches to real-world scenarios. To address these challenges, we\nfind that the high-dimension time series data are generated from the\nlow-dimension latent variables, which motivates us to model the causal\nmechanisms of the temporal latent process. Based on this intuition, we propose\na latent causal mechanism identification framework that guarantees the\nuniqueness of the reconstructed latent causal structures. Specifically, we\nfirst identify latent variables by utilizing sufficient changes in historical\ninformation. Moreover, by enforcing the sparsity of the relationships of latent\nvariables, we can achieve identifiable latent causal structures. Built on the\ntheoretical results, we develop the Latent Causality Alignment (LCA) model that\nleverages variational inference, which incorporates an intra-domain latent\nsparsity constraint for latent structure reconstruction and an inter-domain\nlatent sparsity constraint for domain-invariant structure reconstruction.\nExperiment results on eight benchmarks show a general improvement in the\ndomain-adaptive time series classification and forecasting tasks, highlighting\nthe effectiveness of our method in real-world scenarios. Codes are available at\nhttps://github.com/DMIRLAB-Group/LCA.",
+      "pdf_url": "http://arxiv.org/pdf/2502.16637v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.16637v1",
+      "published": "2025-02-23",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Linear Attention for Efficient Bidirectional Sequence Modeling",
+      "authors": [
+        "Arshia Afzal",
+        "Elias Abad Rocamora",
+        "Leyla Naz Candogan",
+        "Pol Puigdemont",
+        "Francesco Tonin",
+        "Yongtao Wu",
+        "Mahsa Shoaran",
+        "Volkan Cevher"
+      ],
+      "abstract": "Transformers with linear attention enable fast and parallel training.\nMoreover, they can be formulated as Recurrent Neural Networks (RNNs), for\nefficient linear-time inference. While extensively evaluated in causal sequence\nmodeling, they have yet to be extended to the bidirectional setting. This work\nintroduces the LION framework, establishing new theoretical foundations for\nlinear transformers in bidirectional sequence modeling. LION constructs a\nbidirectional RNN equivalent to full Linear Attention. This extends the\nbenefits of linear transformers: parallel training, and efficient inference,\ninto the bidirectional setting. Using LION, we cast three linear transformers\nto their bidirectional form: LION-LIT, the bidirectional variant corresponding\nto (Katharopoulos et al., 2020); LION-D, extending RetNet (Sun et al., 2023);\nand LION-S, a linear transformer with a stable selective mask inspired by\nselectivity of SSMs (Dao & Gu, 2024). Replacing the attention block with LION\n(-LIT, -D, -S) achieves performance on bidirectional tasks that approaches that\nof Transformers and State-Space Models (SSMs), while delivering significant\nimprovements in training speed. Our implementation is available in\nhttp://github.com/LIONS-EPFL/LION.",
+      "pdf_url": "http://arxiv.org/pdf/2502.16249v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.16249v1",
+      "published": "2025-02-22",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Practical programming research of Linear DML model based on the simplest Python code: From the standpoint of novice researchers",
+      "authors": [
+        "Shunxin Yao"
+      ],
+      "abstract": "This paper presents linear DML models for causal inference using the simplest\nPython code on a Jupyter notebook based on an Anaconda platform and compares\nthe performance of different DML models. The results show that current Library\nAPI technology is not yet sufficient to enable novice Python users to build\nqualified and high-quality DML models with the simplest coding approach. Novice\nusers attempting to perform DML causal inference using Python still have to\nimprove their mathematical and computer knowledge to adapt to more flexible DML\nprogramming. Additionally, the issue of mismatched outcome variable dimensions\nis also widespread when building linear DML models in Jupyter notebook.",
+      "pdf_url": "http://arxiv.org/pdf/2502.16172v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.16172v1",
+      "published": "2025-02-22",
+      "categories": [
+        "cs.SE",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Predicting gene essentiality and drug response from perturbation screens in preclinical cancer models with LEAP: Layered Ensemble of Autoencoders and Predictors",
       "authors": [
@@ -74,98 +184,6 @@
       "categories": [
         "stat.ML",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Outlier Detection in Mendelian Randomisation",
-      "authors": [
-        "Maximilian M Mandl",
-        "Anne-Laure Boulesteix",
-        "Stephen Burgess",
-        "Verena Zuber"
-      ],
-      "abstract": "Mendelian Randomisation (MR) uses genetic variants as instrumental variables\nto infer causal effects of exposures on an outcome. One key assumption of MR is\nthat the genetic variants used as instrumental variables are independent of the\noutcome conditional on the risk factor and unobserved confounders. Violations\nof this assumption, i.e. the effect of the instrumental variables on the\noutcome through a path other than the risk factor included in the model (which\ncan be caused by pleiotropy), are common phenomena in human genetics. Genetic\nvariants, which deviate from this assumption, appear as outliers to the MR\nmodel fit and can be detected by the general heterogeneity statistics proposed\nin the literature, which are known to suffer from overdispersion, i.e. too many\ngenetic variants are declared as false outliers. We propose a method that\ncorrects for overdispersion of the heterogeneity statistics in uni- and\nmultivariable MR analysis by making use of the estimated inflation factor to\ncorrectly remove outlying instruments and therefore account for pleiotropic\neffects. Our method is applicable to summary-level data.",
-      "pdf_url": "http://arxiv.org/pdf/2502.14716v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.14716v1",
-      "published": "2025-02-20",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Optimal word order for non-causal text generation with Large Language Models: the Spanish case",
-      "authors": [
-        "Andrea Busto-Castiñeira",
-        "Silvia García-Méndez",
-        "Francisco de Arriba-Pérez",
-        "Francisco J. González-Castaño"
-      ],
-      "abstract": "Natural Language Generation (NLG) popularity has increased owing to the\nprogress in Large Language Models (LLMs), with zero-shot inference\ncapabilities. However, most neural systems utilize decoder-only causal\n(unidirectional) transformer models, which are effective for English but may\nreduce the richness of languages with less strict word order, subject omission,\nor different relative clause attachment preferences. This is the first work\nthat analytically addresses optimal text generation order for non-causal\nlanguage models. We present a novel Viterbi algorithm-based methodology for\nmaximum likelihood word order estimation. We analyze the non-causal\nmost-likelihood order probability for NLG in Spanish and, then, the probability\nof generating the same phrases with Spanish causal NLG. This comparative\nanalysis reveals that causal NLG prefers English-like SVO structures. We also\nanalyze the relationship between optimal generation order and causal\nleft-to-right generation order using Spearman's rank correlation. Our results\ndemonstrate that the ideal order predicted by the maximum likelihood estimator\nis not closely related to the causal order and may be influenced by the\nsyntactic structure of the target sentence.",
-      "pdf_url": "http://arxiv.org/pdf/2502.14451v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.14451v1",
-      "published": "2025-02-20",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Robust Counterfactual Inference in Markov Decision Processes",
-      "authors": [
-        "Jessica Lally",
-        "Milad Kazemi",
-        "Nicola Paoletti"
-      ],
-      "abstract": "This paper addresses a key limitation in existing counterfactual inference\nmethods for Markov Decision Processes (MDPs). Current approaches assume a\nspecific causal model to make counterfactuals identifiable. However, there are\nusually many causal models that align with the observational and interventional\ndistributions of an MDP, each yielding different counterfactual distributions,\nso fixing a particular causal model limits the validity (and usefulness) of\ncounterfactual inference. We propose a novel non-parametric approach that\ncomputes tight bounds on counterfactual transition probabilities across all\ncompatible causal models. Unlike previous methods that require solving\nprohibitively large optimisation problems (with variables that grow\nexponentially in the size of the MDP), our approach provides closed-form\nexpressions for these bounds, making computation highly efficient and scalable\nfor non-trivial MDPs. Once such an interval counterfactual MDP is constructed,\nour method identifies robust counterfactual policies that optimise the\nworst-case reward w.r.t. the uncertain interval MDP probabilities. We evaluate\nour method on various case studies, demonstrating improved robustness over\nexisting methods.",
-      "pdf_url": "http://arxiv.org/pdf/2502.13731v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.13731v1",
-      "published": "2025-02-19",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Distal Causal Excursion Effects: Modeling Long-Term Effects of Time-Varying Treatments in Micro-Randomized Trials",
-      "authors": [
-        "Tianchen Qian"
-      ],
-      "abstract": "Micro-randomized trials (MRTs) play a crucial role in optimizing digital\ninterventions. In an MRT, each participant is sequentially randomized among\ntreatment options hundreds of times. While the interventions tested in MRTs\ntarget short-term behavioral responses (proximal outcomes), their ultimate goal\nis to drive long-term behavior change (distal outcomes). However, existing\ncausal inference methods, such as the causal excursion effect, are limited to\nproximal outcomes, making it challenging to quantify the long-term impact of\ninterventions. To address this gap, we introduce the distal causal excursion\neffect (DCEE), a novel estimand that quantifies the long-term effect of\ntime-varying treatments. The DCEE contrasts distal outcomes under two excursion\npolicies while marginalizing over most treatment assignments, enabling a\nparsimonious and interpretable causal model even with a large number of\ndecision points. We propose two estimators for the DCEE -- one with\ncross-fitting and one without -- both robust to misspecification of the outcome\nmodel. We establish their asymptotic properties and validate their performance\nthrough simulations. We apply our method to the HeartSteps MRT to assess the\nimpact of activity prompts on long-term habit formation. Our findings suggest\nthat prompts delivered earlier in the study have a stronger long-term effect\nthan those delivered later, underscoring the importance of intervention timing\nin behavior change. This work provides the critically needed toolkit for\nscientists working on digital interventions to assess long-term causal effects\nusing MRT data.",
-      "pdf_url": "http://arxiv.org/pdf/2502.13500v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.13500v1",
-      "published": "2025-02-19",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Robust Inference for the Direct Average Treatment Effect with Treatment Assignment Interference",
-      "authors": [
-        "Matias D. Cattaneo",
-        "Yihan He",
-        "Ruiqi",
-        "Yu"
-      ],
-      "abstract": "Uncertainty quantification in causal inference settings with random network\ninterference is a challenging open problem. We study the large sample\ndistributional properties of the classical difference-in-means Hajek treatment\neffect estimator, and propose a robust inference procedure for the\n(conditional) direct average treatment effect, allowing for cross-unit\ninterference in both the outcome and treatment equations. Leveraging ideas from\nstatistical physics, we introduce a novel Ising model capturing interference in\nthe treatment assignment, and then obtain three main results. First, we\nestablish a Berry-Esseen distributional approximation pointwise in the degree\nof interference generated by the Ising model. Our distributional approximation\nrecovers known results in the literature under no-interference in treatment\nassignment, and also highlights a fundamental fragility of inference procedures\ndeveloped using such a pointwise approximation. Second, we establish a uniform\ndistributional approximation for the Hajek estimator, and develop robust\ninference procedures that remain valid regardless of the unknown degree of\ninterference in the Ising model. Third, we propose a novel resampling method\nfor implementation of robust inference procedure. A key technical innovation\nunderlying our work is a new \\textit{De-Finetti Machine} that facilitates\nconditional i.i.d. Gaussianization, a technique that may be of independent\ninterest in other settings.",
-      "pdf_url": "http://arxiv.org/pdf/2502.13238v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.13238v1",
-      "published": "2025-02-18",
-      "categories": [
-        "stat.ME",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Robust Disentangled Counterfactual Learning for Physical Audiovisual Commonsense Reasoning",
-      "authors": [
-        "Mengshi Qi",
-        "Changsheng Lv",
-        "Huadong Ma"
-      ],
-      "abstract": "In this paper, we propose a new Robust Disentangled Counterfactual Learning\n(RDCL) approach for physical audiovisual commonsense reasoning. The task aims\nto infer objects' physics commonsense based on both video and audio input, with\nthe main challenge being how to imitate the reasoning ability of humans, even\nunder the scenario of missing modalities. Most of the current methods fail to\ntake full advantage of different characteristics in multi-modal data, and\nlacking causal reasoning ability in models impedes the progress of implicit\nphysical knowledge inferring. To address these issues, our proposed RDCL method\ndecouples videos into static (time-invariant) and dynamic (time-varying)\nfactors in the latent space by the disentangled sequential encoder, which\nadopts a variational autoencoder (VAE) to maximize the mutual information with\na contrastive loss function. Furthermore, we introduce a counterfactual\nlearning module to augment the model's reasoning ability by modeling physical\nknowledge relationships among different objects under counterfactual\nintervention. To alleviate the incomplete modality data issue, we introduce a\nrobust multimodal learning method to recover the missing data by decomposing\nthe shared features and model-specific features. Our proposed method is a\nplug-and-play module that can be incorporated into any baseline including VLMs.\nIn experiments, we show that our proposed method improves the reasoning\naccuracy and robustness of baseline methods and achieves the state-of-the-art\nperformance.",
-      "pdf_url": "http://arxiv.org/pdf/2502.12425v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.12425v1",
-      "published": "2025-02-18",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
