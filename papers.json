@@ -1,6 +1,49 @@
 {
-  "last_updated": "2025-02-26T00:46:16.453546",
+  "last_updated": "2025-02-27T00:46:40.359812",
   "papers": [
+    {
+      "title": "Enhancing DNA Foundation Models to Address Masking Inefficiencies",
+      "authors": [
+        "Monireh Safari",
+        "Pablo Millan Arias",
+        "Scott C. Lowe",
+        "Lila Kari",
+        "Angel X. Chang",
+        "Graham W. Taylor"
+      ],
+      "abstract": "Masked language modelling (MLM) as a pretraining objective has been widely\nadopted in genomic sequence modelling. While pretrained models can successfully\nserve as encoders for various downstream tasks, the distribution shift between\npretraining and inference detrimentally impacts performance, as the pretraining\ntask is to map [MASK] tokens to predictions, yet the [MASK] is absent during\ndownstream applications. This means the encoder does not prioritize its\nencodings of non-[MASK] tokens, and expends parameters and compute on work only\nrelevant to the MLM task, despite this being irrelevant at deployment time. In\nthis work, we propose a modified encoder-decoder architecture based on the\nmasked autoencoder framework, designed to address this inefficiency within a\nBERT-based transformer. We empirically show that the resulting mismatch is\nparticularly detrimental in genomic pipelines where models are often used for\nfeature extraction without fine-tuning. We evaluate our approach on the\nBIOSCAN-5M dataset, comprising over 2 million unique DNA barcodes. We achieve\nsubstantial performance gains in both closed-world and open-world\nclassification tasks when compared against causal models and bidirectional\narchitectures pretrained with MLM tasks.",
+      "pdf_url": "http://arxiv.org/pdf/2502.18405v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.18405v1",
+      "published": "2025-02-25",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "An Overview of Large Language Models for Statisticians",
+      "authors": [
+        "Wenlong Ji",
+        "Weizhe Yuan",
+        "Emily Getzen",
+        "Kyunghyun Cho",
+        "Michael I. Jordan",
+        "Song Mei",
+        "Jason E Weston",
+        "Weijie J. Su",
+        "Jing Xu",
+        "Linjun Zhang"
+      ],
+      "abstract": "Large Language Models (LLMs) have emerged as transformative tools in\nartificial intelligence (AI), exhibiting remarkable capabilities across diverse\ntasks such as text generation, reasoning, and decision-making. While their\nsuccess has primarily been driven by advances in computational power and deep\nlearning architectures, emerging problems -- in areas such as uncertainty\nquantification, decision-making, causal inference, and distribution shift --\nrequire a deeper engagement with the field of statistics. This paper explores\npotential areas where statisticians can make important contributions to the\ndevelopment of LLMs, particularly those that aim to engender trustworthiness\nand transparency for human users. Thus, we focus on issues such as uncertainty\nquantification, interpretability, fairness, privacy, watermarking and model\nadaptation. We also consider possible roles for LLMs in statistical analysis.\nBy bridging AI and statistics, we aim to foster a deeper collaboration that\nadvances both the theoretical foundations and practical applications of LLMs,\nultimately shaping their role in addressing complex societal challenges.",
+      "pdf_url": "http://arxiv.org/pdf/2502.17814v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.17814v1",
+      "published": "2025-02-25",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Joint Value Estimation and Bidding in Repeated First-Price Auctions",
       "authors": [
@@ -36,6 +79,8 @@
       "categories": [
         "cs.HC",
         "cs.AI",
+        "cs.CY",
+        "q-bio.NC",
         "H.1.2, J.4",
         "H.1.2; J.4"
       ]
@@ -145,45 +190,6 @@
         "cs.LG",
         "cs.CR",
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Symmetric observations without symmetric causal explanations",
-      "authors": [
-        "Christian William",
-        "Patrick Remy",
-        "Jean-Daniel Bancal",
-        "Yu Cai",
-        "Nicolas Brunner",
-        "Alejandro Pozas-Kerstjens"
-      ],
-      "abstract": "Inferring causal models from observed correlations is a challenging task,\ncrucial to many areas of science. In order to alleviate the effort, it is\nimportant to know whether symmetries in the observations correspond to\nsymmetries in the underlying realization. Via an explicit example, we answer\nthis question in the negative. We use a tripartite probability distribution\nover binary events that is realized by using three (different) independent\nsources of classical randomness. We prove that even removing the condition that\nthe sources distribute systems described by classical physics, the requirements\nthat i) the sources distribute the same physical systems, ii) these physical\nsystems respect relativistic causality, and iii) the correlations are the\nobserved ones, are incompatible.",
-      "pdf_url": "http://arxiv.org/pdf/2502.14950v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.14950v1",
-      "published": "2025-02-20",
-      "categories": [
-        "quant-ph",
-        "cs.LG",
-        "math.ST",
-        "stat.ML",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Internal Incoherency Scores for Constraint-based Causal Discovery Algorithms",
-      "authors": [
-        "Sofia Faltenbacher",
-        "Jonas Wahl",
-        "Rebecca Herman",
-        "Jakob Runge"
-      ],
-      "abstract": "Causal discovery aims to infer causal graphs from observational or\nexperimental data. Methods such as the popular PC algorithm are based on\nconditional independence testing and utilize enabling assumptions, such as the\nfaithfulness assumption, for their inferences. In practice, these assumptions,\nas well as the functional assumptions inherited from the chosen conditional\nindependence test, are typically taken as a given and not further tested for\ntheir validity on the data. In this work, we propose internal coherency scores\nthat allow testing for assumption violations and finite sample errors, whenever\ndetectable without requiring ground truth or further statistical tests. We\nprovide a complete classification of erroneous results, including a distinction\nbetween detectable and undetectable errors, and prove that the detectable\nerroneous results can be measured by our scores. We illustrate our coherency\nscores on the PC algorithm with simulated and real-world datasets, and envision\nthat testing for internal coherency can become a standard tool in applying\nconstraint-based methods, much like a suite of tests is used to validate the\nassumptions of classical regression analysis.",
-      "pdf_url": "http://arxiv.org/pdf/2502.14719v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.14719v1",
-      "published": "2025-02-20",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
       ]
     }
   ]
