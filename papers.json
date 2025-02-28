@@ -1,6 +1,58 @@
 {
-  "last_updated": "2025-02-27T00:46:40.359812",
+  "last_updated": "2025-02-28T00:46:48.896828",
   "papers": [
+    {
+      "title": "Towards a robust approach to infer causality in molecular systems satisfying detailed balance",
+      "authors": [
+        "Vittorio Del Tatto",
+        "Debarshi Banerjee",
+        "Ali Hassanali",
+        "Alessandro Laio"
+      ],
+      "abstract": "The ability to distinguish between correlation and causation of variables in\nmolecular systems remains an interesting and open area of investigation. In\nthis work, we probe causality in a molecular system using two independent\ncomputational methods that infer the causal direction through the language of\ninformation transfer. Specifically, we demonstrate that a molecular dynamics\nsimulation involving a single Tryptophan in liquid water displays asymmetric\ninformation transfer between specific collective variables, such as solute and\nsolvent coordinates. Analyzing a discrete Markov-state and Langevin dynamics on\na 2D free energy surface, we show that the same kind of asymmetries can emerge\neven in extremely simple systems, undergoing equilibrium and time-reversible\ndynamics. We use these model systems to rationalize the unidirectional\ninformation transfer in the molecular system in terms of asymmetries in the\nunderlying free energy landscape and/or relaxation dynamics of the relevant\ncoordinates. Finally, we propose a computational experiment that allows one to\ndecide if an asymmetric information transfer between two variables corresponds\nto a genuine causal link.",
+      "pdf_url": "http://arxiv.org/pdf/2502.19384v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.19384v1",
+      "published": "2025-02-26",
+      "categories": [
+        "physics.chem-ph",
+        "cond-mat.stat-mech",
+        "physics.bio-ph"
+      ]
+    },
+    {
+      "title": "Long-term Causal Inference via Modeling Sequential Latent Confounding",
+      "authors": [
+        "Weilin Chen",
+        "Ruichu Cai",
+        "Yuguang Yan",
+        "Zhifeng Hao",
+        "José Miguel Hernández-Lobato"
+      ],
+      "abstract": "Long-term causal inference is an important but challenging problem across\nvarious scientific domains. To solve the latent confounding problem in\nlong-term observational studies, existing methods leverage short-term\nexperimental data. Ghassami et al. propose an approach based on the Conditional\nAdditive Equi-Confounding Bias (CAECB) assumption, which asserts that the\nconfounding bias in the short-term outcome is equal to that in the long-term\noutcome, so that the long-term confounding bias and the causal effects can be\nidentified. While effective in certain cases, this assumption is limited to\nscenarios with a one-dimensional short-term outcome. In this paper, we\nintroduce a novel assumption that extends the CAECB assumption to accommodate\ntemporal short-term outcomes. Our proposed assumption states a functional\nrelationship between sequential confounding biases across temporal short-term\noutcomes, under which we theoretically establish the identification of\nlong-term causal effects. Based on the identification result, we develop an\nestimator and conduct a theoretical analysis of its asymptotic properties.\nExtensive experiments validate our theoretical results and demonstrate the\neffectiveness of the proposed method.",
+      "pdf_url": "http://arxiv.org/pdf/2502.18994v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.18994v1",
+      "published": "2025-02-26",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Nonparametric Heterogeneous Long-term Causal Effect Estimation via Data Combination",
+      "authors": [
+        "Weilin Chen",
+        "Ruichu Cai",
+        "Junjie Wan",
+        "Zeqin Yang",
+        "José Miguel Hernández-Lobato"
+      ],
+      "abstract": "Long-term causal inference has drawn increasing attention in many scientific\ndomains. Existing methods mainly focus on estimating average long-term causal\neffects by combining long-term observational data and short-term experimental\ndata. However, it is still understudied how to robustly and effectively\nestimate heterogeneous long-term causal effects, significantly limiting\npractical applications. In this paper, we propose several two-stage style\nnonparametric estimators for heterogeneous long-term causal effect estimation,\nincluding propensity-based, regression-based, and multiple robust estimators.\nWe conduct a comprehensive theoretical analysis of their asymptotic properties\nunder mild assumptions, with the ultimate goal of building a better\nunderstanding of the conditions under which some estimators can be expected to\nperform better. Extensive experiments across several semi-synthetic and\nreal-world datasets validate the theoretical results and demonstrate the\neffectiveness of the proposed estimators.",
+      "pdf_url": "http://arxiv.org/pdf/2502.18960v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.18960v1",
+      "published": "2025-02-26",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Enhancing DNA Foundation Models to Address Masking Inefficiencies",
       "authors": [
@@ -16,6 +68,21 @@
       "arxiv_url": "http://arxiv.org/abs/2502.18405v1",
       "published": "2025-02-25",
       "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Multi-class Seismic Building Damage Assessment from InSAR Imagery using Quadratic Variational Causal Bayesian Inference",
+      "authors": [
+        "Xuechun Li",
+        "Susu Xu"
+      ],
+      "abstract": "Interferometric Synthetic Aperture Radar (InSAR) technology uses satellite\nradar to detect surface deformation patterns and monitor earthquake impacts on\nbuildings. While vital for emergency response planning, extracting multi-class\nbuilding damage classifications from InSAR data faces challenges: overlapping\ndamage signatures with environmental noise, computational complexity in\nmulti-class scenarios, and the need for rapid regional-scale processing. Our\nnovel multi-class variational causal Bayesian inference framework with\nquadratic variational bounds provides rigorous approximations while ensuring\nefficiency. By integrating InSAR observations with USGS ground failure models\nand building fragility functions, our approach separates building damage\nsignals while maintaining computational efficiency through strategic pruning.\nEvaluation across five major earthquakes (Haiti 2021, Puerto Rico 2020, Zagreb\n2020, Italy 2016, Ridgecrest 2019) shows improved damage classification\naccuracy (AUC: 0.94-0.96), achieving up to 35.7% improvement over existing\nmethods. Our approach maintains high accuracy (AUC > 0.93) across all damage\ncategories while reducing computational overhead by over 40% without requiring\nextensive ground truth data.",
+      "pdf_url": "http://arxiv.org/pdf/2502.18546v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.18546v1",
+      "published": "2025-02-25",
+      "categories": [
+        "cs.CV",
         "cs.LG"
       ]
     },
@@ -119,77 +186,6 @@
         "cs.LG",
         "cs.AI",
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Linear Attention for Efficient Bidirectional Sequence Modeling",
-      "authors": [
-        "Arshia Afzal",
-        "Elias Abad Rocamora",
-        "Leyla Naz Candogan",
-        "Pol Puigdemont",
-        "Francesco Tonin",
-        "Yongtao Wu",
-        "Mahsa Shoaran",
-        "Volkan Cevher"
-      ],
-      "abstract": "Transformers with linear attention enable fast and parallel training.\nMoreover, they can be formulated as Recurrent Neural Networks (RNNs), for\nefficient linear-time inference. While extensively evaluated in causal sequence\nmodeling, they have yet to be extended to the bidirectional setting. This work\nintroduces the LION framework, establishing new theoretical foundations for\nlinear transformers in bidirectional sequence modeling. LION constructs a\nbidirectional RNN equivalent to full Linear Attention. This extends the\nbenefits of linear transformers: parallel training, and efficient inference,\ninto the bidirectional setting. Using LION, we cast three linear transformers\nto their bidirectional form: LION-LIT, the bidirectional variant corresponding\nto (Katharopoulos et al., 2020); LION-D, extending RetNet (Sun et al., 2023);\nand LION-S, a linear transformer with a stable selective mask inspired by\nselectivity of SSMs (Dao & Gu, 2024). Replacing the attention block with LION\n(-LIT, -D, -S) achieves performance on bidirectional tasks that approaches that\nof Transformers and State-Space Models (SSMs), while delivering significant\nimprovements in training speed. Our implementation is available in\nhttp://github.com/LIONS-EPFL/LION.",
-      "pdf_url": "http://arxiv.org/pdf/2502.16249v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.16249v1",
-      "published": "2025-02-22",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Practical programming research of Linear DML model based on the simplest Python code: From the standpoint of novice researchers",
-      "authors": [
-        "Shunxin Yao"
-      ],
-      "abstract": "This paper presents linear DML models for causal inference using the simplest\nPython code on a Jupyter notebook based on an Anaconda platform and compares\nthe performance of different DML models. The results show that current Library\nAPI technology is not yet sufficient to enable novice Python users to build\nqualified and high-quality DML models with the simplest coding approach. Novice\nusers attempting to perform DML causal inference using Python still have to\nimprove their mathematical and computer knowledge to adapt to more flexible DML\nprogramming. Additionally, the issue of mismatched outcome variable dimensions\nis also widespread when building linear DML models in Jupyter notebook.",
-      "pdf_url": "http://arxiv.org/pdf/2502.16172v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.16172v1",
-      "published": "2025-02-22",
-      "categories": [
-        "cs.SE",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Predicting gene essentiality and drug response from perturbation screens in preclinical cancer models with LEAP: Layered Ensemble of Autoencoders and Predictors",
-      "authors": [
-        "Barbara Bodinier",
-        "Gaetan Dissez",
-        "Linus Bleistein",
-        "Antonin Dauvin"
-      ],
-      "abstract": "Preclinical perturbation screens, where the effects of genetic, chemical, or\nenvironmental perturbations are systematically tested on disease models, hold\nsignificant promise for machine learning-enhanced drug discovery due to their\nscale and causal nature. Predictive models can infer perturbation responses for\npreviously untested disease models based on molecular profiles. These in silico\nlabels can expand databases and guide experimental prioritization.\n  However, modelling perturbation-specific effects and generating robust\nprediction performances across diverse biological contexts remain elusive. We\nintroduce LEAP (Layered Ensemble of Autoencoders and Predictors), a novel\nensemble framework to improve robustness and generalization. LEAP leverages\nmultiple DAMAE (Data Augmented Masked Autoencoder) representations and LASSO\nregressors. By combining diverse gene expression representation models learned\nfrom different random initializations, LEAP consistently outperforms\nstate-of-the-art approaches in predicting gene essentiality or drug responses\nin unseen cell lines, tissues and disease models. Notably, our results show\nthat ensembling representation models, rather than prediction models alone,\nyields superior predictive performance.\n  Beyond its performance gains, LEAP is computationally efficient, requires\nminimal hyperparameter tuning and can therefore be readily incorporated into\ndrug discovery pipelines to prioritize promising targets and support\nbiomarker-driven stratification. The code and datasets used in this work are\nmade publicly available.",
-      "pdf_url": "http://arxiv.org/pdf/2502.15646v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.15646v1",
-      "published": "2025-02-21",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "EigenShield: Causal Subspace Filtering via Random Matrix Theory for Adversarially Robust Vision-Language Models",
-      "authors": [
-        "Nastaran Darabi",
-        "Devashri Naik",
-        "Sina Tayebati",
-        "Dinithi Jayasuriya",
-        "Ranganath Krishnan",
-        "Amit Ranjan Trivedi"
-      ],
-      "abstract": "Vision-Language Models (VLMs) inherit adversarial vulnerabilities of Large\nLanguage Models (LLMs), which are further exacerbated by their multimodal\nnature. Existing defenses, including adversarial training, input\ntransformations, and heuristic detection, are computationally expensive,\narchitecture-dependent, and fragile against adaptive attacks. We introduce\nEigenShield, an inference-time defense leveraging Random Matrix Theory to\nquantify adversarial disruptions in high-dimensional VLM representations.\nUnlike prior methods that rely on empirical heuristics, EigenShield employs the\nspiked covariance model to detect structured spectral deviations. Using a\nRobustness-based Nonconformity Score (RbNS) and quantile-based thresholding, it\nseparates causal eigenvectors, which encode semantic information, from\ncorrelational eigenvectors that are susceptible to adversarial artifacts. By\nprojecting embeddings onto the causal subspace, EigenShield filters adversarial\nnoise without modifying model parameters or requiring adversarial training.\nThis architecture-independent, attack-agnostic approach significantly reduces\nthe attack success rate, establishing spectral analysis as a principled\nalternative to conventional defenses. Our results demonstrate that EigenShield\nconsistently outperforms all existing defenses, including adversarial training,\nUNIGUARD, and CIDER.",
-      "pdf_url": "http://arxiv.org/pdf/2502.14976v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.14976v1",
-      "published": "2025-02-20",
-      "categories": [
-        "cs.LG",
-        "cs.CR",
-        "cs.CV"
       ]
     }
   ]
