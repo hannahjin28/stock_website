@@ -1,6 +1,103 @@
 {
-  "last_updated": "2025-02-28T00:46:48.896828",
+  "last_updated": "2025-03-01T00:51:48.587595",
   "papers": [
+    {
+      "title": "Transfer Learning in Latent Contextual Bandits with Covariate Shift Through Causal Transportability",
+      "authors": [
+        "Mingwei Deng",
+        "Ville Kyrki",
+        "Dominik Baumann"
+      ],
+      "abstract": "Transferring knowledge from one environment to another is an essential\nability of intelligent systems. Nevertheless, when two environments are\ndifferent, naively transferring all knowledge may deteriorate the performance,\na phenomenon known as negative transfer. In this paper, we address this issue\nwithin the framework of multi-armed bandits from the perspective of causal\ninference. Specifically, we consider transfer learning in latent contextual\nbandits, where the actual context is hidden, but a potentially high-dimensional\nproxy is observable. We further consider a covariate shift in the context\nacross environments. We show that naively transferring all knowledge for\nclassical bandit algorithms in this setting led to negative transfer. We then\nleverage transportability theory from causal inference to develop algorithms\nthat explicitly transfer effective knowledge for estimating the causal effects\nof interest in the target environment. Besides, we utilize variational\nautoencoders to approximate causal effects under the presence of a\nhigh-dimensional proxy. We test our algorithms on synthetic and semi-synthetic\ndatasets, empirically demonstrating consistently improved learning efficiency\nacross different proxies compared to baseline algorithms, showing the\neffectiveness of our causal framework in transferring knowledge.",
+      "pdf_url": "http://arxiv.org/pdf/2502.20153v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.20153v1",
+      "published": "2025-02-27",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Economic Causal Inference Based on DML Framework: Python Implementation of Binary and Continuous Treatment Variables",
+      "authors": [
+        "Shunxin Yao"
+      ],
+      "abstract": "This study utilizes a simulated dataset to establish Python code for Double\nMachine Learning (DML) using Anaconda's Jupyter Notebook and the DML software\npackage from GitHub. The research focuses on causal inference experiments for\nboth binary and continuous treatment variables. The findings reveal that the\nDML model demonstrates relatively stable performance in calculating the Average\nTreatment Effect (ATE) and its robustness metrics. However, the study also\nhighlights that the computation of Conditional Average Treatment Effect (CATE)\nremains a significant challenge for future DML modeling, particularly in the\ncontext of continuous treatment variables. This underscores the need for\nfurther research and development in this area to enhance the model's\napplicability and accuracy.",
+      "pdf_url": "http://arxiv.org/pdf/2502.19898v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.19898v1",
+      "published": "2025-02-27",
+      "categories": [
+        "econ.EM",
+        "62P20, 91B84",
+        "C.1.3; G.3; I.2.6; J.4"
+      ]
+    },
+    {
+      "title": "Semiparametric Triple Difference Estimators",
+      "authors": [
+        "Sina Akbari",
+        "Negar Kiyavash",
+        "AmirEmad Ghassami"
+      ],
+      "abstract": "The triple difference causal inference framework is an extension of the\nwell-known difference-in-differences framework. It relaxes the parallel trends\nassumption of the difference-in-differences framework through leveraging data\nfrom an auxiliary domain. Despite being commonly applied in empirical research,\nthe triple difference framework has received relatively limited attention in\nthe statistics literature. Specifically, investigating the intricacies of\nidentification and the design of robust and efficient estimators for this\nframework has remained largely unexplored. This work aims to address these gaps\nin the literature. From the identification standpoint, we present outcome\nregression and weighting methods to identify the average treatment effect on\nthe treated in both panel data and repeated cross-section settings. For the\nlatter, we relax the commonly made assumption of time-invariant covariates.\nFrom the estimation perspective, we consider semiparametric estimators for the\ntriple difference framework in both panel data and repeated cross-sections\nsettings. We demonstrate that our proposed estimators are doubly robust.",
+      "pdf_url": "http://arxiv.org/pdf/2502.19788v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.19788v1",
+      "published": "2025-02-27",
+      "categories": [
+        "econ.EM",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Effect Estimation under Networked Interference without Networked Unconfoundedness Assumption",
+      "authors": [
+        "Weilin Chen",
+        "Ruichu Cai",
+        "Jie Qiao",
+        "Yuguang Yan",
+        "José Miguel Hernández-Lobato"
+      ],
+      "abstract": "Estimating causal effects under networked interference is a crucial yet\nchallenging problem. Existing methods based on observational data mainly rely\non the networked unconfoundedness assumption, which guarantees the\nidentification of networked effects. However, the networked unconfoundedness\nassumption is usually violated due to the latent confounders in observational\ndata, hindering the identification of networked effects. Interestingly, in such\nnetworked settings, interactions between units provide valuable information for\nrecovering latent confounders. In this paper, we identify three types of latent\nconfounders in networked inference that hinder identification: those affecting\nonly the individual, those affecting only neighbors, and those influencing\nboth. Specifically, we devise a networked effect estimator based on\nidentifiable representation learning techniques. Theoretically, we establish\nthe identifiability of all latent confounders, and leveraging the identified\nlatent confounders, we provide the networked effect identification result.\nExtensive experiments validate our theoretical results and demonstrate the\neffectiveness of the proposed method.",
+      "pdf_url": "http://arxiv.org/pdf/2502.19741v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.19741v1",
+      "published": "2025-02-27",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Training Robust Graph Neural Networks by Modeling Noise Dependencies",
+      "authors": [
+        "Yeonjun In",
+        "Kanghoon Yoon",
+        "Sukwon Yun",
+        "Kibum Kim",
+        "Sungchul Kim",
+        "Chanyoung Park"
+      ],
+      "abstract": "In real-world applications, node features in graphs often contain noise from\nvarious sources, leading to significant performance degradation in GNNs.\nAlthough several methods have been developed to enhance robustness, they rely\non the unrealistic assumption that noise in node features is independent of the\ngraph structure and node labels, thereby limiting their applicability. To this\nend, we introduce a more realistic noise scenario, dependency-aware noise on\ngraphs (DANG), where noise in node features create a chain of noise\ndependencies that propagates to the graph structure and node labels. We propose\na novel robust GNN, DA-GNN, which captures the causal relationships among\nvariables in the data generating process (DGP) of DANG using variational\ninference. In addition, we present new benchmark datasets that simulate DANG in\nreal-world applications, enabling more practical research on robust GNNs.\nExtensive experiments demonstrate that DA-GNN consistently outperforms existing\nbaselines across various noise scenarios, including both DANG and conventional\nnoise models commonly considered in this field.",
+      "pdf_url": "http://arxiv.org/pdf/2502.19670v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.19670v1",
+      "published": "2025-02-27",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Treatment Non-Adherence Bias in Clinical Machine Learning: A Real-World Study on Hypertension Medication",
+      "authors": [
+        "Zhongyuan Liang",
+        "Arvind Suresh",
+        "Irene Y. Chen"
+      ],
+      "abstract": "Machine learning systems trained on electronic health records (EHRs)\nincreasingly guide treatment decisions, but their reliability depends on the\ncritical assumption that patients follow the prescribed treatments recorded in\nEHRs. Using EHR data from 3,623 hypertension patients, we investigate how\ntreatment non-adherence introduces implicit bias that can fundamentally distort\nboth causal inference and predictive modeling. By extracting patient adherence\ninformation from clinical notes using a large language model, we identify 786\npatients (21.7%) with medication non-adherence. We further uncover key\ndemographic and clinical factors associated with non-adherence, as well as\npatient-reported reasons including side effects and difficulties obtaining\nrefills. Our findings demonstrate that this implicit bias can not only reverse\nestimated treatment effects, but also degrade model performance by up to 5%\nwhile disproportionately affecting vulnerable populations by exacerbating\ndisparities in decision outcomes and model error rates. This highlights the\nimportance of accounting for treatment non-adherence in developing responsible\nand equitable clinical machine learning systems.",
+      "pdf_url": "http://arxiv.org/pdf/2502.19625v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.19625v1",
+      "published": "2025-02-26",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Towards a robust approach to infer causality in molecular systems satisfying detailed balance",
       "authors": [
@@ -69,123 +166,6 @@
       "published": "2025-02-25",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Multi-class Seismic Building Damage Assessment from InSAR Imagery using Quadratic Variational Causal Bayesian Inference",
-      "authors": [
-        "Xuechun Li",
-        "Susu Xu"
-      ],
-      "abstract": "Interferometric Synthetic Aperture Radar (InSAR) technology uses satellite\nradar to detect surface deformation patterns and monitor earthquake impacts on\nbuildings. While vital for emergency response planning, extracting multi-class\nbuilding damage classifications from InSAR data faces challenges: overlapping\ndamage signatures with environmental noise, computational complexity in\nmulti-class scenarios, and the need for rapid regional-scale processing. Our\nnovel multi-class variational causal Bayesian inference framework with\nquadratic variational bounds provides rigorous approximations while ensuring\nefficiency. By integrating InSAR observations with USGS ground failure models\nand building fragility functions, our approach separates building damage\nsignals while maintaining computational efficiency through strategic pruning.\nEvaluation across five major earthquakes (Haiti 2021, Puerto Rico 2020, Zagreb\n2020, Italy 2016, Ridgecrest 2019) shows improved damage classification\naccuracy (AUC: 0.94-0.96), achieving up to 35.7% improvement over existing\nmethods. Our approach maintains high accuracy (AUC > 0.93) across all damage\ncategories while reducing computational overhead by over 40% without requiring\nextensive ground truth data.",
-      "pdf_url": "http://arxiv.org/pdf/2502.18546v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.18546v1",
-      "published": "2025-02-25",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "An Overview of Large Language Models for Statisticians",
-      "authors": [
-        "Wenlong Ji",
-        "Weizhe Yuan",
-        "Emily Getzen",
-        "Kyunghyun Cho",
-        "Michael I. Jordan",
-        "Song Mei",
-        "Jason E Weston",
-        "Weijie J. Su",
-        "Jing Xu",
-        "Linjun Zhang"
-      ],
-      "abstract": "Large Language Models (LLMs) have emerged as transformative tools in\nartificial intelligence (AI), exhibiting remarkable capabilities across diverse\ntasks such as text generation, reasoning, and decision-making. While their\nsuccess has primarily been driven by advances in computational power and deep\nlearning architectures, emerging problems -- in areas such as uncertainty\nquantification, decision-making, causal inference, and distribution shift --\nrequire a deeper engagement with the field of statistics. This paper explores\npotential areas where statisticians can make important contributions to the\ndevelopment of LLMs, particularly those that aim to engender trustworthiness\nand transparency for human users. Thus, we focus on issues such as uncertainty\nquantification, interpretability, fairness, privacy, watermarking and model\nadaptation. We also consider possible roles for LLMs in statistical analysis.\nBy bridging AI and statistics, we aim to foster a deeper collaboration that\nadvances both the theoretical foundations and practical applications of LLMs,\nultimately shaping their role in addressing complex societal challenges.",
-      "pdf_url": "http://arxiv.org/pdf/2502.17814v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.17814v1",
-      "published": "2025-02-25",
-      "categories": [
-        "stat.ML",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Joint Value Estimation and Bidding in Repeated First-Price Auctions",
-      "authors": [
-        "Yuxiao Wen",
-        "Yanjun Han",
-        "Zhengyuan Zhou"
-      ],
-      "abstract": "We study regret minimization in repeated first-price auctions (FPAs), where a\nbidder observes only the realized outcome after each auction -- win or loss.\nThis setup reflects practical scenarios in online display advertising where the\nactual value of an impression depends on the difference between two potential\noutcomes, such as clicks or conversion rates, when the auction is won versus\nlost. We analyze three outcome models: (1) adversarial outcomes without\nfeatures, (2) linear potential outcomes with features, and (3) linear treatment\neffects in features. For each setting, we propose algorithms that jointly\nestimate private values and optimize bidding strategies, achieving near-optimal\nregret bounds. Notably, our framework enjoys a unique feature that the\ntreatments are also actively chosen, and hence eliminates the need for the\noverlap condition commonly required in causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2502.17292v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.17292v1",
-      "published": "2025-02-24",
-      "categories": [
-        "cs.LG",
-        "cs.GT",
-        "cs.IT",
-        "math.IT",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Teleology-Driven Affective Computing: A Causal Framework for Sustained Well-Being",
-      "authors": [
-        "Bin Yin",
-        "Chong-Yi Liu",
-        "Liya Fu",
-        "Jinkun Zhang"
-      ],
-      "abstract": "Affective computing has made significant strides in emotion recognition and\ngeneration, yet current approaches mainly focus on short-term pattern\nrecognition and lack a comprehensive framework to guide affective agents toward\nlong-term human well-being. To address this, we propose a teleology-driven\naffective computing framework that unifies major emotion theories (basic\nemotion, appraisal, and constructivist approaches) under the premise that\naffect is an adaptive, goal-directed process that facilitates survival and\ndevelopment. Our framework emphasizes aligning agent responses with both\npersonal/individual and group/collective well-being over extended timescales.\nWe advocate for creating a \"dataverse\" of personal affective events, capturing\nthe interplay between beliefs, goals, actions, and outcomes through real-world\nexperience sampling and immersive virtual reality. By leveraging causal\nmodeling, this \"dataverse\" enables AI systems to infer individuals' unique\naffective concerns and provide tailored interventions for sustained well-being.\nAdditionally, we introduce a meta-reinforcement learning paradigm to train\nagents in simulated environments, allowing them to adapt to evolving affective\nconcerns and balance hierarchical goals - from immediate emotional needs to\nlong-term self-actualization. This framework shifts the focus from statistical\ncorrelations to causal reasoning, enhancing agents' ability to predict and\nrespond proactively to emotional challenges, and offers a foundation for\ndeveloping personalized, ethically aligned affective systems that promote\nmeaningful human-AI interactions and societal well-being.",
-      "pdf_url": "http://arxiv.org/pdf/2502.17172v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.17172v1",
-      "published": "2025-02-24",
-      "categories": [
-        "cs.HC",
-        "cs.AI",
-        "cs.CY",
-        "q-bio.NC",
-        "H.1.2, J.4",
-        "H.1.2; J.4"
-      ]
-    },
-    {
-      "title": "A tutorial on optimal dynamic treatment regimes",
-      "authors": [
-        "Chunyu Wang",
-        "Brian DM Tom"
-      ],
-      "abstract": "A dynamic treatment regime is a sequence of treatment decision rules tailored\nto an individual's evolving status over time. In precision medicine, much focus\nhas been placed on finding an optimal dynamic treatment regime which, if\nfollowed by everyone in the population, would yield the best outcome on\naverage; and extensive investigation has been conducted from both\nmethodological and applications standpoints. The aim of this tutorial is to\nprovide readers who are interested in optimal dynamic treatment regimes with a\nsystematic, detailed but accessible introduction, including the formal\ndefinition and formulation of this topic within the framework of causal\ninference, identification assumptions required to link the causal quantity of\ninterest to the observed data, existing statistical models and estimation\nmethods to learn the optimal regime from data, and application of these methods\nto both simulated and real data.",
-      "pdf_url": "http://arxiv.org/pdf/2502.16988v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.16988v1",
-      "published": "2025-02-24",
-      "categories": [
-        "stat.OT",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Time Series Domain Adaptation via Latent Invariant Causal Mechanism",
-      "authors": [
-        "Ruichu Cai",
-        "Junxian Huang",
-        "Zhenhui Yang",
-        "Zijian Li",
-        "Emadeldeen Eldele",
-        "Min Wu",
-        "Fuchun Sun"
-      ],
-      "abstract": "Time series domain adaptation aims to transfer the complex temporal\ndependence from the labeled source domain to the unlabeled target domain.\nRecent advances leverage the stable causal mechanism over observed variables to\nmodel the domain-invariant temporal dependence. However, modeling precise\ncausal structures in high-dimensional data, such as videos, remains\nchallenging. Additionally, direct causal edges may not exist among observed\nvariables (e.g., pixels). These limitations hinder the applicability of\nexisting approaches to real-world scenarios. To address these challenges, we\nfind that the high-dimension time series data are generated from the\nlow-dimension latent variables, which motivates us to model the causal\nmechanisms of the temporal latent process. Based on this intuition, we propose\na latent causal mechanism identification framework that guarantees the\nuniqueness of the reconstructed latent causal structures. Specifically, we\nfirst identify latent variables by utilizing sufficient changes in historical\ninformation. Moreover, by enforcing the sparsity of the relationships of latent\nvariables, we can achieve identifiable latent causal structures. Built on the\ntheoretical results, we develop the Latent Causality Alignment (LCA) model that\nleverages variational inference, which incorporates an intra-domain latent\nsparsity constraint for latent structure reconstruction and an inter-domain\nlatent sparsity constraint for domain-invariant structure reconstruction.\nExperiment results on eight benchmarks show a general improvement in the\ndomain-adaptive time series classification and forecasting tasks, highlighting\nthe effectiveness of our method in real-world scenarios. Codes are available at\nhttps://github.com/DMIRLAB-Group/LCA.",
-      "pdf_url": "http://arxiv.org/pdf/2502.16637v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.16637v1",
-      "published": "2025-02-23",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ME"
       ]
     }
   ]
