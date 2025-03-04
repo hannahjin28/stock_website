@@ -1,6 +1,54 @@
 {
-  "last_updated": "2025-03-03T00:49:39.172469",
+  "last_updated": "2025-03-04T00:47:54.957722",
   "papers": [
+    {
+      "title": "Persuasion Should be Double-Blind: A Multi-Domain Dialogue Dataset With Faithfulness Based on Causal Theory of Mind",
+      "authors": [
+        "Dingyi Zhang",
+        "Deyu Zhou"
+      ],
+      "abstract": "Persuasive dialogue plays a pivotal role in human communication, influencing\nvarious domains. Recent persuasive dialogue datasets often fail to align with\nreal-world interpersonal interactions, leading to unfaithful representations.\nFor instance, unrealistic scenarios may arise, such as when the persuadee\nexplicitly instructs the persuader on which persuasion strategies to employ,\nwith each of the persuadee's questions corresponding to a specific strategy for\nthe persuader to follow. This issue can be attributed to a violation of the\n\"Double Blind\" condition, where critical information is fully shared between\nparticipants. In actual human interactions, however, key information such as\nthe mental state of the persuadee and the persuasion strategies of the\npersuader is not directly accessible. The persuader must infer the persuadee's\nmental state using Theory of Mind capabilities and construct arguments that\nalign with the persuadee's motivations. To address this gap, we introduce\nToMMA, a novel multi-agent framework for dialogue generation that is guided by\ncausal Theory of Mind. This framework ensures that information remains\nundisclosed between agents, preserving \"double-blind\" conditions, while causal\nToM directs the persuader's reasoning, enhancing alignment with human-like\npersuasion dynamics. Consequently, we present CToMPersu, a multi-domain,\nmulti-turn persuasive dialogue dataset that tackles both double-blind and\nlogical coherence issues, demonstrating superior performance across multiple\nmetrics and achieving better alignment with real human dialogues. Our dataset\nand prompts are available at https://github.com/DingyiZhang/ToMMA-CToMPersu .",
+      "pdf_url": "http://arxiv.org/pdf/2502.21297v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.21297v1",
+      "published": "2025-02-28",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Amortized Conditional Independence Testing",
+      "authors": [
+        "Bao Duong",
+        "Nu Hoang",
+        "Thin Nguyen"
+      ],
+      "abstract": "Testing for the conditional independence structure in data is a fundamental\nand critical task in statistics and machine learning, which finds natural\napplications in causal discovery - a highly relevant problem to many scientific\ndisciplines. Existing methods seek to design explicit test statistics that\nquantify the degree of conditional dependence, which is highly challenging yet\ncannot capture nor utilize prior knowledge in a data-driven manner. In this\nstudy, an entirely new approach is introduced, where we instead propose to\namortize conditional independence testing and devise ACID - a novel\ntransformer-based neural network architecture that learns to test for\nconditional independence. ACID can be trained on synthetic data in a supervised\nlearning fashion, and the learned model can then be applied to any dataset of\nsimilar natures or adapted to new domains by fine-tuning with a negligible\ncomputational cost. Our extensive empirical evaluations on both synthetic and\nreal data reveal that ACID consistently achieves state-of-the-art performance\nagainst existing baselines under multiple metrics, and is able to generalize\nrobustly to unseen sample sizes, dimensionalities, as well as non-linearities\nwith a remarkably low inference time.",
+      "pdf_url": "http://arxiv.org/pdf/2502.20925v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.20925v1",
+      "published": "2025-02-28",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Everything, Everywhere, All at Once: Is Mechanistic Interpretability Identifiable?",
+      "authors": [
+        "Maxime Méloux",
+        "Silviu Maniu",
+        "François Portet",
+        "Maxime Peyrard"
+      ],
+      "abstract": "As AI systems are used in high-stakes applications, ensuring interpretability\nis crucial. Mechanistic Interpretability (MI) aims to reverse-engineer neural\nnetworks by extracting human-understandable algorithms to explain their\nbehavior. This work examines a key question: for a given behavior, and under\nMI's criteria, does a unique explanation exist? Drawing on identifiability in\nstatistics, where parameters are uniquely inferred under specific assumptions,\nwe explore the identifiability of MI explanations.\n  We identify two main MI strategies: (1) \"where-then-what,\" which isolates a\ncircuit replicating model behavior before interpreting it, and (2)\n\"what-then-where,\" which starts with candidate algorithms and searches for\nneural activation subspaces implementing them, using causal alignment.\n  We test both strategies on Boolean functions and small multi-layer\nperceptrons, fully enumerating candidate explanations. Our experiments reveal\nsystematic non-identifiability: multiple circuits can replicate behavior, a\ncircuit can have multiple interpretations, several algorithms can align with\nthe network, and one algorithm can align with different subspaces.\n  Is uniqueness necessary? A pragmatic approach may require only predictive and\nmanipulability standards. If uniqueness is essential for understanding,\nstricter criteria may be needed. We also reference the inner interpretability\nframework, which validates explanations through multiple criteria. This work\ncontributes to defining explanation standards in AI.",
+      "pdf_url": "http://arxiv.org/pdf/2502.20914v1",
+      "arxiv_url": "http://arxiv.org/abs/2502.20914v1",
+      "published": "2025-02-28",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
     {
       "title": "Transfer Learning in Latent Contextual Bandits with Covariate Shift Through Causal Transportability",
       "authors": [
@@ -114,58 +162,6 @@
         "physics.chem-ph",
         "cond-mat.stat-mech",
         "physics.bio-ph"
-      ]
-    },
-    {
-      "title": "Long-term Causal Inference via Modeling Sequential Latent Confounding",
-      "authors": [
-        "Weilin Chen",
-        "Ruichu Cai",
-        "Yuguang Yan",
-        "Zhifeng Hao",
-        "José Miguel Hernández-Lobato"
-      ],
-      "abstract": "Long-term causal inference is an important but challenging problem across\nvarious scientific domains. To solve the latent confounding problem in\nlong-term observational studies, existing methods leverage short-term\nexperimental data. Ghassami et al. propose an approach based on the Conditional\nAdditive Equi-Confounding Bias (CAECB) assumption, which asserts that the\nconfounding bias in the short-term outcome is equal to that in the long-term\noutcome, so that the long-term confounding bias and the causal effects can be\nidentified. While effective in certain cases, this assumption is limited to\nscenarios with a one-dimensional short-term outcome. In this paper, we\nintroduce a novel assumption that extends the CAECB assumption to accommodate\ntemporal short-term outcomes. Our proposed assumption states a functional\nrelationship between sequential confounding biases across temporal short-term\noutcomes, under which we theoretically establish the identification of\nlong-term causal effects. Based on the identification result, we develop an\nestimator and conduct a theoretical analysis of its asymptotic properties.\nExtensive experiments validate our theoretical results and demonstrate the\neffectiveness of the proposed method.",
-      "pdf_url": "http://arxiv.org/pdf/2502.18994v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.18994v1",
-      "published": "2025-02-26",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Nonparametric Heterogeneous Long-term Causal Effect Estimation via Data Combination",
-      "authors": [
-        "Weilin Chen",
-        "Ruichu Cai",
-        "Junjie Wan",
-        "Zeqin Yang",
-        "José Miguel Hernández-Lobato"
-      ],
-      "abstract": "Long-term causal inference has drawn increasing attention in many scientific\ndomains. Existing methods mainly focus on estimating average long-term causal\neffects by combining long-term observational data and short-term experimental\ndata. However, it is still understudied how to robustly and effectively\nestimate heterogeneous long-term causal effects, significantly limiting\npractical applications. In this paper, we propose several two-stage style\nnonparametric estimators for heterogeneous long-term causal effect estimation,\nincluding propensity-based, regression-based, and multiple robust estimators.\nWe conduct a comprehensive theoretical analysis of their asymptotic properties\nunder mild assumptions, with the ultimate goal of building a better\nunderstanding of the conditions under which some estimators can be expected to\nperform better. Extensive experiments across several semi-synthetic and\nreal-world datasets validate the theoretical results and demonstrate the\neffectiveness of the proposed estimators.",
-      "pdf_url": "http://arxiv.org/pdf/2502.18960v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.18960v1",
-      "published": "2025-02-26",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Enhancing DNA Foundation Models to Address Masking Inefficiencies",
-      "authors": [
-        "Monireh Safari",
-        "Pablo Millan Arias",
-        "Scott C. Lowe",
-        "Lila Kari",
-        "Angel X. Chang",
-        "Graham W. Taylor"
-      ],
-      "abstract": "Masked language modelling (MLM) as a pretraining objective has been widely\nadopted in genomic sequence modelling. While pretrained models can successfully\nserve as encoders for various downstream tasks, the distribution shift between\npretraining and inference detrimentally impacts performance, as the pretraining\ntask is to map [MASK] tokens to predictions, yet the [MASK] is absent during\ndownstream applications. This means the encoder does not prioritize its\nencodings of non-[MASK] tokens, and expends parameters and compute on work only\nrelevant to the MLM task, despite this being irrelevant at deployment time. In\nthis work, we propose a modified encoder-decoder architecture based on the\nmasked autoencoder framework, designed to address this inefficiency within a\nBERT-based transformer. We empirically show that the resulting mismatch is\nparticularly detrimental in genomic pipelines where models are often used for\nfeature extraction without fine-tuning. We evaluate our approach on the\nBIOSCAN-5M dataset, comprising over 2 million unique DNA barcodes. We achieve\nsubstantial performance gains in both closed-world and open-world\nclassification tasks when compared against causal models and bidirectional\narchitectures pretrained with MLM tasks.",
-      "pdf_url": "http://arxiv.org/pdf/2502.18405v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.18405v1",
-      "published": "2025-02-25",
-      "categories": [
-        "cs.LG"
       ]
     }
   ]
