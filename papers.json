@@ -1,6 +1,155 @@
 {
-  "last_updated": "2025-03-05T00:48:17.614189",
+  "last_updated": "2025-03-06T00:47:42.113989",
   "papers": [
+    {
+      "title": "PanelMatch: Matching Methods for Causal Inference with Time-Series Cross-Section Data",
+      "authors": [
+        "Adam Rauh",
+        "In Song Kim",
+        "Kosuke Imai"
+      ],
+      "abstract": "Analyzing time-series cross-sectional (also known as longitudinal or panel)\ndata is an important process across a number of fields, including the social\nsciences, economics, finance, and medicine. PanelMatch is an R package that\nimplements a set of tools enabling researchers to apply matching methods for\ncausal inference with time-series cross-sectional data. Relative to other\ncommonly used methods for longitudinal analyses, like regression with fixed\neffects, the matching-based approach implemented in PanelMatch makes fewer\nparametric assumptions and offers more diagnostics. In this paper, we discuss\nthe PanelMatch package, showing users a recommended pipeline for doing causal\ninference analysis with it and highlighting useful diagnostic and visualization\ntools.",
+      "pdf_url": "http://arxiv.org/pdf/2503.02073v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.02073v1",
+      "published": "2025-03-03",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Learning Exposure Mapping Functions for Inferring Heterogeneous Peer Effects",
+      "authors": [
+        "Shishir Adhikari",
+        "Sourav Medya",
+        "Elena Zheleva"
+      ],
+      "abstract": "In causal inference, interference refers to the phenomenon in which the\nactions of peers in a network can influence an individual's outcome. Peer\neffect refers to the difference in counterfactual outcomes of an individual for\ndifferent levels of peer exposure, the extent to which an individual is exposed\nto the treatments, actions, or behaviors of peers. Estimating peer effects\nrequires deciding how to represent peer exposure. Typically, researchers define\nan exposure mapping function that aggregates peer treatments and outputs peer\nexposure. Most existing approaches for defining exposure mapping functions\nassume peer exposure based on the number or fraction of treated peers. Recent\nstudies have investigated more complex functions of peer exposure which capture\nthat different peers can exert different degrees of influence. However, none of\nthese works have explicitly considered the problem of automatically learning\nthe exposure mapping function. In this work, we focus on learning this function\nfor the purpose of estimating heterogeneous peer effects, where heterogeneity\nrefers to the variation in counterfactual outcomes for the same peer exposure\nbut different individual's contexts. We develop EgoNetGNN, a graph neural\nnetwork (GNN)-based method, to automatically learn the appropriate exposure\nmapping function allowing for complex peer influence mechanisms that, in\naddition to peer treatments, can involve the local neighborhood structure and\nedge attributes. We show that GNN models that use peer exposure based on the\nnumber or fraction of treated peers or learn peer exposure naively face\ndifficulty accounting for such influence mechanisms. Our comprehensive\nevaluation on synthetic and semi-synthetic network data shows that our method\nis more robust to different unknown underlying influence mechanisms when\nestimating heterogeneous peer effects when compared to state-of-the-art\nbaselines.",
+      "pdf_url": "http://arxiv.org/pdf/2503.01722v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.01722v1",
+      "published": "2025-03-03",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.SI"
+      ]
+    },
+    {
+      "title": "ProRCA: A Causal Python Package for Actionable Root Cause Analysis in Real-world Business Scenarios",
+      "authors": [
+        "Ahmed Dawoud",
+        "Shravan Talupula"
+      ],
+      "abstract": "Root Cause Analysis (RCA) is becoming ever more critical as modern systems\ngrow in complexity, volume of data, and interdependencies. While traditional\nRCA methods frequently rely on correlation-based or rule-based techniques,\nthese approaches can prove inadequate in highly dynamic, multi-layered\nenvironments. In this paper, we present a pathway-tracing package built on the\nDoWhy causal inference library. Our method integrates conditional anomaly\nscoring, noise-based attribution, and depth-first path exploration to reveal\nmulti-hop causal chains. By systematically tracing entire causal pathways from\nan observed anomaly back to the initial triggers, our approach provides a\ncomprehensive, end-to-end RCA solution. Experimental evaluations with synthetic\nanomaly injections demonstrate the package's ability to accurately isolate\ntriggers and rank root causes by their overall significance.",
+      "pdf_url": "http://arxiv.org/pdf/2503.01475v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.01475v1",
+      "published": "2025-03-03",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Causal Tree Extraction from Medical Case Reports: A Novel Task for Experts-like Text Comprehension",
+      "authors": [
+        "Sakiko Yahata",
+        "Zhen Wan",
+        "Fei Cheng",
+        "Sadao Kurohashi",
+        "Hisahiko Sato",
+        "Ryozo Nagai"
+      ],
+      "abstract": "Extracting causal relationships from a medical case report is essential for\ncomprehending the case, particularly its diagnostic process. Since the\ndiagnostic process is regarded as a bottom-up inference, causal relationships\nin cases naturally form a multi-layered tree structure. The existing tasks,\nsuch as medical relation extraction, are insufficient for capturing the causal\nrelationships of an entire case, as they treat all relations equally without\nconsidering the hierarchical structure inherent in the diagnostic process.\nThus, we propose a novel task, Causal Tree Extraction (CTE), which receives a\ncase report and generates a causal tree with the primary disease as the root,\nproviding an intuitive understanding of a case's diagnostic process.\nSubsequently, we construct a Japanese case report CTE dataset, J-Casemap,\npropose a generation-based CTE method that outperforms the baseline by 20.2\npoints in the human evaluation, and introduce evaluation metrics that reflect\nclinician preferences. Further experiments also show that J-Casemap enhances\nthe performance of solving other medical tasks, such as question answering.",
+      "pdf_url": "http://arxiv.org/pdf/2503.01302v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.01302v1",
+      "published": "2025-03-03",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "ACTIVA: Amortized Causal Effect Estimation without Graphs via Transformer-based Variational Autoencoder",
+      "authors": [
+        "Andreas Sauter",
+        "Saber Salehkaleybar",
+        "Aske Plaat",
+        "Erman Acar"
+      ],
+      "abstract": "Predicting the distribution of outcomes under hypothetical interventions is\ncrucial in domains like healthcare, economics, and policy-making. Current\nmethods often rely on strong assumptions, such as known causal graphs or\nparametric models, and lack amortization across problem instances, limiting\ntheir practicality. We propose a novel transformer-based conditional\nvariational autoencoder architecture, named ACTIVA, that extends causal\ntransformer encoders to predict causal effects as mixtures of Gaussians. Our\nmethod requires no causal graph and predicts interventional distributions given\nonly observational data and a queried intervention. By amortizing over many\nsimulated instances, it enables zero-shot generalization to novel datasets\nwithout retraining. Experiments demonstrate accurate predictions for synthetic\nand semi-synthetic data, showcasing the effectiveness of our graph-free,\namortized causal inference approach.",
+      "pdf_url": "http://arxiv.org/pdf/2503.01290v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.01290v1",
+      "published": "2025-03-03",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Architectural and Inferential Inductive Biases For Exchangeable Sequence Modeling",
+      "authors": [
+        "Daksh Mittal",
+        "Ang Li",
+        "Tzu-Ching Yen",
+        "Daniel Guetta",
+        "Hongseok Namkoong"
+      ],
+      "abstract": "Autoregressive models have emerged as a powerful framework for modeling\nexchangeable sequences - i.i.d. observations when conditioned on some latent\nfactor - enabling direct modeling of uncertainty from missing data (rather than\na latent). Motivated by the critical role posterior inference plays as a\nsubroutine in decision-making (e.g., active learning, bandits), we study the\ninferential and architectural inductive biases that are most effective for\nexchangeable sequence modeling. For the inference stage, we highlight a\nfundamental limitation of the prevalent single-step generation approach:\ninability to distinguish between epistemic and aleatoric uncertainty. Instead,\na long line of works in Bayesian statistics advocates for multi-step\nautoregressive generation; we demonstrate this \"correct approach\" enables\nsuperior uncertainty quantification that translates into better performance on\ndownstream decision-making tasks. This naturally leads to the next question:\nwhich architectures are best suited for multi-step inference? We identify a\nsubtle yet important gap between recently proposed Transformer architectures\nfor exchangeable sequences (Muller et al., 2022; Nguyen & Grover, 2022; Ye &\nNamkoong, 2024), and prove that they in fact cannot guarantee exchangeability\ndespite introducing significant computational overhead. We illustrate our\nfindings using controlled synthetic settings, demonstrating how custom\narchitectures can significantly underperform standard causal masks,\nunderscoring the need for new architectural innovations.",
+      "pdf_url": "http://arxiv.org/pdf/2503.01215v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.01215v1",
+      "published": "2025-03-03",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Time-Varying Causal Survival Learning",
+      "authors": [
+        "Xiang Meng",
+        "Iavor Bojinov"
+      ],
+      "abstract": "This work bridges the gap between staggered adoption designs and survival\nanalysis to estimate causal effects in settings with time-varying treatments,\naddressing a fundamental challenge in medical research exemplified by the\nStanford Heart Transplant study. In medical interventions, particularly organ\ntransplantation, the timing of treatment varies significantly across patients\ndue to factors such as donor availability and patient readiness, introducing\npotential bias in treatment effect estimation if not properly accounted for. We\nidentify conditions under which staggered adoption assumptions can justify the\nuse of survival analysis techniques for causal inference with time-varying\ntreatments. By establishing this connection, we enable the use of existing\nsurvival analysis methods while maintaining causal interpretability.\nFurthermore, we enhance estimation performance by incorporating double machine\nlearning methods, improving efficiency when handling complex relationships\nbetween patient characteristics and survival outcomes. Through both simulation\nstudies and application to heart transplant data, our approach demonstrates\nsuperior performance compared to traditional methods, reducing bias and\noffering theoretical guarantees for improved efficiency in survival analysis\nsettings.",
+      "pdf_url": "http://arxiv.org/pdf/2503.00730v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.00730v1",
+      "published": "2025-03-02",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Inference on Outcomes Learned from Text",
+      "authors": [
+        "Iman Modarressi",
+        "Jann Spiess",
+        "Amar Venugopal"
+      ],
+      "abstract": "We propose a machine-learning tool that yields causal inference on text in\nrandomized trials. Based on a simple econometric framework in which text may\ncapture outcomes of interest, our procedure addresses three questions: First,\nis the text affected by the treatment? Second, which outcomes is the effect on?\nAnd third, how complete is our description of causal effects? To answer all\nthree questions, our approach uses large language models (LLMs) that suggest\nsystematic differences across two groups of text documents and then provides\nvalid inference based on costly validation. Specifically, we highlight the need\nfor sample splitting to allow for statistical validation of LLM outputs, as\nwell as the need for human labeling to validate substantive claims about how\ndocuments differ across groups. We illustrate the tool in a proof-of-concept\napplication using abstracts of academic manuscripts.",
+      "pdf_url": "http://arxiv.org/pdf/2503.00725v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.00725v1",
+      "published": "2025-03-02",
+      "categories": [
+        "econ.EM",
+        "cs.CL",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Learning Conditional Average Treatment Effects in Regression Discontinuity Designs using Bayesian Additive Regression Trees",
+      "authors": [
+        "Rafael Alcantara",
+        "P. Richard Hahn",
+        "Carlos Carvalho",
+        "Hedibert Lopes"
+      ],
+      "abstract": "BART (Bayesian additive regression trees) has been established as a leading\nsupervised learning method, particularly in the field of causal inference. This\npaper explores the use of BART models for learning conditional average\ntreatment effects (CATE) from regression discontinuity designs, where treatment\nassignment is based on whether an observed covariate (called the running\nvariable) exceeds a pre-specified threshold. A purpose-built version of BART\nthat uses linear regression leaf models (of the running variable and treatment\nassignment dummy) is shown to out-perform off-the-shelf BART implementations as\nwell as a local polynomial regression approach and a CART-based approach. The\nnew method is evaluated in thorough simulation studies as well as an empirical\napplication looking at the effect of academic probation on student performance.",
+      "pdf_url": "http://arxiv.org/pdf/2503.00326v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.00326v1",
+      "published": "2025-03-01",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Persuasion Should be Double-Blind: A Multi-Domain Dialogue Dataset With Faithfulness Based on Causal Theory of Mind",
       "authors": [
@@ -13,155 +162,6 @@
       "published": "2025-02-28",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Amortized Conditional Independence Testing",
-      "authors": [
-        "Bao Duong",
-        "Nu Hoang",
-        "Thin Nguyen"
-      ],
-      "abstract": "Testing for the conditional independence structure in data is a fundamental\nand critical task in statistics and machine learning, which finds natural\napplications in causal discovery - a highly relevant problem to many scientific\ndisciplines. Existing methods seek to design explicit test statistics that\nquantify the degree of conditional dependence, which is highly challenging yet\ncannot capture nor utilize prior knowledge in a data-driven manner. In this\nstudy, an entirely new approach is introduced, where we instead propose to\namortize conditional independence testing and devise ACID - a novel\ntransformer-based neural network architecture that learns to test for\nconditional independence. ACID can be trained on synthetic data in a supervised\nlearning fashion, and the learned model can then be applied to any dataset of\nsimilar natures or adapted to new domains by fine-tuning with a negligible\ncomputational cost. Our extensive empirical evaluations on both synthetic and\nreal data reveal that ACID consistently achieves state-of-the-art performance\nagainst existing baselines under multiple metrics, and is able to generalize\nrobustly to unseen sample sizes, dimensionalities, as well as non-linearities\nwith a remarkably low inference time.",
-      "pdf_url": "http://arxiv.org/pdf/2502.20925v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.20925v1",
-      "published": "2025-02-28",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Everything, Everywhere, All at Once: Is Mechanistic Interpretability Identifiable?",
-      "authors": [
-        "Maxime Méloux",
-        "Silviu Maniu",
-        "François Portet",
-        "Maxime Peyrard"
-      ],
-      "abstract": "As AI systems are used in high-stakes applications, ensuring interpretability\nis crucial. Mechanistic Interpretability (MI) aims to reverse-engineer neural\nnetworks by extracting human-understandable algorithms to explain their\nbehavior. This work examines a key question: for a given behavior, and under\nMI's criteria, does a unique explanation exist? Drawing on identifiability in\nstatistics, where parameters are uniquely inferred under specific assumptions,\nwe explore the identifiability of MI explanations.\n  We identify two main MI strategies: (1) \"where-then-what,\" which isolates a\ncircuit replicating model behavior before interpreting it, and (2)\n\"what-then-where,\" which starts with candidate algorithms and searches for\nneural activation subspaces implementing them, using causal alignment.\n  We test both strategies on Boolean functions and small multi-layer\nperceptrons, fully enumerating candidate explanations. Our experiments reveal\nsystematic non-identifiability: multiple circuits can replicate behavior, a\ncircuit can have multiple interpretations, several algorithms can align with\nthe network, and one algorithm can align with different subspaces.\n  Is uniqueness necessary? A pragmatic approach may require only predictive and\nmanipulability standards. If uniqueness is essential for understanding,\nstricter criteria may be needed. We also reference the inner interpretability\nframework, which validates explanations through multiple criteria. This work\ncontributes to defining explanation standards in AI.",
-      "pdf_url": "http://arxiv.org/pdf/2502.20914v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.20914v1",
-      "published": "2025-02-28",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Transfer Learning in Latent Contextual Bandits with Covariate Shift Through Causal Transportability",
-      "authors": [
-        "Mingwei Deng",
-        "Ville Kyrki",
-        "Dominik Baumann"
-      ],
-      "abstract": "Transferring knowledge from one environment to another is an essential\nability of intelligent systems. Nevertheless, when two environments are\ndifferent, naively transferring all knowledge may deteriorate the performance,\na phenomenon known as negative transfer. In this paper, we address this issue\nwithin the framework of multi-armed bandits from the perspective of causal\ninference. Specifically, we consider transfer learning in latent contextual\nbandits, where the actual context is hidden, but a potentially high-dimensional\nproxy is observable. We further consider a covariate shift in the context\nacross environments. We show that naively transferring all knowledge for\nclassical bandit algorithms in this setting led to negative transfer. We then\nleverage transportability theory from causal inference to develop algorithms\nthat explicitly transfer effective knowledge for estimating the causal effects\nof interest in the target environment. Besides, we utilize variational\nautoencoders to approximate causal effects under the presence of a\nhigh-dimensional proxy. We test our algorithms on synthetic and semi-synthetic\ndatasets, empirically demonstrating consistently improved learning efficiency\nacross different proxies compared to baseline algorithms, showing the\neffectiveness of our causal framework in transferring knowledge.",
-      "pdf_url": "http://arxiv.org/pdf/2502.20153v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.20153v1",
-      "published": "2025-02-27",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Economic Causal Inference Based on DML Framework: Python Implementation of Binary and Continuous Treatment Variables",
-      "authors": [
-        "Shunxin Yao"
-      ],
-      "abstract": "This study utilizes a simulated dataset to establish Python code for Double\nMachine Learning (DML) using Anaconda's Jupyter Notebook and the DML software\npackage from GitHub. The research focuses on causal inference experiments for\nboth binary and continuous treatment variables. The findings reveal that the\nDML model demonstrates relatively stable performance in calculating the Average\nTreatment Effect (ATE) and its robustness metrics. However, the study also\nhighlights that the computation of Conditional Average Treatment Effect (CATE)\nremains a significant challenge for future DML modeling, particularly in the\ncontext of continuous treatment variables. This underscores the need for\nfurther research and development in this area to enhance the model's\napplicability and accuracy.",
-      "pdf_url": "http://arxiv.org/pdf/2502.19898v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.19898v1",
-      "published": "2025-02-27",
-      "categories": [
-        "econ.EM",
-        "62P20, 91B84",
-        "C.1.3; G.3; I.2.6; J.4"
-      ]
-    },
-    {
-      "title": "Semiparametric Triple Difference Estimators",
-      "authors": [
-        "Sina Akbari",
-        "Negar Kiyavash",
-        "AmirEmad Ghassami"
-      ],
-      "abstract": "The triple difference causal inference framework is an extension of the\nwell-known difference-in-differences framework. It relaxes the parallel trends\nassumption of the difference-in-differences framework through leveraging data\nfrom an auxiliary domain. Despite being commonly applied in empirical research,\nthe triple difference framework has received relatively limited attention in\nthe statistics literature. Specifically, investigating the intricacies of\nidentification and the design of robust and efficient estimators for this\nframework has remained largely unexplored. This work aims to address these gaps\nin the literature. From the identification standpoint, we present outcome\nregression and weighting methods to identify the average treatment effect on\nthe treated in both panel data and repeated cross-section settings. For the\nlatter, we relax the commonly made assumption of time-invariant covariates.\nFrom the estimation perspective, we consider semiparametric estimators for the\ntriple difference framework in both panel data and repeated cross-sections\nsettings. We demonstrate that our proposed estimators are doubly robust.",
-      "pdf_url": "http://arxiv.org/pdf/2502.19788v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.19788v1",
-      "published": "2025-02-27",
-      "categories": [
-        "econ.EM",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Effect Estimation under Networked Interference without Networked Unconfoundedness Assumption",
-      "authors": [
-        "Weilin Chen",
-        "Ruichu Cai",
-        "Jie Qiao",
-        "Yuguang Yan",
-        "José Miguel Hernández-Lobato"
-      ],
-      "abstract": "Estimating causal effects under networked interference is a crucial yet\nchallenging problem. Existing methods based on observational data mainly rely\non the networked unconfoundedness assumption, which guarantees the\nidentification of networked effects. However, the networked unconfoundedness\nassumption is usually violated due to the latent confounders in observational\ndata, hindering the identification of networked effects. Interestingly, in such\nnetworked settings, interactions between units provide valuable information for\nrecovering latent confounders. In this paper, we identify three types of latent\nconfounders in networked inference that hinder identification: those affecting\nonly the individual, those affecting only neighbors, and those influencing\nboth. Specifically, we devise a networked effect estimator based on\nidentifiable representation learning techniques. Theoretically, we establish\nthe identifiability of all latent confounders, and leveraging the identified\nlatent confounders, we provide the networked effect identification result.\nExtensive experiments validate our theoretical results and demonstrate the\neffectiveness of the proposed method.",
-      "pdf_url": "http://arxiv.org/pdf/2502.19741v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.19741v1",
-      "published": "2025-02-27",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Training Robust Graph Neural Networks by Modeling Noise Dependencies",
-      "authors": [
-        "Yeonjun In",
-        "Kanghoon Yoon",
-        "Sukwon Yun",
-        "Kibum Kim",
-        "Sungchul Kim",
-        "Chanyoung Park"
-      ],
-      "abstract": "In real-world applications, node features in graphs often contain noise from\nvarious sources, leading to significant performance degradation in GNNs.\nAlthough several methods have been developed to enhance robustness, they rely\non the unrealistic assumption that noise in node features is independent of the\ngraph structure and node labels, thereby limiting their applicability. To this\nend, we introduce a more realistic noise scenario, dependency-aware noise on\ngraphs (DANG), where noise in node features create a chain of noise\ndependencies that propagates to the graph structure and node labels. We propose\na novel robust GNN, DA-GNN, which captures the causal relationships among\nvariables in the data generating process (DGP) of DANG using variational\ninference. In addition, we present new benchmark datasets that simulate DANG in\nreal-world applications, enabling more practical research on robust GNNs.\nExtensive experiments demonstrate that DA-GNN consistently outperforms existing\nbaselines across various noise scenarios, including both DANG and conventional\nnoise models commonly considered in this field.",
-      "pdf_url": "http://arxiv.org/pdf/2502.19670v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.19670v1",
-      "published": "2025-02-27",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Treatment Non-Adherence Bias in Clinical Machine Learning: A Real-World Study on Hypertension Medication",
-      "authors": [
-        "Zhongyuan Liang",
-        "Arvind Suresh",
-        "Irene Y. Chen"
-      ],
-      "abstract": "Machine learning systems trained on electronic health records (EHRs)\nincreasingly guide treatment decisions, but their reliability depends on the\ncritical assumption that patients follow the prescribed treatments recorded in\nEHRs. Using EHR data from 3,623 hypertension patients, we investigate how\ntreatment non-adherence introduces implicit bias that can fundamentally distort\nboth causal inference and predictive modeling. By extracting patient adherence\ninformation from clinical notes using a large language model, we identify 786\npatients (21.7%) with medication non-adherence. We further uncover key\ndemographic and clinical factors associated with non-adherence, as well as\npatient-reported reasons including side effects and difficulties obtaining\nrefills. Our findings demonstrate that this implicit bias can not only reverse\nestimated treatment effects, but also degrade model performance by up to 5%\nwhile disproportionately affecting vulnerable populations by exacerbating\ndisparities in decision outcomes and model error rates. This highlights the\nimportance of accounting for treatment non-adherence in developing responsible\nand equitable clinical machine learning systems.",
-      "pdf_url": "http://arxiv.org/pdf/2502.19625v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.19625v1",
-      "published": "2025-02-26",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Towards a robust approach to infer causality in molecular systems satisfying detailed balance",
-      "authors": [
-        "Vittorio Del Tatto",
-        "Debarshi Banerjee",
-        "Ali Hassanali",
-        "Alessandro Laio"
-      ],
-      "abstract": "The ability to distinguish between correlation and causation of variables in\nmolecular systems remains an interesting and open area of investigation. In\nthis work, we probe causality in a molecular system using two independent\ncomputational methods that infer the causal direction through the language of\ninformation transfer. Specifically, we demonstrate that a molecular dynamics\nsimulation involving a single Tryptophan in liquid water displays asymmetric\ninformation transfer between specific collective variables, such as solute and\nsolvent coordinates. Analyzing a discrete Markov-state and Langevin dynamics on\na 2D free energy surface, we show that the same kind of asymmetries can emerge\neven in extremely simple systems, undergoing equilibrium and time-reversible\ndynamics. We use these model systems to rationalize the unidirectional\ninformation transfer in the molecular system in terms of asymmetries in the\nunderlying free energy landscape and/or relaxation dynamics of the relevant\ncoordinates. Finally, we propose a computational experiment that allows one to\ndecide if an asymmetric information transfer between two variables corresponds\nto a genuine causal link.",
-      "pdf_url": "http://arxiv.org/pdf/2502.19384v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.19384v1",
-      "published": "2025-02-26",
-      "categories": [
-        "physics.chem-ph",
-        "cond-mat.stat-mech",
-        "physics.bio-ph"
       ]
     }
   ]
