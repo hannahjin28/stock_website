@@ -1,6 +1,69 @@
 {
-  "last_updated": "2025-03-06T00:47:42.113989",
+  "last_updated": "2025-03-07T00:48:03.676999",
   "papers": [
+    {
+      "title": "Causal language jumps in clinical practice guidelines for diabetes management",
+      "authors": [
+        "Keling Wang",
+        "Chang Wei",
+        "Jeremy A. Labrecque"
+      ],
+      "abstract": "Clinical practice guidelines are designed to guide clinical practice and\ninvolve causal language. Sometimes guidelines make or require stronger causal\nclaims than those in the references they rely on, a phenomenon we refer to as\n'causal language jump'. We evaluated the strength of expressed causation in\ndiabetes guidelines and the evidence they reference to assess the pattern of\njumps. We randomly sampled 300 guideline statements from four diabetes\nguidelines. We rated the causation strength in the statements and the\ndependence on causation in recommendations supported by these statements using\nexisting scales. Among the causal statements, the cited original studies were\nsimilarly assessed. We also assessed how well they report target trial\nemulation (TTE) components as a proxy for reliability. Of the sampled\nstatements, 114 (38.0%) were causal, and 76 (66.7%) expressed strong causation.\n27.2% (31/114) of causal guideline statements demonstrated a \"causal language\njump\", and 34.9% (29/83) of guideline recommendations cannot be effectively\nsupported. Of the 53 eligible studies for TTE rating, most did not report\ntreatment assignment and causal contrast in detail. Our findings suggest causal\nlanguage jumps were common among diabetes guidelines. While these jumps are\nsometimes inevitable, they should always be supported by good causal inference\npractices.",
+      "pdf_url": "http://arxiv.org/pdf/2503.03557v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.03557v1",
+      "published": "2025-03-05",
+      "categories": [
+        "stat.AP",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "The Ejection of Transient Jets in Swift J1727.8-1613 Revealed by Time-Dependent Visibility Modelling",
+      "authors": [
+        "Callan M. Wood",
+        "James C. A. Miller-Jones",
+        "Arash Bahramian",
+        "Steven J. Tingay",
+        "He-Xin Liu",
+        "Diego Altamirano",
+        "Rob Fender",
+        "Elmar Körding",
+        "Dipankar Maitra",
+        "Sera Markoff",
+        "David M. Russell",
+        "Thomas D. Russell",
+        "Craig L. Sarazin",
+        "Gregory R. Sivakoff",
+        "Roberto Soria",
+        "Alexandra J. Tetarenko",
+        "Valeriu Tudose"
+      ],
+      "abstract": "High angular resolution radio observations of relativistic jets are necessary\nto understand the causal connection between accretion and jet ejection in low\nmass X-ray binaries. Images from these observations can be difficult to\nreconstruct due to the rapid intra-observational motion and variability of\ntransient jets. We have developed a time-dependent visibility model fitting and\nself-calibration procedure and applied it to a single four-hour VLBA\nobservation of the low-mass X-ray binary Swift J1727.8-1613 during the bright\nflaring period of its 2023 outburst. This allowed us to detect and model a\nslightly resolved self-absorbed compact core, as well as three downstream\ntransient jet knots. We were able to precisely measure the proper motion and\nflux density variability of these three jet knots, as well as (for the first\ntime) their intra-observational expansion. Using simultaneous multi-frequency\ndata, we were also able to measure the spectral index of the furthest\ndownstream jet knot, and the core, as well as the frequency-dependent core\nshift between 2.3 and 8.3 GHz. Using these measurements, we inferred the\nejection dates of the three jet knots, including one to within $\\pm40$ minutes,\nwhich is one of the most precise ever measured. The ejection of the transient\njet knots coincided with a bright X-ray flare and a drastic change in the X-ray\nspectral and timing properties as seen by HXMT, which is the clearest\nassociation ever seen between the launching of transient relativistic jets in\nan X-ray binary and a sudden change in the X-ray properties of the accretion\ninflow.",
+      "pdf_url": "http://arxiv.org/pdf/2503.03073v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.03073v1",
+      "published": "2025-03-05",
+      "categories": [
+        "astro-ph.HE"
+      ]
+    },
+    {
+      "title": "Out-of-Distribution Generalization on Graphs via Progressive Inference",
+      "authors": [
+        "Yiming Xu",
+        "Bin Shi",
+        "Zhen Peng",
+        "Huixiang Liu",
+        "Bo Dong",
+        "Chen Chen"
+      ],
+      "abstract": "The development and evaluation of graph neural networks (GNNs) generally\nfollow the independent and identically distributed (i.i.d.) assumption. Yet\nthis assumption is often untenable in practice due to the uncontrollable data\ngeneration mechanism. In particular, when the data distribution shows a\nsignificant shift, most GNNs would fail to produce reliable predictions and may\neven make decisions randomly. One of the most promising solutions to improve\nthe model generalization is to pick out causal invariant parts in the input\ngraph. Nonetheless, we observe a significant distribution gap between the\ncausal parts learned by existing methods and the ground truth, leading to\nundesirable performance. In response to the above issues, this paper presents\nGPro, a model that learns graph causal invariance with progressive inference.\nSpecifically, the complicated graph causal invariant learning is decomposed\ninto multiple intermediate inference steps from easy to hard, and the\nperception of GPro is continuously strengthened through a progressive inference\nprocess to extract causal features that are stable to distribution shifts. We\nalso enlarge the training distribution by creating counterfactual samples to\nenhance the capability of the GPro in capturing the causal invariant parts.\nExtensive experiments demonstrate that our proposed GPro outperforms the\nstate-of-the-art methods by 4.91% on average. For datasets with more severe\ndistribution shifts, the performance improvement can be up to 6.86%.",
+      "pdf_url": "http://arxiv.org/pdf/2503.02988v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.02988v1",
+      "published": "2025-03-04",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "PanelMatch: Matching Methods for Causal Inference with Time-Series Cross-Section Data",
       "authors": [
@@ -113,55 +176,6 @@
       "published": "2025-03-02",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Inference on Outcomes Learned from Text",
-      "authors": [
-        "Iman Modarressi",
-        "Jann Spiess",
-        "Amar Venugopal"
-      ],
-      "abstract": "We propose a machine-learning tool that yields causal inference on text in\nrandomized trials. Based on a simple econometric framework in which text may\ncapture outcomes of interest, our procedure addresses three questions: First,\nis the text affected by the treatment? Second, which outcomes is the effect on?\nAnd third, how complete is our description of causal effects? To answer all\nthree questions, our approach uses large language models (LLMs) that suggest\nsystematic differences across two groups of text documents and then provides\nvalid inference based on costly validation. Specifically, we highlight the need\nfor sample splitting to allow for statistical validation of LLM outputs, as\nwell as the need for human labeling to validate substantive claims about how\ndocuments differ across groups. We illustrate the tool in a proof-of-concept\napplication using abstracts of academic manuscripts.",
-      "pdf_url": "http://arxiv.org/pdf/2503.00725v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.00725v1",
-      "published": "2025-03-02",
-      "categories": [
-        "econ.EM",
-        "cs.CL",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Learning Conditional Average Treatment Effects in Regression Discontinuity Designs using Bayesian Additive Regression Trees",
-      "authors": [
-        "Rafael Alcantara",
-        "P. Richard Hahn",
-        "Carlos Carvalho",
-        "Hedibert Lopes"
-      ],
-      "abstract": "BART (Bayesian additive regression trees) has been established as a leading\nsupervised learning method, particularly in the field of causal inference. This\npaper explores the use of BART models for learning conditional average\ntreatment effects (CATE) from regression discontinuity designs, where treatment\nassignment is based on whether an observed covariate (called the running\nvariable) exceeds a pre-specified threshold. A purpose-built version of BART\nthat uses linear regression leaf models (of the running variable and treatment\nassignment dummy) is shown to out-perform off-the-shelf BART implementations as\nwell as a local polynomial regression approach and a CART-based approach. The\nnew method is evaluated in thorough simulation studies as well as an empirical\napplication looking at the effect of academic probation on student performance.",
-      "pdf_url": "http://arxiv.org/pdf/2503.00326v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.00326v1",
-      "published": "2025-03-01",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Persuasion Should be Double-Blind: A Multi-Domain Dialogue Dataset With Faithfulness Based on Causal Theory of Mind",
-      "authors": [
-        "Dingyi Zhang",
-        "Deyu Zhou"
-      ],
-      "abstract": "Persuasive dialogue plays a pivotal role in human communication, influencing\nvarious domains. Recent persuasive dialogue datasets often fail to align with\nreal-world interpersonal interactions, leading to unfaithful representations.\nFor instance, unrealistic scenarios may arise, such as when the persuadee\nexplicitly instructs the persuader on which persuasion strategies to employ,\nwith each of the persuadee's questions corresponding to a specific strategy for\nthe persuader to follow. This issue can be attributed to a violation of the\n\"Double Blind\" condition, where critical information is fully shared between\nparticipants. In actual human interactions, however, key information such as\nthe mental state of the persuadee and the persuasion strategies of the\npersuader is not directly accessible. The persuader must infer the persuadee's\nmental state using Theory of Mind capabilities and construct arguments that\nalign with the persuadee's motivations. To address this gap, we introduce\nToMMA, a novel multi-agent framework for dialogue generation that is guided by\ncausal Theory of Mind. This framework ensures that information remains\nundisclosed between agents, preserving \"double-blind\" conditions, while causal\nToM directs the persuader's reasoning, enhancing alignment with human-like\npersuasion dynamics. Consequently, we present CToMPersu, a multi-domain,\nmulti-turn persuasive dialogue dataset that tackles both double-blind and\nlogical coherence issues, demonstrating superior performance across multiple\nmetrics and achieving better alignment with real human dialogues. Our dataset\nand prompts are available at https://github.com/DingyiZhang/ToMMA-CToMPersu .",
-      "pdf_url": "http://arxiv.org/pdf/2502.21297v1",
-      "arxiv_url": "http://arxiv.org/abs/2502.21297v1",
-      "published": "2025-02-28",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]
