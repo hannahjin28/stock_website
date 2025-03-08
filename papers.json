@@ -1,6 +1,132 @@
 {
-  "last_updated": "2025-03-07T00:48:03.676999",
+  "last_updated": "2025-03-08T00:37:27.623378",
   "papers": [
+    {
+      "title": "Compositional Causal Reasoning Evaluation in Language Models",
+      "authors": [
+        "Jacqueline R. M. A. Maasch",
+        "Alihan Hüyük",
+        "Xinnuo Xu",
+        "Aditya V. Nori",
+        "Javier Gonzalez"
+      ],
+      "abstract": "Causal reasoning and compositional reasoning are two core aspirations in\ngenerative AI. Measuring the extent of these behaviors requires principled\nevaluation methods. We explore a unified perspective that considers both\nbehaviors simultaneously, termed compositional causal reasoning (CCR): the\nability to infer how causal measures compose and, equivalently, how causal\nquantities propagate through graphs. We instantiate a framework for the\nsystematic evaluation of CCR for the average treatment effect and the\nprobability of necessity and sufficiency. As proof of concept, we demonstrate\nthe design of CCR tasks for language models in the LLama, Phi, and GPT\nfamilies. On a math word problem, our framework revealed a range of\ntaxonomically distinct error patterns. Additionally, CCR errors increased with\nthe complexity of causal paths for all models except o1.",
+      "pdf_url": "http://arxiv.org/pdf/2503.04556v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.04556v1",
+      "published": "2025-03-06",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "A Spatiotemporal, Quasi-experimental Causal Inference Approach to Characterize the Effects of Global Plastic Waste Export and Burning on Air Quality Using Remotely Sensed Data",
+      "authors": [
+        "Ellen M. Considine",
+        "Rachel C. Nethery"
+      ],
+      "abstract": "Open burning of plastic waste may pose a significant threat to global health\nby degrading air quality, but quantitative research on this problem -- crucial\nfor policy making -- has previously been stunted by lack of data. Critically,\nmany low- and middle-income countries, where open burning is of greatest\nconcern, have little to no air quality monitoring. Here, we propose an\napproach, at the intersection of modern causal inference and environmental data\nscience, to leverage remotely sensed data products combined with spatiotemporal\ncausal analytic techniques to evaluate the impact of large-scale plastic waste\npolicies on air quality. Throughout, we use the case study of Indonesia before\nand after 2018, when China halted its import of plastic waste, resulting in\ndiversion of this massive waste stream to other countries in the East Asia &\nPacific region, including Indonesia. We tailor cutting-edge statistical methods\nto this setting, estimating effects of the increase in plastic waste imports on\nfine particulate matter near waste dump sites in Indonesia and allowing effects\nto vary as a function of the site's proximity to ports (from which\ninternational plastic waste enters the country), which serves as an induced\ncontinuous exposure or \"dose\" of treatment. We observe a statistically\nsignificant increase in monthly fine particulate matter concentrations near\ndump sites after China's ban took effect (2018-2019) compared to concentrations\nexpected under business-as-usual (2012-2017), with increases ranging from\n0.76--1.72$\\mu$g/m$^3$ (15--34\\% of the World Health Organization's recommended\nlimit for exposure on an annual basis) depending on the site's port proximity,\nat sites with port proximity above the 20th quantile. Sites with lower port\nproximity had smaller and not statistically significant effects.",
+      "pdf_url": "http://arxiv.org/pdf/2503.04491v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.04491v1",
+      "published": "2025-03-06",
+      "categories": [
+        "stat.AP",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causally Reliable Concept Bottleneck Models",
+      "authors": [
+        "Giovanni De Felice",
+        "Arianna Casanova Flores",
+        "Francesco De Santis",
+        "Silvia Santini",
+        "Johannes Schneider",
+        "Pietro Barbiero",
+        "Alberto Termine"
+      ],
+      "abstract": "Concept-based models are an emerging paradigm in deep learning that\nconstrains the inference process to operate through human-interpretable\nconcepts, facilitating explainability and human interaction. However, these\narchitectures, on par with popular opaque neural models, fail to account for\nthe true causal mechanisms underlying the target phenomena represented in the\ndata. This hampers their ability to support causal reasoning tasks, limits\nout-of-distribution generalization, and hinders the implementation of fairness\nconstraints. To overcome these issues, we propose \\emph{Causally reliable\nConcept Bottleneck Models} (C$^2$BMs), a class of concept-based architectures\nthat enforce reasoning through a bottleneck of concepts structured according to\na model of the real-world causal mechanisms. We also introduce a pipeline to\nautomatically learn this structure from observational data and\n\\emph{unstructured} background knowledge (e.g., scientific literature).\nExperimental evidence suggest that C$^2$BM are more interpretable, causally\nreliable, and improve responsiveness to interventions w.r.t. standard opaque\nand concept-based models, while maintaining their accuracy.",
+      "pdf_url": "http://arxiv.org/pdf/2503.04363v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.04363v1",
+      "published": "2025-03-06",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Large Language Models for Zero-shot Inference of Causal Structures in Biology",
+      "authors": [
+        "Izzy Newsham",
+        "Luka Kovačević",
+        "Richard Moulange",
+        "Nan Rosemary Ke",
+        "Sach Mukherjee"
+      ],
+      "abstract": "Genes, proteins and other biological entities influence one another via\ncausal molecular networks. Causal relationships in such networks are mediated\nby complex and diverse mechanisms, through latent variables, and are often\nspecific to cellular context. It remains challenging to characterise such\nnetworks in practice. Here, we present a novel framework to evaluate large\nlanguage models (LLMs) for zero-shot inference of causal relationships in\nbiology. In particular, we systematically evaluate causal claims obtained from\nan LLM using real-world interventional data. This is done over one hundred\nvariables and thousands of causal hypotheses. Furthermore, we consider several\nprompting and retrieval-augmentation strategies, including large, and\npotentially conflicting, collections of scientific articles. Our results show\nthat with tailored augmentation and prompting, even relatively small LLMs can\ncapture meaningful aspects of causal structure in biological systems. This\nsupports the notion that LLMs could act as orchestration tools in biological\ndiscovery, by helping to distil current knowledge in ways amenable to\ndownstream analysis. Our approach to assessing LLMs with respect to\nexperimental data is relevant for a broad range of problems at the intersection\nof causal learning, LLMs and scientific discovery.",
+      "pdf_url": "http://arxiv.org/pdf/2503.04347v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.04347v1",
+      "published": "2025-03-06",
+      "categories": [
+        "cs.LG",
+        "q-bio.GN"
+      ]
+    },
+    {
+      "title": "LEDiT: Your Length-Extrapolatable Diffusion Transformer without Positional Encoding",
+      "authors": [
+        "Shen Zhang",
+        "Yaning Tan",
+        "Siyuan Liang",
+        "Linze Li",
+        "Ge Wu",
+        "Yuhao Chen",
+        "Shuheng Li",
+        "Zhenyu Zhao",
+        "Caihua Chen",
+        "Jiajun Liang",
+        "Yao Tang"
+      ],
+      "abstract": "Diffusion transformers(DiTs) struggle to generate images at resolutions\nhigher than their training resolutions. The primary obstacle is that the\nexplicit positional encodings(PE), such as RoPE, need extrapolation which\ndegrades performance when the inference resolution differs from training. In\nthis paper, we propose a Length-Extrapolatable Diffusion Transformer(LEDiT), a\nsimple yet powerful architecture to overcome this limitation. LEDiT needs no\nexplicit PEs, thereby avoiding extrapolation. The key innovations of LEDiT are\nintroducing causal attention to implicitly impart global positional information\nto tokens, while enhancing locality to precisely distinguish adjacent tokens.\nExperiments on 256x256 and 512x512 ImageNet show that LEDiT can scale the\ninference resolution to 512x512 and 1024x1024, respectively, while achieving\nbetter image quality compared to current state-of-the-art length extrapolation\nmethods(NTK-aware, YaRN). Moreover, LEDiT achieves strong extrapolation\nperformance with just 100K steps of fine-tuning on a pretrained DiT,\ndemonstrating its potential for integration into existing text-to-image DiTs.",
+      "pdf_url": "http://arxiv.org/pdf/2503.04344v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.04344v1",
+      "published": "2025-03-06",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Spatial-Temporal Perception with Causal Inference for Naturalistic Driving Action Recognition",
+      "authors": [
+        "Qing Chang",
+        "Wei Dai",
+        "Zhihao Shuai",
+        "Limin Yu",
+        "Yutao Yue"
+      ],
+      "abstract": "Naturalistic driving action recognition is essential for vehicle cabin\nmonitoring systems. However, the complexity of real-world backgrounds presents\nsignificant challenges for this task, and previous approaches have struggled\nwith practical implementation due to their limited ability to observe subtle\nbehavioral differences and effectively learn inter-frame features from video.\nIn this paper, we propose a novel Spatial-Temporal Perception (STP)\narchitecture that emphasizes both temporal information and spatial\nrelationships between key objects, incorporating a causal decoder to perform\nbehavior recognition and temporal action localization. Without requiring\nmultimodal input, STP directly extracts temporal and spatial distance features\nfrom RGB video clips. Subsequently, these dual features are jointly encoded by\nmaximizing the expected likelihood across all possible permutations of the\nfactorization order. By integrating temporal and spatial features at different\nscales, STP can perceive subtle behavioral changes in challenging scenarios.\nAdditionally, we introduce a causal-aware module to explore relationships\nbetween video frame features, significantly enhancing detection efficiency and\nperformance. We validate the effectiveness of our approach using two publicly\navailable driver distraction detection benchmarks. The results demonstrate that\nour framework achieves state-of-the-art performance.",
+      "pdf_url": "http://arxiv.org/pdf/2503.04078v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.04078v1",
+      "published": "2025-03-06",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "How Balanced Should Causal Covariates Be?",
+      "authors": [
+        "Shiva Kaul",
+        "Min-Gyu Kim"
+      ],
+      "abstract": "Covariate balancing is a popular technique for controlling confounding in\nobservational studies. It finds weights for the treatment group which are close\nto uniform, but make the group's covariate means (approximately) equal to those\nof the entire sample. A crucial question is: how approximate should the\nbalancing be, in order to minimize the error of the final estimate? Current\nguidance is derived from heuristic or asymptotic analyses, which are\nuninformative when the size of the sample is small compared to the number of\ncovariates. This paper presents the first rigorous, nonasymptotic analysis of\ncovariate balancing; specifically, we use PAC-Bayesian techniques to derive\nvalid, finite-sample confidence intervals for the treatment effect. More\ngenerally, we prove these guarantees for a flexible form of covariate balancing\nwhere the regularization parameters weighting the tradeoff between bias\n(imbalance) and variance (divergence from uniform) are optimized, not fixed.\nThis gives rise to a new balancing algorithm which empirically delivers\nsuperior adaptivity. Our overall contribution is to make covariate balancing a\nmore reliable method for causal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2503.03860v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.03860v1",
+      "published": "2025-03-05",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Causal language jumps in clinical practice guidelines for diabetes management",
       "authors": [
@@ -62,120 +188,6 @@
       "published": "2025-03-04",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "PanelMatch: Matching Methods for Causal Inference with Time-Series Cross-Section Data",
-      "authors": [
-        "Adam Rauh",
-        "In Song Kim",
-        "Kosuke Imai"
-      ],
-      "abstract": "Analyzing time-series cross-sectional (also known as longitudinal or panel)\ndata is an important process across a number of fields, including the social\nsciences, economics, finance, and medicine. PanelMatch is an R package that\nimplements a set of tools enabling researchers to apply matching methods for\ncausal inference with time-series cross-sectional data. Relative to other\ncommonly used methods for longitudinal analyses, like regression with fixed\neffects, the matching-based approach implemented in PanelMatch makes fewer\nparametric assumptions and offers more diagnostics. In this paper, we discuss\nthe PanelMatch package, showing users a recommended pipeline for doing causal\ninference analysis with it and highlighting useful diagnostic and visualization\ntools.",
-      "pdf_url": "http://arxiv.org/pdf/2503.02073v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.02073v1",
-      "published": "2025-03-03",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Learning Exposure Mapping Functions for Inferring Heterogeneous Peer Effects",
-      "authors": [
-        "Shishir Adhikari",
-        "Sourav Medya",
-        "Elena Zheleva"
-      ],
-      "abstract": "In causal inference, interference refers to the phenomenon in which the\nactions of peers in a network can influence an individual's outcome. Peer\neffect refers to the difference in counterfactual outcomes of an individual for\ndifferent levels of peer exposure, the extent to which an individual is exposed\nto the treatments, actions, or behaviors of peers. Estimating peer effects\nrequires deciding how to represent peer exposure. Typically, researchers define\nan exposure mapping function that aggregates peer treatments and outputs peer\nexposure. Most existing approaches for defining exposure mapping functions\nassume peer exposure based on the number or fraction of treated peers. Recent\nstudies have investigated more complex functions of peer exposure which capture\nthat different peers can exert different degrees of influence. However, none of\nthese works have explicitly considered the problem of automatically learning\nthe exposure mapping function. In this work, we focus on learning this function\nfor the purpose of estimating heterogeneous peer effects, where heterogeneity\nrefers to the variation in counterfactual outcomes for the same peer exposure\nbut different individual's contexts. We develop EgoNetGNN, a graph neural\nnetwork (GNN)-based method, to automatically learn the appropriate exposure\nmapping function allowing for complex peer influence mechanisms that, in\naddition to peer treatments, can involve the local neighborhood structure and\nedge attributes. We show that GNN models that use peer exposure based on the\nnumber or fraction of treated peers or learn peer exposure naively face\ndifficulty accounting for such influence mechanisms. Our comprehensive\nevaluation on synthetic and semi-synthetic network data shows that our method\nis more robust to different unknown underlying influence mechanisms when\nestimating heterogeneous peer effects when compared to state-of-the-art\nbaselines.",
-      "pdf_url": "http://arxiv.org/pdf/2503.01722v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.01722v1",
-      "published": "2025-03-03",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.SI"
-      ]
-    },
-    {
-      "title": "ProRCA: A Causal Python Package for Actionable Root Cause Analysis in Real-world Business Scenarios",
-      "authors": [
-        "Ahmed Dawoud",
-        "Shravan Talupula"
-      ],
-      "abstract": "Root Cause Analysis (RCA) is becoming ever more critical as modern systems\ngrow in complexity, volume of data, and interdependencies. While traditional\nRCA methods frequently rely on correlation-based or rule-based techniques,\nthese approaches can prove inadequate in highly dynamic, multi-layered\nenvironments. In this paper, we present a pathway-tracing package built on the\nDoWhy causal inference library. Our method integrates conditional anomaly\nscoring, noise-based attribution, and depth-first path exploration to reveal\nmulti-hop causal chains. By systematically tracing entire causal pathways from\nan observed anomaly back to the initial triggers, our approach provides a\ncomprehensive, end-to-end RCA solution. Experimental evaluations with synthetic\nanomaly injections demonstrate the package's ability to accurately isolate\ntriggers and rank root causes by their overall significance.",
-      "pdf_url": "http://arxiv.org/pdf/2503.01475v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.01475v1",
-      "published": "2025-03-03",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Causal Tree Extraction from Medical Case Reports: A Novel Task for Experts-like Text Comprehension",
-      "authors": [
-        "Sakiko Yahata",
-        "Zhen Wan",
-        "Fei Cheng",
-        "Sadao Kurohashi",
-        "Hisahiko Sato",
-        "Ryozo Nagai"
-      ],
-      "abstract": "Extracting causal relationships from a medical case report is essential for\ncomprehending the case, particularly its diagnostic process. Since the\ndiagnostic process is regarded as a bottom-up inference, causal relationships\nin cases naturally form a multi-layered tree structure. The existing tasks,\nsuch as medical relation extraction, are insufficient for capturing the causal\nrelationships of an entire case, as they treat all relations equally without\nconsidering the hierarchical structure inherent in the diagnostic process.\nThus, we propose a novel task, Causal Tree Extraction (CTE), which receives a\ncase report and generates a causal tree with the primary disease as the root,\nproviding an intuitive understanding of a case's diagnostic process.\nSubsequently, we construct a Japanese case report CTE dataset, J-Casemap,\npropose a generation-based CTE method that outperforms the baseline by 20.2\npoints in the human evaluation, and introduce evaluation metrics that reflect\nclinician preferences. Further experiments also show that J-Casemap enhances\nthe performance of solving other medical tasks, such as question answering.",
-      "pdf_url": "http://arxiv.org/pdf/2503.01302v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.01302v1",
-      "published": "2025-03-03",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "ACTIVA: Amortized Causal Effect Estimation without Graphs via Transformer-based Variational Autoencoder",
-      "authors": [
-        "Andreas Sauter",
-        "Saber Salehkaleybar",
-        "Aske Plaat",
-        "Erman Acar"
-      ],
-      "abstract": "Predicting the distribution of outcomes under hypothetical interventions is\ncrucial in domains like healthcare, economics, and policy-making. Current\nmethods often rely on strong assumptions, such as known causal graphs or\nparametric models, and lack amortization across problem instances, limiting\ntheir practicality. We propose a novel transformer-based conditional\nvariational autoencoder architecture, named ACTIVA, that extends causal\ntransformer encoders to predict causal effects as mixtures of Gaussians. Our\nmethod requires no causal graph and predicts interventional distributions given\nonly observational data and a queried intervention. By amortizing over many\nsimulated instances, it enables zero-shot generalization to novel datasets\nwithout retraining. Experiments demonstrate accurate predictions for synthetic\nand semi-synthetic data, showcasing the effectiveness of our graph-free,\namortized causal inference approach.",
-      "pdf_url": "http://arxiv.org/pdf/2503.01290v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.01290v1",
-      "published": "2025-03-03",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Architectural and Inferential Inductive Biases For Exchangeable Sequence Modeling",
-      "authors": [
-        "Daksh Mittal",
-        "Ang Li",
-        "Tzu-Ching Yen",
-        "Daniel Guetta",
-        "Hongseok Namkoong"
-      ],
-      "abstract": "Autoregressive models have emerged as a powerful framework for modeling\nexchangeable sequences - i.i.d. observations when conditioned on some latent\nfactor - enabling direct modeling of uncertainty from missing data (rather than\na latent). Motivated by the critical role posterior inference plays as a\nsubroutine in decision-making (e.g., active learning, bandits), we study the\ninferential and architectural inductive biases that are most effective for\nexchangeable sequence modeling. For the inference stage, we highlight a\nfundamental limitation of the prevalent single-step generation approach:\ninability to distinguish between epistemic and aleatoric uncertainty. Instead,\na long line of works in Bayesian statistics advocates for multi-step\nautoregressive generation; we demonstrate this \"correct approach\" enables\nsuperior uncertainty quantification that translates into better performance on\ndownstream decision-making tasks. This naturally leads to the next question:\nwhich architectures are best suited for multi-step inference? We identify a\nsubtle yet important gap between recently proposed Transformer architectures\nfor exchangeable sequences (Muller et al., 2022; Nguyen & Grover, 2022; Ye &\nNamkoong, 2024), and prove that they in fact cannot guarantee exchangeability\ndespite introducing significant computational overhead. We illustrate our\nfindings using controlled synthetic settings, demonstrating how custom\narchitectures can significantly underperform standard causal masks,\nunderscoring the need for new architectural innovations.",
-      "pdf_url": "http://arxiv.org/pdf/2503.01215v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.01215v1",
-      "published": "2025-03-03",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Time-Varying Causal Survival Learning",
-      "authors": [
-        "Xiang Meng",
-        "Iavor Bojinov"
-      ],
-      "abstract": "This work bridges the gap between staggered adoption designs and survival\nanalysis to estimate causal effects in settings with time-varying treatments,\naddressing a fundamental challenge in medical research exemplified by the\nStanford Heart Transplant study. In medical interventions, particularly organ\ntransplantation, the timing of treatment varies significantly across patients\ndue to factors such as donor availability and patient readiness, introducing\npotential bias in treatment effect estimation if not properly accounted for. We\nidentify conditions under which staggered adoption assumptions can justify the\nuse of survival analysis techniques for causal inference with time-varying\ntreatments. By establishing this connection, we enable the use of existing\nsurvival analysis methods while maintaining causal interpretability.\nFurthermore, we enhance estimation performance by incorporating double machine\nlearning methods, improving efficiency when handling complex relationships\nbetween patient characteristics and survival outcomes. Through both simulation\nstudies and application to heart transplant data, our approach demonstrates\nsuperior performance compared to traditional methods, reducing bias and\noffering theoretical guarantees for improved efficiency in survival analysis\nsettings.",
-      "pdf_url": "http://arxiv.org/pdf/2503.00730v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.00730v1",
-      "published": "2025-03-02",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
