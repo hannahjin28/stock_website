@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-03-09T00:41:37.941853",
+  "last_updated": "2025-03-10T00:40:21.250629",
   "papers": [
     {
       "title": "Compositional Causal Reasoning Evaluation in Language Models",
@@ -79,6 +79,7 @@
         "Shen Zhang",
         "Yaning Tan",
         "Siyuan Liang",
+        "Zhaowei Chen",
         "Linze Li",
         "Ge Wu",
         "Yuhao Chen",
@@ -88,9 +89,9 @@
         "Jiajun Liang",
         "Yao Tang"
       ],
-      "abstract": "Diffusion transformers(DiTs) struggle to generate images at resolutions\nhigher than their training resolutions. The primary obstacle is that the\nexplicit positional encodings(PE), such as RoPE, need extrapolation which\ndegrades performance when the inference resolution differs from training. In\nthis paper, we propose a Length-Extrapolatable Diffusion Transformer(LEDiT), a\nsimple yet powerful architecture to overcome this limitation. LEDiT needs no\nexplicit PEs, thereby avoiding extrapolation. The key innovations of LEDiT are\nintroducing causal attention to implicitly impart global positional information\nto tokens, while enhancing locality to precisely distinguish adjacent tokens.\nExperiments on 256x256 and 512x512 ImageNet show that LEDiT can scale the\ninference resolution to 512x512 and 1024x1024, respectively, while achieving\nbetter image quality compared to current state-of-the-art length extrapolation\nmethods(NTK-aware, YaRN). Moreover, LEDiT achieves strong extrapolation\nperformance with just 100K steps of fine-tuning on a pretrained DiT,\ndemonstrating its potential for integration into existing text-to-image DiTs.",
-      "pdf_url": "http://arxiv.org/pdf/2503.04344v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.04344v1",
+      "abstract": "Diffusion transformers(DiTs) struggle to generate images at resolutions\nhigher than their training resolutions. The primary obstacle is that the\nexplicit positional encodings(PE), such as RoPE, need extrapolation which\ndegrades performance when the inference resolution differs from training. In\nthis paper, we propose a Length-Extrapolatable Diffusion Transformer(LEDiT), a\nsimple yet powerful architecture to overcome this limitation. LEDiT needs no\nexplicit PEs, thereby avoiding extrapolation. The key innovations of LEDiT are\nintroducing causal attention to implicitly impart global positional information\nto tokens, while enhancing locality to precisely distinguish adjacent tokens.\nExperiments on 256x256 and 512x512 ImageNet show that LEDiT can scale the\ninference resolution to 512x512 and 1024x1024, respectively, while achieving\nbetter image quality compared to current state-of-the-art length extrapolation\nmethods(NTK-aware, YaRN). Moreover, LEDiT achieves strong extrapolation\nperformance with just 100K steps of fine-tuning on a pretrained DiT,\ndemonstrating its potential for integration into existing text-to-image DiTs.\nProject page: https://shenzhang2145.github.io/ledit/",
+      "pdf_url": "http://arxiv.org/pdf/2503.04344v2",
+      "arxiv_url": "http://arxiv.org/abs/2503.04344v2",
       "published": "2025-03-06",
       "categories": [
         "cs.CV"
