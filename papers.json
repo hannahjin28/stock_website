@@ -1,6 +1,79 @@
 {
-  "last_updated": "2025-03-10T00:40:21.250629",
+  "last_updated": "2025-03-11T00:48:31.074312",
   "papers": [
+    {
+      "title": "Integration of aggregated data in causally interpretable meta-analysis by inverse weighting",
+      "authors": [
+        "Tat-Thang Vo",
+        "Tran Trong Khoi Le",
+        "Sivem Afach",
+        "Stijn Vansteelandt"
+      ],
+      "abstract": "Obtaining causally interpretable meta-analysis results is challenging when\nthere are differences in the distribution of effect modifiers between eligible\ntrials. To overcome this, recent work on transportability methods has\nconsidered standardizing results of individual studies over the case-mix of a\ntarget population, prior to pooling them as in a classical random-effect\nmeta-analysis. One practical challenge, however, is that case-mix\nstandardization often requires individual participant data (IPD) on outcome,\ntreatments and case-mix characteristics to be fully accessible in every\neligible study, along with IPD case-mix characteristics for a random sample\nfrom the target population. In this paper, we aim to develop novel strategies\nto integrate aggregated-level data from eligible trials with non-accessible IPD\ninto a causal meta-analysis, by extending moment-based methods frequently used\nfor population-adjusted indirect comparison in health technology assessment.\nSince valid inference for these moment-based methods by M-estimation theory\nrequires additional aggregated data that are often unavailable in practice,\ncomputational methods to address this concern are also developed. We assess the\nfinite-sample performance of the proposed approaches by simulated data, and\nthen apply these on real-world clinical data to investigate the effectiveness\nof risankizumab versus ustekinumab among patients with moderate to severe\npsoriasis.",
+      "pdf_url": "http://arxiv.org/pdf/2503.05634v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.05634v1",
+      "published": "2025-03-07",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Riemannian Metric Learning: Closer to You than You Imagine",
+      "authors": [
+        "Samuel Gruffaz",
+        "Josua Sassen"
+      ],
+      "abstract": "Riemannian metric learning is an emerging field in machine learning,\nunlocking new ways to encode complex data structures beyond traditional\ndistance metric learning. While classical approaches rely on global distances\nin Euclidean space, they often fall short in capturing intrinsic data geometry.\nEnter Riemannian metric learning: a powerful generalization that leverages\ndifferential geometry to model the data according to their underlying\nRiemannian manifold. This approach has demonstrated remarkable success across\ndiverse domains, from causal inference and optimal transport to generative\nmodeling and representation learning. In this review, we bridge the gap between\nclassical metric learning and Riemannian geometry, providing a structured and\naccessible overview of key methods, applications, and recent advances. We argue\nthat Riemannian metric learning is not merely a technical refinement but a\nfundamental shift in how we think about data representations. Thus, this review\nshould serve as a valuable resource for researchers and practitioners\ninterested in exploring Riemannian metric learning and convince them that it is\ncloser to them than they might imagine-both in theory and in practice.",
+      "pdf_url": "http://arxiv.org/pdf/2503.05321v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.05321v1",
+      "published": "2025-03-07",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.DG",
+        "68T05 (Primary), 58D17 (Secondary)",
+        "I.2.6"
+      ]
+    },
+    {
+      "title": "Frequency Autoregressive Image Generation with Continuous Tokens",
+      "authors": [
+        "Hu Yu",
+        "Hao Luo",
+        "Hangjie Yuan",
+        "Yu Rong",
+        "Feng Zhao"
+      ],
+      "abstract": "Autoregressive (AR) models for image generation typically adopt a two-stage\nparadigm of vector quantization and raster-scan ``next-token prediction\",\ninspired by its great success in language modeling. However, due to the huge\nmodality gap, image autoregressive models may require a systematic reevaluation\nfrom two perspectives: tokenizer format and regression direction. In this\npaper, we introduce the frequency progressive autoregressive (\\textbf{FAR})\nparadigm and instantiate FAR with the continuous tokenizer. Specifically, we\nidentify spectral dependency as the desirable regression direction for FAR,\nwherein higher-frequency components build upon the lower one to progressively\nconstruct a complete image. This design seamlessly fits the causality\nrequirement for autoregressive models and preserves the unique spatial locality\nof image data. Besides, we delve into the integration of FAR and the continuous\ntokenizer, introducing a series of techniques to address optimization\nchallenges and improve the efficiency of training and inference processes. We\ndemonstrate the efficacy of FAR through comprehensive experiments on the\nImageNet dataset and verify its potential on text-to-image generation.",
+      "pdf_url": "http://arxiv.org/pdf/2503.05305v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.05305v1",
+      "published": "2025-03-07",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Kernel-based estimators for functional causal effects",
+      "authors": [
+        "Yordan P. Raykov",
+        "Hengrui Luo",
+        "Justin D. Strait",
+        "Wasiur R. KhudaBukhsh"
+      ],
+      "abstract": "We propose causal effect estimators based on empirical Fr\\'{e}chet means and\noperator-valued kernels, tailored to functional data spaces. These methods\naddress the challenges of high-dimensionality, sequential ordering, and model\ncomplexity while preserving robustness to treatment misspecification. Using\nstructural assumptions, we obtain compact representations of potential\noutcomes, enabling scalable estimation of causal effects over time and across\ncovariates. We provide both theoretical, regarding the consistency of\nfunctional causal effects, as well as empirical comparison of a range of\nproposed causal effect estimators.\n  Applications to binary treatment settings with functional outcomes illustrate\nthe framework's utility in biomedical monitoring, where outcomes exhibit\ncomplex temporal dynamics. Our estimators accommodate scenarios with registered\ncovariates and outcomes, aligning them to the Fr\\'{e}chet means, as well as\ncases requiring higher-order representations to capture intricate\ncovariate-outcome interactions. These advancements extend causal inference to\ndynamic and non-linear domains, offering new tools for understanding complex\ntreatment effects in functional data settings.",
+      "pdf_url": "http://arxiv.org/pdf/2503.05024v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.05024v1",
+      "published": "2025-03-06",
+      "categories": [
+        "stat.ME",
+        "cs.LG",
+        "math.ST",
+        "stat.TH",
+        "62G05",
+        "G.3"
+      ]
+    },
     {
       "title": "Compositional Causal Reasoning Evaluation in Language Models",
       "authors": [
@@ -112,83 +185,6 @@
       "published": "2025-03-06",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "How Balanced Should Causal Covariates Be?",
-      "authors": [
-        "Shiva Kaul",
-        "Min-Gyu Kim"
-      ],
-      "abstract": "Covariate balancing is a popular technique for controlling confounding in\nobservational studies. It finds weights for the treatment group which are close\nto uniform, but make the group's covariate means (approximately) equal to those\nof the entire sample. A crucial question is: how approximate should the\nbalancing be, in order to minimize the error of the final estimate? Current\nguidance is derived from heuristic or asymptotic analyses, which are\nuninformative when the size of the sample is small compared to the number of\ncovariates. This paper presents the first rigorous, nonasymptotic analysis of\ncovariate balancing; specifically, we use PAC-Bayesian techniques to derive\nvalid, finite-sample confidence intervals for the treatment effect. More\ngenerally, we prove these guarantees for a flexible form of covariate balancing\nwhere the regularization parameters weighting the tradeoff between bias\n(imbalance) and variance (divergence from uniform) are optimized, not fixed.\nThis gives rise to a new balancing algorithm which empirically delivers\nsuperior adaptivity. Our overall contribution is to make covariate balancing a\nmore reliable method for causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2503.03860v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.03860v1",
-      "published": "2025-03-05",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal language jumps in clinical practice guidelines for diabetes management",
-      "authors": [
-        "Keling Wang",
-        "Chang Wei",
-        "Jeremy A. Labrecque"
-      ],
-      "abstract": "Clinical practice guidelines are designed to guide clinical practice and\ninvolve causal language. Sometimes guidelines make or require stronger causal\nclaims than those in the references they rely on, a phenomenon we refer to as\n'causal language jump'. We evaluated the strength of expressed causation in\ndiabetes guidelines and the evidence they reference to assess the pattern of\njumps. We randomly sampled 300 guideline statements from four diabetes\nguidelines. We rated the causation strength in the statements and the\ndependence on causation in recommendations supported by these statements using\nexisting scales. Among the causal statements, the cited original studies were\nsimilarly assessed. We also assessed how well they report target trial\nemulation (TTE) components as a proxy for reliability. Of the sampled\nstatements, 114 (38.0%) were causal, and 76 (66.7%) expressed strong causation.\n27.2% (31/114) of causal guideline statements demonstrated a \"causal language\njump\", and 34.9% (29/83) of guideline recommendations cannot be effectively\nsupported. Of the 53 eligible studies for TTE rating, most did not report\ntreatment assignment and causal contrast in detail. Our findings suggest causal\nlanguage jumps were common among diabetes guidelines. While these jumps are\nsometimes inevitable, they should always be supported by good causal inference\npractices.",
-      "pdf_url": "http://arxiv.org/pdf/2503.03557v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.03557v1",
-      "published": "2025-03-05",
-      "categories": [
-        "stat.AP",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "The Ejection of Transient Jets in Swift J1727.8-1613 Revealed by Time-Dependent Visibility Modelling",
-      "authors": [
-        "Callan M. Wood",
-        "James C. A. Miller-Jones",
-        "Arash Bahramian",
-        "Steven J. Tingay",
-        "He-Xin Liu",
-        "Diego Altamirano",
-        "Rob Fender",
-        "Elmar Körding",
-        "Dipankar Maitra",
-        "Sera Markoff",
-        "David M. Russell",
-        "Thomas D. Russell",
-        "Craig L. Sarazin",
-        "Gregory R. Sivakoff",
-        "Roberto Soria",
-        "Alexandra J. Tetarenko",
-        "Valeriu Tudose"
-      ],
-      "abstract": "High angular resolution radio observations of relativistic jets are necessary\nto understand the causal connection between accretion and jet ejection in low\nmass X-ray binaries. Images from these observations can be difficult to\nreconstruct due to the rapid intra-observational motion and variability of\ntransient jets. We have developed a time-dependent visibility model fitting and\nself-calibration procedure and applied it to a single four-hour VLBA\nobservation of the low-mass X-ray binary Swift J1727.8-1613 during the bright\nflaring period of its 2023 outburst. This allowed us to detect and model a\nslightly resolved self-absorbed compact core, as well as three downstream\ntransient jet knots. We were able to precisely measure the proper motion and\nflux density variability of these three jet knots, as well as (for the first\ntime) their intra-observational expansion. Using simultaneous multi-frequency\ndata, we were also able to measure the spectral index of the furthest\ndownstream jet knot, and the core, as well as the frequency-dependent core\nshift between 2.3 and 8.3 GHz. Using these measurements, we inferred the\nejection dates of the three jet knots, including one to within $\\pm40$ minutes,\nwhich is one of the most precise ever measured. The ejection of the transient\njet knots coincided with a bright X-ray flare and a drastic change in the X-ray\nspectral and timing properties as seen by HXMT, which is the clearest\nassociation ever seen between the launching of transient relativistic jets in\nan X-ray binary and a sudden change in the X-ray properties of the accretion\ninflow.",
-      "pdf_url": "http://arxiv.org/pdf/2503.03073v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.03073v1",
-      "published": "2025-03-05",
-      "categories": [
-        "astro-ph.HE"
-      ]
-    },
-    {
-      "title": "Out-of-Distribution Generalization on Graphs via Progressive Inference",
-      "authors": [
-        "Yiming Xu",
-        "Bin Shi",
-        "Zhen Peng",
-        "Huixiang Liu",
-        "Bo Dong",
-        "Chen Chen"
-      ],
-      "abstract": "The development and evaluation of graph neural networks (GNNs) generally\nfollow the independent and identically distributed (i.i.d.) assumption. Yet\nthis assumption is often untenable in practice due to the uncontrollable data\ngeneration mechanism. In particular, when the data distribution shows a\nsignificant shift, most GNNs would fail to produce reliable predictions and may\neven make decisions randomly. One of the most promising solutions to improve\nthe model generalization is to pick out causal invariant parts in the input\ngraph. Nonetheless, we observe a significant distribution gap between the\ncausal parts learned by existing methods and the ground truth, leading to\nundesirable performance. In response to the above issues, this paper presents\nGPro, a model that learns graph causal invariance with progressive inference.\nSpecifically, the complicated graph causal invariant learning is decomposed\ninto multiple intermediate inference steps from easy to hard, and the\nperception of GPro is continuously strengthened through a progressive inference\nprocess to extract causal features that are stable to distribution shifts. We\nalso enlarge the training distribution by creating counterfactual samples to\nenhance the capability of the GPro in capturing the causal invariant parts.\nExtensive experiments demonstrate that our proposed GPro outperforms the\nstate-of-the-art methods by 4.91% on average. For datasets with more severe\ndistribution shifts, the performance improvement can be up to 6.86%.",
-      "pdf_url": "http://arxiv.org/pdf/2503.02988v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.02988v1",
-      "published": "2025-03-04",
-      "categories": [
-        "cs.LG"
       ]
     }
   ]
