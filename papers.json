@@ -1,6 +1,125 @@
 {
-  "last_updated": "2025-03-11T00:48:31.074312",
+  "last_updated": "2025-03-12T00:47:37.895554",
   "papers": [
+    {
+      "title": "AR-Diffusion: Asynchronous Video Generation with Auto-Regressive Diffusion",
+      "authors": [
+        "Mingzhen Sun",
+        "Weining Wang",
+        "Gen Li",
+        "Jiawei Liu",
+        "Jiahui Sun",
+        "Wanquan Feng",
+        "Shanshan Lao",
+        "SiYu Zhou",
+        "Qian He",
+        "Jing Liu"
+      ],
+      "abstract": "The task of video generation requires synthesizing visually realistic and\ntemporally coherent video frames. Existing methods primarily use asynchronous\nauto-regressive models or synchronous diffusion models to address this\nchallenge. However, asynchronous auto-regressive models often suffer from\ninconsistencies between training and inference, leading to issues such as error\naccumulation, while synchronous diffusion models are limited by their reliance\non rigid sequence length. To address these issues, we introduce Auto-Regressive\nDiffusion (AR-Diffusion), a novel model that combines the strengths of\nauto-regressive and diffusion models for flexible, asynchronous video\ngeneration. Specifically, our approach leverages diffusion to gradually corrupt\nvideo frames in both training and inference, reducing the discrepancy between\nthese phases. Inspired by auto-regressive generation, we incorporate a\nnon-decreasing constraint on the corruption timesteps of individual frames,\nensuring that earlier frames remain clearer than subsequent ones. This setup,\ntogether with temporal causal attention, enables flexible generation of videos\nwith varying lengths while preserving temporal coherence. In addition, we\ndesign two specialized timestep schedulers: the FoPP scheduler for balanced\ntimestep sampling during training, and the AD scheduler for flexible timestep\ndifferences during inference, supporting both synchronous and asynchronous\ngeneration. Extensive experiments demonstrate the superiority of our proposed\nmethod, which achieves competitive and state-of-the-art results across four\nchallenging benchmarks.",
+      "pdf_url": "http://arxiv.org/pdf/2503.07418v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.07418v1",
+      "published": "2025-03-10",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "NFIG: Autoregressive Image Generation with Next-Frequency Prediction",
+      "authors": [
+        "Zhihao Huang",
+        "Xi Qiu",
+        "Yukuo Ma",
+        "Yifu Zhou",
+        "Chi Zhang",
+        "Xuelong Li"
+      ],
+      "abstract": "Autoregressive models have achieved promising results in natural language\nprocessing. However, for image generation tasks, they encounter substantial\nchallenges in effectively capturing long-range dependencies, managing\ncomputational costs, and most crucially, defining meaningful autoregressive\nsequences that reflect natural image hierarchies. To address these issues, we\npresent \\textbf{N}ext-\\textbf{F}requency \\textbf{I}mage \\textbf{G}eneration\n(\\textbf{NFIG}), a novel framework that decomposes the image generation process\ninto multiple frequency-guided stages. Our approach first generates\nlow-frequency components to establish global structure with fewer tokens, then\nprogressively adds higher-frequency details, following the natural spectral\nhierarchy of images. This principled autoregressive sequence not only improves\nthe quality of generated images by better capturing true causal relationships\nbetween image components, but also significantly reduces computational overhead\nduring inference. Extensive experiments demonstrate that NFIG achieves\nstate-of-the-art performance with fewer steps, offering a more efficient\nsolution for image generation, with 1.25$\\times$ speedup compared to VAR-d20\nwhile achieving better performance (FID: 2.81) on the ImageNet-256 benchmark.\nWe hope that our insight of incorporating frequency-domain knowledge to guide\nautoregressive sequence design will shed light on future research. We will make\nour code publicly available upon acceptance of the paper.",
+      "pdf_url": "http://arxiv.org/pdf/2503.07076v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.07076v1",
+      "published": "2025-03-10",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "68T07",
+        "I.2.10; I.2.6"
+      ]
+    },
+    {
+      "title": "AXAI-CDSS : An Affective Explainable AI-Driven Clinical Decision Support System for Cannabis Use",
+      "authors": [
+        "Tongze Zhang",
+        "Tammy Chung",
+        "Anind Dey",
+        "Sang Won Bae"
+      ],
+      "abstract": "As cannabis use has increased in recent years, researchers have come to rely\non sophisticated machine learning models to predict cannabis use behavior and\nits impact on health. However, many artificial intelligence (AI) models lack\ntransparency and interpretability due to their opaque nature, limiting their\ntrust and adoption in real-world medical applications, such as clinical\ndecision support systems (CDSS). To address this issue, this paper enhances\nalgorithm explainability underlying CDSS by integrating multiple Explainable\nArtificial Intelligence (XAI) methods and applying causal inference techniques\nto clarify the model' predictive decisions under various scenarios. By\nproviding deeper interpretability of the XAI outputs using Large Language\nModels (LLMs), we provide users with more personalized and accessible insights\nto overcome the challenges posed by AI's \"black box\" nature. Our system\ndynamically adjusts feedback based on user queries and emotional states,\ncombining text-based sentiment analysis with real-time facial emotion\nrecognition to ensure responses are empathetic, context-adaptive, and\nuser-centered. This approach bridges the gap between the learning demands of\ninterpretability and the need for intuitive understanding, enabling\nnon-technical users such as clinicians and clinical researchers to interact\neffectively with AI models.} Ultimately, this approach improves usability,\nenhances perceived trustworthiness, and increases the impact of CDSS in\nhealthcare applications.",
+      "pdf_url": "http://arxiv.org/pdf/2503.06463v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.06463v1",
+      "published": "2025-03-09",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Causal Discovery and Inference towards Urban Elements and Associated Factors",
+      "authors": [
+        "Tao Feng",
+        "Yunke Zhang",
+        "Xiaochen Fan",
+        "Huandong Wang",
+        "Yong Li"
+      ],
+      "abstract": "To uncover the city's fundamental functioning mechanisms, it is important to\nacquire a deep understanding of complicated relationships among citizens,\nlocation, and mobility behaviors. Previous research studies have applied direct\ncorrelation analysis to investigate such relationships. Nevertheless, due to\nthe ubiquitous confounding effects, empirical correlation analysis may not\naccurately reflect underlying causal relationships among basic urban elements.\nIn this paper, we propose a novel urban causal computing framework to\ncomprehensively explore causalities and confounding effects among a variety of\nfactors across different types of urban elements. In particular, we design a\nreinforcement learning algorithm to discover the potential causal graph, which\ndepicts the causal relations between urban factors. The causal graph further\nserves as the guidance for estimating causal effects between pair-wise urban\nfactors by propensity score matching. After removing the confounding effects\nfrom correlations, we leverage significance levels of causal effects in\ndownstream urban mobility prediction tasks. Experimental studies on open-source\nurban datasets show that the discovered causal graph demonstrates a\nhierarchical structure, where citizens affect locations, and they both cause\nchanges in urban mobility behaviors. Experimental results in urban mobility\nprediction tasks further show that the proposed method can effectively reduce\nconfounding effects and enhance performance of urban computing tasks.",
+      "pdf_url": "http://arxiv.org/pdf/2503.06395v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.06395v1",
+      "published": "2025-03-09",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Integrating Chain-of-Thought for Multimodal Alignment: A Study on 3D Vision-Language Learning",
+      "authors": [
+        "Yanjun Chen",
+        "Yirong Sun",
+        "Xinghao Chen",
+        "Jian Wang",
+        "Xiaoyu Shen",
+        "Wenjie Li",
+        "Wei Zhang"
+      ],
+      "abstract": "Chain-of-Thought (CoT) reasoning has proven effective in natural language\ntasks but remains underexplored in multimodal alignment. This study\ninvestigates its integration into 3D vision-language learning by embedding\nstructured reasoning into alignment training. We introduce the 3D-CoT\nBenchmark, a dataset with hierarchical CoT annotations covering shape\nrecognition, functional inference, and causal reasoning. Through controlled\nexperiments, we compare CoT-structured and standard textual annotations across\nlarge reasoning models (LRMs) and large language models (LLMs). Our evaluation\nemploys a dual-layer framework assessing both intermediate reasoning and final\ninference quality. Extensive experiments demonstrate that CoT significantly\nimproves 3D semantic grounding, with LRMs leveraging CoT more effectively than\nLLMs. Furthermore, we highlight that annotation structure influences\nperformance-explicit reasoning markers aid LLMs, while unmarked CoT better\naligns with LRM inference patterns. Our analyses suggest that CoT is crucial\nfor enhancing multimodal reasoning, with implications beyond 3D tasks.",
+      "pdf_url": "http://arxiv.org/pdf/2503.06232v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.06232v1",
+      "published": "2025-03-08",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Black Box Causal Inference: Effect Estimation via Meta Prediction",
+      "authors": [
+        "Lucius E. J. Bynum",
+        "Aahlad Manas Puli",
+        "Diego Herrero-Quevedo",
+        "Nhi Nguyen",
+        "Carlos Fernandez-Granda",
+        "Kyunghyun Cho",
+        "Rajesh Ranganath"
+      ],
+      "abstract": "Causal inference and the estimation of causal effects plays a central role in\ndecision-making across many areas, including healthcare and economics.\nEstimating causal effects typically requires an estimator that is tailored to\neach problem of interest. But developing estimators can take significant effort\nfor even a single causal inference setting. For example, algorithms for\nregression-based estimators, propensity score methods, and doubly robust\nmethods were designed across several decades to handle causal estimation with\nobserved confounders. Similarly, several estimators have been developed to\nexploit instrumental variables (IVs), including two-stage least-squares (TSLS),\ncontrol functions, and the method-of-moments. In this work, we instead frame\ncausal inference as a dataset-level prediction problem, offloading algorithm\ndesign to the learning process. The approach we introduce, called black box\ncausal inference (BBCI), builds estimators in a black-box manner by learning to\npredict causal effects from sampled dataset-effect pairs. We demonstrate\naccurate estimation of average treatment effects (ATEs) and conditional average\ntreatment effects (CATEs) with BBCI across several causal inference problems\nwith known identification, including problems with less developed estimators.",
+      "pdf_url": "http://arxiv.org/pdf/2503.05985v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.05985v1",
+      "published": "2025-03-07",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.CO",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Integration of aggregated data in causally interpretable meta-analysis by inverse weighting",
       "authors": [
@@ -62,8 +181,8 @@
         "Wasiur R. KhudaBukhsh"
       ],
       "abstract": "We propose causal effect estimators based on empirical Fr\\'{e}chet means and\noperator-valued kernels, tailored to functional data spaces. These methods\naddress the challenges of high-dimensionality, sequential ordering, and model\ncomplexity while preserving robustness to treatment misspecification. Using\nstructural assumptions, we obtain compact representations of potential\noutcomes, enabling scalable estimation of causal effects over time and across\ncovariates. We provide both theoretical, regarding the consistency of\nfunctional causal effects, as well as empirical comparison of a range of\nproposed causal effect estimators.\n  Applications to binary treatment settings with functional outcomes illustrate\nthe framework's utility in biomedical monitoring, where outcomes exhibit\ncomplex temporal dynamics. Our estimators accommodate scenarios with registered\ncovariates and outcomes, aligning them to the Fr\\'{e}chet means, as well as\ncases requiring higher-order representations to capture intricate\ncovariate-outcome interactions. These advancements extend causal inference to\ndynamic and non-linear domains, offering new tools for understanding complex\ntreatment effects in functional data settings.",
-      "pdf_url": "http://arxiv.org/pdf/2503.05024v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.05024v1",
+      "pdf_url": "http://arxiv.org/pdf/2503.05024v2",
+      "arxiv_url": "http://arxiv.org/abs/2503.05024v2",
       "published": "2025-03-06",
       "categories": [
         "stat.ME",
@@ -72,119 +191,6 @@
         "stat.TH",
         "62G05",
         "G.3"
-      ]
-    },
-    {
-      "title": "Compositional Causal Reasoning Evaluation in Language Models",
-      "authors": [
-        "Jacqueline R. M. A. Maasch",
-        "Alihan Hüyük",
-        "Xinnuo Xu",
-        "Aditya V. Nori",
-        "Javier Gonzalez"
-      ],
-      "abstract": "Causal reasoning and compositional reasoning are two core aspirations in\ngenerative AI. Measuring the extent of these behaviors requires principled\nevaluation methods. We explore a unified perspective that considers both\nbehaviors simultaneously, termed compositional causal reasoning (CCR): the\nability to infer how causal measures compose and, equivalently, how causal\nquantities propagate through graphs. We instantiate a framework for the\nsystematic evaluation of CCR for the average treatment effect and the\nprobability of necessity and sufficiency. As proof of concept, we demonstrate\nthe design of CCR tasks for language models in the LLama, Phi, and GPT\nfamilies. On a math word problem, our framework revealed a range of\ntaxonomically distinct error patterns. Additionally, CCR errors increased with\nthe complexity of causal paths for all models except o1.",
-      "pdf_url": "http://arxiv.org/pdf/2503.04556v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.04556v1",
-      "published": "2025-03-06",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "A Spatiotemporal, Quasi-experimental Causal Inference Approach to Characterize the Effects of Global Plastic Waste Export and Burning on Air Quality Using Remotely Sensed Data",
-      "authors": [
-        "Ellen M. Considine",
-        "Rachel C. Nethery"
-      ],
-      "abstract": "Open burning of plastic waste may pose a significant threat to global health\nby degrading air quality, but quantitative research on this problem -- crucial\nfor policy making -- has previously been stunted by lack of data. Critically,\nmany low- and middle-income countries, where open burning is of greatest\nconcern, have little to no air quality monitoring. Here, we propose an\napproach, at the intersection of modern causal inference and environmental data\nscience, to leverage remotely sensed data products combined with spatiotemporal\ncausal analytic techniques to evaluate the impact of large-scale plastic waste\npolicies on air quality. Throughout, we use the case study of Indonesia before\nand after 2018, when China halted its import of plastic waste, resulting in\ndiversion of this massive waste stream to other countries in the East Asia &\nPacific region, including Indonesia. We tailor cutting-edge statistical methods\nto this setting, estimating effects of the increase in plastic waste imports on\nfine particulate matter near waste dump sites in Indonesia and allowing effects\nto vary as a function of the site's proximity to ports (from which\ninternational plastic waste enters the country), which serves as an induced\ncontinuous exposure or \"dose\" of treatment. We observe a statistically\nsignificant increase in monthly fine particulate matter concentrations near\ndump sites after China's ban took effect (2018-2019) compared to concentrations\nexpected under business-as-usual (2012-2017), with increases ranging from\n0.76--1.72$\\mu$g/m$^3$ (15--34\\% of the World Health Organization's recommended\nlimit for exposure on an annual basis) depending on the site's port proximity,\nat sites with port proximity above the 20th quantile. Sites with lower port\nproximity had smaller and not statistically significant effects.",
-      "pdf_url": "http://arxiv.org/pdf/2503.04491v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.04491v1",
-      "published": "2025-03-06",
-      "categories": [
-        "stat.AP",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causally Reliable Concept Bottleneck Models",
-      "authors": [
-        "Giovanni De Felice",
-        "Arianna Casanova Flores",
-        "Francesco De Santis",
-        "Silvia Santini",
-        "Johannes Schneider",
-        "Pietro Barbiero",
-        "Alberto Termine"
-      ],
-      "abstract": "Concept-based models are an emerging paradigm in deep learning that\nconstrains the inference process to operate through human-interpretable\nconcepts, facilitating explainability and human interaction. However, these\narchitectures, on par with popular opaque neural models, fail to account for\nthe true causal mechanisms underlying the target phenomena represented in the\ndata. This hampers their ability to support causal reasoning tasks, limits\nout-of-distribution generalization, and hinders the implementation of fairness\nconstraints. To overcome these issues, we propose \\emph{Causally reliable\nConcept Bottleneck Models} (C$^2$BMs), a class of concept-based architectures\nthat enforce reasoning through a bottleneck of concepts structured according to\na model of the real-world causal mechanisms. We also introduce a pipeline to\nautomatically learn this structure from observational data and\n\\emph{unstructured} background knowledge (e.g., scientific literature).\nExperimental evidence suggest that C$^2$BM are more interpretable, causally\nreliable, and improve responsiveness to interventions w.r.t. standard opaque\nand concept-based models, while maintaining their accuracy.",
-      "pdf_url": "http://arxiv.org/pdf/2503.04363v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.04363v1",
-      "published": "2025-03-06",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Large Language Models for Zero-shot Inference of Causal Structures in Biology",
-      "authors": [
-        "Izzy Newsham",
-        "Luka Kovačević",
-        "Richard Moulange",
-        "Nan Rosemary Ke",
-        "Sach Mukherjee"
-      ],
-      "abstract": "Genes, proteins and other biological entities influence one another via\ncausal molecular networks. Causal relationships in such networks are mediated\nby complex and diverse mechanisms, through latent variables, and are often\nspecific to cellular context. It remains challenging to characterise such\nnetworks in practice. Here, we present a novel framework to evaluate large\nlanguage models (LLMs) for zero-shot inference of causal relationships in\nbiology. In particular, we systematically evaluate causal claims obtained from\nan LLM using real-world interventional data. This is done over one hundred\nvariables and thousands of causal hypotheses. Furthermore, we consider several\nprompting and retrieval-augmentation strategies, including large, and\npotentially conflicting, collections of scientific articles. Our results show\nthat with tailored augmentation and prompting, even relatively small LLMs can\ncapture meaningful aspects of causal structure in biological systems. This\nsupports the notion that LLMs could act as orchestration tools in biological\ndiscovery, by helping to distil current knowledge in ways amenable to\ndownstream analysis. Our approach to assessing LLMs with respect to\nexperimental data is relevant for a broad range of problems at the intersection\nof causal learning, LLMs and scientific discovery.",
-      "pdf_url": "http://arxiv.org/pdf/2503.04347v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.04347v1",
-      "published": "2025-03-06",
-      "categories": [
-        "cs.LG",
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "LEDiT: Your Length-Extrapolatable Diffusion Transformer without Positional Encoding",
-      "authors": [
-        "Shen Zhang",
-        "Yaning Tan",
-        "Siyuan Liang",
-        "Zhaowei Chen",
-        "Linze Li",
-        "Ge Wu",
-        "Yuhao Chen",
-        "Shuheng Li",
-        "Zhenyu Zhao",
-        "Caihua Chen",
-        "Jiajun Liang",
-        "Yao Tang"
-      ],
-      "abstract": "Diffusion transformers(DiTs) struggle to generate images at resolutions\nhigher than their training resolutions. The primary obstacle is that the\nexplicit positional encodings(PE), such as RoPE, need extrapolation which\ndegrades performance when the inference resolution differs from training. In\nthis paper, we propose a Length-Extrapolatable Diffusion Transformer(LEDiT), a\nsimple yet powerful architecture to overcome this limitation. LEDiT needs no\nexplicit PEs, thereby avoiding extrapolation. The key innovations of LEDiT are\nintroducing causal attention to implicitly impart global positional information\nto tokens, while enhancing locality to precisely distinguish adjacent tokens.\nExperiments on 256x256 and 512x512 ImageNet show that LEDiT can scale the\ninference resolution to 512x512 and 1024x1024, respectively, while achieving\nbetter image quality compared to current state-of-the-art length extrapolation\nmethods(NTK-aware, YaRN). Moreover, LEDiT achieves strong extrapolation\nperformance with just 100K steps of fine-tuning on a pretrained DiT,\ndemonstrating its potential for integration into existing text-to-image DiTs.\nProject page: https://shenzhang2145.github.io/ledit/",
-      "pdf_url": "http://arxiv.org/pdf/2503.04344v2",
-      "arxiv_url": "http://arxiv.org/abs/2503.04344v2",
-      "published": "2025-03-06",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Spatial-Temporal Perception with Causal Inference for Naturalistic Driving Action Recognition",
-      "authors": [
-        "Qing Chang",
-        "Wei Dai",
-        "Zhihao Shuai",
-        "Limin Yu",
-        "Yutao Yue"
-      ],
-      "abstract": "Naturalistic driving action recognition is essential for vehicle cabin\nmonitoring systems. However, the complexity of real-world backgrounds presents\nsignificant challenges for this task, and previous approaches have struggled\nwith practical implementation due to their limited ability to observe subtle\nbehavioral differences and effectively learn inter-frame features from video.\nIn this paper, we propose a novel Spatial-Temporal Perception (STP)\narchitecture that emphasizes both temporal information and spatial\nrelationships between key objects, incorporating a causal decoder to perform\nbehavior recognition and temporal action localization. Without requiring\nmultimodal input, STP directly extracts temporal and spatial distance features\nfrom RGB video clips. Subsequently, these dual features are jointly encoded by\nmaximizing the expected likelihood across all possible permutations of the\nfactorization order. By integrating temporal and spatial features at different\nscales, STP can perceive subtle behavioral changes in challenging scenarios.\nAdditionally, we introduce a causal-aware module to explore relationships\nbetween video frame features, significantly enhancing detection efficiency and\nperformance. We validate the effectiveness of our approach using two publicly\navailable driver distraction detection benchmarks. The results demonstrate that\nour framework achieves state-of-the-art performance.",
-      "pdf_url": "http://arxiv.org/pdf/2503.04078v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.04078v1",
-      "published": "2025-03-06",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
