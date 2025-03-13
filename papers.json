@@ -1,6 +1,78 @@
 {
-  "last_updated": "2025-03-12T00:47:37.895554",
+  "last_updated": "2025-03-13T00:48:45.224847",
   "papers": [
+    {
+      "title": "\"Principal Components\" Enable A New Language of Images",
+      "authors": [
+        "Xin Wen",
+        "Bingchen Zhao",
+        "Ismail Elezi",
+        "Jiankang Deng",
+        "Xiaojuan Qi"
+      ],
+      "abstract": "We introduce a novel visual tokenization framework that embeds a provable\nPCA-like structure into the latent token space. While existing visual\ntokenizers primarily optimize for reconstruction fidelity, they often neglect\nthe structural properties of the latent space -- a critical factor for both\ninterpretability and downstream tasks. Our method generates a 1D causal token\nsequence for images, where each successive token contributes non-overlapping\ninformation with mathematically guaranteed decreasing explained variance,\nanalogous to principal component analysis. This structural constraint ensures\nthe tokenizer extracts the most salient visual features first, with each\nsubsequent token adding diminishing yet complementary information.\nAdditionally, we identified and resolved a semantic-spectrum coupling effect\nthat causes the unwanted entanglement of high-level semantic content and\nlow-level spectral details in the tokens by leveraging a diffusion decoder.\nExperiments demonstrate that our approach achieves state-of-the-art\nreconstruction performance and enables better interpretability to align with\nthe human vision system. Moreover, auto-regressive models trained on our token\nsequences achieve performance comparable to current state-of-the-art methods\nwhile requiring fewer tokens for training and inference.",
+      "pdf_url": "http://arxiv.org/pdf/2503.08685v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.08685v1",
+      "published": "2025-03-11",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Perplexity Trap: PLM-Based Retrievers Overrate Low Perplexity Documents",
+      "authors": [
+        "Haoyu Wang",
+        "Sunhao Dai",
+        "Haiyuan Zhao",
+        "Liang Pang",
+        "Xiao Zhang",
+        "Gang Wang",
+        "Zhenhua Dong",
+        "Jun Xu",
+        "Ji-Rong Wen"
+      ],
+      "abstract": "Previous studies have found that PLM-based retrieval models exhibit a\npreference for LLM-generated content, assigning higher relevance scores to\nthese documents even when their semantic quality is comparable to human-written\nones. This phenomenon, known as source bias, threatens the sustainable\ndevelopment of the information access ecosystem. However, the underlying causes\nof source bias remain unexplored. In this paper, we explain the process of\ninformation retrieval with a causal graph and discover that PLM-based\nretrievers learn perplexity features for relevance estimation, causing source\nbias by ranking the documents with low perplexity higher. Theoretical analysis\nfurther reveals that the phenomenon stems from the positive correlation between\nthe gradients of the loss functions in language modeling task and retrieval\ntask. Based on the analysis, a causal-inspired inference-time debiasing method\nis proposed, called Causal Diagnosis and Correction (CDC). CDC first diagnoses\nthe bias effect of the perplexity and then separates the bias effect from the\noverall estimated relevance score. Experimental results across three domains\ndemonstrate the superior debiasing effectiveness of CDC, emphasizing the\nvalidity of our proposed explanatory framework. Source codes are available at\nhttps://github.com/WhyDwelledOnAi/Perplexity-Trap.",
+      "pdf_url": "http://arxiv.org/pdf/2503.08684v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.08684v1",
+      "published": "2025-03-11",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Causal Networks of Infodemiological Data: Modelling Dermatitis",
+      "authors": [
+        "Marco Scutari",
+        "Samir Salah",
+        "Delphine Kerob",
+        "Jean Krutmann"
+      ],
+      "abstract": "Environmental and mental conditions are known risk factors for dermatitis and\nsymptoms of skin inflammation, but their interplay is difficult to quantify;\nepidemiological studies rarely include both, along with possible confounding\nfactors. Infodemiology leverages large online data sets to address this issue,\nbut fusing them produces strong patterns of spatial and temporal correlation,\nmissingness, and heterogeneity.\n  In this paper, we design a causal network that correctly models these complex\nstructures in large-scale infodemiological data from Google, EPA, NOAA and US\nCensus (434 US counties, 134 weeks). Our model successfully captures known\ncausal relationships between weather patterns, pollutants, mental conditions,\nand dermatitis. Key findings reveal that anxiety accounts for 57.4% of\nexplained variance in dermatitis, followed by NO2 (33.9%), while environmental\nfactors show significant mediation effects through mental conditions. The model\npredicts that reducing PM2.5 emissions by 25% could decrease dermatitis\nprevalence by 18%. Through statistical validation and causal inference, we\nprovide unprecedented insights into the complex interplay between environmental\nand mental health factors affecting dermatitis, offering valuable guidance for\npublic health policies and environmental regulations.",
+      "pdf_url": "http://arxiv.org/pdf/2503.08252v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.08252v1",
+      "published": "2025-03-11",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "A primer on optimal transport for causal inference with observational data",
+      "authors": [
+        "Florian F Gunsilius"
+      ],
+      "abstract": "The theory of optimal transportation has developed into a powerful and\nelegant framework for comparing probability distributions, with wide-ranging\napplications in all areas of science. The fundamental idea of analyzing\nprobabilities by comparing their underlying state space naturally aligns with\nthe core idea of causal inference, where understanding and quantifying\ncounterfactual states is paramount. Despite this intuitive connection, explicit\nresearch at the intersection of optimal transport and causal inference is only\nbeginning to develop. Yet, many foundational models in causal inference have\nimplicitly relied on optimal transport principles for decades, without\nrecognizing the underlying connection. Therefore, the goal of this review is to\noffer an introduction to the surprisingly deep existing connections between\noptimal transport and the identification of causal effects with observational\ndata -- where optimal transport is not just a set of potential tools, but\nactually builds the foundation of model assumptions. As a result, this review\nis intended to unify the language and notation between different areas of\nstatistics, mathematics, and econometrics, by pointing out these existing\nconnections, and to explore novel problems and directions for future work in\nboth areas derived from this realization.",
+      "pdf_url": "http://arxiv.org/pdf/2503.07811v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.07811v1",
+      "published": "2025-03-10",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "econ.EM"
+      ]
+    },
     {
       "title": "AR-Diffusion: Asynchronous Video Generation with Auto-Regressive Diffusion",
       "authors": [
@@ -78,6 +150,35 @@
       ]
     },
     {
+      "title": "Antibiotic Resistance Microbiology Dataset (ARMD): A De-identified Resource for Studying Antimicrobial Resistance Using Electronic Health Records",
+      "authors": [
+        "Fateme Nateghi Haredasht",
+        "Fatemeh Amrollahi",
+        "Manoj Maddali",
+        "Nicholas Marshall",
+        "Stephen P. Ma",
+        "Lauren N. Cooper",
+        "Richard J. Medford",
+        "Sanjat Kanjilal",
+        "Niaz Banaei",
+        "Stanley Deresinski",
+        "Mary K. Goldstein",
+        "Steven M. Asch",
+        "Amy Chang",
+        "Jonathan H. Chen"
+      ],
+      "abstract": "The Antibiotic Resistance Microbiology Dataset (ARMD) is a de-identified\nresource derived from electronic health records (EHR) that facilitates research\ninto antimicrobial resistance (AMR). ARMD encompasses data from adult patients,\nfocusing on microbiological cultures, antibiotic susceptibilities, and\nassociated clinical and demographic features. Key attributes include organism\nidentification, susceptibility patterns for 55 antibiotics, implied\nsusceptibility rules, and de-identified patient information. This dataset\nsupports studies on antimicrobial stewardship, causal inference, and clinical\ndecision-making. ARMD is designed to be reusable and interoperable, promoting\ncollaboration and innovation in combating AMR. This paper describes the\ndataset's acquisition, structure, and utility while detailing its\nde-identification process.",
+      "pdf_url": "http://arxiv.org/pdf/2503.07664v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.07664v1",
+      "published": "2025-03-08",
+      "categories": [
+        "q-bio.QM",
+        "cs.IR",
+        "cs.LG",
+        "stat.AP"
+      ]
+    },
+    {
       "title": "Integrating Chain-of-Thought for Multimodal Alignment: A Study on 3D Vision-Language Learning",
       "authors": [
         "Yanjun Chen",
@@ -95,102 +196,6 @@
       "categories": [
         "cs.CL",
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Black Box Causal Inference: Effect Estimation via Meta Prediction",
-      "authors": [
-        "Lucius E. J. Bynum",
-        "Aahlad Manas Puli",
-        "Diego Herrero-Quevedo",
-        "Nhi Nguyen",
-        "Carlos Fernandez-Granda",
-        "Kyunghyun Cho",
-        "Rajesh Ranganath"
-      ],
-      "abstract": "Causal inference and the estimation of causal effects plays a central role in\ndecision-making across many areas, including healthcare and economics.\nEstimating causal effects typically requires an estimator that is tailored to\neach problem of interest. But developing estimators can take significant effort\nfor even a single causal inference setting. For example, algorithms for\nregression-based estimators, propensity score methods, and doubly robust\nmethods were designed across several decades to handle causal estimation with\nobserved confounders. Similarly, several estimators have been developed to\nexploit instrumental variables (IVs), including two-stage least-squares (TSLS),\ncontrol functions, and the method-of-moments. In this work, we instead frame\ncausal inference as a dataset-level prediction problem, offloading algorithm\ndesign to the learning process. The approach we introduce, called black box\ncausal inference (BBCI), builds estimators in a black-box manner by learning to\npredict causal effects from sampled dataset-effect pairs. We demonstrate\naccurate estimation of average treatment effects (ATEs) and conditional average\ntreatment effects (CATEs) with BBCI across several causal inference problems\nwith known identification, including problems with less developed estimators.",
-      "pdf_url": "http://arxiv.org/pdf/2503.05985v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.05985v1",
-      "published": "2025-03-07",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.CO",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Integration of aggregated data in causally interpretable meta-analysis by inverse weighting",
-      "authors": [
-        "Tat-Thang Vo",
-        "Tran Trong Khoi Le",
-        "Sivem Afach",
-        "Stijn Vansteelandt"
-      ],
-      "abstract": "Obtaining causally interpretable meta-analysis results is challenging when\nthere are differences in the distribution of effect modifiers between eligible\ntrials. To overcome this, recent work on transportability methods has\nconsidered standardizing results of individual studies over the case-mix of a\ntarget population, prior to pooling them as in a classical random-effect\nmeta-analysis. One practical challenge, however, is that case-mix\nstandardization often requires individual participant data (IPD) on outcome,\ntreatments and case-mix characteristics to be fully accessible in every\neligible study, along with IPD case-mix characteristics for a random sample\nfrom the target population. In this paper, we aim to develop novel strategies\nto integrate aggregated-level data from eligible trials with non-accessible IPD\ninto a causal meta-analysis, by extending moment-based methods frequently used\nfor population-adjusted indirect comparison in health technology assessment.\nSince valid inference for these moment-based methods by M-estimation theory\nrequires additional aggregated data that are often unavailable in practice,\ncomputational methods to address this concern are also developed. We assess the\nfinite-sample performance of the proposed approaches by simulated data, and\nthen apply these on real-world clinical data to investigate the effectiveness\nof risankizumab versus ustekinumab among patients with moderate to severe\npsoriasis.",
-      "pdf_url": "http://arxiv.org/pdf/2503.05634v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.05634v1",
-      "published": "2025-03-07",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Riemannian Metric Learning: Closer to You than You Imagine",
-      "authors": [
-        "Samuel Gruffaz",
-        "Josua Sassen"
-      ],
-      "abstract": "Riemannian metric learning is an emerging field in machine learning,\nunlocking new ways to encode complex data structures beyond traditional\ndistance metric learning. While classical approaches rely on global distances\nin Euclidean space, they often fall short in capturing intrinsic data geometry.\nEnter Riemannian metric learning: a powerful generalization that leverages\ndifferential geometry to model the data according to their underlying\nRiemannian manifold. This approach has demonstrated remarkable success across\ndiverse domains, from causal inference and optimal transport to generative\nmodeling and representation learning. In this review, we bridge the gap between\nclassical metric learning and Riemannian geometry, providing a structured and\naccessible overview of key methods, applications, and recent advances. We argue\nthat Riemannian metric learning is not merely a technical refinement but a\nfundamental shift in how we think about data representations. Thus, this review\nshould serve as a valuable resource for researchers and practitioners\ninterested in exploring Riemannian metric learning and convince them that it is\ncloser to them than they might imagine-both in theory and in practice.",
-      "pdf_url": "http://arxiv.org/pdf/2503.05321v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.05321v1",
-      "published": "2025-03-07",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "math.DG",
-        "68T05 (Primary), 58D17 (Secondary)",
-        "I.2.6"
-      ]
-    },
-    {
-      "title": "Frequency Autoregressive Image Generation with Continuous Tokens",
-      "authors": [
-        "Hu Yu",
-        "Hao Luo",
-        "Hangjie Yuan",
-        "Yu Rong",
-        "Feng Zhao"
-      ],
-      "abstract": "Autoregressive (AR) models for image generation typically adopt a two-stage\nparadigm of vector quantization and raster-scan ``next-token prediction\",\ninspired by its great success in language modeling. However, due to the huge\nmodality gap, image autoregressive models may require a systematic reevaluation\nfrom two perspectives: tokenizer format and regression direction. In this\npaper, we introduce the frequency progressive autoregressive (\\textbf{FAR})\nparadigm and instantiate FAR with the continuous tokenizer. Specifically, we\nidentify spectral dependency as the desirable regression direction for FAR,\nwherein higher-frequency components build upon the lower one to progressively\nconstruct a complete image. This design seamlessly fits the causality\nrequirement for autoregressive models and preserves the unique spatial locality\nof image data. Besides, we delve into the integration of FAR and the continuous\ntokenizer, introducing a series of techniques to address optimization\nchallenges and improve the efficiency of training and inference processes. We\ndemonstrate the efficacy of FAR through comprehensive experiments on the\nImageNet dataset and verify its potential on text-to-image generation.",
-      "pdf_url": "http://arxiv.org/pdf/2503.05305v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.05305v1",
-      "published": "2025-03-07",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Kernel-based estimators for functional causal effects",
-      "authors": [
-        "Yordan P. Raykov",
-        "Hengrui Luo",
-        "Justin D. Strait",
-        "Wasiur R. KhudaBukhsh"
-      ],
-      "abstract": "We propose causal effect estimators based on empirical Fr\\'{e}chet means and\noperator-valued kernels, tailored to functional data spaces. These methods\naddress the challenges of high-dimensionality, sequential ordering, and model\ncomplexity while preserving robustness to treatment misspecification. Using\nstructural assumptions, we obtain compact representations of potential\noutcomes, enabling scalable estimation of causal effects over time and across\ncovariates. We provide both theoretical, regarding the consistency of\nfunctional causal effects, as well as empirical comparison of a range of\nproposed causal effect estimators.\n  Applications to binary treatment settings with functional outcomes illustrate\nthe framework's utility in biomedical monitoring, where outcomes exhibit\ncomplex temporal dynamics. Our estimators accommodate scenarios with registered\ncovariates and outcomes, aligning them to the Fr\\'{e}chet means, as well as\ncases requiring higher-order representations to capture intricate\ncovariate-outcome interactions. These advancements extend causal inference to\ndynamic and non-linear domains, offering new tools for understanding complex\ntreatment effects in functional data settings.",
-      "pdf_url": "http://arxiv.org/pdf/2503.05024v2",
-      "arxiv_url": "http://arxiv.org/abs/2503.05024v2",
-      "published": "2025-03-06",
-      "categories": [
-        "stat.ME",
-        "cs.LG",
-        "math.ST",
-        "stat.TH",
-        "62G05",
-        "G.3"
       ]
     }
   ]
