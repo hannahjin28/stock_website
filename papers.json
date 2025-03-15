@@ -1,6 +1,78 @@
 {
-  "last_updated": "2025-03-14T00:47:35.802879",
+  "last_updated": "2025-03-15T00:47:04.581904",
   "papers": [
+    {
+      "title": "Autoregressive Image Generation with Randomized Parallel Decoding",
+      "authors": [
+        "Haopeng Li",
+        "Jinyue Yang",
+        "Guoqi Li",
+        "Huan Wang"
+      ],
+      "abstract": "We introduce ARPG, a novel visual autoregressive model that enables\nrandomized parallel generation, addressing the inherent limitations of\nconventional raster-order approaches, which hinder inference efficiency and\nzero-shot generalization due to their sequential, predefined token generation\norder. Our key insight is that effective random-order modeling necessitates\nexplicit guidance for determining the position of the next predicted token. To\nthis end, we propose a novel guided decoding framework that decouples\npositional guidance from content representation, encoding them separately as\nqueries and key-value pairs. By directly incorporating this guidance into the\ncausal attention mechanism, our approach enables fully random-order training\nand generation, eliminating the need for bidirectional attention. Consequently,\nARPG readily generalizes to zero-shot tasks such as image inpainting,\noutpainting, and resolution expansion. Furthermore, it supports parallel\ninference by concurrently processing multiple queries using a shared KV cache.\nOn the ImageNet-1K 256 benchmark, our approach attains an FID of 1.94 with only\n64 sampling steps, achieving over a 20-fold increase in throughput while\nreducing memory consumption by over 75% compared to representative recent\nautoregressive models at a similar scale.",
+      "pdf_url": "http://arxiv.org/pdf/2503.10568v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.10568v1",
+      "published": "2025-03-13",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "SCOOP: A Framework for Proactive Collaboration and Social Continual Learning through Natural Language Interaction andCausal Reasoning",
+      "authors": [
+        "Dimitri Ognibene",
+        "Sabrina Patania",
+        "Luca Annese",
+        "Cansu Koyuturk",
+        "Franca Garzotto",
+        "Giuseppe Vizzari",
+        "Azzurra Ruggeri",
+        "Simone Colombani"
+      ],
+      "abstract": "Multimodal information-gathering settings, where users collaborate with AI in\ndynamic environments, are increasingly common. These involve complex processes\nwith textual and multimodal interactions, often requiring additional structural\ninformation via cost-incurring requests. AI helpers lack access to users' true\ngoals, beliefs, and preferences and struggle to integrate diverse information\neffectively.\n  We propose a social continual learning framework for causal knowledge\nacquisition and collaborative decision-making. It focuses on autonomous agents\nlearning through dialogues, question-asking, and interaction in open, partially\nobservable environments. A key component is a natural language oracle that\nanswers the agent's queries about environmental mechanisms and states, refining\ncausal understanding while balancing exploration or learning, and exploitation\nor knowledge use.\n  Evaluation tasks inspired by developmental psychology emphasize causal\nreasoning and question-asking skills. They complement benchmarks by assessing\nthe agent's ability to identify knowledge gaps, generate meaningful queries,\nand incrementally update reasoning. The framework also evaluates how knowledge\nacquisition costs are amortized across tasks within the same environment.\n  We propose two architectures: 1) a system combining Large Language Models\n(LLMs) with the ReAct framework and question-generation, and 2) an advanced\nsystem with a causal world model, symbolic, graph-based, or subsymbolic, for\nreasoning and decision-making. The latter builds a causal knowledge graph for\nefficient inference and adaptability under constraints. Challenges include\nintegrating causal reasoning into ReAct and optimizing exploration and\nquestion-asking in error-prone scenarios. Beyond applications, this framework\nmodels developmental processes combining causal reasoning, question generation,\nand social learning.",
+      "pdf_url": "http://arxiv.org/pdf/2503.10241v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.10241v1",
+      "published": "2025-03-13",
+      "categories": [
+        "cs.MA",
+        "cs.HC",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "Using Causal Inference to Explore Government Policy Impact on Computer Usage",
+      "authors": [
+        "Mingjia Zhu",
+        "Lechuan Wang",
+        "Julien Sebot",
+        "Bijan Arbab",
+        "Babak Salimi",
+        "Alexander Cloninger"
+      ],
+      "abstract": "We explore the causal relationship between COVID-19 lockdown policies and\nchanges in personal computer usage. In particular, we examine how lockdown\npolicies affected average daily computer usage, as well as how it affected\nusage patterns of different groups of users. This is done through a merging of\nthe Oxford Policy public data set, which describes the timeline of\nimplementation of COVID policies across the world, and a collection of Intel's\nData Collection and Analytics (DCA) telemetry data, which includes millions of\ncomputer usage records and updates daily. Through difference-in-difference,\nsynthetic control, and change-point detection algorithms, we identify causal\nlinks between the increase in intensity (watts) and time (hours) of computer\nusage and the implementation of work from home policy. We also show an\ninteresting trend in the individual's computer usage affected by the policy. We\nalso conclude that computer usage behaviors are much less predictable during\nreduction in COVID lockdown policies than during increases in COVID lockdown\npolicies.",
+      "pdf_url": "http://arxiv.org/pdf/2503.09957v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.09957v1",
+      "published": "2025-03-13",
+      "categories": [
+        "stat.AP",
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "Towards Causal Model-Based Policy Optimization",
+      "authors": [
+        "Alberto Caron",
+        "Vasilios Mavroudis",
+        "Chris Hicks"
+      ],
+      "abstract": "Real-world decision-making problems are often marked by complex, uncertain\ndynamics that can shift or break under changing conditions. Traditional\nModel-Based Reinforcement Learning (MBRL) approaches learn predictive models of\nenvironment dynamics from queried trajectories and then use these models to\nsimulate rollouts for policy optimization. However, such methods do not account\nfor the underlying causal mechanisms that govern the environment, and thus\ninadvertently capture spurious correlations, making them sensitive to\ndistributional shifts and limiting their ability to generalize. The same\nnaturally holds for model-free approaches. In this work, we introduce Causal\nModel-Based Policy Optimization (C-MBPO), a novel framework that integrates\ncausal learning into the MBRL pipeline to achieve more robust, explainable, and\ngeneralizable policy learning algorithms.\n  Our approach centers on first inferring a Causal Markov Decision Process\n(C-MDP) by learning a local Structural Causal Model (SCM) of both the state and\nreward transition dynamics from trajectories gathered online. C-MDPs differ\nfrom classic MDPs in that we can decompose causal dependencies in the\nenvironment dynamics via specifying an associated Causal Bayesian Network.\nC-MDPs allow for targeted interventions and counterfactual reasoning, enabling\nthe agent to distinguish between mere statistical correlations and causal\nrelationships. The learned SCM is then used to simulate counterfactual\non-policy transitions and rewards under hypothetical actions (or\n``interventions\"), thereby guiding policy optimization more effectively. The\nresulting policy learned by C-MBPO can be shown to be robust to a class of\ndistributional shifts that affect spurious, non-causal relationships in the\ndynamics. We demonstrate this through some simple experiments involving near\nand far OOD dynamics drifts.",
+      "pdf_url": "http://arxiv.org/pdf/2503.09719v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.09719v1",
+      "published": "2025-03-12",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Addressing pitfalls in implicit unobserved confounding synthesis using explicit block hierarchical ancestral sampling",
       "authors": [
@@ -100,83 +172,6 @@
       "pdf_url": "http://arxiv.org/pdf/2503.08685v1",
       "arxiv_url": "http://arxiv.org/abs/2503.08685v1",
       "published": "2025-03-11",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Perplexity Trap: PLM-Based Retrievers Overrate Low Perplexity Documents",
-      "authors": [
-        "Haoyu Wang",
-        "Sunhao Dai",
-        "Haiyuan Zhao",
-        "Liang Pang",
-        "Xiao Zhang",
-        "Gang Wang",
-        "Zhenhua Dong",
-        "Jun Xu",
-        "Ji-Rong Wen"
-      ],
-      "abstract": "Previous studies have found that PLM-based retrieval models exhibit a\npreference for LLM-generated content, assigning higher relevance scores to\nthese documents even when their semantic quality is comparable to human-written\nones. This phenomenon, known as source bias, threatens the sustainable\ndevelopment of the information access ecosystem. However, the underlying causes\nof source bias remain unexplored. In this paper, we explain the process of\ninformation retrieval with a causal graph and discover that PLM-based\nretrievers learn perplexity features for relevance estimation, causing source\nbias by ranking the documents with low perplexity higher. Theoretical analysis\nfurther reveals that the phenomenon stems from the positive correlation between\nthe gradients of the loss functions in language modeling task and retrieval\ntask. Based on the analysis, a causal-inspired inference-time debiasing method\nis proposed, called Causal Diagnosis and Correction (CDC). CDC first diagnoses\nthe bias effect of the perplexity and then separates the bias effect from the\noverall estimated relevance score. Experimental results across three domains\ndemonstrate the superior debiasing effectiveness of CDC, emphasizing the\nvalidity of our proposed explanatory framework. Source codes are available at\nhttps://github.com/WhyDwelledOnAi/Perplexity-Trap.",
-      "pdf_url": "http://arxiv.org/pdf/2503.08684v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.08684v1",
-      "published": "2025-03-11",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Causal Networks of Infodemiological Data: Modelling Dermatitis",
-      "authors": [
-        "Marco Scutari",
-        "Samir Salah",
-        "Delphine Kerob",
-        "Jean Krutmann"
-      ],
-      "abstract": "Environmental and mental conditions are known risk factors for dermatitis and\nsymptoms of skin inflammation, but their interplay is difficult to quantify;\nepidemiological studies rarely include both, along with possible confounding\nfactors. Infodemiology leverages large online data sets to address this issue,\nbut fusing them produces strong patterns of spatial and temporal correlation,\nmissingness, and heterogeneity.\n  In this paper, we design a causal network that correctly models these complex\nstructures in large-scale infodemiological data from Google, EPA, NOAA and US\nCensus (434 US counties, 134 weeks). Our model successfully captures known\ncausal relationships between weather patterns, pollutants, mental conditions,\nand dermatitis. Key findings reveal that anxiety accounts for 57.4% of\nexplained variance in dermatitis, followed by NO2 (33.9%), while environmental\nfactors show significant mediation effects through mental conditions. The model\npredicts that reducing PM2.5 emissions by 25% could decrease dermatitis\nprevalence by 18%. Through statistical validation and causal inference, we\nprovide unprecedented insights into the complex interplay between environmental\nand mental health factors affecting dermatitis, offering valuable guidance for\npublic health policies and environmental regulations.",
-      "pdf_url": "http://arxiv.org/pdf/2503.08252v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.08252v1",
-      "published": "2025-03-11",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "A primer on optimal transport for causal inference with observational data",
-      "authors": [
-        "Florian F Gunsilius"
-      ],
-      "abstract": "The theory of optimal transportation has developed into a powerful and\nelegant framework for comparing probability distributions, with wide-ranging\napplications in all areas of science. The fundamental idea of analyzing\nprobabilities by comparing their underlying state space naturally aligns with\nthe core idea of causal inference, where understanding and quantifying\ncounterfactual states is paramount. Despite this intuitive connection, explicit\nresearch at the intersection of optimal transport and causal inference is only\nbeginning to develop. Yet, many foundational models in causal inference have\nimplicitly relied on optimal transport principles for decades, without\nrecognizing the underlying connection. Therefore, the goal of this review is to\noffer an introduction to the surprisingly deep existing connections between\noptimal transport and the identification of causal effects with observational\ndata -- where optimal transport is not just a set of potential tools, but\nactually builds the foundation of model assumptions. As a result, this review\nis intended to unify the language and notation between different areas of\nstatistics, mathematics, and econometrics, by pointing out these existing\nconnections, and to explore novel problems and directions for future work in\nboth areas derived from this realization.",
-      "pdf_url": "http://arxiv.org/pdf/2503.07811v2",
-      "arxiv_url": "http://arxiv.org/abs/2503.07811v2",
-      "published": "2025-03-10",
-      "categories": [
-        "stat.ME",
-        "cs.AI",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "AR-Diffusion: Asynchronous Video Generation with Auto-Regressive Diffusion",
-      "authors": [
-        "Mingzhen Sun",
-        "Weining Wang",
-        "Gen Li",
-        "Jiawei Liu",
-        "Jiahui Sun",
-        "Wanquan Feng",
-        "Shanshan Lao",
-        "SiYu Zhou",
-        "Qian He",
-        "Jing Liu"
-      ],
-      "abstract": "The task of video generation requires synthesizing visually realistic and\ntemporally coherent video frames. Existing methods primarily use asynchronous\nauto-regressive models or synchronous diffusion models to address this\nchallenge. However, asynchronous auto-regressive models often suffer from\ninconsistencies between training and inference, leading to issues such as error\naccumulation, while synchronous diffusion models are limited by their reliance\non rigid sequence length. To address these issues, we introduce Auto-Regressive\nDiffusion (AR-Diffusion), a novel model that combines the strengths of\nauto-regressive and diffusion models for flexible, asynchronous video\ngeneration. Specifically, our approach leverages diffusion to gradually corrupt\nvideo frames in both training and inference, reducing the discrepancy between\nthese phases. Inspired by auto-regressive generation, we incorporate a\nnon-decreasing constraint on the corruption timesteps of individual frames,\nensuring that earlier frames remain clearer than subsequent ones. This setup,\ntogether with temporal causal attention, enables flexible generation of videos\nwith varying lengths while preserving temporal coherence. In addition, we\ndesign two specialized timestep schedulers: the FoPP scheduler for balanced\ntimestep sampling during training, and the AD scheduler for flexible timestep\ndifferences during inference, supporting both synchronous and asynchronous\ngeneration. Extensive experiments demonstrate the superiority of our proposed\nmethod, which achieves competitive and state-of-the-art results across four\nchallenging benchmarks.",
-      "pdf_url": "http://arxiv.org/pdf/2503.07418v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.07418v1",
-      "published": "2025-03-10",
       "categories": [
         "cs.CV"
       ]
