@@ -1,6 +1,39 @@
 {
-  "last_updated": "2025-03-17T00:50:58.256239",
+  "last_updated": "2025-03-18T00:48:32.955736",
   "papers": [
+    {
+      "title": "Vamba: Understanding Hour-Long Videos with Hybrid Mamba-Transformers",
+      "authors": [
+        "Weiming Ren",
+        "Wentao Ma",
+        "Huan Yang",
+        "Cong Wei",
+        "Ge Zhang",
+        "Wenhu Chen"
+      ],
+      "abstract": "State-of-the-art transformer-based large multimodal models (LMMs) struggle to\nhandle hour-long video inputs due to the quadratic complexity of the causal\nself-attention operations, leading to high computational costs during training\nand inference. Existing token compression-based methods reduce the number of\nvideo tokens but often incur information loss and remain inefficient for\nextremely long sequences. In this paper, we explore an orthogonal direction to\nbuild a hybrid Mamba-Transformer model (VAMBA) that employs Mamba-2 blocks to\nencode video tokens with linear complexity. Without any token reduction, VAMBA\ncan encode more than 1024 frames (640$\\times$360) on a single GPU, while\ntransformer-based models can only encode 256 frames. On long video input, VAMBA\nachieves at least 50% reduction in GPU memory usage during training and\ninference, and nearly doubles the speed per training step compared to\ntransformer-based LMMs. Our experimental results demonstrate that VAMBA\nimproves accuracy by 4.3% on the challenging hour-long video understanding\nbenchmark LVBench over prior efficient video LMMs, and maintains strong\nperformance on a broad spectrum of long and short video understanding tasks.",
+      "pdf_url": "http://arxiv.org/pdf/2503.11579v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.11579v1",
+      "published": "2025-03-14",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Difference-in-Differences Meets Synthetic Control: Doubly Robust Identification and Estimation",
+      "authors": [
+        "Yixiao Sun",
+        "Haitian Xie",
+        "Yuhang Zhang"
+      ],
+      "abstract": "Difference-in-Differences (DiD) and Synthetic Control (SC) are widely used\nmethods for causal inference in panel data, each with its own strengths and\nlimitations. In this paper, we propose a novel methodology that integrates the\nadvantages of both DiD and SC approaches. Our integrated approach provides a\ndoubly robust identification strategy for causal effects in panel data with a\ngroup structure, identifying the average treatment effect on the treated (ATT)\nunder either the parallel trends assumption or the group-level SC assumption.\nBuilding on this identification result, we develop a unified semiparametric\nframework for estimating the ATT. Notably, while the identification-robust\nmoment function satisfies Neyman orthogonality under the parallel trends\nassumption, it does not under the SC assumption, leading to different\nasymptotic variances under these two identification strategies. To address this\nchallenge, we propose a multiplier bootstrap method that consistently\napproximates the asymptotic distribution, regardless of which identification\nassumption holds. Furthermore, we extend our methodology to accommodate\nrepeated cross-sectional data and staggered treatment designs. As an empirical\napplication, we apply our method to evaluate the impact of the 2003 minimum\nwage increase in Alaska on family income.",
+      "pdf_url": "http://arxiv.org/pdf/2503.11375v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.11375v1",
+      "published": "2025-03-14",
+      "categories": [
+        "econ.EM"
+      ]
+    },
     {
       "title": "Autoregressive Image Generation with Randomized Parallel Decoding",
       "authors": [
@@ -142,38 +175,6 @@
       "published": "2025-03-12",
       "categories": [
         "cs.HC"
-      ]
-    },
-    {
-      "title": "ESNLIR: A Spanish Multi-Genre Dataset with Causal Relationships",
-      "authors": [
-        "Johan R. Portela",
-        "Nicolás Perez",
-        "Rubén Manrique"
-      ],
-      "abstract": "Natural Language Inference (NLI), also known as Recognizing Textual\nEntailment (RTE), serves as a crucial area within the domain of Natural\nLanguage Processing (NLP). This area fundamentally empowers machines to discern\nsemantic relationships between assorted sections of text. Even though\nconsiderable work has been executed for the English language, it has been\nobserved that efforts for the Spanish language are relatively sparse. Keeping\nthis in view, this paper focuses on generating a multi-genre Spanish dataset\nfor NLI, ESNLIR, particularly accounting for causal Relationships. A\npreliminary baseline has been conceptualized and subjected to an evaluation,\nleveraging models drawn from the BERT family. The findings signify that the\nenrichment of genres essentially contributes to the enrichment of the model's\ncapability to generalize.\n  The code, notebooks and whole datasets for this experiments is available at:\nhttps://zenodo.org/records/15002575. If you are interested only in the dataset\nyou can find it here: https://zenodo.org/records/15002371.",
-      "pdf_url": "http://arxiv.org/pdf/2503.08803v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.08803v1",
-      "published": "2025-03-11",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "\"Principal Components\" Enable A New Language of Images",
-      "authors": [
-        "Xin Wen",
-        "Bingchen Zhao",
-        "Ismail Elezi",
-        "Jiankang Deng",
-        "Xiaojuan Qi"
-      ],
-      "abstract": "We introduce a novel visual tokenization framework that embeds a provable\nPCA-like structure into the latent token space. While existing visual\ntokenizers primarily optimize for reconstruction fidelity, they often neglect\nthe structural properties of the latent space -- a critical factor for both\ninterpretability and downstream tasks. Our method generates a 1D causal token\nsequence for images, where each successive token contributes non-overlapping\ninformation with mathematically guaranteed decreasing explained variance,\nanalogous to principal component analysis. This structural constraint ensures\nthe tokenizer extracts the most salient visual features first, with each\nsubsequent token adding diminishing yet complementary information.\nAdditionally, we identified and resolved a semantic-spectrum coupling effect\nthat causes the unwanted entanglement of high-level semantic content and\nlow-level spectral details in the tokens by leveraging a diffusion decoder.\nExperiments demonstrate that our approach achieves state-of-the-art\nreconstruction performance and enables better interpretability to align with\nthe human vision system. Moreover, auto-regressive models trained on our token\nsequences achieve performance comparable to current state-of-the-art methods\nwhile requiring fewer tokens for training and inference.",
-      "pdf_url": "http://arxiv.org/pdf/2503.08685v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.08685v1",
-      "published": "2025-03-11",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
