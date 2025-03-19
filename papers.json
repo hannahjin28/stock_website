@@ -1,6 +1,107 @@
 {
-  "last_updated": "2025-03-18T00:48:32.955736",
+  "last_updated": "2025-03-19T00:49:13.151026",
   "papers": [
+    {
+      "title": "Causes of evolutionary divergence in prostate cancer",
+      "authors": [
+        "Emre Esenturk",
+        "Atef Sahli",
+        "Valeriia Haberland",
+        "Aleksandra Ziuboniewicz",
+        "Christopher Wirth",
+        "G. Steven Bova",
+        "Robert G Bristow",
+        "Mark N Brook",
+        "Benedikt Brors",
+        "Adam Butler",
+        "Géraldine Cancel-Tassin",
+        "Kevin CL Cheng",
+        "Colin S Cooper",
+        "Niall M Corcoran",
+        "Olivier Cussenot",
+        "Ros A Eeles",
+        "Francesco Favero",
+        "Clarissa Gerhauser",
+        "Abraham Gihawi",
+        "Etsehiwot G Girma",
+        "Vincent J Gnanapragasam",
+        "Andreas J Gruber",
+        "Anis Hamid",
+        "Vanessa M Hayes",
+        "Housheng Hansen He",
+        "Christopher M Hovens",
+        "Eddie Luidy Imada",
+        "G. Maria Jakobsdottir",
+        "Chol-hee Jung",
+        "Francesca Khani",
+        "Zsofia Kote-Jarai",
+        "Philippe Lamy",
+        "Gregory Leeman",
+        "Massimo Loda",
+        "Pavlo Lutsik",
+        "Luigi Marchionni",
+        "Ramyar Molania",
+        "Anthony T Papenfuss",
+        "Diogo Pellegrina",
+        "Bernard Pope",
+        "Lucio R Queiroz",
+        "Tobias Rausch",
+        "Jüri Reimand",
+        "Brian Robinson",
+        "Thorsten Schlomm",
+        "Karina D Sørensen",
+        "Sebastian Uhrig",
+        "Joachim Weischenfeldt",
+        "Yaobo Xu",
+        "Takafumi N Yamaguchi",
+        "Claudio Zanettini",
+        "Andy G Lynch",
+        "David C Wedge",
+        "Daniel S Brewer",
+        "Dan J Woodcock"
+      ],
+      "abstract": "Cancer progression involves the sequential accumulation of genetic\nalterations that cumulatively shape the tumour phenotype. In prostate cancer,\ntumours can follow divergent evolutionary trajectories that lead to distinct\nsubtypes, but the causes of this divergence remain unclear. While causal\ninference could elucidate the factors involved, conventional methods are\nunsuitable due to the possibility of unobserved confounders and ambiguity in\nthe direction of causality. Here, we propose a method that circumvents these\nissues and apply it to genomic data from 829 prostate cancer patients. We\nidentify several genetic alterations that drive divergence as well as others\nthat prevent this transition, locking tumours into one trajectory. Further\nanalysis reveals that these genetic alterations may cause each other, implying\na positive-feedback loop that accelerates divergence. Our findings provide\ninsights into how cancer subtypes emerge and offer a foundation for genomic\nsurveillance strategies aimed at monitoring the progression of prostate cancer.",
+      "pdf_url": "http://arxiv.org/pdf/2503.13189v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.13189v1",
+      "published": "2025-03-17",
+      "categories": [
+        "q-bio.GN"
+      ]
+    },
+    {
+      "title": "Causal Feature Learning in the Social Sciences",
+      "authors": [
+        "Jingzhou Huang",
+        "Jiuyao Lu",
+        "Alexander Williams Tolbert"
+      ],
+      "abstract": "Variable selection poses a significant challenge in causal modeling,\nparticularly within the social sciences, where constructs often rely on\ninter-related factors such as age, socioeconomic status, gender, and race.\nIndeed, it has been argued that such attributes must be modeled as macro-level\nabstractions of lower-level manipulable features, in order to preserve the\nmodularity assumption essential to causal inference. This paper accordingly\nextends the theoretical framework of Causal Feature Learning (CFL).\nEmpirically, we apply the CFL algorithm to diverse social science datasets,\nevaluating how CFL-derived macrostates compare with traditional microstates in\ndownstream modeling tasks.",
+      "pdf_url": "http://arxiv.org/pdf/2503.12784v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.12784v1",
+      "published": "2025-03-17",
+      "categories": [
+        "stat.ME",
+        "cs.LG",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Computational identification of ketone metabolism as a key regulator of sleep stability and circadian dynamics via real-time metabolic profiling",
+      "authors": [
+        "Hao Huang",
+        "Kaijing Xu",
+        "Michael Lardelli"
+      ],
+      "abstract": "Metabolism plays a crucial role in sleep regulation, yet its effects are\nchallenging to track in real time. This study introduces a machine\nlearning-based framework to analyze sleep patterns and identify how metabolic\nchanges influence sleep at specific time points. We first established that\nsleep periods in Drosophila melanogaster function independently, with no causal\nrelationship between different sleep episodes. Using gradient boosting models\nand explainable artificial intelligence techniques, we quantified the influence\nof time-dependent sleep features. Causal inference and autocorrelation analyses\nfurther confirmed that sleep states at different times are statistically\nindependent, providing a robust foundation for exploring metabolic effects on\nsleep. Applying this framework to flies with altered monocarboxylate\ntransporter 2 expression, we found that changes in ketone transport modified\nsleep stability and disrupted transitions between day and night sleep. In an\nAlzheimers disease model, metabolic interventions such as beta hydroxybutyrate\nsupplementation and intermittent fasting selectively influenced the timing of\nday to night transitions rather than uniformly altering sleep duration.\nAutoencoder based similarity scoring and wavelet analysis reinforced that\nmetabolic effects on sleep were highly time dependent. This study presents a\nnovel approach to studying sleep-metabolism interactions, revealing that\nmetabolic states exert their strongest influence at distinct time points,\nshaping sleep stability and circadian transitions.",
+      "pdf_url": "http://arxiv.org/pdf/2503.12330v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.12330v1",
+      "published": "2025-03-16",
+      "categories": [
+        "q-bio.QM",
+        "q-bio.GN",
+        "q-bio.NC"
+      ]
+    },
     {
       "title": "Vamba: Understanding Hour-Long Videos with Hybrid Mamba-Transformers",
       "authors": [
@@ -123,58 +224,6 @@
         "cs.LG",
         "math.ST",
         "stat.TH"
-      ]
-    },
-    {
-      "title": "Drift-Aware Federated Learning: A Causal Perspective",
-      "authors": [
-        "Yunjie Fang",
-        "Sheng Wu",
-        "Tao Yang",
-        "Xiaofeng Wu",
-        "Bo Hu"
-      ],
-      "abstract": "Federated learning (FL) facilitates collaborative model training among\nmultiple clients while preserving data privacy, often resulting in enhanced\nperformance compared to models trained by individual clients. However, factors\nsuch as communication frequency and data distribution can contribute to feature\ndrift, hindering the attainment of optimal training performance. This paper\nexamine the relationship between model update drift and global as well as local\noptimizer from causal perspective. The influence of the global optimizer on\nfeature drift primarily arises from the participation frequency of certain\nclients in server updates, whereas the effect of the local optimizer is\ntypically associated with imbalanced data distributions.To mitigate this drift,\nwe propose a novel framework termed Causal drift-Aware Federated lEarning\n(CAFE). CAFE exploits the causal relationship between feature-invariant\ncomponents and classification outcomes to independently calibrate local client\nsample features and classifiers during the training phase. In the inference\nphase, it eliminated the drifts in the global model that favor frequently\ncommunicating clients.Experimental results demonstrate that CAFE's integration\nof feature calibration, parameter calibration, and historical information\neffectively reduces both drift towards majority classes and tendencies toward\nfrequently communicating nodes.",
-      "pdf_url": "http://arxiv.org/pdf/2503.09116v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.09116v1",
-      "published": "2025-03-12",
-      "categories": [
-        "cs.LG",
-        "cs.DC"
-      ]
-    },
-    {
-      "title": "Causal-Ex: Causal Graph-based Micro and Macro Expression Spotting",
-      "authors": [
-        "Pei-Sze Tan",
-        "Sailaja Rajanala",
-        "Arghya Pal",
-        "Raphaël C. -W. Phan",
-        "Huey-Fang Ong"
-      ],
-      "abstract": "Detecting concealed emotions within apparently normal expressions is crucial\nfor identifying potential mental health issues and facilitating timely support\nand intervention. The task of spotting macro and micro-expressions involves\npredicting the emotional timeline within a video, accomplished by identifying\nthe onset, apex, and offset frames of the displayed emotions. Utilizing\nfoundational facial muscle movement cues, known as facial action units, boosts\nthe accuracy. However, an overlooked challenge from previous research lies in\nthe inadvertent integration of biases into the training model. These biases\narising from datasets can spuriously link certain action unit movements to\nparticular emotion classes. We tackle this issue by novel replacement of action\nunit adjacency information with the action unit causal graphs. This approach\naims to identify and eliminate undesired spurious connections, retaining only\nunbiased information for classification. Our model, named Causal-Ex\n(Causal-based Expression spotting), employs a rapid causal inference algorithm\nto construct a causal graph of facial action units. This enables us to select\ncausally relevant facial action units. Our work demonstrates improvement in\noverall F1-scores compared to state-of-the-art approaches with 0.388 on\nCAS(ME)^2 and 0.3701 on SAMM-Long Video datasets.",
-      "pdf_url": "http://arxiv.org/pdf/2503.09098v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.09098v1",
-      "published": "2025-03-12",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "StratIncon Detector: Analyzing Strategy Inconsistencies Between Real-Time Strategy and Preferred Professional Strategy in MOBA Esports",
-      "authors": [
-        "Ruofei Ma",
-        "Yu Zhao",
-        "Yuheng Shao",
-        "Yunjie Yao",
-        "Quan Li"
-      ],
-      "abstract": "MOBA (Multiplayer Online Battle Arena) games require a delicate interplay of\nstrategic planning and real-time decision-making, particularly in professional\nesports, where players exhibit varying levels of skill and strategic insight.\nWhile team strategies have been widely studied, analyzing inconsistencies in\nprofessional matches remains a significant challenge. The complexity lies in\ndefining and quantifying the difference between real-time and preferred\nprofessional strategies, as well as understanding the disparities between them.\nEstablishing direct causal links between specific strategic decisions and game\noutcomes also demands a comprehensive analysis of the entire match progression.\nTo tackle these challenges, we present the StratIncon Detector, a visual\nanalytics system designed to assist professional players and coaches in\nefficiently identifying strategic inconsistencies. The system detects real-time\nstrategies, predicts preferred professional strategies, extracts relevant human\nfactors, and uncovers their impact on subsequent game phases. Findings from a\ncase study, a user study with 24 participants, and expert interviews suggest\nthat, compared to traditional methods, the StratIncon Detector enables users to\nmore comprehensively and efficiently identify inconsistencies, infer their\ncauses, evaluate their effects on subsequent game outcomes, and gain deeper\ninsights into team collaboration-ultimately enhancing future teamwork.",
-      "pdf_url": "http://arxiv.org/pdf/2503.09060v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.09060v1",
-      "published": "2025-03-12",
-      "categories": [
-        "cs.HC"
       ]
     }
   ]
