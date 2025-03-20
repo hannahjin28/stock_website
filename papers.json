@@ -1,6 +1,92 @@
 {
-  "last_updated": "2025-03-19T00:49:13.151026",
+  "last_updated": "2025-03-20T00:47:53.608693",
   "papers": [
+    {
+      "title": "Doubly robust identification of treatment effects from multiple environments",
+      "authors": [
+        "Piersilvio De Bartolomeis",
+        "Julia Kostin",
+        "Javier Abad",
+        "Yixin Wang",
+        "Fanny Yang"
+      ],
+      "abstract": "Practical and ethical constraints often require the use of observational data\nfor causal inference, particularly in medicine and social sciences. Yet,\nobservational datasets are prone to confounding, potentially compromising the\nvalidity of causal conclusions. While it is possible to correct for biases if\nthe underlying causal graph is known, this is rarely a feasible ask in\npractical scenarios. A common strategy is to adjust for all available\ncovariates, yet this approach can yield biased treatment effect estimates,\nespecially when post-treatment or unobserved variables are present. We propose\nRAMEN, an algorithm that produces unbiased treatment effect estimates by\nleveraging the heterogeneity of multiple data sources without the need to know\nor learn the underlying causal graph. Notably, RAMEN achieves doubly robust\nidentification: it can identify the treatment effect whenever the causal\nparents of the treatment or those of the outcome are observed, and the node\nwhose parents are observed satisfies an invariance assumption. Empirical\nevaluations on synthetic and real-world datasets show that our approach\noutperforms existing methods.",
+      "pdf_url": "http://arxiv.org/pdf/2503.14459v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.14459v1",
+      "published": "2025-03-18",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "The covariance of causal effect estimators for binary v-structures",
+      "authors": [
+        "Jack Kuipers",
+        "Giusi Moffa"
+      ],
+      "abstract": "Previously [Journal of Causal Inference, 10, 90-105 (2022)], we computed the\nvariance of two estimators of causal effects for a v-structure of binary\nvariables. Here we show that a linear combination of these estimators has lower\nvariance than either. Furthermore, we show that this holds also when the\ntreatment variable is block randomised with a predefined number receiving\ntreatment, with analogous results to when it is sampled randomly.",
+      "pdf_url": "http://arxiv.org/pdf/2503.14242v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.14242v1",
+      "published": "2025-03-18",
+      "categories": [
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "KANITE: Kolmogorov-Arnold Networks for ITE estimation",
+      "authors": [
+        "Eshan Mehendale",
+        "Abhinav Thorat",
+        "Ravi Kolla",
+        "Niranjan Pedanekar"
+      ],
+      "abstract": "We introduce KANITE, a framework leveraging Kolmogorov-Arnold Networks (KANs)\nfor Individual Treatment Effect (ITE) estimation under multiple treatments\nsetting in causal inference. By utilizing KAN's unique abilities to learn\nunivariate activation functions as opposed to learning linear weights by\nMulti-Layer Perceptrons (MLPs), we improve the estimates of ITEs. The KANITE\nframework comprises two key architectures: 1.Integral Probability Metric (IPM)\narchitecture: This employs an IPM loss in a specialized manner to effectively\nalign towards ITE estimation across multiple treatments. 2. Entropy Balancing\n(EB) architecture: This uses weights for samples that are learned by optimizing\nentropy subject to balancing the covariates across treatment groups. Extensive\nevaluations on benchmark datasets demonstrate that KANITE outperforms\nstate-of-the-art algorithms in both $\\epsilon_{\\text{PEHE}}$ and\n$\\epsilon_{\\text{ATE}}$ metrics. Our experiments highlight the advantages of\nKANITE in achieving improved causal estimates, emphasizing the potential of\nKANs to advance causal inference methodologies across diverse application\nareas.",
+      "pdf_url": "http://arxiv.org/pdf/2503.13912v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.13912v1",
+      "published": "2025-03-18",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Bayesian high-dimensional biological pathway-guided mediation analysis with application to metabolomics",
+      "authors": [
+        "Yuzi Zhang",
+        "Donghai Liang",
+        "Youran Tan",
+        "Anne L. Dunlop",
+        "Howard H. Chang"
+      ],
+      "abstract": "With advances in high-resolution mass spectrometry technologies, metabolomics\ndata are increasingly used to investigate biological mechanisms underlying\nassociations between exposures and health outcomes in clinical and\nepidemiological studies. Mediation analysis is a powerful framework for\ninvestigating a hypothesized causal chain and when applied to metabolomics\ndata, a large number of correlated metabolites belonging to interconnected\nmetabolic pathways need to be considered as mediators. To identify metabolic\npathways as active mediators, existing approaches typically focus on first\nidentifying individual metabolites as active mediators, followed by post-hoc\nmetabolic pathway determination. These multi-stage procedures make statistical\ninference challenging. We propose a Bayesian biological pathway-guided\nmediation analysis that aims to jointly analyze all metabolites together,\nidentify metabolic pathways directly, and estimate metabolic pathway-specific\nindirect effects. This is accomplished by incorporating existing biological\nknowledge of metabolic pathways to account for correlations among mediators,\nalong with variable selection and dimension reduction techniques. Advantages of\nthe proposed method is demonstrated in extensive simulation studies with\nreal-word metabolic pathway structure. We apply the proposed method to two\nstudies examining the role of metabolism in mediating (1) the effect of\nRoux-en-Y gastric bypass on glycemic control, and (2) the effect of prenatal\nexposure to per- and polyfluoroalkyl substances (PFAS) on gestational age at\nbirth. Our analyses confirm metabolic pathways previously identified and\nprovide additional uncertainty quantification for the mediation effects.",
+      "pdf_url": "http://arxiv.org/pdf/2503.13894v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.13894v1",
+      "published": "2025-03-18",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Heterogeneous Treatment Effects in Regression Discontinuity Designs",
+      "authors": [
+        "Sebastian Calonico",
+        "Matias D. Cattaneo",
+        "Max H. Farrell",
+        "Filippo Palomba",
+        "Rocio Titiunik"
+      ],
+      "abstract": "Empirical studies using Regression Discontinuity (RD) designs often explore\nheterogeneous treatment effects based on pretreatment covariates. However, the\nlack of formal statistical methods has led to the widespread use of ad hoc\napproaches in applications. Motivated by common empirical practice, we develop\na unified, theoretically grounded framework for RD heterogeneity analysis. We\nshow that a fully interacted local linear (in functional parameters) model\neffectively captures heterogeneity while still being tractable and\ninterpretable in applications. The model structure holds without loss of\ngenerality for discrete covariates, while for continuous covariates our\nproposed (local functional linear-in-parameters) model can be potentially\nrestrictive, but it nonetheless naturally matches standard empirical practice\nand offers a causal interpretation for RD applications. We establish principled\nbandwidth selection and robust bias-corrected inference methods to analyze\nheterogeneous treatment effects and test group differences. We provide\ncompanion software to facilitate implementation of our results. An empirical\napplication illustrates the practical relevance of our methods.",
+      "pdf_url": "http://arxiv.org/pdf/2503.13696v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.13696v1",
+      "published": "2025-03-17",
+      "categories": [
+        "econ.EM"
+      ]
+    },
     {
       "title": "Causes of evolutionary divergence in prostate cancer",
       "authors": [
@@ -133,97 +219,6 @@
       "published": "2025-03-14",
       "categories": [
         "econ.EM"
-      ]
-    },
-    {
-      "title": "Autoregressive Image Generation with Randomized Parallel Decoding",
-      "authors": [
-        "Haopeng Li",
-        "Jinyue Yang",
-        "Guoqi Li",
-        "Huan Wang"
-      ],
-      "abstract": "We introduce ARPG, a novel visual autoregressive model that enables\nrandomized parallel generation, addressing the inherent limitations of\nconventional raster-order approaches, which hinder inference efficiency and\nzero-shot generalization due to their sequential, predefined token generation\norder. Our key insight is that effective random-order modeling necessitates\nexplicit guidance for determining the position of the next predicted token. To\nthis end, we propose a novel guided decoding framework that decouples\npositional guidance from content representation, encoding them separately as\nqueries and key-value pairs. By directly incorporating this guidance into the\ncausal attention mechanism, our approach enables fully random-order training\nand generation, eliminating the need for bidirectional attention. Consequently,\nARPG readily generalizes to zero-shot tasks such as image inpainting,\noutpainting, and resolution expansion. Furthermore, it supports parallel\ninference by concurrently processing multiple queries using a shared KV cache.\nOn the ImageNet-1K 256 benchmark, our approach attains an FID of 1.94 with only\n64 sampling steps, achieving over a 20-fold increase in throughput while\nreducing memory consumption by over 75% compared to representative recent\nautoregressive models at a similar scale.",
-      "pdf_url": "http://arxiv.org/pdf/2503.10568v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.10568v1",
-      "published": "2025-03-13",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "SCOOP: A Framework for Proactive Collaboration and Social Continual Learning through Natural Language Interaction andCausal Reasoning",
-      "authors": [
-        "Dimitri Ognibene",
-        "Sabrina Patania",
-        "Luca Annese",
-        "Cansu Koyuturk",
-        "Franca Garzotto",
-        "Giuseppe Vizzari",
-        "Azzurra Ruggeri",
-        "Simone Colombani"
-      ],
-      "abstract": "Multimodal information-gathering settings, where users collaborate with AI in\ndynamic environments, are increasingly common. These involve complex processes\nwith textual and multimodal interactions, often requiring additional structural\ninformation via cost-incurring requests. AI helpers lack access to users' true\ngoals, beliefs, and preferences and struggle to integrate diverse information\neffectively.\n  We propose a social continual learning framework for causal knowledge\nacquisition and collaborative decision-making. It focuses on autonomous agents\nlearning through dialogues, question-asking, and interaction in open, partially\nobservable environments. A key component is a natural language oracle that\nanswers the agent's queries about environmental mechanisms and states, refining\ncausal understanding while balancing exploration or learning, and exploitation\nor knowledge use.\n  Evaluation tasks inspired by developmental psychology emphasize causal\nreasoning and question-asking skills. They complement benchmarks by assessing\nthe agent's ability to identify knowledge gaps, generate meaningful queries,\nand incrementally update reasoning. The framework also evaluates how knowledge\nacquisition costs are amortized across tasks within the same environment.\n  We propose two architectures: 1) a system combining Large Language Models\n(LLMs) with the ReAct framework and question-generation, and 2) an advanced\nsystem with a causal world model, symbolic, graph-based, or subsymbolic, for\nreasoning and decision-making. The latter builds a causal knowledge graph for\nefficient inference and adaptability under constraints. Challenges include\nintegrating causal reasoning into ReAct and optimizing exploration and\nquestion-asking in error-prone scenarios. Beyond applications, this framework\nmodels developmental processes combining causal reasoning, question generation,\nand social learning.",
-      "pdf_url": "http://arxiv.org/pdf/2503.10241v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.10241v1",
-      "published": "2025-03-13",
-      "categories": [
-        "cs.MA",
-        "cs.HC",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "Using Causal Inference to Explore Government Policy Impact on Computer Usage",
-      "authors": [
-        "Mingjia Zhu",
-        "Lechuan Wang",
-        "Julien Sebot",
-        "Bijan Arbab",
-        "Babak Salimi",
-        "Alexander Cloninger"
-      ],
-      "abstract": "We explore the causal relationship between COVID-19 lockdown policies and\nchanges in personal computer usage. In particular, we examine how lockdown\npolicies affected average daily computer usage, as well as how it affected\nusage patterns of different groups of users. This is done through a merging of\nthe Oxford Policy public data set, which describes the timeline of\nimplementation of COVID policies across the world, and a collection of Intel's\nData Collection and Analytics (DCA) telemetry data, which includes millions of\ncomputer usage records and updates daily. Through difference-in-difference,\nsynthetic control, and change-point detection algorithms, we identify causal\nlinks between the increase in intensity (watts) and time (hours) of computer\nusage and the implementation of work from home policy. We also show an\ninteresting trend in the individual's computer usage affected by the policy. We\nalso conclude that computer usage behaviors are much less predictable during\nreduction in COVID lockdown policies than during increases in COVID lockdown\npolicies.",
-      "pdf_url": "http://arxiv.org/pdf/2503.09957v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.09957v1",
-      "published": "2025-03-13",
-      "categories": [
-        "stat.AP",
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "Towards Causal Model-Based Policy Optimization",
-      "authors": [
-        "Alberto Caron",
-        "Vasilios Mavroudis",
-        "Chris Hicks"
-      ],
-      "abstract": "Real-world decision-making problems are often marked by complex, uncertain\ndynamics that can shift or break under changing conditions. Traditional\nModel-Based Reinforcement Learning (MBRL) approaches learn predictive models of\nenvironment dynamics from queried trajectories and then use these models to\nsimulate rollouts for policy optimization. However, such methods do not account\nfor the underlying causal mechanisms that govern the environment, and thus\ninadvertently capture spurious correlations, making them sensitive to\ndistributional shifts and limiting their ability to generalize. The same\nnaturally holds for model-free approaches. In this work, we introduce Causal\nModel-Based Policy Optimization (C-MBPO), a novel framework that integrates\ncausal learning into the MBRL pipeline to achieve more robust, explainable, and\ngeneralizable policy learning algorithms.\n  Our approach centers on first inferring a Causal Markov Decision Process\n(C-MDP) by learning a local Structural Causal Model (SCM) of both the state and\nreward transition dynamics from trajectories gathered online. C-MDPs differ\nfrom classic MDPs in that we can decompose causal dependencies in the\nenvironment dynamics via specifying an associated Causal Bayesian Network.\nC-MDPs allow for targeted interventions and counterfactual reasoning, enabling\nthe agent to distinguish between mere statistical correlations and causal\nrelationships. The learned SCM is then used to simulate counterfactual\non-policy transitions and rewards under hypothetical actions (or\n``interventions\"), thereby guiding policy optimization more effectively. The\nresulting policy learned by C-MBPO can be shown to be robust to a class of\ndistributional shifts that affect spurious, non-causal relationships in the\ndynamics. We demonstrate this through some simple experiments involving near\nand far OOD dynamics drifts.",
-      "pdf_url": "http://arxiv.org/pdf/2503.09719v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.09719v1",
-      "published": "2025-03-12",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Addressing pitfalls in implicit unobserved confounding synthesis using explicit block hierarchical ancestral sampling",
-      "authors": [
-        "Xudong Sun",
-        "Alex Markham",
-        "Pratik Misra",
-        "Carsten Marr"
-      ],
-      "abstract": "Unbiased data synthesis is crucial for evaluating causal discovery algorithms\nin the presence of unobserved confounding, given the scarcity of real-world\ndatasets. A common approach, implicit parameterization, encodes unobserved\nconfounding by modifying the off-diagonal entries of the idiosyncratic\ncovariance matrix while preserving positive definiteness. Within this approach,\nstate-of-the-art protocols have two distinct issues that hinder unbiased\nsampling from the complete space of causal models: first, the use of diagonally\ndominant constructions, which restrict the spectrum of partial correlation\nmatrices; and second, the restriction of possible graphical structures when\nsampling bidirected edges, unnecessarily ruling out valid causal models. To\naddress these limitations, we propose an improved explicit modeling approach\nfor unobserved confounding, leveraging block-hierarchical ancestral generation\nof ground truth causal graphs. Algorithms for converting the ground truth DAG\ninto ancestral graph is provided so that the output of causal discovery\nalgorithms could be compared with. We prove that our approach fully covers the\nspace of causal models, including those generated by the implicit\nparameterization, thus enabling more robust evaluation of methods for causal\ndiscovery and inference.",
-      "pdf_url": "http://arxiv.org/pdf/2503.09194v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.09194v1",
-      "published": "2025-03-12",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "math.ST",
-        "stat.TH"
       ]
     }
   ]
