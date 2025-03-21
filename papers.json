@@ -1,6 +1,62 @@
 {
-  "last_updated": "2025-03-20T00:47:53.608693",
+  "last_updated": "2025-03-21T00:49:38.041231",
   "papers": [
+    {
+      "title": "World Models in Artificial Intelligence: Sensing, Learning, and Reasoning Like a Child",
+      "authors": [
+        "Javier Del Ser",
+        "Jesus L. Lobo",
+        "Heimo Müller",
+        "Andreas Holzinger"
+      ],
+      "abstract": "World Models help Artificial Intelligence (AI) predict outcomes, reason about\nits environment, and guide decision-making. While widely used in reinforcement\nlearning, they lack the structured, adaptive representations that even young\nchildren intuitively develop. Advancing beyond pattern recognition requires\ndynamic, interpretable frameworks inspired by Piaget's cognitive development\ntheory. We highlight six key research areas -- physics-informed learning,\nneurosymbolic learning, continual learning, causal inference, human-in-the-loop\nAI, and responsible AI -- as essential for enabling true reasoning in AI. By\nintegrating statistical learning with advances in these areas, AI can evolve\nfrom pattern recognition to genuine understanding, adaptation and reasoning\ncapabilities.",
+      "pdf_url": "http://arxiv.org/pdf/2503.15168v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.15168v1",
+      "published": "2025-03-19",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.ET",
+        "cs.LG",
+        "68T05"
+      ]
+    },
+    {
+      "title": "DeCaFlow: A Deconfounding Causal Generative Model",
+      "authors": [
+        "Alejandro Almodóvar",
+        "Adrián Javaloy",
+        "Juan Parras",
+        "Santiago Zazo",
+        "Isabel Valera"
+      ],
+      "abstract": "Causal generative models (CGMs) have recently emerged as capable approaches\nto simulate the causal mechanisms generating our observations, enabling causal\ninference. Unfortunately, existing approaches either are overly restrictive,\nassuming the absence of hidden confounders, or lack generality, being tailored\nto a particular query and graph. In this work, we introduce DeCaFlow, a CGM\nthat accounts for hidden confounders in a single amortized training process\nusing only observational data and the causal graph. Importantly, DeCaFlow can\nprovably identify all causal queries with a valid adjustment set or\nsufficiently informative proxy variables. Remarkably, for the first time to our\nknowledge, we show that a confounded counterfactual query is identifiable, and\nthus solvable by DeCaFlow, as long as its interventional counterpart is as\nwell. Our empirical results on diverse settings (including the Ecoli70 dataset,\nwith 3 independent hidden confounders, tens of observed variables and hundreds\nof causal queries) show that DeCaFlow outperforms existing approaches, while\ndemonstrating its out-of-the-box flexibility.",
+      "pdf_url": "http://arxiv.org/pdf/2503.15114v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.15114v1",
+      "published": "2025-03-19",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "The Hardness of Validating Observational Studies with Experimental Data",
+      "authors": [
+        "Jake Fawkes",
+        "Michael O'Riordan",
+        "Athanasios Vlontzos",
+        "Oriol Corcoll",
+        "Ciarán Mark Gilligan-Lee"
+      ],
+      "abstract": "Observational data is often readily available in large quantities, but can\nlead to biased causal effect estimates due to the presence of unobserved\nconfounding. Recent works attempt to remove this bias by supplementing\nobservational data with experimental data, which, when available, is typically\non a smaller scale due to the time and cost involved in running a randomised\ncontrolled trial. In this work, we prove a theorem that places fundamental\nlimits on this ``best of both worlds'' approach. Using the framework of\nimpossible inference, we show that although it is possible to use experimental\ndata to \\emph{falsify} causal effect estimates from observational data, in\ngeneral it is not possible to \\emph{validate} such estimates. Our theorem\nproves that while experimental data can be used to detect bias in observational\nstudies, without additional assumptions on the smoothness of the correction\nfunction, it can not be used to remove it. We provide a practical example of\nsuch an assumption, developing a novel Gaussian Process based approach to\nconstruct intervals which contain the true treatment effect with high\nprobability, both inside and outside of the support of the experimental data.\nWe demonstrate our methodology on both simulated and semi-synthetic datasets\nand make the \\href{https://github.com/Jakefawkes/Obs_and_exp_data}{code\navailable}.",
+      "pdf_url": "http://arxiv.org/pdf/2503.14795v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.14795v1",
+      "published": "2025-03-19",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
     {
       "title": "Doubly robust identification of treatment effects from multiple environments",
       "authors": [
@@ -71,6 +127,24 @@
       ]
     },
     {
+      "title": "Generating Causal Explanations of Vehicular Agent Behavioural Interactions with Learnt Reward Profiles",
+      "authors": [
+        "Rhys Howard",
+        "Nick Hawes",
+        "Lars Kunze"
+      ],
+      "abstract": "Transparency and explainability are important features that responsible\nautonomous vehicles should possess, particularly when interacting with humans,\nand causal reasoning offers a strong basis to provide these qualities. However,\neven if one assumes agents act to maximise some concept of reward, it is\ndifficult to make accurate causal inferences of agent planning without\ncapturing what is of importance to the agent. Thus our work aims to learn a\nweighting of reward metrics for agents such that explanations for agent\ninteractions can be causally inferred. We validate our approach quantitatively\nand qualitatively across three real-world driving datasets, demonstrating a\nfunctional improvement over previous methods and competitive performance across\nevaluation metrics.",
+      "pdf_url": "http://arxiv.org/pdf/2503.14557v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.14557v1",
+      "published": "2025-03-18",
+      "categories": [
+        "cs.AI",
+        "cs.MA",
+        "cs.RO",
+        "I.2.0; I.2.6; I.2.9; I.2.11; I.6.0"
+      ]
+    },
+    {
       "title": "Heterogeneous Treatment Effects in Regression Discontinuity Designs",
       "authors": [
         "Sebastian Calonico",
@@ -84,7 +158,8 @@
       "arxiv_url": "http://arxiv.org/abs/2503.13696v1",
       "published": "2025-03-17",
       "categories": [
-        "econ.EM"
+        "econ.EM",
+        "stat.ME"
       ]
     },
     {
@@ -152,73 +227,6 @@
       "published": "2025-03-17",
       "categories": [
         "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Causal Feature Learning in the Social Sciences",
-      "authors": [
-        "Jingzhou Huang",
-        "Jiuyao Lu",
-        "Alexander Williams Tolbert"
-      ],
-      "abstract": "Variable selection poses a significant challenge in causal modeling,\nparticularly within the social sciences, where constructs often rely on\ninter-related factors such as age, socioeconomic status, gender, and race.\nIndeed, it has been argued that such attributes must be modeled as macro-level\nabstractions of lower-level manipulable features, in order to preserve the\nmodularity assumption essential to causal inference. This paper accordingly\nextends the theoretical framework of Causal Feature Learning (CFL).\nEmpirically, we apply the CFL algorithm to diverse social science datasets,\nevaluating how CFL-derived macrostates compare with traditional microstates in\ndownstream modeling tasks.",
-      "pdf_url": "http://arxiv.org/pdf/2503.12784v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.12784v1",
-      "published": "2025-03-17",
-      "categories": [
-        "stat.ME",
-        "cs.LG",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Computational identification of ketone metabolism as a key regulator of sleep stability and circadian dynamics via real-time metabolic profiling",
-      "authors": [
-        "Hao Huang",
-        "Kaijing Xu",
-        "Michael Lardelli"
-      ],
-      "abstract": "Metabolism plays a crucial role in sleep regulation, yet its effects are\nchallenging to track in real time. This study introduces a machine\nlearning-based framework to analyze sleep patterns and identify how metabolic\nchanges influence sleep at specific time points. We first established that\nsleep periods in Drosophila melanogaster function independently, with no causal\nrelationship between different sleep episodes. Using gradient boosting models\nand explainable artificial intelligence techniques, we quantified the influence\nof time-dependent sleep features. Causal inference and autocorrelation analyses\nfurther confirmed that sleep states at different times are statistically\nindependent, providing a robust foundation for exploring metabolic effects on\nsleep. Applying this framework to flies with altered monocarboxylate\ntransporter 2 expression, we found that changes in ketone transport modified\nsleep stability and disrupted transitions between day and night sleep. In an\nAlzheimers disease model, metabolic interventions such as beta hydroxybutyrate\nsupplementation and intermittent fasting selectively influenced the timing of\nday to night transitions rather than uniformly altering sleep duration.\nAutoencoder based similarity scoring and wavelet analysis reinforced that\nmetabolic effects on sleep were highly time dependent. This study presents a\nnovel approach to studying sleep-metabolism interactions, revealing that\nmetabolic states exert their strongest influence at distinct time points,\nshaping sleep stability and circadian transitions.",
-      "pdf_url": "http://arxiv.org/pdf/2503.12330v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.12330v1",
-      "published": "2025-03-16",
-      "categories": [
-        "q-bio.QM",
-        "q-bio.GN",
-        "q-bio.NC"
-      ]
-    },
-    {
-      "title": "Vamba: Understanding Hour-Long Videos with Hybrid Mamba-Transformers",
-      "authors": [
-        "Weiming Ren",
-        "Wentao Ma",
-        "Huan Yang",
-        "Cong Wei",
-        "Ge Zhang",
-        "Wenhu Chen"
-      ],
-      "abstract": "State-of-the-art transformer-based large multimodal models (LMMs) struggle to\nhandle hour-long video inputs due to the quadratic complexity of the causal\nself-attention operations, leading to high computational costs during training\nand inference. Existing token compression-based methods reduce the number of\nvideo tokens but often incur information loss and remain inefficient for\nextremely long sequences. In this paper, we explore an orthogonal direction to\nbuild a hybrid Mamba-Transformer model (VAMBA) that employs Mamba-2 blocks to\nencode video tokens with linear complexity. Without any token reduction, VAMBA\ncan encode more than 1024 frames (640$\\times$360) on a single GPU, while\ntransformer-based models can only encode 256 frames. On long video input, VAMBA\nachieves at least 50% reduction in GPU memory usage during training and\ninference, and nearly doubles the speed per training step compared to\ntransformer-based LMMs. Our experimental results demonstrate that VAMBA\nimproves accuracy by 4.3% on the challenging hour-long video understanding\nbenchmark LVBench over prior efficient video LMMs, and maintains strong\nperformance on a broad spectrum of long and short video understanding tasks.",
-      "pdf_url": "http://arxiv.org/pdf/2503.11579v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.11579v1",
-      "published": "2025-03-14",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Difference-in-Differences Meets Synthetic Control: Doubly Robust Identification and Estimation",
-      "authors": [
-        "Yixiao Sun",
-        "Haitian Xie",
-        "Yuhang Zhang"
-      ],
-      "abstract": "Difference-in-Differences (DiD) and Synthetic Control (SC) are widely used\nmethods for causal inference in panel data, each with its own strengths and\nlimitations. In this paper, we propose a novel methodology that integrates the\nadvantages of both DiD and SC approaches. Our integrated approach provides a\ndoubly robust identification strategy for causal effects in panel data with a\ngroup structure, identifying the average treatment effect on the treated (ATT)\nunder either the parallel trends assumption or the group-level SC assumption.\nBuilding on this identification result, we develop a unified semiparametric\nframework for estimating the ATT. Notably, while the identification-robust\nmoment function satisfies Neyman orthogonality under the parallel trends\nassumption, it does not under the SC assumption, leading to different\nasymptotic variances under these two identification strategies. To address this\nchallenge, we propose a multiplier bootstrap method that consistently\napproximates the asymptotic distribution, regardless of which identification\nassumption holds. Furthermore, we extend our methodology to accommodate\nrepeated cross-sectional data and staggered treatment designs. As an empirical\napplication, we apply our method to evaluate the impact of the 2003 minimum\nwage increase in Alaska on family income.",
-      "pdf_url": "http://arxiv.org/pdf/2503.11375v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.11375v1",
-      "published": "2025-03-14",
-      "categories": [
-        "econ.EM"
       ]
     }
   ]
