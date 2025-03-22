@@ -1,6 +1,65 @@
 {
-  "last_updated": "2025-03-21T00:49:38.041231",
+  "last_updated": "2025-03-22T00:47:09.782684",
   "papers": [
+    {
+      "title": "Feedback-augmented Non-homogeneous Hidden Markov Models for Longitudinal Causal Inference",
+      "authors": [
+        "Jouni Helske"
+      ],
+      "abstract": "Hidden Markov models are widely used for modeling sequential data but\ntypically have limited applicability in observational causal inference due to\ntheir strong conditional independence assumptions. I introduce\nfeedback-augmented non-homogeneous hidden Markov model (FAN-HMM), which\nincorporate time-varying covariates and feedback mechanisms from past\nobservations to latent states and future responses. Integrating these models\nwith the structural causal model framework allows flexible causal inference in\nlongitudinal data with time-varying unobserved heterogeneity and multiple\ncausal pathways. I show how, in a common case of categorical response\nvariables, long-term causal effects can be estimated efficiently without the\nneed for simulating counterfactual trajectories. Using simulation experiments,\nI study the performance of FAN-HMM under the common misspecification of the\nnumber of latent states, and finally apply the proposed approach to estimate\nthe effect of the 2013 parental leave reform on fathers' paternal leave uptake\nin Finnish workplaces.",
+      "pdf_url": "http://arxiv.org/pdf/2503.16014v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.16014v1",
+      "published": "2025-03-20",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Critical review of patient outcome study in head and neck cancer radiotherapy",
+      "authors": [
+        "Jingyuan Chen",
+        "Yunze Yang",
+        "Chenbin Liu",
+        "Hongying Feng",
+        "Jason M. Holmes",
+        "Lian Zhang",
+        "Steven J. Frank",
+        "Charles B. Simone II",
+        "Daniel J. Ma",
+        "Samir H. Patel",
+        "Wei Liu"
+      ],
+      "abstract": "Rapid technological advances in radiation therapy have significantly improved\ndose delivery and tumor control for head and neck cancers. However,\ntreatment-related toxicities caused by high-dose exposure to critical\nstructures remain a significant clinical challenge, underscoring the need for\naccurate prediction of clinical outcomes-encompassing both tumor control and\nadverse events (AEs). This review critically evaluates the evolution of\ndata-driven approaches in predicting patient outcomes in head and neck cancer\npatients treated with radiation therapy, from traditional dose-volume\nconstraints to cutting-edge artificial intelligence (AI) and causal inference\nframework. The integration of linear energy transfer in patient outcomes study,\nwhich has uncovered critical mechanisms behind unexpected toxicity, was also\nintroduced for proton therapy. Three transformative methodological advances are\nreviewed: radiomics, AI-based algorithms, and causal inference frameworks.\nWhile radiomics has enabled quantitative characterization of medical images, AI\nmodels have demonstrated superior capability than traditional models. However,\nthe field faces significant challenges in translating statistical correlations\nfrom real-world data into interventional clinical insights. We highlight that\nhow causal inference methods can bridge this gap by providing a rigorous\nframework for identifying treatment effects. Looking ahead, we envision that\ncombining these complementary approaches, especially the interventional\nprediction models, will enable more personalized treatment strategies,\nultimately improving both tumor control and quality of life for head and neck\ncancer patients treated with radiation therapy.",
+      "pdf_url": "http://arxiv.org/pdf/2503.15691v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.15691v1",
+      "published": "2025-03-19",
+      "categories": [
+        "physics.med-ph"
+      ]
+    },
+    {
+      "title": "R$^2$: A LLM Based Novel-to-Screenplay Generation Framework with Causal Plot Graphs",
+      "authors": [
+        "Zefeng Lin",
+        "Yi Xiao",
+        "Zhiqiang Mo",
+        "Qifan Zhang",
+        "Jie Wang",
+        "Jiayang Chen",
+        "Jiajing Zhang",
+        "Hui Zhang",
+        "Zhengyi Liu",
+        "Xianyong Fang",
+        "Xiaohua Xu"
+      ],
+      "abstract": "Automatically adapting novels into screenplays is important for the TV, film,\nor opera industries to promote products with low costs. The strong performances\nof large language models (LLMs) in long-text generation call us to propose a\nLLM based framework Reader-Rewriter (R$^2$) for this task. However, there are\ntwo fundamental challenges here. First, the LLM hallucinations may cause\ninconsistent plot extraction and screenplay generation. Second, the\ncausality-embedded plot lines should be effectively extracted for coherent\nrewriting. Therefore, two corresponding tactics are proposed: 1) A\nhallucination-aware refinement method (HAR) to iteratively discover and\neliminate the affections of hallucinations; and 2) a causal plot-graph\nconstruction method (CPC) based on a greedy cycle-breaking algorithm to\nefficiently construct plot lines with event causalities. Recruiting those\nefficient techniques, R$^2$ utilizes two modules to mimic the human screenplay\nrewriting process: The Reader module adopts a sliding window and CPC to build\nthe causal plot graphs, while the Rewriter module generates first the scene\noutlines based on the graphs and then the screenplays. HAR is integrated into\nboth modules for accurate inferences of LLMs. Experimental results demonstrate\nthe superiority of R$^2$, which substantially outperforms three existing\napproaches (51.3%, 22.6%, and 57.1% absolute increases) in pairwise comparison\nat the overall win rate for GPT-4o.",
+      "pdf_url": "http://arxiv.org/pdf/2503.15655v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.15655v1",
+      "published": "2025-03-19",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "World Models in Artificial Intelligence: Sensing, Learning, and Reasoning Like a Child",
       "authors": [
@@ -124,109 +183,6 @@
       "published": "2025-03-18",
       "categories": [
         "stat.AP"
-      ]
-    },
-    {
-      "title": "Generating Causal Explanations of Vehicular Agent Behavioural Interactions with Learnt Reward Profiles",
-      "authors": [
-        "Rhys Howard",
-        "Nick Hawes",
-        "Lars Kunze"
-      ],
-      "abstract": "Transparency and explainability are important features that responsible\nautonomous vehicles should possess, particularly when interacting with humans,\nand causal reasoning offers a strong basis to provide these qualities. However,\neven if one assumes agents act to maximise some concept of reward, it is\ndifficult to make accurate causal inferences of agent planning without\ncapturing what is of importance to the agent. Thus our work aims to learn a\nweighting of reward metrics for agents such that explanations for agent\ninteractions can be causally inferred. We validate our approach quantitatively\nand qualitatively across three real-world driving datasets, demonstrating a\nfunctional improvement over previous methods and competitive performance across\nevaluation metrics.",
-      "pdf_url": "http://arxiv.org/pdf/2503.14557v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.14557v1",
-      "published": "2025-03-18",
-      "categories": [
-        "cs.AI",
-        "cs.MA",
-        "cs.RO",
-        "I.2.0; I.2.6; I.2.9; I.2.11; I.6.0"
-      ]
-    },
-    {
-      "title": "Heterogeneous Treatment Effects in Regression Discontinuity Designs",
-      "authors": [
-        "Sebastian Calonico",
-        "Matias D. Cattaneo",
-        "Max H. Farrell",
-        "Filippo Palomba",
-        "Rocio Titiunik"
-      ],
-      "abstract": "Empirical studies using Regression Discontinuity (RD) designs often explore\nheterogeneous treatment effects based on pretreatment covariates. However, the\nlack of formal statistical methods has led to the widespread use of ad hoc\napproaches in applications. Motivated by common empirical practice, we develop\na unified, theoretically grounded framework for RD heterogeneity analysis. We\nshow that a fully interacted local linear (in functional parameters) model\neffectively captures heterogeneity while still being tractable and\ninterpretable in applications. The model structure holds without loss of\ngenerality for discrete covariates, while for continuous covariates our\nproposed (local functional linear-in-parameters) model can be potentially\nrestrictive, but it nonetheless naturally matches standard empirical practice\nand offers a causal interpretation for RD applications. We establish principled\nbandwidth selection and robust bias-corrected inference methods to analyze\nheterogeneous treatment effects and test group differences. We provide\ncompanion software to facilitate implementation of our results. An empirical\napplication illustrates the practical relevance of our methods.",
-      "pdf_url": "http://arxiv.org/pdf/2503.13696v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.13696v1",
-      "published": "2025-03-17",
-      "categories": [
-        "econ.EM",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causes of evolutionary divergence in prostate cancer",
-      "authors": [
-        "Emre Esenturk",
-        "Atef Sahli",
-        "Valeriia Haberland",
-        "Aleksandra Ziuboniewicz",
-        "Christopher Wirth",
-        "G. Steven Bova",
-        "Robert G Bristow",
-        "Mark N Brook",
-        "Benedikt Brors",
-        "Adam Butler",
-        "Géraldine Cancel-Tassin",
-        "Kevin CL Cheng",
-        "Colin S Cooper",
-        "Niall M Corcoran",
-        "Olivier Cussenot",
-        "Ros A Eeles",
-        "Francesco Favero",
-        "Clarissa Gerhauser",
-        "Abraham Gihawi",
-        "Etsehiwot G Girma",
-        "Vincent J Gnanapragasam",
-        "Andreas J Gruber",
-        "Anis Hamid",
-        "Vanessa M Hayes",
-        "Housheng Hansen He",
-        "Christopher M Hovens",
-        "Eddie Luidy Imada",
-        "G. Maria Jakobsdottir",
-        "Chol-hee Jung",
-        "Francesca Khani",
-        "Zsofia Kote-Jarai",
-        "Philippe Lamy",
-        "Gregory Leeman",
-        "Massimo Loda",
-        "Pavlo Lutsik",
-        "Luigi Marchionni",
-        "Ramyar Molania",
-        "Anthony T Papenfuss",
-        "Diogo Pellegrina",
-        "Bernard Pope",
-        "Lucio R Queiroz",
-        "Tobias Rausch",
-        "Jüri Reimand",
-        "Brian Robinson",
-        "Thorsten Schlomm",
-        "Karina D Sørensen",
-        "Sebastian Uhrig",
-        "Joachim Weischenfeldt",
-        "Yaobo Xu",
-        "Takafumi N Yamaguchi",
-        "Claudio Zanettini",
-        "Andy G Lynch",
-        "David C Wedge",
-        "Daniel S Brewer",
-        "Dan J Woodcock"
-      ],
-      "abstract": "Cancer progression involves the sequential accumulation of genetic\nalterations that cumulatively shape the tumour phenotype. In prostate cancer,\ntumours can follow divergent evolutionary trajectories that lead to distinct\nsubtypes, but the causes of this divergence remain unclear. While causal\ninference could elucidate the factors involved, conventional methods are\nunsuitable due to the possibility of unobserved confounders and ambiguity in\nthe direction of causality. Here, we propose a method that circumvents these\nissues and apply it to genomic data from 829 prostate cancer patients. We\nidentify several genetic alterations that drive divergence as well as others\nthat prevent this transition, locking tumours into one trajectory. Further\nanalysis reveals that these genetic alterations may cause each other, implying\na positive-feedback loop that accelerates divergence. Our findings provide\ninsights into how cancer subtypes emerge and offer a foundation for genomic\nsurveillance strategies aimed at monitoring the progression of prostate cancer.",
-      "pdf_url": "http://arxiv.org/pdf/2503.13189v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.13189v1",
-      "published": "2025-03-17",
-      "categories": [
-        "q-bio.GN"
       ]
     }
   ]
