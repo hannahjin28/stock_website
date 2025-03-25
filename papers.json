@@ -1,6 +1,44 @@
 {
-  "last_updated": "2025-03-24T00:51:37.030228",
+  "last_updated": "2025-03-25T00:50:10.657901",
   "papers": [
+    {
+      "title": "Calibration Strategies for Robust Causal Estimation: Theoretical and Empirical Insights on Propensity Score Based Estimators",
+      "authors": [
+        "Jan Rabenseifner",
+        "Sven Klaassen",
+        "Jannis Kueck",
+        "Philipp Bach"
+      ],
+      "abstract": "The partitioning of data for estimation and calibration critically impacts\nthe performance of propensity score based estimators like inverse probability\nweighting (IPW) and double/debiased machine learning (DML) frameworks. We\nextend recent advances in calibration techniques for propensity score\nestimation, improving the robustness of propensity scores in challenging\nsettings such as limited overlap, small sample sizes, or unbalanced data. Our\ncontributions are twofold: First, we provide a theoretical analysis of the\nproperties of calibrated estimators in the context of DML. To this end, we\nrefine existing calibration frameworks for propensity score models, with a\nparticular emphasis on the role of sample-splitting schemes in ensuring valid\ncausal inference. Second, through extensive simulations, we show that\ncalibration reduces variance of inverse-based propensity score estimators while\nalso mitigating bias in IPW, even in small-sample regimes. Notably, calibration\nimproves stability for flexible learners (e.g., gradient boosting) while\npreserving the doubly robust properties of DML. A key insight is that, even\nwhen methods perform well without calibration, incorporating a calibration step\ndoes not degrade performance, provided that an appropriate sample-splitting\napproach is chosen.",
+      "pdf_url": "http://arxiv.org/pdf/2503.17290v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.17290v1",
+      "published": "2025-03-21",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "econ.EM",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Casual Inference via Style Bias Deconfounding for Domain Generalization",
+      "authors": [
+        "Jiaxi Li",
+        "Di Lin",
+        "Hao Chen",
+        "Hongying Liu",
+        "Liang Wan",
+        "Wei Feng"
+      ],
+      "abstract": "Deep neural networks (DNNs) often struggle with out-of-distribution data,\nlimiting their reliability in diverse realworld applications. To address this\nissue, domain generalization methods have been developed to learn\ndomain-invariant features from single or multiple training domains, enabling\ngeneralization to unseen testing domains. However, existing approaches usually\noverlook the impact of style frequency within the training set. This oversight\npredisposes models to capture spurious visual correlations caused by style\nconfounding factors, rather than learning truly causal representations, thereby\nundermining inference reliability. In this work, we introduce Style\nDeconfounding Causal Learning (SDCL), a novel causal inference-based framework\ndesigned to explicitly address style as a confounding factor. Our approaches\nbegins with constructing a structural causal model (SCM) tailored to the domain\ngeneralization problem and applies a backdoor adjustment strategy to account\nfor style influence. Building on this foundation, we design a style-guided\nexpert module (SGEM) to adaptively clusters style distributions during\ntraining, capturing the global confounding style. Additionally, a back-door\ncausal learning module (BDCL) performs causal interventions during feature\nextraction, ensuring fair integration of global confounding styles into sample\npredictions, effectively reducing style bias. The SDCL framework is highly\nversatile and can be seamlessly integrated with state-of-the-art data\naugmentation techniques. Extensive experiments across diverse natural and\nmedical image recognition tasks validate its efficacy, demonstrating superior\nperformance in both multi-domain and the more challenging single-domain\ngeneralization scenarios.",
+      "pdf_url": "http://arxiv.org/pdf/2503.16852v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.16852v1",
+      "published": "2025-03-21",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Feedback-augmented Non-homogeneous Hidden Markov Models for Longitudinal Causal Inference",
       "authors": [
@@ -148,41 +186,6 @@
       "categories": [
         "math.ST",
         "stat.TH"
-      ]
-    },
-    {
-      "title": "KANITE: Kolmogorov-Arnold Networks for ITE estimation",
-      "authors": [
-        "Eshan Mehendale",
-        "Abhinav Thorat",
-        "Ravi Kolla",
-        "Niranjan Pedanekar"
-      ],
-      "abstract": "We introduce KANITE, a framework leveraging Kolmogorov-Arnold Networks (KANs)\nfor Individual Treatment Effect (ITE) estimation under multiple treatments\nsetting in causal inference. By utilizing KAN's unique abilities to learn\nunivariate activation functions as opposed to learning linear weights by\nMulti-Layer Perceptrons (MLPs), we improve the estimates of ITEs. The KANITE\nframework comprises two key architectures: 1.Integral Probability Metric (IPM)\narchitecture: This employs an IPM loss in a specialized manner to effectively\nalign towards ITE estimation across multiple treatments. 2. Entropy Balancing\n(EB) architecture: This uses weights for samples that are learned by optimizing\nentropy subject to balancing the covariates across treatment groups. Extensive\nevaluations on benchmark datasets demonstrate that KANITE outperforms\nstate-of-the-art algorithms in both $\\epsilon_{\\text{PEHE}}$ and\n$\\epsilon_{\\text{ATE}}$ metrics. Our experiments highlight the advantages of\nKANITE in achieving improved causal estimates, emphasizing the potential of\nKANs to advance causal inference methodologies across diverse application\nareas.",
-      "pdf_url": "http://arxiv.org/pdf/2503.13912v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.13912v1",
-      "published": "2025-03-18",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Bayesian high-dimensional biological pathway-guided mediation analysis with application to metabolomics",
-      "authors": [
-        "Yuzi Zhang",
-        "Donghai Liang",
-        "Youran Tan",
-        "Anne L. Dunlop",
-        "Howard H. Chang"
-      ],
-      "abstract": "With advances in high-resolution mass spectrometry technologies, metabolomics\ndata are increasingly used to investigate biological mechanisms underlying\nassociations between exposures and health outcomes in clinical and\nepidemiological studies. Mediation analysis is a powerful framework for\ninvestigating a hypothesized causal chain and when applied to metabolomics\ndata, a large number of correlated metabolites belonging to interconnected\nmetabolic pathways need to be considered as mediators. To identify metabolic\npathways as active mediators, existing approaches typically focus on first\nidentifying individual metabolites as active mediators, followed by post-hoc\nmetabolic pathway determination. These multi-stage procedures make statistical\ninference challenging. We propose a Bayesian biological pathway-guided\nmediation analysis that aims to jointly analyze all metabolites together,\nidentify metabolic pathways directly, and estimate metabolic pathway-specific\nindirect effects. This is accomplished by incorporating existing biological\nknowledge of metabolic pathways to account for correlations among mediators,\nalong with variable selection and dimension reduction techniques. Advantages of\nthe proposed method is demonstrated in extensive simulation studies with\nreal-word metabolic pathway structure. We apply the proposed method to two\nstudies examining the role of metabolism in mediating (1) the effect of\nRoux-en-Y gastric bypass on glycemic control, and (2) the effect of prenatal\nexposure to per- and polyfluoroalkyl substances (PFAS) on gestational age at\nbirth. Our analyses confirm metabolic pathways previously identified and\nprovide additional uncertainty quantification for the mediation effects.",
-      "pdf_url": "http://arxiv.org/pdf/2503.13894v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.13894v1",
-      "published": "2025-03-18",
-      "categories": [
-        "stat.AP"
       ]
     }
   ]
