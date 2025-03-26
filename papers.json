@@ -1,6 +1,93 @@
 {
-  "last_updated": "2025-03-25T00:50:10.657901",
+  "last_updated": "2025-03-26T00:49:33.840440",
   "papers": [
+    {
+      "title": "Causal Links Between Anthropogenic Emissions and Air Pollution Dynamics in Delhi",
+      "authors": [
+        "Sourish Das",
+        "Sudeep Shukla",
+        "Alka Yadav",
+        "Anirban Chakraborti"
+      ],
+      "abstract": "Air pollution poses significant health and environmental challenges,\nparticularly in rapidly urbanizing regions. Delhi-National Capital Region\nexperiences air pollution episodes due to complex interactions between\nanthropogenic emissions and meteorological conditions. Understanding the causal\ndrivers of key pollutants such as $PM_{2.5}$ and ground $O_3$ is crucial for\ndeveloping effective mitigation strategies. This study investigates the causal\nlinks of anthropogenic emissions on $PM_{2.5}$ and $O_3$ concentrations using\npredictive modeling and causal inference techniques. Integrating\nhigh-resolution air quality data from Jan 2018 to Aug 2023 across 32 monitoring\nstations, we develop predictive regression models that incorporate\nmeteorological variables (temperature and relative humidity), pollutant\nconcentrations ($NO_2, SO_2, CO$), and seasonal harmonic components to capture\nboth diurnal and annual cycles. Here, we show that reductions in anthropogenic\nemissions lead to significant decreases in $PM_{2.5}$ levels, whereas their\neffect on $O_3$ remains marginal and statistically insignificant. To address\nspatial heterogeneity, we employ Gaussian Process modeling. Further, we use\nGranger causality analysis and counterfactual simulation to establish direct\ncausal links. Validation using real-world data from the COVID-19 lockdown\nconfirms that reduced emissions led to a substantial drop in $PM_{2.5}$ but\nonly a slight, insignificant change in $O_3$. The findings highlight the\nnecessity of targeted emission reduction policies while emphasizing the need\nfor integrated strategies addressing both particulate and ozone pollution.\nThese insights are crucial for policymakers designing air pollution\ninterventions in other megacities, and offer a scalable methodology for\ntackling complex urban air pollution through data-driven decision-making.",
+      "pdf_url": "http://arxiv.org/pdf/2503.18912v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.18912v1",
+      "published": "2025-03-24",
+      "categories": [
+        "stat.AP",
+        "physics.ao-ph",
+        "physics.soc-ph",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "A Causal Adjustment Module for Debiasing Scene Graph Generation",
+      "authors": [
+        "Li Liu",
+        "Shuzhou Sun",
+        "Shuaifeng Zhi",
+        "Fan Shi",
+        "Zhen Liu",
+        "Janne Heikkilä",
+        "Yongxiang Liu"
+      ],
+      "abstract": "While recent debiasing methods for Scene Graph Generation (SGG) have shown\nimpressive performance, these efforts often attribute model bias solely to the\nlong-tail distribution of relationships, overlooking the more profound causes\nstemming from skewed object and object pair distributions. In this paper, we\nemploy causal inference techniques to model the causality among these observed\nskewed distributions. Our insight lies in the ability of causal inference to\ncapture the unobservable causal effects between complex distributions, which is\ncrucial for tracing the roots of model bias. Specifically, we introduce the\nMediator-based Causal Chain Model (MCCM), which, in addition to modeling\ncausality among objects, object pairs, and relationships, incorporates mediator\nvariables, i.e., cooccurrence distribution, for complementing the causality.\nFollowing this, we propose the Causal Adjustment Module (CAModule) to estimate\nthe modeled causal structure, using variables from MCCM as inputs to produce a\nset of adjustment factors aimed at correcting biased model predictions.\nMoreover, our method enables the composition of zero-shot relationships,\nthereby enhancing the model's ability to recognize such relationships.\nExperiments conducted across various SGG backbones and popular benchmarks\ndemonstrate that CAModule achieves state-of-the-art mean recall rates, with\nsignificant improvements also observed on the challenging zero-shot recall rate\nmetric.",
+      "pdf_url": "http://arxiv.org/pdf/2503.17862v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.17862v1",
+      "published": "2025-03-22",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "A Roadmap Towards Improving Multi-Agent Reinforcement Learning With Causal Discovery And Inference",
+      "authors": [
+        "Giovanni Briglia",
+        "Stefano Mariani",
+        "Franco Zambonelli"
+      ],
+      "abstract": "Causal reasoning is increasingly used in Reinforcement Learning (RL) to\nimprove the learning process in several dimensions: efficacy of learned\npolicies, efficiency of convergence, generalisation capabilities, safety and\ninterpretability of behaviour. However, applications of causal reasoning to\nMulti-Agent RL (MARL) are still mostly unexplored. In this paper, we take the\nfirst step in investigating the opportunities and challenges of applying causal\nreasoning in MARL. We measure the impact of a simple form of causal\naugmentation in state-of-the-art MARL scenarios increasingly requiring\ncooperation, and with state-of-the-art MARL algorithms exploiting various\ndegrees of collaboration between agents. Then, we discuss the positive as well\nas negative results achieved, giving us the chance to outline the areas where\nfurther research may help to successfully transfer causal RL to the multi-agent\nsetting.",
+      "pdf_url": "http://arxiv.org/pdf/2503.17803v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.17803v1",
+      "published": "2025-03-22",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.MA",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Inference based Transfer Learning with LLMs: An Efficient Framework for Industrial RUL Prediction",
+      "authors": [
+        "Yan Chen",
+        "Cheng Liu"
+      ],
+      "abstract": "Accurate prediction of Remaining Useful Life (RUL) for complex industrial\nmachinery is critical for the reliability and maintenance of mechatronic\nsystems, but it is challenged by high-dimensional, noisy sensor data. We\npropose the Causal-Informed Data Pruning Framework (CIDPF), which pioneers the\nuse of causal inference to identify sensor signals with robust causal\nrelationships to RUL through PCMCI-based stability analysis, while a Gaussian\nMixture Model (GMM) screens for anomalies. By training on only 10% of the\npruned data, CIDPF fine-tunes pre-trained Large Language Models (LLMs) using\nparameter-efficient strategies, reducing training time by 90% compared to\ntraditional approaches. Experiments on the N-CMAPSS dataset demonstrate that\nCIDPF achieves a 26% lower RMSE than existing methods and a 25% improvement\nover full-data baselines, showcasing superior accuracy and computational\nefficiency in industrial mechatronic systems. The framework's adaptability to\nmulti-condition scenarios further underscores its practicality for industrial\ndeployment.",
+      "pdf_url": "http://arxiv.org/pdf/2503.17686v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.17686v1",
+      "published": "2025-03-22",
+      "categories": [
+        "eess.SP"
+      ]
+    },
+    {
+      "title": "Fairness-Driven LLM-based Causal Discovery with Active Learning and Dynamic Scoring",
+      "authors": [
+        "Khadija Zanna",
+        "Akane Sano"
+      ],
+      "abstract": "Causal discovery (CD) plays a pivotal role in numerous scientific fields by\nclarifying the causal relationships that underlie phenomena observed in diverse\ndisciplines. Despite significant advancements in CD algorithms that enhance\nbias and fairness analyses in machine learning, their application faces\nchallenges due to the high computational demands and complexities of\nlarge-scale data. This paper introduces a framework that leverages Large\nLanguage Models (LLMs) for CD, utilizing a metadata-based approach akin to the\nreasoning processes of human experts. By shifting from pairwise queries to a\nmore scalable breadth-first search (BFS) strategy, the number of required\nqueries is reduced from quadratic to linear in terms of variable count, thereby\naddressing scalability concerns inherent in previous approaches. This method\nutilizes an Active Learning (AL) and a Dynamic Scoring Mechanism that\nprioritizes queries based on their potential information gain, combining mutual\ninformation, partial correlation, and LLM confidence scores to refine the\ncausal graph more efficiently and accurately. This BFS query strategy reduces\nthe required number of queries significantly, thereby addressing scalability\nconcerns inherent in previous approaches. This study provides a more scalable\nand efficient solution for leveraging LLMs in fairness-driven CD, highlighting\nthe effects of the different parameters on performance. We perform fairness\nanalyses on the inferred causal graphs, identifying direct and indirect effects\nof sensitive attributes on outcomes. A comparison of these analyses against\nthose from graphs produced by baseline methods highlights the importance of\naccurate causal graph construction in understanding bias and ensuring fairness\nin machine learning systems.",
+      "pdf_url": "http://arxiv.org/pdf/2503.17569v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.17569v1",
+      "published": "2025-03-21",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Calibration Strategies for Robust Causal Estimation: Theoretical and Empirical Insights on Propensity Score Based Estimators",
       "authors": [
@@ -96,96 +183,6 @@
       "published": "2025-03-19",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "World Models in Artificial Intelligence: Sensing, Learning, and Reasoning Like a Child",
-      "authors": [
-        "Javier Del Ser",
-        "Jesus L. Lobo",
-        "Heimo Müller",
-        "Andreas Holzinger"
-      ],
-      "abstract": "World Models help Artificial Intelligence (AI) predict outcomes, reason about\nits environment, and guide decision-making. While widely used in reinforcement\nlearning, they lack the structured, adaptive representations that even young\nchildren intuitively develop. Advancing beyond pattern recognition requires\ndynamic, interpretable frameworks inspired by Piaget's cognitive development\ntheory. We highlight six key research areas -- physics-informed learning,\nneurosymbolic learning, continual learning, causal inference, human-in-the-loop\nAI, and responsible AI -- as essential for enabling true reasoning in AI. By\nintegrating statistical learning with advances in these areas, AI can evolve\nfrom pattern recognition to genuine understanding, adaptation and reasoning\ncapabilities.",
-      "pdf_url": "http://arxiv.org/pdf/2503.15168v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.15168v1",
-      "published": "2025-03-19",
-      "categories": [
-        "cs.AI",
-        "cs.CV",
-        "cs.ET",
-        "cs.LG",
-        "68T05"
-      ]
-    },
-    {
-      "title": "DeCaFlow: A Deconfounding Causal Generative Model",
-      "authors": [
-        "Alejandro Almodóvar",
-        "Adrián Javaloy",
-        "Juan Parras",
-        "Santiago Zazo",
-        "Isabel Valera"
-      ],
-      "abstract": "Causal generative models (CGMs) have recently emerged as capable approaches\nto simulate the causal mechanisms generating our observations, enabling causal\ninference. Unfortunately, existing approaches either are overly restrictive,\nassuming the absence of hidden confounders, or lack generality, being tailored\nto a particular query and graph. In this work, we introduce DeCaFlow, a CGM\nthat accounts for hidden confounders in a single amortized training process\nusing only observational data and the causal graph. Importantly, DeCaFlow can\nprovably identify all causal queries with a valid adjustment set or\nsufficiently informative proxy variables. Remarkably, for the first time to our\nknowledge, we show that a confounded counterfactual query is identifiable, and\nthus solvable by DeCaFlow, as long as its interventional counterpart is as\nwell. Our empirical results on diverse settings (including the Ecoli70 dataset,\nwith 3 independent hidden confounders, tens of observed variables and hundreds\nof causal queries) show that DeCaFlow outperforms existing approaches, while\ndemonstrating its out-of-the-box flexibility.",
-      "pdf_url": "http://arxiv.org/pdf/2503.15114v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.15114v1",
-      "published": "2025-03-19",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "The Hardness of Validating Observational Studies with Experimental Data",
-      "authors": [
-        "Jake Fawkes",
-        "Michael O'Riordan",
-        "Athanasios Vlontzos",
-        "Oriol Corcoll",
-        "Ciarán Mark Gilligan-Lee"
-      ],
-      "abstract": "Observational data is often readily available in large quantities, but can\nlead to biased causal effect estimates due to the presence of unobserved\nconfounding. Recent works attempt to remove this bias by supplementing\nobservational data with experimental data, which, when available, is typically\non a smaller scale due to the time and cost involved in running a randomised\ncontrolled trial. In this work, we prove a theorem that places fundamental\nlimits on this ``best of both worlds'' approach. Using the framework of\nimpossible inference, we show that although it is possible to use experimental\ndata to \\emph{falsify} causal effect estimates from observational data, in\ngeneral it is not possible to \\emph{validate} such estimates. Our theorem\nproves that while experimental data can be used to detect bias in observational\nstudies, without additional assumptions on the smoothness of the correction\nfunction, it can not be used to remove it. We provide a practical example of\nsuch an assumption, developing a novel Gaussian Process based approach to\nconstruct intervals which contain the true treatment effect with high\nprobability, both inside and outside of the support of the experimental data.\nWe demonstrate our methodology on both simulated and semi-synthetic datasets\nand make the \\href{https://github.com/Jakefawkes/Obs_and_exp_data}{code\navailable}.",
-      "pdf_url": "http://arxiv.org/pdf/2503.14795v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.14795v1",
-      "published": "2025-03-19",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Doubly robust identification of treatment effects from multiple environments",
-      "authors": [
-        "Piersilvio De Bartolomeis",
-        "Julia Kostin",
-        "Javier Abad",
-        "Yixin Wang",
-        "Fanny Yang"
-      ],
-      "abstract": "Practical and ethical constraints often require the use of observational data\nfor causal inference, particularly in medicine and social sciences. Yet,\nobservational datasets are prone to confounding, potentially compromising the\nvalidity of causal conclusions. While it is possible to correct for biases if\nthe underlying causal graph is known, this is rarely a feasible ask in\npractical scenarios. A common strategy is to adjust for all available\ncovariates, yet this approach can yield biased treatment effect estimates,\nespecially when post-treatment or unobserved variables are present. We propose\nRAMEN, an algorithm that produces unbiased treatment effect estimates by\nleveraging the heterogeneity of multiple data sources without the need to know\nor learn the underlying causal graph. Notably, RAMEN achieves doubly robust\nidentification: it can identify the treatment effect whenever the causal\nparents of the treatment or those of the outcome are observed, and the node\nwhose parents are observed satisfies an invariance assumption. Empirical\nevaluations on synthetic and real-world datasets show that our approach\noutperforms existing methods.",
-      "pdf_url": "http://arxiv.org/pdf/2503.14459v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.14459v1",
-      "published": "2025-03-18",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "The covariance of causal effect estimators for binary v-structures",
-      "authors": [
-        "Jack Kuipers",
-        "Giusi Moffa"
-      ],
-      "abstract": "Previously [Journal of Causal Inference, 10, 90-105 (2022)], we computed the\nvariance of two estimators of causal effects for a v-structure of binary\nvariables. Here we show that a linear combination of these estimators has lower\nvariance than either. Furthermore, we show that this holds also when the\ntreatment variable is block randomised with a predefined number receiving\ntreatment, with analogous results to when it is sampled randomly.",
-      "pdf_url": "http://arxiv.org/pdf/2503.14242v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.14242v1",
-      "published": "2025-03-18",
-      "categories": [
-        "math.ST",
-        "stat.TH"
       ]
     }
   ]
