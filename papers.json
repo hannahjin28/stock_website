@@ -1,6 +1,23 @@
 {
-  "last_updated": "2025-03-26T00:49:33.840440",
+  "last_updated": "2025-03-27T00:49:38.314991",
   "papers": [
+    {
+      "title": "Causal Bayesian Optimization with Unknown Graphs",
+      "authors": [
+        "Jean Durand",
+        "Yashas Annadani",
+        "Stefan Bauer",
+        "Sonali Parbhoo"
+      ],
+      "abstract": "Causal Bayesian Optimization (CBO) is a methodology designed to optimize an\noutcome variable by leveraging known causal relationships through targeted\ninterventions. Traditional CBO methods require a fully and accurately specified\ncausal graph, which is a limitation in many real-world scenarios where such\ngraphs are unknown. To address this, we propose a new method for the CBO\nframework that operates without prior knowledge of the causal graph. Consistent\nwith causal bandit theory, we demonstrate through theoretical analysis and that\nfocusing on the direct causal parents of the target variable is sufficient for\noptimization, and provide empirical validation in the context of CBO.\nFurthermore we introduce a new method that learns a Bayesian posterior over the\ndirect parents of the target variable. This allows us to optimize the outcome\nvariable while simultaneously learning the causal structure. Our contributions\ninclude a derivation of the closed-form posterior distribution for the linear\ncase. In the nonlinear case where the posterior is not tractable, we present a\nGaussian Process (GP) approximation that still enables CBO by inferring the\nparents of the outcome variable. The proposed method performs competitively\nwith existing benchmarks and scales well to larger graphs, making it a\npractical tool for real-world applications where causal information is\nincomplete.",
+      "pdf_url": "http://arxiv.org/pdf/2503.19554v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.19554v1",
+      "published": "2025-03-25",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Causal Links Between Anthropogenic Emissions and Air Pollution Dynamics in Delhi",
       "authors": [
@@ -160,29 +177,6 @@
       "published": "2025-03-19",
       "categories": [
         "physics.med-ph"
-      ]
-    },
-    {
-      "title": "R$^2$: A LLM Based Novel-to-Screenplay Generation Framework with Causal Plot Graphs",
-      "authors": [
-        "Zefeng Lin",
-        "Yi Xiao",
-        "Zhiqiang Mo",
-        "Qifan Zhang",
-        "Jie Wang",
-        "Jiayang Chen",
-        "Jiajing Zhang",
-        "Hui Zhang",
-        "Zhengyi Liu",
-        "Xianyong Fang",
-        "Xiaohua Xu"
-      ],
-      "abstract": "Automatically adapting novels into screenplays is important for the TV, film,\nor opera industries to promote products with low costs. The strong performances\nof large language models (LLMs) in long-text generation call us to propose a\nLLM based framework Reader-Rewriter (R$^2$) for this task. However, there are\ntwo fundamental challenges here. First, the LLM hallucinations may cause\ninconsistent plot extraction and screenplay generation. Second, the\ncausality-embedded plot lines should be effectively extracted for coherent\nrewriting. Therefore, two corresponding tactics are proposed: 1) A\nhallucination-aware refinement method (HAR) to iteratively discover and\neliminate the affections of hallucinations; and 2) a causal plot-graph\nconstruction method (CPC) based on a greedy cycle-breaking algorithm to\nefficiently construct plot lines with event causalities. Recruiting those\nefficient techniques, R$^2$ utilizes two modules to mimic the human screenplay\nrewriting process: The Reader module adopts a sliding window and CPC to build\nthe causal plot graphs, while the Rewriter module generates first the scene\noutlines based on the graphs and then the screenplays. HAR is integrated into\nboth modules for accurate inferences of LLMs. Experimental results demonstrate\nthe superiority of R$^2$, which substantially outperforms three existing\napproaches (51.3%, 22.6%, and 57.1% absolute increases) in pairwise comparison\nat the overall win rate for GPT-4o.",
-      "pdf_url": "http://arxiv.org/pdf/2503.15655v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.15655v1",
-      "published": "2025-03-19",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]
