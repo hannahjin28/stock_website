@@ -1,6 +1,54 @@
 {
-  "last_updated": "2025-03-27T00:49:38.314991",
+  "last_updated": "2025-03-28T00:49:22.538346",
   "papers": [
+    {
+      "title": "Inferring Treatment Effects in Large Panels by Uncovering Latent Similarities",
+      "authors": [
+        "Ben Deaner",
+        "Chen-Wei Hsiang",
+        "Andrei Zeleneev"
+      ],
+      "abstract": "The presence of unobserved confounders is one of the main challenges in\nidentifying treatment effects. In this paper, we propose a new approach to\ncausal inference using panel data with large large $N$ and $T$. Our approach\nimputes the untreated potential outcomes for treated units using the outcomes\nfor untreated individuals with similar values of the latent confounders. In\norder to find units with similar latent characteristics, we utilize long\npre-treatment histories of the outcomes. Our analysis is based on a\nnonparametric, nonlinear, and nonseparable factor model for untreated potential\noutcomes and treatments. The model satisfies minimal smoothness requirements.\nWe impute both missing counterfactual outcomes and propensity scores using\nkernel smoothing based on the constructed measure of latent similarity between\nunits, and demonstrate that our estimates can achieve the optimal nonparametric\nrate of convergence up to log terms. Using these estimates, we construct a\ndoubly robust estimator of the period-specifc average treatment effect on the\ntreated (ATT), and provide conditions, under which this estimator is\n$\\sqrt{N}$-consistent, and asymptotically normal and unbiased. Our simulation\nstudy demonstrates that our method provides accurate inference for a wide range\nof data generating processes.",
+      "pdf_url": "http://arxiv.org/pdf/2503.20769v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.20769v1",
+      "published": "2025-03-26",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Treatment Effects Inference with High-Dimensional Instruments and Control Variables",
+      "authors": [
+        "Xiduo Chen",
+        "Xingdong Feng",
+        "Antonio F. Galvao",
+        "Yeheng Ge"
+      ],
+      "abstract": "Obtaining valid treatment effect inferences remains a challenging problem\nwhen dealing with numerous instruments and non-sparse control variables. In\nthis paper, we propose a novel ridge regularization-based instrumental\nvariables method for estimation and inference in the presence of both\nhigh-dimensional instrumental variables and high-dimensional control variables.\nThese methods are applicable both with and without sparsity assumptions. To\naddress the bias caused by high-dimensional instruments, we introduce a\ntwo-step procedure incorporating a data-splitting strategy. We establish\nstatistical properties of the estimator, including consistency and asymptotic\nnormality. Furthermore, we develop statistical inference procedures by\nproviding a consistent estimator for the asymptotic variance of the estimator.\nThe finite sample performance of the proposed method is evaluated through\nnumerical simulations. Results indicate that the new estimator consistently\noutperforms existing sparsity-based approaches across various settings,\noffering valuable insights for more complex scenarios. Finally, we provide an\nempirical application estimating the causal effect of schooling on earnings by\naddressing potential endogeneity through the use of high-dimensional\ninstrumental variables and high-dimensional covariates.",
+      "pdf_url": "http://arxiv.org/pdf/2503.20149v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.20149v1",
+      "published": "2025-03-26",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Functional structural equation models with out-of-sample guarantees",
+      "authors": [
+        "Philip Kennerberg",
+        "Ernst C. Wit"
+      ],
+      "abstract": "Statistical learning methods typically assume that the training and test data\noriginate from the same distribution, enabling effective risk minimization.\nHowever, real-world applications frequently involve distributional shifts,\nleading to poor model generalization. To address this, recent advances in\ncausal inference and robust learning have introduced strategies such as\ninvariant causal prediction and anchor regression. While these approaches have\nbeen explored for traditional structural equation models (SEMs), their\nextension to functional systems remains limited. This paper develops a risk\nminimization framework for functional SEMs using linear, potentially unbounded\noperators. We introduce a functional worst-risk minimization approach, ensuring\nrobust predictive performance across shifted environments. Our key contribution\nis a novel worst-risk decomposition theorem, which expresses the maximum\nout-of-sample risk in terms of observed environments. We establish conditions\nfor the existence and uniqueness of the worst-risk minimizer and provide\nconsistent estimation procedures. Empirical results on functional systems\nillustrate the advantages of our method in mitigating distributional shifts.\nThese findings contribute to the growing literature on robust functional\nregression and causal learning, offering practical guarantees for out-of-sample\ngeneralization in dynamic environments.",
+      "pdf_url": "http://arxiv.org/pdf/2503.20072v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.20072v1",
+      "published": "2025-03-25",
+      "categories": [
+        "math.ST",
+        "stat.ME",
+        "stat.TH",
+        "62R10"
+      ]
+    },
     {
       "title": "Causal Bayesian Optimization with Unknown Graphs",
       "authors": [
@@ -16,6 +64,26 @@
       "categories": [
         "stat.ML",
         "cs.LG"
+      ]
+    },
+    {
+      "title": "Body Discovery of Embodied AI",
+      "authors": [
+        "Zhe Sun",
+        "Pengfei Tian",
+        "Xiaozhu Hu",
+        "Xiaoyu Zhao",
+        "Huiying Li",
+        "Zhenliang Zhang"
+      ],
+      "abstract": "In the pursuit of realizing artificial general intelligence (AGI), the\nimportance of embodied artificial intelligence (AI) becomes increasingly\napparent. Following this trend, research integrating robots with AGI has become\nprominent. As various kinds of embodiments have been designed, adaptability to\ndiverse embodiments will become important to AGI. We introduce a new challenge,\ntermed \"Body Discovery of Embodied AI\", focusing on tasks of recognizing\nembodiments and summarizing neural signal functionality. The challenge\nencompasses the precise definition of an AI body and the intricate task of\nidentifying embodiments in dynamic environments, where conventional approaches\noften prove inadequate. To address these challenges, we apply causal inference\nmethod and evaluate it by developing a simulator tailored for testing\nalgorithms with virtual environments. Finally, we validate the efficacy of our\nalgorithms through empirical testing, demonstrating their robust performance in\nvarious scenarios based on virtual environments.",
+      "pdf_url": "http://arxiv.org/pdf/2503.19941v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.19941v1",
+      "published": "2025-03-25",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.NE"
       ]
     },
     {
@@ -103,80 +171,6 @@
         "cs.LG",
         "cs.AI",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Calibration Strategies for Robust Causal Estimation: Theoretical and Empirical Insights on Propensity Score Based Estimators",
-      "authors": [
-        "Jan Rabenseifner",
-        "Sven Klaassen",
-        "Jannis Kueck",
-        "Philipp Bach"
-      ],
-      "abstract": "The partitioning of data for estimation and calibration critically impacts\nthe performance of propensity score based estimators like inverse probability\nweighting (IPW) and double/debiased machine learning (DML) frameworks. We\nextend recent advances in calibration techniques for propensity score\nestimation, improving the robustness of propensity scores in challenging\nsettings such as limited overlap, small sample sizes, or unbalanced data. Our\ncontributions are twofold: First, we provide a theoretical analysis of the\nproperties of calibrated estimators in the context of DML. To this end, we\nrefine existing calibration frameworks for propensity score models, with a\nparticular emphasis on the role of sample-splitting schemes in ensuring valid\ncausal inference. Second, through extensive simulations, we show that\ncalibration reduces variance of inverse-based propensity score estimators while\nalso mitigating bias in IPW, even in small-sample regimes. Notably, calibration\nimproves stability for flexible learners (e.g., gradient boosting) while\npreserving the doubly robust properties of DML. A key insight is that, even\nwhen methods perform well without calibration, incorporating a calibration step\ndoes not degrade performance, provided that an appropriate sample-splitting\napproach is chosen.",
-      "pdf_url": "http://arxiv.org/pdf/2503.17290v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.17290v1",
-      "published": "2025-03-21",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "econ.EM",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Casual Inference via Style Bias Deconfounding for Domain Generalization",
-      "authors": [
-        "Jiaxi Li",
-        "Di Lin",
-        "Hao Chen",
-        "Hongying Liu",
-        "Liang Wan",
-        "Wei Feng"
-      ],
-      "abstract": "Deep neural networks (DNNs) often struggle with out-of-distribution data,\nlimiting their reliability in diverse realworld applications. To address this\nissue, domain generalization methods have been developed to learn\ndomain-invariant features from single or multiple training domains, enabling\ngeneralization to unseen testing domains. However, existing approaches usually\noverlook the impact of style frequency within the training set. This oversight\npredisposes models to capture spurious visual correlations caused by style\nconfounding factors, rather than learning truly causal representations, thereby\nundermining inference reliability. In this work, we introduce Style\nDeconfounding Causal Learning (SDCL), a novel causal inference-based framework\ndesigned to explicitly address style as a confounding factor. Our approaches\nbegins with constructing a structural causal model (SCM) tailored to the domain\ngeneralization problem and applies a backdoor adjustment strategy to account\nfor style influence. Building on this foundation, we design a style-guided\nexpert module (SGEM) to adaptively clusters style distributions during\ntraining, capturing the global confounding style. Additionally, a back-door\ncausal learning module (BDCL) performs causal interventions during feature\nextraction, ensuring fair integration of global confounding styles into sample\npredictions, effectively reducing style bias. The SDCL framework is highly\nversatile and can be seamlessly integrated with state-of-the-art data\naugmentation techniques. Extensive experiments across diverse natural and\nmedical image recognition tasks validate its efficacy, demonstrating superior\nperformance in both multi-domain and the more challenging single-domain\ngeneralization scenarios.",
-      "pdf_url": "http://arxiv.org/pdf/2503.16852v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.16852v1",
-      "published": "2025-03-21",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Feedback-augmented Non-homogeneous Hidden Markov Models for Longitudinal Causal Inference",
-      "authors": [
-        "Jouni Helske"
-      ],
-      "abstract": "Hidden Markov models are widely used for modeling sequential data but\ntypically have limited applicability in observational causal inference due to\ntheir strong conditional independence assumptions. I introduce\nfeedback-augmented non-homogeneous hidden Markov model (FAN-HMM), which\nincorporate time-varying covariates and feedback mechanisms from past\nobservations to latent states and future responses. Integrating these models\nwith the structural causal model framework allows flexible causal inference in\nlongitudinal data with time-varying unobserved heterogeneity and multiple\ncausal pathways. I show how, in a common case of categorical response\nvariables, long-term causal effects can be estimated efficiently without the\nneed for simulating counterfactual trajectories. Using simulation experiments,\nI study the performance of FAN-HMM under the common misspecification of the\nnumber of latent states, and finally apply the proposed approach to estimate\nthe effect of the 2013 parental leave reform on fathers' paternal leave uptake\nin Finnish workplaces.",
-      "pdf_url": "http://arxiv.org/pdf/2503.16014v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.16014v1",
-      "published": "2025-03-20",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Critical review of patient outcome study in head and neck cancer radiotherapy",
-      "authors": [
-        "Jingyuan Chen",
-        "Yunze Yang",
-        "Chenbin Liu",
-        "Hongying Feng",
-        "Jason M. Holmes",
-        "Lian Zhang",
-        "Steven J. Frank",
-        "Charles B. Simone II",
-        "Daniel J. Ma",
-        "Samir H. Patel",
-        "Wei Liu"
-      ],
-      "abstract": "Rapid technological advances in radiation therapy have significantly improved\ndose delivery and tumor control for head and neck cancers. However,\ntreatment-related toxicities caused by high-dose exposure to critical\nstructures remain a significant clinical challenge, underscoring the need for\naccurate prediction of clinical outcomes-encompassing both tumor control and\nadverse events (AEs). This review critically evaluates the evolution of\ndata-driven approaches in predicting patient outcomes in head and neck cancer\npatients treated with radiation therapy, from traditional dose-volume\nconstraints to cutting-edge artificial intelligence (AI) and causal inference\nframework. The integration of linear energy transfer in patient outcomes study,\nwhich has uncovered critical mechanisms behind unexpected toxicity, was also\nintroduced for proton therapy. Three transformative methodological advances are\nreviewed: radiomics, AI-based algorithms, and causal inference frameworks.\nWhile radiomics has enabled quantitative characterization of medical images, AI\nmodels have demonstrated superior capability than traditional models. However,\nthe field faces significant challenges in translating statistical correlations\nfrom real-world data into interventional clinical insights. We highlight that\nhow causal inference methods can bridge this gap by providing a rigorous\nframework for identifying treatment effects. Looking ahead, we envision that\ncombining these complementary approaches, especially the interventional\nprediction models, will enable more personalized treatment strategies,\nultimately improving both tumor control and quality of life for head and neck\ncancer patients treated with radiation therapy.",
-      "pdf_url": "http://arxiv.org/pdf/2503.15691v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.15691v1",
-      "published": "2025-03-19",
-      "categories": [
-        "physics.med-ph"
       ]
     }
   ]
