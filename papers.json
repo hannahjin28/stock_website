@@ -1,6 +1,24 @@
 {
-  "last_updated": "2025-03-28T00:49:22.538346",
+  "last_updated": "2025-03-29T00:48:45.082573",
   "papers": [
+    {
+      "title": "ClusterSC: Advancing Synthetic Control with Donor Selection",
+      "authors": [
+        "Saeyoung Rho",
+        "Andrew Tang",
+        "Noah Bergam",
+        "Rachel Cummings",
+        "Vishal Misra"
+      ],
+      "abstract": "In causal inference with observational studies, synthetic control (SC) has\nemerged as a prominent tool. SC has traditionally been applied to\naggregate-level datasets, but more recent work has extended its use to\nindividual-level data. As they contain a greater number of observed units, this\nshift introduces the curse of dimensionality to SC. To address this, we propose\nCluster Synthetic Control (ClusterSC), based on the idea that groups of\nindividuals may exist where behavior aligns internally but diverges between\ngroups. ClusterSC incorporates a clustering step to select only the relevant\ndonors for the target. We provide theoretical guarantees on the improvements\ninduced by ClusterSC, supported by empirical demonstrations on synthetic and\nreal-world datasets. The results indicate that ClusterSC consistently\noutperforms classical SC approaches.",
+      "pdf_url": "http://arxiv.org/pdf/2503.21629v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.21629v1",
+      "published": "2025-03-27",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Inferring Treatment Effects in Large Panels by Uncovering Latent Similarities",
       "authors": [
@@ -9,8 +27,8 @@
         "Andrei Zeleneev"
       ],
       "abstract": "The presence of unobserved confounders is one of the main challenges in\nidentifying treatment effects. In this paper, we propose a new approach to\ncausal inference using panel data with large large $N$ and $T$. Our approach\nimputes the untreated potential outcomes for treated units using the outcomes\nfor untreated individuals with similar values of the latent confounders. In\norder to find units with similar latent characteristics, we utilize long\npre-treatment histories of the outcomes. Our analysis is based on a\nnonparametric, nonlinear, and nonseparable factor model for untreated potential\noutcomes and treatments. The model satisfies minimal smoothness requirements.\nWe impute both missing counterfactual outcomes and propensity scores using\nkernel smoothing based on the constructed measure of latent similarity between\nunits, and demonstrate that our estimates can achieve the optimal nonparametric\nrate of convergence up to log terms. Using these estimates, we construct a\ndoubly robust estimator of the period-specifc average treatment effect on the\ntreated (ATT), and provide conditions, under which this estimator is\n$\\sqrt{N}$-consistent, and asymptotically normal and unbiased. Our simulation\nstudy demonstrates that our method provides accurate inference for a wide range\nof data generating processes.",
-      "pdf_url": "http://arxiv.org/pdf/2503.20769v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.20769v1",
+      "pdf_url": "http://arxiv.org/pdf/2503.20769v2",
+      "arxiv_url": "http://arxiv.org/abs/2503.20769v2",
       "published": "2025-03-26",
       "categories": [
         "econ.EM"
@@ -155,22 +173,6 @@
       "published": "2025-03-22",
       "categories": [
         "eess.SP"
-      ]
-    },
-    {
-      "title": "Fairness-Driven LLM-based Causal Discovery with Active Learning and Dynamic Scoring",
-      "authors": [
-        "Khadija Zanna",
-        "Akane Sano"
-      ],
-      "abstract": "Causal discovery (CD) plays a pivotal role in numerous scientific fields by\nclarifying the causal relationships that underlie phenomena observed in diverse\ndisciplines. Despite significant advancements in CD algorithms that enhance\nbias and fairness analyses in machine learning, their application faces\nchallenges due to the high computational demands and complexities of\nlarge-scale data. This paper introduces a framework that leverages Large\nLanguage Models (LLMs) for CD, utilizing a metadata-based approach akin to the\nreasoning processes of human experts. By shifting from pairwise queries to a\nmore scalable breadth-first search (BFS) strategy, the number of required\nqueries is reduced from quadratic to linear in terms of variable count, thereby\naddressing scalability concerns inherent in previous approaches. This method\nutilizes an Active Learning (AL) and a Dynamic Scoring Mechanism that\nprioritizes queries based on their potential information gain, combining mutual\ninformation, partial correlation, and LLM confidence scores to refine the\ncausal graph more efficiently and accurately. This BFS query strategy reduces\nthe required number of queries significantly, thereby addressing scalability\nconcerns inherent in previous approaches. This study provides a more scalable\nand efficient solution for leveraging LLMs in fairness-driven CD, highlighting\nthe effects of the different parameters on performance. We perform fairness\nanalyses on the inferred causal graphs, identifying direct and indirect effects\nof sensitive attributes on outcomes. A comparison of these analyses against\nthose from graphs produced by baseline methods highlights the importance of\naccurate causal graph construction in understanding bias and ensuring fairness\nin machine learning systems.",
-      "pdf_url": "http://arxiv.org/pdf/2503.17569v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.17569v1",
-      "published": "2025-03-21",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ML"
       ]
     }
   ]
