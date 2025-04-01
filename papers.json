@@ -1,6 +1,39 @@
 {
-  "last_updated": "2025-03-31T00:53:06.970911",
+  "last_updated": "2025-04-01T00:56:50.646206",
   "papers": [
+    {
+      "title": "A Unified Approach for Estimating Various Treatment Effects in Causal Inference",
+      "authors": [
+        "Kuan-Hsun Wu",
+        "Li-Pang Chen"
+      ],
+      "abstract": "In this paper, we introduce a unified estimator to analyze various treatment\neffects in causal inference, including but not limited to the average treatment\neffect (ATE) and the quantile treatment effect (QTE). The proposed estimator is\ndeveloped under the statistical functional and cumulative distribution function\nstructure, which leads to a flexible and robust estimator and covers some\nfrequent treatment effects. In addition, our approach also takes variable\nselection into account, so that informative and network structure in\nconfounders can be identified and be implemented in our estimation procedure.\nThe theoretical properties, including variable selection consistency and\nasymptotic normality of the statistical functional estimator, are established.\nVarious treatment effects estimations are also conducted in numerical studies,\nand the results reveal that the proposed estimator generally outperforms the\nexisting methods and is more efficient than its competitors.",
+      "pdf_url": "http://arxiv.org/pdf/2503.22616v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.22616v1",
+      "published": "2025-03-28",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "EgoToM: Benchmarking Theory of Mind Reasoning from Egocentric Videos",
+      "authors": [
+        "Yuxuan Li",
+        "Vijay Veerabadran",
+        "Michael L. Iuzzolino",
+        "Brett D. Roads",
+        "Asli Celikyilmaz",
+        "Karl Ridgeway"
+      ],
+      "abstract": "We introduce EgoToM, a new video question-answering benchmark that extends\nTheory-of-Mind (ToM) evaluation to egocentric domains. Using a causal ToM\nmodel, we generate multi-choice video QA instances for the Ego4D dataset to\nbenchmark the ability to predict a camera wearer's goals, beliefs, and next\nactions. We study the performance of both humans and state of the art\nmultimodal large language models (MLLMs) on these three interconnected\ninference problems. Our evaluation shows that MLLMs achieve close to\nhuman-level accuracy on inferring goals from egocentric videos. However, MLLMs\n(including the largest ones we tested with over 100B parameters) fall short of\nhuman performance when inferring the camera wearers' in-the-moment belief\nstates and future actions that are most consistent with the unseen video\nfuture. We believe that our results will shape the future design of an\nimportant class of egocentric digital assistants which are equipped with a\nreasonable model of the user's internal mental states.",
+      "pdf_url": "http://arxiv.org/pdf/2503.22152v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.22152v1",
+      "published": "2025-03-28",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "ClusterSC: Advancing Synthetic Control with Donor Selection",
       "authors": [
@@ -124,55 +157,18 @@
       ]
     },
     {
-      "title": "A Causal Adjustment Module for Debiasing Scene Graph Generation",
+      "title": "Leveraging Large Language Models for Automated Causal Loop Diagram Generation: Enhancing System Dynamics Modeling through Curated Prompting Techniques",
       "authors": [
-        "Li Liu",
-        "Shuzhou Sun",
-        "Shuaifeng Zhi",
-        "Fan Shi",
-        "Zhen Liu",
-        "Janne Heikkilä",
-        "Yongxiang Liu"
+        "Ning-Yuan Georgia Liu",
+        "David R. Keith"
       ],
-      "abstract": "While recent debiasing methods for Scene Graph Generation (SGG) have shown\nimpressive performance, these efforts often attribute model bias solely to the\nlong-tail distribution of relationships, overlooking the more profound causes\nstemming from skewed object and object pair distributions. In this paper, we\nemploy causal inference techniques to model the causality among these observed\nskewed distributions. Our insight lies in the ability of causal inference to\ncapture the unobservable causal effects between complex distributions, which is\ncrucial for tracing the roots of model bias. Specifically, we introduce the\nMediator-based Causal Chain Model (MCCM), which, in addition to modeling\ncausality among objects, object pairs, and relationships, incorporates mediator\nvariables, i.e., cooccurrence distribution, for complementing the causality.\nFollowing this, we propose the Causal Adjustment Module (CAModule) to estimate\nthe modeled causal structure, using variables from MCCM as inputs to produce a\nset of adjustment factors aimed at correcting biased model predictions.\nMoreover, our method enables the composition of zero-shot relationships,\nthereby enhancing the model's ability to recognize such relationships.\nExperiments conducted across various SGG backbones and popular benchmarks\ndemonstrate that CAModule achieves state-of-the-art mean recall rates, with\nsignificant improvements also observed on the challenging zero-shot recall rate\nmetric.",
-      "pdf_url": "http://arxiv.org/pdf/2503.17862v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.17862v1",
-      "published": "2025-03-22",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A Roadmap Towards Improving Multi-Agent Reinforcement Learning With Causal Discovery And Inference",
-      "authors": [
-        "Giovanni Briglia",
-        "Stefano Mariani",
-        "Franco Zambonelli"
-      ],
-      "abstract": "Causal reasoning is increasingly used in Reinforcement Learning (RL) to\nimprove the learning process in several dimensions: efficacy of learned\npolicies, efficiency of convergence, generalisation capabilities, safety and\ninterpretability of behaviour. However, applications of causal reasoning to\nMulti-Agent RL (MARL) are still mostly unexplored. In this paper, we take the\nfirst step in investigating the opportunities and challenges of applying causal\nreasoning in MARL. We measure the impact of a simple form of causal\naugmentation in state-of-the-art MARL scenarios increasingly requiring\ncooperation, and with state-of-the-art MARL algorithms exploiting various\ndegrees of collaboration between agents. Then, we discuss the positive as well\nas negative results achieved, giving us the chance to outline the areas where\nfurther research may help to successfully transfer causal RL to the multi-agent\nsetting.",
-      "pdf_url": "http://arxiv.org/pdf/2503.17803v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.17803v1",
-      "published": "2025-03-22",
+      "abstract": "Transforming a dynamic hypothesis into a causal loop diagram (CLD) is crucial\nfor System Dynamics Modelling. Extracting key variables and causal\nrelationships from text to build a CLD is often challenging and time-consuming\nfor novice modelers, limiting SD tool adoption. This paper introduces and tests\na method for automating the translation of dynamic hypotheses into CLDs using\nlarge language models (LLMs) with curated prompting techniques. We first\ndescribe how LLMs work and how they can make the inferences needed to build\nCLDs using a standard digraph structure. Next, we develop a set of simple\ndynamic hypotheses and corresponding CLDs from leading SD textbooks. We then\ncompare the four different combinations of prompting techniques, evaluating\ntheir performance against CLDs labeled by expert modelers. Results show that\nfor simple model structures and using curated prompting techniques, LLMs can\ngenerate CLDs of a similar quality to expert-built ones, accelerating CLD\ncreation.",
+      "pdf_url": "http://arxiv.org/pdf/2503.21798v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.21798v1",
+      "published": "2025-03-23",
       "categories": [
         "cs.LG",
-        "cs.AI",
-        "cs.MA",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Inference based Transfer Learning with LLMs: An Efficient Framework for Industrial RUL Prediction",
-      "authors": [
-        "Yan Chen",
-        "Cheng Liu"
-      ],
-      "abstract": "Accurate prediction of Remaining Useful Life (RUL) for complex industrial\nmachinery is critical for the reliability and maintenance of mechatronic\nsystems, but it is challenged by high-dimensional, noisy sensor data. We\npropose the Causal-Informed Data Pruning Framework (CIDPF), which pioneers the\nuse of causal inference to identify sensor signals with robust causal\nrelationships to RUL through PCMCI-based stability analysis, while a Gaussian\nMixture Model (GMM) screens for anomalies. By training on only 10% of the\npruned data, CIDPF fine-tunes pre-trained Large Language Models (LLMs) using\nparameter-efficient strategies, reducing training time by 90% compared to\ntraditional approaches. Experiments on the N-CMAPSS dataset demonstrate that\nCIDPF achieves a 26% lower RMSE than existing methods and a 25% improvement\nover full-data baselines, showcasing superior accuracy and computational\nefficiency in industrial mechatronic systems. The framework's adaptability to\nmulti-condition scenarios further underscores its practicality for industrial\ndeployment.",
-      "pdf_url": "http://arxiv.org/pdf/2503.17686v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.17686v1",
-      "published": "2025-03-22",
-      "categories": [
-        "eess.SP"
+        "cs.CL"
       ]
     }
   ]
