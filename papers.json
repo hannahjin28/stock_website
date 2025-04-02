@@ -1,6 +1,81 @@
 {
-  "last_updated": "2025-04-01T00:56:50.646206",
+  "last_updated": "2025-04-02T00:50:56.831552",
   "papers": [
+    {
+      "title": "Partial Transportability for Domain Generalization",
+      "authors": [
+        "Kasra Jalaldoust",
+        "Alexis Bellot",
+        "Elias Bareinboim"
+      ],
+      "abstract": "A fundamental task in AI is providing performance guarantees for predictions\nmade in unseen domains. In practice, there can be substantial uncertainty about\nthe distribution of new data, and corresponding variability in the performance\nof existing predictors. Building on the theory of partial identification and\ntransportability, this paper introduces new results for bounding the value of a\nfunctional of the target distribution, such as the generalization error of a\nclassifier, given data from source domains and assumptions about the data\ngenerating mechanisms, encoded in causal diagrams. Our contribution is to\nprovide the first general estimation technique for transportability problems,\nadapting existing parameterization schemes such Neural Causal Models to encode\nthe structural constraints necessary for cross-population inference. We\ndemonstrate the expressiveness and consistency of this procedure and further\npropose a gradient-based optimization scheme for making scalable inferences in\npractice. Our results are corroborated with experiments.",
+      "pdf_url": "http://arxiv.org/pdf/2503.23605v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.23605v1",
+      "published": "2025-03-30",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Bayesian Inference for High-dimensional Time Series with a Directed Acyclic Graphical Structure",
+      "authors": [
+        "Arkaprava Roy",
+        "Anindya Roy",
+        "Subhashis Ghosal"
+      ],
+      "abstract": "In multivariate time series analysis, understanding the underlying causal\nrelationships among variables is often of interest for various applications.\nDirected acyclic graphs (DAGs) provide a powerful framework for representing\ncausal dependencies. This paper proposes a novel Bayesian approach for modeling\nmultivariate time series where conditional independencies and causal structure\nare encoded by a DAG. The proposed model allows structural properties such as\nstationarity to be easily accommodated. Given the application, we further\nextend the model for matrix-variate time series. We take a Bayesian approach to\ninference, and a ``projection-posterior'' based efficient computational\nalgorithm is developed. The posterior convergence properties of the proposed\nmethod are established along with two identifiability results for the\nunrestricted structural equation models. The utility of the proposed method is\ndemonstrated through simulation studies and real data analysis.",
+      "pdf_url": "http://arxiv.org/pdf/2503.23563v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.23563v1",
+      "published": "2025-03-30",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Rethinking Structural Equation Modeling in Political Science: Challenges, Best Practices, and Future Directions",
+      "authors": [
+        "Bang Quan Zheng"
+      ],
+      "abstract": "Structural Equation Modeling (SEM) or Covariance Structure Analysis (CSA) is\na versatile and powerful method in the social and behavioral sciences,\nproviding a framework for modeling complex relationships, testing mediation,\naccounting for measurement error, and analyzing latent constructs. However, SEM\nremains underutilized in in political science; its application is often marred\nby misunderstandings, misinterpretations, and methodological pitfalls that can\ncompromise the validity and interpretability of findings. This article examines\nkey challenges in SEM applications within political science, including test\nstatistics and fit indices, model specification, estimator selection, and\ncausal inference. It offers practical recommendations for enhancing\nmethodological rigor and introduces recent advancements in causal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2503.23551v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.23551v1",
+      "published": "2025-03-30",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Reinterpreting demand estimation",
+      "authors": [
+        "Jiafeng Chen"
+      ],
+      "abstract": "This paper connects the literature on demand estimation to the literature on\ncausal inference by interpreting nonparametric structural assumptions as\nrestrictions on counterfactual outcomes. It offers nontrivial and equivalent\nrestatements of key demand estimation assumptions in the Neyman-Rubin potential\noutcomes model, for both settings with market-level data (Berry and Haile,\n2014) and settings with demographic-specific market shares (Berry and Haile,\n2024). This exercise helps bridge the literatures on structural estimation and\non causal inference by separating notational and linguistic differences from\nsubstantive ones.",
+      "pdf_url": "http://arxiv.org/pdf/2503.23524v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.23524v1",
+      "published": "2025-03-30",
+      "categories": [
+        "econ.EM",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Bridging General Relativity and Quantum Dynamics Through Finite-Resource Logical Models",
+      "authors": [
+        "Arturo Tozzi",
+        "Michel Planat"
+      ],
+      "abstract": "A theoretical framework bridging General Relativity (GR) and Quantum Dynamics\n(QD) is introduced through the application of Kripke semantics and linear\nlogic. While conventional unification efforts often rely on structural or\ngeometrical formulations, we instead treat causality, energy and information as\nfinite, non-replicable resources constraining physical transitions and\ninference. Our framework, termed Energy Constrained Linear Causality (ECLC),\nmodels quantum transitions and spacetime evolution as logically constrained\nprocesses in which each implication spends limited resources and cannot be\narbitrarily duplicated or reversed. We construct a causal inference model where\nphysical operations like quantum measurement, entanglement propagation and\nspacetime curvature are expressed as energy-weighted, one-time transformations.\nKripke semantics formalizes the logical accessibility of physical states,\ncapturing context-sensitive transitions and the irreversibility of information\nflow under finite conditions. We derive a structured method for modelling\nobserver-dependent outcomes without invoking background-independence or\nhigh-dimensional embeddings. We formulate a series of testable predictions with\ncontrolled deviations from standard GR and QD expectations. The\nconsumption-based irreversibility introduces an intrinsic mechanism of symmetry\nbreaking. In GR, it restricts mutual causal accessibility by bounding inference\ndepth with curvature-weighted energy costs. In QD, it disrupts the reciprocity\nof conditional probabilities and undermines time symmetry in measurement\nsequences. Therefore, ECLC provides a unified, resource-aware logic for\ndescribing causality, computation and emergence within a finite physical\nuniverse.",
+      "pdf_url": "http://arxiv.org/pdf/2503.23136v1",
+      "arxiv_url": "http://arxiv.org/abs/2503.23136v1",
+      "published": "2025-03-29",
+      "categories": [
+        "quant-ph"
+      ]
+    },
     {
       "title": "A Unified Approach for Estimating Various Treatment Effects in Causal Inference",
       "authors": [
@@ -81,94 +156,6 @@
       "published": "2025-03-26",
       "categories": [
         "econ.EM"
-      ]
-    },
-    {
-      "title": "Functional structural equation models with out-of-sample guarantees",
-      "authors": [
-        "Philip Kennerberg",
-        "Ernst C. Wit"
-      ],
-      "abstract": "Statistical learning methods typically assume that the training and test data\noriginate from the same distribution, enabling effective risk minimization.\nHowever, real-world applications frequently involve distributional shifts,\nleading to poor model generalization. To address this, recent advances in\ncausal inference and robust learning have introduced strategies such as\ninvariant causal prediction and anchor regression. While these approaches have\nbeen explored for traditional structural equation models (SEMs), their\nextension to functional systems remains limited. This paper develops a risk\nminimization framework for functional SEMs using linear, potentially unbounded\noperators. We introduce a functional worst-risk minimization approach, ensuring\nrobust predictive performance across shifted environments. Our key contribution\nis a novel worst-risk decomposition theorem, which expresses the maximum\nout-of-sample risk in terms of observed environments. We establish conditions\nfor the existence and uniqueness of the worst-risk minimizer and provide\nconsistent estimation procedures. Empirical results on functional systems\nillustrate the advantages of our method in mitigating distributional shifts.\nThese findings contribute to the growing literature on robust functional\nregression and causal learning, offering practical guarantees for out-of-sample\ngeneralization in dynamic environments.",
-      "pdf_url": "http://arxiv.org/pdf/2503.20072v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.20072v1",
-      "published": "2025-03-25",
-      "categories": [
-        "math.ST",
-        "stat.ME",
-        "stat.TH",
-        "62R10"
-      ]
-    },
-    {
-      "title": "Causal Bayesian Optimization with Unknown Graphs",
-      "authors": [
-        "Jean Durand",
-        "Yashas Annadani",
-        "Stefan Bauer",
-        "Sonali Parbhoo"
-      ],
-      "abstract": "Causal Bayesian Optimization (CBO) is a methodology designed to optimize an\noutcome variable by leveraging known causal relationships through targeted\ninterventions. Traditional CBO methods require a fully and accurately specified\ncausal graph, which is a limitation in many real-world scenarios where such\ngraphs are unknown. To address this, we propose a new method for the CBO\nframework that operates without prior knowledge of the causal graph. Consistent\nwith causal bandit theory, we demonstrate through theoretical analysis and that\nfocusing on the direct causal parents of the target variable is sufficient for\noptimization, and provide empirical validation in the context of CBO.\nFurthermore we introduce a new method that learns a Bayesian posterior over the\ndirect parents of the target variable. This allows us to optimize the outcome\nvariable while simultaneously learning the causal structure. Our contributions\ninclude a derivation of the closed-form posterior distribution for the linear\ncase. In the nonlinear case where the posterior is not tractable, we present a\nGaussian Process (GP) approximation that still enables CBO by inferring the\nparents of the outcome variable. The proposed method performs competitively\nwith existing benchmarks and scales well to larger graphs, making it a\npractical tool for real-world applications where causal information is\nincomplete.",
-      "pdf_url": "http://arxiv.org/pdf/2503.19554v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.19554v1",
-      "published": "2025-03-25",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Body Discovery of Embodied AI",
-      "authors": [
-        "Zhe Sun",
-        "Pengfei Tian",
-        "Xiaozhu Hu",
-        "Xiaoyu Zhao",
-        "Huiying Li",
-        "Zhenliang Zhang"
-      ],
-      "abstract": "In the pursuit of realizing artificial general intelligence (AGI), the\nimportance of embodied artificial intelligence (AI) becomes increasingly\napparent. Following this trend, research integrating robots with AGI has become\nprominent. As various kinds of embodiments have been designed, adaptability to\ndiverse embodiments will become important to AGI. We introduce a new challenge,\ntermed \"Body Discovery of Embodied AI\", focusing on tasks of recognizing\nembodiments and summarizing neural signal functionality. The challenge\nencompasses the precise definition of an AI body and the intricate task of\nidentifying embodiments in dynamic environments, where conventional approaches\noften prove inadequate. To address these challenges, we apply causal inference\nmethod and evaluate it by developing a simulator tailored for testing\nalgorithms with virtual environments. Finally, we validate the efficacy of our\nalgorithms through empirical testing, demonstrating their robust performance in\nvarious scenarios based on virtual environments.",
-      "pdf_url": "http://arxiv.org/pdf/2503.19941v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.19941v1",
-      "published": "2025-03-25",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.NE"
-      ]
-    },
-    {
-      "title": "Causal Links Between Anthropogenic Emissions and Air Pollution Dynamics in Delhi",
-      "authors": [
-        "Sourish Das",
-        "Sudeep Shukla",
-        "Alka Yadav",
-        "Anirban Chakraborti"
-      ],
-      "abstract": "Air pollution poses significant health and environmental challenges,\nparticularly in rapidly urbanizing regions. Delhi-National Capital Region\nexperiences air pollution episodes due to complex interactions between\nanthropogenic emissions and meteorological conditions. Understanding the causal\ndrivers of key pollutants such as $PM_{2.5}$ and ground $O_3$ is crucial for\ndeveloping effective mitigation strategies. This study investigates the causal\nlinks of anthropogenic emissions on $PM_{2.5}$ and $O_3$ concentrations using\npredictive modeling and causal inference techniques. Integrating\nhigh-resolution air quality data from Jan 2018 to Aug 2023 across 32 monitoring\nstations, we develop predictive regression models that incorporate\nmeteorological variables (temperature and relative humidity), pollutant\nconcentrations ($NO_2, SO_2, CO$), and seasonal harmonic components to capture\nboth diurnal and annual cycles. Here, we show that reductions in anthropogenic\nemissions lead to significant decreases in $PM_{2.5}$ levels, whereas their\neffect on $O_3$ remains marginal and statistically insignificant. To address\nspatial heterogeneity, we employ Gaussian Process modeling. Further, we use\nGranger causality analysis and counterfactual simulation to establish direct\ncausal links. Validation using real-world data from the COVID-19 lockdown\nconfirms that reduced emissions led to a substantial drop in $PM_{2.5}$ but\nonly a slight, insignificant change in $O_3$. The findings highlight the\nnecessity of targeted emission reduction policies while emphasizing the need\nfor integrated strategies addressing both particulate and ozone pollution.\nThese insights are crucial for policymakers designing air pollution\ninterventions in other megacities, and offer a scalable methodology for\ntackling complex urban air pollution through data-driven decision-making.",
-      "pdf_url": "http://arxiv.org/pdf/2503.18912v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.18912v1",
-      "published": "2025-03-24",
-      "categories": [
-        "stat.AP",
-        "physics.ao-ph",
-        "physics.soc-ph",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Leveraging Large Language Models for Automated Causal Loop Diagram Generation: Enhancing System Dynamics Modeling through Curated Prompting Techniques",
-      "authors": [
-        "Ning-Yuan Georgia Liu",
-        "David R. Keith"
-      ],
-      "abstract": "Transforming a dynamic hypothesis into a causal loop diagram (CLD) is crucial\nfor System Dynamics Modelling. Extracting key variables and causal\nrelationships from text to build a CLD is often challenging and time-consuming\nfor novice modelers, limiting SD tool adoption. This paper introduces and tests\na method for automating the translation of dynamic hypotheses into CLDs using\nlarge language models (LLMs) with curated prompting techniques. We first\ndescribe how LLMs work and how they can make the inferences needed to build\nCLDs using a standard digraph structure. Next, we develop a set of simple\ndynamic hypotheses and corresponding CLDs from leading SD textbooks. We then\ncompare the four different combinations of prompting techniques, evaluating\ntheir performance against CLDs labeled by expert modelers. Results show that\nfor simple model structures and using curated prompting techniques, LLMs can\ngenerate CLDs of a similar quality to expert-built ones, accelerating CLD\ncreation.",
-      "pdf_url": "http://arxiv.org/pdf/2503.21798v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.21798v1",
-      "published": "2025-03-23",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
       ]
     }
   ]
