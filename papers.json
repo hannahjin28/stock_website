@@ -1,6 +1,130 @@
 {
-  "last_updated": "2025-04-03T00:50:00.349693",
+  "last_updated": "2025-04-04T00:49:55.662434",
   "papers": [
+    {
+      "title": "A Causal Inference Framework for Data Rich Environments",
+      "authors": [
+        "Alberto Abadie",
+        "Anish Agarwal",
+        "Devavrat Shah"
+      ],
+      "abstract": "We propose a formal model for counterfactual estimation with unobserved\nconfounding in \"data-rich\" settings, i.e., where there are a large number of\nunits and a large number of measurements per unit. Our model provides a bridge\nbetween the structural causal model view of causal inference common in the\ngraphical models literature with that of the latent factor model view common in\nthe potential outcomes literature. We show how classic models for potential\noutcomes and treatment assignments fit within our framework. We provide an\nidentification argument for the average treatment effect, the average treatment\neffect on the treated, and the average treatment effect on the untreated. For\nany estimator that has a fast enough estimation error rate for a certain\nnuisance parameter, we establish it is consistent for these various causal\nparameters. We then show principal component regression is one such estimator\nthat leads to consistent estimation, and we analyze the minimal smoothness\nrequired of the potential outcomes function for consistency.",
+      "pdf_url": "http://arxiv.org/pdf/2504.01702v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.01702v1",
+      "published": "2025-04-02",
+      "categories": [
+        "econ.EM",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Identifying Macro Causal Effects in C-DMGs",
+      "authors": [
+        "Simon Ferreira",
+        "Charles K. Assaad"
+      ],
+      "abstract": "Causal effect identification using causal graphs is a fundamental challenge\nin causal inference. While extensive research has been conducted in this area,\nmost existing methods assume the availability of fully specified causal graphs.\nHowever, in complex domains such as medicine and epidemiology, complete causal\nknowledge is often unavailable, and only partial information about the system\nis accessible. This paper focuses on causal effect identification within\npartially specified causal graphs, with particular emphasis on cluster-directed\nmixed graphs (C-DMGs). These graphs provide a higher-level representation of\ncausal relationships by grouping variables into clusters, offering a more\npractical approach for handling complex systems. Unlike fully specified causal\ngraphs, C-DMGs can contain cycles, which complicate their analysis and\ninterpretation. Furthermore, their cluster-based nature introduces new\nchallenges, as it gives rise to two distinct types of causal effects, macro\ncausal effects and micro causal effects, with different properties. In this\nwork, we focus on macro causal effects, which describe the effects of entire\nclusters on other clusters. We establish that the do-calculus is both sound and\ncomplete for identifying these effects in C-DMGs. Additionally, we provide a\ngraphical characterization of non-identifiability for macro causal effects in\nthese graphs.",
+      "pdf_url": "http://arxiv.org/pdf/2504.01551v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.01551v1",
+      "published": "2025-04-02",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "On the limitations for causal inference in Cox models with time-varying treatment",
+      "authors": [
+        "Mark B. Knudsen",
+        "Erin E. Gabriel",
+        "Torben Martinussen",
+        "Helene C. W. Rytgaard",
+        "Arvid Sjölander"
+      ],
+      "abstract": "When using the Cox model to analyze the effect of a time-varying treatment on\na survival outcome, treatment is commonly included, using only the current\nlevel as a time-dependent covariate. Such a model does not necessarily assume\nthat past treatment is not associated with the outcome (the Markov property),\nsince it is possible to model the hazard conditional on only the current\ntreatment value. However, modeling the hazard conditional on the full treatment\nhistory is required in order to interpret the results causally, and such a full\nmodel assumes the Markov property when only including current treatment. This\nis, for example, common in marginal structural Cox models. We demonstrate that\nrelying on the Markov property is problematic, since it only holds in\nunrealistic settings or if the treatment has no causal effect. This is the case\neven if there are no confounders and the true causal effect of treatment really\nonly depends on its current level. Further, we provide an example of a scenario\nwhere the Markov property is not fulfilled, but the Cox model that includes\nonly current treatment as a covariate is correctly specified. Transforming the\nresult to the survival scale does not give the true intervention-specific\nsurvival probabilities, showcasing that it is unclear how to make causal\nstatements from such models.",
+      "pdf_url": "http://arxiv.org/pdf/2504.01524v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.01524v1",
+      "published": "2025-04-02",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "PROPHET: An Inferable Future Forecasting Benchmark with Causal Intervened Likelihood Estimation",
+      "authors": [
+        "Zhengwei Tao",
+        "Zhi Jin",
+        "Bincheng Li",
+        "Xiaoying Bai",
+        "Haiyan Zhao",
+        "Chengfeng Dou",
+        "Xiancai Chen",
+        "Jia Li",
+        "Linyu Li",
+        "Chongyang Tao"
+      ],
+      "abstract": "Predicting future events stands as one of the ultimate aspirations of\nartificial intelligence. Recent advances in large language model (LLM)-based\nsystems have shown remarkable potential in forecasting future events, thereby\ngarnering significant interest in the research community. Currently, several\nbenchmarks have been established to evaluate the forecasting capabilities by\nformalizing the event prediction as a retrieval-augmented generation (RAG) and\nreasoning task. In these benchmarks, each prediction question is answered with\nrelevant retrieved news articles. However, because there is no consideration on\nwhether the questions can be supported by valid or sufficient supporting\nrationales, some of the questions in these benchmarks may be inherently\nnoninferable. To address this issue, we introduce a new benchmark, PROPHET,\nwhich comprises inferable forecasting questions paired with relevant news for\nretrieval. To ensure the inferability of the benchmark, we propose Causal\nIntervened Likelihood (CIL), a statistical measure that assesses inferability\nthrough causal inference. In constructing this benchmark, we first collected\nrecent trend forecasting questions and then filtered the data using CIL,\nresulting in an inferable benchmark for event prediction. Through extensive\nexperiments, we first demonstrate the validity of CIL and in-depth\ninvestigations into event prediction with the aid of CIL. Subsequently, we\nevaluate several representative prediction systems on PROPHET, drawing valuable\ninsights for future directions.",
+      "pdf_url": "http://arxiv.org/pdf/2504.01509v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.01509v1",
+      "published": "2025-04-02",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Causal Models for Growing Networks",
+      "authors": [
+        "Gecia Bravo-Hermsdorff",
+        "Lee M. Gunderson",
+        "Kayvan Sadeghi"
+      ],
+      "abstract": "Real-world networks grow over time; statistical models based on node\nexchangeability are not appropriate. Instead of constraining the structure of\nthe \\textit{distribution} of edges, we propose that the relevant symmetries\nrefer to the \\textit{causal structure} between them. We first enumerate the 96\ncausal directed acyclic graph (DAG) models over pairs of nodes (dyad variables)\nin a growing network with finite ancestral sets that are invariant to node\ndeletion. We then partition them into 21 classes with ancestral sets that are\nclosed under node marginalization. Several of these classes are remarkably\namenable to distributed and asynchronous evaluation. As an example, we\nhighlight a simple model that exhibits flexible power-law degree distributions\nand emergent phase transitions in sparsity, which we characterize analytically.\nWith few parameters and much conditional independence, our proposed framework\nprovides natural baseline models for causal inference in relational data.",
+      "pdf_url": "http://arxiv.org/pdf/2504.01012v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.01012v1",
+      "published": "2025-04-01",
+      "categories": [
+        "cs.SI",
+        "cs.DM",
+        "math.CO",
+        "math.ST",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Quantile Treatment Effects in High Dimensional Panel Data",
+      "authors": [
+        "Yihong Xu",
+        "Li Zheng"
+      ],
+      "abstract": "We introduce a novel estimator for quantile causal effects with\nhigh-dimensional panel data (large $N$ and $T$), where only one or a few units\nare affected by the intervention or policy. Our method extends the generalized\nsynthetic control method (Xu 2017) from average treatment effect on the treated\nto quantile treatment effect on the treated, allowing the underlying factor\nstructure to change across the quantile of the interested outcome distribution.\nOur method involves estimating the quantile-dependent factors using the control\ngroup, followed by a quantile regression to estimate the quantile treatment\neffect using the treated units. We establish the asymptotic properties of our\nestimator and propose a bootstrap procedure for statistical inference,\nsupported by simulation studies. An empirical application of the 2008 China\nStimulus Program is provided.",
+      "pdf_url": "http://arxiv.org/pdf/2504.00785v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.00785v1",
+      "published": "2025-04-01",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "stat.AP",
+        "62F12, 62P20"
+      ]
+    },
+    {
+      "title": "Contextualize-then-Aggregate: Circuits for In-Context Learning in Gemma-2 2B",
+      "authors": [
+        "Aleksandra Bakalova",
+        "Yana Veitsman",
+        "Xinting Huang",
+        "Michael Hahn"
+      ],
+      "abstract": "In-Context Learning (ICL) is an intriguing ability of large language models\n(LLMs). Despite a substantial amount of work on its behavioral aspects and how\nit emerges in miniature setups, it remains unclear which mechanism assembles\ntask information from the individual examples in a fewshot prompt. We use\ncausal interventions to identify information flow in Gemma-2 2B for five\nnaturalistic ICL tasks. We find that the model infers task information using a\ntwo-step strategy we call contextualize-then-aggregate: In the lower layers,\nthe model builds up representations of individual fewshot examples, which are\ncontextualized by preceding examples through connections between fewshot input\nand output tokens across the sequence. In the higher layers, these\nrepresentations are aggregated to identify the task and prepare prediction of\nthe next output. The importance of the contextualization step differs between\ntasks, and it may become more important in the presence of ambiguous examples.\nOverall, by providing rigorous causal analysis, our results shed light on the\nmechanisms through which ICL happens in language models.",
+      "pdf_url": "http://arxiv.org/pdf/2504.00132v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.00132v1",
+      "published": "2025-03-31",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Partial Transportability for Domain Generalization",
       "authors": [
@@ -26,8 +150,8 @@
         "Subhashis Ghosal"
       ],
       "abstract": "In multivariate time series analysis, understanding the underlying causal\nrelationships among variables is often of interest for various applications.\nDirected acyclic graphs (DAGs) provide a powerful framework for representing\ncausal dependencies. This paper proposes a novel Bayesian approach for modeling\nmultivariate time series where conditional independencies and causal structure\nare encoded by a DAG. The proposed model allows structural properties such as\nstationarity to be easily accommodated. Given the application, we further\nextend the model for matrix-variate time series. We take a Bayesian approach to\ninference, and a ``projection-posterior'' based efficient computational\nalgorithm is developed. The posterior convergence properties of the proposed\nmethod are established along with two identifiability results for the\nunrestricted structural equation models. The utility of the proposed method is\ndemonstrated through simulation studies and real data analysis.",
-      "pdf_url": "http://arxiv.org/pdf/2503.23563v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.23563v1",
+      "pdf_url": "http://arxiv.org/pdf/2503.23563v2",
+      "arxiv_url": "http://arxiv.org/abs/2503.23563v2",
       "published": "2025-03-30",
       "categories": [
         "stat.ME",
@@ -46,116 +170,6 @@
       "published": "2025-03-30",
       "categories": [
         "stat.AP"
-      ]
-    },
-    {
-      "title": "Reinterpreting demand estimation",
-      "authors": [
-        "Jiafeng Chen"
-      ],
-      "abstract": "This paper connects the literature on demand estimation to the literature on\ncausal inference by interpreting nonparametric structural assumptions as\nrestrictions on counterfactual outcomes. It offers nontrivial and equivalent\nrestatements of key demand estimation assumptions in the Neyman-Rubin potential\noutcomes model, for both settings with market-level data (Berry and Haile,\n2014) and settings with demographic-specific market shares (Berry and Haile,\n2024). This exercise helps bridge the literatures on structural estimation and\non causal inference by separating notational and linguistic differences from\nsubstantive ones.",
-      "pdf_url": "http://arxiv.org/pdf/2503.23524v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.23524v1",
-      "published": "2025-03-30",
-      "categories": [
-        "econ.EM",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Bridging General Relativity and Quantum Dynamics Through Finite-Resource Logical Models",
-      "authors": [
-        "Arturo Tozzi",
-        "Michel Planat"
-      ],
-      "abstract": "A theoretical framework bridging General Relativity (GR) and Quantum Dynamics\n(QD) is introduced through the application of Kripke semantics and linear\nlogic. While conventional unification efforts often rely on structural or\ngeometrical formulations, we instead treat causality, energy and information as\nfinite, non-replicable resources constraining physical transitions and\ninference. Our framework, termed Energy Constrained Linear Causality (ECLC),\nmodels quantum transitions and spacetime evolution as logically constrained\nprocesses in which each implication spends limited resources and cannot be\narbitrarily duplicated or reversed. We construct a causal inference model where\nphysical operations like quantum measurement, entanglement propagation and\nspacetime curvature are expressed as energy-weighted, one-time transformations.\nKripke semantics formalizes the logical accessibility of physical states,\ncapturing context-sensitive transitions and the irreversibility of information\nflow under finite conditions. We derive a structured method for modelling\nobserver-dependent outcomes without invoking background-independence or\nhigh-dimensional embeddings. We formulate a series of testable predictions with\ncontrolled deviations from standard GR and QD expectations. The\nconsumption-based irreversibility introduces an intrinsic mechanism of symmetry\nbreaking. In GR, it restricts mutual causal accessibility by bounding inference\ndepth with curvature-weighted energy costs. In QD, it disrupts the reciprocity\nof conditional probabilities and undermines time symmetry in measurement\nsequences. Therefore, ECLC provides a unified, resource-aware logic for\ndescribing causality, computation and emergence within a finite physical\nuniverse.",
-      "pdf_url": "http://arxiv.org/pdf/2503.23136v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.23136v1",
-      "published": "2025-03-29",
-      "categories": [
-        "quant-ph"
-      ]
-    },
-    {
-      "title": "A Unified Approach for Estimating Various Treatment Effects in Causal Inference",
-      "authors": [
-        "Kuan-Hsun Wu",
-        "Li-Pang Chen"
-      ],
-      "abstract": "In this paper, we introduce a unified estimator to analyze various treatment\neffects in causal inference, including but not limited to the average treatment\neffect (ATE) and the quantile treatment effect (QTE). The proposed estimator is\ndeveloped under the statistical functional and cumulative distribution function\nstructure, which leads to a flexible and robust estimator and covers some\nfrequent treatment effects. In addition, our approach also takes variable\nselection into account, so that informative and network structure in\nconfounders can be identified and be implemented in our estimation procedure.\nThe theoretical properties, including variable selection consistency and\nasymptotic normality of the statistical functional estimator, are established.\nVarious treatment effects estimations are also conducted in numerical studies,\nand the results reveal that the proposed estimator generally outperforms the\nexisting methods and is more efficient than its competitors.",
-      "pdf_url": "http://arxiv.org/pdf/2503.22616v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.22616v1",
-      "published": "2025-03-28",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "EgoToM: Benchmarking Theory of Mind Reasoning from Egocentric Videos",
-      "authors": [
-        "Yuxuan Li",
-        "Vijay Veerabadran",
-        "Michael L. Iuzzolino",
-        "Brett D. Roads",
-        "Asli Celikyilmaz",
-        "Karl Ridgeway"
-      ],
-      "abstract": "We introduce EgoToM, a new video question-answering benchmark that extends\nTheory-of-Mind (ToM) evaluation to egocentric domains. Using a causal ToM\nmodel, we generate multi-choice video QA instances for the Ego4D dataset to\nbenchmark the ability to predict a camera wearer's goals, beliefs, and next\nactions. We study the performance of both humans and state of the art\nmultimodal large language models (MLLMs) on these three interconnected\ninference problems. Our evaluation shows that MLLMs achieve close to\nhuman-level accuracy on inferring goals from egocentric videos. However, MLLMs\n(including the largest ones we tested with over 100B parameters) fall short of\nhuman performance when inferring the camera wearers' in-the-moment belief\nstates and future actions that are most consistent with the unseen video\nfuture. We believe that our results will shape the future design of an\nimportant class of egocentric digital assistants which are equipped with a\nreasonable model of the user's internal mental states.",
-      "pdf_url": "http://arxiv.org/pdf/2503.22152v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.22152v1",
-      "published": "2025-03-28",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "ClusterSC: Advancing Synthetic Control with Donor Selection",
-      "authors": [
-        "Saeyoung Rho",
-        "Andrew Tang",
-        "Noah Bergam",
-        "Rachel Cummings",
-        "Vishal Misra"
-      ],
-      "abstract": "In causal inference with observational studies, synthetic control (SC) has\nemerged as a prominent tool. SC has traditionally been applied to\naggregate-level datasets, but more recent work has extended its use to\nindividual-level data. As they contain a greater number of observed units, this\nshift introduces the curse of dimensionality to SC. To address this, we propose\nCluster Synthetic Control (ClusterSC), based on the idea that groups of\nindividuals may exist where behavior aligns internally but diverges between\ngroups. ClusterSC incorporates a clustering step to select only the relevant\ndonors for the target. We provide theoretical guarantees on the improvements\ninduced by ClusterSC, supported by empirical demonstrations on synthetic and\nreal-world datasets. The results indicate that ClusterSC consistently\noutperforms classical SC approaches.",
-      "pdf_url": "http://arxiv.org/pdf/2503.21629v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.21629v1",
-      "published": "2025-03-27",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Inferring Treatment Effects in Large Panels by Uncovering Latent Similarities",
-      "authors": [
-        "Ben Deaner",
-        "Chen-Wei Hsiang",
-        "Andrei Zeleneev"
-      ],
-      "abstract": "The presence of unobserved confounders is one of the main challenges in\nidentifying treatment effects. In this paper, we propose a new approach to\ncausal inference using panel data with large large $N$ and $T$. Our approach\nimputes the untreated potential outcomes for treated units using the outcomes\nfor untreated individuals with similar values of the latent confounders. In\norder to find units with similar latent characteristics, we utilize long\npre-treatment histories of the outcomes. Our analysis is based on a\nnonparametric, nonlinear, and nonseparable factor model for untreated potential\noutcomes and treatments. The model satisfies minimal smoothness requirements.\nWe impute both missing counterfactual outcomes and propensity scores using\nkernel smoothing based on the constructed measure of latent similarity between\nunits, and demonstrate that our estimates can achieve the optimal nonparametric\nrate of convergence up to log terms. Using these estimates, we construct a\ndoubly robust estimator of the period-specifc average treatment effect on the\ntreated (ATT), and provide conditions, under which this estimator is\n$\\sqrt{N}$-consistent, and asymptotically normal and unbiased. Our simulation\nstudy demonstrates that our method provides accurate inference for a wide range\nof data generating processes.",
-      "pdf_url": "http://arxiv.org/pdf/2503.20769v2",
-      "arxiv_url": "http://arxiv.org/abs/2503.20769v2",
-      "published": "2025-03-26",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Treatment Effects Inference with High-Dimensional Instruments and Control Variables",
-      "authors": [
-        "Xiduo Chen",
-        "Xingdong Feng",
-        "Antonio F. Galvao",
-        "Yeheng Ge"
-      ],
-      "abstract": "Obtaining valid treatment effect inferences remains a challenging problem\nwhen dealing with numerous instruments and non-sparse control variables. In\nthis paper, we propose a novel ridge regularization-based instrumental\nvariables method for estimation and inference in the presence of both\nhigh-dimensional instrumental variables and high-dimensional control variables.\nThese methods are applicable both with and without sparsity assumptions. To\naddress the bias caused by high-dimensional instruments, we introduce a\ntwo-step procedure incorporating a data-splitting strategy. We establish\nstatistical properties of the estimator, including consistency and asymptotic\nnormality. Furthermore, we develop statistical inference procedures by\nproviding a consistent estimator for the asymptotic variance of the estimator.\nThe finite sample performance of the proposed method is evaluated through\nnumerical simulations. Results indicate that the new estimator consistently\noutperforms existing sparsity-based approaches across various settings,\noffering valuable insights for more complex scenarios. Finally, we provide an\nempirical application estimating the causal effect of schooling on earnings by\naddressing potential endogeneity through the use of high-dimensional\ninstrumental variables and high-dimensional covariates.",
-      "pdf_url": "http://arxiv.org/pdf/2503.20149v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.20149v1",
-      "published": "2025-03-26",
-      "categories": [
-        "econ.EM"
       ]
     }
   ]
