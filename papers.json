@@ -1,6 +1,40 @@
 {
-  "last_updated": "2025-04-04T00:49:55.662434",
+  "last_updated": "2025-04-05T00:48:42.448836",
   "papers": [
+    {
+      "title": "The Amenability Framework: Rethinking Causal Ordering Without Estimating Causal Effects",
+      "authors": [
+        "Carlos Fernández-Loría",
+        "Jorge Loría"
+      ],
+      "abstract": "Who should we prioritize for intervention when we cannot estimate\nintervention effects? In many applied domains (e.g., advertising, customer\nretention, and behavioral nudging) prioritization is guided by predictive\nmodels that estimate outcome probabilities rather than causal effects. This\npaper investigates when these predictions (scores) can effectively rank\nindividuals by their intervention effects, particularly when direct effect\nestimation is infeasible or unreliable. We propose a conceptual framework based\non amenability: an individual's latent proclivity to be influenced by an\nintervention. We then formalize conditions under which predictive scores serve\nas effective proxies for amenability. These conditions justify using non-causal\nscores for intervention prioritization, even when the scores do not directly\nestimate effects. We further show that, under plausible assumptions, predictive\nmodels can outperform causal effect estimators in ranking individuals by\nintervention effects. Empirical evidence from an advertising context supports\nour theoretical findings, demonstrating that predictive modeling can offer a\nmore robust approach to targeting than effect estimation. Our framework\nsuggests a shift in focus, from estimating effects to inferring who is\namenable, as a practical and theoretically grounded strategy for prioritizing\ninterventions in resource-constrained environments.",
+      "pdf_url": "http://arxiv.org/pdf/2504.02456v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.02456v1",
+      "published": "2025-04-03",
+      "categories": [
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Self-supervised Pretrained Frontend with Predictive Code for Speech Separation",
+      "authors": [
+        "Wupeng Wang",
+        "Zexu Pan",
+        "Xinke Li",
+        "Shuai Wang",
+        "Haizhou Li"
+      ],
+      "abstract": "Speech separation (SS) seeks to disentangle a multi-talker speech mixture\ninto single-talker speech streams. Although SS can be generally achieved using\noffline methods, such a processing paradigm is not suitable for real-time\nstreaming applications. Causal separation models, which rely only on past and\npresent information, offer a promising solution for real-time streaming.\nHowever, these models typically suffer from notable performance degradation due\nto the absence of future context. In this paper, we introduce a novel frontend\nthat is designed to mitigate the mismatch between training and run-time\ninference by implicitly incorporating future information into causal models\nthrough predictive patterns. The pretrained frontend employs a transformer\ndecoder network with a causal convolutional encoder as the backbone and is\npretrained in a self-supervised manner with two innovative pretext tasks:\nautoregressive hybrid prediction and contextual knowledge distillation. These\ntasks enable the model to capture predictive patterns directly from mixtures in\na self-supervised manner. The pretrained frontend subsequently serves as a\nfeature extractor to generate high-quality predictive patterns. Comprehensive\nevaluations on synthetic and real-world datasets validated the effectiveness of\nthe proposed pretrained frontend.",
+      "pdf_url": "http://arxiv.org/pdf/2504.02302v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.02302v1",
+      "published": "2025-04-03",
+      "categories": [
+        "cs.SD",
+        "cs.LG",
+        "eess.AS"
+      ]
+    },
     {
       "title": "A Causal Inference Framework for Data Rich Environments",
       "authors": [
@@ -140,36 +174,6 @@
         "cs.LG",
         "cs.AI",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Bayesian Inference for High-dimensional Time Series with a Directed Acyclic Graphical Structure",
-      "authors": [
-        "Arkaprava Roy",
-        "Anindya Roy",
-        "Subhashis Ghosal"
-      ],
-      "abstract": "In multivariate time series analysis, understanding the underlying causal\nrelationships among variables is often of interest for various applications.\nDirected acyclic graphs (DAGs) provide a powerful framework for representing\ncausal dependencies. This paper proposes a novel Bayesian approach for modeling\nmultivariate time series where conditional independencies and causal structure\nare encoded by a DAG. The proposed model allows structural properties such as\nstationarity to be easily accommodated. Given the application, we further\nextend the model for matrix-variate time series. We take a Bayesian approach to\ninference, and a ``projection-posterior'' based efficient computational\nalgorithm is developed. The posterior convergence properties of the proposed\nmethod are established along with two identifiability results for the\nunrestricted structural equation models. The utility of the proposed method is\ndemonstrated through simulation studies and real data analysis.",
-      "pdf_url": "http://arxiv.org/pdf/2503.23563v2",
-      "arxiv_url": "http://arxiv.org/abs/2503.23563v2",
-      "published": "2025-03-30",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Rethinking Structural Equation Modeling in Political Science: Challenges, Best Practices, and Future Directions",
-      "authors": [
-        "Bang Quan Zheng"
-      ],
-      "abstract": "Structural Equation Modeling (SEM) or Covariance Structure Analysis (CSA) is\na versatile and powerful method in the social and behavioral sciences,\nproviding a framework for modeling complex relationships, testing mediation,\naccounting for measurement error, and analyzing latent constructs. However, SEM\nremains underutilized in in political science; its application is often marred\nby misunderstandings, misinterpretations, and methodological pitfalls that can\ncompromise the validity and interpretability of findings. This article examines\nkey challenges in SEM applications within political science, including test\nstatistics and fit indices, model specification, estimator selection, and\ncausal inference. It offers practical recommendations for enhancing\nmethodological rigor and introduces recent advancements in causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2503.23551v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.23551v1",
-      "published": "2025-03-30",
-      "categories": [
-        "stat.AP"
       ]
     }
   ]
