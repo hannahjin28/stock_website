@@ -1,6 +1,40 @@
 {
-  "last_updated": "2025-04-07T00:52:21.434735",
+  "last_updated": "2025-04-08T00:49:59.810701",
   "papers": [
+    {
+      "title": "Multivariate Causal Effects: a Bayesian Causal Regression Factor Model",
+      "authors": [
+        "Dafne Zorzetto",
+        "Jenna Landy",
+        "Corwin Zigler",
+        "Giovanni Parmigiani",
+        "Roberta De Vito"
+      ],
+      "abstract": "The impact of wildfire smoke on air quality is a growing concern,\ncontributing to air pollution through a complex mixture of chemical species\nwith important implications for public health. While previous studies have\nprimarily focused on its association with total particulate matter (PM2.5), the\ncausal relationship between wildfire smoke and the chemical composition of\nPM2.5 remains largely unexplored. Exposure to these chemical mixtures plays a\ncritical role in shaping public health, yet capturing their relationships\nrequires advanced statistical methods capable of modeling the complex\ndependencies among chemical species. To fill this gap, we propose a Bayesian\ncausal regression factor model that estimates the multivariate causal effects\nof wildfire smoke on the concentration of 27 chemical species in PM2.5 across\nthe United States. Our approach introduces two key innovations: (i) a causal\ninference framework for multivariate potential outcomes, and (ii) a novel\nBayesian factor model that employs a probit stick-breaking process as prior for\ntreatment-specific factor scores. By focusing on factor scores, our method\naddresses the missing data challenge common in causal inference and enables a\nflexible, data-driven characterization of the latent factor structure, which is\ncrucial to capture the complex correlation among multivariate outcomes. Through\nMonte Carlo simulations, we show the model's accuracy in estimating the causal\neffects in multivariate outcomes and characterizing the treatment-specific\nlatent structure. Finally, we apply our method to US air quality data,\nestimating the causal effect of wildfire smoke on 27 chemical species in PM2.5,\nproviding a deeper understanding of their interdependencies.",
+      "pdf_url": "http://arxiv.org/pdf/2504.03480v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.03480v1",
+      "published": "2025-04-04",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Spatiotemporal causal inference with arbitrary spillover and carryover effects",
+      "authors": [
+        "Mitsuru Mukaigawara",
+        "Kosuke Imai",
+        "Jason Lyall",
+        "Georgia Papadogeorgou"
+      ],
+      "abstract": "Micro-level data with granular spatial and temporal information are becoming\nincreasingly available to social scientists. Most researchers aggregate such\ndata into a convenient panel data format and apply standard causal inference\nmethods. This approach, however, has two limitations. First, data aggregation\nresults in the loss of detailed geo-location and temporal information, leading\nto potential biases. Second, most panel data methods either ignore spatial\nspillover and temporal carryover effects or impose restrictive assumptions on\ntheir structure. We introduce a general methodological framework for\nspatiotemporal causal inference with arbitrary spillover and carryover effects.\nUnder this general framework, we demonstrate how to define and estimate causal\nquantities of interest, explore heterogeneous treatment effects, investigate\ncausal mechanisms, and visualize the results to facilitate their\ninterpretation. We illustrate the proposed methodology through an analysis of\nairstrikes and insurgent attacks in Iraq. The open-source software package\ngeocausal implements all of our methods.",
+      "pdf_url": "http://arxiv.org/pdf/2504.03464v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.03464v1",
+      "published": "2025-04-04",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
     {
       "title": "The Amenability Framework: Rethinking Causal Ordering Without Estimating Causal Effects",
       "authors": [
@@ -140,40 +174,6 @@
         "econ.EM",
         "stat.AP",
         "62F12, 62P20"
-      ]
-    },
-    {
-      "title": "Contextualize-then-Aggregate: Circuits for In-Context Learning in Gemma-2 2B",
-      "authors": [
-        "Aleksandra Bakalova",
-        "Yana Veitsman",
-        "Xinting Huang",
-        "Michael Hahn"
-      ],
-      "abstract": "In-Context Learning (ICL) is an intriguing ability of large language models\n(LLMs). Despite a substantial amount of work on its behavioral aspects and how\nit emerges in miniature setups, it remains unclear which mechanism assembles\ntask information from the individual examples in a fewshot prompt. We use\ncausal interventions to identify information flow in Gemma-2 2B for five\nnaturalistic ICL tasks. We find that the model infers task information using a\ntwo-step strategy we call contextualize-then-aggregate: In the lower layers,\nthe model builds up representations of individual fewshot examples, which are\ncontextualized by preceding examples through connections between fewshot input\nand output tokens across the sequence. In the higher layers, these\nrepresentations are aggregated to identify the task and prepare prediction of\nthe next output. The importance of the contextualization step differs between\ntasks, and it may become more important in the presence of ambiguous examples.\nOverall, by providing rigorous causal analysis, our results shed light on the\nmechanisms through which ICL happens in language models.",
-      "pdf_url": "http://arxiv.org/pdf/2504.00132v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.00132v1",
-      "published": "2025-03-31",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Partial Transportability for Domain Generalization",
-      "authors": [
-        "Kasra Jalaldoust",
-        "Alexis Bellot",
-        "Elias Bareinboim"
-      ],
-      "abstract": "A fundamental task in AI is providing performance guarantees for predictions\nmade in unseen domains. In practice, there can be substantial uncertainty about\nthe distribution of new data, and corresponding variability in the performance\nof existing predictors. Building on the theory of partial identification and\ntransportability, this paper introduces new results for bounding the value of a\nfunctional of the target distribution, such as the generalization error of a\nclassifier, given data from source domains and assumptions about the data\ngenerating mechanisms, encoded in causal diagrams. Our contribution is to\nprovide the first general estimation technique for transportability problems,\nadapting existing parameterization schemes such Neural Causal Models to encode\nthe structural constraints necessary for cross-population inference. We\ndemonstrate the expressiveness and consistency of this procedure and further\npropose a gradient-based optimization scheme for making scalable inferences in\npractice. Our results are corroborated with experiments.",
-      "pdf_url": "http://arxiv.org/pdf/2503.23605v1",
-      "arxiv_url": "http://arxiv.org/abs/2503.23605v1",
-      "published": "2025-03-30",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ML"
       ]
     }
   ]
