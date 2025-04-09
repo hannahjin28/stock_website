@@ -1,6 +1,60 @@
 {
-  "last_updated": "2025-04-08T00:49:59.810701",
+  "last_updated": "2025-04-09T00:50:31.363164",
   "papers": [
+    {
+      "title": "REWIND: Real-Time Egocentric Whole-Body Motion Diffusion with Exemplar-Based Identity Conditioning",
+      "authors": [
+        "Jihyun Lee",
+        "Weipeng Xu",
+        "Alexander Richard",
+        "Shih-En Wei",
+        "Shunsuke Saito",
+        "Shaojie Bai",
+        "Te-Li Wang",
+        "Minhyuk Sung",
+        "Tae-Kyun Kim",
+        "Jason Saragih"
+      ],
+      "abstract": "We present REWIND (Real-Time Egocentric Whole-Body Motion Diffusion), a\none-step diffusion model for real-time, high-fidelity human motion estimation\nfrom egocentric image inputs. While an existing method for egocentric\nwhole-body (i.e., body and hands) motion estimation is non-real-time and\nacausal due to diffusion-based iterative motion refinement to capture\ncorrelations between body and hand poses, REWIND operates in a fully causal and\nreal-time manner. To enable real-time inference, we introduce (1) cascaded\nbody-hand denoising diffusion, which effectively models the correlation between\negocentric body and hand motions in a fast, feed-forward manner, and (2)\ndiffusion distillation, which enables high-quality motion estimation with a\nsingle denoising step. Our denoising diffusion model is based on a modified\nTransformer architecture, designed to causally model output motions while\nenhancing generalizability to unseen motion lengths. Additionally, REWIND\noptionally supports identity-conditioned motion estimation when identity prior\nis available. To this end, we propose a novel identity conditioning method\nbased on a small set of pose exemplars of the target identity, which further\nenhances motion estimation quality. Through extensive experiments, we\ndemonstrate that REWIND significantly outperforms the existing baselines both\nwith and without exemplar-based identity conditioning.",
+      "pdf_url": "http://arxiv.org/pdf/2504.04956v2",
+      "arxiv_url": "http://arxiv.org/abs/2504.04956v2",
+      "published": "2025-04-07",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Causal Inference Isn't Special: Why It's Just Another Prediction Problem",
+      "authors": [
+        "Carlos Fernández-Loría"
+      ],
+      "abstract": "Causal inference is often portrayed as fundamentally distinct from predictive\nmodeling, with its own terminology, goals, and intellectual challenges. But at\nits core, causal inference is simply a structured instance of prediction under\ndistribution shift. In both cases, we begin with labeled data from a source\ndomain and seek to generalize to a target domain where outcomes are not\nobserved. The key difference is that in causal inference, the labels --\npotential outcomes -- are selectively observed based on treatment assignment,\nintroducing bias that must be addressed through assumptions. This perspective\nreframes causal estimation as a familiar generalization problem and highlights\nhow techniques from predictive modeling, such as reweighting and domain\nadaptation, apply directly to causal tasks. It also clarifies that causal\nassumptions are not uniquely strong -- they are simply more explicit. By\nviewing causal inference through the lens of prediction, we demystify its\nlogic, connect it to familiar tools, and make it more accessible to\npractitioners and educators alike.",
+      "pdf_url": "http://arxiv.org/pdf/2504.04320v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.04320v1",
+      "published": "2025-04-06",
+      "categories": [
+        "cs.LG",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Multi-resolution Score-Based Variational Graphical Diffusion for Causal Disaster System Modeling and Inference",
+      "authors": [
+        "Xuechun Li",
+        "Shan Gao",
+        "Susu Xu"
+      ],
+      "abstract": "Complex systems with intricate causal dependencies challenge accurate\nprediction. Effective modeling requires precise physical process\nrepresentation, integration of interdependent factors, and incorporation of\nmulti-resolution observational data. These systems manifest in both static\nscenarios with instantaneous causal chains and temporal scenarios with evolving\ndynamics, complicating modeling efforts. Current methods struggle to\nsimultaneously handle varying resolutions, capture physical relationships,\nmodel causal dependencies, and incorporate temporal dynamics, especially with\ninconsistently sampled data from diverse sources. We introduce Temporal-SVGDM:\nScore-based Variational Graphical Diffusion Model for Multi-resolution\nobservations. Our framework constructs individual SDEs for each variable at its\nnative resolution, then couples these SDEs through a causal score mechanism\nwhere parent nodes inform child nodes' evolution. This enables unified modeling\nof both immediate causal effects in static scenarios and evolving dependencies\nin temporal scenarios. In temporal models, state representations are processed\nthrough a sequence prediction model to predict future states based on\nhistorical patterns and causal relationships. Experiments on real-world\ndatasets demonstrate improved prediction accuracy and causal understanding\ncompared to existing methods, with robust performance under varying levels of\nbackground knowledge. Our model exhibits graceful degradation across different\ndisaster types, successfully handling both static earthquake scenarios and\ntemporal hurricane and wildfire scenarios, while maintaining superior\nperformance even with limited data.",
+      "pdf_url": "http://arxiv.org/pdf/2504.04015v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.04015v1",
+      "published": "2025-04-05",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Multivariate Causal Effects: a Bayesian Causal Regression Factor Model",
       "authors": [
@@ -115,65 +169,6 @@
       "published": "2025-04-02",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "PROPHET: An Inferable Future Forecasting Benchmark with Causal Intervened Likelihood Estimation",
-      "authors": [
-        "Zhengwei Tao",
-        "Zhi Jin",
-        "Bincheng Li",
-        "Xiaoying Bai",
-        "Haiyan Zhao",
-        "Chengfeng Dou",
-        "Xiancai Chen",
-        "Jia Li",
-        "Linyu Li",
-        "Chongyang Tao"
-      ],
-      "abstract": "Predicting future events stands as one of the ultimate aspirations of\nartificial intelligence. Recent advances in large language model (LLM)-based\nsystems have shown remarkable potential in forecasting future events, thereby\ngarnering significant interest in the research community. Currently, several\nbenchmarks have been established to evaluate the forecasting capabilities by\nformalizing the event prediction as a retrieval-augmented generation (RAG) and\nreasoning task. In these benchmarks, each prediction question is answered with\nrelevant retrieved news articles. However, because there is no consideration on\nwhether the questions can be supported by valid or sufficient supporting\nrationales, some of the questions in these benchmarks may be inherently\nnoninferable. To address this issue, we introduce a new benchmark, PROPHET,\nwhich comprises inferable forecasting questions paired with relevant news for\nretrieval. To ensure the inferability of the benchmark, we propose Causal\nIntervened Likelihood (CIL), a statistical measure that assesses inferability\nthrough causal inference. In constructing this benchmark, we first collected\nrecent trend forecasting questions and then filtered the data using CIL,\nresulting in an inferable benchmark for event prediction. Through extensive\nexperiments, we first demonstrate the validity of CIL and in-depth\ninvestigations into event prediction with the aid of CIL. Subsequently, we\nevaluate several representative prediction systems on PROPHET, drawing valuable\ninsights for future directions.",
-      "pdf_url": "http://arxiv.org/pdf/2504.01509v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.01509v1",
-      "published": "2025-04-02",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Causal Models for Growing Networks",
-      "authors": [
-        "Gecia Bravo-Hermsdorff",
-        "Lee M. Gunderson",
-        "Kayvan Sadeghi"
-      ],
-      "abstract": "Real-world networks grow over time; statistical models based on node\nexchangeability are not appropriate. Instead of constraining the structure of\nthe \\textit{distribution} of edges, we propose that the relevant symmetries\nrefer to the \\textit{causal structure} between them. We first enumerate the 96\ncausal directed acyclic graph (DAG) models over pairs of nodes (dyad variables)\nin a growing network with finite ancestral sets that are invariant to node\ndeletion. We then partition them into 21 classes with ancestral sets that are\nclosed under node marginalization. Several of these classes are remarkably\namenable to distributed and asynchronous evaluation. As an example, we\nhighlight a simple model that exhibits flexible power-law degree distributions\nand emergent phase transitions in sparsity, which we characterize analytically.\nWith few parameters and much conditional independence, our proposed framework\nprovides natural baseline models for causal inference in relational data.",
-      "pdf_url": "http://arxiv.org/pdf/2504.01012v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.01012v1",
-      "published": "2025-04-01",
-      "categories": [
-        "cs.SI",
-        "cs.DM",
-        "math.CO",
-        "math.ST",
-        "stat.ML",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Quantile Treatment Effects in High Dimensional Panel Data",
-      "authors": [
-        "Yihong Xu",
-        "Li Zheng"
-      ],
-      "abstract": "We introduce a novel estimator for quantile causal effects with\nhigh-dimensional panel data (large $N$ and $T$), where only one or a few units\nare affected by the intervention or policy. Our method extends the generalized\nsynthetic control method (Xu 2017) from average treatment effect on the treated\nto quantile treatment effect on the treated, allowing the underlying factor\nstructure to change across the quantile of the interested outcome distribution.\nOur method involves estimating the quantile-dependent factors using the control\ngroup, followed by a quantile regression to estimate the quantile treatment\neffect using the treated units. We establish the asymptotic properties of our\nestimator and propose a bootstrap procedure for statistical inference,\nsupported by simulation studies. An empirical application of the 2008 China\nStimulus Program is provided.",
-      "pdf_url": "http://arxiv.org/pdf/2504.00785v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.00785v1",
-      "published": "2025-04-01",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "stat.AP",
-        "62F12, 62P20"
       ]
     }
   ]
