@@ -1,6 +1,37 @@
 {
-  "last_updated": "2025-04-09T00:50:31.363164",
+  "last_updated": "2025-04-10T00:50:27.025531",
   "papers": [
+    {
+      "title": "Characterizing direct and indirect causal effects when outcomes are dependent due to treatment spillover and outcome spillover",
+      "authors": [
+        "Subhankar Bhadra",
+        "Michael Schweinberger"
+      ],
+      "abstract": "We provide novel insight into causal inference when both treatment spillover\nand outcome spillover occur in connected populations, by taking advantage of\nrecent advances in statistical network analysis. Scenarios with treatment\nspillover and outcome spillover are challenging, because both forms of\nspillover affect outcomes and therefore treatment spillover and outcome\nspillover are intertwined, and outcomes are dependent conditional on treatments\nby virtue of outcome spillover. As a result, the direct and indirect causal\neffects arising from spillover have remained black boxes: While the direct and\nindirect causal effects can be identified, it is unknown how these causal\neffects explicitly depend on the effects of treatment, treatment spillover, and\noutcome spillover. We make three contributions, facilitated by low-rank random\ninterference graphs. First, we provide novel insight into direct and indirect\ncausal effects by disentangling the contributions of treatment, treatment\nspillover, and outcome spillover. Second, we provide scalable estimators of\ndirect and indirect causal effects. Third, we establish rates of convergence\nfor estimators of direct and indirect causal effects. These are the first\nconvergence rates in scenarios in which treatment spillover and outcome\nspillover are intertwined and outcomes are dependent conditional on treatments,\nand the interference graph is sparse or dense.",
+      "pdf_url": "http://arxiv.org/pdf/2504.06108v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.06108v1",
+      "published": "2025-04-08",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Identification and estimation of causal peer effects using instrumental variables",
+      "authors": [
+        "Shanshan Luo",
+        "Kang Shuai",
+        "Yechi Zhang",
+        "Wei Li",
+        "Yangbo He"
+      ],
+      "abstract": "In social science researches, causal inference regarding peer effects often\nfaces significant challenges due to homophily bias and contextual confounding.\nFor example, unmeasured health conditions (e.g., influenza) and psychological\nstates (e.g., happiness, loneliness) can spread among closely connected\nindividuals, such as couples or siblings. To address these issues, we define\nfour effect estimands for dyadic data to characterize direct effects and\nspillover effects. We employ dual instrumental variables to achieve\nnonparametric identification of these causal estimands in the presence of\nunobserved confounding. We then derive the efficient influence functions for\nthese estimands under the nonparametric model. Additionally, we develop a\ntriply robust and locally efficient estimator that remains consistent even\nunder partial misspecification of the observed data model. The proposed robust\nestimators can be easily adapted to flexible approaches such as machine\nlearning estimation methods, provided that certain rate conditions are\nsatisfied. Finally, we illustrate our approach through simulations and an\nempirical application evaluating the peer effects of retirement on fluid\ncognitive perception among couples.",
+      "pdf_url": "http://arxiv.org/pdf/2504.05658v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.05658v1",
+      "published": "2025-04-08",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "REWIND: Real-Time Egocentric Whole-Body Motion Diffusion with Exemplar-Based Identity Conditioning",
       "authors": [
@@ -137,37 +168,6 @@
       "categories": [
         "econ.EM",
         "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Identifying Macro Causal Effects in C-DMGs",
-      "authors": [
-        "Simon Ferreira",
-        "Charles K. Assaad"
-      ],
-      "abstract": "Causal effect identification using causal graphs is a fundamental challenge\nin causal inference. While extensive research has been conducted in this area,\nmost existing methods assume the availability of fully specified causal graphs.\nHowever, in complex domains such as medicine and epidemiology, complete causal\nknowledge is often unavailable, and only partial information about the system\nis accessible. This paper focuses on causal effect identification within\npartially specified causal graphs, with particular emphasis on cluster-directed\nmixed graphs (C-DMGs). These graphs provide a higher-level representation of\ncausal relationships by grouping variables into clusters, offering a more\npractical approach for handling complex systems. Unlike fully specified causal\ngraphs, C-DMGs can contain cycles, which complicate their analysis and\ninterpretation. Furthermore, their cluster-based nature introduces new\nchallenges, as it gives rise to two distinct types of causal effects, macro\ncausal effects and micro causal effects, with different properties. In this\nwork, we focus on macro causal effects, which describe the effects of entire\nclusters on other clusters. We establish that the do-calculus is both sound and\ncomplete for identifying these effects in C-DMGs. Additionally, we provide a\ngraphical characterization of non-identifiability for macro causal effects in\nthese graphs.",
-      "pdf_url": "http://arxiv.org/pdf/2504.01551v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.01551v1",
-      "published": "2025-04-02",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "On the limitations for causal inference in Cox models with time-varying treatment",
-      "authors": [
-        "Mark B. Knudsen",
-        "Erin E. Gabriel",
-        "Torben Martinussen",
-        "Helene C. W. Rytgaard",
-        "Arvid Sjölander"
-      ],
-      "abstract": "When using the Cox model to analyze the effect of a time-varying treatment on\na survival outcome, treatment is commonly included, using only the current\nlevel as a time-dependent covariate. Such a model does not necessarily assume\nthat past treatment is not associated with the outcome (the Markov property),\nsince it is possible to model the hazard conditional on only the current\ntreatment value. However, modeling the hazard conditional on the full treatment\nhistory is required in order to interpret the results causally, and such a full\nmodel assumes the Markov property when only including current treatment. This\nis, for example, common in marginal structural Cox models. We demonstrate that\nrelying on the Markov property is problematic, since it only holds in\nunrealistic settings or if the treatment has no causal effect. This is the case\neven if there are no confounders and the true causal effect of treatment really\nonly depends on its current level. Further, we provide an example of a scenario\nwhere the Markov property is not fulfilled, but the Cox model that includes\nonly current treatment as a covariate is correctly specified. Transforming the\nresult to the survival scale does not give the true intervention-specific\nsurvival probabilities, showcasing that it is unclear how to make causal\nstatements from such models.",
-      "pdf_url": "http://arxiv.org/pdf/2504.01524v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.01524v1",
-      "published": "2025-04-02",
-      "categories": [
         "stat.ME"
       ]
     }
