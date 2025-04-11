@@ -1,6 +1,57 @@
 {
-  "last_updated": "2025-04-10T00:50:27.025531",
+  "last_updated": "2025-04-11T00:50:58.625695",
   "papers": [
+    {
+      "title": "Efficient Timestamping for Sampling-based Race Detection",
+      "authors": [
+        "Minjian Zhang",
+        "Daniel Wee Soong Lim",
+        "Mosaad Al Thokair",
+        "Umang Mathur",
+        "Mahesh Viswanathan"
+      ],
+      "abstract": "Dynamic race detection based on the happens before (HB) partial order has now\nbecome the de facto approach to quickly identify data races in multi-threaded\nsoftware. Most practical implementations for detecting these races use\ntimestamps to infer causality between events and detect races based on these\ntimestamps. Such an algorithm updates timestamps (stored in vector clocks) at\nevery event in the execution, and is known to induce excessive overhead. Random\nsampling has emerged as a promising algorithmic paradigm to offset this\noverhead. It offers the promise of making sound race detection scalable. In\nthis work we consider the task of designing an efficient sampling based race\ndetector with low overhead for timestamping when the number of sampled events\nis much smaller than the total events in an execution. To solve this problem,\nwe propose (1) a new notion of freshness timestamp, (2) a new data structure to\nstore timestamps, and (3) an algorithm that uses a combination of them to\nreduce the cost of timestamping in sampling based race detection. Further, we\nprove that our algorithm is close to optimal -- the number of vector clock\ntraversals is bounded by the number of sampled events and number of threads,\nand further, on any given dynamic execution, the cost of timestamping due to\nour algorithm is close to the amount of work any timestamping-based algorithm\nmust perform on that execution, that is it is instance optimal. Our evaluation\non real world benchmarks demonstrates the effectiveness of our proposed\nalgorithm over prior timestamping algorithms that are agnostic to sampling.",
+      "pdf_url": "http://arxiv.org/pdf/2504.06688v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.06688v1",
+      "published": "2025-04-09",
+      "categories": [
+        "cs.PL"
+      ]
+    },
+    {
+      "title": "A Streamable Neural Audio Codec with Residual Scalar-Vector Quantization for Real-Time Communication",
+      "authors": [
+        "Xiao-Hang Jiang",
+        "Yang Ai",
+        "Rui-Chen Zheng",
+        "Zhen-Hua Ling"
+      ],
+      "abstract": "This paper proposes StreamCodec, a streamable neural audio codec designed for\nreal-time communication. StreamCodec adopts a fully causal, symmetric\nencoder-decoder structure and operates in the modified discrete cosine\ntransform (MDCT) domain, aiming for low-latency inference and real-time\nefficient generation. To improve codebook utilization efficiency and compensate\nfor the audio quality loss caused by structural causality, StreamCodec\nintroduces a novel residual scalar-vector quantizer (RSVQ). The RSVQ\nsequentially connects scalar quantizers and improved vector quantizers in a\nresidual manner, constructing coarse audio contours and refining acoustic\ndetails, respectively. Experimental results confirm that the proposed\nStreamCodec achieves decoded audio quality comparable to advanced\nnon-streamable neural audio codecs. Specifically, on the 16 kHz LibriTTS\ndataset, StreamCodec attains a ViSQOL score of 4.30 at 1.5 kbps. It has a fixed\nlatency of only 20 ms and achieves a generation speed nearly 20 times real-time\non a CPU, with a lightweight model size of just 7M parameters, making it highly\nsuitable for real-time communication applications.",
+      "pdf_url": "http://arxiv.org/pdf/2504.06561v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.06561v1",
+      "published": "2025-04-09",
+      "categories": [
+        "cs.SD"
+      ]
+    },
+    {
+      "title": "OPAL: Encoding Causal Understanding of Physical Systems for Robot Learning",
+      "authors": [
+        "Daniel Tcheurekdjian",
+        "Joshua Klasmeier",
+        "Tom Cooney",
+        "Christopher McCann",
+        "Tyler Fenstermaker"
+      ],
+      "abstract": "We present OPAL (Operant Physical Agent with Language), a novel\nvision-language-action architecture that introduces topological constraints to\nflow matching for robotic control. To do so, we further introduce topological\nattention. Our approach models action sequences as topologically-structured\nrepresentations with non-trivial constraints. Experimental results across 10\ncomplex manipulation tasks demonstrate OPAL's superior performance compared to\nprevious approaches, including Octo, OpenVLA, and ${\\pi}$0.\n  Our architecture achieves significant improvements in zero-shot performance\nwithout requiring task-specific fine-tuning, while reducing inference\ncomputational requirements by 42%. The theoretical guarantees provided by our\ntopological approach result in more coherent long-horizon action sequences. Our\nresults highlight the potential of constraining the search space of learning\nproblems in robotics by deriving from fundamental physical laws, and the\npossibility of using topological attention to embed causal understanding into\ntransformer architectures.",
+      "pdf_url": "http://arxiv.org/pdf/2504.06538v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.06538v1",
+      "published": "2025-04-09",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Characterizing direct and indirect causal effects when outcomes are dependent due to treatment spillover and outcome spillover",
       "authors": [
@@ -118,57 +169,6 @@
       "categories": [
         "stat.ME",
         "stat.AP"
-      ]
-    },
-    {
-      "title": "The Amenability Framework: Rethinking Causal Ordering Without Estimating Causal Effects",
-      "authors": [
-        "Carlos Fernández-Loría",
-        "Jorge Loría"
-      ],
-      "abstract": "Who should we prioritize for intervention when we cannot estimate\nintervention effects? In many applied domains (e.g., advertising, customer\nretention, and behavioral nudging) prioritization is guided by predictive\nmodels that estimate outcome probabilities rather than causal effects. This\npaper investigates when these predictions (scores) can effectively rank\nindividuals by their intervention effects, particularly when direct effect\nestimation is infeasible or unreliable. We propose a conceptual framework based\non amenability: an individual's latent proclivity to be influenced by an\nintervention. We then formalize conditions under which predictive scores serve\nas effective proxies for amenability. These conditions justify using non-causal\nscores for intervention prioritization, even when the scores do not directly\nestimate effects. We further show that, under plausible assumptions, predictive\nmodels can outperform causal effect estimators in ranking individuals by\nintervention effects. Empirical evidence from an advertising context supports\nour theoretical findings, demonstrating that predictive modeling can offer a\nmore robust approach to targeting than effect estimation. Our framework\nsuggests a shift in focus, from estimating effects to inferring who is\namenable, as a practical and theoretically grounded strategy for prioritizing\ninterventions in resource-constrained environments.",
-      "pdf_url": "http://arxiv.org/pdf/2504.02456v2",
-      "arxiv_url": "http://arxiv.org/abs/2504.02456v2",
-      "published": "2025-04-03",
-      "categories": [
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Self-supervised Pretrained Frontend with Predictive Code for Speech Separation",
-      "authors": [
-        "Wupeng Wang",
-        "Zexu Pan",
-        "Xinke Li",
-        "Shuai Wang",
-        "Haizhou Li"
-      ],
-      "abstract": "Speech separation (SS) seeks to disentangle a multi-talker speech mixture\ninto single-talker speech streams. Although SS can be generally achieved using\noffline methods, such a processing paradigm is not suitable for real-time\nstreaming applications. Causal separation models, which rely only on past and\npresent information, offer a promising solution for real-time streaming.\nHowever, these models typically suffer from notable performance degradation due\nto the absence of future context. In this paper, we introduce a novel frontend\nthat is designed to mitigate the mismatch between training and run-time\ninference by implicitly incorporating future information into causal models\nthrough predictive patterns. The pretrained frontend employs a transformer\ndecoder network with a causal convolutional encoder as the backbone and is\npretrained in a self-supervised manner with two innovative pretext tasks:\nautoregressive hybrid prediction and contextual knowledge distillation. These\ntasks enable the model to capture predictive patterns directly from mixtures in\na self-supervised manner. The pretrained frontend subsequently serves as a\nfeature extractor to generate high-quality predictive patterns. Comprehensive\nevaluations on synthetic and real-world datasets validated the effectiveness of\nthe proposed pretrained frontend.",
-      "pdf_url": "http://arxiv.org/pdf/2504.02302v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.02302v1",
-      "published": "2025-04-03",
-      "categories": [
-        "cs.SD",
-        "cs.LG",
-        "eess.AS"
-      ]
-    },
-    {
-      "title": "A Causal Inference Framework for Data Rich Environments",
-      "authors": [
-        "Alberto Abadie",
-        "Anish Agarwal",
-        "Devavrat Shah"
-      ],
-      "abstract": "We propose a formal model for counterfactual estimation with unobserved\nconfounding in \"data-rich\" settings, i.e., where there are a large number of\nunits and a large number of measurements per unit. Our model provides a bridge\nbetween the structural causal model view of causal inference common in the\ngraphical models literature with that of the latent factor model view common in\nthe potential outcomes literature. We show how classic models for potential\noutcomes and treatment assignments fit within our framework. We provide an\nidentification argument for the average treatment effect, the average treatment\neffect on the treated, and the average treatment effect on the untreated. For\nany estimator that has a fast enough estimation error rate for a certain\nnuisance parameter, we establish it is consistent for these various causal\nparameters. We then show principal component regression is one such estimator\nthat leads to consistent estimation, and we analyze the minimal smoothness\nrequired of the potential outcomes function for consistency.",
-      "pdf_url": "http://arxiv.org/pdf/2504.01702v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.01702v1",
-      "published": "2025-04-02",
-      "categories": [
-        "econ.EM",
-        "cs.LG",
-        "stat.ME"
       ]
     }
   ]
