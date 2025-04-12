@@ -1,6 +1,53 @@
 {
-  "last_updated": "2025-04-11T00:50:58.625695",
+  "last_updated": "2025-04-12T00:49:55.241982",
   "papers": [
+    {
+      "title": "Relaxing the Markov Requirements on Reinforcement Learning Under Weak Partial Ignorability",
+      "authors": [
+        "MaryLena Bleile"
+      ],
+      "abstract": "Incomplete data, confounding effects, and violations of the Markov property\nare interrelated problems which are ubiquitous in Reinforcement Learning\napplications. We introduce the concept of ``partial ignorabilty\" and leverage\nit to establish a novel convergence theorem for adaptive Reinforcement\nLearning. This theoretical result relaxes the Markov assumption on the\nstochastic process underlying conventional $Q$-learning, deploying a\ngeneralized form of the Robbins-Monro stochastic approximation theorem to\nestablish optimality. This result has clear downstream implications for most\nactive subfields of Reinforcement Learning, with clear paths for extension to\nthe field of Causal Inference.",
+      "pdf_url": "http://arxiv.org/pdf/2504.07722v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.07722v1",
+      "published": "2025-04-10",
+      "categories": [
+        "cs.LG",
+        "stat.ME",
+        "60G"
+      ]
+    },
+    {
+      "title": "Better Decisions through the Right Causal World Model",
+      "authors": [
+        "Elisabeth Dillies",
+        "Quentin Delfosse",
+        "Jannis Blüml",
+        "Raban Emunds",
+        "Florian Peter Busch",
+        "Kristian Kersting"
+      ],
+      "abstract": "Reinforcement learning (RL) agents have shown remarkable performances in\nvarious environments, where they can discover effective policies directly from\nsensory inputs. However, these agents often exploit spurious correlations in\nthe training data, resulting in brittle behaviours that fail to generalize to\nnew or slightly modified environments. To address this, we introduce the Causal\nObject-centric Model Extraction Tool (COMET), a novel algorithm designed to\nlearn the exact interpretable causal world models (CWMs). COMET first extracts\nobject-centric state descriptions from observations and identifies the\nenvironment's internal states related to the depicted objects' properties.\nUsing symbolic regression, it models object-centric transitions and derives\ncausal relationships governing object dynamics. COMET further incorporates\nlarge language models (LLMs) for semantic inference, annotating causal\nvariables to enhance interpretability.\n  By leveraging these capabilities, COMET constructs CWMs that align with the\ntrue causal structure of the environment, enabling agents to focus on\ntask-relevant features. The extracted CWMs mitigate the danger of shortcuts,\npermitting the development of RL systems capable of better planning and\ndecision-making across dynamic scenarios. Our results, validated in Atari\nenvironments such as Pong and Freeway, demonstrate the accuracy and robustness\nof COMET, highlighting its potential to bridge the gap between object-centric\nreasoning and causal inference in reinforcement learning.",
+      "pdf_url": "http://arxiv.org/pdf/2504.07257v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.07257v1",
+      "published": "2025-04-09",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal Inference under Interference through Designed Markets",
+      "authors": [
+        "Evan Munro"
+      ],
+      "abstract": "Equilibrium effects make it challenging to evaluate the impact of an\nindividual-level treatment on outcomes in a single market, even with data from\na randomized trial. In some markets, however, a centralized mechanism allocates\ngoods and imposes useful structure on spillovers. For a class of strategy-proof\n\"cutoff\" mechanisms, we propose an estimator for global treatment effects using\nindividual-level data from one market, where treatment assignment is\nunconfounded. Algorithmically, we re-run a weighted and perturbed version of\nthe mechanism. Under a continuum market approximation, the estimator is\nasymptotically normal and semi-parametrically efficient. We extend this\napproach to learn spillover-aware treatment rules with vanishing asymptotic\nregret. Empirically, adjusting for equilibrium effects notably diminishes the\nestimated effect of information on inequality in the Chilean school system.",
+      "pdf_url": "http://arxiv.org/pdf/2504.07217v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.07217v1",
+      "published": "2025-04-09",
+      "categories": [
+        "econ.EM"
+      ]
+    },
     {
       "title": "Efficient Timestamping for Sampling-based Race Detection",
       "authors": [
@@ -119,56 +166,6 @@
         "cs.LG",
         "stat.ME",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Multi-resolution Score-Based Variational Graphical Diffusion for Causal Disaster System Modeling and Inference",
-      "authors": [
-        "Xuechun Li",
-        "Shan Gao",
-        "Susu Xu"
-      ],
-      "abstract": "Complex systems with intricate causal dependencies challenge accurate\nprediction. Effective modeling requires precise physical process\nrepresentation, integration of interdependent factors, and incorporation of\nmulti-resolution observational data. These systems manifest in both static\nscenarios with instantaneous causal chains and temporal scenarios with evolving\ndynamics, complicating modeling efforts. Current methods struggle to\nsimultaneously handle varying resolutions, capture physical relationships,\nmodel causal dependencies, and incorporate temporal dynamics, especially with\ninconsistently sampled data from diverse sources. We introduce Temporal-SVGDM:\nScore-based Variational Graphical Diffusion Model for Multi-resolution\nobservations. Our framework constructs individual SDEs for each variable at its\nnative resolution, then couples these SDEs through a causal score mechanism\nwhere parent nodes inform child nodes' evolution. This enables unified modeling\nof both immediate causal effects in static scenarios and evolving dependencies\nin temporal scenarios. In temporal models, state representations are processed\nthrough a sequence prediction model to predict future states based on\nhistorical patterns and causal relationships. Experiments on real-world\ndatasets demonstrate improved prediction accuracy and causal understanding\ncompared to existing methods, with robust performance under varying levels of\nbackground knowledge. Our model exhibits graceful degradation across different\ndisaster types, successfully handling both static earthquake scenarios and\ntemporal hurricane and wildfire scenarios, while maintaining superior\nperformance even with limited data.",
-      "pdf_url": "http://arxiv.org/pdf/2504.04015v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.04015v1",
-      "published": "2025-04-05",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Multivariate Causal Effects: a Bayesian Causal Regression Factor Model",
-      "authors": [
-        "Dafne Zorzetto",
-        "Jenna Landy",
-        "Corwin Zigler",
-        "Giovanni Parmigiani",
-        "Roberta De Vito"
-      ],
-      "abstract": "The impact of wildfire smoke on air quality is a growing concern,\ncontributing to air pollution through a complex mixture of chemical species\nwith important implications for public health. While previous studies have\nprimarily focused on its association with total particulate matter (PM2.5), the\ncausal relationship between wildfire smoke and the chemical composition of\nPM2.5 remains largely unexplored. Exposure to these chemical mixtures plays a\ncritical role in shaping public health, yet capturing their relationships\nrequires advanced statistical methods capable of modeling the complex\ndependencies among chemical species. To fill this gap, we propose a Bayesian\ncausal regression factor model that estimates the multivariate causal effects\nof wildfire smoke on the concentration of 27 chemical species in PM2.5 across\nthe United States. Our approach introduces two key innovations: (i) a causal\ninference framework for multivariate potential outcomes, and (ii) a novel\nBayesian factor model that employs a probit stick-breaking process as prior for\ntreatment-specific factor scores. By focusing on factor scores, our method\naddresses the missing data challenge common in causal inference and enables a\nflexible, data-driven characterization of the latent factor structure, which is\ncrucial to capture the complex correlation among multivariate outcomes. Through\nMonte Carlo simulations, we show the model's accuracy in estimating the causal\neffects in multivariate outcomes and characterizing the treatment-specific\nlatent structure. Finally, we apply our method to US air quality data,\nestimating the causal effect of wildfire smoke on 27 chemical species in PM2.5,\nproviding a deeper understanding of their interdependencies.",
-      "pdf_url": "http://arxiv.org/pdf/2504.03480v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.03480v1",
-      "published": "2025-04-04",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Spatiotemporal causal inference with arbitrary spillover and carryover effects",
-      "authors": [
-        "Mitsuru Mukaigawara",
-        "Kosuke Imai",
-        "Jason Lyall",
-        "Georgia Papadogeorgou"
-      ],
-      "abstract": "Micro-level data with granular spatial and temporal information are becoming\nincreasingly available to social scientists. Most researchers aggregate such\ndata into a convenient panel data format and apply standard causal inference\nmethods. This approach, however, has two limitations. First, data aggregation\nresults in the loss of detailed geo-location and temporal information, leading\nto potential biases. Second, most panel data methods either ignore spatial\nspillover and temporal carryover effects or impose restrictive assumptions on\ntheir structure. We introduce a general methodological framework for\nspatiotemporal causal inference with arbitrary spillover and carryover effects.\nUnder this general framework, we demonstrate how to define and estimate causal\nquantities of interest, explore heterogeneous treatment effects, investigate\ncausal mechanisms, and visualize the results to facilitate their\ninterpretation. We illustrate the proposed methodology through an analysis of\nairstrikes and insurgent attacks in Iraq. The open-source software package\ngeocausal implements all of our methods.",
-      "pdf_url": "http://arxiv.org/pdf/2504.03464v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.03464v1",
-      "published": "2025-04-04",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
       ]
     }
   ]
