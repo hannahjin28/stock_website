@@ -1,6 +1,89 @@
 {
-  "last_updated": "2025-04-14T00:53:40.355592",
+  "last_updated": "2025-04-15T00:52:02.499309",
   "papers": [
+    {
+      "title": "PlugSelect: Pruning Channels with Plug-and-Play Flexibility for Electroencephalography-based Brain Computer Interface",
+      "authors": [
+        "Xue Yuan",
+        "Keren Shi",
+        "Ning Jiang",
+        "Jiayuan He"
+      ],
+      "abstract": "Automatic minimization and optimization of the number of the electrodes is\nessential for the practical application of electroencephalography (EEG)-based\nbrain computer interface (BCI). Previous methods typically require additional\ntraining costs or rely on prior knowledge assumptions. This study proposed a\nnovel channel pruning model, plug-and-select (PlugSelect), applicable across a\nbroad range of BCI paradigms with no additional training cost and plug-and-play\nfunctionality. It integrates gradients along the input path to globally infer\nthe causal relationships between input channels and outputs, and ranks the\ncontribution sequences to identify the most highly attributed channels. The\nresults showed that for three BCI paradigms, i.e., auditory attention decoding\n(AAD), motor imagery (MI), affective computation (AC), PlugSelect could reduce\nthe number of channels by at least half while effectively maintaining decoding\nperformance and improving efficiency. The outcome benefits the design of\nwearable EEG-based devices, facilitating the practical application of BCI\ntechnology.",
+      "pdf_url": "http://arxiv.org/pdf/2504.08486v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.08486v1",
+      "published": "2025-04-11",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Enhanced Marginal Sensitivity Model and Bounds",
+      "authors": [
+        "Yi Zhang",
+        "Wenfu Xu",
+        "Zhiqiang Tan"
+      ],
+      "abstract": "Sensitivity analysis is important to assess the impact of unmeasured\nconfounding in causal inference from observational studies. The marginal\nsensitivity model (MSM) provides a useful approach in quantifying the influence\nof unmeasured confounders on treatment assignment and leading to tractable\nsharp bounds of common causal parameters. In this paper, to tighten MSM sharp\nbounds, we propose the enhanced MSM (eMSM) by incorporating another sensitivity\nconstraint that quantifies the influence of unmeasured confounders on outcomes.\nWe derive sharp population bounds of expected potential outcomes under eMSM,\nwhich are always narrower than the MSM sharp bounds in a simple and\ninterpretable way. We further discuss desirable specifications of sensitivity\nparameters related to the outcome sensitivity constraint, and obtain both\ndoubly robust point estimation and confidence intervals for the eMSM population\nbounds. The effectiveness of eMSM is also demonstrated numerically through two\nreal-data applications. Our development represents, for the first time, a\nsatisfactory extension of MSM to exploit both treatment and outcome sensitivity\nconstraints on unmeasured confounding.",
+      "pdf_url": "http://arxiv.org/pdf/2504.08301v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.08301v1",
+      "published": "2025-04-11",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Causal attribution with confidence",
+      "authors": [
+        "Ping Zhang",
+        "Ruoyu Wang",
+        "Wang Miao"
+      ],
+      "abstract": "To answer questions of \"causes of effects\", the probability of necessity is\nintroduced for assessing whether or not an observed outcome was caused by an\nearlier treatment. However, the statistical inference for probability of\nnecessity is understudied due to several difficulties, which hinders its\napplication in practice. The evaluation of the probability of necessity\ninvolves the joint distribution of potential outcomes, and thus it is in\ngeneral not point identified and one can at best obtain lower and upper bounds\neven in randomized experiments, unless certain monotonicity assumptions on\npotential outcomes are made. Moreover, these bounds are non-smooth functionals\nof the observed data distribution and standard estimation and inference methods\ncannot be directly applied. In this paper, we investigate the statistical\ninference for the probability of necessity in general situations where it may\nnot be point identified. We introduce a mild margin condition to tackle the\nnon-smoothness, under which the bounds become pathwise differentiable. We\nestablish the semiparametric efficiency theory and propose novel asymptotically\nefficient estimators of the bounds, and further construct confidence intervals\nfor the probability of necessity based on the proposed bounds estimators. The\nresultant confidence intervals are less conservative than existing methods and\ncan effectively make use of the observed covariates.",
+      "pdf_url": "http://arxiv.org/pdf/2504.08294v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.08294v1",
+      "published": "2025-04-11",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "A roadmap for systematic identification and analysis of multiple biases in causal inference",
+      "authors": [
+        "Rushani Wijesuriya",
+        "Rachael A. Hughes",
+        "John B. Carlin",
+        "Rachel L. Peters",
+        "Jennifer J. Koplin",
+        "Margarita Moreno-Betancur"
+      ],
+      "abstract": "Observational studies examining causal effects rely on unverifiable causal\nassumptions, the violation of which can induce multiple biases. Quantitative\nbias analysis (QBA) methods examine the sensitivity of findings to such\nviolations, generally by producing bias-adjusted estimates under alternative\nassumptions. Common strategies for QBA address either a single source of bias\nor multiple sources one at a time, thus not informing the overall impact of the\npotential biases. We propose a systematic approach (roadmap) for identifying\nand analysing multiple biases together. Briefly, this consists of (i)\narticulating the assumptions underlying the primary analysis through\nspecification and emulation of the \"ideal trial\" that defines the causal\nestimand of interest and depicting these assumptions using casual diagrams;\n(ii) depicting alternative assumptions under which biases arise using causal\ndiagrams; (iii) obtaining a single estimate simultaneously adjusted for all\nbiases under the alternative assumptions. We illustrate the roadmap in an\ninvestigation of the effect of breastfeeding on risk of childhood asthma. We\nfurther use simulations to evaluate a recent simultaneous adjustment approach\nand illustrate the need for simultaneous rather than one-at-a-time adjustment\nto examine the overall impact of biases. The proposed roadmap should facilitate\nthe conduct of high-quality multiple bias analyses.",
+      "pdf_url": "http://arxiv.org/pdf/2504.08263v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.08263v1",
+      "published": "2025-04-11",
+      "categories": [
+        "stat.ME",
+        "stat.OT"
+      ]
+    },
+    {
+      "title": "STEI-PCN: an efficient pure convolutional network for traffic prediction via spatial-temporal encoding and inferring",
+      "authors": [
+        "Kai Hu",
+        "Zhidan Zhao",
+        "Zhifeng Hao"
+      ],
+      "abstract": "Traffic data exhibits complex temporal, spatial, and spatial-temporal\ncorrelations. Most of models use either independent modules to separately\nextract temporal and spatial correlations or joint modules to synchronously\nextract them, without considering the spatial-temporal correlations. Moreover,\nmodels that consider joint spatial-temporal correlations (temporal, spatial,\nand spatial-temporal correlations) often encounter significant challenges in\naccuracy and computational efficiency which prevent such models from\ndemonstrating the expected advantages of a joint spatial-temporal correlations\narchitecture. To address these issues, this paper proposes an efficient pure\nconvolutional network for traffic prediction via spatial-temporal encoding and\ninferring (STEI-PCN). The model introduces and designs a dynamic adjacency\nmatrix inferring module based on absolute spatial and temporal coordinates, as\nwell as relative spatial and temporal distance encoding, using a graph\nconvolutional network combined with gating mechanism to capture local\nsynchronous joint spatial-temporal correlations. Additionally, three layers of\ntemporal dilated causal convolutional network are used to capture long-range\ntemporal correlations. Finally, through multi-view collaborative prediction\nmodule, the model integrates the gated-activated original, local synchronous\njoint spatial-temporal, and long-range temporal features to achieve\ncomprehensive prediction. This study conducts extensive experiments on flow\ndatasets (PeMS03/04/07/08) and speed dataset (PeMS-Bay), covering multiple\nprediction horizons. The results show that STEI-PCN demonstrates competitive\ncomputational efficiency in both training and inference speeds, and achieves\nsuperior or slightly inferior to state-of-the-art (SOTA) models on most\nevaluation metrics.",
+      "pdf_url": "http://arxiv.org/pdf/2504.08061v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.08061v1",
+      "published": "2025-04-10",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Relaxing the Markov Requirements on Reinforcement Learning Under Weak Partial Ignorability",
       "authors": [
@@ -79,93 +162,6 @@
       "published": "2025-04-09",
       "categories": [
         "cs.SD"
-      ]
-    },
-    {
-      "title": "OPAL: Encoding Causal Understanding of Physical Systems for Robot Learning",
-      "authors": [
-        "Daniel Tcheurekdjian",
-        "Joshua Klasmeier",
-        "Tom Cooney",
-        "Christopher McCann",
-        "Tyler Fenstermaker"
-      ],
-      "abstract": "We present OPAL (Operant Physical Agent with Language), a novel\nvision-language-action architecture that introduces topological constraints to\nflow matching for robotic control. To do so, we further introduce topological\nattention. Our approach models action sequences as topologically-structured\nrepresentations with non-trivial constraints. Experimental results across 10\ncomplex manipulation tasks demonstrate OPAL's superior performance compared to\nprevious approaches, including Octo, OpenVLA, and ${\\pi}$0.\n  Our architecture achieves significant improvements in zero-shot performance\nwithout requiring task-specific fine-tuning, while reducing inference\ncomputational requirements by 42%. The theoretical guarantees provided by our\ntopological approach result in more coherent long-horizon action sequences. Our\nresults highlight the potential of constraining the search space of learning\nproblems in robotics by deriving from fundamental physical laws, and the\npossibility of using topological attention to embed causal understanding into\ntransformer architectures.",
-      "pdf_url": "http://arxiv.org/pdf/2504.06538v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.06538v1",
-      "published": "2025-04-09",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Characterizing direct and indirect causal effects when outcomes are dependent due to treatment spillover and outcome spillover",
-      "authors": [
-        "Subhankar Bhadra",
-        "Michael Schweinberger"
-      ],
-      "abstract": "We provide novel insight into causal inference when both treatment spillover\nand outcome spillover occur in connected populations, by taking advantage of\nrecent advances in statistical network analysis. Scenarios with treatment\nspillover and outcome spillover are challenging, because both forms of\nspillover affect outcomes and therefore treatment spillover and outcome\nspillover are intertwined, and outcomes are dependent conditional on treatments\nby virtue of outcome spillover. As a result, the direct and indirect causal\neffects arising from spillover have remained black boxes: While the direct and\nindirect causal effects can be identified, it is unknown how these causal\neffects explicitly depend on the effects of treatment, treatment spillover, and\noutcome spillover. We make three contributions, facilitated by low-rank random\ninterference graphs. First, we provide novel insight into direct and indirect\ncausal effects by disentangling the contributions of treatment, treatment\nspillover, and outcome spillover. Second, we provide scalable estimators of\ndirect and indirect causal effects. Third, we establish rates of convergence\nfor estimators of direct and indirect causal effects. These are the first\nconvergence rates in scenarios in which treatment spillover and outcome\nspillover are intertwined and outcomes are dependent conditional on treatments,\nand the interference graph is sparse or dense.",
-      "pdf_url": "http://arxiv.org/pdf/2504.06108v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.06108v1",
-      "published": "2025-04-08",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Identification and estimation of causal peer effects using instrumental variables",
-      "authors": [
-        "Shanshan Luo",
-        "Kang Shuai",
-        "Yechi Zhang",
-        "Wei Li",
-        "Yangbo He"
-      ],
-      "abstract": "In social science researches, causal inference regarding peer effects often\nfaces significant challenges due to homophily bias and contextual confounding.\nFor example, unmeasured health conditions (e.g., influenza) and psychological\nstates (e.g., happiness, loneliness) can spread among closely connected\nindividuals, such as couples or siblings. To address these issues, we define\nfour effect estimands for dyadic data to characterize direct effects and\nspillover effects. We employ dual instrumental variables to achieve\nnonparametric identification of these causal estimands in the presence of\nunobserved confounding. We then derive the efficient influence functions for\nthese estimands under the nonparametric model. Additionally, we develop a\ntriply robust and locally efficient estimator that remains consistent even\nunder partial misspecification of the observed data model. The proposed robust\nestimators can be easily adapted to flexible approaches such as machine\nlearning estimation methods, provided that certain rate conditions are\nsatisfied. Finally, we illustrate our approach through simulations and an\nempirical application evaluating the peer effects of retirement on fluid\ncognitive perception among couples.",
-      "pdf_url": "http://arxiv.org/pdf/2504.05658v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.05658v1",
-      "published": "2025-04-08",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "REWIND: Real-Time Egocentric Whole-Body Motion Diffusion with Exemplar-Based Identity Conditioning",
-      "authors": [
-        "Jihyun Lee",
-        "Weipeng Xu",
-        "Alexander Richard",
-        "Shih-En Wei",
-        "Shunsuke Saito",
-        "Shaojie Bai",
-        "Te-Li Wang",
-        "Minhyuk Sung",
-        "Tae-Kyun Kim",
-        "Jason Saragih"
-      ],
-      "abstract": "We present REWIND (Real-Time Egocentric Whole-Body Motion Diffusion), a\none-step diffusion model for real-time, high-fidelity human motion estimation\nfrom egocentric image inputs. While an existing method for egocentric\nwhole-body (i.e., body and hands) motion estimation is non-real-time and\nacausal due to diffusion-based iterative motion refinement to capture\ncorrelations between body and hand poses, REWIND operates in a fully causal and\nreal-time manner. To enable real-time inference, we introduce (1) cascaded\nbody-hand denoising diffusion, which effectively models the correlation between\negocentric body and hand motions in a fast, feed-forward manner, and (2)\ndiffusion distillation, which enables high-quality motion estimation with a\nsingle denoising step. Our denoising diffusion model is based on a modified\nTransformer architecture, designed to causally model output motions while\nenhancing generalizability to unseen motion lengths. Additionally, REWIND\noptionally supports identity-conditioned motion estimation when identity prior\nis available. To this end, we propose a novel identity conditioning method\nbased on a small set of pose exemplars of the target identity, which further\nenhances motion estimation quality. Through extensive experiments, we\ndemonstrate that REWIND significantly outperforms the existing baselines both\nwith and without exemplar-based identity conditioning.",
-      "pdf_url": "http://arxiv.org/pdf/2504.04956v2",
-      "arxiv_url": "http://arxiv.org/abs/2504.04956v2",
-      "published": "2025-04-07",
-      "categories": [
-        "cs.GR",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal Inference Isn't Special: Why It's Just Another Prediction Problem",
-      "authors": [
-        "Carlos Fernández-Loría"
-      ],
-      "abstract": "Causal inference is often portrayed as fundamentally distinct from predictive\nmodeling, with its own terminology, goals, and intellectual challenges. But at\nits core, causal inference is simply a structured instance of prediction under\ndistribution shift. In both cases, we begin with labeled data from a source\ndomain and seek to generalize to a target domain where outcomes are not\nobserved. The key difference is that in causal inference, the labels --\npotential outcomes -- are selectively observed based on treatment assignment,\nintroducing bias that must be addressed through assumptions. This perspective\nreframes causal estimation as a familiar generalization problem and highlights\nhow techniques from predictive modeling, such as reweighting and domain\nadaptation, apply directly to causal tasks. It also clarifies that causal\nassumptions are not uniquely strong -- they are simply more explicit. By\nviewing causal inference through the lens of prediction, we demystify its\nlogic, connect it to familiar tools, and make it more accessible to\npractitioners and educators alike.",
-      "pdf_url": "http://arxiv.org/pdf/2504.04320v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.04320v1",
-      "published": "2025-04-06",
-      "categories": [
-        "cs.LG",
-        "stat.ME",
-        "stat.ML"
       ]
     }
   ]
