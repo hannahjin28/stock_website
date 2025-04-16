@@ -1,6 +1,21 @@
 {
-  "last_updated": "2025-04-15T00:52:02.499309",
+  "last_updated": "2025-04-16T00:52:09.895065",
   "papers": [
+    {
+      "title": "A Two-Stage Interpretable Matching Framework for Causal Inference",
+      "authors": [
+        "Sahil Shikalgar",
+        "Md. Noor-E-Alam"
+      ],
+      "abstract": "Matching in causal inference from observational data aims to construct\ntreatment and control groups with similar distributions of covariates, thereby\nreducing confounding and ensuring an unbiased estimation of treatment effects.\nThis matched sample closely mimics a randomized controlled trial (RCT), thus\nimproving the quality of causal estimates. We introduce a novel Two-stage\nInterpretable Matching (TIM) framework for transparent and interpretable\ncovariate matching. In the first stage, we perform exact matching across all\navailable covariates. For treatment and control units without an exact match in\nthe first stage, we proceed to the second stage. Here, we iteratively refine\nthe matching process by removing the least significant confounder in each\niteration and attempting exact matching on the remaining covariates. We learn a\ndistance metric for the dropped covariates to quantify closeness to the\ntreatment unit(s) within the corresponding strata. We used these high- quality\nmatches to estimate the conditional average treatment effects (CATEs). To\nvalidate TIM, we conducted experiments on synthetic datasets with varying\nassociation structures and correlations. We assessed its performance by\nmeasuring bias in CATE estimation and evaluating multivariate overlap between\ntreatment and control groups before and after matching. Additionally, we apply\nTIM to a real-world healthcare dataset from the Centers for Disease Control and\nPrevention (CDC) to estimate the causal effect of high cholesterol on diabetes.\nOur results demonstrate that TIM improves CATE estimates, increases\nmultivariate overlap, and scales effectively to high-dimensional data, making\nit a robust tool for causal inference in observational data.",
+      "pdf_url": "http://arxiv.org/pdf/2504.09635v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.09635v1",
+      "published": "2025-04-13",
+      "categories": [
+        "cs.AI",
+        "stat.ME"
+      ]
+    },
     {
       "title": "PlugSelect: Pruning Channels with Plug-and-Play Flexibility for Electroencephalography-based Brain Computer Interface",
       "authors": [
@@ -85,6 +100,22 @@
       ]
     },
     {
+      "title": "Double Machine Learning for Causal Inference under Shared-State Interference",
+      "authors": [
+        "Chris Hays",
+        "Manish Raghavan"
+      ],
+      "abstract": "Researchers and practitioners often wish to measure treatment effects in\nsettings where units interact via markets and recommendation systems. In these\nsettings, units are affected by certain shared states, like prices, algorithmic\nrecommendations or social signals. We formalize this structure, calling it\nshared-state interference, and argue that our formulation captures many\nrelevant applied settings. Our key modeling assumption is that individuals'\npotential outcomes are independent conditional on the shared state. We then\nprove an extension of a double machine learning (DML) theorem providing\nconditions for achieving efficient inference under shared-state interference.\nWe also instantiate our general theorem in several models of interest where it\nis possible to efficiently estimate the average direct effect (ADE) or global\naverage treatment effect (GATE).",
+      "pdf_url": "http://arxiv.org/pdf/2504.08836v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.08836v1",
+      "published": "2025-04-10",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "econ.EM"
+      ]
+    },
+    {
       "title": "Relaxing the Markov Requirements on Reinforcement Learning Under Weak Partial Ignorability",
       "authors": [
         "MaryLena Bleile"
@@ -129,39 +160,6 @@
       "published": "2025-04-09",
       "categories": [
         "econ.EM"
-      ]
-    },
-    {
-      "title": "Efficient Timestamping for Sampling-based Race Detection",
-      "authors": [
-        "Minjian Zhang",
-        "Daniel Wee Soong Lim",
-        "Mosaad Al Thokair",
-        "Umang Mathur",
-        "Mahesh Viswanathan"
-      ],
-      "abstract": "Dynamic race detection based on the happens before (HB) partial order has now\nbecome the de facto approach to quickly identify data races in multi-threaded\nsoftware. Most practical implementations for detecting these races use\ntimestamps to infer causality between events and detect races based on these\ntimestamps. Such an algorithm updates timestamps (stored in vector clocks) at\nevery event in the execution, and is known to induce excessive overhead. Random\nsampling has emerged as a promising algorithmic paradigm to offset this\noverhead. It offers the promise of making sound race detection scalable. In\nthis work we consider the task of designing an efficient sampling based race\ndetector with low overhead for timestamping when the number of sampled events\nis much smaller than the total events in an execution. To solve this problem,\nwe propose (1) a new notion of freshness timestamp, (2) a new data structure to\nstore timestamps, and (3) an algorithm that uses a combination of them to\nreduce the cost of timestamping in sampling based race detection. Further, we\nprove that our algorithm is close to optimal -- the number of vector clock\ntraversals is bounded by the number of sampled events and number of threads,\nand further, on any given dynamic execution, the cost of timestamping due to\nour algorithm is close to the amount of work any timestamping-based algorithm\nmust perform on that execution, that is it is instance optimal. Our evaluation\non real world benchmarks demonstrates the effectiveness of our proposed\nalgorithm over prior timestamping algorithms that are agnostic to sampling.",
-      "pdf_url": "http://arxiv.org/pdf/2504.06688v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.06688v1",
-      "published": "2025-04-09",
-      "categories": [
-        "cs.PL"
-      ]
-    },
-    {
-      "title": "A Streamable Neural Audio Codec with Residual Scalar-Vector Quantization for Real-Time Communication",
-      "authors": [
-        "Xiao-Hang Jiang",
-        "Yang Ai",
-        "Rui-Chen Zheng",
-        "Zhen-Hua Ling"
-      ],
-      "abstract": "This paper proposes StreamCodec, a streamable neural audio codec designed for\nreal-time communication. StreamCodec adopts a fully causal, symmetric\nencoder-decoder structure and operates in the modified discrete cosine\ntransform (MDCT) domain, aiming for low-latency inference and real-time\nefficient generation. To improve codebook utilization efficiency and compensate\nfor the audio quality loss caused by structural causality, StreamCodec\nintroduces a novel residual scalar-vector quantizer (RSVQ). The RSVQ\nsequentially connects scalar quantizers and improved vector quantizers in a\nresidual manner, constructing coarse audio contours and refining acoustic\ndetails, respectively. Experimental results confirm that the proposed\nStreamCodec achieves decoded audio quality comparable to advanced\nnon-streamable neural audio codecs. Specifically, on the 16 kHz LibriTTS\ndataset, StreamCodec attains a ViSQOL score of 4.30 at 1.5 kbps. It has a fixed\nlatency of only 20 ms and achieves a generation speed nearly 20 times real-time\non a CPU, with a lightweight model size of just 7M parameters, making it highly\nsuitable for real-time communication applications.",
-      "pdf_url": "http://arxiv.org/pdf/2504.06561v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.06561v1",
-      "published": "2025-04-09",
-      "categories": [
-        "cs.SD"
       ]
     }
   ]
