@@ -1,6 +1,117 @@
 {
-  "last_updated": "2025-04-16T00:52:09.895065",
+  "last_updated": "2025-04-17T00:51:07.069804",
   "papers": [
+    {
+      "title": "Looking beyond the next token",
+      "authors": [
+        "Abitha Thankaraj",
+        "Yiding Jiang",
+        "J. Zico Kolter",
+        "Yonatan Bisk"
+      ],
+      "abstract": "The structure of causal language model training assumes that each token can\nbe accurately predicted from the previous context. This contrasts with humans'\nnatural writing and reasoning process, where goals are typically known before\nthe exact argument or phrasings. While this mismatch has been well studied in\nthe literature, the working assumption has been that architectural changes are\nneeded to address this mismatch. We argue that rearranging and processing the\ntraining data sequences can allow models to more accurately imitate the true\ndata-generating process, and does not require any other changes to the\narchitecture or training infrastructure. We demonstrate that this technique,\nTrelawney, and the inference algorithms derived from it allow us to improve\nperformance on several key benchmarks that span planning, algorithmic\nreasoning, and story generation tasks. Finally, our method naturally enables\nthe generation of long-term goals at no additional cost. We investigate how\nusing the model's goal-generation capability can further improve planning and\nreasoning. Additionally, we believe Trelawney could potentially open doors to\nnew capabilities beyond the current language modeling paradigm.",
+      "pdf_url": "http://arxiv.org/pdf/2504.11336v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.11336v1",
+      "published": "2025-04-15",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Clinically Interpretable Survival Risk Stratification in Head and Neck Cancer Using Bayesian Networks and Markov Blankets",
+      "authors": [
+        "Keyur D. Shah",
+        "Ibrahim Chamseddine",
+        "Xiaohan Yuan",
+        "Sibo Tian",
+        "Richard Qiu",
+        "Jun Zhou",
+        "Anees Dhabaan",
+        "Hania Al-Hallaq",
+        "David S. Yu",
+        "Harald Paganetti",
+        "Xiaofeng Yang"
+      ],
+      "abstract": "Purpose: To identify a clinically interpretable subset of survival-relevant\nfeatures in HN cancer using Bayesian Network (BN) and evaluate its prognostic\nand causal utility. Methods and Materials: We used the RADCURE dataset,\nconsisting of 3,346 patients with H&N cancer treated with definitive\n(chemo)radiotherapy. A probabilistic BN was constructed to model dependencies\namong clinical, anatomical, and treatment variables. The Markov Blanket (MB) of\ntwo-year survival (SVy2) was extracted and used to train a logistic regression\nmodel. After excluding incomplete cases, a temporal split yielded a train/test\n(2,174/820) dataset using 2007 as the cutoff year. Model performance was\nassessed using area under the ROC curve (AUC), C-index, and Kaplan-Meier (KM)\nsurvival stratification. Model fit was further evaluated using a log-likelihood\nratio (LLR) test. Causal inference was performed using do-calculus\ninterventions on MB variables. Results: The MB of SVy2 included 6 clinically\nrelevant features: ECOG performance status, T-stage, HPV status, disease site,\nthe primary gross tumor volume (GTVp), and treatment modality. The model\nachieved an AUC of 0.65 and C-index of 0.78 on the test dataset, significantly\nstratifying patients into high- and low-risk groups (log-rank p < 0.01). Model\nfit was further supported by a log-likelihood ratio of 70.32 (p < 0.01).\nSubgroup analyses revealed strong performance in HPV-negative (AUC = 0.69,\nC-index = 0.76), T4 (AUC = 0.69, C-index = 0.80), and large-GTV (AUC = 0.67,\nC-index = 0.75) cohorts, each showing significant KM separation. Causal\nanalysis further supported the positive survival impact of ECOG 0, HPV-positive\nstatus, and chemoradiation. Conclusions: A compact, MB-derived BN model can\nrobustly stratify survival risk in HN cancer. The model enables explainable\nprognostication and supports individualized decision-making across key clinical\nsubgroups.",
+      "pdf_url": "http://arxiv.org/pdf/2504.11188v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.11188v1",
+      "published": "2025-04-15",
+      "categories": [
+        "physics.med-ph"
+      ]
+    },
+    {
+      "title": "On relative universality, regression operator, and conditional independence",
+      "authors": [
+        "Bing Li",
+        "Ben Jones",
+        "Andreas Artemiou"
+      ],
+      "abstract": "The notion of relative universality with respect to a {\\sigma}-field was\nintroduced to establish the unbiasedness and Fisher consistency of an estimator\nin nonlinear sufficient dimension reduction. However, there is a gap in the\nproof of this result in the existing literature. The existing definition of\nrelative universality seems to be too strong for the proof to be valid. In this\nnote we modify the definition of relative universality using the concept of\n\\k{o}-measurability, and rigorously establish the mentioned unbiasedness and\nFisher consistency. The significance of this result is beyond its original\ncontext of sufficient dimension reduction, because relative universality allows\nus to use the regression operator to fully characterize conditional\nindependence, a crucially important statistical relation that sits at the core\nof many areas and methodologies in statistics and machine learning, such as\ndimension reduction, graphical models, probability embedding, causal inference,\nand Bayesian estimation.",
+      "pdf_url": "http://arxiv.org/pdf/2504.11044v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.11044v1",
+      "published": "2025-04-15",
+      "categories": [
+        "math.ST",
+        "stat.ME",
+        "stat.ML",
+        "stat.TH",
+        "62",
+        "G.3"
+      ]
+    },
+    {
+      "title": "A conceptual synthesis of causal assumptions for causal discovery and inference",
+      "authors": [
+        "Hannah E. Correia"
+      ],
+      "abstract": "This work presents a conceptual synthesis of causal discovery and inference\nframeworks, with a focus on how foundational assumptions -- causal sufficiency,\ncausal faithfulness, and the causal Markov condition -- are formalized and\noperationalized across methodological traditions. Through structured tables and\ncomparative summaries, I map core assumptions, tasks, and analytical choices\nfrom multiple causal frameworks, highlighting their connections and\ndifferences. The synthesis provides practical guidance for researchers\ndesigning causal studies, especially in settings where observational or\nexperimental constraints challenge standard approaches. This guide spans all\nphases of causal analysis, including question formulation, formalization of\nbackground knowledge, selection of appropriate frameworks, choice of study\ndesign or algorithm, and interpretation. It is intended as a tool to support\nrigorous causal reasoning across diverse empirical domains.",
+      "pdf_url": "http://arxiv.org/pdf/2504.11035v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.11035v1",
+      "published": "2025-04-15",
+      "categories": [
+        "stat.ME",
+        "q-bio.QM",
+        "stat.AP",
+        "stat.OT",
+        "62A01"
+      ]
+    },
+    {
+      "title": "Can LLMs Leverage Observational Data? Towards Data-Driven Causal Discovery with LLMs",
+      "authors": [
+        "Yuni Susanti",
+        "Michael Färber"
+      ],
+      "abstract": "Causal discovery traditionally relies on statistical methods applied to\nobservational data, often requiring large datasets and assumptions about\nunderlying causal structures. Recent advancements in Large Language Models\n(LLMs) have introduced new possibilities for causal discovery by providing\ndomain expert knowledge. However, it remains unclear whether LLMs can\neffectively process observational data for causal discovery. In this work, we\nexplore the potential of LLMs for data-driven causal discovery by integrating\nobservational data for LLM-based reasoning. Specifically, we examine whether\nLLMs can effectively utilize observational data through two prompting\nstrategies: pairwise prompting and breadth first search (BFS)-based prompting.\nIn both approaches, we incorporate the observational data directly into the\nprompt to assess LLMs' ability to infer causal relationships from such data.\nExperiments on benchmark datasets show that incorporating observational data\nenhances causal discovery, boosting F1 scores by up to 0.11 point using both\npairwise and BFS LLM-based prompting, while outperforming traditional\nstatistical causal discovery baseline by up to 0.52 points. Our findings\nhighlight the potential and limitations of LLMs for data-driven causal\ndiscovery, demonstrating their ability to move beyond textual metadata and\neffectively interpret and utilize observational data for more informed causal\nreasoning. Our studies lays the groundwork for future advancements toward fully\nLLM-driven causal discovery.",
+      "pdf_url": "http://arxiv.org/pdf/2504.10936v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.10936v1",
+      "published": "2025-04-15",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Bayesian analysis of regression discontinuity designs with heterogeneous treatment effects",
+      "authors": [
+        "Kevin Tao",
+        "Y. Samuel Wang",
+        "David Ruppert"
+      ],
+      "abstract": "Regression Discontinuity Design (RDD) is a popular framework for estimating a\ncausal effect in settings where treatment is assigned if an observed covariate\nexceeds a fixed threshold. We consider estimation and inference in the common\nsetting where the sample consists of multiple known sub-populations with\npotentially heterogeneous treatment effects. In the applied literature, it is\ncommon to account for heterogeneity by either fitting a parametric model or\nconsidering each sub-population separately. In contrast, we develop a Bayesian\nhierarchical model using Gaussian process regression which allows for\nnon-parametric regression while borrowing information across sub-populations.\nWe derive the posterior distribution, prove posterior consistency, and develop\na Metropolis-Hastings within Gibbs sampling algorithm. In extensive\nsimulations, we show that the proposed procedure outperforms existing methods\nin both estimation and inferential tasks. Finally, we apply our procedure to\nU.S. Senate election data and discover an incumbent party advantage which is\nheterogeneous over different time periods.",
+      "pdf_url": "http://arxiv.org/pdf/2504.10652v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.10652v1",
+      "published": "2025-04-14",
+      "categories": [
+        "math.ST",
+        "stat.ME",
+        "stat.TH",
+        "62C10"
+      ]
+    },
     {
       "title": "A Two-Stage Interpretable Matching Framework for Causal Inference",
       "authors": [
@@ -62,104 +173,6 @@
       "published": "2025-04-11",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "A roadmap for systematic identification and analysis of multiple biases in causal inference",
-      "authors": [
-        "Rushani Wijesuriya",
-        "Rachael A. Hughes",
-        "John B. Carlin",
-        "Rachel L. Peters",
-        "Jennifer J. Koplin",
-        "Margarita Moreno-Betancur"
-      ],
-      "abstract": "Observational studies examining causal effects rely on unverifiable causal\nassumptions, the violation of which can induce multiple biases. Quantitative\nbias analysis (QBA) methods examine the sensitivity of findings to such\nviolations, generally by producing bias-adjusted estimates under alternative\nassumptions. Common strategies for QBA address either a single source of bias\nor multiple sources one at a time, thus not informing the overall impact of the\npotential biases. We propose a systematic approach (roadmap) for identifying\nand analysing multiple biases together. Briefly, this consists of (i)\narticulating the assumptions underlying the primary analysis through\nspecification and emulation of the \"ideal trial\" that defines the causal\nestimand of interest and depicting these assumptions using casual diagrams;\n(ii) depicting alternative assumptions under which biases arise using causal\ndiagrams; (iii) obtaining a single estimate simultaneously adjusted for all\nbiases under the alternative assumptions. We illustrate the roadmap in an\ninvestigation of the effect of breastfeeding on risk of childhood asthma. We\nfurther use simulations to evaluate a recent simultaneous adjustment approach\nand illustrate the need for simultaneous rather than one-at-a-time adjustment\nto examine the overall impact of biases. The proposed roadmap should facilitate\nthe conduct of high-quality multiple bias analyses.",
-      "pdf_url": "http://arxiv.org/pdf/2504.08263v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.08263v1",
-      "published": "2025-04-11",
-      "categories": [
-        "stat.ME",
-        "stat.OT"
-      ]
-    },
-    {
-      "title": "STEI-PCN: an efficient pure convolutional network for traffic prediction via spatial-temporal encoding and inferring",
-      "authors": [
-        "Kai Hu",
-        "Zhidan Zhao",
-        "Zhifeng Hao"
-      ],
-      "abstract": "Traffic data exhibits complex temporal, spatial, and spatial-temporal\ncorrelations. Most of models use either independent modules to separately\nextract temporal and spatial correlations or joint modules to synchronously\nextract them, without considering the spatial-temporal correlations. Moreover,\nmodels that consider joint spatial-temporal correlations (temporal, spatial,\nand spatial-temporal correlations) often encounter significant challenges in\naccuracy and computational efficiency which prevent such models from\ndemonstrating the expected advantages of a joint spatial-temporal correlations\narchitecture. To address these issues, this paper proposes an efficient pure\nconvolutional network for traffic prediction via spatial-temporal encoding and\ninferring (STEI-PCN). The model introduces and designs a dynamic adjacency\nmatrix inferring module based on absolute spatial and temporal coordinates, as\nwell as relative spatial and temporal distance encoding, using a graph\nconvolutional network combined with gating mechanism to capture local\nsynchronous joint spatial-temporal correlations. Additionally, three layers of\ntemporal dilated causal convolutional network are used to capture long-range\ntemporal correlations. Finally, through multi-view collaborative prediction\nmodule, the model integrates the gated-activated original, local synchronous\njoint spatial-temporal, and long-range temporal features to achieve\ncomprehensive prediction. This study conducts extensive experiments on flow\ndatasets (PeMS03/04/07/08) and speed dataset (PeMS-Bay), covering multiple\nprediction horizons. The results show that STEI-PCN demonstrates competitive\ncomputational efficiency in both training and inference speeds, and achieves\nsuperior or slightly inferior to state-of-the-art (SOTA) models on most\nevaluation metrics.",
-      "pdf_url": "http://arxiv.org/pdf/2504.08061v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.08061v1",
-      "published": "2025-04-10",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Double Machine Learning for Causal Inference under Shared-State Interference",
-      "authors": [
-        "Chris Hays",
-        "Manish Raghavan"
-      ],
-      "abstract": "Researchers and practitioners often wish to measure treatment effects in\nsettings where units interact via markets and recommendation systems. In these\nsettings, units are affected by certain shared states, like prices, algorithmic\nrecommendations or social signals. We formalize this structure, calling it\nshared-state interference, and argue that our formulation captures many\nrelevant applied settings. Our key modeling assumption is that individuals'\npotential outcomes are independent conditional on the shared state. We then\nprove an extension of a double machine learning (DML) theorem providing\nconditions for achieving efficient inference under shared-state interference.\nWe also instantiate our general theorem in several models of interest where it\nis possible to efficiently estimate the average direct effect (ADE) or global\naverage treatment effect (GATE).",
-      "pdf_url": "http://arxiv.org/pdf/2504.08836v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.08836v1",
-      "published": "2025-04-10",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Relaxing the Markov Requirements on Reinforcement Learning Under Weak Partial Ignorability",
-      "authors": [
-        "MaryLena Bleile"
-      ],
-      "abstract": "Incomplete data, confounding effects, and violations of the Markov property\nare interrelated problems which are ubiquitous in Reinforcement Learning\napplications. We introduce the concept of ``partial ignorabilty\" and leverage\nit to establish a novel convergence theorem for adaptive Reinforcement\nLearning. This theoretical result relaxes the Markov assumption on the\nstochastic process underlying conventional $Q$-learning, deploying a\ngeneralized form of the Robbins-Monro stochastic approximation theorem to\nestablish optimality. This result has clear downstream implications for most\nactive subfields of Reinforcement Learning, with clear paths for extension to\nthe field of Causal Inference.",
-      "pdf_url": "http://arxiv.org/pdf/2504.07722v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.07722v1",
-      "published": "2025-04-10",
-      "categories": [
-        "cs.LG",
-        "stat.ME",
-        "60G"
-      ]
-    },
-    {
-      "title": "Better Decisions through the Right Causal World Model",
-      "authors": [
-        "Elisabeth Dillies",
-        "Quentin Delfosse",
-        "Jannis Blüml",
-        "Raban Emunds",
-        "Florian Peter Busch",
-        "Kristian Kersting"
-      ],
-      "abstract": "Reinforcement learning (RL) agents have shown remarkable performances in\nvarious environments, where they can discover effective policies directly from\nsensory inputs. However, these agents often exploit spurious correlations in\nthe training data, resulting in brittle behaviours that fail to generalize to\nnew or slightly modified environments. To address this, we introduce the Causal\nObject-centric Model Extraction Tool (COMET), a novel algorithm designed to\nlearn the exact interpretable causal world models (CWMs). COMET first extracts\nobject-centric state descriptions from observations and identifies the\nenvironment's internal states related to the depicted objects' properties.\nUsing symbolic regression, it models object-centric transitions and derives\ncausal relationships governing object dynamics. COMET further incorporates\nlarge language models (LLMs) for semantic inference, annotating causal\nvariables to enhance interpretability.\n  By leveraging these capabilities, COMET constructs CWMs that align with the\ntrue causal structure of the environment, enabling agents to focus on\ntask-relevant features. The extracted CWMs mitigate the danger of shortcuts,\npermitting the development of RL systems capable of better planning and\ndecision-making across dynamic scenarios. Our results, validated in Atari\nenvironments such as Pong and Freeway, demonstrate the accuracy and robustness\nof COMET, highlighting its potential to bridge the gap between object-centric\nreasoning and causal inference in reinforcement learning.",
-      "pdf_url": "http://arxiv.org/pdf/2504.07257v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.07257v1",
-      "published": "2025-04-09",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Inference under Interference through Designed Markets",
-      "authors": [
-        "Evan Munro"
-      ],
-      "abstract": "Equilibrium effects make it challenging to evaluate the impact of an\nindividual-level treatment on outcomes in a single market, even with data from\na randomized trial. In some markets, however, a centralized mechanism allocates\ngoods and imposes useful structure on spillovers. For a class of strategy-proof\n\"cutoff\" mechanisms, we propose an estimator for global treatment effects using\nindividual-level data from one market, where treatment assignment is\nunconfounded. Algorithmically, we re-run a weighted and perturbed version of\nthe mechanism. Under a continuum market approximation, the estimator is\nasymptotically normal and semi-parametrically efficient. We extend this\napproach to learn spillover-aware treatment rules with vanishing asymptotic\nregret. Empirically, adjusting for equilibrium effects notably diminishes the\nestimated effect of information on inequality in the Chilean school system.",
-      "pdf_url": "http://arxiv.org/pdf/2504.07217v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.07217v1",
-      "published": "2025-04-09",
-      "categories": [
-        "econ.EM"
       ]
     }
   ]
