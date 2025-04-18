@@ -1,6 +1,75 @@
 {
-  "last_updated": "2025-04-17T00:51:07.069804",
+  "last_updated": "2025-04-18T00:50:29.448235",
   "papers": [
+    {
+      "title": "Cobra: Efficient Line Art COlorization with BRoAder References",
+      "authors": [
+        "Junhao Zhuang",
+        "Lingen Li",
+        "Xuan Ju",
+        "Zhaoyang Zhang",
+        "Chun Yuan",
+        "Ying Shan"
+      ],
+      "abstract": "The comic production industry requires reference-based line art colorization\nwith high accuracy, efficiency, contextual consistency, and flexible control. A\ncomic page often involves diverse characters, objects, and backgrounds, which\ncomplicates the coloring process. Despite advancements in diffusion models for\nimage generation, their application in line art colorization remains limited,\nfacing challenges related to handling extensive reference images,\ntime-consuming inference, and flexible control. We investigate the necessity of\nextensive contextual image guidance on the quality of line art colorization. To\naddress these challenges, we introduce Cobra, an efficient and versatile method\nthat supports color hints and utilizes over 200 reference images while\nmaintaining low latency. Central to Cobra is a Causal Sparse DiT architecture,\nwhich leverages specially designed positional encodings, causal sparse\nattention, and Key-Value Cache to effectively manage long-context references\nand ensure color identity consistency. Results demonstrate that Cobra achieves\naccurate line art colorization through extensive contextual reference,\nsignificantly enhancing inference speed and interactivity, thereby meeting\ncritical industrial demands. We release our codes and models on our project\npage: https://zhuang2002.github.io/Cobra/.",
+      "pdf_url": "http://arxiv.org/pdf/2504.12240v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.12240v1",
+      "published": "2025-04-16",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Semiparametric Causal Discovery and Inference with Invalid Instruments",
+      "authors": [
+        "Jing Zou",
+        "Wei Li",
+        "Wei Lin"
+      ],
+      "abstract": "Learning causal relationships among a set of variables, as encoded by a\ndirected acyclic graph, from observational data is complicated by the presence\nof unobserved confounders. Instrumental variables (IVs) are a popular remedy\nfor this issue, but most existing methods either assume the validity of all IVs\nor postulate a specific form of relationship, such as a linear model, between\nthe primary variables and the IVs. To overcome these limitations, we introduce\na partially linear structural equation model for causal discovery and inference\nthat accommodates potentially invalid IVs and allows for general dependence of\nthe primary variables on the IVs. We establish identification under this\nsemiparametric model by constructing surrogate valid IVs, and develop a\nfinite-sample procedure for estimating the causal structures and effects.\nTheoretically, we show that our procedure consistently learns the causal\nstructures, yields asymptotically normal estimates, and effectively controls\nthe false discovery rate in edge recovery. Simulation studies demonstrate the\nsuperiority of our method over existing competitors, and an application to\ninferring gene regulatory networks in Alzheimer's disease illustrates its\nusefulness.",
+      "pdf_url": "http://arxiv.org/pdf/2504.12085v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.12085v1",
+      "published": "2025-04-16",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causality-enhanced Decision-Making for Autonomous Mobile Robots in Dynamic Environments",
+      "authors": [
+        "Luca Castri",
+        "Gloria Beraldo",
+        "Nicola Bellotto"
+      ],
+      "abstract": "The growing integration of robots in shared environments -- such as\nwarehouses, shopping centres, and hospitals -- demands a deep understanding of\nthe underlying dynamics and human behaviours, including how, when, and where\nindividuals engage in various activities and interactions. This knowledge goes\nbeyond simple correlation studies and requires a more comprehensive causal\nanalysis. By leveraging causal inference to model cause-and-effect\nrelationships, we can better anticipate critical environmental factors and\nenable autonomous robots to plan and execute tasks more effectively. To this\nend, we propose a novel causality-based decision-making framework that reasons\nover a learned causal model to predict battery usage and human obstructions,\nunderstanding how these factors could influence robot task execution. Such\nreasoning framework assists the robot in deciding when and how to complete a\ngiven task. To achieve this, we developed also PeopleFlow, a new Gazebo-based\nsimulator designed to model context-sensitive human-robot spatial interactions\nin shared workspaces. PeopleFlow features realistic human and robot\ntrajectories influenced by contextual factors such as time, environment layout,\nand robot state, and can simulate a large number of agents. While the simulator\nis general-purpose, in this paper we focus on a warehouse-like environment as a\ncase study, where we conduct an extensive evaluation benchmarking our causal\napproach against a non-causal baseline. Our findings demonstrate the efficacy\nof the proposed solutions, highlighting how causal reasoning enables autonomous\nrobots to operate more efficiently and safely in dynamic environments shared\nwith humans.",
+      "pdf_url": "http://arxiv.org/pdf/2504.11901v2",
+      "arxiv_url": "http://arxiv.org/abs/2504.11901v2",
+      "published": "2025-04-16",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "A cautionary note for plasmode simulation studies in the setting of causal inference",
+      "authors": [
+        "Pamela A Shaw",
+        "Susan Gruber",
+        "Brian D. Williamson",
+        "Rishi Desai",
+        "Susan M. Shortreed",
+        "Chloe Krakauer",
+        "Jennifer C. Nelson",
+        "Mark J. van der Laan"
+      ],
+      "abstract": "Plasmode simulation has become an important tool for evaluating the operating\ncharacteristics of different statistical methods in complex settings, such as\npharmacoepidemiological studies of treatment effectiveness using electronic\nhealth records (EHR) data. These studies provide insight into how estimator\nperformance is impacted by challenges including rare events, small sample size,\netc., that can indicate which among a set of methods performs best in a\nreal-world dataset. Plasmode simulation combines data resampled from a\nreal-world dataset with synthetic data to generate a known truth for an\nestimand in realistic data. There are different potential plasmode strategies\ncurrently in use. We compare two popular plasmode simulation frameworks. We\nprovide numerical evidence and a theoretical result, which shows that one of\nthese frameworks can cause certain estimators to incorrectly appear overly\nbiased with lower than nominal confidence interval coverage. Detailed\nsimulation studies using both synthetic and real-world EHR data demonstrate\nthat these pitfalls remain at large sample sizes and when analyzing data from a\nrandomized controlled trial. We conclude with guidance for the choice of a\nplasmode simulation approach that maintains good theoretical properties to\nallow a fair evaluation of statistical methods while also maintaining the\ndesired similarity to real data.",
+      "pdf_url": "http://arxiv.org/pdf/2504.11740v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.11740v1",
+      "published": "2025-04-16",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Looking beyond the next token",
       "authors": [
@@ -110,69 +179,6 @@
         "stat.ME",
         "stat.TH",
         "62C10"
-      ]
-    },
-    {
-      "title": "A Two-Stage Interpretable Matching Framework for Causal Inference",
-      "authors": [
-        "Sahil Shikalgar",
-        "Md. Noor-E-Alam"
-      ],
-      "abstract": "Matching in causal inference from observational data aims to construct\ntreatment and control groups with similar distributions of covariates, thereby\nreducing confounding and ensuring an unbiased estimation of treatment effects.\nThis matched sample closely mimics a randomized controlled trial (RCT), thus\nimproving the quality of causal estimates. We introduce a novel Two-stage\nInterpretable Matching (TIM) framework for transparent and interpretable\ncovariate matching. In the first stage, we perform exact matching across all\navailable covariates. For treatment and control units without an exact match in\nthe first stage, we proceed to the second stage. Here, we iteratively refine\nthe matching process by removing the least significant confounder in each\niteration and attempting exact matching on the remaining covariates. We learn a\ndistance metric for the dropped covariates to quantify closeness to the\ntreatment unit(s) within the corresponding strata. We used these high- quality\nmatches to estimate the conditional average treatment effects (CATEs). To\nvalidate TIM, we conducted experiments on synthetic datasets with varying\nassociation structures and correlations. We assessed its performance by\nmeasuring bias in CATE estimation and evaluating multivariate overlap between\ntreatment and control groups before and after matching. Additionally, we apply\nTIM to a real-world healthcare dataset from the Centers for Disease Control and\nPrevention (CDC) to estimate the causal effect of high cholesterol on diabetes.\nOur results demonstrate that TIM improves CATE estimates, increases\nmultivariate overlap, and scales effectively to high-dimensional data, making\nit a robust tool for causal inference in observational data.",
-      "pdf_url": "http://arxiv.org/pdf/2504.09635v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.09635v1",
-      "published": "2025-04-13",
-      "categories": [
-        "cs.AI",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "PlugSelect: Pruning Channels with Plug-and-Play Flexibility for Electroencephalography-based Brain Computer Interface",
-      "authors": [
-        "Xue Yuan",
-        "Keren Shi",
-        "Ning Jiang",
-        "Jiayuan He"
-      ],
-      "abstract": "Automatic minimization and optimization of the number of the electrodes is\nessential for the practical application of electroencephalography (EEG)-based\nbrain computer interface (BCI). Previous methods typically require additional\ntraining costs or rely on prior knowledge assumptions. This study proposed a\nnovel channel pruning model, plug-and-select (PlugSelect), applicable across a\nbroad range of BCI paradigms with no additional training cost and plug-and-play\nfunctionality. It integrates gradients along the input path to globally infer\nthe causal relationships between input channels and outputs, and ranks the\ncontribution sequences to identify the most highly attributed channels. The\nresults showed that for three BCI paradigms, i.e., auditory attention decoding\n(AAD), motor imagery (MI), affective computation (AC), PlugSelect could reduce\nthe number of channels by at least half while effectively maintaining decoding\nperformance and improving efficiency. The outcome benefits the design of\nwearable EEG-based devices, facilitating the practical application of BCI\ntechnology.",
-      "pdf_url": "http://arxiv.org/pdf/2504.08486v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.08486v1",
-      "published": "2025-04-11",
-      "categories": [
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Enhanced Marginal Sensitivity Model and Bounds",
-      "authors": [
-        "Yi Zhang",
-        "Wenfu Xu",
-        "Zhiqiang Tan"
-      ],
-      "abstract": "Sensitivity analysis is important to assess the impact of unmeasured\nconfounding in causal inference from observational studies. The marginal\nsensitivity model (MSM) provides a useful approach in quantifying the influence\nof unmeasured confounders on treatment assignment and leading to tractable\nsharp bounds of common causal parameters. In this paper, to tighten MSM sharp\nbounds, we propose the enhanced MSM (eMSM) by incorporating another sensitivity\nconstraint that quantifies the influence of unmeasured confounders on outcomes.\nWe derive sharp population bounds of expected potential outcomes under eMSM,\nwhich are always narrower than the MSM sharp bounds in a simple and\ninterpretable way. We further discuss desirable specifications of sensitivity\nparameters related to the outcome sensitivity constraint, and obtain both\ndoubly robust point estimation and confidence intervals for the eMSM population\nbounds. The effectiveness of eMSM is also demonstrated numerically through two\nreal-data applications. Our development represents, for the first time, a\nsatisfactory extension of MSM to exploit both treatment and outcome sensitivity\nconstraints on unmeasured confounding.",
-      "pdf_url": "http://arxiv.org/pdf/2504.08301v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.08301v1",
-      "published": "2025-04-11",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Causal attribution with confidence",
-      "authors": [
-        "Ping Zhang",
-        "Ruoyu Wang",
-        "Wang Miao"
-      ],
-      "abstract": "To answer questions of \"causes of effects\", the probability of necessity is\nintroduced for assessing whether or not an observed outcome was caused by an\nearlier treatment. However, the statistical inference for probability of\nnecessity is understudied due to several difficulties, which hinders its\napplication in practice. The evaluation of the probability of necessity\ninvolves the joint distribution of potential outcomes, and thus it is in\ngeneral not point identified and one can at best obtain lower and upper bounds\neven in randomized experiments, unless certain monotonicity assumptions on\npotential outcomes are made. Moreover, these bounds are non-smooth functionals\nof the observed data distribution and standard estimation and inference methods\ncannot be directly applied. In this paper, we investigate the statistical\ninference for the probability of necessity in general situations where it may\nnot be point identified. We introduce a mild margin condition to tackle the\nnon-smoothness, under which the bounds become pathwise differentiable. We\nestablish the semiparametric efficiency theory and propose novel asymptotically\nefficient estimators of the bounds, and further construct confidence intervals\nfor the probability of necessity based on the proposed bounds estimators. The\nresultant confidence intervals are less conservative than existing methods and\ncan effectively make use of the observed covariates.",
-      "pdf_url": "http://arxiv.org/pdf/2504.08294v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.08294v1",
-      "published": "2025-04-11",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
