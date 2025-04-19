@@ -1,6 +1,42 @@
 {
-  "last_updated": "2025-04-18T00:50:29.448235",
+  "last_updated": "2025-04-19T00:48:22.589631",
   "papers": [
+    {
+      "title": "Covariate balancing estimation and model selection for difference-in-differences approach",
+      "authors": [
+        "Takamichi Baba",
+        "Yoshiyuki Ninomiya"
+      ],
+      "abstract": "In causal inference, remarkable progress has been made in\ndifference-in-differences (DID) approaches to estimate the average effect of\ntreatment on the treated (ATT). Of these, the semiparametric DID (SDID)\napproach incorporates a propensity score analysis into the DID setup. Supposing\nthat the ATT is a function of covariates, we estimate it by weighting the\ninverse of the propensity score. As one method to make the estimation robust to\nthe propensity score modeling, we incorporate covariate balancing. Then, by\nattentively constructing the moment conditions used in the covariate balancing,\nwe show that the proposed estimator has doubly robustness. In addition to the\nestimation, model selection is also addressed. In practice, covariate selection\nis an essential task in statistical analysis, but even in the basic setting of\nthe SDID approach, there are no reasonable information criteria. Therefore, we\nderive a model selection criterion as an asymptotically bias-corrected\nestimator of risk based on the loss function used in the SDID estimation. As a\nresult, we show that a penalty term is derived that is considerably different\nfrom almost twice the number of parameters that often appears in AIC-type\ninformation criteria. Numerical experiments show that the proposed method\nestimates the ATT robustly compared to the method using propensity scores given\nby the maximum likelihood estimation (MLE), and that the proposed criterion\nclearly reduces the risk targeted in the SDID approach compared to the\nintuitive generalization of the existing information criterion. In addition,\nreal data analysis confirms that there is a large difference between the\nresults of the proposed method and the existing method.",
+      "pdf_url": "http://arxiv.org/pdf/2504.13057v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.13057v1",
+      "published": "2025-04-17",
+      "categories": [
+        "stat.ME",
+        "62D20"
+      ]
+    },
+    {
+      "title": "Information Gain-Guided Causal Intervention for Autonomous Debiasing Large Language Models",
+      "authors": [
+        "Zhouhao Sun",
+        "Xiao Ding",
+        "Li Du",
+        "Yunpeng Xu",
+        "Yixuan Ma",
+        "Yang Zhao",
+        "Bing Qin",
+        "Ting Liu"
+      ],
+      "abstract": "Despite significant progress, recent studies indicate that current large\nlanguage models (LLMs) may still capture dataset biases and utilize them during\ninference, leading to the poor generalizability of LLMs. However, due to the\ndiversity of dataset biases and the insufficient nature of bias suppression\nbased on in-context learning, the effectiveness of previous prior\nknowledge-based debiasing methods and in-context learning based automatic\ndebiasing methods is limited. To address these challenges, we explore the\ncombination of causal mechanisms with information theory and propose an\ninformation gain-guided causal intervention debiasing (IGCIDB) framework. This\nframework first utilizes an information gain-guided causal intervention method\nto automatically and autonomously balance the distribution of\ninstruction-tuning dataset. Subsequently, it employs a standard supervised\nfine-tuning process to train LLMs on the debiased dataset. Experimental results\nshow that IGCIDB can effectively debias LLM to improve its generalizability\nacross different tasks.",
+      "pdf_url": "http://arxiv.org/pdf/2504.12898v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.12898v1",
+      "published": "2025-04-17",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Cobra: Efficient Line Art COlorization with BRoAder References",
       "authors": [
@@ -71,6 +107,29 @@
       ]
     },
     {
+      "title": "Reimagining Urban Science: Scaling Causal Inference with Large Language Models",
+      "authors": [
+        "Yutong Xia",
+        "Ao Qu",
+        "Yunhan Zheng",
+        "Yihong Tang",
+        "Dingyi Zhuang",
+        "Yuxuan Liang",
+        "Cathy Wu",
+        "Roger Zimmermann",
+        "Jinhua Zhao"
+      ],
+      "abstract": "Urban causal research is essential for understanding the complex dynamics of\ncities and informing evidence-based policies. However, it is challenged by the\ninefficiency and bias of hypothesis generation, barriers to multimodal data\ncomplexity, and the methodological fragility of causal experimentation. Recent\nadvances in large language models (LLMs) present an opportunity to rethink how\nurban causal analysis is conducted. This Perspective examines current urban\ncausal research by analyzing taxonomies that categorize research topics, data\nsources, and methodological approaches to identify structural gaps. We then\nintroduce an LLM-driven conceptual framework, AutoUrbanCI, composed of four\ndistinct modular agents responsible for hypothesis generation, data\nengineering, experiment design and execution, and results interpretation with\npolicy recommendations. We propose evaluation criteria for rigor and\ntransparency and reflect on implications for human-AI collaboration, equity,\nand accountability. We call for a new research agenda that embraces\nAI-augmented workflows not as replacements for human expertise but as tools to\nbroaden participation, improve reproducibility, and unlock more inclusive forms\nof urban causal reasoning.",
+      "pdf_url": "http://arxiv.org/pdf/2504.12345v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.12345v1",
+      "published": "2025-04-15",
+      "categories": [
+        "cs.CL",
+        "cs.CY",
+        "cs.MA"
+      ]
+    },
+    {
       "title": "Looking beyond the next token",
       "authors": [
         "Abitha Thankaraj",
@@ -129,56 +188,6 @@
         "stat.TH",
         "62",
         "G.3"
-      ]
-    },
-    {
-      "title": "A conceptual synthesis of causal assumptions for causal discovery and inference",
-      "authors": [
-        "Hannah E. Correia"
-      ],
-      "abstract": "This work presents a conceptual synthesis of causal discovery and inference\nframeworks, with a focus on how foundational assumptions -- causal sufficiency,\ncausal faithfulness, and the causal Markov condition -- are formalized and\noperationalized across methodological traditions. Through structured tables and\ncomparative summaries, I map core assumptions, tasks, and analytical choices\nfrom multiple causal frameworks, highlighting their connections and\ndifferences. The synthesis provides practical guidance for researchers\ndesigning causal studies, especially in settings where observational or\nexperimental constraints challenge standard approaches. This guide spans all\nphases of causal analysis, including question formulation, formalization of\nbackground knowledge, selection of appropriate frameworks, choice of study\ndesign or algorithm, and interpretation. It is intended as a tool to support\nrigorous causal reasoning across diverse empirical domains.",
-      "pdf_url": "http://arxiv.org/pdf/2504.11035v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.11035v1",
-      "published": "2025-04-15",
-      "categories": [
-        "stat.ME",
-        "q-bio.QM",
-        "stat.AP",
-        "stat.OT",
-        "62A01"
-      ]
-    },
-    {
-      "title": "Can LLMs Leverage Observational Data? Towards Data-Driven Causal Discovery with LLMs",
-      "authors": [
-        "Yuni Susanti",
-        "Michael Färber"
-      ],
-      "abstract": "Causal discovery traditionally relies on statistical methods applied to\nobservational data, often requiring large datasets and assumptions about\nunderlying causal structures. Recent advancements in Large Language Models\n(LLMs) have introduced new possibilities for causal discovery by providing\ndomain expert knowledge. However, it remains unclear whether LLMs can\neffectively process observational data for causal discovery. In this work, we\nexplore the potential of LLMs for data-driven causal discovery by integrating\nobservational data for LLM-based reasoning. Specifically, we examine whether\nLLMs can effectively utilize observational data through two prompting\nstrategies: pairwise prompting and breadth first search (BFS)-based prompting.\nIn both approaches, we incorporate the observational data directly into the\nprompt to assess LLMs' ability to infer causal relationships from such data.\nExperiments on benchmark datasets show that incorporating observational data\nenhances causal discovery, boosting F1 scores by up to 0.11 point using both\npairwise and BFS LLM-based prompting, while outperforming traditional\nstatistical causal discovery baseline by up to 0.52 points. Our findings\nhighlight the potential and limitations of LLMs for data-driven causal\ndiscovery, demonstrating their ability to move beyond textual metadata and\neffectively interpret and utilize observational data for more informed causal\nreasoning. Our studies lays the groundwork for future advancements toward fully\nLLM-driven causal discovery.",
-      "pdf_url": "http://arxiv.org/pdf/2504.10936v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.10936v1",
-      "published": "2025-04-15",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Bayesian analysis of regression discontinuity designs with heterogeneous treatment effects",
-      "authors": [
-        "Kevin Tao",
-        "Y. Samuel Wang",
-        "David Ruppert"
-      ],
-      "abstract": "Regression Discontinuity Design (RDD) is a popular framework for estimating a\ncausal effect in settings where treatment is assigned if an observed covariate\nexceeds a fixed threshold. We consider estimation and inference in the common\nsetting where the sample consists of multiple known sub-populations with\npotentially heterogeneous treatment effects. In the applied literature, it is\ncommon to account for heterogeneity by either fitting a parametric model or\nconsidering each sub-population separately. In contrast, we develop a Bayesian\nhierarchical model using Gaussian process regression which allows for\nnon-parametric regression while borrowing information across sub-populations.\nWe derive the posterior distribution, prove posterior consistency, and develop\na Metropolis-Hastings within Gibbs sampling algorithm. In extensive\nsimulations, we show that the proposed procedure outperforms existing methods\nin both estimation and inferential tasks. Finally, we apply our procedure to\nU.S. Senate election data and discover an incumbent party advantage which is\nheterogeneous over different time periods.",
-      "pdf_url": "http://arxiv.org/pdf/2504.10652v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.10652v1",
-      "published": "2025-04-14",
-      "categories": [
-        "math.ST",
-        "stat.ME",
-        "stat.TH",
-        "62C10"
       ]
     }
   ]
