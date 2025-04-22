@@ -1,6 +1,114 @@
 {
-  "last_updated": "2025-04-21T00:54:27.799165",
+  "last_updated": "2025-04-22T00:51:46.779684",
   "papers": [
+    {
+      "title": "Dynamic Regularized CBDT: Variance-Calibrated Causal Boosting for Interpretable Heterogeneous Treatment Effects",
+      "authors": [
+        "Yichen Liu"
+      ],
+      "abstract": "Heterogeneous treatment effect estimation in high-stakes applications demands\nmodels that simultaneously optimize precision, interpretability, and\ncalibration. Many existing tree-based causal inference techniques, however,\nexhibit high estimation errors when applied to observational data because they\nstruggle to capture complex interactions among factors and rely on static\nregularization schemes. In this work, we propose Dynamic Regularized Causal\nBoosted Decision Trees (CBDT), a novel framework that integrates variance\nregularization and average treatment effect calibration into the loss function\nof gradient boosted decision trees. Our approach dynamically updates the\nregularization parameters using gradient statistics to better balance the\nbias-variance tradeoff. Extensive experiments on standard benchmark datasets\nand real-world clinical data demonstrate that the proposed method significantly\nimproves estimation accuracy while maintaining reliable coverage of true\ntreatment effects. In an intensive care unit patient triage study, the method\nsuccessfully identified clinically actionable rules and achieved high accuracy\nin treatment effect estimation. The results validate that dynamic\nregularization can effectively tighten error bounds and enhance both predictive\nperformance and model interpretability.",
+      "pdf_url": "http://arxiv.org/pdf/2504.13733v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.13733v1",
+      "published": "2025-04-18",
+      "categories": [
+        "cs.LG",
+        "stat.ML",
+        "68T05, 62H12, 90C30",
+        "I.2.6; G.3; I.5.1"
+      ]
+    },
+    {
+      "title": "Inverse Inference on Cooperative Control of Networked Dynamical Systems",
+      "authors": [
+        "Yushan Li",
+        "Jianping He",
+        "Dimos V. Dimarogonas"
+      ],
+      "abstract": "Recent years have witnessed the rapid advancement of understanding the\ncontrol mechanism of networked dynamical systems (NDSs), which are governed by\ncomponents such as nodal dynamics and topology. This paper reveals that the\ncritical components in continuous-time state feedback cooperative control of\nNDSs can be inferred merely from discrete observations. In particular, we\nadvocate a bi-level inference framework to estimate the global closed-loop\nsystem and extract the components, respectively. The novelty lies in bridging\nthe gap from discrete observations to the continuous-time model and effectively\ndecoupling the concerned components. Specifically, in the first level, we\ndesign a causality-based estimator for the discrete-time closed-loop system\nmatrix, which can achieve asymptotically unbiased performance when the NDS is\nstable. In the second level, we introduce a matrix logarithm based method to\nrecover the continuous-time counterpart matrix, providing new sampling period\nguarantees and establishing the recovery error bound. By utilizing graph\nproperties of the NDS, we develop least square based procedures to decouple the\nconcerned components with up to a scalar ambiguity. Furthermore, we employ\ninverse optimal control techniques to reconstruct the objective function\ndriving the control process, deriving necessary conditions for the solutions.\nNumerical simulations demonstrate the effectiveness of the proposed method.",
+      "pdf_url": "http://arxiv.org/pdf/2504.13701v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.13701v1",
+      "published": "2025-04-18",
+      "categories": [
+        "eess.SY",
+        "cs.MA",
+        "cs.SY"
+      ]
+    },
+    {
+      "title": "MR-MAGIC: Robust Causal Inference Using Many Weak Genetic Interactions",
+      "authors": [
+        "Di Zhang",
+        "Minhao Yao",
+        "Zhonghua Liu",
+        "Baoluo Sun"
+      ],
+      "abstract": "Mendelian randomization (MR) studies commonly use genetic variants as\ninstrumental variables to estimate causal effects of exposures on outcomes.\nHowever, the presence of invalid instruments-even when numerous-can lead to\nbiased causal estimates. We propose a novel identification strategy that\nremains valid even when all candidate instruments are invalid by leveraging\ngenetic interactions that collectively explain substantial exposure variation.\nRecognizing that individual interaction effects may be weak, we develop\nMR-MAGIC (Mendelian Randomization with MAny weak Genetic Interactions for\nCausality), a robust method that simultaneously addresses instrument invalidity\nand improves estimation efficiency. MR-MAGIC provides consistent and\nasymptotically normal estimates under a many-weak-interactions asymptotic\nframework. Comprehensive simulations and applications to UK Biobank data\ndemonstrate that MR-MAGIC outperforms conventional MR methods in practice,\noffering reliable causal inference when standard approaches fail.",
+      "pdf_url": "http://arxiv.org/pdf/2504.13565v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.13565v1",
+      "published": "2025-04-18",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Bayesian Model Averaging in Causal Instrumental Variable Models",
+      "authors": [
+        "Gregor Steiner",
+        "Mark Steel"
+      ],
+      "abstract": "Instrumental variables are a popular tool to infer causal effects under\nunobserved confounding, but choosing suitable instruments is challenging in\npractice. We propose gIVBMA, a Bayesian model averaging procedure that\naddresses this challenge by averaging across different sets of instrumental\nvariables and covariates in a structural equation model. Our approach extends\nprevious work through a scale-invariant prior structure and accommodates\nnon-Gaussian outcomes and treatments, offering greater flexibility than\nexisting methods. The computational strategy uses conditional Bayes factors to\nupdate models separately for the outcome and treatments. We prove that this\nmodel selection procedure is consistent. By explicitly accounting for model\nuncertainty, gIVBMA allows instruments and covariates to switch roles and\nprovides robustness against invalid instruments. In simulation experiments,\ngIVBMA outperforms current state-of-the-art methods. We demonstrate its\nusefulness in two empirical applications: the effects of malaria and\ninstitutions on income per capita and the returns to schooling. A software\nimplementation of gIVBMA is available in Julia.",
+      "pdf_url": "http://arxiv.org/pdf/2504.13520v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.13520v1",
+      "published": "2025-04-18",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Eco-efficiency as a Catalyst for Citizen Co-production: Evidence from Chinese Cities",
+      "authors": [
+        "Ruiyu Zhang",
+        "Lin Nie",
+        "Ce Zhao",
+        "Xin Zhao"
+      ],
+      "abstract": "We examine whether higher eco-efficiency encourages local governments to\nco-produce environmental solutions with citizens. Using Chinese provincial data\nand advanced textual analysis, we find that high eco-efficiency strongly\npredicts more collaborative responses to environmental complaints. Causal\ninference suggests that crossing a threshold of eco-efficiency increases\nco-production probabilities by about 24 percentage points, indicating\neco-efficiency's potential as a catalyst for participatory environmental\ngovernance.",
+      "pdf_url": "http://arxiv.org/pdf/2504.13290v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.13290v1",
+      "published": "2025-04-17",
+      "categories": [
+        "econ.GN",
+        "q-fin.EC"
+      ]
+    },
+    {
+      "title": "Causal-Copilot: An Autonomous Causal Analysis Agent",
+      "authors": [
+        "Xinyue Wang",
+        "Kun Zhou",
+        "Wenyi Wu",
+        "Har Simrat Singh",
+        "Fang Nan",
+        "Songyao Jin",
+        "Aryan Philip",
+        "Saloni Patnaik",
+        "Hou Zhu",
+        "Shivam Singh",
+        "Parjanya Prashant",
+        "Qian Shen",
+        "Biwei Huang"
+      ],
+      "abstract": "Causal analysis plays a foundational role in scientific discovery and\nreliable decision-making, yet it remains largely inaccessible to domain experts\ndue to its conceptual and algorithmic complexity. This disconnect between\ncausal methodology and practical usability presents a dual challenge: domain\nexperts are unable to leverage recent advances in causal learning, while causal\nresearchers lack broad, real-world deployment to test and refine their methods.\nTo address this, we introduce Causal-Copilot, an autonomous agent that\noperationalizes expert-level causal analysis within a large language model\nframework. Causal-Copilot automates the full pipeline of causal analysis for\nboth tabular and time-series data -- including causal discovery, causal\ninference, algorithm selection, hyperparameter optimization, result\ninterpretation, and generation of actionable insights. It supports interactive\nrefinement through natural language, lowering the barrier for non-specialists\nwhile preserving methodological rigor. By integrating over 20 state-of-the-art\ncausal analysis techniques, our system fosters a virtuous cycle -- expanding\naccess to advanced causal methods for domain experts while generating rich,\nreal-world applications that inform and advance causal theory. Empirical\nevaluations demonstrate that Causal-Copilot achieves superior performance\ncompared to existing baselines, offering a reliable, scalable, and extensible\nsolution that bridges the gap between theoretical sophistication and real-world\napplicability in causal analysis.",
+      "pdf_url": "http://arxiv.org/pdf/2504.13263v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.13263v1",
+      "published": "2025-04-17",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Covariate balancing estimation and model selection for difference-in-differences approach",
       "authors": [
@@ -38,6 +146,24 @@
       ]
     },
     {
+      "title": "The heterogeneous causal effects of the EU's Cohesion Fund",
+      "authors": [
+        "Angelos Alexopoulos",
+        "Ilias Kostarakos",
+        "Christos Mylonakis",
+        "Petros Varthalitis"
+      ],
+      "abstract": "This paper quantifies the causal effect of cohesion policy on EU regional\noutput and investment focusing on one of its least studied instruments, i.e.,\nthe Cohesion Fund (CF). We employ modern causal inference methods to estimate\nnot only the local average treatment effect but also its time-varying and\nheterogeneous effects across regions. Utilizing this method, we propose a novel\nframework for evaluating the effectiveness of CF as an EU cohesion policy tool.\nSpecifically, we estimate the time varying distribution of the CF's causal\neffects across EU regions and derive key distribution metrics useful for policy\nevaluation. Our analysis shows that relying solely on average treatment effects\nmasks significant heterogeneity and can lead to misleading conclusions about\nthe effectiveness of the EU's cohesion policy. We find that the impact of the\nCF is frontloaded, peaking within the first seven years after a region's\ninitial inclusion in the program. The distribution of the effects during this\nfirst seven-year cycle of funding is right skewed with relatively thick tails.\nThis indicates positive effects but unevenly distributed across regions.\nMoreover, the magnitude of the CF effect is inversely related to a region's\nrelative position in the initial distribution of output, i.e., relatively\npoorer recipient regions experience higher effects compared to relatively\nricher regions. Finally, we find a non-linear relationship with diminishing\nreturns, whereby the impact of CF declines as the ratio of CF funds received to\na region's gross value added (GVA) increases.",
+      "pdf_url": "http://arxiv.org/pdf/2504.13223v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.13223v1",
+      "published": "2025-04-17",
+      "categories": [
+        "econ.GN",
+        "econ.EM",
+        "q-fin.EC"
+      ]
+    },
+    {
       "title": "Cobra: Efficient Line Art COlorization with BRoAder References",
       "authors": [
         "Junhao Zhuang",
@@ -53,141 +179,6 @@
       "published": "2025-04-16",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Semiparametric Causal Discovery and Inference with Invalid Instruments",
-      "authors": [
-        "Jing Zou",
-        "Wei Li",
-        "Wei Lin"
-      ],
-      "abstract": "Learning causal relationships among a set of variables, as encoded by a\ndirected acyclic graph, from observational data is complicated by the presence\nof unobserved confounders. Instrumental variables (IVs) are a popular remedy\nfor this issue, but most existing methods either assume the validity of all IVs\nor postulate a specific form of relationship, such as a linear model, between\nthe primary variables and the IVs. To overcome these limitations, we introduce\na partially linear structural equation model for causal discovery and inference\nthat accommodates potentially invalid IVs and allows for general dependence of\nthe primary variables on the IVs. We establish identification under this\nsemiparametric model by constructing surrogate valid IVs, and develop a\nfinite-sample procedure for estimating the causal structures and effects.\nTheoretically, we show that our procedure consistently learns the causal\nstructures, yields asymptotically normal estimates, and effectively controls\nthe false discovery rate in edge recovery. Simulation studies demonstrate the\nsuperiority of our method over existing competitors, and an application to\ninferring gene regulatory networks in Alzheimer's disease illustrates its\nusefulness.",
-      "pdf_url": "http://arxiv.org/pdf/2504.12085v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.12085v1",
-      "published": "2025-04-16",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causality-enhanced Decision-Making for Autonomous Mobile Robots in Dynamic Environments",
-      "authors": [
-        "Luca Castri",
-        "Gloria Beraldo",
-        "Nicola Bellotto"
-      ],
-      "abstract": "The growing integration of robots in shared environments -- such as\nwarehouses, shopping centres, and hospitals -- demands a deep understanding of\nthe underlying dynamics and human behaviours, including how, when, and where\nindividuals engage in various activities and interactions. This knowledge goes\nbeyond simple correlation studies and requires a more comprehensive causal\nanalysis. By leveraging causal inference to model cause-and-effect\nrelationships, we can better anticipate critical environmental factors and\nenable autonomous robots to plan and execute tasks more effectively. To this\nend, we propose a novel causality-based decision-making framework that reasons\nover a learned causal model to predict battery usage and human obstructions,\nunderstanding how these factors could influence robot task execution. Such\nreasoning framework assists the robot in deciding when and how to complete a\ngiven task. To achieve this, we developed also PeopleFlow, a new Gazebo-based\nsimulator designed to model context-sensitive human-robot spatial interactions\nin shared workspaces. PeopleFlow features realistic human and robot\ntrajectories influenced by contextual factors such as time, environment layout,\nand robot state, and can simulate a large number of agents. While the simulator\nis general-purpose, in this paper we focus on a warehouse-like environment as a\ncase study, where we conduct an extensive evaluation benchmarking our causal\napproach against a non-causal baseline. Our findings demonstrate the efficacy\nof the proposed solutions, highlighting how causal reasoning enables autonomous\nrobots to operate more efficiently and safely in dynamic environments shared\nwith humans.",
-      "pdf_url": "http://arxiv.org/pdf/2504.11901v2",
-      "arxiv_url": "http://arxiv.org/abs/2504.11901v2",
-      "published": "2025-04-16",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A cautionary note for plasmode simulation studies in the setting of causal inference",
-      "authors": [
-        "Pamela A Shaw",
-        "Susan Gruber",
-        "Brian D. Williamson",
-        "Rishi Desai",
-        "Susan M. Shortreed",
-        "Chloe Krakauer",
-        "Jennifer C. Nelson",
-        "Mark J. van der Laan"
-      ],
-      "abstract": "Plasmode simulation has become an important tool for evaluating the operating\ncharacteristics of different statistical methods in complex settings, such as\npharmacoepidemiological studies of treatment effectiveness using electronic\nhealth records (EHR) data. These studies provide insight into how estimator\nperformance is impacted by challenges including rare events, small sample size,\netc., that can indicate which among a set of methods performs best in a\nreal-world dataset. Plasmode simulation combines data resampled from a\nreal-world dataset with synthetic data to generate a known truth for an\nestimand in realistic data. There are different potential plasmode strategies\ncurrently in use. We compare two popular plasmode simulation frameworks. We\nprovide numerical evidence and a theoretical result, which shows that one of\nthese frameworks can cause certain estimators to incorrectly appear overly\nbiased with lower than nominal confidence interval coverage. Detailed\nsimulation studies using both synthetic and real-world EHR data demonstrate\nthat these pitfalls remain at large sample sizes and when analyzing data from a\nrandomized controlled trial. We conclude with guidance for the choice of a\nplasmode simulation approach that maintains good theoretical properties to\nallow a fair evaluation of statistical methods while also maintaining the\ndesired similarity to real data.",
-      "pdf_url": "http://arxiv.org/pdf/2504.11740v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.11740v1",
-      "published": "2025-04-16",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Reimagining Urban Science: Scaling Causal Inference with Large Language Models",
-      "authors": [
-        "Yutong Xia",
-        "Ao Qu",
-        "Yunhan Zheng",
-        "Yihong Tang",
-        "Dingyi Zhuang",
-        "Yuxuan Liang",
-        "Cathy Wu",
-        "Roger Zimmermann",
-        "Jinhua Zhao"
-      ],
-      "abstract": "Urban causal research is essential for understanding the complex dynamics of\ncities and informing evidence-based policies. However, it is challenged by the\ninefficiency and bias of hypothesis generation, barriers to multimodal data\ncomplexity, and the methodological fragility of causal experimentation. Recent\nadvances in large language models (LLMs) present an opportunity to rethink how\nurban causal analysis is conducted. This Perspective examines current urban\ncausal research by analyzing taxonomies that categorize research topics, data\nsources, and methodological approaches to identify structural gaps. We then\nintroduce an LLM-driven conceptual framework, AutoUrbanCI, composed of four\ndistinct modular agents responsible for hypothesis generation, data\nengineering, experiment design and execution, and results interpretation with\npolicy recommendations. We propose evaluation criteria for rigor and\ntransparency and reflect on implications for human-AI collaboration, equity,\nand accountability. We call for a new research agenda that embraces\nAI-augmented workflows not as replacements for human expertise but as tools to\nbroaden participation, improve reproducibility, and unlock more inclusive forms\nof urban causal reasoning.",
-      "pdf_url": "http://arxiv.org/pdf/2504.12345v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.12345v1",
-      "published": "2025-04-15",
-      "categories": [
-        "cs.CL",
-        "cs.CY",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "Looking beyond the next token",
-      "authors": [
-        "Abitha Thankaraj",
-        "Yiding Jiang",
-        "J. Zico Kolter",
-        "Yonatan Bisk"
-      ],
-      "abstract": "The structure of causal language model training assumes that each token can\nbe accurately predicted from the previous context. This contrasts with humans'\nnatural writing and reasoning process, where goals are typically known before\nthe exact argument or phrasings. While this mismatch has been well studied in\nthe literature, the working assumption has been that architectural changes are\nneeded to address this mismatch. We argue that rearranging and processing the\ntraining data sequences can allow models to more accurately imitate the true\ndata-generating process, and does not require any other changes to the\narchitecture or training infrastructure. We demonstrate that this technique,\nTrelawney, and the inference algorithms derived from it allow us to improve\nperformance on several key benchmarks that span planning, algorithmic\nreasoning, and story generation tasks. Finally, our method naturally enables\nthe generation of long-term goals at no additional cost. We investigate how\nusing the model's goal-generation capability can further improve planning and\nreasoning. Additionally, we believe Trelawney could potentially open doors to\nnew capabilities beyond the current language modeling paradigm.",
-      "pdf_url": "http://arxiv.org/pdf/2504.11336v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.11336v1",
-      "published": "2025-04-15",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Clinically Interpretable Survival Risk Stratification in Head and Neck Cancer Using Bayesian Networks and Markov Blankets",
-      "authors": [
-        "Keyur D. Shah",
-        "Ibrahim Chamseddine",
-        "Xiaohan Yuan",
-        "Sibo Tian",
-        "Richard Qiu",
-        "Jun Zhou",
-        "Anees Dhabaan",
-        "Hania Al-Hallaq",
-        "David S. Yu",
-        "Harald Paganetti",
-        "Xiaofeng Yang"
-      ],
-      "abstract": "Purpose: To identify a clinically interpretable subset of survival-relevant\nfeatures in HN cancer using Bayesian Network (BN) and evaluate its prognostic\nand causal utility. Methods and Materials: We used the RADCURE dataset,\nconsisting of 3,346 patients with H&N cancer treated with definitive\n(chemo)radiotherapy. A probabilistic BN was constructed to model dependencies\namong clinical, anatomical, and treatment variables. The Markov Blanket (MB) of\ntwo-year survival (SVy2) was extracted and used to train a logistic regression\nmodel. After excluding incomplete cases, a temporal split yielded a train/test\n(2,174/820) dataset using 2007 as the cutoff year. Model performance was\nassessed using area under the ROC curve (AUC), C-index, and Kaplan-Meier (KM)\nsurvival stratification. Model fit was further evaluated using a log-likelihood\nratio (LLR) test. Causal inference was performed using do-calculus\ninterventions on MB variables. Results: The MB of SVy2 included 6 clinically\nrelevant features: ECOG performance status, T-stage, HPV status, disease site,\nthe primary gross tumor volume (GTVp), and treatment modality. The model\nachieved an AUC of 0.65 and C-index of 0.78 on the test dataset, significantly\nstratifying patients into high- and low-risk groups (log-rank p < 0.01). Model\nfit was further supported by a log-likelihood ratio of 70.32 (p < 0.01).\nSubgroup analyses revealed strong performance in HPV-negative (AUC = 0.69,\nC-index = 0.76), T4 (AUC = 0.69, C-index = 0.80), and large-GTV (AUC = 0.67,\nC-index = 0.75) cohorts, each showing significant KM separation. Causal\nanalysis further supported the positive survival impact of ECOG 0, HPV-positive\nstatus, and chemoradiation. Conclusions: A compact, MB-derived BN model can\nrobustly stratify survival risk in HN cancer. The model enables explainable\nprognostication and supports individualized decision-making across key clinical\nsubgroups.",
-      "pdf_url": "http://arxiv.org/pdf/2504.11188v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.11188v1",
-      "published": "2025-04-15",
-      "categories": [
-        "physics.med-ph"
-      ]
-    },
-    {
-      "title": "On relative universality, regression operator, and conditional independence",
-      "authors": [
-        "Bing Li",
-        "Ben Jones",
-        "Andreas Artemiou"
-      ],
-      "abstract": "The notion of relative universality with respect to a {\\sigma}-field was\nintroduced to establish the unbiasedness and Fisher consistency of an estimator\nin nonlinear sufficient dimension reduction. However, there is a gap in the\nproof of this result in the existing literature. The existing definition of\nrelative universality seems to be too strong for the proof to be valid. In this\nnote we modify the definition of relative universality using the concept of\n\\k{o}-measurability, and rigorously establish the mentioned unbiasedness and\nFisher consistency. The significance of this result is beyond its original\ncontext of sufficient dimension reduction, because relative universality allows\nus to use the regression operator to fully characterize conditional\nindependence, a crucially important statistical relation that sits at the core\nof many areas and methodologies in statistics and machine learning, such as\ndimension reduction, graphical models, probability embedding, causal inference,\nand Bayesian estimation.",
-      "pdf_url": "http://arxiv.org/pdf/2504.11044v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.11044v1",
-      "published": "2025-04-15",
-      "categories": [
-        "math.ST",
-        "stat.ME",
-        "stat.ML",
-        "stat.TH",
-        "62",
-        "G.3"
       ]
     }
   ]
