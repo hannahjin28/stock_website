@@ -1,6 +1,42 @@
 {
-  "last_updated": "2025-04-22T00:51:46.779684",
+  "last_updated": "2025-04-23T00:51:38.657666",
   "papers": [
+    {
+      "title": "Causal DAG Summarization (Full Version)",
+      "authors": [
+        "Anna Zeng",
+        "Michael Cafarella",
+        "Batya Kenig",
+        "Markos Markakis",
+        "Brit Youngmann",
+        "Babak Salimi"
+      ],
+      "abstract": "Causal inference aids researchers in discovering cause-and-effect\nrelationships, leading to scientific insights. Accurate causal estimation\nrequires identifying confounding variables to avoid false discoveries. Pearl's\ncausal model uses causal DAGs to identify confounding variables, but incorrect\nDAGs can lead to unreliable causal conclusions. However, for high dimensional\ndata, the causal DAGs are often complex beyond human verifiability. Graph\nsummarization is a logical next step, but current methods for general-purpose\ngraph summarization are inadequate for causal DAG summarization. This paper\naddresses these challenges by proposing a causal graph summarization objective\nthat balances graph simplification for better understanding while retaining\nessential causal information for reliable inference. We develop an efficient\ngreedy algorithm and show that summary causal DAGs can be directly used for\ninference and are more robust to misspecification of assumptions, enhancing\nrobustness for causal inference. Experimenting with six real-life datasets, we\ncompared our algorithm to three existing solutions, showing its effectiveness\nin handling high-dimensional data and its ability to generate summary DAGs that\nensure both reliable causal inference and robustness against misspecifications.",
+      "pdf_url": "http://arxiv.org/pdf/2504.14937v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.14937v1",
+      "published": "2025-04-21",
+      "categories": [
+        "cs.LG",
+        "cs.DB",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causality for Natural Language Processing",
+      "authors": [
+        "Zhijing Jin"
+      ],
+      "abstract": "Causal reasoning is a cornerstone of human intelligence and a critical\ncapability for artificial systems aiming to achieve advanced understanding and\ndecision-making. This thesis delves into various dimensions of causal reasoning\nand understanding in large language models (LLMs). It encompasses a series of\nstudies that explore the causal inference skills of LLMs, the mechanisms behind\ntheir performance, and the implications of causal and anticausal learning for\nnatural language processing (NLP) tasks. Additionally, it investigates the\napplication of causal reasoning in text-based computational social science,\nspecifically focusing on political decision-making and the evaluation of\nscientific impact through citations. Through novel datasets, benchmark tasks,\nand methodological frameworks, this work identifies key challenges and\nopportunities to improve the causal capabilities of LLMs, providing a\ncomprehensive foundation for future research in this evolving field.",
+      "pdf_url": "http://arxiv.org/pdf/2504.14530v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.14530v1",
+      "published": "2025-04-20",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Dynamic Regularized CBDT: Variance-Calibrated Causal Boosting for Interpretable Heterogeneous Treatment Effects",
       "authors": [
@@ -101,9 +137,9 @@
         "Qian Shen",
         "Biwei Huang"
       ],
-      "abstract": "Causal analysis plays a foundational role in scientific discovery and\nreliable decision-making, yet it remains largely inaccessible to domain experts\ndue to its conceptual and algorithmic complexity. This disconnect between\ncausal methodology and practical usability presents a dual challenge: domain\nexperts are unable to leverage recent advances in causal learning, while causal\nresearchers lack broad, real-world deployment to test and refine their methods.\nTo address this, we introduce Causal-Copilot, an autonomous agent that\noperationalizes expert-level causal analysis within a large language model\nframework. Causal-Copilot automates the full pipeline of causal analysis for\nboth tabular and time-series data -- including causal discovery, causal\ninference, algorithm selection, hyperparameter optimization, result\ninterpretation, and generation of actionable insights. It supports interactive\nrefinement through natural language, lowering the barrier for non-specialists\nwhile preserving methodological rigor. By integrating over 20 state-of-the-art\ncausal analysis techniques, our system fosters a virtuous cycle -- expanding\naccess to advanced causal methods for domain experts while generating rich,\nreal-world applications that inform and advance causal theory. Empirical\nevaluations demonstrate that Causal-Copilot achieves superior performance\ncompared to existing baselines, offering a reliable, scalable, and extensible\nsolution that bridges the gap between theoretical sophistication and real-world\napplicability in causal analysis.",
-      "pdf_url": "http://arxiv.org/pdf/2504.13263v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.13263v1",
+      "abstract": "Causal analysis plays a foundational role in scientific discovery and\nreliable decision-making, yet it remains largely inaccessible to domain experts\ndue to its conceptual and algorithmic complexity. This disconnect between\ncausal methodology and practical usability presents a dual challenge: domain\nexperts are unable to leverage recent advances in causal learning, while causal\nresearchers lack broad, real-world deployment to test and refine their methods.\nTo address this, we introduce Causal-Copilot, an autonomous agent that\noperationalizes expert-level causal analysis within a large language model\nframework. Causal-Copilot automates the full pipeline of causal analysis for\nboth tabular and time-series data -- including causal discovery, causal\ninference, algorithm selection, hyperparameter optimization, result\ninterpretation, and generation of actionable insights. It supports interactive\nrefinement through natural language, lowering the barrier for non-specialists\nwhile preserving methodological rigor. By integrating over 20 state-of-the-art\ncausal analysis techniques, our system fosters a virtuous cycle -- expanding\naccess to advanced causal methods for domain experts while generating rich,\nreal-world applications that inform and advance causal theory. Empirical\nevaluations demonstrate that Causal-Copilot achieves superior performance\ncompared to existing baselines, offering a reliable, scalable, and extensible\nsolution that bridges the gap between theoretical sophistication and real-world\napplicability in causal analysis. A live interactive demo of Causal-Copilot is\navailable at https://causalcopilot.com/.",
+      "pdf_url": "http://arxiv.org/pdf/2504.13263v2",
+      "arxiv_url": "http://arxiv.org/abs/2504.13263v2",
       "published": "2025-04-17",
       "categories": [
         "cs.AI"
@@ -143,42 +179,6 @@
       "categories": [
         "cs.CL",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "The heterogeneous causal effects of the EU's Cohesion Fund",
-      "authors": [
-        "Angelos Alexopoulos",
-        "Ilias Kostarakos",
-        "Christos Mylonakis",
-        "Petros Varthalitis"
-      ],
-      "abstract": "This paper quantifies the causal effect of cohesion policy on EU regional\noutput and investment focusing on one of its least studied instruments, i.e.,\nthe Cohesion Fund (CF). We employ modern causal inference methods to estimate\nnot only the local average treatment effect but also its time-varying and\nheterogeneous effects across regions. Utilizing this method, we propose a novel\nframework for evaluating the effectiveness of CF as an EU cohesion policy tool.\nSpecifically, we estimate the time varying distribution of the CF's causal\neffects across EU regions and derive key distribution metrics useful for policy\nevaluation. Our analysis shows that relying solely on average treatment effects\nmasks significant heterogeneity and can lead to misleading conclusions about\nthe effectiveness of the EU's cohesion policy. We find that the impact of the\nCF is frontloaded, peaking within the first seven years after a region's\ninitial inclusion in the program. The distribution of the effects during this\nfirst seven-year cycle of funding is right skewed with relatively thick tails.\nThis indicates positive effects but unevenly distributed across regions.\nMoreover, the magnitude of the CF effect is inversely related to a region's\nrelative position in the initial distribution of output, i.e., relatively\npoorer recipient regions experience higher effects compared to relatively\nricher regions. Finally, we find a non-linear relationship with diminishing\nreturns, whereby the impact of CF declines as the ratio of CF funds received to\na region's gross value added (GVA) increases.",
-      "pdf_url": "http://arxiv.org/pdf/2504.13223v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.13223v1",
-      "published": "2025-04-17",
-      "categories": [
-        "econ.GN",
-        "econ.EM",
-        "q-fin.EC"
-      ]
-    },
-    {
-      "title": "Cobra: Efficient Line Art COlorization with BRoAder References",
-      "authors": [
-        "Junhao Zhuang",
-        "Lingen Li",
-        "Xuan Ju",
-        "Zhaoyang Zhang",
-        "Chun Yuan",
-        "Ying Shan"
-      ],
-      "abstract": "The comic production industry requires reference-based line art colorization\nwith high accuracy, efficiency, contextual consistency, and flexible control. A\ncomic page often involves diverse characters, objects, and backgrounds, which\ncomplicates the coloring process. Despite advancements in diffusion models for\nimage generation, their application in line art colorization remains limited,\nfacing challenges related to handling extensive reference images,\ntime-consuming inference, and flexible control. We investigate the necessity of\nextensive contextual image guidance on the quality of line art colorization. To\naddress these challenges, we introduce Cobra, an efficient and versatile method\nthat supports color hints and utilizes over 200 reference images while\nmaintaining low latency. Central to Cobra is a Causal Sparse DiT architecture,\nwhich leverages specially designed positional encodings, causal sparse\nattention, and Key-Value Cache to effectively manage long-context references\nand ensure color identity consistency. Results demonstrate that Cobra achieves\naccurate line art colorization through extensive contextual reference,\nsignificantly enhancing inference speed and interactivity, thereby meeting\ncritical industrial demands. We release our codes and models on our project\npage: https://zhuang2002.github.io/Cobra/.",
-      "pdf_url": "http://arxiv.org/pdf/2504.12240v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.12240v1",
-      "published": "2025-04-16",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
