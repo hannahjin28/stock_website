@@ -1,6 +1,45 @@
 {
-  "last_updated": "2025-04-24T00:51:57.757559",
+  "last_updated": "2025-04-25T00:52:10.738755",
   "papers": [
+    {
+      "title": "Using Causal Inference to Test Systems with Hidden and Interacting Variables: An Evaluative Case Study",
+      "authors": [
+        "Michael Foster",
+        "Robert M. Hierons",
+        "Donghwan Shin",
+        "Neil Walkinshaw",
+        "Christopher Wild"
+      ],
+      "abstract": "Software systems with large parameter spaces, nondeterminism and high\ncomputational cost are challenging to test. Recently, software testing\ntechniques based on causal inference have been successfully applied to systems\nthat exhibit such characteristics, including scientific models and autonomous\ndriving systems. One significant limitation is that these are restricted to\ntest properties where all of the variables involved can be observed and where\nthere are no interactions between variables. In practice, this is rarely\nguaranteed; the logging infrastructure may not be available to record all of\nthe necessary runtime variable values, and it can often be the case that an\noutput of the system can be affected by complex interactions between variables.\nTo address this, we leverage two additional concepts from causal inference,\nnamely effect modification and instrumental variable methods. We build these\nconcepts into an existing causal testing tool and conduct an evaluative case\nstudy which uses the concepts to test three system-level requirements of CARLA,\na high-fidelity driving simulator widely used in autonomous vehicle development\nand testing. The results show that we can obtain reliable test outcomes without\nrequiring large amounts of highly controlled test data or instrumentation of\nthe code, even when variables interact with each other and are not recorded in\nthe test data.",
+      "pdf_url": "http://arxiv.org/pdf/2504.16526v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.16526v1",
+      "published": "2025-04-23",
+      "categories": [
+        "cs.SE"
+      ]
+    },
+    {
+      "title": "Robust Causal Inference for EHR-based Studies of Point Exposures with Missingness in Eligibility Criteria",
+      "authors": [
+        "Luke Benz",
+        "Rajarshi Mukherjee",
+        "Rui Wang",
+        "David Arterburn",
+        "Heidi Fischer",
+        "Catherine Lee",
+        "Susan M. Shortreed",
+        "Sebastien Haneuse",
+        "Alexander W. Levis"
+      ],
+      "abstract": "Missingness in variables that define study eligibility criteria is a seldom\naddressed challenge in electronic health record (EHR)-based settings. It is\ntypically the case that patients with incomplete eligibility information are\nexcluded from analysis without consideration of (implicit) assumptions that are\nbeing made, leaving study conclusions subject to potential selection bias. In\nan effort to ascertain eligibility for more patients, researchers may look back\nfurther in time prior to study baseline, and in using outdated values of\neligibility-defining covariates may inappropriately be including individuals\nwho, unbeknownst to the researcher, fail to meet eligibility at baseline. To\nthe best of our knowledge, however, very little work has been done to mitigate\nthese concerns. We propose a robust and efficient estimator of the causal\naverage treatment effect on the treated, defined in the study eligible\npopulation, in cohort studies where eligibility-defining covariates are missing\nat random. The approach facilitates the use of flexible machine-learning\nstrategies for component nuisance functions while maintaining appropriate\nconvergence rates for valid asymptotic inference. EHR data from Kaiser\nPermanente are used as motivation as well as a basis for extensive simulations\nthat verify robustness properties under various degrees of model\nmisspecification. The data are also used to demonstrate the use of the method\nto analyze differences between two common bariatric surgical interventions for\nlong-term weight and glycemic outcomes among a cohort of severely obese\npatients with type II diabetes mellitus.",
+      "pdf_url": "http://arxiv.org/pdf/2504.16230v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.16230v1",
+      "published": "2025-04-22",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
     {
       "title": "Consistent Causal Inference of Group Effects in Non-Targeted Trials with Finitely Many Effect Levels",
       "authors": [
@@ -137,48 +176,6 @@
         "econ.EM",
         "math.ST",
         "stat.TH"
-      ]
-    },
-    {
-      "title": "Eco-efficiency as a Catalyst for Citizen Co-production: Evidence from Chinese Cities",
-      "authors": [
-        "Ruiyu Zhang",
-        "Lin Nie",
-        "Ce Zhao",
-        "Xin Zhao"
-      ],
-      "abstract": "We examine whether higher eco-efficiency encourages local governments to\nco-produce environmental solutions with citizens. Using Chinese provincial data\nand advanced textual analysis, we find that high eco-efficiency strongly\npredicts more collaborative responses to environmental complaints. Causal\ninference suggests that crossing a threshold of eco-efficiency increases\nco-production probabilities by about 24 percentage points, indicating\neco-efficiency's potential as a catalyst for participatory environmental\ngovernance.",
-      "pdf_url": "http://arxiv.org/pdf/2504.13290v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.13290v1",
-      "published": "2025-04-17",
-      "categories": [
-        "econ.GN",
-        "q-fin.EC"
-      ]
-    },
-    {
-      "title": "Causal-Copilot: An Autonomous Causal Analysis Agent",
-      "authors": [
-        "Xinyue Wang",
-        "Kun Zhou",
-        "Wenyi Wu",
-        "Har Simrat Singh",
-        "Fang Nan",
-        "Songyao Jin",
-        "Aryan Philip",
-        "Saloni Patnaik",
-        "Hou Zhu",
-        "Shivam Singh",
-        "Parjanya Prashant",
-        "Qian Shen",
-        "Biwei Huang"
-      ],
-      "abstract": "Causal analysis plays a foundational role in scientific discovery and\nreliable decision-making, yet it remains largely inaccessible to domain experts\ndue to its conceptual and algorithmic complexity. This disconnect between\ncausal methodology and practical usability presents a dual challenge: domain\nexperts are unable to leverage recent advances in causal learning, while causal\nresearchers lack broad, real-world deployment to test and refine their methods.\nTo address this, we introduce Causal-Copilot, an autonomous agent that\noperationalizes expert-level causal analysis within a large language model\nframework. Causal-Copilot automates the full pipeline of causal analysis for\nboth tabular and time-series data -- including causal discovery, causal\ninference, algorithm selection, hyperparameter optimization, result\ninterpretation, and generation of actionable insights. It supports interactive\nrefinement through natural language, lowering the barrier for non-specialists\nwhile preserving methodological rigor. By integrating over 20 state-of-the-art\ncausal analysis techniques, our system fosters a virtuous cycle -- expanding\naccess to advanced causal methods for domain experts while generating rich,\nreal-world applications that inform and advance causal theory. Empirical\nevaluations demonstrate that Causal-Copilot achieves superior performance\ncompared to existing baselines, offering a reliable, scalable, and extensible\nsolution that bridges the gap between theoretical sophistication and real-world\napplicability in causal analysis. A live interactive demo of Causal-Copilot is\navailable at https://causalcopilot.com/.",
-      "pdf_url": "http://arxiv.org/pdf/2504.13263v2",
-      "arxiv_url": "http://arxiv.org/abs/2504.13263v2",
-      "published": "2025-04-17",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]
