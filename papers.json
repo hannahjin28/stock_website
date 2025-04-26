@@ -1,6 +1,62 @@
 {
-  "last_updated": "2025-04-25T00:52:10.738755",
+  "last_updated": "2025-04-26T00:50:10.332136",
   "papers": [
+    {
+      "title": "ExOSITO: Explainable Off-Policy Learning with Side Information for Intensive Care Unit Blood Test Orders",
+      "authors": [
+        "Zongliang Ji",
+        "Andre Carlos Kajdacsy-Balla Amaral",
+        "Anna Goldenberg",
+        "Rahul G. Krishnan"
+      ],
+      "abstract": "Ordering a minimal subset of lab tests for patients in the intensive care\nunit (ICU) can be challenging. Care teams must balance between ensuring the\navailability of the right information and reducing the clinical burden and\ncosts associated with each lab test order. Most in-patient settings experience\nfrequent over-ordering of lab tests, but are now aiming to reduce this burden\non both hospital resources and the environment. This paper develops a novel\nmethod that combines off-policy learning with privileged information to\nidentify the optimal set of ICU lab tests to order. Our approach, EXplainable\nOff-policy learning with Side Information for ICU blood Test Orders (ExOSITO)\ncreates an interpretable assistive tool for clinicians to order lab tests by\nconsidering both the observed and predicted future status of each patient. We\npose this problem as a causal bandit trained using offline data and a reward\nfunction derived from clinically-approved rules; we introduce a novel learning\nframework that integrates clinical knowledge with observational data to bridge\nthe gap between the optimal and logging policies. The learned policy function\nprovides interpretable clinical information and reduces costs without omitting\nany vital lab orders, outperforming both a physician's policy and prior\napproaches to this practical problem.",
+      "pdf_url": "http://arxiv.org/pdf/2504.17277v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.17277v1",
+      "published": "2025-04-24",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Target trial emulation without matching: a more efficient approach for evaluating vaccine effectiveness using observational data",
+      "authors": [
+        "Emily Wu",
+        "Elizabeth Rogawski McQuade",
+        "Mats Stensrud",
+        "Razieh Nabi",
+        "David Benkeser"
+      ],
+      "abstract": "Real-world vaccine effectiveness has increasingly been studied using\nmatching-based approaches, particularly in observational cohort studies\nfollowing the target trial emulation framework. Although matching is appealing\nin its simplicity, it suffers important limitations in terms of clarity of the\ntarget estimand and the efficiency or precision with which is it estimated.\nScientifically justified causal estimands of vaccine effectiveness may be\ndifficult to define owing to the fact that vaccine uptake varies over calendar\ntime when infection dynamics may also be rapidly changing. We propose a causal\nestimand of vaccine effectiveness that summarizes vaccine effectiveness over\ncalendar time, similar to how vaccine efficacy is summarized in a randomized\ncontrolled trial. We describe the identification of our estimand, including its\nunderlying assumptions, and propose simple-to-implement estimators based on two\nhazard regression models. We apply our proposed estimator in simulations and in\na study to assess the effectiveness of the Pfizer-BioNTech COVID-19 vaccine to\nprevent infections with SARS-CoV2 in children 5-11 years old. In both settings,\nwe find that our proposed estimator yields similar scientific inferences while\nproviding significant efficiency gains over commonly used matching-based\nestimators.",
+      "pdf_url": "http://arxiv.org/pdf/2504.17104v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.17104v1",
+      "published": "2025-04-23",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Distilling semantically aware orders for autoregressive image generation",
+      "authors": [
+        "Rishav Pramanik",
+        "Antoine Poupon",
+        "Juan A. Rodriguez",
+        "Masih Aminbeidokhti",
+        "David Vazquez",
+        "Christopher Pal",
+        "Zhaozheng Yin",
+        "Marco Pedersoli"
+      ],
+      "abstract": "Autoregressive patch-based image generation has recently shown competitive\nresults in terms of image quality and scalability. It can also be easily\nintegrated and scaled within Vision-Language models. Nevertheless,\nautoregressive models require a defined order for patch generation. While a\nnatural order based on the dictation of the words makes sense for text\ngeneration, there is no inherent generation order that exists for image\ngeneration. Traditionally, a raster-scan order (from top-left to bottom-right)\nguides autoregressive image generation models. In this paper, we argue that\nthis order is suboptimal, as it fails to respect the causality of the image\ncontent: for instance, when conditioned on a visual description of a sunset, an\nautoregressive model may generate clouds before the sun, even though the color\nof clouds should depend on the color of the sun and not the inverse. In this\nwork, we show that first by training a model to generate patches in\nany-given-order, we can infer both the content and the location (order) of each\npatch during generation. Secondly, we use these extracted orders to finetune\nthe any-given-order model to produce better-quality images. Through our\nexperiments, we show on two datasets that this new generation method produces\nbetter images than the traditional raster-scan approach, with similar training\ncosts and no extra annotations.",
+      "pdf_url": "http://arxiv.org/pdf/2504.17069v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.17069v1",
+      "published": "2025-04-23",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Using Causal Inference to Test Systems with Hidden and Interacting Variables: An Evaluative Case Study",
       "authors": [
@@ -126,56 +182,6 @@
         "stat.ML",
         "68T05, 62H12, 90C30",
         "I.2.6; G.3; I.5.1"
-      ]
-    },
-    {
-      "title": "Inverse Inference on Cooperative Control of Networked Dynamical Systems",
-      "authors": [
-        "Yushan Li",
-        "Jianping He",
-        "Dimos V. Dimarogonas"
-      ],
-      "abstract": "Recent years have witnessed the rapid advancement of understanding the\ncontrol mechanism of networked dynamical systems (NDSs), which are governed by\ncomponents such as nodal dynamics and topology. This paper reveals that the\ncritical components in continuous-time state feedback cooperative control of\nNDSs can be inferred merely from discrete observations. In particular, we\nadvocate a bi-level inference framework to estimate the global closed-loop\nsystem and extract the components, respectively. The novelty lies in bridging\nthe gap from discrete observations to the continuous-time model and effectively\ndecoupling the concerned components. Specifically, in the first level, we\ndesign a causality-based estimator for the discrete-time closed-loop system\nmatrix, which can achieve asymptotically unbiased performance when the NDS is\nstable. In the second level, we introduce a matrix logarithm based method to\nrecover the continuous-time counterpart matrix, providing new sampling period\nguarantees and establishing the recovery error bound. By utilizing graph\nproperties of the NDS, we develop least square based procedures to decouple the\nconcerned components with up to a scalar ambiguity. Furthermore, we employ\ninverse optimal control techniques to reconstruct the objective function\ndriving the control process, deriving necessary conditions for the solutions.\nNumerical simulations demonstrate the effectiveness of the proposed method.",
-      "pdf_url": "http://arxiv.org/pdf/2504.13701v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.13701v1",
-      "published": "2025-04-18",
-      "categories": [
-        "eess.SY",
-        "cs.MA",
-        "cs.SY"
-      ]
-    },
-    {
-      "title": "MR-MAGIC: Robust Causal Inference Using Many Weak Genetic Interactions",
-      "authors": [
-        "Di Zhang",
-        "Minhao Yao",
-        "Zhonghua Liu",
-        "Baoluo Sun"
-      ],
-      "abstract": "Mendelian randomization (MR) studies commonly use genetic variants as\ninstrumental variables to estimate causal effects of exposures on outcomes.\nHowever, the presence of invalid instruments-even when numerous-can lead to\nbiased causal estimates. We propose a novel identification strategy that\nremains valid even when all candidate instruments are invalid by leveraging\ngenetic interactions that collectively explain substantial exposure variation.\nRecognizing that individual interaction effects may be weak, we develop\nMR-MAGIC (Mendelian Randomization with MAny weak Genetic Interactions for\nCausality), a robust method that simultaneously addresses instrument invalidity\nand improves estimation efficiency. MR-MAGIC provides consistent and\nasymptotically normal estimates under a many-weak-interactions asymptotic\nframework. Comprehensive simulations and applications to UK Biobank data\ndemonstrate that MR-MAGIC outperforms conventional MR methods in practice,\noffering reliable causal inference when standard approaches fail.",
-      "pdf_url": "http://arxiv.org/pdf/2504.13565v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.13565v1",
-      "published": "2025-04-18",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Bayesian Model Averaging in Causal Instrumental Variable Models",
-      "authors": [
-        "Gregor Steiner",
-        "Mark Steel"
-      ],
-      "abstract": "Instrumental variables are a popular tool to infer causal effects under\nunobserved confounding, but choosing suitable instruments is challenging in\npractice. We propose gIVBMA, a Bayesian model averaging procedure that\naddresses this challenge by averaging across different sets of instrumental\nvariables and covariates in a structural equation model. Our approach extends\nprevious work through a scale-invariant prior structure and accommodates\nnon-Gaussian outcomes and treatments, offering greater flexibility than\nexisting methods. The computational strategy uses conditional Bayes factors to\nupdate models separately for the outcome and treatments. We prove that this\nmodel selection procedure is consistent. By explicitly accounting for model\nuncertainty, gIVBMA allows instruments and covariates to switch roles and\nprovides robustness against invalid instruments. In simulation experiments,\ngIVBMA outperforms current state-of-the-art methods. We demonstrate its\nusefulness in two empirical applications: the effects of malaria and\ninstitutions on income per capita and the returns to schooling. A software\nimplementation of gIVBMA is available in Julia.",
-      "pdf_url": "http://arxiv.org/pdf/2504.13520v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.13520v1",
-      "published": "2025-04-18",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "math.ST",
-        "stat.TH"
       ]
     }
   ]
