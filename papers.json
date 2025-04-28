@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-04-27T00:55:26.745465",
+  "last_updated": "2025-04-28T00:53:53.983900",
   "papers": [
     {
       "title": "ExOSITO: Explainable Off-Policy Learning with Side Information for Intensive Care Unit Blood Test Orders",
@@ -67,8 +67,8 @@
         "Christopher Wild"
       ],
       "abstract": "Software systems with large parameter spaces, nondeterminism and high\ncomputational cost are challenging to test. Recently, software testing\ntechniques based on causal inference have been successfully applied to systems\nthat exhibit such characteristics, including scientific models and autonomous\ndriving systems. One significant limitation is that these are restricted to\ntest properties where all of the variables involved can be observed and where\nthere are no interactions between variables. In practice, this is rarely\nguaranteed; the logging infrastructure may not be available to record all of\nthe necessary runtime variable values, and it can often be the case that an\noutput of the system can be affected by complex interactions between variables.\nTo address this, we leverage two additional concepts from causal inference,\nnamely effect modification and instrumental variable methods. We build these\nconcepts into an existing causal testing tool and conduct an evaluative case\nstudy which uses the concepts to test three system-level requirements of CARLA,\na high-fidelity driving simulator widely used in autonomous vehicle development\nand testing. The results show that we can obtain reliable test outcomes without\nrequiring large amounts of highly controlled test data or instrumentation of\nthe code, even when variables interact with each other and are not recorded in\nthe test data.",
-      "pdf_url": "http://arxiv.org/pdf/2504.16526v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.16526v1",
+      "pdf_url": "http://arxiv.org/pdf/2504.16526v2",
+      "arxiv_url": "http://arxiv.org/abs/2504.16526v2",
       "published": "2025-04-23",
       "categories": [
         "cs.SE"
