@@ -1,6 +1,38 @@
 {
-  "last_updated": "2025-04-28T00:53:53.983900",
+  "last_updated": "2025-04-29T00:52:05.912836",
   "papers": [
+    {
+      "title": "Causality-Driven Neural Network Repair: Challenges and Opportunities",
+      "authors": [
+        "Fatemeh Vares",
+        "Brittany Johnson"
+      ],
+      "abstract": "Deep Neural Networks (DNNs) often rely on statistical correlations rather\nthan causal reasoning, limiting their robustness and interpretability. While\ntesting methods can identify failures, effective debugging and repair remain\nchallenging. This paper explores causal inference as an approach primarily for\nDNN repair, leveraging causal debugging, counterfactual analysis, and\nstructural causal models (SCMs) to identify and correct failures. We discuss in\nwhat ways these techniques support fairness, adversarial robustness, and\nbackdoor mitigation by providing targeted interventions. Finally, we discuss\nkey challenges, including scalability, generalization, and computational\nefficiency, and outline future directions for integrating causality-driven\ninterventions to enhance DNN reliability.",
+      "pdf_url": "http://arxiv.org/pdf/2504.17946v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.17946v1",
+      "published": "2025-04-24",
+      "categories": [
+        "cs.LG",
+        "D.2.2; I.2.6"
+      ]
+    },
+    {
+      "title": "Fast Autoregressive Models for Continuous Latent Generation",
+      "authors": [
+        "Tiankai Hang",
+        "Jianmin Bao",
+        "Fangyun Wei",
+        "Dong Chen"
+      ],
+      "abstract": "Autoregressive models have demonstrated remarkable success in sequential data\ngeneration, particularly in NLP, but their extension to continuous-domain image\ngeneration presents significant challenges. Recent work, the masked\nautoregressive model (MAR), bypasses quantization by modeling per-token\ndistributions in continuous spaces using a diffusion head but suffers from slow\ninference due to the high computational cost of the iterative denoising\nprocess. To address this, we propose the Fast AutoRegressive model (FAR), a\nnovel framework that replaces MAR's diffusion head with a lightweight shortcut\nhead, enabling efficient few-step sampling while preserving autoregressive\nprinciples. Additionally, FAR seamlessly integrates with causal Transformers,\nextending them from discrete to continuous token generation without requiring\narchitectural modifications. Experiments demonstrate that FAR achieves\n$2.3\\times$ faster inference than MAR while maintaining competitive FID and IS\nscores. This work establishes the first efficient autoregressive paradigm for\nhigh-fidelity continuous-space image generation, bridging the critical gap\nbetween quality and scalability in visual autoregressive modeling.",
+      "pdf_url": "http://arxiv.org/pdf/2504.18391v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.18391v1",
+      "published": "2025-04-24",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
     {
       "title": "ExOSITO: Explainable Off-Policy Learning with Side Information for Intensive Care Unit Blood Test Orders",
       "authors": [
@@ -150,38 +182,6 @@
         "cs.LG",
         "cs.DB",
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Causality for Natural Language Processing",
-      "authors": [
-        "Zhijing Jin"
-      ],
-      "abstract": "Causal reasoning is a cornerstone of human intelligence and a critical\ncapability for artificial systems aiming to achieve advanced understanding and\ndecision-making. This thesis delves into various dimensions of causal reasoning\nand understanding in large language models (LLMs). It encompasses a series of\nstudies that explore the causal inference skills of LLMs, the mechanisms behind\ntheir performance, and the implications of causal and anticausal learning for\nnatural language processing (NLP) tasks. Additionally, it investigates the\napplication of causal reasoning in text-based computational social science,\nspecifically focusing on political decision-making and the evaluation of\nscientific impact through citations. Through novel datasets, benchmark tasks,\nand methodological frameworks, this work identifies key challenges and\nopportunities to improve the causal capabilities of LLMs, providing a\ncomprehensive foundation for future research in this evolving field.",
-      "pdf_url": "http://arxiv.org/pdf/2504.14530v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.14530v1",
-      "published": "2025-04-20",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CY",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Dynamic Regularized CBDT: Variance-Calibrated Causal Boosting for Interpretable Heterogeneous Treatment Effects",
-      "authors": [
-        "Yichen Liu"
-      ],
-      "abstract": "Heterogeneous treatment effect estimation in high-stakes applications demands\nmodels that simultaneously optimize precision, interpretability, and\ncalibration. Many existing tree-based causal inference techniques, however,\nexhibit high estimation errors when applied to observational data because they\nstruggle to capture complex interactions among factors and rely on static\nregularization schemes. In this work, we propose Dynamic Regularized Causal\nBoosted Decision Trees (CBDT), a novel framework that integrates variance\nregularization and average treatment effect calibration into the loss function\nof gradient boosted decision trees. Our approach dynamically updates the\nregularization parameters using gradient statistics to better balance the\nbias-variance tradeoff. Extensive experiments on standard benchmark datasets\nand real-world clinical data demonstrate that the proposed method significantly\nimproves estimation accuracy while maintaining reliable coverage of true\ntreatment effects. In an intensive care unit patient triage study, the method\nsuccessfully identified clinically actionable rules and achieved high accuracy\nin treatment effect estimation. The results validate that dynamic\nregularization can effectively tighten error bounds and enhance both predictive\nperformance and model interpretability.",
-      "pdf_url": "http://arxiv.org/pdf/2504.13733v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.13733v1",
-      "published": "2025-04-18",
-      "categories": [
-        "cs.LG",
-        "stat.ML",
-        "68T05, 62H12, 90C30",
-        "I.2.6; G.3; I.5.1"
       ]
     }
   ]
