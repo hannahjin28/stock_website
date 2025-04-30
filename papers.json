@@ -1,6 +1,53 @@
 {
-  "last_updated": "2025-04-29T00:52:05.912836",
+  "last_updated": "2025-04-30T00:52:36.484927",
   "papers": [
+    {
+      "title": "Inference with few treated units",
+      "authors": [
+        "Luis Alvarez",
+        "Bruno Ferman",
+        "Kaspar Wüthrich"
+      ],
+      "abstract": "In many causal inference applications, only one or a few units (or clusters\nof units) are treated. An important challenge in such settings is that standard\ninference methods that rely on asymptotic theory may be unreliable, even when\nthe total number of units is large. This survey reviews and categorizes\ninference methods that are designed to accommodate few treated units,\nconsidering both cross-sectional and panel data methods. We discuss trade-offs\nand connections between different approaches. In doing so, we propose slight\nmodifications to improve the finite-sample validity of some methods, and we\nalso provide theoretical justifications for existing heuristic approaches that\nhave been proposed in the literature.",
+      "pdf_url": "http://arxiv.org/pdf/2504.19841v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.19841v1",
+      "published": "2025-04-28",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Selective randomization inference for subgroup effects with continuous biomarkers",
+      "authors": [
+        "Zijun Gao"
+      ],
+      "abstract": "Randomization tests are a popular method for testing causal effects in\nclinical trials with finite-sample validity. In the presence of heterogeneous\ntreatment effects, it is often of interest to select a subgroup that benefits\nfrom the treatment, frequently by choosing a cutoff for a continuous biomarker.\nHowever, selecting the cutoff and testing the effect on the same data may fail\nto control the type I error. To address this, we propose using \"self-contained\"\nmethods for selecting biomarker-based subgroups (cutoffs) and applying\nconditioning to construct valid randomization tests for the subgroup effect.\nCompared to sample-splitting-based randomization tests, our proposal is fully\ndeterministic, uses the entire selected subgroup for inference, and is thus\nmore powerful. Moreover, we demonstrate scenarios where our procedure achieves\npower comparable to a randomization test with oracle knowledge of the\nbenefiting subgroup. In addition, our procedure is as computationally efficient\nas standard randomization tests. Empirically, we illustrate the effectiveness\nof our method on simulated datasets and the German Breast Cancer Study.",
+      "pdf_url": "http://arxiv.org/pdf/2504.19380v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.19380v1",
+      "published": "2025-04-27",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "ReLU integral probability metric and its applications",
+      "authors": [
+        "Yuha Park",
+        "Kunwoong Kim",
+        "Insung Kong",
+        "Yongdai Kim"
+      ],
+      "abstract": "We propose a parametric integral probability metric (IPM) to measure the\ndiscrepancy between two probability measures. The proposed IPM leverages a\nspecific parametric family of discriminators, such as single-node neural\nnetworks with ReLU activation, to effectively distinguish between\ndistributions, making it applicable in high-dimensional settings. By optimizing\nover the parameters of the chosen discriminator class, the proposed IPM\ndemonstrates that its estimators have good convergence rates and can serve as a\nsurrogate for other IPMs that use smooth nonparametric discriminator classes.\nWe present an efficient algorithm for practical computation, offering a simple\nimplementation and requiring fewer hyperparameters. Furthermore, we explore its\napplications in various tasks, such as covariate balancing for causal inference\nand fair representation learning. Across such diverse applications, we\ndemonstrate that the proposed IPM provides strong theoretical guarantees, and\nempirical experiments show that it achieves comparable or even superior\nperformance to other methods.",
+      "pdf_url": "http://arxiv.org/pdf/2504.18897v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.18897v1",
+      "published": "2025-04-26",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
     {
       "title": "Causality-Driven Neural Network Repair: Challenges and Opportunities",
       "authors": [
@@ -126,62 +173,6 @@
       "categories": [
         "stat.ME",
         "stat.AP"
-      ]
-    },
-    {
-      "title": "Consistent Causal Inference of Group Effects in Non-Targeted Trials with Finitely Many Effect Levels",
-      "authors": [
-        "Georgios Mavroudeas",
-        "Malik Magdon-Ismail",
-        "Kristin P. Bennett",
-        "Jason Kuruzovich"
-      ],
-      "abstract": "A treatment may be appropriate for some group (the ``sick\" group) on whom it\nhas a positive effect, but it can also have a detrimental effect on subjects\nfrom another group (the ``healthy\" group). In a non-targeted trial both sick\nand healthy subjects may be treated, producing heterogeneous effects within the\ntreated group. Inferring the correct treatment effect on the sick population is\nthen difficult, because the effects on the different groups get tangled. We\npropose an efficient nonparametric approach to estimating the group effects,\ncalled {\\bf PCM} (pre-cluster and merge). We prove its asymptotic consistency\nin a general setting and show, on synthetic data, more than a 10x improvement\nin accuracy over existing state-of-the-art. Our approach applies more generally\nto consistent estimation of functions with a finite range.",
-      "pdf_url": "http://arxiv.org/pdf/2504.15854v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.15854v1",
-      "published": "2025-04-22",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Exploring Cognitive and Aesthetic Causality for Multimodal Aspect-Based Sentiment Analysis",
-      "authors": [
-        "Luwei Xiao",
-        "Rui Mao",
-        "Shuai Zhao",
-        "Qika Lin",
-        "Yanhao Jia",
-        "Liang He",
-        "Erik Cambria"
-      ],
-      "abstract": "Multimodal aspect-based sentiment classification (MASC) is an emerging task\ndue to an increase in user-generated multimodal content on social platforms,\naimed at predicting sentiment polarity toward specific aspect targets (i.e.,\nentities or attributes explicitly mentioned in text-image pairs). Despite\nextensive efforts and significant achievements in existing MASC, substantial\ngaps remain in understanding fine-grained visual content and the cognitive\nrationales derived from semantic content and impressions (cognitive\ninterpretations of emotions evoked by image content). In this study, we present\nChimera: a cognitive and aesthetic sentiment causality understanding framework\nto derive fine-grained holistic features of aspects and infer the fundamental\ndrivers of sentiment expression from both semantic perspectives and\naffective-cognitive resonance (the synergistic effect between emotional\nresponses and cognitive interpretations). Specifically, this framework first\nincorporates visual patch features for patch-word alignment. Meanwhile, it\nextracts coarse-grained visual features (e.g., overall image representation)\nand fine-grained visual regions (e.g., aspect-related regions) and translates\nthem into corresponding textual descriptions (e.g., facial, aesthetic).\nFinally, we leverage the sentimental causes and impressions generated by a\nlarge language model (LLM) to enhance the model's awareness of sentimental cues\nevoked by semantic content and affective-cognitive resonance. Experimental\nresults on standard MASC datasets demonstrate the effectiveness of the proposed\nmodel, which also exhibits greater flexibility to MASC compared to LLMs such as\nGPT-4o. We have publicly released the complete implementation and dataset at\nhttps://github.com/Xillv/Chimera",
-      "pdf_url": "http://arxiv.org/pdf/2504.15848v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.15848v1",
-      "published": "2025-04-22",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Causal DAG Summarization (Full Version)",
-      "authors": [
-        "Anna Zeng",
-        "Michael Cafarella",
-        "Batya Kenig",
-        "Markos Markakis",
-        "Brit Youngmann",
-        "Babak Salimi"
-      ],
-      "abstract": "Causal inference aids researchers in discovering cause-and-effect\nrelationships, leading to scientific insights. Accurate causal estimation\nrequires identifying confounding variables to avoid false discoveries. Pearl's\ncausal model uses causal DAGs to identify confounding variables, but incorrect\nDAGs can lead to unreliable causal conclusions. However, for high dimensional\ndata, the causal DAGs are often complex beyond human verifiability. Graph\nsummarization is a logical next step, but current methods for general-purpose\ngraph summarization are inadequate for causal DAG summarization. This paper\naddresses these challenges by proposing a causal graph summarization objective\nthat balances graph simplification for better understanding while retaining\nessential causal information for reliable inference. We develop an efficient\ngreedy algorithm and show that summary causal DAGs can be directly used for\ninference and are more robust to misspecification of assumptions, enhancing\nrobustness for causal inference. Experimenting with six real-life datasets, we\ncompared our algorithm to three existing solutions, showing its effectiveness\nin handling high-dimensional data and its ability to generate summary DAGs that\nensure both reliable causal inference and robustness against misspecifications.",
-      "pdf_url": "http://arxiv.org/pdf/2504.14937v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.14937v1",
-      "published": "2025-04-21",
-      "categories": [
-        "cs.LG",
-        "cs.DB",
-        "stat.ME"
       ]
     }
   ]
