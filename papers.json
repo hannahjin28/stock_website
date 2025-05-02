@@ -1,6 +1,87 @@
 {
-  "last_updated": "2025-05-01T00:57:53.940743",
+  "last_updated": "2025-05-02T00:52:35.686442",
   "papers": [
+    {
+      "title": "Assessing Racial Disparities in Healthcare Expenditures Using Causal Path-Specific Effects",
+      "authors": [
+        "Xiaxian Ou",
+        "Xinwei He",
+        "David Benkeser",
+        "Razieh Nabi"
+      ],
+      "abstract": "Racial disparities in healthcare expenditures are well-documented, yet the\nunderlying drivers remain complex and require further investigation. This study\nemploys causal and counterfactual path-specific effects to quantify how various\nfactors, including socioeconomic status, insurance access, health behaviors,\nand health status, mediate these disparities. Using data from the Medical\nExpenditures Panel Survey, we estimate how expenditures would differ under\ncounterfactual scenarios in which the values of specific mediators were aligned\nacross racial groups along selected causal pathways. A key challenge in this\nanalysis is ensuring robustness against model misspecification while addressing\nthe zero-inflation and right-skewness of healthcare expenditures. For reliable\ninference, we derive asymptotically linear estimators by integrating influence\nfunction-based techniques with flexible machine learning methods, including\nsuper learners and a two-part model tailored to the zero-inflated, right-skewed\nnature of healthcare expenditures.",
+      "pdf_url": "http://arxiv.org/pdf/2504.21688v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.21688v1",
+      "published": "2025-04-30",
+      "categories": [
+        "stat.AP",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Convergence rate for Nearest Neighbour matching: geometry of the domain and higher-order regularity",
+      "authors": [
+        "Simon Viel",
+        "Lionel Truquet",
+        "Ikko Yamane"
+      ],
+      "abstract": "Estimating some mathematical expectations from partially observed data and in\nparticular missing outcomes is a central problem encountered in numerous fields\nsuch as transfer learning, counterfactual analysis or causal inference.\nMatching estimators, estimators based on k-nearest neighbours, are widely used\nin this context. It is known that the variance of such estimators can converge\nto zero at a parametric rate, but their bias can have a slower rate when the\ndimension of the covariates is larger than 2. This makes analysis of this bias\nparticularly important. In this paper, we provide higher order properties of\nthe bias. In contrast to the existing literature related to this problem, we do\nnot assume that the support of the target distribution of the covariates is\nstrictly included in that of the source, and we analyse two geometric\nconditions on the support that avoid such boundary bias problems. We show that\nthese conditions are much more general than the usual convex support\nassumption, leading to an improvement of existing results. Furthermore, we show\nthat the matching estimator studied by Abadie and Imbens (2006) for the average\ntreatment effect can be asymptotically efficient when the dimension of the\ncovariates is less than 4, a result only known in dimension 1.",
+      "pdf_url": "http://arxiv.org/pdf/2504.21633v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.21633v1",
+      "published": "2025-04-30",
+      "categories": [
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Powerful randomization tests for subgroup analysis",
+      "authors": [
+        "Yao Zhang",
+        "Zijun Gao"
+      ],
+      "abstract": "Randomization tests are widely used to generate valid $p$-values for testing\nsharp null hypotheses in finite-population causal inference. This article\nextends their application to subgroup analysis. We show that directly testing\nsubgroup null hypotheses may lack power due to small subgroup sizes.\nIncorporating an estimator of the conditional average treatment effect (CATE)\ncan substantially improve power but requires splitting the treatment variables\nbetween estimation and testing to preserve finite-sample validity. To this end,\nwe propose BaR-learner, a Bayesian extension of the popular method R-learner\nfor CATE estimation. BaR-learner imputes the treatment variables reserved for\nrandomization tests, reducing information loss due to sample-splitting.\nFurthermore, we show that the treatment variables most informative for training\nBaR-learner are different from those most valuable for increasing test power.\nMotivated by this insight, we introduce AdaSplit, a sample-splitting procedure\nthat adaptively allocates units between estimation and testing. Simulation\nstudies demonstrate that our method yields more powerful randomization tests\nthan baselines that omit CATE estimation or rely on random sample-splitting. We\nalso apply our method to a blood pressure intervention trial, identifying\npatient subgroups with significant treatment effects.",
+      "pdf_url": "http://arxiv.org/pdf/2504.21572v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.21572v1",
+      "published": "2025-04-30",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Artificial Intelligence for Personalized Prediction of Alzheimer's Disease Progression: A Survey of Methods, Data Challenges, and Future Directions",
+      "authors": [
+        "Gulsah Hancerliogullari Koksalmis",
+        "Bulent Soykan",
+        "Laura J. Brattain",
+        "Hsin-Hsiung Huang"
+      ],
+      "abstract": "Alzheimer's Disease (AD) is marked by significant inter-individual\nvariability in its progression, complicating accurate prognosis and\npersonalized care planning. This heterogeneity underscores the critical need\nfor predictive models capable of forecasting patient-specific disease\ntrajectories. Artificial Intelligence (AI) offers powerful tools to address\nthis challenge by analyzing complex, multi-modal, and longitudinal patient\ndata. This paper provides a comprehensive survey of AI methodologies applied to\npersonalized AD progression prediction. We review key approaches including\nstate-space models for capturing temporal dynamics, deep learning techniques\nlike Recurrent Neural Networks for sequence modeling, Graph Neural Networks\n(GNNs) for leveraging network structures, and the emerging concept of AI-driven\ndigital twins for individualized simulation. Recognizing that data limitations\noften impede progress, we examine common challenges such as high\ndimensionality, missing data, and dataset imbalance. We further discuss\nAI-driven mitigation strategies, with a specific focus on synthetic data\ngeneration using Variational Autoencoders (VAEs) and Generative Adversarial\nNetworks (GANs) to augment and balance datasets. The survey synthesizes the\nstrengths and limitations of current approaches, emphasizing the trend towards\nmultimodal integration and the persistent need for model interpretability and\ngeneralizability. Finally, we identify critical open challenges, including\nrobust external validation, clinical integration, and ethical considerations,\nand outline promising future research directions such as hybrid models, causal\ninference, and federated learning. This review aims to consolidate current\nknowledge and guide future efforts in developing clinically relevant AI tools\nfor personalized AD prognostication.",
+      "pdf_url": "http://arxiv.org/pdf/2504.21189v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.21189v1",
+      "published": "2025-04-29",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.ET"
+      ]
+    },
+    {
+      "title": "A Hamiltonian Higher-Order Elasticity Framework for Dynamic Diagnostics(2HOED)",
+      "authors": [
+        "Ngueuleweu Tiwang Gildas"
+      ],
+      "abstract": "Machine learning detects patterns, block chain guarantees trust and\nimmutability, and modern causal inference identifies directional linkages, yet\nnone alone exposes the full energetic anatomy of complex systems; the\nHamiltonian Higher Order Elasticity Dynamics(2HOED) framework bridges these\ngaps. Grounded in classical mechanics but extended to Economics order\nelasticity terms, 2HOED represents economic, social, and physical systems as\nenergy-based Hamiltonians whose position, velocity, acceleration, and jerk of\nelasticity jointly determine systemic power, Inertia, policy sensitivity, and\nmarginal responses. Because the formalism is scaling free and coordinate\nagnostic, it transfers seamlessly from financial markets to climate science,\nfrom supply chain logistics to epidemiology, thus any discipline in which\nadaptation and shocks coexist. By embedding standard econometric variables\ninside a Hamiltonian, 2HOED enriches conventional economic analysis with\nrigorous diagnostics of resilience, tipping points, and feedback loops,\nrevealing failure modes invisible to linear models. Wavelet spectra, phase\nspace attractors, and topological persistence diagrams derived from 2HOED\nexpose multistage policy leverage that machine learning detects only\nempirically and block chain secures only after the fact. For economists,\nphysicians and other scientists, the method opens a new causal energetic\nchannel linking biological or mechanical elasticity to macro level outcomes.\nPortable, interpretable, and computationally light, 2HOED turns data streams\ninto dynamical energy maps, empowering decision makers to anticipate crises,\ndesign adaptive policies, and engineer robust systems delivering the predictive\npunch of AI with the explanatory clarity of physics.",
+      "pdf_url": "http://arxiv.org/pdf/2504.21062v1",
+      "arxiv_url": "http://arxiv.org/abs/2504.21062v1",
+      "published": "2025-04-29",
+      "categories": [
+        "cs.LG",
+        "econ.GN",
+        "q-fin.EC"
+      ]
+    },
     {
       "title": "Inference with few treated units",
       "authors": [
@@ -78,101 +159,6 @@
       "categories": [
         "cs.CV",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "ExOSITO: Explainable Off-Policy Learning with Side Information for Intensive Care Unit Blood Test Orders",
-      "authors": [
-        "Zongliang Ji",
-        "Andre Carlos Kajdacsy-Balla Amaral",
-        "Anna Goldenberg",
-        "Rahul G. Krishnan"
-      ],
-      "abstract": "Ordering a minimal subset of lab tests for patients in the intensive care\nunit (ICU) can be challenging. Care teams must balance between ensuring the\navailability of the right information and reducing the clinical burden and\ncosts associated with each lab test order. Most in-patient settings experience\nfrequent over-ordering of lab tests, but are now aiming to reduce this burden\non both hospital resources and the environment. This paper develops a novel\nmethod that combines off-policy learning with privileged information to\nidentify the optimal set of ICU lab tests to order. Our approach, EXplainable\nOff-policy learning with Side Information for ICU blood Test Orders (ExOSITO)\ncreates an interpretable assistive tool for clinicians to order lab tests by\nconsidering both the observed and predicted future status of each patient. We\npose this problem as a causal bandit trained using offline data and a reward\nfunction derived from clinically-approved rules; we introduce a novel learning\nframework that integrates clinical knowledge with observational data to bridge\nthe gap between the optimal and logging policies. The learned policy function\nprovides interpretable clinical information and reduces costs without omitting\nany vital lab orders, outperforming both a physician's policy and prior\napproaches to this practical problem.",
-      "pdf_url": "http://arxiv.org/pdf/2504.17277v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.17277v1",
-      "published": "2025-04-24",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Target trial emulation without matching: a more efficient approach for evaluating vaccine effectiveness using observational data",
-      "authors": [
-        "Emily Wu",
-        "Elizabeth Rogawski McQuade",
-        "Mats Stensrud",
-        "Razieh Nabi",
-        "David Benkeser"
-      ],
-      "abstract": "Real-world vaccine effectiveness has increasingly been studied using\nmatching-based approaches, particularly in observational cohort studies\nfollowing the target trial emulation framework. Although matching is appealing\nin its simplicity, it suffers important limitations in terms of clarity of the\ntarget estimand and the efficiency or precision with which is it estimated.\nScientifically justified causal estimands of vaccine effectiveness may be\ndifficult to define owing to the fact that vaccine uptake varies over calendar\ntime when infection dynamics may also be rapidly changing. We propose a causal\nestimand of vaccine effectiveness that summarizes vaccine effectiveness over\ncalendar time, similar to how vaccine efficacy is summarized in a randomized\ncontrolled trial. We describe the identification of our estimand, including its\nunderlying assumptions, and propose simple-to-implement estimators based on two\nhazard regression models. We apply our proposed estimator in simulations and in\na study to assess the effectiveness of the Pfizer-BioNTech COVID-19 vaccine to\nprevent infections with SARS-CoV2 in children 5-11 years old. In both settings,\nwe find that our proposed estimator yields similar scientific inferences while\nproviding significant efficiency gains over commonly used matching-based\nestimators.",
-      "pdf_url": "http://arxiv.org/pdf/2504.17104v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.17104v1",
-      "published": "2025-04-23",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Distilling semantically aware orders for autoregressive image generation",
-      "authors": [
-        "Rishav Pramanik",
-        "Antoine Poupon",
-        "Juan A. Rodriguez",
-        "Masih Aminbeidokhti",
-        "David Vazquez",
-        "Christopher Pal",
-        "Zhaozheng Yin",
-        "Marco Pedersoli"
-      ],
-      "abstract": "Autoregressive patch-based image generation has recently shown competitive\nresults in terms of image quality and scalability. It can also be easily\nintegrated and scaled within Vision-Language models. Nevertheless,\nautoregressive models require a defined order for patch generation. While a\nnatural order based on the dictation of the words makes sense for text\ngeneration, there is no inherent generation order that exists for image\ngeneration. Traditionally, a raster-scan order (from top-left to bottom-right)\nguides autoregressive image generation models. In this paper, we argue that\nthis order is suboptimal, as it fails to respect the causality of the image\ncontent: for instance, when conditioned on a visual description of a sunset, an\nautoregressive model may generate clouds before the sun, even though the color\nof clouds should depend on the color of the sun and not the inverse. In this\nwork, we show that first by training a model to generate patches in\nany-given-order, we can infer both the content and the location (order) of each\npatch during generation. Secondly, we use these extracted orders to finetune\nthe any-given-order model to produce better-quality images. Through our\nexperiments, we show on two datasets that this new generation method produces\nbetter images than the traditional raster-scan approach, with similar training\ncosts and no extra annotations.",
-      "pdf_url": "http://arxiv.org/pdf/2504.17069v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.17069v1",
-      "published": "2025-04-23",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Using Causal Inference to Test Systems with Hidden and Interacting Variables: An Evaluative Case Study",
-      "authors": [
-        "Michael Foster",
-        "Robert M. Hierons",
-        "Donghwan Shin",
-        "Neil Walkinshaw",
-        "Christopher Wild"
-      ],
-      "abstract": "Software systems with large parameter spaces, nondeterminism and high\ncomputational cost are challenging to test. Recently, software testing\ntechniques based on causal inference have been successfully applied to systems\nthat exhibit such characteristics, including scientific models and autonomous\ndriving systems. One significant limitation is that these are restricted to\ntest properties where all of the variables involved can be observed and where\nthere are no interactions between variables. In practice, this is rarely\nguaranteed; the logging infrastructure may not be available to record all of\nthe necessary runtime variable values, and it can often be the case that an\noutput of the system can be affected by complex interactions between variables.\nTo address this, we leverage two additional concepts from causal inference,\nnamely effect modification and instrumental variable methods. We build these\nconcepts into an existing causal testing tool and conduct an evaluative case\nstudy which uses the concepts to test three system-level requirements of CARLA,\na high-fidelity driving simulator widely used in autonomous vehicle development\nand testing. The results show that we can obtain reliable test outcomes without\nrequiring large amounts of highly controlled test data or instrumentation of\nthe code, even when variables interact with each other and are not recorded in\nthe test data.",
-      "pdf_url": "http://arxiv.org/pdf/2504.16526v2",
-      "arxiv_url": "http://arxiv.org/abs/2504.16526v2",
-      "published": "2025-04-23",
-      "categories": [
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "Robust Causal Inference for EHR-based Studies of Point Exposures with Missingness in Eligibility Criteria",
-      "authors": [
-        "Luke Benz",
-        "Rajarshi Mukherjee",
-        "Rui Wang",
-        "David Arterburn",
-        "Heidi Fischer",
-        "Catherine Lee",
-        "Susan M. Shortreed",
-        "Sebastien Haneuse",
-        "Alexander W. Levis"
-      ],
-      "abstract": "Missingness in variables that define study eligibility criteria is a seldom\naddressed challenge in electronic health record (EHR)-based settings. It is\ntypically the case that patients with incomplete eligibility information are\nexcluded from analysis without consideration of (implicit) assumptions that are\nbeing made, leaving study conclusions subject to potential selection bias. In\nan effort to ascertain eligibility for more patients, researchers may look back\nfurther in time prior to study baseline, and in using outdated values of\neligibility-defining covariates may inappropriately be including individuals\nwho, unbeknownst to the researcher, fail to meet eligibility at baseline. To\nthe best of our knowledge, however, very little work has been done to mitigate\nthese concerns. We propose a robust and efficient estimator of the causal\naverage treatment effect on the treated, defined in the study eligible\npopulation, in cohort studies where eligibility-defining covariates are missing\nat random. The approach facilitates the use of flexible machine-learning\nstrategies for component nuisance functions while maintaining appropriate\nconvergence rates for valid asymptotic inference. EHR data from Kaiser\nPermanente are used as motivation as well as a basis for extensive simulations\nthat verify robustness properties under various degrees of model\nmisspecification. The data are also used to demonstrate the use of the method\nto analyze differences between two common bariatric surgical interventions for\nlong-term weight and glycemic outcomes among a cohort of severely obese\npatients with type II diabetes mellitus.",
-      "pdf_url": "http://arxiv.org/pdf/2504.16230v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.16230v1",
-      "published": "2025-04-22",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
       ]
     }
   ]
