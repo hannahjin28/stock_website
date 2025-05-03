@@ -1,6 +1,86 @@
 {
-  "last_updated": "2025-05-02T00:52:35.686442",
+  "last_updated": "2025-05-03T00:51:06.989163",
   "papers": [
+    {
+      "title": "On the Mechanistic Interpretability of Neural Networks for Causality in Bio-statistics",
+      "authors": [
+        "Jean-Baptiste A. Conan"
+      ],
+      "abstract": "Interpretable insights from predictive models remain critical in\nbio-statistics, particularly when assessing causality, where classical\nstatistical and machine learning methods often provide inherent clarity. While\nNeural Networks (NNs) offer powerful capabilities for modeling complex\nbiological data, their traditional \"black-box\" nature presents challenges for\nvalidation and trust in high-stakes health applications. Recent advances in\nMechanistic Interpretability (MI) aim to decipher the internal computations\nlearned by these networks. This work investigates the application of MI\ntechniques to NNs within the context of causal inference for bio-statistics.\n  We demonstrate that MI tools can be leveraged to: (1) probe and validate the\ninternal representations learned by NNs, such as those estimating nuisance\nfunctions in frameworks like Targeted Minimum Loss-based Estimation (TMLE); (2)\ndiscover and visualize the distinct computational pathways employed by the\nnetwork to process different types of inputs, potentially revealing how\nconfounders and treatments are handled; and (3) provide methodologies for\ncomparing the learned mechanisms and extracted insights across statistical,\nmachine learning, and NN models, fostering a deeper understanding of their\nrespective strengths and weaknesses for causal bio-statistical analysis.",
+      "pdf_url": "http://arxiv.org/pdf/2505.00555v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.00555v1",
+      "published": "2025-05-01",
+      "categories": [
+        "stat.AP",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Geodesic Synthetic Control Methods for Random Objects and Functional Data",
+      "authors": [
+        "Daisuke Kurisu",
+        "Yidong Zhou",
+        "Taisuke Otsu",
+        "Hans-Georg Müller"
+      ],
+      "abstract": "We introduce a geodesic synthetic control method for causal inference that\nextends existing synthetic control methods to scenarios where outcomes are\nelements in a geodesic metric space rather than scalars. Examples of such\noutcomes include distributions, compositions, networks, trees and functional\ndata, among other data types that can be viewed as elements of a geodesic\nmetric space given a suitable metric. We extend this further to geodesic\nsynthetic difference-in-differences that builds on the established synthetic\ndifference-in-differences for Euclidean outcomes. This estimator generalizes\nboth the geodesic synthetic control method and a previously proposed geodesic\ndifference-in-differences method and exhibits a double robustness property. The\nproposed geodesic synthetic control method is illustrated through comprehensive\nsimulation studies and applications to the employment composition changes\nfollowing the 2011 Great East Japan Earthquake, and the impact of abortion\nliberalization policy on fertility patterns in East Germany. We illustrate the\nproposed geodesic synthetic difference-in-differences by studying the\nconsequences of the Soviet Union's collapse on age-at-death distributions for\nmales and females.",
+      "pdf_url": "http://arxiv.org/pdf/2505.00331v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.00331v1",
+      "published": "2025-05-01",
+      "categories": [
+        "stat.ME",
+        "62D20, 62R20"
+      ]
+    },
+    {
+      "title": "A Unifying Framework for Robust and Efficient Inference with Unstructured Data",
+      "authors": [
+        "Jacob Carlson",
+        "Melissa Dell"
+      ],
+      "abstract": "This paper presents a general framework for conducting efficient and robust\ninference on parameters derived from unstructured data, which include text,\nimages, audio, and video. Economists have long incorporated data extracted from\ntexts and images into their analyses, a practice that has accelerated with\nadvancements in deep neural networks. However, neural networks do not\ngenerically produce unbiased predictions, potentially propagating bias to\nestimators that use their outputs. To address this challenge, we reframe\ninference with unstructured data as a missing structured data problem, where\nstructured data are imputed from unstructured inputs using deep neural\nnetworks. This perspective allows us to apply classic results from\nsemiparametric inference, yielding valid, efficient, and robust estimators\nbased on unstructured data. We formalize this approach with MARS (Missing At\nRandom Structured Data), a unifying framework that integrates and extends\nexisting methods for debiased inference using machine learning predictions,\nlinking them to a variety of older, familiar problems such as causal inference.\nWe develop robust and efficient estimators for both descriptive and causal\nestimands and address challenges such as inference using aggregated and\ntransformed predictions from unstructured data. Importantly, MARS applies to\ncommon empirical settings that have received limited attention in the existing\nliterature. Finally, we reanalyze prominent studies that use unstructured data,\ndemonstrating the practical value of MARS.",
+      "pdf_url": "http://arxiv.org/pdf/2505.00282v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.00282v1",
+      "published": "2025-05-01",
+      "categories": [
+        "econ.EM",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Inference for max-linear Bayesian networks with noise",
+      "authors": [
+        "Mark Adams",
+        "Kamillo Ferry",
+        "Ruriko Yoshida"
+      ],
+      "abstract": "Max-Linear Bayesian Networks (MLBNs) provide a powerful framework for causal\ninference in extreme-value settings; we consider MLBNs with noise parameters\nwith a given topology in terms of the max-plus algebra by taking its logarithm.\nThen, we show that an estimator of a parameter for each edge in a directed\nacyclic graph (DAG) is distributed normally. We end this paper with\ncomputational experiments with the expectation and maximization (EM) algorithm\nand quadratic optimization.",
+      "pdf_url": "http://arxiv.org/pdf/2505.00229v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.00229v1",
+      "published": "2025-05-01",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.OC",
+        "math.ST",
+        "stat.TH",
+        "14T90, 62A09, 62H30, 90C20, 90C90"
+      ]
+    },
+    {
+      "title": "Doubly robust augmented weighting estimators for the analysis of externally controlled single-arm trials and unanchored indirect treatment comparisons",
+      "authors": [
+        "Harlan Campbell",
+        "Antonio Remiro-Azócar"
+      ],
+      "abstract": "Externally controlled single-arm trials are critical to assess treatment\nefficacy across therapeutic indications for which randomized controlled trials\nare not feasible. A closely-related research design, the unanchored indirect\ntreatment comparison, is often required for disconnected treatment networks in\nhealth technology assessment. We present a unified causal inference framework\nfor both research designs. We develop a novel estimator that augments a popular\nweighting approach based on entropy balancing -- matching-adjusted indirect\ncomparison (MAIC) -- by fitting a model for the conditional outcome\nexpectation. The predictions of the outcome model are combined with the entropy\nbalancing MAIC weights. While the standard MAIC estimator is singly robust\nwhere the outcome model is non-linear, our augmented MAIC approach is doubly\nrobust, providing increased robustness against model misspecification. This is\ndemonstrated in a simulation study with binary outcomes and a logistic outcome\nmodel, where the augmented estimator demonstrates its doubly robust property,\nwhile exhibiting higher precision than all non-augmented weighting estimators\nand near-identical precision to G-computation. We describe the extension of our\nestimator to the setting with unavailable individual participant data for the\nexternal control, illustrating it through an applied example. Our findings\nreinforce the understanding that entropy balancing-based approaches have\ndesirable properties compared to standard ``modeling'' approaches to weighting,\nbut should be augmented to improve protection against bias and guarantee double\nrobustness.",
+      "pdf_url": "http://arxiv.org/pdf/2505.00113v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.00113v1",
+      "published": "2025-04-30",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Assessing Racial Disparities in Healthcare Expenditures Using Causal Path-Specific Effects",
       "authors": [
@@ -80,85 +160,6 @@
         "cs.LG",
         "econ.GN",
         "q-fin.EC"
-      ]
-    },
-    {
-      "title": "Inference with few treated units",
-      "authors": [
-        "Luis Alvarez",
-        "Bruno Ferman",
-        "Kaspar Wüthrich"
-      ],
-      "abstract": "In many causal inference applications, only one or a few units (or clusters\nof units) are treated. An important challenge in such settings is that standard\ninference methods that rely on asymptotic theory may be unreliable, even when\nthe total number of units is large. This survey reviews and categorizes\ninference methods that are designed to accommodate few treated units,\nconsidering both cross-sectional and panel data methods. We discuss trade-offs\nand connections between different approaches. In doing so, we propose slight\nmodifications to improve the finite-sample validity of some methods, and we\nalso provide theoretical justifications for existing heuristic approaches that\nhave been proposed in the literature.",
-      "pdf_url": "http://arxiv.org/pdf/2504.19841v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.19841v1",
-      "published": "2025-04-28",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Selective randomization inference for subgroup effects with continuous biomarkers",
-      "authors": [
-        "Zijun Gao"
-      ],
-      "abstract": "Randomization tests are a popular method for testing causal effects in\nclinical trials with finite-sample validity. In the presence of heterogeneous\ntreatment effects, it is often of interest to select a subgroup that benefits\nfrom the treatment, frequently by choosing a cutoff for a continuous biomarker.\nHowever, selecting the cutoff and testing the effect on the same data may fail\nto control the type I error. To address this, we propose using \"self-contained\"\nmethods for selecting biomarker-based subgroups (cutoffs) and applying\nconditioning to construct valid randomization tests for the subgroup effect.\nCompared to sample-splitting-based randomization tests, our proposal is fully\ndeterministic, uses the entire selected subgroup for inference, and is thus\nmore powerful. Moreover, we demonstrate scenarios where our procedure achieves\npower comparable to a randomization test with oracle knowledge of the\nbenefiting subgroup. In addition, our procedure is as computationally efficient\nas standard randomization tests. Empirically, we illustrate the effectiveness\nof our method on simulated datasets and the German Breast Cancer Study.",
-      "pdf_url": "http://arxiv.org/pdf/2504.19380v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.19380v1",
-      "published": "2025-04-27",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "ReLU integral probability metric and its applications",
-      "authors": [
-        "Yuha Park",
-        "Kunwoong Kim",
-        "Insung Kong",
-        "Yongdai Kim"
-      ],
-      "abstract": "We propose a parametric integral probability metric (IPM) to measure the\ndiscrepancy between two probability measures. The proposed IPM leverages a\nspecific parametric family of discriminators, such as single-node neural\nnetworks with ReLU activation, to effectively distinguish between\ndistributions, making it applicable in high-dimensional settings. By optimizing\nover the parameters of the chosen discriminator class, the proposed IPM\ndemonstrates that its estimators have good convergence rates and can serve as a\nsurrogate for other IPMs that use smooth nonparametric discriminator classes.\nWe present an efficient algorithm for practical computation, offering a simple\nimplementation and requiring fewer hyperparameters. Furthermore, we explore its\napplications in various tasks, such as covariate balancing for causal inference\nand fair representation learning. Across such diverse applications, we\ndemonstrate that the proposed IPM provides strong theoretical guarantees, and\nempirical experiments show that it achieves comparable or even superior\nperformance to other methods.",
-      "pdf_url": "http://arxiv.org/pdf/2504.18897v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.18897v1",
-      "published": "2025-04-26",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causality-Driven Neural Network Repair: Challenges and Opportunities",
-      "authors": [
-        "Fatemeh Vares",
-        "Brittany Johnson"
-      ],
-      "abstract": "Deep Neural Networks (DNNs) often rely on statistical correlations rather\nthan causal reasoning, limiting their robustness and interpretability. While\ntesting methods can identify failures, effective debugging and repair remain\nchallenging. This paper explores causal inference as an approach primarily for\nDNN repair, leveraging causal debugging, counterfactual analysis, and\nstructural causal models (SCMs) to identify and correct failures. We discuss in\nwhat ways these techniques support fairness, adversarial robustness, and\nbackdoor mitigation by providing targeted interventions. Finally, we discuss\nkey challenges, including scalability, generalization, and computational\nefficiency, and outline future directions for integrating causality-driven\ninterventions to enhance DNN reliability.",
-      "pdf_url": "http://arxiv.org/pdf/2504.17946v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.17946v1",
-      "published": "2025-04-24",
-      "categories": [
-        "cs.LG",
-        "D.2.2; I.2.6"
-      ]
-    },
-    {
-      "title": "Fast Autoregressive Models for Continuous Latent Generation",
-      "authors": [
-        "Tiankai Hang",
-        "Jianmin Bao",
-        "Fangyun Wei",
-        "Dong Chen"
-      ],
-      "abstract": "Autoregressive models have demonstrated remarkable success in sequential data\ngeneration, particularly in NLP, but their extension to continuous-domain image\ngeneration presents significant challenges. Recent work, the masked\nautoregressive model (MAR), bypasses quantization by modeling per-token\ndistributions in continuous spaces using a diffusion head but suffers from slow\ninference due to the high computational cost of the iterative denoising\nprocess. To address this, we propose the Fast AutoRegressive model (FAR), a\nnovel framework that replaces MAR's diffusion head with a lightweight shortcut\nhead, enabling efficient few-step sampling while preserving autoregressive\nprinciples. Additionally, FAR seamlessly integrates with causal Transformers,\nextending them from discrete to continuous token generation without requiring\narchitectural modifications. Experiments demonstrate that FAR achieves\n$2.3\\times$ faster inference than MAR while maintaining competitive FID and IS\nscores. This work establishes the first efficient autoregressive paradigm for\nhigh-fidelity continuous-space image generation, bridging the critical gap\nbetween quality and scalability in visual autoregressive modeling.",
-      "pdf_url": "http://arxiv.org/pdf/2504.18391v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.18391v1",
-      "published": "2025-04-24",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
       ]
     }
   ]
