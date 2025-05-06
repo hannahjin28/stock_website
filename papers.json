@@ -1,6 +1,76 @@
 {
-  "last_updated": "2025-05-05T00:55:26.953512",
+  "last_updated": "2025-05-06T00:52:59.709120",
   "papers": [
+    {
+      "title": "Design-Based Inference under Random Potential Outcomes via Riesz Representation",
+      "authors": [
+        "Yukai Yang"
+      ],
+      "abstract": "We introduce a general framework for design-based causal inference that\naccommodates stochastic potential outcomes, thereby extending the classical\nNeyman-Rubin setup in which outcomes are treated as fixed. In our formulation,\neach unit's potential outcome is modelled as a function $\\tilde{y}_i(z,\n\\omega)$, where $\\omega$ denotes latent randomness external to the treatment\nassignment. Building on recent work that connects design-based estimation with\nthe Riesz representation theorem, we construct causal estimators by embedding\npotential outcomes in a Hilbert space and defining treatment effects as linear\nfunctionals. This allows us to derive unbiased and consistent estimators, even\nwhen potential outcomes exhibit random variation. The framework retains the key\nadvantage of design-based analysis, namely, the use of a known randomisation\nscheme for identification, while enabling inference in settings with inherent\nstochasticity. We establish large-sample properties under local dependence,\nprovide a variance estimator compatible with sparse dependency structures, and\nillustrate the method through a simulation. Our results unify design-based\nreasoning with random-outcome modelling, broadening the applicability of causal\ninference in complex experimental environments.",
+      "pdf_url": "http://arxiv.org/pdf/2505.01324v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.01324v1",
+      "published": "2025-05-02",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "math.ST",
+        "stat.TH",
+        "62G20, 62K99, 62D05"
+      ]
+    },
+    {
+      "title": "Robust Root Cause Diagnosis using In-Distribution Interventions",
+      "authors": [
+        "Lokesh Nagalapatti",
+        "Ashutosh Srivastava",
+        "Sunita Sarawagi",
+        "Amit Sharma"
+      ],
+      "abstract": "Diagnosing the root cause of an anomaly in a complex interconnected system is\na pressing problem in today's cloud services and industrial operations. We\npropose In-Distribution Interventions (IDI), a novel algorithm that predicts\nroot cause as nodes that meet two criteria: 1) **Anomaly:** root cause nodes\nshould take on anomalous values; 2) **Fix:** had the root cause nodes assumed\nusual values, the target node would not have been anomalous. Prior methods of\nassessing the fix condition rely on counterfactuals inferred from a Structural\nCausal Model (SCM) trained on historical data. But since anomalies are rare and\nfall outside the training distribution, the fitted SCMs yield unreliable\ncounterfactual estimates. IDI overcomes this by relying on interventional\nestimates obtained by solely probing the fitted SCM at in-distribution inputs.\nWe present a theoretical analysis comparing and bounding the errors in\nassessing the fix condition using interventional and counterfactual estimates.\nWe then conduct experiments by systematically varying the SCM's complexity to\ndemonstrate the cases where IDI's interventional approach outperforms the\ncounterfactual approach and vice versa. Experiments on both synthetic and\nPetShop RCD benchmark datasets demonstrate that \\our\\ consistently identifies\ntrue root causes more accurately and robustly than nine existing\nstate-of-the-art RCD baselines. Code is released at\nhttps://github.com/nlokeshiisc/IDI_release.",
+      "pdf_url": "http://arxiv.org/pdf/2505.00930v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.00930v1",
+      "published": "2025-05-02",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Q-Learning with Clustered-SMART (cSMART) Data: Examining Moderators in the Construction of Clustered Adaptive Interventions",
+      "authors": [
+        "Yao Song",
+        "Kelly Speth",
+        "Amy Kilbourne",
+        "Andrew Quanbeck",
+        "Daniel Almirall",
+        "Lu Wang"
+      ],
+      "abstract": "A clustered adaptive intervention (cAI) is a pre-specified sequence of\ndecision rules that guides practitioners on how best - and based on which\nmeasures - to tailor cluster-level intervention to improve outcomes at the\nlevel of individuals within the clusters. A clustered sequential multiple\nassignment randomized trial (cSMART) is a type of trial that is used to inform\nthe empirical development of a cAI. The most common type of secondary aim in a\ncSMART focuses on assessing causal effect moderation by candidate tailoring\nvariables. We introduce a clustered Q-learning framework with the M-out-of-N\nCluster Bootstrap using data from a cSMART to evaluate whether a set of\ncandidate tailoring variables may be useful in defining an optimal cAI. This\napproach could construct confidence intervals (CI) with near-nominal coverage\nto assess parameters indexing the causal effect moderation function.\nSpecifically, it allows reliable inferences concerning the utility of candidate\ntailoring variables in constructing a cAI that maximizes a mean end-of-study\noutcome even when \"non-regularity\", a well-known challenge exists. Simulations\ndemonstrate the numerical performance of the proposed method across varying\nnon-regularity conditions and investigate the impact of varying number of\nclusters and intra-cluster correlation coefficient on CI coverage. Methods are\napplied on ADEPT dataset to inform the construction of a clinic-level cAI for\nimproving evidence-based practice in treating mood disorders.",
+      "pdf_url": "http://arxiv.org/pdf/2505.00822v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.00822v1",
+      "published": "2025-05-01",
+      "categories": [
+        "stat.ME",
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Dual Filter: A Mathematical Framework for Inference using Transformer-like Architectures",
+      "authors": [
+        "Heng-Sheng Chang",
+        "Prashant G. Mehta"
+      ],
+      "abstract": "This paper presents a mathematical framework for causal nonlinear prediction\nin settings where observations are generated from an underlying hidden Markov\nmodel (HMM). Both the problem formulation and the proposed solution are\nmotivated by the decoder-only transformer architecture, in which a finite\nsequence of observations (tokens) is mapped to the conditional probability of\nthe next token. Our objective is not to construct a mathematical model of a\ntransformer. Rather, our interest lies in deriving, from first principles,\ntransformer-like architectures that solve the prediction problem for which the\ntransformer is designed. The proposed framework is based on an original optimal\ncontrol approach, where the prediction objective (MMSE) is reformulated as an\noptimal control problem. An analysis of the optimal control problem is\npresented leading to a fixed-point equation on the space of probability\nmeasures. To solve the fixed-point equation, we introduce the dual filter, an\niterative algorithm that closely parallels the architecture of decoder-only\ntransformers. These parallels are discussed in detail along with the\nrelationship to prior work on mathematical modeling of transformers as\ntransport on the space of probability measures. Numerical experiments are\nprovided to illustrate the performance of the algorithm using parameter values\nused in researchscale transformer models.",
+      "pdf_url": "http://arxiv.org/pdf/2505.00818v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.00818v1",
+      "published": "2025-05-01",
+      "categories": [
+        "cs.LG",
+        "cs.SY",
+        "eess.SY",
+        "math.PR"
+      ]
+    },
     {
       "title": "On the Mechanistic Interpretability of Neural Networks for Causality in Bio-statistics",
       "authors": [
@@ -97,69 +167,6 @@
         "stat.AP",
         "stat.ME",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Convergence rate for Nearest Neighbour matching: geometry of the domain and higher-order regularity",
-      "authors": [
-        "Simon Viel",
-        "Lionel Truquet",
-        "Ikko Yamane"
-      ],
-      "abstract": "Estimating some mathematical expectations from partially observed data and in\nparticular missing outcomes is a central problem encountered in numerous fields\nsuch as transfer learning, counterfactual analysis or causal inference.\nMatching estimators, estimators based on k-nearest neighbours, are widely used\nin this context. It is known that the variance of such estimators can converge\nto zero at a parametric rate, but their bias can have a slower rate when the\ndimension of the covariates is larger than 2. This makes analysis of this bias\nparticularly important. In this paper, we provide higher order properties of\nthe bias. In contrast to the existing literature related to this problem, we do\nnot assume that the support of the target distribution of the covariates is\nstrictly included in that of the source, and we analyse two geometric\nconditions on the support that avoid such boundary bias problems. We show that\nthese conditions are much more general than the usual convex support\nassumption, leading to an improvement of existing results. Furthermore, we show\nthat the matching estimator studied by Abadie and Imbens (2006) for the average\ntreatment effect can be asymptotically efficient when the dimension of the\ncovariates is less than 4, a result only known in dimension 1.",
-      "pdf_url": "http://arxiv.org/pdf/2504.21633v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.21633v1",
-      "published": "2025-04-30",
-      "categories": [
-        "math.ST",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Powerful randomization tests for subgroup analysis",
-      "authors": [
-        "Yao Zhang",
-        "Zijun Gao"
-      ],
-      "abstract": "Randomization tests are widely used to generate valid $p$-values for testing\nsharp null hypotheses in finite-population causal inference. This article\nextends their application to subgroup analysis. We show that directly testing\nsubgroup null hypotheses may lack power due to small subgroup sizes.\nIncorporating an estimator of the conditional average treatment effect (CATE)\ncan substantially improve power but requires splitting the treatment variables\nbetween estimation and testing to preserve finite-sample validity. To this end,\nwe propose BaR-learner, a Bayesian extension of the popular method R-learner\nfor CATE estimation. BaR-learner imputes the treatment variables reserved for\nrandomization tests, reducing information loss due to sample-splitting.\nFurthermore, we show that the treatment variables most informative for training\nBaR-learner are different from those most valuable for increasing test power.\nMotivated by this insight, we introduce AdaSplit, a sample-splitting procedure\nthat adaptively allocates units between estimation and testing. Simulation\nstudies demonstrate that our method yields more powerful randomization tests\nthan baselines that omit CATE estimation or rely on random sample-splitting. We\nalso apply our method to a blood pressure intervention trial, identifying\npatient subgroups with significant treatment effects.",
-      "pdf_url": "http://arxiv.org/pdf/2504.21572v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.21572v1",
-      "published": "2025-04-30",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Artificial Intelligence for Personalized Prediction of Alzheimer's Disease Progression: A Survey of Methods, Data Challenges, and Future Directions",
-      "authors": [
-        "Gulsah Hancerliogullari Koksalmis",
-        "Bulent Soykan",
-        "Laura J. Brattain",
-        "Hsin-Hsiung Huang"
-      ],
-      "abstract": "Alzheimer's Disease (AD) is marked by significant inter-individual\nvariability in its progression, complicating accurate prognosis and\npersonalized care planning. This heterogeneity underscores the critical need\nfor predictive models capable of forecasting patient-specific disease\ntrajectories. Artificial Intelligence (AI) offers powerful tools to address\nthis challenge by analyzing complex, multi-modal, and longitudinal patient\ndata. This paper provides a comprehensive survey of AI methodologies applied to\npersonalized AD progression prediction. We review key approaches including\nstate-space models for capturing temporal dynamics, deep learning techniques\nlike Recurrent Neural Networks for sequence modeling, Graph Neural Networks\n(GNNs) for leveraging network structures, and the emerging concept of AI-driven\ndigital twins for individualized simulation. Recognizing that data limitations\noften impede progress, we examine common challenges such as high\ndimensionality, missing data, and dataset imbalance. We further discuss\nAI-driven mitigation strategies, with a specific focus on synthetic data\ngeneration using Variational Autoencoders (VAEs) and Generative Adversarial\nNetworks (GANs) to augment and balance datasets. The survey synthesizes the\nstrengths and limitations of current approaches, emphasizing the trend towards\nmultimodal integration and the persistent need for model interpretability and\ngeneralizability. Finally, we identify critical open challenges, including\nrobust external validation, clinical integration, and ethical considerations,\nand outline promising future research directions such as hybrid models, causal\ninference, and federated learning. This review aims to consolidate current\nknowledge and guide future efforts in developing clinically relevant AI tools\nfor personalized AD prognostication.",
-      "pdf_url": "http://arxiv.org/pdf/2504.21189v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.21189v1",
-      "published": "2025-04-29",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.ET"
-      ]
-    },
-    {
-      "title": "A Hamiltonian Higher-Order Elasticity Framework for Dynamic Diagnostics(2HOED)",
-      "authors": [
-        "Ngueuleweu Tiwang Gildas"
-      ],
-      "abstract": "Machine learning detects patterns, block chain guarantees trust and\nimmutability, and modern causal inference identifies directional linkages, yet\nnone alone exposes the full energetic anatomy of complex systems; the\nHamiltonian Higher Order Elasticity Dynamics(2HOED) framework bridges these\ngaps. Grounded in classical mechanics but extended to Economics order\nelasticity terms, 2HOED represents economic, social, and physical systems as\nenergy-based Hamiltonians whose position, velocity, acceleration, and jerk of\nelasticity jointly determine systemic power, Inertia, policy sensitivity, and\nmarginal responses. Because the formalism is scaling free and coordinate\nagnostic, it transfers seamlessly from financial markets to climate science,\nfrom supply chain logistics to epidemiology, thus any discipline in which\nadaptation and shocks coexist. By embedding standard econometric variables\ninside a Hamiltonian, 2HOED enriches conventional economic analysis with\nrigorous diagnostics of resilience, tipping points, and feedback loops,\nrevealing failure modes invisible to linear models. Wavelet spectra, phase\nspace attractors, and topological persistence diagrams derived from 2HOED\nexpose multistage policy leverage that machine learning detects only\nempirically and block chain secures only after the fact. For economists,\nphysicians and other scientists, the method opens a new causal energetic\nchannel linking biological or mechanical elasticity to macro level outcomes.\nPortable, interpretable, and computationally light, 2HOED turns data streams\ninto dynamical energy maps, empowering decision makers to anticipate crises,\ndesign adaptive policies, and engineer robust systems delivering the predictive\npunch of AI with the explanatory clarity of physics.",
-      "pdf_url": "http://arxiv.org/pdf/2504.21062v1",
-      "arxiv_url": "http://arxiv.org/abs/2504.21062v1",
-      "published": "2025-04-29",
-      "categories": [
-        "cs.LG",
-        "econ.GN",
-        "q-fin.EC"
       ]
     }
   ]
