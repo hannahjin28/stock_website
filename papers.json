@@ -1,6 +1,43 @@
 {
-  "last_updated": "2025-05-07T00:53:03.631849",
+  "last_updated": "2025-05-08T00:53:34.630630",
   "papers": [
+    {
+      "title": "Counterfactual Inference for Eliminating Sentiment Bias in Recommender Systems",
+      "authors": [
+        "Le Pan",
+        "Yuanjiang Cao",
+        "Chengkai Huang",
+        "Wenjie Zhang",
+        "Lina Yao"
+      ],
+      "abstract": "Recommender Systems (RSs) aim to provide personalized recommendations for\nusers. A newly discovered bias, known as sentiment bias, uncovers a common\nphenomenon within Review-based RSs (RRSs): the recommendation accuracy of users\nor items with negative reviews deteriorates compared with users or items with\npositive reviews. Critical users and niche items are disadvantaged by such\nunfair recommendations. We study this problem from the perspective of\ncounterfactual inference with two stages. At the model training stage, we build\na causal graph and model how sentiment influences the final rating score.\nDuring the inference stage, we decouple the direct and indirect effects to\nmitigate the impact of sentiment bias and remove the indirect effect using\ncounterfactual inference. We have conducted extensive experiments, and the\nresults validate that our model can achieve comparable performance on rating\nprediction for better recommendations and effective mitigation of sentiment\nbias. To the best of our knowledge, this is the first work to employ\ncounterfactual inference on sentiment bias mitigation in RSs.",
+      "pdf_url": "http://arxiv.org/pdf/2505.03655v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.03655v1",
+      "published": "2025-05-06",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Integrated Sensing, Computing, Communication, and Control for Time-Sequence-Based Semantic Communications",
+      "authors": [
+        "Qingliang Li",
+        "Bo Chang",
+        "Weidong Mei",
+        "Zhi Chen"
+      ],
+      "abstract": "In the upcoming industrial internet of things (IIoT) era, a surge of\ntask-oriented applications will rely on real-time wireless control systems\n(WCSs). For these systems, ultra-reliable and low-latency wireless\ncommunication will be crucial to ensure the timely transmission of control\ninformation. To achieve this purpose, we propose a novel time-sequence-based\nsemantic communication paradigm, where an integrated sensing, computing,\ncommunication, and control (ISC3) architecture is developed to make sensible\nsemantic inference (SI) for the control information over time sequences,\nenabling adaptive control of the robot. However, due to the causal correlations\nin the time sequence, the control information does not present the Markov\nproperty. To address this challenge, we compute the mutual information of the\ncontrol information sensed at the transmitter (Tx) over different time and\nidentify their temporal semantic correlation via a semantic feature extractor\n(SFE) module. By this means, highly correlated information transmission can be\navoided, thus greatly reducing the communication overhead. Meanwhile, a\nsemantic feature reconstructor (SFR) module is employed at the receiver (Rx) to\nreconstruct the control information based on the previously received one if the\ninformation transmission is not activated at the Tx. Furthermore, a control\ngain policy is also employed at the Rx to adaptively adjust the control gain\nfor the controlled target based on several practical aspects such as the\nquality of the information transmission from the Tx to the Rx. We design the\nneural network structures of the above modules/policies and train their\nparameters by a novel hybrid reward multi-agent deep reinforcement learning\nframework. On-site experiments are conducted to evaluate the performance of our\nproposed method in practice, which shows significant gains over other baseline\nschemes.",
+      "pdf_url": "http://arxiv.org/pdf/2505.03127v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.03127v1",
+      "published": "2025-05-06",
+      "categories": [
+        "eess.SY",
+        "cs.IT",
+        "cs.SY",
+        "math.IT"
+      ]
+    },
     {
       "title": "Multi-View Learning with Context-Guided Receptance for Image Denoising",
       "authors": [
@@ -134,43 +171,6 @@
       "published": "2025-05-02",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Q-Learning with Clustered-SMART (cSMART) Data: Examining Moderators in the Construction of Clustered Adaptive Interventions",
-      "authors": [
-        "Yao Song",
-        "Kelly Speth",
-        "Amy Kilbourne",
-        "Andrew Quanbeck",
-        "Daniel Almirall",
-        "Lu Wang"
-      ],
-      "abstract": "A clustered adaptive intervention (cAI) is a pre-specified sequence of\ndecision rules that guides practitioners on how best - and based on which\nmeasures - to tailor cluster-level intervention to improve outcomes at the\nlevel of individuals within the clusters. A clustered sequential multiple\nassignment randomized trial (cSMART) is a type of trial that is used to inform\nthe empirical development of a cAI. The most common type of secondary aim in a\ncSMART focuses on assessing causal effect moderation by candidate tailoring\nvariables. We introduce a clustered Q-learning framework with the M-out-of-N\nCluster Bootstrap using data from a cSMART to evaluate whether a set of\ncandidate tailoring variables may be useful in defining an optimal cAI. This\napproach could construct confidence intervals (CI) with near-nominal coverage\nto assess parameters indexing the causal effect moderation function.\nSpecifically, it allows reliable inferences concerning the utility of candidate\ntailoring variables in constructing a cAI that maximizes a mean end-of-study\noutcome even when \"non-regularity\", a well-known challenge exists. Simulations\ndemonstrate the numerical performance of the proposed method across varying\nnon-regularity conditions and investigate the impact of varying number of\nclusters and intra-cluster correlation coefficient on CI coverage. Methods are\napplied on ADEPT dataset to inform the construction of a clinic-level cAI for\nimproving evidence-based practice in treating mood disorders.",
-      "pdf_url": "http://arxiv.org/pdf/2505.00822v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.00822v1",
-      "published": "2025-05-01",
-      "categories": [
-        "stat.ME",
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Dual Filter: A Mathematical Framework for Inference using Transformer-like Architectures",
-      "authors": [
-        "Heng-Sheng Chang",
-        "Prashant G. Mehta"
-      ],
-      "abstract": "This paper presents a mathematical framework for causal nonlinear prediction\nin settings where observations are generated from an underlying hidden Markov\nmodel (HMM). Both the problem formulation and the proposed solution are\nmotivated by the decoder-only transformer architecture, in which a finite\nsequence of observations (tokens) is mapped to the conditional probability of\nthe next token. Our objective is not to construct a mathematical model of a\ntransformer. Rather, our interest lies in deriving, from first principles,\ntransformer-like architectures that solve the prediction problem for which the\ntransformer is designed. The proposed framework is based on an original optimal\ncontrol approach, where the prediction objective (MMSE) is reformulated as an\noptimal control problem. An analysis of the optimal control problem is\npresented leading to a fixed-point equation on the space of probability\nmeasures. To solve the fixed-point equation, we introduce the dual filter, an\niterative algorithm that closely parallels the architecture of decoder-only\ntransformers. These parallels are discussed in detail along with the\nrelationship to prior work on mathematical modeling of transformers as\ntransport on the space of probability measures. Numerical experiments are\nprovided to illustrate the performance of the algorithm using parameter values\nused in researchscale transformer models.",
-      "pdf_url": "http://arxiv.org/pdf/2505.00818v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.00818v1",
-      "published": "2025-05-01",
-      "categories": [
-        "cs.LG",
-        "cs.SY",
-        "eess.SY",
-        "math.PR"
       ]
     }
   ]
