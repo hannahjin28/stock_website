@@ -1,6 +1,59 @@
 {
-  "last_updated": "2025-05-08T00:53:34.630630",
+  "last_updated": "2025-05-09T00:53:07.821833",
   "papers": [
+    {
+      "title": "R^3-VQA: \"Read the Room\" by Video Social Reasoning",
+      "authors": [
+        "Lixing Niu",
+        "Jiapeng Li",
+        "Xingping Yu",
+        "Shu Wang",
+        "Ruining Feng",
+        "Bo Wu",
+        "Ping Wei",
+        "Yisen Wang",
+        "Lifeng Fan"
+      ],
+      "abstract": "\"Read the room\" is a significant social reasoning capability in human daily\nlife. Humans can infer others' mental states from subtle social cues. Previous\nsocial reasoning tasks and datasets lack complexity (e.g., simple scenes, basic\ninteractions, incomplete mental state variables, single-step reasoning, etc.)\nand fall far short of the challenges present in real-life social interactions.\nIn this paper, we contribute a valuable, high-quality, and comprehensive video\ndataset named R^3-VQA with precise and fine-grained annotations of social\nevents and mental states (i.e., belief, intent, desire, and emotion) as well as\ncorresponding social causal chains in complex social scenarios. Moreover, we\ninclude human-annotated and model-generated QAs. Our task R^3-VQA includes\nthree aspects: Social Event Understanding, Mental State Estimation, and Social\nCausal Reasoning. As a benchmark, we comprehensively evaluate the social\nreasoning capabilities and consistencies of current state-of-the-art large\nvision-language models (LVLMs). Comprehensive experiments show that (i) LVLMs\nare still far from human-level consistent social reasoning in complex social\nscenarios; (ii) Theory of Mind (ToM) prompting can help LVLMs perform better on\nsocial reasoning tasks. We provide some of our dataset and codes in\nsupplementary material and will release our full dataset and codes upon\nacceptance.",
+      "pdf_url": "http://arxiv.org/pdf/2505.04147v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.04147v1",
+      "published": "2025-05-07",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Regularized Fingerprinting with Linearly Optimal Weight Matrix in Detection and Attribution of Climate Change",
+      "authors": [
+        "Haoran Li",
+        "Yan Li"
+      ],
+      "abstract": "Climate change detection and attribution plays a central role in establishing\nthe causal influence of human activities on global warming. The most widely\nused framework, optimal fingerprinting, is a linear regression model with\nerrors-in-variables (EIV), in which each covariate is subject to measurement\nerror whose covariance matrix is the same as that of the regression error up to\na known scale. The reliability of such detection and attribution analyses\ncritically depends on accurate inference of the regression coefficients. The\noptimal weight matrix in estimating the regression coefficient is the precision\nmatrix of the regression error, which is typically unknown and has to be\nestimated from climate model simulations with appropriate regularization.\nHowever, the estimators from the prevailing method, regularized optimal\nfingerprinting, are not optimal as believed, owing to the unreliable estimation\nof the optimal weight matrix, and their uncertainties are underestimated,\nleading to too narrow confidence intervals to match the nominal confidence\nlevels. In this paper, we propose consistent estimates of the variances of\nregression coefficients for weight matrices within the class of linear\nshrinkage estimators. Building on this result, we derive a linearly optimal\nweight matrix that directly minimizes the asymptotic variances of the estimated\nscaling factors within the fingerprinting framework. Numerical studies confirm\nthat the proposed method yields confidence intervals with empirical coverage\nrates close to the nominal level, while also achieving shorter average interval\nlengths. In applications to the detection and attribution analyses of annual\nmean near-surface air temperature at the global, continental, and\nsubcontinental scales during 1951--2020, the proposed method produced shorter\nconfidence intervals than the existing approaches in most of the analyses.",
+      "pdf_url": "http://arxiv.org/pdf/2505.04070v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.04070v1",
+      "published": "2025-05-07",
+      "categories": [
+        "stat.ME",
+        "physics.ao-ph",
+        "physics.data-an"
+      ]
+    },
+    {
+      "title": "Causal Inference in Counterbalanced Within-Subjects Designs",
+      "authors": [
+        "Justin Ho",
+        "Jonathan Min"
+      ],
+      "abstract": "Experimental designs are fundamental for estimating causal effects. In some\nfields, within-subjects designs, which expose participants to both control and\ntreatment at different time periods, are used to address practical and\nlogistical concerns. Counterbalancing, a common technique in within-subjects\ndesigns, aims to remove carryover effects by randomizing treatment sequences.\nDespite its appeal, counterbalancing relies on the assumption that carryover\neffects are symmetric and cancel out, which is often unverifiable a priori. In\nthis paper, we formalize the challenges of counterbalanced within-subjects\ndesigns using the potential outcomes framework. We introduce sequential\nexchangeability as an additional identification assumption necessary for valid\ncausal inference in these designs. To address identification concerns, we\npropose diagnostic checks, the use of washout periods, and covariate\nadjustments, and alternative experimental designs to counterbalanced\nwithin-subjects design. Our findings demonstrate the limitations of\ncounterbalancing and provide guidance on when and how within-subjects designs\ncan be appropriately used for causal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2505.03937v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.03937v1",
+      "published": "2025-05-06",
+      "categories": [
+        "stat.ME",
+        "econ.EM"
+      ]
+    },
     {
       "title": "Counterfactual Inference for Eliminating Sentiment Bias in Recommender Systems",
       "authors": [
@@ -119,57 +172,6 @@
       "published": "2025-05-03",
       "categories": [
         "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causally Fair Node Classification on Non-IID Graph Data",
-      "authors": [
-        "Yucong Dai",
-        "Lu Zhang",
-        "Yaowei Hu",
-        "Susan Gauch",
-        "Yongkai Wu"
-      ],
-      "abstract": "Fair machine learning seeks to identify and mitigate biases in predictions\nagainst unfavorable populations characterized by demographic attributes, such\nas race and gender. Recently, a few works have extended fairness to graph data,\nsuch as social networks, but most of them neglect the causal relationships\namong data instances. This paper addresses the prevalent challenge in\nfairness-aware ML algorithms, which typically assume Independent and\nIdentically Distributed (IID) data. We tackle the overlooked domain of non-IID,\ngraph-based settings where data instances are interconnected, influencing the\noutcomes of fairness interventions. We base our research on the Network\nStructural Causal Model (NSCM) framework and posit two main assumptions:\nDecomposability and Graph Independence, which enable the computation of\ninterventional distributions in non-IID settings using the $do$-calculus. Based\non that, we develop the Message Passing Variational Autoencoder for Causal\nInference (MPVA) to compute interventional distributions and facilitate\ncausally fair node classification through estimated interventional\ndistributions. Empirical evaluations on semi-synthetic and real-world datasets\ndemonstrate that MPVA outperforms conventional methods by effectively\napproximating interventional distributions and mitigating bias. The\nimplications of our findings underscore the potential of causality-based\nfairness in complex ML applications, setting the stage for further research\ninto relaxing the initial assumptions to enhance model fairness.",
-      "pdf_url": "http://arxiv.org/pdf/2505.01652v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.01652v1",
-      "published": "2025-05-03",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Design-Based Inference under Random Potential Outcomes via Riesz Representation",
-      "authors": [
-        "Yukai Yang"
-      ],
-      "abstract": "We introduce a general framework for design-based causal inference that\naccommodates stochastic potential outcomes, thereby extending the classical\nNeyman-Rubin setup in which outcomes are treated as fixed. In our formulation,\neach unit's potential outcome is modelled as a function $\\tilde{y}_i(z,\n\\omega)$, where $\\omega$ denotes latent randomness external to the treatment\nassignment. Building on recent work that connects design-based estimation with\nthe Riesz representation theorem, we construct causal estimators by embedding\npotential outcomes in a Hilbert space and defining treatment effects as linear\nfunctionals. This allows us to derive unbiased and consistent estimators, even\nwhen potential outcomes exhibit random variation. The framework retains the key\nadvantage of design-based analysis, namely, the use of a known randomisation\nscheme for identification, while enabling inference in settings with inherent\nstochasticity. We establish large-sample properties under local dependence,\nprovide a variance estimator compatible with sparse dependency structures, and\nillustrate the method through a simulation. Our results unify design-based\nreasoning with random-outcome modelling, broadening the applicability of causal\ninference in complex experimental environments.",
-      "pdf_url": "http://arxiv.org/pdf/2505.01324v2",
-      "arxiv_url": "http://arxiv.org/abs/2505.01324v2",
-      "published": "2025-05-02",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "math.ST",
-        "stat.TH",
-        "62G20, 62K99, 62D05"
-      ]
-    },
-    {
-      "title": "Robust Root Cause Diagnosis using In-Distribution Interventions",
-      "authors": [
-        "Lokesh Nagalapatti",
-        "Ashutosh Srivastava",
-        "Sunita Sarawagi",
-        "Amit Sharma"
-      ],
-      "abstract": "Diagnosing the root cause of an anomaly in a complex interconnected system is\na pressing problem in today's cloud services and industrial operations. We\npropose In-Distribution Interventions (IDI), a novel algorithm that predicts\nroot cause as nodes that meet two criteria: 1) **Anomaly:** root cause nodes\nshould take on anomalous values; 2) **Fix:** had the root cause nodes assumed\nusual values, the target node would not have been anomalous. Prior methods of\nassessing the fix condition rely on counterfactuals inferred from a Structural\nCausal Model (SCM) trained on historical data. But since anomalies are rare and\nfall outside the training distribution, the fitted SCMs yield unreliable\ncounterfactual estimates. IDI overcomes this by relying on interventional\nestimates obtained by solely probing the fitted SCM at in-distribution inputs.\nWe present a theoretical analysis comparing and bounding the errors in\nassessing the fix condition using interventional and counterfactual estimates.\nWe then conduct experiments by systematically varying the SCM's complexity to\ndemonstrate the cases where IDI's interventional approach outperforms the\ncounterfactual approach and vice versa. Experiments on both synthetic and\nPetShop RCD benchmark datasets demonstrate that \\our\\ consistently identifies\ntrue root causes more accurately and robustly than nine existing\nstate-of-the-art RCD baselines. Code is released at\nhttps://github.com/nlokeshiisc/IDI_release.",
-      "pdf_url": "http://arxiv.org/pdf/2505.00930v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.00930v1",
-      "published": "2025-05-02",
-      "categories": [
         "cs.LG"
       ]
     }
