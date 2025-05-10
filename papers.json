@@ -1,6 +1,39 @@
 {
-  "last_updated": "2025-05-09T00:53:07.821833",
+  "last_updated": "2025-05-10T00:50:39.146576",
   "papers": [
+    {
+      "title": "Federated Deconfounding and Debiasing Learning for Out-of-Distribution Generalization",
+      "authors": [
+        "Zhuang Qi",
+        "Sijin Zhou",
+        "Lei Meng",
+        "Han Hu",
+        "Han Yu",
+        "Xiangxu Meng"
+      ],
+      "abstract": "Attribute bias in federated learning (FL) typically leads local models to\noptimize inconsistently due to the learning of non-causal associations,\nresulting degraded performance. Existing methods either use data augmentation\nfor increasing sample diversity or knowledge distillation for learning\ninvariant representations to address this problem. However, they lack a\ncomprehensive analysis of the inference paths, and the interference from\nconfounding factors limits their performance. To address these limitations, we\npropose the \\underline{Fed}erated \\underline{D}econfounding and\n\\underline{D}ebiasing \\underline{L}earning (FedDDL) method. It constructs a\nstructured causal graph to analyze the model inference process, and performs\nbackdoor adjustment to eliminate confounding paths. Specifically, we design an\nintra-client deconfounding learning module for computer vision tasks to\ndecouple background and objects, generating counterfactual samples that\nestablish a connection between the background and any label, which stops the\nmodel from using the background to infer the label. Moreover, we design an\ninter-client debiasing learning module to construct causal prototypes to reduce\nthe proportion of the background in prototype components. Notably, it bridges\nthe gap between heterogeneous representations via causal prototypical\nregularization. Extensive experiments on 2 benchmarking datasets demonstrate\nthat \\methodname{} significantly enhances the model capability to focus on main\nobjects in unseen data, leading to 4.5\\% higher Top-1 Accuracy on average over\n9 state-of-the-art existing methods.",
+      "pdf_url": "http://arxiv.org/pdf/2505.04979v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.04979v1",
+      "published": "2025-05-08",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Moments of Causal Effects",
+      "authors": [
+        "Yuta Kawakami",
+        "Jin Tian"
+      ],
+      "abstract": "The moments of random variables are fundamental statistical measures for\ncharacterizing the shape of a probability distribution, encompassing metrics\nsuch as mean, variance, skewness, and kurtosis. Additionally, the product\nmoments, including covariance and correlation, reveal the relationships between\nmultiple random variables. On the other hand, the primary focus of causal\ninference is the evaluation of causal effects, which are defined as the\ndifference between two potential outcomes. While traditional causal effect\nassessment focuses on the average causal effect, this work provides\ndefinitions, identification theorems, and bounds for moments and product\nmoments of causal effects to analyze their distribution and relationships. We\nconduct experiments to illustrate the estimation of the moments of causal\neffects from finite samples and demonstrate their practical application using a\nreal-world medical dataset.",
+      "pdf_url": "http://arxiv.org/pdf/2505.04971v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.04971v1",
+      "published": "2025-05-08",
+      "categories": [
+        "stat.ME",
+        "cs.AI"
+      ]
+    },
     {
       "title": "R^3-VQA: \"Read the Room\" by Video Social Reasoning",
       "authors": [
@@ -52,6 +85,29 @@
       "categories": [
         "stat.ME",
         "econ.EM"
+      ]
+    },
+    {
+      "title": "Scientific Hypothesis Generation and Validation: Methods, Datasets, and Future Directions",
+      "authors": [
+        "Adithya Kulkarni",
+        "Fatimah Alotaibi",
+        "Xinyue Zeng",
+        "Longfeng Wu",
+        "Tong Zeng",
+        "Barry Menglong Yao",
+        "Minqian Liu",
+        "Shuaicheng Zhang",
+        "Lifu Huang",
+        "Dawei Zhou"
+      ],
+      "abstract": "Large Language Models (LLMs) are transforming scientific hypothesis\ngeneration and validation by enabling information synthesis, latent\nrelationship discovery, and reasoning augmentation. This survey provides a\nstructured overview of LLM-driven approaches, including symbolic frameworks,\ngenerative models, hybrid systems, and multi-agent architectures. We examine\ntechniques such as retrieval-augmented generation, knowledge-graph completion,\nsimulation, causal inference, and tool-assisted reasoning, highlighting\ntrade-offs in interpretability, novelty, and domain alignment. We contrast\nearly symbolic discovery systems (e.g., BACON, KEKADA) with modern LLM\npipelines that leverage in-context learning and domain adaptation via\nfine-tuning, retrieval, and symbolic grounding. For validation, we review\nsimulation, human-AI collaboration, causal modeling, and uncertainty\nquantification, emphasizing iterative assessment in open-world contexts. The\nsurvey maps datasets across biomedicine, materials science, environmental\nscience, and social science, introducing new resources like AHTech and\nCSKG-600. Finally, we outline a roadmap emphasizing novelty-aware generation,\nmultimodal-symbolic integration, human-in-the-loop systems, and ethical\nsafeguards, positioning LLMs as agents for principled, scalable scientific\ndiscovery.",
+      "pdf_url": "http://arxiv.org/pdf/2505.04651v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.04651v1",
+      "published": "2025-05-06",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
       ]
     },
     {
@@ -125,54 +181,6 @@
       "published": "2025-05-05",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Bayesian inference for cluster-randomized trials with multivariate outcomes subject to both truncation by death and missingness",
-      "authors": [
-        "Guangyu Tong",
-        "Chenxi Li",
-        "Eric Velazquez",
-        "Michael O. Harhay",
-        "Fan Li"
-      ],
-      "abstract": "Cluster-randomized trials (CRTs) on fragile populations frequently encounter\ncomplex attrition problems where the reasons for missing outcomes can be\nheterogeneous, with participants who are known alive, known to have died, or\nwith unknown survival status, and with complex and distinct missing data\nmechanisms for each group. Although existing methods have been developed to\naddress death truncation in CRTs, no existing methods can jointly accommodate\nparticipants who drop out for reasons unrelated to mortality or serious\nillnesses, or those with an unknown survival status. This paper proposes a\nBayesian framework for estimating survivor average causal effects in CRTs while\naccounting for different types of missingness. Our approach uses a multivariate\noutcome that jointly estimates the causal effects, and in the posterior\nestimates, we distinguish the individual-level and the cluster-level survivor\naverage causal effect. We perform simulation studies to evaluate the\nperformance of our model and found low bias and high coverage on key parameters\nacross several different scenarios. We use data from a geriatric CRT to\nillustrate the use of our model. Although our illustration focuses on the case\nof a bivariate continuous outcome, our model is straightforwardly extended to\naccommodate more than two endpoints as well as other types of endpoints (e.g.,\nbinary). Thus, this work provides a general modeling framework for handling\ncomplex missingness in CRTs and can be applied to a wide range of settings with\naging and palliative care populations.",
-      "pdf_url": "http://arxiv.org/pdf/2505.02310v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.02310v1",
-      "published": "2025-05-05",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Federated Causal Inference in Healthcare: Methods, Challenges, and Applications",
-      "authors": [
-        "Haoyang Li",
-        "Jie Xu",
-        "Kyra Gan",
-        "Fei Wang",
-        "Chengxi Zang"
-      ],
-      "abstract": "Federated causal inference enables multi-site treatment effect estimation\nwithout sharing individual-level data, offering a privacy-preserving solution\nfor real-world evidence generation. However, data heterogeneity across sites,\nmanifested in differences in covariate, treatment, and outcome, poses\nsignificant challenges for unbiased and efficient estimation. In this paper, we\npresent a comprehensive review and theoretical analysis of federated causal\neffect estimation across both binary/continuous and time-to-event outcomes. We\nclassify existing methods into weight-based strategies and optimization-based\nframeworks and further discuss extensions including personalized models,\npeer-to-peer communication, and model decomposition. For time-to-event\noutcomes, we examine federated Cox and Aalen-Johansen models, deriving\nasymptotic bias and variance under heterogeneity. Our analysis reveals that\nFedProx-style regularization achieves near-optimal bias-variance trade-offs\ncompared to naive averaging and meta-analysis. We review related software tools\nand conclude by outlining opportunities, challenges, and future directions for\nscalable, fair, and trustworthy federated causal inference in distributed\nhealthcare systems.",
-      "pdf_url": "http://arxiv.org/pdf/2505.02238v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.02238v1",
-      "published": "2025-05-04",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "TV-SurvCaus: Dynamic Representation Balancing for Causal Survival Analysis",
-      "authors": [
-        "Ayoub Abraich"
-      ],
-      "abstract": "Estimating the causal effect of time-varying treatments on survival outcomes\nis a challenging task in many domains, particularly in medicine where treatment\nprotocols adapt over time. While recent advances in representation learning\nhave improved causal inference for static treatments, extending these methods\nto dynamic treatment regimes with survival outcomes remains under-explored. In\nthis paper, we introduce TV-SurvCaus, a novel framework that extends\nrepresentation balancing techniques to the time-varying treatment setting for\nsurvival analysis. We provide theoretical guarantees through (1) a generalized\nbound for time-varying precision in estimation of heterogeneous effects, (2)\nvariance control via sequential balancing weights, (3) consistency results for\ndynamic treatment regimes, (4) convergence rates for representation learning\nwith temporal dependencies, and (5) a formal bound on the bias due to\ntreatment-confounder feedback. Our neural architecture incorporates sequence\nmodeling to handle temporal dependencies while balancing time-dependent\nrepresentations. Through extensive experiments on both synthetic and real-world\ndatasets, we demonstrate that TV-SurvCaus outperforms existing methods in\nestimating individualized treatment effects with time-varying covariates and\ntreatments. Our framework advances the field of causal inference by enabling\nmore accurate estimation of treatment effects in dynamic, longitudinal settings\nwith survival outcomes.",
-      "pdf_url": "http://arxiv.org/pdf/2505.01785v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.01785v1",
-      "published": "2025-05-03",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
       ]
     }
   ]
