@@ -1,186 +1,179 @@
 {
-  "last_updated": "2025-05-13T00:53:44.691609",
+  "last_updated": "2025-05-14T00:53:15.887845",
   "papers": [
     {
-      "title": "Federated Deconfounding and Debiasing Learning for Out-of-Distribution Generalization",
+      "title": "Nonparametric Instrumental Variable Inference with Many Weak Instruments",
       "authors": [
-        "Zhuang Qi",
-        "Sijin Zhou",
-        "Lei Meng",
-        "Han Hu",
-        "Han Yu",
-        "Xiangxu Meng"
+        "Lars van der Laan",
+        "Nathan Kallus",
+        "Aurélien Bibaut"
       ],
-      "abstract": "Attribute bias in federated learning (FL) typically leads local models to\noptimize inconsistently due to the learning of non-causal associations,\nresulting degraded performance. Existing methods either use data augmentation\nfor increasing sample diversity or knowledge distillation for learning\ninvariant representations to address this problem. However, they lack a\ncomprehensive analysis of the inference paths, and the interference from\nconfounding factors limits their performance. To address these limitations, we\npropose the \\underline{Fed}erated \\underline{D}econfounding and\n\\underline{D}ebiasing \\underline{L}earning (FedDDL) method. It constructs a\nstructured causal graph to analyze the model inference process, and performs\nbackdoor adjustment to eliminate confounding paths. Specifically, we design an\nintra-client deconfounding learning module for computer vision tasks to\ndecouple background and objects, generating counterfactual samples that\nestablish a connection between the background and any label, which stops the\nmodel from using the background to infer the label. Moreover, we design an\ninter-client debiasing learning module to construct causal prototypes to reduce\nthe proportion of the background in prototype components. Notably, it bridges\nthe gap between heterogeneous representations via causal prototypical\nregularization. Extensive experiments on 2 benchmarking datasets demonstrate\nthat \\methodname{} significantly enhances the model capability to focus on main\nobjects in unseen data, leading to 4.5\\% higher Top-1 Accuracy on average over\n9 state-of-the-art existing methods.",
-      "pdf_url": "http://arxiv.org/pdf/2505.04979v2",
-      "arxiv_url": "http://arxiv.org/abs/2505.04979v2",
-      "published": "2025-05-08",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Moments of Causal Effects",
-      "authors": [
-        "Yuta Kawakami",
-        "Jin Tian"
-      ],
-      "abstract": "The moments of random variables are fundamental statistical measures for\ncharacterizing the shape of a probability distribution, encompassing metrics\nsuch as mean, variance, skewness, and kurtosis. Additionally, the product\nmoments, including covariance and correlation, reveal the relationships between\nmultiple random variables. On the other hand, the primary focus of causal\ninference is the evaluation of causal effects, which are defined as the\ndifference between two potential outcomes. While traditional causal effect\nassessment focuses on the average causal effect, this work provides\ndefinitions, identification theorems, and bounds for moments and product\nmoments of causal effects to analyze their distribution and relationships. We\nconduct experiments to illustrate the estimation of the moments of causal\neffects from finite samples and demonstrate their practical application using a\nreal-world medical dataset.",
-      "pdf_url": "http://arxiv.org/pdf/2505.04971v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.04971v1",
-      "published": "2025-05-08",
+      "abstract": "We study inference on linear functionals in the nonparametric instrumental\nvariable (NPIV) problem with a discretely-valued instrument under a\nmany-weak-instruments asymptotic regime, where the number of instrument values\ngrows with the sample size. A key motivating example is estimating long-term\ncausal effects in a new experiment with only short-term outcomes, using past\nexperiments to instrument for the effect of short- on long-term outcomes. Here,\nthe assignment to a past experiment serves as the instrument: we have many past\nexperiments but only a limited number of units in each. Since the structural\nfunction is nonparametric but constrained by only finitely many moment\nrestrictions, point identification typically fails. To address this, we\nconsider linear functionals of the minimum-norm solution to the moment\nrestrictions, which is always well-defined. As the number of instrument levels\ngrows, these functionals define an approximating sequence to a target\nfunctional, replacing point identification with a weaker asymptotic notion\nsuited to discrete instruments. Extending the Jackknife Instrumental Variable\nEstimator (JIVE) beyond the classical parametric setting, we propose npJIVE, a\nnonparametric estimator for solutions to linear inverse problems with many weak\ninstruments. We construct automatic debiased machine learning estimators for\nlinear functionals of both the structural function and its minimum-norm\nprojection, and establish their efficiency in the many-weak-instruments regime.",
+      "pdf_url": "http://arxiv.org/pdf/2505.07729v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.07729v1",
+      "published": "2025-05-12",
       "categories": [
         "stat.ME",
-        "cs.AI"
+        "math.ST",
+        "stat.ML",
+        "stat.TH"
       ]
     },
     {
-      "title": "R^3-VQA: \"Read the Room\" by Video Social Reasoning",
+      "title": "Generative Pre-trained Autoregressive Diffusion Transformer",
       "authors": [
-        "Lixing Niu",
-        "Jiapeng Li",
-        "Xingping Yu",
-        "Shu Wang",
-        "Ruining Feng",
-        "Bo Wu",
-        "Ping Wei",
-        "Yisen Wang",
-        "Lifeng Fan"
+        "Yuan Zhang",
+        "Jiacheng Jiang",
+        "Guoqing Ma",
+        "Zhiying Lu",
+        "Haoyang Huang",
+        "Jianlong Yuan",
+        "Nan Duan"
       ],
-      "abstract": "\"Read the room\" is a significant social reasoning capability in human daily\nlife. Humans can infer others' mental states from subtle social cues. Previous\nsocial reasoning tasks and datasets lack complexity (e.g., simple scenes, basic\ninteractions, incomplete mental state variables, single-step reasoning, etc.)\nand fall far short of the challenges present in real-life social interactions.\nIn this paper, we contribute a valuable, high-quality, and comprehensive video\ndataset named R^3-VQA with precise and fine-grained annotations of social\nevents and mental states (i.e., belief, intent, desire, and emotion) as well as\ncorresponding social causal chains in complex social scenarios. Moreover, we\ninclude human-annotated and model-generated QAs. Our task R^3-VQA includes\nthree aspects: Social Event Understanding, Mental State Estimation, and Social\nCausal Reasoning. As a benchmark, we comprehensively evaluate the social\nreasoning capabilities and consistencies of current state-of-the-art large\nvision-language models (LVLMs). Comprehensive experiments show that (i) LVLMs\nare still far from human-level consistent social reasoning in complex social\nscenarios; (ii) Theory of Mind (ToM) prompting can help LVLMs perform better on\nsocial reasoning tasks. We provide some of our dataset and codes in\nsupplementary material and will release our full dataset and codes upon\nacceptance.",
-      "pdf_url": "http://arxiv.org/pdf/2505.04147v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.04147v1",
-      "published": "2025-05-07",
+      "abstract": "In this work, we present GPDiT, a Generative Pre-trained Autoregressive\nDiffusion Transformer that unifies the strengths of diffusion and\nautoregressive modeling for long-range video synthesis, within a continuous\nlatent space. Instead of predicting discrete tokens, GPDiT autoregressively\npredicts future latent frames using a diffusion loss, enabling natural modeling\nof motion dynamics and semantic consistency across frames. This continuous\nautoregressive framework not only enhances generation quality but also endows\nthe model with representation capabilities. Additionally, we introduce a\nlightweight causal attention variant and a parameter-free rotation-based\ntime-conditioning mechanism, improving both the training and inference\nefficiency. Extensive experiments demonstrate that GPDiT achieves strong\nperformance in video generation quality, video representation ability, and\nfew-shot learning tasks, highlighting its potential as an effective framework\nfor video modeling in continuous space.",
+      "pdf_url": "http://arxiv.org/pdf/2505.07344v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.07344v1",
+      "published": "2025-05-12",
       "categories": [
         "cs.CV",
         "cs.AI"
       ]
     },
     {
-      "title": "Regularized Fingerprinting with Linearly Optimal Weight Matrix in Detection and Attribution of Climate Change",
+      "title": "GMM with Many Weak Moment Conditions and Nuisance Parameters: General Theory and Applications to Causal Inference",
       "authors": [
-        "Haoran Li",
-        "Yan Li"
+        "Rui Wang",
+        "Kwun Chuen Gary Chan",
+        "Ting Ye"
       ],
-      "abstract": "Climate change detection and attribution plays a central role in establishing\nthe causal influence of human activities on global warming. The most widely\nused framework, optimal fingerprinting, is a linear regression model with\nerrors-in-variables (EIV), in which each covariate is subject to measurement\nerror whose covariance matrix is the same as that of the regression error up to\na known scale. The reliability of such detection and attribution analyses\ncritically depends on accurate inference of the regression coefficients. The\noptimal weight matrix in estimating the regression coefficient is the precision\nmatrix of the regression error, which is typically unknown and has to be\nestimated from climate model simulations with appropriate regularization.\nHowever, the estimators from the prevailing method, regularized optimal\nfingerprinting, are not optimal as believed, owing to the unreliable estimation\nof the optimal weight matrix, and their uncertainties are underestimated,\nleading to too narrow confidence intervals to match the nominal confidence\nlevels. In this paper, we propose consistent estimates of the variances of\nregression coefficients for weight matrices within the class of linear\nshrinkage estimators. Building on this result, we derive a linearly optimal\nweight matrix that directly minimizes the asymptotic variances of the estimated\nscaling factors within the fingerprinting framework. Numerical studies confirm\nthat the proposed method yields confidence intervals with empirical coverage\nrates close to the nominal level, while also achieving shorter average interval\nlengths. In applications to the detection and attribution analyses of annual\nmean near-surface air temperature at the global, continental, and\nsubcontinental scales during 1951--2020, the proposed method produced shorter\nconfidence intervals than the existing approaches in most of the analyses.",
-      "pdf_url": "http://arxiv.org/pdf/2505.04070v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.04070v1",
-      "published": "2025-05-07",
+      "abstract": "Weak identification is a common issue for many statistical problems -- for\nexample, when instrumental variables are weakly correlated with treatment, or\nwhen proxy variables are weakly correlated with unmeasured confounders. Under\nweak identification, standard estimation methods, such as the generalized\nmethod of moments (GMM), can have sizeable bias in finite samples or even\nasymptotically. In addition, many practical settings involve a growing number\nof nuisance parameters, adding further complexity to the problem. In this\npaper, we study estimation and inference under a general nonlinear moment model\nwith many weak moment conditions and many nuisance parameters. To obtain\ndebiased inference for finite-dimensional target parameters, we demonstrate\nthat Neyman orthogonality plays a stronger role than in conventional settings\nwith strong identification. We study a general two-step debiasing estimator\nthat allows for possibly nonparametric first-step estimation of nuisance\nparameters, and we establish its consistency and asymptotic normality under a\nmany weak moment asymptotic regime. Our theory accommodates both\nhigh-dimensional moment conditions and infinite-dimensional nuisance\nparameters. We provide high-level assumptions for a general setting and discuss\nspecific applications to the problems of estimation and inference with weak\ninstruments and weak proxies.",
+      "pdf_url": "http://arxiv.org/pdf/2505.07295v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.07295v1",
+      "published": "2025-05-12",
       "categories": [
+        "math.ST",
         "stat.ME",
-        "physics.ao-ph",
-        "physics.data-an"
+        "stat.TH"
       ]
     },
     {
-      "title": "Causal Inference in Counterbalanced Within-Subjects Designs",
+      "title": "Causal View of Time Series Imputation: Some Identification Results on Missing Mechanism",
       "authors": [
-        "Justin Ho",
-        "Jonathan Min"
+        "Ruichu Cai",
+        "Kaitao Zheng",
+        "Junxian Huang",
+        "Zijian Li",
+        "Zhengming Chen",
+        "Boyan Xu",
+        "Zhifeng Hao"
       ],
-      "abstract": "Experimental designs are fundamental for estimating causal effects. In some\nfields, within-subjects designs, which expose participants to both control and\ntreatment at different time periods, are used to address practical and\nlogistical concerns. Counterbalancing, a common technique in within-subjects\ndesigns, aims to remove carryover effects by randomizing treatment sequences.\nDespite its appeal, counterbalancing relies on the assumption that carryover\neffects are symmetric and cancel out, which is often unverifiable a priori. In\nthis paper, we formalize the challenges of counterbalanced within-subjects\ndesigns using the potential outcomes framework. We introduce sequential\nexchangeability as an additional identification assumption necessary for valid\ncausal inference in these designs. To address identification concerns, we\npropose diagnostic checks, the use of washout periods, and covariate\nadjustments, and alternative experimental designs to counterbalanced\nwithin-subjects design. Our findings demonstrate the limitations of\ncounterbalancing and provide guidance on when and how within-subjects designs\ncan be appropriately used for causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2505.03937v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.03937v1",
-      "published": "2025-05-06",
+      "abstract": "Time series imputation is one of the most challenge problems and has broad\napplications in various fields like health care and the Internet of Things.\nExisting methods mainly aim to model the temporally latent dependencies and the\ngeneration process from the observed time series data. In real-world scenarios,\ndifferent types of missing mechanisms, like MAR (Missing At Random), and MNAR\n(Missing Not At Random) can occur in time series data. However, existing\nmethods often overlook the difference among the aforementioned missing\nmechanisms and use a single model for time series imputation, which can easily\nlead to misleading results due to mechanism mismatching. In this paper, we\npropose a framework for time series imputation problem by exploring Different\nMissing Mechanisms (DMM in short) and tailoring solutions accordingly.\nSpecifically, we first analyze the data generation processes with temporal\nlatent states and missing cause variables for different mechanisms.\nSequentially, we model these generation processes via variational inference and\nestimate prior distributions of latent variables via normalizing flow-based\nneural architecture. Furthermore, we establish identifiability results under\nthe nonlinear independent component analysis framework to show that latent\nvariables are identifiable. Experimental results show that our method surpasses\nexisting time series imputation techniques across various datasets with\ndifferent missing mechanisms, demonstrating its effectiveness in real-world\napplications.",
+      "pdf_url": "http://arxiv.org/pdf/2505.07180v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.07180v1",
+      "published": "2025-05-12",
       "categories": [
-        "stat.ME",
-        "econ.EM"
+        "cs.LG",
+        "stat.ML"
       ]
     },
     {
-      "title": "Scientific Hypothesis Generation and Validation: Methods, Datasets, and Future Directions",
+      "title": "Causal knowledge graph analysis identifies adverse drug effects",
       "authors": [
-        "Adithya Kulkarni",
-        "Fatimah Alotaibi",
-        "Xinyue Zeng",
-        "Longfeng Wu",
-        "Tong Zeng",
-        "Barry Menglong Yao",
-        "Minqian Liu",
-        "Shuaicheng Zhang",
-        "Lifu Huang",
-        "Dawei Zhou"
+        "Sumyyah Toonsi",
+        "Paul Schofield",
+        "Robert Hoehndorf"
       ],
-      "abstract": "Large Language Models (LLMs) are transforming scientific hypothesis\ngeneration and validation by enabling information synthesis, latent\nrelationship discovery, and reasoning augmentation. This survey provides a\nstructured overview of LLM-driven approaches, including symbolic frameworks,\ngenerative models, hybrid systems, and multi-agent architectures. We examine\ntechniques such as retrieval-augmented generation, knowledge-graph completion,\nsimulation, causal inference, and tool-assisted reasoning, highlighting\ntrade-offs in interpretability, novelty, and domain alignment. We contrast\nearly symbolic discovery systems (e.g., BACON, KEKADA) with modern LLM\npipelines that leverage in-context learning and domain adaptation via\nfine-tuning, retrieval, and symbolic grounding. For validation, we review\nsimulation, human-AI collaboration, causal modeling, and uncertainty\nquantification, emphasizing iterative assessment in open-world contexts. The\nsurvey maps datasets across biomedicine, materials science, environmental\nscience, and social science, introducing new resources like AHTech and\nCSKG-600. Finally, we outline a roadmap emphasizing novelty-aware generation,\nmultimodal-symbolic integration, human-in-the-loop systems, and ethical\nsafeguards, positioning LLMs as agents for principled, scalable scientific\ndiscovery.",
-      "pdf_url": "http://arxiv.org/pdf/2505.04651v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.04651v1",
-      "published": "2025-05-06",
+      "abstract": "Knowledge graphs and structural causal models have each proven valuable for\norganizing biomedical knowledge and estimating causal effects, but remain\nlargely disconnected: knowledge graphs encode qualitative relationships\nfocusing on facts and deductive reasoning without formal probabilistic\nsemantics, while causal models lack integration with background knowledge in\nknowledge graphs and have no access to the deductive reasoning capabilities\nthat knowledge graphs provide. To bridge this gap, we introduce a novel\nformulation of Causal Knowledge Graphs (CKGs) which extend knowledge graphs\nwith formal causal semantics, preserving their deductive capabilities while\nenabling principled causal inference. CKGs support deconfounding via explicitly\nmarked causal edges and facilitate hypothesis formulation aligned with both\nencoded and entailed background knowledge. We constructed a Drug-Disease CKG\n(DD-CKG) integrating disease progression pathways, drug indications,\nside-effects, and hierarchical disease classification to enable automated\nlarge-scale mediation analysis. Applied to UK Biobank and MIMIC-IV cohorts, we\ntested whether drugs mediate effects between indications and downstream disease\nprogression, adjusting for confounders inferred from the DD-CKG. Our approach\nsuccessfully reproduced known adverse drug reactions with high precision while\nidentifying previously undocumented significant candidate adverse effects.\nFurther validation through side effect similarity analysis demonstrated that\ncombining our predicted drug effects with established databases significantly\nimproves the prediction of shared drug indications, supporting the clinical\nrelevance of our novel findings. These results demonstrate that our methodology\nprovides a generalizable, knowledge-driven framework for scalable causal\ninference.",
+      "pdf_url": "http://arxiv.org/pdf/2505.06949v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.06949v1",
+      "published": "2025-05-11",
       "categories": [
-        "cs.CL",
-        "cs.LG"
+        "cs.AI",
+        "q-bio.BM"
       ]
     },
     {
-      "title": "Counterfactual Inference for Eliminating Sentiment Bias in Recommender Systems",
+      "title": "Beyond Patterns: Harnessing Causal Logic for Autonomous Driving Trajectory Prediction",
       "authors": [
-        "Le Pan",
-        "Yuanjiang Cao",
-        "Chengkai Huang",
-        "Wenjie Zhang",
-        "Lina Yao"
+        "Bonan Wang",
+        "Haicheng Liao",
+        "Chengyue Wang",
+        "Bin Rao",
+        "Yanchen Guan",
+        "Guyang Yu",
+        "Jiaxun Zhang",
+        "Songning Lai",
+        "Chengzhong Xu",
+        "Zhenning Li"
       ],
-      "abstract": "Recommender Systems (RSs) aim to provide personalized recommendations for\nusers. A newly discovered bias, known as sentiment bias, uncovers a common\nphenomenon within Review-based RSs (RRSs): the recommendation accuracy of users\nor items with negative reviews deteriorates compared with users or items with\npositive reviews. Critical users and niche items are disadvantaged by such\nunfair recommendations. We study this problem from the perspective of\ncounterfactual inference with two stages. At the model training stage, we build\na causal graph and model how sentiment influences the final rating score.\nDuring the inference stage, we decouple the direct and indirect effects to\nmitigate the impact of sentiment bias and remove the indirect effect using\ncounterfactual inference. We have conducted extensive experiments, and the\nresults validate that our model can achieve comparable performance on rating\nprediction for better recommendations and effective mitigation of sentiment\nbias. To the best of our knowledge, this is the first work to employ\ncounterfactual inference on sentiment bias mitigation in RSs.",
-      "pdf_url": "http://arxiv.org/pdf/2505.03655v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.03655v1",
-      "published": "2025-05-06",
+      "abstract": "Accurate trajectory prediction has long been a major challenge for autonomous\ndriving (AD). Traditional data-driven models predominantly rely on statistical\ncorrelations, often overlooking the causal relationships that govern traffic\nbehavior. In this paper, we introduce a novel trajectory prediction framework\nthat leverages causal inference to enhance predictive robustness,\ngeneralization, and accuracy. By decomposing the environment into spatial and\ntemporal components, our approach identifies and mitigates spurious\ncorrelations, uncovering genuine causal relationships. We also employ a\nprogressive fusion strategy to integrate multimodal information, simulating\nhuman-like reasoning processes and enabling real-time inference. Evaluations on\nfive real-world datasets--ApolloScape, nuScenes, NGSIM, HighD, and\nMoCAD--demonstrate our model's superiority over existing state-of-the-art\n(SOTA) methods, with improvements in key metrics such as RMSE and FDE. Our\nfindings highlight the potential of causal reasoning to transform trajectory\nprediction, paving the way for robust AD systems.",
+      "pdf_url": "http://arxiv.org/pdf/2505.06856v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.06856v1",
+      "published": "2025-05-11",
       "categories": [
-        "cs.IR",
-        "cs.AI"
+        "cs.AI",
+        "cs.RO"
       ]
     },
     {
-      "title": "Integrated Sensing, Computing, Communication, and Control for Time-Sequence-Based Semantic Communications",
+      "title": "A logic for instrumental obligation",
       "authors": [
-        "Qingliang Li",
-        "Bo Chang",
-        "Weidong Mei",
-        "Zhi Chen"
+        "Jialiang Yan",
+        "Qingyu He"
       ],
-      "abstract": "In the upcoming industrial internet of things (IIoT) era, a surge of\ntask-oriented applications will rely on real-time wireless control systems\n(WCSs). For these systems, ultra-reliable and low-latency wireless\ncommunication will be crucial to ensure the timely transmission of control\ninformation. To achieve this purpose, we propose a novel time-sequence-based\nsemantic communication paradigm, where an integrated sensing, computing,\ncommunication, and control (ISC3) architecture is developed to make sensible\nsemantic inference (SI) for the control information over time sequences,\nenabling adaptive control of the robot. However, due to the causal correlations\nin the time sequence, the control information does not present the Markov\nproperty. To address this challenge, we compute the mutual information of the\ncontrol information sensed at the transmitter (Tx) over different time and\nidentify their temporal semantic correlation via a semantic feature extractor\n(SFE) module. By this means, highly correlated information transmission can be\navoided, thus greatly reducing the communication overhead. Meanwhile, a\nsemantic feature reconstructor (SFR) module is employed at the receiver (Rx) to\nreconstruct the control information based on the previously received one if the\ninformation transmission is not activated at the Tx. Furthermore, a control\ngain policy is also employed at the Rx to adaptively adjust the control gain\nfor the controlled target based on several practical aspects such as the\nquality of the information transmission from the Tx to the Rx. We design the\nneural network structures of the above modules/policies and train their\nparameters by a novel hybrid reward multi-agent deep reinforcement learning\nframework. On-site experiments are conducted to evaluate the performance of our\nproposed method in practice, which shows significant gains over other baseline\nschemes.",
-      "pdf_url": "http://arxiv.org/pdf/2505.03127v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.03127v1",
-      "published": "2025-05-06",
+      "abstract": "This paper develops a logic based on causal inferences to formally capture\nthe concept of instrumental obligation. We establish a causal deontic model\nthat extends causal models with priority structures, allowing us to represent\nboth the instrumental and deontic aspects of an obligation. In this framework,\ninstrumental obligation is defined as a derived notion through intervention\nformulas of causal reasoning, where an action is considered obligatory if it is\nthe best way to achieve the goal. We provide a sound and complete axiomatic\nsystem and show that the logic is NP-complete. The concept of instrumental\npermission is also taken into account in the model.",
+      "pdf_url": "http://arxiv.org/pdf/2505.06824v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.06824v1",
+      "published": "2025-05-11",
       "categories": [
-        "eess.SY",
-        "cs.IT",
-        "cs.SY",
-        "math.IT"
+        "math.LO"
       ]
     },
     {
-      "title": "Multi-View Learning with Context-Guided Receptance for Image Denoising",
+      "title": "Hillclimb-Causal Inference: A Data-Driven Approach to Identify Causal Pathways Among Parental Behaviors, Genetic Risk, and Externalizing Behaviors in Children",
       "authors": [
-        "Binghong Chen",
-        "Tingting Chai",
-        "Wei Jiang",
-        "Yuanrong Xu",
-        "Guanglu Zhou",
-        "Xiangqian Wu"
+        "Mengman Wei",
+        "Qian Peng"
       ],
-      "abstract": "Image denoising is essential in low-level vision applications such as\nphotography and automated driving. Existing methods struggle with\ndistinguishing complex noise patterns in real-world scenes and consume\nsignificant computational resources due to reliance on Transformer-based\nmodels. In this work, the Context-guided Receptance Weighted Key-Value (\\M)\nmodel is proposed, combining enhanced multi-view feature integration with\nefficient sequence modeling. Our approach introduces the Context-guided Token\nShift (CTS) paradigm, which effectively captures local spatial dependencies and\nenhance the model's ability to model real-world noise distributions.\nAdditionally, the Frequency Mix (FMix) module extracting frequency-domain\nfeatures is designed to isolate noise in high-frequency spectra, and is\nintegrated with spatial representations through a multi-view learning process.\nTo improve computational efficiency, the Bidirectional WKV (BiWKV) mechanism is\nadopted, enabling full pixel-sequence interaction with linear complexity while\novercoming the causal selection constraints. The model is validated on multiple\nreal-world image denoising datasets, outperforming the existing\nstate-of-the-art methods quantitatively and reducing inference time up to 40\\%.\nQualitative results further demonstrate the ability of our model to restore\nfine details in various scenes.",
-      "pdf_url": "http://arxiv.org/pdf/2505.02705v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.02705v1",
-      "published": "2025-05-05",
+      "abstract": "Motivation: Externalizing behaviors in children, such as aggression,\nhyperactivity, and defiance, are influenced by complex interplays between\ngenetic predispositions and environmental factors, particularly parental\nbehaviors. Unraveling these intricate causal relationships can benefit from the\nuse of robust data-driven methods.\n  Methods: We developed a method called Hillclimb-Causal Inference, a causal\ndiscovery approach that integrates the Hill Climb Search algorithm with a\ncustomized Linear Gaussian Bayesian Information Criterion (BIC). This method\nwas applied to data from the Adolescent Brain Cognitive Development (ABCD)\nStudy, which included parental behavior assessments, children's genotypes, and\nexternalizing behavior measures. We performed dimensionality reduction to\naddress multicollinearity among parental behaviors and assessed children's\ngenetic risk for externalizing disorders using polygenic risk scores (PRS),\nwhich were computed based on GWAS summary statistics from independent cohorts.\nOnce the causal pathways were identified, we employed structural equation\nmodeling (SEM) to quantify the relationships within the model.\n  Results: We identified prominent causal pathways linking parental behaviors\nto children's externalizing outcomes. Parental alcohol misuse and broader\nbehavioral issues exhibited notably stronger direct effects (0.33 and 0.20,\nrespectively) compared to children's polygenic risk scores (0.07). Moreover,\nwhen considering both direct and indirect paths, parental substance misuse\n(alcohol, drug, and tobacco) collectively resulted in a total effect exceeding\n1.1 on externalizing behaviors. Bootstrap and sensitivity analyses further\nvalidated the robustness of these findings.",
+      "pdf_url": "http://arxiv.org/pdf/2505.06784v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.06784v1",
+      "published": "2025-05-10",
       "categories": [
-        "eess.IV",
-        "cs.CV"
+        "q-bio.QM"
       ]
     },
     {
-      "title": "Structure Causal Models and LLMs Integration in Medical Visual Question Answering",
+      "title": "dcFCI: Robust Causal Discovery Under Latent Confounding, Unfaithfulness, and Mixed Data",
       "authors": [
-        "Zibo Xu",
-        "Qiang Li",
-        "Weizhi Nie",
-        "Weijie Wang",
-        "Anan Liu"
+        "Adèle H. Ribeiro",
+        "Dominik Heider"
       ],
-      "abstract": "Medical Visual Question Answering (MedVQA) aims to answer medical questions\naccording to medical images. However, the complexity of medical data leads to\nconfounders that are difficult to observe, so bias between images and questions\nis inevitable. Such cross-modal bias makes it challenging to infer medically\nmeaningful answers. In this work, we propose a causal inference framework for\nthe MedVQA task, which effectively eliminates the relative confounding effect\nbetween the image and the question to ensure the precision of the\nquestion-answering (QA) session. We are the first to introduce a novel causal\ngraph structure that represents the interaction between visual and textual\nelements, explicitly capturing how different questions influence visual\nfeatures. During optimization, we apply the mutual information to discover\nspurious correlations and propose a multi-variable resampling front-door\nadjustment method to eliminate the relative confounding effect, which aims to\nalign features based on their true causal relevance to the question-answering\ntask. In addition, we also introduce a prompt strategy that combines multiple\nprompt forms to improve the model's ability to understand complex medical data\nand answer accurately. Extensive experiments on three MedVQA datasets\ndemonstrate that 1) our method significantly improves the accuracy of MedVQA,\nand 2) our method achieves true causal correlations in the face of complex\nmedical data.",
-      "pdf_url": "http://arxiv.org/pdf/2505.02703v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.02703v1",
-      "published": "2025-05-05",
+      "abstract": "Causal discovery is central to inferring causal relationships from\nobservational data. In the presence of latent confounding, algorithms such as\nFast Causal Inference (FCI) learn a Partial Ancestral Graph (PAG) representing\nthe true model's Markov Equivalence Class. However, their correctness\ncritically depends on empirical faithfulness, the assumption that observed\n(in)dependencies perfectly reflect those of the underlying causal model, which\noften fails in practice due to limited sample sizes. To address this, we\nintroduce the first nonparametric score to assess a PAG's compatibility with\nobserved data, even with mixed variable types. This score is both necessary and\nsufficient to characterize structural uncertainty and distinguish between\ndistinct PAGs. We then propose data-compatible FCI (dcFCI), the first hybrid\ncausal discovery algorithm to jointly address latent confounding, empirical\nunfaithfulness, and mixed data types. dcFCI integrates our score into an\n(Anytime)FCI-guided search that systematically explores, ranks, and validates\ncandidate PAGs. Experiments on synthetic and real-world scenarios demonstrate\nthat dcFCI significantly outperforms state-of-the-art methods, often recovering\nthe true PAG even in small and heterogeneous datasets. Examining top-ranked\nPAGs further provides valuable insights into structural uncertainty, supporting\nmore robust and informed causal reasoning and decision-making.",
+      "pdf_url": "http://arxiv.org/pdf/2505.06542v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.06542v1",
+      "published": "2025-05-10",
       "categories": [
-        "cs.CV"
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Semiparametric semi-supervised learning for general targets under distribution shift and decaying overlap",
+      "authors": [
+        "Lorenzo Testa",
+        "Qi Xu",
+        "Jing Lei",
+        "Kathryn Roeder"
+      ],
+      "abstract": "In modern scientific applications, large volumes of covariate data are\nreadily available, while outcome labels are costly, sparse, and often subject\nto distribution shift. This asymmetry has spurred interest in semi-supervised\n(SS) learning, but most existing approaches rely on strong assumptions -- such\nas missing completely at random (MCAR) labeling or strict positivity -- that\nput substantial limitations on their practical usefulness. In this work, we\nintroduce a general semiparametric framework for estimation and inference in SS\nsettings where labels are missing at random (MAR) and the overlap may vanish as\nsample size increases. Our framework accommodates a wide range of smooth\nstatistical targets -- including means, linear coefficients, quantiles, and\ncausal effects -- and remains valid under high-dimensional nuisance estimation\nand distributional shift between labeled and unlabeled samples. We construct\nestimators that are doubly robust and asymptotically normal by deriving\ninfluence functions under this decaying MAR-SS regime. A key insight is that\nclassical root-$n$ convergence fails under vanishing overlap; we instead\nprovide corrected asymptotic rates that capture the impact of the decay in\noverlap. We validate our theory through simulations and demonstrate practical\nutility in real-world applications on the internet of things and breast cancer\nwhere labeled data are scarce.",
+      "pdf_url": "http://arxiv.org/pdf/2505.06452v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.06452v1",
+      "published": "2025-05-09",
+      "categories": [
+        "math.ST",
+        "stat.TH"
       ]
     }
   ]
