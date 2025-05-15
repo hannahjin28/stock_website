@@ -1,6 +1,110 @@
 {
-  "last_updated": "2025-05-14T00:53:15.887845",
+  "last_updated": "2025-05-15T00:52:44.059540",
   "papers": [
+    {
+      "title": "AC-Reason: Towards Theory-Guided Actual Causality Reasoning with Large Language Models",
+      "authors": [
+        "Yanxi Zhang",
+        "Xin Cong",
+        "Zhong Zhang",
+        "Xiao Liu",
+        "Dongyan Zhao",
+        "Yesai Wu"
+      ],
+      "abstract": "Actual causality (AC), a fundamental aspect of causal reasoning (CR), is\nresponsible for attribution and responsibility assignment in real-world\nscenarios. However, existing LLM-based methods lack grounding in formal AC\ntheory, resulting in limited interpretability. Therefore, we propose AC-Reason,\na semi-formal reasoning framework that identifies causally relevant events\nwithin an AC scenario, infers the values of their formal causal factors (e.g.,\nsufficiency, necessity, and normality), and answers AC queries via a\ntheory-guided algorithm with explanations. While AC-Reason does not explicitly\nconstruct a causal graph, it operates over variables in the underlying causal\nstructure to support principled reasoning. To enable comprehensive evaluation,\nwe introduce AC-Bench, a new benchmark built upon and substantially extending\nBig-Bench Hard Causal Judgment (BBH-CJ). AC-Bench comprises ~1K carefully\nannotated samples, each with detailed reasoning steps and focuses solely on\nactual causation. The case study shows that synthesized samples in AC-Bench\npresent greater challenges for LLMs. Extensive experiments on BBH-CJ and\nAC-Bench show that AC-Reason consistently improves LLM performance over\nbaselines. On BBH-CJ, all tested LLMs surpass the average human rater accuracy\nof 69.60%, with GPT-4 + AC-Reason achieving 75.04%. On AC-Bench, GPT-4 +\nAC-Reason again achieves the highest accuracy of 71.82%. AC-Bench further\nenables fine-grained analysis of reasoning faithfulness, revealing that only\nQwen-2.5-72B-Instruct, Claude-3.5-Sonnet, and GPT-4o exhibit faithful\nreasoning, whereas GPT-4 tends to exploit shortcuts. Finally, our ablation\nstudy proves that integrating AC theory into LLMs is highly effective, with the\nproposed algorithm contributing the most significant performance gains.",
+      "pdf_url": "http://arxiv.org/pdf/2505.08750v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.08750v1",
+      "published": "2025-05-13",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Assumption-robust Causal Inference",
+      "authors": [
+        "Aditya Ghosh",
+        "Dominik Rothenhäusler"
+      ],
+      "abstract": "In observational causal inference, it is common to encounter multiple\nadjustment sets that appear equally plausible. It is often untestable which of\nthese adjustment sets are valid to adjust for (i.e., satisfies ignorability).\nThis discrepancy can pose practical challenges as it is typically unclear how\nto reconcile multiple, possibly conflicting estimates of the average treatment\neffect (ATE). A naive approach is to report the whole range (convex hull of the\nunion) of the resulting confidence intervals. However, the width of this\ninterval might not shrink to zero in large samples and can be unnecessarily\nwide in real applications. To address this issue, we propose a summary\nprocedure that generates a single estimate, one confidence interval, and\nidentifies a set of units for which the causal effect estimate remains valid,\nprovided at least one adjustment set is valid. The width of our proposed\nconfidence interval shrinks to zero with sample size at $n^{-1/2}$ rate, unlike\nthe original range which is of constant order. Thus, our assumption-robust\napproach enables reliable causal inference on the ATE even in scenarios where\nmost of the adjustment sets are invalid. Admittedly, this robustness comes at a\ncost: our inferential guarantees apply to a target population close to, but\ndifferent from, the one originally intended. We use synthetic and real-data\nexamples to demonstrate that our proposed procedure provides substantially\ntighter confidence intervals for the ATE as compared to the whole range. In\nparticular, for a real-world dataset on 401(k) retirement plans our method\nproduces a confidence interval 50\\% shorter than the whole range of confidence\nintervals based on multiple adjustment sets.",
+      "pdf_url": "http://arxiv.org/pdf/2505.08729v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.08729v1",
+      "published": "2025-05-13",
+      "categories": [
+        "stat.ME",
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Bayesian Estimation of Causal Effects Using Proxies of a Latent Interference Network",
+      "authors": [
+        "Bar Weinstein",
+        "Daniel Nevo"
+      ],
+      "abstract": "Network interference occurs when treatments assigned to some units affect the\noutcomes of others. Traditional approaches often assume that the observed\nnetwork correctly specifies the interference structure. However, in practice,\nresearchers frequently only have access to proxy measurements of the\ninterference network due to limitations in data collection or potential\nmismatches between measured networks and actual interference pathways. In this\npaper, we introduce a framework for estimating causal effects when only proxy\nnetworks are available. Our approach leverages a structural causal model that\naccommodates diverse proxy types, including noisy measurements, multiple data\nsources, and multilayer networks, and defines causal effects as interventions\non population-level treatments. Since the true interference network is latent,\nestimation poses significant challenges. To overcome them, we develop a\nBayesian inference framework. We propose a Block Gibbs sampler with Locally\nInformed Proposals to update the latent network, thereby efficiently exploring\nthe high-dimensional posterior space composed of both discrete and continuous\nparameters. We illustrate the performance of our method through numerical\nexperiments, demonstrating its accuracy in recovering causal effects even when\nonly proxies of the interference network are available.",
+      "pdf_url": "http://arxiv.org/pdf/2505.08395v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.08395v1",
+      "published": "2025-05-13",
+      "categories": [
+        "stat.ME",
+        "stat.AP",
+        "stat.CO",
+        "stat.ML",
+        "stat.OT"
+      ]
+    },
+    {
+      "title": "Empowering Vision Transformers with Multi-Scale Causal Intervention for Long-Tailed Image Classification",
+      "authors": [
+        "Xiaoshuo Yan",
+        "Zhaochuan Li",
+        "Lei Meng",
+        "Zhuang Qi",
+        "Wei Wu",
+        "Zixuan Li",
+        "Xiangxu Meng"
+      ],
+      "abstract": "Causal inference has emerged as a promising approach to mitigate long-tail\nclassification by handling the biases introduced by class imbalance. However,\nalong with the change of advanced backbone models from Convolutional Neural\nNetworks (CNNs) to Visual Transformers (ViT), existing causal models may not\nachieve an expected performance gain. This paper investigates the influence of\nexisting causal models on CNNs and ViT variants, highlighting that ViT's global\nfeature representation makes it hard for causal methods to model associations\nbetween fine-grained features and predictions, which leads to difficulties in\nclassifying tail classes with similar visual appearance. To address these\nissues, this paper proposes TSCNet, a two-stage causal modeling method to\ndiscover fine-grained causal associations through multi-scale causal\ninterventions. Specifically, in the hierarchical causal representation learning\nstage (HCRL), it decouples the background and objects, applying backdoor\ninterventions at both the patch and feature level to prevent model from using\nclass-irrelevant areas to infer labels which enhances fine-grained causal\nrepresentation. In the counterfactual logits bias calibration stage (CLBC), it\nrefines the optimization of model's decision boundary by adaptive constructing\ncounterfactual balanced data distribution to remove the spurious associations\nin the logits caused by data distribution. Extensive experiments conducted on\nvarious long-tail benchmarks demonstrate that the proposed TSCNet can eliminate\nmultiple biases introduced by data imbalance, which outperforms existing\nmethods.",
+      "pdf_url": "http://arxiv.org/pdf/2505.08173v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.08173v1",
+      "published": "2025-05-13",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Asymptotically Efficient Data-adaptive Penalized Shrinkage Estimation with Application to Causal Inference",
+      "authors": [
+        "Herbert P. Susmann",
+        "Yiting Li",
+        "Mara A. McAdams-DeMarco",
+        "Wenbo Wu",
+        "Iván Díaz"
+      ],
+      "abstract": "A rich literature exists on constructing non-parametric estimators with\noptimal asymptotic properties. In addition to asymptotic guarantees, it is\noften of interest to design estimators with desirable finite-sample properties;\nsuch as reduced mean-squared error of a large set of parameters. We provide\nexamples drawn from causal inference where this may be the case, such as\nestimating a large number of group-specific treatment effects. We show how\nfinite-sample properties of non-parametric estimators, particularly their\nvariance, can be improved by careful application of penalization. Given a\ntarget parameter of interest we derive a novel penalized parameter defined as\nthe solution to an optimization problem that balances fidelity to the original\nparameter against a penalty term. By deriving the non-parametric efficiency\nbound for the penalized parameter, we are able to propose simple data-adaptive\nchoices for the L1 and L2 tuning parameters designed to minimize finite-sample\nmean-squared error while preserving optimal asymptotic properties. The L1 and\nL2 penalization amounts to an adjustment that can be performed as a\npost-processing step applied to any asymptotically normal and efficient\nestimator. We show in extensive simulations that this adjustment yields\nestimators with lower MSE than the unpenalized estimators. Finally, we apply\nour approach to estimate provider quality measures of kidney dialysis providers\nwithin a causal inference framework.",
+      "pdf_url": "http://arxiv.org/pdf/2505.08065v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.08065v1",
+      "published": "2025-05-12",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "rd2d: Causal Inference in Boundary Discontinuity Designs",
+      "authors": [
+        "Matias D. Cattaneo",
+        "Rocio Titiunik",
+        "Ruiqi Rae Yu"
+      ],
+      "abstract": "Boundary discontinuity designs -- also known as Multi-Score Regression\nDiscontinuity (RD) designs, with Geographic RD designs as a prominent example\n-- are often used in empirical research to learn about causal treatment effects\nalong a continuous assignment boundary defined by a bivariate score. This\narticle introduces the R package rd2d, which implements and extends the\nmethodological results developed in Cattaneo, Titiunik and Yu (2025) for\nboundary discontinuity designs. The package employs local polynomial estimation\nand inference using either the bivariate score or a univariate\ndistance-to-boundary metric. It features novel data-driven bandwidth selection\nprocedures, and offers both pointwise and uniform estimation and inference\nalong the assignment boundary. The numerical performance of the package is\ndemonstrated through a simulation study.",
+      "pdf_url": "http://arxiv.org/pdf/2505.07989v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.07989v1",
+      "published": "2025-05-12",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "stat.CO"
+      ]
+    },
     {
       "title": "Nonparametric Instrumental Variable Inference with Many Weak Instruments",
       "authors": [
@@ -74,106 +178,6 @@
       "categories": [
         "cs.LG",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Causal knowledge graph analysis identifies adverse drug effects",
-      "authors": [
-        "Sumyyah Toonsi",
-        "Paul Schofield",
-        "Robert Hoehndorf"
-      ],
-      "abstract": "Knowledge graphs and structural causal models have each proven valuable for\norganizing biomedical knowledge and estimating causal effects, but remain\nlargely disconnected: knowledge graphs encode qualitative relationships\nfocusing on facts and deductive reasoning without formal probabilistic\nsemantics, while causal models lack integration with background knowledge in\nknowledge graphs and have no access to the deductive reasoning capabilities\nthat knowledge graphs provide. To bridge this gap, we introduce a novel\nformulation of Causal Knowledge Graphs (CKGs) which extend knowledge graphs\nwith formal causal semantics, preserving their deductive capabilities while\nenabling principled causal inference. CKGs support deconfounding via explicitly\nmarked causal edges and facilitate hypothesis formulation aligned with both\nencoded and entailed background knowledge. We constructed a Drug-Disease CKG\n(DD-CKG) integrating disease progression pathways, drug indications,\nside-effects, and hierarchical disease classification to enable automated\nlarge-scale mediation analysis. Applied to UK Biobank and MIMIC-IV cohorts, we\ntested whether drugs mediate effects between indications and downstream disease\nprogression, adjusting for confounders inferred from the DD-CKG. Our approach\nsuccessfully reproduced known adverse drug reactions with high precision while\nidentifying previously undocumented significant candidate adverse effects.\nFurther validation through side effect similarity analysis demonstrated that\ncombining our predicted drug effects with established databases significantly\nimproves the prediction of shared drug indications, supporting the clinical\nrelevance of our novel findings. These results demonstrate that our methodology\nprovides a generalizable, knowledge-driven framework for scalable causal\ninference.",
-      "pdf_url": "http://arxiv.org/pdf/2505.06949v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.06949v1",
-      "published": "2025-05-11",
-      "categories": [
-        "cs.AI",
-        "q-bio.BM"
-      ]
-    },
-    {
-      "title": "Beyond Patterns: Harnessing Causal Logic for Autonomous Driving Trajectory Prediction",
-      "authors": [
-        "Bonan Wang",
-        "Haicheng Liao",
-        "Chengyue Wang",
-        "Bin Rao",
-        "Yanchen Guan",
-        "Guyang Yu",
-        "Jiaxun Zhang",
-        "Songning Lai",
-        "Chengzhong Xu",
-        "Zhenning Li"
-      ],
-      "abstract": "Accurate trajectory prediction has long been a major challenge for autonomous\ndriving (AD). Traditional data-driven models predominantly rely on statistical\ncorrelations, often overlooking the causal relationships that govern traffic\nbehavior. In this paper, we introduce a novel trajectory prediction framework\nthat leverages causal inference to enhance predictive robustness,\ngeneralization, and accuracy. By decomposing the environment into spatial and\ntemporal components, our approach identifies and mitigates spurious\ncorrelations, uncovering genuine causal relationships. We also employ a\nprogressive fusion strategy to integrate multimodal information, simulating\nhuman-like reasoning processes and enabling real-time inference. Evaluations on\nfive real-world datasets--ApolloScape, nuScenes, NGSIM, HighD, and\nMoCAD--demonstrate our model's superiority over existing state-of-the-art\n(SOTA) methods, with improvements in key metrics such as RMSE and FDE. Our\nfindings highlight the potential of causal reasoning to transform trajectory\nprediction, paving the way for robust AD systems.",
-      "pdf_url": "http://arxiv.org/pdf/2505.06856v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.06856v1",
-      "published": "2025-05-11",
-      "categories": [
-        "cs.AI",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "A logic for instrumental obligation",
-      "authors": [
-        "Jialiang Yan",
-        "Qingyu He"
-      ],
-      "abstract": "This paper develops a logic based on causal inferences to formally capture\nthe concept of instrumental obligation. We establish a causal deontic model\nthat extends causal models with priority structures, allowing us to represent\nboth the instrumental and deontic aspects of an obligation. In this framework,\ninstrumental obligation is defined as a derived notion through intervention\nformulas of causal reasoning, where an action is considered obligatory if it is\nthe best way to achieve the goal. We provide a sound and complete axiomatic\nsystem and show that the logic is NP-complete. The concept of instrumental\npermission is also taken into account in the model.",
-      "pdf_url": "http://arxiv.org/pdf/2505.06824v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.06824v1",
-      "published": "2025-05-11",
-      "categories": [
-        "math.LO"
-      ]
-    },
-    {
-      "title": "Hillclimb-Causal Inference: A Data-Driven Approach to Identify Causal Pathways Among Parental Behaviors, Genetic Risk, and Externalizing Behaviors in Children",
-      "authors": [
-        "Mengman Wei",
-        "Qian Peng"
-      ],
-      "abstract": "Motivation: Externalizing behaviors in children, such as aggression,\nhyperactivity, and defiance, are influenced by complex interplays between\ngenetic predispositions and environmental factors, particularly parental\nbehaviors. Unraveling these intricate causal relationships can benefit from the\nuse of robust data-driven methods.\n  Methods: We developed a method called Hillclimb-Causal Inference, a causal\ndiscovery approach that integrates the Hill Climb Search algorithm with a\ncustomized Linear Gaussian Bayesian Information Criterion (BIC). This method\nwas applied to data from the Adolescent Brain Cognitive Development (ABCD)\nStudy, which included parental behavior assessments, children's genotypes, and\nexternalizing behavior measures. We performed dimensionality reduction to\naddress multicollinearity among parental behaviors and assessed children's\ngenetic risk for externalizing disorders using polygenic risk scores (PRS),\nwhich were computed based on GWAS summary statistics from independent cohorts.\nOnce the causal pathways were identified, we employed structural equation\nmodeling (SEM) to quantify the relationships within the model.\n  Results: We identified prominent causal pathways linking parental behaviors\nto children's externalizing outcomes. Parental alcohol misuse and broader\nbehavioral issues exhibited notably stronger direct effects (0.33 and 0.20,\nrespectively) compared to children's polygenic risk scores (0.07). Moreover,\nwhen considering both direct and indirect paths, parental substance misuse\n(alcohol, drug, and tobacco) collectively resulted in a total effect exceeding\n1.1 on externalizing behaviors. Bootstrap and sensitivity analyses further\nvalidated the robustness of these findings.",
-      "pdf_url": "http://arxiv.org/pdf/2505.06784v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.06784v1",
-      "published": "2025-05-10",
-      "categories": [
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "dcFCI: Robust Causal Discovery Under Latent Confounding, Unfaithfulness, and Mixed Data",
-      "authors": [
-        "Adèle H. Ribeiro",
-        "Dominik Heider"
-      ],
-      "abstract": "Causal discovery is central to inferring causal relationships from\nobservational data. In the presence of latent confounding, algorithms such as\nFast Causal Inference (FCI) learn a Partial Ancestral Graph (PAG) representing\nthe true model's Markov Equivalence Class. However, their correctness\ncritically depends on empirical faithfulness, the assumption that observed\n(in)dependencies perfectly reflect those of the underlying causal model, which\noften fails in practice due to limited sample sizes. To address this, we\nintroduce the first nonparametric score to assess a PAG's compatibility with\nobserved data, even with mixed variable types. This score is both necessary and\nsufficient to characterize structural uncertainty and distinguish between\ndistinct PAGs. We then propose data-compatible FCI (dcFCI), the first hybrid\ncausal discovery algorithm to jointly address latent confounding, empirical\nunfaithfulness, and mixed data types. dcFCI integrates our score into an\n(Anytime)FCI-guided search that systematically explores, ranks, and validates\ncandidate PAGs. Experiments on synthetic and real-world scenarios demonstrate\nthat dcFCI significantly outperforms state-of-the-art methods, often recovering\nthe true PAG even in small and heterogeneous datasets. Examining top-ranked\nPAGs further provides valuable insights into structural uncertainty, supporting\nmore robust and informed causal reasoning and decision-making.",
-      "pdf_url": "http://arxiv.org/pdf/2505.06542v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.06542v1",
-      "published": "2025-05-10",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Semiparametric semi-supervised learning for general targets under distribution shift and decaying overlap",
-      "authors": [
-        "Lorenzo Testa",
-        "Qi Xu",
-        "Jing Lei",
-        "Kathryn Roeder"
-      ],
-      "abstract": "In modern scientific applications, large volumes of covariate data are\nreadily available, while outcome labels are costly, sparse, and often subject\nto distribution shift. This asymmetry has spurred interest in semi-supervised\n(SS) learning, but most existing approaches rely on strong assumptions -- such\nas missing completely at random (MCAR) labeling or strict positivity -- that\nput substantial limitations on their practical usefulness. In this work, we\nintroduce a general semiparametric framework for estimation and inference in SS\nsettings where labels are missing at random (MAR) and the overlap may vanish as\nsample size increases. Our framework accommodates a wide range of smooth\nstatistical targets -- including means, linear coefficients, quantiles, and\ncausal effects -- and remains valid under high-dimensional nuisance estimation\nand distributional shift between labeled and unlabeled samples. We construct\nestimators that are doubly robust and asymptotically normal by deriving\ninfluence functions under this decaying MAR-SS regime. A key insight is that\nclassical root-$n$ convergence fails under vanishing overlap; we instead\nprovide corrected asymptotic rates that capture the impact of the decay in\noverlap. We validate our theory through simulations and demonstrate practical\nutility in real-world applications on the internet of things and breast cancer\nwhere labeled data are scarce.",
-      "pdf_url": "http://arxiv.org/pdf/2505.06452v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.06452v1",
-      "published": "2025-05-09",
-      "categories": [
-        "math.ST",
-        "stat.TH"
       ]
     }
   ]
