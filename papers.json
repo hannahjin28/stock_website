@@ -1,6 +1,77 @@
 {
-  "last_updated": "2025-05-15T00:52:44.059540",
+  "last_updated": "2025-05-16T00:54:23.973811",
   "papers": [
+    {
+      "title": "Language Agents Mirror Human Causal Reasoning Biases. How Can We Help Them Think Like Scientists?",
+      "authors": [
+        "Anthony GX-Chen",
+        "Dongyan Lin",
+        "Mandana Samiei",
+        "Doina Precup",
+        "Blake A. Richards",
+        "Rob Fergus",
+        "Kenneth Marino"
+      ],
+      "abstract": "Language model (LM) agents are increasingly used as autonomous\ndecision-makers who need to actively gather information to guide their\ndecisions. A crucial cognitive skill for such agents is the efficient\nexploration and understanding of the causal structure of the world -- key to\nrobust, scientifically grounded reasoning. Yet, it remains unclear whether LMs\npossess this capability or exhibit systematic biases leading to erroneous\nconclusions. In this work, we examine LMs' ability to explore and infer causal\nrelationships, using the well-established \"Blicket Test\" paradigm from\ndevelopmental psychology. We find that LMs reliably infer the common, intuitive\ndisjunctive causal relationships but systematically struggle with the unusual,\nyet equally (or sometimes even more) evidenced conjunctive ones. This\n\"disjunctive bias\" persists across model families, sizes, and prompting\nstrategies, and performance further declines as task complexity increases.\nInterestingly, an analogous bias appears in human adults, suggesting that LMs\nmay have inherited deep-seated reasoning heuristics from their training data.\nTo this end, we quantify similarities between LMs and humans, finding that LMs\nexhibit adult-like inference profiles (but not children-like). Finally, we\npropose a test-time sampling method which explicitly samples and eliminates\nhypotheses about causal relationships from the LM. This scalable approach\nsignificantly reduces the disjunctive bias and moves LMs closer to the goal of\nscientific, causally rigorous reasoning.",
+      "pdf_url": "http://arxiv.org/pdf/2505.09614v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.09614v1",
+      "published": "2025-05-14",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Moving towards informative and actionable social media research",
+      "authors": [
+        "Joseph B. Bak-Coleman",
+        "Stephan Lewandowsky",
+        "Philipp Lorenz-Spreen",
+        "Arvind Narayanan",
+        "Amy Orben",
+        "Lisa Oswald"
+      ],
+      "abstract": "Social media is nearly ubiquitous in modern life, and concerns have been\nraised about its putative societal impacts, ranging from undermining mental\nhealth and exacerbating polarization to fomenting violence and disrupting\ndemocracy. Despite extensive research, consensus on these effects remains\nelusive, with observational studies often highlighting concerns while\nrandomized controlled trials (RCTs) yield conflicting or null findings. This\nreview examines how the complexity inherent in social systems can account for\nsuch discrepancies, emphasizing that emergent societal and long-term outcomes\ncannot be readily inferred from individual-level effects. In complex systems,\nsuch as social networks, feedback loops, hysteresis, multi-scale dynamics, and\nnon-linearity limit the utility of approaches for assessing causality that are\notherwise robust in simpler contexts. Revisiting large-scale experiments, we\nexplore how null or conflicting findings may reflect these complexities rather\nthan a true absence of effects. Even in cases where the methods are\nappropriate, assessing the net impacts of social media provides little\nactionable insight given that eliminating social media is not a realistic\noption for whole populations. We argue that progress will require a\ncomplexity-minded approach focused on specific design choices of online\nplatforms that triangulates experimental, observational and theoretical\nmethods.",
+      "pdf_url": "http://arxiv.org/pdf/2505.09254v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.09254v1",
+      "published": "2025-05-14",
+      "categories": [
+        "cs.SI",
+        "nlin.AO"
+      ]
+    },
+    {
+      "title": "Modeling Interdependent Cybersecurity Threats Using Bayesian Networks: A Case Study on In-Vehicle Infotainment Systems",
+      "authors": [
+        "Sangita Sridar"
+      ],
+      "abstract": "Cybersecurity threats are increasingly marked by interdependence,\nuncertainty, and evolving complexity challenges that traditional assessment\nmethods such as CVSS, STRIDE, and attack trees fail to adequately capture. This\npaper reviews the application of Bayesian Networks (BNs) in cybersecurity risk\nmodeling, highlighting their capacity to represent probabilistic dependencies,\nintegrate diverse threat indicators, and support reasoning under uncertainty. A\nstructured case study is presented in which a STRIDE-based attack tree for an\nautomotive In-Vehicle Infotainment (IVI) system is transformed into a Bayesian\nNetwork. Logical relationships are encoded using Conditional Probability Tables\n(CPTs), and threat likelihoods are derived from normalized DREAD scores. The\nmodel enables not only probabilistic inference of system compromise likelihood\nbut also supports causal analysis using do-calculus and local sensitivity\nanalysis to identify high-impact vulnerabilities. These analyses provide\ninsight into the most influential nodes within the threat propagation chain,\ninforming targeted mitigation strategies. While demonstrating the potential of\nBNs for dynamic and context-aware risk assessment, the study also outlines\nlimitations related to scalability, reliance on expert input, static structure\nassumptions, and limited temporal modeling. The paper concludes by advocating\nfor future enhancements through Dynamic Bayesian Networks, structure learning,\nand adaptive inference to better support real-time cybersecurity\ndecision-making in complex environments.",
+      "pdf_url": "http://arxiv.org/pdf/2505.09048v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.09048v1",
+      "published": "2025-05-14",
+      "categories": [
+        "cs.CR"
+      ]
+    },
+    {
+      "title": "Modern causal inference approaches to improve power for subgroup analysis in randomized controlled trials",
+      "authors": [
+        "Antonio D'Alessandro",
+        "Jiyu Kim",
+        "Samrachana Adhikari",
+        "Donald Goff",
+        "Falco Bargagli Stoffi",
+        "Michele Santacatterina"
+      ],
+      "abstract": "In randomized controlled trials (RCTs), subgroup analyses are often planned\nto evaluate the heterogeneity of treatment effects within pre-specified\nsubgroups of interest. However, these analyses frequently have small sample\nsizes, reducing the power to detect heterogeneous effects. A way to increase\npower is by borrowing external data from similar RCTs or observational studies.\nIn this project, we target the conditional average treatment effect (CATE) as\nthe estimand of interest, provide identification assumptions, and propose a\ndoubly robust estimator that uses machine learning and Bayesian nonparametric\ntechniques. Borrowing data, however, may present the additional challenge of\npractical violations of the positivity assumption, the conditional probability\nof receiving treatment in the external data source may be small, leading to\nlarge inverse weights and erroneous inferences, thus negating the potential\npower gains from borrowing external data. To overcome this challenge, we also\npropose a covariate balancing approach, an automated debiased machine learning\n(DML) estimator, and a calibrated DML estimator. We show improved power in\nvarious simulations and offer practical recommendations for the application of\nthe proposed methods. Finally, we apply them to evaluate the effectiveness of\ncitalopram, a drug commonly used to treat depression, for negative symptoms in\nfirst-episode schizophrenia patients across subgroups defined by duration of\nuntreated psychosis, using data from two RCTs and an observational study.",
+      "pdf_url": "http://arxiv.org/pdf/2505.08960v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.08960v1",
+      "published": "2025-05-13",
+      "categories": [
+        "stat.ME",
+        "62P10"
+      ]
+    },
     {
       "title": "AC-Reason: Towards Theory-Guided Actual Causality Reasoning with Large Language Models",
       "authors": [
@@ -103,81 +174,6 @@
         "stat.ME",
         "econ.EM",
         "stat.CO"
-      ]
-    },
-    {
-      "title": "Nonparametric Instrumental Variable Inference with Many Weak Instruments",
-      "authors": [
-        "Lars van der Laan",
-        "Nathan Kallus",
-        "Aurélien Bibaut"
-      ],
-      "abstract": "We study inference on linear functionals in the nonparametric instrumental\nvariable (NPIV) problem with a discretely-valued instrument under a\nmany-weak-instruments asymptotic regime, where the number of instrument values\ngrows with the sample size. A key motivating example is estimating long-term\ncausal effects in a new experiment with only short-term outcomes, using past\nexperiments to instrument for the effect of short- on long-term outcomes. Here,\nthe assignment to a past experiment serves as the instrument: we have many past\nexperiments but only a limited number of units in each. Since the structural\nfunction is nonparametric but constrained by only finitely many moment\nrestrictions, point identification typically fails. To address this, we\nconsider linear functionals of the minimum-norm solution to the moment\nrestrictions, which is always well-defined. As the number of instrument levels\ngrows, these functionals define an approximating sequence to a target\nfunctional, replacing point identification with a weaker asymptotic notion\nsuited to discrete instruments. Extending the Jackknife Instrumental Variable\nEstimator (JIVE) beyond the classical parametric setting, we propose npJIVE, a\nnonparametric estimator for solutions to linear inverse problems with many weak\ninstruments. We construct automatic debiased machine learning estimators for\nlinear functionals of both the structural function and its minimum-norm\nprojection, and establish their efficiency in the many-weak-instruments regime.",
-      "pdf_url": "http://arxiv.org/pdf/2505.07729v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.07729v1",
-      "published": "2025-05-12",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.ML",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Generative Pre-trained Autoregressive Diffusion Transformer",
-      "authors": [
-        "Yuan Zhang",
-        "Jiacheng Jiang",
-        "Guoqing Ma",
-        "Zhiying Lu",
-        "Haoyang Huang",
-        "Jianlong Yuan",
-        "Nan Duan"
-      ],
-      "abstract": "In this work, we present GPDiT, a Generative Pre-trained Autoregressive\nDiffusion Transformer that unifies the strengths of diffusion and\nautoregressive modeling for long-range video synthesis, within a continuous\nlatent space. Instead of predicting discrete tokens, GPDiT autoregressively\npredicts future latent frames using a diffusion loss, enabling natural modeling\nof motion dynamics and semantic consistency across frames. This continuous\nautoregressive framework not only enhances generation quality but also endows\nthe model with representation capabilities. Additionally, we introduce a\nlightweight causal attention variant and a parameter-free rotation-based\ntime-conditioning mechanism, improving both the training and inference\nefficiency. Extensive experiments demonstrate that GPDiT achieves strong\nperformance in video generation quality, video representation ability, and\nfew-shot learning tasks, highlighting its potential as an effective framework\nfor video modeling in continuous space.",
-      "pdf_url": "http://arxiv.org/pdf/2505.07344v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.07344v1",
-      "published": "2025-05-12",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "GMM with Many Weak Moment Conditions and Nuisance Parameters: General Theory and Applications to Causal Inference",
-      "authors": [
-        "Rui Wang",
-        "Kwun Chuen Gary Chan",
-        "Ting Ye"
-      ],
-      "abstract": "Weak identification is a common issue for many statistical problems -- for\nexample, when instrumental variables are weakly correlated with treatment, or\nwhen proxy variables are weakly correlated with unmeasured confounders. Under\nweak identification, standard estimation methods, such as the generalized\nmethod of moments (GMM), can have sizeable bias in finite samples or even\nasymptotically. In addition, many practical settings involve a growing number\nof nuisance parameters, adding further complexity to the problem. In this\npaper, we study estimation and inference under a general nonlinear moment model\nwith many weak moment conditions and many nuisance parameters. To obtain\ndebiased inference for finite-dimensional target parameters, we demonstrate\nthat Neyman orthogonality plays a stronger role than in conventional settings\nwith strong identification. We study a general two-step debiasing estimator\nthat allows for possibly nonparametric first-step estimation of nuisance\nparameters, and we establish its consistency and asymptotic normality under a\nmany weak moment asymptotic regime. Our theory accommodates both\nhigh-dimensional moment conditions and infinite-dimensional nuisance\nparameters. We provide high-level assumptions for a general setting and discuss\nspecific applications to the problems of estimation and inference with weak\ninstruments and weak proxies.",
-      "pdf_url": "http://arxiv.org/pdf/2505.07295v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.07295v1",
-      "published": "2025-05-12",
-      "categories": [
-        "math.ST",
-        "stat.ME",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Causal View of Time Series Imputation: Some Identification Results on Missing Mechanism",
-      "authors": [
-        "Ruichu Cai",
-        "Kaitao Zheng",
-        "Junxian Huang",
-        "Zijian Li",
-        "Zhengming Chen",
-        "Boyan Xu",
-        "Zhifeng Hao"
-      ],
-      "abstract": "Time series imputation is one of the most challenge problems and has broad\napplications in various fields like health care and the Internet of Things.\nExisting methods mainly aim to model the temporally latent dependencies and the\ngeneration process from the observed time series data. In real-world scenarios,\ndifferent types of missing mechanisms, like MAR (Missing At Random), and MNAR\n(Missing Not At Random) can occur in time series data. However, existing\nmethods often overlook the difference among the aforementioned missing\nmechanisms and use a single model for time series imputation, which can easily\nlead to misleading results due to mechanism mismatching. In this paper, we\npropose a framework for time series imputation problem by exploring Different\nMissing Mechanisms (DMM in short) and tailoring solutions accordingly.\nSpecifically, we first analyze the data generation processes with temporal\nlatent states and missing cause variables for different mechanisms.\nSequentially, we model these generation processes via variational inference and\nestimate prior distributions of latent variables via normalizing flow-based\nneural architecture. Furthermore, we establish identifiability results under\nthe nonlinear independent component analysis framework to show that latent\nvariables are identifiable. Experimental results show that our method surpasses\nexisting time series imputation techniques across various datasets with\ndifferent missing mechanisms, demonstrating its effectiveness in real-world\napplications.",
-      "pdf_url": "http://arxiv.org/pdf/2505.07180v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.07180v1",
-      "published": "2025-05-12",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
       ]
     }
   ]
