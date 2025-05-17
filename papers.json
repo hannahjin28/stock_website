@@ -1,6 +1,37 @@
 {
-  "last_updated": "2025-05-16T00:54:23.973811",
+  "last_updated": "2025-05-17T00:52:29.473910",
   "papers": [
+    {
+      "title": "Closure and Complexity of Temporal Causality",
+      "authors": [
+        "Mishel Carelli",
+        "Bernd Finkbeiner",
+        "Julian Siber"
+      ],
+      "abstract": "Temporal causality defines what property causes some observed temporal\nbehavior (the effect) in a given computation, based on a counterfactual\nanalysis of similar computations. In this paper, we study its closure\nproperties and the complexity of computing causes. For the former, we establish\nthat safety, reachability, and recurrence properties are all closed under\ncausal inference: If the effect is from one of these property classes, then the\ncause for this effect is from the same class. We also show that persistence and\nobligation properties are not closed in this way. These results rest on a\ntopological characterization of causes which makes them applicable to a wide\nrange of similarity relations between computations. Finally, our complexity\nanalysis establishes improved upper bounds for computing causes for safety,\nreachability, and recurrence properties. We also present the first lower bounds\nfor all of the classes.",
+      "pdf_url": "http://arxiv.org/pdf/2505.10186v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.10186v1",
+      "published": "2025-05-15",
+      "categories": [
+        "cs.LO"
+      ]
+    },
+    {
+      "title": "Forests for Differences: Robust Causal Inference Beyond Parametric DiD",
+      "authors": [
+        "Hugo Gobato Souto",
+        "Francisco Louzada Neto"
+      ],
+      "abstract": "This paper introduces the Difference-in-Differences Bayesian Causal Forest\n(DiD-BCF), a novel non-parametric model addressing key challenges in DiD\nestimation, such as staggered adoption and heterogeneous treatment effects.\nDiD-BCF provides a unified framework for estimating Average (ATE),\nGroup-Average (GATE), and Conditional Average Treatment Effects (CATE). A core\ninnovation, its Parallel Trends Assumption (PTA)-based reparameterization,\nenhances estimation accuracy and stability in complex panel data settings.\nExtensive simulations demonstrate DiD-BCF's superior performance over\nestablished benchmarks, particularly under non-linearity, selection biases, and\neffect heterogeneity. Applied to U.S. minimum wage policy, the model uncovers\nsignificant conditional treatment effect heterogeneity related to county\npopulation, insights obscured by traditional methods. DiD-BCF offers a robust\nand versatile tool for more nuanced causal inference in modern DiD\napplications.",
+      "pdf_url": "http://arxiv.org/pdf/2505.09706v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.09706v1",
+      "published": "2025-05-14",
+      "categories": [
+        "stat.ME",
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Language Agents Mirror Human Causal Reasoning Biases. How Can We Help Them Think Like Scientists?",
       "authors": [
@@ -140,40 +171,6 @@
       "published": "2025-05-13",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Asymptotically Efficient Data-adaptive Penalized Shrinkage Estimation with Application to Causal Inference",
-      "authors": [
-        "Herbert P. Susmann",
-        "Yiting Li",
-        "Mara A. McAdams-DeMarco",
-        "Wenbo Wu",
-        "Iván Díaz"
-      ],
-      "abstract": "A rich literature exists on constructing non-parametric estimators with\noptimal asymptotic properties. In addition to asymptotic guarantees, it is\noften of interest to design estimators with desirable finite-sample properties;\nsuch as reduced mean-squared error of a large set of parameters. We provide\nexamples drawn from causal inference where this may be the case, such as\nestimating a large number of group-specific treatment effects. We show how\nfinite-sample properties of non-parametric estimators, particularly their\nvariance, can be improved by careful application of penalization. Given a\ntarget parameter of interest we derive a novel penalized parameter defined as\nthe solution to an optimization problem that balances fidelity to the original\nparameter against a penalty term. By deriving the non-parametric efficiency\nbound for the penalized parameter, we are able to propose simple data-adaptive\nchoices for the L1 and L2 tuning parameters designed to minimize finite-sample\nmean-squared error while preserving optimal asymptotic properties. The L1 and\nL2 penalization amounts to an adjustment that can be performed as a\npost-processing step applied to any asymptotically normal and efficient\nestimator. We show in extensive simulations that this adjustment yields\nestimators with lower MSE than the unpenalized estimators. Finally, we apply\nour approach to estimate provider quality measures of kidney dialysis providers\nwithin a causal inference framework.",
-      "pdf_url": "http://arxiv.org/pdf/2505.08065v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.08065v1",
-      "published": "2025-05-12",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "rd2d: Causal Inference in Boundary Discontinuity Designs",
-      "authors": [
-        "Matias D. Cattaneo",
-        "Rocio Titiunik",
-        "Ruiqi Rae Yu"
-      ],
-      "abstract": "Boundary discontinuity designs -- also known as Multi-Score Regression\nDiscontinuity (RD) designs, with Geographic RD designs as a prominent example\n-- are often used in empirical research to learn about causal treatment effects\nalong a continuous assignment boundary defined by a bivariate score. This\narticle introduces the R package rd2d, which implements and extends the\nmethodological results developed in Cattaneo, Titiunik and Yu (2025) for\nboundary discontinuity designs. The package employs local polynomial estimation\nand inference using either the bivariate score or a univariate\ndistance-to-boundary metric. It features novel data-driven bandwidth selection\nprocedures, and offers both pointwise and uniform estimation and inference\nalong the assignment boundary. The numerical performance of the package is\ndemonstrated through a simulation study.",
-      "pdf_url": "http://arxiv.org/pdf/2505.07989v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.07989v1",
-      "published": "2025-05-12",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "stat.CO"
       ]
     }
   ]
