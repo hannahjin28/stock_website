@@ -1,176 +1,218 @@
 {
-  "last_updated": "2025-05-20T00:54:52.162255",
+  "last_updated": "2025-05-21T00:54:19.295085",
   "papers": [
     {
-      "title": "A Generative Framework for Causal Estimation via Importance-Weighted Diffusion Distillation",
+      "title": "Machine learning the first stage in 2SLS: Practical guidance from bias decomposition and simulation",
       "authors": [
-        "Xinran Song",
-        "Tianyu Chen",
-        "Mingyuan Zhou"
+        "Connor Lennon",
+        "Edward Rubin",
+        "Glen Waddell"
       ],
-      "abstract": "Estimating individualized treatment effects from observational data is a\ncentral challenge in causal inference, largely due to covariate imbalance and\nconfounding bias from non-randomized treatment assignment. While inverse\nprobability weighting (IPW) is a well-established solution to this problem, its\nintegration into modern deep learning frameworks remains limited. In this work,\nwe propose Importance-Weighted Diffusion Distillation (IWDD), a novel\ngenerative framework that combines the pretraining of diffusion models with\nimportance-weighted score distillation to enable accurate and fast causal\nestimation-including potential outcome prediction and treatment effect\nestimation. We demonstrate how IPW can be naturally incorporated into the\ndistillation of pretrained diffusion models, and further introduce a\nrandomization-based adjustment that eliminates the need to compute IPW\nexplicitly-thereby simplifying computation and, more importantly, provably\nreducing the variance of gradient estimates. Empirical results show that IWDD\nachieves state-of-the-art out-of-sample prediction performance, with the\nhighest win rates compared to other baselines, significantly improving causal\nestimation and supporting the development of individualized treatment\nstrategies. We will release our PyTorch code for reproducibility and future\nresearch.",
-      "pdf_url": "http://arxiv.org/pdf/2505.11444v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.11444v1",
-      "published": "2025-05-16",
+      "abstract": "Machine learning (ML) primarily evolved to solve \"prediction problems.\" The\nfirst stage of two-stage least squares (2SLS) is a prediction problem,\nsuggesting potential gains from ML first-stage assistance. However, little\nguidance exists on when ML helps 2SLS$\\unicode{x2014}$or when it hurts. We\ninvestigate the implications of inserting ML into 2SLS, decomposing the bias\ninto three informative components. Mechanically, ML-in-2SLS procedures face\nissues common to prediction and causal-inference settings$\\unicode{x2014}$and\ntheir interaction. Through simulation, we show linear ML methods (e.g.,\npost-Lasso) work well, while nonlinear methods (e.g., random forests, neural\nnets) generate substantial bias in second-stage\nestimates$\\unicode{x2014}$potentially exceeding the bias of endogenous OLS.",
+      "pdf_url": "http://arxiv.org/pdf/2505.13422v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.13422v1",
+      "published": "2025-05-19",
       "categories": [
+        "econ.EM",
         "cs.LG",
         "stat.AP",
-        "stat.ME",
         "stat.ML"
       ]
     },
     {
-      "title": "Bayesian Hierarchical Invariant Prediction",
+      "title": "FEALLM: Advancing Facial Emotion Analysis in Multimodal Large Language Models with Emotional Synergy and Reasoning",
       "authors": [
-        "Francisco Madaleno",
-        "Pernille Julie Viuff Sand",
-        "Francisco C. Pereira",
-        "Sergio Hernan Garrido Mejia"
+        "Zhuozhao Hu",
+        "Kaishen Yuan",
+        "Xin Liu",
+        "Zitong Yu",
+        "Yuan Zong",
+        "Jingang Shi",
+        "Huanjing Yue",
+        "Jingyu Yang"
       ],
-      "abstract": "We propose Bayesian Hierarchical Invariant Prediction (BHIP) reframing\nInvariant Causal Prediction (ICP) through the lens of Hierarchical Bayes. We\nleverage the hierarchical structure to explicitly test invariance of causal\nmechanisms under heterogeneous data, resulting in improved computational\nscalability for a larger number of predictors compared to ICP. Moreover, given\nits Bayesian nature BHIP enables the use of prior information. In this paper,\nwe test two sparsity inducing priors: horseshoe and spike-and-slab, both of\nwhich allow us a more reliable identification of causal features. We test BHIP\nin synthetic and real-world data showing its potential as an alternative\ninference method to ICP.",
-      "pdf_url": "http://arxiv.org/pdf/2505.11211v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.11211v1",
-      "published": "2025-05-16",
+      "abstract": "Facial Emotion Analysis (FEA) plays a crucial role in visual affective\ncomputing, aiming to infer a person's emotional state based on facial data.\nScientifically, facial expressions (FEs) result from the coordinated movement\nof facial muscles, which can be decomposed into specific action units (AUs)\nthat provide detailed emotional insights. However, traditional methods often\nstruggle with limited interpretability, constrained generalization and\nreasoning abilities. Recently, Multimodal Large Language Models (MLLMs) have\nshown exceptional performance in various visual tasks, while they still face\nsignificant challenges in FEA due to the lack of specialized datasets and their\ninability to capture the intricate relationships between FEs and AUs. To\naddress these issues, we introduce a novel FEA Instruction Dataset that\nprovides accurate and aligned FE and AU descriptions and establishes causal\nreasoning relationships between them, followed by constructing a new benchmark,\nFEABench. Moreover, we propose FEALLM, a novel MLLM architecture designed to\ncapture more detailed facial information, enhancing its capability in FEA\ntasks. Our model demonstrates strong performance on FEABench and impressive\ngeneralization capability through zero-shot evaluation on various datasets,\nincluding RAF-DB, AffectNet, BP4D, and DISFA, showcasing its robustness and\neffectiveness in FEA tasks. The dataset and code will be available at\nhttps://github.com/953206211/FEALLM.",
+      "pdf_url": "http://arxiv.org/pdf/2505.13419v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.13419v1",
+      "published": "2025-05-19",
       "categories": [
-        "cs.LG",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "From What Ifs to Insights: Counterfactuals in Causal Inference vs. Explainable AI",
+      "authors": [
+        "Galit Shmueli",
+        "David Martens",
+        "Jaewon Yoo",
+        "Travis Greene"
+      ],
+      "abstract": "Counterfactuals play a pivotal role in the two distinct data science fields\nof causal inference (CI) and explainable artificial intelligence (XAI). While\nthe core idea behind counterfactuals remains the same in both fields--the\nexamination of what would have happened under different circumstances--there\nare key differences in how they are used and interpreted. We introduce a formal\ndefinition that encompasses the multi-faceted concept of the counterfactual in\nCI and XAI. We then discuss how counterfactuals are used, evaluated, generated,\nand operationalized in CI vs. XAI, highlighting conceptual and practical\ndifferences. By comparing and contrasting the two, we hope to identify\nopportunities for cross-fertilization across CI and XAI.",
+      "pdf_url": "http://arxiv.org/pdf/2505.13324v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.13324v1",
+      "published": "2025-05-19",
+      "categories": [
+        "stat.ML",
         "cs.AI",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "A Fast Kernel-based Conditional Independence test with Application to Causal Discovery",
-      "authors": [
-        "Oliver Schacht",
-        "Biwei Huang"
-      ],
-      "abstract": "Kernel-based conditional independence (KCI) testing is a powerful\nnonparametric method commonly employed in causal discovery tasks. Despite its\nflexibility and statistical reliability, cubic computational complexity limits\nits application to large datasets. To address this computational bottleneck, we\npropose \\textit{FastKCI}, a scalable and parallelizable kernel-based\nconditional independence test that utilizes a mixture-of-experts approach\ninspired by embarrassingly parallel inference techniques for Gaussian\nprocesses. By partitioning the dataset based on a Gaussian mixture model over\nthe conditioning variables, FastKCI conducts local KCI tests in parallel,\naggregating the results using an importance-weighted sampling scheme.\nExperiments on synthetic datasets and benchmarks on real-world production data\nvalidate that FastKCI maintains the statistical power of the original KCI test\nwhile achieving substantial computational speedups. FastKCI thus represents a\npractical and efficient solution for conditional independence testing in causal\ninference on large-scale data.",
-      "pdf_url": "http://arxiv.org/pdf/2505.11085v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.11085v1",
-      "published": "2025-05-16",
-      "categories": [
         "cs.LG",
-        "cs.AI",
-        "stat.ML"
+        "econ.EM",
+        "stat.ME"
       ]
     },
     {
-      "title": "A Cautionary Tale on Integrating Studies with Disparate Outcome Measures for Causal Inference",
+      "title": "MAGI-1: Autoregressive Video Generation at Scale",
       "authors": [
-        "Harsh Parikh",
-        "Trang Quynh Nguyen",
-        "Elizabeth A. Stuart",
-        "Kara E. Rudolph",
-        "Caleb H. Miles"
+        "Sand. ai",
+        "Hansi Teng",
+        "Hongyu Jia",
+        "Lei Sun",
+        "Lingzhi Li",
+        "Maolin Li",
+        "Mingqiu Tang",
+        "Shuai Han",
+        "Tianning Zhang",
+        "W. Q. Zhang",
+        "Weifeng Luo",
+        "Xiaoyang Kang",
+        "Yuchen Sun",
+        "Yue Cao",
+        "Yunpeng Huang",
+        "Yutong Lin",
+        "Yuxin Fang",
+        "Zewei Tao",
+        "Zheng Zhang",
+        "Zhongshu Wang",
+        "Zixun Liu",
+        "Dai Shi",
+        "Guoli Su",
+        "Hanwen Sun",
+        "Hong Pan",
+        "Jie Wang",
+        "Jiexin Sheng",
+        "Min Cui",
+        "Min Hu",
+        "Ming Yan",
+        "Shucheng Yin",
+        "Siran Zhang",
+        "Tingting Liu",
+        "Xianping Yin",
+        "Xiaoyu Yang",
+        "Xin Song",
+        "Xuan Hu",
+        "Yankai Zhang",
+        "Yuqiao Li"
       ],
-      "abstract": "Data integration approaches are increasingly used to enhance the efficiency\nand generalizability of studies. However, a key limitation of these methods is\nthe assumption that outcome measures are identical across datasets -- an\nassumption that often does not hold in practice. Consider the following opioid\nuse disorder (OUD) studies: the XBOT trial and the POAT study, both evaluating\nthe effect of medications for OUD on withdrawal symptom severity (not the\nprimary outcome of either trial). While XBOT measures withdrawal severity using\nthe subjective opiate withdrawal scale, POAT uses the clinical opiate\nwithdrawal scale. We analyze this realistic yet challenging setting where\noutcome measures differ across studies and where neither study records both\ntypes of outcomes. Our paper studies whether and when integrating studies with\ndisparate outcome measures leads to efficiency gains. We introduce three sets\nof assumptions -- with varying degrees of strength -- linking both outcome\nmeasures. Our theoretical and empirical results highlight a cautionary tale:\nintegration can improve asymptotic efficiency only under the strongest\nassumption linking the outcomes. However, misspecification of this assumption\nleads to bias. In contrast, a milder assumption may yield finite-sample\nefficiency gains, yet these benefits diminish as sample size increases. We\nillustrate these trade-offs via a case study integrating the XBOT and POAT\ndatasets to estimate the comparative effect of two medications for opioid use\ndisorder on withdrawal symptoms. By systematically varying the assumptions\nlinking the SOW and COW scales, we show potential efficiency gains and the\nrisks of bias. Our findings emphasize the need for careful assumption selection\nwhen fusing datasets with differing outcome measures, offering guidance for\nresearchers navigating this common challenge in modern data integration.",
-      "pdf_url": "http://arxiv.org/pdf/2505.11014v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.11014v1",
-      "published": "2025-05-16",
+      "abstract": "We present MAGI-1, a world model that generates videos by autoregressively\npredicting a sequence of video chunks, defined as fixed-length segments of\nconsecutive frames. Trained to denoise per-chunk noise that increases\nmonotonically over time, MAGI-1 enables causal temporal modeling and naturally\nsupports streaming generation. It achieves strong performance on image-to-video\n(I2V) tasks conditioned on text instructions, providing high temporal\nconsistency and scalability, which are made possible by several algorithmic\ninnovations and a dedicated infrastructure stack. MAGI-1 facilitates\ncontrollable generation via chunk-wise prompting and supports real-time,\nmemory-efficient deployment by maintaining constant peak inference cost,\nregardless of video length. The largest variant of MAGI-1 comprises 24 billion\nparameters and supports context lengths of up to 4 million tokens,\ndemonstrating the scalability and robustness of our approach. The code and\nmodels are available at https://github.com/SandAI-org/MAGI-1 and\nhttps://github.com/SandAI-org/MagiAttention. The product can be accessed at\nhttps://sand.ai.",
+      "pdf_url": "http://arxiv.org/pdf/2505.13211v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.13211v1",
+      "published": "2025-05-19",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Quantum Algorithms for Causal Estimands",
+      "authors": [
+        "Rishi Goel",
+        "Casey R. Myers",
+        "Sally Shrapnel"
+      ],
+      "abstract": "Modern machine learning methods typically fail to adequately capture causal\ninformation. Consequently, such models do not handle data distributional\nshifts, are vulnerable to adversarial examples, and often learn spurious\ncorrelations. Causal machine learning, or causal inference, aims to solve these\nissues by estimating the expected outcome of counterfactual events, using\nobservational and/or interventional data, where causal relationships are\ntypically depicted as directed acyclic graphs. It is an open question as to\nwhether these causal algorithms provide opportunities for quantum enhancement.\nIn this paper we consider a recently developed family of non-parametric,\ncontinuous causal estimators and derive quantum algorithms for these tasks.\nKernel evaluation and large matrix inversion are critical sub-routines of these\nclassical algorithms, which makes them particularly amenable to a quantum\ntreatment. Unlike other quantum machine learning algorithms, closed form\nsolutions for the estimators exist, negating the need for gradient evaluation\nand variational learning. We describe several new hybrid quantum-classical\nalgorithms and show that uniform consistency of the estimators is retained.\nFurthermore, if one is satisfied with a quantum state output that is\nproportional to the true causal estimand, then these algorithms inherit the\nexponential complexity advantages given by quantum linear system solvers.",
+      "pdf_url": "http://arxiv.org/pdf/2505.12873v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.12873v1",
+      "published": "2025-05-19",
+      "categories": [
+        "quant-ph"
+      ]
+    },
+    {
+      "title": "Double machine learning to estimate the effects of multiple treatments and their interactions",
+      "authors": [
+        "Qingyan Xiang",
+        "Yubai Yuan",
+        "Dongyuan Song",
+        "Usman J. Wudil",
+        "Muktar H. Aliyu",
+        "C. William Wester",
+        "Bryan E. Shepherd"
+      ],
+      "abstract": "Causal inference literature has extensively focused on binary treatments,\nwith relatively fewer methods developed for multi-valued treatments. In\nparticular, methods for multiple simultaneously assigned treatments remain\nunderstudied despite their practical importance. This paper introduces two\nsettings: (1) estimating the effects of multiple treatments of different types\n(binary, categorical, and continuous) and the effects of treatment\ninteractions, and (2) estimating the average treatment effect across categories\nof multi-valued regimens. To obtain robust estimates for both settings, we\npropose a class of methods based on the Double Machine Learning (DML)\nframework. Our methods are well-suited for complex settings of multiple\ntreatments/regimens, using machine learning to model confounding relationships\nwhile overcoming regularization and overfitting biases through Neyman\northogonality and cross-fitting. To our knowledge, this work is the first to\napply machine learning for robust estimation of interaction effects in the\npresence of multiple treatments. We further establish the asymptotic\ndistribution of our estimators and derive variance estimators for statistical\ninference. Extensive simulations demonstrate the performance of our methods.\nFinally, we apply the methods to study the effect of three treatments on\nHIV-associated kidney disease in an adult HIV cohort of 2455 participants in\nNigeria.",
+      "pdf_url": "http://arxiv.org/pdf/2505.12617v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.12617v1",
+      "published": "2025-05-19",
       "categories": [
         "stat.ME",
-        "cs.LG",
-        "econ.EM"
+        "stat.AP"
       ]
     },
     {
-      "title": "Observational causality by states",
+      "title": "SurveillanceVQA-589K: A Benchmark for Comprehensive Surveillance Video-Language Understanding with Large Models",
       "authors": [
-        "Álvaro Martínez-Sánchez",
-        "Adrián Lozano-Durán"
+        "Bo Liu",
+        "Pengfei Qiao",
+        "Minhan Ma",
+        "Xuange Zhang",
+        "Yinan Tang",
+        "Peng Xu",
+        "Kun Liu",
+        "Tongtong Yuan"
       ],
-      "abstract": "Causality plays a central role in understanding interactions between\nvariables in complex systems. These systems often exhibit state-dependent\ncausal relationships, where both the strength and direction of causality vary\nwith the value of the interacting variables. In this work, we introduce a\nstate-aware causal inference method that quantifies causality in terms of\ninformation gain about future states. The effectiveness of the proposed\napproach stems from two key features: its ability to characterize causal\ninfluence as a function of system state, and its capacity to distinguish\nbetween redundant and synergistic interactions. The method is validated across\na range of benchmark cases in which the direction and strength of causality\nevolve in a prescribed manner with the state of the system. We further\ndemonstrate the applicability of our approach in two real scenarios: the\ninteraction between motions across scales in a turbulent boundary layer, and\nthe Walker circulation phenomenon in tropical Pacific climate dynamics. Our\nresults show that, without accounting for state-dependent causality as well as\nredundant and synergistic effects, traditional approaches to causal inference\nmay lead to incomplete or misleading conclusions.",
-      "pdf_url": "http://arxiv.org/pdf/2505.10878v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.10878v1",
-      "published": "2025-05-16",
+      "abstract": "Understanding surveillance video content remains a critical yet underexplored\nchallenge in vision-language research, particularly due to its real-world\ncomplexity, irregular event dynamics, and safety-critical implications. In this\nwork, we introduce SurveillanceVQA-589K, the largest open-ended video question\nanswering benchmark tailored to the surveillance domain. The dataset comprises\n589,380 QA pairs spanning 12 cognitively diverse question types, including\ntemporal reasoning, causal inference, spatial understanding, and anomaly\ninterpretation, across both normal and abnormal video scenarios. To construct\nthe benchmark at scale, we design a hybrid annotation pipeline that combines\ntemporally aligned human-written captions with Large Vision-Language\nModel-assisted QA generation using prompt-based techniques. We also propose a\nmulti-dimensional evaluation protocol to assess contextual, temporal, and\ncausal comprehension. We evaluate eight LVLMs under this framework, revealing\nsignificant performance gaps, especially in causal and anomaly-related tasks,\nunderscoring the limitations of current models in real-world surveillance\ncontexts. Our benchmark provides a practical and comprehensive resource for\nadvancing video-language understanding in safety-critical applications such as\nintelligent monitoring, incident analysis, and autonomous decision-making.",
+      "pdf_url": "http://arxiv.org/pdf/2505.12589v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.12589v1",
+      "published": "2025-05-19",
       "categories": [
-        "physics.data-an",
-        "physics.flu-dyn"
+        "cs.CV"
       ]
     },
     {
-      "title": "Targeted Learning Estimation of Sampling Variance for Improved Inference",
+      "title": "Estimation of Treatment Harm Rate via Partitioning",
       "authors": [
-        "Yunwen Ji",
-        "Mark van der Laan",
-        "Alan Hubbard"
+        "Wei Liang",
+        "Changbao Wu"
       ],
-      "abstract": "For robust statistical inference it is crucial to obtain a good estimator of\nthe variance of the proposed estimator of the statistical estimand. A commonly\nused estimator of the variance for an asymptotically linear estimator is the\nsample variance of the estimated influence function. This estimator has been\nshown to be anti-conservative in limited samples or in the presence of\nnear-positivity violations, leading to elevated Type-I error rates and poor\ncoverage. In this paper, capitalizing on earlier attempts at targeted variance\nestimators, we propose a one-step targeted variance estimator for the causal\nrisk ratio (CRR) in scenarios involving treatment, outcome, and baseline\ncovariates. While our primary focus is on the variance of log(CRR), our\nmethodology can be extended to other causal effect parameters. Specifically, we\nfocus on the variance of the IF for the log relative risk (log(CRR)) estimator,\nwhich requires deriving the efficient influence function for the variance of\nthe IF as the basis for constructing the estimator. Several methods are\navailable to develop efficient estimators of asymptotically linear parameters.\nIn this paper, we concentrate on the so-called one-step targeted maximum\nlikelihood estimator, which is a substitution estimator that utilizes a\none-dimensional universal least favorable parametric submodel when updating the\ndistribution. We conduct simulations with different effect sizes, sample sizes\nand levels of positivity to compare the estimator with existing methods in\nterms of coverage and Type-I error. Simulation results demonstrate that,\nespecially with small samples and near-positivity violations, the proposed\nvariance estimator offers improved performance, achieving coverage closer to\nthe nominal level of 0.95 and a lower Type-I error rate.",
-      "pdf_url": "http://arxiv.org/pdf/2505.10624v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.10624v1",
-      "published": "2025-05-15",
+      "abstract": "In causal inference with binary outcomes, there is a growing interest in\nestimation of treatment harm rate (THR), which is a measure of treatment risk\nand reveals treatment effect heterogeneity in a subpopulation. The THR is\ngenerally non-identifiable even for randomized controlled trials (RCTs), and\nexisting works focus primarily on the estimation of the THR under either\nuntestable identification or ambiguous model assumptions. We develop a class of\npartitioning-based bounds for the THR based on data from RCTs with two distinct\nfeatures: Our proposed bounds effectively use available auxiliary covariates\ninformation and the bounds can be consistently estimated without relying on any\nuntestable or ambiguous model assumptions. Finite sample performances of our\nproposed interval estimators along with a conservatively extended confidence\ninterval for the THR are evaluated through Monte Carlo simulation studies. An\napplication of the proposed methods to the ACTG 175 data is presented. A Python\npackage named partbte for the partitioning-based algorithm has been developed\nand is available on https://github.com/w62liang/partition-te.",
+      "pdf_url": "http://arxiv.org/pdf/2505.12209v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.12209v1",
+      "published": "2025-05-18",
       "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "Closure and Complexity of Temporal Causality",
+      "title": "Causal Machine Learning in IoT-based Engineering Problems: A Tool Comparison in the Case of Household Energy Consumption",
       "authors": [
-        "Mishel Carelli",
-        "Bernd Finkbeiner",
-        "Julian Siber"
+        "Nikolaos-Lysias Kosioris",
+        "Sotirios Nikoletseas",
+        "Gavrilis Filios",
+        "Stefanos Panagiotou"
       ],
-      "abstract": "Temporal causality defines what property causes some observed temporal\nbehavior (the effect) in a given computation, based on a counterfactual\nanalysis of similar computations. In this paper, we study its closure\nproperties and the complexity of computing causes. For the former, we establish\nthat safety, reachability, and recurrence properties are all closed under\ncausal inference: If the effect is from one of these property classes, then the\ncause for this effect is from the same class. We also show that persistence and\nobligation properties are not closed in this way. These results rest on a\ntopological characterization of causes which makes them applicable to a wide\nrange of similarity relations between computations. Finally, our complexity\nanalysis establishes improved upper bounds for computing causes for safety,\nreachability, and recurrence properties. We also present the first lower bounds\nfor all of the classes.",
-      "pdf_url": "http://arxiv.org/pdf/2505.10186v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.10186v1",
-      "published": "2025-05-15",
+      "abstract": "The rapid increase in computing power and the ability to store Big Data in\nthe infrastructure has enabled predictions in a large variety of domains by\nMachine Learning. However, in many cases, existing Machine Learning tools are\nconsidered insufficient or incorrect since they exploit only probabilistic\ndependencies rather than inference logic. Causal Machine Learning methods seem\nto close this gap. In this paper, two prevalent tools based on Causal Machine\nLearning methods are compared, as well as their mathematical underpinning\nbackground. The operation of the tools is demonstrated by examining their\nresponse to 18 queries, based on the IDEAL Household Energy Dataset, published\nby the University of Edinburgh. First, it was important to evaluate the causal\nrelations assumption that allowed the use of this approach; this was based on\nthe preexisting scientific knowledge of the domain and was implemented by use\nof the in-built validation tools. Results were encouraging and may easily be\nextended to other domains.",
+      "pdf_url": "http://arxiv.org/pdf/2505.12147v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.12147v1",
+      "published": "2025-05-17",
       "categories": [
-        "cs.LO"
+        "cs.LG"
       ]
     },
     {
-      "title": "Forests for Differences: Robust Causal Inference Beyond Parametric DiD",
+      "title": "Attribution Projection Calculus: A Novel Framework for Causal Inference in Bayesian Networks",
       "authors": [
-        "Hugo Gobato Souto",
-        "Francisco Louzada Neto"
+        "M Ruhul Amin"
       ],
-      "abstract": "This paper introduces the Difference-in-Differences Bayesian Causal Forest\n(DiD-BCF), a novel non-parametric model addressing key challenges in DiD\nestimation, such as staggered adoption and heterogeneous treatment effects.\nDiD-BCF provides a unified framework for estimating Average (ATE),\nGroup-Average (GATE), and Conditional Average Treatment Effects (CATE). A core\ninnovation, its Parallel Trends Assumption (PTA)-based reparameterization,\nenhances estimation accuracy and stability in complex panel data settings.\nExtensive simulations demonstrate DiD-BCF's superior performance over\nestablished benchmarks, particularly under non-linearity, selection biases, and\neffect heterogeneity. Applied to U.S. minimum wage policy, the model uncovers\nsignificant conditional treatment effect heterogeneity related to county\npopulation, insights obscured by traditional methods. DiD-BCF offers a robust\nand versatile tool for more nuanced causal inference in modern DiD\napplications.",
-      "pdf_url": "http://arxiv.org/pdf/2505.09706v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.09706v1",
-      "published": "2025-05-14",
+      "abstract": "This paper introduces Attribution Projection Calculus (AP-Calculus), a novel\nmathematical framework for determining causal relationships in structured\nBayesian networks. We investigate a specific network architecture with source\nnodes connected to destination nodes through intermediate nodes, where each\ninput maps to a single label with maximum marginal probability. We prove that\nfor each label, exactly one intermediate node acts as a deconfounder while\nothers serve as confounders, enabling optimal attribution of features to their\ncorresponding labels. The framework formalizes the dual nature of intermediate\nnodes as both confounders and deconfounders depending on the context, and\nestablishes separation functions that maximize distinctions between\nintermediate representations. We demonstrate that the proposed network\narchitecture is optimal for causal inference compared to alternative\nstructures, including those based on Pearl's causal framework. AP-Calculus\nprovides a comprehensive mathematical foundation for analyzing feature-label\nattributions, managing spurious correlations, quantifying information gain,\nensuring fairness, and evaluating uncertainty in prediction models, including\nlarge language models. Theoretical verification shows that AP-Calculus not only\nextends but can also subsume traditional do-calculus for many practical\napplications, offering a more direct approach to causal inference in supervised\nlearning contexts.",
+      "pdf_url": "http://arxiv.org/pdf/2505.12094v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.12094v1",
+      "published": "2025-05-17",
       "categories": [
-        "stat.ME",
         "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Language Agents Mirror Human Causal Reasoning Biases. How Can We Help Them Think Like Scientists?",
-      "authors": [
-        "Anthony GX-Chen",
-        "Dongyan Lin",
-        "Mandana Samiei",
-        "Doina Precup",
-        "Blake A. Richards",
-        "Rob Fergus",
-        "Kenneth Marino"
-      ],
-      "abstract": "Language model (LM) agents are increasingly used as autonomous\ndecision-makers who need to actively gather information to guide their\ndecisions. A crucial cognitive skill for such agents is the efficient\nexploration and understanding of the causal structure of the world -- key to\nrobust, scientifically grounded reasoning. Yet, it remains unclear whether LMs\npossess this capability or exhibit systematic biases leading to erroneous\nconclusions. In this work, we examine LMs' ability to explore and infer causal\nrelationships, using the well-established \"Blicket Test\" paradigm from\ndevelopmental psychology. We find that LMs reliably infer the common, intuitive\ndisjunctive causal relationships but systematically struggle with the unusual,\nyet equally (or sometimes even more) evidenced conjunctive ones. This\n\"disjunctive bias\" persists across model families, sizes, and prompting\nstrategies, and performance further declines as task complexity increases.\nInterestingly, an analogous bias appears in human adults, suggesting that LMs\nmay have inherited deep-seated reasoning heuristics from their training data.\nTo this end, we quantify similarities between LMs and humans, finding that LMs\nexhibit adult-like inference profiles (but not children-like). Finally, we\npropose a test-time sampling method which explicitly samples and eliminates\nhypotheses about causal relationships from the LM. This scalable approach\nsignificantly reduces the disjunctive bias and moves LMs closer to the goal of\nscientific, causally rigorous reasoning.",
-      "pdf_url": "http://arxiv.org/pdf/2505.09614v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.09614v1",
-      "published": "2025-05-14",
-      "categories": [
         "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Moving towards informative and actionable social media research",
-      "authors": [
-        "Joseph B. Bak-Coleman",
-        "Stephan Lewandowsky",
-        "Philipp Lorenz-Spreen",
-        "Arvind Narayanan",
-        "Amy Orben",
-        "Lisa Oswald"
-      ],
-      "abstract": "Social media is nearly ubiquitous in modern life, and concerns have been\nraised about its putative societal impacts, ranging from undermining mental\nhealth and exacerbating polarization to fomenting violence and disrupting\ndemocracy. Despite extensive research, consensus on these effects remains\nelusive, with observational studies often highlighting concerns while\nrandomized controlled trials (RCTs) yield conflicting or null findings. This\nreview examines how the complexity inherent in social systems can account for\nsuch discrepancies, emphasizing that emergent societal and long-term outcomes\ncannot be readily inferred from individual-level effects. In complex systems,\nsuch as social networks, feedback loops, hysteresis, multi-scale dynamics, and\nnon-linearity limit the utility of approaches for assessing causality that are\notherwise robust in simpler contexts. Revisiting large-scale experiments, we\nexplore how null or conflicting findings may reflect these complexities rather\nthan a true absence of effects. Even in cases where the methods are\nappropriate, assessing the net impacts of social media provides little\nactionable insight given that eliminating social media is not a realistic\noption for whole populations. We argue that progress will require a\ncomplexity-minded approach focused on specific design choices of online\nplatforms that triangulates experimental, observational and theoretical\nmethods.",
-      "pdf_url": "http://arxiv.org/pdf/2505.09254v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.09254v1",
-      "published": "2025-05-14",
-      "categories": [
-        "cs.SI",
-        "nlin.AO"
+        "cs.IT",
+        "math.IT",
+        "stat.ML",
+        "60E10, 62R07, 68Q32, 68T07, 94A16",
+        "F.2.2; G.3; I.1.2; I.2.6"
       ]
     }
   ]
