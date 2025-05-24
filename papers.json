@@ -1,6 +1,176 @@
 {
-  "last_updated": "2025-05-23T00:53:39.357315",
+  "last_updated": "2025-05-24T00:51:34.047632",
   "papers": [
+    {
+      "title": "Learning Adaptive and Temporally Causal Video Tokenization in a 1D Latent Space",
+      "authors": [
+        "Yan Li",
+        "Changyao Tian",
+        "Renqiu Xia",
+        "Ning Liao",
+        "Weiwei Guo",
+        "Junchi Yan",
+        "Hongsheng Li",
+        "Jifeng Dai",
+        "Hao Li",
+        "Xue Yang"
+      ],
+      "abstract": "We propose AdapTok, an adaptive temporal causal video tokenizer that can\nflexibly allocate tokens for different frames based on video content. AdapTok\nis equipped with a block-wise masking strategy that randomly drops tail tokens\nof each block during training, and a block causal scorer to predict the\nreconstruction quality of video frames using different numbers of tokens.\nDuring inference, an adaptive token allocation strategy based on integer linear\nprogramming is further proposed to adjust token usage given predicted scores.\nSuch design allows for sample-wise, content-aware, and temporally dynamic token\nallocation under a controllable overall budget. Extensive experiments for video\nreconstruction and generation on UCF-101 and Kinetics-600 demonstrate the\neffectiveness of our approach. Without additional image data, AdapTok\nconsistently improves reconstruction quality and generation performance under\ndifferent token budgets, allowing for more scalable and token-efficient\ngenerative video modeling.",
+      "pdf_url": "http://arxiv.org/pdf/2505.17011v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.17011v1",
+      "published": "2025-05-22",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Beyond Correlation: Towards Causal Large Language Model Agents in Biomedicine",
+      "authors": [
+        "Adib Bazgir",
+        "Amir Habibdoust Lafmajani",
+        "Yuwen Zhang"
+      ],
+      "abstract": "Large Language Models (LLMs) show promise in biomedicine but lack true causal\nunderstanding, relying instead on correlations. This paper envisions causal LLM\nagents that integrate multimodal data (text, images, genomics, etc.) and\nperform intervention-based reasoning to infer cause-and-effect. Addressing this\nrequires overcoming key challenges: designing safe, controllable agentic\nframeworks; developing rigorous benchmarks for causal evaluation; integrating\nheterogeneous data sources; and synergistically combining LLMs with structured\nknowledge (KGs) and formal causal inference tools. Such agents could unlock\ntransformative opportunities, including accelerating drug discovery through\nautomated hypothesis generation and simulation, enabling personalized medicine\nthrough patient-specific causal models. This research agenda aims to foster\ninterdisciplinary efforts, bridging causal concepts and foundation models to\ndevelop reliable AI partners for biomedical progress.",
+      "pdf_url": "http://arxiv.org/pdf/2505.16982v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.16982v1",
+      "published": "2025-05-22",
+      "categories": [
+        "cs.AI",
+        "physics.med-ph"
+      ]
+    },
+    {
+      "title": "On the Out-of-Distribution Generalization of Self-Supervised Learning",
+      "authors": [
+        "Wenwen Qiang",
+        "Jingyao Wang",
+        "Zeen Song",
+        "Jiangmeng Li",
+        "Changwen Zheng"
+      ],
+      "abstract": "In this paper, we focus on the out-of-distribution (OOD) generalization of\nself-supervised learning (SSL). By analyzing the mini-batch construction during\nthe SSL training phase, we first give one plausible explanation for SSL having\nOOD generalization. Then, from the perspective of data generation and causal\ninference, we analyze and conclude that SSL learns spurious correlations during\nthe training process, which leads to a reduction in OOD generalization. To\naddress this issue, we propose a post-intervention distribution (PID) grounded\nin the Structural Causal Model. PID offers a scenario where the spurious\nvariable and label variable is mutually independent. Besides, we demonstrate\nthat if each mini-batch during SSL training satisfies PID, the resulting SSL\nmodel can achieve optimal worst-case OOD performance. This motivates us to\ndevelop a batch sampling strategy that enforces PID constraints through the\nlearning of a latent variable model. Through theoretical analysis, we\ndemonstrate the identifiability of the latent variable model and validate the\neffectiveness of the proposed sampling strategy. Experiments conducted on\nvarious downstream OOD tasks demonstrate the effectiveness of the proposed\nsampling strategy.",
+      "pdf_url": "http://arxiv.org/pdf/2505.16675v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.16675v1",
+      "published": "2025-05-22",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Seeing Far and Clearly: Mitigating Hallucinations in MLLMs with Attention Causal Decoding",
+      "authors": [
+        "Feilong Tang",
+        "Chengzhi Liu",
+        "Zhongxing Xu",
+        "Ming Hu",
+        "Zelin Peng",
+        "Zhiwei Yang",
+        "Jionglong Su",
+        "Minquan Lin",
+        "Yifan Peng",
+        "Xuelian Cheng",
+        "Imran Razzak",
+        "Zongyuan Ge"
+      ],
+      "abstract": "Recent advancements in multimodal large language models (MLLMs) have\nsignificantly improved performance in visual question answering. However, they\noften suffer from hallucinations. In this work, hallucinations are categorized\ninto two main types: initial hallucinations and snowball hallucinations. We\nargue that adequate contextual information can be extracted directly from the\ntoken interaction process. Inspired by causal inference in the decoding\nstrategy, we propose to leverage causal masks to establish information\npropagation between multimodal tokens. The hypothesis is that insufficient\ninteraction between those tokens may lead the model to rely on outlier tokens,\noverlooking dense and rich contextual cues. Therefore, we propose to intervene\nin the propagation process by tackling outlier tokens to enhance in-context\ninference. With this goal, we present FarSight, a versatile plug-and-play\ndecoding strategy to reduce attention interference from outlier tokens merely\nby optimizing the causal mask. The heart of our method is effective token\npropagation. We design an attention register structure within the upper\ntriangular matrix of the causal mask, dynamically allocating attention to\ncapture attention diverted to outlier tokens. Moreover, a positional awareness\nencoding method with a diminishing masking rate is proposed, allowing the model\nto attend to further preceding tokens, especially for video sequence tasks.\nWith extensive experiments, FarSight demonstrates significant\nhallucination-mitigating performance across different MLLMs on both image and\nvideo benchmarks, proving its effectiveness.",
+      "pdf_url": "http://arxiv.org/pdf/2505.16652v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.16652v1",
+      "published": "2025-05-22",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal-Invariant Cross-Domain Out-of-Distribution Recommendation",
+      "authors": [
+        "Jiajie Zhu",
+        "Yan Wang",
+        "Feng Zhu",
+        "Pengfei Ding",
+        "Hongyang Liu",
+        "Zhu Sun"
+      ],
+      "abstract": "Cross-Domain Recommendation (CDR) aims to leverage knowledge from a\nrelatively data-richer source domain to address the data sparsity problem in a\nrelatively data-sparser target domain. While CDR methods need to address the\ndistribution shifts between different domains, i.e., cross-domain distribution\nshifts (CDDS), they typically assume independent and identical distribution\n(IID) between training and testing data within the target domain. However, this\nIID assumption rarely holds in real-world scenarios due to single-domain\ndistribution shift (SDDS). The above two co-existing distribution shifts lead\nto out-of-distribution (OOD) environments that hinder effective knowledge\ntransfer and generalization, ultimately degrading recommendation performance in\nCDR. To address these co-existing distribution shifts, we propose a novel\nCausal-Invariant Cross-Domain Out-of-distribution Recommendation framework,\ncalled CICDOR. In CICDOR, we first learn dual-level causal structures to infer\ndomain-specific and domain-shared causal-invariant user preferences for\ntackling both CDDS and SDDS under OOD environments in CDR. Then, we propose an\nLLM-guided confounder discovery module that seamlessly integrates LLMs with a\nconventional causal discovery method to extract observed confounders for\neffective deconfounding, thereby enabling accurate causal-invariant preference\ninference. Extensive experiments on two real-world datasets demonstrate the\nsuperior recommendation accuracy of CICDOR over state-of-the-art methods across\nvarious OOD scenarios.",
+      "pdf_url": "http://arxiv.org/pdf/2505.16532v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.16532v1",
+      "published": "2025-05-22",
+      "categories": [
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Benchmarking and Pushing the Multi-Bias Elimination Boundary of LLMs via Causal Effect Estimation-guided Debiasing",
+      "authors": [
+        "Zhouhao Sun",
+        "Zhiyuan Kan",
+        "Xiao Ding",
+        "Li Du",
+        "Yang Zhao",
+        "Bing Qin",
+        "Ting Liu"
+      ],
+      "abstract": "Despite significant progress, recent studies have indicated that current\nlarge language models (LLMs) may still utilize bias during inference, leading\nto the poor generalizability of LLMs. Some benchmarks are proposed to\ninvestigate the generalizability of LLMs, with each piece of data typically\ncontaining one type of controlled bias. However, a single piece of data may\ncontain multiple types of biases in practical applications. To bridge this gap,\nwe propose a multi-bias benchmark where each piece of data contains five types\nof biases. The evaluations conducted on this benchmark reveal that the\nperformance of existing LLMs and debiasing methods is unsatisfying,\nhighlighting the challenge of eliminating multiple types of biases\nsimultaneously. To overcome this challenge, we propose a causal effect\nestimation-guided multi-bias elimination method (CMBE). This method first\nestimates the causal effect of multiple types of biases simultaneously.\nSubsequently, we eliminate the causal effect of biases from the total causal\neffect exerted by both the semantic information and biases during inference.\nExperimental results show that CMBE can effectively eliminate multiple types of\nbias simultaneously to enhance the generalizability of LLMs.",
+      "pdf_url": "http://arxiv.org/pdf/2505.16522v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.16522v1",
+      "published": "2025-05-22",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "CAIFormer: A Causal Informed Transformer for Multivariate Time Series Forecasting",
+      "authors": [
+        "Xingyu Zhang",
+        "Wenwen Qiang",
+        "Siyu Zhao",
+        "Huijie Guo",
+        "Jiangmeng Li",
+        "Chuxiong Sun",
+        "Changwen Zheng"
+      ],
+      "abstract": "Most existing multivariate time series forecasting methods adopt an\nall-to-all paradigm that feeds all variable histories into a unified model to\npredict their future values without distinguishing their individual roles.\nHowever, this undifferentiated paradigm makes it difficult to identify\nvariable-specific causal influences and often entangles causally relevant\ninformation with spurious correlations. To address this limitation, we propose\nan all-to-one forecasting paradigm that predicts each target variable\nseparately. Specifically, we first construct a Structural Causal Model from\nobservational data and then, for each target variable, we partition the\nhistorical sequence into four sub-segments according to the inferred causal\nstructure: endogenous, direct causal, collider causal, and spurious\ncorrelation. The prediction relies solely on the first three causally relevant\nsub-segments, while the spurious correlation sub-segment is excluded.\nFurthermore, we propose Causal Informed Transformer (CAIFormer), a novel\nforecasting model comprising three components: Endogenous Sub-segment\nPrediction Block, Direct Causal Sub-segment Prediction Block, and Collider\nCausal Sub-segment Prediction Block, which process the endogenous, direct\ncausal, and collider causal sub-segments, respectively. Their outputs are then\ncombined to produce the final prediction. Extensive experiments on multiple\nbenchmark datasets demonstrate the effectiveness of the CAIFormer.",
+      "pdf_url": "http://arxiv.org/pdf/2505.16308v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.16308v1",
+      "published": "2025-05-22",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "A Causal Approach to Mitigate Modality Preference Bias in Medical Visual Question Answering",
+      "authors": [
+        "Shuchang Ye",
+        "Usman Naseem",
+        "Mingyuan Meng",
+        "Dagan Feng",
+        "Jinman Kim"
+      ],
+      "abstract": "Medical Visual Question Answering (MedVQA) is crucial for enhancing the\nefficiency of clinical diagnosis by providing accurate and timely responses to\nclinicians' inquiries regarding medical images. Existing MedVQA models suffered\nfrom modality preference bias, where predictions are heavily dominated by one\nmodality while overlooking the other (in MedVQA, usually questions dominate the\nanswer but images are overlooked), thereby failing to learn multimodal\nknowledge. To overcome the modality preference bias, we proposed a Medical\nCounterFactual VQA (MedCFVQA) model, which trains with bias and leverages\ncausal graphs to eliminate the modality preference bias during inference.\nExisting MedVQA datasets exhibit substantial prior dependencies between\nquestions and answers, which results in acceptable performance even if the\nmodel significantly suffers from the modality preference bias. To address this\nissue, we reconstructed new datasets by leveraging existing MedVQA datasets and\nChanged their P3rior dependencies (CP) between questions and their answers in\nthe training and test set. Extensive experiments demonstrate that MedCFVQA\nsignificantly outperforms its non-causal counterpart on both SLAKE, RadVQA and\nSLAKE-CP, RadVQA-CP datasets.",
+      "pdf_url": "http://arxiv.org/pdf/2505.16209v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.16209v1",
+      "published": "2025-05-22",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "PO-Flow: Flow-based Generative Models for Sampling Potential Outcomes and Counterfactuals",
+      "authors": [
+        "Dongze Wu",
+        "David I. Inouye",
+        "Yao Xie"
+      ],
+      "abstract": "We propose PO-Flow, a novel continuous normalizing flow (CNF) framework for\ncausal inference that jointly models potential outcomes and counterfactuals.\nTrained via flow matching, PO-Flow provides a unified framework for\nindividualized potential outcome prediction, counterfactual predictions, and\nuncertainty-aware density learning. Among generative models, it is the first to\nenable density learning of potential outcomes without requiring explicit\ndistributional assumptions (e.g., Gaussian mixtures), while also supporting\ncounterfactual prediction conditioned on factual outcomes in general\nobservational datasets. On benchmarks such as ACIC, IHDP, and IBM, it\nconsistently outperforms prior methods across a range of causal inference\ntasks. Beyond that, PO-Flow succeeds in high-dimensional settings, including\ncounterfactual image generation, demonstrating its broad applicability.",
+      "pdf_url": "http://arxiv.org/pdf/2505.16051v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.16051v1",
+      "published": "2025-05-21",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
     {
       "title": "ThinkLess: A Training-Free Inference-Efficient Method for Reducing Reasoning Redundancy",
       "authors": [
@@ -15,174 +185,6 @@
       "published": "2025-05-21",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "When Less Language is More: Language-Reasoning Disentanglement Makes LLMs Better Multilingual Reasoners",
-      "authors": [
-        "Weixiang Zhao",
-        "Jiahe Guo",
-        "Yang Deng",
-        "Tongtong Wu",
-        "Wenxuan Zhang",
-        "Yulin Hu",
-        "Xingyu Sui",
-        "Yanyan Zhao",
-        "Wanxiang Che",
-        "Bing Qin",
-        "Tat-Seng Chua",
-        "Ting Liu"
-      ],
-      "abstract": "Multilingual reasoning remains a significant challenge for large language\nmodels (LLMs), with performance disproportionately favoring high-resource\nlanguages. Drawing inspiration from cognitive neuroscience, which suggests that\nhuman reasoning functions largely independently of language processing, we\nhypothesize that LLMs similarly encode reasoning and language as separable\ncomponents that can be disentangled to enhance multilingual reasoning. To\nevaluate this, we perform a causal intervention by ablating language-specific\nrepresentations at inference time. Experiments on 10 open-source LLMs spanning\n11 typologically diverse languages show that this language-specific ablation\nconsistently boosts multilingual reasoning performance. Layer-wise analyses\nfurther confirm that language and reasoning representations can be effectively\ndecoupled throughout the model, yielding improved multilingual reasoning\ncapabilities, while preserving top-layer language features remains essential\nfor maintaining linguistic fidelity. Compared to post-training such as\nsupervised fine-tuning or reinforcement learning, our training-free ablation\nachieves comparable or superior results with minimal computational overhead.\nThese findings shed light on the internal mechanisms underlying multilingual\nreasoning in LLMs and suggest a lightweight and interpretable strategy for\nimproving cross-lingual generalization.",
-      "pdf_url": "http://arxiv.org/pdf/2505.15257v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.15257v1",
-      "published": "2025-05-21",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Clustering and Pruning in Causal Data Fusion",
-      "authors": [
-        "Otto Tabell",
-        "Santtu Tikka",
-        "Juha Karvanen"
-      ],
-      "abstract": "Data fusion, the process of combining observational and experimental data,\ncan enable the identification of causal effects that would otherwise remain\nnon-identifiable. Although identification algorithms have been developed for\nspecific scenarios, do-calculus remains the only general-purpose tool for\ncausal data fusion, particularly when variables are present in some data\nsources but not others. However, approaches based on do-calculus may encounter\ncomputational challenges as the number of variables increases and the causal\ngraph grows in complexity. Consequently, there exists a need to reduce the size\nof such models while preserving the essential features. For this purpose, we\npropose pruning (removing unnecessary variables) and clustering (combining\nvariables) as preprocessing operations for causal data fusion. We generalize\nearlier results on a single data source and derive conditions for applying\npruning and clustering in the case of multiple data sources. We give sufficient\nconditions for inferring the identifiability or non-identifiability of a causal\neffect in a larger graph based on a smaller graph and show how to obtain the\ncorresponding identifying functional for identifiable causal effects. Examples\nfrom epidemiology and social science demonstrate the use of the results.",
-      "pdf_url": "http://arxiv.org/pdf/2505.15215v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.15215v1",
-      "published": "2025-05-21",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Towards a Science of Causal Interpretability in Deep Learning for Software Engineering",
-      "authors": [
-        "David N. Palacio"
-      ],
-      "abstract": "This dissertation addresses achieving causal interpretability in Deep\nLearning for Software Engineering (DL4SE). While Neural Code Models (NCMs) show\nstrong performance in automating software tasks, their lack of transparency in\ncausal relationships between inputs and outputs limits full understanding of\ntheir capabilities. To build trust in NCMs, researchers and practitioners must\nexplain code predictions. Associational interpretability, which identifies\ncorrelations, is often insufficient for tasks requiring intervention and change\nanalysis. To address this, the dissertation introduces DoCode, a novel post hoc\ninterpretability method for NCMs. DoCode uses causal inference to provide\nprogramming language-oriented explanations of model predictions. It follows a\nfour-step pipeline: modeling causal problems using Structural Causal Models\n(SCMs), identifying the causal estimand, estimating effects with metrics like\nAverage Treatment Effect (ATE), and refuting effect estimates. Its framework is\nextensible, with an example that reduces spurious correlations by grounding\nexplanations in programming language properties. A case study on deep code\ngeneration across interpretability scenarios and various deep learning\narchitectures demonstrates DoCode's benefits. Results show NCMs' sensitivity to\ncode syntax changes and their ability to learn certain programming concepts\nwhile minimizing confounding bias. The dissertation also examines associational\ninterpretability as a foundation, analyzing software information's causal\nnature using tools like COMET and TraceXplainer for traceability. It highlights\nthe need to identify code confounders and offers practical guidelines for\napplying causal interpretability to NCMs, contributing to more trustworthy AI\nin software engineering.",
-      "pdf_url": "http://arxiv.org/pdf/2505.15023v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.15023v1",
-      "published": "2025-05-21",
-      "categories": [
-        "cs.SE",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Toward Informed AV Decision-Making: Computational Model of Well-being and Trust in Mobility",
-      "authors": [
-        "Zahra Zahedi",
-        "Shashank Mehrotra",
-        "Teruhisa Misu",
-        "Kumar Akash"
-      ],
-      "abstract": "For future human-autonomous vehicle (AV) interactions to be effective and\nsmooth, human-aware systems that analyze and align human needs with automation\ndecisions are essential. Achieving this requires systems that account for human\ncognitive states. We present a novel computational model in the form of a\nDynamic Bayesian Network (DBN) that infers the cognitive states of both AV\nusers and other road users, integrating this information into the AV's\ndecision-making process. Specifically, our model captures the well-being of\nboth an AV user and an interacting road user as cognitive states alongside\ntrust. Our DBN models infer beliefs over the AV user's evolving well-being,\ntrust, and intention states, as well as the possible well-being of other road\nusers, based on observed interaction experiences. Using data collected from an\ninteraction study, we refine the model parameters and empirically assess its\nperformance. Finally, we extend our model into a causal inference model (CIM)\nframework for AV decision-making, enabling the AV to enhance user well-being\nand trust while balancing these factors with its own operational costs and the\nwell-being of interacting road users. Our evaluation demonstrates the model's\neffectiveness in accurately predicting user's states and guiding informed,\nhuman-centered AV decisions.",
-      "pdf_url": "http://arxiv.org/pdf/2505.14983v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.14983v1",
-      "published": "2025-05-21",
-      "categories": [
-        "cs.AI",
-        "cs.HC",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "Deep Koopman operator framework for causal discovery in nonlinear dynamical systems",
-      "authors": [
-        "Juan Nathaniel",
-        "Carla Roesch",
-        "Jatan Buch",
-        "Derek DeSantis",
-        "Adam Rupe",
-        "Kara Lamb",
-        "Pierre Gentine"
-      ],
-      "abstract": "We use a deep Koopman operator-theoretic formalism to develop a novel causal\ndiscovery algorithm, Kausal. Causal discovery aims to identify cause-effect\nmechanisms for better scientific understanding, explainable decision-making,\nand more accurate modeling. Standard statistical frameworks, such as Granger\ncausality, lack the ability to quantify causal relationships in nonlinear\ndynamics due to the presence of complex feedback mechanisms, timescale mixing,\nand nonstationarity. This presents a challenge in studying many real-world\nsystems, such as the Earth's climate. Meanwhile, Koopman operator methods have\nemerged as a promising tool for approximating nonlinear dynamics in a linear\nspace of observables. In Kausal, we propose to leverage this powerful idea for\ncausal analysis where optimal observables are inferred using deep learning.\nCausal estimates are then evaluated in a reproducing kernel Hilbert space, and\ndefined as the distance between the marginal dynamics of the effect and the\njoint dynamics of the cause-effect observables. Our numerical experiments\ndemonstrate Kausal's superior ability in discovering and characterizing causal\nsignals compared to existing approaches of prescribed observables. Lastly, we\nextend our analysis to observations of El Ni\\~no-Southern Oscillation\nhighlighting our algorithm's applicability to real-world phenomena. Our code is\navailable at https://github.com/juannat7/kausal.",
-      "pdf_url": "http://arxiv.org/pdf/2505.14828v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.14828v1",
-      "published": "2025-05-20",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Assimilative Causal Inference",
-      "authors": [
-        "Marios Andreou",
-        "Nan Chen",
-        "Erik Bollt"
-      ],
-      "abstract": "Causal inference determines cause-and-effect relationships between variables\nand has broad applications across disciplines. Traditional time-series methods\noften reveal causal links only in a time-averaged sense, while ensemble-based\ninformation transfer approaches detect the time evolution of short-term causal\nrelationships but are typically limited to low-dimensional systems. In this\npaper, a new causal inference framework, called assimilative causal inference\n(ACI), is developed. Fundamentally different from the state-of-the-art methods,\nACI uses a dynamical system and a single realization of a subset of the state\nvariables to identify instantaneous causal relationships and the dynamic\nevolution of the associated causal influence range (CIR). Instead of\nquantifying how causes influence effects as done traditionally, ACI solves an\ninverse problem via Bayesian data assimilation, thus tracing causes backward\nfrom observed effects with an implicit Bayesian hypothesis. Causality is\ndetermined by assessing whether incorporating the information of the effect\nvariables reduces the uncertainty in recovering the potential cause variables.\nACI has several desirable features. First, it captures the dynamic interplay of\nvariables, where their roles as causes and effects can shift repeatedly over\ntime. Second, a mathematically justified objective criterion determines the CIR\nwithout empirical thresholds. Third, ACI is scalable to high-dimensional\nproblems by leveraging computationally efficient Bayesian data assimilation\ntechniques. Finally, ACI applies to short time series and incomplete datasets.\nNotably, ACI does not require observations of candidate causes, which is a key\nadvantage since potential drivers are often unknown or unmeasured. The\neffectiveness of ACI is demonstrated by complex dynamical systems showcasing\nintermittency and extreme events.",
-      "pdf_url": "http://arxiv.org/pdf/2505.14825v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.14825v1",
-      "published": "2025-05-20",
-      "categories": [
-        "cs.LG",
-        "math.ST",
-        "physics.data-an",
-        "stat.ME",
-        "stat.ML",
-        "stat.TH",
-        "62F15, 62D20, 62M20, 93E11, 93E14, 60H10"
-      ]
-    },
-    {
-      "title": "Causal Cartographer: From Mapping to Reasoning Over Counterfactual Worlds",
-      "authors": [
-        "Gaël Gendron",
-        "Jože M. Rožanec",
-        "Michael Witbrock",
-        "Gillian Dobbie"
-      ],
-      "abstract": "Causal world models are systems that can answer counterfactual questions\nabout an environment of interest, i.e. predict how it would have evolved if an\narbitrary subset of events had been realized differently. It requires\nunderstanding the underlying causes behind chains of events and conducting\ncausal inference for arbitrary unseen distributions. So far, this task eludes\nfoundation models, notably large language models (LLMs), which do not have\ndemonstrated causal reasoning capabilities beyond the memorization of existing\ncausal relationships. Furthermore, evaluating counterfactuals in real-world\napplications is challenging since only the factual world is observed, limiting\nevaluation to synthetic datasets. We address these problems by explicitly\nextracting and modeling causal relationships and propose the Causal\nCartographer framework. First, we introduce a graph retrieval-augmented\ngeneration agent tasked to retrieve causal relationships from data. This\napproach allows us to construct a large network of real-world causal\nrelationships that can serve as a repository of causal knowledge and build\nreal-world counterfactuals. In addition, we create a counterfactual reasoning\nagent constrained by causal relationships to perform reliable step-by-step\ncausal inference. We show that our approach can extract causal knowledge and\nimprove the robustness of LLMs for causal reasoning tasks while reducing\ninference costs and spurious correlations.",
-      "pdf_url": "http://arxiv.org/pdf/2505.14396v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.14396v1",
-      "published": "2025-05-20",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "I.2.3; I.2.6; I.2.7; G.2.2; G.3; J.1"
-      ]
-    },
-    {
-      "title": "A Bayesian Network Method for Deaggregation: Identification of Tropical Cyclones Driving Coastal Hazards",
-      "authors": [
-        "Ziyue Liu",
-        "Meredith L. Carr",
-        "Norberto C. Nadal-Caraballo",
-        "Madison C. Yawn",
-        "Michelle T. Bensi"
-      ],
-      "abstract": "Bayesian networks (BN) have advantages in visualizing causal relationships\nand performing probabilistic inference analysis, making them ideal tools for\ncoastal hazard analysis and characterizing the compound mechanisms of coastal\nhazards. Meanwhile, the Joint Probability Method (JPM) has served as the\nprimary probabilistic assessment approach used to develop hazard curves for\ntropical cyclone (TC) induced coastal hazards in the past decades. To develop\nhazard curves that can capture the breadth of TC-induced coastal hazards, a\nlarge number of synthetic TCs need to be simulated, which is computationally\nexpensive. Given that low exceedance probability (LEP) coastal hazards are\nlikely to result in the most significant damage to coastal communities, it is\npractical to focus efforts on identifying and understanding TC scenarios that\nare dominant contributors to LEP coastal hazards. This study developed a\nBN-based framework incorporating existing JPM for multiple TC-induced coastal\nhazards deaggregation. Copula-based models capture dependence among TC\natmospheric parameters and generate CPTs for corresponding BN nodes. Machine\nlearning surrogates model the relationship between TC parameters and coastal\nhazards, providing conditional probability tables (CPTs) for hazard nodes. Case\nstudies are applied to the Greater New Orleans region in Louisiana (USA).\nDeaggregation is a method for identifying dominant scenarios for a given\nhazard, which was first established in the field of probabilistic seismic\nhazard analysis. The objective of this study is to leverage BN to develop a\ndeaggregation method of multiple LEP coastal hazards to better understand the\ndominant drivers of coastal hazards to refine storm parameter set selection to\nmore comprehensively represent multiple forcings.",
-      "pdf_url": "http://arxiv.org/pdf/2505.14374v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.14374v1",
-      "published": "2025-05-20",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Taming Recommendation Bias with Causal Intervention on Evolving Personal Popularity",
-      "authors": [
-        "Shiyin Tan",
-        "Dongyuan Li",
-        "Renhe Jiang",
-        "Zhen Wang",
-        "Xingtong Yu",
-        "Manabu Okumura"
-      ],
-      "abstract": "Popularity bias occurs when popular items are recommended far more frequently\nthan they should be, negatively impacting both user experience and\nrecommendation accuracy. Existing debiasing methods mitigate popularity bias\noften uniformly across all users and only partially consider the time evolution\nof users or items. However, users have different levels of preference for item\npopularity, and this preference is evolving over time. To address these issues,\nwe propose a novel method called CausalEPP (Causal Intervention on Evolving\nPersonal Popularity) for taming recommendation bias, which accounts for the\nevolving personal popularity of users. Specifically, we first introduce a\nmetric called {Evolving Personal Popularity} to quantify each user's preference\nfor popular items. Then, we design a causal graph that integrates evolving\npersonal popularity into the conformity effect, and apply deconfounded training\nto mitigate the popularity bias of the causal graph. During inference, we\nconsider the evolution consistency between users and items to achieve a better\nrecommendation. Empirical studies demonstrate that CausalEPP outperforms\nbaseline methods in reducing popularity bias while improving recommendation\naccuracy.",
-      "pdf_url": "http://arxiv.org/pdf/2505.14310v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.14310v1",
-      "published": "2025-05-20",
-      "categories": [
-        "cs.IR",
-        "cs.LG"
       ]
     }
   ]
