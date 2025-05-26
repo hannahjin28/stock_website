@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-05-25T00:59:03.587766",
+  "last_updated": "2025-05-26T00:55:32.640585",
   "papers": [
     {
       "title": "Learning Adaptive and Temporally Causal Video Tokenization in a 1D Latent Space",
@@ -139,7 +139,7 @@
       ]
     },
     {
-      "title": "A Causal Approach to Mitigate Modality Preference Bias in Medical Visual Question Answering",
+      "title": "MedCFVQA: A Causal Approach to Mitigate Modality Preference Bias in Medical Visual Question Answering",
       "authors": [
         "Shuchang Ye",
         "Usman Naseem",
@@ -148,8 +148,8 @@
         "Jinman Kim"
       ],
       "abstract": "Medical Visual Question Answering (MedVQA) is crucial for enhancing the\nefficiency of clinical diagnosis by providing accurate and timely responses to\nclinicians' inquiries regarding medical images. Existing MedVQA models suffered\nfrom modality preference bias, where predictions are heavily dominated by one\nmodality while overlooking the other (in MedVQA, usually questions dominate the\nanswer but images are overlooked), thereby failing to learn multimodal\nknowledge. To overcome the modality preference bias, we proposed a Medical\nCounterFactual VQA (MedCFVQA) model, which trains with bias and leverages\ncausal graphs to eliminate the modality preference bias during inference.\nExisting MedVQA datasets exhibit substantial prior dependencies between\nquestions and answers, which results in acceptable performance even if the\nmodel significantly suffers from the modality preference bias. To address this\nissue, we reconstructed new datasets by leveraging existing MedVQA datasets and\nChanged their P3rior dependencies (CP) between questions and their answers in\nthe training and test set. Extensive experiments demonstrate that MedCFVQA\nsignificantly outperforms its non-causal counterpart on both SLAKE, RadVQA and\nSLAKE-CP, RadVQA-CP datasets.",
-      "pdf_url": "http://arxiv.org/pdf/2505.16209v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.16209v1",
+      "pdf_url": "http://arxiv.org/pdf/2505.16209v2",
+      "arxiv_url": "http://arxiv.org/abs/2505.16209v2",
       "published": "2025-05-22",
       "categories": [
         "cs.CV"
@@ -180,8 +180,8 @@
         "Yunfang Wu"
       ],
       "abstract": "While Chain-of-Thought (CoT) prompting improves reasoning in large language\nmodels (LLMs), the excessive length of reasoning tokens increases latency and\nKV cache memory usage, and may even truncate final answers under context\nlimits. We propose ThinkLess, an inference-efficient framework that terminates\nreasoning generation early and maintains output quality without modifying the\nmodel. Atttention analysis reveals that answer tokens focus minimally on\nearlier reasoning steps and primarily attend to the reasoning terminator token,\ndue to information migration under causal masking. Building on this insight,\nThinkLess inserts the terminator token at earlier positions to skip redundant\nreasoning while preserving the underlying knowledge transfer. To prevent format\ndiscruption casued by early termination, ThinkLess employs a lightweight\npost-regulation mechanism, relying on the model's natural instruction-following\nability to produce well-structured answers. Without fine-tuning or auxiliary\ndata, ThinkLess achieves comparable accuracy to full-length CoT decoding while\ngreatly reducing decoding time and memory consumption.",
-      "pdf_url": "http://arxiv.org/pdf/2505.15684v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.15684v1",
+      "pdf_url": "http://arxiv.org/pdf/2505.15684v2",
+      "arxiv_url": "http://arxiv.org/abs/2505.15684v2",
       "published": "2025-05-21",
       "categories": [
         "cs.CL"
