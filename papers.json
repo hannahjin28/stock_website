@@ -1,6 +1,120 @@
 {
-  "last_updated": "2025-05-26T00:55:32.640585",
+  "last_updated": "2025-05-27T00:52:58.107860",
   "papers": [
+    {
+      "title": "Scalable Policy Maximization Under Network Interference",
+      "authors": [
+        "Aidan Gleich",
+        "Eric Laber",
+        "Alexander Volfovsky"
+      ],
+      "abstract": "Many interventions, such as vaccines in clinical trials or coupons in online\nmarketplaces, must be assigned sequentially without full knowledge of their\neffects. Multi-armed bandit algorithms have proven successful in such settings.\nHowever, standard independence assumptions fail when the treatment status of\none individual impacts the outcomes of others, a phenomenon known as\ninterference. We study optimal-policy learning under interference on a dynamic\nnetwork. Existing approaches to this problem require repeated observations of\nthe same fixed network and struggle to scale in sample size beyond as few as\nfifteen connected units -- both limit applications. We show that under common\nassumptions on the structure of interference, rewards become linear. This\nenables us to develop a scalable Thompson sampling algorithm that maximizes\npolicy impact when a new $n$-node network is observed each round. We prove a\nBayesian regret bound that is sublinear in $n$ and the number of rounds.\nSimulation experiments show that our algorithm learns quickly and outperforms\nexisting methods. The results close a key scalability gap between causal\ninference methods for interference and practical bandit algorithms, enabling\npolicy optimization in large-scale networked systems.",
+      "pdf_url": "http://arxiv.org/pdf/2505.18118v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.18118v1",
+      "published": "2025-05-23",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Structured Thinking Matters: Improving LLMs Generalization in Causal Inference Tasks",
+      "authors": [
+        "Wentao Sun",
+        "Joao Paulo Nogueira",
+        "Alonso Silva"
+      ],
+      "abstract": "Despite remarkable advances in the field, LLMs remain unreliable in\ndistinguishing causation from correlation. Recent results from the Corr2Cause\ndataset benchmark reveal that state-of-the-art LLMs -- such as GPT-4 (F1 score:\n29.08) -- only marginally outperform random baselines (Random Uniform, F1\nscore: 20.38), indicating limited capacity of generalization. To tackle this\nlimitation, we propose a novel structured approach: rather than directly\nanswering causal queries, we provide the model with the capability to structure\nits thinking by guiding the model to build a structured knowledge graph,\nsystematically encoding the provided correlational premises, to answer the\ncausal queries. This intermediate representation significantly enhances the\nmodel's causal capabilities. Experiments on the test subset of the Corr2Cause\ndataset benchmark with Qwen3-32B model (reasoning model) show substantial gains\nover standard direct prompting methods, improving F1 scores from 32.71 to 48.26\n(over 47.5% relative increase), along with notable improvements in precision\nand recall. These results underscore the effectiveness of providing the model\nwith the capability to structure its thinking and highlight its promising\npotential for broader generalization across diverse causal inference tasks.",
+      "pdf_url": "http://arxiv.org/pdf/2505.18034v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.18034v1",
+      "published": "2025-05-23",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Federated Causal Inference from Multi-Site Observational Data via Propensity Score Aggregation",
+      "authors": [
+        "Khellaf Rémi",
+        "Bellet Aurélien",
+        "Josse Julie"
+      ],
+      "abstract": "Causal inference typically assumes centralized access to individual-level\ndata. Yet, in practice, data are often decentralized across multiple sites,\nmaking centralization infeasible due to privacy, logistical, or legal\nconstraints. We address this by estimating the Average Treatment Effect (ATE)\nfrom decentralized observational data using federated learning, which enables\ninference through the exchange of aggregate statistics rather than\nindividual-level data. We propose a novel method to estimate propensity scores\nin a (non-)parametric manner by computing a federated weighted average of local\nscores, using two theoretically grounded weighting schemes -- Membership\nWeights (MW) and Density Ratio Weights (DW) -- that balance communication\nefficiency and model flexibility. These federated scores are then used to\nconstruct two ATE estimators: the Federated Inverse Propensity Weighting\nestimator (Fed-IPW) and its augmented variant (Fed-AIPW). Unlike meta-analysis\nmethods, which fail when any site violates positivity, our approach leverages\nheterogeneity in treatment assignment across sites to improve overlap. We show\nthat Fed-IPW and Fed-AIPW perform well under site-level heterogeneity in sample\nsizes, treatment mechanisms, and covariate distributions, with theoretical\nanalysis and experiments on simulated and real-world data highlighting their\nstrengths and limitations relative to meta-analysis and related methods.",
+      "pdf_url": "http://arxiv.org/pdf/2505.17961v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.17961v1",
+      "published": "2025-05-23",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "math.ST",
+        "stat.AP",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "A Distributionally-Robust Framework for Nuisance in Causal Effect Estimation",
+      "authors": [
+        "Akira Tanimoto"
+      ],
+      "abstract": "Causal inference requires evaluating models on balanced distributions between\ntreatment and control groups, while training data often exhibits imbalance due\nto historical decision-making policies. Most conventional statistical methods\naddress this distribution shift through inverse probability weighting (IPW),\nwhich requires estimating propensity scores as an intermediate step. These\nmethods face two key challenges: inaccurate propensity estimation and\ninstability from extreme weights. We decompose the generalization error to\nisolate these issues--propensity ambiguity and statistical instability--and\naddress them through an adversarial loss function. Our approach combines\ndistributionally robust optimization for handling propensity uncertainty with\nweight regularization based on weighted Rademacher complexity. Experiments on\nsynthetic and real-world datasets demonstrate consistent improvements over\nexisting methods.",
+      "pdf_url": "http://arxiv.org/pdf/2505.17717v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.17717v1",
+      "published": "2025-05-23",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "The Third Pillar of Causal Analysis? A Measurement Perspective on Causal Representations",
+      "authors": [
+        "Dingling Yao",
+        "Shimeng Huang",
+        "Riccardo Cadei",
+        "Kun Zhang",
+        "Francesco Locatello"
+      ],
+      "abstract": "Causal reasoning and discovery, two fundamental tasks of causal analysis,\noften face challenges in applications due to the complexity, noisiness, and\nhigh-dimensionality of real-world data. Despite recent progress in identifying\nlatent causal structures using causal representation learning (CRL), what makes\nlearned representations useful for causal downstream tasks and how to evaluate\nthem are still not well understood. In this paper, we reinterpret CRL using a\nmeasurement model framework, where the learned representations are viewed as\nproxy measurements of the latent causal variables. Our approach clarifies the\nconditions under which learned representations support downstream causal\nreasoning and provides a principled basis for quantitatively assessing the\nquality of representations using a new Test-based Measurement EXclusivity\n(T-MEX) score. We validate T-MEX across diverse causal inference scenarios,\nincluding numerical simulations and real-world ecological video analysis,\ndemonstrating that the proposed framework and corresponding score effectively\nassess the identification of learned representations and their usefulness for\ncausal downstream tasks.",
+      "pdf_url": "http://arxiv.org/pdf/2505.17708v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.17708v1",
+      "published": "2025-05-23",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal Spatio-Temporal Prediction: An Effective and Efficient Multi-Modal Approach",
+      "authors": [
+        "Yuting Huang",
+        "Ziquan Fang",
+        "Zhihao Zeng",
+        "Lu Chen",
+        "Yunjun Gao"
+      ],
+      "abstract": "Spatio-temporal prediction plays a crucial role in intelligent\ntransportation, weather forecasting, and urban planning. While integrating\nmulti-modal data has shown potential for enhancing prediction accuracy, key\nchallenges persist: (i) inadequate fusion of multi-modal information, (ii)\nconfounding factors that obscure causal relations, and (iii) high computational\ncomplexity of prediction models. To address these challenges, we propose\nE^2-CSTP, an Effective and Efficient Causal multi-modal Spatio-Temporal\nPrediction framework. E^2-CSTP leverages cross-modal attention and gating\nmechanisms to effectively integrate multi-modal data. Building on this, we\ndesign a dual-branch causal inference approach: the primary branch focuses on\nspatio-temporal prediction, while the auxiliary branch mitigates bias by\nmodeling additional modalities and applying causal interventions to uncover\ntrue causal dependencies. To improve model efficiency, we integrate GCN with\nthe Mamba architecture for accelerated spatio-temporal encoding. Extensive\nexperiments on 4 real-world datasets show that E^2-CSTP significantly\noutperforms 9 state-of-the-art methods, achieving up to 9.66% improvements in\naccuracy as well as 17.37%-56.11% reductions in computational overhead.",
+      "pdf_url": "http://arxiv.org/pdf/2505.17637v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.17637v1",
+      "published": "2025-05-23",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "TI-DeepONet: Learnable Time Integration for Stable Long-Term Extrapolation",
+      "authors": [
+        "Dibyajyoti Nayak",
+        "Somdatta Goswami"
+      ],
+      "abstract": "Accurate temporal extrapolation presents a fundamental challenge for neural\noperators in modeling dynamical systems, where reliable predictions must extend\nsignificantly beyond the training time horizon. Conventional Deep Operator\nNetwork (DeepONet) approaches employ two inherently limited training paradigms\n- fixed-horizon rollouts that predict complete spatiotemporal solutions while\ndisregarding temporal causality, and autoregressive formulations that\naccumulate errors through sequential predictions. We introduce TI-DeepONet, a\nframework that integrates neural operators with adaptive numerical\ntime-stepping techniques to preserve the Markovian structure of dynamical\nsystems while mitigating error propagation in extended temporal forecasting.\nOur approach reformulates the learning objective from direct state prediction\nto the approximation of instantaneous time-derivative fields, which are then\nintegrated using established numerical schemes. This architecture supports\ncontinuous-time prediction and enables deployment of higher-precision\nintegrators during inference than those used during training, balancing\ncomputational efficiency with predictive accuracy. We further develop\nTI(L)-DeepONet, which incorporates learnable coefficients for intermediate\nslopes in the integration process, adapting to solution-specific variations and\nenhancing fidelity. Evaluation across three canonical PDEs shows that\nTI(L)-DeepONet marginally outperforms TI-DeepONet, with both reducing relative\nL2 extrapolation errors: approximately 81% over autoregressive and 70% over\nfixed-horizon methods. Notably, both maintain prediction stability for temporal\ndomains extending to about twice the training interval. This research\nestablishes a physics-aware operator learning paradigm that bridges neural\napproximation with numerical analysis while preserving the causal structure of\ndynamical systems.",
+      "pdf_url": "http://arxiv.org/pdf/2505.17341v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.17341v1",
+      "published": "2025-05-22",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Learning Adaptive and Temporally Causal Video Tokenization in a 1D Latent Space",
       "authors": [
@@ -54,137 +168,6 @@
       "published": "2025-05-22",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Seeing Far and Clearly: Mitigating Hallucinations in MLLMs with Attention Causal Decoding",
-      "authors": [
-        "Feilong Tang",
-        "Chengzhi Liu",
-        "Zhongxing Xu",
-        "Ming Hu",
-        "Zelin Peng",
-        "Zhiwei Yang",
-        "Jionglong Su",
-        "Minquan Lin",
-        "Yifan Peng",
-        "Xuelian Cheng",
-        "Imran Razzak",
-        "Zongyuan Ge"
-      ],
-      "abstract": "Recent advancements in multimodal large language models (MLLMs) have\nsignificantly improved performance in visual question answering. However, they\noften suffer from hallucinations. In this work, hallucinations are categorized\ninto two main types: initial hallucinations and snowball hallucinations. We\nargue that adequate contextual information can be extracted directly from the\ntoken interaction process. Inspired by causal inference in the decoding\nstrategy, we propose to leverage causal masks to establish information\npropagation between multimodal tokens. The hypothesis is that insufficient\ninteraction between those tokens may lead the model to rely on outlier tokens,\noverlooking dense and rich contextual cues. Therefore, we propose to intervene\nin the propagation process by tackling outlier tokens to enhance in-context\ninference. With this goal, we present FarSight, a versatile plug-and-play\ndecoding strategy to reduce attention interference from outlier tokens merely\nby optimizing the causal mask. The heart of our method is effective token\npropagation. We design an attention register structure within the upper\ntriangular matrix of the causal mask, dynamically allocating attention to\ncapture attention diverted to outlier tokens. Moreover, a positional awareness\nencoding method with a diminishing masking rate is proposed, allowing the model\nto attend to further preceding tokens, especially for video sequence tasks.\nWith extensive experiments, FarSight demonstrates significant\nhallucination-mitigating performance across different MLLMs on both image and\nvideo benchmarks, proving its effectiveness.",
-      "pdf_url": "http://arxiv.org/pdf/2505.16652v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.16652v1",
-      "published": "2025-05-22",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal-Invariant Cross-Domain Out-of-Distribution Recommendation",
-      "authors": [
-        "Jiajie Zhu",
-        "Yan Wang",
-        "Feng Zhu",
-        "Pengfei Ding",
-        "Hongyang Liu",
-        "Zhu Sun"
-      ],
-      "abstract": "Cross-Domain Recommendation (CDR) aims to leverage knowledge from a\nrelatively data-richer source domain to address the data sparsity problem in a\nrelatively data-sparser target domain. While CDR methods need to address the\ndistribution shifts between different domains, i.e., cross-domain distribution\nshifts (CDDS), they typically assume independent and identical distribution\n(IID) between training and testing data within the target domain. However, this\nIID assumption rarely holds in real-world scenarios due to single-domain\ndistribution shift (SDDS). The above two co-existing distribution shifts lead\nto out-of-distribution (OOD) environments that hinder effective knowledge\ntransfer and generalization, ultimately degrading recommendation performance in\nCDR. To address these co-existing distribution shifts, we propose a novel\nCausal-Invariant Cross-Domain Out-of-distribution Recommendation framework,\ncalled CICDOR. In CICDOR, we first learn dual-level causal structures to infer\ndomain-specific and domain-shared causal-invariant user preferences for\ntackling both CDDS and SDDS under OOD environments in CDR. Then, we propose an\nLLM-guided confounder discovery module that seamlessly integrates LLMs with a\nconventional causal discovery method to extract observed confounders for\neffective deconfounding, thereby enabling accurate causal-invariant preference\ninference. Extensive experiments on two real-world datasets demonstrate the\nsuperior recommendation accuracy of CICDOR over state-of-the-art methods across\nvarious OOD scenarios.",
-      "pdf_url": "http://arxiv.org/pdf/2505.16532v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.16532v1",
-      "published": "2025-05-22",
-      "categories": [
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Benchmarking and Pushing the Multi-Bias Elimination Boundary of LLMs via Causal Effect Estimation-guided Debiasing",
-      "authors": [
-        "Zhouhao Sun",
-        "Zhiyuan Kan",
-        "Xiao Ding",
-        "Li Du",
-        "Yang Zhao",
-        "Bing Qin",
-        "Ting Liu"
-      ],
-      "abstract": "Despite significant progress, recent studies have indicated that current\nlarge language models (LLMs) may still utilize bias during inference, leading\nto the poor generalizability of LLMs. Some benchmarks are proposed to\ninvestigate the generalizability of LLMs, with each piece of data typically\ncontaining one type of controlled bias. However, a single piece of data may\ncontain multiple types of biases in practical applications. To bridge this gap,\nwe propose a multi-bias benchmark where each piece of data contains five types\nof biases. The evaluations conducted on this benchmark reveal that the\nperformance of existing LLMs and debiasing methods is unsatisfying,\nhighlighting the challenge of eliminating multiple types of biases\nsimultaneously. To overcome this challenge, we propose a causal effect\nestimation-guided multi-bias elimination method (CMBE). This method first\nestimates the causal effect of multiple types of biases simultaneously.\nSubsequently, we eliminate the causal effect of biases from the total causal\neffect exerted by both the semantic information and biases during inference.\nExperimental results show that CMBE can effectively eliminate multiple types of\nbias simultaneously to enhance the generalizability of LLMs.",
-      "pdf_url": "http://arxiv.org/pdf/2505.16522v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.16522v1",
-      "published": "2025-05-22",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CAIFormer: A Causal Informed Transformer for Multivariate Time Series Forecasting",
-      "authors": [
-        "Xingyu Zhang",
-        "Wenwen Qiang",
-        "Siyu Zhao",
-        "Huijie Guo",
-        "Jiangmeng Li",
-        "Chuxiong Sun",
-        "Changwen Zheng"
-      ],
-      "abstract": "Most existing multivariate time series forecasting methods adopt an\nall-to-all paradigm that feeds all variable histories into a unified model to\npredict their future values without distinguishing their individual roles.\nHowever, this undifferentiated paradigm makes it difficult to identify\nvariable-specific causal influences and often entangles causally relevant\ninformation with spurious correlations. To address this limitation, we propose\nan all-to-one forecasting paradigm that predicts each target variable\nseparately. Specifically, we first construct a Structural Causal Model from\nobservational data and then, for each target variable, we partition the\nhistorical sequence into four sub-segments according to the inferred causal\nstructure: endogenous, direct causal, collider causal, and spurious\ncorrelation. The prediction relies solely on the first three causally relevant\nsub-segments, while the spurious correlation sub-segment is excluded.\nFurthermore, we propose Causal Informed Transformer (CAIFormer), a novel\nforecasting model comprising three components: Endogenous Sub-segment\nPrediction Block, Direct Causal Sub-segment Prediction Block, and Collider\nCausal Sub-segment Prediction Block, which process the endogenous, direct\ncausal, and collider causal sub-segments, respectively. Their outputs are then\ncombined to produce the final prediction. Extensive experiments on multiple\nbenchmark datasets demonstrate the effectiveness of the CAIFormer.",
-      "pdf_url": "http://arxiv.org/pdf/2505.16308v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.16308v1",
-      "published": "2025-05-22",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "MedCFVQA: A Causal Approach to Mitigate Modality Preference Bias in Medical Visual Question Answering",
-      "authors": [
-        "Shuchang Ye",
-        "Usman Naseem",
-        "Mingyuan Meng",
-        "Dagan Feng",
-        "Jinman Kim"
-      ],
-      "abstract": "Medical Visual Question Answering (MedVQA) is crucial for enhancing the\nefficiency of clinical diagnosis by providing accurate and timely responses to\nclinicians' inquiries regarding medical images. Existing MedVQA models suffered\nfrom modality preference bias, where predictions are heavily dominated by one\nmodality while overlooking the other (in MedVQA, usually questions dominate the\nanswer but images are overlooked), thereby failing to learn multimodal\nknowledge. To overcome the modality preference bias, we proposed a Medical\nCounterFactual VQA (MedCFVQA) model, which trains with bias and leverages\ncausal graphs to eliminate the modality preference bias during inference.\nExisting MedVQA datasets exhibit substantial prior dependencies between\nquestions and answers, which results in acceptable performance even if the\nmodel significantly suffers from the modality preference bias. To address this\nissue, we reconstructed new datasets by leveraging existing MedVQA datasets and\nChanged their P3rior dependencies (CP) between questions and their answers in\nthe training and test set. Extensive experiments demonstrate that MedCFVQA\nsignificantly outperforms its non-causal counterpart on both SLAKE, RadVQA and\nSLAKE-CP, RadVQA-CP datasets.",
-      "pdf_url": "http://arxiv.org/pdf/2505.16209v2",
-      "arxiv_url": "http://arxiv.org/abs/2505.16209v2",
-      "published": "2025-05-22",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "PO-Flow: Flow-based Generative Models for Sampling Potential Outcomes and Counterfactuals",
-      "authors": [
-        "Dongze Wu",
-        "David I. Inouye",
-        "Yao Xie"
-      ],
-      "abstract": "We propose PO-Flow, a novel continuous normalizing flow (CNF) framework for\ncausal inference that jointly models potential outcomes and counterfactuals.\nTrained via flow matching, PO-Flow provides a unified framework for\nindividualized potential outcome prediction, counterfactual predictions, and\nuncertainty-aware density learning. Among generative models, it is the first to\nenable density learning of potential outcomes without requiring explicit\ndistributional assumptions (e.g., Gaussian mixtures), while also supporting\ncounterfactual prediction conditioned on factual outcomes in general\nobservational datasets. On benchmarks such as ACIC, IHDP, and IBM, it\nconsistently outperforms prior methods across a range of causal inference\ntasks. Beyond that, PO-Flow succeeds in high-dimensional settings, including\ncounterfactual image generation, demonstrating its broad applicability.",
-      "pdf_url": "http://arxiv.org/pdf/2505.16051v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.16051v1",
-      "published": "2025-05-21",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "ThinkLess: A Training-Free Inference-Efficient Method for Reducing Reasoning Redundancy",
-      "authors": [
-        "Gengyang Li",
-        "Yifeng Gao",
-        "Yuming Li",
-        "Yunfang Wu"
-      ],
-      "abstract": "While Chain-of-Thought (CoT) prompting improves reasoning in large language\nmodels (LLMs), the excessive length of reasoning tokens increases latency and\nKV cache memory usage, and may even truncate final answers under context\nlimits. We propose ThinkLess, an inference-efficient framework that terminates\nreasoning generation early and maintains output quality without modifying the\nmodel. Atttention analysis reveals that answer tokens focus minimally on\nearlier reasoning steps and primarily attend to the reasoning terminator token,\ndue to information migration under causal masking. Building on this insight,\nThinkLess inserts the terminator token at earlier positions to skip redundant\nreasoning while preserving the underlying knowledge transfer. To prevent format\ndiscruption casued by early termination, ThinkLess employs a lightweight\npost-regulation mechanism, relying on the model's natural instruction-following\nability to produce well-structured answers. Without fine-tuning or auxiliary\ndata, ThinkLess achieves comparable accuracy to full-length CoT decoding while\ngreatly reducing decoding time and memory consumption.",
-      "pdf_url": "http://arxiv.org/pdf/2505.15684v2",
-      "arxiv_url": "http://arxiv.org/abs/2505.15684v2",
-      "published": "2025-05-21",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]
