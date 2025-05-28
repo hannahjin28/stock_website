@@ -1,6 +1,109 @@
 {
-  "last_updated": "2025-05-27T00:52:58.107860",
+  "last_updated": "2025-05-28T00:54:13.893047",
   "papers": [
+    {
+      "title": "An Explainable Diagnostic Framework for Neurodegenerative Dementias via Reinforcement-Optimized LLM Reasoning",
+      "authors": [
+        "Andrew Zamai",
+        "Nathanael Fijalkow",
+        "Boris Mansencal",
+        "Laurent Simon",
+        "Eloi Navet",
+        "Pierrick Coupe"
+      ],
+      "abstract": "The differential diagnosis of neurodegenerative dementias is a challenging\nclinical task, mainly because of the overlap in symptom presentation and the\nsimilarity of patterns observed in structural neuroimaging. To improve\ndiagnostic efficiency and accuracy, deep learning-based methods such as\nConvolutional Neural Networks and Vision Transformers have been proposed for\nthe automatic classification of brain MRIs. However, despite their strong\npredictive performance, these models find limited clinical utility due to their\nopaque decision making. In this work, we propose a framework that integrates\ntwo core components to enhance diagnostic transparency. First, we introduce a\nmodular pipeline for converting 3D T1-weighted brain MRIs into textual\nradiology reports. Second, we explore the potential of modern Large Language\nModels (LLMs) to assist clinicians in the differential diagnosis between\nFrontotemporal dementia subtypes, Alzheimer's disease, and normal aging based\non the generated reports. To bridge the gap between predictive accuracy and\nexplainability, we employ reinforcement learning to incentivize diagnostic\nreasoning in LLMs. Without requiring supervised reasoning traces or\ndistillation from larger models, our approach enables the emergence of\nstructured diagnostic rationales grounded in neuroimaging findings. Unlike\npost-hoc explainability methods that retrospectively justify model decisions,\nour framework generates diagnostic rationales as part of the inference\nprocess-producing causally grounded explanations that inform and guide the\nmodel's decision-making process. In doing so, our framework matches the\ndiagnostic performance of existing deep learning methods while offering\nrationales that support its diagnostic conclusions.",
+      "pdf_url": "http://arxiv.org/pdf/2505.19954v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.19954v1",
+      "published": "2025-05-26",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Causal Bayesian Networks for Data-driven Safety Analysis of Complex Systems",
+      "authors": [
+        "Roman Gansch",
+        "Lina Putze",
+        "Tjark Koopmann",
+        "Jan Reich",
+        "Christian Neurohr"
+      ],
+      "abstract": "Ensuring safe operation of safety-critical complex systems interacting with\ntheir environment poses significant challenges, particularly when the system's\nworld model relies on machine learning algorithms to process the perception\ninput. A comprehensive safety argumentation requires knowledge of how faults or\nfunctional insufficiencies propagate through the system and interact with\nexternal factors, to manage their safety impact. While statistical analysis\napproaches can support the safety assessment, associative reasoning alone is\nneither sufficient for the safety argumentation nor for the identification and\ninvestigation of safety measures. A causal understanding of the system and its\ninteraction with the environment is crucial for safeguarding safety-critical\ncomplex systems. It allows to transfer and generalize knowledge, such as\ninsights gained from testing, and facilitates the identification of potential\nimprovements. This work explores using causal Bayesian networks to model the\nsystem's causalities for safety analysis, and proposes measures to assess\ncausal influences based on Pearl's framework of causal inference. We compare\nthe approach of causal Bayesian networks to the well-established fault tree\nanalysis, outlining advantages and limitations. In particular, we examine\nimportance metrics typically employed in fault tree analysis as foundation to\ndiscuss suitable causal metrics. An evaluation is performed on the example of a\nperception system for automated driving. Overall, this work presents an\napproach for causal reasoning in safety analysis that enables the integration\nof data-driven and expert-based knowledge to account for uncertainties arising\nfrom complex systems operating in open environments.",
+      "pdf_url": "http://arxiv.org/pdf/2505.19860v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.19860v1",
+      "published": "2025-05-26",
+      "categories": [
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "Model Agnostic Differentially Private Causal Inference",
+      "authors": [
+        "Christian Lebeda",
+        "Mathieu Even",
+        "Aurélien Bellet",
+        "Julie Josse"
+      ],
+      "abstract": "Estimating causal effects from observational data is essential in fields such\nas medicine, economics and social sciences, where privacy concerns are\nparamount. We propose a general, model-agnostic framework for differentially\nprivate estimation of average treatment effects (ATE) that avoids strong\nstructural assumptions on the data-generating process or the models used to\nestimate propensity scores and conditional outcomes. In contrast to prior work,\nwhich enforces differential privacy by directly privatizing these nuisance\ncomponents and results in a privacy cost that scales with model complexity, our\napproach decouples nuisance estimation from privacy protection. This separation\nallows the use of flexible, state-of-the-art black-box models, while\ndifferential privacy is achieved by perturbing only predictions and aggregation\nsteps within a fold-splitting scheme with ensemble techniques. We instantiate\nthe framework for three classical estimators -- the G-formula, inverse\npropensity weighting (IPW), and augmented IPW (AIPW) -- and provide formal\nutility and privacy guarantees. Empirical results show that our methods\nmaintain competitive performance under realistic privacy budgets. We further\nextend our framework to support meta-analysis of multiple private ATE\nestimates. Our results bridge a critical gap between causal inference and\nprivacy-preserving data analysis.",
+      "pdf_url": "http://arxiv.org/pdf/2505.19589v2",
+      "arxiv_url": "http://arxiv.org/abs/2505.19589v2",
+      "published": "2025-05-26",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Estimating Online Influence Needs Causal Modeling! Counterfactual Analysis of Social Media Engagement",
+      "authors": [
+        "Lin Tian",
+        "Marian-Andrei Rizoiu"
+      ],
+      "abstract": "Understanding true influence in social media requires distinguishing\ncorrelation from causation--particularly when analyzing misinformation spread.\nWhile existing approaches focus on exposure metrics and network structures,\nthey often fail to capture the causal mechanisms by which external temporal\nsignals trigger engagement. We introduce a novel joint treatment-outcome\nframework that leverages existing sequential models to simultaneously adapt to\nboth policy timing and engagement effects. Our approach adapts causal inference\ntechniques from healthcare to estimate Average Treatment Effects (ATE) within\nthe sequential nature of social media interactions, tackling challenges from\nexternal confounding signals. Through our experiments on real-world\nmisinformation and disinformation datasets, we show that our models outperform\nexisting benchmarks by 15--22% in predicting engagement across diverse\ncounterfactual scenarios, including exposure adjustment, timing shifts, and\nvaried intervention durations. Case studies on 492 social media users show our\ncausal effect measure aligns strongly with the gold standard in influence\nestimation, the expert-based empirical influence.",
+      "pdf_url": "http://arxiv.org/pdf/2505.19355v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.19355v1",
+      "published": "2025-05-25",
+      "categories": [
+        "cs.CL",
+        "cs.SI"
+      ]
+    },
+    {
+      "title": "Can Large Language Models Infer Causal Relationships from Real-World Text?",
+      "authors": [
+        "Ryan Saklad",
+        "Aman Chadha",
+        "Oleg Pavlov",
+        "Raha Moraffah"
+      ],
+      "abstract": "Understanding and inferring causal relationships from texts is a core aspect\nof human cognition and is essential for advancing large language models (LLMs)\ntowards artificial general intelligence. Existing work primarily focuses on\nsynthetically generated texts which involve simple causal relationships\nexplicitly mentioned in the text. This fails to reflect the complexities of\nreal-world tasks. In this paper, we investigate whether LLMs are capable of\ninferring causal relationships from real-world texts. We develop a benchmark\ndrawn from real-world academic literature which includes diverse texts with\nrespect to length, complexity of relationships (different levels of\nexplicitness, number of events, and causal relationships), and domains and\nsub-domains. To the best of our knowledge, our benchmark is the first-ever\nreal-world dataset for this task. Our experiments on state-of-the-art LLMs\nevaluated on our proposed benchmark demonstrate significant challenges, with\nthe best-performing model achieving an average F1 score of only 0.477. Analysis\nreveals common pitfalls: difficulty with implicitly stated information, in\ndistinguishing relevant causal factors from surrounding contextual details, and\nwith connecting causally relevant information spread across lengthy textual\npassages. By systematically characterizing these deficiencies, our benchmark\noffers targeted insights for further research into advancing LLM causal\nreasoning.",
+      "pdf_url": "http://arxiv.org/pdf/2505.18931v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.18931v1",
+      "published": "2025-05-25",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Rethinking Causal Mask Attention for Vision-Language Inference",
+      "authors": [
+        "Xiaohuan Pei",
+        "Tao Huang",
+        "YanXiang Ma",
+        "Chang Xu"
+      ],
+      "abstract": "Causal attention has become a foundational mechanism in autoregressive\nvision-language models (VLMs), unifying textual and visual inputs under a\nsingle generative framework. However, existing causal mask-based strategies are\ninherited from large language models (LLMs) where they are tailored for\ntext-only decoding, and their adaptation to vision tokens is insufficiently\naddressed in the prefill stage. Strictly masking future positions for vision\nqueries introduces overly rigid constraints, which hinder the model's ability\nto leverage future context that often contains essential semantic cues for\naccurate inference. In this work, we empirically investigate how different\ncausal masking strategies affect vision-language inference and then propose a\nfamily of future-aware attentions tailored for this setting. We first\nempirically analyze the effect of previewing future tokens for vision queries\nand demonstrate that rigid masking undermines the model's capacity to capture\nuseful contextual semantic representations. Based on these findings, we propose\na lightweight attention family that aggregates future visual context into past\nrepresentations via pooling, effectively preserving the autoregressive\nstructure while enhancing cross-token dependencies. We evaluate a range of\ncausal masks across diverse vision-language inference settings and show that\nselectively compressing future semantic context into past representations\nbenefits the inference.",
+      "pdf_url": "http://arxiv.org/pdf/2505.18605v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.18605v1",
+      "published": "2025-05-24",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Scalable Policy Maximization Under Network Interference",
       "authors": [
@@ -21,12 +124,12 @@
       "title": "Structured Thinking Matters: Improving LLMs Generalization in Causal Inference Tasks",
       "authors": [
         "Wentao Sun",
-        "Joao Paulo Nogueira",
+        "João Paulo Nogueira",
         "Alonso Silva"
       ],
       "abstract": "Despite remarkable advances in the field, LLMs remain unreliable in\ndistinguishing causation from correlation. Recent results from the Corr2Cause\ndataset benchmark reveal that state-of-the-art LLMs -- such as GPT-4 (F1 score:\n29.08) -- only marginally outperform random baselines (Random Uniform, F1\nscore: 20.38), indicating limited capacity of generalization. To tackle this\nlimitation, we propose a novel structured approach: rather than directly\nanswering causal queries, we provide the model with the capability to structure\nits thinking by guiding the model to build a structured knowledge graph,\nsystematically encoding the provided correlational premises, to answer the\ncausal queries. This intermediate representation significantly enhances the\nmodel's causal capabilities. Experiments on the test subset of the Corr2Cause\ndataset benchmark with Qwen3-32B model (reasoning model) show substantial gains\nover standard direct prompting methods, improving F1 scores from 32.71 to 48.26\n(over 47.5% relative increase), along with notable improvements in precision\nand recall. These results underscore the effectiveness of providing the model\nwith the capability to structure its thinking and highlight its promising\npotential for broader generalization across diverse causal inference tasks.",
-      "pdf_url": "http://arxiv.org/pdf/2505.18034v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.18034v1",
+      "pdf_url": "http://arxiv.org/pdf/2505.18034v2",
+      "arxiv_url": "http://arxiv.org/abs/2505.18034v2",
       "published": "2025-05-23",
       "categories": [
         "cs.AI",
@@ -64,109 +167,6 @@
       "categories": [
         "stat.ML",
         "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "The Third Pillar of Causal Analysis? A Measurement Perspective on Causal Representations",
-      "authors": [
-        "Dingling Yao",
-        "Shimeng Huang",
-        "Riccardo Cadei",
-        "Kun Zhang",
-        "Francesco Locatello"
-      ],
-      "abstract": "Causal reasoning and discovery, two fundamental tasks of causal analysis,\noften face challenges in applications due to the complexity, noisiness, and\nhigh-dimensionality of real-world data. Despite recent progress in identifying\nlatent causal structures using causal representation learning (CRL), what makes\nlearned representations useful for causal downstream tasks and how to evaluate\nthem are still not well understood. In this paper, we reinterpret CRL using a\nmeasurement model framework, where the learned representations are viewed as\nproxy measurements of the latent causal variables. Our approach clarifies the\nconditions under which learned representations support downstream causal\nreasoning and provides a principled basis for quantitatively assessing the\nquality of representations using a new Test-based Measurement EXclusivity\n(T-MEX) score. We validate T-MEX across diverse causal inference scenarios,\nincluding numerical simulations and real-world ecological video analysis,\ndemonstrating that the proposed framework and corresponding score effectively\nassess the identification of learned representations and their usefulness for\ncausal downstream tasks.",
-      "pdf_url": "http://arxiv.org/pdf/2505.17708v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.17708v1",
-      "published": "2025-05-23",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Spatio-Temporal Prediction: An Effective and Efficient Multi-Modal Approach",
-      "authors": [
-        "Yuting Huang",
-        "Ziquan Fang",
-        "Zhihao Zeng",
-        "Lu Chen",
-        "Yunjun Gao"
-      ],
-      "abstract": "Spatio-temporal prediction plays a crucial role in intelligent\ntransportation, weather forecasting, and urban planning. While integrating\nmulti-modal data has shown potential for enhancing prediction accuracy, key\nchallenges persist: (i) inadequate fusion of multi-modal information, (ii)\nconfounding factors that obscure causal relations, and (iii) high computational\ncomplexity of prediction models. To address these challenges, we propose\nE^2-CSTP, an Effective and Efficient Causal multi-modal Spatio-Temporal\nPrediction framework. E^2-CSTP leverages cross-modal attention and gating\nmechanisms to effectively integrate multi-modal data. Building on this, we\ndesign a dual-branch causal inference approach: the primary branch focuses on\nspatio-temporal prediction, while the auxiliary branch mitigates bias by\nmodeling additional modalities and applying causal interventions to uncover\ntrue causal dependencies. To improve model efficiency, we integrate GCN with\nthe Mamba architecture for accelerated spatio-temporal encoding. Extensive\nexperiments on 4 real-world datasets show that E^2-CSTP significantly\noutperforms 9 state-of-the-art methods, achieving up to 9.66% improvements in\naccuracy as well as 17.37%-56.11% reductions in computational overhead.",
-      "pdf_url": "http://arxiv.org/pdf/2505.17637v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.17637v1",
-      "published": "2025-05-23",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "TI-DeepONet: Learnable Time Integration for Stable Long-Term Extrapolation",
-      "authors": [
-        "Dibyajyoti Nayak",
-        "Somdatta Goswami"
-      ],
-      "abstract": "Accurate temporal extrapolation presents a fundamental challenge for neural\noperators in modeling dynamical systems, where reliable predictions must extend\nsignificantly beyond the training time horizon. Conventional Deep Operator\nNetwork (DeepONet) approaches employ two inherently limited training paradigms\n- fixed-horizon rollouts that predict complete spatiotemporal solutions while\ndisregarding temporal causality, and autoregressive formulations that\naccumulate errors through sequential predictions. We introduce TI-DeepONet, a\nframework that integrates neural operators with adaptive numerical\ntime-stepping techniques to preserve the Markovian structure of dynamical\nsystems while mitigating error propagation in extended temporal forecasting.\nOur approach reformulates the learning objective from direct state prediction\nto the approximation of instantaneous time-derivative fields, which are then\nintegrated using established numerical schemes. This architecture supports\ncontinuous-time prediction and enables deployment of higher-precision\nintegrators during inference than those used during training, balancing\ncomputational efficiency with predictive accuracy. We further develop\nTI(L)-DeepONet, which incorporates learnable coefficients for intermediate\nslopes in the integration process, adapting to solution-specific variations and\nenhancing fidelity. Evaluation across three canonical PDEs shows that\nTI(L)-DeepONet marginally outperforms TI-DeepONet, with both reducing relative\nL2 extrapolation errors: approximately 81% over autoregressive and 70% over\nfixed-horizon methods. Notably, both maintain prediction stability for temporal\ndomains extending to about twice the training interval. This research\nestablishes a physics-aware operator learning paradigm that bridges neural\napproximation with numerical analysis while preserving the causal structure of\ndynamical systems.",
-      "pdf_url": "http://arxiv.org/pdf/2505.17341v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.17341v1",
-      "published": "2025-05-22",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Learning Adaptive and Temporally Causal Video Tokenization in a 1D Latent Space",
-      "authors": [
-        "Yan Li",
-        "Changyao Tian",
-        "Renqiu Xia",
-        "Ning Liao",
-        "Weiwei Guo",
-        "Junchi Yan",
-        "Hongsheng Li",
-        "Jifeng Dai",
-        "Hao Li",
-        "Xue Yang"
-      ],
-      "abstract": "We propose AdapTok, an adaptive temporal causal video tokenizer that can\nflexibly allocate tokens for different frames based on video content. AdapTok\nis equipped with a block-wise masking strategy that randomly drops tail tokens\nof each block during training, and a block causal scorer to predict the\nreconstruction quality of video frames using different numbers of tokens.\nDuring inference, an adaptive token allocation strategy based on integer linear\nprogramming is further proposed to adjust token usage given predicted scores.\nSuch design allows for sample-wise, content-aware, and temporally dynamic token\nallocation under a controllable overall budget. Extensive experiments for video\nreconstruction and generation on UCF-101 and Kinetics-600 demonstrate the\neffectiveness of our approach. Without additional image data, AdapTok\nconsistently improves reconstruction quality and generation performance under\ndifferent token budgets, allowing for more scalable and token-efficient\ngenerative video modeling.",
-      "pdf_url": "http://arxiv.org/pdf/2505.17011v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.17011v1",
-      "published": "2025-05-22",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Beyond Correlation: Towards Causal Large Language Model Agents in Biomedicine",
-      "authors": [
-        "Adib Bazgir",
-        "Amir Habibdoust Lafmajani",
-        "Yuwen Zhang"
-      ],
-      "abstract": "Large Language Models (LLMs) show promise in biomedicine but lack true causal\nunderstanding, relying instead on correlations. This paper envisions causal LLM\nagents that integrate multimodal data (text, images, genomics, etc.) and\nperform intervention-based reasoning to infer cause-and-effect. Addressing this\nrequires overcoming key challenges: designing safe, controllable agentic\nframeworks; developing rigorous benchmarks for causal evaluation; integrating\nheterogeneous data sources; and synergistically combining LLMs with structured\nknowledge (KGs) and formal causal inference tools. Such agents could unlock\ntransformative opportunities, including accelerating drug discovery through\nautomated hypothesis generation and simulation, enabling personalized medicine\nthrough patient-specific causal models. This research agenda aims to foster\ninterdisciplinary efforts, bridging causal concepts and foundation models to\ndevelop reliable AI partners for biomedical progress.",
-      "pdf_url": "http://arxiv.org/pdf/2505.16982v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.16982v1",
-      "published": "2025-05-22",
-      "categories": [
-        "cs.AI",
-        "physics.med-ph"
-      ]
-    },
-    {
-      "title": "On the Out-of-Distribution Generalization of Self-Supervised Learning",
-      "authors": [
-        "Wenwen Qiang",
-        "Jingyao Wang",
-        "Zeen Song",
-        "Jiangmeng Li",
-        "Changwen Zheng"
-      ],
-      "abstract": "In this paper, we focus on the out-of-distribution (OOD) generalization of\nself-supervised learning (SSL). By analyzing the mini-batch construction during\nthe SSL training phase, we first give one plausible explanation for SSL having\nOOD generalization. Then, from the perspective of data generation and causal\ninference, we analyze and conclude that SSL learns spurious correlations during\nthe training process, which leads to a reduction in OOD generalization. To\naddress this issue, we propose a post-intervention distribution (PID) grounded\nin the Structural Causal Model. PID offers a scenario where the spurious\nvariable and label variable is mutually independent. Besides, we demonstrate\nthat if each mini-batch during SSL training satisfies PID, the resulting SSL\nmodel can achieve optimal worst-case OOD performance. This motivates us to\ndevelop a batch sampling strategy that enforces PID constraints through the\nlearning of a latent variable model. Through theoretical analysis, we\ndemonstrate the identifiability of the latent variable model and validate the\neffectiveness of the proposed sampling strategy. Experiments conducted on\nvarious downstream OOD tasks demonstrate the effectiveness of the proposed\nsampling strategy.",
-      "pdf_url": "http://arxiv.org/pdf/2505.16675v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.16675v1",
-      "published": "2025-05-22",
-      "categories": [
         "cs.LG"
       ]
     }
