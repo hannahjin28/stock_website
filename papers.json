@@ -1,6 +1,56 @@
 {
-  "last_updated": "2025-05-29T00:54:16.121974",
+  "last_updated": "2025-05-30T00:53:58.571522",
   "papers": [
+    {
+      "title": "A Synthetic Business Cycle Approach to Counterfactual Analysis with Nonstationary Macroeconomic Data",
+      "authors": [
+        "Zhentao Shi",
+        "Jin Xi",
+        "Haitian Xie"
+      ],
+      "abstract": "This paper investigates the use of synthetic control methods for causal\ninference in macroeconomic settings when dealing with possibly nonstationary\ndata. While the synthetic control approach has gained popularity for estimating\ncounterfactual outcomes, we caution researchers against assuming a common\nnonstationary trend factor across units for macroeconomic outcomes, as doing so\nmay result in misleading causal estimation-a pitfall we refer to as the\nspurious synthetic control problem. To address this issue, we propose a\nsynthetic business cycle framework that explicitly separates trend and cyclical\ncomponents. By leveraging the treated unit's historical data to forecast its\ntrend and using control units only for cyclical fluctuations, our\ndivide-and-conquer strategy eliminates spurious correlations and improves the\nrobustness of counterfactual prediction in macroeconomic applications. As\nempirical illustrations, we examine the cases of German reunification and the\nhandover of Hong Kong, demonstrating the advantages of the proposed approach.",
+      "pdf_url": "http://arxiv.org/pdf/2505.22388v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.22388v1",
+      "published": "2025-05-28",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Causal Inference for Experiments with Latent Outcomes: Key Results and Their Implications for Design and Analysis",
+      "authors": [
+        "Jiawei Fu",
+        "Donald P. Green"
+      ],
+      "abstract": "How should we analyze randomized experiments in which the main outcome is\nmeasured in multiple ways and each measure contains some degree of error? Since\nCostner (1971) and Bagozzi (1977), methodological discussions of experiments\nwith latent outcomes have reviewed the modeling assumptions that are invoked\nwhen the quantity of interest is the average treatment effect (ATE) of a\nrandomized intervention on a latent outcome that is measured with error. Many\nauthors have proposed methods to estimate this ATE when multiple measures of an\noutcome are available. Despite this extensive literature, social scientists\nrarely use these modeling approaches when analyzing experimental data, perhaps\nbecause the surge of interest in experiments coincides with increased\nskepticism about the modeling assumptions that these methods invoke. The\npresent paper takes a fresh look at the use of latent variable models to\nanalyze experiments. Like the skeptics, we seek to minimize reliance on ad hoc\nassumptions that are not rooted in the experimental design and measurement\nstrategy. At the same time, we think that some of the misgivings that are\nfrequently expressed about latent variable models can be addressed by modifying\nthe research design in ways that make the underlying assumptions defensible or\ntestable. We describe modeling approaches that enable researchers to identify\nand estimate key parameters of interest, suggest ways that experimental designs\ncan be augmented so as to make the modeling requirements more credible, and\ndiscuss empirical tests of key modeling assumptions. Simulations and an\nempirical application illustrate the gains in terms of precision and\nrobustness.",
+      "pdf_url": "http://arxiv.org/pdf/2505.21909v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.21909v1",
+      "published": "2025-05-28",
+      "categories": [
+        "econ.EM",
+        "stat.AP",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "MAMBO-NET: Multi-Causal Aware Modeling Backdoor-Intervention Optimization for Medical Image Segmentation Network",
+      "authors": [
+        "Ruiguo Yu",
+        "Yiyang Zhang",
+        "Yuan Tian",
+        "Yujie Diao",
+        "Di Jin",
+        "Witold Pedrycz"
+      ],
+      "abstract": "Medical image segmentation methods generally assume that the process from\nmedical image to segmentation is unbiased, and use neural networks to establish\nconditional probability models to complete the segmentation task. This\nassumption does not consider confusion factors, which can affect medical\nimages, such as complex anatomical variations and imaging modality limitations.\nConfusion factors obfuscate the relevance and causality of medical image\nsegmentation, leading to unsatisfactory segmentation results. To address this\nissue, we propose a multi-causal aware modeling backdoor-intervention\noptimization (MAMBO-NET) network for medical image segmentation. Drawing\ninsights from causal inference, MAMBO-NET utilizes self-modeling with\nmulti-Gaussian distributions to fit the confusion factors and introduce causal\nintervention into the segmentation process. Moreover, we design appropriate\nposterior probability constraints to effectively train the distributions of\nconfusion factors. For the distributions to effectively guide the segmentation\nand mitigate and eliminate the Impact of confusion factors on the segmentation,\nwe introduce classical backdoor intervention techniques and analyze their\nfeasibility in the segmentation task. To evaluate the effectiveness of our\napproach, we conducted extensive experiments on five medical image datasets.\nThe results demonstrate that our method significantly reduces the influence of\nconfusion factors, leading to enhanced segmentation accuracy.",
+      "pdf_url": "http://arxiv.org/pdf/2505.21874v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.21874v1",
+      "published": "2025-05-28",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ]
+    },
     {
       "title": "Causal Posterior Estimation",
       "authors": [
@@ -113,65 +163,6 @@
       "published": "2025-05-27",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Long-Context State-Space Video World Models",
-      "authors": [
-        "Ryan Po",
-        "Yotam Nitzan",
-        "Richard Zhang",
-        "Berlin Chen",
-        "Tri Dao",
-        "Eli Shechtman",
-        "Gordon Wetzstein",
-        "Xun Huang"
-      ],
-      "abstract": "Video diffusion models have recently shown promise for world modeling through\nautoregressive frame prediction conditioned on actions. However, they struggle\nto maintain long-term memory due to the high computational cost associated with\nprocessing extended sequences in attention layers. To overcome this limitation,\nwe propose a novel architecture leveraging state-space models (SSMs) to extend\ntemporal memory without compromising computational efficiency. Unlike previous\napproaches that retrofit SSMs for non-causal vision tasks, our method fully\nexploits the inherent advantages of SSMs in causal sequence modeling. Central\nto our design is a block-wise SSM scanning scheme, which strategically trades\noff spatial consistency for extended temporal memory, combined with dense local\nattention to ensure coherence between consecutive frames. We evaluate the\nlong-term memory capabilities of our model through spatial retrieval and\nreasoning tasks over extended horizons. Experiments on Memory Maze and\nMinecraft datasets demonstrate that our approach surpasses baselines in\npreserving long-range memory, while maintaining practical inference speeds\nsuitable for interactive applications.",
-      "pdf_url": "http://arxiv.org/pdf/2505.20171v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.20171v1",
-      "published": "2025-05-26",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal Meta-Analysis: Rethinking the Foundations of Evidence-Based Medicine",
-      "authors": [
-        "Clément Berenfeld",
-        "Ahmed Boughdiri",
-        "Bénédicte Colnet",
-        "Wouter A. C. van Amsterdam",
-        "Aurélien Bellet",
-        "Rémi Khellaf",
-        "Erwan Scornet",
-        "Julie Josse"
-      ],
-      "abstract": "Meta-analysis, by synthesizing effect estimates from multiple studies\nconducted in diverse settings, stands at the top of the evidence hierarchy in\nclinical research. Yet, conventional approaches based on fixed- or\nrandom-effects models lack a causal framework, which may limit their\ninterpretability and utility for public policy. Incorporating causal inference\nreframes meta-analysis as the estimation of well-defined causal effects on\nclearly specified populations, enabling a principled approach to handling study\nheterogeneity. We show that classical meta-analysis estimators have a clear\ncausal interpretation when effects are measured as risk differences. However,\nthis breaks down for nonlinear measures like the risk ratio and odds ratio. To\naddress this, we introduce novel causal aggregation formulas that remain\ncompatible with standard meta-analysis practices and do not require access to\nindividual-level data. To evaluate real-world impact, we apply both classical\nand causal meta-analysis methods to 500 published meta-analyses. While the\nconclusions often align, notable discrepancies emerge, revealing cases where\nconventional methods may suggest a treatment is beneficial when, under a causal\nlens, it is in fact harmful.",
-      "pdf_url": "http://arxiv.org/pdf/2505.20168v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.20168v1",
-      "published": "2025-05-26",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "An Explainable Diagnostic Framework for Neurodegenerative Dementias via Reinforcement-Optimized LLM Reasoning",
-      "authors": [
-        "Andrew Zamai",
-        "Nathanael Fijalkow",
-        "Boris Mansencal",
-        "Laurent Simon",
-        "Eloi Navet",
-        "Pierrick Coupe"
-      ],
-      "abstract": "The differential diagnosis of neurodegenerative dementias is a challenging\nclinical task, mainly because of the overlap in symptom presentation and the\nsimilarity of patterns observed in structural neuroimaging. To improve\ndiagnostic efficiency and accuracy, deep learning-based methods such as\nConvolutional Neural Networks and Vision Transformers have been proposed for\nthe automatic classification of brain MRIs. However, despite their strong\npredictive performance, these models find limited clinical utility due to their\nopaque decision making. In this work, we propose a framework that integrates\ntwo core components to enhance diagnostic transparency. First, we introduce a\nmodular pipeline for converting 3D T1-weighted brain MRIs into textual\nradiology reports. Second, we explore the potential of modern Large Language\nModels (LLMs) to assist clinicians in the differential diagnosis between\nFrontotemporal dementia subtypes, Alzheimer's disease, and normal aging based\non the generated reports. To bridge the gap between predictive accuracy and\nexplainability, we employ reinforcement learning to incentivize diagnostic\nreasoning in LLMs. Without requiring supervised reasoning traces or\ndistillation from larger models, our approach enables the emergence of\nstructured diagnostic rationales grounded in neuroimaging findings. Unlike\npost-hoc explainability methods that retrospectively justify model decisions,\nour framework generates diagnostic rationales as part of the inference\nprocess-producing causally grounded explanations that inform and guide the\nmodel's decision-making process. In doing so, our framework matches the\ndiagnostic performance of existing deep learning methods while offering\nrationales that support its diagnostic conclusions.",
-      "pdf_url": "http://arxiv.org/pdf/2505.19954v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.19954v1",
-      "published": "2025-05-26",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
       ]
     }
   ]
