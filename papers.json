@@ -1,6 +1,44 @@
 {
-  "last_updated": "2025-05-30T00:53:58.571522",
+  "last_updated": "2025-05-31T00:52:55.757939",
   "papers": [
+    {
+      "title": "D-AR: Diffusion via Autoregressive Models",
+      "authors": [
+        "Ziteng Gao",
+        "Mike Zheng Shou"
+      ],
+      "abstract": "This paper presents Diffusion via Autoregressive models (D-AR), a new\nparadigm recasting the image diffusion process as a vanilla autoregressive\nprocedure in the standard next-token-prediction fashion. We start by designing\nthe tokenizer that converts images into sequences of discrete tokens, where\ntokens in different positions can be decoded into different diffusion denoising\nsteps in the pixel space. Thanks to the diffusion properties, these tokens\nnaturally follow a coarse-to-fine order, which directly lends itself to\nautoregressive modeling. Therefore, we apply standard next-token prediction on\nthese tokens, without modifying any underlying designs (either causal masks or\ntraining/inference strategies), and such sequential autoregressive token\ngeneration directly mirrors the diffusion procedure in image space. That is,\nonce the autoregressive model generates an increment of tokens, we can directly\ndecode these tokens into the corresponding diffusion denoising step in the\nstreaming manner. Our pipeline naturally reveals several intriguing properties,\nfor example, it supports consistent previews when generating only a subset of\ntokens and enables zero-shot layout-controlled synthesis. On the standard\nImageNet benchmark, our method achieves 2.09 FID using a 775M Llama backbone\nwith 256 discrete tokens. We hope our work can inspire future research on\nunified autoregressive architectures of visual synthesis, especially with large\nlanguage models. Code and models will be available at\nhttps://github.com/showlab/D-AR",
+      "pdf_url": "http://arxiv.org/pdf/2505.23660v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.23660v1",
+      "published": "2025-05-29",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "BinauralFlow: A Causal and Streamable Approach for High-Quality Binaural Speech Synthesis with Flow Matching Models",
+      "authors": [
+        "Susan Liang",
+        "Dejan Markovic",
+        "Israel D. Gebru",
+        "Steven Krenn",
+        "Todd Keebler",
+        "Jacob Sandakly",
+        "Frank Yu",
+        "Samuel Hassel",
+        "Chenliang Xu",
+        "Alexander Richard"
+      ],
+      "abstract": "Binaural rendering aims to synthesize binaural audio that mimics natural\nhearing based on a mono audio and the locations of the speaker and listener.\nAlthough many methods have been proposed to solve this problem, they struggle\nwith rendering quality and streamable inference. Synthesizing high-quality\nbinaural audio that is indistinguishable from real-world recordings requires\nprecise modeling of binaural cues, room reverb, and ambient sounds.\nAdditionally, real-world applications demand streaming inference. To address\nthese challenges, we propose a flow matching based streaming binaural speech\nsynthesis framework called BinauralFlow. We consider binaural rendering to be a\ngeneration problem rather than a regression problem and design a conditional\nflow matching model to render high-quality audio. Moreover, we design a causal\nU-Net architecture that estimates the current audio frame solely based on past\ninformation to tailor generative models for streaming inference. Finally, we\nintroduce a continuous inference pipeline incorporating streaming STFT/ISTFT\noperations, a buffer bank, a midpoint solver, and an early skip schedule to\nimprove rendering continuity and speed. Quantitative and qualitative\nevaluations demonstrate the superiority of our method over SOTA approaches. A\nperceptual study further reveals that our model is nearly indistinguishable\nfrom real-world recordings, with a $42\\%$ confusion rate.",
+      "pdf_url": "http://arxiv.org/pdf/2505.22865v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.22865v1",
+      "published": "2025-05-28",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "eess.AS"
+      ]
+    },
     {
       "title": "A Synthetic Business Cycle Approach to Counterfactual Analysis with Nonstationary Macroeconomic Data",
       "authors": [
@@ -130,39 +168,6 @@
         "stat.ME",
         "econ.EM",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Causal inference with dyadic data in randomized experiments",
-      "authors": [
-        "Yilin Li",
-        "Lu Deng",
-        "Yong Wang",
-        "Wang Miao"
-      ],
-      "abstract": "Estimating the treatment effect within network structures is a key focus in\nonline controlled experiments, particularly for social media platforms. We\ninvestigate a scenario where the unit-level outcome of interest comprises a\nseries of dyadic outcomes, which is pervasive in many social network sources,\nspanning from microscale point-to-point messaging to macroscale international\ntrades. Dyadic outcomes are of particular interest in online controlled\nexperiments, capturing pairwise interactions as basic units for analysis. The\ndyadic nature of the data induces interference, as treatment assigned to one\nunit may affect outcomes involving connected pairs. We propose a novel\ndesign-based causal inference framework for dyadic outcomes in randomized\nexperiments, develop estimators of the global average causal effect, and\nestablish their asymptotic properties under different randomization designs. We\nprove the central limit theorem for the estimators and propose variance\nestimators to quantify the estimation uncertainty. The advantages of\nintegrating dyadic data in randomized experiments are manifested in a variety\nof numerical experiments, especially in correcting interference bias. We\nimplement our proposed method in a large-scale experiment on WeChat Channels,\nassessing the impact of a recommendation algorithm on users' interaction\nmetrics.",
-      "pdf_url": "http://arxiv.org/pdf/2505.20780v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.20780v1",
-      "published": "2025-05-27",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Mamba-Driven Topology Fusion for Monocular 3-D Human Pose Estimation",
-      "authors": [
-        "Zenghao Zheng",
-        "Lianping Yang",
-        "Jinshan Pan",
-        "Hegui Zhu"
-      ],
-      "abstract": "Transformer-based methods for 3-D human pose estimation face significant\ncomputational challenges due to the quadratic growth of self-attention\nmechanism complexity with sequence length. Recently, the Mamba model has\nsubstantially reduced computational overhead and demonstrated outstanding\nperformance in modeling long sequences by leveraging state space model (SSM).\nHowever, the ability of SSM to process sequential data is not suitable for 3-D\njoint sequences with topological structures, and the causal convolution\nstructure in Mamba also lacks insight into local joint relationships. To\naddress these issues, we propose the Mamba-Driven Topology Fusion framework in\nthis paper. Specifically, the proposed Bone Aware Module infers the direction\nand length of bone vectors in the spherical coordinate system, providing\neffective topological guidance for the Mamba model in processing joint\nsequences. Furthermore, we enhance the convolutional structure within the Mamba\nmodel by integrating forward and backward graph convolutional network, enabling\nit to better capture local joint dependencies. Finally, we design a\nSpatiotemporal Refinement Module to model both temporal and spatial\nrelationships within the sequence. Through the incorporation of skeletal\ntopology, our approach effectively alleviates Mamba's limitations in capturing\nhuman structural relationships. We conduct extensive experiments on the\nHuman3.6M and MPI-INF-3DHP datasets for testing and comparison, and the results\nshow that the proposed method greatly reduces computational cost while\nachieving higher accuracy. Ablation studies further demonstrate the\neffectiveness of each proposed module. The code and models will be released.",
-      "pdf_url": "http://arxiv.org/pdf/2505.20611v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.20611v1",
-      "published": "2025-05-27",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
