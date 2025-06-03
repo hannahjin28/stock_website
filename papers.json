@@ -1,6 +1,80 @@
 {
-  "last_updated": "2025-06-02T00:56:48.929924",
+  "last_updated": "2025-06-03T00:55:18.856038",
   "papers": [
+    {
+      "title": "Density Ratio Permutation Tests with connections to distributional shifts and conditional two-sample testing",
+      "authors": [
+        "Alberto Bordino",
+        "Thomas B. Berrett"
+      ],
+      "abstract": "We introduce novel hypothesis tests to allow for statistical inference for\ndensity ratios. More precisely, we introduce the Density Ratio Permutation Test\n(DRPT) for testing $H_0: g \\propto r f$ based on independent data drawn from\ndistributions with densities $f$ and $g$, where the hypothesised density ratio\n$r$ is a fixed function. The proposed test employs an efficient Markov Chain\nMonte Carlo algorithm to draw permutations of the combined dataset according to\na distribution determined by $r$, producing exchangeable versions of the whole\nsample and thereby establishing finite-sample validity. Regarding the test's\nbehaviour under the alternative hypothesis, we begin by demonstrating that if\nthe test statistic is chosen as an Integral Probability Metric (IPM), the DRPT\nis consistent under mild assumptions on the function class that defines the\nIPM. We then narrow our focus to the setting where the function class is a\nReproducing Kernel Hilbert Space, and introduce a generalisation of the\nclassical Maximum Mean Discrepancy (MMD), which we term Shifted-MMD. For\ncontinuous data, assuming that a normalised version of $g - rf$ lies in a\nSobolev ball, we establish the minimax optimality of the DRPT based on the\nShifted-MMD. We further extend our approach to scenarios with an unknown shift\nfactor $r$, estimating it from part of the data using Density Ratio Estimation\ntechniques, and derive Type-I error bounds based on estimation error.\nAdditionally, we demonstrate how the DRPT can be adapted for conditional\ntwo-sample testing, establishing it as a versatile tool for assessing modelling\nassumptions on importance weights, covariate shifts and related scenarios,\nwhich frequently arise in contexts such as transfer learning and causal\ninference. Finally, we validate our theoretical findings through experiments on\nboth simulated and real-world datasets.",
+      "pdf_url": "http://arxiv.org/pdf/2505.24529v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.24529v1",
+      "published": "2025-05-30",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.TH",
+        "62G09 62G10"
+      ]
+    },
+    {
+      "title": "Data Fusion for Partial Identification of Causal Effects",
+      "authors": [
+        "Quinn Lanners",
+        "Cynthia Rudin",
+        "Alexander Volfovsky",
+        "Harsh Parikh"
+      ],
+      "abstract": "Data fusion techniques integrate information from heterogeneous data sources\nto improve learning, generalization, and decision making across data sciences.\nIn causal inference, these methods leverage rich observational data to improve\ncausal effect estimation, while maintaining the trustworthiness of randomized\ncontrolled trials. Existing approaches often relax the strong no unobserved\nconfounding assumption by instead assuming exchangeability of counterfactual\noutcomes across data sources. However, when both assumptions simultaneously\nfail - a common scenario in practice - current methods cannot identify or\nestimate causal effects. We address this limitation by proposing a novel\npartial identification framework that enables researchers to answer key\nquestions such as: Is the causal effect positive or negative? and How severe\nmust assumption violations be to overturn this conclusion? Our approach\nintroduces interpretable sensitivity parameters that quantify assumption\nviolations and derives corresponding causal effect bounds. We develop doubly\nrobust estimators for these bounds and operationalize breakdown frontier\nanalysis to understand how causal conclusions change as assumption violations\nincrease. We apply our framework to the Project STAR study, which investigates\nthe effect of classroom size on students' third-grade standardized test\nperformance. Our analysis reveals that the Project STAR results are robust to\nsimultaneous violations of key assumptions, both on average and across various\nsubgroups of interest. This strengthens confidence in the study's conclusions\ndespite potential unmeasured biases in the data.",
+      "pdf_url": "http://arxiv.org/pdf/2505.24296v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.24296v1",
+      "published": "2025-05-30",
+      "categories": [
+        "stat.ME",
+        "cs.LG",
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Estimation of Gender Wage Gap in the University of North Carolina System",
+      "authors": [
+        "Zihan Zhang",
+        "Jan Hannig"
+      ],
+      "abstract": "Gender pay equity remains an open challenge in academia despite decades of\nmovements. Prior studies, however, have relied largely on descriptive\nregressions, leaving causal analysis underexplored. This study examines\ngender-based wage disparities among tenure-track faculty in the University of\nNorth Carolina system using both parametric and non-parametric causal inference\nmethods. In particular, we employed propensity score matching and causal\nforests to estimate the causal effect of gender on academic salary while\ncontrolling for university type, discipline, titles, working years, and\nscholarly productivity metrics. The results indicate that on average female\nprofessors earn approximately 6% less than their male colleagues with similar\nqualifications and positions.",
+      "pdf_url": "http://arxiv.org/pdf/2505.24078v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.24078v1",
+      "published": "2025-05-29",
+      "categories": [
+        "stat.AP",
+        "econ.GN",
+        "q-fin.EC"
+      ]
+    },
+    {
+      "title": "Test-Time Training Done Right",
+      "authors": [
+        "Tianyuan Zhang",
+        "Sai Bi",
+        "Yicong Hong",
+        "Kai Zhang",
+        "Fujun Luan",
+        "Songlin Yang",
+        "Kalyan Sunkavalli",
+        "William T. Freeman",
+        "Hao Tan"
+      ],
+      "abstract": "Test-Time Training (TTT) models context dependencies by adapting part of the\nmodel's weights (referred to as fast weights) during inference. This fast\nweight, akin to recurrent states in RNNs, stores temporary memories of past\ntokens in the current sequence. Existing TTT methods struggled to show\neffectiveness in handling long-context data, due to their inefficiency on\nmodern GPUs. The TTT layers in many of these approaches operate with extremely\nlow FLOPs utilization (often <5%) because they deliberately apply small online\nminibatch sizes (e.g., updating fast weights every 16 or 64 tokens). Moreover,\na small minibatch implies fine-grained block-wise causal dependencies in the\ndata, unsuitable for data beyond 1D ordered sequences, like sets or\nN-dimensional grids such as images or videos. In contrast, we pursue the\nopposite direction by using an extremely large chunk update, ranging from 2K to\n1M tokens across tasks of varying modalities, which we refer to as Large Chunk\nTest-Time Training (LaCT). It improves hardware utilization by orders of\nmagnitude, and more importantly, facilitates scaling of nonlinear state size\n(up to 40% of model parameters), hence substantially improving state capacity,\nall without requiring cumbersome and error-prone kernel implementations. It\nalso allows easy integration of sophisticated optimizers, e.g. Muon for online\nupdates. We validate our approach across diverse modalities and tasks,\nincluding novel view synthesis with image set, language models, and\nauto-regressive video diffusion. Our approach can scale up to 14B-parameter AR\nvideo diffusion model on sequences up to 56K tokens. In our longest sequence\nexperiment, we perform novel view synthesis with 1 million context length. We\nhope this work will inspire and accelerate new research in the field of\nlong-context modeling and test-time training. Website:\nhttps://tianyuanzhang.com/projects/ttt-done-right",
+      "pdf_url": "http://arxiv.org/pdf/2505.23884v1",
+      "arxiv_url": "http://arxiv.org/abs/2505.23884v1",
+      "published": "2025-05-29",
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "cs.CV"
+      ]
+    },
     {
       "title": "D-AR: Diffusion via Autoregressive Models",
       "authors": [
@@ -101,72 +175,6 @@
       "published": "2025-05-27",
       "categories": [
         "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "A Bayesian approach to the survivor average causal effect in cluster-randomized crossover trials",
-      "authors": [
-        "Dane Isenberg",
-        "Michael O. Harhay",
-        "Andrew B. Forbes",
-        "Paul J. Young",
-        "Fan Li",
-        "Nandita Mitra"
-      ],
-      "abstract": "In cluster-randomized crossover (CRXO) trials, groups of individuals are\nrandomly assigned to two or more sequences of alternating treatments. Since\nclusters act as their own control, the CRXO design is typically more\nstatistically efficient than the usual parallel-arm trial. CRXO trials are\nincreasingly popular in many areas of health research where the number of\navailable clusters is limited. Further, in trials among severely ill patients,\nresearchers often want to assess the effect of treatments on secondary\nnon-terminal outcomes, but frequently in these studies, there are patients who\ndo not survive to have these measurements fully recorded. In this paper, we\nprovide a causal inference framework and treatment effect estimation methods\nfor addressing truncation by death in the setting of CRXO trials. We target the\nsurvivor average causal effect (SACE) estimand, a well-defined subgroup\ntreatment effect obtained via principal stratification. We propose novel\nstructural and standard modeling assumptions to enable SACE identification\nfollowed by estimation within a Bayesian paradigm. We evaluate the small-sample\nperformance of our proposed Bayesian approach for the estimation of the SACE in\nCRXO trial settings via simulation studies. We apply our methods to a\npreviously conducted two-period cross-sectional CRXO study examining the impact\nof proton pump inhibitors compared to histamine-2 receptor blockers on length\nof hospitalization among adults requiring invasive mechanical ventilation.",
-      "pdf_url": "http://arxiv.org/pdf/2505.21447v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.21447v1",
-      "published": "2025-05-27",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "The Effect of the Gotthard Base Tunnel on Road Traffic: A Synthetic Control Approach",
-      "authors": [
-        "Hannes Wallimann",
-        "Widar von Arx",
-        "Ann Hesse"
-      ],
-      "abstract": "The opening of the Gotthard Base Tunnel in 2017, the longest railway tunnel\nin the world, marked a milestone in Swiss transport policy. The tunnel, a part\nof the New Rail Link through the Alps, serves as a key instrument of the\nso-called \"modal shift policy,\" which aims to transfer transalpine freight\ntraffic from road to rail. The reduction in travel time by train between\nnorthern and southern Switzerland raised expectations that a substantial share\nof tourist-oriented passenger traffic would also shift from car to rail. In\nthis paper, we conduct a causal analysis of the impact of the Gotthard Base\nTunnel's opening at the end of 2016 on the number of cars using the parallel\nGotthard motorway section in the subsequent years. To this end, we apply the\nsynthetic control and the synthetic difference-in-differences methods to\nconstruct a synthetic Gotthard motorway section based on a weighted combination\nof other alpine road crossings (a so-called donor pool) that did not experience\nthe construction of a competing rail infrastructure. Our results reveal only a\nmodest but statistically significant decline in the number of cars between the\nactual and the synthetic Gotthard motorway in the short run. Given the\nconsistently strong and increasing demand for the new rail connection through\nthe Gotthard Base Tunnel, we infer a substantial induced short-run demand\neffect resulting from the rail travel time savings.",
-      "pdf_url": "http://arxiv.org/pdf/2505.21129v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.21129v1",
-      "published": "2025-05-27",
-      "categories": [
-        "econ.GN",
-        "q-fin.EC"
-      ]
-    },
-    {
-      "title": "Study of Lightweight Transformer Architectures for Single-Channel Speech Enhancement",
-      "authors": [
-        "Haixin Zhao",
-        "Nilesh Madhu"
-      ],
-      "abstract": "In speech enhancement, achieving state-of-the-art (SotA) performance while\nadhering to the computational constraints on edge devices remains a formidable\nchallenge. Networks integrating stacked temporal and spectral modelling\neffectively leverage improved architectures such as transformers; however, they\ninevitably incur substantial computational complexity and model expansion.\nThrough systematic ablation analysis on transformer-based temporal and spectral\nmodelling, we demonstrate that the architecture employing streamlined\nFrequency-Time-Frequency (FTF) stacked transformers efficiently learns global\ndependencies within causal context, while avoiding considerable computational\ndemands. Utilising discriminators in training further improves learning\nefficacy and enhancement without introducing additional complexity during\ninference. The proposed lightweight, causal, transformer-based architecture\nwith adversarial training (LCT-GAN) yields SoTA performance on instrumental\nmetrics among contemporary lightweight models, but with far less overhead.\nCompared to DeepFilterNet2, the LCT-GAN only requires 6% of the parameters, at\nsimilar complexity and performance. Against CCFNet+(Lite), LCT-GAN saves 9% in\nparameters and 10% in multiply-accumulate operations yet yielding improved\nperformance. Further, the LCT-GAN even outperforms more complex, common\nbaseline models on widely used test datasets.",
-      "pdf_url": "http://arxiv.org/pdf/2505.21057v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.21057v1",
-      "published": "2025-05-27",
-      "categories": [
-        "eess.AS",
-        "cs.SD"
-      ]
-    },
-    {
-      "title": "Debiased Ill-Posed Regression",
-      "authors": [
-        "AmirEmad Ghassami",
-        "James M. Robins",
-        "Andrea Rotnitzky"
-      ],
-      "abstract": "In various statistical settings, the goal is to estimate a function which is\nrestricted by the statistical model only through a conditional moment\nrestriction. Prominent examples include the nonparametric instrumental variable\nframework for estimating the structural function of the outcome variable, and\nthe proximal causal inference framework for estimating the bridge functions. A\ncommon strategy in the literature is to find the minimizer of the projected\nmean squared error. However, this approach can be sensitive to misspecification\nor slow convergence rate of the estimators of the involved nuisance components.\nIn this work, we propose a debiased estimation strategy based on the influence\nfunction of a modification of the projected error and demonstrate its\nfinite-sample convergence rate. Our proposed estimator possesses a second-order\nbias with respect to the involved nuisance functions and a desirable robustness\nproperty with respect to the misspecification of one of the nuisance functions.\nThe proposed estimator involves a hyper-parameter, for which the optimal value\ndepends on potentially unknown features of the underlying data-generating\nprocess. Hence, we further propose a hyper-parameter selection approach based\non cross-validation and derive an error bound for the resulting estimator. This\nanalysis highlights the potential rate loss due to hyper-parameter selection\nand underscore the importance and advantages of incorporating debiasing in this\nsetting. We also study the application of our approach to the estimation of\nregular parameters in a specific parameter class, which are linear functionals\nof the solutions to the conditional moment restrictions and provide sufficient\nconditions for achieving root-n consistency using our debiased estimator.",
-      "pdf_url": "http://arxiv.org/pdf/2505.20787v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.20787v1",
-      "published": "2025-05-27",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
         "stat.ML"
       ]
     }
