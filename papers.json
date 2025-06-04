@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-06-03T00:55:18.856038",
+  "last_updated": "2025-06-04T00:55:09.907194",
   "papers": [
     {
       "title": "Density Ratio Permutation Tests with connections to distributional shifts and conditional two-sample testing",
@@ -134,9 +134,9 @@
         "Jiawei Fu",
         "Donald P. Green"
       ],
-      "abstract": "How should we analyze randomized experiments in which the main outcome is\nmeasured in multiple ways and each measure contains some degree of error? Since\nCostner (1971) and Bagozzi (1977), methodological discussions of experiments\nwith latent outcomes have reviewed the modeling assumptions that are invoked\nwhen the quantity of interest is the average treatment effect (ATE) of a\nrandomized intervention on a latent outcome that is measured with error. Many\nauthors have proposed methods to estimate this ATE when multiple measures of an\noutcome are available. Despite this extensive literature, social scientists\nrarely use these modeling approaches when analyzing experimental data, perhaps\nbecause the surge of interest in experiments coincides with increased\nskepticism about the modeling assumptions that these methods invoke. The\npresent paper takes a fresh look at the use of latent variable models to\nanalyze experiments. Like the skeptics, we seek to minimize reliance on ad hoc\nassumptions that are not rooted in the experimental design and measurement\nstrategy. At the same time, we think that some of the misgivings that are\nfrequently expressed about latent variable models can be addressed by modifying\nthe research design in ways that make the underlying assumptions defensible or\ntestable. We describe modeling approaches that enable researchers to identify\nand estimate key parameters of interest, suggest ways that experimental designs\ncan be augmented so as to make the modeling requirements more credible, and\ndiscuss empirical tests of key modeling assumptions. Simulations and an\nempirical application illustrate the gains in terms of precision and\nrobustness.",
-      "pdf_url": "http://arxiv.org/pdf/2505.21909v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.21909v1",
+      "abstract": "How should researchers analyze randomized experiments in which the main\noutcome is measured in multiple ways but each measure contains some degree of\nerror? We describe modeling approaches that enable researchers to identify\ncausal parameters of interest, suggest ways that experimental designs can be\naugmented so as to make linear latent variable models more credible, and\ndiscuss empirical tests of key modeling assumptions. We show that when\nexperimental researchers invest appropriately in multiple outcome measures, an\noptimally weighted index of the outcome measures enables researchers to obtain\nefficient and interpretable estimates of causal parameters by applying standard\nregression methods, and that weights may be obtained using instrumental\nvariables regression. Maximum likelihood and generalized method of moments\nestimators can be used to obtain estimates and standard errors in a single\nstep. An empirical application illustrates the gains in precision and\nrobustness that multiple outcome measures can provide.",
+      "pdf_url": "http://arxiv.org/pdf/2505.21909v2",
+      "arxiv_url": "http://arxiv.org/abs/2505.21909v2",
       "published": "2025-05-28",
       "categories": [
         "econ.EM",
