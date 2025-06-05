@@ -1,181 +1,176 @@
 {
-  "last_updated": "2025-06-04T00:55:09.907194",
+  "last_updated": "2025-06-05T00:54:21.433076",
   "papers": [
     {
-      "title": "Density Ratio Permutation Tests with connections to distributional shifts and conditional two-sample testing",
+      "title": "TalkingMachines: Real-Time Audio-Driven FaceTime-Style Video via Autoregressive Diffusion Models",
       "authors": [
-        "Alberto Bordino",
-        "Thomas B. Berrett"
+        "Chetwin Low",
+        "Weimin Wang"
       ],
-      "abstract": "We introduce novel hypothesis tests to allow for statistical inference for\ndensity ratios. More precisely, we introduce the Density Ratio Permutation Test\n(DRPT) for testing $H_0: g \\propto r f$ based on independent data drawn from\ndistributions with densities $f$ and $g$, where the hypothesised density ratio\n$r$ is a fixed function. The proposed test employs an efficient Markov Chain\nMonte Carlo algorithm to draw permutations of the combined dataset according to\na distribution determined by $r$, producing exchangeable versions of the whole\nsample and thereby establishing finite-sample validity. Regarding the test's\nbehaviour under the alternative hypothesis, we begin by demonstrating that if\nthe test statistic is chosen as an Integral Probability Metric (IPM), the DRPT\nis consistent under mild assumptions on the function class that defines the\nIPM. We then narrow our focus to the setting where the function class is a\nReproducing Kernel Hilbert Space, and introduce a generalisation of the\nclassical Maximum Mean Discrepancy (MMD), which we term Shifted-MMD. For\ncontinuous data, assuming that a normalised version of $g - rf$ lies in a\nSobolev ball, we establish the minimax optimality of the DRPT based on the\nShifted-MMD. We further extend our approach to scenarios with an unknown shift\nfactor $r$, estimating it from part of the data using Density Ratio Estimation\ntechniques, and derive Type-I error bounds based on estimation error.\nAdditionally, we demonstrate how the DRPT can be adapted for conditional\ntwo-sample testing, establishing it as a versatile tool for assessing modelling\nassumptions on importance weights, covariate shifts and related scenarios,\nwhich frequently arise in contexts such as transfer learning and causal\ninference. Finally, we validate our theoretical findings through experiments on\nboth simulated and real-world datasets.",
-      "pdf_url": "http://arxiv.org/pdf/2505.24529v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.24529v1",
-      "published": "2025-05-30",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.TH",
-        "62G09 62G10"
-      ]
-    },
-    {
-      "title": "Data Fusion for Partial Identification of Causal Effects",
-      "authors": [
-        "Quinn Lanners",
-        "Cynthia Rudin",
-        "Alexander Volfovsky",
-        "Harsh Parikh"
-      ],
-      "abstract": "Data fusion techniques integrate information from heterogeneous data sources\nto improve learning, generalization, and decision making across data sciences.\nIn causal inference, these methods leverage rich observational data to improve\ncausal effect estimation, while maintaining the trustworthiness of randomized\ncontrolled trials. Existing approaches often relax the strong no unobserved\nconfounding assumption by instead assuming exchangeability of counterfactual\noutcomes across data sources. However, when both assumptions simultaneously\nfail - a common scenario in practice - current methods cannot identify or\nestimate causal effects. We address this limitation by proposing a novel\npartial identification framework that enables researchers to answer key\nquestions such as: Is the causal effect positive or negative? and How severe\nmust assumption violations be to overturn this conclusion? Our approach\nintroduces interpretable sensitivity parameters that quantify assumption\nviolations and derives corresponding causal effect bounds. We develop doubly\nrobust estimators for these bounds and operationalize breakdown frontier\nanalysis to understand how causal conclusions change as assumption violations\nincrease. We apply our framework to the Project STAR study, which investigates\nthe effect of classroom size on students' third-grade standardized test\nperformance. Our analysis reveals that the Project STAR results are robust to\nsimultaneous violations of key assumptions, both on average and across various\nsubgroups of interest. This strengthens confidence in the study's conclusions\ndespite potential unmeasured biases in the data.",
-      "pdf_url": "http://arxiv.org/pdf/2505.24296v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.24296v1",
-      "published": "2025-05-30",
-      "categories": [
-        "stat.ME",
-        "cs.LG",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Estimation of Gender Wage Gap in the University of North Carolina System",
-      "authors": [
-        "Zihan Zhang",
-        "Jan Hannig"
-      ],
-      "abstract": "Gender pay equity remains an open challenge in academia despite decades of\nmovements. Prior studies, however, have relied largely on descriptive\nregressions, leaving causal analysis underexplored. This study examines\ngender-based wage disparities among tenure-track faculty in the University of\nNorth Carolina system using both parametric and non-parametric causal inference\nmethods. In particular, we employed propensity score matching and causal\nforests to estimate the causal effect of gender on academic salary while\ncontrolling for university type, discipline, titles, working years, and\nscholarly productivity metrics. The results indicate that on average female\nprofessors earn approximately 6% less than their male colleagues with similar\nqualifications and positions.",
-      "pdf_url": "http://arxiv.org/pdf/2505.24078v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.24078v1",
-      "published": "2025-05-29",
-      "categories": [
-        "stat.AP",
-        "econ.GN",
-        "q-fin.EC"
-      ]
-    },
-    {
-      "title": "Test-Time Training Done Right",
-      "authors": [
-        "Tianyuan Zhang",
-        "Sai Bi",
-        "Yicong Hong",
-        "Kai Zhang",
-        "Fujun Luan",
-        "Songlin Yang",
-        "Kalyan Sunkavalli",
-        "William T. Freeman",
-        "Hao Tan"
-      ],
-      "abstract": "Test-Time Training (TTT) models context dependencies by adapting part of the\nmodel's weights (referred to as fast weights) during inference. This fast\nweight, akin to recurrent states in RNNs, stores temporary memories of past\ntokens in the current sequence. Existing TTT methods struggled to show\neffectiveness in handling long-context data, due to their inefficiency on\nmodern GPUs. The TTT layers in many of these approaches operate with extremely\nlow FLOPs utilization (often <5%) because they deliberately apply small online\nminibatch sizes (e.g., updating fast weights every 16 or 64 tokens). Moreover,\na small minibatch implies fine-grained block-wise causal dependencies in the\ndata, unsuitable for data beyond 1D ordered sequences, like sets or\nN-dimensional grids such as images or videos. In contrast, we pursue the\nopposite direction by using an extremely large chunk update, ranging from 2K to\n1M tokens across tasks of varying modalities, which we refer to as Large Chunk\nTest-Time Training (LaCT). It improves hardware utilization by orders of\nmagnitude, and more importantly, facilitates scaling of nonlinear state size\n(up to 40% of model parameters), hence substantially improving state capacity,\nall without requiring cumbersome and error-prone kernel implementations. It\nalso allows easy integration of sophisticated optimizers, e.g. Muon for online\nupdates. We validate our approach across diverse modalities and tasks,\nincluding novel view synthesis with image set, language models, and\nauto-regressive video diffusion. Our approach can scale up to 14B-parameter AR\nvideo diffusion model on sequences up to 56K tokens. In our longest sequence\nexperiment, we perform novel view synthesis with 1 million context length. We\nhope this work will inspire and accelerate new research in the field of\nlong-context modeling and test-time training. Website:\nhttps://tianyuanzhang.com/projects/ttt-done-right",
-      "pdf_url": "http://arxiv.org/pdf/2505.23884v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.23884v1",
-      "published": "2025-05-29",
-      "categories": [
-        "cs.LG",
-        "cs.CL",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "D-AR: Diffusion via Autoregressive Models",
-      "authors": [
-        "Ziteng Gao",
-        "Mike Zheng Shou"
-      ],
-      "abstract": "This paper presents Diffusion via Autoregressive models (D-AR), a new\nparadigm recasting the image diffusion process as a vanilla autoregressive\nprocedure in the standard next-token-prediction fashion. We start by designing\nthe tokenizer that converts images into sequences of discrete tokens, where\ntokens in different positions can be decoded into different diffusion denoising\nsteps in the pixel space. Thanks to the diffusion properties, these tokens\nnaturally follow a coarse-to-fine order, which directly lends itself to\nautoregressive modeling. Therefore, we apply standard next-token prediction on\nthese tokens, without modifying any underlying designs (either causal masks or\ntraining/inference strategies), and such sequential autoregressive token\ngeneration directly mirrors the diffusion procedure in image space. That is,\nonce the autoregressive model generates an increment of tokens, we can directly\ndecode these tokens into the corresponding diffusion denoising step in the\nstreaming manner. Our pipeline naturally reveals several intriguing properties,\nfor example, it supports consistent previews when generating only a subset of\ntokens and enables zero-shot layout-controlled synthesis. On the standard\nImageNet benchmark, our method achieves 2.09 FID using a 775M Llama backbone\nwith 256 discrete tokens. We hope our work can inspire future research on\nunified autoregressive architectures of visual synthesis, especially with large\nlanguage models. Code and models will be available at\nhttps://github.com/showlab/D-AR",
-      "pdf_url": "http://arxiv.org/pdf/2505.23660v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.23660v1",
-      "published": "2025-05-29",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "BinauralFlow: A Causal and Streamable Approach for High-Quality Binaural Speech Synthesis with Flow Matching Models",
-      "authors": [
-        "Susan Liang",
-        "Dejan Markovic",
-        "Israel D. Gebru",
-        "Steven Krenn",
-        "Todd Keebler",
-        "Jacob Sandakly",
-        "Frank Yu",
-        "Samuel Hassel",
-        "Chenliang Xu",
-        "Alexander Richard"
-      ],
-      "abstract": "Binaural rendering aims to synthesize binaural audio that mimics natural\nhearing based on a mono audio and the locations of the speaker and listener.\nAlthough many methods have been proposed to solve this problem, they struggle\nwith rendering quality and streamable inference. Synthesizing high-quality\nbinaural audio that is indistinguishable from real-world recordings requires\nprecise modeling of binaural cues, room reverb, and ambient sounds.\nAdditionally, real-world applications demand streaming inference. To address\nthese challenges, we propose a flow matching based streaming binaural speech\nsynthesis framework called BinauralFlow. We consider binaural rendering to be a\ngeneration problem rather than a regression problem and design a conditional\nflow matching model to render high-quality audio. Moreover, we design a causal\nU-Net architecture that estimates the current audio frame solely based on past\ninformation to tailor generative models for streaming inference. Finally, we\nintroduce a continuous inference pipeline incorporating streaming STFT/ISTFT\noperations, a buffer bank, a midpoint solver, and an early skip schedule to\nimprove rendering continuity and speed. Quantitative and qualitative\nevaluations demonstrate the superiority of our method over SOTA approaches. A\nperceptual study further reveals that our model is nearly indistinguishable\nfrom real-world recordings, with a $42\\%$ confusion rate.",
-      "pdf_url": "http://arxiv.org/pdf/2505.22865v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.22865v1",
-      "published": "2025-05-28",
+      "abstract": "In this paper, we present TalkingMachines -- an efficient framework that\ntransforms pretrained video generation models into real-time, audio-driven\ncharacter animators. TalkingMachines enables natural conversational experiences\nby integrating an audio large language model (LLM) with our video generation\nfoundation model. Our primary contributions include: (1) We adapt a pretrained\nSOTA image-to-video DiT into an audio-driven avatar generation model of 18\nbillion parameters; (2) We enable infinite video streaming without error\naccumulation through asymmetric knowledge distillation from a bidirectional\nteacher model into a sparse causal, autoregressive student model; (3) We design\na high-throughput, low-latency inference pipeline incorporating several key\nengineering optimizations such as: (a) disaggregation of the DiT and VAE\ndecoder across separate devices, (b) efficient overlap of inter-device\ncommunication and computation using CUDA streams, (c) elimination of redundant\nrecomputations to maximize frame-generation throughput. Please see demo videos\nhere - https://aaxwaz.github.io/TalkingMachines/",
+      "pdf_url": "http://arxiv.org/pdf/2506.03099v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.03099v1",
+      "published": "2025-06-03",
       "categories": [
         "cs.SD",
         "cs.AI",
-        "eess.AS"
+        "cs.GR"
       ]
     },
     {
-      "title": "A Synthetic Business Cycle Approach to Counterfactual Analysis with Nonstationary Macroeconomic Data",
+      "title": "IP-Dialog: Evaluating Implicit Personalization in Dialogue Systems with Synthetic Data",
       "authors": [
-        "Zhentao Shi",
-        "Jin Xi",
-        "Haitian Xie"
+        "Bo Peng",
+        "Zhiheng Wang",
+        "Heyang Gong",
+        "Chaochao Lu"
       ],
-      "abstract": "This paper investigates the use of synthetic control methods for causal\ninference in macroeconomic settings when dealing with possibly nonstationary\ndata. While the synthetic control approach has gained popularity for estimating\ncounterfactual outcomes, we caution researchers against assuming a common\nnonstationary trend factor across units for macroeconomic outcomes, as doing so\nmay result in misleading causal estimation-a pitfall we refer to as the\nspurious synthetic control problem. To address this issue, we propose a\nsynthetic business cycle framework that explicitly separates trend and cyclical\ncomponents. By leveraging the treated unit's historical data to forecast its\ntrend and using control units only for cyclical fluctuations, our\ndivide-and-conquer strategy eliminates spurious correlations and improves the\nrobustness of counterfactual prediction in macroeconomic applications. As\nempirical illustrations, we examine the cases of German reunification and the\nhandover of Hong Kong, demonstrating the advantages of the proposed approach.",
-      "pdf_url": "http://arxiv.org/pdf/2505.22388v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.22388v1",
-      "published": "2025-05-28",
+      "abstract": "In modern dialogue systems, the ability to implicitly infer user backgrounds\nfrom conversations and leverage this information for personalized assistance is\ncrucial. However, the scarcity of high-quality data remains a fundamental\nchallenge to evaluating and improving this capability. Traditional dataset\nconstruction methods are labor-intensive, resource-demanding, and raise privacy\nconcerns. To address these issues, we propose a novel approach for automatic\nsynthetic data generation and introduce the Implicit Personalized Dialogue\n(IP-Dialog) benchmark along with a training dataset, covering 10 tasks and 12\nuser attribute types. Additionally, we develop a systematic evaluation\nframework with four metrics to assess both attribute awareness and reasoning\ncapabilities. We further propose five causal graphs to elucidate models'\nreasoning pathways during implicit personalization. Extensive experiments yield\ninsightful observations and prove the reliability of our dataset.",
+      "pdf_url": "http://arxiv.org/pdf/2506.02449v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.02449v1",
+      "published": "2025-06-03",
       "categories": [
-        "econ.EM"
+        "cs.CL",
+        "cs.HC"
       ]
     },
     {
-      "title": "Causal Inference for Experiments with Latent Outcomes: Key Results and Their Implications for Design and Analysis",
+      "title": "Spillovers and Effect Attenuation in Firearm Policy Research in the United States",
       "authors": [
-        "Jiawei Fu",
-        "Donald P. Green"
+        "Lee Kennedy-Shaffer",
+        "Alan Hamilton Kennedy"
       ],
-      "abstract": "How should researchers analyze randomized experiments in which the main\noutcome is measured in multiple ways but each measure contains some degree of\nerror? We describe modeling approaches that enable researchers to identify\ncausal parameters of interest, suggest ways that experimental designs can be\naugmented so as to make linear latent variable models more credible, and\ndiscuss empirical tests of key modeling assumptions. We show that when\nexperimental researchers invest appropriately in multiple outcome measures, an\noptimally weighted index of the outcome measures enables researchers to obtain\nefficient and interpretable estimates of causal parameters by applying standard\nregression methods, and that weights may be obtained using instrumental\nvariables regression. Maximum likelihood and generalized method of moments\nestimators can be used to obtain estimates and standard errors in a single\nstep. An empirical application illustrates the gains in precision and\nrobustness that multiple outcome measures can provide.",
-      "pdf_url": "http://arxiv.org/pdf/2505.21909v2",
-      "arxiv_url": "http://arxiv.org/abs/2505.21909v2",
-      "published": "2025-05-28",
+      "abstract": "In the United States, firearm-related deaths and injuries are a major public\nhealth issue. Because of limited federal action, state policies are\nparticularly important, and their evaluation informs the actions of other\npolicymakers. The movement of firearms across state and local borders, however,\ncan undermine the effectiveness of these policies and have statistical\nconsequences for their empirical evaluation. This movement causes spillover and\nbypass effects of policies, wherein interventions affect nearby control states\nand the lack of intervention in nearby states reduces the effectiveness in the\nintervention states. While some causal inference methods exist to account for\nspillover effects and reduce bias, these do not necessarily align well with the\ndata available for firearm research or with the most policy-relevant estimands.\nIntegrated data infrastructure and new methods are necessary for a better\nunderstanding of the effects these policies would have if widely adopted. In\nthe meantime, appropriately understanding and interpreting effect estimates\nfrom quasi-experimental analyses is crucial for ensuring that effective\npolicies are not dismissed due to these statistical challenges.",
+      "pdf_url": "http://arxiv.org/pdf/2506.01695v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.01695v1",
+      "published": "2025-06-02",
       "categories": [
-        "econ.EM",
         "stat.AP",
+        "econ.EM",
+        "62P25"
+      ]
+    },
+    {
+      "title": "A Diffusion-Based Method for Learning the Multi-Outcome Distribution of Medical Treatments",
+      "authors": [
+        "Yuchen Ma",
+        "Jonas Schweisthal",
+        "Hengrui Zhang",
+        "Stefan Feuerriegel"
+      ],
+      "abstract": "In medicine, treatments often influence multiple, interdependent outcomes,\nsuch as primary endpoints, complications, adverse events, or other secondary\nendpoints. Hence, to make optimal treatment decisions, clinicians are\ninterested in learning the distribution of multi-dimensional treatment\noutcomes. However, the vast majority of machine learning methods for predicting\ntreatment effects focus on single-outcome settings, despite the fact that\nmedical data often include multiple, interdependent outcomes. To address this\nlimitation, we propose a novel diffusion-based method called DIME to learn the\njoint distribution of multiple outcomes of medical treatments. We addresses\nthree challenges relevant in medical practice: (i)it is tailored to learn the\njoint interventional distribution of multiple medical outcomes, which enables\nreliable decision-making with uncertainty quantification rather than relying\nsolely on point estimates; (ii)it explicitly captures the dependence structure\nbetween outcomes; (iii)it can handle outcomes of mixed type, including binary,\ncategorical, and continuous variables. In DIME, we take into account the\nfundamental problem of causal inference through causal masking. For training,\nour method decomposes the joint distribution into a series of conditional\ndistributions with a customized conditional masking to account for the\ndependence structure across outcomes. For inference, our method\nauto-regressively generates predictions. This allows our method to move beyond\npoint estimates of causal quantities and thus learn the joint interventional\ndistribution. To the best of our knowledge, DIME is the first neural method\ntailored to learn the joint, multi-outcome distribution of medical treatments.\nAcross various experiments, we demonstrate that our method effectively learns\nthe joint distribution and captures shared information among multiple outcomes.",
+      "pdf_url": "http://arxiv.org/pdf/2506.01533v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.01533v1",
+      "published": "2025-06-02",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Playing with Transformer at 30+ FPS via Next-Frame Diffusion",
+      "authors": [
+        "Xinle Cheng",
+        "Tianyu He",
+        "Jiayi Xu",
+        "Junliang Guo",
+        "Di He",
+        "Jiang Bian"
+      ],
+      "abstract": "Autoregressive video models offer distinct advantages over bidirectional\ndiffusion models in creating interactive video content and supporting streaming\napplications with arbitrary duration. In this work, we present Next-Frame\nDiffusion (NFD), an autoregressive diffusion transformer that incorporates\nblock-wise causal attention, enabling iterative sampling and efficient\ninference via parallel token generation within each frame. Nonetheless,\nachieving real-time video generation remains a significant challenge for such\nmodels, primarily due to the high computational cost associated with diffusion\nsampling and the hardware inefficiencies inherent to autoregressive generation.\nTo address this, we introduce two innovations: (1) We extend consistency\ndistillation to the video domain and adapt it specifically for video models,\nenabling efficient inference with few sampling steps; (2) To fully leverage\nparallel computation, motivated by the observation that adjacent frames often\nshare the identical action input, we propose speculative sampling. In this\napproach, the model generates next few frames using current action input, and\ndiscard speculatively generated frames if the input action differs. Experiments\non a large-scale action-conditioned video generation benchmark demonstrate that\nNFD beats autoregressive baselines in terms of both visual quality and sampling\nefficiency. We, for the first time, achieves autoregressive video generation at\nover 30 Frames Per Second (FPS) on an A100 GPU using a 310M model.",
+      "pdf_url": "http://arxiv.org/pdf/2506.01380v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.01380v1",
+      "published": "2025-06-02",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Uncovering Bias Mechanisms in Observational Studies",
+      "authors": [
+        "Ilker Demirel",
+        "Zeshan Hussain",
+        "Piersilvio De Bartolomeis",
+        "David Sontag"
+      ],
+      "abstract": "Observational studies are a key resource for causal inference but are often\naffected by systematic biases. Prior work has focused mainly on detecting these\nbiases, via sensitivity analyses and comparisons with randomized controlled\ntrials, or mitigating them through debiasing techniques. However, there remains\na lack of methodology for uncovering the underlying mechanisms driving these\nbiases, e.g., whether due to hidden confounding or selection of participants.\nIn this work, we show that the relationship between bias magnitude and the\npredictive performance of nuisance function estimators (in the observational\nstudy) can help distinguish among common sources of causal bias. We validate\nour methodology through extensive synthetic experiments and a real-world case\nstudy, demonstrating its effectiveness in revealing the mechanisms behind\nobserved biases. Our framework offers a new lens for understanding and\ncharacterizing bias in observational studies, with practical implications for\nimproving causal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2506.01191v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.01191v1",
+      "published": "2025-06-01",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "zip2zip: Inference-Time Adaptive Vocabularies for Language Models via Token Compression",
+      "authors": [
+        "Saibo Geng",
+        "Nathan Ranchin",
+        "Yunzhen yao",
+        "Maxime Peyrard",
+        "Chris Wendler",
+        "Michael Gastpar",
+        "Robert West"
+      ],
+      "abstract": "Tokenization efficiency plays a critical role in the performance and cost of\nlarge language models (LLMs), yet most models rely on static tokenizers\noptimized for general-purpose corpora. These tokenizers' fixed vocabularies\noften fail to adapt to domain- or language-specific inputs, leading to longer\ntoken sequences and higher computational costs. We introduce zip2zip, a\nframework that enables LLMs to dynamically adjust token vocabulary at inference\ntime, allowing for fewer generated tokens and thus faster inference. zip2zip\nconsists of three key components: (1) a tokenizer based on Lempel-Ziv-Welch\n(LZW) compression that incrementally compresses tokens into reusable\n\"hypertokens\" on the fly; (2) an embedding layer that computes embeddings for\nnewly formed hypertokens at runtime; and (3) a causal language modeling variant\nthat trains the model to operate on hypertokenized, compressed sequences. We\nshow that an existing LLM can be zip2zip-fied in 10 GPU-hours via\nparameter-efficient finetuning. The resulting zip2zip LLMs effectively learn to\nuse hypertokens at inference time, reducing input and output sequence length by\n20-60\\%, with significant improvements in inference latency.",
+      "pdf_url": "http://arxiv.org/pdf/2506.01084v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.01084v1",
+      "published": "2025-06-01",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Projection Pursuit Density Ratio Estimation",
+      "authors": [
+        "Meilin Wang",
+        "Wei Huang",
+        "Mingming Gong",
+        "Zheng Zhang"
+      ],
+      "abstract": "Density ratio estimation (DRE) is a paramount task in machine learning, for\nits broad applications across multiple domains, such as covariate shift\nadaptation, causal inference, independence tests and beyond. Parametric methods\nfor estimating the density ratio possibly lead to biased results if models are\nmisspecified, while conventional non-parametric methods suffer from the curse\nof dimensionality when the dimension of data is large. To address these\nchallenges, in this paper, we propose a novel approach for DRE based on the\nprojection pursuit (PP) approximation. The proposed method leverages PP to\nmitigate the impact of high dimensionality while retaining the model\nflexibility needed for the accuracy of DRE. We establish the consistency and\nthe convergence rate for the proposed estimator. Experimental results\ndemonstrate that our proposed method outperforms existing alternatives in\nvarious applications.",
+      "pdf_url": "http://arxiv.org/pdf/2506.00866v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.00866v1",
+      "published": "2025-06-01",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
         "stat.ME"
       ]
     },
     {
-      "title": "MAMBO-NET: Multi-Causal Aware Modeling Backdoor-Intervention Optimization for Medical Image Segmentation Network",
+      "title": "Recover Experimental Data with Selection Bias using Counterfactual Logic",
       "authors": [
-        "Ruiguo Yu",
-        "Yiyang Zhang",
-        "Yuan Tian",
-        "Yujie Diao",
-        "Di Jin",
-        "Witold Pedrycz"
+        "Jingyang He",
+        "Shuai Wang",
+        "Ang Li"
       ],
-      "abstract": "Medical image segmentation methods generally assume that the process from\nmedical image to segmentation is unbiased, and use neural networks to establish\nconditional probability models to complete the segmentation task. This\nassumption does not consider confusion factors, which can affect medical\nimages, such as complex anatomical variations and imaging modality limitations.\nConfusion factors obfuscate the relevance and causality of medical image\nsegmentation, leading to unsatisfactory segmentation results. To address this\nissue, we propose a multi-causal aware modeling backdoor-intervention\noptimization (MAMBO-NET) network for medical image segmentation. Drawing\ninsights from causal inference, MAMBO-NET utilizes self-modeling with\nmulti-Gaussian distributions to fit the confusion factors and introduce causal\nintervention into the segmentation process. Moreover, we design appropriate\nposterior probability constraints to effectively train the distributions of\nconfusion factors. For the distributions to effectively guide the segmentation\nand mitigate and eliminate the Impact of confusion factors on the segmentation,\nwe introduce classical backdoor intervention techniques and analyze their\nfeasibility in the segmentation task. To evaluate the effectiveness of our\napproach, we conducted extensive experiments on five medical image datasets.\nThe results demonstrate that our method significantly reduces the influence of\nconfusion factors, leading to enhanced segmentation accuracy.",
-      "pdf_url": "http://arxiv.org/pdf/2505.21874v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.21874v1",
-      "published": "2025-05-28",
+      "abstract": "Selection bias, arising from the systematic inclusion or exclusion of certain\nsamples, poses a significant challenge to the validity of causal inference.\nWhile Bareinboim et al. introduced methods for recovering unbiased\nobservational and interventional distributions from biased data using partial\nexternal information, the complexity of the backdoor adjustment and the\nmethod's strong reliance on observational data limit its applicability in many\npractical settings. In this paper, we formally discover the recoverability of\n$P(Y^*_{x^*})$ under selection bias with experimental data. By explicitly\nconstructing counterfactual worlds via Structural Causal Models (SCMs), we\nanalyze how selection mechanisms in the observational world propagate to the\ncounterfactual domain. We derive a complete set of graphical and theoretical\ncriteria to determine that the experimental distribution remain unaffected by\nselection bias. Furthermore, we propose principled methods for leveraging\npartially unbiased observational data to recover $P(Y^*_{x^*})$ from biased\nexperimental datasets. Simulation studies replicating realistic research\nscenarios demonstrate the practical utility of our approach, offering concrete\nguidance for mitigating selection bias in applied causal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2506.00335v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.00335v1",
+      "published": "2025-05-31",
       "categories": [
-        "eess.IV",
-        "cs.CV"
+        "stat.ME",
+        "cs.AI"
       ]
     },
     {
-      "title": "Causal Posterior Estimation",
+      "title": "Estimation of Optimal Causal Bounds via Covariate-Assisted Optimal Transport",
       "authors": [
-        "Simon Dirmeier",
-        "Antonietta Mira"
+        "Sirui Lin",
+        "Zijun Gao",
+        "Jose Blanchet",
+        "Peter Glynn"
       ],
-      "abstract": "We present Causal Posterior Estimation (CPE), a novel method for Bayesian\ninference in simulator models, i.e., models where the evaluation of the\nlikelihood function is intractable or too computationally expensive, but where\none can simulate model outputs given parameter values. CPE utilizes a\nnormalizing flow-based (NF) approximation to the posterior distribution which\ncarefully incorporates the conditional dependence structure induced by the\ngraphical representation of the model into the neural network. Thereby it is\npossible to improve the accuracy of the approximation. We introduce both\ndiscrete and continuous NF architectures for CPE and propose a constant-time\nsampling procedure for the continuous case which reduces the computational\ncomplexity of drawing samples to O(1) as for discrete NFs. We show, through an\nextensive experimental evaluation, that by incorporating the conditional\ndependencies induced by the graphical model directly into the neural network,\nrather than learning them from data, CPE is able to conduct highly accurate\nposterior inference either outperforming or matching the state of the art in\nthe field.",
-      "pdf_url": "http://arxiv.org/pdf/2505.21468v1",
-      "arxiv_url": "http://arxiv.org/abs/2505.21468v1",
-      "published": "2025-05-27",
+      "abstract": "We study the estimation of causal estimand involving the joint distribution\nof treatment and control outcomes for a single unit. In typical causal\ninference settings, it is impossible to observe both outcomes simultaneously,\nwhich places our estimation within the domain of partial identification (PI).\nPre-treatment covariates can substantially reduce estimation uncertainty by\nshrinking the partially identified set. Recently, it was shown that\ncovariate-assisted PI sets can be characterized through conditional optimal\ntransport (COT) problems. However, finite-sample estimation of COT poses\nsignificant challenges, primarily because, as we explain, the COT functional is\ndiscontinuous under the weak topology, rendering the direct plug-in estimator\ninconsistent. To address this issue, existing literature relies on relaxations\nor indirect methods involving the estimation of non-parametric nuisance\nstatistics. In this work, we demonstrate the continuity of the COT functional\nunder a stronger topology induced by the adapted Wasserstein distance.\nLeveraging this result, we propose a direct, consistent, non-parametric\nestimator for COT value that avoids nuisance parameter estimation. We derive\nthe convergence rate for our estimator and validate its effectiveness through\ncomprehensive simulations, demonstrating its improved performance compared to\nexisting approaches.",
+      "pdf_url": "http://arxiv.org/pdf/2506.00257v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.00257v1",
+      "published": "2025-05-30",
       "categories": [
-        "cs.LG",
-        "stat.ML"
+        "stat.ME"
       ]
     }
   ]
