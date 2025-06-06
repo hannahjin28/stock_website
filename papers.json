@@ -1,6 +1,73 @@
 {
-  "last_updated": "2025-06-05T00:54:21.433076",
+  "last_updated": "2025-06-06T00:53:56.687836",
   "papers": [
+    {
+      "title": "What Makes Treatment Effects Identifiable? Characterizations and Estimators Beyond Unconfoundedness",
+      "authors": [
+        "Yang Cai",
+        "Alkis Kalavasis",
+        "Katerina Mamali",
+        "Anay Mehrotra",
+        "Manolis Zampetakis"
+      ],
+      "abstract": "Most of the widely used estimators of the average treatment effect (ATE) in\ncausal inference rely on the assumptions of unconfoundedness and overlap.\nUnconfoundedness requires that the observed covariates account for all\ncorrelations between the outcome and treatment. Overlap requires the existence\nof randomness in treatment decisions for all individuals. Nevertheless, many\ntypes of studies frequently violate unconfoundedness or overlap, for instance,\nobservational studies with deterministic treatment decisions -- popularly known\nas Regression Discontinuity designs -- violate overlap.\n  In this paper, we initiate the study of general conditions that enable the\nidentification of the average treatment effect, extending beyond\nunconfoundedness and overlap. In particular, following the paradigm of\nstatistical learning theory, we provide an interpretable condition that is\nsufficient and nearly necessary for the identification of ATE. Moreover, this\ncondition characterizes the identification of the average treatment effect on\nthe treated (ATT) and can be used to characterize other treatment effects as\nwell. To illustrate the utility of our condition, we present several\nwell-studied scenarios where our condition is satisfied and, hence, we prove\nthat ATE can be identified in regimes that prior works could not capture. For\nexample, under mild assumptions on the data distributions, this holds for the\nmodels proposed by Tan (2006) and Rosenbaum (2002), and the Regression\nDiscontinuity design model introduced by Thistlethwaite and Campbell (1960).\nFor each of these scenarios, we also show that, under natural additional\nassumptions, ATE can be estimated from finite samples.\n  We believe these findings open new avenues for bridging learning-theoretic\ninsights and causal inference methodologies, particularly in observational\nstudies with complex treatment mechanisms.",
+      "pdf_url": "http://arxiv.org/pdf/2506.04194v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.04194v1",
+      "published": "2025-06-04",
+      "categories": [
+        "math.ST",
+        "cs.LG",
+        "econ.EM",
+        "stat.ME",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "N$^2$: A Unified Python Package and Test Bench for Nearest Neighbor-Based Matrix Completion",
+      "authors": [
+        "Caleb Chin",
+        "Aashish Khubchandani",
+        "Harshvardhan Maskara",
+        "Kyuseong Choi",
+        "Jacob Feitelberg",
+        "Albert Gong",
+        "Manit Paul",
+        "Tathagata Sadhukhan",
+        "Anish Agarwal",
+        "Raaz Dwivedi"
+      ],
+      "abstract": "Nearest neighbor (NN) methods have re-emerged as competitive tools for matrix\ncompletion, offering strong empirical performance and recent theoretical\nguarantees, including entry-wise error bounds, confidence intervals, and\nminimax optimality. Despite their simplicity, recent work has shown that NN\napproaches are robust to a range of missingness patterns and effective across\ndiverse applications. This paper introduces N$^2$, a unified Python package and\ntestbed that consolidates a broad class of NN-based methods through a modular,\nextensible interface. Built for both researchers and practitioners, N$^2$\nsupports rapid experimentation and benchmarking. Using this framework, we\nintroduce a new NN variant that achieves state-of-the-art results in several\nsettings. We also release a benchmark suite of real-world datasets, from\nhealthcare and recommender systems to causal inference and LLM evaluation,\ndesigned to stress-test matrix completion methods beyond synthetic scenarios.\nOur experiments demonstrate that while classical methods excel on idealized\ndata, NN-based techniques consistently outperform them in real-world settings.",
+      "pdf_url": "http://arxiv.org/pdf/2506.04166v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.04166v1",
+      "published": "2025-06-04",
+      "categories": [
+        "cs.LG",
+        "stat.CO",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Causal Inference with Missing Exposures, Missing Outcomes, and Dependence",
+      "authors": [
+        "Kirsten E. Landsiedel",
+        "Rachel Abbott",
+        "Atukunda Mucunguzi",
+        "Florence Mwangwa",
+        "Elijah Kakande",
+        "Edwin D. Charlebois",
+        "Carina Marquez",
+        "Moses R. Kamya",
+        "Laura B. Balzer"
+      ],
+      "abstract": "Missing data are ubiquitous in public health research. The\nmissing-completely-at-random (MCAR) assumption is often unrealistic and can\nlead to meaningful bias when violated. The missing-at-random (MAR) assumption\ntends to be more reasonable, but guidance on conducting causal analyses under\nMAR is limited when there is missingness on multiple variables. We present a\nseries of causal graphs and identification results to demonstrate the handling\nof missing exposures and outcomes in observational studies. For estimation and\ninference, we highlight the use of targeted minimum loss-based estimation\n(TMLE) with Super Learner to flexibly and robustly address confounding, missing\ndata, and dependence. Our work is motivated by SEARCH-TB's investigation of the\neffect of alcohol consumption on the risk of incident tuberculosis (TB)\ninfection in rural Uganda. This study posed notable challenges due to\nconfounding, missingness on the exposure (alcohol use), missingness on the\nbaseline outcome (defining who was at risk of TB), missingness on the outcome\nat follow-up (capturing who acquired TB), and clustering within households.\nApplication to real data from SEARCH-TB highlighted the real-world consequences\nof the discussed methods. Estimates from TMLE suggested that alcohol use was\nassociated with a 49% increase in the relative risk (RR) of incident TB\ninfection (RR=1.49, 95%CI: 1.39-1.59). These estimates were notably larger and\nmore precise than estimates from inverse probability weighting (RR=1.13, 95%CI:\n1.00-1.27) and unadjusted, complete case analyses (RR=1.18, 95%CI: 0.89-1.57).\nOur work demonstrates the utility of causal models for describing the missing\ndata mechanism and TMLE for flexible inference.",
+      "pdf_url": "http://arxiv.org/pdf/2506.03336v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.03336v1",
+      "published": "2025-06-03",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "TalkingMachines: Real-Time Audio-Driven FaceTime-Style Video via Autoregressive Diffusion Models",
       "authors": [
@@ -121,56 +188,6 @@
       "categories": [
         "cs.CL",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Projection Pursuit Density Ratio Estimation",
-      "authors": [
-        "Meilin Wang",
-        "Wei Huang",
-        "Mingming Gong",
-        "Zheng Zhang"
-      ],
-      "abstract": "Density ratio estimation (DRE) is a paramount task in machine learning, for\nits broad applications across multiple domains, such as covariate shift\nadaptation, causal inference, independence tests and beyond. Parametric methods\nfor estimating the density ratio possibly lead to biased results if models are\nmisspecified, while conventional non-parametric methods suffer from the curse\nof dimensionality when the dimension of data is large. To address these\nchallenges, in this paper, we propose a novel approach for DRE based on the\nprojection pursuit (PP) approximation. The proposed method leverages PP to\nmitigate the impact of high dimensionality while retaining the model\nflexibility needed for the accuracy of DRE. We establish the consistency and\nthe convergence rate for the proposed estimator. Experimental results\ndemonstrate that our proposed method outperforms existing alternatives in\nvarious applications.",
-      "pdf_url": "http://arxiv.org/pdf/2506.00866v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.00866v1",
-      "published": "2025-06-01",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Recover Experimental Data with Selection Bias using Counterfactual Logic",
-      "authors": [
-        "Jingyang He",
-        "Shuai Wang",
-        "Ang Li"
-      ],
-      "abstract": "Selection bias, arising from the systematic inclusion or exclusion of certain\nsamples, poses a significant challenge to the validity of causal inference.\nWhile Bareinboim et al. introduced methods for recovering unbiased\nobservational and interventional distributions from biased data using partial\nexternal information, the complexity of the backdoor adjustment and the\nmethod's strong reliance on observational data limit its applicability in many\npractical settings. In this paper, we formally discover the recoverability of\n$P(Y^*_{x^*})$ under selection bias with experimental data. By explicitly\nconstructing counterfactual worlds via Structural Causal Models (SCMs), we\nanalyze how selection mechanisms in the observational world propagate to the\ncounterfactual domain. We derive a complete set of graphical and theoretical\ncriteria to determine that the experimental distribution remain unaffected by\nselection bias. Furthermore, we propose principled methods for leveraging\npartially unbiased observational data to recover $P(Y^*_{x^*})$ from biased\nexperimental datasets. Simulation studies replicating realistic research\nscenarios demonstrate the practical utility of our approach, offering concrete\nguidance for mitigating selection bias in applied causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2506.00335v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.00335v1",
-      "published": "2025-05-31",
-      "categories": [
-        "stat.ME",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Estimation of Optimal Causal Bounds via Covariate-Assisted Optimal Transport",
-      "authors": [
-        "Sirui Lin",
-        "Zijun Gao",
-        "Jose Blanchet",
-        "Peter Glynn"
-      ],
-      "abstract": "We study the estimation of causal estimand involving the joint distribution\nof treatment and control outcomes for a single unit. In typical causal\ninference settings, it is impossible to observe both outcomes simultaneously,\nwhich places our estimation within the domain of partial identification (PI).\nPre-treatment covariates can substantially reduce estimation uncertainty by\nshrinking the partially identified set. Recently, it was shown that\ncovariate-assisted PI sets can be characterized through conditional optimal\ntransport (COT) problems. However, finite-sample estimation of COT poses\nsignificant challenges, primarily because, as we explain, the COT functional is\ndiscontinuous under the weak topology, rendering the direct plug-in estimator\ninconsistent. To address this issue, existing literature relies on relaxations\nor indirect methods involving the estimation of non-parametric nuisance\nstatistics. In this work, we demonstrate the continuity of the COT functional\nunder a stronger topology induced by the adapted Wasserstein distance.\nLeveraging this result, we propose a direct, consistent, non-parametric\nestimator for COT value that avoids nuisance parameter estimation. We derive\nthe convergence rate for our estimator and validate its effectiveness through\ncomprehensive simulations, demonstrating its improved performance compared to\nexisting approaches.",
-      "pdf_url": "http://arxiv.org/pdf/2506.00257v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.00257v1",
-      "published": "2025-05-30",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
