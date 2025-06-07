@@ -1,6 +1,136 @@
 {
-  "last_updated": "2025-06-06T00:53:56.687836",
+  "last_updated": "2025-06-07T00:53:50.607511",
   "papers": [
+    {
+      "title": "Generalizable, real-time neural decoding with hybrid state-space models",
+      "authors": [
+        "Avery Hee-Woon Ryoo",
+        "Nanda H. Krishna",
+        "Ximeng Mao",
+        "Mehdi Azabou",
+        "Eva L. Dyer",
+        "Matthew G. Perich",
+        "Guillaume Lajoie"
+      ],
+      "abstract": "Real-time decoding of neural activity is central to neuroscience and\nneurotechnology applications, from closed-loop experiments to brain-computer\ninterfaces, where models are subject to strict latency constraints. Traditional\nmethods, including simple recurrent neural networks, are fast and lightweight\nbut often struggle to generalize to unseen data. In contrast, recent\nTransformer-based approaches leverage large-scale pretraining for strong\ngeneralization performance, but typically have much larger computational\nrequirements and are not always suitable for low-resource or real-time\nsettings. To address these shortcomings, we present POSSM, a novel hybrid\narchitecture that combines individual spike tokenization via a cross-attention\nmodule with a recurrent state-space model (SSM) backbone to enable (1) fast and\ncausal online prediction on neural activity and (2) efficient generalization to\nnew sessions, individuals, and tasks through multi-dataset pretraining. We\nevaluate POSSM's decoding performance and inference speed on intracortical\ndecoding of monkey motor tasks, and show that it extends to clinical\napplications, namely handwriting and speech decoding in human subjects.\nNotably, we demonstrate that pretraining on monkey motor-cortical recordings\nimproves decoding performance on the human handwriting task, highlighting the\nexciting potential for cross-species transfer. In all of these tasks, we find\nthat POSSM achieves decoding accuracy comparable to state-of-the-art\nTransformers, at a fraction of the inference cost (up to 9x faster on GPU).\nThese results suggest that hybrid SSMs are a promising approach to bridging the\ngap between accuracy, inference speed, and generalization when training neural\ndecoders for real-time, closed-loop applications.",
+      "pdf_url": "http://arxiv.org/pdf/2506.05320v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.05320v1",
+      "published": "2025-06-05",
+      "categories": [
+        "q-bio.NC",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "MesaNet: Sequence Modeling by Locally Optimal Test-Time Training",
+      "authors": [
+        "Johannes von Oswald",
+        "Nino Scherrer",
+        "Seijin Kobayashi",
+        "Luca Versari",
+        "Songlin Yang",
+        "Maximilian Schlegel",
+        "Kaitlin Maile",
+        "Yanick Schimpf",
+        "Oliver Sieberling",
+        "Alexander Meulemans",
+        "Rif A. Saurous",
+        "Guillaume Lajoie",
+        "Charlotte Frenkel",
+        "Razvan Pascanu",
+        "Blaise Agüera y Arcas",
+        "João Sacramento"
+      ],
+      "abstract": "Sequence modeling is currently dominated by causal transformer architectures\nthat use softmax self-attention. Although widely adopted, transformers require\nscaling memory and compute linearly during inference. A recent stream of work\nlinearized the softmax operation, resulting in powerful recurrent neural\nnetwork (RNN) models with constant memory and compute costs such as DeltaNet,\nMamba or xLSTM. These models can be unified by noting that their recurrent\nlayer dynamics can all be derived from an in-context regression objective,\napproximately optimized through an online learning rule. Here, we join this\nline of work and introduce a numerically stable, chunkwise parallelizable\nversion of the recently proposed Mesa layer (von Oswald et al., 2024), and\nstudy it in language modeling at the billion-parameter scale. This layer again\nstems from an in-context loss, but which is now minimized to optimality at\nevery time point using a fast conjugate gradient solver. Through an extensive\nsuite of experiments, we show that optimal test-time training enables reaching\nlower language modeling perplexity and higher downstream benchmark performance\nthan previous RNNs, especially on tasks requiring long context understanding.\nThis performance gain comes at the cost of additional flops spent during\ninference time. Our results are therefore intriguingly related to recent trends\nof increasing test-time compute to improve performance -- here by spending\ncompute to solve sequential optimization problems within the neural network\nitself.",
+      "pdf_url": "http://arxiv.org/pdf/2506.05233v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.05233v1",
+      "published": "2025-06-05",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Causal Effect Identification in lvLiNGAM from Higher-Order Cumulants",
+      "authors": [
+        "Daniele Tramontano",
+        "Yaroslav Kivva",
+        "Saber Salehkaleybar Mathias Drton",
+        "Negar Kiyavash"
+      ],
+      "abstract": "This paper investigates causal effect identification in latent variable\nLinear Non-Gaussian Acyclic Models (lvLiNGAM) using higher-order cumulants,\naddressing two prominent setups that are challenging in the presence of latent\nconfounding: (1) a single proxy variable that may causally influence the\ntreatment and (2) underspecified instrumental variable cases where fewer\ninstruments exist than treatments. We prove that causal effects are\nidentifiable with a single proxy or instrument and provide corresponding\nestimation methods. Experimental results demonstrate the accuracy and\nrobustness of our approaches compared to existing methods, advancing the\ntheoretical and practical understanding of causal inference in linear systems\nwith latent confounders.",
+      "pdf_url": "http://arxiv.org/pdf/2506.05202v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.05202v1",
+      "published": "2025-06-05",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Nonlinear Causal Discovery for Grouped Data",
+      "authors": [
+        "Konstantin Göbler",
+        "Tobias Windisch",
+        "Mathias Drton"
+      ],
+      "abstract": "Inferring cause-effect relationships from observational data has gained\nsignificant attention in recent years, but most methods are limited to scalar\nrandom variables. In many important domains, including neuroscience,\npsychology, social science, and industrial manufacturing, the causal units of\ninterest are groups of variables rather than individual scalar measurements.\nMotivated by these applications, we extend nonlinear additive noise models to\nhandle random vectors, establishing a two-step approach for causal graph\nlearning: First, infer the causal order among random vectors. Second, perform\nmodel selection to identify the best graph consistent with this order. We\nintroduce effective and novel solutions for both steps in the vector case,\ndemonstrating strong performance in simulations. Finally, we apply our method\nto real-world assembly line data with partial knowledge of causal ordering\namong variable groups.",
+      "pdf_url": "http://arxiv.org/pdf/2506.05120v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.05120v1",
+      "published": "2025-06-05",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Learning Joint Interventional Effects from Single-Variable Interventions in Additive Models",
+      "authors": [
+        "Armin Kekić",
+        "Sergio Hernan Garrido Mejia",
+        "Bernhard Schölkopf"
+      ],
+      "abstract": "Estimating causal effects of joint interventions on multiple variables is\ncrucial in many domains, but obtaining data from such simultaneous\ninterventions can be challenging. Our study explores how to learn joint\ninterventional effects using only observational data and single-variable\ninterventions. We present an identifiability result for this problem, showing\nthat for a class of nonlinear additive outcome mechanisms, joint effects can be\ninferred without access to joint interventional data. We propose a practical\nestimator that decomposes the causal effect into confounded and unconfounded\ncontributions for each intervention variable. Experiments on synthetic data\ndemonstrate that our method achieves performance comparable to models trained\ndirectly on joint interventional data, outperforming a purely observational\nestimator.",
+      "pdf_url": "http://arxiv.org/pdf/2506.04945v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.04945v1",
+      "published": "2025-06-05",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Bayesian Doubly Robust Causal Inference via Posterior Coupling",
+      "authors": [
+        "Shunichiro Orihara",
+        "Tomotaka Momozaki",
+        "Shonosuke Sugasawa"
+      ],
+      "abstract": "In observational studies, propensity score methods are central for estimating\ncausal effects while adjusting for confounders. Among them, the doubly robust\n(DR) estimator has gained considerable attention because it provides consistent\nestimates when either the propensity score model or the outcome model is\ncorrectly specified. Like other propensity score approaches, the DR estimator\ntypically involves two-step estimation: first, estimating the propensity score\nand outcome models, and then estimating the causal effects using the estimated\nvalues. However, this sequential procedure does not naturally align with the\nBayesian framework, which centers on updating prior beliefs solely through the\nlikelihood. In this manuscript, we propose novel Bayesian DR estimation via\nposterior coupling, which incorporates propensity score information via moment\nconditions directly into the posterior distribution. This design avoids the\nfeedback problem and enables a fully Bayesian interpretation of DR estimation\nwithout requiring two-step estimation. We detail the theoretical properties of\nthe proposed method and demonstrate its advantages over existing Bayesian\napproaches through comprehensive simulation studies and real data applications.",
+      "pdf_url": "http://arxiv.org/pdf/2506.04868v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.04868v1",
+      "published": "2025-06-05",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "OpenAg: Democratizing Agricultural Intelligence",
+      "authors": [
+        "Srikanth Thudumu",
+        "Jason Fisher"
+      ],
+      "abstract": "Agriculture is undergoing a major transformation driven by artificial\nintelligence (AI), machine learning, and knowledge representation technologies.\nHowever, current agricultural intelligence systems often lack contextual\nunderstanding, explainability, and adaptability, especially for smallholder\nfarmers with limited resources. General-purpose large language models (LLMs),\nwhile powerful, typically lack the domain-specific knowledge and contextual\nreasoning needed for practical decision support in farming. They tend to\nproduce recommendations that are too generic or unrealistic for real-world\napplications. To address these challenges, we present OpenAg, a comprehensive\nframework designed to advance agricultural artificial general intelligence\n(AGI). OpenAg combines domain-specific foundation models, neural knowledge\ngraphs, multi-agent reasoning, causal explainability, and adaptive transfer\nlearning to deliver context-aware, explainable, and actionable insights. The\nsystem includes: (i) a unified agricultural knowledge base that integrates\nscientific literature, sensor data, and farmer-generated knowledge; (ii) a\nneural agricultural knowledge graph for structured reasoning and inference;\n(iii) an adaptive multi-agent reasoning system where AI agents specialize and\ncollaborate across agricultural domains; and (iv) a causal transparency\nmechanism that ensures AI recommendations are interpretable, scientifically\ngrounded, and aligned with real-world constraints. OpenAg aims to bridge the\ngap between scientific knowledge and the tacit expertise of experienced farmers\nto support scalable and locally relevant agricultural decision-making.",
+      "pdf_url": "http://arxiv.org/pdf/2506.04571v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.04571v1",
+      "published": "2025-06-05",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "What Makes Treatment Effects Identifiable? Characterizations and Estimators Beyond Unconfoundedness",
       "authors": [
@@ -66,128 +196,6 @@
       "published": "2025-06-03",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "TalkingMachines: Real-Time Audio-Driven FaceTime-Style Video via Autoregressive Diffusion Models",
-      "authors": [
-        "Chetwin Low",
-        "Weimin Wang"
-      ],
-      "abstract": "In this paper, we present TalkingMachines -- an efficient framework that\ntransforms pretrained video generation models into real-time, audio-driven\ncharacter animators. TalkingMachines enables natural conversational experiences\nby integrating an audio large language model (LLM) with our video generation\nfoundation model. Our primary contributions include: (1) We adapt a pretrained\nSOTA image-to-video DiT into an audio-driven avatar generation model of 18\nbillion parameters; (2) We enable infinite video streaming without error\naccumulation through asymmetric knowledge distillation from a bidirectional\nteacher model into a sparse causal, autoregressive student model; (3) We design\na high-throughput, low-latency inference pipeline incorporating several key\nengineering optimizations such as: (a) disaggregation of the DiT and VAE\ndecoder across separate devices, (b) efficient overlap of inter-device\ncommunication and computation using CUDA streams, (c) elimination of redundant\nrecomputations to maximize frame-generation throughput. Please see demo videos\nhere - https://aaxwaz.github.io/TalkingMachines/",
-      "pdf_url": "http://arxiv.org/pdf/2506.03099v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.03099v1",
-      "published": "2025-06-03",
-      "categories": [
-        "cs.SD",
-        "cs.AI",
-        "cs.GR"
-      ]
-    },
-    {
-      "title": "IP-Dialog: Evaluating Implicit Personalization in Dialogue Systems with Synthetic Data",
-      "authors": [
-        "Bo Peng",
-        "Zhiheng Wang",
-        "Heyang Gong",
-        "Chaochao Lu"
-      ],
-      "abstract": "In modern dialogue systems, the ability to implicitly infer user backgrounds\nfrom conversations and leverage this information for personalized assistance is\ncrucial. However, the scarcity of high-quality data remains a fundamental\nchallenge to evaluating and improving this capability. Traditional dataset\nconstruction methods are labor-intensive, resource-demanding, and raise privacy\nconcerns. To address these issues, we propose a novel approach for automatic\nsynthetic data generation and introduce the Implicit Personalized Dialogue\n(IP-Dialog) benchmark along with a training dataset, covering 10 tasks and 12\nuser attribute types. Additionally, we develop a systematic evaluation\nframework with four metrics to assess both attribute awareness and reasoning\ncapabilities. We further propose five causal graphs to elucidate models'\nreasoning pathways during implicit personalization. Extensive experiments yield\ninsightful observations and prove the reliability of our dataset.",
-      "pdf_url": "http://arxiv.org/pdf/2506.02449v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.02449v1",
-      "published": "2025-06-03",
-      "categories": [
-        "cs.CL",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Spillovers and Effect Attenuation in Firearm Policy Research in the United States",
-      "authors": [
-        "Lee Kennedy-Shaffer",
-        "Alan Hamilton Kennedy"
-      ],
-      "abstract": "In the United States, firearm-related deaths and injuries are a major public\nhealth issue. Because of limited federal action, state policies are\nparticularly important, and their evaluation informs the actions of other\npolicymakers. The movement of firearms across state and local borders, however,\ncan undermine the effectiveness of these policies and have statistical\nconsequences for their empirical evaluation. This movement causes spillover and\nbypass effects of policies, wherein interventions affect nearby control states\nand the lack of intervention in nearby states reduces the effectiveness in the\nintervention states. While some causal inference methods exist to account for\nspillover effects and reduce bias, these do not necessarily align well with the\ndata available for firearm research or with the most policy-relevant estimands.\nIntegrated data infrastructure and new methods are necessary for a better\nunderstanding of the effects these policies would have if widely adopted. In\nthe meantime, appropriately understanding and interpreting effect estimates\nfrom quasi-experimental analyses is crucial for ensuring that effective\npolicies are not dismissed due to these statistical challenges.",
-      "pdf_url": "http://arxiv.org/pdf/2506.01695v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.01695v1",
-      "published": "2025-06-02",
-      "categories": [
-        "stat.AP",
-        "econ.EM",
-        "62P25"
-      ]
-    },
-    {
-      "title": "A Diffusion-Based Method for Learning the Multi-Outcome Distribution of Medical Treatments",
-      "authors": [
-        "Yuchen Ma",
-        "Jonas Schweisthal",
-        "Hengrui Zhang",
-        "Stefan Feuerriegel"
-      ],
-      "abstract": "In medicine, treatments often influence multiple, interdependent outcomes,\nsuch as primary endpoints, complications, adverse events, or other secondary\nendpoints. Hence, to make optimal treatment decisions, clinicians are\ninterested in learning the distribution of multi-dimensional treatment\noutcomes. However, the vast majority of machine learning methods for predicting\ntreatment effects focus on single-outcome settings, despite the fact that\nmedical data often include multiple, interdependent outcomes. To address this\nlimitation, we propose a novel diffusion-based method called DIME to learn the\njoint distribution of multiple outcomes of medical treatments. We addresses\nthree challenges relevant in medical practice: (i)it is tailored to learn the\njoint interventional distribution of multiple medical outcomes, which enables\nreliable decision-making with uncertainty quantification rather than relying\nsolely on point estimates; (ii)it explicitly captures the dependence structure\nbetween outcomes; (iii)it can handle outcomes of mixed type, including binary,\ncategorical, and continuous variables. In DIME, we take into account the\nfundamental problem of causal inference through causal masking. For training,\nour method decomposes the joint distribution into a series of conditional\ndistributions with a customized conditional masking to account for the\ndependence structure across outcomes. For inference, our method\nauto-regressively generates predictions. This allows our method to move beyond\npoint estimates of causal quantities and thus learn the joint interventional\ndistribution. To the best of our knowledge, DIME is the first neural method\ntailored to learn the joint, multi-outcome distribution of medical treatments.\nAcross various experiments, we demonstrate that our method effectively learns\nthe joint distribution and captures shared information among multiple outcomes.",
-      "pdf_url": "http://arxiv.org/pdf/2506.01533v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.01533v1",
-      "published": "2025-06-02",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Playing with Transformer at 30+ FPS via Next-Frame Diffusion",
-      "authors": [
-        "Xinle Cheng",
-        "Tianyu He",
-        "Jiayi Xu",
-        "Junliang Guo",
-        "Di He",
-        "Jiang Bian"
-      ],
-      "abstract": "Autoregressive video models offer distinct advantages over bidirectional\ndiffusion models in creating interactive video content and supporting streaming\napplications with arbitrary duration. In this work, we present Next-Frame\nDiffusion (NFD), an autoregressive diffusion transformer that incorporates\nblock-wise causal attention, enabling iterative sampling and efficient\ninference via parallel token generation within each frame. Nonetheless,\nachieving real-time video generation remains a significant challenge for such\nmodels, primarily due to the high computational cost associated with diffusion\nsampling and the hardware inefficiencies inherent to autoregressive generation.\nTo address this, we introduce two innovations: (1) We extend consistency\ndistillation to the video domain and adapt it specifically for video models,\nenabling efficient inference with few sampling steps; (2) To fully leverage\nparallel computation, motivated by the observation that adjacent frames often\nshare the identical action input, we propose speculative sampling. In this\napproach, the model generates next few frames using current action input, and\ndiscard speculatively generated frames if the input action differs. Experiments\non a large-scale action-conditioned video generation benchmark demonstrate that\nNFD beats autoregressive baselines in terms of both visual quality and sampling\nefficiency. We, for the first time, achieves autoregressive video generation at\nover 30 Frames Per Second (FPS) on an A100 GPU using a 310M model.",
-      "pdf_url": "http://arxiv.org/pdf/2506.01380v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.01380v1",
-      "published": "2025-06-02",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Uncovering Bias Mechanisms in Observational Studies",
-      "authors": [
-        "Ilker Demirel",
-        "Zeshan Hussain",
-        "Piersilvio De Bartolomeis",
-        "David Sontag"
-      ],
-      "abstract": "Observational studies are a key resource for causal inference but are often\naffected by systematic biases. Prior work has focused mainly on detecting these\nbiases, via sensitivity analyses and comparisons with randomized controlled\ntrials, or mitigating them through debiasing techniques. However, there remains\na lack of methodology for uncovering the underlying mechanisms driving these\nbiases, e.g., whether due to hidden confounding or selection of participants.\nIn this work, we show that the relationship between bias magnitude and the\npredictive performance of nuisance function estimators (in the observational\nstudy) can help distinguish among common sources of causal bias. We validate\nour methodology through extensive synthetic experiments and a real-world case\nstudy, demonstrating its effectiveness in revealing the mechanisms behind\nobserved biases. Our framework offers a new lens for understanding and\ncharacterizing bias in observational studies, with practical implications for\nimproving causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2506.01191v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.01191v1",
-      "published": "2025-06-01",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "zip2zip: Inference-Time Adaptive Vocabularies for Language Models via Token Compression",
-      "authors": [
-        "Saibo Geng",
-        "Nathan Ranchin",
-        "Yunzhen yao",
-        "Maxime Peyrard",
-        "Chris Wendler",
-        "Michael Gastpar",
-        "Robert West"
-      ],
-      "abstract": "Tokenization efficiency plays a critical role in the performance and cost of\nlarge language models (LLMs), yet most models rely on static tokenizers\noptimized for general-purpose corpora. These tokenizers' fixed vocabularies\noften fail to adapt to domain- or language-specific inputs, leading to longer\ntoken sequences and higher computational costs. We introduce zip2zip, a\nframework that enables LLMs to dynamically adjust token vocabulary at inference\ntime, allowing for fewer generated tokens and thus faster inference. zip2zip\nconsists of three key components: (1) a tokenizer based on Lempel-Ziv-Welch\n(LZW) compression that incrementally compresses tokens into reusable\n\"hypertokens\" on the fly; (2) an embedding layer that computes embeddings for\nnewly formed hypertokens at runtime; and (3) a causal language modeling variant\nthat trains the model to operate on hypertokenized, compressed sequences. We\nshow that an existing LLM can be zip2zip-fied in 10 GPU-hours via\nparameter-efficient finetuning. The resulting zip2zip LLMs effectively learn to\nuse hypertokens at inference time, reducing input and output sequence length by\n20-60\\%, with significant improvements in inference latency.",
-      "pdf_url": "http://arxiv.org/pdf/2506.01084v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.01084v1",
-      "published": "2025-06-01",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
       ]
     }
   ]
