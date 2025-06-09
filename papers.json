@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-06-08T00:59:50.290619",
+  "last_updated": "2025-06-09T00:57:55.027733",
   "papers": [
     {
       "title": "Generalizable, real-time neural decoding with hybrid state-space models",
@@ -56,12 +56,13 @@
       "authors": [
         "Daniele Tramontano",
         "Yaroslav Kivva",
-        "Saber Salehkaleybar Mathias Drton",
+        "Saber Salehkaleybar",
+        "Mathias Drton",
         "Negar Kiyavash"
       ],
       "abstract": "This paper investigates causal effect identification in latent variable\nLinear Non-Gaussian Acyclic Models (lvLiNGAM) using higher-order cumulants,\naddressing two prominent setups that are challenging in the presence of latent\nconfounding: (1) a single proxy variable that may causally influence the\ntreatment and (2) underspecified instrumental variable cases where fewer\ninstruments exist than treatments. We prove that causal effects are\nidentifiable with a single proxy or instrument and provide corresponding\nestimation methods. Experimental results demonstrate the accuracy and\nrobustness of our approaches compared to existing methods, advancing the\ntheoretical and practical understanding of causal inference in linear systems\nwith latent confounders.",
-      "pdf_url": "http://arxiv.org/pdf/2506.05202v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.05202v1",
+      "pdf_url": "http://arxiv.org/pdf/2506.05202v2",
+      "arxiv_url": "http://arxiv.org/abs/2506.05202v2",
       "published": "2025-06-05",
       "categories": [
         "stat.ML",
