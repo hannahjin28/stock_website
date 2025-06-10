@@ -1,6 +1,40 @@
 {
-  "last_updated": "2025-06-09T00:57:55.027733",
+  "last_updated": "2025-06-10T00:55:17.259055",
   "papers": [
+    {
+      "title": "Preference Learning for AI Alignment: a Causal Perspective",
+      "authors": [
+        "Katarzyna Kobalczyk",
+        "Mihaela van der Schaar"
+      ],
+      "abstract": "Reward modelling from preference data is a crucial step in aligning large\nlanguage models (LLMs) with human values, requiring robust generalisation to\nnovel prompt-response pairs. In this work, we propose to frame this problem in\na causal paradigm, providing the rich toolbox of causality to identify the\npersistent challenges, such as causal misidentification, preference\nheterogeneity, and confounding due to user-specific factors. Inheriting from\nthe literature of causal inference, we identify key assumptions necessary for\nreliable generalisation and contrast them with common data collection\npractices. We illustrate failure modes of naive reward models and demonstrate\nhow causally-inspired approaches can improve model robustness. Finally, we\noutline desiderata for future research and practices, advocating targeted\ninterventions to address inherent limitations of observational data.",
+      "pdf_url": "http://arxiv.org/pdf/2506.05967v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.05967v1",
+      "published": "2025-06-06",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "MOGO: Residual Quantized Hierarchical Causal Transformer for High-Quality and Real-Time 3D Human Motion Generation",
+      "authors": [
+        "Dongjie Fu",
+        "Tengjiao Sun",
+        "Pengcheng Fang",
+        "Xiaohao Cai",
+        "Hansung Kim"
+      ],
+      "abstract": "Recent advances in transformer-based text-to-motion generation have led to\nimpressive progress in synthesizing high-quality human motion. Nevertheless,\njointly achieving high fidelity, streaming capability, real-time\nresponsiveness, and scalability remains a fundamental challenge. In this paper,\nwe propose MOGO (Motion Generation with One-pass), a novel autoregressive\nframework tailored for efficient and real-time 3D motion generation. MOGO\ncomprises two key components: (1) MoSA-VQ, a motion scale-adaptive residual\nvector quantization module that hierarchically discretizes motion sequences\nwith learnable scaling to produce compact yet expressive representations; and\n(2) RQHC-Transformer, a residual quantized hierarchical causal transformer that\ngenerates multi-layer motion tokens in a single forward pass, significantly\nreducing inference latency. To enhance semantic fidelity, we further introduce\na text condition alignment mechanism that improves motion decoding under\ntextual control. Extensive experiments on benchmark datasets including\nHumanML3D, KIT-ML, and CMP demonstrate that MOGO achieves competitive or\nsuperior generation quality compared to state-of-the-art transformer-based\nmethods, while offering substantial improvements in real-time performance,\nstreaming generation, and generalization under zero-shot settings.",
+      "pdf_url": "http://arxiv.org/pdf/2506.05952v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.05952v1",
+      "published": "2025-06-06",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Generalizable, real-time neural decoding with hybrid state-space models",
       "authors": [
@@ -88,6 +122,24 @@
       ]
     },
     {
+      "title": "Causal Policy Learning in Reinforcement Learning: Backdoor-Adjusted Soft Actor-Critic",
+      "authors": [
+        "Thanh Vinh Vo",
+        "Young Lee",
+        "Haozhe Ma",
+        "Chien Lu",
+        "Tze-Yun Leong"
+      ],
+      "abstract": "Hidden confounders that influence both states and actions can bias policy\nlearning in reinforcement learning (RL), leading to suboptimal or\nnon-generalizable behavior. Most RL algorithms ignore this issue, learning\npolicies from observational trajectories based solely on statistical\nassociations rather than causal effects. We propose DoSAC (Do-Calculus Soft\nActor-Critic with Backdoor Adjustment), a principled extension of the SAC\nalgorithm that corrects for hidden confounding via causal intervention\nestimation. DoSAC estimates the interventional policy $\\pi(a | \\mathrm{do}(s))$\nusing the backdoor criterion, without requiring access to true confounders or\ncausal labels. To achieve this, we introduce a learnable Backdoor Reconstructor\nthat infers pseudo-past variables (previous state and action) from the current\nstate to enable backdoor adjustment from observational data. This module is\nintegrated into a soft actor-critic framework to compute both the\ninterventional policy and its entropy. Empirical results on continuous control\nbenchmarks show that DoSAC outperforms baselines under confounded settings,\nwith improved robustness, generalization, and policy reliability.",
+      "pdf_url": "http://arxiv.org/pdf/2506.05445v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.05445v1",
+      "published": "2025-06-05",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
       "title": "Learning Joint Interventional Effects from Single-Variable Interventions in Additive Models",
       "authors": [
         "Armin Kekić",
@@ -130,73 +182,6 @@
       "published": "2025-06-05",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "What Makes Treatment Effects Identifiable? Characterizations and Estimators Beyond Unconfoundedness",
-      "authors": [
-        "Yang Cai",
-        "Alkis Kalavasis",
-        "Katerina Mamali",
-        "Anay Mehrotra",
-        "Manolis Zampetakis"
-      ],
-      "abstract": "Most of the widely used estimators of the average treatment effect (ATE) in\ncausal inference rely on the assumptions of unconfoundedness and overlap.\nUnconfoundedness requires that the observed covariates account for all\ncorrelations between the outcome and treatment. Overlap requires the existence\nof randomness in treatment decisions for all individuals. Nevertheless, many\ntypes of studies frequently violate unconfoundedness or overlap, for instance,\nobservational studies with deterministic treatment decisions -- popularly known\nas Regression Discontinuity designs -- violate overlap.\n  In this paper, we initiate the study of general conditions that enable the\nidentification of the average treatment effect, extending beyond\nunconfoundedness and overlap. In particular, following the paradigm of\nstatistical learning theory, we provide an interpretable condition that is\nsufficient and nearly necessary for the identification of ATE. Moreover, this\ncondition characterizes the identification of the average treatment effect on\nthe treated (ATT) and can be used to characterize other treatment effects as\nwell. To illustrate the utility of our condition, we present several\nwell-studied scenarios where our condition is satisfied and, hence, we prove\nthat ATE can be identified in regimes that prior works could not capture. For\nexample, under mild assumptions on the data distributions, this holds for the\nmodels proposed by Tan (2006) and Rosenbaum (2002), and the Regression\nDiscontinuity design model introduced by Thistlethwaite and Campbell (1960).\nFor each of these scenarios, we also show that, under natural additional\nassumptions, ATE can be estimated from finite samples.\n  We believe these findings open new avenues for bridging learning-theoretic\ninsights and causal inference methodologies, particularly in observational\nstudies with complex treatment mechanisms.",
-      "pdf_url": "http://arxiv.org/pdf/2506.04194v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.04194v1",
-      "published": "2025-06-04",
-      "categories": [
-        "math.ST",
-        "cs.LG",
-        "econ.EM",
-        "stat.ME",
-        "stat.ML",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "N$^2$: A Unified Python Package and Test Bench for Nearest Neighbor-Based Matrix Completion",
-      "authors": [
-        "Caleb Chin",
-        "Aashish Khubchandani",
-        "Harshvardhan Maskara",
-        "Kyuseong Choi",
-        "Jacob Feitelberg",
-        "Albert Gong",
-        "Manit Paul",
-        "Tathagata Sadhukhan",
-        "Anish Agarwal",
-        "Raaz Dwivedi"
-      ],
-      "abstract": "Nearest neighbor (NN) methods have re-emerged as competitive tools for matrix\ncompletion, offering strong empirical performance and recent theoretical\nguarantees, including entry-wise error bounds, confidence intervals, and\nminimax optimality. Despite their simplicity, recent work has shown that NN\napproaches are robust to a range of missingness patterns and effective across\ndiverse applications. This paper introduces N$^2$, a unified Python package and\ntestbed that consolidates a broad class of NN-based methods through a modular,\nextensible interface. Built for both researchers and practitioners, N$^2$\nsupports rapid experimentation and benchmarking. Using this framework, we\nintroduce a new NN variant that achieves state-of-the-art results in several\nsettings. We also release a benchmark suite of real-world datasets, from\nhealthcare and recommender systems to causal inference and LLM evaluation,\ndesigned to stress-test matrix completion methods beyond synthetic scenarios.\nOur experiments demonstrate that while classical methods excel on idealized\ndata, NN-based techniques consistently outperform them in real-world settings.",
-      "pdf_url": "http://arxiv.org/pdf/2506.04166v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.04166v1",
-      "published": "2025-06-04",
-      "categories": [
-        "cs.LG",
-        "stat.CO",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Causal Inference with Missing Exposures, Missing Outcomes, and Dependence",
-      "authors": [
-        "Kirsten E. Landsiedel",
-        "Rachel Abbott",
-        "Atukunda Mucunguzi",
-        "Florence Mwangwa",
-        "Elijah Kakande",
-        "Edwin D. Charlebois",
-        "Carina Marquez",
-        "Moses R. Kamya",
-        "Laura B. Balzer"
-      ],
-      "abstract": "Missing data are ubiquitous in public health research. The\nmissing-completely-at-random (MCAR) assumption is often unrealistic and can\nlead to meaningful bias when violated. The missing-at-random (MAR) assumption\ntends to be more reasonable, but guidance on conducting causal analyses under\nMAR is limited when there is missingness on multiple variables. We present a\nseries of causal graphs and identification results to demonstrate the handling\nof missing exposures and outcomes in observational studies. For estimation and\ninference, we highlight the use of targeted minimum loss-based estimation\n(TMLE) with Super Learner to flexibly and robustly address confounding, missing\ndata, and dependence. Our work is motivated by SEARCH-TB's investigation of the\neffect of alcohol consumption on the risk of incident tuberculosis (TB)\ninfection in rural Uganda. This study posed notable challenges due to\nconfounding, missingness on the exposure (alcohol use), missingness on the\nbaseline outcome (defining who was at risk of TB), missingness on the outcome\nat follow-up (capturing who acquired TB), and clustering within households.\nApplication to real data from SEARCH-TB highlighted the real-world consequences\nof the discussed methods. Estimates from TMLE suggested that alcohol use was\nassociated with a 49% increase in the relative risk (RR) of incident TB\ninfection (RR=1.49, 95%CI: 1.39-1.59). These estimates were notably larger and\nmore precise than estimates from inverse probability weighting (RR=1.13, 95%CI:\n1.00-1.27) and unadjusted, complete case analyses (RR=1.18, 95%CI: 0.89-1.57).\nOur work demonstrates the utility of causal models for describing the missing\ndata mechanism and TMLE for flexible inference.",
-      "pdf_url": "http://arxiv.org/pdf/2506.03336v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.03336v1",
-      "published": "2025-06-03",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
