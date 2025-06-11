@@ -1,6 +1,169 @@
 {
-  "last_updated": "2025-06-10T00:55:17.259055",
+  "last_updated": "2025-06-11T00:55:21.322475",
   "papers": [
+    {
+      "title": "Self Forcing: Bridging the Train-Test Gap in Autoregressive Video Diffusion",
+      "authors": [
+        "Xun Huang",
+        "Zhengqi Li",
+        "Guande He",
+        "Mingyuan Zhou",
+        "Eli Shechtman"
+      ],
+      "abstract": "We introduce Self Forcing, a novel training paradigm for autoregressive video\ndiffusion models. It addresses the longstanding issue of exposure bias, where\nmodels trained on ground-truth context must generate sequences conditioned on\ntheir own imperfect outputs during inference. Unlike prior methods that denoise\nfuture frames based on ground-truth context frames, Self Forcing conditions\neach frame's generation on previously self-generated outputs by performing\nautoregressive rollout with key-value (KV) caching during training. This\nstrategy enables supervision through a holistic loss at the video level that\ndirectly evaluates the quality of the entire generated sequence, rather than\nrelying solely on traditional frame-wise objectives. To ensure training\nefficiency, we employ a few-step diffusion model along with a stochastic\ngradient truncation strategy, effectively balancing computational cost and\nperformance. We further introduce a rolling KV cache mechanism that enables\nefficient autoregressive video extrapolation. Extensive experiments demonstrate\nthat our approach achieves real-time streaming video generation with sub-second\nlatency on a single GPU, while matching or even surpassing the generation\nquality of significantly slower and non-causal diffusion models. Project\nwebsite: http://self-forcing.github.io/",
+      "pdf_url": "http://arxiv.org/pdf/2506.08009v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.08009v1",
+      "published": "2025-06-09",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "CausalPFN: Amortized Causal Effect Estimation via In-Context Learning",
+      "authors": [
+        "Vahid Balazadeh",
+        "Hamidreza Kamkari",
+        "Valentin Thomas",
+        "Benson Li",
+        "Junwei Ma",
+        "Jesse C. Cresswell",
+        "Rahul G. Krishnan"
+      ],
+      "abstract": "Causal effect estimation from observational data is fundamental across\nvarious applications. However, selecting an appropriate estimator from dozens\nof specialized methods demands substantial manual effort and domain expertise.\nWe present CausalPFN, a single transformer that amortizes this workflow:\ntrained once on a large library of simulated data-generating processes that\nsatisfy ignorability, it infers causal effects for new observational datasets\nout-of-the-box. CausalPFN combines ideas from Bayesian causal inference with\nthe large-scale training protocol of prior-fitted networks (PFNs), learning to\nmap raw observations directly to causal effects without any task-specific\nadjustment. Our approach achieves superior average performance on heterogeneous\nand average treatment effect estimation benchmarks (IHDP, Lalonde, ACIC).\nMoreover, it shows competitive performance for real-world policy making on\nuplift modeling tasks. CausalPFN provides calibrated uncertainty estimates to\nsupport reliable decision-making based on Bayesian principles. This\nready-to-use model does not require any further training or tuning and takes a\nstep toward automated causal inference (https://github.com/vdblm/CausalPFN).",
+      "pdf_url": "http://arxiv.org/pdf/2506.07918v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.07918v1",
+      "published": "2025-06-09",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Learning to Focus: Causal Attention Distillation via Gradient-Guided Token Pruning",
+      "authors": [
+        "Yiju Guo",
+        "Wenkai Yang",
+        "Zexu Sun",
+        "Ning Ding",
+        "Zhiyuan Liu",
+        "Yankai Lin"
+      ],
+      "abstract": "Large language models (LLMs) have demonstrated significant improvements in\ncontextual understanding. However, their ability to attend to truly critical\ninformation during long-context reasoning and generation still falls behind the\npace. Specifically, our preliminary experiments reveal that certain distracting\npatterns can misdirect the model's attention during inference, and removing\nthese patterns substantially improves reasoning accuracy and generation\nquality. We attribute this phenomenon to spurious correlations in the training\ndata, which obstruct the model's capacity to infer authentic causal\ninstruction-response relationships. This phenomenon may induce redundant\nreasoning processes, potentially resulting in significant inference overhead\nand, more critically, the generation of erroneous or suboptimal responses. To\nmitigate this, we introduce a two-stage framework called Learning to Focus\n(LeaF) leveraging intervention-based inference to disentangle confounding\nfactors. In the first stage, LeaF employs gradient-based comparisons with an\nadvanced teacher to automatically identify confounding tokens based on causal\nrelationships in the training corpus. Then, in the second stage, it prunes\nthese tokens during distillation to enact intervention, aligning the student's\nattention with the teacher's focus distribution on truly critical context\ntokens. Experimental results demonstrate that LeaF not only achieves an\nabsolute improvement in various mathematical reasoning and code generation\nbenchmarks but also effectively suppresses attention to confounding tokens\nduring inference, yielding a more interpretable and reliable reasoning model.",
+      "pdf_url": "http://arxiv.org/pdf/2506.07851v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.07851v1",
+      "published": "2025-06-09",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Individual Treatment Effect: Prediction Intervals and Sharp Bounds",
+      "authors": [
+        "Zhehao Zhang",
+        "Thomas S. Richardson"
+      ],
+      "abstract": "Individual treatment effect (ITE) is often regarded as the ideal target of\ninference in causal analyses and has been the focus of several recent studies.\nIn this paper, we describe the intrinsic limits regarding what can be learned\nconcerning ITEs given data from large randomized experiments. We consider when\na valid prediction interval for the ITE is informative and when it can be\nbounded away from zero. The joint distribution over potential outcomes is only\npartially identified from a randomized trial. Consequently, to be valid, an ITE\nprediction interval must be valid for all joint distribution consistent with\nthe observed data and hence will in general be wider than that resulting from\nknowledge of this joint distribution. We characterize prediction intervals in\nthe binary treatment and outcome setting, and extend these insights to models\nwith continuous and ordinal outcomes. We derive sharp bounds on the probability\nmass function (pmf) of the individual treatment effect (ITE). Finally, we\ncontrast prediction intervals for the ITE and confidence intervals for the\naverage treatment effect (ATE). This also leads to the consideration of Fisher\nversus Neyman null hypotheses. While confidence intervals for the ATE shrink\nwith increasing sample size due to its status as a population parameter,\nprediction intervals for the ITE generally do not vanish, leading to scenarios\nwhere one may reject the Neyman null yet still find evidence consistent with\nthe Fisher null, highlighting the challenges of individualized decision-making\nunder partial identification.",
+      "pdf_url": "http://arxiv.org/pdf/2506.07469v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.07469v1",
+      "published": "2025-06-09",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Investigating the Relationship Between Physical Activity and Tailored Behavior Change Messaging: Connecting Contextual Bandit with Large Language Models",
+      "authors": [
+        "Haochen Song",
+        "Dominik Hofer",
+        "Rania Islambouli",
+        "Laura Hawkins",
+        "Ananya Bhattacharjee",
+        "Meredith Franklin",
+        "Joseph Jay Williams"
+      ],
+      "abstract": "Machine learning approaches, such as contextual multi-armed bandit (cMAB)\nalgorithms, offer a promising strategy to reduce sedentary behavior by\ndelivering personalized interventions to encourage physical activity. However,\ncMAB algorithms typically require large participant samples to learn\neffectively and may overlook key psychological factors that are not explicitly\nencoded in the model. In this study, we propose a hybrid approach that combines\ncMAB for selecting intervention types with large language models (LLMs) to\npersonalize message content. We evaluate four intervention types: behavioral\nself-monitoring, gain-framed, loss-framed, and social comparison, each\ndelivered as a motivational message aimed at increasing motivation for physical\nactivity and daily step count. Message content is further personalized using\ndynamic contextual factors including daily fluctuations in self-efficacy,\nsocial influence, and regulatory focus. Over a seven-day trial, participants\nreceive daily messages assigned by one of four models: cMAB alone, LLM alone,\ncombined cMAB with LLM personalization (cMABxLLM), or equal randomization\n(RCT). Outcomes include daily step count and message acceptance, assessed via\necological momentary assessments (EMAs). We apply a causal inference framework\nto evaluate the effects of each model. Our findings offer new insights into the\ncomplementary roles of LLM-based personalization and cMAB adaptation in\npromoting physical activity through personalized behavioral messaging.",
+      "pdf_url": "http://arxiv.org/pdf/2506.07275v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.07275v1",
+      "published": "2025-06-08",
+      "categories": [
+        "cs.LG",
+        "cs.HC",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Quantile-Optimal Policy Learning under Unmeasured Confounding",
+      "authors": [
+        "Zhongren Chen",
+        "Siyu Chen",
+        "Zhengling Qi",
+        "Xiaohong Chen",
+        "Zhuoran Yang"
+      ],
+      "abstract": "We study quantile-optimal policy learning where the goal is to find a policy\nwhose reward distribution has the largest $\\alpha$-quantile for some $\\alpha\n\\in (0, 1)$. We focus on the offline setting whose generating process involves\nunobserved confounders. Such a problem suffers from three main challenges: (i)\nnonlinearity of the quantile objective as a functional of the reward\ndistribution, (ii) unobserved confounding issue, and (iii) insufficient\ncoverage of the offline dataset. To address these challenges, we propose a\nsuite of causal-assisted policy learning methods that provably enjoy strong\ntheoretical guarantees under mild conditions. In particular, to address (i) and\n(ii), using causal inference tools such as instrumental variables and negative\ncontrols, we propose to estimate the quantile objectives by solving nonlinear\nfunctional integral equations. Then we adopt a minimax estimation approach with\nnonparametric models to solve these integral equations, and propose to\nconstruct conservative policy estimates that address (iii). The final policy is\nthe one that maximizes these pessimistic estimates. In addition, we propose a\nnovel regularized policy learning method that is more amenable to computation.\nFinally, we prove that the policies learned by these methods are\n$\\tilde{\\mathscr{O}}(n^{-1/2})$ quantile-optimal under a mild coverage\nassumption on the offline dataset. Here, $\\tilde{\\mathscr{O}}(\\cdot)$ omits\npoly-logarithmic factors. To the best of our knowledge, we propose the first\nsample-efficient policy learning algorithms for estimating the quantile-optimal\npolicy when there exist unmeasured confounding.",
+      "pdf_url": "http://arxiv.org/pdf/2506.07140v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.07140v1",
+      "published": "2025-06-08",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Half-AVAE: Adversarial-Enhanced Factorized and Structured Encoder-Free VAE for Underdetermined Independent Component Analysis",
+      "authors": [
+        "Yuan-Hao Wei",
+        "Yan-Jie Sun"
+      ],
+      "abstract": "This study advances the Variational Autoencoder (VAE) framework by addressing\nchallenges in Independent Component Analysis (ICA) under both determined and\nunderdetermined conditions, focusing on enhancing the independence and\ninterpretability of latent variables. Traditional VAEs map observed data to\nlatent variables and back via an encoder-decoder architecture, but struggle\nwith underdetermined ICA where the number of latent variables exceeds observed\nsignals. The proposed Half Adversarial VAE (Half-AVAE) builds on the\nencoder-free Half-VAE framework, eliminating explicit inverse mapping to tackle\nunderdetermined scenarios. By integrating adversarial networks and External\nEnhancement (EE) terms, Half-AVAE promotes mutual independence among latent\ndimensions, achieving factorized and interpretable representations. Experiments\nwith synthetic signals demonstrate that Half-AVAE outperforms baseline models,\nincluding GP-AVAE and Half-VAE, in recovering independent components under\nunderdetermined conditions, as evidenced by lower root mean square errors. The\nstudy highlights the flexibility of VAEs in variational inference, showing that\nencoder omission, combined with adversarial training and structured priors,\nenables effective solutions for complex ICA tasks, advancing applications in\ndisentanglement, causal inference, and generative modeling.",
+      "pdf_url": "http://arxiv.org/pdf/2506.07011v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.07011v1",
+      "published": "2025-06-08",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "eess.SP"
+      ]
+    },
+    {
+      "title": "Causal Graph based Event Reasoning using Semantic Relation Experts",
+      "authors": [
+        "Mahnaz Koupaee",
+        "Xueying Bai",
+        "Mudan Chen",
+        "Greg Durrett",
+        "Nathanael Chambers",
+        "Niranjan Balasubramanian"
+      ],
+      "abstract": "Understanding how events in a scenario causally connect with each other is\nimportant for effectively modeling and reasoning about events. But event\nreasoning remains a difficult challenge, and despite recent advances, Large\nLanguage Models (LLMs) still struggle to accurately identify causal connections\nbetween events. This struggle leads to poor performance on deeper reasoning\ntasks like event forecasting and timeline understanding. To address this\nchallenge, we investigate the generation of causal event graphs (e.g., A\nenables B) as a parallel mechanism to help LLMs explicitly represent causality\nduring inference. This paper evaluates both how to generate correct graphs as\nwell as how graphs can assist reasoning. We propose a collaborative approach to\ncausal graph generation where we use LLMs to simulate experts that focus on\nspecific semantic relations. The experts engage in multiple rounds of\ndiscussions which are then consolidated by a final expert. Then, to demonstrate\nthe utility of causal graphs, we use them on multiple downstream applications,\nand also introduce a new explainable event prediction task that requires a\ncausal chain of events in the explanation. These explanations are more\ninformative and coherent than baseline generations. Finally, our overall\napproach not finetuned on any downstream task, achieves competitive results\nwith state-of-the-art models on both forecasting and next event prediction\ntasks.",
+      "pdf_url": "http://arxiv.org/pdf/2506.06910v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.06910v1",
+      "published": "2025-06-07",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Perturbative QCD reveals the softening of matter in the cores of massive neutron stars",
+      "authors": [
+        "Oleg Komoltsev"
+      ],
+      "abstract": "The cores of neutron stars (NSs) contain the densest matter in the universe.\nRapid advancements in neutron-star observations allow unprecedented empirical\naccess to cold, ultra-dense Quantum Chromodynamics (QCD) matter. The\ncombination of these observations with theoretical calculations has revealed\npreviously inaccessible features of the equation of state (EoS) and the QCD\nphase diagram. In this thesis, I demonstrate how perturbative-QCD calculations\nat asymptotically high baryon densities provide robust constraints on the EoS\nat neutron-star densities. The method for constraint propagation is based\nsolely on thermodynamical causality, stability, and consistency of the EoS. By\nconstructing a large ensemble of EoSs using Gaussian processes regression and\nincorporating it into a Bayesian inference of EoS, I demonstrate that the novel\npQCD constraints go beyond those obtained from current astrophysical\nobservations alone, forcing the EoS to soften at the maximum densities of\nstable neutron stars. This softening of the EoS can be interpreted as an\nindication of approximate conformal symmetry restoration, a sign of a\nfirst-order phase transition (FOPT), or potentially both. I show that the\nconformal symmetry restoration is consistent with the hypothesis of quark\nmatter cores inside the most massive NSs. Although current astrophysical data\nand theoretical inputs cannot definitively distinguish between the two\nscenarios, they slightly favor the occurrence of a phase transition of some\nkind - whether a crossover to quark matter or a destabilizing FOPT - in the\ncores of the most massive neutron stars.",
+      "pdf_url": "http://arxiv.org/pdf/2506.06465v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.06465v1",
+      "published": "2025-06-06",
+      "categories": [
+        "astro-ph.HE",
+        "hep-ph",
+        "nucl-th"
+      ]
+    },
     {
       "title": "Preference Learning for AI Alignment: a Causal Perspective",
       "authors": [
@@ -15,173 +178,6 @@
         "cs.AI",
         "cs.LG",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "MOGO: Residual Quantized Hierarchical Causal Transformer for High-Quality and Real-Time 3D Human Motion Generation",
-      "authors": [
-        "Dongjie Fu",
-        "Tengjiao Sun",
-        "Pengcheng Fang",
-        "Xiaohao Cai",
-        "Hansung Kim"
-      ],
-      "abstract": "Recent advances in transformer-based text-to-motion generation have led to\nimpressive progress in synthesizing high-quality human motion. Nevertheless,\njointly achieving high fidelity, streaming capability, real-time\nresponsiveness, and scalability remains a fundamental challenge. In this paper,\nwe propose MOGO (Motion Generation with One-pass), a novel autoregressive\nframework tailored for efficient and real-time 3D motion generation. MOGO\ncomprises two key components: (1) MoSA-VQ, a motion scale-adaptive residual\nvector quantization module that hierarchically discretizes motion sequences\nwith learnable scaling to produce compact yet expressive representations; and\n(2) RQHC-Transformer, a residual quantized hierarchical causal transformer that\ngenerates multi-layer motion tokens in a single forward pass, significantly\nreducing inference latency. To enhance semantic fidelity, we further introduce\na text condition alignment mechanism that improves motion decoding under\ntextual control. Extensive experiments on benchmark datasets including\nHumanML3D, KIT-ML, and CMP demonstrate that MOGO achieves competitive or\nsuperior generation quality compared to state-of-the-art transformer-based\nmethods, while offering substantial improvements in real-time performance,\nstreaming generation, and generalization under zero-shot settings.",
-      "pdf_url": "http://arxiv.org/pdf/2506.05952v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.05952v1",
-      "published": "2025-06-06",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Generalizable, real-time neural decoding with hybrid state-space models",
-      "authors": [
-        "Avery Hee-Woon Ryoo",
-        "Nanda H. Krishna",
-        "Ximeng Mao",
-        "Mehdi Azabou",
-        "Eva L. Dyer",
-        "Matthew G. Perich",
-        "Guillaume Lajoie"
-      ],
-      "abstract": "Real-time decoding of neural activity is central to neuroscience and\nneurotechnology applications, from closed-loop experiments to brain-computer\ninterfaces, where models are subject to strict latency constraints. Traditional\nmethods, including simple recurrent neural networks, are fast and lightweight\nbut often struggle to generalize to unseen data. In contrast, recent\nTransformer-based approaches leverage large-scale pretraining for strong\ngeneralization performance, but typically have much larger computational\nrequirements and are not always suitable for low-resource or real-time\nsettings. To address these shortcomings, we present POSSM, a novel hybrid\narchitecture that combines individual spike tokenization via a cross-attention\nmodule with a recurrent state-space model (SSM) backbone to enable (1) fast and\ncausal online prediction on neural activity and (2) efficient generalization to\nnew sessions, individuals, and tasks through multi-dataset pretraining. We\nevaluate POSSM's decoding performance and inference speed on intracortical\ndecoding of monkey motor tasks, and show that it extends to clinical\napplications, namely handwriting and speech decoding in human subjects.\nNotably, we demonstrate that pretraining on monkey motor-cortical recordings\nimproves decoding performance on the human handwriting task, highlighting the\nexciting potential for cross-species transfer. In all of these tasks, we find\nthat POSSM achieves decoding accuracy comparable to state-of-the-art\nTransformers, at a fraction of the inference cost (up to 9x faster on GPU).\nThese results suggest that hybrid SSMs are a promising approach to bridging the\ngap between accuracy, inference speed, and generalization when training neural\ndecoders for real-time, closed-loop applications.",
-      "pdf_url": "http://arxiv.org/pdf/2506.05320v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.05320v1",
-      "published": "2025-06-05",
-      "categories": [
-        "q-bio.NC",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "MesaNet: Sequence Modeling by Locally Optimal Test-Time Training",
-      "authors": [
-        "Johannes von Oswald",
-        "Nino Scherrer",
-        "Seijin Kobayashi",
-        "Luca Versari",
-        "Songlin Yang",
-        "Maximilian Schlegel",
-        "Kaitlin Maile",
-        "Yanick Schimpf",
-        "Oliver Sieberling",
-        "Alexander Meulemans",
-        "Rif A. Saurous",
-        "Guillaume Lajoie",
-        "Charlotte Frenkel",
-        "Razvan Pascanu",
-        "Blaise Agüera y Arcas",
-        "João Sacramento"
-      ],
-      "abstract": "Sequence modeling is currently dominated by causal transformer architectures\nthat use softmax self-attention. Although widely adopted, transformers require\nscaling memory and compute linearly during inference. A recent stream of work\nlinearized the softmax operation, resulting in powerful recurrent neural\nnetwork (RNN) models with constant memory and compute costs such as DeltaNet,\nMamba or xLSTM. These models can be unified by noting that their recurrent\nlayer dynamics can all be derived from an in-context regression objective,\napproximately optimized through an online learning rule. Here, we join this\nline of work and introduce a numerically stable, chunkwise parallelizable\nversion of the recently proposed Mesa layer (von Oswald et al., 2024), and\nstudy it in language modeling at the billion-parameter scale. This layer again\nstems from an in-context loss, but which is now minimized to optimality at\nevery time point using a fast conjugate gradient solver. Through an extensive\nsuite of experiments, we show that optimal test-time training enables reaching\nlower language modeling perplexity and higher downstream benchmark performance\nthan previous RNNs, especially on tasks requiring long context understanding.\nThis performance gain comes at the cost of additional flops spent during\ninference time. Our results are therefore intriguingly related to recent trends\nof increasing test-time compute to improve performance -- here by spending\ncompute to solve sequential optimization problems within the neural network\nitself.",
-      "pdf_url": "http://arxiv.org/pdf/2506.05233v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.05233v1",
-      "published": "2025-06-05",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Causal Effect Identification in lvLiNGAM from Higher-Order Cumulants",
-      "authors": [
-        "Daniele Tramontano",
-        "Yaroslav Kivva",
-        "Saber Salehkaleybar",
-        "Mathias Drton",
-        "Negar Kiyavash"
-      ],
-      "abstract": "This paper investigates causal effect identification in latent variable\nLinear Non-Gaussian Acyclic Models (lvLiNGAM) using higher-order cumulants,\naddressing two prominent setups that are challenging in the presence of latent\nconfounding: (1) a single proxy variable that may causally influence the\ntreatment and (2) underspecified instrumental variable cases where fewer\ninstruments exist than treatments. We prove that causal effects are\nidentifiable with a single proxy or instrument and provide corresponding\nestimation methods. Experimental results demonstrate the accuracy and\nrobustness of our approaches compared to existing methods, advancing the\ntheoretical and practical understanding of causal inference in linear systems\nwith latent confounders.",
-      "pdf_url": "http://arxiv.org/pdf/2506.05202v2",
-      "arxiv_url": "http://arxiv.org/abs/2506.05202v2",
-      "published": "2025-06-05",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Nonlinear Causal Discovery for Grouped Data",
-      "authors": [
-        "Konstantin Göbler",
-        "Tobias Windisch",
-        "Mathias Drton"
-      ],
-      "abstract": "Inferring cause-effect relationships from observational data has gained\nsignificant attention in recent years, but most methods are limited to scalar\nrandom variables. In many important domains, including neuroscience,\npsychology, social science, and industrial manufacturing, the causal units of\ninterest are groups of variables rather than individual scalar measurements.\nMotivated by these applications, we extend nonlinear additive noise models to\nhandle random vectors, establishing a two-step approach for causal graph\nlearning: First, infer the causal order among random vectors. Second, perform\nmodel selection to identify the best graph consistent with this order. We\nintroduce effective and novel solutions for both steps in the vector case,\ndemonstrating strong performance in simulations. Finally, we apply our method\nto real-world assembly line data with partial knowledge of causal ordering\namong variable groups.",
-      "pdf_url": "http://arxiv.org/pdf/2506.05120v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.05120v1",
-      "published": "2025-06-05",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Policy Learning in Reinforcement Learning: Backdoor-Adjusted Soft Actor-Critic",
-      "authors": [
-        "Thanh Vinh Vo",
-        "Young Lee",
-        "Haozhe Ma",
-        "Chien Lu",
-        "Tze-Yun Leong"
-      ],
-      "abstract": "Hidden confounders that influence both states and actions can bias policy\nlearning in reinforcement learning (RL), leading to suboptimal or\nnon-generalizable behavior. Most RL algorithms ignore this issue, learning\npolicies from observational trajectories based solely on statistical\nassociations rather than causal effects. We propose DoSAC (Do-Calculus Soft\nActor-Critic with Backdoor Adjustment), a principled extension of the SAC\nalgorithm that corrects for hidden confounding via causal intervention\nestimation. DoSAC estimates the interventional policy $\\pi(a | \\mathrm{do}(s))$\nusing the backdoor criterion, without requiring access to true confounders or\ncausal labels. To achieve this, we introduce a learnable Backdoor Reconstructor\nthat infers pseudo-past variables (previous state and action) from the current\nstate to enable backdoor adjustment from observational data. This module is\nintegrated into a soft actor-critic framework to compute both the\ninterventional policy and its entropy. Empirical results on continuous control\nbenchmarks show that DoSAC outperforms baselines under confounded settings,\nwith improved robustness, generalization, and policy reliability.",
-      "pdf_url": "http://arxiv.org/pdf/2506.05445v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.05445v1",
-      "published": "2025-06-05",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Learning Joint Interventional Effects from Single-Variable Interventions in Additive Models",
-      "authors": [
-        "Armin Kekić",
-        "Sergio Hernan Garrido Mejia",
-        "Bernhard Schölkopf"
-      ],
-      "abstract": "Estimating causal effects of joint interventions on multiple variables is\ncrucial in many domains, but obtaining data from such simultaneous\ninterventions can be challenging. Our study explores how to learn joint\ninterventional effects using only observational data and single-variable\ninterventions. We present an identifiability result for this problem, showing\nthat for a class of nonlinear additive outcome mechanisms, joint effects can be\ninferred without access to joint interventional data. We propose a practical\nestimator that decomposes the causal effect into confounded and unconfounded\ncontributions for each intervention variable. Experiments on synthetic data\ndemonstrate that our method achieves performance comparable to models trained\ndirectly on joint interventional data, outperforming a purely observational\nestimator.",
-      "pdf_url": "http://arxiv.org/pdf/2506.04945v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.04945v1",
-      "published": "2025-06-05",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Bayesian Doubly Robust Causal Inference via Posterior Coupling",
-      "authors": [
-        "Shunichiro Orihara",
-        "Tomotaka Momozaki",
-        "Shonosuke Sugasawa"
-      ],
-      "abstract": "In observational studies, propensity score methods are central for estimating\ncausal effects while adjusting for confounders. Among them, the doubly robust\n(DR) estimator has gained considerable attention because it provides consistent\nestimates when either the propensity score model or the outcome model is\ncorrectly specified. Like other propensity score approaches, the DR estimator\ntypically involves two-step estimation: first, estimating the propensity score\nand outcome models, and then estimating the causal effects using the estimated\nvalues. However, this sequential procedure does not naturally align with the\nBayesian framework, which centers on updating prior beliefs solely through the\nlikelihood. In this manuscript, we propose novel Bayesian DR estimation via\nposterior coupling, which incorporates propensity score information via moment\nconditions directly into the posterior distribution. This design avoids the\nfeedback problem and enables a fully Bayesian interpretation of DR estimation\nwithout requiring two-step estimation. We detail the theoretical properties of\nthe proposed method and demonstrate its advantages over existing Bayesian\napproaches through comprehensive simulation studies and real data applications.",
-      "pdf_url": "http://arxiv.org/pdf/2506.04868v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.04868v1",
-      "published": "2025-06-05",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "OpenAg: Democratizing Agricultural Intelligence",
-      "authors": [
-        "Srikanth Thudumu",
-        "Jason Fisher"
-      ],
-      "abstract": "Agriculture is undergoing a major transformation driven by artificial\nintelligence (AI), machine learning, and knowledge representation technologies.\nHowever, current agricultural intelligence systems often lack contextual\nunderstanding, explainability, and adaptability, especially for smallholder\nfarmers with limited resources. General-purpose large language models (LLMs),\nwhile powerful, typically lack the domain-specific knowledge and contextual\nreasoning needed for practical decision support in farming. They tend to\nproduce recommendations that are too generic or unrealistic for real-world\napplications. To address these challenges, we present OpenAg, a comprehensive\nframework designed to advance agricultural artificial general intelligence\n(AGI). OpenAg combines domain-specific foundation models, neural knowledge\ngraphs, multi-agent reasoning, causal explainability, and adaptive transfer\nlearning to deliver context-aware, explainable, and actionable insights. The\nsystem includes: (i) a unified agricultural knowledge base that integrates\nscientific literature, sensor data, and farmer-generated knowledge; (ii) a\nneural agricultural knowledge graph for structured reasoning and inference;\n(iii) an adaptive multi-agent reasoning system where AI agents specialize and\ncollaborate across agricultural domains; and (iv) a causal transparency\nmechanism that ensures AI recommendations are interpretable, scientifically\ngrounded, and aligned with real-world constraints. OpenAg aims to bridge the\ngap between scientific knowledge and the tacit expertise of experienced farmers\nto support scalable and locally relevant agricultural decision-making.",
-      "pdf_url": "http://arxiv.org/pdf/2506.04571v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.04571v1",
-      "published": "2025-06-05",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]
