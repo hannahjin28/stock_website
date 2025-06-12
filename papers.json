@@ -1,6 +1,73 @@
 {
-  "last_updated": "2025-06-11T00:55:21.322475",
+  "last_updated": "2025-06-12T00:54:55.511211",
   "papers": [
+    {
+      "title": "Paths to Causality: Finding Informative Subgraphs Within Knowledge Graphs for Knowledge-Based Causal Discovery",
+      "authors": [
+        "Yuni Susanti",
+        "Michael Färber"
+      ],
+      "abstract": "Inferring causal relationships between variable pairs is crucial for\nunderstanding multivariate interactions in complex systems. Knowledge-based\ncausal discovery -- which involves inferring causal relationships by reasoning\nover the metadata of variables (e.g., names or textual context) -- offers a\ncompelling alternative to traditional methods that rely on observational data.\nHowever, existing methods using Large Language Models (LLMs) often produce\nunstable and inconsistent results, compromising their reliability for causal\ninference. To address this, we introduce a novel approach that integrates\nKnowledge Graphs (KGs) with LLMs to enhance knowledge-based causal discovery.\nOur approach identifies informative metapath-based subgraphs within KGs and\nfurther refines the selection of these subgraphs using Learning-to-Rank-based\nmodels. The top-ranked subgraphs are then incorporated into zero-shot prompts,\nimproving the effectiveness of LLMs in inferring the causal relationship.\nExtensive experiments on biomedical and open-domain datasets demonstrate that\nour method outperforms most baselines by up to 44.4 points in F1 scores,\nevaluated across diverse LLMs and KGs. Our code and datasets are available on\nGitHub: https://github.com/susantiyuni/path-to-causality",
+      "pdf_url": "http://arxiv.org/pdf/2506.08771v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.08771v1",
+      "published": "2025-06-10",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "CC-RAG: Structured Multi-Hop Reasoning via Theme-Based Causal Graphs",
+      "authors": [
+        "Jash Rajesh Parekh",
+        "Pengcheng Jiang",
+        "Jiawei Han"
+      ],
+      "abstract": "Understanding cause and effect relationships remains a formidable challenge\nfor Large Language Models (LLMs), particularly in specialized domains where\nreasoning requires more than surface-level correlations. Retrieval-Augmented\nGeneration (RAG) improves factual accuracy, but standard RAG pipelines treat\nevidence as flat context, lacking the structure required to model true causal\ndependencies. We introduce Causal-Chain RAG (CC-RAG), a novel approach that\nintegrates zero-shot triple extraction and theme-aware graph chaining into the\nRAG pipeline, enabling structured multi-hop inference. Given a domain specific\ncorpus, CC-RAG constructs a Directed Acyclic Graph (DAG) of <cause, relation,\neffect> triples and uses forward/backward chaining to guide structured answer\ngeneration. Experiments on two real-world domains: Bitcoin price fluctuations\nand Gaucher disease, show that CC-RAG outperforms standard RAG and zero-shot\nLLMs in chain similarity, information density, and lexical diversity. Both\nLLM-as-a-Judge and human evaluations consistently favor CC-RAG. Our results\ndemonstrate that explicitly modeling causal structure enables LLMs to generate\nmore accurate and interpretable responses, especially in specialized domains\nwhere flat retrieval fails.",
+      "pdf_url": "http://arxiv.org/pdf/2506.08364v2",
+      "arxiv_url": "http://arxiv.org/abs/2506.08364v2",
+      "published": "2025-06-10",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "DEAL: Disentangling Transformer Head Activations for LLM Steering",
+      "authors": [
+        "Li-Ming Zhan",
+        "Bo Liu",
+        "Zexin Lu",
+        "Chengqiang Xie",
+        "Jiannong Cao",
+        "Xiao-Ming Wu"
+      ],
+      "abstract": "Inference-time steering aims to alter the response characteristics of large\nlanguage models (LLMs) without modifying their underlying parameters. A\ncritical step in this process is the identification of internal modules within\nLLMs that are associated with the target behavior. However, current approaches\nto module selection often depend on superficial cues or ad-hoc heuristics,\nwhich can result in suboptimal or unintended outcomes. In this work, we propose\na principled causal-attribution framework for identifying behavior-relevant\nattention heads in transformers. For each head, we train a vector-quantized\nautoencoder (VQ-AE) on its attention activations, partitioning the latent space\ninto behavior-relevant and behavior-irrelevant subspaces, each quantized with a\nshared learnable codebook. We assess the behavioral relevance of each head by\nquantifying the separability of VQ-AE encodings for behavior-aligned versus\nbehavior-violating responses using a binary classification metric. This yields\na behavioral relevance score that reflects each head discriminative capacity\nwith respect to the target behavior, guiding both selection and importance\nweighting. Experiments on seven LLMs from two model families and five\nbehavioral steering datasets demonstrate that our method enables more accurate\ninference-time interventions, achieving superior performance on the\ntruthfulness-steering task. Furthermore, the heads selected by our approach\nexhibit strong zero-shot generalization in cross-domain truthfulness-steering\nscenarios.",
+      "pdf_url": "http://arxiv.org/pdf/2506.08359v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.08359v1",
+      "published": "2025-06-10",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Operator theoretic measure of causality in linear dynamical systems",
+      "authors": [
+        "Ankit Srivastava",
+        "Louis Cattafesta",
+        "Scott Dawson"
+      ],
+      "abstract": "This paper introduces Linear Operator Causality Analysis (LOCA), a\nphysics-based framework for analyzing causality in linear dynamical systems,\nwith a focus on fluid mechanics. Unlike data-driven statistical methods like\nGranger causality, LOCA uses the matrix exponential from the system's governing\nequations to provide a more rigorous and interpretable measure of causal\ninteractions. Our framework reveals that, under certain conditions, common\ndata-driven measures effectively approximate the squared magnitude of the\nmatrix exponential. LOCA also mitigates common analysis issues, such as\nmisleading inferences from correlated variables. We validate the methodology\nusing a linearized Couette flow, demonstrating its ability to robustly identify\nboth direct and indirect causal relationships between flow structures. This\napproach offers a powerful tool for understanding modal interactions and\nperturbation propagation in complex systems.",
+      "pdf_url": "http://arxiv.org/pdf/2506.08118v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.08118v1",
+      "published": "2025-06-09",
+      "categories": [
+        "nlin.CD",
+        "math-ph",
+        "math.MP"
+      ]
+    },
     {
       "title": "Self Forcing: Bridging the Train-Test Gap in Autoregressive Video Diffusion",
       "authors": [
@@ -113,71 +180,6 @@
         "stat.ML",
         "cs.LG",
         "econ.EM"
-      ]
-    },
-    {
-      "title": "Half-AVAE: Adversarial-Enhanced Factorized and Structured Encoder-Free VAE for Underdetermined Independent Component Analysis",
-      "authors": [
-        "Yuan-Hao Wei",
-        "Yan-Jie Sun"
-      ],
-      "abstract": "This study advances the Variational Autoencoder (VAE) framework by addressing\nchallenges in Independent Component Analysis (ICA) under both determined and\nunderdetermined conditions, focusing on enhancing the independence and\ninterpretability of latent variables. Traditional VAEs map observed data to\nlatent variables and back via an encoder-decoder architecture, but struggle\nwith underdetermined ICA where the number of latent variables exceeds observed\nsignals. The proposed Half Adversarial VAE (Half-AVAE) builds on the\nencoder-free Half-VAE framework, eliminating explicit inverse mapping to tackle\nunderdetermined scenarios. By integrating adversarial networks and External\nEnhancement (EE) terms, Half-AVAE promotes mutual independence among latent\ndimensions, achieving factorized and interpretable representations. Experiments\nwith synthetic signals demonstrate that Half-AVAE outperforms baseline models,\nincluding GP-AVAE and Half-VAE, in recovering independent components under\nunderdetermined conditions, as evidenced by lower root mean square errors. The\nstudy highlights the flexibility of VAEs in variational inference, showing that\nencoder omission, combined with adversarial training and structured priors,\nenables effective solutions for complex ICA tasks, advancing applications in\ndisentanglement, causal inference, and generative modeling.",
-      "pdf_url": "http://arxiv.org/pdf/2506.07011v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.07011v1",
-      "published": "2025-06-08",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "eess.SP"
-      ]
-    },
-    {
-      "title": "Causal Graph based Event Reasoning using Semantic Relation Experts",
-      "authors": [
-        "Mahnaz Koupaee",
-        "Xueying Bai",
-        "Mudan Chen",
-        "Greg Durrett",
-        "Nathanael Chambers",
-        "Niranjan Balasubramanian"
-      ],
-      "abstract": "Understanding how events in a scenario causally connect with each other is\nimportant for effectively modeling and reasoning about events. But event\nreasoning remains a difficult challenge, and despite recent advances, Large\nLanguage Models (LLMs) still struggle to accurately identify causal connections\nbetween events. This struggle leads to poor performance on deeper reasoning\ntasks like event forecasting and timeline understanding. To address this\nchallenge, we investigate the generation of causal event graphs (e.g., A\nenables B) as a parallel mechanism to help LLMs explicitly represent causality\nduring inference. This paper evaluates both how to generate correct graphs as\nwell as how graphs can assist reasoning. We propose a collaborative approach to\ncausal graph generation where we use LLMs to simulate experts that focus on\nspecific semantic relations. The experts engage in multiple rounds of\ndiscussions which are then consolidated by a final expert. Then, to demonstrate\nthe utility of causal graphs, we use them on multiple downstream applications,\nand also introduce a new explainable event prediction task that requires a\ncausal chain of events in the explanation. These explanations are more\ninformative and coherent than baseline generations. Finally, our overall\napproach not finetuned on any downstream task, achieves competitive results\nwith state-of-the-art models on both forecasting and next event prediction\ntasks.",
-      "pdf_url": "http://arxiv.org/pdf/2506.06910v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.06910v1",
-      "published": "2025-06-07",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Perturbative QCD reveals the softening of matter in the cores of massive neutron stars",
-      "authors": [
-        "Oleg Komoltsev"
-      ],
-      "abstract": "The cores of neutron stars (NSs) contain the densest matter in the universe.\nRapid advancements in neutron-star observations allow unprecedented empirical\naccess to cold, ultra-dense Quantum Chromodynamics (QCD) matter. The\ncombination of these observations with theoretical calculations has revealed\npreviously inaccessible features of the equation of state (EoS) and the QCD\nphase diagram. In this thesis, I demonstrate how perturbative-QCD calculations\nat asymptotically high baryon densities provide robust constraints on the EoS\nat neutron-star densities. The method for constraint propagation is based\nsolely on thermodynamical causality, stability, and consistency of the EoS. By\nconstructing a large ensemble of EoSs using Gaussian processes regression and\nincorporating it into a Bayesian inference of EoS, I demonstrate that the novel\npQCD constraints go beyond those obtained from current astrophysical\nobservations alone, forcing the EoS to soften at the maximum densities of\nstable neutron stars. This softening of the EoS can be interpreted as an\nindication of approximate conformal symmetry restoration, a sign of a\nfirst-order phase transition (FOPT), or potentially both. I show that the\nconformal symmetry restoration is consistent with the hypothesis of quark\nmatter cores inside the most massive NSs. Although current astrophysical data\nand theoretical inputs cannot definitively distinguish between the two\nscenarios, they slightly favor the occurrence of a phase transition of some\nkind - whether a crossover to quark matter or a destabilizing FOPT - in the\ncores of the most massive neutron stars.",
-      "pdf_url": "http://arxiv.org/pdf/2506.06465v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.06465v1",
-      "published": "2025-06-06",
-      "categories": [
-        "astro-ph.HE",
-        "hep-ph",
-        "nucl-th"
-      ]
-    },
-    {
-      "title": "Preference Learning for AI Alignment: a Causal Perspective",
-      "authors": [
-        "Katarzyna Kobalczyk",
-        "Mihaela van der Schaar"
-      ],
-      "abstract": "Reward modelling from preference data is a crucial step in aligning large\nlanguage models (LLMs) with human values, requiring robust generalisation to\nnovel prompt-response pairs. In this work, we propose to frame this problem in\na causal paradigm, providing the rich toolbox of causality to identify the\npersistent challenges, such as causal misidentification, preference\nheterogeneity, and confounding due to user-specific factors. Inheriting from\nthe literature of causal inference, we identify key assumptions necessary for\nreliable generalisation and contrast them with common data collection\npractices. We illustrate failure modes of naive reward models and demonstrate\nhow causally-inspired approaches can improve model robustness. Finally, we\noutline desiderata for future research and practices, advocating targeted\ninterventions to address inherent limitations of observational data.",
-      "pdf_url": "http://arxiv.org/pdf/2506.05967v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.05967v1",
-      "published": "2025-06-06",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "stat.ML"
       ]
     }
   ]
