@@ -1,6 +1,160 @@
 {
-  "last_updated": "2025-06-12T00:54:55.511211",
+  "last_updated": "2025-06-13T00:55:00.703854",
   "papers": [
+    {
+      "title": "Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation",
+      "authors": [
+        "Xinyu Yang",
+        "Yuwei An",
+        "Hongyi Liu",
+        "Tianqi Chen",
+        "Beidi Chen"
+      ],
+      "abstract": "Autoregressive Large Language Models (AR-LLMs) frequently exhibit implicit\nparallelism in sequential generation. Inspired by this, we introduce\nMultiverse, a new generative model that enables natively parallel generation.\nMultiverse internalizes a MapReduce paradigm, generating automatically through\nthree stages: (i) a Map stage for adaptive task decomposition, (ii) a Process\nstage for parallel subtask execution, and (iii) a Reduce stage for lossless\nresult synthesis. Next, we build a real-world Multiverse reasoning model with\nco-design of data, algorithm, and system, enabling rapid and seamless transfer\nfrom frontier AR-LLMs. Starting from sequential reasoning chains, we create\nMultiverse 1K by converting them into structured training data using an\nautomated LLM-assisted pipeline, avoiding costly human annotations.\nAlgorithmically, we design Multiverse Attention to separate parallel reasoning\nsteps while keeping compatibility with causal attention for efficient training.\nSystematically, we implement Multiverse Engine to enable parallel inference. It\nfeatures a dedicated scheduler that dynamically switches between sequential and\nparallel generation, triggered directly by the model. After a 3-hour\nfine-tuning with 1K examples, our Multiverse-32B stands as the only\nopen-sourced non-AR model achieving performance on par with leading AR-LLMs of\nthe same scale, evidenced by AIME24 & 25 scores of 54% and 46%, respectively.\nMoreover, our budget control experiments show that Multiverse-32B exhibits\nsuperior scaling, outperforming AR-LLMs by 1.87% on average using the same\ncontext length. Such scaling further leads to practical efficiency gain,\nachieving up to 2x speedup across varying batch sizes. We have open-sourced the\nentire Multiverse ecosystem, including data, model weights, engine, supporting\ntools, as well as complete data curation prompts and detailed training and\nevaluation recipes.",
+      "pdf_url": "http://arxiv.org/pdf/2506.09991v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.09991v1",
+      "published": "2025-06-11",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal Sufficiency and Necessity Improves Chain-of-Thought Reasoning",
+      "authors": [
+        "Xiangning Yu",
+        "Zhuohan Wang",
+        "Linyi Yang",
+        "Haoxuan Li",
+        "Anjie Liu",
+        "Xiao Xue",
+        "Jun Wang",
+        "Mengyue Yang"
+      ],
+      "abstract": "Chain-of-Thought (CoT) prompting plays an indispensable role in endowing\nlarge language models (LLMs) with complex reasoning capabilities. However, CoT\ncurrently faces two fundamental challenges: (1) Sufficiency, which ensures that\nthe generated intermediate inference steps comprehensively cover and\nsubstantiate the final conclusion; and (2) Necessity, which identifies the\ninference steps that are truly indispensable for the soundness of the resulting\nanswer. We propose a causal framework that characterizes CoT reasoning through\nthe dual lenses of sufficiency and necessity. Incorporating causal Probability\nof Sufficiency and Necessity allows us not only to determine which steps are\nlogically sufficient or necessary to the prediction outcome, but also to\nquantify their actual influence on the final reasoning outcome under different\nintervention scenarios, thereby enabling the automated addition of missing\nsteps and the pruning of redundant ones. Extensive experimental results on\nvarious mathematical and commonsense reasoning benchmarks confirm substantial\nimprovements in reasoning efficiency and reduced token usage without\nsacrificing accuracy. Our work provides a promising direction for improving LLM\nreasoning performance and cost-effectiveness.",
+      "pdf_url": "http://arxiv.org/pdf/2506.09853v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.09853v1",
+      "published": "2025-06-11",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "math.ST",
+        "stat.ME",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Benchmarking Debiasing Methods for LLM-based Parameter Estimates",
+      "authors": [
+        "Nicolas Audinet de Pieuchon",
+        "Adel Daoud",
+        "Connor T. Jerzak",
+        "Moa Johansson",
+        "Richard Johansson"
+      ],
+      "abstract": "Large language models (LLMs) offer an inexpensive yet powerful way to\nannotate text, but are often inconsistent when compared with experts. These\nerrors can bias downstream estimates of population parameters such as\nregression coefficients and causal effects. To mitigate this bias, researchers\nhave developed debiasing methods such as Design-based Supervised Learning (DSL)\nand Prediction-Powered Inference (PPI), which promise valid estimation by\ncombining LLM annotations with a limited number of expensive expert\nannotations. Although these methods produce consistent estimates under\ntheoretical assumptions, it is unknown how they compare in finite samples of\nsizes encountered in applied research. We make two contributions: First, we\nstudy how each method's performance scales with the number of expert\nannotations, highlighting regimes where LLM bias or limited expert labels\nsignificantly affect results. Second, we compare DSL and PPI across a range of\ntasks, finding that although both achieve low bias with large datasets, DSL\noften outperforms PPI on bias reduction and empirical efficiency, but its\nperformance is less consistent across datasets. Our findings indicate that\nthere is a bias-variance tradeoff at the level of debiasing methods, calling\nfor more research on developing metrics for quantifying their efficiency in\nfinite samples.",
+      "pdf_url": "http://arxiv.org/pdf/2506.09627v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.09627v1",
+      "published": "2025-06-11",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "STOAT: Spatial-Temporal Probabilistic Causal Inference Network",
+      "authors": [
+        "Yang Yang",
+        "Du Yin",
+        "Hao Xue",
+        "Flora Salim"
+      ],
+      "abstract": "Spatial-temporal causal time series (STC-TS) involve region-specific temporal\nobservations driven by causally relevant covariates and interconnected across\ngeographic or network-based spaces. Existing methods often model spatial and\ntemporal dynamics independently and overlook causality-driven probabilistic\nforecasting, limiting their predictive power. To address this, we propose STOAT\n(Spatial-Temporal Probabilistic Causal Inference Network), a novel framework\nfor probabilistic forecasting in STC-TS. The proposed method extends a causal\ninference approach by incorporating a spatial relation matrix that encodes\ninterregional dependencies (e.g. proximity or connectivity), enabling spatially\ninformed causal effect estimation. The resulting latent series are processed by\ndeep probabilistic models to estimate the parameters of the distributions,\nenabling calibrated uncertainty modeling. We further explore multiple output\ndistributions (e.g., Gaussian, Student's-$t$, Laplace) to capture\nregion-specific variability. Experiments on COVID-19 data across six countries\ndemonstrate that STOAT outperforms state-of-the-art probabilistic forecasting\nmodels (DeepAR, DeepVAR, Deep State Space Model, etc.) in key metrics,\nparticularly in regions with strong spatial dependencies. By bridging causal\ninference and geospatial probabilistic forecasting, STOAT offers a\ngeneralizable framework for complex spatial-temporal tasks, such as epidemic\nmanagement.",
+      "pdf_url": "http://arxiv.org/pdf/2506.09544v2",
+      "arxiv_url": "http://arxiv.org/abs/2506.09544v2",
+      "published": "2025-06-11",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Mitigating Spurious Correlations in LLMs via Causality-Aware Post-Training",
+      "authors": [
+        "Shurui Gui",
+        "Shuiwang Ji"
+      ],
+      "abstract": "While large language models (LLMs) have demonstrated remarkable capabilities\nin language modeling, recent studies reveal that they often fail on\nout-of-distribution (OOD) samples due to spurious correlations acquired during\npre-training. Here, we aim to mitigate such spurious correlations through\ncausality-aware post-training (CAPT). By decomposing a biased prediction into\ntwo unbiased steps, known as \\textit{event estimation} and \\textit{event\nintervention}, we reduce LLMs' pre-training biases without incurring additional\nfine-tuning biases, thus enhancing the model's generalization ability.\nExperiments on the formal causal inference benchmark CLadder and the logical\nreasoning dataset PrOntoQA show that 3B-scale language models fine-tuned with\nCAPT can outperform both traditional SFT and larger LLMs on in-distribution\n(ID) and OOD tasks using only 100 ID fine-tuning samples, demonstrating the\neffectiveness and sample efficiency of CAPT.",
+      "pdf_url": "http://arxiv.org/pdf/2506.09433v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.09433v1",
+      "published": "2025-06-11",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "G-Sim: Generative Simulations with Large Language Models and Gradient-Free Calibration",
+      "authors": [
+        "Samuel Holt",
+        "Max Ruiz Luyten",
+        "Antonin Berthon",
+        "Mihaela van der Schaar"
+      ],
+      "abstract": "Constructing robust simulators is essential for asking \"what if?\" questions\nand guiding policy in critical domains like healthcare and logistics. However,\nexisting methods often struggle, either failing to generalize beyond historical\ndata or, when using Large Language Models (LLMs), suffering from inaccuracies\nand poor empirical alignment. We introduce G-Sim, a hybrid framework that\nautomates simulator construction by synergizing LLM-driven structural design\nwith rigorous empirical calibration. G-Sim employs an LLM in an iterative loop\nto propose and refine a simulator's core components and causal relationships,\nguided by domain knowledge. This structure is then grounded in reality by\nestimating its parameters using flexible calibration techniques. Specifically,\nG-Sim can leverage methods that are both likelihood-free and gradient-free with\nrespect to the simulator, such as gradient-free optimization for direct\nparameter estimation or simulation-based inference for obtaining a posterior\ndistribution over parameters. This allows it to handle non-differentiable and\nstochastic simulators. By integrating domain priors with empirical evidence,\nG-Sim produces reliable, causally-informed simulators, mitigating\ndata-inefficiency and enabling robust system-level interventions for complex\ndecision-making.",
+      "pdf_url": "http://arxiv.org/pdf/2506.09272v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.09272v1",
+      "published": "2025-06-10",
+      "categories": [
+        "cs.LG",
+        "stat.ML",
+        "68T05, 68U20, 62F15",
+        "I.2.6; I.6.5; G.3"
+      ]
+    },
+    {
+      "title": "Longitudinal weighted and trimmed treatment effects with flip interventions",
+      "authors": [
+        "Alec McClean",
+        "Alexander W. Levis",
+        "Nicholas Williams",
+        "Ivan Diaz"
+      ],
+      "abstract": "Weighting and trimming are popular methods for addressing positivity\nviolations in causal inference. While well-studied with single-timepoint data,\nstandard methods do not easily generalize to address non-baseline positivity\nviolations in longitudinal data, and remain vulnerable to such violations. In\nthis paper, we extend weighting and trimming to longitudinal data via\nstochastic ``flip'' interventions, which maintain the treatment status of\nsubjects who would have received the target treatment, and flip others'\ntreatment to the target with probability equal to their weight (e.g., overlap\nweight, trimming indicator). We first show, in single-timepoint data, that flip\ninterventions yield a large class of weighted average treatment effects,\nascribing a novel policy interpretation to these popular weighted estimands.\nWith longitudinal data, we then show that flip interventions provide\ninterpretable weighting or trimming on non-baseline covariates and, crucially,\nyield effects that are identifiable under arbitrary positivity violations.\nMoreover, we demonstrate that flip interventions are policy-relevant since they\ncould be implemented in practice. By contrast, we show that alternative\napproaches for weighting on non-baseline covariates fail to achieve this\nproperty. We derive flexible and efficient estimators based on efficient\ninfluence functions when the weight is a smooth function of the propensity\nscore. Namely, we construct multiply robust-style and sequentially doubly\nrobust-style estimators that achieve root-n consistency and asymptotic\nnormality under nonparametric conditions. Finally, we demonstrate our methods\nthrough an analysis of the effect of union membership on earnings.",
+      "pdf_url": "http://arxiv.org/pdf/2506.09188v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.09188v1",
+      "published": "2025-06-10",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Revolutionizing Clinical Trials: A Manifesto for AI-Driven Transformation",
+      "authors": [
+        "Mihaela van der Schaar",
+        "Richard Peck",
+        "Eoin McKinney",
+        "Jim Weatherall",
+        "Stuart Bailey",
+        "Justine Rochon",
+        "Chris Anagnostopoulos",
+        "Pierre Marquet",
+        "Anthony Wood",
+        "Nicky Best",
+        "Harry Amad",
+        "Julianna Piskorz",
+        "Krzysztof Kacprzyk",
+        "Rafik Salama",
+        "Christina Gunther",
+        "Francesca Frau",
+        "Antoine Pugeat",
+        "Ramon Hernandez"
+      ],
+      "abstract": "This manifesto represents a collaborative vision forged by leaders in\npharmaceuticals, consulting firms, clinical research, and AI. It outlines a\nroadmap for two AI technologies - causal inference and digital twins - to\ntransform clinical trials, delivering faster, safer, and more personalized\noutcomes for patients. By focusing on actionable integration within existing\nregulatory frameworks, we propose a way forward to revolutionize clinical\nresearch and redefine the gold standard for clinical trials using AI.",
+      "pdf_url": "http://arxiv.org/pdf/2506.09102v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.09102v1",
+      "published": "2025-06-10",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Paths to Causality: Finding Informative Subgraphs Within Knowledge Graphs for Knowledge-Based Causal Discovery",
       "authors": [
@@ -31,155 +185,6 @@
       "published": "2025-06-10",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "DEAL: Disentangling Transformer Head Activations for LLM Steering",
-      "authors": [
-        "Li-Ming Zhan",
-        "Bo Liu",
-        "Zexin Lu",
-        "Chengqiang Xie",
-        "Jiannong Cao",
-        "Xiao-Ming Wu"
-      ],
-      "abstract": "Inference-time steering aims to alter the response characteristics of large\nlanguage models (LLMs) without modifying their underlying parameters. A\ncritical step in this process is the identification of internal modules within\nLLMs that are associated with the target behavior. However, current approaches\nto module selection often depend on superficial cues or ad-hoc heuristics,\nwhich can result in suboptimal or unintended outcomes. In this work, we propose\na principled causal-attribution framework for identifying behavior-relevant\nattention heads in transformers. For each head, we train a vector-quantized\nautoencoder (VQ-AE) on its attention activations, partitioning the latent space\ninto behavior-relevant and behavior-irrelevant subspaces, each quantized with a\nshared learnable codebook. We assess the behavioral relevance of each head by\nquantifying the separability of VQ-AE encodings for behavior-aligned versus\nbehavior-violating responses using a binary classification metric. This yields\na behavioral relevance score that reflects each head discriminative capacity\nwith respect to the target behavior, guiding both selection and importance\nweighting. Experiments on seven LLMs from two model families and five\nbehavioral steering datasets demonstrate that our method enables more accurate\ninference-time interventions, achieving superior performance on the\ntruthfulness-steering task. Furthermore, the heads selected by our approach\nexhibit strong zero-shot generalization in cross-domain truthfulness-steering\nscenarios.",
-      "pdf_url": "http://arxiv.org/pdf/2506.08359v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.08359v1",
-      "published": "2025-06-10",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Operator theoretic measure of causality in linear dynamical systems",
-      "authors": [
-        "Ankit Srivastava",
-        "Louis Cattafesta",
-        "Scott Dawson"
-      ],
-      "abstract": "This paper introduces Linear Operator Causality Analysis (LOCA), a\nphysics-based framework for analyzing causality in linear dynamical systems,\nwith a focus on fluid mechanics. Unlike data-driven statistical methods like\nGranger causality, LOCA uses the matrix exponential from the system's governing\nequations to provide a more rigorous and interpretable measure of causal\ninteractions. Our framework reveals that, under certain conditions, common\ndata-driven measures effectively approximate the squared magnitude of the\nmatrix exponential. LOCA also mitigates common analysis issues, such as\nmisleading inferences from correlated variables. We validate the methodology\nusing a linearized Couette flow, demonstrating its ability to robustly identify\nboth direct and indirect causal relationships between flow structures. This\napproach offers a powerful tool for understanding modal interactions and\nperturbation propagation in complex systems.",
-      "pdf_url": "http://arxiv.org/pdf/2506.08118v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.08118v1",
-      "published": "2025-06-09",
-      "categories": [
-        "nlin.CD",
-        "math-ph",
-        "math.MP"
-      ]
-    },
-    {
-      "title": "Self Forcing: Bridging the Train-Test Gap in Autoregressive Video Diffusion",
-      "authors": [
-        "Xun Huang",
-        "Zhengqi Li",
-        "Guande He",
-        "Mingyuan Zhou",
-        "Eli Shechtman"
-      ],
-      "abstract": "We introduce Self Forcing, a novel training paradigm for autoregressive video\ndiffusion models. It addresses the longstanding issue of exposure bias, where\nmodels trained on ground-truth context must generate sequences conditioned on\ntheir own imperfect outputs during inference. Unlike prior methods that denoise\nfuture frames based on ground-truth context frames, Self Forcing conditions\neach frame's generation on previously self-generated outputs by performing\nautoregressive rollout with key-value (KV) caching during training. This\nstrategy enables supervision through a holistic loss at the video level that\ndirectly evaluates the quality of the entire generated sequence, rather than\nrelying solely on traditional frame-wise objectives. To ensure training\nefficiency, we employ a few-step diffusion model along with a stochastic\ngradient truncation strategy, effectively balancing computational cost and\nperformance. We further introduce a rolling KV cache mechanism that enables\nefficient autoregressive video extrapolation. Extensive experiments demonstrate\nthat our approach achieves real-time streaming video generation with sub-second\nlatency on a single GPU, while matching or even surpassing the generation\nquality of significantly slower and non-causal diffusion models. Project\nwebsite: http://self-forcing.github.io/",
-      "pdf_url": "http://arxiv.org/pdf/2506.08009v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.08009v1",
-      "published": "2025-06-09",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "CausalPFN: Amortized Causal Effect Estimation via In-Context Learning",
-      "authors": [
-        "Vahid Balazadeh",
-        "Hamidreza Kamkari",
-        "Valentin Thomas",
-        "Benson Li",
-        "Junwei Ma",
-        "Jesse C. Cresswell",
-        "Rahul G. Krishnan"
-      ],
-      "abstract": "Causal effect estimation from observational data is fundamental across\nvarious applications. However, selecting an appropriate estimator from dozens\nof specialized methods demands substantial manual effort and domain expertise.\nWe present CausalPFN, a single transformer that amortizes this workflow:\ntrained once on a large library of simulated data-generating processes that\nsatisfy ignorability, it infers causal effects for new observational datasets\nout-of-the-box. CausalPFN combines ideas from Bayesian causal inference with\nthe large-scale training protocol of prior-fitted networks (PFNs), learning to\nmap raw observations directly to causal effects without any task-specific\nadjustment. Our approach achieves superior average performance on heterogeneous\nand average treatment effect estimation benchmarks (IHDP, Lalonde, ACIC).\nMoreover, it shows competitive performance for real-world policy making on\nuplift modeling tasks. CausalPFN provides calibrated uncertainty estimates to\nsupport reliable decision-making based on Bayesian principles. This\nready-to-use model does not require any further training or tuning and takes a\nstep toward automated causal inference (https://github.com/vdblm/CausalPFN).",
-      "pdf_url": "http://arxiv.org/pdf/2506.07918v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.07918v1",
-      "published": "2025-06-09",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Learning to Focus: Causal Attention Distillation via Gradient-Guided Token Pruning",
-      "authors": [
-        "Yiju Guo",
-        "Wenkai Yang",
-        "Zexu Sun",
-        "Ning Ding",
-        "Zhiyuan Liu",
-        "Yankai Lin"
-      ],
-      "abstract": "Large language models (LLMs) have demonstrated significant improvements in\ncontextual understanding. However, their ability to attend to truly critical\ninformation during long-context reasoning and generation still falls behind the\npace. Specifically, our preliminary experiments reveal that certain distracting\npatterns can misdirect the model's attention during inference, and removing\nthese patterns substantially improves reasoning accuracy and generation\nquality. We attribute this phenomenon to spurious correlations in the training\ndata, which obstruct the model's capacity to infer authentic causal\ninstruction-response relationships. This phenomenon may induce redundant\nreasoning processes, potentially resulting in significant inference overhead\nand, more critically, the generation of erroneous or suboptimal responses. To\nmitigate this, we introduce a two-stage framework called Learning to Focus\n(LeaF) leveraging intervention-based inference to disentangle confounding\nfactors. In the first stage, LeaF employs gradient-based comparisons with an\nadvanced teacher to automatically identify confounding tokens based on causal\nrelationships in the training corpus. Then, in the second stage, it prunes\nthese tokens during distillation to enact intervention, aligning the student's\nattention with the teacher's focus distribution on truly critical context\ntokens. Experimental results demonstrate that LeaF not only achieves an\nabsolute improvement in various mathematical reasoning and code generation\nbenchmarks but also effectively suppresses attention to confounding tokens\nduring inference, yielding a more interpretable and reliable reasoning model.",
-      "pdf_url": "http://arxiv.org/pdf/2506.07851v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.07851v1",
-      "published": "2025-06-09",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Individual Treatment Effect: Prediction Intervals and Sharp Bounds",
-      "authors": [
-        "Zhehao Zhang",
-        "Thomas S. Richardson"
-      ],
-      "abstract": "Individual treatment effect (ITE) is often regarded as the ideal target of\ninference in causal analyses and has been the focus of several recent studies.\nIn this paper, we describe the intrinsic limits regarding what can be learned\nconcerning ITEs given data from large randomized experiments. We consider when\na valid prediction interval for the ITE is informative and when it can be\nbounded away from zero. The joint distribution over potential outcomes is only\npartially identified from a randomized trial. Consequently, to be valid, an ITE\nprediction interval must be valid for all joint distribution consistent with\nthe observed data and hence will in general be wider than that resulting from\nknowledge of this joint distribution. We characterize prediction intervals in\nthe binary treatment and outcome setting, and extend these insights to models\nwith continuous and ordinal outcomes. We derive sharp bounds on the probability\nmass function (pmf) of the individual treatment effect (ITE). Finally, we\ncontrast prediction intervals for the ITE and confidence intervals for the\naverage treatment effect (ATE). This also leads to the consideration of Fisher\nversus Neyman null hypotheses. While confidence intervals for the ATE shrink\nwith increasing sample size due to its status as a population parameter,\nprediction intervals for the ITE generally do not vanish, leading to scenarios\nwhere one may reject the Neyman null yet still find evidence consistent with\nthe Fisher null, highlighting the challenges of individualized decision-making\nunder partial identification.",
-      "pdf_url": "http://arxiv.org/pdf/2506.07469v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.07469v1",
-      "published": "2025-06-09",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "math.ST",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Investigating the Relationship Between Physical Activity and Tailored Behavior Change Messaging: Connecting Contextual Bandit with Large Language Models",
-      "authors": [
-        "Haochen Song",
-        "Dominik Hofer",
-        "Rania Islambouli",
-        "Laura Hawkins",
-        "Ananya Bhattacharjee",
-        "Meredith Franklin",
-        "Joseph Jay Williams"
-      ],
-      "abstract": "Machine learning approaches, such as contextual multi-armed bandit (cMAB)\nalgorithms, offer a promising strategy to reduce sedentary behavior by\ndelivering personalized interventions to encourage physical activity. However,\ncMAB algorithms typically require large participant samples to learn\neffectively and may overlook key psychological factors that are not explicitly\nencoded in the model. In this study, we propose a hybrid approach that combines\ncMAB for selecting intervention types with large language models (LLMs) to\npersonalize message content. We evaluate four intervention types: behavioral\nself-monitoring, gain-framed, loss-framed, and social comparison, each\ndelivered as a motivational message aimed at increasing motivation for physical\nactivity and daily step count. Message content is further personalized using\ndynamic contextual factors including daily fluctuations in self-efficacy,\nsocial influence, and regulatory focus. Over a seven-day trial, participants\nreceive daily messages assigned by one of four models: cMAB alone, LLM alone,\ncombined cMAB with LLM personalization (cMABxLLM), or equal randomization\n(RCT). Outcomes include daily step count and message acceptance, assessed via\necological momentary assessments (EMAs). We apply a causal inference framework\nto evaluate the effects of each model. Our findings offer new insights into the\ncomplementary roles of LLM-based personalization and cMAB adaptation in\npromoting physical activity through personalized behavioral messaging.",
-      "pdf_url": "http://arxiv.org/pdf/2506.07275v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.07275v1",
-      "published": "2025-06-08",
-      "categories": [
-        "cs.LG",
-        "cs.HC",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Quantile-Optimal Policy Learning under Unmeasured Confounding",
-      "authors": [
-        "Zhongren Chen",
-        "Siyu Chen",
-        "Zhengling Qi",
-        "Xiaohong Chen",
-        "Zhuoran Yang"
-      ],
-      "abstract": "We study quantile-optimal policy learning where the goal is to find a policy\nwhose reward distribution has the largest $\\alpha$-quantile for some $\\alpha\n\\in (0, 1)$. We focus on the offline setting whose generating process involves\nunobserved confounders. Such a problem suffers from three main challenges: (i)\nnonlinearity of the quantile objective as a functional of the reward\ndistribution, (ii) unobserved confounding issue, and (iii) insufficient\ncoverage of the offline dataset. To address these challenges, we propose a\nsuite of causal-assisted policy learning methods that provably enjoy strong\ntheoretical guarantees under mild conditions. In particular, to address (i) and\n(ii), using causal inference tools such as instrumental variables and negative\ncontrols, we propose to estimate the quantile objectives by solving nonlinear\nfunctional integral equations. Then we adopt a minimax estimation approach with\nnonparametric models to solve these integral equations, and propose to\nconstruct conservative policy estimates that address (iii). The final policy is\nthe one that maximizes these pessimistic estimates. In addition, we propose a\nnovel regularized policy learning method that is more amenable to computation.\nFinally, we prove that the policies learned by these methods are\n$\\tilde{\\mathscr{O}}(n^{-1/2})$ quantile-optimal under a mild coverage\nassumption on the offline dataset. Here, $\\tilde{\\mathscr{O}}(\\cdot)$ omits\npoly-logarithmic factors. To the best of our knowledge, we propose the first\nsample-efficient policy learning algorithms for estimating the quantile-optimal\npolicy when there exist unmeasured confounding.",
-      "pdf_url": "http://arxiv.org/pdf/2506.07140v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.07140v1",
-      "published": "2025-06-08",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "econ.EM"
       ]
     }
   ]
