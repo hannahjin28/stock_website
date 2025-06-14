@@ -1,6 +1,74 @@
 {
-  "last_updated": "2025-06-13T00:55:00.703854",
+  "last_updated": "2025-06-14T00:52:50.042273",
   "papers": [
+    {
+      "title": "Foundation Models for Causal Inference via Prior-Data Fitted Networks",
+      "authors": [
+        "Yuchen Ma",
+        "Dennis Frauen",
+        "Emil Javurek",
+        "Stefan Feuerriegel"
+      ],
+      "abstract": "Prior-data fitted networks (PFNs) have recently been proposed as a promising\nway to train tabular foundation models. PFNs are transformers that are\npre-trained on synthetic data generated from a prespecified prior distribution\nand that enable Bayesian inference through in-context learning. In this paper,\nwe introduce CausalFM, a comprehensive framework for training PFN-based\nfoundation models in various causal inference settings. First, we formalize the\nconstruction of Bayesian priors for causal inference based on structural causal\nmodels (SCMs) in a principled way and derive necessary criteria for the\nvalidity of such priors. Building on this, we propose a novel family of prior\ndistributions using causality-inspired Bayesian neural networks that enable\nCausalFM to perform Bayesian causal inference in various settings, including\nback-door, front-door, and instrumental variable adjustment. Finally, we\ninstantiate CausalFM and explicitly train a foundation model for estimating\nconditional average treatment effects (CATEs) using back-door adjustment. We\nshow that CausalFM performs competitively for CATE estimation using various\nsynthetic and semi-synthetic benchmarks. In sum, our framework can be used as a\ngeneral recipe to train foundation models for various causal inference\nsettings. In contrast to the current state-of-the-art in causal inference,\nCausalFM offers a novel paradigm with the potential to fundamentally change how\npractitioners perform causal inference in medicine, economics, and other\ndisciplines.",
+      "pdf_url": "http://arxiv.org/pdf/2506.10914v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.10914v1",
+      "published": "2025-06-12",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "From Images to Insights: Explainable Biodiversity Monitoring with Plain Language Habitat Explanations",
+      "authors": [
+        "Yutong Zhou",
+        "Masahiro Ryo"
+      ],
+      "abstract": "Explaining why the species lives at a particular location is important for\nunderstanding ecological systems and conserving biodiversity. However, existing\necological workflows are fragmented and often inaccessible to non-specialists.\nWe propose an end-to-end visual-to-causal framework that transforms a species\nimage into interpretable causal insights about its habitat preference. The\nsystem integrates species recognition, global occurrence retrieval,\npseudo-absence sampling, and climate data extraction. We then discover causal\nstructures among environmental features and estimate their influence on species\noccurrence using modern causal inference methods. Finally, we generate\nstatistically grounded, human-readable causal explanations from structured\ntemplates and large language models. We demonstrate the framework on a bee and\na flower species and report early results as part of an ongoing project,\nshowing the potential of the multimodal AI assistant backed up by a recommended\necological modeling practice for describing species habitat in\nhuman-understandable language.",
+      "pdf_url": "http://arxiv.org/pdf/2506.10559v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.10559v1",
+      "published": "2025-06-12",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.ET"
+      ]
+    },
+    {
+      "title": "Towards Robust Multimodal Emotion Recognition under Missing Modalities and Distribution Shifts",
+      "authors": [
+        "Guowei Zhong",
+        "Ruohong Huan",
+        "Mingzhen Wu",
+        "Ronghua Liang",
+        "Peng Chen"
+      ],
+      "abstract": "Recent advancements in Multimodal Emotion Recognition (MER) face challenges\nin addressing both modality missing and Out-Of-Distribution (OOD) data\nsimultaneously. Existing methods often rely on specific models or introduce\nexcessive parameters, which limits their practicality. To address these issues,\nwe propose a novel robust MER framework, Causal Inference Distiller (CIDer),\nand introduce a new task, Random Modality Feature Missing (RMFM), to generalize\nthe definition of modality missing. CIDer integrates two key components: a\nModel-Specific Self-Distillation (MSSD) module and a Model-Agnostic Causal\nInference (MACI) module. MSSD enhances robustness under the RMFM task through a\nweight-sharing self-distillation approach applied across low-level features,\nattention maps, and high-level representations. Additionally, a Word-level\nSelf-aligned Attention Module (WSAM) reduces computational complexity, while a\nMultimodal Composite Transformer (MCT) facilitates efficient multimodal fusion.\nTo tackle OOD challenges, MACI employs a tailored causal graph to mitigate\nlabel and language biases using a Multimodal Causal Module (MCM) and\nfine-grained counterfactual texts. Notably, MACI can independently enhance OOD\ngeneralization with minimal additional parameters. Furthermore, we also\nintroduce the new repartitioned MER OOD datasets. Experimental results\ndemonstrate that CIDer achieves robust performance in both RMFM and OOD\nscenarios, with fewer parameters and faster training compared to\nstate-of-the-art methods. The implementation of this work is publicly\naccessible at https://github.com/gw-zhong/CIDer.",
+      "pdf_url": "http://arxiv.org/pdf/2506.10452v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.10452v1",
+      "published": "2025-06-12",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.LG",
+        "cs.MM"
+      ]
+    },
+    {
+      "title": "Correlation vs causation in Alzheimer's disease: an interpretability-driven study",
+      "authors": [
+        "Hamzah Dabool",
+        "Raghad Mustafa"
+      ],
+      "abstract": "Understanding the distinction between causation and correlation is critical\nin Alzheimer's disease (AD) research, as it impacts diagnosis, treatment, and\nthe identification of true disease drivers. This experiment investigates the\nrelationships among clinical, cognitive, genetic, and biomarker features using\na combination of correlation analysis, machine learning classification, and\nmodel interpretability techniques. Employing the XGBoost algorithm, we\nidentified key features influencing AD classification, including cognitive\nscores and genetic risk factors. Correlation matrices revealed clusters of\ninterrelated variables, while SHAP (SHapley Additive exPlanations) values\nprovided detailed insights into feature contributions across disease stages.\nOur results highlight that strong correlations do not necessarily imply\ncausation, emphasizing the need for careful interpretation of associative data.\nBy integrating feature importance and interpretability with classical\nstatistical analysis, this work lays groundwork for future causal inference\nstudies aimed at uncovering true pathological mechanisms. Ultimately,\ndistinguishing causal factors from correlated markers can lead to improved\nearly diagnosis and targeted interventions for Alzheimer's disease.",
+      "pdf_url": "http://arxiv.org/pdf/2506.10179v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.10179v1",
+      "published": "2025-06-11",
+      "categories": [
+        "cs.AI",
+        "q-bio.QM",
+        "stat.AP"
+      ]
+    },
     {
       "title": "Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation",
       "authors": [
@@ -106,85 +174,6 @@
         "stat.ML",
         "68T05, 68U20, 62F15",
         "I.2.6; I.6.5; G.3"
-      ]
-    },
-    {
-      "title": "Longitudinal weighted and trimmed treatment effects with flip interventions",
-      "authors": [
-        "Alec McClean",
-        "Alexander W. Levis",
-        "Nicholas Williams",
-        "Ivan Diaz"
-      ],
-      "abstract": "Weighting and trimming are popular methods for addressing positivity\nviolations in causal inference. While well-studied with single-timepoint data,\nstandard methods do not easily generalize to address non-baseline positivity\nviolations in longitudinal data, and remain vulnerable to such violations. In\nthis paper, we extend weighting and trimming to longitudinal data via\nstochastic ``flip'' interventions, which maintain the treatment status of\nsubjects who would have received the target treatment, and flip others'\ntreatment to the target with probability equal to their weight (e.g., overlap\nweight, trimming indicator). We first show, in single-timepoint data, that flip\ninterventions yield a large class of weighted average treatment effects,\nascribing a novel policy interpretation to these popular weighted estimands.\nWith longitudinal data, we then show that flip interventions provide\ninterpretable weighting or trimming on non-baseline covariates and, crucially,\nyield effects that are identifiable under arbitrary positivity violations.\nMoreover, we demonstrate that flip interventions are policy-relevant since they\ncould be implemented in practice. By contrast, we show that alternative\napproaches for weighting on non-baseline covariates fail to achieve this\nproperty. We derive flexible and efficient estimators based on efficient\ninfluence functions when the weight is a smooth function of the propensity\nscore. Namely, we construct multiply robust-style and sequentially doubly\nrobust-style estimators that achieve root-n consistency and asymptotic\nnormality under nonparametric conditions. Finally, we demonstrate our methods\nthrough an analysis of the effect of union membership on earnings.",
-      "pdf_url": "http://arxiv.org/pdf/2506.09188v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.09188v1",
-      "published": "2025-06-10",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Revolutionizing Clinical Trials: A Manifesto for AI-Driven Transformation",
-      "authors": [
-        "Mihaela van der Schaar",
-        "Richard Peck",
-        "Eoin McKinney",
-        "Jim Weatherall",
-        "Stuart Bailey",
-        "Justine Rochon",
-        "Chris Anagnostopoulos",
-        "Pierre Marquet",
-        "Anthony Wood",
-        "Nicky Best",
-        "Harry Amad",
-        "Julianna Piskorz",
-        "Krzysztof Kacprzyk",
-        "Rafik Salama",
-        "Christina Gunther",
-        "Francesca Frau",
-        "Antoine Pugeat",
-        "Ramon Hernandez"
-      ],
-      "abstract": "This manifesto represents a collaborative vision forged by leaders in\npharmaceuticals, consulting firms, clinical research, and AI. It outlines a\nroadmap for two AI technologies - causal inference and digital twins - to\ntransform clinical trials, delivering faster, safer, and more personalized\noutcomes for patients. By focusing on actionable integration within existing\nregulatory frameworks, we propose a way forward to revolutionize clinical\nresearch and redefine the gold standard for clinical trials using AI.",
-      "pdf_url": "http://arxiv.org/pdf/2506.09102v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.09102v1",
-      "published": "2025-06-10",
-      "categories": [
-        "cs.CY",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Paths to Causality: Finding Informative Subgraphs Within Knowledge Graphs for Knowledge-Based Causal Discovery",
-      "authors": [
-        "Yuni Susanti",
-        "Michael Färber"
-      ],
-      "abstract": "Inferring causal relationships between variable pairs is crucial for\nunderstanding multivariate interactions in complex systems. Knowledge-based\ncausal discovery -- which involves inferring causal relationships by reasoning\nover the metadata of variables (e.g., names or textual context) -- offers a\ncompelling alternative to traditional methods that rely on observational data.\nHowever, existing methods using Large Language Models (LLMs) often produce\nunstable and inconsistent results, compromising their reliability for causal\ninference. To address this, we introduce a novel approach that integrates\nKnowledge Graphs (KGs) with LLMs to enhance knowledge-based causal discovery.\nOur approach identifies informative metapath-based subgraphs within KGs and\nfurther refines the selection of these subgraphs using Learning-to-Rank-based\nmodels. The top-ranked subgraphs are then incorporated into zero-shot prompts,\nimproving the effectiveness of LLMs in inferring the causal relationship.\nExtensive experiments on biomedical and open-domain datasets demonstrate that\nour method outperforms most baselines by up to 44.4 points in F1 scores,\nevaluated across diverse LLMs and KGs. Our code and datasets are available on\nGitHub: https://github.com/susantiyuni/path-to-causality",
-      "pdf_url": "http://arxiv.org/pdf/2506.08771v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.08771v1",
-      "published": "2025-06-10",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.IR",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "CC-RAG: Structured Multi-Hop Reasoning via Theme-Based Causal Graphs",
-      "authors": [
-        "Jash Rajesh Parekh",
-        "Pengcheng Jiang",
-        "Jiawei Han"
-      ],
-      "abstract": "Understanding cause and effect relationships remains a formidable challenge\nfor Large Language Models (LLMs), particularly in specialized domains where\nreasoning requires more than surface-level correlations. Retrieval-Augmented\nGeneration (RAG) improves factual accuracy, but standard RAG pipelines treat\nevidence as flat context, lacking the structure required to model true causal\ndependencies. We introduce Causal-Chain RAG (CC-RAG), a novel approach that\nintegrates zero-shot triple extraction and theme-aware graph chaining into the\nRAG pipeline, enabling structured multi-hop inference. Given a domain specific\ncorpus, CC-RAG constructs a Directed Acyclic Graph (DAG) of <cause, relation,\neffect> triples and uses forward/backward chaining to guide structured answer\ngeneration. Experiments on two real-world domains: Bitcoin price fluctuations\nand Gaucher disease, show that CC-RAG outperforms standard RAG and zero-shot\nLLMs in chain similarity, information density, and lexical diversity. Both\nLLM-as-a-Judge and human evaluations consistently favor CC-RAG. Our results\ndemonstrate that explicitly modeling causal structure enables LLMs to generate\nmore accurate and interpretable responses, especially in specialized domains\nwhere flat retrieval fails.",
-      "pdf_url": "http://arxiv.org/pdf/2506.08364v2",
-      "arxiv_url": "http://arxiv.org/abs/2506.08364v2",
-      "published": "2025-06-10",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]
