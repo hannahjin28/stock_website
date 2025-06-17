@@ -1,6 +1,73 @@
 {
-  "last_updated": "2025-06-16T00:57:12.966745",
+  "last_updated": "2025-06-17T00:55:00.463237",
   "papers": [
+    {
+      "title": "Identification and Inference of Partial Effects in Sharp Regression Kink Designs",
+      "authors": [
+        "Zhixin Wang",
+        "Zhengyu Zhang"
+      ],
+      "abstract": "The partial effect refers to the impact of a change in a target variable D on\nthe distribution of an outcome variable Y . This study examines the\nidentification and inference of a wide range of partial effects at the\nthreshold in the sharp regression kink (RK) design under general policy\ninterventions. We establish a unifying framework for conducting inference on\nthe effect of an infinitesimal change in D on smooth functionals of the\ndistribution of Y, particularly when D is endogenous and instrumental variables\nare unavailable. This framework yields a general formula that clarifies the\ncausal interpretation of numerous existing sharp RK estimands in the\nliterature.\n  We develop the relevant asymptotic theory, introduce a multiplier bootstrap\nprocedure for inference, and provide practical implementation guidelines.\nApplying our method to the effect of unemployment insurance (UI) benefits on\nunemployment duration, we find that while higher benefits lead to longer\ndurations, they also tend to reduce their dispersion. Furthermore, our results\nshow that the magnitude of the partial effect can change substantially\ndepending on the specific form of the policy intervention.",
+      "pdf_url": "http://arxiv.org/pdf/2506.11663v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.11663v1",
+      "published": "2025-06-13",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "GraphRAG-Causal: A novel graph-augmented framework for causal reasoning and annotation in news",
+      "authors": [
+        "Abdul Haque",
+        "Umm e Hani",
+        "Ahmad Din",
+        "Muhammad Babar",
+        "Ali Abbas",
+        "Insaf Ullah"
+      ],
+      "abstract": "GraphRAG-Causal introduces an innovative framework that combines graph-based\nretrieval with large language models to enhance causal reasoning in news\nanalysis. Traditional NLP approaches often struggle with identifying complex,\nimplicit causal links, especially in low-data scenarios. Our approach addresses\nthese challenges by transforming annotated news headlines into structured\ncausal knowledge graphs. It then employs a hybrid retrieval system that merges\nsemantic embeddings with graph-based structural cues leveraging Neo4j to\naccurately match and retrieve relevant events. The framework is built on a\nthree-stage pipeline: First, during Data Preparation, news sentences are\nmeticulously annotated and converted into causal graphs capturing cause,\neffect, and trigger relationships. Next, the Graph Retrieval stage stores these\ngraphs along with their embeddings in a Neo4j database and utilizes hybrid\nCypher queries to efficiently identify events that share both semantic and\nstructural similarities with a given query. Finally, the LLM Inference stage\nutilizes these retrieved causal graphs in a few-shot learning setup with\nXML-based prompting, enabling robust classification and tagging of causal\nrelationships. Experimental evaluations demonstrate that GraphRAG-Causal\nachieves an impressive F1-score of 82.1% on causal classification using just 20\nfew-shot examples. This approach significantly boosts accuracy and consistency,\nmaking it highly suitable for real-time applications in news reliability\nassessment, misinformation detection, and policy analysis.",
+      "pdf_url": "http://arxiv.org/pdf/2506.11600v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.11600v1",
+      "published": "2025-06-13",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Bayesian Sensitivity Analysis for Causal Estimation with Time-varying Unmeasured Confounding",
+      "authors": [
+        "Yushu Zou",
+        "Liangyuan Hu",
+        "Amanda Ricciuto",
+        "Mark Deneau",
+        "Kuan Liu"
+      ],
+      "abstract": "Causal inference relies on the untestable assumption of no unmeasured\nconfounding. Sensitivity analysis can be used to quantify the impact of\nunmeasured confounding on causal estimates. Among sensitivity analysis methods\nproposed in the literature for unmeasured confounding, the latent confounder\napproach is favoured for its intuitive interpretation via the use of bias\nparameters to specify the relationship between the observed and unobserved\nvariables and the sensitivity function approach directly characterizes the net\ncausal effect of the unmeasured confounding without explicitly introducing\nlatent variables to the causal models. In this paper, we developed and extended\ntwo sensitivity analysis approaches, namely the Bayesian sensitivity analysis\nwith latent confounding variables and the Bayesian sensitivity function\napproach for the estimation of time-varying treatment effects with longitudinal\nobservational data subjected to time-varying unmeasured confounding. We\ninvestigated the performance of these methods in a series of simulation studies\nand applied them to a multi-center pediatric disease registry data to provide\npractical guidance on their implementation.",
+      "pdf_url": "http://arxiv.org/pdf/2506.11322v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.11322v1",
+      "published": "2025-06-12",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Variance estimation after matching or re-weighting",
+      "authors": [
+        "Xiang Meng",
+        "Aaron Smith",
+        "Luke Miratrix"
+      ],
+      "abstract": "This paper develops a variance estimation framework for matching estimators\nthat enables valid population inference for treatment effects. We provide\ntheoretical analysis of a variance estimator that addresses key limitations in\nthe existing literature. While Abadie and Imbens (2006) proposed a foundational\nvariance estimator requiring matching for both treatment and control groups,\nthis approach is computationally prohibitive and rarely used in practice. Our\nmethod provides a computationally feasible alternative that only requires\nmatching treated units to controls while maintaining theoretical validity for\npopulation inference.\n  We make three main contributions. First, we establish consistency and\nasymptotic normality for our variance estimator, proving its validity for\naverage treatment effect on the treated (ATT) estimation in settings with small\ntreated samples. Second, we develop a generalized theoretical framework with\nnovel regularity conditions that significantly expand the class of matching\nprocedures for which valid inference is available, including radius matching,\nM-nearest neighbor matching, and propensity score matching. Third, we\ndemonstrate that our approach extends naturally to other causal inference\nestimators such as stable balancing weighting methods.\n  Through simulation studies across different data generating processes, we\nshow that our estimator maintains proper coverage rates while the\nstate-of-the-art bootstrap method can exhibit substantial undercoverage\n(dropping from 95% to as low as 61%), particularly in settings with extensive\ncontrol unit reuse. Our framework provides researchers with both theoretical\nguarantees and practical tools for conducting valid population inference across\na wide range of causal inference applications. An R package implementing our\nmethod is available at https://github.com/jche/scmatch2.",
+      "pdf_url": "http://arxiv.org/pdf/2506.11317v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.11317v1",
+      "published": "2025-06-12",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
     {
       "title": "Foundation Models for Causal Inference via Prior-Data Fitted Networks",
       "authors": [
@@ -108,72 +175,6 @@
         "math.ST",
         "stat.ME",
         "stat.TH"
-      ]
-    },
-    {
-      "title": "Benchmarking Debiasing Methods for LLM-based Parameter Estimates",
-      "authors": [
-        "Nicolas Audinet de Pieuchon",
-        "Adel Daoud",
-        "Connor T. Jerzak",
-        "Moa Johansson",
-        "Richard Johansson"
-      ],
-      "abstract": "Large language models (LLMs) offer an inexpensive yet powerful way to\nannotate text, but are often inconsistent when compared with experts. These\nerrors can bias downstream estimates of population parameters such as\nregression coefficients and causal effects. To mitigate this bias, researchers\nhave developed debiasing methods such as Design-based Supervised Learning (DSL)\nand Prediction-Powered Inference (PPI), which promise valid estimation by\ncombining LLM annotations with a limited number of expensive expert\nannotations. Although these methods produce consistent estimates under\ntheoretical assumptions, it is unknown how they compare in finite samples of\nsizes encountered in applied research. We make two contributions: First, we\nstudy how each method's performance scales with the number of expert\nannotations, highlighting regimes where LLM bias or limited expert labels\nsignificantly affect results. Second, we compare DSL and PPI across a range of\ntasks, finding that although both achieve low bias with large datasets, DSL\noften outperforms PPI on bias reduction and empirical efficiency, but its\nperformance is less consistent across datasets. Our findings indicate that\nthere is a bias-variance tradeoff at the level of debiasing methods, calling\nfor more research on developing metrics for quantifying their efficiency in\nfinite samples.",
-      "pdf_url": "http://arxiv.org/pdf/2506.09627v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.09627v1",
-      "published": "2025-06-11",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "STOAT: Spatial-Temporal Probabilistic Causal Inference Network",
-      "authors": [
-        "Yang Yang",
-        "Du Yin",
-        "Hao Xue",
-        "Flora Salim"
-      ],
-      "abstract": "Spatial-temporal causal time series (STC-TS) involve region-specific temporal\nobservations driven by causally relevant covariates and interconnected across\ngeographic or network-based spaces. Existing methods often model spatial and\ntemporal dynamics independently and overlook causality-driven probabilistic\nforecasting, limiting their predictive power. To address this, we propose STOAT\n(Spatial-Temporal Probabilistic Causal Inference Network), a novel framework\nfor probabilistic forecasting in STC-TS. The proposed method extends a causal\ninference approach by incorporating a spatial relation matrix that encodes\ninterregional dependencies (e.g. proximity or connectivity), enabling spatially\ninformed causal effect estimation. The resulting latent series are processed by\ndeep probabilistic models to estimate the parameters of the distributions,\nenabling calibrated uncertainty modeling. We further explore multiple output\ndistributions (e.g., Gaussian, Student's-$t$, Laplace) to capture\nregion-specific variability. Experiments on COVID-19 data across six countries\ndemonstrate that STOAT outperforms state-of-the-art probabilistic forecasting\nmodels (DeepAR, DeepVAR, Deep State Space Model, etc.) in key metrics,\nparticularly in regions with strong spatial dependencies. By bridging causal\ninference and geospatial probabilistic forecasting, STOAT offers a\ngeneralizable framework for complex spatial-temporal tasks, such as epidemic\nmanagement.",
-      "pdf_url": "http://arxiv.org/pdf/2506.09544v2",
-      "arxiv_url": "http://arxiv.org/abs/2506.09544v2",
-      "published": "2025-06-11",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Mitigating Spurious Correlations in LLMs via Causality-Aware Post-Training",
-      "authors": [
-        "Shurui Gui",
-        "Shuiwang Ji"
-      ],
-      "abstract": "While large language models (LLMs) have demonstrated remarkable capabilities\nin language modeling, recent studies reveal that they often fail on\nout-of-distribution (OOD) samples due to spurious correlations acquired during\npre-training. Here, we aim to mitigate such spurious correlations through\ncausality-aware post-training (CAPT). By decomposing a biased prediction into\ntwo unbiased steps, known as \\textit{event estimation} and \\textit{event\nintervention}, we reduce LLMs' pre-training biases without incurring additional\nfine-tuning biases, thus enhancing the model's generalization ability.\nExperiments on the formal causal inference benchmark CLadder and the logical\nreasoning dataset PrOntoQA show that 3B-scale language models fine-tuned with\nCAPT can outperform both traditional SFT and larger LLMs on in-distribution\n(ID) and OOD tasks using only 100 ID fine-tuning samples, demonstrating the\neffectiveness and sample efficiency of CAPT.",
-      "pdf_url": "http://arxiv.org/pdf/2506.09433v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.09433v1",
-      "published": "2025-06-11",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "G-Sim: Generative Simulations with Large Language Models and Gradient-Free Calibration",
-      "authors": [
-        "Samuel Holt",
-        "Max Ruiz Luyten",
-        "Antonin Berthon",
-        "Mihaela van der Schaar"
-      ],
-      "abstract": "Constructing robust simulators is essential for asking \"what if?\" questions\nand guiding policy in critical domains like healthcare and logistics. However,\nexisting methods often struggle, either failing to generalize beyond historical\ndata or, when using Large Language Models (LLMs), suffering from inaccuracies\nand poor empirical alignment. We introduce G-Sim, a hybrid framework that\nautomates simulator construction by synergizing LLM-driven structural design\nwith rigorous empirical calibration. G-Sim employs an LLM in an iterative loop\nto propose and refine a simulator's core components and causal relationships,\nguided by domain knowledge. This structure is then grounded in reality by\nestimating its parameters using flexible calibration techniques. Specifically,\nG-Sim can leverage methods that are both likelihood-free and gradient-free with\nrespect to the simulator, such as gradient-free optimization for direct\nparameter estimation or simulation-based inference for obtaining a posterior\ndistribution over parameters. This allows it to handle non-differentiable and\nstochastic simulators. By integrating domain priors with empirical evidence,\nG-Sim produces reliable, causally-informed simulators, mitigating\ndata-inefficiency and enabling robust system-level interventions for complex\ndecision-making.",
-      "pdf_url": "http://arxiv.org/pdf/2506.09272v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.09272v1",
-      "published": "2025-06-10",
-      "categories": [
-        "cs.LG",
-        "stat.ML",
-        "68T05, 68U20, 62F15",
-        "I.2.6; I.6.5; G.3"
       ]
     }
   ]
