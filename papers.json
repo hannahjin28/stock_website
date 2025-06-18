@@ -1,180 +1,174 @@
 {
-  "last_updated": "2025-06-17T00:55:00.463237",
+  "last_updated": "2025-06-18T00:55:10.336528",
   "papers": [
     {
-      "title": "Identification and Inference of Partial Effects in Sharp Regression Kink Designs",
+      "title": "Mixture of Weight-shared Heterogeneous Group Attention Experts for Dynamic Token-wise KV Optimization",
       "authors": [
-        "Zhixin Wang",
-        "Zhengyu Zhang"
+        "Guanghui Song",
+        "Dongping Liao",
+        "Yiren Zhao",
+        "Kejiang Ye",
+        "Cheng-zhong Xu",
+        "Xitong Gao"
       ],
-      "abstract": "The partial effect refers to the impact of a change in a target variable D on\nthe distribution of an outcome variable Y . This study examines the\nidentification and inference of a wide range of partial effects at the\nthreshold in the sharp regression kink (RK) design under general policy\ninterventions. We establish a unifying framework for conducting inference on\nthe effect of an infinitesimal change in D on smooth functionals of the\ndistribution of Y, particularly when D is endogenous and instrumental variables\nare unavailable. This framework yields a general formula that clarifies the\ncausal interpretation of numerous existing sharp RK estimands in the\nliterature.\n  We develop the relevant asymptotic theory, introduce a multiplier bootstrap\nprocedure for inference, and provide practical implementation guidelines.\nApplying our method to the effect of unemployment insurance (UI) benefits on\nunemployment duration, we find that while higher benefits lead to longer\ndurations, they also tend to reduce their dispersion. Furthermore, our results\nshow that the magnitude of the partial effect can change substantially\ndepending on the specific form of the policy intervention.",
-      "pdf_url": "http://arxiv.org/pdf/2506.11663v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.11663v1",
-      "published": "2025-06-13",
+      "abstract": "Transformer models face scalability challenges in causal language modeling\n(CLM) due to inefficient memory allocation for growing key-value (KV) caches,\nwhich strains compute and storage resources. Existing methods like Grouped\nQuery Attention (GQA) and token-level KV optimization improve efficiency but\nrely on rigid resource allocation, often discarding \"low-priority\" tokens or\nstatically grouping them, failing to address the dynamic spectrum of token\nimportance. We propose mixSGA, a novel mixture-of-expert (MoE) approach that\ndynamically optimizes token-wise computation and memory allocation. Unlike\nprior approaches, mixSGA retains all tokens while adaptively routing them to\nspecialized experts with varying KV group sizes, balancing granularity and\nefficiency. Our key novelties include: (1) a token-wise expert-choice routing\nmechanism guided by learned importance scores, enabling proportional resource\nallocation without token discard; (2) weight-sharing across grouped attention\nprojections to minimize parameter overhead; and (3) an auxiliary loss to ensure\none-hot routing decisions for training-inference consistency in CLMs. Extensive\nevaluations across Llama3, TinyLlama, OPT, and Gemma2 model families show\nmixSGA's superiority over static baselines. On instruction-following and\ncontinued pretraining tasks, mixSGA achieves higher ROUGE-L and lower\nperplexity under the same KV budgets.",
+      "pdf_url": "http://arxiv.org/pdf/2506.13541v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.13541v1",
+      "published": "2025-06-16",
       "categories": [
-        "econ.EM"
+        "cs.CL",
+        "cs.LG"
       ]
     },
     {
-      "title": "GraphRAG-Causal: A novel graph-augmented framework for causal reasoning and annotation in news",
+      "title": "Chaos, coherence and turbulence",
       "authors": [
-        "Abdul Haque",
-        "Umm e Hani",
-        "Ahmad Din",
-        "Muhammad Babar",
-        "Ali Abbas",
-        "Insaf Ullah"
+        "Javier Jimenez"
       ],
-      "abstract": "GraphRAG-Causal introduces an innovative framework that combines graph-based\nretrieval with large language models to enhance causal reasoning in news\nanalysis. Traditional NLP approaches often struggle with identifying complex,\nimplicit causal links, especially in low-data scenarios. Our approach addresses\nthese challenges by transforming annotated news headlines into structured\ncausal knowledge graphs. It then employs a hybrid retrieval system that merges\nsemantic embeddings with graph-based structural cues leveraging Neo4j to\naccurately match and retrieve relevant events. The framework is built on a\nthree-stage pipeline: First, during Data Preparation, news sentences are\nmeticulously annotated and converted into causal graphs capturing cause,\neffect, and trigger relationships. Next, the Graph Retrieval stage stores these\ngraphs along with their embeddings in a Neo4j database and utilizes hybrid\nCypher queries to efficiently identify events that share both semantic and\nstructural similarities with a given query. Finally, the LLM Inference stage\nutilizes these retrieved causal graphs in a few-shot learning setup with\nXML-based prompting, enabling robust classification and tagging of causal\nrelationships. Experimental evaluations demonstrate that GraphRAG-Causal\nachieves an impressive F1-score of 82.1% on causal classification using just 20\nfew-shot examples. This approach significantly boosts accuracy and consistency,\nmaking it highly suitable for real-time applications in news reliability\nassessment, misinformation detection, and policy analysis.",
-      "pdf_url": "http://arxiv.org/pdf/2506.11600v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.11600v1",
-      "published": "2025-06-13",
+      "abstract": "This paper is a personal overview of the efforts over the last half century\nto understand fluid turbulence in terms of simpler coherent units. The\nconsequences of chaos and the concept of coherence are first reviewed, using\nexamples from free-shear and wall-bounded shear flows, and including how the\nsimplifications due to coherent structures have been useful in the\nconceptualization and control of turbulence. It is remarked that, even if this\napproach has revolutionized our understanding of the flow, most of turbulence\ncannot yet be described by structures. This includes cascades, both direct and\ninverse, and possibly junk turbulence, whose role, if any, is currently\nunknown. This part of the paper is mostly a catalog of questions, some of them\nanswered and others still open. A second part of the paper examines which new\ntechniques can be expected to help in attacking the open questions, and which,\nin the opinion of the author, are the strengths and limitations of current\napproaches, such as data-driven science and causal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2506.13417v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.13417v1",
+      "published": "2025-06-16",
       "categories": [
-        "cs.IR",
-        "cs.AI"
+        "physics.flu-dyn"
       ]
     },
     {
-      "title": "Bayesian Sensitivity Analysis for Causal Estimation with Time-varying Unmeasured Confounding",
+      "title": "Fortified Proximal Causal Inference with Many Invalid Proxies",
       "authors": [
-        "Yushu Zou",
-        "Liangyuan Hu",
-        "Amanda Ricciuto",
-        "Mark Deneau",
-        "Kuan Liu"
+        "Myeonghun Yu",
+        "Xu Shi",
+        "Eric J. Tchetgen Tchetgen"
       ],
-      "abstract": "Causal inference relies on the untestable assumption of no unmeasured\nconfounding. Sensitivity analysis can be used to quantify the impact of\nunmeasured confounding on causal estimates. Among sensitivity analysis methods\nproposed in the literature for unmeasured confounding, the latent confounder\napproach is favoured for its intuitive interpretation via the use of bias\nparameters to specify the relationship between the observed and unobserved\nvariables and the sensitivity function approach directly characterizes the net\ncausal effect of the unmeasured confounding without explicitly introducing\nlatent variables to the causal models. In this paper, we developed and extended\ntwo sensitivity analysis approaches, namely the Bayesian sensitivity analysis\nwith latent confounding variables and the Bayesian sensitivity function\napproach for the estimation of time-varying treatment effects with longitudinal\nobservational data subjected to time-varying unmeasured confounding. We\ninvestigated the performance of these methods in a series of simulation studies\nand applied them to a multi-center pediatric disease registry data to provide\npractical guidance on their implementation.",
-      "pdf_url": "http://arxiv.org/pdf/2506.11322v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.11322v1",
-      "published": "2025-06-12",
+      "abstract": "Causal inference from observational data often relies on the assumption of no\nunmeasured confounding, an assumption frequently violated in practice due to\nunobserved or poorly measured covariates. Proximal causal inference (PCI)\noffers a promising framework for addressing unmeasured confounding using a pair\nof outcome and treatment confounding proxies. However, existing PCI methods\ntypically assume all specified proxies are valid, which may be unrealistic and\nis untestable without extra assumptions. In this paper, we develop a\nsemiparametric approach for a many-proxy PCI setting that accommodates\npotentially invalid treatment confounding proxies. We introduce a new class of\nfortified confounding bridge functions and establish nonparametric\nidentification of the population average treatment effect (ATE) under the\nassumption that at least $\\gamma$ out of $K$ candidate treatment confounding\nproxies are valid, for any $\\gamma \\leq K$ set by the analyst without requiring\nknowledge of which proxies are valid. We establish a local semiparametric\nefficiency bound and develop a class of multiply robust, locally efficient\nestimators for the ATE. These estimators are thus simultaneously robust to\ninvalid treatment confounding proxies and model misspecification of nuisance\nparameters. The proposed methods are evaluated through simulation and applied\nto assess the effect of right heart catheterization in critically ill patients.",
+      "pdf_url": "http://arxiv.org/pdf/2506.13152v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.13152v1",
+      "published": "2025-06-16",
       "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "Variance estimation after matching or re-weighting",
+      "title": "Honesty in Causal Forests: When It Helps and When It Hurts",
       "authors": [
-        "Xiang Meng",
-        "Aaron Smith",
-        "Luke Miratrix"
+        "Yanfang Hou",
+        "Carlos Fernández-Loría"
       ],
-      "abstract": "This paper develops a variance estimation framework for matching estimators\nthat enables valid population inference for treatment effects. We provide\ntheoretical analysis of a variance estimator that addresses key limitations in\nthe existing literature. While Abadie and Imbens (2006) proposed a foundational\nvariance estimator requiring matching for both treatment and control groups,\nthis approach is computationally prohibitive and rarely used in practice. Our\nmethod provides a computationally feasible alternative that only requires\nmatching treated units to controls while maintaining theoretical validity for\npopulation inference.\n  We make three main contributions. First, we establish consistency and\nasymptotic normality for our variance estimator, proving its validity for\naverage treatment effect on the treated (ATT) estimation in settings with small\ntreated samples. Second, we develop a generalized theoretical framework with\nnovel regularity conditions that significantly expand the class of matching\nprocedures for which valid inference is available, including radius matching,\nM-nearest neighbor matching, and propensity score matching. Third, we\ndemonstrate that our approach extends naturally to other causal inference\nestimators such as stable balancing weighting methods.\n  Through simulation studies across different data generating processes, we\nshow that our estimator maintains proper coverage rates while the\nstate-of-the-art bootstrap method can exhibit substantial undercoverage\n(dropping from 95% to as low as 61%), particularly in settings with extensive\ncontrol unit reuse. Our framework provides researchers with both theoretical\nguarantees and practical tools for conducting valid population inference across\na wide range of causal inference applications. An R package implementing our\nmethod is available at https://github.com/jche/scmatch2.",
-      "pdf_url": "http://arxiv.org/pdf/2506.11317v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.11317v1",
-      "published": "2025-06-12",
+      "abstract": "Causal forests are increasingly used to personalize decisions based on\nestimated treatment effects. A distinctive modeling choice in this method is\nhonest estimation: using separate data for splitting and for estimating effects\nwithin leaves. This practice is the default in most implementations and is\nwidely seen as desirable for causal inference. But we show that honesty can\nhurt the accuracy of individual-level effect estimates. The reason is a classic\nbias-variance trade-off: honesty reduces variance by preventing overfitting,\nbut increases bias by limiting the model's ability to discover and exploit\nmeaningful heterogeneity in treatment effects. This trade-off depends on the\nsignal-to-noise ratio (SNR): honesty helps when effect heterogeneity is hard to\ndetect (low SNR), but hurts when the signal is strong (high SNR). In essence,\nhonesty acts as a form of regularization, and like any regularization choice,\nit should be guided by out-of-sample performance, not adopted by default.",
+      "pdf_url": "http://arxiv.org/pdf/2506.13107v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.13107v1",
+      "published": "2025-06-16",
       "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Foundation Models for Causal Inference via Prior-Data Fitted Networks",
-      "authors": [
-        "Yuchen Ma",
-        "Dennis Frauen",
-        "Emil Javurek",
-        "Stefan Feuerriegel"
-      ],
-      "abstract": "Prior-data fitted networks (PFNs) have recently been proposed as a promising\nway to train tabular foundation models. PFNs are transformers that are\npre-trained on synthetic data generated from a prespecified prior distribution\nand that enable Bayesian inference through in-context learning. In this paper,\nwe introduce CausalFM, a comprehensive framework for training PFN-based\nfoundation models in various causal inference settings. First, we formalize the\nconstruction of Bayesian priors for causal inference based on structural causal\nmodels (SCMs) in a principled way and derive necessary criteria for the\nvalidity of such priors. Building on this, we propose a novel family of prior\ndistributions using causality-inspired Bayesian neural networks that enable\nCausalFM to perform Bayesian causal inference in various settings, including\nback-door, front-door, and instrumental variable adjustment. Finally, we\ninstantiate CausalFM and explicitly train a foundation model for estimating\nconditional average treatment effects (CATEs) using back-door adjustment. We\nshow that CausalFM performs competitively for CATE estimation using various\nsynthetic and semi-synthetic benchmarks. In sum, our framework can be used as a\ngeneral recipe to train foundation models for various causal inference\nsettings. In contrast to the current state-of-the-art in causal inference,\nCausalFM offers a novel paradigm with the potential to fundamentally change how\npractitioners perform causal inference in medicine, economics, and other\ndisciplines.",
-      "pdf_url": "http://arxiv.org/pdf/2506.10914v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.10914v1",
-      "published": "2025-06-12",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "From Images to Insights: Explainable Biodiversity Monitoring with Plain Language Habitat Explanations",
-      "authors": [
-        "Yutong Zhou",
-        "Masahiro Ryo"
-      ],
-      "abstract": "Explaining why the species lives at a particular location is important for\nunderstanding ecological systems and conserving biodiversity. However, existing\necological workflows are fragmented and often inaccessible to non-specialists.\nWe propose an end-to-end visual-to-causal framework that transforms a species\nimage into interpretable causal insights about its habitat preference. The\nsystem integrates species recognition, global occurrence retrieval,\npseudo-absence sampling, and climate data extraction. We then discover causal\nstructures among environmental features and estimate their influence on species\noccurrence using modern causal inference methods. Finally, we generate\nstatistically grounded, human-readable causal explanations from structured\ntemplates and large language models. We demonstrate the framework on a bee and\na flower species and report early results as part of an ongoing project,\nshowing the potential of the multimodal AI assistant backed up by a recommended\necological modeling practice for describing species habitat in\nhuman-understandable language.",
-      "pdf_url": "http://arxiv.org/pdf/2506.10559v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.10559v1",
-      "published": "2025-06-12",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.ET"
-      ]
-    },
-    {
-      "title": "Towards Robust Multimodal Emotion Recognition under Missing Modalities and Distribution Shifts",
-      "authors": [
-        "Guowei Zhong",
-        "Ruohong Huan",
-        "Mingzhen Wu",
-        "Ronghua Liang",
-        "Peng Chen"
-      ],
-      "abstract": "Recent advancements in Multimodal Emotion Recognition (MER) face challenges\nin addressing both modality missing and Out-Of-Distribution (OOD) data\nsimultaneously. Existing methods often rely on specific models or introduce\nexcessive parameters, which limits their practicality. To address these issues,\nwe propose a novel robust MER framework, Causal Inference Distiller (CIDer),\nand introduce a new task, Random Modality Feature Missing (RMFM), to generalize\nthe definition of modality missing. CIDer integrates two key components: a\nModel-Specific Self-Distillation (MSSD) module and a Model-Agnostic Causal\nInference (MACI) module. MSSD enhances robustness under the RMFM task through a\nweight-sharing self-distillation approach applied across low-level features,\nattention maps, and high-level representations. Additionally, a Word-level\nSelf-aligned Attention Module (WSAM) reduces computational complexity, while a\nMultimodal Composite Transformer (MCT) facilitates efficient multimodal fusion.\nTo tackle OOD challenges, MACI employs a tailored causal graph to mitigate\nlabel and language biases using a Multimodal Causal Module (MCM) and\nfine-grained counterfactual texts. Notably, MACI can independently enhance OOD\ngeneralization with minimal additional parameters. Furthermore, we also\nintroduce the new repartitioned MER OOD datasets. Experimental results\ndemonstrate that CIDer achieves robust performance in both RMFM and OOD\nscenarios, with fewer parameters and faster training compared to\nstate-of-the-art methods. The implementation of this work is publicly\naccessible at https://github.com/gw-zhong/CIDer.",
-      "pdf_url": "http://arxiv.org/pdf/2506.10452v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.10452v1",
-      "published": "2025-06-12",
-      "categories": [
-        "cs.CV",
-        "cs.CL",
         "cs.LG",
-        "cs.MM"
+        "stat.ML"
       ]
     },
     {
-      "title": "Correlation vs causation in Alzheimer's disease: an interpretability-driven study",
+      "title": "Discussion of \"Causal and counterfactual views of missing data models\" by Razieh Nabi, Rohit Bhattacharya, Ilya Shpitser, & James M. Robins",
       "authors": [
-        "Hamzah Dabool",
-        "Raghad Mustafa"
+        "Alex W. Levis",
+        "Edward H. Kennedy"
       ],
-      "abstract": "Understanding the distinction between causation and correlation is critical\nin Alzheimer's disease (AD) research, as it impacts diagnosis, treatment, and\nthe identification of true disease drivers. This experiment investigates the\nrelationships among clinical, cognitive, genetic, and biomarker features using\na combination of correlation analysis, machine learning classification, and\nmodel interpretability techniques. Employing the XGBoost algorithm, we\nidentified key features influencing AD classification, including cognitive\nscores and genetic risk factors. Correlation matrices revealed clusters of\ninterrelated variables, while SHAP (SHapley Additive exPlanations) values\nprovided detailed insights into feature contributions across disease stages.\nOur results highlight that strong correlations do not necessarily imply\ncausation, emphasizing the need for careful interpretation of associative data.\nBy integrating feature importance and interpretability with classical\nstatistical analysis, this work lays groundwork for future causal inference\nstudies aimed at uncovering true pathological mechanisms. Ultimately,\ndistinguishing causal factors from correlated markers can lead to improved\nearly diagnosis and targeted interventions for Alzheimer's disease.",
-      "pdf_url": "http://arxiv.org/pdf/2506.10179v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.10179v1",
-      "published": "2025-06-11",
+      "abstract": "We congratulate Nabi et al. (2022) on their impressive and insightful paper,\nwhich illustrates the benefits of using causal/counterfactual perspectives and\ntools in missing data problems. This paper represents an important approach to\nmissing-not-at-random (MNAR) problems, exploiting nonparametric independence\nrestrictions for identification, as opposed to parametric/semiparametric\nmodels, or resorting to sensitivity analysis. Crucially, the authors represent\nthese restrictions with missing data directed acyclic graphs (m-DAGs), which\ncan be useful to determine identification in complex and interesting MNAR\nmodels. In this discussion we consider: (i) how/whether other tools from causal\ninference could be useful in missing data problems, (ii) problems that combine\nboth missing data and causal inference together, and (iii) some work on\nestimation in one of the authors' example MNAR models.",
+      "pdf_url": "http://arxiv.org/pdf/2506.13025v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.13025v1",
+      "published": "2025-06-16",
       "categories": [
-        "cs.AI",
-        "q-bio.QM",
-        "stat.AP"
+        "stat.ME"
       ]
     },
     {
-      "title": "Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation",
+      "title": "Finite sample-optimal adjustment sets in linear Gaussian causal models",
       "authors": [
-        "Xinyu Yang",
-        "Yuwei An",
-        "Hongyi Liu",
-        "Tianqi Chen",
-        "Beidi Chen"
+        "Nadja Rutsch",
+        "Sara Magliacane",
+        "Stéphanie van der Pas"
       ],
-      "abstract": "Autoregressive Large Language Models (AR-LLMs) frequently exhibit implicit\nparallelism in sequential generation. Inspired by this, we introduce\nMultiverse, a new generative model that enables natively parallel generation.\nMultiverse internalizes a MapReduce paradigm, generating automatically through\nthree stages: (i) a Map stage for adaptive task decomposition, (ii) a Process\nstage for parallel subtask execution, and (iii) a Reduce stage for lossless\nresult synthesis. Next, we build a real-world Multiverse reasoning model with\nco-design of data, algorithm, and system, enabling rapid and seamless transfer\nfrom frontier AR-LLMs. For data creation, we develop Multiverse Curator, an\nautomated LLM-assisted pipeline that transforms sequential reasoning chains\ninto structured training data, avoiding costly human annotations.\nAlgorithmically, we design Multiverse Attention to separate parallel reasoning\nsteps while keeping compatibility with causal attention for efficient training.\nSystematically, we implement Multiverse Engine to support parallel inference.\nIt features a dedicated interpreter that dynamically switches between\nsequential and parallel generation, triggered directly by the model. After a\n3-hour fine-tuning with 1K examples, our Multiverse-32B stands as the only\nopen-sourced non-AR model achieving performance on par with leading AR-LLMs of\nthe same scale, evidenced by AIME24 & 25 scores of 54% and 46%, respectively.\nMoreover, our budget control experiments show that Multiverse-32B exhibits\nsuperior scaling, outperforming AR-LLMs by 1.87% on average using the same\ncontext length. Such scaling further leads to practical efficiency gains,\nachieving up to 2x speedup across varying batch sizes. We have open-sourced the\nentire Multiverse ecosystem, including data, model weights, engine, as well as\ncomplete data curation prompts and detailed training and evaluation recipes.",
-      "pdf_url": "http://arxiv.org/pdf/2506.09991v2",
-      "arxiv_url": "http://arxiv.org/abs/2506.09991v2",
-      "published": "2025-06-11",
+      "abstract": "Traditional covariate selection methods for causal inference focus on\nachieving unbiasedness and asymptotic efficiency. In many practical scenarios,\nresearchers must estimate causal effects from observational data with limited\nsample sizes or in cases where covariates are difficult or costly to measure.\nTheir needs might be better met by selecting adjustment sets that are finite\nsample-optimal in terms of mean squared error. In this paper, we aim to find\nthe adjustment set that minimizes the mean squared error of the causal effect\nestimator, taking into account the joint distribution of the variables and the\nsample size. We call this finite sample-optimal set the MSE-optimal adjustment\nset and present examples in which the MSE-optimal adjustment set differs from\nthe asymptotically optimal adjustment set. To identify the MSE-optimal\nadjustment set, we then introduce a sample size criterion for comparing\nadjustment sets in linear Gaussian models. We also develop graphical criteria\nto reduce the search space for this adjustment set based on the causal graph.\nIn experiments with simulated data, we show that the MSE-optimal adjustment set\ncan outperform the asymptotically optimal adjustment set in finite sample size\nsettings, making causal inference more practical in such scenarios.",
+      "pdf_url": "http://arxiv.org/pdf/2506.12869v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.12869v1",
+      "published": "2025-06-15",
       "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Sufficiency and Necessity Improves Chain-of-Thought Reasoning",
-      "authors": [
-        "Xiangning Yu",
-        "Zhuohan Wang",
-        "Linyi Yang",
-        "Haoxuan Li",
-        "Anjie Liu",
-        "Xiao Xue",
-        "Jun Wang",
-        "Mengyue Yang"
-      ],
-      "abstract": "Chain-of-Thought (CoT) prompting plays an indispensable role in endowing\nlarge language models (LLMs) with complex reasoning capabilities. However, CoT\ncurrently faces two fundamental challenges: (1) Sufficiency, which ensures that\nthe generated intermediate inference steps comprehensively cover and\nsubstantiate the final conclusion; and (2) Necessity, which identifies the\ninference steps that are truly indispensable for the soundness of the resulting\nanswer. We propose a causal framework that characterizes CoT reasoning through\nthe dual lenses of sufficiency and necessity. Incorporating causal Probability\nof Sufficiency and Necessity allows us not only to determine which steps are\nlogically sufficient or necessary to the prediction outcome, but also to\nquantify their actual influence on the final reasoning outcome under different\nintervention scenarios, thereby enabling the automated addition of missing\nsteps and the pruning of redundant ones. Extensive experimental results on\nvarious mathematical and commonsense reasoning benchmarks confirm substantial\nimprovements in reasoning efficiency and reduced token usage without\nsacrificing accuracy. Our work provides a promising direction for improving LLM\nreasoning performance and cost-effectiveness.",
-      "pdf_url": "http://arxiv.org/pdf/2506.09853v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.09853v1",
-      "published": "2025-06-11",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
         "math.ST",
         "stat.ME",
         "stat.TH"
+      ]
+    },
+    {
+      "title": "Leveraging MIMIC Datasets for Better Digital Health: A Review on Open Problems, Progress Highlights, and Future Promises",
+      "authors": [
+        "Afifa Khaled",
+        "Mohammed Sabir",
+        "Rizwan Qureshi",
+        "Camillo Maria Caruso",
+        "Valerio Guarrasi",
+        "Suncheng Xiang",
+        "S Kevin Zhou"
+      ],
+      "abstract": "The Medical Information Mart for Intensive Care (MIMIC) datasets have become\nthe Kernel of Digital Health Research by providing freely accessible,\ndeidentified records from tens of thousands of critical care admissions,\nenabling a broad spectrum of applications in clinical decision support, outcome\nprediction, and healthcare analytics. Although numerous studies and surveys\nhave explored the predictive power and clinical utility of MIMIC based models,\ncritical challenges in data integration, representation, and interoperability\nremain underexplored. This paper presents a comprehensive survey that focuses\nuniquely on open problems. We identify persistent issues such as data\ngranularity, cardinality limitations, heterogeneous coding schemes, and ethical\nconstraints that hinder the generalizability and real-time implementation of\nmachine learning models. We highlight key progress in dimensionality reduction,\ntemporal modelling, causal inference, and privacy preserving analytics, while\nalso outlining promising directions including hybrid modelling, federated\nlearning, and standardized preprocessing pipelines. By critically examining\nthese structural limitations and their implications, this survey offers\nactionable insights to guide the next generation of MIMIC powered digital\nhealth innovations.",
+      "pdf_url": "http://arxiv.org/pdf/2506.12808v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.12808v1",
+      "published": "2025-06-15",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "A Residual Prediction Test for the Well-Specification of Linear Instrumental Variable Models",
+      "authors": [
+        "Cyrill Scheidegger",
+        "Malte Londschien",
+        "Peter Bühlmann"
+      ],
+      "abstract": "The linear instrumental variable (IV) model is widely applied in\nobservational studies. The corresponding assumptions are critical for valid\ncausal inference, and hence, it is important to have tools to assess the\nmodel's well-specification. The classical Sargan-Hansen J-test is limited to\nthe overidentified setting, where the number of instruments is larger than the\nnumber of endogenous variables. Here, we propose a novel and simple test for\nthe well-specification of the linear IV model under the assumption that the\nstructural error is mean independent of the instruments. Importantly, assuming\nmean independence allows the construction of such a test even in the\njust-identified setting. We use the idea of residual prediction tests: if the\nresiduals from two-stage least squares can be predicted from the instruments\nbetter than randomly, this signals misspecification. We construct a test\nstatistic based on sample splitting and a user-chosen machine learning method.\nWe show asymptotic type I error control. Furthermore, by relying on machine\nlearning tools, our test has good power for detecting alternatives from a broad\nclass of scenarios. We also address heteroskedasticity- and cluster-robust\ninference. The test is implemented in the R package RPIV and in the ivmodels\nsoftware package for Python.",
+      "pdf_url": "http://arxiv.org/pdf/2506.12771v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.12771v1",
+      "published": "2025-06-15",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Interpretable Causal Representation Learning for Biological Data in the Pathway Space",
+      "authors": [
+        "Jesus de la Fuente",
+        "Robert Lehmann",
+        "Carlos Ruiz-Arenas",
+        "Jan Voges",
+        "Irene Marin-Goñi",
+        "Xabier Martinez-de-Morentin",
+        "David Gomez-Cabrero",
+        "Idoia Ochoa",
+        "Jesper Tegner",
+        "Vincenzo Lagani",
+        "Mikel Hernaez"
+      ],
+      "abstract": "Predicting the impact of genomic and drug perturbations in cellular function\nis crucial for understanding gene functions and drug effects, ultimately\nleading to improved therapies. To this end, Causal Representation Learning\n(CRL) constitutes one of the most promising approaches, as it aims to identify\nthe latent factors that causally govern biological systems, thus facilitating\nthe prediction of the effect of unseen perturbations. Yet, current CRL methods\nfail in reconciling their principled latent representations with known\nbiological processes, leading to models that are not interpretable. To address\nthis major issue, we present SENA-discrepancy-VAE, a model based on the\nrecently proposed CRL method discrepancy-VAE, that produces representations\nwhere each latent factor can be interpreted as the (linear) combination of the\nactivity of a (learned) set of biological processes. To this extent, we present\nan encoder, SENA-{\\delta}, that efficiently compute and map biological\nprocesses' activity levels to the latent causal factors. We show that\nSENA-discrepancy-VAE achieves predictive performances on unseen combinations of\ninterventions that are comparable with its original, non-interpretable\ncounterpart, while inferring causal latent factors that are biologically\nmeaningful.",
+      "pdf_url": "http://arxiv.org/pdf/2506.12439v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.12439v1",
+      "published": "2025-06-14",
+      "categories": [
+        "cs.LG",
+        "q-bio.QM",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Path-specific effects for pulse-oximetry guided decisions in critical care",
+      "authors": [
+        "Kevin Zhang",
+        "Yonghan Jung",
+        "Divyat Mahajan",
+        "Karthikeyan Shanmugam",
+        "Shalmali Joshi"
+      ],
+      "abstract": "Identifying and measuring biases associated with sensitive attributes is a\ncrucial consideration in healthcare to prevent treatment disparities. One\nprominent issue is inaccurate pulse oximeter readings, which tend to\noverestimate oxygen saturation for dark-skinned patients and misrepresent\nsupplemental oxygen needs. Most existing research has revealed statistical\ndisparities linking device errors to patient outcomes in intensive care units\n(ICUs) without causal formalization. In contrast, this study causally\ninvestigates how racial discrepancies in oximetry measurements affect invasive\nventilation in ICU settings. We employ a causal inference-based approach using\npath-specific effects to isolate the impact of bias by race on clinical\ndecision-making. To estimate these effects, we leverage a doubly robust\nestimator, propose its self-normalized variant for improved sample efficiency,\nand provide novel finite-sample guarantees. Our methodology is validated on\nsemi-synthetic data and applied to two large real-world health datasets:\nMIMIC-IV and eICU. Contrary to prior work, our analysis reveals minimal impact\nof racial discrepancies on invasive ventilation rates. However, path-specific\neffects mediated by oxygen saturation disparity are more pronounced on\nventilation duration, and the severity differs by dataset. Our work provides a\nnovel and practical pipeline for investigating potential disparities in the ICU\nand, more crucially, highlights the necessity of causal methods to robustly\nassess fairness in decision-making.",
+      "pdf_url": "http://arxiv.org/pdf/2506.12371v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.12371v1",
+      "published": "2025-06-14",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
       ]
     }
   ]
