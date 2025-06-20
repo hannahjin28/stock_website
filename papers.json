@@ -1,6 +1,102 @@
 {
-  "last_updated": "2025-06-18T00:55:10.336528",
+  "last_updated": "2025-06-20T00:55:00.066837",
   "papers": [
+    {
+      "title": "Causal inference amid missingness-specific independencies and mechanism shifts",
+      "authors": [
+        "Johan de Aguas",
+        "Leonard Henckel",
+        "Johan Pensar",
+        "Guido Biele"
+      ],
+      "abstract": "The recovery of causal effects in structural models with missing data often\nrelies on $m$-graphs, which assume that missingness mechanisms do not directly\ninfluence substantive variables. Yet, in many real-world settings, missing data\ncan alter decision-making processes, as the absence of key information may\naffect downstream actions and states. To overcome this limitation, we introduce\n$lm$-SCMs and $lm$-graphs, which extend $m$-graphs by integrating a label set\nthat represents relevant context-specific independencies (CSI), accounting for\nmechanism shifts induced by missingness. We define two causal effects within\nthese systems: the Full Average Treatment Effect (FATE), which reflects the\neffect in a hypothetical scenario had no data been missing, and the Natural\nAverage Treatment Effect (NATE), which captures the effect under the unaltered\nCSIs in the system. We propose recovery criteria for these queries and present\ndoubly-robust estimators for a graphical model inspired by a real-world\napplication. Simulations highlight key differences between these estimands and\nestimation methods. Findings from the application case suggest a small effect\nof ADHD treatment upon test achievement among Norwegian children, with a slight\neffect shift due to missing pre-tests scores.",
+      "pdf_url": "http://arxiv.org/pdf/2506.15441v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.15441v1",
+      "published": "2025-06-18",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.TH",
+        "62D20, 62H22"
+      ]
+    },
+    {
+      "title": "Double Machine Learning for Conditional Moment Restrictions: IV regression, Proximal Causal Learning and Beyond",
+      "authors": [
+        "Daqian Shao",
+        "Ashkan Soleymani",
+        "Francesco Quinzan",
+        "Marta Kwiatkowska"
+      ],
+      "abstract": "Solving conditional moment restrictions (CMRs) is a key problem considered in\nstatistics, causal inference, and econometrics, where the aim is to solve for a\nfunction of interest that satisfies some conditional moment equalities.\nSpecifically, many techniques for causal inference, such as instrumental\nvariable (IV) regression and proximal causal learning (PCL), are CMR problems.\nMost CMR estimators use a two-stage approach, where the first-stage estimation\nis directly plugged into the second stage to estimate the function of interest.\nHowever, naively plugging in the first-stage estimator can cause heavy bias in\nthe second stage. This is particularly the case for recently proposed CMR\nestimators that use deep neural network (DNN) estimators for both stages, where\nregularisation and overfitting bias is present. We propose DML-CMR, a two-stage\nCMR estimator that provides an unbiased estimate with fast convergence rate\nguarantees. We derive a novel learning objective to reduce bias and develop the\nDML-CMR algorithm following the double/debiased machine learning (DML)\nframework. We show that our DML-CMR estimator can achieve the minimax optimal\nconvergence rate of $O(N^{-1/2})$ under parameterisation and mild regularity\nconditions, where $N$ is the sample size. We apply DML-CMR to a range of\nproblems using DNN estimators, including IV regression and proximal causal\nlearning on real-world datasets, demonstrating state-of-the-art performance\nagainst existing CMR estimators and algorithms tailored to those problems.",
+      "pdf_url": "http://arxiv.org/pdf/2506.14950v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.14950v1",
+      "published": "2025-06-17",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "CDP: Towards Robust Autoregressive Visuomotor Policy Learning via Causal Diffusion",
+      "authors": [
+        "Jiahua Ma",
+        "Yiran Qin",
+        "Yixiong Li",
+        "Xuanqi Liao",
+        "Yulan Guo",
+        "Ruimao Zhang"
+      ],
+      "abstract": "Diffusion Policy (DP) enables robots to learn complex behaviors by imitating\nexpert demonstrations through action diffusion. However, in practical\napplications, hardware limitations often degrade data quality, while real-time\nconstraints restrict model inference to instantaneous state and scene\nobservations. These limitations seriously reduce the efficacy of learning from\nexpert demonstrations, resulting in failures in object localization, grasp\nplanning, and long-horizon task execution. To address these challenges, we\npropose Causal Diffusion Policy (CDP), a novel transformer-based diffusion\nmodel that enhances action prediction by conditioning on historical action\nsequences, thereby enabling more coherent and context-aware visuomotor policy\nlearning. To further mitigate the computational cost associated with\nautoregressive inference, a caching mechanism is also introduced to store\nattention key-value pairs from previous timesteps, substantially reducing\nredundant computations during execution. Extensive experiments in both\nsimulated and real-world environments, spanning diverse 2D and 3D manipulation\ntasks, demonstrate that CDP uniquely leverages historical action sequences to\nachieve significantly higher accuracy than existing methods. Moreover, even\nwhen faced with degraded input observation quality, CDP maintains remarkable\nprecision by reasoning through temporal continuity, which highlights its\npractical robustness for robotic control under realistic, imperfect conditions.",
+      "pdf_url": "http://arxiv.org/pdf/2506.14769v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.14769v1",
+      "published": "2025-06-17",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "VideoMAR: Autoregressive Video Generatio with Continuous Tokens",
+      "authors": [
+        "Hu Yu",
+        "Biao Gong",
+        "Hangjie Yuan",
+        "DanDan Zheng",
+        "Weilong Chai",
+        "Jingdong Chen",
+        "Kecheng Zheng",
+        "Feng Zhao"
+      ],
+      "abstract": "Masked-based autoregressive models have demonstrated promising image\ngeneration capability in continuous space. However, their potential for video\ngeneration remains under-explored. In this paper, we propose \\textbf{VideoMAR},\na concise and efficient decoder-only autoregressive image-to-video model with\ncontinuous tokens, composing temporal frame-by-frame and spatial masked\ngeneration. We first identify temporal causality and spatial bi-directionality\nas the first principle of video AR models, and propose the next-frame diffusion\nloss for the integration of mask and video generation. Besides, the huge cost\nand difficulty of long sequence autoregressive modeling is a basic but crucial\nissue. To this end, we propose the temporal short-to-long curriculum learning\nand spatial progressive resolution training, and employ progressive temperature\nstrategy at inference time to mitigate the accumulation error. Furthermore,\nVideoMAR replicates several unique capacities of language models to video\ngeneration. It inherently bears high efficiency due to simultaneous\ntemporal-wise KV cache and spatial-wise parallel generation, and presents the\ncapacity of spatial and temporal extrapolation via 3D rotary embeddings. On the\nVBench-I2V benchmark, VideoMAR surpasses the previous state-of-the-art (Cosmos\nI2V) while requiring significantly fewer parameters ($9.3\\%$), training data\n($0.5\\%$), and GPU resources ($0.2\\%$).",
+      "pdf_url": "http://arxiv.org/pdf/2506.14168v2",
+      "arxiv_url": "http://arxiv.org/abs/2506.14168v2",
+      "published": "2025-06-17",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Estimation of Treatment Effects in Extreme and Unobserved Data",
+      "authors": [
+        "Jiyuan Tan",
+        "Jose Blanchet",
+        "Vasilis Syrgkanis"
+      ],
+      "abstract": "Causal effect estimation seeks to determine the impact of an intervention\nfrom observational data. However, the existing causal inference literature\nprimarily addresses treatment effects on frequently occurring events. But what\nif we are interested in estimating the effects of a policy intervention whose\nbenefits, while potentially important, can only be observed and measured in\nrare yet impactful events, such as extreme climate events? The standard causal\ninference methodology is not designed for this type of inference since the\nevents of interest may be scarce in the observed data and some degree of\nextrapolation is necessary. Extreme Value Theory (EVT) provides methodologies\nfor analyzing statistical phenomena in such extreme regimes. We introduce a\nnovel framework for assessing treatment effects in extreme data to capture the\ncausal effect at the occurrence of rare events of interest. In particular, we\nemploy the theory of multivariate regular variation to model extremities. We\ndevelop a consistent estimator for extreme treatment effects and present a\nrigorous non-asymptotic analysis of its performance. We illustrate the\nperformance of our estimator using both synthetic and semi-synthetic data.",
+      "pdf_url": "http://arxiv.org/pdf/2506.14051v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.14051v1",
+      "published": "2025-06-16",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.ST",
+        "stat.ME",
+        "stat.TH"
+      ]
+    },
     {
       "title": "Mixture of Weight-shared Heterogeneous Group Attention Experts for Dynamic Token-wise KV Optimization",
       "authors": [
@@ -75,100 +171,6 @@
       "published": "2025-06-16",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Finite sample-optimal adjustment sets in linear Gaussian causal models",
-      "authors": [
-        "Nadja Rutsch",
-        "Sara Magliacane",
-        "Stéphanie van der Pas"
-      ],
-      "abstract": "Traditional covariate selection methods for causal inference focus on\nachieving unbiasedness and asymptotic efficiency. In many practical scenarios,\nresearchers must estimate causal effects from observational data with limited\nsample sizes or in cases where covariates are difficult or costly to measure.\nTheir needs might be better met by selecting adjustment sets that are finite\nsample-optimal in terms of mean squared error. In this paper, we aim to find\nthe adjustment set that minimizes the mean squared error of the causal effect\nestimator, taking into account the joint distribution of the variables and the\nsample size. We call this finite sample-optimal set the MSE-optimal adjustment\nset and present examples in which the MSE-optimal adjustment set differs from\nthe asymptotically optimal adjustment set. To identify the MSE-optimal\nadjustment set, we then introduce a sample size criterion for comparing\nadjustment sets in linear Gaussian models. We also develop graphical criteria\nto reduce the search space for this adjustment set based on the causal graph.\nIn experiments with simulated data, we show that the MSE-optimal adjustment set\ncan outperform the asymptotically optimal adjustment set in finite sample size\nsettings, making causal inference more practical in such scenarios.",
-      "pdf_url": "http://arxiv.org/pdf/2506.12869v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.12869v1",
-      "published": "2025-06-15",
-      "categories": [
-        "math.ST",
-        "stat.ME",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Leveraging MIMIC Datasets for Better Digital Health: A Review on Open Problems, Progress Highlights, and Future Promises",
-      "authors": [
-        "Afifa Khaled",
-        "Mohammed Sabir",
-        "Rizwan Qureshi",
-        "Camillo Maria Caruso",
-        "Valerio Guarrasi",
-        "Suncheng Xiang",
-        "S Kevin Zhou"
-      ],
-      "abstract": "The Medical Information Mart for Intensive Care (MIMIC) datasets have become\nthe Kernel of Digital Health Research by providing freely accessible,\ndeidentified records from tens of thousands of critical care admissions,\nenabling a broad spectrum of applications in clinical decision support, outcome\nprediction, and healthcare analytics. Although numerous studies and surveys\nhave explored the predictive power and clinical utility of MIMIC based models,\ncritical challenges in data integration, representation, and interoperability\nremain underexplored. This paper presents a comprehensive survey that focuses\nuniquely on open problems. We identify persistent issues such as data\ngranularity, cardinality limitations, heterogeneous coding schemes, and ethical\nconstraints that hinder the generalizability and real-time implementation of\nmachine learning models. We highlight key progress in dimensionality reduction,\ntemporal modelling, causal inference, and privacy preserving analytics, while\nalso outlining promising directions including hybrid modelling, federated\nlearning, and standardized preprocessing pipelines. By critically examining\nthese structural limitations and their implications, this survey offers\nactionable insights to guide the next generation of MIMIC powered digital\nhealth innovations.",
-      "pdf_url": "http://arxiv.org/pdf/2506.12808v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.12808v1",
-      "published": "2025-06-15",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "A Residual Prediction Test for the Well-Specification of Linear Instrumental Variable Models",
-      "authors": [
-        "Cyrill Scheidegger",
-        "Malte Londschien",
-        "Peter Bühlmann"
-      ],
-      "abstract": "The linear instrumental variable (IV) model is widely applied in\nobservational studies. The corresponding assumptions are critical for valid\ncausal inference, and hence, it is important to have tools to assess the\nmodel's well-specification. The classical Sargan-Hansen J-test is limited to\nthe overidentified setting, where the number of instruments is larger than the\nnumber of endogenous variables. Here, we propose a novel and simple test for\nthe well-specification of the linear IV model under the assumption that the\nstructural error is mean independent of the instruments. Importantly, assuming\nmean independence allows the construction of such a test even in the\njust-identified setting. We use the idea of residual prediction tests: if the\nresiduals from two-stage least squares can be predicted from the instruments\nbetter than randomly, this signals misspecification. We construct a test\nstatistic based on sample splitting and a user-chosen machine learning method.\nWe show asymptotic type I error control. Furthermore, by relying on machine\nlearning tools, our test has good power for detecting alternatives from a broad\nclass of scenarios. We also address heteroskedasticity- and cluster-robust\ninference. The test is implemented in the R package RPIV and in the ivmodels\nsoftware package for Python.",
-      "pdf_url": "http://arxiv.org/pdf/2506.12771v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.12771v1",
-      "published": "2025-06-15",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Interpretable Causal Representation Learning for Biological Data in the Pathway Space",
-      "authors": [
-        "Jesus de la Fuente",
-        "Robert Lehmann",
-        "Carlos Ruiz-Arenas",
-        "Jan Voges",
-        "Irene Marin-Goñi",
-        "Xabier Martinez-de-Morentin",
-        "David Gomez-Cabrero",
-        "Idoia Ochoa",
-        "Jesper Tegner",
-        "Vincenzo Lagani",
-        "Mikel Hernaez"
-      ],
-      "abstract": "Predicting the impact of genomic and drug perturbations in cellular function\nis crucial for understanding gene functions and drug effects, ultimately\nleading to improved therapies. To this end, Causal Representation Learning\n(CRL) constitutes one of the most promising approaches, as it aims to identify\nthe latent factors that causally govern biological systems, thus facilitating\nthe prediction of the effect of unseen perturbations. Yet, current CRL methods\nfail in reconciling their principled latent representations with known\nbiological processes, leading to models that are not interpretable. To address\nthis major issue, we present SENA-discrepancy-VAE, a model based on the\nrecently proposed CRL method discrepancy-VAE, that produces representations\nwhere each latent factor can be interpreted as the (linear) combination of the\nactivity of a (learned) set of biological processes. To this extent, we present\nan encoder, SENA-{\\delta}, that efficiently compute and map biological\nprocesses' activity levels to the latent causal factors. We show that\nSENA-discrepancy-VAE achieves predictive performances on unseen combinations of\ninterventions that are comparable with its original, non-interpretable\ncounterpart, while inferring causal latent factors that are biologically\nmeaningful.",
-      "pdf_url": "http://arxiv.org/pdf/2506.12439v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.12439v1",
-      "published": "2025-06-14",
-      "categories": [
-        "cs.LG",
-        "q-bio.QM",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Path-specific effects for pulse-oximetry guided decisions in critical care",
-      "authors": [
-        "Kevin Zhang",
-        "Yonghan Jung",
-        "Divyat Mahajan",
-        "Karthikeyan Shanmugam",
-        "Shalmali Joshi"
-      ],
-      "abstract": "Identifying and measuring biases associated with sensitive attributes is a\ncrucial consideration in healthcare to prevent treatment disparities. One\nprominent issue is inaccurate pulse oximeter readings, which tend to\noverestimate oxygen saturation for dark-skinned patients and misrepresent\nsupplemental oxygen needs. Most existing research has revealed statistical\ndisparities linking device errors to patient outcomes in intensive care units\n(ICUs) without causal formalization. In contrast, this study causally\ninvestigates how racial discrepancies in oximetry measurements affect invasive\nventilation in ICU settings. We employ a causal inference-based approach using\npath-specific effects to isolate the impact of bias by race on clinical\ndecision-making. To estimate these effects, we leverage a doubly robust\nestimator, propose its self-normalized variant for improved sample efficiency,\nand provide novel finite-sample guarantees. Our methodology is validated on\nsemi-synthetic data and applied to two large real-world health datasets:\nMIMIC-IV and eICU. Contrary to prior work, our analysis reveals minimal impact\nof racial discrepancies on invasive ventilation rates. However, path-specific\neffects mediated by oxygen saturation disparity are more pronounced on\nventilation duration, and the severity differs by dataset. Our work provides a\nnovel and practical pipeline for investigating potential disparities in the ICU\nand, more crucially, highlights the necessity of causal methods to robustly\nassess fairness in decision-making.",
-      "pdf_url": "http://arxiv.org/pdf/2506.12371v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.12371v1",
-      "published": "2025-06-14",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
       ]
     }
   ]
