@@ -1,6 +1,138 @@
 {
-  "last_updated": "2025-06-23T00:59:00.388216",
+  "last_updated": "2025-06-24T00:55:33.551087",
   "papers": [
+    {
+      "title": "CLEAR-3K: Assessing Causal Explanatory Capabilities in Language Models",
+      "authors": [
+        "Naiming Liu",
+        "Richard Baraniuk",
+        "Shashank Sonkar"
+      ],
+      "abstract": "We introduce CLEAR-3K, a dataset of 3,000 assertion-reasoning questions\ndesigned to evaluate whether language models can determine if one statement\ncausally explains another. Each question present an assertion-reason pair and\nchallenge language models to distinguish between semantic relatedness and\ngenuine causal explanatory relationships. Through comprehensive evaluation of\n21 state-of-the-art language models (ranging from 0.5B to 72B parameters), we\nidentify two fundamental findings. First, language models frequently confuse\nsemantic similarity with causality, relying on lexical and semantic overlap\ninstead of inferring actual causal explanatory relationships. Second, as\nparameter size increases, models tend to shift from being overly skeptical\nabout causal relationships to being excessively permissive in accepting them.\nDespite this shift, performance measured by the Matthews Correlation\nCoefficient plateaus at just 0.55, even for the best-performing models.Hence,\nCLEAR-3K provides a crucial benchmark for developing and evaluating genuine\ncausal reasoning in language models, which is an essential capability for\napplications that require accurate assessment of causal relationships.",
+      "pdf_url": "http://arxiv.org/pdf/2506.17180v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.17180v1",
+      "published": "2025-06-20",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Flow-Based Non-stationary Temporal Regime Causal Structure Learning",
+      "authors": [
+        "Abdellah Rahmani",
+        "Pascal Frossard"
+      ],
+      "abstract": "Understanding causal relationships in multivariate time series is crucial in\nmany scenarios, such as those dealing with financial or neurological data. Many\nsuch time series exhibit multiple regimes, i.e., consecutive temporal segments\nwith a priori unknown boundaries, with each regime having its own causal\nstructure. Inferring causal dependencies and regime shifts is critical for\nanalyzing the underlying processes. However, causal structure learning in this\nsetting is challenging due to (1) non stationarity, i.e., each regime can have\nits own causal graph and mixing function, and (2) complex noise distributions,\nwhich may be non Gaussian or heteroscedastic. Existing causal discovery\napproaches cannot address these challenges, since generally assume stationarity\nor Gaussian noise with constant variance. Hence, we introduce FANTOM, a unified\nframework for causal discovery that handles non stationary processes along with\nnon Gaussian and heteroscedastic noises. FANTOM simultaneously infers the\nnumber of regimes and their corresponding indices and learns each regime's\nDirected Acyclic Graph. It uses a Bayesian Expectation Maximization algorithm\nthat maximizes the evidence lower bound of the data log likelihood. On the\ntheoretical side, we prove, under mild assumptions, that temporal\nheteroscedastic causal models, introduced in FANTOM's formulation, are\nidentifiable in both stationary and non stationary settings. In addition,\nextensive experiments on synthetic and real data show that FANTOM outperforms\nexisting methods.",
+      "pdf_url": "http://arxiv.org/pdf/2506.17065v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.17065v1",
+      "published": "2025-06-20",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Modeling and Visualization Reasoning for Stakeholders in Education and Industry Integration Systems: Research on Structured Synthetic Dialogue Data Generation Based on NIST Standards",
+      "authors": [
+        "Wei Meng"
+      ],
+      "abstract": "This study addresses the structural complexity and semantic ambiguity in\nstakeholder interactions within the Education-Industry Integration (EII)\nsystem. The scarcity of real interview data, absence of structured variable\nmodeling, and lack of interpretability in inference mechanisms have limited the\nanalytical accuracy and policy responsiveness of EII research. To resolve these\nchallenges, we propose a structural modeling paradigm based on the National\nInstitute of Standards and Technology (NIST) synthetic data quality framework,\nfocusing on consistency, authenticity, and traceability. We design a five-layer\narchitecture that includes prompt-driven synthetic dialogue generation, a\nstructured variable system covering skills, institutional, and emotional\ndimensions, dependency and causal path modeling, graph-based structure design,\nand an interactive inference engine. Empirical results demonstrate the\neffectiveness of the approach using a 15-segment synthetic corpus, with 41,597\ntokens, 127 annotated variables, and 820 semantic relationship triples. The\nmodel exhibits strong structural consistency (Krippendorff alpha = 0.83),\nconstruct validity (RMSEA = 0.048, CFI = 0.93), and semantic alignment (mean\ncosine similarity > 0.78 via BERT). A key causal loop is identified: system\nmismatch leads to emotional frustration, reduced participation, skill gaps, and\nrecurrence of mismatch, revealing a structural degradation cycle. This research\nintroduces the first NIST-compliant AI modeling framework for stakeholder\nsystems and provides a foundation for policy simulation, curriculum design, and\ncollaborative strategy modeling.",
+      "pdf_url": "http://arxiv.org/pdf/2506.16952v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.16952v1",
+      "published": "2025-06-20",
+      "categories": [
+        "cs.CY",
+        "68T50, 68T30, 91B06, 05C82, 62H30",
+        "I.2.6; I.2.7; H.2.8; K.3.1; K.4.1"
+      ]
+    },
+    {
+      "title": "From Prompts to Constructs: A Dual-Validity Framework for LLM Research in Psychology",
+      "authors": [
+        "Zhicheng Lin"
+      ],
+      "abstract": "Large language models (LLMs) are rapidly being adopted across psychology,\nserving as research tools, experimental subjects, human simulators, and\ncomputational models of cognition. However, the application of human\nmeasurement tools to these systems can produce contradictory results, raising\nconcerns that many findings are measurement phantoms--statistical artifacts\nrather than genuine psychological phenomena. In this Perspective, we argue that\nbuilding a robust science of AI psychology requires integrating two of our\nfield's foundational pillars: the principles of reliable measurement and the\nstandards for sound causal inference. We present a dual-validity framework to\nguide this integration, which clarifies how the evidence needed to support a\nclaim scales with its scientific ambition. Using an LLM to classify text may\nrequire only basic accuracy checks, whereas claiming it can simulate anxiety\ndemands a far more rigorous validation process. Current practice systematically\nfails to meet these requirements, often treating statistical pattern matching\nas evidence of psychological phenomena. The same model output--endorsing \"I am\nanxious\"--requires different validation strategies depending on whether\nresearchers claim to measure, characterize, simulate, or model psychological\nconstructs. Moving forward requires developing computational analogues of\npsychological constructs and establishing clear, scalable standards of evidence\nrather than the uncritical application of human measurement tools.",
+      "pdf_url": "http://arxiv.org/pdf/2506.16697v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.16697v1",
+      "published": "2025-06-20",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.CL",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Learning Causally Predictable Outcomes from Psychiatric Longitudinal Data",
+      "authors": [
+        "Eric V. Strobl"
+      ],
+      "abstract": "Causal inference in longitudinal biomedical data remains a central challenge,\nespecially in psychiatry, where symptom heterogeneity and latent confounding\nfrequently undermine classical estimators. Most existing methods for treatment\neffect estimation presuppose a fixed outcome variable and address confounding\nthrough observed covariate adjustment. However, the assumption of\nunconfoundedness may not hold for a fixed outcome in practice. To address this\nfoundational limitation, we directly optimize the outcome definition to\nmaximize causal identifiability. Our DEBIAS (Durable Effects with\nBackdoor-Invariant Aggregated Symptoms) algorithm learns non-negative,\nclinically interpretable weights for outcome aggregation, maximizing durable\ntreatment effects and empirically minimizing both observed and latent\nconfounding by leveraging the time-limited direct effects of prior treatments\nin psychiatric longitudinal data. The algorithm also furnishes an empirically\nverifiable test for outcome unconfoundedness. DEBIAS consistently outperforms\nstate-of-the-art methods in recovering causal effects for clinically\ninterpretable composite outcomes across comprehensive experiments in depression\nand schizophrenia.",
+      "pdf_url": "http://arxiv.org/pdf/2506.16629v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.16629v1",
+      "published": "2025-06-19",
+      "categories": [
+        "cs.LG",
+        "q-bio.QM",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Robust Reward Modeling via Causal Rubrics",
+      "authors": [
+        "Pragya Srivastava",
+        "Harman Singh",
+        "Rahul Madhavan",
+        "Gandharv Patil",
+        "Sravanti Addepalli",
+        "Arun Suggala",
+        "Rengarajan Aravamudhan",
+        "Soumya Sharma",
+        "Anirban Laha",
+        "Aravindan Raghuveer",
+        "Karthikeyan Shanmugam",
+        "Doina Precup"
+      ],
+      "abstract": "Reward models (RMs) are fundamental to aligning Large Language Models (LLMs)\nvia human feedback, yet they often suffer from reward hacking. They tend to\nlatch on to superficial or spurious attributes, such as response length or\nformatting, mistaking these cues learned from correlations in training data for\nthe true causal drivers of quality (e.g., factuality, relevance). This occurs\nbecause standard training objectives struggle to disentangle these factors,\nleading to brittle RMs and misaligned policies. We introduce Crome (Causally\nRobust Reward Modeling), a novel framework grounded in an explicit causal model\ndesigned to mitigate reward hacking. Crome employs the following synthetic\ntargeted augmentations during training: (1) Causal Augmentations, which are\npairs that differ along specific causal attributes, to enforce sensitivity\nalong each causal attribute individually, and (2) Neutral Augmentations, which\nare tie-label pairs varying primarily in spurious attributes, to enforce\ninvariance along spurious attributes. Notably, our augmentations are produced\nwithout any knowledge of spurious factors, via answer interventions only along\ncausal rubrics, that are identified by querying an oracle LLM. Empirically,\nCrome significantly outperforms standard baselines on RewardBench, improving\naverage accuracy by up to 5.4% and achieving gains of up to 13.2% and 7.2% in\nspecific categories. The robustness of Crome is further testified by the\nconsistent gains obtained in a Best-of-N inference setting across increasing N,\nacross various benchmarks, including the popular RewardBench (covering chat,\nchat-hard, safety, and reasoning tasks), the safety-focused WildGuardTest, and\nthe reasoning-specific GSM8k.",
+      "pdf_url": "http://arxiv.org/pdf/2506.16507v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.16507v1",
+      "published": "2025-06-19",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "An introduction to Causal Modelling",
+      "authors": [
+        "Gauranga Kumar Baishya"
+      ],
+      "abstract": "This tutorial provides a concise introduction to modern causal modeling by\nintegrating potential outcomes and graphical methods. We motivate causal\nquestions such as counterfactual reasoning under interventions and define\nbinary treatments and potential outcomes. We discuss causal effect\nmeasures-including average treatment effects on the treated and on the\nuntreated-and choices of effect scales for binary outcomes. We derive\nidentification in randomized experiments under exchangeability and consistency,\nand extend to stratification and blocking designs. We present inverse\nprobability weighting with propensity score estimation and robust inference via\nsandwich estimators. Finally, we introduce causal graphs, d-separation, the\nbackdoor criterion, single-world intervention graphs, and structural equation\nmodels, showing how graphical and potential-outcome approaches complement each\nother. Emphasis is placed on clear notation, intuitive explanations, and\npractical examples for applied researchers.",
+      "pdf_url": "http://arxiv.org/pdf/2506.16486v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.16486v1",
+      "published": "2025-06-19",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Unveiling Political Influence Through Social Media: Network and Causal Dynamics in the 2022 French Presidential Election",
+      "authors": [
+        "Ixandra Achitouv",
+        "David Chavalarias"
+      ],
+      "abstract": "During the 2022 French presidential election, we collected daily Twitter\nmessages on key topics posted by political candidates and their close networks.\nUsing a data-driven approach, we analyze interactions among political parties,\nidentifying central topics that shape the landscape of political debate. Moving\nbeyond traditional correlation analyses, we apply a causal inference technique:\nConvergent Cross Mapping, to uncover directional influences among political\ncommunities, revealing how some parties are more likely to initiate changes in\nactivity while others tend to respond. This approach allows us to distinguish\ntrue influence from mere correlation, highlighting asymmetric relationships and\nhidden dynamics within the social media political network. Our findings\ndemonstrate how specific issues, such as health and foreign policy, act as\ncatalysts for cross-party influence, particularly during critical election\nphases. These insights provide a novel framework for understanding political\ndiscourse dynamics and have practical implications for campaign strategists and\nmedia analysts seeking to monitor and respond to shifts in political influence\nin real time.",
+      "pdf_url": "http://arxiv.org/pdf/2506.16449v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.16449v1",
+      "published": "2025-06-19",
+      "categories": [
+        "cs.SI",
+        "cs.CY",
+        "physics.soc-ph"
+      ]
+    },
     {
       "title": "Causal inference amid missingness-specific independencies and mechanism shifts",
       "authors": [
@@ -21,156 +153,22 @@
       ]
     },
     {
-      "title": "Double Machine Learning for Conditional Moment Restrictions: IV regression, Proximal Causal Learning and Beyond",
+      "title": "Linear-Time Primitives for Algorithm Development in Graphical Causal Inference",
       "authors": [
-        "Daqian Shao",
-        "Ashkan Soleymani",
-        "Francesco Quinzan",
-        "Marta Kwiatkowska"
+        "Marcel Wienöbst",
+        "Sebastian Weichwald",
+        "Leonard Henckel"
       ],
-      "abstract": "Solving conditional moment restrictions (CMRs) is a key problem considered in\nstatistics, causal inference, and econometrics, where the aim is to solve for a\nfunction of interest that satisfies some conditional moment equalities.\nSpecifically, many techniques for causal inference, such as instrumental\nvariable (IV) regression and proximal causal learning (PCL), are CMR problems.\nMost CMR estimators use a two-stage approach, where the first-stage estimation\nis directly plugged into the second stage to estimate the function of interest.\nHowever, naively plugging in the first-stage estimator can cause heavy bias in\nthe second stage. This is particularly the case for recently proposed CMR\nestimators that use deep neural network (DNN) estimators for both stages, where\nregularisation and overfitting bias is present. We propose DML-CMR, a two-stage\nCMR estimator that provides an unbiased estimate with fast convergence rate\nguarantees. We derive a novel learning objective to reduce bias and develop the\nDML-CMR algorithm following the double/debiased machine learning (DML)\nframework. We show that our DML-CMR estimator can achieve the minimax optimal\nconvergence rate of $O(N^{-1/2})$ under parameterisation and mild regularity\nconditions, where $N$ is the sample size. We apply DML-CMR to a range of\nproblems using DNN estimators, including IV regression and proximal causal\nlearning on real-world datasets, demonstrating state-of-the-art performance\nagainst existing CMR estimators and algorithms tailored to those problems.",
-      "pdf_url": "http://arxiv.org/pdf/2506.14950v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.14950v1",
-      "published": "2025-06-17",
+      "abstract": "We introduce CIfly, a framework for efficient algorithmic primitives in\ngraphical causal inference that isolates reachability as a reusable core\noperation. It builds on the insight that many causal reasoning tasks can be\nreduced to reachability in purpose-built state-space graphs that can be\nconstructed on the fly during traversal. We formalize a rule table schema for\nspecifying such algorithms and prove they run in linear time. We establish\nCIfly as a more efficient alternative to the common primitives moralization and\nlatent projection, which we show are computationally equivalent to Boolean\nmatrix multiplication. Our open-source Rust implementation parses rule table\ntext files and runs the specified CIfly algorithms providing high-performance\nexecution accessible from Python and R. We demonstrate CIfly's utility by\nre-implementing a range of established causal inference tasks within the\nframework and by developing new algorithms for instrumental variables. These\ncontributions position CIfly as a flexible and scalable backbone for graphical\ncausal inference, guiding algorithm development and enabling easy and efficient\ndeployment.",
+      "pdf_url": "http://arxiv.org/pdf/2506.15758v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.15758v1",
+      "published": "2025-06-18",
       "categories": [
-        "stat.ML",
+        "cs.AI",
+        "cs.DS",
         "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "CDP: Towards Robust Autoregressive Visuomotor Policy Learning via Causal Diffusion",
-      "authors": [
-        "Jiahua Ma",
-        "Yiran Qin",
-        "Yixiong Li",
-        "Xuanqi Liao",
-        "Yulan Guo",
-        "Ruimao Zhang"
-      ],
-      "abstract": "Diffusion Policy (DP) enables robots to learn complex behaviors by imitating\nexpert demonstrations through action diffusion. However, in practical\napplications, hardware limitations often degrade data quality, while real-time\nconstraints restrict model inference to instantaneous state and scene\nobservations. These limitations seriously reduce the efficacy of learning from\nexpert demonstrations, resulting in failures in object localization, grasp\nplanning, and long-horizon task execution. To address these challenges, we\npropose Causal Diffusion Policy (CDP), a novel transformer-based diffusion\nmodel that enhances action prediction by conditioning on historical action\nsequences, thereby enabling more coherent and context-aware visuomotor policy\nlearning. To further mitigate the computational cost associated with\nautoregressive inference, a caching mechanism is also introduced to store\nattention key-value pairs from previous timesteps, substantially reducing\nredundant computations during execution. Extensive experiments in both\nsimulated and real-world environments, spanning diverse 2D and 3D manipulation\ntasks, demonstrate that CDP uniquely leverages historical action sequences to\nachieve significantly higher accuracy than existing methods. Moreover, even\nwhen faced with degraded input observation quality, CDP maintains remarkable\nprecision by reasoning through temporal continuity, which highlights its\npractical robustness for robotic control under realistic, imperfect conditions.",
-      "pdf_url": "http://arxiv.org/pdf/2506.14769v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.14769v1",
-      "published": "2025-06-17",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "VideoMAR: Autoregressive Video Generatio with Continuous Tokens",
-      "authors": [
-        "Hu Yu",
-        "Biao Gong",
-        "Hangjie Yuan",
-        "DanDan Zheng",
-        "Weilong Chai",
-        "Jingdong Chen",
-        "Kecheng Zheng",
-        "Feng Zhao"
-      ],
-      "abstract": "Masked-based autoregressive models have demonstrated promising image\ngeneration capability in continuous space. However, their potential for video\ngeneration remains under-explored. In this paper, we propose \\textbf{VideoMAR},\na concise and efficient decoder-only autoregressive image-to-video model with\ncontinuous tokens, composing temporal frame-by-frame and spatial masked\ngeneration. We first identify temporal causality and spatial bi-directionality\nas the first principle of video AR models, and propose the next-frame diffusion\nloss for the integration of mask and video generation. Besides, the huge cost\nand difficulty of long sequence autoregressive modeling is a basic but crucial\nissue. To this end, we propose the temporal short-to-long curriculum learning\nand spatial progressive resolution training, and employ progressive temperature\nstrategy at inference time to mitigate the accumulation error. Furthermore,\nVideoMAR replicates several unique capacities of language models to video\ngeneration. It inherently bears high efficiency due to simultaneous\ntemporal-wise KV cache and spatial-wise parallel generation, and presents the\ncapacity of spatial and temporal extrapolation via 3D rotary embeddings. On the\nVBench-I2V benchmark, VideoMAR surpasses the previous state-of-the-art (Cosmos\nI2V) while requiring significantly fewer parameters ($9.3\\%$), training data\n($0.5\\%$), and GPU resources ($0.2\\%$).",
-      "pdf_url": "http://arxiv.org/pdf/2506.14168v2",
-      "arxiv_url": "http://arxiv.org/abs/2506.14168v2",
-      "published": "2025-06-17",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Estimation of Treatment Effects in Extreme and Unobserved Data",
-      "authors": [
-        "Jiyuan Tan",
-        "Jose Blanchet",
-        "Vasilis Syrgkanis"
-      ],
-      "abstract": "Causal effect estimation seeks to determine the impact of an intervention\nfrom observational data. However, the existing causal inference literature\nprimarily addresses treatment effects on frequently occurring events. But what\nif we are interested in estimating the effects of a policy intervention whose\nbenefits, while potentially important, can only be observed and measured in\nrare yet impactful events, such as extreme climate events? The standard causal\ninference methodology is not designed for this type of inference since the\nevents of interest may be scarce in the observed data and some degree of\nextrapolation is necessary. Extreme Value Theory (EVT) provides methodologies\nfor analyzing statistical phenomena in such extreme regimes. We introduce a\nnovel framework for assessing treatment effects in extreme data to capture the\ncausal effect at the occurrence of rare events of interest. In particular, we\nemploy the theory of multivariate regular variation to model extremities. We\ndevelop a consistent estimator for extreme treatment effects and present a\nrigorous non-asymptotic analysis of its performance. We illustrate the\nperformance of our estimator using both synthetic and semi-synthetic data.",
-      "pdf_url": "http://arxiv.org/pdf/2506.14051v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.14051v1",
-      "published": "2025-06-16",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "math.ST",
         "stat.ME",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Mixture of Weight-shared Heterogeneous Group Attention Experts for Dynamic Token-wise KV Optimization",
-      "authors": [
-        "Guanghui Song",
-        "Dongping Liao",
-        "Yiren Zhao",
-        "Kejiang Ye",
-        "Cheng-zhong Xu",
-        "Xitong Gao"
-      ],
-      "abstract": "Transformer models face scalability challenges in causal language modeling\n(CLM) due to inefficient memory allocation for growing key-value (KV) caches,\nwhich strains compute and storage resources. Existing methods like Grouped\nQuery Attention (GQA) and token-level KV optimization improve efficiency but\nrely on rigid resource allocation, often discarding \"low-priority\" tokens or\nstatically grouping them, failing to address the dynamic spectrum of token\nimportance. We propose mixSGA, a novel mixture-of-expert (MoE) approach that\ndynamically optimizes token-wise computation and memory allocation. Unlike\nprior approaches, mixSGA retains all tokens while adaptively routing them to\nspecialized experts with varying KV group sizes, balancing granularity and\nefficiency. Our key novelties include: (1) a token-wise expert-choice routing\nmechanism guided by learned importance scores, enabling proportional resource\nallocation without token discard; (2) weight-sharing across grouped attention\nprojections to minimize parameter overhead; and (3) an auxiliary loss to ensure\none-hot routing decisions for training-inference consistency in CLMs. Extensive\nevaluations across Llama3, TinyLlama, OPT, and Gemma2 model families show\nmixSGA's superiority over static baselines. On instruction-following and\ncontinued pretraining tasks, mixSGA achieves higher ROUGE-L and lower\nperplexity under the same KV budgets.",
-      "pdf_url": "http://arxiv.org/pdf/2506.13541v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.13541v1",
-      "published": "2025-06-16",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Chaos, coherence and turbulence",
-      "authors": [
-        "Javier Jimenez"
-      ],
-      "abstract": "This paper is a personal overview of the efforts over the last half century\nto understand fluid turbulence in terms of simpler coherent units. The\nconsequences of chaos and the concept of coherence are first reviewed, using\nexamples from free-shear and wall-bounded shear flows, and including how the\nsimplifications due to coherent structures have been useful in the\nconceptualization and control of turbulence. It is remarked that, even if this\napproach has revolutionized our understanding of the flow, most of turbulence\ncannot yet be described by structures. This includes cascades, both direct and\ninverse, and possibly junk turbulence, whose role, if any, is currently\nunknown. This part of the paper is mostly a catalog of questions, some of them\nanswered and others still open. A second part of the paper examines which new\ntechniques can be expected to help in attacking the open questions, and which,\nin the opinion of the author, are the strengths and limitations of current\napproaches, such as data-driven science and causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2506.13417v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.13417v1",
-      "published": "2025-06-16",
-      "categories": [
-        "physics.flu-dyn"
-      ]
-    },
-    {
-      "title": "Fortified Proximal Causal Inference with Many Invalid Proxies",
-      "authors": [
-        "Myeonghun Yu",
-        "Xu Shi",
-        "Eric J. Tchetgen Tchetgen"
-      ],
-      "abstract": "Causal inference from observational data often relies on the assumption of no\nunmeasured confounding, an assumption frequently violated in practice due to\nunobserved or poorly measured covariates. Proximal causal inference (PCI)\noffers a promising framework for addressing unmeasured confounding using a pair\nof outcome and treatment confounding proxies. However, existing PCI methods\ntypically assume all specified proxies are valid, which may be unrealistic and\nis untestable without extra assumptions. In this paper, we develop a\nsemiparametric approach for a many-proxy PCI setting that accommodates\npotentially invalid treatment confounding proxies. We introduce a new class of\nfortified confounding bridge functions and establish nonparametric\nidentification of the population average treatment effect (ATE) under the\nassumption that at least $\\gamma$ out of $K$ candidate treatment confounding\nproxies are valid, for any $\\gamma \\leq K$ set by the analyst without requiring\nknowledge of which proxies are valid. We establish a local semiparametric\nefficiency bound and develop a class of multiply robust, locally efficient\nestimators for the ATE. These estimators are thus simultaneously robust to\ninvalid treatment confounding proxies and model misspecification of nuisance\nparameters. The proposed methods are evaluated through simulation and applied\nto assess the effect of right heart catheterization in critically ill patients.",
-      "pdf_url": "http://arxiv.org/pdf/2506.13152v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.13152v1",
-      "published": "2025-06-16",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Honesty in Causal Forests: When It Helps and When It Hurts",
-      "authors": [
-        "Yanfang Hou",
-        "Carlos Fernández-Loría"
-      ],
-      "abstract": "Causal forests are increasingly used to personalize decisions based on\nestimated treatment effects. A distinctive modeling choice in this method is\nhonest estimation: using separate data for splitting and for estimating effects\nwithin leaves. This practice is the default in most implementations and is\nwidely seen as desirable for causal inference. But we show that honesty can\nhurt the accuracy of individual-level effect estimates. The reason is a classic\nbias-variance trade-off: honesty reduces variance by preventing overfitting,\nbut increases bias by limiting the model's ability to discover and exploit\nmeaningful heterogeneity in treatment effects. This trade-off depends on the\nsignal-to-noise ratio (SNR): honesty helps when effect heterogeneity is hard to\ndetect (low SNR), but hurts when the signal is strong (high SNR). In essence,\nhonesty acts as a form of regularization, and like any regularization choice,\nit should be guided by out-of-sample performance, not adopted by default.",
-      "pdf_url": "http://arxiv.org/pdf/2506.13107v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.13107v1",
-      "published": "2025-06-16",
-      "categories": [
-        "cs.LG",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Discussion of \"Causal and counterfactual views of missing data models\" by Razieh Nabi, Rohit Bhattacharya, Ilya Shpitser, & James M. Robins",
-      "authors": [
-        "Alex W. Levis",
-        "Edward H. Kennedy"
-      ],
-      "abstract": "We congratulate Nabi et al. (2022) on their impressive and insightful paper,\nwhich illustrates the benefits of using causal/counterfactual perspectives and\ntools in missing data problems. This paper represents an important approach to\nmissing-not-at-random (MNAR) problems, exploiting nonparametric independence\nrestrictions for identification, as opposed to parametric/semiparametric\nmodels, or resorting to sensitivity analysis. Crucially, the authors represent\nthese restrictions with missing data directed acyclic graphs (m-DAGs), which\ncan be useful to determine identification in complex and interesting MNAR\nmodels. In this discussion we consider: (i) how/whether other tools from causal\ninference could be useful in missing data problems, (ii) problems that combine\nboth missing data and causal inference together, and (iii) some work on\nestimation in one of the authors' example MNAR models.",
-      "pdf_url": "http://arxiv.org/pdf/2506.13025v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.13025v1",
-      "published": "2025-06-16",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
