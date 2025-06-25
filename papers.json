@@ -1,174 +1,166 @@
 {
-  "last_updated": "2025-06-24T00:55:33.551087",
+  "last_updated": "2025-06-25T00:56:16.566721",
   "papers": [
     {
-      "title": "CLEAR-3K: Assessing Causal Explanatory Capabilities in Language Models",
+      "title": "Steering Conceptual Bias via Transformer Latent-Subspace Activation",
       "authors": [
-        "Naiming Liu",
-        "Richard Baraniuk",
-        "Shashank Sonkar"
+        "Vansh Sharma",
+        "Venkat Raman"
       ],
-      "abstract": "We introduce CLEAR-3K, a dataset of 3,000 assertion-reasoning questions\ndesigned to evaluate whether language models can determine if one statement\ncausally explains another. Each question present an assertion-reason pair and\nchallenge language models to distinguish between semantic relatedness and\ngenuine causal explanatory relationships. Through comprehensive evaluation of\n21 state-of-the-art language models (ranging from 0.5B to 72B parameters), we\nidentify two fundamental findings. First, language models frequently confuse\nsemantic similarity with causality, relying on lexical and semantic overlap\ninstead of inferring actual causal explanatory relationships. Second, as\nparameter size increases, models tend to shift from being overly skeptical\nabout causal relationships to being excessively permissive in accepting them.\nDespite this shift, performance measured by the Matthews Correlation\nCoefficient plateaus at just 0.55, even for the best-performing models.Hence,\nCLEAR-3K provides a crucial benchmark for developing and evaluating genuine\ncausal reasoning in language models, which is an essential capability for\napplications that require accurate assessment of causal relationships.",
-      "pdf_url": "http://arxiv.org/pdf/2506.17180v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.17180v1",
-      "published": "2025-06-20",
+      "abstract": "This work examines whether activating latent subspaces in language models\n(LLMs) can steer scientific code generation toward a specific programming\nlanguage. Five causal LLMs were first evaluated on scientific coding prompts to\nquantify their baseline bias among four programming languages. A static\nneuron-attribution method, perturbing the highest activated MLP weight for a\nC++ or CPP token, proved brittle and exhibited limited generalization across\nprompt styles and model scales. To address these limitations, a\ngradient-refined adaptive activation steering framework (G-ACT) was developed:\nper-prompt activation differences are clustered into a small set of steering\ndirections, and lightweight per-layer probes are trained and refined online to\nselect the appropriate steering vector. In LLaMA-3.2 3B, this approach reliably\nbiases generation towards the CPP language by increasing the average probe\nclassification accuracy by 15% and the early layers (0-6) improving the probe\nclassification accuracy by 61.5% compared to the standard ACT framework. For\nLLaMA-3.3 70B, where attention-head signals become more diffuse, targeted\ninjections at key layers still improve language selection. Although per-layer\nprobing introduces a modest inference overhead, it remains practical by\nsteering only a subset of layers and enables reproducible model behavior. These\nresults demonstrate a scalable, interpretable and efficient mechanism for\nconcept-level control for practical agentic systems.",
+      "pdf_url": "http://arxiv.org/pdf/2506.18887v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.18887v1",
+      "published": "2025-06-23",
       "categories": [
-        "cs.CL"
+        "cs.AI",
+        "cs.LG",
+        "cs.SY",
+        "eess.SY",
+        "I.2.7; I.2.6; I.2.1; D.3.3; C.4"
       ]
     },
     {
-      "title": "Flow-Based Non-stationary Temporal Regime Causal Structure Learning",
+      "title": "A Practical Introduction to Regression-based Causal Inference in Meteorology (I): All confounders measured",
       "authors": [
-        "Abdellah Rahmani",
-        "Pascal Frossard"
+        "Caren Marzban",
+        "Yikun Zhang",
+        "Nicholas Bond",
+        "Michael Richman"
       ],
-      "abstract": "Understanding causal relationships in multivariate time series is crucial in\nmany scenarios, such as those dealing with financial or neurological data. Many\nsuch time series exhibit multiple regimes, i.e., consecutive temporal segments\nwith a priori unknown boundaries, with each regime having its own causal\nstructure. Inferring causal dependencies and regime shifts is critical for\nanalyzing the underlying processes. However, causal structure learning in this\nsetting is challenging due to (1) non stationarity, i.e., each regime can have\nits own causal graph and mixing function, and (2) complex noise distributions,\nwhich may be non Gaussian or heteroscedastic. Existing causal discovery\napproaches cannot address these challenges, since generally assume stationarity\nor Gaussian noise with constant variance. Hence, we introduce FANTOM, a unified\nframework for causal discovery that handles non stationary processes along with\nnon Gaussian and heteroscedastic noises. FANTOM simultaneously infers the\nnumber of regimes and their corresponding indices and learns each regime's\nDirected Acyclic Graph. It uses a Bayesian Expectation Maximization algorithm\nthat maximizes the evidence lower bound of the data log likelihood. On the\ntheoretical side, we prove, under mild assumptions, that temporal\nheteroscedastic causal models, introduced in FANTOM's formulation, are\nidentifiable in both stationary and non stationary settings. In addition,\nextensive experiments on synthetic and real data show that FANTOM outperforms\nexisting methods.",
-      "pdf_url": "http://arxiv.org/pdf/2506.17065v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.17065v1",
-      "published": "2025-06-20",
+      "abstract": "Whether a variable is the cause of another, or simply associated with it, is\noften an important scientific question. Causal Inference is the name associated\nwith the body of techniques for addressing that question in a statistical\nsetting. Although assessing causality is relatively straightforward in the\npresence of temporal information, outside of that setting - the situation\nconsidered here - it is more difficult to assess causal effects. The\ndevelopment of the field of causal inference has involved concepts from a wide\nrange of topics, thereby limiting its adoption across some fields, including\nmeteorology. However, at its core, the requisite knowledge for causal inference\ninvolves little more than basic probability theory and regression, topics\nfamiliar to most meteorologists. By focusing on these core areas, this and a\ncompanion article provide a steppingstone for the meteorology community into\nthe field of (non-temporal) causal inference. Although some theoretical\nfoundations are presented, the main goal is the application of a specific\nmethod, called matching, to a problem in meteorology. The data for the\napplication are in public domain, and R code is provided as well, forming an\neasy path for meteorology students and researchers to enter the field.",
+      "pdf_url": "http://arxiv.org/pdf/2506.18808v2",
+      "arxiv_url": "http://arxiv.org/abs/2506.18808v2",
+      "published": "2025-06-23",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Likelihood Ratio test for Poisson graph",
+      "authors": [
+        "Chen Shuyan",
+        "Liu Xin",
+        "Wang Shaoli"
+      ],
+      "abstract": "Directed acyclic graphs are widely used to describe the causal effects among\nrandom variables, and the inference of those causal effects has become an\npopular topic in statistics and machine learning, and has wide applications in\nneuroinformatics, bioinformatics and so on. However, most studies focus on the\nestimation or inference of the directional relations among continuous random\nvariables, those among discrete random variables have not gained much\nattentions. In this article we focus on the inference of directed linkages and\ndirected pathways in a Poisson directed graphical model. We employ likelihood\nratio tests subject to non-convex acyclicity constraints, and derive the\nasymptotic distributions of the test statistic under the null hypothesis is\ntrue in high-dimensional situations. The power analysis and simulations suggest\nthat the tests achieve the desired objectives of inference. An analysis of a\nbasketball statistics dataset of NBA players during 2016-2017 season\nillustrates the utility of the proposed method to infer directed linkages and\ndirected pathways in player's statistics network.",
+      "pdf_url": "http://arxiv.org/pdf/2506.18778v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.18778v1",
+      "published": "2025-06-23",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.TH",
+        "Primary: 62F03, Secondary: 62F30"
+      ]
+    },
+    {
+      "title": "Towards Group Fairness with Multiple Sensitive Attributes in Federated Foundation Models",
+      "authors": [
+        "Yuning Yang",
+        "Han Yu",
+        "Tianrun Gao",
+        "Xiaodong Xu",
+        "Guangyu Wang"
+      ],
+      "abstract": "The deep integration of foundation models (FM) with federated learning (FL)\nenhances personalization and scalability for diverse downstream tasks, making\nit crucial in sensitive domains like healthcare. Achieving group fairness has\nbecome an increasingly prominent issue in the era of federated foundation\nmodels (FFMs), since biases in sensitive attributes might lead to inequitable\ntreatment for under-represented demographic groups. Existing studies mostly\nfocus on achieving fairness with respect to a single sensitive attribute. This\nrenders them unable to provide clear interpretability of dependencies among\nmultiple sensitive attributes which is required to achieve group fairness. Our\npaper takes the first attempt towards a causal analysis of the relationship\nbetween group fairness across various sensitive attributes in the FFM. We\nextend the FFM structure to trade off multiple sensitive attributes\nsimultaneously and quantify the causal effect behind the group fairness through\ncausal discovery and inference. Extensive experiments validate its\neffectiveness, offering insights into interpretability towards building\ntrustworthy and fair FFM systems.",
+      "pdf_url": "http://arxiv.org/pdf/2506.18732v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.18732v1",
+      "published": "2025-06-23",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "A Practical Introduction to Regression-based Causal Inference in Meteorology (II): Unmeasured confounders",
+      "authors": [
+        "Caren Marzban",
+        "Yikun Zhang",
+        "Nicholas Bond",
+        "Michael Richman"
+      ],
+      "abstract": "One obstacle to ``elevating\" correlation to causation is the phenomenon of\nconfounding, i.e., when a correlation between two variables exists because both\nvariables are in fact caused by a third variable. The situation where the\nconfounders are measured is examined in an earlier, accompanying article. Here,\nit is shown that even when the confounding variables are not measured, it is\nstill possible to estimate the causal effect via a regression-based method that\nuses the notion of Instrumental Variables. Using meteorological data set,\nsimilar to that in the sister article, a number of different estimates of the\ncausal effect are compared and contrasted. It is shown that the Instrumental\nVariable results based on unmeasured confounders are consistent with those of\nthe sister article where confounders are measured.",
+      "pdf_url": "http://arxiv.org/pdf/2506.18652v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.18652v1",
+      "published": "2025-06-23",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "T-CPDL: A Temporal Causal Probabilistic Description Logic for Developing Logic-RAG Agent",
+      "authors": [
+        "Hong Qing Yu"
+      ],
+      "abstract": "Large language models excel at generating fluent text but frequently struggle\nwith structured reasoning involving temporal constraints, causal relationships,\nand probabilistic reasoning. To address these limitations, we propose Temporal\nCausal Probabilistic Description Logic (T-CPDL), an integrated framework that\nextends traditional Description Logic with temporal interval operators,\nexplicit causal relationships, and probabilistic annotations. We present two\ndistinct variants of T-CPDL: one capturing qualitative temporal relationships\nthrough Allen's interval algebra, and another variant enriched with explicit\ntimestamped causal assertions. Both variants share a unified logical structure,\nenabling complex reasoning tasks ranging from simple temporal ordering to\nnuanced probabilistic causation. Empirical evaluations on temporal reasoning\nand causal inference benchmarks confirm that T-CPDL substantially improves\ninference accuracy, interpretability, and confidence calibration of language\nmodel outputs. By delivering transparent reasoning paths and fine-grained\ntemporal and causal semantics, T-CPDL significantly enhances the capability of\nlanguage models to support robust, explainable, and trustworthy\ndecision-making. This work also lays the groundwork for developing advanced\nLogic-Retrieval-Augmented Generation (Logic-RAG) frameworks, potentially\nboosting the reasoning capabilities and efficiency of knowledge graph-enhanced\nRAG systems.",
+      "pdf_url": "http://arxiv.org/pdf/2506.18559v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.18559v1",
+      "published": "2025-06-23",
+      "categories": [
+        "cs.AI",
+        "cs.LO",
+        "I.2.7; F.4.1"
+      ]
+    },
+    {
+      "title": "Leveraging specificity for causal inference in observational studies",
+      "authors": [
+        "Wang Miao"
+      ],
+      "abstract": "Hill's specificity criterion has been highly influential in biomedical and\nepidemiological research. However, it remains controversial and its application\noften relies on subjective and qualitative analysis without a comprehensive and\nrigorous causal theory. Focusing on unmeasured confounding adjustment with\nmultiple treatments and multiple outcomes, this paper develops a formal and\nquantitative framework for leveraging specificity for causal inference in\nobservational studies. The proposed framework introduces a causal specificity\nassumption, a quantitative measure of specificity, a hypothesis testing\nprocedure, and identification and estimation strategies. Identification under a\nnonparametric outcome model is established. The causal specificity assumption\nconcerns only the breadth of causal associations, in contrast to Hill's\nspecificity that concerns observed associations and to existing confounding\nadjustment methods that rely on auxiliary variables (e.g., instrumental\nvariables, negative controls) or independence structures (e.g., factor models).\nA sensitivity analysis procedure is proposed to assess robustness of the test\nagainst violations of this assumption. This framework is particularly suited to\nexposure- and outcome-wide studies, where joint causal discovery across\nmultiple treatments and multiple outcomes is of interest. It also offers a\npotential tool for addressing other sources of bias, such as invalid\ninstruments in Mendelian randomization and selection bias in missing data\nanalysis.",
+      "pdf_url": "http://arxiv.org/pdf/2506.18469v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.18469v1",
+      "published": "2025-06-23",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Learning Causal Graphs at Scale: A Foundation Model Approach",
+      "authors": [
+        "Naiyu Yin",
+        "Tian Gao",
+        "Yue Yu"
+      ],
+      "abstract": "Due to its human-interpretability and invariance properties, Directed Acyclic\nGraph (DAG) has been a foundational tool across various areas of AI research,\nleading to significant advancements. However, DAG learning remains highly\nchallenging, due to its super-exponential growth in computational cost and\nidentifiability issues, particularly in small-sample regimes. To address these\ntwo challenges, in this work we leverage the recent success of linear\ntransformers and develop a foundation model approach for discovering multiple\norder-consistent DAGs across tasks. In particular, we propose Attention-DAG\n(ADAG), a novel attention-mechanism-based architecture for learning multiple\nlinear Structural Equation Models (SEMs). ADAG learns the mapping from observed\ndata to both graph structure and parameters via a nonlinear attention-based\nkernel, enabling efficient multi-task estimation of the underlying linear SEMs.\nBy formulating the learning process across multiple tasks as a continuous\noptimization problem, the pre-trained ADAG model captures the common structural\nproperties as a shared low-dimensional prior, thereby reducing the\nill-posedness of downstream DAG learning tasks in small-sample regimes. We\nevaluate our proposed approach on benchmark synthetic datasets and find that\nADAG achieves substantial improvements in both DAG learning accuracy and\nzero-shot inference efficiency. To the best of our knowledge, this is the first\npractical approach for pre-training a foundation model specifically designed\nfor DAG learning, representing a step toward more efficient and generalizable\ndown-stream applications in causal discovery.",
+      "pdf_url": "http://arxiv.org/pdf/2506.18285v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.18285v1",
+      "published": "2025-06-23",
       "categories": [
         "cs.LG",
         "cs.AI"
       ]
     },
     {
-      "title": "Modeling and Visualization Reasoning for Stakeholders in Education and Industry Integration Systems: Research on Structured Synthetic Dialogue Data Generation Based on NIST Standards",
+      "title": "The Impact of Medication Non-adherence on Adverse Outcomes: Evidence from Schizophrenia Patients via Survival Analysis",
       "authors": [
-        "Wei Meng"
+        "Shahriar Noroozizadeh",
+        "Pim Welle",
+        "Jeremy C. Weiss",
+        "George H. Chen"
       ],
-      "abstract": "This study addresses the structural complexity and semantic ambiguity in\nstakeholder interactions within the Education-Industry Integration (EII)\nsystem. The scarcity of real interview data, absence of structured variable\nmodeling, and lack of interpretability in inference mechanisms have limited the\nanalytical accuracy and policy responsiveness of EII research. To resolve these\nchallenges, we propose a structural modeling paradigm based on the National\nInstitute of Standards and Technology (NIST) synthetic data quality framework,\nfocusing on consistency, authenticity, and traceability. We design a five-layer\narchitecture that includes prompt-driven synthetic dialogue generation, a\nstructured variable system covering skills, institutional, and emotional\ndimensions, dependency and causal path modeling, graph-based structure design,\nand an interactive inference engine. Empirical results demonstrate the\neffectiveness of the approach using a 15-segment synthetic corpus, with 41,597\ntokens, 127 annotated variables, and 820 semantic relationship triples. The\nmodel exhibits strong structural consistency (Krippendorff alpha = 0.83),\nconstruct validity (RMSEA = 0.048, CFI = 0.93), and semantic alignment (mean\ncosine similarity > 0.78 via BERT). A key causal loop is identified: system\nmismatch leads to emotional frustration, reduced participation, skill gaps, and\nrecurrence of mismatch, revealing a structural degradation cycle. This research\nintroduces the first NIST-compliant AI modeling framework for stakeholder\nsystems and provides a foundation for policy simulation, curriculum design, and\ncollaborative strategy modeling.",
-      "pdf_url": "http://arxiv.org/pdf/2506.16952v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.16952v1",
-      "published": "2025-06-20",
+      "abstract": "This study quantifies the association between non-adherence to antipsychotic\nmedications and adverse outcomes in individuals with schizophrenia. We frame\nthe problem using survival analysis, focusing on the time to the earliest of\nseveral adverse events (early death, involuntary hospitalization, jail\nbooking). We extend standard causal inference methods (T-learner, S-learner,\nnearest neighbor matching) to utilize various survival models to estimate\nindividual and average treatment effects, where treatment corresponds to\nmedication non-adherence. Analyses are repeated using different amounts of\nlongitudinal information (3, 6, 9, and 12 months). Using data from Allegheny\nCounty in western Pennsylvania, we find strong evidence that non-adherence\nadvances adverse outcomes by approximately 1 to 4 months. Ablation studies\nconfirm that county-provided risk scores adjust for key confounders, as their\nremoval amplifies the estimated effects. Subgroup analyses by medication\nformulation (injectable vs. oral) and medication type consistently show that\nnon-adherence is associated with earlier adverse events. These findings\nhighlight the clinical importance of adherence in delaying psychiatric crises\nand show that integrating survival analysis with causal inference tools can\nyield policy-relevant insights. We caution that although we apply causal\ninference, we only make associative claims and discuss assumptions needed for\ncausal interpretation.",
+      "pdf_url": "http://arxiv.org/pdf/2506.18187v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.18187v1",
+      "published": "2025-06-22",
       "categories": [
-        "cs.CY",
-        "68T50, 68T30, 91B06, 05C82, 62H30",
-        "I.2.6; I.2.7; H.2.8; K.3.1; K.4.1"
-      ]
-    },
-    {
-      "title": "From Prompts to Constructs: A Dual-Validity Framework for LLM Research in Psychology",
-      "authors": [
-        "Zhicheng Lin"
-      ],
-      "abstract": "Large language models (LLMs) are rapidly being adopted across psychology,\nserving as research tools, experimental subjects, human simulators, and\ncomputational models of cognition. However, the application of human\nmeasurement tools to these systems can produce contradictory results, raising\nconcerns that many findings are measurement phantoms--statistical artifacts\nrather than genuine psychological phenomena. In this Perspective, we argue that\nbuilding a robust science of AI psychology requires integrating two of our\nfield's foundational pillars: the principles of reliable measurement and the\nstandards for sound causal inference. We present a dual-validity framework to\nguide this integration, which clarifies how the evidence needed to support a\nclaim scales with its scientific ambition. Using an LLM to classify text may\nrequire only basic accuracy checks, whereas claiming it can simulate anxiety\ndemands a far more rigorous validation process. Current practice systematically\nfails to meet these requirements, often treating statistical pattern matching\nas evidence of psychological phenomena. The same model output--endorsing \"I am\nanxious\"--requires different validation strategies depending on whether\nresearchers claim to measure, characterize, simulate, or model psychological\nconstructs. Moving forward requires developing computational analogues of\npsychological constructs and establishing clear, scalable standards of evidence\nrather than the uncritical application of human measurement tools.",
-      "pdf_url": "http://arxiv.org/pdf/2506.16697v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.16697v1",
-      "published": "2025-06-20",
-      "categories": [
-        "cs.CY",
         "cs.AI",
-        "cs.CL",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Learning Causally Predictable Outcomes from Psychiatric Longitudinal Data",
-      "authors": [
-        "Eric V. Strobl"
-      ],
-      "abstract": "Causal inference in longitudinal biomedical data remains a central challenge,\nespecially in psychiatry, where symptom heterogeneity and latent confounding\nfrequently undermine classical estimators. Most existing methods for treatment\neffect estimation presuppose a fixed outcome variable and address confounding\nthrough observed covariate adjustment. However, the assumption of\nunconfoundedness may not hold for a fixed outcome in practice. To address this\nfoundational limitation, we directly optimize the outcome definition to\nmaximize causal identifiability. Our DEBIAS (Durable Effects with\nBackdoor-Invariant Aggregated Symptoms) algorithm learns non-negative,\nclinically interpretable weights for outcome aggregation, maximizing durable\ntreatment effects and empirically minimizing both observed and latent\nconfounding by leveraging the time-limited direct effects of prior treatments\nin psychiatric longitudinal data. The algorithm also furnishes an empirically\nverifiable test for outcome unconfoundedness. DEBIAS consistently outperforms\nstate-of-the-art methods in recovering causal effects for clinically\ninterpretable composite outcomes across comprehensive experiments in depression\nand schizophrenia.",
-      "pdf_url": "http://arxiv.org/pdf/2506.16629v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.16629v1",
-      "published": "2025-06-19",
-      "categories": [
         "cs.LG",
-        "q-bio.QM",
         "stat.ML"
       ]
     },
     {
-      "title": "Robust Reward Modeling via Causal Rubrics",
+      "title": "Causal Interventions in Bond Multi-Dealer-to-Client Platforms",
       "authors": [
-        "Pragya Srivastava",
-        "Harman Singh",
-        "Rahul Madhavan",
-        "Gandharv Patil",
-        "Sravanti Addepalli",
-        "Arun Suggala",
-        "Rengarajan Aravamudhan",
-        "Soumya Sharma",
-        "Anirban Laha",
-        "Aravindan Raghuveer",
-        "Karthikeyan Shanmugam",
-        "Doina Precup"
+        "Paloma Marín",
+        "Sergio Ardanza-Trevijano",
+        "Javier Sabio"
       ],
-      "abstract": "Reward models (RMs) are fundamental to aligning Large Language Models (LLMs)\nvia human feedback, yet they often suffer from reward hacking. They tend to\nlatch on to superficial or spurious attributes, such as response length or\nformatting, mistaking these cues learned from correlations in training data for\nthe true causal drivers of quality (e.g., factuality, relevance). This occurs\nbecause standard training objectives struggle to disentangle these factors,\nleading to brittle RMs and misaligned policies. We introduce Crome (Causally\nRobust Reward Modeling), a novel framework grounded in an explicit causal model\ndesigned to mitigate reward hacking. Crome employs the following synthetic\ntargeted augmentations during training: (1) Causal Augmentations, which are\npairs that differ along specific causal attributes, to enforce sensitivity\nalong each causal attribute individually, and (2) Neutral Augmentations, which\nare tie-label pairs varying primarily in spurious attributes, to enforce\ninvariance along spurious attributes. Notably, our augmentations are produced\nwithout any knowledge of spurious factors, via answer interventions only along\ncausal rubrics, that are identified by querying an oracle LLM. Empirically,\nCrome significantly outperforms standard baselines on RewardBench, improving\naverage accuracy by up to 5.4% and achieving gains of up to 13.2% and 7.2% in\nspecific categories. The robustness of Crome is further testified by the\nconsistent gains obtained in a Best-of-N inference setting across increasing N,\nacross various benchmarks, including the popular RewardBench (covering chat,\nchat-hard, safety, and reasoning tasks), the safety-focused WildGuardTest, and\nthe reasoning-specific GSM8k.",
-      "pdf_url": "http://arxiv.org/pdf/2506.16507v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.16507v1",
-      "published": "2025-06-19",
+      "abstract": "The digitalization of financial markets has shifted trading from voice to\nelectronic channels, with Multi-Dealer-to-Client (MD2C) platforms now enabling\nclients to request quotes (RfQs) for financial instruments like bonds from\nmultiple dealers simultaneously. In this competitive landscape, dealers cannot\nsee each other's prices, making a rigorous analysis of the negotiation process\ncrucial to ensure their profitability. This article introduces a novel general\nframework for analyzing the RfQ process using probabilistic graphical models\nand causal inference. Within this framework, we explore different inferential\nquestions that are relevant for dealers participating in MD2C platforms, such\nas the computation of optimal prices, estimating potential revenues and the\nidentification of clients that might be interested in trading the dealer's\naxes. We then move into analyzing two different approaches for model\nspecification: a generative model built on the work of (Fermanian, Gu\\'eant &\nPu, 2017); and discriminative models utilizing machine learning techniques. We\nevaluate these methodologies using predictive metrics designed to assess their\neffectiveness in the context of optimal pricing, highlighting the relative\nbenefits of using models that take into account the internal mechanisms of the\nnegotiation process.",
+      "pdf_url": "http://arxiv.org/pdf/2506.18147v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.18147v1",
+      "published": "2025-06-22",
       "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "An introduction to Causal Modelling",
-      "authors": [
-        "Gauranga Kumar Baishya"
-      ],
-      "abstract": "This tutorial provides a concise introduction to modern causal modeling by\nintegrating potential outcomes and graphical methods. We motivate causal\nquestions such as counterfactual reasoning under interventions and define\nbinary treatments and potential outcomes. We discuss causal effect\nmeasures-including average treatment effects on the treated and on the\nuntreated-and choices of effect scales for binary outcomes. We derive\nidentification in randomized experiments under exchangeability and consistency,\nand extend to stratification and blocking designs. We present inverse\nprobability weighting with propensity score estimation and robust inference via\nsandwich estimators. Finally, we introduce causal graphs, d-separation, the\nbackdoor criterion, single-world intervention graphs, and structural equation\nmodels, showing how graphical and potential-outcome approaches complement each\nother. Emphasis is placed on clear notation, intuitive explanations, and\npractical examples for applied researchers.",
-      "pdf_url": "http://arxiv.org/pdf/2506.16486v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.16486v1",
-      "published": "2025-06-19",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.ML",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Unveiling Political Influence Through Social Media: Network and Causal Dynamics in the 2022 French Presidential Election",
-      "authors": [
-        "Ixandra Achitouv",
-        "David Chavalarias"
-      ],
-      "abstract": "During the 2022 French presidential election, we collected daily Twitter\nmessages on key topics posted by political candidates and their close networks.\nUsing a data-driven approach, we analyze interactions among political parties,\nidentifying central topics that shape the landscape of political debate. Moving\nbeyond traditional correlation analyses, we apply a causal inference technique:\nConvergent Cross Mapping, to uncover directional influences among political\ncommunities, revealing how some parties are more likely to initiate changes in\nactivity while others tend to respond. This approach allows us to distinguish\ntrue influence from mere correlation, highlighting asymmetric relationships and\nhidden dynamics within the social media political network. Our findings\ndemonstrate how specific issues, such as health and foreign policy, act as\ncatalysts for cross-party influence, particularly during critical election\nphases. These insights provide a novel framework for understanding political\ndiscourse dynamics and have practical implications for campaign strategists and\nmedia analysts seeking to monitor and respond to shifts in political influence\nin real time.",
-      "pdf_url": "http://arxiv.org/pdf/2506.16449v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.16449v1",
-      "published": "2025-06-19",
-      "categories": [
-        "cs.SI",
-        "cs.CY",
-        "physics.soc-ph"
-      ]
-    },
-    {
-      "title": "Causal inference amid missingness-specific independencies and mechanism shifts",
-      "authors": [
-        "Johan de Aguas",
-        "Leonard Henckel",
-        "Johan Pensar",
-        "Guido Biele"
-      ],
-      "abstract": "The recovery of causal effects in structural models with missing data often\nrelies on $m$-graphs, which assume that missingness mechanisms do not directly\ninfluence substantive variables. Yet, in many real-world settings, missing data\ncan alter decision-making processes, as the absence of key information may\naffect downstream actions and states. To overcome this limitation, we introduce\n$lm$-SCMs and $lm$-graphs, which extend $m$-graphs by integrating a label set\nthat represents relevant context-specific independencies (CSI), accounting for\nmechanism shifts induced by missingness. We define two causal effects within\nthese systems: the Full Average Treatment Effect (FATE), which reflects the\neffect in a hypothetical scenario had no data been missing, and the Natural\nAverage Treatment Effect (NATE), which captures the effect under the unaltered\nCSIs in the system. We propose recovery criteria for these queries and present\ndoubly-robust estimators for a graphical model inspired by a real-world\napplication. Simulations highlight key differences between these estimands and\nestimation methods. Findings from the application case suggest a small effect\nof ADHD treatment upon test achievement among Norwegian children, with a slight\neffect shift due to missing pre-tests scores.",
-      "pdf_url": "http://arxiv.org/pdf/2506.15441v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.15441v1",
-      "published": "2025-06-18",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.TH",
-        "62D20, 62H22"
-      ]
-    },
-    {
-      "title": "Linear-Time Primitives for Algorithm Development in Graphical Causal Inference",
-      "authors": [
-        "Marcel Wienöbst",
-        "Sebastian Weichwald",
-        "Leonard Henckel"
-      ],
-      "abstract": "We introduce CIfly, a framework for efficient algorithmic primitives in\ngraphical causal inference that isolates reachability as a reusable core\noperation. It builds on the insight that many causal reasoning tasks can be\nreduced to reachability in purpose-built state-space graphs that can be\nconstructed on the fly during traversal. We formalize a rule table schema for\nspecifying such algorithms and prove they run in linear time. We establish\nCIfly as a more efficient alternative to the common primitives moralization and\nlatent projection, which we show are computationally equivalent to Boolean\nmatrix multiplication. Our open-source Rust implementation parses rule table\ntext files and runs the specified CIfly algorithms providing high-performance\nexecution accessible from Python and R. We demonstrate CIfly's utility by\nre-implementing a range of established causal inference tasks within the\nframework and by developing new algorithms for instrumental variables. These\ncontributions position CIfly as a flexible and scalable backbone for graphical\ncausal inference, guiding algorithm development and enabling easy and efficient\ndeployment.",
-      "pdf_url": "http://arxiv.org/pdf/2506.15758v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.15758v1",
-      "published": "2025-06-18",
-      "categories": [
-        "cs.AI",
-        "cs.DS",
-        "cs.LG",
-        "stat.ME",
-        "stat.ML"
+        "q-fin.TR"
       ]
     }
   ]
