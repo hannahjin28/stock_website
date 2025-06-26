@@ -1,6 +1,55 @@
 {
-  "last_updated": "2025-06-25T00:56:16.566721",
+  "last_updated": "2025-06-26T00:55:17.271935",
   "papers": [
+    {
+      "title": "Bayesian Evolutionary Swarm Architecture: A Formal Epistemic System Grounded in Truth-Based Competition",
+      "authors": [
+        "Craig Steven Wright"
+      ],
+      "abstract": "We introduce a mathematically rigorous framework for an artificial\nintelligence system composed of probabilistic agents evolving through\nstructured competition and belief revision. The architecture, grounded in\nBayesian inference, measure theory, and population dynamics, defines agent\nfitness as a function of alignment with a fixed external oracle representing\nground truth. Agents compete in a discrete-time environment, adjusting\nposterior beliefs through observed outcomes, with higher-rated agents\nreproducing and lower-rated agents undergoing extinction. Ratings are updated\nvia pairwise truth-aligned utility comparisons, and belief updates preserve\nmeasurable consistency and stochastic convergence. We introduce hash-based\ncryptographic identity commitments to ensure traceability, alongside causal\ninference operators using do-calculus. Formal theorems on convergence,\nrobustness, and evolutionary stability are provided. The system establishes\ntruth as an evolutionary attractor, demonstrating that verifiable knowledge\narises from adversarial epistemic pressure within a computable, self-regulating\nswarm.",
+      "pdf_url": "http://arxiv.org/pdf/2506.19191v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.19191v1",
+      "published": "2025-06-23",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.GT",
+        "math.LO",
+        "68T05, 68Q87, 03E20",
+        "I.2.6; I.2.3; F.1.1"
+      ]
+    },
+    {
+      "title": "Inferring Diffusion Structures of Heterogeneous Network Cascade",
+      "authors": [
+        "Yubai Yuan",
+        "Siyu Huang",
+        "Abdul Basit Adeel"
+      ],
+      "abstract": "Network cascade refers to diffusion processes in which outcome changes within\npart of an interconnected population trigger a sequence of changes across the\nentire network. These cascades are governed by underlying diffusion networks,\nwhich are often latent. Inferring such networks is critical for understanding\ncascade pathways, uncovering Granger causality of interaction mechanisms among\nindividuals, and enabling tasks such as forecasting or maximizing information\npropagation. In this project, we propose a novel double mixture directed graph\nmodel for inferring multi-layer diffusion networks from cascade data. The\nproposed model represents cascade pathways as a mixture of diffusion networks\nacross different layers, effectively capturing the strong heterogeneity present\nin real-world cascades. Additionally, the model imposes layer-specific\nstructural constraints, enabling diffusion networks at different layers to\ncapture complementary cascading patterns at the population level. A key\nadvantage of our model is its convex formulation, which allows us to establish\nboth statistical and computational guarantees for the resulting diffusion\nnetwork estimates. We conduct extensive simulation studies to demonstrate the\nmodel's performance in recovering diverse diffusion structures. Finally, we\napply the proposed method to analyze cascades of research topics in the social\nsciences across U.S. universities, revealing the underlying diffusion networks\nof research topic propagation among institutions.",
+      "pdf_url": "http://arxiv.org/pdf/2506.19142v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.19142v1",
+      "published": "2025-06-23",
+      "categories": [
+        "cs.SI",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Principal stratification with recurrent events truncated by a terminal event: A nested Bayesian nonparametric approach",
+      "authors": [
+        "Yuki Ohnishi",
+        "Michael O. Harhay",
+        "Fan Li"
+      ],
+      "abstract": "Recurrent events often serve as key endpoints in clinical studies but may be\nprematurely truncated by terminal events such as death, creating selection bias\nand complicating causal inference. To address this challenge, we propose novel\ncausal estimands within the principal stratification framework, introducing a\nrefined ``always-survivor'' stratum that defines survival until the final\nrecurrent event rather than a fixed time point, yielding more stable and\ninterpretable causal contrasts. We develop a flexible Bayesian nonparametric\nprior -- the enriched dependent Dirichlet process -- specifically designed for\njoint modeling of recurrent and terminal events, addressing a critical\nlimitation where standard Dirichlet process priors create random partitions\ndominated by recurrent events, yielding poor predictive performance for\nterminal events. Our nested structure separates within-arm and cross-arm\ndependence through a dual-frailty framework, enabling transparent sensitivity\nanalysis for non-identifiable parameters. Simulations are carried out to show\nthat our method has superior performance compared to existing methods. We also\nillustrate the proposed Bayesian methods to infer the causal effect of\nintensive blood pressure control on recurrent cardiovascular events in a\ncardiovascular clinical trial.",
+      "pdf_url": "http://arxiv.org/pdf/2506.19015v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.19015v1",
+      "published": "2025-06-23",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Steering Conceptual Bias via Transformer Latent-Subspace Activation",
       "authors": [
@@ -112,55 +161,6 @@
       "published": "2025-06-23",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Learning Causal Graphs at Scale: A Foundation Model Approach",
-      "authors": [
-        "Naiyu Yin",
-        "Tian Gao",
-        "Yue Yu"
-      ],
-      "abstract": "Due to its human-interpretability and invariance properties, Directed Acyclic\nGraph (DAG) has been a foundational tool across various areas of AI research,\nleading to significant advancements. However, DAG learning remains highly\nchallenging, due to its super-exponential growth in computational cost and\nidentifiability issues, particularly in small-sample regimes. To address these\ntwo challenges, in this work we leverage the recent success of linear\ntransformers and develop a foundation model approach for discovering multiple\norder-consistent DAGs across tasks. In particular, we propose Attention-DAG\n(ADAG), a novel attention-mechanism-based architecture for learning multiple\nlinear Structural Equation Models (SEMs). ADAG learns the mapping from observed\ndata to both graph structure and parameters via a nonlinear attention-based\nkernel, enabling efficient multi-task estimation of the underlying linear SEMs.\nBy formulating the learning process across multiple tasks as a continuous\noptimization problem, the pre-trained ADAG model captures the common structural\nproperties as a shared low-dimensional prior, thereby reducing the\nill-posedness of downstream DAG learning tasks in small-sample regimes. We\nevaluate our proposed approach on benchmark synthetic datasets and find that\nADAG achieves substantial improvements in both DAG learning accuracy and\nzero-shot inference efficiency. To the best of our knowledge, this is the first\npractical approach for pre-training a foundation model specifically designed\nfor DAG learning, representing a step toward more efficient and generalizable\ndown-stream applications in causal discovery.",
-      "pdf_url": "http://arxiv.org/pdf/2506.18285v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.18285v1",
-      "published": "2025-06-23",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "The Impact of Medication Non-adherence on Adverse Outcomes: Evidence from Schizophrenia Patients via Survival Analysis",
-      "authors": [
-        "Shahriar Noroozizadeh",
-        "Pim Welle",
-        "Jeremy C. Weiss",
-        "George H. Chen"
-      ],
-      "abstract": "This study quantifies the association between non-adherence to antipsychotic\nmedications and adverse outcomes in individuals with schizophrenia. We frame\nthe problem using survival analysis, focusing on the time to the earliest of\nseveral adverse events (early death, involuntary hospitalization, jail\nbooking). We extend standard causal inference methods (T-learner, S-learner,\nnearest neighbor matching) to utilize various survival models to estimate\nindividual and average treatment effects, where treatment corresponds to\nmedication non-adherence. Analyses are repeated using different amounts of\nlongitudinal information (3, 6, 9, and 12 months). Using data from Allegheny\nCounty in western Pennsylvania, we find strong evidence that non-adherence\nadvances adverse outcomes by approximately 1 to 4 months. Ablation studies\nconfirm that county-provided risk scores adjust for key confounders, as their\nremoval amplifies the estimated effects. Subgroup analyses by medication\nformulation (injectable vs. oral) and medication type consistently show that\nnon-adherence is associated with earlier adverse events. These findings\nhighlight the clinical importance of adherence in delaying psychiatric crises\nand show that integrating survival analysis with causal inference tools can\nyield policy-relevant insights. We caution that although we apply causal\ninference, we only make associative claims and discuss assumptions needed for\ncausal interpretation.",
-      "pdf_url": "http://arxiv.org/pdf/2506.18187v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.18187v1",
-      "published": "2025-06-22",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Causal Interventions in Bond Multi-Dealer-to-Client Platforms",
-      "authors": [
-        "Paloma Marín",
-        "Sergio Ardanza-Trevijano",
-        "Javier Sabio"
-      ],
-      "abstract": "The digitalization of financial markets has shifted trading from voice to\nelectronic channels, with Multi-Dealer-to-Client (MD2C) platforms now enabling\nclients to request quotes (RfQs) for financial instruments like bonds from\nmultiple dealers simultaneously. In this competitive landscape, dealers cannot\nsee each other's prices, making a rigorous analysis of the negotiation process\ncrucial to ensure their profitability. This article introduces a novel general\nframework for analyzing the RfQ process using probabilistic graphical models\nand causal inference. Within this framework, we explore different inferential\nquestions that are relevant for dealers participating in MD2C platforms, such\nas the computation of optimal prices, estimating potential revenues and the\nidentification of clients that might be interested in trading the dealer's\naxes. We then move into analyzing two different approaches for model\nspecification: a generative model built on the work of (Fermanian, Gu\\'eant &\nPu, 2017); and discriminative models utilizing machine learning techniques. We\nevaluate these methodologies using predictive metrics designed to assess their\neffectiveness in the context of optimal pricing, highlighting the relative\nbenefits of using models that take into account the internal mechanisms of the\nnegotiation process.",
-      "pdf_url": "http://arxiv.org/pdf/2506.18147v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.18147v1",
-      "published": "2025-06-22",
-      "categories": [
-        "q-fin.TR"
       ]
     }
   ]
