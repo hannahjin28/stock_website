@@ -1,6 +1,142 @@
 {
-  "last_updated": "2025-06-26T00:55:17.271935",
+  "last_updated": "2025-06-27T00:55:58.523836",
   "papers": [
+    {
+      "title": "DiffuCoder: Understanding and Improving Masked Diffusion Models for Code Generation",
+      "authors": [
+        "Shansan Gong",
+        "Ruixiang Zhang",
+        "Huangjie Zheng",
+        "Jiatao Gu",
+        "Navdeep Jaitly",
+        "Lingpeng Kong",
+        "Yizhe Zhang"
+      ],
+      "abstract": "Diffusion large language models (dLLMs) are compelling alternatives to\nautoregressive (AR) models because their denoising models operate over the\nentire sequence. The global planning and iterative refinement features of dLLMs\nare particularly useful for code generation. However, current training and\ninference mechanisms for dLLMs in coding are still under-explored. To demystify\nthe decoding behavior of dLLMs and unlock their potential for coding, we\nsystematically investigate their denoising processes and reinforcement learning\n(RL) methods. We train a 7B dLLM, \\textbf{DiffuCoder}, on 130B tokens of code.\nUsing this model as a testbed, we analyze its decoding behavior, revealing how\nit differs from that of AR models: (1) dLLMs can decide how causal their\ngeneration should be without relying on semi-AR decoding, and (2) increasing\nthe sampling temperature diversifies not only token choices but also their\ngeneration order. This diversity creates a rich search space for RL rollouts.\nFor RL training, to reduce the variance of token log-likelihood estimates and\nmaintain training efficiency, we propose \\textbf{coupled-GRPO}, a novel\nsampling scheme that constructs complementary mask noise for completions used\nin training. In our experiments, coupled-GRPO significantly improves\nDiffuCoder's performance on code generation benchmarks (+4.4\\% on EvalPlus) and\nreduces reliance on AR bias during decoding. Our work provides deeper insight\ninto the machinery of dLLM generation and offers an effective, diffusion-native\nRL training framework. https://github.com/apple/ml-diffucoder.",
+      "pdf_url": "http://arxiv.org/pdf/2506.20639v2",
+      "arxiv_url": "http://arxiv.org/abs/2506.20639v2",
+      "published": "2025-06-25",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Causal Inference for Latent Outcomes Learned with Factor Models",
+      "authors": [
+        "Jenna M. Landy",
+        "Dafne Zorzetto",
+        "Roberta De Vito",
+        "Giovanni Parmigiani"
+      ],
+      "abstract": "In many fields$\\unicode{x2013}$including genomics, epidemiology, natural\nlanguage processing, social and behavioral sciences, and\neconomics$\\unicode{x2013}$it is increasingly important to address causal\nquestions in the context of factor models or representation learning. In this\nwork, we investigate causal effects on $\\textit{latent outcomes}$ derived from\nhigh-dimensional observed data using nonnegative matrix factorization. To the\nbest of our knowledge, this is the first study to formally address causal\ninference in this setting. A central challenge is that estimating a latent\nfactor model can cause an individual's learned latent outcome to depend on\nother individuals' treatments, thereby violating the standard causal inference\nassumption of no interference. We formalize this issue as\n$\\textit{learning-induced interference}$ and distinguish it from interference\npresent in a data-generating process. To address this, we propose a novel,\nintuitive, and theoretically grounded algorithm to estimate causal effects on\nlatent outcomes while mitigating learning-induced interference and improving\nestimation efficiency. We establish theoretical guarantees for the consistency\nof our estimator and demonstrate its practical utility through simulation\nstudies and an application to cancer mutational signature analysis. All\nbaseline and proposed methods are available in our open-source R package, ${\\tt\ncausalLFO}$.",
+      "pdf_url": "http://arxiv.org/pdf/2506.20549v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.20549v1",
+      "published": "2025-06-25",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Anytime-Valid Inference in Adaptive Experiments: Covariate Adjustment and Balanced Power",
+      "authors": [
+        "Daniel Molitor",
+        "Samantha Gold"
+      ],
+      "abstract": "Adaptive experiments have become central to modern experimental design,\nenabling researchers to efficiently identify optimal treatments, improve\nstatistical power, and maximize respondent welfare. However, adaptive\nexperiments compromise valid inference and leave sub-optimal treatments\nunderpowered. We introduce two methodological advances for adaptive\nexperimentation. First, covariate-adjusted Mixture Adaptive Design (MADCovar)\nachieves substantial improvements in average treatment effect (ATE) precision\nby incorporating covariate adjustment within an anytime-valid inference\nframework. Second, power-modified MAD (MADMod) reallocates sample to\nunderpowered treatment arms, improving statistical power across all treatments\nwhile maintaining error control. Both methods provide anytime-valid guarantees,\nenabling continuous monitoring without inflating Type 1 error rates. Simulation\nstudies and empirical analyses demonstrate that MADCovar delivers significant\nprecision gains and that MADMod ensures robust inference even for suboptimal\ntreatments. Together, these methods address key limitations of adaptive\nexperiments and equip researchers with practical tools for precise and reliable\ncausal inference. Our proposed methods are implemented through an open-source\nsoftware package.",
+      "pdf_url": "http://arxiv.org/pdf/2506.20523v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.20523v1",
+      "published": "2025-06-25",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "stat.CO"
+      ]
+    },
+    {
+      "title": "The Role of Partisan Culture in Mental Health Language Online",
+      "authors": [
+        "Sachin R. Pendse",
+        "Ben Rochford",
+        "Neha Kumar",
+        "Munmun De Choudhury"
+      ],
+      "abstract": "The impact of culture on how people express distress in online support\ncommunities is increasingly a topic of interest within Computer Supported\nCooperative Work (CSCW) and Human-Computer Interaction (HCI). In the United\nStates, distinct cultures have emerged from each of the two dominant political\nparties, forming a primary lens by which people navigate online and offline\nworlds. We examine whether partisan culture may play a role in how U.S.\nRepublican and Democrat users of online mental health support communities\nexpress distress. We present a large-scale observational study of 2,184,356\nposts from 8,916 statistically matched Republican, Democrat, and unaffiliated\nonline support community members. We utilize methods from causal inference to\nstatistically match partisan users along covariates that correspond with\ndemographic attributes and platform use, in order to create comparable cohorts\nfor analysis. We then leverage methods from natural language processing to\nunderstand how partisan expressions of distress compare between these sets of\nclosely matched opposing partisans, and between closely matched partisans and\ntypical support community members. Our data spans January 2013 to December\n2022, a period of both rising political polarization and mental health\nconcerns. We find that partisan culture does play into expressions of distress,\nunderscoring the importance of considering partisan cultural differences in the\ndesign of online support community platforms.",
+      "pdf_url": "http://arxiv.org/pdf/2506.20377v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.20377v1",
+      "published": "2025-06-25",
+      "categories": [
+        "cs.HC",
+        "cs.CY",
+        "cs.SI"
+      ]
+    },
+    {
+      "title": "Causal Operator Discovery in Partial Differential Equations via Counterfactual Physics-Informed Neural Networks",
+      "authors": [
+        "Ronald Katende"
+      ],
+      "abstract": "We develop a principled framework for discovering causal structure in partial\ndifferential equations (PDEs) using physics-informed neural networks and\ncounterfactual perturbations. Unlike classical residual minimization or sparse\nregression methods, our approach quantifies operator-level necessity through\nfunctional interventions on the governing dynamics. We introduce causal\nsensitivity indices and structural deviation metrics to assess the influence of\ncandidate differential operators within neural surrogates. Theoretically, we\nprove exact recovery of the causal operator support under restricted isometry\nor mutual coherence conditions, with residual bounds guaranteeing\nidentifiability. Empirically, we validate the framework on both synthetic and\nreal-world datasets across climate dynamics, tumor diffusion, and ocean flows.\nOur method consistently recovers governing operators even under noise,\nredundancy, and data scarcity, outperforming standard PINNs and DeepONets in\nstructural fidelity. This work positions causal PDE discovery as a tractable\nand interpretable inference task grounded in structural causal models and\nvariational residual analysis.",
+      "pdf_url": "http://arxiv.org/pdf/2506.20181v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.20181v1",
+      "published": "2025-06-25",
+      "categories": [
+        "cs.LG",
+        "cs.NA",
+        "math.NA"
+      ]
+    },
+    {
+      "title": "Causal mediation analysis for longitudinal and survival data in continuous time using Bayesian non-parametric joint models",
+      "authors": [
+        "Saurabh Bhandari",
+        "Michael J. Daniels",
+        "Juned Siddique"
+      ],
+      "abstract": "Observational cohort data is an important source of information for\nunderstanding the causal effects of treatments on survival and the degree to\nwhich these effects are mediated through changes in disease-related risk\nfactors. However, these analyses are often complicated by irregular data\ncollection intervals and the presence of longitudinal confounders and\nmediators. We propose a causal mediation framework that jointly models\nlongitudinal exposures, confounders, mediators, and time-to-event outcomes as\ncontinuous functions of age. This framework for longitudinal covariate\ntrajectories enables statistical inference even at ages where the subject's\ncovariate measurements are unavailable. The observed data distribution in our\nframework is modeled using an enriched Dirichlet process mixture (EDPM) model.\nUsing data from the Atherosclerosis Risk in Communities cohort study, we apply\nour methods to assess how medication -- prescribed to target cardiovascular\ndisease (CVD) risk factors -- affects the time-to-CVD death.",
+      "pdf_url": "http://arxiv.org/pdf/2506.20058v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.20058v1",
+      "published": "2025-06-24",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Quantum Neural Networks for Propensity Score Estimation and Survival Analysis in Observational Biomedical Studies",
+      "authors": [
+        "Vojtěch Novák",
+        "Ivan Zelinka",
+        "Lenka Přibylová",
+        "Lubomír Martínek"
+      ],
+      "abstract": "This study investigates the application of quantum neural networks (QNNs) for\npropensity score estimation to address selection bias in comparing survival\noutcomes between laparoscopic and open surgical techniques in a cohort of 1177\ncolorectal carcinoma patients treated at University Hospital Ostrava\n(2001-2009). Using a dataset with 77 variables, including patient demographics\nand tumor characteristics, we developed QNN-based propensity score models\nfocusing on four key covariates (Age, Sex, Stage, BMI). The QNN architecture\nemployed a linear ZFeatureMap for data encoding, a SummedPaulis operator for\npredictions, and the Covariance Matrix Adaptation Evolution Strategy (CMA-ES)\nfor robust, gradient-free optimization in noisy quantum environments. Variance\nregularization was integrated to mitigate quantum measurement noise, with\nsimulations conducted under exact, sampling (1024 shots), and noisy hardware\n(FakeManhattanV2) conditions. QNNs, particularly with simulated hardware noise,\noutperformed classical logistic regression and gradient boosted machines in\nsmall samples (AUC up to 0.750 for n=100), with noise modeling enhancing\npredictive stability. Propensity score matching and weighting, optimized via\ngenetic matching and matching weights, achieved covariate balance with\nstandardized mean differences of 0.0849 and 0.0869, respectively. Survival\nanalyses using Kaplan-Meier estimation, Cox proportional hazards, and Aalen\nadditive regression revealed no significant survival differences\npost-adjustment (p-values 0.287-0.851), indicating confounding bias in\nunadjusted outcomes. These results highlight QNNs' potential, enhanced by\nCMA-ES and noise-aware strategies, to improve causal inference in biomedical\nresearch, particularly for small-sample, high-dimensional datasets.",
+      "pdf_url": "http://arxiv.org/pdf/2506.19973v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.19973v1",
+      "published": "2025-06-24",
+      "categories": [
+        "quant-ph",
+        "cs.AI",
+        "stat.ML",
+        "62H30, 62P10, 68T05, 81P68",
+        "I.2.6; J.3; I.5.4; F.4.1"
+      ]
+    },
+    {
+      "title": "Causal-Aware Intelligent QoE Optimization for VR Interaction with Adaptive Keyframe Extraction",
+      "authors": [
+        "Ziru Zhang",
+        "Jiadong Yu",
+        "Danny H. K. Tsang"
+      ],
+      "abstract": "The optimization of quality of experience (QoE) in multi-user virtual reality\n(VR) interactions demands a delicate balance between ultra-low latency,\nhigh-fidelity motion synchronization, and equitable resource allocation. While\nadaptive keyframe extraction mitigates transmission overhead, existing\napproaches often overlook the causal relationships among allocated bandwidth,\nCPU frequency, and user perception, limiting QoE gains. This paper proposes an\nintelligent framework to maximize QoE by integrating adaptive keyframe\nextraction with causal-aware reinforcement learning (RL). First, a novel QoE\nmetric is formulated using the Weber-Fechner Law, combining perceptual\nsensitivity, attention-driven priorities, and motion reconstruction accuracy.\nThe QoE optimization problem is then modeled as a mixed integer programming\n(MIP) task, jointly optimizing keyframe ratios, bandwidth, and computational\nresources under horizon-fairness constraints. We propose Partial State Causal\nDeep Deterministic Policy Gradient (PS-CDDPG), which integrates the Deep\nDeterministic Policy Gradient (DDPG) method with causal influence detection. By\nleveraging causal information regarding how QoE is influenced and determined by\nvarious actions, we explore actions guided by weights calculated from causal\ninference (CI), which in turn improves training efficiency. Experiments\nconducted with the CMU Motion Capture Database demonstrate that our framework\nsignificantly reduces interactive latency, enhances QoE, and maintains\nfairness, achieving superior performance compared to benchmark methods.",
+      "pdf_url": "http://arxiv.org/pdf/2506.19890v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.19890v1",
+      "published": "2025-06-24",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Bayesian Evolutionary Swarm Architecture: A Formal Epistemic System Grounded in Truth-Based Competition",
       "authors": [
@@ -33,134 +169,6 @@
       "categories": [
         "cs.SI",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Principal stratification with recurrent events truncated by a terminal event: A nested Bayesian nonparametric approach",
-      "authors": [
-        "Yuki Ohnishi",
-        "Michael O. Harhay",
-        "Fan Li"
-      ],
-      "abstract": "Recurrent events often serve as key endpoints in clinical studies but may be\nprematurely truncated by terminal events such as death, creating selection bias\nand complicating causal inference. To address this challenge, we propose novel\ncausal estimands within the principal stratification framework, introducing a\nrefined ``always-survivor'' stratum that defines survival until the final\nrecurrent event rather than a fixed time point, yielding more stable and\ninterpretable causal contrasts. We develop a flexible Bayesian nonparametric\nprior -- the enriched dependent Dirichlet process -- specifically designed for\njoint modeling of recurrent and terminal events, addressing a critical\nlimitation where standard Dirichlet process priors create random partitions\ndominated by recurrent events, yielding poor predictive performance for\nterminal events. Our nested structure separates within-arm and cross-arm\ndependence through a dual-frailty framework, enabling transparent sensitivity\nanalysis for non-identifiable parameters. Simulations are carried out to show\nthat our method has superior performance compared to existing methods. We also\nillustrate the proposed Bayesian methods to infer the causal effect of\nintensive blood pressure control on recurrent cardiovascular events in a\ncardiovascular clinical trial.",
-      "pdf_url": "http://arxiv.org/pdf/2506.19015v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.19015v1",
-      "published": "2025-06-23",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Steering Conceptual Bias via Transformer Latent-Subspace Activation",
-      "authors": [
-        "Vansh Sharma",
-        "Venkat Raman"
-      ],
-      "abstract": "This work examines whether activating latent subspaces in language models\n(LLMs) can steer scientific code generation toward a specific programming\nlanguage. Five causal LLMs were first evaluated on scientific coding prompts to\nquantify their baseline bias among four programming languages. A static\nneuron-attribution method, perturbing the highest activated MLP weight for a\nC++ or CPP token, proved brittle and exhibited limited generalization across\nprompt styles and model scales. To address these limitations, a\ngradient-refined adaptive activation steering framework (G-ACT) was developed:\nper-prompt activation differences are clustered into a small set of steering\ndirections, and lightweight per-layer probes are trained and refined online to\nselect the appropriate steering vector. In LLaMA-3.2 3B, this approach reliably\nbiases generation towards the CPP language by increasing the average probe\nclassification accuracy by 15% and the early layers (0-6) improving the probe\nclassification accuracy by 61.5% compared to the standard ACT framework. For\nLLaMA-3.3 70B, where attention-head signals become more diffuse, targeted\ninjections at key layers still improve language selection. Although per-layer\nprobing introduces a modest inference overhead, it remains practical by\nsteering only a subset of layers and enables reproducible model behavior. These\nresults demonstrate a scalable, interpretable and efficient mechanism for\nconcept-level control for practical agentic systems.",
-      "pdf_url": "http://arxiv.org/pdf/2506.18887v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.18887v1",
-      "published": "2025-06-23",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.SY",
-        "eess.SY",
-        "I.2.7; I.2.6; I.2.1; D.3.3; C.4"
-      ]
-    },
-    {
-      "title": "A Practical Introduction to Regression-based Causal Inference in Meteorology (I): All confounders measured",
-      "authors": [
-        "Caren Marzban",
-        "Yikun Zhang",
-        "Nicholas Bond",
-        "Michael Richman"
-      ],
-      "abstract": "Whether a variable is the cause of another, or simply associated with it, is\noften an important scientific question. Causal Inference is the name associated\nwith the body of techniques for addressing that question in a statistical\nsetting. Although assessing causality is relatively straightforward in the\npresence of temporal information, outside of that setting - the situation\nconsidered here - it is more difficult to assess causal effects. The\ndevelopment of the field of causal inference has involved concepts from a wide\nrange of topics, thereby limiting its adoption across some fields, including\nmeteorology. However, at its core, the requisite knowledge for causal inference\ninvolves little more than basic probability theory and regression, topics\nfamiliar to most meteorologists. By focusing on these core areas, this and a\ncompanion article provide a steppingstone for the meteorology community into\nthe field of (non-temporal) causal inference. Although some theoretical\nfoundations are presented, the main goal is the application of a specific\nmethod, called matching, to a problem in meteorology. The data for the\napplication are in public domain, and R code is provided as well, forming an\neasy path for meteorology students and researchers to enter the field.",
-      "pdf_url": "http://arxiv.org/pdf/2506.18808v2",
-      "arxiv_url": "http://arxiv.org/abs/2506.18808v2",
-      "published": "2025-06-23",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Likelihood Ratio test for Poisson graph",
-      "authors": [
-        "Chen Shuyan",
-        "Liu Xin",
-        "Wang Shaoli"
-      ],
-      "abstract": "Directed acyclic graphs are widely used to describe the causal effects among\nrandom variables, and the inference of those causal effects has become an\npopular topic in statistics and machine learning, and has wide applications in\nneuroinformatics, bioinformatics and so on. However, most studies focus on the\nestimation or inference of the directional relations among continuous random\nvariables, those among discrete random variables have not gained much\nattentions. In this article we focus on the inference of directed linkages and\ndirected pathways in a Poisson directed graphical model. We employ likelihood\nratio tests subject to non-convex acyclicity constraints, and derive the\nasymptotic distributions of the test statistic under the null hypothesis is\ntrue in high-dimensional situations. The power analysis and simulations suggest\nthat the tests achieve the desired objectives of inference. An analysis of a\nbasketball statistics dataset of NBA players during 2016-2017 season\nillustrates the utility of the proposed method to infer directed linkages and\ndirected pathways in player's statistics network.",
-      "pdf_url": "http://arxiv.org/pdf/2506.18778v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.18778v1",
-      "published": "2025-06-23",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.TH",
-        "Primary: 62F03, Secondary: 62F30"
-      ]
-    },
-    {
-      "title": "Towards Group Fairness with Multiple Sensitive Attributes in Federated Foundation Models",
-      "authors": [
-        "Yuning Yang",
-        "Han Yu",
-        "Tianrun Gao",
-        "Xiaodong Xu",
-        "Guangyu Wang"
-      ],
-      "abstract": "The deep integration of foundation models (FM) with federated learning (FL)\nenhances personalization and scalability for diverse downstream tasks, making\nit crucial in sensitive domains like healthcare. Achieving group fairness has\nbecome an increasingly prominent issue in the era of federated foundation\nmodels (FFMs), since biases in sensitive attributes might lead to inequitable\ntreatment for under-represented demographic groups. Existing studies mostly\nfocus on achieving fairness with respect to a single sensitive attribute. This\nrenders them unable to provide clear interpretability of dependencies among\nmultiple sensitive attributes which is required to achieve group fairness. Our\npaper takes the first attempt towards a causal analysis of the relationship\nbetween group fairness across various sensitive attributes in the FFM. We\nextend the FFM structure to trade off multiple sensitive attributes\nsimultaneously and quantify the causal effect behind the group fairness through\ncausal discovery and inference. Extensive experiments validate its\neffectiveness, offering insights into interpretability towards building\ntrustworthy and fair FFM systems.",
-      "pdf_url": "http://arxiv.org/pdf/2506.18732v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.18732v1",
-      "published": "2025-06-23",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "A Practical Introduction to Regression-based Causal Inference in Meteorology (II): Unmeasured confounders",
-      "authors": [
-        "Caren Marzban",
-        "Yikun Zhang",
-        "Nicholas Bond",
-        "Michael Richman"
-      ],
-      "abstract": "One obstacle to ``elevating\" correlation to causation is the phenomenon of\nconfounding, i.e., when a correlation between two variables exists because both\nvariables are in fact caused by a third variable. The situation where the\nconfounders are measured is examined in an earlier, accompanying article. Here,\nit is shown that even when the confounding variables are not measured, it is\nstill possible to estimate the causal effect via a regression-based method that\nuses the notion of Instrumental Variables. Using meteorological data set,\nsimilar to that in the sister article, a number of different estimates of the\ncausal effect are compared and contrasted. It is shown that the Instrumental\nVariable results based on unmeasured confounders are consistent with those of\nthe sister article where confounders are measured.",
-      "pdf_url": "http://arxiv.org/pdf/2506.18652v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.18652v1",
-      "published": "2025-06-23",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "T-CPDL: A Temporal Causal Probabilistic Description Logic for Developing Logic-RAG Agent",
-      "authors": [
-        "Hong Qing Yu"
-      ],
-      "abstract": "Large language models excel at generating fluent text but frequently struggle\nwith structured reasoning involving temporal constraints, causal relationships,\nand probabilistic reasoning. To address these limitations, we propose Temporal\nCausal Probabilistic Description Logic (T-CPDL), an integrated framework that\nextends traditional Description Logic with temporal interval operators,\nexplicit causal relationships, and probabilistic annotations. We present two\ndistinct variants of T-CPDL: one capturing qualitative temporal relationships\nthrough Allen's interval algebra, and another variant enriched with explicit\ntimestamped causal assertions. Both variants share a unified logical structure,\nenabling complex reasoning tasks ranging from simple temporal ordering to\nnuanced probabilistic causation. Empirical evaluations on temporal reasoning\nand causal inference benchmarks confirm that T-CPDL substantially improves\ninference accuracy, interpretability, and confidence calibration of language\nmodel outputs. By delivering transparent reasoning paths and fine-grained\ntemporal and causal semantics, T-CPDL significantly enhances the capability of\nlanguage models to support robust, explainable, and trustworthy\ndecision-making. This work also lays the groundwork for developing advanced\nLogic-Retrieval-Augmented Generation (Logic-RAG) frameworks, potentially\nboosting the reasoning capabilities and efficiency of knowledge graph-enhanced\nRAG systems.",
-      "pdf_url": "http://arxiv.org/pdf/2506.18559v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.18559v1",
-      "published": "2025-06-23",
-      "categories": [
-        "cs.AI",
-        "cs.LO",
-        "I.2.7; F.4.1"
-      ]
-    },
-    {
-      "title": "Leveraging specificity for causal inference in observational studies",
-      "authors": [
-        "Wang Miao"
-      ],
-      "abstract": "Hill's specificity criterion has been highly influential in biomedical and\nepidemiological research. However, it remains controversial and its application\noften relies on subjective and qualitative analysis without a comprehensive and\nrigorous causal theory. Focusing on unmeasured confounding adjustment with\nmultiple treatments and multiple outcomes, this paper develops a formal and\nquantitative framework for leveraging specificity for causal inference in\nobservational studies. The proposed framework introduces a causal specificity\nassumption, a quantitative measure of specificity, a hypothesis testing\nprocedure, and identification and estimation strategies. Identification under a\nnonparametric outcome model is established. The causal specificity assumption\nconcerns only the breadth of causal associations, in contrast to Hill's\nspecificity that concerns observed associations and to existing confounding\nadjustment methods that rely on auxiliary variables (e.g., instrumental\nvariables, negative controls) or independence structures (e.g., factor models).\nA sensitivity analysis procedure is proposed to assess robustness of the test\nagainst violations of this assumption. This framework is particularly suited to\nexposure- and outcome-wide studies, where joint causal discovery across\nmultiple treatments and multiple outcomes is of interest. It also offers a\npotential tool for addressing other sources of bias, such as invalid\ninstruments in Mendelian randomization and selection bias in missing data\nanalysis.",
-      "pdf_url": "http://arxiv.org/pdf/2506.18469v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.18469v1",
-      "published": "2025-06-23",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
