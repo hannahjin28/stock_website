@@ -1,6 +1,83 @@
 {
-  "last_updated": "2025-06-27T00:55:58.523836",
+  "last_updated": "2025-06-28T00:53:46.887040",
   "papers": [
+    {
+      "title": "Causal inference via implied interventions",
+      "authors": [
+        "Carlos García Meixide",
+        "Mark J. van der Laan"
+      ],
+      "abstract": "In the context of having an instrumental variable, the standard practice in\ncausal inference begins by targeting an effect of interest and proceeds by\nformulating assumptions enabling identification of this effect. We turn this\naround by simply not making assumptions anymore and just adhere to the\ninterventions we can identify, rather than starting with a desired causal\nestimand and imposing untestable hypotheses. The randomization of an instrument\nand its exclusion restriction define a class of auxiliary stochastic\ninterventions on the treatment that are implied by stochastic interventions on\nthe instrument. This mapping effectively characterizes the identifiable causal\neffects of the treatment on the outcome given the observable probability\ndistribution, leading to an explicit transparent G-computation formula under\nhidden confounding. Alternatively, searching for an intervention on the\ninstrument whose implied one best approximates a desired target -- whose causal\neffect the user aims to estimate -- naturally leads to a projection on a\nfunction space representing the closest identifiable treatment effect. The\ngenerality of this projection allows to select different norms and indexing\nsets for the function class that turn optimization into different estimation\nprocedures with the Highly Adaptive Lasso. This shift from identification under\nassumptions to identification under observation redefines how the problem of\ncausal inference is approached.",
+      "pdf_url": "http://arxiv.org/pdf/2506.21501v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.21501v1",
+      "published": "2025-06-26",
+      "categories": [
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Counterfactual Voting Adjustment for Quality Assessment and Fairer Voting in Online Platforms with Helpfulness Evaluation",
+      "authors": [
+        "Chang Liu",
+        "Yixin Wang",
+        "Moontae Lee"
+      ],
+      "abstract": "Efficient access to high-quality information is vital for online platforms.\nTo promote more useful information, users not only create new content but also\nevaluate existing content, often through helpfulness voting. Although\naggregated votes help service providers rank their user content, these votes\nare often biased by disparate accessibility per position and the cascaded\ninfluence of prior votes. For a fairer assessment of information quality, we\npropose the Counterfactual Voting Adjustment (CVA), a causal framework that\naccounts for the context in which individual votes are cast. Through\npreliminary and semi-synthetic experiments, we show that CVA effectively models\nthe position and herding biases, accurately recovering the predefined content\nquality. In a real experiment, we demonstrate that reranking content based on\nthe learned quality by CVA exhibits stronger alignment with both user sentiment\nand quality evaluation assessed by GPT-4o, outperforming system rankings based\non aggregated votes and model-based rerankings without causal inference. Beyond\nthe individual quality inference, our embeddings offer comparative insights\ninto the behavioral dynamics of expert user groups across 120 major\nStackExchange communities.",
+      "pdf_url": "http://arxiv.org/pdf/2506.21362v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.21362v1",
+      "published": "2025-06-26",
+      "categories": [
+        "cs.CE"
+      ]
+    },
+    {
+      "title": "Active Inference AI Systems for Scientific Discovery",
+      "authors": [
+        "Karthik Duraisamy"
+      ],
+      "abstract": "The rapid evolution of artificial intelligence has led to expectations of\ntransformative scientific discovery, yet current systems remain fundamentally\nlimited by their operational architectures, brittle reasoning mechanisms, and\ntheir separation from experimental reality. Building on earlier work, we\ncontend that progress in AI-driven science now depends on closing three\nfundamental gaps -- the abstraction gap, the reasoning gap, and the reality gap\n-- rather than on model size/data/test time compute. Scientific reasoning\ndemands internal representations that support simulation of actions and\nresponse, causal structures that distinguish correlation from mechanism, and\ncontinuous calibration. We define active inference AI systems for scientific\ndiscovery as those that (i) maintain long-lived research memories grounded in\ncausal self-supervised foundation models, (ii) symbolic or neuro-symbolic\nplanners equipped with Bayesian guardrails, (iii) grow persistent knowledge\ngraphs where thinking generates novel conceptual nodes, reasoning establishes\ncausal edges, and real-world interaction prunes false connections while\nstrengthening verified pathways, and (iv) refine their internal representations\nthrough closed-loop interaction with both high-fidelity simulators and\nautomated laboratories - an operational loop where mental simulation guides\naction and empirical surprise reshapes understanding. In essence, we outline an\narchitecture where discovery arises from the interplay between internal models\nthat enable counterfactual reasoning and external validation that grounds\nhypotheses in reality. It is also argued that the inherent ambiguity in\nfeedback from simulations and experiments, and underlying uncertainties makes\nhuman judgment indispensable, not as a temporary scaffold but as a permanent\narchitectural component.",
+      "pdf_url": "http://arxiv.org/pdf/2506.21329v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.21329v1",
+      "published": "2025-06-26",
+      "categories": [
+        "cs.AI",
+        "physics.soc-ph",
+        "68",
+        "I.2"
+      ]
+    },
+    {
+      "title": "Influence and information in a collective of self-propelled particles",
+      "authors": [
+        "Jiahuan Pang",
+        "Wendong Wang"
+      ],
+      "abstract": "While information-theoretic quantities, such as transfer entropy, have been\nwidely adopted to infer causal relationships in collective systems, a critical\ngap exists: the absence of quantitative evidence directly linking\ninformation-theoretic quantities to a physically defined influence. This letter\naddresses this gap by proposing a modified Vicsek model that enables the\ncalculation of a physically interpretable influence grounded in the angular\ninteractions between particles. Averaged pairwise influences can serve as new\norder parameters to indicate collective phase transitions. We reveal\nquantitative relations between information, represented by transfer entropy,\nand average influence in pairwise and collective interactions. We test three\ntypical methods of partial information decomposition and find that the method\nbased on intrinsic mutual information gives the most appropriate\ninterpretation. Overall, this work provides a model system for quantitative\nstudies of influence and information in complex systems.",
+      "pdf_url": "http://arxiv.org/pdf/2506.20888v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.20888v1",
+      "published": "2025-06-25",
+      "categories": [
+        "cond-mat.stat-mech",
+        "nlin.AO"
+      ]
+    },
+    {
+      "title": "A Bayesian Nonparametric Approach for Semi-Competing Risks with Application to Cardiovascular Health",
+      "authors": [
+        "Karina Gelis-Cadena",
+        "Michael Daniels",
+        "Juned Siddique"
+      ],
+      "abstract": "We address causal estimation in semi-competing risks settings, where a\nnon-terminal event may be precluded by one or more terminal events. We define a\nprincipal-stratification causal estimand for treatment effects on the\nnon-terminal event, conditional on surviving past a specified landmark time. To\nestimate joint event-time distributions, we employ both vine-copula\nconstructions and Bayesian nonparametric Enriched Dirichlet-process mixtures\n(EDPM), enabling inference under minimal parametric assumptions. We index our\ncausal assumptions with sensitivity parameters. Posterior summaries via MCMC\nyield interpretable estimates with credible intervals. We illustrate the\nproposed method using data from a cardiovascular health study.",
+      "pdf_url": "http://arxiv.org/pdf/2506.20860v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.20860v1",
+      "published": "2025-06-25",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
     {
       "title": "DiffuCoder: Understanding and Improving Masked Diffusion Models for Code Generation",
       "authors": [
@@ -83,92 +160,6 @@
         "cs.LG",
         "cs.NA",
         "math.NA"
-      ]
-    },
-    {
-      "title": "Causal mediation analysis for longitudinal and survival data in continuous time using Bayesian non-parametric joint models",
-      "authors": [
-        "Saurabh Bhandari",
-        "Michael J. Daniels",
-        "Juned Siddique"
-      ],
-      "abstract": "Observational cohort data is an important source of information for\nunderstanding the causal effects of treatments on survival and the degree to\nwhich these effects are mediated through changes in disease-related risk\nfactors. However, these analyses are often complicated by irregular data\ncollection intervals and the presence of longitudinal confounders and\nmediators. We propose a causal mediation framework that jointly models\nlongitudinal exposures, confounders, mediators, and time-to-event outcomes as\ncontinuous functions of age. This framework for longitudinal covariate\ntrajectories enables statistical inference even at ages where the subject's\ncovariate measurements are unavailable. The observed data distribution in our\nframework is modeled using an enriched Dirichlet process mixture (EDPM) model.\nUsing data from the Atherosclerosis Risk in Communities cohort study, we apply\nour methods to assess how medication -- prescribed to target cardiovascular\ndisease (CVD) risk factors -- affects the time-to-CVD death.",
-      "pdf_url": "http://arxiv.org/pdf/2506.20058v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.20058v1",
-      "published": "2025-06-24",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Quantum Neural Networks for Propensity Score Estimation and Survival Analysis in Observational Biomedical Studies",
-      "authors": [
-        "Vojtěch Novák",
-        "Ivan Zelinka",
-        "Lenka Přibylová",
-        "Lubomír Martínek"
-      ],
-      "abstract": "This study investigates the application of quantum neural networks (QNNs) for\npropensity score estimation to address selection bias in comparing survival\noutcomes between laparoscopic and open surgical techniques in a cohort of 1177\ncolorectal carcinoma patients treated at University Hospital Ostrava\n(2001-2009). Using a dataset with 77 variables, including patient demographics\nand tumor characteristics, we developed QNN-based propensity score models\nfocusing on four key covariates (Age, Sex, Stage, BMI). The QNN architecture\nemployed a linear ZFeatureMap for data encoding, a SummedPaulis operator for\npredictions, and the Covariance Matrix Adaptation Evolution Strategy (CMA-ES)\nfor robust, gradient-free optimization in noisy quantum environments. Variance\nregularization was integrated to mitigate quantum measurement noise, with\nsimulations conducted under exact, sampling (1024 shots), and noisy hardware\n(FakeManhattanV2) conditions. QNNs, particularly with simulated hardware noise,\noutperformed classical logistic regression and gradient boosted machines in\nsmall samples (AUC up to 0.750 for n=100), with noise modeling enhancing\npredictive stability. Propensity score matching and weighting, optimized via\ngenetic matching and matching weights, achieved covariate balance with\nstandardized mean differences of 0.0849 and 0.0869, respectively. Survival\nanalyses using Kaplan-Meier estimation, Cox proportional hazards, and Aalen\nadditive regression revealed no significant survival differences\npost-adjustment (p-values 0.287-0.851), indicating confounding bias in\nunadjusted outcomes. These results highlight QNNs' potential, enhanced by\nCMA-ES and noise-aware strategies, to improve causal inference in biomedical\nresearch, particularly for small-sample, high-dimensional datasets.",
-      "pdf_url": "http://arxiv.org/pdf/2506.19973v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.19973v1",
-      "published": "2025-06-24",
-      "categories": [
-        "quant-ph",
-        "cs.AI",
-        "stat.ML",
-        "62H30, 62P10, 68T05, 81P68",
-        "I.2.6; J.3; I.5.4; F.4.1"
-      ]
-    },
-    {
-      "title": "Causal-Aware Intelligent QoE Optimization for VR Interaction with Adaptive Keyframe Extraction",
-      "authors": [
-        "Ziru Zhang",
-        "Jiadong Yu",
-        "Danny H. K. Tsang"
-      ],
-      "abstract": "The optimization of quality of experience (QoE) in multi-user virtual reality\n(VR) interactions demands a delicate balance between ultra-low latency,\nhigh-fidelity motion synchronization, and equitable resource allocation. While\nadaptive keyframe extraction mitigates transmission overhead, existing\napproaches often overlook the causal relationships among allocated bandwidth,\nCPU frequency, and user perception, limiting QoE gains. This paper proposes an\nintelligent framework to maximize QoE by integrating adaptive keyframe\nextraction with causal-aware reinforcement learning (RL). First, a novel QoE\nmetric is formulated using the Weber-Fechner Law, combining perceptual\nsensitivity, attention-driven priorities, and motion reconstruction accuracy.\nThe QoE optimization problem is then modeled as a mixed integer programming\n(MIP) task, jointly optimizing keyframe ratios, bandwidth, and computational\nresources under horizon-fairness constraints. We propose Partial State Causal\nDeep Deterministic Policy Gradient (PS-CDDPG), which integrates the Deep\nDeterministic Policy Gradient (DDPG) method with causal influence detection. By\nleveraging causal information regarding how QoE is influenced and determined by\nvarious actions, we explore actions guided by weights calculated from causal\ninference (CI), which in turn improves training efficiency. Experiments\nconducted with the CMU Motion Capture Database demonstrate that our framework\nsignificantly reduces interactive latency, enhances QoE, and maintains\nfairness, achieving superior performance compared to benchmark methods.",
-      "pdf_url": "http://arxiv.org/pdf/2506.19890v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.19890v1",
-      "published": "2025-06-24",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Bayesian Evolutionary Swarm Architecture: A Formal Epistemic System Grounded in Truth-Based Competition",
-      "authors": [
-        "Craig Steven Wright"
-      ],
-      "abstract": "We introduce a mathematically rigorous framework for an artificial\nintelligence system composed of probabilistic agents evolving through\nstructured competition and belief revision. The architecture, grounded in\nBayesian inference, measure theory, and population dynamics, defines agent\nfitness as a function of alignment with a fixed external oracle representing\nground truth. Agents compete in a discrete-time environment, adjusting\nposterior beliefs through observed outcomes, with higher-rated agents\nreproducing and lower-rated agents undergoing extinction. Ratings are updated\nvia pairwise truth-aligned utility comparisons, and belief updates preserve\nmeasurable consistency and stochastic convergence. We introduce hash-based\ncryptographic identity commitments to ensure traceability, alongside causal\ninference operators using do-calculus. Formal theorems on convergence,\nrobustness, and evolutionary stability are provided. The system establishes\ntruth as an evolutionary attractor, demonstrating that verifiable knowledge\narises from adversarial epistemic pressure within a computable, self-regulating\nswarm.",
-      "pdf_url": "http://arxiv.org/pdf/2506.19191v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.19191v1",
-      "published": "2025-06-23",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.GT",
-        "math.LO",
-        "68T05, 68Q87, 03E20",
-        "I.2.6; I.2.3; F.1.1"
-      ]
-    },
-    {
-      "title": "Inferring Diffusion Structures of Heterogeneous Network Cascade",
-      "authors": [
-        "Yubai Yuan",
-        "Siyu Huang",
-        "Abdul Basit Adeel"
-      ],
-      "abstract": "Network cascade refers to diffusion processes in which outcome changes within\npart of an interconnected population trigger a sequence of changes across the\nentire network. These cascades are governed by underlying diffusion networks,\nwhich are often latent. Inferring such networks is critical for understanding\ncascade pathways, uncovering Granger causality of interaction mechanisms among\nindividuals, and enabling tasks such as forecasting or maximizing information\npropagation. In this project, we propose a novel double mixture directed graph\nmodel for inferring multi-layer diffusion networks from cascade data. The\nproposed model represents cascade pathways as a mixture of diffusion networks\nacross different layers, effectively capturing the strong heterogeneity present\nin real-world cascades. Additionally, the model imposes layer-specific\nstructural constraints, enabling diffusion networks at different layers to\ncapture complementary cascading patterns at the population level. A key\nadvantage of our model is its convex formulation, which allows us to establish\nboth statistical and computational guarantees for the resulting diffusion\nnetwork estimates. We conduct extensive simulation studies to demonstrate the\nmodel's performance in recovering diverse diffusion structures. Finally, we\napply the proposed method to analyze cascades of research topics in the social\nsciences across U.S. universities, revealing the underlying diffusion networks\nof research topic propagation among institutions.",
-      "pdf_url": "http://arxiv.org/pdf/2506.19142v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.19142v1",
-      "published": "2025-06-23",
-      "categories": [
-        "cs.SI",
-        "stat.ML"
       ]
     }
   ]
