@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-06-29T01:01:45.324108",
+  "last_updated": "2025-06-30T00:59:04.132665",
   "papers": [
     {
       "title": "Causal inference via implied interventions",
@@ -106,8 +106,8 @@
         "Giovanni Parmigiani"
       ],
       "abstract": "In many fields$\\unicode{x2013}$including genomics, epidemiology, natural\nlanguage processing, social and behavioral sciences, and\neconomics$\\unicode{x2013}$it is increasingly important to address causal\nquestions in the context of factor models or representation learning. In this\nwork, we investigate causal effects on $\\textit{latent outcomes}$ derived from\nhigh-dimensional observed data using nonnegative matrix factorization. To the\nbest of our knowledge, this is the first study to formally address causal\ninference in this setting. A central challenge is that estimating a latent\nfactor model can cause an individual's learned latent outcome to depend on\nother individuals' treatments, thereby violating the standard causal inference\nassumption of no interference. We formalize this issue as\n$\\textit{learning-induced interference}$ and distinguish it from interference\npresent in a data-generating process. To address this, we propose a novel,\nintuitive, and theoretically grounded algorithm to estimate causal effects on\nlatent outcomes while mitigating learning-induced interference and improving\nestimation efficiency. We establish theoretical guarantees for the consistency\nof our estimator and demonstrate its practical utility through simulation\nstudies and an application to cancer mutational signature analysis. All\nbaseline and proposed methods are available in our open-source R package, ${\\tt\ncausalLFO}$.",
-      "pdf_url": "http://arxiv.org/pdf/2506.20549v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.20549v1",
+      "pdf_url": "http://arxiv.org/pdf/2506.20549v2",
+      "arxiv_url": "http://arxiv.org/abs/2506.20549v2",
       "published": "2025-06-25",
       "categories": [
         "stat.ME"
