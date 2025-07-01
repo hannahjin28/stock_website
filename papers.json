@@ -1,6 +1,80 @@
 {
-  "last_updated": "2025-06-30T00:59:04.132665",
+  "last_updated": "2025-07-01T01:02:05.748264",
   "papers": [
+    {
+      "title": "Rethinking Visual Token Reduction in LVLMs under Cross-modal Misalignment",
+      "authors": [
+        "Rui Xu",
+        "Yunke Wang",
+        "Yong Luo",
+        "Bo Du"
+      ],
+      "abstract": "Large Vision-Language Models (LVLMs) encode visual inputs as dense sequences\nof patch-level tokens to capture fine-grained semantics. These visual tokens\noften outnumber their textual counterparts by a large margin, leading to\nsubstantial computational overhead and limiting the scalability of LVLMs in\npractice. Previous efforts have explored visual token reduction either prior to\nor within the large language models (LLM). However, most in-LLM reduction\napproaches rely on text-conditioned interactions, implicitly assuming that\ntextual tokens can reliably capture the importance of visual tokens. In this\nwork, we revisit this assumption and reveal causal, semantic, and spatial forms\nof cross-modal misalignment. These misalignments undermine the effectiveness of\ntext-guided visual token reduction. To address this, we introduce VisionDrop, a\ntraining-free, visual-only pruning framework that selects informative visual\ntokens based on intra-modal (visual-to-visual) attention, without relying on\ntextual signals. To further suppress redundancy throughout the model hierarchy,\nwe treat the visual encoder and the LLM as a unified system and design a\nprogressive pruning pipeline. Our method performs dominant token selection and\nlightweight contextual merging at multiple stages, enabling fine-grained visual\ninformation to be retained even under aggressive token budgets. Extensive\nexperiments across diverse benchmarks show that VisionDrop achieves consistent\nimprovements over existing methods, despite requiring no additional training or\ncomplex modifications. Its simple yet effective design enables efficient\ninference while preserving strong performance across tasks.",
+      "pdf_url": "http://arxiv.org/pdf/2506.22283v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.22283v1",
+      "published": "2025-06-27",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Efficient Estimation of Causal Effects Under Two-Phase Sampling with Error-Prone Outcome and Treatment Measurements",
+      "authors": [
+        "Keith Barnatchez",
+        "Kevin P. Josey",
+        "Nima S. Hejazi",
+        "Bryan E. Shepherd",
+        "Giovanni Parmigiani",
+        "Rachel Nethery"
+      ],
+      "abstract": "Measurement error is a common challenge for causal inference studies using\nelectronic health record (EHR) data, where clinical outcomes and treatments are\nfrequently mismeasured. Researchers often address measurement error by\nconducting manual chart reviews to validate measurements in a subset of the\nfull EHR data -- a form of two-phase sampling. To improve efficiency, phase-two\nsamples are often collected in a biased manner dependent on the patients'\ninitial, error-prone measurements. In this work, motivated by our aim of\nperforming causal inference with error-prone outcome and treatment measurements\nunder two-phase sampling, we develop solutions applicable to both this specific\nproblem and the broader problem of causal inference with two-phase samples. For\nour specific measurement error problem, we construct two asymptotically\nequivalent doubly-robust estimators of the average treatment effect and\ndemonstrate how these estimators arise from two previously disconnected\napproaches to constructing efficient estimators in general two-phase sampling\nsettings. We document various sources of instability affecting estimators from\neach approach and propose modifications that can considerably improve finite\nsample performance in any two-phase sampling context. We demonstrate the\nutility of our proposed methods through simulation studies and an illustrative\nexample assessing effects of antiretroviral therapy on occurrence of\nAIDS-defining events in patients with HIV from the Vanderbilt Comprehensive\nCare Clinic.",
+      "pdf_url": "http://arxiv.org/pdf/2506.21777v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.21777v1",
+      "published": "2025-06-26",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "THE-Tree: Can Tracing Historical Evolution Enhance Scientific Verification and Reasoning?",
+      "authors": [
+        "Xin Wang",
+        "Jiyao Liu",
+        "Yulong Xiao",
+        "Junzhi Ning",
+        "Lihao Liu",
+        "Junjun He",
+        "Botian Shi",
+        "Kaicheng Yu"
+      ],
+      "abstract": "Large Language Models (LLMs) are accelerating scientific idea generation, but\nrigorously evaluating these numerous, often superficial, AI-generated\npropositions for novelty and factual accuracy is a critical bottleneck; manual\nverification is too slow.Existing validation methods are inadequate: LLMs as\nstandalone verifiers may hallucinate and lack domain knowledge (our findings\nshow ~60\\% unawareness of relevant papers in specific domains), while\ntraditional citation networks lack explicit causality and narrative surveys are\nunstructured.This underscores a core challenge: the absence of structured,\nverifiable, and causally-linked historical data of scientific evolution.To\naddress this,we introduce \\textbf{THE-Tree} (\\textbf{T}echnology\n\\textbf{H}istory \\textbf{E}volution Tree), a computational framework that\nconstructs such domain-specific evolution trees from scientific\nliterature.THE-Tree employs a search algorithm to explore evolutionary paths.\nDuring its node expansion, it utilizes a novel \"Think-Verbalize-Cite-Verify\"\nprocess: an LLM proposes potential advancements and cites supporting\nliterature. Critically, each proposed evolutionary link is then validated for\nlogical coherence and evidential support by a recovered natural language\ninference mechanism that interrogates the cited literature, ensuring that each\nstep is grounded.We construct and validate 88 THE-Trees across diverse domains\nand release a benchmark dataset including up to 71k fact verifications covering\n27k papers to foster further research.Experiments demonstrate that i) in graph\ncompletion, our THE-Tree improves hit@1 by 8\\% to 14\\% across multiple models\ncompared to traditional citation networks; ii) for predicting future scientific\ndevelopments, it improves hit@1 metric by nearly 10\\%; and iii) when combined\nwith other methods, it boosts the performance of evaluating important\nscientific papers by almost 100\\%.",
+      "pdf_url": "http://arxiv.org/pdf/2506.21763v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.21763v1",
+      "published": "2025-06-26",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ImplicitQA: Going beyond frames towards Implicit Video Reasoning",
+      "authors": [
+        "Sirnam Swetha",
+        "Rohit Gupta",
+        "Parth Parag Kulkarni",
+        "David G Shatwell",
+        "Jeffrey A Chan Santiago",
+        "Nyle Siddiqui",
+        "Joseph Fioresi",
+        "Mubarak Shah"
+      ],
+      "abstract": "Video QA has made significant strides by leveraging multimodal learning to\nalign visual and textual modalities. However, current benchmarks overwhelmingly\nfocus on questions answerable through explicit visual content - actions,\nobjects & events directly observable within individual frames or short clips.\nIn contrast, creative and cinematic videos - such as movies, TV shows, and\nnarrative-driven content - employ storytelling techniques that deliberately\nomit certain depictions, requiring viewers to infer motives, causality, and\nrelationships across discontinuous frames. Humans naturally excel at such\nimplicit reasoning, seamlessly integrating information across time and context\nto construct coherent narratives. Current VideoQA systems and benchmarks fail\nto capture this essential dimension of human-like understanding. To bridge this\ngap, we present ImplicitQA, a novel benchmark specifically designed to test\nmodels on implicit reasoning. It comprises 1K meticulously annotated QA pairs\nderived from 320+ high-quality creative video clips, systematically categorized\ninto key reasoning dimensions: lateral and vertical spatial reasoning, depth\nand proximity, viewpoint and visibility, motion and trajectory, causal and\nmotivational reasoning, social interactions, physical context, and inferred\ncounting. These annotations are deliberately challenging, crafted by authors\nensuring high-quality. Our extensive evaluations on leading VideoQA models\nreveals performance degradation, underscoring their reliance on surface-level\nvisual cues and highlighting the difficulty of implicit reasoning. Performance\nvariations across models further illustrate the complexity and diversity of the\nchallenges presented by ImplicitQA. By releasing both the dataset and our data\ncollection framework, we aim to stimulate further research and development in\nthe community. https://huggingface.co/datasets/ucf-crcv/ImplicitQA.",
+      "pdf_url": "http://arxiv.org/pdf/2506.21742v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.21742v1",
+      "published": "2025-06-26",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "Causal inference via implied interventions",
       "authors": [
@@ -95,71 +169,6 @@
       "published": "2025-06-25",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Causal Inference for Latent Outcomes Learned with Factor Models",
-      "authors": [
-        "Jenna M. Landy",
-        "Dafne Zorzetto",
-        "Roberta De Vito",
-        "Giovanni Parmigiani"
-      ],
-      "abstract": "In many fields$\\unicode{x2013}$including genomics, epidemiology, natural\nlanguage processing, social and behavioral sciences, and\neconomics$\\unicode{x2013}$it is increasingly important to address causal\nquestions in the context of factor models or representation learning. In this\nwork, we investigate causal effects on $\\textit{latent outcomes}$ derived from\nhigh-dimensional observed data using nonnegative matrix factorization. To the\nbest of our knowledge, this is the first study to formally address causal\ninference in this setting. A central challenge is that estimating a latent\nfactor model can cause an individual's learned latent outcome to depend on\nother individuals' treatments, thereby violating the standard causal inference\nassumption of no interference. We formalize this issue as\n$\\textit{learning-induced interference}$ and distinguish it from interference\npresent in a data-generating process. To address this, we propose a novel,\nintuitive, and theoretically grounded algorithm to estimate causal effects on\nlatent outcomes while mitigating learning-induced interference and improving\nestimation efficiency. We establish theoretical guarantees for the consistency\nof our estimator and demonstrate its practical utility through simulation\nstudies and an application to cancer mutational signature analysis. All\nbaseline and proposed methods are available in our open-source R package, ${\\tt\ncausalLFO}$.",
-      "pdf_url": "http://arxiv.org/pdf/2506.20549v2",
-      "arxiv_url": "http://arxiv.org/abs/2506.20549v2",
-      "published": "2025-06-25",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Anytime-Valid Inference in Adaptive Experiments: Covariate Adjustment and Balanced Power",
-      "authors": [
-        "Daniel Molitor",
-        "Samantha Gold"
-      ],
-      "abstract": "Adaptive experiments have become central to modern experimental design,\nenabling researchers to efficiently identify optimal treatments, improve\nstatistical power, and maximize respondent welfare. However, adaptive\nexperiments compromise valid inference and leave sub-optimal treatments\nunderpowered. We introduce two methodological advances for adaptive\nexperimentation. First, covariate-adjusted Mixture Adaptive Design (MADCovar)\nachieves substantial improvements in average treatment effect (ATE) precision\nby incorporating covariate adjustment within an anytime-valid inference\nframework. Second, power-modified MAD (MADMod) reallocates sample to\nunderpowered treatment arms, improving statistical power across all treatments\nwhile maintaining error control. Both methods provide anytime-valid guarantees,\nenabling continuous monitoring without inflating Type 1 error rates. Simulation\nstudies and empirical analyses demonstrate that MADCovar delivers significant\nprecision gains and that MADMod ensures robust inference even for suboptimal\ntreatments. Together, these methods address key limitations of adaptive\nexperiments and equip researchers with practical tools for precise and reliable\ncausal inference. Our proposed methods are implemented through an open-source\nsoftware package.",
-      "pdf_url": "http://arxiv.org/pdf/2506.20523v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.20523v1",
-      "published": "2025-06-25",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "stat.CO"
-      ]
-    },
-    {
-      "title": "The Role of Partisan Culture in Mental Health Language Online",
-      "authors": [
-        "Sachin R. Pendse",
-        "Ben Rochford",
-        "Neha Kumar",
-        "Munmun De Choudhury"
-      ],
-      "abstract": "The impact of culture on how people express distress in online support\ncommunities is increasingly a topic of interest within Computer Supported\nCooperative Work (CSCW) and Human-Computer Interaction (HCI). In the United\nStates, distinct cultures have emerged from each of the two dominant political\nparties, forming a primary lens by which people navigate online and offline\nworlds. We examine whether partisan culture may play a role in how U.S.\nRepublican and Democrat users of online mental health support communities\nexpress distress. We present a large-scale observational study of 2,184,356\nposts from 8,916 statistically matched Republican, Democrat, and unaffiliated\nonline support community members. We utilize methods from causal inference to\nstatistically match partisan users along covariates that correspond with\ndemographic attributes and platform use, in order to create comparable cohorts\nfor analysis. We then leverage methods from natural language processing to\nunderstand how partisan expressions of distress compare between these sets of\nclosely matched opposing partisans, and between closely matched partisans and\ntypical support community members. Our data spans January 2013 to December\n2022, a period of both rising political polarization and mental health\nconcerns. We find that partisan culture does play into expressions of distress,\nunderscoring the importance of considering partisan cultural differences in the\ndesign of online support community platforms.",
-      "pdf_url": "http://arxiv.org/pdf/2506.20377v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.20377v1",
-      "published": "2025-06-25",
-      "categories": [
-        "cs.HC",
-        "cs.CY",
-        "cs.SI"
-      ]
-    },
-    {
-      "title": "Causal Operator Discovery in Partial Differential Equations via Counterfactual Physics-Informed Neural Networks",
-      "authors": [
-        "Ronald Katende"
-      ],
-      "abstract": "We develop a principled framework for discovering causal structure in partial\ndifferential equations (PDEs) using physics-informed neural networks and\ncounterfactual perturbations. Unlike classical residual minimization or sparse\nregression methods, our approach quantifies operator-level necessity through\nfunctional interventions on the governing dynamics. We introduce causal\nsensitivity indices and structural deviation metrics to assess the influence of\ncandidate differential operators within neural surrogates. Theoretically, we\nprove exact recovery of the causal operator support under restricted isometry\nor mutual coherence conditions, with residual bounds guaranteeing\nidentifiability. Empirically, we validate the framework on both synthetic and\nreal-world datasets across climate dynamics, tumor diffusion, and ocean flows.\nOur method consistently recovers governing operators even under noise,\nredundancy, and data scarcity, outperforming standard PINNs and DeepONets in\nstructural fidelity. This work positions causal PDE discovery as a tractable\nand interpretable inference task grounded in structural causal models and\nvariational residual analysis.",
-      "pdf_url": "http://arxiv.org/pdf/2506.20181v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.20181v1",
-      "published": "2025-06-25",
-      "categories": [
-        "cs.LG",
-        "cs.NA",
-        "math.NA"
       ]
     }
   ]
