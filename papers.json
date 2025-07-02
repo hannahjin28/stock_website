@@ -1,174 +1,165 @@
 {
-  "last_updated": "2025-07-01T01:02:05.748264",
+  "last_updated": "2025-07-02T00:55:59.346952",
   "papers": [
     {
-      "title": "Rethinking Visual Token Reduction in LVLMs under Cross-modal Misalignment",
+      "title": "When Additive Noise Meets Unobserved Mediators: Bivariate Denoising Diffusion for Causal Discovery",
       "authors": [
-        "Rui Xu",
-        "Yunke Wang",
-        "Yong Luo",
-        "Bo Du"
+        "Dominik Meier",
+        "Sujai Hiremath",
+        "Promit Ghosal",
+        "Kyra Gan"
       ],
-      "abstract": "Large Vision-Language Models (LVLMs) encode visual inputs as dense sequences\nof patch-level tokens to capture fine-grained semantics. These visual tokens\noften outnumber their textual counterparts by a large margin, leading to\nsubstantial computational overhead and limiting the scalability of LVLMs in\npractice. Previous efforts have explored visual token reduction either prior to\nor within the large language models (LLM). However, most in-LLM reduction\napproaches rely on text-conditioned interactions, implicitly assuming that\ntextual tokens can reliably capture the importance of visual tokens. In this\nwork, we revisit this assumption and reveal causal, semantic, and spatial forms\nof cross-modal misalignment. These misalignments undermine the effectiveness of\ntext-guided visual token reduction. To address this, we introduce VisionDrop, a\ntraining-free, visual-only pruning framework that selects informative visual\ntokens based on intra-modal (visual-to-visual) attention, without relying on\ntextual signals. To further suppress redundancy throughout the model hierarchy,\nwe treat the visual encoder and the LLM as a unified system and design a\nprogressive pruning pipeline. Our method performs dominant token selection and\nlightweight contextual merging at multiple stages, enabling fine-grained visual\ninformation to be retained even under aggressive token budgets. Extensive\nexperiments across diverse benchmarks show that VisionDrop achieves consistent\nimprovements over existing methods, despite requiring no additional training or\ncomplex modifications. Its simple yet effective design enables efficient\ninference while preserving strong performance across tasks.",
-      "pdf_url": "http://arxiv.org/pdf/2506.22283v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.22283v1",
-      "published": "2025-06-27",
+      "abstract": "Distinguishing cause and effect from bivariate observational data is a\nfoundational problem in many disciplines, but challenging without additional\nassumptions. Additive noise models (ANMs) are widely used to enable\nsample-efficient bivariate causal discovery. However, conventional ANM-based\nmethods fail when unobserved mediators corrupt the causal relationship between\nvariables. This paper makes three key contributions: first, we rigorously\ncharacterize why standard ANM approaches break down in the presence of\nunmeasured mediators. Second, we demonstrate that prior solutions for hidden\nmediation are brittle in finite sample settings, limiting their practical\nutility. To address these gaps, we propose Bivariate Denoising Diffusion (BiDD)\nfor causal discovery, a method designed to handle latent noise introduced by\nunmeasured mediators. Unlike prior methods that infer directionality through\nmean squared error loss comparisons, our approach introduces a novel\nindependence test statistic: during the noising and denoising processes for\neach variable, we condition on the other variable as input and evaluate the\nindependence of the predicted noise relative to this input. We prove asymptotic\nconsistency of BiDD under the ANM, and conjecture that it performs well under\nhidden mediation. Experiments on synthetic and real-world data demonstrate\nconsistent performance, outperforming existing methods in mediator-corrupted\nsettings while maintaining strong performance in mediator-free settings.",
+      "pdf_url": "http://arxiv.org/pdf/2506.23374v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.23374v1",
+      "published": "2025-06-29",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "CycleVAR: Repurposing Autoregressive Model for Unsupervised One-Step Image Translation",
+      "authors": [
+        "Yi Liu",
+        "Shengqian Li",
+        "Zuzeng Lin",
+        "Feng Wang",
+        "Si Liu"
+      ],
+      "abstract": "The current conditional autoregressive image generation methods have shown\npromising results, yet their potential remains largely unexplored in the\npractical unsupervised image translation domain, which operates without\nexplicit cross-domain correspondences. A critical limitation stems from the\ndiscrete quantization inherent in traditional Vector Quantization-based\nframeworks, which disrupts gradient flow between the Variational Autoencoder\ndecoder and causal Transformer, impeding end-to-end optimization during\nadversarial training in image space. To tackle this issue, we propose using\nSoftmax Relaxed Quantization, a novel approach that reformulates codebook\nselection as a continuous probability mixing process via Softmax, thereby\npreserving gradient propagation. Building upon this differentiable foundation,\nwe introduce CycleVAR, which reformulates image-to-image translation as\nimage-conditional visual autoregressive generation by injecting multi-scale\nsource image tokens as contextual prompts, analogous to prefix-based\nconditioning in language models. CycleVAR exploits two modes to generate the\ntarget image tokens, including (1) serial multi-step generation, enabling\niterative refinement across scales, and (2) parallel one-step generation\nsynthesizing all resolution outputs in a single forward pass. Experimental\nfindings indicate that the parallel one-step generation mode attains superior\ntranslation quality with quicker inference speed than the serial multi-step\nmode in unsupervised scenarios. Furthermore, both quantitative and qualitative\nresults indicate that CycleVAR surpasses previous state-of-the-art unsupervised\nimage translation models, \\textit{e}.\\textit{g}., CycleGAN-Turbo.",
+      "pdf_url": "http://arxiv.org/pdf/2506.23347v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.23347v1",
+      "published": "2025-06-29",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "Efficient Estimation of Causal Effects Under Two-Phase Sampling with Error-Prone Outcome and Treatment Measurements",
+      "title": "Auto-Doubly Robust Estimation of Causal Effects on a Network",
       "authors": [
-        "Keith Barnatchez",
-        "Kevin P. Josey",
-        "Nima S. Hejazi",
-        "Bryan E. Shepherd",
-        "Giovanni Parmigiani",
-        "Rachel Nethery"
+        "Jizhou Liu",
+        "Dake Zhang",
+        "Eric J. Tchetgen Tchetgen"
       ],
-      "abstract": "Measurement error is a common challenge for causal inference studies using\nelectronic health record (EHR) data, where clinical outcomes and treatments are\nfrequently mismeasured. Researchers often address measurement error by\nconducting manual chart reviews to validate measurements in a subset of the\nfull EHR data -- a form of two-phase sampling. To improve efficiency, phase-two\nsamples are often collected in a biased manner dependent on the patients'\ninitial, error-prone measurements. In this work, motivated by our aim of\nperforming causal inference with error-prone outcome and treatment measurements\nunder two-phase sampling, we develop solutions applicable to both this specific\nproblem and the broader problem of causal inference with two-phase samples. For\nour specific measurement error problem, we construct two asymptotically\nequivalent doubly-robust estimators of the average treatment effect and\ndemonstrate how these estimators arise from two previously disconnected\napproaches to constructing efficient estimators in general two-phase sampling\nsettings. We document various sources of instability affecting estimators from\neach approach and propose modifications that can considerably improve finite\nsample performance in any two-phase sampling context. We demonstrate the\nutility of our proposed methods through simulation studies and an illustrative\nexample assessing effects of antiretroviral therapy on occurrence of\nAIDS-defining events in patients with HIV from the Vanderbilt Comprehensive\nCare Clinic.",
-      "pdf_url": "http://arxiv.org/pdf/2506.21777v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.21777v1",
-      "published": "2025-06-26",
+      "abstract": "This paper develops new methods for causal inference in observational studies\non a single large network of interconnected units, addressing two key\nchallenges: long-range dependence among units and the presence of general\ninterference. We introduce a novel network version of Augmented Inverse\nPropensity Weighted, which combines propensity score and outcome models defined\non the network to achieve doubly robust identification and estimation of both\ndirect and spillover causal effects. Under a network version of conditional\nignorability, the proposed approach identifies the expected potential outcome\nfor a unit given the treatment assignment vector for its network neighborhood\nup to a user-specified distance, while marginalizing over treatment assignments\nfor the rest of the network. By introducing two additional assumptions on the\noutcome, we establish a new doubly robust identification result for the\nexpected potential outcome under a hypothetical intervention on the treatment\nassignment vector for the entire network. Under a union of Chain Graph models -\none governing the propensity model and the other the outcome model - we propose\na corresponding semiparametric estimator based on parametric models naturally\narising from the chain graph representation of the network. We formally prove\nthat, under weak network dependence, the proposed estimators are asymptotically\nnormal and we characterize the impact of model misspecification on the\nasymptotic variance. Extensive simulation studies highlight the practical\nrelevance of our approach. We further demonstrate its application in an\nempirical analysis of the NNAHRAY study, evaluating the impact of incarceration\non individual socioeconomic outcomes in Brooklyn, New York.",
+      "pdf_url": "http://arxiv.org/pdf/2506.23332v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.23332v1",
+      "published": "2025-06-29",
       "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "THE-Tree: Can Tracing Historical Evolution Enhance Scientific Verification and Reasoning?",
+      "title": "P-CRE-DML: A Novel Approach for Causal Inference in Non-Linear Panel Data",
       "authors": [
-        "Xin Wang",
-        "Jiyao Liu",
-        "Yulong Xiao",
-        "Junzhi Ning",
-        "Lihao Liu",
-        "Junjun He",
-        "Botian Shi",
-        "Kaicheng Yu"
+        "Amarendra Sharma"
       ],
-      "abstract": "Large Language Models (LLMs) are accelerating scientific idea generation, but\nrigorously evaluating these numerous, often superficial, AI-generated\npropositions for novelty and factual accuracy is a critical bottleneck; manual\nverification is too slow.Existing validation methods are inadequate: LLMs as\nstandalone verifiers may hallucinate and lack domain knowledge (our findings\nshow ~60\\% unawareness of relevant papers in specific domains), while\ntraditional citation networks lack explicit causality and narrative surveys are\nunstructured.This underscores a core challenge: the absence of structured,\nverifiable, and causally-linked historical data of scientific evolution.To\naddress this,we introduce \\textbf{THE-Tree} (\\textbf{T}echnology\n\\textbf{H}istory \\textbf{E}volution Tree), a computational framework that\nconstructs such domain-specific evolution trees from scientific\nliterature.THE-Tree employs a search algorithm to explore evolutionary paths.\nDuring its node expansion, it utilizes a novel \"Think-Verbalize-Cite-Verify\"\nprocess: an LLM proposes potential advancements and cites supporting\nliterature. Critically, each proposed evolutionary link is then validated for\nlogical coherence and evidential support by a recovered natural language\ninference mechanism that interrogates the cited literature, ensuring that each\nstep is grounded.We construct and validate 88 THE-Trees across diverse domains\nand release a benchmark dataset including up to 71k fact verifications covering\n27k papers to foster further research.Experiments demonstrate that i) in graph\ncompletion, our THE-Tree improves hit@1 by 8\\% to 14\\% across multiple models\ncompared to traditional citation networks; ii) for predicting future scientific\ndevelopments, it improves hit@1 metric by nearly 10\\%; and iii) when combined\nwith other methods, it boosts the performance of evaluating important\nscientific papers by almost 100\\%.",
-      "pdf_url": "http://arxiv.org/pdf/2506.21763v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.21763v1",
-      "published": "2025-06-26",
+      "abstract": "This paper introduces a novel Proxy-Enhanced Correlated Random Effects Double\nMachine Learning (P-CRE-DML) framework to estimate causal effects in panel data\nwith non-linearities and unobserved heterogeneity. Combining Double Machine\nLearning (DML, Chernozhukov et al., 2018), Correlated Random Effects (CRE,\nMundlak, 1978), and lagged variables (Arellano & Bond, 1991) and innovating\nwithin the CRE-DML framework (Chernozhukov et al., 2022; Clarke & Polselli,\n2025; Fuhr & Papies, 2024), we apply P-CRE-DML to investigate the effect of\nsocial trust on GDP growth across 89 countries (2010-2020). We find positive\nand statistically significant relationship between social trust and economic\ngrowth. This aligns with prior findings on trust-growth relationship (e.g.,\nKnack & Keefer, 1997). Furthermore, a Monte Carlo simulation demonstrates\nP-CRE-DML's advantage in terms of lower bias over CRE-DML and System GMM.\nP-CRE-DML offers a robust and flexible alternative for panel data causal\ninference, with applications beyond economic growth.",
+      "pdf_url": "http://arxiv.org/pdf/2506.23297v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.23297v1",
+      "published": "2025-06-29",
       "categories": [
-        "cs.AI"
+        "econ.EM"
       ]
     },
     {
-      "title": "ImplicitQA: Going beyond frames towards Implicit Video Reasoning",
+      "title": "Token Activation Map to Visually Explain Multimodal LLMs",
       "authors": [
-        "Sirnam Swetha",
-        "Rohit Gupta",
-        "Parth Parag Kulkarni",
-        "David G Shatwell",
-        "Jeffrey A Chan Santiago",
-        "Nyle Siddiqui",
-        "Joseph Fioresi",
-        "Mubarak Shah"
+        "Yi Li",
+        "Hualiang Wang",
+        "Xinpeng Ding",
+        "Haonan Wang",
+        "Xiaomeng Li"
       ],
-      "abstract": "Video QA has made significant strides by leveraging multimodal learning to\nalign visual and textual modalities. However, current benchmarks overwhelmingly\nfocus on questions answerable through explicit visual content - actions,\nobjects & events directly observable within individual frames or short clips.\nIn contrast, creative and cinematic videos - such as movies, TV shows, and\nnarrative-driven content - employ storytelling techniques that deliberately\nomit certain depictions, requiring viewers to infer motives, causality, and\nrelationships across discontinuous frames. Humans naturally excel at such\nimplicit reasoning, seamlessly integrating information across time and context\nto construct coherent narratives. Current VideoQA systems and benchmarks fail\nto capture this essential dimension of human-like understanding. To bridge this\ngap, we present ImplicitQA, a novel benchmark specifically designed to test\nmodels on implicit reasoning. It comprises 1K meticulously annotated QA pairs\nderived from 320+ high-quality creative video clips, systematically categorized\ninto key reasoning dimensions: lateral and vertical spatial reasoning, depth\nand proximity, viewpoint and visibility, motion and trajectory, causal and\nmotivational reasoning, social interactions, physical context, and inferred\ncounting. These annotations are deliberately challenging, crafted by authors\nensuring high-quality. Our extensive evaluations on leading VideoQA models\nreveals performance degradation, underscoring their reliance on surface-level\nvisual cues and highlighting the difficulty of implicit reasoning. Performance\nvariations across models further illustrate the complexity and diversity of the\nchallenges presented by ImplicitQA. By releasing both the dataset and our data\ncollection framework, we aim to stimulate further research and development in\nthe community. https://huggingface.co/datasets/ucf-crcv/ImplicitQA.",
-      "pdf_url": "http://arxiv.org/pdf/2506.21742v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.21742v1",
-      "published": "2025-06-26",
+      "abstract": "Multimodal large language models (MLLMs) are broadly empowering various\nfields. Despite their advancements, the explainability of MLLMs remains less\nexplored, hindering deeper understanding, model credibility, and effective\nvisualization. Unlike conventional vision models (e.g., CNNs, ViTs, CLIP) that\nproduce a single output, MLLMs generate sequences of tokens progressively,\nwhere each generated token depends on the previous context. Therefore, earlier\ncontext tokens can introduce redundant activations that interfere with the\nexplanation of later tokens beyond their original information. Existing studies\noften overlook this issue, but our observations reveal that these redundant\ncorrelations can significantly hurt the reliability of explanations. To address\nthis, we propose an estimated causal inference method to mitigate the\ninterference of context to achieve high-quality MLLM explanation, with a novel\nrank Gaussian filter to further reduce activation noises. We term this method\nToken Activation Map (TAM) to highlight the consideration of interactions\nbetween tokens. TAM also indicates that it excels at explaining multiple tokens\nof MLLM, which is different from the Class Activation Map (CAM) for a single\nprediction. Our TAM method significantly outperforms existing SoTA methods,\nshowcasing high-quality visualization results that can be utilized for various\nscenarios, such as object localization, failure case analysis, video\nvisualization, MLLMs visual comparison, and model understanding (e.g., color,\nshape, action, location, visual reasoning, multi-turn conversation, etc). The\ncode is available atgithub.com/xmed-lab/TAM.",
+      "pdf_url": "http://arxiv.org/pdf/2506.23270v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.23270v1",
+      "published": "2025-06-29",
       "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal inference via implied interventions",
-      "authors": [
-        "Carlos García Meixide",
-        "Mark J. van der Laan"
-      ],
-      "abstract": "In the context of having an instrumental variable, the standard practice in\ncausal inference begins by targeting an effect of interest and proceeds by\nformulating assumptions enabling identification of this effect. We turn this\naround by simply not making assumptions anymore and just adhere to the\ninterventions we can identify, rather than starting with a desired causal\nestimand and imposing untestable hypotheses. The randomization of an instrument\nand its exclusion restriction define a class of auxiliary stochastic\ninterventions on the treatment that are implied by stochastic interventions on\nthe instrument. This mapping effectively characterizes the identifiable causal\neffects of the treatment on the outcome given the observable probability\ndistribution, leading to an explicit transparent G-computation formula under\nhidden confounding. Alternatively, searching for an intervention on the\ninstrument whose implied one best approximates a desired target -- whose causal\neffect the user aims to estimate -- naturally leads to a projection on a\nfunction space representing the closest identifiable treatment effect. The\ngenerality of this projection allows to select different norms and indexing\nsets for the function class that turn optimization into different estimation\nprocedures with the Highly Adaptive Lasso. This shift from identification under\nassumptions to identification under observation redefines how the problem of\ncausal inference is approached.",
-      "pdf_url": "http://arxiv.org/pdf/2506.21501v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.21501v1",
-      "published": "2025-06-26",
-      "categories": [
-        "math.ST",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Counterfactual Voting Adjustment for Quality Assessment and Fairer Voting in Online Platforms with Helpfulness Evaluation",
-      "authors": [
-        "Chang Liu",
-        "Yixin Wang",
-        "Moontae Lee"
-      ],
-      "abstract": "Efficient access to high-quality information is vital for online platforms.\nTo promote more useful information, users not only create new content but also\nevaluate existing content, often through helpfulness voting. Although\naggregated votes help service providers rank their user content, these votes\nare often biased by disparate accessibility per position and the cascaded\ninfluence of prior votes. For a fairer assessment of information quality, we\npropose the Counterfactual Voting Adjustment (CVA), a causal framework that\naccounts for the context in which individual votes are cast. Through\npreliminary and semi-synthetic experiments, we show that CVA effectively models\nthe position and herding biases, accurately recovering the predefined content\nquality. In a real experiment, we demonstrate that reranking content based on\nthe learned quality by CVA exhibits stronger alignment with both user sentiment\nand quality evaluation assessed by GPT-4o, outperforming system rankings based\non aggregated votes and model-based rerankings without causal inference. Beyond\nthe individual quality inference, our embeddings offer comparative insights\ninto the behavioral dynamics of expert user groups across 120 major\nStackExchange communities.",
-      "pdf_url": "http://arxiv.org/pdf/2506.21362v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.21362v1",
-      "published": "2025-06-26",
-      "categories": [
-        "cs.CE"
-      ]
-    },
-    {
-      "title": "Active Inference AI Systems for Scientific Discovery",
-      "authors": [
-        "Karthik Duraisamy"
-      ],
-      "abstract": "The rapid evolution of artificial intelligence has led to expectations of\ntransformative scientific discovery, yet current systems remain fundamentally\nlimited by their operational architectures, brittle reasoning mechanisms, and\ntheir separation from experimental reality. Building on earlier work, we\ncontend that progress in AI-driven science now depends on closing three\nfundamental gaps -- the abstraction gap, the reasoning gap, and the reality gap\n-- rather than on model size/data/test time compute. Scientific reasoning\ndemands internal representations that support simulation of actions and\nresponse, causal structures that distinguish correlation from mechanism, and\ncontinuous calibration. We define active inference AI systems for scientific\ndiscovery as those that (i) maintain long-lived research memories grounded in\ncausal self-supervised foundation models, (ii) symbolic or neuro-symbolic\nplanners equipped with Bayesian guardrails, (iii) grow persistent knowledge\ngraphs where thinking generates novel conceptual nodes, reasoning establishes\ncausal edges, and real-world interaction prunes false connections while\nstrengthening verified pathways, and (iv) refine their internal representations\nthrough closed-loop interaction with both high-fidelity simulators and\nautomated laboratories - an operational loop where mental simulation guides\naction and empirical surprise reshapes understanding. In essence, we outline an\narchitecture where discovery arises from the interplay between internal models\nthat enable counterfactual reasoning and external validation that grounds\nhypotheses in reality. It is also argued that the inherent ambiguity in\nfeedback from simulations and experiments, and underlying uncertainties makes\nhuman judgment indispensable, not as a temporary scaffold but as a permanent\narchitectural component.",
-      "pdf_url": "http://arxiv.org/pdf/2506.21329v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.21329v1",
-      "published": "2025-06-26",
-      "categories": [
+        "cs.CV",
         "cs.AI",
-        "physics.soc-ph",
-        "68",
-        "I.2"
+        "cs.LG"
       ]
     },
     {
-      "title": "Influence and information in a collective of self-propelled particles",
+      "title": "Causal Inference in Panel Data with a Continuous Treatment",
       "authors": [
-        "Jiahuan Pang",
-        "Wendong Wang"
+        "Zhiguo Xiao",
+        "Peikai Wu"
       ],
-      "abstract": "While information-theoretic quantities, such as transfer entropy, have been\nwidely adopted to infer causal relationships in collective systems, a critical\ngap exists: the absence of quantitative evidence directly linking\ninformation-theoretic quantities to a physically defined influence. This letter\naddresses this gap by proposing a modified Vicsek model that enables the\ncalculation of a physically interpretable influence grounded in the angular\ninteractions between particles. Averaged pairwise influences can serve as new\norder parameters to indicate collective phase transitions. We reveal\nquantitative relations between information, represented by transfer entropy,\nand average influence in pairwise and collective interactions. We test three\ntypical methods of partial information decomposition and find that the method\nbased on intrinsic mutual information gives the most appropriate\ninterpretation. Overall, this work provides a model system for quantitative\nstudies of influence and information in complex systems.",
-      "pdf_url": "http://arxiv.org/pdf/2506.20888v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.20888v1",
-      "published": "2025-06-25",
+      "abstract": "This paper proposes a framework that incorporates the two-way fixed effects\nmodel as a special case to conduct causal inference with a continuous\ntreatment. Treatments are allowed to change over time and potential outcomes\nare dependent on historical treatments. Regression models on potential\noutcomes, along with the sequentially conditional independence assumptions\n(SCIAs) are introduced to identify the treatment effects, which are measured by\naggre causal responses. Least squares and generalized method of moments (GMM)\nestimators are developed for model parameters, which are then used to estimate\nthe aggregate causal effects. We establish the asymptotic properties of these\naggregate estimators. Additionally, we propose employing directed acyclic\ngraphs (DAGs) to test the validity of the SCIAs. An application examining the\naid-growth relationship illustrates the proposed methodology.",
+      "pdf_url": "http://arxiv.org/pdf/2506.23226v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.23226v1",
+      "published": "2025-06-29",
       "categories": [
-        "cond-mat.stat-mech",
-        "nlin.AO"
+        "stat.ME"
       ]
     },
     {
-      "title": "A Bayesian Nonparametric Approach for Semi-Competing Risks with Application to Cardiovascular Health",
+      "title": "Design-Based and Network Sampling-Based Uncertainties in Network Experiments",
       "authors": [
-        "Karina Gelis-Cadena",
-        "Michael Daniels",
-        "Juned Siddique"
+        "Kensuke Sakamoto",
+        "Yuya Shimizu"
       ],
-      "abstract": "We address causal estimation in semi-competing risks settings, where a\nnon-terminal event may be precluded by one or more terminal events. We define a\nprincipal-stratification causal estimand for treatment effects on the\nnon-terminal event, conditional on surviving past a specified landmark time. To\nestimate joint event-time distributions, we employ both vine-copula\nconstructions and Bayesian nonparametric Enriched Dirichlet-process mixtures\n(EDPM), enabling inference under minimal parametric assumptions. We index our\ncausal assumptions with sensitivity parameters. Posterior summaries via MCMC\nyield interpretable estimates with credible intervals. We illustrate the\nproposed method using data from a cardiovascular health study.",
-      "pdf_url": "http://arxiv.org/pdf/2506.20860v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.20860v1",
-      "published": "2025-06-25",
+      "abstract": "OLS estimators are widely used in network experiments to estimate spillover\neffects via regressions on exposure mappings that summarize treatment and\nnetwork structure. We study the causal interpretation and inference of such OLS\nestimators when both design-based uncertainty in treatment assignment and\nsampling-based uncertainty in network links are present. We show that\ncorrelations among elements of the exposure mapping can contaminate the OLS\nestimand, preventing it from aggregating heterogeneous spillover effects for\nclear causal interpretation. We derive the estimator's asymptotic distribution\nand propose a network-robust variance estimator. Simulations and an empirical\napplication reveal sizable contamination bias and inflated spillover estimates.",
+      "pdf_url": "http://arxiv.org/pdf/2506.22989v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.22989v1",
+      "published": "2025-06-28",
+      "categories": [
+        "econ.EM",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Inference for Aggregated Treatment",
+      "authors": [
+        "Carolina Caetano",
+        "Gregorio Caetano",
+        "Brantly Callaway",
+        "Derek Dyal"
+      ],
+      "abstract": "In this paper, we study causal inference when the treatment variable is an\naggregation of multiple sub-treatment variables. Researchers often report\nmarginal causal effects for the aggregated treatment, implicitly assuming that\nthe target parameter corresponds to a well-defined average of sub-treatment\neffects. We show that, even in an ideal scenario for causal inference such as\nrandom assignment, the weights underlying this average have some key\nundesirable properties: they are not unique, they can be negative, and, holding\nall else constant, these issues become exponentially more likely to occur as\nthe number of sub-treatments increases and the support of each sub-treatment\ngrows. We propose approaches to avoid these problems, depending on whether or\nnot the sub-treatment variables are observed.",
+      "pdf_url": "http://arxiv.org/pdf/2506.22885v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.22885v1",
+      "published": "2025-06-28",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Boosting CTC-Based ASR Using LLM-Based Intermediate Loss Regularization",
+      "authors": [
+        "Duygu Altinok"
+      ],
+      "abstract": "End-to-end (E2E) automatic speech recognition (ASR) systems have\nrevolutionized the field by integrating all components into a single neural\nnetwork, with attention-based encoder-decoder models achieving state-of-the-art\nperformance. However, their autoregressive decoding process limits inference\nspeed, making them unsuitable for real-time applications. In contrast,\nCTC-based models offer faster, non-autoregressive decoding but struggle to\nmodel linguistic dependencies effectively. Addressing this challenge, we\npropose a novel auxiliary loss framework called Language-Aware Intermediate\nLoss (LAIL) to enhance CTC-based ASR using the linguistic knowledge of large\nlanguage models (LLMs). By attaching connector layers to intermediate encoder\nlayers, LAIL maps outputs to the embedding space of an LLM and computes a\ncausal language modeling loss during training. This approach enhances\nlinguistic modeling while preserving the computational efficiency of CTC\ndecoding. Using the Conformer architecture and various LLaMA models, we\ndemonstrate significant improvements in Word Error Rate (WER) on the\nLibriSpeech, TEDLIUM2, and WSJ corpora, achieving state-of-the-art performance\nfor CTC-based ASR with minimal computational overhead.",
+      "pdf_url": "http://arxiv.org/pdf/2506.22846v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.22846v1",
+      "published": "2025-06-28",
+      "categories": [
+        "cs.CL",
+        "cs.SD",
+        "eess.AS"
+      ]
+    },
+    {
+      "title": "Doubly robust estimation of causal effects for random object outcomes with continuous treatments",
+      "authors": [
+        "Satarupa Bhattacharjee",
+        "Bing Li",
+        "Xiao Wu",
+        "Lingzhou Xue"
+      ],
+      "abstract": "Causal inference is central to statistics and scientific discovery, enabling\nresearchers to identify cause-and-effect relationships beyond associations.\nWhile traditionally studied within Euclidean spaces, contemporary applications\nincreasingly involve complex, non-Euclidean data structures that reside in\nabstract metric spaces, known as random objects, such as images, shapes,\nnetworks, and distributions. This paper introduces a novel framework for causal\ninference with continuous treatments applied to non-Euclidean data. To address\nthe challenges posed by the lack of linear structures, we leverage Hilbert\nspace embeddings of the metric spaces to facilitate Fr\\'echet mean estimation\nand causal effect mapping. Motivated by a study on the impact of exposure to\nfine particulate matter on age-at-death distributions across U.S. counties, we\npropose a nonparametric, doubly-debiased causal inference approach for outcomes\nas random objects with continuous treatments. Our framework can accommodate\nmoderately high-dimensional vector-valued confounders and derive efficient\ninfluence functions for estimation to ensure both robustness and\ninterpretability. We establish rigorous asymptotic properties of the\ncross-fitted estimators and employ conformal inference techniques for\ncounterfactual outcome prediction. Validated through numerical experiments and\napplied to real-world environmental data, our framework extends causal\ninference methodologies to complex data structures, broadening its\napplicability across scientific disciplines.",
+      "pdf_url": "http://arxiv.org/pdf/2506.22754v1",
+      "arxiv_url": "http://arxiv.org/abs/2506.22754v1",
+      "published": "2025-06-28",
       "categories": [
         "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "DiffuCoder: Understanding and Improving Masked Diffusion Models for Code Generation",
-      "authors": [
-        "Shansan Gong",
-        "Ruixiang Zhang",
-        "Huangjie Zheng",
-        "Jiatao Gu",
-        "Navdeep Jaitly",
-        "Lingpeng Kong",
-        "Yizhe Zhang"
-      ],
-      "abstract": "Diffusion large language models (dLLMs) are compelling alternatives to\nautoregressive (AR) models because their denoising models operate over the\nentire sequence. The global planning and iterative refinement features of dLLMs\nare particularly useful for code generation. However, current training and\ninference mechanisms for dLLMs in coding are still under-explored. To demystify\nthe decoding behavior of dLLMs and unlock their potential for coding, we\nsystematically investigate their denoising processes and reinforcement learning\n(RL) methods. We train a 7B dLLM, \\textbf{DiffuCoder}, on 130B tokens of code.\nUsing this model as a testbed, we analyze its decoding behavior, revealing how\nit differs from that of AR models: (1) dLLMs can decide how causal their\ngeneration should be without relying on semi-AR decoding, and (2) increasing\nthe sampling temperature diversifies not only token choices but also their\ngeneration order. This diversity creates a rich search space for RL rollouts.\nFor RL training, to reduce the variance of token log-likelihood estimates and\nmaintain training efficiency, we propose \\textbf{coupled-GRPO}, a novel\nsampling scheme that constructs complementary mask noise for completions used\nin training. In our experiments, coupled-GRPO significantly improves\nDiffuCoder's performance on code generation benchmarks (+4.4\\% on EvalPlus) and\nreduces reliance on AR bias during decoding. Our work provides deeper insight\ninto the machinery of dLLM generation and offers an effective, diffusion-native\nRL training framework. https://github.com/apple/ml-diffucoder.",
-      "pdf_url": "http://arxiv.org/pdf/2506.20639v2",
-      "arxiv_url": "http://arxiv.org/abs/2506.20639v2",
-      "published": "2025-06-25",
-      "categories": [
-        "cs.CL"
+        "econ.EM",
+        "math.ST",
+        "stat.AP",
+        "stat.ML",
+        "stat.TH"
       ]
     }
   ]
