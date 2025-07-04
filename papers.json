@@ -1,6 +1,152 @@
 {
-  "last_updated": "2025-07-03T00:55:34.371813",
+  "last_updated": "2025-07-04T00:55:22.512397",
   "papers": [
+    {
+      "title": "Reasoning to Edit: Hypothetical Instruction-Based Image Editing with Visual Reasoning",
+      "authors": [
+        "Qingdong He",
+        "Xueqin Chen",
+        "Chaoyi Wang",
+        "Yanjie Pan",
+        "Xiaobin Hu",
+        "Zhenye Gan",
+        "Yabiao Wang",
+        "Chengjie Wang",
+        "Xiangtai Li",
+        "Jiangning Zhang"
+      ],
+      "abstract": "Instruction-based image editing (IIE) has advanced rapidly with the success\nof diffusion models. However, existing efforts primarily focus on simple and\nexplicit instructions to execute editing operations such as adding, deleting,\nmoving, or swapping objects. They struggle to handle more complex implicit\nhypothetical instructions that require deeper reasoning to infer plausible\nvisual changes and user intent. Additionally, current datasets provide limited\nsupport for training and evaluating reasoning-aware editing capabilities.\nArchitecturally, these methods also lack mechanisms for fine-grained detail\nextraction that support such reasoning. To address these limitations, we\npropose Reason50K, a large-scale dataset specifically curated for training and\nevaluating hypothetical instruction reasoning image editing, along with\nReasonBrain, a novel framework designed to reason over and execute implicit\nhypothetical instructions across diverse scenarios. Reason50K includes over 50K\nsamples spanning four key reasoning scenarios: Physical, Temporal, Causal, and\nStory reasoning. ReasonBrain leverages Multimodal Large Language Models (MLLMs)\nfor editing guidance generation and a diffusion model for image synthesis,\nincorporating a Fine-grained Reasoning Cue Extraction (FRCE) module to capture\ndetailed visual and textual semantics essential for supporting instruction\nreasoning. To mitigate the semantic loss, we further introduce a Cross-Modal\nEnhancer (CME) that enables rich interactions between the fine-grained cues and\nMLLM-derived features. Extensive experiments demonstrate that ReasonBrain\nconsistently outperforms state-of-the-art baselines on reasoning scenarios\nwhile exhibiting strong zero-shot generalization to conventional IIE tasks. Our\ndataset and code will be released publicly.",
+      "pdf_url": "http://arxiv.org/pdf/2507.01908v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.01908v1",
+      "published": "2025-07-02",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "HOI-Dyn: Learning Interaction Dynamics for Human-Object Motion Diffusion",
+      "authors": [
+        "Lin Wu",
+        "Zhixiang Chen",
+        "Jianglin Lan"
+      ],
+      "abstract": "Generating realistic 3D human-object interactions (HOIs) remains a\nchallenging task due to the difficulty of modeling detailed interaction\ndynamics. Existing methods treat human and object motions independently,\nresulting in physically implausible and causally inconsistent behaviors. In\nthis work, we present HOI-Dyn, a novel framework that formulates HOI generation\nas a driver-responder system, where human actions drive object responses. At\nthe core of our method is a lightweight transformer-based interaction dynamics\nmodel that explicitly predicts how objects should react to human motion. To\nfurther enforce consistency, we introduce a residual-based dynamics loss that\nmitigates the impact of dynamics prediction errors and prevents misleading\noptimization signals. The dynamics model is used only during training,\npreserving inference efficiency. Through extensive qualitative and quantitative\nexperiments, we demonstrate that our approach not only enhances the quality of\nHOI generation but also establishes a feasible metric for evaluating the\nquality of generated interactions.",
+      "pdf_url": "http://arxiv.org/pdf/2507.01737v2",
+      "arxiv_url": "http://arxiv.org/abs/2507.01737v2",
+      "published": "2025-07-02",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Relational Causal Discovery with Latent Confounders",
+      "authors": [
+        "Andrea Piras",
+        "Matteo Negro",
+        "Ragib Ahsan",
+        "David Arbour",
+        "Elena Zheleva"
+      ],
+      "abstract": "Estimating causal effects from real-world relational data can be challenging\nwhen the underlying causal model and potential confounders are unknown. While\nseveral causal discovery algorithms exist for learning causal models with\nlatent confounders from data, they assume that the data is independent and\nidentically distributed (i.i.d.) and are not well-suited for learning from\nrelational data. Similarly, existing relational causal discovery algorithms\nassume causal sufficiency, which is unrealistic for many real-world datasets.\nTo address this gap, we propose RelFCI, a sound and complete causal discovery\nalgorithm for relational data with latent confounders. Our work builds upon the\nFast Causal Inference (FCI) and Relational Causal Discovery (RCD) algorithms\nand it defines new graphical models, necessary to support causal discovery in\nrelational domains. We also establish soundness and completeness guarantees for\nrelational d-separation with latent confounders. We present experimental\nresults demonstrating the effectiveness of RelFCI in identifying the correct\ncausal structure in relational causal models with latent confounders.",
+      "pdf_url": "http://arxiv.org/pdf/2507.01700v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.01700v1",
+      "published": "2025-07-02",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "rdhte: Conditional Average Treatment Effects in RD Designs",
+      "authors": [
+        "Sebastian Calonico",
+        "Matias D. Cattaneo",
+        "Max H. Farrell",
+        "Filippo Palomba",
+        "Rocio Titiunik"
+      ],
+      "abstract": "Understanding causal heterogeneous treatment effects based on pretreatment\ncovariates is a crucial aspect of empirical work. Building on Calonico,\nCattaneo, Farrell, Palomba, and Titiunik (2025), this article discusses the\nsoftware package rdhte for estimation and inference of heterogeneous treatment\neffects in sharp regression discontinuity (RD) designs. The package includes\nthree main commands: rdhte conducts estimation and robust bias-corrected\ninference for heterogeneous RD treatment effects, for a given choice of the\nbandwidth parameter; rdbwhte implements automatic bandwidth selection methods;\nand rdhte lincom computes point estimates and robust bias-corrected confidence\nintervals for linear combinations, a post-estimation command specifically\ntailored to rdhte. We also provide an overview of heterogeneous effects for\nsharp RD designs, give basic details on the methodology, and illustrate using\nan empirical application. Finally, we discuss how the package rdhte\ncomplements, and in specific cases recovers, the canonical RD package rdrobust\n(Calonico, Cattaneo, Farrell, and Titiunik 2017).",
+      "pdf_url": "http://arxiv.org/pdf/2507.01128v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.01128v1",
+      "published": "2025-07-01",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Bayesian analysis of the causal reference-based model for missing data in clinical trials",
+      "authors": [
+        "Brendah Nansereko",
+        "Marcel Wolbers",
+        "James Carpenter",
+        "Jonathan Bartlett"
+      ],
+      "abstract": "The statistical analysis of clinical trials is often complicated by missing\ndata. Patients sometimes experience intercurrent events (ICEs), which usually\n(although not always) lead to missing subsequent outcome measurements for such\nindividuals. The reference-based imputation methods were proposed by Carpenter\net al. (2013) and have been commonly adopted for handling missing data due to\nICEs when estimating treatment policy strategy estimands. Conventionally, the\nvariance for reference-based estimators was obtained using Rubin's rules.\nHowever, Rubin's rules variance estimator is biased compared to the repeated\nsampling variance of the point estimator, due to uncongeniality. Repeated\nsampling variance estimators were proposed as an alternative to variance\nestimation for reference-based estimators. However, these have the property\nthat they decrease as the proportion of ICEs increases. White et al. (2019)\nintroduced a causal model incorporating the concept of a 'maintained treatment\neffect' following the occurrence of ICEs and showed that this causal model\nincluded common reference-based estimators as special cases. Building on this\nframework, we propose introducing a prior distribution for the maintained\neffect parameter to account for uncertainty in this assumption. Our approach\nprovides inference for reference-based estimators that explicitly reflects our\nuncertainty about how much treatment effects are maintained after the\noccurrence of ICEs. In trials where no or little post-ICE data are observed,\nour proposed Bayesian reference-based causal model approach can be used to\nestimate the treatment policy treatment effect, incorporating uncertainty about\nthe reference-based assumption. We compare the frequentist properties of this\napproach with existing reference-based methods through simulations and by\napplication to an antidepressant trial.",
+      "pdf_url": "http://arxiv.org/pdf/2507.00680v2",
+      "arxiv_url": "http://arxiv.org/abs/2507.00680v2",
+      "published": "2025-07-01",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Quantum Bayesian inference with Suport vector states for intrusion detection",
+      "authors": [
+        "Nayema Mridha",
+        "Garrv Sipani",
+        "Eva R Gaarder",
+        "Shah Haque",
+        "Radhika Kuttala",
+        "Binay P Akhouri",
+        "Mohamad M Al Zein",
+        "Eric Howard"
+      ],
+      "abstract": "We present a quantum Bayesian inference method for intrusion detection, using\nexplicitly constructed quantum circuits and statevector simulation. Prior and\nconditional probabilities are encoded via unitary gates, and posterior\ndistributions are extracted through symbolic post-selection. Applied to a\nscenario with network spikes, system vulnerabilities, and false alarms, the\nmethod yields joint, marginal, and conditional probabilities aligned with\ncausal structure. Our results demonstrate the feasibility and interpretability\nof quantum-native inference for information security applications",
+      "pdf_url": "http://arxiv.org/pdf/2507.00403v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.00403v1",
+      "published": "2025-07-01",
+      "categories": [
+        "quant-ph"
+      ]
+    },
+    {
+      "title": "Causal Prompting for Implicit Sentiment Analysis with Large Language Models",
+      "authors": [
+        "Jing Ren",
+        "Wenhao Zhou",
+        "Bowen Li",
+        "Mujie Liu",
+        "Nguyen Linh Dan Le",
+        "Jiade Cen",
+        "Liping Chen",
+        "Ziqi Xu",
+        "Xiwei Xu",
+        "Xiaodong Li"
+      ],
+      "abstract": "Implicit Sentiment Analysis (ISA) aims to infer sentiment that is implied\nrather than explicitly stated, requiring models to perform deeper reasoning\nover subtle contextual cues. While recent prompting-based methods using Large\nLanguage Models (LLMs) have shown promise in ISA, they often rely on majority\nvoting over chain-of-thought (CoT) reasoning paths without evaluating their\ncausal validity, making them susceptible to internal biases and spurious\ncorrelations. To address this challenge, we propose CAPITAL, a causal prompting\nframework that incorporates front-door adjustment into CoT reasoning. CAPITAL\ndecomposes the overall causal effect into two components: the influence of the\ninput prompt on the reasoning chains, and the impact of those chains on the\nfinal output. These components are estimated using encoder-based clustering and\nthe NWGM approximation, with a contrastive learning objective used to better\nalign the encoder's representation with the LLM's reasoning space. Experiments\non benchmark ISA datasets with three LLMs demonstrate that CAPITAL consistently\noutperforms strong prompting baselines in both accuracy and robustness,\nparticularly under adversarial conditions. This work offers a principled\napproach to integrating causal inference into LLM prompting and highlights its\nbenefits for bias-aware sentiment reasoning. The source code and case study are\navailable at: https://github.com/whZ62/CAPITAL.",
+      "pdf_url": "http://arxiv.org/pdf/2507.00389v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.00389v1",
+      "published": "2025-07-01",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Penalized FCI for Causal Structure Learning in a Sparse DAG for Biomarker Discovery in Parkinson's Disease",
+      "authors": [
+        "Samhita Pal",
+        "Dhrubajyoti Ghosh",
+        "Shu Yang"
+      ],
+      "abstract": "Parkinson's disease (PD) is a progressive neurodegenerative disorder that\nlacks reliable early-stage biomarkers for diagnosis, prognosis, and therapeutic\nmonitoring. While cerebrospinal fluid (CSF) biomarkers, such as alpha-synuclein\nseed amplification assays (alphaSyn-SAA), offer diagnostic potential, their\nclinical utility is limited by invasiveness and incomplete specificity. Plasma\nbiomarkers provide a minimally invasive alternative, but their mechanistic role\nin PD remains unclear. A major challenge is distinguishing whether plasma\nbiomarkers causally reflect primary neurodegenerative processes or are\ndownstream consequences of disease progression. To address this, we leverage\nthe Parkinson's Progression Markers Initiative (PPMI) Project 9000, containing\n2,924 plasma and CSF biomarkers, to systematically infer causal relationships\nwith disease status. However, only a sparse subset of these biomarkers and\ntheir interconnections are actually relevant for the disease. Existing causal\ndiscovery algorithms, such as Fast Causal Inference (FCI) and its variants,\nstruggle with the high dimensionality of biomarker datasets under sparsity,\nlimiting their scalability. We propose Penalized Fast Causal Inference (PFCI),\na novel approach that incorporates sparsity constraints to efficiently infer\ncausal structures in large-scale biological datasets. By applying PFCI to PPMI\ndata, we aim to identify biomarkers that are causally linked to PD pathology,\nenabling early diagnosis and patient stratification. Our findings will\nfacilitate biomarker-driven clinical trials and contribute to the development\nof neuroprotective therapies.",
+      "pdf_url": "http://arxiv.org/pdf/2507.00173v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.00173v1",
+      "published": "2025-06-30",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
     {
       "title": "When Additive Noise Meets Unobserved Mediators: Bivariate Denoising Diffusion for Causal Discovery",
       "authors": [
@@ -32,134 +178,6 @@
       "published": "2025-06-29",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Auto-Doubly Robust Estimation of Causal Effects on a Network",
-      "authors": [
-        "Jizhou Liu",
-        "Dake Zhang",
-        "Eric J. Tchetgen Tchetgen"
-      ],
-      "abstract": "This paper develops new methods for causal inference in observational studies\non a single large network of interconnected units, addressing two key\nchallenges: long-range dependence among units and the presence of general\ninterference. We introduce a novel network version of Augmented Inverse\nPropensity Weighted, which combines propensity score and outcome models defined\non the network to achieve doubly robust identification and estimation of both\ndirect and spillover causal effects. Under a network version of conditional\nignorability, the proposed approach identifies the expected potential outcome\nfor a unit given the treatment assignment vector for its network neighborhood\nup to a user-specified distance, while marginalizing over treatment assignments\nfor the rest of the network. By introducing two additional assumptions on the\noutcome, we establish a new doubly robust identification result for the\nexpected potential outcome under a hypothetical intervention on the treatment\nassignment vector for the entire network. Under a union of Chain Graph models -\none governing the propensity model and the other the outcome model - we propose\na corresponding semiparametric estimator based on parametric models naturally\narising from the chain graph representation of the network. We formally prove\nthat, under weak network dependence, the proposed estimators are asymptotically\nnormal and we characterize the impact of model misspecification on the\nasymptotic variance. Extensive simulation studies highlight the practical\nrelevance of our approach. We further demonstrate its application in an\nempirical analysis of the NNAHRAY study, evaluating the impact of incarceration\non individual socioeconomic outcomes in Brooklyn, New York.",
-      "pdf_url": "http://arxiv.org/pdf/2506.23332v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.23332v1",
-      "published": "2025-06-29",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "P-CRE-DML: A Novel Approach for Causal Inference in Non-Linear Panel Data",
-      "authors": [
-        "Amarendra Sharma"
-      ],
-      "abstract": "This paper introduces a novel Proxy-Enhanced Correlated Random Effects Double\nMachine Learning (P-CRE-DML) framework to estimate causal effects in panel data\nwith non-linearities and unobserved heterogeneity. Combining Double Machine\nLearning (DML, Chernozhukov et al., 2018), Correlated Random Effects (CRE,\nMundlak, 1978), and lagged variables (Arellano & Bond, 1991) and innovating\nwithin the CRE-DML framework (Chernozhukov et al., 2022; Clarke & Polselli,\n2025; Fuhr & Papies, 2024), we apply P-CRE-DML to investigate the effect of\nsocial trust on GDP growth across 89 countries (2010-2020). We find positive\nand statistically significant relationship between social trust and economic\ngrowth. This aligns with prior findings on trust-growth relationship (e.g.,\nKnack & Keefer, 1997). Furthermore, a Monte Carlo simulation demonstrates\nP-CRE-DML's advantage in terms of lower bias over CRE-DML and System GMM.\nP-CRE-DML offers a robust and flexible alternative for panel data causal\ninference, with applications beyond economic growth.",
-      "pdf_url": "http://arxiv.org/pdf/2506.23297v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.23297v1",
-      "published": "2025-06-29",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Token Activation Map to Visually Explain Multimodal LLMs",
-      "authors": [
-        "Yi Li",
-        "Hualiang Wang",
-        "Xinpeng Ding",
-        "Haonan Wang",
-        "Xiaomeng Li"
-      ],
-      "abstract": "Multimodal large language models (MLLMs) are broadly empowering various\nfields. Despite their advancements, the explainability of MLLMs remains less\nexplored, hindering deeper understanding, model credibility, and effective\nvisualization. Unlike conventional vision models (e.g., CNNs, ViTs, CLIP) that\nproduce a single output, MLLMs generate sequences of tokens progressively,\nwhere each generated token depends on the previous context. Therefore, earlier\ncontext tokens can introduce redundant activations that interfere with the\nexplanation of later tokens beyond their original information. Existing studies\noften overlook this issue, but our observations reveal that these redundant\ncorrelations can significantly hurt the reliability of explanations. To address\nthis, we propose an estimated causal inference method to mitigate the\ninterference of context to achieve high-quality MLLM explanation, with a novel\nrank Gaussian filter to further reduce activation noises. We term this method\nToken Activation Map (TAM) to highlight the consideration of interactions\nbetween tokens. TAM also indicates that it excels at explaining multiple tokens\nof MLLM, which is different from the Class Activation Map (CAM) for a single\nprediction. Our TAM method significantly outperforms existing SoTA methods,\nshowcasing high-quality visualization results that can be utilized for various\nscenarios, such as object localization, failure case analysis, video\nvisualization, MLLMs visual comparison, and model understanding (e.g., color,\nshape, action, location, visual reasoning, multi-turn conversation, etc). The\ncode is available atgithub.com/xmed-lab/TAM.",
-      "pdf_url": "http://arxiv.org/pdf/2506.23270v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.23270v1",
-      "published": "2025-06-29",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Inference in Panel Data with a Continuous Treatment",
-      "authors": [
-        "Zhiguo Xiao",
-        "Peikai Wu"
-      ],
-      "abstract": "This paper proposes a framework that incorporates the two-way fixed effects\nmodel as a special case to conduct causal inference with a continuous\ntreatment. Treatments are allowed to change over time and potential outcomes\nare dependent on historical treatments. Regression models on potential\noutcomes, along with the sequentially conditional independence assumptions\n(SCIAs) are introduced to identify the treatment effects, which are measured by\naggre causal responses. Least squares and generalized method of moments (GMM)\nestimators are developed for model parameters, which are then used to estimate\nthe aggregate causal effects. We establish the asymptotic properties of these\naggregate estimators. Additionally, we propose employing directed acyclic\ngraphs (DAGs) to test the validity of the SCIAs. An application examining the\naid-growth relationship illustrates the proposed methodology.",
-      "pdf_url": "http://arxiv.org/pdf/2506.23226v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.23226v1",
-      "published": "2025-06-29",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Design-Based and Network Sampling-Based Uncertainties in Network Experiments",
-      "authors": [
-        "Kensuke Sakamoto",
-        "Yuya Shimizu"
-      ],
-      "abstract": "OLS estimators are widely used in network experiments to estimate spillover\neffects via regressions on exposure mappings that summarize treatment and\nnetwork structure. We study the causal interpretation and inference of such OLS\nestimators when both design-based uncertainty in treatment assignment and\nsampling-based uncertainty in network links are present. We show that\ncorrelations among elements of the exposure mapping can contaminate the OLS\nestimand, preventing it from aggregating heterogeneous spillover effects for\nclear causal interpretation. We derive the estimator's asymptotic distribution\nand propose a network-robust variance estimator. Simulations and an empirical\napplication reveal sizable contamination bias and inflated spillover estimates.",
-      "pdf_url": "http://arxiv.org/pdf/2506.22989v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.22989v1",
-      "published": "2025-06-28",
-      "categories": [
-        "econ.EM",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Inference for Aggregated Treatment",
-      "authors": [
-        "Carolina Caetano",
-        "Gregorio Caetano",
-        "Brantly Callaway",
-        "Derek Dyal"
-      ],
-      "abstract": "In this paper, we study causal inference when the treatment variable is an\naggregation of multiple sub-treatment variables. Researchers often report\nmarginal causal effects for the aggregated treatment, implicitly assuming that\nthe target parameter corresponds to a well-defined average of sub-treatment\neffects. We show that, even in an ideal scenario for causal inference such as\nrandom assignment, the weights underlying this average have some key\nundesirable properties: they are not unique, they can be negative, and, holding\nall else constant, these issues become exponentially more likely to occur as\nthe number of sub-treatments increases and the support of each sub-treatment\ngrows. We propose approaches to avoid these problems, depending on whether or\nnot the sub-treatment variables are observed.",
-      "pdf_url": "http://arxiv.org/pdf/2506.22885v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.22885v1",
-      "published": "2025-06-28",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Boosting CTC-Based ASR Using LLM-Based Intermediate Loss Regularization",
-      "authors": [
-        "Duygu Altinok"
-      ],
-      "abstract": "End-to-end (E2E) automatic speech recognition (ASR) systems have\nrevolutionized the field by integrating all components into a single neural\nnetwork, with attention-based encoder-decoder models achieving state-of-the-art\nperformance. However, their autoregressive decoding process limits inference\nspeed, making them unsuitable for real-time applications. In contrast,\nCTC-based models offer faster, non-autoregressive decoding but struggle to\nmodel linguistic dependencies effectively. Addressing this challenge, we\npropose a novel auxiliary loss framework called Language-Aware Intermediate\nLoss (LAIL) to enhance CTC-based ASR using the linguistic knowledge of large\nlanguage models (LLMs). By attaching connector layers to intermediate encoder\nlayers, LAIL maps outputs to the embedding space of an LLM and computes a\ncausal language modeling loss during training. This approach enhances\nlinguistic modeling while preserving the computational efficiency of CTC\ndecoding. Using the Conformer architecture and various LLaMA models, we\ndemonstrate significant improvements in Word Error Rate (WER) on the\nLibriSpeech, TEDLIUM2, and WSJ corpora, achieving state-of-the-art performance\nfor CTC-based ASR with minimal computational overhead.",
-      "pdf_url": "http://arxiv.org/pdf/2506.22846v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.22846v1",
-      "published": "2025-06-28",
-      "categories": [
-        "cs.CL",
-        "cs.SD",
-        "eess.AS"
-      ]
-    },
-    {
-      "title": "Doubly robust estimation of causal effects for random object outcomes with continuous treatments",
-      "authors": [
-        "Satarupa Bhattacharjee",
-        "Bing Li",
-        "Xiao Wu",
-        "Lingzhou Xue"
-      ],
-      "abstract": "Causal inference is central to statistics and scientific discovery, enabling\nresearchers to identify cause-and-effect relationships beyond associations.\nWhile traditionally studied within Euclidean spaces, contemporary applications\nincreasingly involve complex, non-Euclidean data structures that reside in\nabstract metric spaces, known as random objects, such as images, shapes,\nnetworks, and distributions. This paper introduces a novel framework for causal\ninference with continuous treatments applied to non-Euclidean data. To address\nthe challenges posed by the lack of linear structures, we leverage Hilbert\nspace embeddings of the metric spaces to facilitate Fr\\'echet mean estimation\nand causal effect mapping. Motivated by a study on the impact of exposure to\nfine particulate matter on age-at-death distributions across U.S. counties, we\npropose a nonparametric, doubly-debiased causal inference approach for outcomes\nas random objects with continuous treatments. Our framework can accommodate\nmoderately high-dimensional vector-valued confounders and derive efficient\ninfluence functions for estimation to ensure both robustness and\ninterpretability. We establish rigorous asymptotic properties of the\ncross-fitted estimators and employ conformal inference techniques for\ncounterfactual outcome prediction. Validated through numerical experiments and\napplied to real-world environmental data, our framework extends causal\ninference methodologies to complex data structures, broadening its\napplicability across scientific disciplines.",
-      "pdf_url": "http://arxiv.org/pdf/2506.22754v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.22754v1",
-      "published": "2025-06-28",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "math.ST",
-        "stat.AP",
-        "stat.ML",
-        "stat.TH"
       ]
     }
   ]
