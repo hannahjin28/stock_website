@@ -1,6 +1,60 @@
 {
-  "last_updated": "2025-07-04T00:55:22.512397",
+  "last_updated": "2025-07-05T00:53:10.457509",
   "papers": [
+    {
+      "title": "FlowSpec: Continuous Pipelined Speculative Decoding for Efficient Distributed LLM Inference",
+      "authors": [
+        "Xing Liu",
+        "Lizhuo Luo",
+        "Ming Tang",
+        "Chao Huang"
+      ],
+      "abstract": "Distributed inference serves as a promising approach to enabling the\ninference of large language models (LLMs) at the network edge. It distributes\nthe inference process to multiple devices to ensure that the LLMs can fit into\nthe device memory. Recent pipeline-based approaches have the potential to\nparallelize communication and computation, which helps reduce inference\nlatency. However, the benefit diminishes when the inference request at the\nnetwork edge is sparse, where pipeline is typically at low utilization. To\nenable efficient distributed LLM inference at the edge, we propose\n\\textbf{FlowSpec}, a pipeline-parallel tree-based speculative decoding\nframework. FlowSpec incorporates three key mechanisms to improve decoding\nefficiency: 1) score-based step-wise verification prioritizes more important\ndraft tokens to bring earlier accpeted tokens; 2) efficient draft management to\nprune invalid tokens while maintaining correct causal relationship during\nverification; 3) dynamic draft expansion strategies to supply high-quality\nspeculative inputs. These techniques work in concert to enhance both pipeline\nutilization and speculative efficiency. We evaluate FlowSpec on a real-world\ntestbed with other baselines. Experimental results demonstrate that our\nproposed framework significantly improves inference speed across diverse models\nand configurations, achieving speedup ratios 1.36$\\times$-1.77$\\times$ compared\nto baselines. Our code is publicly available at\n\\href{https://github.com/Leosang-lx/FlowSpec#}{https://github.com/Leosang-lx/FlowSpec\\#}",
+      "pdf_url": "http://arxiv.org/pdf/2507.02620v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.02620v1",
+      "published": "2025-07-03",
+      "categories": [
+        "cs.DC",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Nonlinear Network Reconstruction by Pairwise Time-delayed Transfer Entropy",
+      "authors": [
+        "Kai Chen",
+        "Zhong-qi K. Tian",
+        "Yifei Chen",
+        "Songting Li",
+        "Douglas Zhou"
+      ],
+      "abstract": "Analyzing network structural connectivity is crucial for understanding\ndynamics and functions of complex networks across disciplines. In many\nnetworks, structural connectivity is not observable, which requires to be\ninferred via causal inference methods. Among them, transfer entropy (TE) is one\nof the most broadly applied causality measure due to its model-free property.\nHowever, TE often faces the curse of dimensionality in high-dimensional\nprobability estimation, and the relation between the inferred causal\nconnectivity and the underlying structural connectivity remains poorly\nunderstood. Here we address these issues by proposing a pairwise time-delayed\ntransfer entropy (PTD-TE) method. We theoretically establish a quadratic\nrelationship between PTD-TE values and node coupling strengths, and demonstrate\nits immunity to dimensionality issues and broad applicability. Tests on\nbiological neuronal networks, nonlinear physical systems, and\nelectrophysiological data show PTD-TE achieves consistent, high-performance\nreconstructions. Compared to a bunch of existing approaches for network\nconnectivity reconstruction, PTD-TE outperforms these methods across various\nnetwork systems in accuracy and robustness against noise. Our framework\nprovides a scalable, model-agnostic tool for structural connectivity inference\nin nonlinear real-world networks.",
+      "pdf_url": "http://arxiv.org/pdf/2507.02304v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.02304v1",
+      "published": "2025-07-03",
+      "categories": [
+        "q-bio.NC"
+      ]
+    },
+    {
+      "title": "It's Hard to Be Normal: The Impact of Noise on Structure-agnostic Estimation",
+      "authors": [
+        "Jikai Jin",
+        "Lester Mackey",
+        "Vasilis Syrgkanis"
+      ],
+      "abstract": "Structure-agnostic causal inference studies how well one can estimate a\ntreatment effect given black-box machine learning estimates of nuisance\nfunctions (like the impact of confounders on treatment and outcomes). Here, we\nfind that the answer depends in a surprising way on the distribution of the\ntreatment noise. Focusing on the partially linear model of\n\\citet{robinson1988root}, we first show that the widely adopted double machine\nlearning (DML) estimator is minimax rate-optimal for Gaussian treatment noise,\nresolving an open problem of \\citet{mackey2018orthogonal}. Meanwhile, for\nindependent non-Gaussian treatment noise, we show that DML is always suboptimal\nby constructing new practical procedures with higher-order robustness to\nnuisance errors. These \\emph{ACE} procedures use structure-agnostic cumulant\nestimators to achieve $r$-th order insensitivity to nuisance errors whenever\nthe $(r+1)$-st treatment cumulant is non-zero. We complement these core results\nwith novel minimax guarantees for binary treatments in the partially linear\nmodel. Finally, using synthetic demand estimation experiments, we demonstrate\nthe practical benefits of our higher-order robust estimators.",
+      "pdf_url": "http://arxiv.org/pdf/2507.02275v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.02275v1",
+      "published": "2025-07-03",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "econ.EM",
+        "math.ST",
+        "stat.ME",
+        "stat.TH"
+      ]
+    },
     {
       "title": "Reasoning to Edit: Hypothetical Instruction-Based Image Editing with Visual Reasoning",
       "authors": [
@@ -129,55 +183,6 @@
       "published": "2025-07-01",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Penalized FCI for Causal Structure Learning in a Sparse DAG for Biomarker Discovery in Parkinson's Disease",
-      "authors": [
-        "Samhita Pal",
-        "Dhrubajyoti Ghosh",
-        "Shu Yang"
-      ],
-      "abstract": "Parkinson's disease (PD) is a progressive neurodegenerative disorder that\nlacks reliable early-stage biomarkers for diagnosis, prognosis, and therapeutic\nmonitoring. While cerebrospinal fluid (CSF) biomarkers, such as alpha-synuclein\nseed amplification assays (alphaSyn-SAA), offer diagnostic potential, their\nclinical utility is limited by invasiveness and incomplete specificity. Plasma\nbiomarkers provide a minimally invasive alternative, but their mechanistic role\nin PD remains unclear. A major challenge is distinguishing whether plasma\nbiomarkers causally reflect primary neurodegenerative processes or are\ndownstream consequences of disease progression. To address this, we leverage\nthe Parkinson's Progression Markers Initiative (PPMI) Project 9000, containing\n2,924 plasma and CSF biomarkers, to systematically infer causal relationships\nwith disease status. However, only a sparse subset of these biomarkers and\ntheir interconnections are actually relevant for the disease. Existing causal\ndiscovery algorithms, such as Fast Causal Inference (FCI) and its variants,\nstruggle with the high dimensionality of biomarker datasets under sparsity,\nlimiting their scalability. We propose Penalized Fast Causal Inference (PFCI),\na novel approach that incorporates sparsity constraints to efficiently infer\ncausal structures in large-scale biological datasets. By applying PFCI to PPMI\ndata, we aim to identify biomarkers that are causally linked to PD pathology,\nenabling early diagnosis and patient stratification. Our findings will\nfacilitate biomarker-driven clinical trials and contribute to the development\nof neuroprotective therapies.",
-      "pdf_url": "http://arxiv.org/pdf/2507.00173v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.00173v1",
-      "published": "2025-06-30",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "When Additive Noise Meets Unobserved Mediators: Bivariate Denoising Diffusion for Causal Discovery",
-      "authors": [
-        "Dominik Meier",
-        "Sujai Hiremath",
-        "Promit Ghosal",
-        "Kyra Gan"
-      ],
-      "abstract": "Distinguishing cause and effect from bivariate observational data is a\nfoundational problem in many disciplines, but challenging without additional\nassumptions. Additive noise models (ANMs) are widely used to enable\nsample-efficient bivariate causal discovery. However, conventional ANM-based\nmethods fail when unobserved mediators corrupt the causal relationship between\nvariables. This paper makes three key contributions: first, we rigorously\ncharacterize why standard ANM approaches break down in the presence of\nunmeasured mediators. Second, we demonstrate that prior solutions for hidden\nmediation are brittle in finite sample settings, limiting their practical\nutility. To address these gaps, we propose Bivariate Denoising Diffusion (BiDD)\nfor causal discovery, a method designed to handle latent noise introduced by\nunmeasured mediators. Unlike prior methods that infer directionality through\nmean squared error loss comparisons, our approach introduces a novel\nindependence test statistic: during the noising and denoising processes for\neach variable, we condition on the other variable as input and evaluate the\nindependence of the predicted noise relative to this input. We prove asymptotic\nconsistency of BiDD under the ANM, and conjecture that it performs well under\nhidden mediation. Experiments on synthetic and real-world data demonstrate\nconsistent performance, outperforming existing methods in mediator-corrupted\nsettings while maintaining strong performance in mediator-free settings.",
-      "pdf_url": "http://arxiv.org/pdf/2506.23374v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.23374v1",
-      "published": "2025-06-29",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "CycleVAR: Repurposing Autoregressive Model for Unsupervised One-Step Image Translation",
-      "authors": [
-        "Yi Liu",
-        "Shengqian Li",
-        "Zuzeng Lin",
-        "Feng Wang",
-        "Si Liu"
-      ],
-      "abstract": "The current conditional autoregressive image generation methods have shown\npromising results, yet their potential remains largely unexplored in the\npractical unsupervised image translation domain, which operates without\nexplicit cross-domain correspondences. A critical limitation stems from the\ndiscrete quantization inherent in traditional Vector Quantization-based\nframeworks, which disrupts gradient flow between the Variational Autoencoder\ndecoder and causal Transformer, impeding end-to-end optimization during\nadversarial training in image space. To tackle this issue, we propose using\nSoftmax Relaxed Quantization, a novel approach that reformulates codebook\nselection as a continuous probability mixing process via Softmax, thereby\npreserving gradient propagation. Building upon this differentiable foundation,\nwe introduce CycleVAR, which reformulates image-to-image translation as\nimage-conditional visual autoregressive generation by injecting multi-scale\nsource image tokens as contextual prompts, analogous to prefix-based\nconditioning in language models. CycleVAR exploits two modes to generate the\ntarget image tokens, including (1) serial multi-step generation, enabling\niterative refinement across scales, and (2) parallel one-step generation\nsynthesizing all resolution outputs in a single forward pass. Experimental\nfindings indicate that the parallel one-step generation mode attains superior\ntranslation quality with quicker inference speed than the serial multi-step\nmode in unsupervised scenarios. Furthermore, both quantitative and qualitative\nresults indicate that CycleVAR surpasses previous state-of-the-art unsupervised\nimage translation models, \\textit{e}.\\textit{g}., CycleGAN-Turbo.",
-      "pdf_url": "http://arxiv.org/pdf/2506.23347v1",
-      "arxiv_url": "http://arxiv.org/abs/2506.23347v1",
-      "published": "2025-06-29",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
