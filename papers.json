@@ -1,6 +1,42 @@
 {
-  "last_updated": "2025-07-09T00:56:50.372574",
+  "last_updated": "2025-07-10T00:56:38.761485",
   "papers": [
+    {
+      "title": "PromiseTune: Unveiling Causally Promising and Explainable Configuration Tuning",
+      "authors": [
+        "Pengzhou Chen",
+        "Tao Chen"
+      ],
+      "abstract": "The high configurability of modern software systems has made configuration\ntuning a crucial step for assuring system performance, e.g., latency or\nthroughput. However, given the expensive measurements, large configuration\nspace, and rugged configuration landscape, existing tuners suffer\nineffectiveness due to the difficult balance of budget utilization between\nexploring uncertain regions (for escaping from local optima) and exploiting\nguidance of known good configurations (for fast convergence). The root cause is\nthat we lack knowledge of where the promising regions lay, which also causes\nchallenges in the explainability of the results.\n  In this paper, we propose PromiseTune that tunes configuration guided by\ncausally purified rules. PromiseTune is unique in the sense that we learn\nrules, which reflect certain regions in the configuration landscape, and purify\nthem with causal inference. The remaining rules serve as approximated\nreflections of the promising regions, bounding the tuning to emphasize these\nplaces in the landscape. This, as we demonstrate, can effectively mitigate the\nimpact of the exploration and exploitation trade-off. Those purified regions\ncan then be paired with the measured configurations to provide spatial\nexplainability at the landscape level. Comparing with 11 state-of-the-art\ntuners on 12 systems and varying budgets, we show that PromiseTune performs\nsignificantly better than the others with $42\\%$ superior rank to the overall\nsecond best while providing richer information to explain the hidden system\ncharacteristics.",
+      "pdf_url": "http://arxiv.org/pdf/2507.05995v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.05995v1",
+      "published": "2025-07-08",
+      "categories": [
+        "cs.SE",
+        "68Nxx",
+        "D.2.0; D.2.8"
+      ]
+    },
+    {
+      "title": "Estimating Interventional Distributions with Uncertain Causal Graphs through Meta-Learning",
+      "authors": [
+        "Anish Dhir",
+        "Cristiana Diaconu",
+        "Valentinian Mihai Lungu",
+        "James Requeima",
+        "Richard E. Turner",
+        "Mark van der Wilk"
+      ],
+      "abstract": "In scientific domains -- from biology to the social sciences -- many\nquestions boil down to \\textit{What effect will we observe if we intervene on a\nparticular variable?} If the causal relationships (e.g.~a causal graph) are\nknown, it is possible to estimate the intervention distributions. In the\nabsence of this domain knowledge, the causal structure must be discovered from\nthe available observational data. However, observational data are often\ncompatible with multiple causal graphs, making methods that commit to a single\nstructure prone to overconfidence. A principled way to manage this structural\nuncertainty is via Bayesian inference, which averages over a posterior\ndistribution on possible causal structures and functional mechanisms.\nUnfortunately, the number of causal structures grows super-exponentially with\nthe number of nodes in the graph, making computations intractable. We propose\nto circumvent these challenges by using meta-learning to create an end-to-end\nmodel: the Model-Averaged Causal Estimation Transformer Neural Process\n(MACE-TNP). The model is trained to predict the Bayesian model-averaged\ninterventional posterior distribution, and its end-to-end nature bypasses the\nneed for expensive calculations. Empirically, we demonstrate that MACE-TNP\noutperforms strong Bayesian baselines. Our work establishes meta-learning as a\nflexible and scalable paradigm for approximating complex Bayesian causal\ninference, that can be scaled to increasingly challenging settings in the\nfuture.",
+      "pdf_url": "http://arxiv.org/pdf/2507.05526v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.05526v1",
+      "published": "2025-07-07",
+      "categories": [
+        "cs.LG",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Identification of Causal Effects with a Bunching Design",
       "authors": [
@@ -128,40 +164,6 @@
       "published": "2025-07-04",
       "categories": [
         "cs.SE"
-      ]
-    },
-    {
-      "title": "Nonparametric regression for cost-effectiveness analyses with observational data -- a tutorial",
-      "authors": [
-        "Jonas Esser",
-        "Mateus Maia",
-        "Judith Bosmans",
-        "Johanna van Dongen"
-      ],
-      "abstract": "Healthcare decision-making often requires selecting among treatment options\nunder budget constraints, particularly when one option is more effective but\nalso more costly. Cost-effectiveness analysis (CEA) provides a framework for\nevaluating whether the health benefits of a treatment justify its additional\ncosts. A key component of CEA is the estimation of treatment effects on both\nhealth outcomes and costs, which becomes challenging when using observational\ndata, due to potential confounding. While advanced causal inference methods\nexist for use in such circumstances, their adoption in CEAs remains limited,\nwith many studies relying on overly simplistic methods such as linear\nregression or propensity score matching. We believe that this is mainly due to\nhealth economists being generally unfamiliar with superior methodology. In this\npaper, we address this gap by introducing cost-effectiveness researchers to\nmodern nonparametric regression models, with a particular focus on Bayesian\nAdditive Regression Trees (BART). We provide practical guidance on how to\nimplement BART in CEAs, including code examples, and discuss its advantages in\nproducing more robust and credible estimates from observational data.",
-      "pdf_url": "http://arxiv.org/pdf/2507.03511v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.03511v1",
-      "published": "2025-07-04",
-      "categories": [
-        "econ.EM",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "ReTimeCausal: EM-Augmented Additive Noise Models for Interpretable Causal Discovery in Irregular Time Series",
-      "authors": [
-        "Weihong Li",
-        "Anpeng Wu",
-        "Kun Kuang",
-        "Keting Yin"
-      ],
-      "abstract": "This paper studies causal discovery in irregularly sampled time series-a\npivotal challenge in high-stakes domains like finance, healthcare, and climate\nscience, where missing data and inconsistent sampling frequencies distort\ncausal mechanisms. Traditional methods (e.g., Granger causality, PCMCI) fail to\nreconcile multi-scale interactions (e.g., hourly storms vs. decadal climate\nshifts), while neural approaches (e.g., CUTS+) lack interpretability, stemming\nfrom a critical gap: existing frameworks either rigidly assume temporal\nregularity or aggregate dynamics into opaque representations, neglecting\nreal-world granularity and auditable logic. To bridge this gap, we propose\nReTimeCausal, a novel integration of Additive Noise Models (ANM) and\nExpectation-Maximization (EM) that unifies physics-guided data imputation with\nsparse causal inference. Through kernelized sparse regression and structural\nconstraints, ReTimeCausal iteratively refines missing values (E-step) and\ncausal graphs (M-step), resolving cross-frequency dependencies and missing data\nissues. Extensive experiments on synthetic and real-world datasets demonstrate\nthat ReTimeCausal outperforms existing state-of-the-art methods under\nchallenging irregular sampling and missing data conditions.",
-      "pdf_url": "http://arxiv.org/pdf/2507.03310v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.03310v1",
-      "published": "2025-07-04",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
       ]
     }
   ]
