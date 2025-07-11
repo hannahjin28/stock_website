@@ -1,20 +1,35 @@
 {
-  "last_updated": "2025-07-10T00:56:38.761485",
+  "last_updated": "2025-07-11T00:57:15.477194",
   "papers": [
+    {
+      "title": "Deep Disentangled Representation Network for Treatment Effect Estimation",
+      "authors": [
+        "Hui Meng",
+        "Keping Yang",
+        "Xuyu Peng",
+        "Bo Zheng"
+      ],
+      "abstract": "Estimating individual-level treatment effect from observational data is a\nfundamental problem in causal inference and has attracted increasing attention\nin the fields of education, healthcare, and public policy.In this work, we\nconcentrate on the study of disentangled representation methods that have shown\npromising outcomes by decomposing observed covariates into instrumental,\nconfounding, and adjustment factors. However, most of the previous work has\nprimarily revolved around generative models or hard decomposition methods for\ncovariates, which often struggle to guarantee the attainment of precisely\ndisentangled factors. In order to effectively model different causal\nrelationships, we propose a novel treatment effect estimation algorithm that\nincorporates a mixture of experts with multi-head attention and a linear\northogonal regularizer to softly decompose the pre-treatment variables, and\nsimultaneously eliminates selection bias via importance sampling re-weighting\ntechniques. We conduct extensive experiments on both public semi-synthetic and\nreal-world production datasets. The experimental results clearly demonstrate\nthat our algorithm outperforms the state-of-the-art methods focused on\nindividual treatment effects.",
+      "pdf_url": "http://arxiv.org/pdf/2507.06650v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.06650v1",
+      "published": "2025-07-09",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "PromiseTune: Unveiling Causally Promising and Explainable Configuration Tuning",
       "authors": [
         "Pengzhou Chen",
         "Tao Chen"
       ],
-      "abstract": "The high configurability of modern software systems has made configuration\ntuning a crucial step for assuring system performance, e.g., latency or\nthroughput. However, given the expensive measurements, large configuration\nspace, and rugged configuration landscape, existing tuners suffer\nineffectiveness due to the difficult balance of budget utilization between\nexploring uncertain regions (for escaping from local optima) and exploiting\nguidance of known good configurations (for fast convergence). The root cause is\nthat we lack knowledge of where the promising regions lay, which also causes\nchallenges in the explainability of the results.\n  In this paper, we propose PromiseTune that tunes configuration guided by\ncausally purified rules. PromiseTune is unique in the sense that we learn\nrules, which reflect certain regions in the configuration landscape, and purify\nthem with causal inference. The remaining rules serve as approximated\nreflections of the promising regions, bounding the tuning to emphasize these\nplaces in the landscape. This, as we demonstrate, can effectively mitigate the\nimpact of the exploration and exploitation trade-off. Those purified regions\ncan then be paired with the measured configurations to provide spatial\nexplainability at the landscape level. Comparing with 11 state-of-the-art\ntuners on 12 systems and varying budgets, we show that PromiseTune performs\nsignificantly better than the others with $42\\%$ superior rank to the overall\nsecond best while providing richer information to explain the hidden system\ncharacteristics.",
-      "pdf_url": "http://arxiv.org/pdf/2507.05995v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.05995v1",
+      "abstract": "The high configurability of modern software systems has made configuration\ntuning a crucial step for assuring system performance, e.g., latency or\nthroughput. However, given the expensive measurements, large configuration\nspace, and rugged configuration landscape, existing tuners suffer\nineffectiveness due to the difficult balance of budget utilization between\nexploring uncertain regions (for escaping from local optima) and exploiting\nguidance of known good configurations (for fast convergence). The root cause is\nthat we lack knowledge of where the promising regions lay, which also causes\nchallenges in the explainability of the results.\n  In this paper, we propose PromiseTune that tunes configuration guided by\ncausally purified rules. PromiseTune is unique in the sense that we learn\nrules, which reflect certain regions in the configuration landscape, and purify\nthem with causal inference. The remaining rules serve as approximated\nreflections of the promising regions, bounding the tuning to emphasize these\nplaces in the landscape. This, as we demonstrate, can effectively mitigate the\nimpact of the exploration and exploitation trade-off. Those purified regions\ncan then be paired with the measured configurations to provide spatial\nexplainability at the landscape level. Comparing with 11 state-of-the-art\ntuners on 12 systems and varying budgets, we show that PromiseTune performs\nsignificantly better than the others with 42% superior rank to the overall\nsecond best while providing richer information to explain the hidden system\ncharacteristics.",
+      "pdf_url": "http://arxiv.org/pdf/2507.05995v2",
+      "arxiv_url": "http://arxiv.org/abs/2507.05995v2",
       "published": "2025-07-08",
       "categories": [
-        "cs.SE",
-        "68Nxx",
-        "D.2.0; D.2.8"
+        "cs.SE"
       ]
     },
     {
@@ -150,20 +165,6 @@
         "cs.LG",
         "stat.ME",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Enhancing Uncertainty Quantification for Runtime Safety Assurance Using Causal Risk Analysis and Operational Design Domain",
-      "authors": [
-        "Radouane Bouchekir",
-        "Michell Guzman Cancimance"
-      ],
-      "abstract": "Ensuring the runtime safety of autonomous systems remains challenging due to\ndeep learning components' inherent uncertainty and their sensitivity to\nenvironmental changes. In this paper, we propose an enhancement of traditional\nuncertainty quantification by explicitly incorporating environmental conditions\nusing risk-based causal analysis. We leverage Hazard Analysis and Risk\nAssessment (HARA) and fault tree modeling to identify critical operational\nconditions affecting system functionality. These conditions, together with\nuncertainties from the data and model, are integrated into a unified Bayesian\nNetwork (BN). At runtime, this BN is instantiated using real-time environmental\nobservations to infer a probabilistic distribution over the safety estimation.\nThis distribution enables the computation of both expected performance and its\nassociated variance, providing a dynamic and context-aware measure of\nuncertainty. We demonstrate our approach through a case study of the Object\nDetection (OD) component in an Automated Valet Parking (AVP).",
-      "pdf_url": "http://arxiv.org/pdf/2507.03515v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.03515v1",
-      "published": "2025-07-04",
-      "categories": [
-        "cs.SE"
       ]
     }
   ]
