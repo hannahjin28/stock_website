@@ -1,6 +1,109 @@
 {
-  "last_updated": "2025-07-11T00:57:15.477194",
+  "last_updated": "2025-07-12T00:58:30.913071",
   "papers": [
+    {
+      "title": "Efficient Causal Discovery for Autoregressive Time Series",
+      "authors": [
+        "Mohammad Fesanghary",
+        "Achintya Gopal"
+      ],
+      "abstract": "In this study, we present a novel constraint-based algorithm for causal\nstructure learning specifically designed for nonlinear autoregressive time\nseries. Our algorithm significantly reduces computational complexity compared\nto existing methods, making it more efficient and scalable to larger problems.\nWe rigorously evaluate its performance on synthetic datasets, demonstrating\nthat our algorithm not only outperforms current techniques, but also excels in\nscenarios with limited data availability. These results highlight its potential\nfor practical applications in fields requiring efficient and accurate causal\ninference from nonlinear time series data.",
+      "pdf_url": "http://arxiv.org/pdf/2507.07898v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.07898v1",
+      "published": "2025-07-10",
+      "categories": [
+        "cs.LG",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Efficient and Scalable Estimation of Distributional Treatment Effects with Multi-Task Neural Networks",
+      "authors": [
+        "Tomu Hirata",
+        "Undral Byambadalai",
+        "Tatsushi Oka",
+        "Shota Yasui",
+        "Shingo Uto"
+      ],
+      "abstract": "We propose a novel multi-task neural network approach for estimating\ndistributional treatment effects (DTE) in randomized experiments. While DTE\nprovides more granular insights into the experiment outcomes over conventional\nmethods focusing on the Average Treatment Effect (ATE), estimating it with\nregression adjustment methods presents significant challenges. Specifically,\nprecision in the distribution tails suffers due to data imbalance, and\ncomputational inefficiencies arise from the need to solve numerous regression\nproblems, particularly in large-scale datasets commonly encountered in\nindustry. To address these limitations, our method leverages multi-task neural\nnetworks to estimate conditional outcome distributions while incorporating\nmonotonic shape constraints and multi-threshold label learning to enhance\naccuracy. To demonstrate the practical effectiveness of our proposed method, we\napply our method to both simulated and real-world datasets, including a\nrandomized field experiment aimed at reducing water consumption in the US and a\nlarge-scale A/B test from a leading streaming platform in Japan. The\nexperimental results consistently demonstrate superior performance across\nvarious datasets, establishing our method as a robust and practical solution\nfor modern causal inference applications requiring a detailed understanding of\ntreatment effect heterogeneity.",
+      "pdf_url": "http://arxiv.org/pdf/2507.07738v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.07738v1",
+      "published": "2025-07-10",
+      "categories": [
+        "cs.LG",
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Sparse Causal Discovery with Generative Intervention for Unsupervised Graph Domain Adaptation",
+      "authors": [
+        "Junyu Luo",
+        "Yuhao Tang",
+        "Yiwei Fu",
+        "Xiao Luo",
+        "Zhizhuo Kou",
+        "Zhiping Xiao",
+        "Wei Ju",
+        "Wentao Zhang",
+        "Ming Zhang"
+      ],
+      "abstract": "Unsupervised Graph Domain Adaptation (UGDA) leverages labeled source domain\ngraphs to achieve effective performance in unlabeled target domains despite\ndistribution shifts. However, existing methods often yield suboptimal results\ndue to the entanglement of causal-spurious features and the failure of global\nalignment strategies. We propose SLOGAN (Sparse Causal Discovery with\nGenerative Intervention), a novel approach that achieves stable graph\nrepresentation transfer through sparse causal modeling and dynamic intervention\nmechanisms. Specifically, SLOGAN first constructs a sparse causal graph\nstructure, leveraging mutual information bottleneck constraints to disentangle\nsparse, stable causal features while compressing domain-dependent spurious\ncorrelations through variational inference. To address residual spurious\ncorrelations, we innovatively design a generative intervention mechanism that\nbreaks local spurious couplings through cross-domain feature recombination\nwhile maintaining causal feature semantic consistency via covariance\nconstraints. Furthermore, to mitigate error accumulation in target domain\npseudo-labels, we introduce a category-adaptive dynamic calibration strategy,\nensuring stable discriminative learning. Extensive experiments on multiple\nreal-world datasets demonstrate that SLOGAN significantly outperforms existing\nbaselines.",
+      "pdf_url": "http://arxiv.org/pdf/2507.07621v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.07621v1",
+      "published": "2025-07-10",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Goal-Oriented Sequential Bayesian Experimental Design for Causal Learning",
+      "authors": [
+        "Zheyu Zhang",
+        "Jiayuan Dong",
+        "Jie Liu",
+        "Xun Huan"
+      ],
+      "abstract": "We present GO-CBED, a goal-oriented Bayesian framework for sequential causal\nexperimental design. Unlike conventional approaches that select interventions\naimed at inferring the full causal model, GO-CBED directly maximizes the\nexpected information gain (EIG) on user-specified causal quantities of\ninterest, enabling more targeted and efficient experimentation. The framework\nis both non-myopic, optimizing over entire intervention sequences, and\ngoal-oriented, targeting only model aspects relevant to the causal query. To\naddress the intractability of exact EIG computation, we introduce a variational\nlower bound estimator, optimized jointly through a transformer-based policy\nnetwork and normalizing flow-based variational posteriors. The resulting policy\nenables real-time decision-making via an amortized network. We demonstrate that\nGO-CBED consistently outperforms existing baselines across various causal\nreasoning and discovery tasks-including synthetic structural causal models and\nsemi-synthetic gene regulatory networks-particularly in settings with limited\nexperimental budgets and complex causal mechanisms. Our results highlight the\nbenefits of aligning experimental design objectives with specific research\ngoals and of forward-looking sequential planning.",
+      "pdf_url": "http://arxiv.org/pdf/2507.07359v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.07359v1",
+      "published": "2025-07-10",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Beyond the ATE: Interpretable Modelling of Treatment Effects over Dose and Time",
+      "authors": [
+        "Julianna Piskorz",
+        "Krzysztof Kacprzyk",
+        "Mihaela van der Schaar"
+      ],
+      "abstract": "The Average Treatment Effect (ATE) is a foundational metric in causal\ninference, widely used to assess intervention efficacy in randomized controlled\ntrials (RCTs). However, in many applications -- particularly in healthcare --\nthis static summary fails to capture the nuanced dynamics of treatment effects\nthat vary with both dose and time. We propose a framework for modelling\ntreatment effect trajectories as smooth surfaces over dose and time, enabling\nthe extraction of clinically actionable insights such as onset time, peak\neffect, and duration of benefit. To ensure interpretability, robustness, and\nverifiability -- key requirements in high-stakes domains -- we adapt\nSemanticODE, a recent framework for interpretable trajectory modelling, to the\ncausal setting where treatment effects are never directly observed. Our\napproach decouples the estimation of trajectory shape from the specification of\nclinically relevant properties (e.g., maxima, inflection points), supporting\ndomain-informed priors, post-hoc editing, and transparent analysis. We show\nthat our method yields accurate, interpretable, and editable models of\ntreatment dynamics, facilitating both rigorous causal analysis and practical\ndecision-making.",
+      "pdf_url": "http://arxiv.org/pdf/2507.07271v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.07271v1",
+      "published": "2025-07-09",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Debiased Semiparametric Efficient Changes-in-Changes Estimation",
+      "authors": [
+        "Jinghao Sun",
+        "Eric J. Tchetgen Tchetgen"
+      ],
+      "abstract": "We introduce a novel extension of the influential changes-in-changes (CiC)\nframework [Athey and Imbens, 2006] to estimate the average treatment effect on\nthe treated (ATT) and distributional causal estimands in panel data settings\nwith unmeasured confounding. While CiC relaxes the parallel trends assumption\ninherent in difference-in-differences (DiD), existing approaches typically\naccommodate only a single scalar unobserved confounder and rely on monotonicity\nassumptions between the confounder and the outcome. Moreover, current\nformulations lack inference procedures and theoretical guarantees that\naccommodate continuous covariates. Motivated by the intricate nature of\nconfounding in empirical applications and the need to incorporate continuous\ncovariates in a principled manner, we make two key contributions in this\ntechnical report. First, we establish nonparametric identification under a\nnovel set of assumptions that permit high-dimensional unmeasured confounders\nand non-monotonic relationships between confounders and outcomes. Second, we\nconstruct efficient estimators that are Neyman orthogonal to\ninfinite-dimensional nuisance parameters, facilitating valid inference even in\nthe presence of high-dimensional continuous or discrete covariates and flexible\nmachine learning-based nuisance estimation.",
+      "pdf_url": "http://arxiv.org/pdf/2507.07228v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.07228v1",
+      "published": "2025-07-09",
+      "categories": [
+        "stat.ME",
+        "econ.EM"
+      ]
+    },
     {
       "title": "Deep Disentangled Representation Network for Treatment Effect Estimation",
       "authors": [
@@ -66,105 +169,6 @@
       "published": "2025-07-07",
       "categories": [
         "econ.EM"
-      ]
-    },
-    {
-      "title": "Practical considerations for Gaussian Process modeling for causal inference quasi-experimental studies with panel data",
-      "authors": [
-        "Sofia L. Vega",
-        "Rachel C. Nethery"
-      ],
-      "abstract": "Estimating causal effects in quasi-experiments with spatio-temporal panel\ndata often requires adjusting for unmeasured confounding that varies across\nspace and time. Gaussian Processes (GPs) offer a flexible, nonparametric\nmodeling approach that can account for such complex dependencies through\ncarefully chosen covariance kernels. In this paper, we provide a practical and\ninterpretable framework for applying GPs to causal inference in panel data\nsettings. We demonstrate how GPs generalize popular methods such as synthetic\ncontrol and vertical regression, and we show that the GP posterior mean can be\nrepresented as a weighted average of observed outcomes, where the weights\nreflect spatial and temporal similarity. To support applied use, we explore how\ndifferent kernel choices impact both estimation performance and\ninterpretability, offering guidance for selecting between separable and\nnonseparable kernels. Through simulations and application to Hurricane Katrina\nmortality data, we illustrate how GP models can be used to estimate\ncounterfactual outcomes and quantify treatment effects. All code and materials\nare made publicly available to support reproducibility and encourage adoption.\nOur results suggest that GPs are a promising and interpretable tool for\naddressing unmeasured spatio-temporal confounding in quasi-experimental\nstudies.",
-      "pdf_url": "http://arxiv.org/pdf/2507.05128v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.05128v1",
-      "published": "2025-07-07",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Boosting Temporal Sentence Grounding via Causal Inference",
-      "authors": [
-        "Kefan Tang",
-        "Lihuo He",
-        "Jisheng Dang",
-        "Xinbo Gao"
-      ],
-      "abstract": "Temporal Sentence Grounding (TSG) aims to identify relevant moments in an\nuntrimmed video that semantically correspond to a given textual query. Despite\nexisting studies having made substantial progress, they often overlook the\nissue of spurious correlations between video and textual queries. These\nspurious correlations arise from two primary factors: (1) inherent biases in\nthe textual data, such as frequent co-occurrences of specific verbs or phrases,\nand (2) the model's tendency to overfit to salient or repetitive patterns in\nvideo content. Such biases mislead the model into associating textual cues with\nincorrect visual moments, resulting in unreliable predictions and poor\ngeneralization to out-of-distribution examples. To overcome these limitations,\nwe propose a novel TSG framework, causal intervention and counterfactual\nreasoning that utilizes causal inference to eliminate spurious correlations and\nenhance the model's robustness. Specifically, we first formulate the TSG task\nfrom a causal perspective with a structural causal model. Then, to address\nunobserved confounders reflecting textual biases toward specific verbs or\nphrases, a textual causal intervention is proposed, utilizing do-calculus to\nestimate the causal effects. Furthermore, visual counterfactual reasoning is\nperformed by constructing a counterfactual scenario that focuses solely on\nvideo features, excluding the query and fused multi-modal features. This allows\nus to debias the model by isolating and removing the influence of the video\nfrom the overall effect. Experiments on public datasets demonstrate the\nsuperiority of the proposed method. The code is available at\nhttps://github.com/Tangkfan/CICR.",
-      "pdf_url": "http://arxiv.org/pdf/2507.04958v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.04958v1",
-      "published": "2025-07-07",
-      "categories": [
-        "cs.CV",
-        "cs.MM"
-      ]
-    },
-    {
-      "title": "A validity-guided workflow for robust large language model research in psychology",
-      "authors": [
-        "Zhicheng Lin"
-      ],
-      "abstract": "Large language models (LLMs) are rapidly being integrated into psychological\nresearch as research tools, evaluation targets, human simulators, and cognitive\nmodels. However, recent evidence reveals severe measurement unreliability:\nPersonality assessments collapse under factor analysis, moral preferences\nreverse with punctuation changes, and theory-of-mind accuracy varies widely\nwith trivial rephrasing. These \"measurement phantoms\"--statistical artifacts\nmasquerading as psychological phenomena--threaten the validity of a growing\nbody of research. Guided by the dual-validity framework that integrates\npsychometrics with causal inference, we present a six-stage workflow that\nscales validity requirements to research ambition--using LLMs to code text\nrequires basic reliability and accuracy, while claims about psychological\nproperties demand comprehensive construct validation. Researchers must (1)\nexplicitly define their research goal and corresponding validity requirements,\n(2) develop and validate computational instruments through psychometric\ntesting, (3) design experiments that control for computational confounds, (4)\nexecute protocols with transparency, (5) analyze data using methods appropriate\nfor non-independent observations, and (6) report findings within demonstrated\nboundaries and use results to refine theory. We illustrate the workflow through\nan example of model evaluation--\"LLM selfhood\"--showing how systematic\nvalidation can distinguish genuine computational phenomena from measurement\nartifacts. By establishing validated computational instruments and transparent\npractices, this workflow provides a path toward building a robust empirical\nfoundation for AI psychology research.",
-      "pdf_url": "http://arxiv.org/pdf/2507.04491v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.04491v1",
-      "published": "2025-07-06",
-      "categories": [
-        "cs.HC",
-        "cs.AI",
-        "cs.CL",
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "Long-Context Modeling Networks for Monaural Speech Enhancement: A Comparative Study",
-      "authors": [
-        "Qiquan Zhang",
-        "Moran Chen",
-        "Zeyang Song",
-        "Hexin Liu",
-        "Xiangyu Zhang",
-        "Haizhou Li"
-      ],
-      "abstract": "Advanced long-context modeling backbone networks, such as Transformer,\nConformer, and Mamba, have demonstrated state-of-the-art performance in speech\nenhancement. However, a systematic and comprehensive comparative study of these\nbackbones within a unified speech enhancement framework remains lacking. In\naddition, xLSTM, a more recent and efficient variant of LSTM, has shown\npromising results in language modeling and as a general-purpose vision\nbackbone. In this paper, we investigate the capability of xLSTM in speech\nenhancement, and conduct a comprehensive comparison and analysis of the\nTransformer, Conformer, Mamba, and xLSTM backbones within a unified framework,\nconsidering both causal and noncausal configurations. Overall, xLSTM and Mamba\nachieve better performance than Transformer and Conformer. Mamba demonstrates\nsignificantly superior training and inference efficiency, particularly for long\nspeech inputs, whereas xLSTM suffers from the slowest processing speed.",
-      "pdf_url": "http://arxiv.org/pdf/2507.04368v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.04368v1",
-      "published": "2025-07-06",
-      "categories": [
-        "eess.AS"
-      ]
-    },
-    {
-      "title": "Deconfounding Causal Inference through Two-Branch Framework with Early-Forking for Sensor-Based Cross-Domain Activity Recognition",
-      "authors": [
-        "Di Xiong",
-        "Lei Zhang",
-        "Shuoyuan Wang",
-        "Dongzhou Cheng",
-        "Wenbo Huang"
-      ],
-      "abstract": "Recently, domain generalization (DG) has emerged as a promising solution to\nmitigate distribution-shift issue in sensor-based human activity recognition\n(HAR) scenario. However, most existing DG-based works have merely focused on\nmodeling statistical dependence between sensor data and activity labels,\nneglecting the importance of intrinsic casual mechanism. Intuitively, every\nsensor input can be viewed as a mixture of causal (category-aware) and\nnon-causal factors (domain-specific), where only the former affects activity\nclassification judgment. In this paper, by casting such DG-based HAR as a\ncasual inference problem, we propose a causality-inspired representation\nlearning algorithm for cross-domain activity recognition. To this end, an\nearly-forking two-branch framework is designed, where two separate branches are\nrespectively responsible for learning casual and non-causal features, while an\nindependence-based Hilbert-Schmidt Information Criterion is employed to\nimplicitly disentangling them. Additionally, an inhomogeneous domain sampling\nstrategy is designed to enhance disentanglement, while a category-aware domain\nperturbation layer is performed to prevent representation collapse. Extensive\nexperiments on several public HAR benchmarks demonstrate that our\ncausality-inspired approach significantly outperforms eleven related\nstate-of-the-art baselines under cross-person, cross-dataset, and\ncross-position settings. Detailed ablation and visualizations analyses reveal\nunderlying casual mechanism, indicating its effectiveness, efficiency, and\nuniversality in cross-domain activity recognition scenario.",
-      "pdf_url": "http://arxiv.org/pdf/2507.03898v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.03898v1",
-      "published": "2025-07-05",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "GenAI-Powered Inference",
-      "authors": [
-        "Kosuke Imai",
-        "Kentaro Nakamura"
-      ],
-      "abstract": "We introduce GenAI-Powered Inference (GPI), a statistical framework for both\ncausal and predictive inference using unstructured data, including text and\nimages. GPI leverages open-source Generative Artificial Intelligence (GenAI)\nmodels - such as large language models and diffusion models - not only to\ngenerate unstructured data at scale but also to extract low-dimensional\nrepresentations that capture their underlying structure. Applying machine\nlearning to these representations, GPI enables estimation of causal and\npredictive effects while quantifying associated estimation uncertainty. Unlike\nexisting approaches to representation learning, GPI does not require\nfine-tuning of generative models, making it computationally efficient and\nbroadly accessible. We illustrate the versatility of the GPI framework through\nthree applications: (1) analyzing Chinese social media censorship, (2)\nestimating predictive effects of candidates' facial appearance on electoral\noutcomes, and (3) assessing the persuasiveness of political rhetoric. An\nopen-source software package is available for implementing GPI.",
-      "pdf_url": "http://arxiv.org/pdf/2507.03897v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.03897v1",
-      "published": "2025-07-05",
-      "categories": [
-        "cs.LG",
-        "stat.ME",
-        "stat.ML"
       ]
     }
   ]
