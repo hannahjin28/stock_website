@@ -1,6 +1,66 @@
 {
-  "last_updated": "2025-07-14T01:00:22.976132",
+  "last_updated": "2025-07-15T00:59:07.091147",
   "papers": [
+    {
+      "title": "Lumos-1: On Autoregressive Video Generation from a Unified Model Perspective",
+      "authors": [
+        "Hangjie Yuan",
+        "Weihua Chen",
+        "Jun Cen",
+        "Hu Yu",
+        "Jingyun Liang",
+        "Shuning Chang",
+        "Zhihui Lin",
+        "Tao Feng",
+        "Pengwei Liu",
+        "Jiazheng Xing",
+        "Hao Luo",
+        "Jiasheng Tang",
+        "Fan Wang",
+        "Yi Yang"
+      ],
+      "abstract": "Autoregressive large language models (LLMs) have unified a vast range of\nlanguage tasks, inspiring preliminary efforts in autoregressive video\ngeneration. Existing autoregressive video generators either diverge from\nstandard LLM architectures, depend on bulky external text encoders, or incur\nprohibitive latency due to next-token decoding. In this paper, we introduce\nLumos-1, an autoregressive video generator that retains the LLM architecture\nwith minimal architectural modifications. To inject spatiotemporal correlations\nin LLMs, we identify the efficacy of incorporating 3D RoPE and diagnose its\nimbalanced frequency spectrum ranges. Therefore, we propose MM-RoPE, a RoPE\nscheme that preserves the original textual RoPE while providing comprehensive\nfrequency spectra and scaled 3D positions for modeling multimodal\nspatiotemporal data. Moreover, Lumos-1 resorts to a token dependency strategy\nthat obeys intra-frame bidirectionality and inter-frame temporal causality.\nBased on this dependency strategy, we identify the issue of frame-wise loss\nimbalance caused by spatial information redundancy and solve it by proposing\nAutoregressive Discrete Diffusion Forcing (AR-DF). AR-DF introduces temporal\ntube masking during training with a compatible inference-time masking policy to\navoid quality degradation. By using memory-efficient training techniques, we\npre-train Lumos-1 on only 48 GPUs, achieving performance comparable to EMU3 on\nGenEval, COSMOS-Video2World on VBench-I2V, and OpenSoraPlan on VBench-T2V. Code\nand models are available at https://github.com/alibaba-damo-academy/Lumos.",
+      "pdf_url": "http://arxiv.org/pdf/2507.08801v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.08801v1",
+      "published": "2025-07-11",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.MM"
+      ]
+    },
+    {
+      "title": "Propensity score with factor loadings: the effect of the Paris Agreement",
+      "authors": [
+        "Angelo Forino",
+        "Andrea Mercatanti",
+        "Giacomo Morelli"
+      ],
+      "abstract": "Factor models for longitudinal data, where policy adoption is unconfounded\nwith respect to a low-dimensional set of latent factor loadings, have become\nincreasingly popular for causal inference. Most existing approaches, however,\nrely on a causal finite-sample approach or computationally intensive methods,\nlimiting their applicability and external validity. In this paper, we propose a\nnovel causal inference method for panel data based on inverse propensity score\nweighting where the propensity score is a function of latent factor loadings\nwithin a framework of causal inference from super-population. The approach\nrelaxes the traditional restrictive assumptions of causal panel methods, while\noffering advantages in terms of causal interpretability, policy relevance, and\ncomputational efficiency. Under standard assumptions, we outline a three-step\nestimation procedure for the ATT and derive its large-sample properties using\nMestimation theory. We apply the method to assess the causal effect of the\nParis Agreement, a policy aimed at fostering the transition to a low-carbon\neconomy, on European stock returns. Our empirical results suggest a\nstatistically significant and negative short-run effect on the stock returns of\nfirms that issued green bonds.",
+      "pdf_url": "http://arxiv.org/pdf/2507.08764v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.08764v1",
+      "published": "2025-07-11",
+      "categories": [
+        "econ.EM",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "InsightBuild: LLM-Powered Causal Reasoning in Smart Building Systems",
+      "authors": [
+        "Pinaki Prasad Guha Neogi",
+        "Ahmad Mohammadshirazi",
+        "Rajiv Ramnath"
+      ],
+      "abstract": "Smart buildings generate vast streams of sensor and control data, but\nfacility managers often lack clear explanations for anomalous energy usage. We\npropose InsightBuild, a two-stage framework that integrates causality analysis\nwith a fine-tuned large language model (LLM) to provide human-readable, causal\nexplanations of energy consumption patterns. First, a lightweight causal\ninference module applies Granger causality tests and structural causal\ndiscovery on building telemetry (e.g., temperature, HVAC settings, occupancy)\ndrawn from Google Smart Buildings and Berkeley Office datasets. Next, an LLM,\nfine-tuned on aligned pairs of sensor-level causes and textual explanations,\nreceives as input the detected causal relations and generates concise,\nactionable explanations. We evaluate InsightBuild on two real-world datasets\n(Google: 2017-2022; Berkeley: 2018-2020), using expert-annotated ground-truth\ncauses for a held-out set of anomalies. Our results demonstrate that combining\nexplicit causal discovery with LLM-based natural language generation yields\nclear, precise explanations that assist facility managers in diagnosing and\nmitigating energy inefficiencies.",
+      "pdf_url": "http://arxiv.org/pdf/2507.08235v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.08235v1",
+      "published": "2025-07-11",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Efficient Causal Discovery for Autoregressive Time Series",
       "authors": [
@@ -119,56 +179,6 @@
       "categories": [
         "cs.LG",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "PromiseTune: Unveiling Causally Promising and Explainable Configuration Tuning",
-      "authors": [
-        "Pengzhou Chen",
-        "Tao Chen"
-      ],
-      "abstract": "The high configurability of modern software systems has made configuration\ntuning a crucial step for assuring system performance, e.g., latency or\nthroughput. However, given the expensive measurements, large configuration\nspace, and rugged configuration landscape, existing tuners suffer\nineffectiveness due to the difficult balance of budget utilization between\nexploring uncertain regions (for escaping from local optima) and exploiting\nguidance of known good configurations (for fast convergence). The root cause is\nthat we lack knowledge of where the promising regions lay, which also causes\nchallenges in the explainability of the results.\n  In this paper, we propose PromiseTune that tunes configuration guided by\ncausally purified rules. PromiseTune is unique in the sense that we learn\nrules, which reflect certain regions in the configuration landscape, and purify\nthem with causal inference. The remaining rules serve as approximated\nreflections of the promising regions, bounding the tuning to emphasize these\nplaces in the landscape. This, as we demonstrate, can effectively mitigate the\nimpact of the exploration and exploitation trade-off. Those purified regions\ncan then be paired with the measured configurations to provide spatial\nexplainability at the landscape level. Comparing with 11 state-of-the-art\ntuners on 12 systems and varying budgets, we show that PromiseTune performs\nsignificantly better than the others with 42% superior rank to the overall\nsecond best while providing richer information to explain the hidden system\ncharacteristics.",
-      "pdf_url": "http://arxiv.org/pdf/2507.05995v2",
-      "arxiv_url": "http://arxiv.org/abs/2507.05995v2",
-      "published": "2025-07-08",
-      "categories": [
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "Estimating Interventional Distributions with Uncertain Causal Graphs through Meta-Learning",
-      "authors": [
-        "Anish Dhir",
-        "Cristiana Diaconu",
-        "Valentinian Mihai Lungu",
-        "James Requeima",
-        "Richard E. Turner",
-        "Mark van der Wilk"
-      ],
-      "abstract": "In scientific domains -- from biology to the social sciences -- many\nquestions boil down to \\textit{What effect will we observe if we intervene on a\nparticular variable?} If the causal relationships (e.g.~a causal graph) are\nknown, it is possible to estimate the intervention distributions. In the\nabsence of this domain knowledge, the causal structure must be discovered from\nthe available observational data. However, observational data are often\ncompatible with multiple causal graphs, making methods that commit to a single\nstructure prone to overconfidence. A principled way to manage this structural\nuncertainty is via Bayesian inference, which averages over a posterior\ndistribution on possible causal structures and functional mechanisms.\nUnfortunately, the number of causal structures grows super-exponentially with\nthe number of nodes in the graph, making computations intractable. We propose\nto circumvent these challenges by using meta-learning to create an end-to-end\nmodel: the Model-Averaged Causal Estimation Transformer Neural Process\n(MACE-TNP). The model is trained to predict the Bayesian model-averaged\ninterventional posterior distribution, and its end-to-end nature bypasses the\nneed for expensive calculations. Empirically, we demonstrate that MACE-TNP\noutperforms strong Bayesian baselines. Our work establishes meta-learning as a\nflexible and scalable paradigm for approximating complex Bayesian causal\ninference, that can be scaled to increasingly challenging settings in the\nfuture.",
-      "pdf_url": "http://arxiv.org/pdf/2507.05526v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.05526v1",
-      "published": "2025-07-07",
-      "categories": [
-        "cs.LG",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Identification of Causal Effects with a Bunching Design",
-      "authors": [
-        "Carolina Caetano",
-        "Gregorio Caetano",
-        "Leonard Goff",
-        "Eric Nielsen"
-      ],
-      "abstract": "We show that causal effects can be identified when there is bunching in the\ndistribution of a continuous treatment variable, without imposing any\nparametric assumptions. This yields a new nonparametric method for overcoming\nselection bias in the absence of instrumental variables, panel data, or other\npopular research designs for causal inference. The method leverages the change\nof variables theorem from integration theory, relating the selection bias to\nthe ratio of the density of the treatment and the density of the part of the\noutcome that varies with confounders. At the bunching point, the treatment\nlevel is constant, so the variation in the outcomes is due entirely to\nunobservables, allowing us to identify the denominator. Our main result\nidentifies the average causal response to the treatment among individuals who\nmarginally select into the bunching point. We further show that under\nadditional smoothness assumptions on the selection bias, treatment effects away\nfrom the bunching point may also be identified. We propose estimators based on\nstandard software packages and apply the method to estimate the effect of\nmaternal smoking during pregnancy on birth weight.",
-      "pdf_url": "http://arxiv.org/pdf/2507.05210v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.05210v1",
-      "published": "2025-07-07",
-      "categories": [
-        "econ.EM"
       ]
     }
   ]
