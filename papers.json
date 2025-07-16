@@ -1,6 +1,158 @@
 {
-  "last_updated": "2025-07-15T00:59:07.091147",
+  "last_updated": "2025-07-16T00:58:03.928201",
   "papers": [
+    {
+      "title": "T-GRAB: A Synthetic Diagnostic Benchmark for Learning on Temporal Graphs",
+      "authors": [
+        "Alireza Dizaji",
+        "Benedict Aaron Tjandra",
+        "Mehrab Hamidi",
+        "Shenyang Huang",
+        "Guillaume Rabusseau"
+      ],
+      "abstract": "Dynamic graph learning methods have recently emerged as powerful tools for\nmodelling relational data evolving through time. However, despite extensive\nbenchmarking efforts, it remains unclear whether current Temporal Graph Neural\nNetworks (TGNNs) effectively capture core temporal patterns such as\nperiodicity, cause-and-effect, and long-range dependencies. In this work, we\nintroduce the Temporal Graph Reasoning Benchmark (T-GRAB), a comprehensive set\nof synthetic tasks designed to systematically probe the capabilities of TGNNs\nto reason across time. T-GRAB provides controlled, interpretable tasks that\nisolate key temporal skills: counting/memorizing periodic repetitions,\ninferring delayed causal effects, and capturing long-range dependencies over\nboth spatial and temporal dimensions. We evaluate 11 temporal graph learning\nmethods on these tasks, revealing fundamental shortcomings in their ability to\ngeneralize temporal patterns. Our findings offer actionable insights into the\nlimitations of current models, highlight challenges hidden by traditional\nreal-world benchmarks, and motivate the development of architectures with\nstronger temporal reasoning abilities. The code for T-GRAB can be found at:\nhttps://github.com/alirezadizaji/T-GRAB.",
+      "pdf_url": "http://arxiv.org/pdf/2507.10183v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.10183v1",
+      "published": "2025-07-14",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Text-Driven Causal Representation Learning for Source-Free Domain Generalization",
+      "authors": [
+        "Lihua Zhou",
+        "Mao Ye",
+        "Nianxin Li",
+        "Shuaifeng Li",
+        "Jinlin Wu",
+        "Xiatian Zhu",
+        "Lei Deng",
+        "Hongbin Liu",
+        "Jiebo Luo",
+        "Zhen Lei"
+      ],
+      "abstract": "Deep learning often struggles when training and test data distributions\ndiffer. Traditional domain generalization (DG) tackles this by including data\nfrom multiple source domains, which is impractical due to expensive data\ncollection and annotation. Recent vision-language models like CLIP enable\nsource-free domain generalization (SFDG) by using text prompts to simulate\nvisual representations, reducing data demands. However, existing SFDG methods\nstruggle with domain-specific confounders, limiting their generalization\ncapabilities. To address this issue, we propose TDCRL\n(\\textbf{T}ext-\\textbf{D}riven \\textbf{C}ausal \\textbf{R}epresentation\n\\textbf{L}earning), the first method to integrate causal inference into the\nSFDG setting. TDCRL operates in two steps: first, it employs data augmentation\nto generate style word vectors, combining them with class information to\ngenerate text embeddings to simulate visual representations; second, it trains\na causal intervention network with a confounder dictionary to extract\ndomain-invariant features. Grounded in causal learning, our approach offers a\nclear and effective mechanism to achieve robust, domain-invariant features,\nensuring robust generalization. Extensive experiments on PACS, VLCS,\nOfficeHome, and DomainNet show state-of-the-art performance, proving TDCRL\neffectiveness in SFDG.",
+      "pdf_url": "http://arxiv.org/pdf/2507.09961v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.09961v1",
+      "published": "2025-07-14",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Exploring the effects of mechanical ventilator settings with modified vector-valued treatment policies",
+      "authors": [
+        "Ziren Jiang",
+        "Philip S. Crooke",
+        "John J. Marini",
+        "Jared D. Huling"
+      ],
+      "abstract": "Mechanical ventilation is critical for managing respiratory failure, but\ninappropriate ventilator settings can lead to ventilator-induced lung injury\n(VILI), increasing patient morbidity and mortality. Evaluating the causal\nimpact of ventilator settings is challenging due to the complex interplay of\nmultiple treatment variables and strong confounding due to ventilator\nguidelines. In this paper, we propose a modified vector-valued treatment policy\n(MVTP) framework coupled with energy balancing weights to estimate causal\neffects involving multiple continuous ventilator parameters simultaneously in\naddition to sensitivity analysis to unmeasured confounding. Our approach\nmitigates common challenges in causal inference for vector-valued treatments,\nsuch as infeasible treatment combinations, stringent positivity assumptions,\nand interpretability concerns. Using the MIMIC-III database, our analyses\nsuggest that equal reductions in the total power of ventilation (i.e., the\nmechanical power) through different ventilator parameters result in different\nexpected patient outcomes. Specifically, lowering airway pressures may yield\ngreater reductions in patient mortality compared to proportional adjustments of\ntidal volume alone. Moreover, controlling for respiratory-system compliance and\nminute ventilation, we found a significant benefit of reducing driving pressure\nin patients with acute respiratory distress syndrome (ARDS). Our analyses help\nshed light on the contributors to VILI.",
+      "pdf_url": "http://arxiv.org/pdf/2507.09809v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.09809v1",
+      "published": "2025-07-13",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Bridging Structural Causal Inference and Machine Learning The S-DIDML Estimator for Heterogeneous Treatment Effects",
+      "authors": [
+        "Yile Yu",
+        "Anzhi Xu"
+      ],
+      "abstract": "In response to the increasing complexity of policy environments and the\nproliferation of high-dimensional data, this paper introduces the S-DIDML\nestimator a framework grounded in structure and semiparametrically flexible for\ncausal inference. By embedding Difference-in-Differences (DID) logic within a\nDouble Machine Learning (DML) architecture, the S-DIDML approach combines the\nstrengths of temporal identification, machine learning-based nuisance\nadjustment, and orthogonalized estimation. We begin by identifying critical\nlimitations in existing methods, including the lack of structural\ninterpretability in ML models, instability of classical DID under\nhigh-dimensional confounding, and the temporal rigidity of standard DML\nframeworks. Building on recent advances in staggered adoption designs and\nNeyman orthogonalization, S-DIDML offers a five-step estimation pipeline that\nenables robust estimation of heterogeneous treatment effects (HTEs) while\nmaintaining interpretability and scalability. Demonstrative applications are\ndiscussed across labor economics, education, taxation, and environmental\npolicy. The proposed framework contributes to the methodological frontier by\noffering a blueprint for policy-relevant, structurally interpretable, and\nstatistically valid causal analysis in complex data settings.",
+      "pdf_url": "http://arxiv.org/pdf/2507.09718v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.09718v1",
+      "published": "2025-07-13",
+      "categories": [
+        "stat.ME",
+        "91-01"
+      ]
+    },
+    {
+      "title": "Dynamic Sparse Causal-Attention Temporal Networks for Interpretable Causality Discovery in Multivariate Time Series",
+      "authors": [
+        "Meriem Zerkouk",
+        "Miloud Mihoubi",
+        "Belkacem Chikhaoui"
+      ],
+      "abstract": "Understanding causal relationships in multivariate time series (MTS) is\nessential for effective decision-making in fields such as finance and\nmarketing, where complex dependencies and lagged effects challenge conventional\nanalytical approaches. We introduce Dynamic Sparse Causal-Attention Temporal\nNetworks for Interpretable Causality Discovery in MTS (DyCAST-Net), a novel\narchitecture designed to enhance causal discovery by integrating dilated\ntemporal convolutions and dynamic sparse attention mechanisms. DyCAST-Net\neffectively captures multiscale temporal dependencies through dilated\nconvolutions while leveraging an adaptive thresholding strategy in its\nattention mechanism to eliminate spurious connections, ensuring both accuracy\nand interpretability. A statistical shuffle test validation further strengthens\nrobustness by filtering false positives and improving causal inference\nreliability. Extensive evaluations on financial and marketing datasets\ndemonstrate that DyCAST-Net consistently outperforms existing models such as\nTCDF, GCFormer, and CausalFormer. The model provides a more precise estimation\nof causal delays and significantly reduces false discoveries, particularly in\nnoisy environments. Moreover, attention heatmaps offer interpretable insights,\nuncovering hidden causal patterns such as the mediated effects of advertising\non consumer behavior and the influence of macroeconomic indicators on financial\nmarkets. Case studies illustrate DyCAST-Net's ability to detect latent\nmediators and lagged causal factors, making it particularly effective in\nhigh-dimensional, dynamic settings. The model's architecture enhanced by\nRMSNorm stabilization and causal masking ensures scalability and adaptability\nacross diverse application domains",
+      "pdf_url": "http://arxiv.org/pdf/2507.09439v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.09439v1",
+      "published": "2025-07-13",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "A Framework for Predictive Directional Trading Based on Volatility and Causal Inference",
+      "authors": [
+        "Ivan Letteri"
+      ],
+      "abstract": "Purpose: This study introduces a novel framework for identifying and\nexploiting predictive lead-lag relationships in financial markets. We propose\nan integrated approach that combines advanced statistical methodologies with\nmachine learning models to enhance the identification and exploitation of\npredictive relationships between equities. Methods: We employed a Gaussian\nMixture Model (GMM) to cluster nine prominent stocks based on their mid-range\nhistorical volatility profiles over a three-year period. From the resulting\nclusters, we constructed a multi-stage causal inference pipeline, incorporating\nthe Granger Causality Test (GCT), a customised Peter-Clark Momentary\nConditional Independence (PCMCI) test, and Effective Transfer Entropy (ETE) to\nidentify robust, predictive linkages. Subsequently, Dynamic Time Warping (DTW)\nand a K-Nearest Neighbours (KNN) classifier were utilised to determine the\noptimal time lag for trade execution. The resulting strategy was rigorously\nbacktested. Results: The proposed volatility-based trading strategy, tested\nfrom 8 June 2023 to 12 August 2023, demonstrated substantial efficacy. The\nportfolio yielded a total return of 15.38%, significantly outperforming the\n10.39% return of a comparative Buy-and-Hold strategy. Key performance metrics,\nincluding a Sharpe Ratio up to 2.17 and a win rate up to 100% for certain\npairs, confirmed the strategy's viability. Conclusion: This research\ncontributes a systematic and robust methodology for identifying profitable\ntrading opportunities derived from volatility-based causal relationships. The\nfindings have significant implications for both academic research in financial\nmodelling and the practical application of algorithmic trading, offering a\nstructured approach to developing resilient, data-driven strategies.",
+      "pdf_url": "http://arxiv.org/pdf/2507.09347v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.09347v1",
+      "published": "2025-07-12",
+      "categories": [
+        "q-fin.ST",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "The Multiplicative Instrumental Variable Model",
+      "authors": [
+        "Jiewen Liu",
+        "Chan Park",
+        "Yonghoon Lee",
+        "Yunshu Zhang",
+        "Mengxin Yu",
+        "James M. Robins",
+        "Eric J. Tchetgen Tchetgen"
+      ],
+      "abstract": "The instrumental variable (IV) design is a common approach to address hidden\nconfounding bias. For validity, an IV must impact the outcome only through its\nassociation with the treatment. In addition, IV identification has required a\nhomogeneity condition such as monotonicity or no unmeasured common effect\nmodifier between the additive effect of the treatment on the outcome, and that\nof the IV on the treatment. In this work, we introduce a novel identifying\ncondition of no multiplicative interaction between the instrument and the\nunmeasured confounder in the treatment model, which we establish\nnonparametrically identifies the average treatment effect on the treated (ATT).\nFor inference, we propose an estimator that is multiply robust and\nsemiparametric efficient, while allowing for the use of machine learning to\nadaptively estimate required nuisance functions via cross-fitting. Finally, we\nillustrate the methods in extended simulations and an application on the causal\nimpact of a job training program on subsequent earnings.",
+      "pdf_url": "http://arxiv.org/pdf/2507.09302v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.09302v1",
+      "published": "2025-07-12",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Hybrid Autoregressive-Diffusion Model for Real-Time Streaming Sign Language Production",
+      "authors": [
+        "Maoxiao Ye",
+        "Xinfeng Ye",
+        "Mano Manoharan"
+      ],
+      "abstract": "Earlier Sign Language Production (SLP) models typically relied on\nautoregressive methods that generate output tokens one by one, which inherently\nprovide temporal alignment. Although techniques like Teacher Forcing can\nprevent model collapse during training, they still cannot solve the problem of\nerror accumulation during inference, since ground truth is unavailable at that\nstage. In contrast, more recent approaches based on diffusion models leverage\nstep-by-step denoising to enable high-quality generation. However, the\niterative nature of these models and the requirement to denoise entire\nsequences limit their applicability in real-time tasks like SLP. To address it,\nwe apply a hybrid approach combining autoregressive and diffusion models to SLP\nfor the first time, leveraging the strengths of both models in sequential\ndependency modeling and output refinement. To capture fine-grained body\nmovements, we design a Multi-Scale Pose Representation module that separately\nextracts detailed features from distinct articulators and integrates them via a\nMulti-Scale Fusion module. Furthermore, we introduce a Confidence-Aware Causal\nAttention mechanism that utilizes joint-level confidence scores to dynamically\nguide the pose generation process, improving accuracy and robustness. Extensive\nexperiments on the PHOENIX14T and How2Sign datasets demonstrate the\neffectiveness of our method in both generation quality and real-time streaming\nefficiency.",
+      "pdf_url": "http://arxiv.org/pdf/2507.09105v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.09105v1",
+      "published": "2025-07-12",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "MI CAM: Mutual Information Weighted Activation Mapping for Causal Visual Explanations of Convolutional Neural Networks",
+      "authors": [
+        "Ram S Iyer",
+        "Narayan S Iyer",
+        "Rugmini Ammal P"
+      ],
+      "abstract": "With the intervention of machine vision in our crucial day to day necessities\nincluding healthcare and automated power plants, attention has been drawn to\nthe internal mechanisms of convolutional neural networks, and the reason why\nthe network provides specific inferences. This paper proposes a novel post-hoc\nvisual explanation method called MI CAM based on activation mapping. Differing\nfrom previous class activation mapping based approaches, MI CAM produces\nsaliency visualizations by weighing each feature map through its mutual\ninformation with the input image and the final result is generated by a linear\ncombination of weights and activation maps. It also adheres to producing causal\ninterpretations as validated with the help of counterfactual analysis. We aim\nto exhibit the visual performance and unbiased justifications for the model\ninferencing procedure achieved by MI CAM. Our approach works at par with all\nstate-of-the-art methods but particularly outperforms some in terms of\nqualitative and quantitative measures. The implementation of proposed method\ncan be found on https://anonymous.4open.science/r/MI-CAM-4D27",
+      "pdf_url": "http://arxiv.org/pdf/2507.09092v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.09092v1",
+      "published": "2025-07-12",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Lumos-1: On Autoregressive Video Generation from a Unified Model Perspective",
       "authors": [
@@ -27,158 +179,6 @@
         "cs.CV",
         "cs.AI",
         "cs.MM"
-      ]
-    },
-    {
-      "title": "Propensity score with factor loadings: the effect of the Paris Agreement",
-      "authors": [
-        "Angelo Forino",
-        "Andrea Mercatanti",
-        "Giacomo Morelli"
-      ],
-      "abstract": "Factor models for longitudinal data, where policy adoption is unconfounded\nwith respect to a low-dimensional set of latent factor loadings, have become\nincreasingly popular for causal inference. Most existing approaches, however,\nrely on a causal finite-sample approach or computationally intensive methods,\nlimiting their applicability and external validity. In this paper, we propose a\nnovel causal inference method for panel data based on inverse propensity score\nweighting where the propensity score is a function of latent factor loadings\nwithin a framework of causal inference from super-population. The approach\nrelaxes the traditional restrictive assumptions of causal panel methods, while\noffering advantages in terms of causal interpretability, policy relevance, and\ncomputational efficiency. Under standard assumptions, we outline a three-step\nestimation procedure for the ATT and derive its large-sample properties using\nMestimation theory. We apply the method to assess the causal effect of the\nParis Agreement, a policy aimed at fostering the transition to a low-carbon\neconomy, on European stock returns. Our empirical results suggest a\nstatistically significant and negative short-run effect on the stock returns of\nfirms that issued green bonds.",
-      "pdf_url": "http://arxiv.org/pdf/2507.08764v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.08764v1",
-      "published": "2025-07-11",
-      "categories": [
-        "econ.EM",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "InsightBuild: LLM-Powered Causal Reasoning in Smart Building Systems",
-      "authors": [
-        "Pinaki Prasad Guha Neogi",
-        "Ahmad Mohammadshirazi",
-        "Rajiv Ramnath"
-      ],
-      "abstract": "Smart buildings generate vast streams of sensor and control data, but\nfacility managers often lack clear explanations for anomalous energy usage. We\npropose InsightBuild, a two-stage framework that integrates causality analysis\nwith a fine-tuned large language model (LLM) to provide human-readable, causal\nexplanations of energy consumption patterns. First, a lightweight causal\ninference module applies Granger causality tests and structural causal\ndiscovery on building telemetry (e.g., temperature, HVAC settings, occupancy)\ndrawn from Google Smart Buildings and Berkeley Office datasets. Next, an LLM,\nfine-tuned on aligned pairs of sensor-level causes and textual explanations,\nreceives as input the detected causal relations and generates concise,\nactionable explanations. We evaluate InsightBuild on two real-world datasets\n(Google: 2017-2022; Berkeley: 2018-2020), using expert-annotated ground-truth\ncauses for a held-out set of anomalies. Our results demonstrate that combining\nexplicit causal discovery with LLM-based natural language generation yields\nclear, precise explanations that assist facility managers in diagnosing and\nmitigating energy inefficiencies.",
-      "pdf_url": "http://arxiv.org/pdf/2507.08235v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.08235v1",
-      "published": "2025-07-11",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Efficient Causal Discovery for Autoregressive Time Series",
-      "authors": [
-        "Mohammad Fesanghary",
-        "Achintya Gopal"
-      ],
-      "abstract": "In this study, we present a novel constraint-based algorithm for causal\nstructure learning specifically designed for nonlinear autoregressive time\nseries. Our algorithm significantly reduces computational complexity compared\nto existing methods, making it more efficient and scalable to larger problems.\nWe rigorously evaluate its performance on synthetic datasets, demonstrating\nthat our algorithm not only outperforms current techniques, but also excels in\nscenarios with limited data availability. These results highlight its potential\nfor practical applications in fields requiring efficient and accurate causal\ninference from nonlinear time series data.",
-      "pdf_url": "http://arxiv.org/pdf/2507.07898v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.07898v1",
-      "published": "2025-07-10",
-      "categories": [
-        "cs.LG",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Efficient and Scalable Estimation of Distributional Treatment Effects with Multi-Task Neural Networks",
-      "authors": [
-        "Tomu Hirata",
-        "Undral Byambadalai",
-        "Tatsushi Oka",
-        "Shota Yasui",
-        "Shingo Uto"
-      ],
-      "abstract": "We propose a novel multi-task neural network approach for estimating\ndistributional treatment effects (DTE) in randomized experiments. While DTE\nprovides more granular insights into the experiment outcomes over conventional\nmethods focusing on the Average Treatment Effect (ATE), estimating it with\nregression adjustment methods presents significant challenges. Specifically,\nprecision in the distribution tails suffers due to data imbalance, and\ncomputational inefficiencies arise from the need to solve numerous regression\nproblems, particularly in large-scale datasets commonly encountered in\nindustry. To address these limitations, our method leverages multi-task neural\nnetworks to estimate conditional outcome distributions while incorporating\nmonotonic shape constraints and multi-threshold label learning to enhance\naccuracy. To demonstrate the practical effectiveness of our proposed method, we\napply our method to both simulated and real-world datasets, including a\nrandomized field experiment aimed at reducing water consumption in the US and a\nlarge-scale A/B test from a leading streaming platform in Japan. The\nexperimental results consistently demonstrate superior performance across\nvarious datasets, establishing our method as a robust and practical solution\nfor modern causal inference applications requiring a detailed understanding of\ntreatment effect heterogeneity.",
-      "pdf_url": "http://arxiv.org/pdf/2507.07738v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.07738v1",
-      "published": "2025-07-10",
-      "categories": [
-        "cs.LG",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Sparse Causal Discovery with Generative Intervention for Unsupervised Graph Domain Adaptation",
-      "authors": [
-        "Junyu Luo",
-        "Yuhao Tang",
-        "Yiwei Fu",
-        "Xiao Luo",
-        "Zhizhuo Kou",
-        "Zhiping Xiao",
-        "Wei Ju",
-        "Wentao Zhang",
-        "Ming Zhang"
-      ],
-      "abstract": "Unsupervised Graph Domain Adaptation (UGDA) leverages labeled source domain\ngraphs to achieve effective performance in unlabeled target domains despite\ndistribution shifts. However, existing methods often yield suboptimal results\ndue to the entanglement of causal-spurious features and the failure of global\nalignment strategies. We propose SLOGAN (Sparse Causal Discovery with\nGenerative Intervention), a novel approach that achieves stable graph\nrepresentation transfer through sparse causal modeling and dynamic intervention\nmechanisms. Specifically, SLOGAN first constructs a sparse causal graph\nstructure, leveraging mutual information bottleneck constraints to disentangle\nsparse, stable causal features while compressing domain-dependent spurious\ncorrelations through variational inference. To address residual spurious\ncorrelations, we innovatively design a generative intervention mechanism that\nbreaks local spurious couplings through cross-domain feature recombination\nwhile maintaining causal feature semantic consistency via covariance\nconstraints. Furthermore, to mitigate error accumulation in target domain\npseudo-labels, we introduce a category-adaptive dynamic calibration strategy,\nensuring stable discriminative learning. Extensive experiments on multiple\nreal-world datasets demonstrate that SLOGAN significantly outperforms existing\nbaselines.",
-      "pdf_url": "http://arxiv.org/pdf/2507.07621v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.07621v1",
-      "published": "2025-07-10",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Goal-Oriented Sequential Bayesian Experimental Design for Causal Learning",
-      "authors": [
-        "Zheyu Zhang",
-        "Jiayuan Dong",
-        "Jie Liu",
-        "Xun Huan"
-      ],
-      "abstract": "We present GO-CBED, a goal-oriented Bayesian framework for sequential causal\nexperimental design. Unlike conventional approaches that select interventions\naimed at inferring the full causal model, GO-CBED directly maximizes the\nexpected information gain (EIG) on user-specified causal quantities of\ninterest, enabling more targeted and efficient experimentation. The framework\nis both non-myopic, optimizing over entire intervention sequences, and\ngoal-oriented, targeting only model aspects relevant to the causal query. To\naddress the intractability of exact EIG computation, we introduce a variational\nlower bound estimator, optimized jointly through a transformer-based policy\nnetwork and normalizing flow-based variational posteriors. The resulting policy\nenables real-time decision-making via an amortized network. We demonstrate that\nGO-CBED consistently outperforms existing baselines across various causal\nreasoning and discovery tasks-including synthetic structural causal models and\nsemi-synthetic gene regulatory networks-particularly in settings with limited\nexperimental budgets and complex causal mechanisms. Our results highlight the\nbenefits of aligning experimental design objectives with specific research\ngoals and of forward-looking sequential planning.",
-      "pdf_url": "http://arxiv.org/pdf/2507.07359v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.07359v1",
-      "published": "2025-07-10",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Beyond the ATE: Interpretable Modelling of Treatment Effects over Dose and Time",
-      "authors": [
-        "Julianna Piskorz",
-        "Krzysztof Kacprzyk",
-        "Mihaela van der Schaar"
-      ],
-      "abstract": "The Average Treatment Effect (ATE) is a foundational metric in causal\ninference, widely used to assess intervention efficacy in randomized controlled\ntrials (RCTs). However, in many applications -- particularly in healthcare --\nthis static summary fails to capture the nuanced dynamics of treatment effects\nthat vary with both dose and time. We propose a framework for modelling\ntreatment effect trajectories as smooth surfaces over dose and time, enabling\nthe extraction of clinically actionable insights such as onset time, peak\neffect, and duration of benefit. To ensure interpretability, robustness, and\nverifiability -- key requirements in high-stakes domains -- we adapt\nSemanticODE, a recent framework for interpretable trajectory modelling, to the\ncausal setting where treatment effects are never directly observed. Our\napproach decouples the estimation of trajectory shape from the specification of\nclinically relevant properties (e.g., maxima, inflection points), supporting\ndomain-informed priors, post-hoc editing, and transparent analysis. We show\nthat our method yields accurate, interpretable, and editable models of\ntreatment dynamics, facilitating both rigorous causal analysis and practical\ndecision-making.",
-      "pdf_url": "http://arxiv.org/pdf/2507.07271v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.07271v1",
-      "published": "2025-07-09",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Debiased Semiparametric Efficient Changes-in-Changes Estimation",
-      "authors": [
-        "Jinghao Sun",
-        "Eric J. Tchetgen Tchetgen"
-      ],
-      "abstract": "We introduce a novel extension of the influential changes-in-changes (CiC)\nframework [Athey and Imbens, 2006] to estimate the average treatment effect on\nthe treated (ATT) and distributional causal estimands in panel data settings\nwith unmeasured confounding. While CiC relaxes the parallel trends assumption\ninherent in difference-in-differences (DiD), existing approaches typically\naccommodate only a single scalar unobserved confounder and rely on monotonicity\nassumptions between the confounder and the outcome. Moreover, current\nformulations lack inference procedures and theoretical guarantees that\naccommodate continuous covariates. Motivated by the intricate nature of\nconfounding in empirical applications and the need to incorporate continuous\ncovariates in a principled manner, we make two key contributions in this\ntechnical report. First, we establish nonparametric identification under a\nnovel set of assumptions that permit high-dimensional unmeasured confounders\nand non-monotonic relationships between confounders and outcomes. Second, we\nconstruct efficient estimators that are Neyman orthogonal to\ninfinite-dimensional nuisance parameters, facilitating valid inference even in\nthe presence of high-dimensional continuous or discrete covariates and flexible\nmachine learning-based nuisance estimation.",
-      "pdf_url": "http://arxiv.org/pdf/2507.07228v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.07228v1",
-      "published": "2025-07-09",
-      "categories": [
-        "stat.ME",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Deep Disentangled Representation Network for Treatment Effect Estimation",
-      "authors": [
-        "Hui Meng",
-        "Keping Yang",
-        "Xuyu Peng",
-        "Bo Zheng"
-      ],
-      "abstract": "Estimating individual-level treatment effect from observational data is a\nfundamental problem in causal inference and has attracted increasing attention\nin the fields of education, healthcare, and public policy.In this work, we\nconcentrate on the study of disentangled representation methods that have shown\npromising outcomes by decomposing observed covariates into instrumental,\nconfounding, and adjustment factors. However, most of the previous work has\nprimarily revolved around generative models or hard decomposition methods for\ncovariates, which often struggle to guarantee the attainment of precisely\ndisentangled factors. In order to effectively model different causal\nrelationships, we propose a novel treatment effect estimation algorithm that\nincorporates a mixture of experts with multi-head attention and a linear\northogonal regularizer to softly decompose the pre-treatment variables, and\nsimultaneously eliminates selection bias via importance sampling re-weighting\ntechniques. We conduct extensive experiments on both public semi-synthetic and\nreal-world production datasets. The experimental results clearly demonstrate\nthat our algorithm outperforms the state-of-the-art methods focused on\nindividual treatment effects.",
-      "pdf_url": "http://arxiv.org/pdf/2507.06650v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.06650v1",
-      "published": "2025-07-09",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
       ]
     }
   ]
