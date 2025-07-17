@@ -1,6 +1,101 @@
 {
-  "last_updated": "2025-07-16T00:58:03.928201",
+  "last_updated": "2025-07-17T00:58:45.784001",
   "papers": [
+    {
+      "title": "Streaming 4D Visual Geometry Transformer",
+      "authors": [
+        "Dong Zhuo",
+        "Wenzhao Zheng",
+        "Jiahe Guo",
+        "Yuqi Wu",
+        "Jie Zhou",
+        "Jiwen Lu"
+      ],
+      "abstract": "Perceiving and reconstructing 4D spatial-temporal geometry from videos is a\nfundamental yet challenging computer vision task. To facilitate interactive and\nreal-time applications, we propose a streaming 4D visual geometry transformer\nthat shares a similar philosophy with autoregressive large language models. We\nexplore a simple and efficient design and employ a causal transformer\narchitecture to process the input sequence in an online manner. We use temporal\ncausal attention and cache the historical keys and values as implicit memory to\nenable efficient streaming long-term 4D reconstruction. This design can handle\nreal-time 4D reconstruction by incrementally integrating historical information\nwhile maintaining high-quality spatial consistency. For efficient training, we\npropose to distill knowledge from the dense bidirectional visual geometry\ngrounded transformer (VGGT) to our causal model. For inference, our model\nsupports the migration of optimized efficient attention operator (e.g.,\nFlashAttention) from the field of large language models. Extensive experiments\non various 4D geometry perception benchmarks demonstrate that our model\nincreases the inference speed in online scenarios while maintaining competitive\nperformance, paving the way for scalable and interactive 4D vision systems.\nCode is available at: https://github.com/wzzheng/StreamVGGT.",
+      "pdf_url": "http://arxiv.org/pdf/2507.11539v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.11539v1",
+      "published": "2025-07-15",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Gradient Regularization-based Neural Granger Causality",
+      "authors": [
+        "Meiliang Liu",
+        "Huiwen Dong",
+        "Xiaoxiao Yang",
+        "Yunfang Xu",
+        "Zijin Li",
+        "Zhengye Si",
+        "Xinyue Yang",
+        "Zhiwen Zhao"
+      ],
+      "abstract": "With the advancement of deep learning technologies, various neural\nnetwork-based Granger causality models have been proposed. Although these\nmodels have demonstrated notable improvements, several limitations remain. Most\nexisting approaches adopt the component-wise architecture, necessitating the\nconstruction of a separate model for each time series, which results in\nsubstantial computational costs. In addition, imposing the sparsity-inducing\npenalty on the first-layer weights of the neural network to extract causal\nrelationships weakens the model's ability to capture complex interactions. To\naddress these limitations, we propose Gradient Regularization-based Neural\nGranger Causality (GRNGC), which requires only one time series prediction model\nand applies $L_{1}$ regularization to the gradient between model's input and\noutput to infer Granger causality. Moreover, GRNGC is not tied to a specific\ntime series forecasting model and can be implemented with diverse architectures\nsuch as KAN, MLP, and LSTM, offering enhanced flexibility. Numerical\nsimulations on DREAM, Lorenz-96, fMRI BOLD, and CausalTime show that GRNGC\noutperforms existing baselines and significantly reduces computational\noverhead. Meanwhile, experiments on real-world DNA, Yeast, HeLa, and bladder\nurothelial carcinoma datasets further validate the model's effectiveness in\nreconstructing gene regulatory networks.",
+      "pdf_url": "http://arxiv.org/pdf/2507.11178v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.11178v1",
+      "published": "2025-07-15",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Uncovering Causal Relation Shifts in Event Sequences under Out-of-Domain Interventions",
+      "authors": [
+        "Kazi Tasnim Zinat",
+        "Yun Zhou",
+        "Xiang Lyu",
+        "Yawei Wang",
+        "Zhicheng Liu",
+        "Panpan Xu"
+      ],
+      "abstract": "Inferring causal relationships between event pairs in a temporal sequence is\napplicable in many domains such as healthcare, manufacturing, and\ntransportation. Most existing work on causal inference primarily focuses on\nevent types within the designated domain, without considering the impact of\nexogenous out-of-domain interventions. In real-world settings, these\nout-of-domain interventions can significantly alter causal dynamics. To address\nthis gap, we propose a new causal framework to define average treatment effect\n(ATE), beyond independent and identically distributed (i.i.d.) data in classic\nRubin's causal framework, to capture the causal relation shift between events\nof temporal process under out-of-domain intervention. We design an unbiased ATE\nestimator, and devise a Transformer-based neural network model to handle both\nlong-range temporal dependencies and local patterns while integrating\nout-of-domain intervention information into process modeling. Extensive\nexperiments on both simulated and real-world datasets demonstrate that our\nmethod outperforms baselines in ATE estimation and goodness-of-fit under\nout-of-domain-augmented point processes.",
+      "pdf_url": "http://arxiv.org/pdf/2507.10809v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.10809v1",
+      "published": "2025-07-14",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Propensity score weighting across counterfactual worlds: longitudinal effects under positivity violations",
+      "authors": [
+        "Alec McClean",
+        "Iván Díaz"
+      ],
+      "abstract": "When examining a contrast between two interventions, longitudinal causal\ninference studies frequently encounter positivity violations when one or both\nregimes are impossible to observe for some subjects. Existing weighting methods\neither assume positivity holds or produce effects that conflate interventions'\nimpacts on ultimate outcomes with their effects on intermediate treatments and\ncovariates. We propose a novel class of estimands -- cumulative cross-world\nweighted effects -- that weights potential outcome differences using propensity\nscores adapting to positivity violations cumulatively across timepoints and\nsimultaneously across both counterfactual treatment histories. This new\nestimand isolates mechanistic differences between treatment regimes, is\nidentifiable without positivity assumptions, and circumvents the limitations of\nexisting longitudinal methods. Further, our analysis reveals two fundamental\ninsights about longitudinal causal inference under positivity violations.\nFirst, while mechanistically meaningful, these effects correspond to\nnon-implementable interventions, exposing a core\ninterpretability-implementability tradeoff. Second, the identified effects\nfaithfully capture mechanistic differences only under a partial common support\nassumption; violations cause the identified functional to collapse to zero,\neven when the causal effect is non-zero. We develop doubly robust-style\nestimators that achieve asymptotic normality and parametric convergence under\nnonparametric assumptions on the nuisance estimators. To this end, we\nreformulate challenging density ratio estimation as regression function\nestimation, which is achievable with standard machine learning methods. We\nillustrate our methods through analysis of union membership's effect on\nearnings.",
+      "pdf_url": "http://arxiv.org/pdf/2507.10774v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.10774v1",
+      "published": "2025-07-14",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Discovery for Linear Non-Gaussian Models with Disjoint Cycles",
+      "authors": [
+        "Mathias Drton",
+        "Marina Garrote-López",
+        "Niko Nikov",
+        "Elina Robeva",
+        "Y. Samuel Wang"
+      ],
+      "abstract": "The paradigm of linear structural equation modeling readily allows one to\nincorporate causal feedback loops in the model specification. These appear as\ndirected cycles in the common graphical representation of the models. However,\nthe presence of cycles entails difficulties such as the fact that models need\nno longer be characterized by conditional independence relations. As a result,\nlearning cyclic causal structures remains a challenging problem. In this paper,\nwe offer new insights on this problem in the context of linear non-Gaussian\nmodels. First, we precisely characterize when two directed graphs determine the\nsame linear non-Gaussian model. Next, we take up a setting of cycle-disjoint\ngraphs, for which we are able to show that simple quadratic and cubic\npolynomial relations among low-order moments of a non-Gaussian distribution\nallow one to locate source cycles. Complementing this with a strategy of\ndecorrelating cycles and multivariate regression allows one to infer a\nblock-topological order among the directed cycles, which leads to a {consistent\nand computationally efficient algorithm} for learning causal structures with\ndisjoint cycles.",
+      "pdf_url": "http://arxiv.org/pdf/2507.10767v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.10767v1",
+      "published": "2025-07-14",
+      "categories": [
+        "math.ST",
+        "stat.ME",
+        "stat.ML",
+        "stat.TH",
+        "62H22, 62D20, 62R01"
+      ]
+    },
     {
       "title": "T-GRAB: A Synthetic Diagnostic Benchmark for Learning on Temporal Graphs",
       "authors": [
@@ -86,99 +181,6 @@
         "cs.LG",
         "cs.AI",
         "cs.IR"
-      ]
-    },
-    {
-      "title": "A Framework for Predictive Directional Trading Based on Volatility and Causal Inference",
-      "authors": [
-        "Ivan Letteri"
-      ],
-      "abstract": "Purpose: This study introduces a novel framework for identifying and\nexploiting predictive lead-lag relationships in financial markets. We propose\nan integrated approach that combines advanced statistical methodologies with\nmachine learning models to enhance the identification and exploitation of\npredictive relationships between equities. Methods: We employed a Gaussian\nMixture Model (GMM) to cluster nine prominent stocks based on their mid-range\nhistorical volatility profiles over a three-year period. From the resulting\nclusters, we constructed a multi-stage causal inference pipeline, incorporating\nthe Granger Causality Test (GCT), a customised Peter-Clark Momentary\nConditional Independence (PCMCI) test, and Effective Transfer Entropy (ETE) to\nidentify robust, predictive linkages. Subsequently, Dynamic Time Warping (DTW)\nand a K-Nearest Neighbours (KNN) classifier were utilised to determine the\noptimal time lag for trade execution. The resulting strategy was rigorously\nbacktested. Results: The proposed volatility-based trading strategy, tested\nfrom 8 June 2023 to 12 August 2023, demonstrated substantial efficacy. The\nportfolio yielded a total return of 15.38%, significantly outperforming the\n10.39% return of a comparative Buy-and-Hold strategy. Key performance metrics,\nincluding a Sharpe Ratio up to 2.17 and a win rate up to 100% for certain\npairs, confirmed the strategy's viability. Conclusion: This research\ncontributes a systematic and robust methodology for identifying profitable\ntrading opportunities derived from volatility-based causal relationships. The\nfindings have significant implications for both academic research in financial\nmodelling and the practical application of algorithmic trading, offering a\nstructured approach to developing resilient, data-driven strategies.",
-      "pdf_url": "http://arxiv.org/pdf/2507.09347v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.09347v1",
-      "published": "2025-07-12",
-      "categories": [
-        "q-fin.ST",
-        "cs.AI",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "The Multiplicative Instrumental Variable Model",
-      "authors": [
-        "Jiewen Liu",
-        "Chan Park",
-        "Yonghoon Lee",
-        "Yunshu Zhang",
-        "Mengxin Yu",
-        "James M. Robins",
-        "Eric J. Tchetgen Tchetgen"
-      ],
-      "abstract": "The instrumental variable (IV) design is a common approach to address hidden\nconfounding bias. For validity, an IV must impact the outcome only through its\nassociation with the treatment. In addition, IV identification has required a\nhomogeneity condition such as monotonicity or no unmeasured common effect\nmodifier between the additive effect of the treatment on the outcome, and that\nof the IV on the treatment. In this work, we introduce a novel identifying\ncondition of no multiplicative interaction between the instrument and the\nunmeasured confounder in the treatment model, which we establish\nnonparametrically identifies the average treatment effect on the treated (ATT).\nFor inference, we propose an estimator that is multiply robust and\nsemiparametric efficient, while allowing for the use of machine learning to\nadaptively estimate required nuisance functions via cross-fitting. Finally, we\nillustrate the methods in extended simulations and an application on the causal\nimpact of a job training program on subsequent earnings.",
-      "pdf_url": "http://arxiv.org/pdf/2507.09302v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.09302v1",
-      "published": "2025-07-12",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Hybrid Autoregressive-Diffusion Model for Real-Time Streaming Sign Language Production",
-      "authors": [
-        "Maoxiao Ye",
-        "Xinfeng Ye",
-        "Mano Manoharan"
-      ],
-      "abstract": "Earlier Sign Language Production (SLP) models typically relied on\nautoregressive methods that generate output tokens one by one, which inherently\nprovide temporal alignment. Although techniques like Teacher Forcing can\nprevent model collapse during training, they still cannot solve the problem of\nerror accumulation during inference, since ground truth is unavailable at that\nstage. In contrast, more recent approaches based on diffusion models leverage\nstep-by-step denoising to enable high-quality generation. However, the\niterative nature of these models and the requirement to denoise entire\nsequences limit their applicability in real-time tasks like SLP. To address it,\nwe apply a hybrid approach combining autoregressive and diffusion models to SLP\nfor the first time, leveraging the strengths of both models in sequential\ndependency modeling and output refinement. To capture fine-grained body\nmovements, we design a Multi-Scale Pose Representation module that separately\nextracts detailed features from distinct articulators and integrates them via a\nMulti-Scale Fusion module. Furthermore, we introduce a Confidence-Aware Causal\nAttention mechanism that utilizes joint-level confidence scores to dynamically\nguide the pose generation process, improving accuracy and robustness. Extensive\nexperiments on the PHOENIX14T and How2Sign datasets demonstrate the\neffectiveness of our method in both generation quality and real-time streaming\nefficiency.",
-      "pdf_url": "http://arxiv.org/pdf/2507.09105v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.09105v1",
-      "published": "2025-07-12",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "MI CAM: Mutual Information Weighted Activation Mapping for Causal Visual Explanations of Convolutional Neural Networks",
-      "authors": [
-        "Ram S Iyer",
-        "Narayan S Iyer",
-        "Rugmini Ammal P"
-      ],
-      "abstract": "With the intervention of machine vision in our crucial day to day necessities\nincluding healthcare and automated power plants, attention has been drawn to\nthe internal mechanisms of convolutional neural networks, and the reason why\nthe network provides specific inferences. This paper proposes a novel post-hoc\nvisual explanation method called MI CAM based on activation mapping. Differing\nfrom previous class activation mapping based approaches, MI CAM produces\nsaliency visualizations by weighing each feature map through its mutual\ninformation with the input image and the final result is generated by a linear\ncombination of weights and activation maps. It also adheres to producing causal\ninterpretations as validated with the help of counterfactual analysis. We aim\nto exhibit the visual performance and unbiased justifications for the model\ninferencing procedure achieved by MI CAM. Our approach works at par with all\nstate-of-the-art methods but particularly outperforms some in terms of\nqualitative and quantitative measures. The implementation of proposed method\ncan be found on https://anonymous.4open.science/r/MI-CAM-4D27",
-      "pdf_url": "http://arxiv.org/pdf/2507.09092v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.09092v1",
-      "published": "2025-07-12",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Lumos-1: On Autoregressive Video Generation from a Unified Model Perspective",
-      "authors": [
-        "Hangjie Yuan",
-        "Weihua Chen",
-        "Jun Cen",
-        "Hu Yu",
-        "Jingyun Liang",
-        "Shuning Chang",
-        "Zhihui Lin",
-        "Tao Feng",
-        "Pengwei Liu",
-        "Jiazheng Xing",
-        "Hao Luo",
-        "Jiasheng Tang",
-        "Fan Wang",
-        "Yi Yang"
-      ],
-      "abstract": "Autoregressive large language models (LLMs) have unified a vast range of\nlanguage tasks, inspiring preliminary efforts in autoregressive video\ngeneration. Existing autoregressive video generators either diverge from\nstandard LLM architectures, depend on bulky external text encoders, or incur\nprohibitive latency due to next-token decoding. In this paper, we introduce\nLumos-1, an autoregressive video generator that retains the LLM architecture\nwith minimal architectural modifications. To inject spatiotemporal correlations\nin LLMs, we identify the efficacy of incorporating 3D RoPE and diagnose its\nimbalanced frequency spectrum ranges. Therefore, we propose MM-RoPE, a RoPE\nscheme that preserves the original textual RoPE while providing comprehensive\nfrequency spectra and scaled 3D positions for modeling multimodal\nspatiotemporal data. Moreover, Lumos-1 resorts to a token dependency strategy\nthat obeys intra-frame bidirectionality and inter-frame temporal causality.\nBased on this dependency strategy, we identify the issue of frame-wise loss\nimbalance caused by spatial information redundancy and solve it by proposing\nAutoregressive Discrete Diffusion Forcing (AR-DF). AR-DF introduces temporal\ntube masking during training with a compatible inference-time masking policy to\navoid quality degradation. By using memory-efficient training techniques, we\npre-train Lumos-1 on only 48 GPUs, achieving performance comparable to EMU3 on\nGenEval, COSMOS-Video2World on VBench-I2V, and OpenSoraPlan on VBench-T2V. Code\nand models are available at https://github.com/alibaba-damo-academy/Lumos.",
-      "pdf_url": "http://arxiv.org/pdf/2507.08801v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.08801v1",
-      "published": "2025-07-11",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.MM"
       ]
     }
   ]
