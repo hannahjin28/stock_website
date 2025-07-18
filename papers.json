@@ -1,6 +1,98 @@
 {
-  "last_updated": "2025-07-17T00:58:45.784001",
+  "last_updated": "2025-07-18T00:57:50.650092",
   "papers": [
+    {
+      "title": "Targeted Deep Architectures: A TMLE-Based Framework for Robust Causal Inference in Neural Networks",
+      "authors": [
+        "Yi Li",
+        "David Mccoy",
+        "Nolan Gunter",
+        "Kaitlyn Lee",
+        "Alejandro Schuler",
+        "Mark van der Laan"
+      ],
+      "abstract": "Modern deep neural networks are powerful predictive tools yet often lack\nvalid inference for causal parameters, such as treatment effects or entire\nsurvival curves. While frameworks like Double Machine Learning (DML) and\nTargeted Maximum Likelihood Estimation (TMLE) can debias machine-learning fits,\nexisting neural implementations either rely on \"targeted losses\" that do not\nguarantee solving the efficient influence function equation or computationally\nexpensive post-hoc \"fluctuations\" for multi-parameter settings. We propose\nTargeted Deep Architectures (TDA), a new framework that embeds TMLE directly\ninto the network's parameter space with no restrictions on the backbone\narchitecture. Specifically, TDA partitions model parameters - freezing all but\na small \"targeting\" subset - and iteratively updates them along a targeting\ngradient, derived from projecting the influence functions onto the span of the\ngradients of the loss with respect to weights. This procedure yields plug-in\nestimates that remove first-order bias and produce asymptotically valid\nconfidence intervals. Crucially, TDA easily extends to multi-dimensional causal\nestimands (e.g., entire survival curves) by merging separate targeting\ngradients into a single universal targeting update. Theoretically, TDA inherits\nclassical TMLE properties, including double robustness and semiparametric\nefficiency. Empirically, on the benchmark IHDP dataset (average treatment\neffects) and simulated survival data with informative censoring, TDA reduces\nbias and improves coverage relative to both standard neural-network estimators\nand prior post-hoc approaches. In doing so, TDA establishes a direct, scalable\npathway toward rigorous causal inference within modern deep architectures for\ncomplex multi-parameter targets.",
+      "pdf_url": "http://arxiv.org/pdf/2507.12435v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.12435v1",
+      "published": "2025-07-16",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Robust Causal Discovery in Real-World Time Series with Power-Laws",
+      "authors": [
+        "Matteo Tusoni",
+        "Giuseppe Masi",
+        "Andrea Coletta",
+        "Aldo Glielmo",
+        "Viviana Arrigoni",
+        "Novella Bartolini"
+      ],
+      "abstract": "Exploring causal relationships in stochastic time series is a challenging yet\ncrucial task with a vast range of applications, including finance, economics,\nneuroscience, and climate science. Many algorithms for Causal Discovery (CD)\nhave been proposed, but they often exhibit a high sensitivity to noise,\nresulting in misleading causal inferences when applied to real data. In this\npaper, we observe that the frequency spectra of typical real-world time series\nfollow a power-law distribution, notably due to an inherent self-organizing\nbehavior. Leveraging this insight, we build a robust CD method based on the\nextraction of power -law spectral features that amplify genuine causal signals.\nOur method consistently outperforms state-of-the-art alternatives on both\nsynthetic benchmarks and real-world datasets with known causal structures,\ndemonstrating its robustness and practical relevance.",
+      "pdf_url": "http://arxiv.org/pdf/2507.12257v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.12257v1",
+      "published": "2025-07-16",
+      "categories": [
+        "cs.LG",
+        "physics.data-an",
+        "stat.ML",
+        "stat.OT"
+      ]
+    },
+    {
+      "title": "PRISM: Distributed Inference for Foundation Models at Edge",
+      "authors": [
+        "Muhammad Azlan Qazi",
+        "Alexandros Iosifidis",
+        "Qi Zhang"
+      ],
+      "abstract": "Foundation models (FMs) have achieved remarkable success across a wide range\nof applications, from image classification to natural langurage processing, but\npose significant challenges for deployment at edge. This has sparked growing\ninterest in developing practical and efficient strategies for bringing\nfoundation models to edge environments. In this work, we propose PRISM, a\ncommunication-efficient and compute-aware strategy for distributed Transformer\ninference on edge devices. Our method leverages a Segment Means representation\nto approximate intermediate output features, drastically reducing inter-device\ncommunication. Additionally, we restructure the self-attention mechanism to\neliminate redundant computations caused by per-device Key/Value calculation in\nposition-wise partitioning and design a partition-aware causal masking scheme\ntailored for autoregressive models. We evaluate PRISM on ViT, BERT, and GPT-2\nacross diverse datasets, namely CIFAR-10, CIFAR-100, ImageNet-1k, GLUE, and\nCBT. Our results demonstrate substantial reductions in communication overhead\n(up to 99.2% for BERT at compression rate CR = 128) and per-device computation\n(51.24% for BERT at the same setting), with only minor accuracy degradation.\nThis method offers a scalable and practical solution for deploying foundation\nmodels in distributed resource-constrained environments.",
+      "pdf_url": "http://arxiv.org/pdf/2507.12145v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.12145v1",
+      "published": "2025-07-16",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Inference on Optimal Policy Values and Other Irregular Functionals via Smoothing",
+      "authors": [
+        "Justin Whitehouse",
+        "Morgane Austern",
+        "Vasilis Syrgkanis"
+      ],
+      "abstract": "Constructing confidence intervals for the value of an optimal treatment\npolicy is an important problem in causal inference. Insight into the optimal\npolicy value can guide the development of reward-maximizing, individualized\ntreatment regimes. However, because the functional that defines the optimal\nvalue is non-differentiable, standard semi-parametric approaches for performing\ninference fail to be directly applicable. Existing approaches for handling this\nnon-differentiability fall roughly into two camps. In one camp are estimators\nbased on constructing smooth approximations of the optimal value. These\napproaches are computationally lightweight, but typically place unrealistic\nparametric assumptions on outcome regressions. In another camp are approaches\nthat directly de-bias the non-smooth objective. These approaches don't place\nparametric assumptions on nuisance functions, but they either require the\ncomputation of intractably-many nuisance estimates, assume unrealistic\n$L^\\infty$ nuisance convergence rates, or make strong margin assumptions that\nprohibit non-response to a treatment. In this paper, we revisit the problem of\nconstructing smooth approximations of non-differentiable functionals. By\ncarefully controlling first-order bias and second-order remainders, we show\nthat a softmax smoothing-based estimator can be used to estimate parameters\nthat are specified as a maximum of scores involving nuisance components. In\nparticular, this includes the value of the optimal treatment policy as a\nspecial case. Our estimator obtains $\\sqrt{n}$ convergence rates, avoids\nparametric restrictions/unrealistic margin assumptions, and is often\nstatistically efficient.",
+      "pdf_url": "http://arxiv.org/pdf/2507.11780v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.11780v1",
+      "published": "2025-07-15",
+      "categories": [
+        "econ.EM",
+        "cs.LG",
+        "math.ST",
+        "stat.ME",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Constructing targeted minimum loss/maximum likelihood estimators: a simple illustration to build intuition",
+      "authors": [
+        "Rachael K. Ross",
+        "Lina M. Montoya",
+        "Dana E. Goin",
+        "Ivan Diaz",
+        "Audrey Renson"
+      ],
+      "abstract": "Use of machine learning to estimate nuisance functions (e.g. outcomes models,\npropensity score models) in estimators used in causal inference is increasingly\ncommon, as it can mitigate bias due to model misspecification. However, it can\nbe challenging to achieve valid inference (e.g., estimate valid confidence\nintervals). The efficient influence function (EIF) provides a recipe to go from\na statistical estimand relevant to our causal question, to an estimator that\ncan validly incorporate machine learning. Our companion paper, Renson et al.\n2025 (arXiv:2502.05363), provides a thorough but approachable description of\nthe EIF, along with a guide through the steps to go from a unique statistical\nestimand to development of one type of EIF-based estimator, the so-called\none-step estimator. Another commonly used estimator based on the EIF is the\ntargeted maximum likelihood/minimum loss estimator (TMLE). Construction of\nTMLEs is well-discussed in the statistical literature, but there remains a gap\nin translation to a more applied audience. In this letter, which supplements\nRenson et al., we provide a more accessible illustration of how to construct a\nTMLE.",
+      "pdf_url": "http://arxiv.org/pdf/2507.11680v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.11680v1",
+      "published": "2025-07-15",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Streaming 4D Visual Geometry Transformer",
       "authors": [
@@ -94,93 +186,6 @@
         "stat.ML",
         "stat.TH",
         "62H22, 62D20, 62R01"
-      ]
-    },
-    {
-      "title": "T-GRAB: A Synthetic Diagnostic Benchmark for Learning on Temporal Graphs",
-      "authors": [
-        "Alireza Dizaji",
-        "Benedict Aaron Tjandra",
-        "Mehrab Hamidi",
-        "Shenyang Huang",
-        "Guillaume Rabusseau"
-      ],
-      "abstract": "Dynamic graph learning methods have recently emerged as powerful tools for\nmodelling relational data evolving through time. However, despite extensive\nbenchmarking efforts, it remains unclear whether current Temporal Graph Neural\nNetworks (TGNNs) effectively capture core temporal patterns such as\nperiodicity, cause-and-effect, and long-range dependencies. In this work, we\nintroduce the Temporal Graph Reasoning Benchmark (T-GRAB), a comprehensive set\nof synthetic tasks designed to systematically probe the capabilities of TGNNs\nto reason across time. T-GRAB provides controlled, interpretable tasks that\nisolate key temporal skills: counting/memorizing periodic repetitions,\ninferring delayed causal effects, and capturing long-range dependencies over\nboth spatial and temporal dimensions. We evaluate 11 temporal graph learning\nmethods on these tasks, revealing fundamental shortcomings in their ability to\ngeneralize temporal patterns. Our findings offer actionable insights into the\nlimitations of current models, highlight challenges hidden by traditional\nreal-world benchmarks, and motivate the development of architectures with\nstronger temporal reasoning abilities. The code for T-GRAB can be found at:\nhttps://github.com/alirezadizaji/T-GRAB.",
-      "pdf_url": "http://arxiv.org/pdf/2507.10183v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.10183v1",
-      "published": "2025-07-14",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Text-Driven Causal Representation Learning for Source-Free Domain Generalization",
-      "authors": [
-        "Lihua Zhou",
-        "Mao Ye",
-        "Nianxin Li",
-        "Shuaifeng Li",
-        "Jinlin Wu",
-        "Xiatian Zhu",
-        "Lei Deng",
-        "Hongbin Liu",
-        "Jiebo Luo",
-        "Zhen Lei"
-      ],
-      "abstract": "Deep learning often struggles when training and test data distributions\ndiffer. Traditional domain generalization (DG) tackles this by including data\nfrom multiple source domains, which is impractical due to expensive data\ncollection and annotation. Recent vision-language models like CLIP enable\nsource-free domain generalization (SFDG) by using text prompts to simulate\nvisual representations, reducing data demands. However, existing SFDG methods\nstruggle with domain-specific confounders, limiting their generalization\ncapabilities. To address this issue, we propose TDCRL\n(\\textbf{T}ext-\\textbf{D}riven \\textbf{C}ausal \\textbf{R}epresentation\n\\textbf{L}earning), the first method to integrate causal inference into the\nSFDG setting. TDCRL operates in two steps: first, it employs data augmentation\nto generate style word vectors, combining them with class information to\ngenerate text embeddings to simulate visual representations; second, it trains\na causal intervention network with a confounder dictionary to extract\ndomain-invariant features. Grounded in causal learning, our approach offers a\nclear and effective mechanism to achieve robust, domain-invariant features,\nensuring robust generalization. Extensive experiments on PACS, VLCS,\nOfficeHome, and DomainNet show state-of-the-art performance, proving TDCRL\neffectiveness in SFDG.",
-      "pdf_url": "http://arxiv.org/pdf/2507.09961v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.09961v1",
-      "published": "2025-07-14",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Exploring the effects of mechanical ventilator settings with modified vector-valued treatment policies",
-      "authors": [
-        "Ziren Jiang",
-        "Philip S. Crooke",
-        "John J. Marini",
-        "Jared D. Huling"
-      ],
-      "abstract": "Mechanical ventilation is critical for managing respiratory failure, but\ninappropriate ventilator settings can lead to ventilator-induced lung injury\n(VILI), increasing patient morbidity and mortality. Evaluating the causal\nimpact of ventilator settings is challenging due to the complex interplay of\nmultiple treatment variables and strong confounding due to ventilator\nguidelines. In this paper, we propose a modified vector-valued treatment policy\n(MVTP) framework coupled with energy balancing weights to estimate causal\neffects involving multiple continuous ventilator parameters simultaneously in\naddition to sensitivity analysis to unmeasured confounding. Our approach\nmitigates common challenges in causal inference for vector-valued treatments,\nsuch as infeasible treatment combinations, stringent positivity assumptions,\nand interpretability concerns. Using the MIMIC-III database, our analyses\nsuggest that equal reductions in the total power of ventilation (i.e., the\nmechanical power) through different ventilator parameters result in different\nexpected patient outcomes. Specifically, lowering airway pressures may yield\ngreater reductions in patient mortality compared to proportional adjustments of\ntidal volume alone. Moreover, controlling for respiratory-system compliance and\nminute ventilation, we found a significant benefit of reducing driving pressure\nin patients with acute respiratory distress syndrome (ARDS). Our analyses help\nshed light on the contributors to VILI.",
-      "pdf_url": "http://arxiv.org/pdf/2507.09809v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.09809v1",
-      "published": "2025-07-13",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Bridging Structural Causal Inference and Machine Learning The S-DIDML Estimator for Heterogeneous Treatment Effects",
-      "authors": [
-        "Yile Yu",
-        "Anzhi Xu"
-      ],
-      "abstract": "In response to the increasing complexity of policy environments and the\nproliferation of high-dimensional data, this paper introduces the S-DIDML\nestimator a framework grounded in structure and semiparametrically flexible for\ncausal inference. By embedding Difference-in-Differences (DID) logic within a\nDouble Machine Learning (DML) architecture, the S-DIDML approach combines the\nstrengths of temporal identification, machine learning-based nuisance\nadjustment, and orthogonalized estimation. We begin by identifying critical\nlimitations in existing methods, including the lack of structural\ninterpretability in ML models, instability of classical DID under\nhigh-dimensional confounding, and the temporal rigidity of standard DML\nframeworks. Building on recent advances in staggered adoption designs and\nNeyman orthogonalization, S-DIDML offers a five-step estimation pipeline that\nenables robust estimation of heterogeneous treatment effects (HTEs) while\nmaintaining interpretability and scalability. Demonstrative applications are\ndiscussed across labor economics, education, taxation, and environmental\npolicy. The proposed framework contributes to the methodological frontier by\noffering a blueprint for policy-relevant, structurally interpretable, and\nstatistically valid causal analysis in complex data settings.",
-      "pdf_url": "http://arxiv.org/pdf/2507.09718v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.09718v1",
-      "published": "2025-07-13",
-      "categories": [
-        "stat.ME",
-        "91-01"
-      ]
-    },
-    {
-      "title": "Dynamic Sparse Causal-Attention Temporal Networks for Interpretable Causality Discovery in Multivariate Time Series",
-      "authors": [
-        "Meriem Zerkouk",
-        "Miloud Mihoubi",
-        "Belkacem Chikhaoui"
-      ],
-      "abstract": "Understanding causal relationships in multivariate time series (MTS) is\nessential for effective decision-making in fields such as finance and\nmarketing, where complex dependencies and lagged effects challenge conventional\nanalytical approaches. We introduce Dynamic Sparse Causal-Attention Temporal\nNetworks for Interpretable Causality Discovery in MTS (DyCAST-Net), a novel\narchitecture designed to enhance causal discovery by integrating dilated\ntemporal convolutions and dynamic sparse attention mechanisms. DyCAST-Net\neffectively captures multiscale temporal dependencies through dilated\nconvolutions while leveraging an adaptive thresholding strategy in its\nattention mechanism to eliminate spurious connections, ensuring both accuracy\nand interpretability. A statistical shuffle test validation further strengthens\nrobustness by filtering false positives and improving causal inference\nreliability. Extensive evaluations on financial and marketing datasets\ndemonstrate that DyCAST-Net consistently outperforms existing models such as\nTCDF, GCFormer, and CausalFormer. The model provides a more precise estimation\nof causal delays and significantly reduces false discoveries, particularly in\nnoisy environments. Moreover, attention heatmaps offer interpretable insights,\nuncovering hidden causal patterns such as the mediated effects of advertising\non consumer behavior and the influence of macroeconomic indicators on financial\nmarkets. Case studies illustrate DyCAST-Net's ability to detect latent\nmediators and lagged causal factors, making it particularly effective in\nhigh-dimensional, dynamic settings. The model's architecture enhanced by\nRMSNorm stabilization and causal masking ensures scalability and adaptability\nacross diverse application domains",
-      "pdf_url": "http://arxiv.org/pdf/2507.09439v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.09439v1",
-      "published": "2025-07-13",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.IR"
       ]
     }
   ]
