@@ -1,6 +1,54 @@
 {
-  "last_updated": "2025-07-18T00:57:50.650092",
+  "last_updated": "2025-07-19T00:56:39.315056",
   "papers": [
+    {
+      "title": "Resurrect Mask AutoRegressive Modeling for Efficient and Scalable Image Generation",
+      "authors": [
+        "Yi Xin",
+        "Le Zhuo",
+        "Qi Qin",
+        "Siqi Luo",
+        "Yuewen Cao",
+        "Bin Fu",
+        "Yangfan He",
+        "Hongsheng Li",
+        "Guangtao Zhai",
+        "Xiaohong Liu",
+        "Peng Gao"
+      ],
+      "abstract": "AutoRegressive (AR) models have made notable progress in image generation,\nwith Masked AutoRegressive (MAR) models gaining attention for their efficient\nparallel decoding. However, MAR models have traditionally underperformed when\ncompared to standard AR models. This study refines the MAR architecture to\nimprove image generation quality. We begin by evaluating various image\ntokenizers to identify the most effective one. Subsequently, we introduce an\nimproved Bidirectional LLaMA architecture by replacing causal attention with\nbidirectional attention and incorporating 2D RoPE, which together form our\nadvanced model, MaskGIL. Scaled from 111M to 1.4B parameters, MaskGIL achieves\na FID score of 3.71, matching state-of-the-art AR models in the ImageNet\n256x256 benchmark, while requiring only 8 inference steps compared to the 256\nsteps of AR models. Furthermore, we develop a text-driven MaskGIL model with\n775M parameters for generating images from text at various resolutions. Beyond\nimage generation, MaskGIL extends to accelerate AR-based generation and enable\nreal-time speech-to-image conversion. Our codes and models are available at\nhttps://github.com/synbol/MaskGIL.",
+      "pdf_url": "http://arxiv.org/pdf/2507.13032v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.13032v1",
+      "published": "2025-07-17",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Modeling Open-World Cognition as On-Demand Synthesis of Probabilistic Models",
+      "authors": [
+        "Lionel Wong",
+        "Katherine M. Collins",
+        "Lance Ying",
+        "Cedegao E. Zhang",
+        "Adrian Weller",
+        "Tobias Gersternberg",
+        "Timothy O'Donnell",
+        "Alexander K. Lew",
+        "Jacob D. Andreas",
+        "Joshua B. Tenenbaum",
+        "Tyler Brooke-Wilson"
+      ],
+      "abstract": "When faced with novel situations, people are able to marshal relevant\nconsiderations from a wide range of background knowledge and put these to use\nin inferences and predictions. What permits us to draw in globally relevant\ninformation and reason over it coherently? Here, we explore the hypothesis that\npeople use a combination of distributed and symbolic representations to\nconstruct bespoke mental models tailored to novel situations. We propose a\ncomputational implementation of this idea -- a ``Model Synthesis Architecture''\n(MSA) -- using language models to implement global relevance-based retrieval\nand model synthesis and probabilistic programs to implement bespoke, coherent\nworld models. We evaluate our MSA as a model of human judgments on a novel\nreasoning dataset. The dataset -- built around a `Model Olympics` domain of\nsports vignettes -- tests models' capacity for human-like, open-ended reasoning\nby requiring (i) judgments about novel causal structures described in language;\n(ii) drawing on large bodies of background knowledge; and (iii) doing both in\nlight of observations that introduce arbitrary novel variables. Our MSA\napproach captures human judgments better than language model-only baselines,\nunder both direct and chain-of-thought generations from the LM that supports\nmodel synthesis. These results suggest that MSAs can be implemented in a way\nthat mirrors people's ability to deliver locally coherent reasoning over\nglobally relevant variables, offering a path to understanding and replicating\nhuman reasoning in open-ended domains.",
+      "pdf_url": "http://arxiv.org/pdf/2507.12547v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.12547v1",
+      "published": "2025-07-16",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.PL"
+      ]
+    },
     {
       "title": "Targeted Deep Architectures: A TMLE-Based Framework for Robust Causal Inference in Neural Networks",
       "authors": [
@@ -151,41 +199,6 @@
       "categories": [
         "cs.LG",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Propensity score weighting across counterfactual worlds: longitudinal effects under positivity violations",
-      "authors": [
-        "Alec McClean",
-        "Iván Díaz"
-      ],
-      "abstract": "When examining a contrast between two interventions, longitudinal causal\ninference studies frequently encounter positivity violations when one or both\nregimes are impossible to observe for some subjects. Existing weighting methods\neither assume positivity holds or produce effects that conflate interventions'\nimpacts on ultimate outcomes with their effects on intermediate treatments and\ncovariates. We propose a novel class of estimands -- cumulative cross-world\nweighted effects -- that weights potential outcome differences using propensity\nscores adapting to positivity violations cumulatively across timepoints and\nsimultaneously across both counterfactual treatment histories. This new\nestimand isolates mechanistic differences between treatment regimes, is\nidentifiable without positivity assumptions, and circumvents the limitations of\nexisting longitudinal methods. Further, our analysis reveals two fundamental\ninsights about longitudinal causal inference under positivity violations.\nFirst, while mechanistically meaningful, these effects correspond to\nnon-implementable interventions, exposing a core\ninterpretability-implementability tradeoff. Second, the identified effects\nfaithfully capture mechanistic differences only under a partial common support\nassumption; violations cause the identified functional to collapse to zero,\neven when the causal effect is non-zero. We develop doubly robust-style\nestimators that achieve asymptotic normality and parametric convergence under\nnonparametric assumptions on the nuisance estimators. To this end, we\nreformulate challenging density ratio estimation as regression function\nestimation, which is achievable with standard machine learning methods. We\nillustrate our methods through analysis of union membership's effect on\nearnings.",
-      "pdf_url": "http://arxiv.org/pdf/2507.10774v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.10774v1",
-      "published": "2025-07-14",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Discovery for Linear Non-Gaussian Models with Disjoint Cycles",
-      "authors": [
-        "Mathias Drton",
-        "Marina Garrote-López",
-        "Niko Nikov",
-        "Elina Robeva",
-        "Y. Samuel Wang"
-      ],
-      "abstract": "The paradigm of linear structural equation modeling readily allows one to\nincorporate causal feedback loops in the model specification. These appear as\ndirected cycles in the common graphical representation of the models. However,\nthe presence of cycles entails difficulties such as the fact that models need\nno longer be characterized by conditional independence relations. As a result,\nlearning cyclic causal structures remains a challenging problem. In this paper,\nwe offer new insights on this problem in the context of linear non-Gaussian\nmodels. First, we precisely characterize when two directed graphs determine the\nsame linear non-Gaussian model. Next, we take up a setting of cycle-disjoint\ngraphs, for which we are able to show that simple quadratic and cubic\npolynomial relations among low-order moments of a non-Gaussian distribution\nallow one to locate source cycles. Complementing this with a strategy of\ndecorrelating cycles and multivariate regression allows one to infer a\nblock-topological order among the directed cycles, which leads to a {consistent\nand computationally efficient algorithm} for learning causal structures with\ndisjoint cycles.",
-      "pdf_url": "http://arxiv.org/pdf/2507.10767v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.10767v1",
-      "published": "2025-07-14",
-      "categories": [
-        "math.ST",
-        "stat.ME",
-        "stat.ML",
-        "stat.TH",
-        "62H22, 62D20, 62R01"
       ]
     }
   ]
