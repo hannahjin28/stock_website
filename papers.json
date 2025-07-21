@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-20T01:04:11.791261",
+  "last_updated": "2025-07-21T01:01:51.679908",
   "papers": [
     {
       "title": "Resurrect Mask AutoRegressive Modeling for Efficient and Scalable Image Generation",
@@ -32,7 +32,7 @@
         "Lance Ying",
         "Cedegao E. Zhang",
         "Adrian Weller",
-        "Tobias Gersternberg",
+        "Tobias Gerstenberg",
         "Timothy O'Donnell",
         "Alexander K. Lew",
         "Jacob D. Andreas",
@@ -40,8 +40,8 @@
         "Tyler Brooke-Wilson"
       ],
       "abstract": "When faced with novel situations, people are able to marshal relevant\nconsiderations from a wide range of background knowledge and put these to use\nin inferences and predictions. What permits us to draw in globally relevant\ninformation and reason over it coherently? Here, we explore the hypothesis that\npeople use a combination of distributed and symbolic representations to\nconstruct bespoke mental models tailored to novel situations. We propose a\ncomputational implementation of this idea -- a ``Model Synthesis Architecture''\n(MSA) -- using language models to implement global relevance-based retrieval\nand model synthesis and probabilistic programs to implement bespoke, coherent\nworld models. We evaluate our MSA as a model of human judgments on a novel\nreasoning dataset. The dataset -- built around a `Model Olympics` domain of\nsports vignettes -- tests models' capacity for human-like, open-ended reasoning\nby requiring (i) judgments about novel causal structures described in language;\n(ii) drawing on large bodies of background knowledge; and (iii) doing both in\nlight of observations that introduce arbitrary novel variables. Our MSA\napproach captures human judgments better than language model-only baselines,\nunder both direct and chain-of-thought generations from the LM that supports\nmodel synthesis. These results suggest that MSAs can be implemented in a way\nthat mirrors people's ability to deliver locally coherent reasoning over\nglobally relevant variables, offering a path to understanding and replicating\nhuman reasoning in open-ended domains.",
-      "pdf_url": "http://arxiv.org/pdf/2507.12547v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.12547v1",
+      "pdf_url": "http://arxiv.org/pdf/2507.12547v2",
+      "arxiv_url": "http://arxiv.org/abs/2507.12547v2",
       "published": "2025-07-16",
       "categories": [
         "cs.CL",
