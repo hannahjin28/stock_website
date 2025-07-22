@@ -1,6 +1,103 @@
 {
-  "last_updated": "2025-07-21T01:01:51.679908",
+  "last_updated": "2025-07-22T00:58:26.540734",
   "papers": [
+    {
+      "title": "On the importance of tail assumptions in climate extreme event attribution",
+      "authors": [
+        "Mengran Li",
+        "Daniela Castro-Camilo"
+      ],
+      "abstract": "Extreme weather events are becoming more frequent and intense, posing serious\nthreats to human life, biodiversity, and ecosystems. A key objective of extreme\nevent attribution (EEA) is to assess whether and to what extent anthropogenic\nclimate change influences such events. Central to EEA is the accurate\nstatistical characterization of atmospheric extremes, which are inherently\nmultivariate or spatial due to their measurement over high-dimensional grids.\nWithin the counterfactual causal inference framework of Pearl, we evaluate how\ntail assumptions affect attribution conclusions by comparing three multivariate\nmodeling approaches for estimating causation metrics. These include: (i) the\nmultivariate generalized Pareto distribution, which imposes an invariant tail\ndependence structure; (ii) the factor copula model of Castro-Camilo and Huser\n(2020), which offers flexible subasymptotic behavior; and (iii) the model of\nHuser and Wadsworth (2019), which smoothly transitions between different forms\nof extremal dependence. We assess the implications of these modeling choices in\nboth simulated scenarios (under varying forms of model misspecification) and\nreal data applications, using weekly winter maxima over Europe from the\nM\\'et\\'eo-France CNRM model and daily precipitation from the ACCESS-CM2 model\nover the U.S. Our findings highlight that tail assumptions critically shape\ncausality metrics in EEA. Misspecification of the extremal dependence structure\ncan lead to substantially different and potentially misleading attribution\nconclusions, underscoring the need for careful model selection and evaluation\nwhen quantifying the influence of climate change on extreme events.",
+      "pdf_url": "http://arxiv.org/pdf/2507.14019v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.14019v1",
+      "published": "2025-07-18",
+      "categories": [
+        "stat.AP",
+        "62G32, 62H10, 62P12, 62H20",
+        "G.3"
+      ]
+    },
+    {
+      "title": "A regression-based approach for bidirectional proximal causal inference in the presence of unmeasured confounding",
+      "authors": [
+        "Jiaqi Min",
+        "Xueyue Zhang",
+        "Shanshan Luo"
+      ],
+      "abstract": "Proxy variables are commonly used in causal inference when unmeasured\nconfounding exists. While most existing proximal methods assume a\nunidirectional causal relationship between two primary variables, many social\nand biological systems exhibit complex feedback mechanisms that imply\nbidirectional causality. In this paper, using regression-based models, we\nextend the proximal framework to identify bidirectional causal effects in the\npresence of unmeasured confounding. We establish the identification of\nbidirectional causal effects and develop a sensitivity analysis method for\nviolations of the proxy structural conditions. Building on this identification\nresult, we derive bidirectional two-stage least squares estimators that are\nconsistent and asymptotically normal under standard regularity conditions.\nSimulation studies demonstrate that our approach delivers unbiased causal\neffect estimates and outperforms some standard methods. The simulation results\nalso confirm the reliability of the sensitivity analysis procedure. Applying\nour methodology to a state-level panel dataset from 1985 to 2014 in the United\nStates, we examine the bidirectional causal effects between abortion rates and\nmurder rates. The analysis reveals a consistent negative effect of abortion\nrates on murder rates, while also detecting a potential reciprocal effect from\nmurder rates to abortion rates that conventional unidirectional analyses have\nnot considered.",
+      "pdf_url": "http://arxiv.org/pdf/2507.13965v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.13965v1",
+      "published": "2025-07-18",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Reframing attention as a reinforcement learning problem for causal discovery",
+      "authors": [
+        "Turan Orujlu",
+        "Christian Gumbsch",
+        "Martin V. Butz",
+        "Charley M Wu"
+      ],
+      "abstract": "Formal frameworks of causality have operated largely parallel to modern\ntrends in deep reinforcement learning (RL). However, there has been a revival\nof interest in formally grounding the representations learned by neural\nnetworks in causal concepts. Yet, most attempts at neural models of causality\nassume static causal graphs and ignore the dynamic nature of causal\ninteractions. In this work, we introduce Causal Process framework as a novel\ntheory for representing dynamic hypotheses about causal structure. Furthermore,\nwe present Causal Process Model as an implementation of this framework. This\nallows us to reformulate the attention mechanism popularized by Transformer\nnetworks within an RL setting with the goal to infer interpretable causal\nprocesses from visual observations. Here, causal inference corresponds to\nconstructing a causal graph hypothesis which itself becomes an RL task nested\nwithin the original RL problem. To create an instance of such hypothesis, we\nemploy RL agents. These agents establish links between units similar to the\noriginal Transformer attention mechanism. We demonstrate the effectiveness of\nour approach in an RL environment where we outperform current alternatives in\ncausal representation learning and agent performance, and uniquely recover\ngraphs of dynamic causal processes.",
+      "pdf_url": "http://arxiv.org/pdf/2507.13920v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.13920v1",
+      "published": "2025-07-18",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "CoTasks: Chain-of-Thought based Video Instruction Tuning Tasks",
+      "authors": [
+        "Yanan Wang",
+        "Julio Vizcarra",
+        "Zhi Li",
+        "Hao Niu",
+        "Mori Kurokawa"
+      ],
+      "abstract": "Despite recent progress in video large language models (VideoLLMs), a key\nopen challenge remains: how to equip models with chain-of-thought (CoT)\nreasoning abilities grounded in fine-grained object-level video understanding.\nExisting instruction-tuned models, such as the Qwen and LLaVA series, are\ntrained on high-level video-text pairs, often lacking structured annotations\nnecessary for compositional, step-by-step reasoning. We propose CoTasks:\nChain-of-Thought based Video Instruction Tuning Tasks, a new framework that\ndecomposes complex video questions of existing datasets (e.g., NeXT-QA, STAR)\ninto four entity-level foundational tasks: frame localization, entity tracking,\nspatial and temporal relation extraction. By embedding these intermediate\nCoT-style reasoning steps into the input, CoTasks enables models to explicitly\nperform object-centric spatiotemporal reasoning. Experiments on the NeXT-QA\nbenchmark show that CoTasks significantly enhance inference performance:\nLLaVA-video-7B improves by +3.3 points in average GPT-4 evaluation score, and\nQwen2.5-VL-3B gains +17.4, with large boosts in causal (+14.6), temporal\n(+10.9), and descriptive (+48.1) subcategories. These results demonstrate the\neffectiveness of CoTasks as a structured CoT-style supervision framework for\nimproving compositional video reasoning.",
+      "pdf_url": "http://arxiv.org/pdf/2507.13609v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.13609v1",
+      "published": "2025-07-18",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Combining stated and revealed preferences",
+      "authors": [
+        "Romuald Meango",
+        "Marc Henry",
+        "Ismael Mourifie"
+      ],
+      "abstract": "Can stated preferences inform counterfactual analyses of actual choice? This\nresearch proposes a novel approach to researchers who have access to both\nstated choices in hypothetical scenarios and actual choices, matched or\nunmatched. The key idea is to use stated choices to identify the distribution\nof individual unobserved heterogeneity. If this unobserved heterogeneity is the\nsource of endogeneity, the researcher can correct for its influence in a demand\nfunction estimation using actual choices and recover causal effects. Bounds on\ncausal effects are derived in the case, where stated choice and actual choices\nare observed in unmatched data sets. These data combination bounds are of\nindependent interest. We derive a valid bootstrap inference for the bounds and\nshow its good performance in a simulation experiment.",
+      "pdf_url": "http://arxiv.org/pdf/2507.13552v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.13552v1",
+      "published": "2025-07-17",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "CaSTFormer: Causal Spatio-Temporal Transformer for Driving Intention Prediction",
+      "authors": [
+        "Sirui Wang",
+        "Zhou Guan",
+        "Bingxi Zhao",
+        "Tongjia Gu"
+      ],
+      "abstract": "Accurate prediction of driving intention is key to enhancing the safety and\ninteractive efficiency of human-machine co-driving systems. It serves as a\ncornerstone for achieving high-level autonomous driving. However, current\napproaches remain inadequate for accurately modeling the complex\nspatio-temporal interdependencies and the unpredictable variability of human\ndriving behavior. To address these challenges, we propose CaSTFormer, a Causal\nSpatio-Temporal Transformer to explicitly model causal interactions between\ndriver behavior and environmental context for robust intention prediction.\nSpecifically, CaSTFormer introduces a novel Reciprocal Shift Fusion (RSF)\nmechanism for precise temporal alignment of internal and external feature\nstreams, a Causal Pattern Extraction (CPE) module that systematically\neliminates spurious correlations to reveal authentic causal dependencies, and\nan innovative Feature Synthesis Network (FSN) that adaptively synthesizes these\npurified representations into coherent spatio-temporal inferences. We evaluate\nthe proposed CaSTFormer on the public Brain4Cars dataset, and it achieves\nstate-of-the-art performance. It effectively captures complex causal\nspatio-temporal dependencies and enhances both the accuracy and transparency of\ndriving intention prediction.",
+      "pdf_url": "http://arxiv.org/pdf/2507.13425v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.13425v1",
+      "published": "2025-07-17",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Resurrect Mask AutoRegressive Modeling for Efficient and Scalable Image Generation",
       "authors": [
@@ -22,6 +119,26 @@
       "published": "2025-07-17",
       "categories": [
         "cs.CV"
+      ]
+    },
+    {
+      "title": "Causal Language Control in Multilingual Transformers via Sparse Feature Steering",
+      "authors": [
+        "Cheng-Ting Chou",
+        "George Liu",
+        "Jessica Sun",
+        "Cole Blondin",
+        "Kevin Zhu",
+        "Vasu Sharma",
+        "Sean O'Brien"
+      ],
+      "abstract": "Deterministically controlling the target generation language of large\nmultilingual language models (LLMs) remains a fundamental challenge,\nparticularly in zero-shot settings where neither explicit language prompts nor\nfine-tuning are available. In this work, we investigate whether sparse\nautoencoder (SAE) features, previously shown to correlate with interpretable\nmodel behaviors, can be leveraged to steer the generated language of LLMs\nduring inference. Leveraging pretrained SAEs on the residual streams of\nGemma-2B and Gemma-9B, we identify features whose activations differ most\nsignificantly between English and four target languages: Chinese, Japanese,\nSpanish, and French. By modifying just a single SAE feature at one transformer\nlayer, we achieve controlled language shifts with up to 90\\% success, as\nmeasured by FastText language classification, while preserving semantic\nfidelity according to LaBSE (Language-Agnostic BERT Sentence Embedding)\nsimilarity. Our analysis reveals that language steering is most effective in\nmid-to-late transformer layers and is amplified by specific attention heads\ndisproportionately associated with language-sensitive SAE features. These\nresults demonstrate the promise of sparse feature steering as a lightweight and\ninterpretable mechanism for controllable multilingual generation.",
+      "pdf_url": "http://arxiv.org/pdf/2507.13410v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.13410v1",
+      "published": "2025-07-17",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
       ]
     },
     {
@@ -65,140 +182,6 @@
       "published": "2025-07-16",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Robust Causal Discovery in Real-World Time Series with Power-Laws",
-      "authors": [
-        "Matteo Tusoni",
-        "Giuseppe Masi",
-        "Andrea Coletta",
-        "Aldo Glielmo",
-        "Viviana Arrigoni",
-        "Novella Bartolini"
-      ],
-      "abstract": "Exploring causal relationships in stochastic time series is a challenging yet\ncrucial task with a vast range of applications, including finance, economics,\nneuroscience, and climate science. Many algorithms for Causal Discovery (CD)\nhave been proposed, but they often exhibit a high sensitivity to noise,\nresulting in misleading causal inferences when applied to real data. In this\npaper, we observe that the frequency spectra of typical real-world time series\nfollow a power-law distribution, notably due to an inherent self-organizing\nbehavior. Leveraging this insight, we build a robust CD method based on the\nextraction of power -law spectral features that amplify genuine causal signals.\nOur method consistently outperforms state-of-the-art alternatives on both\nsynthetic benchmarks and real-world datasets with known causal structures,\ndemonstrating its robustness and practical relevance.",
-      "pdf_url": "http://arxiv.org/pdf/2507.12257v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.12257v1",
-      "published": "2025-07-16",
-      "categories": [
-        "cs.LG",
-        "physics.data-an",
-        "stat.ML",
-        "stat.OT"
-      ]
-    },
-    {
-      "title": "PRISM: Distributed Inference for Foundation Models at Edge",
-      "authors": [
-        "Muhammad Azlan Qazi",
-        "Alexandros Iosifidis",
-        "Qi Zhang"
-      ],
-      "abstract": "Foundation models (FMs) have achieved remarkable success across a wide range\nof applications, from image classification to natural langurage processing, but\npose significant challenges for deployment at edge. This has sparked growing\ninterest in developing practical and efficient strategies for bringing\nfoundation models to edge environments. In this work, we propose PRISM, a\ncommunication-efficient and compute-aware strategy for distributed Transformer\ninference on edge devices. Our method leverages a Segment Means representation\nto approximate intermediate output features, drastically reducing inter-device\ncommunication. Additionally, we restructure the self-attention mechanism to\neliminate redundant computations caused by per-device Key/Value calculation in\nposition-wise partitioning and design a partition-aware causal masking scheme\ntailored for autoregressive models. We evaluate PRISM on ViT, BERT, and GPT-2\nacross diverse datasets, namely CIFAR-10, CIFAR-100, ImageNet-1k, GLUE, and\nCBT. Our results demonstrate substantial reductions in communication overhead\n(up to 99.2% for BERT at compression rate CR = 128) and per-device computation\n(51.24% for BERT at the same setting), with only minor accuracy degradation.\nThis method offers a scalable and practical solution for deploying foundation\nmodels in distributed resource-constrained environments.",
-      "pdf_url": "http://arxiv.org/pdf/2507.12145v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.12145v1",
-      "published": "2025-07-16",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Inference on Optimal Policy Values and Other Irregular Functionals via Smoothing",
-      "authors": [
-        "Justin Whitehouse",
-        "Morgane Austern",
-        "Vasilis Syrgkanis"
-      ],
-      "abstract": "Constructing confidence intervals for the value of an optimal treatment\npolicy is an important problem in causal inference. Insight into the optimal\npolicy value can guide the development of reward-maximizing, individualized\ntreatment regimes. However, because the functional that defines the optimal\nvalue is non-differentiable, standard semi-parametric approaches for performing\ninference fail to be directly applicable. Existing approaches for handling this\nnon-differentiability fall roughly into two camps. In one camp are estimators\nbased on constructing smooth approximations of the optimal value. These\napproaches are computationally lightweight, but typically place unrealistic\nparametric assumptions on outcome regressions. In another camp are approaches\nthat directly de-bias the non-smooth objective. These approaches don't place\nparametric assumptions on nuisance functions, but they either require the\ncomputation of intractably-many nuisance estimates, assume unrealistic\n$L^\\infty$ nuisance convergence rates, or make strong margin assumptions that\nprohibit non-response to a treatment. In this paper, we revisit the problem of\nconstructing smooth approximations of non-differentiable functionals. By\ncarefully controlling first-order bias and second-order remainders, we show\nthat a softmax smoothing-based estimator can be used to estimate parameters\nthat are specified as a maximum of scores involving nuisance components. In\nparticular, this includes the value of the optimal treatment policy as a\nspecial case. Our estimator obtains $\\sqrt{n}$ convergence rates, avoids\nparametric restrictions/unrealistic margin assumptions, and is often\nstatistically efficient.",
-      "pdf_url": "http://arxiv.org/pdf/2507.11780v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.11780v1",
-      "published": "2025-07-15",
-      "categories": [
-        "econ.EM",
-        "cs.LG",
-        "math.ST",
-        "stat.ME",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Constructing targeted minimum loss/maximum likelihood estimators: a simple illustration to build intuition",
-      "authors": [
-        "Rachael K. Ross",
-        "Lina M. Montoya",
-        "Dana E. Goin",
-        "Ivan Diaz",
-        "Audrey Renson"
-      ],
-      "abstract": "Use of machine learning to estimate nuisance functions (e.g. outcomes models,\npropensity score models) in estimators used in causal inference is increasingly\ncommon, as it can mitigate bias due to model misspecification. However, it can\nbe challenging to achieve valid inference (e.g., estimate valid confidence\nintervals). The efficient influence function (EIF) provides a recipe to go from\na statistical estimand relevant to our causal question, to an estimator that\ncan validly incorporate machine learning. Our companion paper, Renson et al.\n2025 (arXiv:2502.05363), provides a thorough but approachable description of\nthe EIF, along with a guide through the steps to go from a unique statistical\nestimand to development of one type of EIF-based estimator, the so-called\none-step estimator. Another commonly used estimator based on the EIF is the\ntargeted maximum likelihood/minimum loss estimator (TMLE). Construction of\nTMLEs is well-discussed in the statistical literature, but there remains a gap\nin translation to a more applied audience. In this letter, which supplements\nRenson et al., we provide a more accessible illustration of how to construct a\nTMLE.",
-      "pdf_url": "http://arxiv.org/pdf/2507.11680v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.11680v1",
-      "published": "2025-07-15",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Streaming 4D Visual Geometry Transformer",
-      "authors": [
-        "Dong Zhuo",
-        "Wenzhao Zheng",
-        "Jiahe Guo",
-        "Yuqi Wu",
-        "Jie Zhou",
-        "Jiwen Lu"
-      ],
-      "abstract": "Perceiving and reconstructing 4D spatial-temporal geometry from videos is a\nfundamental yet challenging computer vision task. To facilitate interactive and\nreal-time applications, we propose a streaming 4D visual geometry transformer\nthat shares a similar philosophy with autoregressive large language models. We\nexplore a simple and efficient design and employ a causal transformer\narchitecture to process the input sequence in an online manner. We use temporal\ncausal attention and cache the historical keys and values as implicit memory to\nenable efficient streaming long-term 4D reconstruction. This design can handle\nreal-time 4D reconstruction by incrementally integrating historical information\nwhile maintaining high-quality spatial consistency. For efficient training, we\npropose to distill knowledge from the dense bidirectional visual geometry\ngrounded transformer (VGGT) to our causal model. For inference, our model\nsupports the migration of optimized efficient attention operator (e.g.,\nFlashAttention) from the field of large language models. Extensive experiments\non various 4D geometry perception benchmarks demonstrate that our model\nincreases the inference speed in online scenarios while maintaining competitive\nperformance, paving the way for scalable and interactive 4D vision systems.\nCode is available at: https://github.com/wzzheng/StreamVGGT.",
-      "pdf_url": "http://arxiv.org/pdf/2507.11539v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.11539v1",
-      "published": "2025-07-15",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Gradient Regularization-based Neural Granger Causality",
-      "authors": [
-        "Meiliang Liu",
-        "Huiwen Dong",
-        "Xiaoxiao Yang",
-        "Yunfang Xu",
-        "Zijin Li",
-        "Zhengye Si",
-        "Xinyue Yang",
-        "Zhiwen Zhao"
-      ],
-      "abstract": "With the advancement of deep learning technologies, various neural\nnetwork-based Granger causality models have been proposed. Although these\nmodels have demonstrated notable improvements, several limitations remain. Most\nexisting approaches adopt the component-wise architecture, necessitating the\nconstruction of a separate model for each time series, which results in\nsubstantial computational costs. In addition, imposing the sparsity-inducing\npenalty on the first-layer weights of the neural network to extract causal\nrelationships weakens the model's ability to capture complex interactions. To\naddress these limitations, we propose Gradient Regularization-based Neural\nGranger Causality (GRNGC), which requires only one time series prediction model\nand applies $L_{1}$ regularization to the gradient between model's input and\noutput to infer Granger causality. Moreover, GRNGC is not tied to a specific\ntime series forecasting model and can be implemented with diverse architectures\nsuch as KAN, MLP, and LSTM, offering enhanced flexibility. Numerical\nsimulations on DREAM, Lorenz-96, fMRI BOLD, and CausalTime show that GRNGC\noutperforms existing baselines and significantly reduces computational\noverhead. Meanwhile, experiments on real-world DNA, Yeast, HeLa, and bladder\nurothelial carcinoma datasets further validate the model's effectiveness in\nreconstructing gene regulatory networks.",
-      "pdf_url": "http://arxiv.org/pdf/2507.11178v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.11178v1",
-      "published": "2025-07-15",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Uncovering Causal Relation Shifts in Event Sequences under Out-of-Domain Interventions",
-      "authors": [
-        "Kazi Tasnim Zinat",
-        "Yun Zhou",
-        "Xiang Lyu",
-        "Yawei Wang",
-        "Zhicheng Liu",
-        "Panpan Xu"
-      ],
-      "abstract": "Inferring causal relationships between event pairs in a temporal sequence is\napplicable in many domains such as healthcare, manufacturing, and\ntransportation. Most existing work on causal inference primarily focuses on\nevent types within the designated domain, without considering the impact of\nexogenous out-of-domain interventions. In real-world settings, these\nout-of-domain interventions can significantly alter causal dynamics. To address\nthis gap, we propose a new causal framework to define average treatment effect\n(ATE), beyond independent and identically distributed (i.i.d.) data in classic\nRubin's causal framework, to capture the causal relation shift between events\nof temporal process under out-of-domain intervention. We design an unbiased ATE\nestimator, and devise a Transformer-based neural network model to handle both\nlong-range temporal dependencies and local patterns while integrating\nout-of-domain intervention information into process modeling. Extensive\nexperiments on both simulated and real-world datasets demonstrate that our\nmethod outperforms baselines in ATE estimation and goodness-of-fit under\nout-of-domain-augmented point processes.",
-      "pdf_url": "http://arxiv.org/pdf/2507.10809v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.10809v1",
-      "published": "2025-07-14",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
       ]
     }
   ]
