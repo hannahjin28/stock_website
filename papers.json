@@ -1,6 +1,118 @@
 {
-  "last_updated": "2025-07-22T00:58:26.540734",
+  "last_updated": "2025-07-23T00:59:00.226072",
   "papers": [
+    {
+      "title": "CoLD: Counterfactually-Guided Length Debiasing for Process Reward Models",
+      "authors": [
+        "Congmin Zheng",
+        "Jiachen Zhu",
+        "Jianghao Lin",
+        "Xinyi Dai",
+        "Yong Yu",
+        "Weinan Zhang",
+        "Mengyue Yang"
+      ],
+      "abstract": "Process Reward Models (PRMs) play a central role in evaluating and guiding\nmulti-step reasoning in large language models (LLMs), especially for\nmathematical problem solving. However, we identify a pervasive length bias in\nexisting PRMs: they tend to assign higher scores to longer reasoning steps,\neven when the semantic content and logical validity are unchanged. This bias\nundermines the reliability of reward predictions and leads to overly verbose\noutputs during inference. To address this issue, we propose\nCoLD(Counterfactually-Guided Length Debiasing), a unified framework that\nmitigates length bias through three components: an explicit length-penalty\nadjustment, a learned bias estimator trained to capture spurious length-related\nsignals, and a joint training strategy that enforces length-invariance in\nreward predictions. Our approach is grounded in counterfactual reasoning and\ninformed by causal graph analysis. Extensive experiments on MATH500 and\nGSM-Plus show that CoLD consistently reduces reward-length correlation,\nimproves accuracy in step selection, and encourages more concise, logically\nvalid reasoning. These results demonstrate the effectiveness and practicality\nof CoLD in improving the fidelity and robustness of PRMs.",
+      "pdf_url": "http://arxiv.org/pdf/2507.15698v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.15698v1",
+      "published": "2025-07-21",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Inference on Nonlinear Counterfactual Functionals under a Multiplicative IV Model",
+      "authors": [
+        "Yonghoon Lee",
+        "Mengxin Yu",
+        "Jiewen Liu",
+        "Chan Park",
+        "Yunshu Zhang",
+        "James M. Robins",
+        "Eric J. Tchetgen Tchetgen"
+      ],
+      "abstract": "Instrumental variable (IV) methods play a central role in causal inference,\nparticularly in settings where treatment assignment is confounded by unobserved\nvariables. IV methods have been extensively developed in recent years and\napplied across diverse domains, from economics to epidemiology. In this work,\nwe study the recently introduced multiplicative IV (MIV) model and demonstrate\nits utility for causal inference beyond the average treatment effect. In\nparticular, we show that it enables identification and inference for a broad\nclass of counterfactual functionals characterized by moment equations. This\nincludes, for example, inference on quantile treatment effects. We develop\nmethods for efficient and multiply robust estimation of such functionals, and\nprovide inference procedures with asymptotic validity. Experimental results\ndemonstrate that the proposed procedure performs well even with moderate sample\nsizes.",
+      "pdf_url": "http://arxiv.org/pdf/2507.15612v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.15612v1",
+      "published": "2025-07-21",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "From Kicking to Causality: Simulating Infant Agency Detection with a Robust Intrinsic Reward",
+      "authors": [
+        "Xia Xu",
+        "Jochen Triesch"
+      ],
+      "abstract": "While human infants robustly discover their own causal efficacy, standard\nreinforcement learning agents remain brittle, as their reliance on\ncorrelation-based rewards fails in noisy, ecologically valid scenarios. To\naddress this, we introduce the Causal Action Influence Score (CAIS), a novel\nintrinsic reward rooted in causal inference. CAIS quantifies an action's\ninfluence by measuring the 1-Wasserstein distance between the learned\ndistribution of sensory outcomes conditional on that action, $p(h|a)$, and the\nbaseline outcome distribution, $p(h)$. This divergence provides a robust reward\nthat isolates the agent's causal impact from confounding environmental noise.\nWe test our approach in a simulated infant-mobile environment where\ncorrelation-based perceptual rewards fail completely when the mobile is\nsubjected to external forces. In stark contrast, CAIS enables the agent to\nfilter this noise, identify its influence, and learn the correct policy.\nFurthermore, the high-quality predictive model learned for CAIS allows our\nagent, when augmented with a surprise signal, to successfully reproduce the\n\"extinction burst\" phenomenon. We conclude that explicitly inferring causality\nis a crucial mechanism for developing a robust sense of agency, offering a\npsychologically plausible framework for more adaptive autonomous systems.",
+      "pdf_url": "http://arxiv.org/pdf/2507.15106v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.15106v1",
+      "published": "2025-07-20",
+      "categories": [
+        "cs.AI",
+        "cs.RO",
+        "F.2.2"
+      ]
+    },
+    {
+      "title": "Kernel Based Maximum Entropy Inverse Reinforcement Learning for Mean-Field Games",
+      "authors": [
+        "Berkay Anahtarci",
+        "Can Deha Kariksiz",
+        "Naci Saldi"
+      ],
+      "abstract": "We consider the maximum causal entropy inverse reinforcement learning problem\nfor infinite-horizon stationary mean-field games, in which we model the unknown\nreward function within a reproducing kernel Hilbert space. This allows the\ninference of rich and potentially nonlinear reward structures directly from\nexpert demonstrations, in contrast to most existing inverse reinforcement\nlearning approaches for mean-field games that typically restrict the reward\nfunction to a linear combination of a fixed finite set of basis functions. We\nalso focus on the infinite-horizon cost structure, whereas prior studies\nprimarily rely on finite-horizon formulations. We introduce a Lagrangian\nrelaxation to this maximum causal entropy inverse reinforcement learning\nproblem that enables us to reformulate it as an unconstrained log-likelihood\nmaximization problem, and obtain a solution \\lk{via} a gradient ascent\nalgorithm. To illustrate the theoretical consistency of the algorithm, we\nestablish the smoothness of the log-likelihood objective by proving the\nFr\\'echet differentiability of the related soft Bellman operators with respect\nto the parameters in the reproducing kernel Hilbert space. We demonstrate the\neffectiveness of our method on a mean-field traffic routing game, where it\naccurately recovers expert behavior.",
+      "pdf_url": "http://arxiv.org/pdf/2507.14529v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.14529v1",
+      "published": "2025-07-19",
+      "categories": [
+        "cs.LG",
+        "math.OC",
+        "91A16, 68T05, 49N45, 93E20, 46E22"
+      ]
+    },
+    {
+      "title": "Positive-Unlabeled Learning for Control Group Construction in Observational Causal Inference",
+      "authors": [
+        "Ilias Tsoumas",
+        "Dimitrios Bormpoudakis",
+        "Vasileios Sitokonstantinou",
+        "Athanasios Askitopoulos",
+        "Andreas Kalogeras",
+        "Charalampos Kontoes",
+        "Ioannis Athanasiadis"
+      ],
+      "abstract": "In causal inference, whether through randomized controlled trials or\nobservational studies, access to both treated and control units is essential\nfor estimating the effect of a treatment on an outcome of interest. When\ntreatment assignment is random, the average treatment effect (ATE) can be\nestimated directly by comparing outcomes between groups. In non-randomized\nsettings, various techniques are employed to adjust for confounding and\napproximate the counterfactual scenario to recover an unbiased ATE. A common\nchallenge, especially in observational studies, is the absence of units clearly\nlabeled as controls-that is, units known not to have received the treatment. To\naddress this, we propose positive-unlabeled (PU) learning as a framework for\nidentifying, with high confidence, control units from a pool of unlabeled ones,\nusing only the available treated (positive) units. We evaluate this approach\nusing both simulated and real-world data. We construct a causal graph with\ndiverse relationships and use it to generate synthetic data under various\nscenarios, assessing how reliably the method recovers control groups that allow\nestimates of true ATE. We also apply our approach to real-world data on optimal\nsowing and fertilizer treatments in sustainable agriculture. Our findings show\nthat PU learning can successfully identify control (negative) units from\nunlabeled data based only on treated units and, through the resulting control\ngroup, estimate an ATE that closely approximates the true value. This work has\nimportant implications for observational causal inference, especially in fields\nwhere randomized experiments are difficult or costly. In domains such as earth,\nenvironmental, and agricultural sciences, it enables a plethora of\nquasi-experiments by leveraging available earth observation and climate data,\nparticularly when treated units are available but control units are lacking.",
+      "pdf_url": "http://arxiv.org/pdf/2507.14528v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.14528v1",
+      "published": "2025-07-19",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "How LLMs Comprehend Temporal Meaning in Narratives: A Case Study in Cognitive Evaluation of LLMs",
+      "authors": [
+        "Karin de Langis",
+        "Jong Inn Park",
+        "Andreas Schramm",
+        "Bin Hu",
+        "Khanh Chi Le",
+        "Michael Mensink",
+        "Ahn Thu Tong",
+        "Dongyeop Kang"
+      ],
+      "abstract": "Large language models (LLMs) exhibit increasingly sophisticated linguistic\ncapabilities, yet the extent to which these behaviors reflect human-like\ncognition versus advanced pattern recognition remains an open question. In this\nstudy, we investigate how LLMs process the temporal meaning of linguistic\naspect in narratives that were previously used in human studies. Using an\nExpert-in-the-Loop probing pipeline, we conduct a series of targeted\nexperiments to assess whether LLMs construct semantic representations and\npragmatic inferences in a human-like manner. Our findings show that LLMs\nover-rely on prototypicality, produce inconsistent aspectual judgments, and\nstruggle with causal reasoning derived from aspect, raising concerns about\ntheir ability to fully comprehend narratives. These results suggest that LLMs\nprocess aspect fundamentally differently from humans and lack robust narrative\nunderstanding. Beyond these empirical findings, we develop a standardized\nexperimental framework for the reliable assessment of LLMs' cognitive and\nlinguistic capabilities.",
+      "pdf_url": "http://arxiv.org/pdf/2507.14307v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.14307v1",
+      "published": "2025-07-18",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "On the importance of tail assumptions in climate extreme event attribution",
       "authors": [
@@ -64,124 +176,6 @@
       "categories": [
         "cs.CV",
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Combining stated and revealed preferences",
-      "authors": [
-        "Romuald Meango",
-        "Marc Henry",
-        "Ismael Mourifie"
-      ],
-      "abstract": "Can stated preferences inform counterfactual analyses of actual choice? This\nresearch proposes a novel approach to researchers who have access to both\nstated choices in hypothetical scenarios and actual choices, matched or\nunmatched. The key idea is to use stated choices to identify the distribution\nof individual unobserved heterogeneity. If this unobserved heterogeneity is the\nsource of endogeneity, the researcher can correct for its influence in a demand\nfunction estimation using actual choices and recover causal effects. Bounds on\ncausal effects are derived in the case, where stated choice and actual choices\nare observed in unmatched data sets. These data combination bounds are of\nindependent interest. We derive a valid bootstrap inference for the bounds and\nshow its good performance in a simulation experiment.",
-      "pdf_url": "http://arxiv.org/pdf/2507.13552v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.13552v1",
-      "published": "2025-07-17",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "CaSTFormer: Causal Spatio-Temporal Transformer for Driving Intention Prediction",
-      "authors": [
-        "Sirui Wang",
-        "Zhou Guan",
-        "Bingxi Zhao",
-        "Tongjia Gu"
-      ],
-      "abstract": "Accurate prediction of driving intention is key to enhancing the safety and\ninteractive efficiency of human-machine co-driving systems. It serves as a\ncornerstone for achieving high-level autonomous driving. However, current\napproaches remain inadequate for accurately modeling the complex\nspatio-temporal interdependencies and the unpredictable variability of human\ndriving behavior. To address these challenges, we propose CaSTFormer, a Causal\nSpatio-Temporal Transformer to explicitly model causal interactions between\ndriver behavior and environmental context for robust intention prediction.\nSpecifically, CaSTFormer introduces a novel Reciprocal Shift Fusion (RSF)\nmechanism for precise temporal alignment of internal and external feature\nstreams, a Causal Pattern Extraction (CPE) module that systematically\neliminates spurious correlations to reveal authentic causal dependencies, and\nan innovative Feature Synthesis Network (FSN) that adaptively synthesizes these\npurified representations into coherent spatio-temporal inferences. We evaluate\nthe proposed CaSTFormer on the public Brain4Cars dataset, and it achieves\nstate-of-the-art performance. It effectively captures complex causal\nspatio-temporal dependencies and enhances both the accuracy and transparency of\ndriving intention prediction.",
-      "pdf_url": "http://arxiv.org/pdf/2507.13425v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.13425v1",
-      "published": "2025-07-17",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Resurrect Mask AutoRegressive Modeling for Efficient and Scalable Image Generation",
-      "authors": [
-        "Yi Xin",
-        "Le Zhuo",
-        "Qi Qin",
-        "Siqi Luo",
-        "Yuewen Cao",
-        "Bin Fu",
-        "Yangfan He",
-        "Hongsheng Li",
-        "Guangtao Zhai",
-        "Xiaohong Liu",
-        "Peng Gao"
-      ],
-      "abstract": "AutoRegressive (AR) models have made notable progress in image generation,\nwith Masked AutoRegressive (MAR) models gaining attention for their efficient\nparallel decoding. However, MAR models have traditionally underperformed when\ncompared to standard AR models. This study refines the MAR architecture to\nimprove image generation quality. We begin by evaluating various image\ntokenizers to identify the most effective one. Subsequently, we introduce an\nimproved Bidirectional LLaMA architecture by replacing causal attention with\nbidirectional attention and incorporating 2D RoPE, which together form our\nadvanced model, MaskGIL. Scaled from 111M to 1.4B parameters, MaskGIL achieves\na FID score of 3.71, matching state-of-the-art AR models in the ImageNet\n256x256 benchmark, while requiring only 8 inference steps compared to the 256\nsteps of AR models. Furthermore, we develop a text-driven MaskGIL model with\n775M parameters for generating images from text at various resolutions. Beyond\nimage generation, MaskGIL extends to accelerate AR-based generation and enable\nreal-time speech-to-image conversion. Our codes and models are available at\nhttps://github.com/synbol/MaskGIL.",
-      "pdf_url": "http://arxiv.org/pdf/2507.13032v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.13032v1",
-      "published": "2025-07-17",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal Language Control in Multilingual Transformers via Sparse Feature Steering",
-      "authors": [
-        "Cheng-Ting Chou",
-        "George Liu",
-        "Jessica Sun",
-        "Cole Blondin",
-        "Kevin Zhu",
-        "Vasu Sharma",
-        "Sean O'Brien"
-      ],
-      "abstract": "Deterministically controlling the target generation language of large\nmultilingual language models (LLMs) remains a fundamental challenge,\nparticularly in zero-shot settings where neither explicit language prompts nor\nfine-tuning are available. In this work, we investigate whether sparse\nautoencoder (SAE) features, previously shown to correlate with interpretable\nmodel behaviors, can be leveraged to steer the generated language of LLMs\nduring inference. Leveraging pretrained SAEs on the residual streams of\nGemma-2B and Gemma-9B, we identify features whose activations differ most\nsignificantly between English and four target languages: Chinese, Japanese,\nSpanish, and French. By modifying just a single SAE feature at one transformer\nlayer, we achieve controlled language shifts with up to 90\\% success, as\nmeasured by FastText language classification, while preserving semantic\nfidelity according to LaBSE (Language-Agnostic BERT Sentence Embedding)\nsimilarity. Our analysis reveals that language steering is most effective in\nmid-to-late transformer layers and is amplified by specific attention heads\ndisproportionately associated with language-sensitive SAE features. These\nresults demonstrate the promise of sparse feature steering as a lightweight and\ninterpretable mechanism for controllable multilingual generation.",
-      "pdf_url": "http://arxiv.org/pdf/2507.13410v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.13410v1",
-      "published": "2025-07-17",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Modeling Open-World Cognition as On-Demand Synthesis of Probabilistic Models",
-      "authors": [
-        "Lionel Wong",
-        "Katherine M. Collins",
-        "Lance Ying",
-        "Cedegao E. Zhang",
-        "Adrian Weller",
-        "Tobias Gerstenberg",
-        "Timothy O'Donnell",
-        "Alexander K. Lew",
-        "Jacob D. Andreas",
-        "Joshua B. Tenenbaum",
-        "Tyler Brooke-Wilson"
-      ],
-      "abstract": "When faced with novel situations, people are able to marshal relevant\nconsiderations from a wide range of background knowledge and put these to use\nin inferences and predictions. What permits us to draw in globally relevant\ninformation and reason over it coherently? Here, we explore the hypothesis that\npeople use a combination of distributed and symbolic representations to\nconstruct bespoke mental models tailored to novel situations. We propose a\ncomputational implementation of this idea -- a ``Model Synthesis Architecture''\n(MSA) -- using language models to implement global relevance-based retrieval\nand model synthesis and probabilistic programs to implement bespoke, coherent\nworld models. We evaluate our MSA as a model of human judgments on a novel\nreasoning dataset. The dataset -- built around a `Model Olympics` domain of\nsports vignettes -- tests models' capacity for human-like, open-ended reasoning\nby requiring (i) judgments about novel causal structures described in language;\n(ii) drawing on large bodies of background knowledge; and (iii) doing both in\nlight of observations that introduce arbitrary novel variables. Our MSA\napproach captures human judgments better than language model-only baselines,\nunder both direct and chain-of-thought generations from the LM that supports\nmodel synthesis. These results suggest that MSAs can be implemented in a way\nthat mirrors people's ability to deliver locally coherent reasoning over\nglobally relevant variables, offering a path to understanding and replicating\nhuman reasoning in open-ended domains.",
-      "pdf_url": "http://arxiv.org/pdf/2507.12547v2",
-      "arxiv_url": "http://arxiv.org/abs/2507.12547v2",
-      "published": "2025-07-16",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.PL"
-      ]
-    },
-    {
-      "title": "Targeted Deep Architectures: A TMLE-Based Framework for Robust Causal Inference in Neural Networks",
-      "authors": [
-        "Yi Li",
-        "David Mccoy",
-        "Nolan Gunter",
-        "Kaitlyn Lee",
-        "Alejandro Schuler",
-        "Mark van der Laan"
-      ],
-      "abstract": "Modern deep neural networks are powerful predictive tools yet often lack\nvalid inference for causal parameters, such as treatment effects or entire\nsurvival curves. While frameworks like Double Machine Learning (DML) and\nTargeted Maximum Likelihood Estimation (TMLE) can debias machine-learning fits,\nexisting neural implementations either rely on \"targeted losses\" that do not\nguarantee solving the efficient influence function equation or computationally\nexpensive post-hoc \"fluctuations\" for multi-parameter settings. We propose\nTargeted Deep Architectures (TDA), a new framework that embeds TMLE directly\ninto the network's parameter space with no restrictions on the backbone\narchitecture. Specifically, TDA partitions model parameters - freezing all but\na small \"targeting\" subset - and iteratively updates them along a targeting\ngradient, derived from projecting the influence functions onto the span of the\ngradients of the loss with respect to weights. This procedure yields plug-in\nestimates that remove first-order bias and produce asymptotically valid\nconfidence intervals. Crucially, TDA easily extends to multi-dimensional causal\nestimands (e.g., entire survival curves) by merging separate targeting\ngradients into a single universal targeting update. Theoretically, TDA inherits\nclassical TMLE properties, including double robustness and semiparametric\nefficiency. Empirically, on the benchmark IHDP dataset (average treatment\neffects) and simulated survival data with informative censoring, TDA reduces\nbias and improves coverage relative to both standard neural-network estimators\nand prior post-hoc approaches. In doing so, TDA establishes a direct, scalable\npathway toward rigorous causal inference within modern deep architectures for\ncomplex multi-parameter targets.",
-      "pdf_url": "http://arxiv.org/pdf/2507.12435v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.12435v1",
-      "published": "2025-07-16",
-      "categories": [
-        "cs.LG"
       ]
     }
   ]
