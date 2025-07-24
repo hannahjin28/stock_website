@@ -1,6 +1,73 @@
 {
-  "last_updated": "2025-07-23T00:59:00.226072",
+  "last_updated": "2025-07-24T00:58:44.112621",
   "papers": [
+    {
+      "title": "Ballot Design and Electoral Outcomes: The Role of Candidate Order and Party Affiliation",
+      "authors": [
+        "Alessandro Arlotto",
+        "Alexandre Belloni",
+        "Fei Fang",
+        "Saša Pekeč"
+      ],
+      "abstract": "We use causal inference to study how designing ballots with and without party\ndesignations impacts electoral outcomes when partisan voters rely on\nparty-order cues to infer candidate affiliation in races without designations.\nIf the party orders of candidates in races with and without party designations\ndiffer, these voters might cast their votes incorrectly. We identify a\nquasi-randomized natural experiment with contest-level treatment assignment\npertaining to North Carolina judicial elections and use double machine learning\nto accurately capture the magnitude of such incorrectly cast votes. Using\nprecinct-level election and demographic data, we estimate that 11.8% (95%\nconfidence interval: [4.0%, 19.6%]) of democratic partisan voters and 15.4%\n(95% confidence interval: [7.8%, 23.1%]) of republican partisan voters cast\ntheir votes incorrectly due to the difference in party orders. Our results\nindicate that ballots mixing contests with and without party designations\nmislead many voters, leading to outcomes that do not reflect true voter\npreferences. To accurately capture voter intent, such ballot designs should be\navoided.",
+      "pdf_url": "http://arxiv.org/pdf/2507.16722v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.16722v1",
+      "published": "2025-07-22",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "On Causal Inference for the Survivor Function",
+      "authors": [
+        "Benjamin R. Baer",
+        "Ashkan Ertefaie",
+        "Robert L. Strawderman"
+      ],
+      "abstract": "In this expository paper, we consider the problem of causal inference and\nefficient estimation for the counterfactual survivor function. This problem has\npreviously been considered in the literature in several papers, each relying on\nthe imposition of conditions meant to identify the desired estimand from the\nobserved data. These conditions, generally referred to as either implying or\nsatisfying coarsening at random, are inconsistently imposed across this\nliterature and, in all cases, fail to imply coarsening at random. We establish\nthe first general characterization of coarsening at random, and also sequential\ncoarsening at random, for this estimation problem. Other contributions include\nthe first general characterization of the set of all influence functions for\nthe counterfactual survival probability under sequential coarsening at random,\nand the corresponding nonparametric efficient influence function. These\ncharacterizations are general in that neither impose continuity assumptions on\neither the underlying failure or censoring time distributions. We further show\nhow the latter compares to alternative forms recently derived in the\nliterature, including establishing the pointwise equivalence of the influence\nfunctions for our nonparametric efficient estimator and that recently given in\nWestling et al (2024, Journal of the American Statistical Association).",
+      "pdf_url": "http://arxiv.org/pdf/2507.16691v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.16691v1",
+      "published": "2025-07-22",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Estimating Treatment Effects with Independent Component Analysis",
+      "authors": [
+        "Patrik Reizinger",
+        "Lester Mackey",
+        "Wieland Brendel",
+        "Rahul Krishnan"
+      ],
+      "abstract": "The field of causal inference has developed a variety of methods to\naccurately estimate treatment effects in the presence of nuisance. Meanwhile,\nthe field of identifiability theory has developed methods like Independent\nComponent Analysis (ICA) to identify latent sources and mixing weights from\ndata. While these two research communities have developed largely\nindependently, they aim to achieve similar goals: the accurate and\nsample-efficient estimation of model parameters. In the partially linear\nregression (PLR) setting, Mackey et al. (2018) recently found that estimation\nconsistency can be improved with non-Gaussian treatment noise. Non-Gaussianity\nis also a crucial assumption for identifying latent factors in ICA. We provide\nthe first theoretical and empirical insights into this connection, showing that\nICA can be used for causal effect estimation in the PLR model. Surprisingly, we\nfind that linear ICA can accurately estimate multiple treatment effects even in\nthe presence of Gaussian confounders or nonlinear nuisance.",
+      "pdf_url": "http://arxiv.org/pdf/2507.16467v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.16467v1",
+      "published": "2025-07-22",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Do Large Language Models Have a Planning Theory of Mind? Evidence from MindGames: a Multi-Step Persuasion Task",
+      "authors": [
+        "Jared Moore",
+        "Ned Cooper",
+        "Rasmus Overmark",
+        "Beba Cibralic",
+        "Nick Haber",
+        "Cameron R. Jones"
+      ],
+      "abstract": "Recent evidence suggests Large Language Models (LLMs) display Theory of Mind\n(ToM) abilities. Most ToM experiments place participants in a spectatorial\nrole, wherein they predict and interpret other agents' behavior. However, human\nToM also contributes to dynamically planning action and strategically\nintervening on others' mental states. We present MindGames: a novel `planning\ntheory of mind' (PToM) task which requires agents to infer an interlocutor's\nbeliefs and desires to persuade them to alter their behavior. Unlike previous\nevaluations, we explicitly evaluate use cases of ToM. We find that humans\nsignificantly outperform o1-preview (an LLM) at our PToM task (11% higher;\n$p=0.006$). We hypothesize this is because humans have an implicit causal model\nof other agents (e.g., they know, as our task requires, to ask about people's\npreferences). In contrast, o1-preview outperforms humans in a baseline\ncondition which requires a similar amount of planning but minimal mental state\ninferences (e.g., o1-preview is better than humans at planning when already\ngiven someone's preferences). These results suggest a significant gap between\nhuman-like social reasoning and LLM abilities.",
+      "pdf_url": "http://arxiv.org/pdf/2507.16196v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.16196v1",
+      "published": "2025-07-22",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "CoLD: Counterfactually-Guided Length Debiasing for Process Reward Models",
       "authors": [
@@ -39,6 +106,23 @@
       "published": "2025-07-21",
       "categories": [
         "stat.ME"
+      ]
+    },
+    {
+      "title": "Structural DID with ML: Theory, Simulation, and a Roadmap for Applied Research",
+      "authors": [
+        "Yile Yu",
+        "Anzhi Xu",
+        "Yi Wang"
+      ],
+      "abstract": "Causal inference in observational panel data has become a central concern in\neconomics,policy analysis,and the broader social sciences.To address the core\ncontradiction where traditional difference-in-differences (DID) struggles with\nhigh-dimensional confounding variables in observational panel data,while\nmachine learning (ML) lacks causal structure interpretability,this paper\nproposes an innovative framework called S-DIDML that integrates structural\nidentification with high-dimensional estimation.Building upon the structure of\ntraditional DID methods,S-DIDML employs structured residual orthogonalization\ntechniques (Neyman orthogonality+cross-fitting) to retain the group-time\ntreatment effect (ATT) identification structure while resolving\nhigh-dimensional covariate interference issues.It designs a dynamic\nheterogeneity estimation module combining causal forests and semi-parametric\nmodels to capture spatiotemporal heterogeneity effects.The framework\nestablishes a complete modular application process with standardized Stata\nimplementation paths.The introduction of S-DIDML enriches methodological\nresearch on DID and DDML innovations, shifting causal inference from method\nstacking to architecture integration.This advancement enables social sciences\nto precisely identify policy-sensitive groups and optimize resource\nallocation.The framework provides replicable evaluation tools, decision\noptimization references,and methodological paradigms for complex intervention\nscenarios such as digital transformation policies and environmental\nregulations.",
+      "pdf_url": "http://arxiv.org/pdf/2507.15899v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.15899v1",
+      "published": "2025-07-21",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "91-01"
       ]
     },
     {
@@ -91,91 +175,6 @@
       "published": "2025-07-19",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "How LLMs Comprehend Temporal Meaning in Narratives: A Case Study in Cognitive Evaluation of LLMs",
-      "authors": [
-        "Karin de Langis",
-        "Jong Inn Park",
-        "Andreas Schramm",
-        "Bin Hu",
-        "Khanh Chi Le",
-        "Michael Mensink",
-        "Ahn Thu Tong",
-        "Dongyeop Kang"
-      ],
-      "abstract": "Large language models (LLMs) exhibit increasingly sophisticated linguistic\ncapabilities, yet the extent to which these behaviors reflect human-like\ncognition versus advanced pattern recognition remains an open question. In this\nstudy, we investigate how LLMs process the temporal meaning of linguistic\naspect in narratives that were previously used in human studies. Using an\nExpert-in-the-Loop probing pipeline, we conduct a series of targeted\nexperiments to assess whether LLMs construct semantic representations and\npragmatic inferences in a human-like manner. Our findings show that LLMs\nover-rely on prototypicality, produce inconsistent aspectual judgments, and\nstruggle with causal reasoning derived from aspect, raising concerns about\ntheir ability to fully comprehend narratives. These results suggest that LLMs\nprocess aspect fundamentally differently from humans and lack robust narrative\nunderstanding. Beyond these empirical findings, we develop a standardized\nexperimental framework for the reliable assessment of LLMs' cognitive and\nlinguistic capabilities.",
-      "pdf_url": "http://arxiv.org/pdf/2507.14307v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.14307v1",
-      "published": "2025-07-18",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "On the importance of tail assumptions in climate extreme event attribution",
-      "authors": [
-        "Mengran Li",
-        "Daniela Castro-Camilo"
-      ],
-      "abstract": "Extreme weather events are becoming more frequent and intense, posing serious\nthreats to human life, biodiversity, and ecosystems. A key objective of extreme\nevent attribution (EEA) is to assess whether and to what extent anthropogenic\nclimate change influences such events. Central to EEA is the accurate\nstatistical characterization of atmospheric extremes, which are inherently\nmultivariate or spatial due to their measurement over high-dimensional grids.\nWithin the counterfactual causal inference framework of Pearl, we evaluate how\ntail assumptions affect attribution conclusions by comparing three multivariate\nmodeling approaches for estimating causation metrics. These include: (i) the\nmultivariate generalized Pareto distribution, which imposes an invariant tail\ndependence structure; (ii) the factor copula model of Castro-Camilo and Huser\n(2020), which offers flexible subasymptotic behavior; and (iii) the model of\nHuser and Wadsworth (2019), which smoothly transitions between different forms\nof extremal dependence. We assess the implications of these modeling choices in\nboth simulated scenarios (under varying forms of model misspecification) and\nreal data applications, using weekly winter maxima over Europe from the\nM\\'et\\'eo-France CNRM model and daily precipitation from the ACCESS-CM2 model\nover the U.S. Our findings highlight that tail assumptions critically shape\ncausality metrics in EEA. Misspecification of the extremal dependence structure\ncan lead to substantially different and potentially misleading attribution\nconclusions, underscoring the need for careful model selection and evaluation\nwhen quantifying the influence of climate change on extreme events.",
-      "pdf_url": "http://arxiv.org/pdf/2507.14019v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.14019v1",
-      "published": "2025-07-18",
-      "categories": [
-        "stat.AP",
-        "62G32, 62H10, 62P12, 62H20",
-        "G.3"
-      ]
-    },
-    {
-      "title": "A regression-based approach for bidirectional proximal causal inference in the presence of unmeasured confounding",
-      "authors": [
-        "Jiaqi Min",
-        "Xueyue Zhang",
-        "Shanshan Luo"
-      ],
-      "abstract": "Proxy variables are commonly used in causal inference when unmeasured\nconfounding exists. While most existing proximal methods assume a\nunidirectional causal relationship between two primary variables, many social\nand biological systems exhibit complex feedback mechanisms that imply\nbidirectional causality. In this paper, using regression-based models, we\nextend the proximal framework to identify bidirectional causal effects in the\npresence of unmeasured confounding. We establish the identification of\nbidirectional causal effects and develop a sensitivity analysis method for\nviolations of the proxy structural conditions. Building on this identification\nresult, we derive bidirectional two-stage least squares estimators that are\nconsistent and asymptotically normal under standard regularity conditions.\nSimulation studies demonstrate that our approach delivers unbiased causal\neffect estimates and outperforms some standard methods. The simulation results\nalso confirm the reliability of the sensitivity analysis procedure. Applying\nour methodology to a state-level panel dataset from 1985 to 2014 in the United\nStates, we examine the bidirectional causal effects between abortion rates and\nmurder rates. The analysis reveals a consistent negative effect of abortion\nrates on murder rates, while also detecting a potential reciprocal effect from\nmurder rates to abortion rates that conventional unidirectional analyses have\nnot considered.",
-      "pdf_url": "http://arxiv.org/pdf/2507.13965v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.13965v1",
-      "published": "2025-07-18",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Reframing attention as a reinforcement learning problem for causal discovery",
-      "authors": [
-        "Turan Orujlu",
-        "Christian Gumbsch",
-        "Martin V. Butz",
-        "Charley M Wu"
-      ],
-      "abstract": "Formal frameworks of causality have operated largely parallel to modern\ntrends in deep reinforcement learning (RL). However, there has been a revival\nof interest in formally grounding the representations learned by neural\nnetworks in causal concepts. Yet, most attempts at neural models of causality\nassume static causal graphs and ignore the dynamic nature of causal\ninteractions. In this work, we introduce Causal Process framework as a novel\ntheory for representing dynamic hypotheses about causal structure. Furthermore,\nwe present Causal Process Model as an implementation of this framework. This\nallows us to reformulate the attention mechanism popularized by Transformer\nnetworks within an RL setting with the goal to infer interpretable causal\nprocesses from visual observations. Here, causal inference corresponds to\nconstructing a causal graph hypothesis which itself becomes an RL task nested\nwithin the original RL problem. To create an instance of such hypothesis, we\nemploy RL agents. These agents establish links between units similar to the\noriginal Transformer attention mechanism. We demonstrate the effectiveness of\nour approach in an RL environment where we outperform current alternatives in\ncausal representation learning and agent performance, and uniquely recover\ngraphs of dynamic causal processes.",
-      "pdf_url": "http://arxiv.org/pdf/2507.13920v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.13920v1",
-      "published": "2025-07-18",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "CoTasks: Chain-of-Thought based Video Instruction Tuning Tasks",
-      "authors": [
-        "Yanan Wang",
-        "Julio Vizcarra",
-        "Zhi Li",
-        "Hao Niu",
-        "Mori Kurokawa"
-      ],
-      "abstract": "Despite recent progress in video large language models (VideoLLMs), a key\nopen challenge remains: how to equip models with chain-of-thought (CoT)\nreasoning abilities grounded in fine-grained object-level video understanding.\nExisting instruction-tuned models, such as the Qwen and LLaVA series, are\ntrained on high-level video-text pairs, often lacking structured annotations\nnecessary for compositional, step-by-step reasoning. We propose CoTasks:\nChain-of-Thought based Video Instruction Tuning Tasks, a new framework that\ndecomposes complex video questions of existing datasets (e.g., NeXT-QA, STAR)\ninto four entity-level foundational tasks: frame localization, entity tracking,\nspatial and temporal relation extraction. By embedding these intermediate\nCoT-style reasoning steps into the input, CoTasks enables models to explicitly\nperform object-centric spatiotemporal reasoning. Experiments on the NeXT-QA\nbenchmark show that CoTasks significantly enhance inference performance:\nLLaVA-video-7B improves by +3.3 points in average GPT-4 evaluation score, and\nQwen2.5-VL-3B gains +17.4, with large boosts in causal (+14.6), temporal\n(+10.9), and descriptive (+48.1) subcategories. These results demonstrate the\neffectiveness of CoTasks as a structured CoT-style supervision framework for\nimproving compositional video reasoning.",
-      "pdf_url": "http://arxiv.org/pdf/2507.13609v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.13609v1",
-      "published": "2025-07-18",
-      "categories": [
-        "cs.CV",
-        "cs.CL"
       ]
     }
   ]
