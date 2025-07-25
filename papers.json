@@ -1,6 +1,72 @@
 {
-  "last_updated": "2025-07-24T00:58:44.112621",
+  "last_updated": "2025-07-25T00:58:21.058287",
   "papers": [
+    {
+      "title": "Debiased maximum-likelihood estimators for hazard ratios under machine-learning adjustment",
+      "authors": [
+        "Takashi Hayakawa",
+        "Satoshi Asai"
+      ],
+      "abstract": "Previous studies have shown that hazard ratios between treatment groups\nestimated with the Cox model are uninterpretable because the indefinite\nbaseline hazard of the model fails to identify temporal change in the risk set\ncomposition due to treatment assignment and unobserved factors among multiple,\ncontradictory scenarios. To alleviate this problem, especially in studies based\non observational data with uncontrolled dynamic treatment and real-time\nmeasurement of many covariates, we propose abandoning the baseline hazard and\nusing machine learning to explicitly model the change in the risk set with or\nwithout latent variables. For this framework, we clarify the context in which\nhazard ratios can be causally interpreted, and then develop a method based on\nNeyman orthogonality to compute debiased maximum-likelihood estimators of\nhazard ratios. Computing the constructed estimators is more efficient than\ncomputing those based on weighted regression with marginal structural Cox\nmodels. Numerical simulations confirm that the proposed method identifies the\nground truth with minimal bias. These results lay the foundation for developing\na useful, alternative method for causal inference with uncontrolled,\nobservational data in modern epidemiology.",
+      "pdf_url": "http://arxiv.org/pdf/2507.17686v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.17686v1",
+      "published": "2025-07-23",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "See the Forest and the Trees: A Synergistic Reasoning Framework for Knowledge-Based Visual Question Answering",
+      "authors": [
+        "Junjie Wang",
+        "Yunhan Tang",
+        "Yijie Wang",
+        "Zhihao Yuan",
+        "Huan Wang",
+        "Yangfan He",
+        "Bin Li"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) have pushed the frontiers of\nKnowledge-Based Visual Question Answering (KBVQA), yet their reasoning is\nfundamentally bottlenecked by a reliance on uni-dimensional evidence. This\n\"seeing only the trees, but not the forest\" approach prevents robust,\nmulti-faceted understanding. Inspired by the principle of seeing both the\nforest and trees, we propose Synergos-VQA, a novel synergistic reasoning\nframework. At its core, Synergos-VQA concurrently generates and fuses three\ncomplementary evidence streams at inference time: (1) Holistic Evidence to\nperceive the entire scene (the \"forest\"), (2) Structural Evidence from a\nprototype-driven module to identify key objects (the \"trees\"), and (3) Causal\nEvidence from a counterfactual probe to ensure the reasoning is robustly\ngrounded. By synergistically fusing this multi-faceted evidence, our framework\nachieves a more comprehensive and reliable reasoning process. Extensive\nexperiments show that Synergos-VQA decisively establishes a new\nstate-of-the-art on three challenging benchmarks, including OK-VQA and A-OKVQA.\nFurthermore, our approach demonstrates strong plug-and-play capabilities,\nsignificantly boosting various open-source MLLMs and proving that superior\nmethodological design can outperform sheer model scale.",
+      "pdf_url": "http://arxiv.org/pdf/2507.17659v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.17659v1",
+      "published": "2025-07-23",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Doubly robust outlier resistant inference on causal treatment effect",
+      "authors": [
+        "Joonsung Kang"
+      ],
+      "abstract": "Outliers can severely distort causal effect estimation in observational\nstudies, yet this issue has received limited attention in the literature. Their\ninfluence is especially pronounced in small sample sizes, where detecting and\nremoving outliers becomes increasingly difficult. Therefore, it is essential to\nestimate treatment effects robustly without excluding these influential data\npoints. To address this, we propose a doubly robust point estimator for the\naverage treatment effect under a contaminated model that includes outliers.\nRobustness in outcome regression is achieved through a robust estimating\nequation, while covariate balancing propensity scores (CBPS) ensure resilience\nin propensity score modeling.\n  To prevent model overfitting due to the inclusion of numerous parameters, we\nincorporate variable selection. All these components are unified under a\npenalized empirical likelihood framework. For confidence interval estimation,\nmost existing approaches rely on asymptotic properties, which may be unreliable\nin finite samples. We derive an optimal finite-sample confidence interval for\nthe average treatment effect using our proposed estimating equation, ensuring\nthat the interval bounds remain unaffected by outliers. Through simulations and\na real-world application involving hypertension data with outliers, we\ndemonstrate that our method consistently outperforms existing approaches in\nboth accuracy and robustness.",
+      "pdf_url": "http://arxiv.org/pdf/2507.17439v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.17439v1",
+      "published": "2025-07-23",
+      "categories": [
+        "stat.ME",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "CAPRI-CT: Causal Analysis and Predictive Reasoning for Image Quality Optimization in Computed Tomography",
+      "authors": [
+        "Sneha George Gnanakalavathy",
+        "Hairil Abdul Razak",
+        "Robert Meertens",
+        "Jonathan E. Fieldsend",
+        "Xujiong Ye",
+        "Mohammed M. Abdelsamea"
+      ],
+      "abstract": "In computed tomography (CT), achieving high image quality while minimizing\nradiation exposure remains a key clinical challenge. This paper presents\nCAPRI-CT, a novel causal-aware deep learning framework for Causal Analysis and\nPredictive Reasoning for Image Quality Optimization in CT imaging. CAPRI-CT\nintegrates image data with acquisition metadata (such as tube voltage, tube\ncurrent, and contrast agent types) to model the underlying causal relationships\nthat influence image quality. An ensemble of Variational Autoencoders (VAEs) is\nemployed to extract meaningful features and generate causal representations\nfrom observational data, including CT images and associated imaging parameters.\nThese input features are fused to predict the Signal-to-Noise Ratio (SNR) and\nsupport counterfactual inference, enabling what-if simulations, such as changes\nin contrast agents (types and concentrations) or scan parameters. CAPRI-CT is\ntrained and validated using an ensemble learning approach, achieving strong\npredictive performance. By facilitating both prediction and interpretability,\nCAPRI-CT provides actionable insights that could help radiologists and\ntechnicians design more efficient CT protocols without repeated physical scans.\nThe source code and dataset are publicly available at\nhttps://github.com/SnehaGeorge22/capri-ct.",
+      "pdf_url": "http://arxiv.org/pdf/2507.17420v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.17420v1",
+      "published": "2025-07-23",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "Ballot Design and Electoral Outcomes: The Role of Candidate Order and Party Affiliation",
       "authors": [
@@ -106,75 +172,6 @@
       "published": "2025-07-21",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Structural DID with ML: Theory, Simulation, and a Roadmap for Applied Research",
-      "authors": [
-        "Yile Yu",
-        "Anzhi Xu",
-        "Yi Wang"
-      ],
-      "abstract": "Causal inference in observational panel data has become a central concern in\neconomics,policy analysis,and the broader social sciences.To address the core\ncontradiction where traditional difference-in-differences (DID) struggles with\nhigh-dimensional confounding variables in observational panel data,while\nmachine learning (ML) lacks causal structure interpretability,this paper\nproposes an innovative framework called S-DIDML that integrates structural\nidentification with high-dimensional estimation.Building upon the structure of\ntraditional DID methods,S-DIDML employs structured residual orthogonalization\ntechniques (Neyman orthogonality+cross-fitting) to retain the group-time\ntreatment effect (ATT) identification structure while resolving\nhigh-dimensional covariate interference issues.It designs a dynamic\nheterogeneity estimation module combining causal forests and semi-parametric\nmodels to capture spatiotemporal heterogeneity effects.The framework\nestablishes a complete modular application process with standardized Stata\nimplementation paths.The introduction of S-DIDML enriches methodological\nresearch on DID and DDML innovations, shifting causal inference from method\nstacking to architecture integration.This advancement enables social sciences\nto precisely identify policy-sensitive groups and optimize resource\nallocation.The framework provides replicable evaluation tools, decision\noptimization references,and methodological paradigms for complex intervention\nscenarios such as digital transformation policies and environmental\nregulations.",
-      "pdf_url": "http://arxiv.org/pdf/2507.15899v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.15899v1",
-      "published": "2025-07-21",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "91-01"
-      ]
-    },
-    {
-      "title": "From Kicking to Causality: Simulating Infant Agency Detection with a Robust Intrinsic Reward",
-      "authors": [
-        "Xia Xu",
-        "Jochen Triesch"
-      ],
-      "abstract": "While human infants robustly discover their own causal efficacy, standard\nreinforcement learning agents remain brittle, as their reliance on\ncorrelation-based rewards fails in noisy, ecologically valid scenarios. To\naddress this, we introduce the Causal Action Influence Score (CAIS), a novel\nintrinsic reward rooted in causal inference. CAIS quantifies an action's\ninfluence by measuring the 1-Wasserstein distance between the learned\ndistribution of sensory outcomes conditional on that action, $p(h|a)$, and the\nbaseline outcome distribution, $p(h)$. This divergence provides a robust reward\nthat isolates the agent's causal impact from confounding environmental noise.\nWe test our approach in a simulated infant-mobile environment where\ncorrelation-based perceptual rewards fail completely when the mobile is\nsubjected to external forces. In stark contrast, CAIS enables the agent to\nfilter this noise, identify its influence, and learn the correct policy.\nFurthermore, the high-quality predictive model learned for CAIS allows our\nagent, when augmented with a surprise signal, to successfully reproduce the\n\"extinction burst\" phenomenon. We conclude that explicitly inferring causality\nis a crucial mechanism for developing a robust sense of agency, offering a\npsychologically plausible framework for more adaptive autonomous systems.",
-      "pdf_url": "http://arxiv.org/pdf/2507.15106v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.15106v1",
-      "published": "2025-07-20",
-      "categories": [
-        "cs.AI",
-        "cs.RO",
-        "F.2.2"
-      ]
-    },
-    {
-      "title": "Kernel Based Maximum Entropy Inverse Reinforcement Learning for Mean-Field Games",
-      "authors": [
-        "Berkay Anahtarci",
-        "Can Deha Kariksiz",
-        "Naci Saldi"
-      ],
-      "abstract": "We consider the maximum causal entropy inverse reinforcement learning problem\nfor infinite-horizon stationary mean-field games, in which we model the unknown\nreward function within a reproducing kernel Hilbert space. This allows the\ninference of rich and potentially nonlinear reward structures directly from\nexpert demonstrations, in contrast to most existing inverse reinforcement\nlearning approaches for mean-field games that typically restrict the reward\nfunction to a linear combination of a fixed finite set of basis functions. We\nalso focus on the infinite-horizon cost structure, whereas prior studies\nprimarily rely on finite-horizon formulations. We introduce a Lagrangian\nrelaxation to this maximum causal entropy inverse reinforcement learning\nproblem that enables us to reformulate it as an unconstrained log-likelihood\nmaximization problem, and obtain a solution \\lk{via} a gradient ascent\nalgorithm. To illustrate the theoretical consistency of the algorithm, we\nestablish the smoothness of the log-likelihood objective by proving the\nFr\\'echet differentiability of the related soft Bellman operators with respect\nto the parameters in the reproducing kernel Hilbert space. We demonstrate the\neffectiveness of our method on a mean-field traffic routing game, where it\naccurately recovers expert behavior.",
-      "pdf_url": "http://arxiv.org/pdf/2507.14529v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.14529v1",
-      "published": "2025-07-19",
-      "categories": [
-        "cs.LG",
-        "math.OC",
-        "91A16, 68T05, 49N45, 93E20, 46E22"
-      ]
-    },
-    {
-      "title": "Positive-Unlabeled Learning for Control Group Construction in Observational Causal Inference",
-      "authors": [
-        "Ilias Tsoumas",
-        "Dimitrios Bormpoudakis",
-        "Vasileios Sitokonstantinou",
-        "Athanasios Askitopoulos",
-        "Andreas Kalogeras",
-        "Charalampos Kontoes",
-        "Ioannis Athanasiadis"
-      ],
-      "abstract": "In causal inference, whether through randomized controlled trials or\nobservational studies, access to both treated and control units is essential\nfor estimating the effect of a treatment on an outcome of interest. When\ntreatment assignment is random, the average treatment effect (ATE) can be\nestimated directly by comparing outcomes between groups. In non-randomized\nsettings, various techniques are employed to adjust for confounding and\napproximate the counterfactual scenario to recover an unbiased ATE. A common\nchallenge, especially in observational studies, is the absence of units clearly\nlabeled as controls-that is, units known not to have received the treatment. To\naddress this, we propose positive-unlabeled (PU) learning as a framework for\nidentifying, with high confidence, control units from a pool of unlabeled ones,\nusing only the available treated (positive) units. We evaluate this approach\nusing both simulated and real-world data. We construct a causal graph with\ndiverse relationships and use it to generate synthetic data under various\nscenarios, assessing how reliably the method recovers control groups that allow\nestimates of true ATE. We also apply our approach to real-world data on optimal\nsowing and fertilizer treatments in sustainable agriculture. Our findings show\nthat PU learning can successfully identify control (negative) units from\nunlabeled data based only on treated units and, through the resulting control\ngroup, estimate an ATE that closely approximates the true value. This work has\nimportant implications for observational causal inference, especially in fields\nwhere randomized experiments are difficult or costly. In domains such as earth,\nenvironmental, and agricultural sciences, it enables a plethora of\nquasi-experiments by leveraging available earth observation and climate data,\nparticularly when treated units are available but control units are lacking.",
-      "pdf_url": "http://arxiv.org/pdf/2507.14528v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.14528v1",
-      "published": "2025-07-19",
-      "categories": [
-        "cs.LG"
       ]
     }
   ]
