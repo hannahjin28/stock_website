@@ -1,6 +1,57 @@
 {
-  "last_updated": "2025-07-25T00:58:21.058287",
+  "last_updated": "2025-07-26T00:56:51.598631",
   "papers": [
+    {
+      "title": "Deep Learning for Blood-Brain Barrier Permeability Prediction",
+      "authors": [
+        "Zihan Yang",
+        "Haipeng Gong"
+      ],
+      "abstract": "Predicting whether a molecule can cross the blood-brain barrier (BBB) is a\nkey step in early-stage neuropharmaceutical development, directly influencing\nboth research efficiency and success rates in drug discovery. Traditional\nempirical methods based on physicochemical properties are prone to systematic\nmisjudgements due to their reliance on static rules. Early machine learning\nmodels, although data-driven, often suffer from limited capacity, poor\ngeneralization, and insufficient interpretability. In recent years, artificial\nintelligence (AI) methods have become essential tools for predicting BBB\npermeability and guiding related drug design, owing to their ability to model\nmolecular structures and capture complex biological mechanisms. This article\nsystematically reviews the evolution of this field-from deep neural networks to\ngraph-based structural modeling-highlighting the advantages of multi-task and\nmultimodal learning strategies in identifying mechanism-relevant variables. We\nfurther explore the emerging potential of generative models and causal\ninference methods for integrating permeability prediction with mechanism-aware\ndrug design. BBB modeling is in the transition from static classification\ntoward mechanistic perception and structure-function modeling. This paradigm\nshift provides a methodological foundation and future roadmap for the\nintegration of AI into neuropharmacological development.",
+      "pdf_url": "http://arxiv.org/pdf/2507.18557v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.18557v1",
+      "published": "2025-07-24",
+      "categories": [
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "A Two-armed Bandit Framework for A/B Testing",
+      "authors": [
+        "Jinjuan Wang",
+        "Qianglin Wen",
+        "Yu Zhang",
+        "Xiaodong Yan",
+        "Chengchun Shi"
+      ],
+      "abstract": "A/B testing is widely used in modern technology companies for policy\nevaluation and product deployment, with the goal of comparing the outcomes\nunder a newly-developed policy against a standard control. Various causal\ninference and reinforcement learning methods developed in the literature are\napplicable to A/B testing. This paper introduces a two-armed bandit framework\ndesigned to improve the power of existing approaches. The proposed procedure\nconsists of three main steps: (i) employing doubly robust estimation to\ngenerate pseudo-outcomes, (ii) utilizing a two-armed bandit framework to\nconstruct the test statistic, and (iii) applying a permutation-based method to\ncompute the $p$-value. We demonstrate the efficacy of the proposed method\nthrough asymptotic theories, numerical experiments and real-world data from a\nridesharing company, showing its superior performance in comparison to existing\nmethods.",
+      "pdf_url": "http://arxiv.org/pdf/2507.18118v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.18118v1",
+      "published": "2025-07-24",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "GrAInS: Gradient-based Attribution for Inference-Time Steering of LLMs and VLMs",
+      "authors": [
+        "Duy Nguyen",
+        "Archiki Prasad",
+        "Elias Stengel-Eskin",
+        "Mohit Bansal"
+      ],
+      "abstract": "Inference-time steering methods offer a lightweight alternative to\nfine-tuning large language models (LLMs) and vision-language models (VLMs) by\nmodifying internal activations at test time without updating model weights.\nHowever, most existing approaches rely on fixed, global intervention vectors,\noverlook the causal influence of individual input tokens, and fail to leverage\ninformative gradients from the model's logits, particularly in multimodal\nsettings where visual and textual inputs contribute unevenly. To address these\nlimitations, we introduce GrAInS, an inference-time steering approach that\noperates across both language-only and vision-language models and tasks. GrAInS\nuses contrastive, gradient-based attribution via Integrated Gradients to\nidentify the top-k most influential tokens, both positively and negatively\nattributed based on their contribution to preferred versus dispreferred\noutputs. These tokens are then used to construct directional steering vectors\nthat capture semantic shifts from undesirable to desirable behavior. During\ninference, GrAInS adjusts hidden activations at transformer layers guided by\ntoken-level attribution signals, and normalizes activations to preserve\nrepresentational scale. This enables fine-grained, interpretable, and modular\ncontrol over model behavior, without retraining or auxiliary supervision.\nEmpirically, GrAInS consistently outperforms both fine-tuning and existing\nsteering baselines: it achieves a 13.22% accuracy gain on TruthfulQA using\nLlama-3.1-8B, reduces hallucination rates on MMHal-Bench from 0.624 to 0.514\nwith LLaVA-1.6-7B, and improves alignment win rates on SPA-VL by 8.11%, all\nwhile preserving the model's fluency and general capabilities.",
+      "pdf_url": "http://arxiv.org/pdf/2507.18043v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.18043v1",
+      "published": "2025-07-24",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ]
+    },
     {
       "title": "Debiased maximum-likelihood estimators for hazard ratios under machine-learning adjustment",
       "authors": [
@@ -68,6 +119,22 @@
       ]
     },
     {
+      "title": "Causal Mechanism Estimation in Multi-Sensor Systems Across Multiple Domains",
+      "authors": [
+        "Jingyi Yu",
+        "Tim Pychynski",
+        "Marco F. Huber"
+      ],
+      "abstract": "To gain deeper insights into a complex sensor system through the lens of\ncausality, we present common and individual causal mechanism estimation\n(CICME), a novel three-step approach to inferring causal mechanisms from\nheterogeneous data collected across multiple domains. By leveraging the\nprinciple of Causal Transfer Learning (CTL), CICME is able to reliably detect\ndomain-invariant causal mechanisms when provided with sufficient samples. The\nidentified common causal mechanisms are further used to guide the estimation of\nthe remaining causal mechanisms in each domain individually. The performance of\nCICME is evaluated on linear Gaussian models under scenarios inspired from a\nmanufacturing process. Building upon existing continuous optimization-based\ncausal discovery methods, we show that CICME leverages the benefits of applying\ncausal discovery on the pooled data and repeatedly on data from individual\ndomains, and it even outperforms both baseline methods under certain scenarios.",
+      "pdf_url": "http://arxiv.org/pdf/2507.17792v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.17792v1",
+      "published": "2025-07-23",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
       "title": "Ballot Design and Electoral Outcomes: The Role of Candidate Order and Party Affiliation",
       "authors": [
         "Alessandro Arlotto",
@@ -94,82 +161,6 @@
       "pdf_url": "http://arxiv.org/pdf/2507.16691v1",
       "arxiv_url": "http://arxiv.org/abs/2507.16691v1",
       "published": "2025-07-22",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Estimating Treatment Effects with Independent Component Analysis",
-      "authors": [
-        "Patrik Reizinger",
-        "Lester Mackey",
-        "Wieland Brendel",
-        "Rahul Krishnan"
-      ],
-      "abstract": "The field of causal inference has developed a variety of methods to\naccurately estimate treatment effects in the presence of nuisance. Meanwhile,\nthe field of identifiability theory has developed methods like Independent\nComponent Analysis (ICA) to identify latent sources and mixing weights from\ndata. While these two research communities have developed largely\nindependently, they aim to achieve similar goals: the accurate and\nsample-efficient estimation of model parameters. In the partially linear\nregression (PLR) setting, Mackey et al. (2018) recently found that estimation\nconsistency can be improved with non-Gaussian treatment noise. Non-Gaussianity\nis also a crucial assumption for identifying latent factors in ICA. We provide\nthe first theoretical and empirical insights into this connection, showing that\nICA can be used for causal effect estimation in the PLR model. Surprisingly, we\nfind that linear ICA can accurately estimate multiple treatment effects even in\nthe presence of Gaussian confounders or nonlinear nuisance.",
-      "pdf_url": "http://arxiv.org/pdf/2507.16467v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.16467v1",
-      "published": "2025-07-22",
-      "categories": [
-        "stat.ML",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Do Large Language Models Have a Planning Theory of Mind? Evidence from MindGames: a Multi-Step Persuasion Task",
-      "authors": [
-        "Jared Moore",
-        "Ned Cooper",
-        "Rasmus Overmark",
-        "Beba Cibralic",
-        "Nick Haber",
-        "Cameron R. Jones"
-      ],
-      "abstract": "Recent evidence suggests Large Language Models (LLMs) display Theory of Mind\n(ToM) abilities. Most ToM experiments place participants in a spectatorial\nrole, wherein they predict and interpret other agents' behavior. However, human\nToM also contributes to dynamically planning action and strategically\nintervening on others' mental states. We present MindGames: a novel `planning\ntheory of mind' (PToM) task which requires agents to infer an interlocutor's\nbeliefs and desires to persuade them to alter their behavior. Unlike previous\nevaluations, we explicitly evaluate use cases of ToM. We find that humans\nsignificantly outperform o1-preview (an LLM) at our PToM task (11% higher;\n$p=0.006$). We hypothesize this is because humans have an implicit causal model\nof other agents (e.g., they know, as our task requires, to ask about people's\npreferences). In contrast, o1-preview outperforms humans in a baseline\ncondition which requires a similar amount of planning but minimal mental state\ninferences (e.g., o1-preview is better than humans at planning when already\ngiven someone's preferences). These results suggest a significant gap between\nhuman-like social reasoning and LLM abilities.",
-      "pdf_url": "http://arxiv.org/pdf/2507.16196v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.16196v1",
-      "published": "2025-07-22",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "CoLD: Counterfactually-Guided Length Debiasing for Process Reward Models",
-      "authors": [
-        "Congmin Zheng",
-        "Jiachen Zhu",
-        "Jianghao Lin",
-        "Xinyi Dai",
-        "Yong Yu",
-        "Weinan Zhang",
-        "Mengyue Yang"
-      ],
-      "abstract": "Process Reward Models (PRMs) play a central role in evaluating and guiding\nmulti-step reasoning in large language models (LLMs), especially for\nmathematical problem solving. However, we identify a pervasive length bias in\nexisting PRMs: they tend to assign higher scores to longer reasoning steps,\neven when the semantic content and logical validity are unchanged. This bias\nundermines the reliability of reward predictions and leads to overly verbose\noutputs during inference. To address this issue, we propose\nCoLD(Counterfactually-Guided Length Debiasing), a unified framework that\nmitigates length bias through three components: an explicit length-penalty\nadjustment, a learned bias estimator trained to capture spurious length-related\nsignals, and a joint training strategy that enforces length-invariance in\nreward predictions. Our approach is grounded in counterfactual reasoning and\ninformed by causal graph analysis. Extensive experiments on MATH500 and\nGSM-Plus show that CoLD consistently reduces reward-length correlation,\nimproves accuracy in step selection, and encourages more concise, logically\nvalid reasoning. These results demonstrate the effectiveness and practicality\nof CoLD in improving the fidelity and robustness of PRMs.",
-      "pdf_url": "http://arxiv.org/pdf/2507.15698v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.15698v1",
-      "published": "2025-07-21",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Inference on Nonlinear Counterfactual Functionals under a Multiplicative IV Model",
-      "authors": [
-        "Yonghoon Lee",
-        "Mengxin Yu",
-        "Jiewen Liu",
-        "Chan Park",
-        "Yunshu Zhang",
-        "James M. Robins",
-        "Eric J. Tchetgen Tchetgen"
-      ],
-      "abstract": "Instrumental variable (IV) methods play a central role in causal inference,\nparticularly in settings where treatment assignment is confounded by unobserved\nvariables. IV methods have been extensively developed in recent years and\napplied across diverse domains, from economics to epidemiology. In this work,\nwe study the recently introduced multiplicative IV (MIV) model and demonstrate\nits utility for causal inference beyond the average treatment effect. In\nparticular, we show that it enables identification and inference for a broad\nclass of counterfactual functionals characterized by moment equations. This\nincludes, for example, inference on quantile treatment effects. We develop\nmethods for efficient and multiply robust estimation of such functionals, and\nprovide inference procedures with asymptotic validity. Experimental results\ndemonstrate that the proposed procedure performs well even with moderate sample\nsizes.",
-      "pdf_url": "http://arxiv.org/pdf/2507.15612v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.15612v1",
-      "published": "2025-07-21",
       "categories": [
         "stat.ME"
       ]
