@@ -1,6 +1,38 @@
 {
-  "last_updated": "2025-07-28T01:02:53.536322",
+  "last_updated": "2025-07-29T01:04:42.167118",
   "papers": [
+    {
+      "title": "Riesz representers for the rest of us",
+      "authors": [
+        "Nicholas T. Williams",
+        "Oliver J. Hines",
+        "Kara E. Rudolph"
+      ],
+      "abstract": "The application of semiparametric efficient estimators, particularly those\nthat leverage machine learning, is rapidly expanding within epidemiology and\ncausal inference. Much of the recent methodological literature on these\nestimators relies heavily on the Riesz representation theorem and Riesz\nregression. This paper aims to introduce the Riesz representation theorem to an\napplied audience, explaining why and how Riesz regression is becoming widely\nused in the semiparametric estimator statistical literature.",
+      "pdf_url": "http://arxiv.org/pdf/2507.19413v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.19413v1",
+      "published": "2025-07-25",
+      "categories": [
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Probably Approximately Correct Causal Discovery",
+      "authors": [
+        "Mian Wei",
+        "Somesh Jha",
+        "David Page"
+      ],
+      "abstract": "The discovery of causal relationships is a foundational problem in artificial\nintelligence, statistics, epidemiology, economics, and beyond. While elegant\ntheories exist for accurate causal discovery given infinite data, real-world\napplications are inherently resource-constrained. Effective methods for\ninferring causal relationships from observational data must perform well under\nfinite data and time constraints, where \"performing well\" implies achieving\nhigh, though not perfect accuracy. In his seminal paper A Theory of the\nLearnable, Valiant highlighted the importance of resource constraints in\nsupervised machine learning, introducing the concept of Probably Approximately\nCorrect (PAC) learning as an alternative to exact learning. Inspired by\nValiant's work, we propose the Probably Approximately Correct Causal (PACC)\nDiscovery framework, which extends PAC learning principles to the causal field.\nThis framework emphasizes both computational and sample efficiency for\nestablished causal methods such as propensity score techniques and instrumental\nvariable approaches. Furthermore, we show that it can also provide theoretical\nguarantees for other widely used methods, such as the Self-Controlled Case\nSeries (SCCS) method, which had previously lacked such guarantees.",
+      "pdf_url": "http://arxiv.org/pdf/2507.18903v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.18903v1",
+      "published": "2025-07-25",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Deep Learning for Blood-Brain Barrier Permeability Prediction",
       "authors": [
@@ -132,37 +164,6 @@
       "categories": [
         "cs.LG",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Ballot Design and Electoral Outcomes: The Role of Candidate Order and Party Affiliation",
-      "authors": [
-        "Alessandro Arlotto",
-        "Alexandre Belloni",
-        "Fei Fang",
-        "Saša Pekeč"
-      ],
-      "abstract": "We use causal inference to study how designing ballots with and without party\ndesignations impacts electoral outcomes when partisan voters rely on\nparty-order cues to infer candidate affiliation in races without designations.\nIf the party orders of candidates in races with and without party designations\ndiffer, these voters might cast their votes incorrectly. We identify a\nquasi-randomized natural experiment with contest-level treatment assignment\npertaining to North Carolina judicial elections and use double machine learning\nto accurately capture the magnitude of such incorrectly cast votes. Using\nprecinct-level election and demographic data, we estimate that 11.8% (95%\nconfidence interval: [4.0%, 19.6%]) of democratic partisan voters and 15.4%\n(95% confidence interval: [7.8%, 23.1%]) of republican partisan voters cast\ntheir votes incorrectly due to the difference in party orders. Our results\nindicate that ballots mixing contests with and without party designations\nmislead many voters, leading to outcomes that do not reflect true voter\npreferences. To accurately capture voter intent, such ballot designs should be\navoided.",
-      "pdf_url": "http://arxiv.org/pdf/2507.16722v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.16722v1",
-      "published": "2025-07-22",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "On Causal Inference for the Survivor Function",
-      "authors": [
-        "Benjamin R. Baer",
-        "Ashkan Ertefaie",
-        "Robert L. Strawderman"
-      ],
-      "abstract": "In this expository paper, we consider the problem of causal inference and\nefficient estimation for the counterfactual survivor function. This problem has\npreviously been considered in the literature in several papers, each relying on\nthe imposition of conditions meant to identify the desired estimand from the\nobserved data. These conditions, generally referred to as either implying or\nsatisfying coarsening at random, are inconsistently imposed across this\nliterature and, in all cases, fail to imply coarsening at random. We establish\nthe first general characterization of coarsening at random, and also sequential\ncoarsening at random, for this estimation problem. Other contributions include\nthe first general characterization of the set of all influence functions for\nthe counterfactual survival probability under sequential coarsening at random,\nand the corresponding nonparametric efficient influence function. These\ncharacterizations are general in that neither impose continuity assumptions on\neither the underlying failure or censoring time distributions. We further show\nhow the latter compares to alternative forms recently derived in the\nliterature, including establishing the pointwise equivalence of the influence\nfunctions for our nonparametric efficient estimator and that recently given in\nWestling et al (2024, Journal of the American Statistical Association).",
-      "pdf_url": "http://arxiv.org/pdf/2507.16691v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.16691v1",
-      "published": "2025-07-22",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
