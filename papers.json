@@ -1,6 +1,112 @@
 {
-  "last_updated": "2025-07-29T01:04:42.167118",
+  "last_updated": "2025-07-30T00:59:30.044749",
   "papers": [
+    {
+      "title": "Personalized Treatment Effect Estimation from Unstructured Data",
+      "authors": [
+        "Henri Arno",
+        "Thomas Demeester"
+      ],
+      "abstract": "Existing methods for estimating personalized treatment effects typically rely\non structured covariates, limiting their applicability to unstructured data.\nYet, leveraging unstructured data for causal inference has considerable\napplication potential, for instance in healthcare, where clinical notes or\nmedical images are abundant. To this end, we first introduce an approximate\n'plug-in' method trained directly on the neural representations of unstructured\ndata. However, when these fail to capture all confounding information, the\nmethod may be subject to confounding bias. We therefore introduce two\ntheoretically grounded estimators that leverage structured measurements of the\nconfounders during training, but allow estimating personalized treatment\neffects purely from unstructured inputs, while avoiding confounding bias. When\nthese structured measurements are only available for a non-representative\nsubset of the data, these estimators may suffer from sampling bias. To address\nthis, we further introduce a regression-based correction that accounts for the\nnon-uniform sampling, assuming the sampling mechanism is known or can be\nwell-estimated. Our experiments on two benchmark datasets show that the plug-in\nmethod, directly trainable on large unstructured datasets, achieves strong\nempirical performance across all settings, despite its simplicity.",
+      "pdf_url": "http://arxiv.org/pdf/2507.20993v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.20993v1",
+      "published": "2025-07-28",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Onboard Hyperspectral Super-Resolution with Deep Pushbroom Neural Network",
+      "authors": [
+        "Davide Piccinini",
+        "Diego Valsesia",
+        "Enrico Magli"
+      ],
+      "abstract": "Hyperspectral imagers on satellites obtain the fine spectral signatures\nessential for distinguishing one material from another at the expense of\nlimited spatial resolution. Enhancing the latter is thus a desirable\npreprocessing step in order to further improve the detection capabilities\noffered by hyperspectral images on downstream tasks. At the same time, there is\na growing interest towards deploying inference methods directly onboard of\nsatellites, which calls for lightweight image super-resolution methods that can\nbe run on the payload in real time. In this paper, we present a novel neural\nnetwork design, called Deep Pushbroom Super-Resolution (DPSR) that matches the\npushbroom acquisition of hyperspectral sensors by processing an image line by\nline in the along-track direction with a causal memory mechanism to exploit\npreviously acquired lines. This design greatly limits memory requirements and\ncomputational complexity, achieving onboard real-time performance, i.e., the\nability to super-resolve a line in the time it takes to acquire the next one,\non low-power hardware. Experiments show that the quality of the super-resolved\nimages is competitive or even outperforms state-of-the-art methods that are\nsignificantly more complex.",
+      "pdf_url": "http://arxiv.org/pdf/2507.20765v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.20765v1",
+      "published": "2025-07-28",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Causal Inference when Intervention Units and Outcome Units Differ",
+      "authors": [
+        "Georgia Papadogeorgou",
+        "Zhaoyan Song",
+        "Guido Imbens",
+        "Fabrizia Mealli"
+      ],
+      "abstract": "We study causal inference in settings characterized by interference with a\nbipartite structure. There are two distinct sets of units: intervention units\nto which an intervention can be applied and outcome units on which the outcome\nof interest can be measured. Outcome units may be affected by interventions on\nsome, but not all, intervention units, as captured by a bipartite graph.\nExamples of this setting can be found in analyses of the impact of pollution\nabatement in plants on health outcomes for individuals, or the effect of\ntransportation network expansions on regional economic activity. We introduce\nand discuss a variety of old and new causal estimands for these bipartite\nsettings. We do not impose restrictions on the functional form of the exposure\nmapping and the potential outcomes, thus allowing for heterogeneity,\nnon-linearity, non-additivity, and potential interactions in treatment effects.\nWe propose unbiased weighting estimators for these estimands from a\ndesign-based perspective, based on the knowledge of the bipartite network under\ngeneral experimental designs. We derive their variance and prove consistency\nfor increasing number of outcome units. Using the Chinese high-speed rail\nconstruction study, analyzed in Borusyak and Hull [2023], we discuss\nnon-trivial positivity violations that depend on the estimands, the adopted\nexperimental design, and the structure of the bipartite graph.",
+      "pdf_url": "http://arxiv.org/pdf/2507.20231v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.20231v1",
+      "published": "2025-07-27",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Inference for Circular Data",
+      "authors": [
+        "Kuan-Hsun Wu"
+      ],
+      "abstract": "In causal inference, a fundamental task is to estimate the effect resulting\nfrom a specific treatment, which is often handled with inverse probability\nweighting. Despite an abundance of attention to the advancement of this task,\nmost articles have focused on linear data rather than circular data, which are\nmeasured in angles. In this article, we extend the causal inference framework\nto accommodate circular data. Specifically, two new treatment effects, average\ndirection treatment effect (ADTE) and average length treatment effect (ALTE),\nare introduced to offer a proper causal explanation for these data. As the\naverage direction and average length describe the location and concentration of\na random sample of circular data, the ADTE and ALTE measure the change in\ndirection and length between two counterfactual outcomes. With inverse\nprobability weighting, we propose estimators that exhibit ideal theoretical\nproperties, which are validated by a simulation study. To illustrate the\npractical utility of our estimator, we analyze the effect of different job\ntypes on dispatchers' sleep patterns using data from Federal Railroad\nAdministration.",
+      "pdf_url": "http://arxiv.org/pdf/2507.19889v2",
+      "arxiv_url": "http://arxiv.org/abs/2507.19889v2",
+      "published": "2025-07-26",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Adaptive Proximal Causal Inference with Some Invalid Proxies",
+      "authors": [
+        "Prabrisha Rakshit",
+        "Xu Shi",
+        "Eric Tchetgen Tchetgen"
+      ],
+      "abstract": "Proximal causal inference (PCI) is a recently proposed framework to identify\nand estimate the causal effect of an exposure on an outcome in the presence of\nhidden confounders, using observed proxies. Specifically, PCI relies on two\ntypes of proxies: a treatment-inducing confounding proxy, related to the\noutcome only through its association with unmeasured confounders (given\ntreatment and covariates), and an outcome-inducing confounding proxy, related\nto the treatment only through such association (given covariates). These\nproxies must satisfy stringent exclusion restrictions - namely, the treatment\nproxy must not affect the outcome, and the outcome proxy must not be affected\nby the treatment. To improve identification and potentially efficiency,\nmultiple proxies are often used, raising concerns about bias from exclusion\nviolations. To address this, we introduce necessary and sufficient conditions\nfor identifying causal effects in the presence of many proxies, some\npotentially invalid. Under a canonical proximal linear structural equations\nmodel, we propose a LASSO-based median estimator that jointly selects valid\nproxies and estimates the causal effect, with theoretical guarantees.\nRecognizing LASSO's limitations in consistently selecting valid treatment\nproxies, we develop an adaptive LASSO-based estimator with differential\npenalization. We show that it is root-n consistent and yields valid confidence\nintervals when a valid outcome proxy is available. We also extend the approach\nto settings with many potentially invalid outcome proxies. Theoretical results\nare supported by simulations and an application assessing the effect of right\nheart catheterization on 30-day survival in ICU patient.",
+      "pdf_url": "http://arxiv.org/pdf/2507.19623v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.19623v1",
+      "published": "2025-07-25",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Beyond Bonferroni: Hierarchical Multiple Testing in Empirical Research",
+      "authors": [
+        "Sebastian Calonico",
+        "Sebastian Galiani"
+      ],
+      "abstract": "Empirical research in the social and medical sciences frequently involves\ntesting multiple hypotheses simultaneously, increasing the risk of false\npositives due to chance. Classical multiple testing procedures, such as the\nBonferroni correction, control the family-wise error rate (FWER) but tend to be\noverly conservative, reducing statistical power. Stepwise alternatives like the\nHolm and Hochberg procedures offer improved power while maintaining error\ncontrol under certain dependence structures. However, these standard approaches\ntypically ignore hierarchical relationships among hypotheses -- structures that\nare common in settings such as clinical trials and program evaluations, where\noutcomes are often logically or causally linked. Hierarchical multiple testing\nprocedures -- including fixed sequence, fallback, and gatekeeping methods --\nexplicitly incorporate these relationships, providing more powerful and\ninterpretable frameworks for inference. This paper reviews key hierarchical\nmethods, compares their statistical properties and practical trade-offs, and\ndiscusses implications for applied empirical research.",
+      "pdf_url": "http://arxiv.org/pdf/2507.19610v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.19610v1",
+      "published": "2025-07-25",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Inference with weights: Residualization produces short, valid intervals for varying estimands and varying resampling processes",
+      "authors": [
+        "Erin Hartman",
+        "Chad Hazlett",
+        "Arisa Sadeghpour"
+      ],
+      "abstract": "Weighting procedures are used in observational causal inference to adjust for\ncovariate imbalance within the sample. Common practice for inference is to\nestimate robust standard errors from a weighted regression of outcome on\ntreatment. However, it is well known that weighting can inflate variance\nestimates, sometimes significantly, leading to standard errors and confidence\nintervals that are overly conservative. We instead examine and recommend the\nuse of robust standard errors from a weighted regression that additionally\nincludes the balancing covariates and their interactions with treatment. We\nshow that these standard errors are more precise and asymptotically correct for\nweights that achieve exact balance under multiple common resampling frameworks,\nincluding design-based and model-based inference, as well as superpopulation\nsampling with a finite sample correction. Gains to precision can be quite\nsignificant when the balancing weights adjust for prognostic covariates. For\nprocedures that balance only approximately or in expectation, such as inverse\npropensity weighting or approximate balancing weights, our proposed method\nimproves precision by reducing residuals through augmentation with the\nparametric model. We demonstrate our approach through simulation and\nre-analysis of multiple empirical studies.",
+      "pdf_url": "http://arxiv.org/pdf/2507.19607v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.19607v1",
+      "published": "2025-07-25",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Riesz representers for the rest of us",
       "authors": [
@@ -36,134 +142,14 @@
     {
       "title": "Deep Learning for Blood-Brain Barrier Permeability Prediction",
       "authors": [
-        "Zihan Yang",
-        "Haipeng Gong"
+        "Zihan Yang"
       ],
       "abstract": "Predicting whether a molecule can cross the blood-brain barrier (BBB) is a\nkey step in early-stage neuropharmaceutical development, directly influencing\nboth research efficiency and success rates in drug discovery. Traditional\nempirical methods based on physicochemical properties are prone to systematic\nmisjudgements due to their reliance on static rules. Early machine learning\nmodels, although data-driven, often suffer from limited capacity, poor\ngeneralization, and insufficient interpretability. In recent years, artificial\nintelligence (AI) methods have become essential tools for predicting BBB\npermeability and guiding related drug design, owing to their ability to model\nmolecular structures and capture complex biological mechanisms. This article\nsystematically reviews the evolution of this field-from deep neural networks to\ngraph-based structural modeling-highlighting the advantages of multi-task and\nmultimodal learning strategies in identifying mechanism-relevant variables. We\nfurther explore the emerging potential of generative models and causal\ninference methods for integrating permeability prediction with mechanism-aware\ndrug design. BBB modeling is in the transition from static classification\ntoward mechanistic perception and structure-function modeling. This paradigm\nshift provides a methodological foundation and future roadmap for the\nintegration of AI into neuropharmacological development.",
-      "pdf_url": "http://arxiv.org/pdf/2507.18557v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.18557v1",
+      "pdf_url": "http://arxiv.org/pdf/2507.18557v2",
+      "arxiv_url": "http://arxiv.org/abs/2507.18557v2",
       "published": "2025-07-24",
       "categories": [
         "q-bio.QM"
-      ]
-    },
-    {
-      "title": "A Two-armed Bandit Framework for A/B Testing",
-      "authors": [
-        "Jinjuan Wang",
-        "Qianglin Wen",
-        "Yu Zhang",
-        "Xiaodong Yan",
-        "Chengchun Shi"
-      ],
-      "abstract": "A/B testing is widely used in modern technology companies for policy\nevaluation and product deployment, with the goal of comparing the outcomes\nunder a newly-developed policy against a standard control. Various causal\ninference and reinforcement learning methods developed in the literature are\napplicable to A/B testing. This paper introduces a two-armed bandit framework\ndesigned to improve the power of existing approaches. The proposed procedure\nconsists of three main steps: (i) employing doubly robust estimation to\ngenerate pseudo-outcomes, (ii) utilizing a two-armed bandit framework to\nconstruct the test statistic, and (iii) applying a permutation-based method to\ncompute the $p$-value. We demonstrate the efficacy of the proposed method\nthrough asymptotic theories, numerical experiments and real-world data from a\nridesharing company, showing its superior performance in comparison to existing\nmethods.",
-      "pdf_url": "http://arxiv.org/pdf/2507.18118v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.18118v1",
-      "published": "2025-07-24",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "GrAInS: Gradient-based Attribution for Inference-Time Steering of LLMs and VLMs",
-      "authors": [
-        "Duy Nguyen",
-        "Archiki Prasad",
-        "Elias Stengel-Eskin",
-        "Mohit Bansal"
-      ],
-      "abstract": "Inference-time steering methods offer a lightweight alternative to\nfine-tuning large language models (LLMs) and vision-language models (VLMs) by\nmodifying internal activations at test time without updating model weights.\nHowever, most existing approaches rely on fixed, global intervention vectors,\noverlook the causal influence of individual input tokens, and fail to leverage\ninformative gradients from the model's logits, particularly in multimodal\nsettings where visual and textual inputs contribute unevenly. To address these\nlimitations, we introduce GrAInS, an inference-time steering approach that\noperates across both language-only and vision-language models and tasks. GrAInS\nuses contrastive, gradient-based attribution via Integrated Gradients to\nidentify the top-k most influential tokens, both positively and negatively\nattributed based on their contribution to preferred versus dispreferred\noutputs. These tokens are then used to construct directional steering vectors\nthat capture semantic shifts from undesirable to desirable behavior. During\ninference, GrAInS adjusts hidden activations at transformer layers guided by\ntoken-level attribution signals, and normalizes activations to preserve\nrepresentational scale. This enables fine-grained, interpretable, and modular\ncontrol over model behavior, without retraining or auxiliary supervision.\nEmpirically, GrAInS consistently outperforms both fine-tuning and existing\nsteering baselines: it achieves a 13.22% accuracy gain on TruthfulQA using\nLlama-3.1-8B, reduces hallucination rates on MMHal-Bench from 0.624 to 0.514\nwith LLaVA-1.6-7B, and improves alignment win rates on SPA-VL by 8.11%, all\nwhile preserving the model's fluency and general capabilities.",
-      "pdf_url": "http://arxiv.org/pdf/2507.18043v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.18043v1",
-      "published": "2025-07-24",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Debiased maximum-likelihood estimators for hazard ratios under machine-learning adjustment",
-      "authors": [
-        "Takashi Hayakawa",
-        "Satoshi Asai"
-      ],
-      "abstract": "Previous studies have shown that hazard ratios between treatment groups\nestimated with the Cox model are uninterpretable because the indefinite\nbaseline hazard of the model fails to identify temporal change in the risk set\ncomposition due to treatment assignment and unobserved factors among multiple,\ncontradictory scenarios. To alleviate this problem, especially in studies based\non observational data with uncontrolled dynamic treatment and real-time\nmeasurement of many covariates, we propose abandoning the baseline hazard and\nusing machine learning to explicitly model the change in the risk set with or\nwithout latent variables. For this framework, we clarify the context in which\nhazard ratios can be causally interpreted, and then develop a method based on\nNeyman orthogonality to compute debiased maximum-likelihood estimators of\nhazard ratios. Computing the constructed estimators is more efficient than\ncomputing those based on weighted regression with marginal structural Cox\nmodels. Numerical simulations confirm that the proposed method identifies the\nground truth with minimal bias. These results lay the foundation for developing\na useful, alternative method for causal inference with uncontrolled,\nobservational data in modern epidemiology.",
-      "pdf_url": "http://arxiv.org/pdf/2507.17686v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.17686v1",
-      "published": "2025-07-23",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "See the Forest and the Trees: A Synergistic Reasoning Framework for Knowledge-Based Visual Question Answering",
-      "authors": [
-        "Junjie Wang",
-        "Yunhan Tang",
-        "Yijie Wang",
-        "Zhihao Yuan",
-        "Huan Wang",
-        "Yangfan He",
-        "Bin Li"
-      ],
-      "abstract": "Multimodal Large Language Models (MLLMs) have pushed the frontiers of\nKnowledge-Based Visual Question Answering (KBVQA), yet their reasoning is\nfundamentally bottlenecked by a reliance on uni-dimensional evidence. This\n\"seeing only the trees, but not the forest\" approach prevents robust,\nmulti-faceted understanding. Inspired by the principle of seeing both the\nforest and trees, we propose Synergos-VQA, a novel synergistic reasoning\nframework. At its core, Synergos-VQA concurrently generates and fuses three\ncomplementary evidence streams at inference time: (1) Holistic Evidence to\nperceive the entire scene (the \"forest\"), (2) Structural Evidence from a\nprototype-driven module to identify key objects (the \"trees\"), and (3) Causal\nEvidence from a counterfactual probe to ensure the reasoning is robustly\ngrounded. By synergistically fusing this multi-faceted evidence, our framework\nachieves a more comprehensive and reliable reasoning process. Extensive\nexperiments show that Synergos-VQA decisively establishes a new\nstate-of-the-art on three challenging benchmarks, including OK-VQA and A-OKVQA.\nFurthermore, our approach demonstrates strong plug-and-play capabilities,\nsignificantly boosting various open-source MLLMs and proving that superior\nmethodological design can outperform sheer model scale.",
-      "pdf_url": "http://arxiv.org/pdf/2507.17659v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.17659v1",
-      "published": "2025-07-23",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Doubly robust outlier resistant inference on causal treatment effect",
-      "authors": [
-        "Joonsung Kang"
-      ],
-      "abstract": "Outliers can severely distort causal effect estimation in observational\nstudies, yet this issue has received limited attention in the literature. Their\ninfluence is especially pronounced in small sample sizes, where detecting and\nremoving outliers becomes increasingly difficult. Therefore, it is essential to\nestimate treatment effects robustly without excluding these influential data\npoints. To address this, we propose a doubly robust point estimator for the\naverage treatment effect under a contaminated model that includes outliers.\nRobustness in outcome regression is achieved through a robust estimating\nequation, while covariate balancing propensity scores (CBPS) ensure resilience\nin propensity score modeling.\n  To prevent model overfitting due to the inclusion of numerous parameters, we\nincorporate variable selection. All these components are unified under a\npenalized empirical likelihood framework. For confidence interval estimation,\nmost existing approaches rely on asymptotic properties, which may be unreliable\nin finite samples. We derive an optimal finite-sample confidence interval for\nthe average treatment effect using our proposed estimating equation, ensuring\nthat the interval bounds remain unaffected by outliers. Through simulations and\na real-world application involving hypertension data with outliers, we\ndemonstrate that our method consistently outperforms existing approaches in\nboth accuracy and robustness.",
-      "pdf_url": "http://arxiv.org/pdf/2507.17439v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.17439v1",
-      "published": "2025-07-23",
-      "categories": [
-        "stat.ME",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "CAPRI-CT: Causal Analysis and Predictive Reasoning for Image Quality Optimization in Computed Tomography",
-      "authors": [
-        "Sneha George Gnanakalavathy",
-        "Hairil Abdul Razak",
-        "Robert Meertens",
-        "Jonathan E. Fieldsend",
-        "Xujiong Ye",
-        "Mohammed M. Abdelsamea"
-      ],
-      "abstract": "In computed tomography (CT), achieving high image quality while minimizing\nradiation exposure remains a key clinical challenge. This paper presents\nCAPRI-CT, a novel causal-aware deep learning framework for Causal Analysis and\nPredictive Reasoning for Image Quality Optimization in CT imaging. CAPRI-CT\nintegrates image data with acquisition metadata (such as tube voltage, tube\ncurrent, and contrast agent types) to model the underlying causal relationships\nthat influence image quality. An ensemble of Variational Autoencoders (VAEs) is\nemployed to extract meaningful features and generate causal representations\nfrom observational data, including CT images and associated imaging parameters.\nThese input features are fused to predict the Signal-to-Noise Ratio (SNR) and\nsupport counterfactual inference, enabling what-if simulations, such as changes\nin contrast agents (types and concentrations) or scan parameters. CAPRI-CT is\ntrained and validated using an ensemble learning approach, achieving strong\npredictive performance. By facilitating both prediction and interpretability,\nCAPRI-CT provides actionable insights that could help radiologists and\ntechnicians design more efficient CT protocols without repeated physical scans.\nThe source code and dataset are publicly available at\nhttps://github.com/SnehaGeorge22/capri-ct.",
-      "pdf_url": "http://arxiv.org/pdf/2507.17420v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.17420v1",
-      "published": "2025-07-23",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal Mechanism Estimation in Multi-Sensor Systems Across Multiple Domains",
-      "authors": [
-        "Jingyi Yu",
-        "Tim Pychynski",
-        "Marco F. Huber"
-      ],
-      "abstract": "To gain deeper insights into a complex sensor system through the lens of\ncausality, we present common and individual causal mechanism estimation\n(CICME), a novel three-step approach to inferring causal mechanisms from\nheterogeneous data collected across multiple domains. By leveraging the\nprinciple of Causal Transfer Learning (CTL), CICME is able to reliably detect\ndomain-invariant causal mechanisms when provided with sufficient samples. The\nidentified common causal mechanisms are further used to guide the estimation of\nthe remaining causal mechanisms in each domain individually. The performance of\nCICME is evaluated on linear Gaussian models under scenarios inspired from a\nmanufacturing process. Building upon existing continuous optimization-based\ncausal discovery methods, we show that CICME leverages the benefits of applying\ncausal discovery on the pooled data and repeatedly on data from individual\ndomains, and it even outperforms both baseline methods under certain scenarios.",
-      "pdf_url": "http://arxiv.org/pdf/2507.17792v2",
-      "arxiv_url": "http://arxiv.org/abs/2507.17792v2",
-      "published": "2025-07-23",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
       ]
     }
   ]
