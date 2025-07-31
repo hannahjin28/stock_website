@@ -1,6 +1,38 @@
 {
-  "last_updated": "2025-07-30T00:59:30.044749",
+  "last_updated": "2025-07-31T00:59:32.220033",
   "papers": [
+    {
+      "title": "Hybrid Causal Identification and Causal Mechanism Clustering",
+      "authors": [
+        "Saixiong Liu",
+        "Yuhua Qian",
+        "Jue Li",
+        "Honghong Cheng",
+        "Feijiang Li"
+      ],
+      "abstract": "Bivariate causal direction identification is a fundamental and vital problem\nin the causal inference field. Among binary causal methods, most methods based\non additive noise only use one single causal mechanism to construct a causal\nmodel. In the real world, observations are always collected in different\nenvironments with heterogeneous causal relationships. Therefore, on observation\ndata, this paper proposes a Mixture Conditional Variational Causal Inference\nmodel (MCVCI) to infer heterogeneous causality. Specifically, according to the\nidentifiability of the Hybrid Additive Noise Model (HANM), MCVCI combines the\nsuperior fitting capabilities of the Gaussian mixture model and the neural\nnetwork and elegantly uses the likelihoods obtained from the probabilistic\nbounds of the mixture conditional variational auto-encoder as causal decision\ncriteria. Moreover, we model the casual heterogeneity into cluster numbers and\npropose the Mixture Conditional Variational Causal Clustering (MCVCC) method,\nwhich can reveal causal mechanism expression. Compared with state-of-the-art\nmethods, the comprehensive best performance demonstrates the effectiveness of\nthe methods proposed in this paper on several simulated and real data.",
+      "pdf_url": "http://arxiv.org/pdf/2507.21792v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.21792v1",
+      "published": "2025-07-29",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Towards Locally Deployable Fine-Tuned Causal Large Language Models for Mode Choice Behaviour",
+      "authors": [
+        "Tareq Alsaleh",
+        "Bilal Farooq"
+      ],
+      "abstract": "This study investigates the adoption of open-access, locally deployable\ncausal large language models (LLMs) for travel mode choice prediction and\nintroduces LiTransMC, the first fine-tuned causal LLM developed for this task.\nWe systematically benchmark eleven LLMs (1-12B parameters) across three stated\nand revealed preference datasets, testing 396 configurations and generating\nover 79,000 synthetic commuter predictions. Beyond predictive accuracy, we\nevaluate models generated reasoning using BERTopic for topic modelling and a\nnovel Explanation Strength Index, providing the first structured analysis of\nhow LLMs articulate decision factors in alignment with behavioural theory.\nLiTransMC, fine-tuned using parameter efficient and loss masking strategy,\nachieved a weighted F1 score of 0.6845 and a Jensen-Shannon Divergence of\n0.000245, surpassing both untuned local models and larger proprietary systems,\nincluding GPT-4o with advanced persona inference and embedding-based loading,\nwhile also outperforming classical mode choice methods such as discrete choice\nmodels and machine learning classifiers for the same dataset. This dual\nimprovement, i.e., high instant-level accuracy and near-perfect distributional\ncalibration, demonstrates the feasibility of creating specialist, locally\ndeployable LLMs that integrate prediction and interpretability. Through\ncombining structured behavioural prediction with natural language reasoning,\nthis work unlocks the potential for conversational, multi-task transport models\ncapable of supporting agent-based simulations, policy testing, and behavioural\ninsight generation. These findings establish a pathway for transforming general\npurpose LLMs into specialized, explainable tools for transportation research\nand policy formulation, while maintaining privacy, reducing cost, and\nbroadening access through local deployment.",
+      "pdf_url": "http://arxiv.org/pdf/2507.21432v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.21432v1",
+      "published": "2025-07-29",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Personalized Treatment Effect Estimation from Unstructured Data",
       "authors": [
@@ -121,35 +153,6 @@
       "categories": [
         "math.ST",
         "stat.TH"
-      ]
-    },
-    {
-      "title": "Probably Approximately Correct Causal Discovery",
-      "authors": [
-        "Mian Wei",
-        "Somesh Jha",
-        "David Page"
-      ],
-      "abstract": "The discovery of causal relationships is a foundational problem in artificial\nintelligence, statistics, epidemiology, economics, and beyond. While elegant\ntheories exist for accurate causal discovery given infinite data, real-world\napplications are inherently resource-constrained. Effective methods for\ninferring causal relationships from observational data must perform well under\nfinite data and time constraints, where \"performing well\" implies achieving\nhigh, though not perfect accuracy. In his seminal paper A Theory of the\nLearnable, Valiant highlighted the importance of resource constraints in\nsupervised machine learning, introducing the concept of Probably Approximately\nCorrect (PAC) learning as an alternative to exact learning. Inspired by\nValiant's work, we propose the Probably Approximately Correct Causal (PACC)\nDiscovery framework, which extends PAC learning principles to the causal field.\nThis framework emphasizes both computational and sample efficiency for\nestablished causal methods such as propensity score techniques and instrumental\nvariable approaches. Furthermore, we show that it can also provide theoretical\nguarantees for other widely used methods, such as the Self-Controlled Case\nSeries (SCCS) method, which had previously lacked such guarantees.",
-      "pdf_url": "http://arxiv.org/pdf/2507.18903v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.18903v1",
-      "published": "2025-07-25",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Deep Learning for Blood-Brain Barrier Permeability Prediction",
-      "authors": [
-        "Zihan Yang"
-      ],
-      "abstract": "Predicting whether a molecule can cross the blood-brain barrier (BBB) is a\nkey step in early-stage neuropharmaceutical development, directly influencing\nboth research efficiency and success rates in drug discovery. Traditional\nempirical methods based on physicochemical properties are prone to systematic\nmisjudgements due to their reliance on static rules. Early machine learning\nmodels, although data-driven, often suffer from limited capacity, poor\ngeneralization, and insufficient interpretability. In recent years, artificial\nintelligence (AI) methods have become essential tools for predicting BBB\npermeability and guiding related drug design, owing to their ability to model\nmolecular structures and capture complex biological mechanisms. This article\nsystematically reviews the evolution of this field-from deep neural networks to\ngraph-based structural modeling-highlighting the advantages of multi-task and\nmultimodal learning strategies in identifying mechanism-relevant variables. We\nfurther explore the emerging potential of generative models and causal\ninference methods for integrating permeability prediction with mechanism-aware\ndrug design. BBB modeling is in the transition from static classification\ntoward mechanistic perception and structure-function modeling. This paradigm\nshift provides a methodological foundation and future roadmap for the\nintegration of AI into neuropharmacological development.",
-      "pdf_url": "http://arxiv.org/pdf/2507.18557v2",
-      "arxiv_url": "http://arxiv.org/abs/2507.18557v2",
-      "published": "2025-07-24",
-      "categories": [
-        "q-bio.QM"
       ]
     }
   ]
