@@ -1,6 +1,54 @@
 {
-  "last_updated": "2025-07-31T00:59:32.220033",
+  "last_updated": "2025-08-01T01:06:19.694992",
   "papers": [
+    {
+      "title": "A quantum experiment with joint exogeneity violation",
+      "authors": [
+        "Yuhao Wang",
+        "Xingjian Zhang"
+      ],
+      "abstract": "In randomized experiments, the assumption of potential outcomes is usually\naccompanied by the \\emph{joint exogeneity} assumption. Although joint\nexogeneity has faced criticism as a counterfactual assumption since its\nproposal, no evidence has yet demonstrated its violation in randomized\nexperiments. In this paper, we reveal such a violation in a quantum experiment,\nthereby falsifying this assumption, at least in regimes where classical physics\ncannot provide a complete description. We further discuss its implications for\npotential outcome modelling, from both practial and philosophical perspectives.",
+      "pdf_url": "http://arxiv.org/pdf/2507.22747v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.22747v1",
+      "published": "2025-07-30",
+      "categories": [
+        "quant-ph",
+        "math.ST",
+        "physics.hist-ph",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Risk-inclusive Contextual Bandits for Early Phase Clinical Trials",
+      "authors": [
+        "Rohit Kanrar",
+        "Chunlin Li",
+        "Zara Ghodsi",
+        "Margaret Gamalo"
+      ],
+      "abstract": "Early-phase clinical trials face the challenge of selecting optimal drug\ndoses that balance safety and efficacy due to uncertain dose-response\nrelationships and varied participant characteristics. Traditional randomized\ndose allocation often exposes participants to sub-optimal doses by not\nconsidering individual covariates, necessitating larger sample sizes and\nprolonging drug development. This paper introduces a risk-inclusive contextual\nbandit algorithm that utilizes multi-arm bandit (MAB) strategies to optimize\ndosing through participant-specific data integration. By combining two separate\nThompson samplers, one for efficacy and one for safety, the algorithm enhances\nthe balance between efficacy and safety in dose allocation. The effect sizes\nare estimated with a generalized version of asymptotic confidence sequences\n(AsympCS, Waudby-Smith et al., 2024), offering a uniform coverage guarantee for\nsequential causal inference over time. The validity of AsympCS is also\nestablished in the MAB setup with a possibly mis-specified model. The empirical\nresults demonstrate the strengths of this method in optimizing dose allocation\ncompared to randomized allocations and traditional contextual bandits focused\nsolely on efficacy. Moreover, an application on real data generated from a\nrecent Phase IIb study aligns with actual findings.",
+      "pdf_url": "http://arxiv.org/pdf/2507.22344v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.22344v1",
+      "published": "2025-07-30",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Dimension Reduction for Conditional Density Estimation with Applications to High-Dimensional Causal Inference",
+      "authors": [
+        "Jianhua Mei",
+        "Fu Ouyang",
+        "Thomas T. Yang"
+      ],
+      "abstract": "We propose a novel and computationally efficient approach for nonparametric\nconditional density estimation in high-dimensional settings that achieves\ndimension reduction without imposing restrictive distributional or functional\nform assumptions. To uncover the underlying sparsity structure of the data, we\ndevelop an innovative conditional dependence measure and a modified\ncross-validation procedure that enables data-driven variable selection, thereby\ncircumventing the need for subjective threshold selection. We demonstrate the\npractical utility of our dimension-reduced conditional density estimation by\napplying it to doubly robust estimators for average treatment effects. Notably,\nour proposed procedure is able to select relevant variables for nonparametric\npropensity score estimation and also inherently reduce the dimensionality of\noutcome regressions through a refined ignorability condition. We evaluate the\nfinite-sample properties of our approach through comprehensive simulation\nstudies and an empirical study on the effects of 401(k) eligibility on savings\nusing SIPP data.",
+      "pdf_url": "http://arxiv.org/pdf/2507.22312v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.22312v1",
+      "published": "2025-07-30",
+      "categories": [
+        "econ.EM"
+      ]
+    },
     {
       "title": "Hybrid Causal Identification and Causal Mechanism Clustering",
       "authors": [
@@ -108,51 +156,6 @@
       "published": "2025-07-25",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Beyond Bonferroni: Hierarchical Multiple Testing in Empirical Research",
-      "authors": [
-        "Sebastian Calonico",
-        "Sebastian Galiani"
-      ],
-      "abstract": "Empirical research in the social and medical sciences frequently involves\ntesting multiple hypotheses simultaneously, increasing the risk of false\npositives due to chance. Classical multiple testing procedures, such as the\nBonferroni correction, control the family-wise error rate (FWER) but tend to be\noverly conservative, reducing statistical power. Stepwise alternatives like the\nHolm and Hochberg procedures offer improved power while maintaining error\ncontrol under certain dependence structures. However, these standard approaches\ntypically ignore hierarchical relationships among hypotheses -- structures that\nare common in settings such as clinical trials and program evaluations, where\noutcomes are often logically or causally linked. Hierarchical multiple testing\nprocedures -- including fixed sequence, fallback, and gatekeeping methods --\nexplicitly incorporate these relationships, providing more powerful and\ninterpretable frameworks for inference. This paper reviews key hierarchical\nmethods, compares their statistical properties and practical trade-offs, and\ndiscusses implications for applied empirical research.",
-      "pdf_url": "http://arxiv.org/pdf/2507.19610v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.19610v1",
-      "published": "2025-07-25",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Inference with weights: Residualization produces short, valid intervals for varying estimands and varying resampling processes",
-      "authors": [
-        "Erin Hartman",
-        "Chad Hazlett",
-        "Arisa Sadeghpour"
-      ],
-      "abstract": "Weighting procedures are used in observational causal inference to adjust for\ncovariate imbalance within the sample. Common practice for inference is to\nestimate robust standard errors from a weighted regression of outcome on\ntreatment. However, it is well known that weighting can inflate variance\nestimates, sometimes significantly, leading to standard errors and confidence\nintervals that are overly conservative. We instead examine and recommend the\nuse of robust standard errors from a weighted regression that additionally\nincludes the balancing covariates and their interactions with treatment. We\nshow that these standard errors are more precise and asymptotically correct for\nweights that achieve exact balance under multiple common resampling frameworks,\nincluding design-based and model-based inference, as well as superpopulation\nsampling with a finite sample correction. Gains to precision can be quite\nsignificant when the balancing weights adjust for prognostic covariates. For\nprocedures that balance only approximately or in expectation, such as inverse\npropensity weighting or approximate balancing weights, our proposed method\nimproves precision by reducing residuals through augmentation with the\nparametric model. We demonstrate our approach through simulation and\nre-analysis of multiple empirical studies.",
-      "pdf_url": "http://arxiv.org/pdf/2507.19607v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.19607v1",
-      "published": "2025-07-25",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Riesz representers for the rest of us",
-      "authors": [
-        "Nicholas T. Williams",
-        "Oliver J. Hines",
-        "Kara E. Rudolph"
-      ],
-      "abstract": "The application of semiparametric efficient estimators, particularly those\nthat leverage machine learning, is rapidly expanding within epidemiology and\ncausal inference. Much of the recent methodological literature on these\nestimators relies heavily on the Riesz representation theorem and Riesz\nregression. This paper aims to introduce the Riesz representation theorem to an\napplied audience, explaining why and how Riesz regression is becoming widely\nused in the semiparametric estimator statistical literature.",
-      "pdf_url": "http://arxiv.org/pdf/2507.19413v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.19413v1",
-      "published": "2025-07-25",
-      "categories": [
-        "math.ST",
-        "stat.TH"
       ]
     }
   ]
