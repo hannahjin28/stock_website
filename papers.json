@@ -1,6 +1,81 @@
 {
-  "last_updated": "2025-08-01T01:06:19.694992",
+  "last_updated": "2025-08-02T00:56:53.692738",
   "papers": [
+    {
+      "title": "Relative Bias Under Imperfect Identification in Observational Causal Inference",
+      "authors": [
+        "Melody Huang",
+        "Cory McCartan"
+      ],
+      "abstract": "To conduct causal inference in observational settings, researchers must rely\non certain identifying assumptions. In practice, these assumptions are unlikely\nto hold exactly. This paper considers the bias of selection-on-observables,\ninstrumental variables, and proximal inference estimates under violations of\ntheir identifying assumptions. We develop bias expressions for IV and proximal\ninference that show how violations of their respective assumptions are\namplified by any unmeasured confounding in the outcome variable. We propose a\nset of sensitivity tools that quantify the sensitivity of different\nidentification strategies, and an augmented bias contour plot visualizes the\nrelationship between these strategies. We argue that the act of choosing an\nidentification strategy implicitly expresses a belief about the degree of\nviolations that must be present in alternative identification strategies. Even\nwhen researchers intend to conduct an IV or proximal analysis, a sensitivity\nanalysis comparing different identification strategies can help to better\nunderstand the implications of each set of assumptions. Throughout, we compare\nthe different approaches on a re-analysis of the impact of state surveillance\non the incidence of protest in Communist Poland.",
+      "pdf_url": "http://arxiv.org/pdf/2507.23743v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.23743v1",
+      "published": "2025-07-31",
+      "categories": [
+        "stat.ME",
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Incorporating structural uncertainty in causal decision making",
+      "authors": [
+        "Maurits Kaptein"
+      ],
+      "abstract": "Practitioners making decisions based on causal effects typically ignore\nstructural uncertainty. We analyze when this uncertainty is consequential\nenough to warrant methodological solutions (Bayesian model averaging over\ncompeting causal structures). Focusing on bivariate relationships ($X\n\\rightarrow Y$ vs. $X \\leftarrow Y$), we establish that model averaging is\nbeneficial when: (1) structural uncertainty is moderate to high, (2) causal\neffects differ substantially between structures, and (3) loss functions are\nsufficiently sensitive to the size of the causal effect. We prove optimality\nresults of our suggested methodological solution under regularity conditions\nand demonstrate through simulations that modern causal discovery methods can\nprovide, within limits, the necessary quantification. Our framework complements\nexisting robust causal inference approaches by addressing a distinct source of\nuncertainty typically overlooked in practice.",
+      "pdf_url": "http://arxiv.org/pdf/2507.23495v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.23495v1",
+      "published": "2025-07-31",
+      "categories": [
+        "cs.LG",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Causal Reasoning in Pieces: Modular In-Context Learning for Causal Discovery",
+      "authors": [
+        "Kacper Kadziolka",
+        "Saber Salehkaleybar"
+      ],
+      "abstract": "Causal inference remains a fundamental challenge for large language models.\nRecent advances in internal reasoning with large language models have sparked\ninterest in whether state-of-the-art reasoning models can robustly perform\ncausal discovery-a task where conventional models often suffer from severe\noverfitting and near-random performance under data perturbations. We study\ncausal discovery on the Corr2Cause benchmark using the emergent OpenAI's\no-series and DeepSeek-R model families and find that these reasoning-first\narchitectures achieve significantly greater native gains than prior approaches.\nTo capitalize on these strengths, we introduce a modular in-context pipeline\ninspired by the Tree-of-Thoughts and Chain-of-Thoughts methodologies, yielding\nnearly three-fold improvements over conventional baselines. We further probe\nthe pipeline's impact by analyzing reasoning chain length, complexity, and\nconducting qualitative and quantitative comparisons between conventional and\nreasoning models. Our findings suggest that while advanced reasoning models\nrepresent a substantial leap forward, carefully structured in-context\nframeworks are essential to maximize their capabilities and offer a\ngeneralizable blueprint for causal discovery across diverse domains.",
+      "pdf_url": "http://arxiv.org/pdf/2507.23488v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.23488v1",
+      "published": "2025-07-31",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Causal2Vec: Improving Decoder-only LLMs as Versatile Embedding Models",
+      "authors": [
+        "Ailiang Lin",
+        "Zhuoyun Li",
+        "Kotaro Funakoshi"
+      ],
+      "abstract": "Decoder-only large language models (LLMs) are increasingly used to build\nembedding models that effectively encode the semantic information of natural\nlanguage texts into dense vector representations for various embedding tasks.\nHowever, many existing methods primarily focus on removing the causal attention\nmask in LLMs to enable bidirectional attention, potentially undermining the\nmodel's ability to extract semantic information acquired during pretraining.\nAdditionally, leading unidirectional approaches often rely on extra input text\nto overcome the inherent limitations of causal attention, inevitably increasing\ncomputational costs. In this work, we propose Causal2Vec, a general-purpose\nembedding model tailored to enhance the performance of decoder-only LLMs\nwithout altering their original architectures or introducing significant\ncomputational overhead. Specifically, we first employ a lightweight BERT-style\nmodel to pre-encode the input text into a single Contextual token, which is\nthen prepended to the LLM's input sequence, allowing each token to capture\ncontextualized information even without attending to future tokens.\nFurthermore, to mitigate the recency bias introduced by last-token pooling and\nhelp LLMs better leverage the semantic information encoded in the Contextual\ntoken, we concatenate the last hidden states of Contextual and EOS tokens as\nthe final text embedding. In practice, Causal2Vec achieves state-of-the-art\nperformance on the Massive Text Embeddings Benchmark (MTEB) among models\ntrained solely on publicly available retrieval datasets, while reducing the\nrequired sequence length by up to 85% and inference time by up to 82% compared\nto best-performing methods.",
+      "pdf_url": "http://arxiv.org/pdf/2507.23386v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.23386v1",
+      "published": "2025-07-31",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ISO-Bench: Benchmarking Multimodal Causal Reasoning in Visual-Language Models through Procedural Plans",
+      "authors": [
+        "Ananya Sadana",
+        "Yash Kumar Lal",
+        "Jiawei Zhou"
+      ],
+      "abstract": "Understanding causal relationships across modalities is a core challenge for\nmultimodal models operating in real-world environments. We introduce ISO-Bench,\na benchmark for evaluating whether models can infer causal dependencies between\nvisual observations and procedural text. Each example presents an image of a\ntask step and a text snippet from a plan, with the goal of deciding whether the\nvisual step occurs before or after the referenced text step. Evaluation results\non ten frontier vision-language models show underwhelming performance: the best\nzero-shot F1 is only 0.57, and chain-of-thought reasoning yields only modest\ngains (up to 0.62 F1), largely behind humans (0.98 F1). Our analysis further\nhighlights concrete directions for improving causal understanding in multimodal\nmodels.",
+      "pdf_url": "http://arxiv.org/pdf/2507.23135v1",
+      "arxiv_url": "http://arxiv.org/abs/2507.23135v1",
+      "published": "2025-07-30",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "A quantum experiment with joint exogeneity violation",
       "authors": [
@@ -79,83 +154,6 @@
       "categories": [
         "cs.CL",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Personalized Treatment Effect Estimation from Unstructured Data",
-      "authors": [
-        "Henri Arno",
-        "Thomas Demeester"
-      ],
-      "abstract": "Existing methods for estimating personalized treatment effects typically rely\non structured covariates, limiting their applicability to unstructured data.\nYet, leveraging unstructured data for causal inference has considerable\napplication potential, for instance in healthcare, where clinical notes or\nmedical images are abundant. To this end, we first introduce an approximate\n'plug-in' method trained directly on the neural representations of unstructured\ndata. However, when these fail to capture all confounding information, the\nmethod may be subject to confounding bias. We therefore introduce two\ntheoretically grounded estimators that leverage structured measurements of the\nconfounders during training, but allow estimating personalized treatment\neffects purely from unstructured inputs, while avoiding confounding bias. When\nthese structured measurements are only available for a non-representative\nsubset of the data, these estimators may suffer from sampling bias. To address\nthis, we further introduce a regression-based correction that accounts for the\nnon-uniform sampling, assuming the sampling mechanism is known or can be\nwell-estimated. Our experiments on two benchmark datasets show that the plug-in\nmethod, directly trainable on large unstructured datasets, achieves strong\nempirical performance across all settings, despite its simplicity.",
-      "pdf_url": "http://arxiv.org/pdf/2507.20993v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.20993v1",
-      "published": "2025-07-28",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Onboard Hyperspectral Super-Resolution with Deep Pushbroom Neural Network",
-      "authors": [
-        "Davide Piccinini",
-        "Diego Valsesia",
-        "Enrico Magli"
-      ],
-      "abstract": "Hyperspectral imagers on satellites obtain the fine spectral signatures\nessential for distinguishing one material from another at the expense of\nlimited spatial resolution. Enhancing the latter is thus a desirable\npreprocessing step in order to further improve the detection capabilities\noffered by hyperspectral images on downstream tasks. At the same time, there is\na growing interest towards deploying inference methods directly onboard of\nsatellites, which calls for lightweight image super-resolution methods that can\nbe run on the payload in real time. In this paper, we present a novel neural\nnetwork design, called Deep Pushbroom Super-Resolution (DPSR) that matches the\npushbroom acquisition of hyperspectral sensors by processing an image line by\nline in the along-track direction with a causal memory mechanism to exploit\npreviously acquired lines. This design greatly limits memory requirements and\ncomputational complexity, achieving onboard real-time performance, i.e., the\nability to super-resolve a line in the time it takes to acquire the next one,\non low-power hardware. Experiments show that the quality of the super-resolved\nimages is competitive or even outperforms state-of-the-art methods that are\nsignificantly more complex.",
-      "pdf_url": "http://arxiv.org/pdf/2507.20765v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.20765v1",
-      "published": "2025-07-28",
-      "categories": [
-        "eess.IV",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal Inference when Intervention Units and Outcome Units Differ",
-      "authors": [
-        "Georgia Papadogeorgou",
-        "Zhaoyan Song",
-        "Guido Imbens",
-        "Fabrizia Mealli"
-      ],
-      "abstract": "We study causal inference in settings characterized by interference with a\nbipartite structure. There are two distinct sets of units: intervention units\nto which an intervention can be applied and outcome units on which the outcome\nof interest can be measured. Outcome units may be affected by interventions on\nsome, but not all, intervention units, as captured by a bipartite graph.\nExamples of this setting can be found in analyses of the impact of pollution\nabatement in plants on health outcomes for individuals, or the effect of\ntransportation network expansions on regional economic activity. We introduce\nand discuss a variety of old and new causal estimands for these bipartite\nsettings. We do not impose restrictions on the functional form of the exposure\nmapping and the potential outcomes, thus allowing for heterogeneity,\nnon-linearity, non-additivity, and potential interactions in treatment effects.\nWe propose unbiased weighting estimators for these estimands from a\ndesign-based perspective, based on the knowledge of the bipartite network under\ngeneral experimental designs. We derive their variance and prove consistency\nfor increasing number of outcome units. Using the Chinese high-speed rail\nconstruction study, analyzed in Borusyak and Hull [2023], we discuss\nnon-trivial positivity violations that depend on the estimands, the adopted\nexperimental design, and the structure of the bipartite graph.",
-      "pdf_url": "http://arxiv.org/pdf/2507.20231v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.20231v1",
-      "published": "2025-07-27",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Inference for Circular Data",
-      "authors": [
-        "Kuan-Hsun Wu"
-      ],
-      "abstract": "In causal inference, a fundamental task is to estimate the effect resulting\nfrom a specific treatment, which is often handled with inverse probability\nweighting. Despite an abundance of attention to the advancement of this task,\nmost articles have focused on linear data rather than circular data, which are\nmeasured in angles. In this article, we extend the causal inference framework\nto accommodate circular data. Specifically, two new treatment effects, average\ndirection treatment effect (ADTE) and average length treatment effect (ALTE),\nare introduced to offer a proper causal explanation for these data. As the\naverage direction and average length describe the location and concentration of\na random sample of circular data, the ADTE and ALTE measure the change in\ndirection and length between two counterfactual outcomes. With inverse\nprobability weighting, we propose estimators that exhibit ideal theoretical\nproperties, which are validated by a simulation study. To illustrate the\npractical utility of our estimator, we analyze the effect of different job\ntypes on dispatchers' sleep patterns using data from Federal Railroad\nAdministration.",
-      "pdf_url": "http://arxiv.org/pdf/2507.19889v2",
-      "arxiv_url": "http://arxiv.org/abs/2507.19889v2",
-      "published": "2025-07-26",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Adaptive Proximal Causal Inference with Some Invalid Proxies",
-      "authors": [
-        "Prabrisha Rakshit",
-        "Xu Shi",
-        "Eric Tchetgen Tchetgen"
-      ],
-      "abstract": "Proximal causal inference (PCI) is a recently proposed framework to identify\nand estimate the causal effect of an exposure on an outcome in the presence of\nhidden confounders, using observed proxies. Specifically, PCI relies on two\ntypes of proxies: a treatment-inducing confounding proxy, related to the\noutcome only through its association with unmeasured confounders (given\ntreatment and covariates), and an outcome-inducing confounding proxy, related\nto the treatment only through such association (given covariates). These\nproxies must satisfy stringent exclusion restrictions - namely, the treatment\nproxy must not affect the outcome, and the outcome proxy must not be affected\nby the treatment. To improve identification and potentially efficiency,\nmultiple proxies are often used, raising concerns about bias from exclusion\nviolations. To address this, we introduce necessary and sufficient conditions\nfor identifying causal effects in the presence of many proxies, some\npotentially invalid. Under a canonical proximal linear structural equations\nmodel, we propose a LASSO-based median estimator that jointly selects valid\nproxies and estimates the causal effect, with theoretical guarantees.\nRecognizing LASSO's limitations in consistently selecting valid treatment\nproxies, we develop an adaptive LASSO-based estimator with differential\npenalization. We show that it is root-n consistent and yields valid confidence\nintervals when a valid outcome proxy is available. We also extend the approach\nto settings with many potentially invalid outcome proxies. Theoretical results\nare supported by simulations and an application assessing the effect of right\nheart catheterization on 30-day survival in ICU patient.",
-      "pdf_url": "http://arxiv.org/pdf/2507.19623v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.19623v1",
-      "published": "2025-07-25",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
