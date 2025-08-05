@@ -1,6 +1,93 @@
 {
-  "last_updated": "2025-08-04T01:04:33.292530",
+  "last_updated": "2025-08-05T01:01:00.384358",
   "papers": [
+    {
+      "title": "Harnessing the Power of Interleaving and Counterfactual Evaluation for Airbnb Search Ranking",
+      "authors": [
+        "Qing Zhang",
+        "Alex Deng",
+        "Michelle Du",
+        "Huiji Gao",
+        "Liwei He",
+        "Sanjeev Katariya"
+      ],
+      "abstract": "Evaluation plays a crucial role in the development of ranking algorithms on\nsearch and recommender systems. It enables online platforms to create\nuser-friendly features that drive commercial success in a steady and effective\nmanner. The online environment is particularly conducive to applying causal\ninference techniques, such as randomized controlled experiments (known as A/B\ntest), which are often more challenging to implement in fields like medicine\nand public policy. However, businesses face unique challenges when it comes to\neffective A/B test. Specifically, achieving sufficient statistical power for\nconversion-based metrics can be time-consuming, especially for significant\npurchases like booking accommodations. While offline evaluations are quicker\nand more cost-effective, they often lack accuracy and are inadequate for\nselecting candidates for A/B test. To address these challenges, we developed\ninterleaving and counterfactual evaluation methods to facilitate rapid online\nassessments for identifying the most promising candidates for A/B tests. Our\napproach not only increased the sensitivity of experiments by a factor of up to\n100 (depending on the approach and metrics) compared to traditional A/B testing\nbut also streamlined the experimental process. The practical insights gained\nfrom usage in production can also benefit organizations with similar interests.",
+      "pdf_url": "http://arxiv.org/pdf/2508.00751v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.00751v1",
+      "published": "2025-08-01",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "H.3; G.3"
+      ]
+    },
+    {
+      "title": "Multi-Band Variable-Lag Granger Causality: A Unified Framework for Causal Time Series Inference across Frequencies",
+      "authors": [
+        "Chakattrai Sookkongwaree",
+        "Tattep Lakmuang",
+        "Chainarong Amornbunchornvej"
+      ],
+      "abstract": "Understanding causal relationships in time series is fundamental to many\ndomains, including neuroscience, economics, and behavioral science. Granger\ncausality is one of the well-known techniques for inferring causality in time\nseries. Typically, Granger causality frameworks have a strong fix-lag\nassumption between cause and effect, which is often unrealistic in complex\nsystems. While recent work on variable-lag Granger causality (VLGC) addresses\nthis limitation by allowing a cause to influence an effect with different time\nlags at each time point, it fails to account for the fact that causal\ninteractions may vary not only in time delay but also across frequency bands.\nFor example, in brain signals, alpha-band activity may influence another region\nwith a shorter delay than slower delta-band oscillations. In this work, we\nformalize Multi-Band Variable-Lag Granger Causality (MB-VLGC) and propose a\nnovel framework that generalizes traditional VLGC by explicitly modeling\nfrequency-dependent causal delays. We provide a formal definition of MB-VLGC,\ndemonstrate its theoretical soundness, and propose an efficient inference\npipeline. Extensive experiments across multiple domains demonstrate that our\nframework significantly outperforms existing methods on both synthetic and\nreal-world datasets, confirming its broad applicability to any type of time\nseries data. Code and datasets are publicly available.",
+      "pdf_url": "http://arxiv.org/pdf/2508.00658v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.00658v1",
+      "published": "2025-08-01",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "econ.EM",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "The Missing Parts: Augmenting Fact Verification with Half-Truth Detection",
+      "authors": [
+        "Yixuan Tang",
+        "Jincheng Wang",
+        "Anthony K. H. Tung"
+      ],
+      "abstract": "Fact verification systems typically assess whether a claim is supported by\nretrieved evidence, assuming that truthfulness depends solely on what is\nstated. However, many real-world claims are half-truths, factually correct yet\nmisleading due to the omission of critical context. Existing models struggle\nwith such cases, as they are not designed to reason about what is left unsaid.\nWe introduce the task of half-truth detection, and propose PolitiFact-Hidden, a\nnew benchmark with 15k political claims annotated with sentence-level evidence\nalignment and inferred claim intent. To address this challenge, we present\nTRACER, a modular re-assessment framework that identifies omission-based\nmisinformation by aligning evidence, inferring implied intent, and estimating\nthe causal impact of hidden content. TRACER can be integrated into existing\nfact-checking pipelines and consistently improves performance across multiple\nstrong baselines. Notably, it boosts Half-True classification F1 by up to 16\npoints, highlighting the importance of modeling omissions for trustworthy fact\nverification.",
+      "pdf_url": "http://arxiv.org/pdf/2508.00489v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.00489v1",
+      "published": "2025-08-01",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Learning to Optimize Feedback for One Million Students: Insights from Multi-Armed and Contextual Bandits in Large-Scale Online Tutoring",
+      "authors": [
+        "Robin Schmucker",
+        "Nimish Pachapurkar",
+        "Shanmuga Bala",
+        "Miral Shah",
+        "Tom Mitchell"
+      ],
+      "abstract": "We present an online tutoring system that learns to provide effective\nfeedback to students after they answer questions incorrectly. Using data from\none million students, the system learns which assistance action (e.g., one of\nmultiple hints) to provide for each question to optimize student learning.\nEmploying the multi-armed bandit (MAB) framework and offline policy evaluation,\nwe assess 43,000 assistance actions, and identify trade-offs between assistance\npolicies optimized for different student outcomes (e.g., response correctness,\nsession completion). We design an algorithm that for each question decides on a\nsuitable policy training objective to enhance students' immediate second\nattempt success and overall practice session performance. We evaluate the\nresulting MAB policies in 166,000 practice sessions, verifying significant\nimprovements in student outcomes. While MAB policies optimize feedback for the\noverall student population, we further investigate whether contextual bandit\n(CB) policies can enhance outcomes by personalizing feedback based on\nindividual student features (e.g., ability estimates, response times). Using\ncausal inference, we examine (i) how effects of assistance actions vary across\nstudents and (ii) whether CB policies, which leverage such effect\nheterogeneity, outperform MAB policies. While our analysis reveals that some\nactions for some questions exhibit effect heterogeneity, effect sizes may often\nbe too small for CB policies to provide significant improvements beyond what\nwell-optimized MAB policies that deliver the same action to all students\nalready achieve. We discuss insights gained from deploying data-driven systems\nat scale and implications for future refinements. Today, the teaching policies\noptimized by our system support thousands of students daily.",
+      "pdf_url": "http://arxiv.org/pdf/2508.00270v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.00270v1",
+      "published": "2025-08-01",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Structural Causal Models for Extremes: an Approach Based on Exponent Measures",
+      "authors": [
+        "Fei Fang",
+        "Shuyang Bai",
+        "Tiandong Wang"
+      ],
+      "abstract": "We introduce a new formulation of structural causal models for extremes,\ncalled the extremal structural causal model (eSCM). Unlike conventional\nstructural causal models, where randomness is governed by a probability\ndistribution, eSCMs use an exponent measure--an infinite-mass law that\nnaturally arises in the analysis of multivariate extremes. Central to this\nframework are activation variables, which abstract the single-big-jump\nprinciple, along with additional randomization that enriches the class of eSCM\nlaws. This formulation encompasses all possible laws of directed graphical\nmodels under the recently introduced notion of extremal conditional\nindependence. We also identify an inherent asymmetry in eSCMs under natural\nassumptions, enabling the identifiability of causal directions, a central\nchallenge in causal inference. Finally, we propose a method that utilizes this\ncausal asymmetry and demonstrate its effectiveness in both simulated and real\ndatasets.",
+      "pdf_url": "http://arxiv.org/pdf/2508.00223v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.00223v1",
+      "published": "2025-08-01",
+      "categories": [
+        "math.ST",
+        "stat.ME",
+        "stat.TH"
+      ]
+    },
     {
       "title": "Relative Bias Under Imperfect Identification in Observational Causal Inference",
       "authors": [
@@ -74,86 +161,6 @@
       "published": "2025-07-30",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "A quantum experiment with joint exogeneity violation",
-      "authors": [
-        "Yuhao Wang",
-        "Xingjian Zhang"
-      ],
-      "abstract": "In randomized experiments, the assumption of potential outcomes is usually\naccompanied by the \\emph{joint exogeneity} assumption. Although joint\nexogeneity has faced criticism as a counterfactual assumption since its\nproposal, no evidence has yet demonstrated its violation in randomized\nexperiments. In this paper, we reveal such a violation in a quantum experiment,\nthereby falsifying this assumption, at least in regimes where classical physics\ncannot provide a complete description. We further discuss its implications for\npotential outcome modelling, from both practial and philosophical perspectives.",
-      "pdf_url": "http://arxiv.org/pdf/2507.22747v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.22747v1",
-      "published": "2025-07-30",
-      "categories": [
-        "quant-ph",
-        "math.ST",
-        "physics.hist-ph",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Risk-inclusive Contextual Bandits for Early Phase Clinical Trials",
-      "authors": [
-        "Rohit Kanrar",
-        "Chunlin Li",
-        "Zara Ghodsi",
-        "Margaret Gamalo"
-      ],
-      "abstract": "Early-phase clinical trials face the challenge of selecting optimal drug\ndoses that balance safety and efficacy due to uncertain dose-response\nrelationships and varied participant characteristics. Traditional randomized\ndose allocation often exposes participants to sub-optimal doses by not\nconsidering individual covariates, necessitating larger sample sizes and\nprolonging drug development. This paper introduces a risk-inclusive contextual\nbandit algorithm that utilizes multi-arm bandit (MAB) strategies to optimize\ndosing through participant-specific data integration. By combining two separate\nThompson samplers, one for efficacy and one for safety, the algorithm enhances\nthe balance between efficacy and safety in dose allocation. The effect sizes\nare estimated with a generalized version of asymptotic confidence sequences\n(AsympCS, Waudby-Smith et al., 2024), offering a uniform coverage guarantee for\nsequential causal inference over time. The validity of AsympCS is also\nestablished in the MAB setup with a possibly mis-specified model. The empirical\nresults demonstrate the strengths of this method in optimizing dose allocation\ncompared to randomized allocations and traditional contextual bandits focused\nsolely on efficacy. Moreover, an application on real data generated from a\nrecent Phase IIb study aligns with actual findings.",
-      "pdf_url": "http://arxiv.org/pdf/2507.22344v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.22344v1",
-      "published": "2025-07-30",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Dimension Reduction for Conditional Density Estimation with Applications to High-Dimensional Causal Inference",
-      "authors": [
-        "Jianhua Mei",
-        "Fu Ouyang",
-        "Thomas T. Yang"
-      ],
-      "abstract": "We propose a novel and computationally efficient approach for nonparametric\nconditional density estimation in high-dimensional settings that achieves\ndimension reduction without imposing restrictive distributional or functional\nform assumptions. To uncover the underlying sparsity structure of the data, we\ndevelop an innovative conditional dependence measure and a modified\ncross-validation procedure that enables data-driven variable selection, thereby\ncircumventing the need for subjective threshold selection. We demonstrate the\npractical utility of our dimension-reduced conditional density estimation by\napplying it to doubly robust estimators for average treatment effects. Notably,\nour proposed procedure is able to select relevant variables for nonparametric\npropensity score estimation and also inherently reduce the dimensionality of\noutcome regressions through a refined ignorability condition. We evaluate the\nfinite-sample properties of our approach through comprehensive simulation\nstudies and an empirical study on the effects of 401(k) eligibility on savings\nusing SIPP data.",
-      "pdf_url": "http://arxiv.org/pdf/2507.22312v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.22312v1",
-      "published": "2025-07-30",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Hybrid Causal Identification and Causal Mechanism Clustering",
-      "authors": [
-        "Saixiong Liu",
-        "Yuhua Qian",
-        "Jue Li",
-        "Honghong Cheng",
-        "Feijiang Li"
-      ],
-      "abstract": "Bivariate causal direction identification is a fundamental and vital problem\nin the causal inference field. Among binary causal methods, most methods based\non additive noise only use one single causal mechanism to construct a causal\nmodel. In the real world, observations are always collected in different\nenvironments with heterogeneous causal relationships. Therefore, on observation\ndata, this paper proposes a Mixture Conditional Variational Causal Inference\nmodel (MCVCI) to infer heterogeneous causality. Specifically, according to the\nidentifiability of the Hybrid Additive Noise Model (HANM), MCVCI combines the\nsuperior fitting capabilities of the Gaussian mixture model and the neural\nnetwork and elegantly uses the likelihoods obtained from the probabilistic\nbounds of the mixture conditional variational auto-encoder as causal decision\ncriteria. Moreover, we model the casual heterogeneity into cluster numbers and\npropose the Mixture Conditional Variational Causal Clustering (MCVCC) method,\nwhich can reveal causal mechanism expression. Compared with state-of-the-art\nmethods, the comprehensive best performance demonstrates the effectiveness of\nthe methods proposed in this paper on several simulated and real data.",
-      "pdf_url": "http://arxiv.org/pdf/2507.21792v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.21792v1",
-      "published": "2025-07-29",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Towards Locally Deployable Fine-Tuned Causal Large Language Models for Mode Choice Behaviour",
-      "authors": [
-        "Tareq Alsaleh",
-        "Bilal Farooq"
-      ],
-      "abstract": "This study investigates the adoption of open-access, locally deployable\ncausal large language models (LLMs) for travel mode choice prediction and\nintroduces LiTransMC, the first fine-tuned causal LLM developed for this task.\nWe systematically benchmark eleven LLMs (1-12B parameters) across three stated\nand revealed preference datasets, testing 396 configurations and generating\nover 79,000 synthetic commuter predictions. Beyond predictive accuracy, we\nevaluate models generated reasoning using BERTopic for topic modelling and a\nnovel Explanation Strength Index, providing the first structured analysis of\nhow LLMs articulate decision factors in alignment with behavioural theory.\nLiTransMC, fine-tuned using parameter efficient and loss masking strategy,\nachieved a weighted F1 score of 0.6845 and a Jensen-Shannon Divergence of\n0.000245, surpassing both untuned local models and larger proprietary systems,\nincluding GPT-4o with advanced persona inference and embedding-based loading,\nwhile also outperforming classical mode choice methods such as discrete choice\nmodels and machine learning classifiers for the same dataset. This dual\nimprovement, i.e., high instant-level accuracy and near-perfect distributional\ncalibration, demonstrates the feasibility of creating specialist, locally\ndeployable LLMs that integrate prediction and interpretability. Through\ncombining structured behavioural prediction with natural language reasoning,\nthis work unlocks the potential for conversational, multi-task transport models\ncapable of supporting agent-based simulations, policy testing, and behavioural\ninsight generation. These findings establish a pathway for transforming general\npurpose LLMs into specialized, explainable tools for transportation research\nand policy formulation, while maintaining privacy, reducing cost, and\nbroadening access through local deployment.",
-      "pdf_url": "http://arxiv.org/pdf/2507.21432v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.21432v1",
-      "published": "2025-07-29",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]
