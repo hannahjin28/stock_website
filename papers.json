@@ -1,6 +1,126 @@
 {
-  "last_updated": "2025-08-05T01:01:00.384358",
+  "last_updated": "2025-08-06T01:00:05.073511",
   "papers": [
+    {
+      "title": "Causality and Interpretability for Electrical Distribution System faults",
+      "authors": [
+        "Karthik Peddi",
+        "Sai Ram Aditya Parisineni",
+        "Hemanth Macharla",
+        "Mayukha Pal"
+      ],
+      "abstract": "Causal analysis helps us understand variables that are responsible for system\nfailures. This improves fault detection and makes system more reliable. In this\nwork, we present a new method that combines causal inference with machine\nlearning to classify faults in electrical distribution systems (EDS) using\ngraph-based models. We first build causal graphs using transfer entropy (TE).\nEach fault case is represented as a graph, where the nodes are features such as\nvoltage and current, and the edges demonstrate how these features influence\neach other. Then, the graphs are classified using machine learning and\nGraphSAGE where the model learns from both the node values and the structure of\nthe graph to predict the type of fault. To make the predictions understandable,\nwe further developed an integrated approach using GNNExplainer and Captums\nIntegrated Gradients to highlight the nodes (features) that influences the most\non the final prediction. This gives us clear insights into the possible causes\nof the fault. Our experiments show high accuracy: 99.44% on the EDS fault\ndataset, which is better than state of art models. By combining causal graphs\nwith machine learning, our method not only predicts faults accurately but also\nhelps understand their root causes. This makes it a strong and practical tool\nfor improving system reliability.",
+      "pdf_url": "http://arxiv.org/pdf/2508.02524v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.02524v1",
+      "published": "2025-08-04",
+      "categories": [
+        "eess.SY",
+        "cs.LG",
+        "cs.SY"
+      ]
+    },
+    {
+      "title": "CITS: Nonparametric Statistical Causal Modeling for High-Resolution Neural Time Series",
+      "authors": [
+        "Rahul Biswas",
+        "SuryaNarayana Sripada",
+        "Somabha Mukherjee",
+        "Reza Abbasi-Asl"
+      ],
+      "abstract": "Understanding how signals propagate through neural circuits is central to\ndeciphering brain computation. While functional connectivity captures\nstatistical associations, it does not reveal directionality or causal\nmechanisms. We introduce CITS (Causal Inference in Time Series), a\nnon-parametric method for inferring statistically causal neural circuitry from\nhigh-resolution time series data. CITS models neural dynamics using a\nstructural causal model with arbitrary Markov order and tests for time-lagged\nconditional independence using either Gaussian or distribution-free statistics.\nUnlike classical Granger Causality, which assumes linear autoregressive models\nand Gaussian noise, or the Peter-Clark algorithm, which assumes i.i.d. data and\nno temporal structure, CITS handles temporally dependent, potentially\nnon-Gaussian data with flexible testing procedures. We prove consistency under\nmild mixing assumptions and validate CITS on simulated linear, nonlinear, and\ncontinuous-time recurrent neural network data, where it outperforms\nstate-of-the-art methods. We then apply CITS to Neuropixels recordings from\nmouse brain during visual tasks. CITS uncovers interpretable, stimulus-specific\ncausal circuits linking cortical, thalamic, and hippocampal regions, consistent\nwith experimental literature. It also reveals that neurons with similar\norientation selectivity indices are more likely to be causally connected. Our\nresults demonstrate the utility of CITS in uncovering biologically meaningful\npathways and generating hypotheses for future experimental studies.",
+      "pdf_url": "http://arxiv.org/pdf/2508.01920v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.01920v1",
+      "published": "2025-08-03",
+      "categories": [
+        "q-bio.NC",
+        "q-bio.QM",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Structure Maintained Representation Learning Neural Network for Causal Inference",
+      "authors": [
+        "Yang Sun",
+        "Wenbin Lu",
+        "Yi-Hui Zhou"
+      ],
+      "abstract": "Recent developments in causal inference have greatly shifted the interest\nfrom estimating the average treatment effect to the individual treatment\neffect. In this article, we improve the predictive accuracy of representation\nlearning and adversarial networks in estimating individual treatment effects by\nintroducing a structure keeper which maintains the correlation between the\nbaseline covariates and their corresponding representations in the high\ndimensional space. We train a discriminator at the end of representation layers\nto trade off representation balance and information loss. We show that the\nproposed discriminator minimizes an upper bound of the treatment estimation\nerror. We can address the tradeoff between distribution balance and information\nloss by considering the correlations between the learned representation space\nand the original covariate feature space. We conduct extensive experiments with\nsimulated and real-world observational data to show that our proposed Structure\nMaintained Representation Learning (SMRL) algorithm outperforms\nstate-of-the-art methods. We also demonstrate the algorithms on real electronic\nhealth record data from the MIMIC-III database.",
+      "pdf_url": "http://arxiv.org/pdf/2508.01865v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.01865v1",
+      "published": "2025-08-03",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Anchoring-Based Causal Design (ABCD): Estimating the Effects of Beliefs",
+      "authors": [
+        "Raanan Sulitzeanu-Kenan",
+        "Micha Mandel",
+        "Yosef Rinott"
+      ],
+      "abstract": "A central challenge in any study of the effects of beliefs on outcomes, such\nas decisions and behavior, is the risk of omitted variables bias. Omitted\nvariables, frequently unmeasured or even unknown, can induce correlations\nbetween beliefs and decisions that are not genuinely causal, in which case the\nomitted variables are referred to as confounders. To address the challenge of\ncausal inference, researchers frequently rely on information provision\nexperiments to randomly manipulate beliefs. The information supplied in these\nexperiments can serve as an instrumental variable (IV), enabling causal\ninference, so long as it influences decisions exclusively through its impact on\nbeliefs. However, providing varying information to participants to shape their\nbeliefs can raise both methodological and ethical concerns. Methodological\nconcerns arise from potential violations of the exclusion restriction\nassumption. Such violations may stem from information source effects, when\nattitudes toward the source affect the outcome decision directly, thereby\nintroducing a confounder. An ethical concern arises from manipulating the\nprovided information, as it may involve deceiving participants. This paper\nproposes and empirically demonstrates a new method for treating beliefs and\nestimating their effects, the Anchoring-Based Causal Design (ABCD), which\navoids deception and source influences. ABCD combines the cognitive mechanism\nknown as anchoring with instrumental variable (IV) estimation. Instead of\nproviding substantive information, the method employs a deliberately\nnon-informative procedure in which participants compare their self-assessment\nof a concept to a randomly assigned anchor value. We present the method and the\nresults of eight experiments demonstrating its application, strengths, and\nlimitations. We conclude by discussing the potential of this design for\nadvancing experimental social science.",
+      "pdf_url": "http://arxiv.org/pdf/2508.01677v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.01677v1",
+      "published": "2025-08-03",
+      "categories": [
+        "econ.GN",
+        "q-fin.EC",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Debiasing Machine Learning Predictions for Causal Inference Without Additional Ground Truth Data: \"One Map, Many Trials\" in Satellite-Driven Poverty Analysis",
+      "authors": [
+        "Markus Pettersson",
+        "Connor T. Jerzak",
+        "Adel Daoud"
+      ],
+      "abstract": "Machine learning models trained on Earth observation data, such as satellite\nimagery, have demonstrated significant promise in predicting household-level\nwealth indices, enabling the creation of high-resolution wealth maps that can\nbe leveraged across multiple causal trials. However, because standard training\nobjectives prioritize overall predictive accuracy, these predictions inherently\nsuffer from shrinkage toward the mean, leading to attenuated estimates of\ncausal treatment effects and limiting their utility in policy. Existing\ndebiasing methods, such as Prediction-Powered Inference, can handle this\nattenuation bias but require additional fresh ground-truth data at the\ndownstream stage of causal inference, which restricts their applicability in\ndata-scarce environments. Here, we introduce and evaluate two correction\nmethods -- linear calibration correction and Tweedie's correction -- that\nsubstantially reduce prediction bias without relying on newly collected labeled\ndata. Linear calibration corrects bias through a straightforward linear\ntransformation derived from held-out calibration data, whereas Tweedie's\ncorrection leverages empirical Bayes principles to directly address\nshrinkage-induced biases by exploiting score functions derived from the model's\nlearning patterns. Through analytical exercises and experiments using\nDemographic and Health Survey data, we demonstrate that the proposed methods\nmeet or outperform existing approaches that either require (a) adjustments to\ntraining pipelines or (b) additional labeled data. These approaches may\nrepresent a promising avenue for improving the reliability of causal inference\nwhen direct outcome measures are limited or unavailable, enabling a \"one map,\nmany trials\" paradigm where a single upstream data creation team produces\npredictions usable by many downstream teams across diverse ML pipelines.",
+      "pdf_url": "http://arxiv.org/pdf/2508.01341v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.01341v1",
+      "published": "2025-08-02",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "62C12",
+        "H.3"
+      ]
+    },
+    {
+      "title": "Flow IV: Counterfactual Inference In Nonseparable Outcome Models Using Instrumental Variables",
+      "authors": [
+        "Marc Braun",
+        "Jose M. Peña",
+        "Adel Daoud"
+      ],
+      "abstract": "To reach human level intelligence, learning algorithms need to incorporate\ncausal reasoning. But identifying causality, and particularly counterfactual\nreasoning, remains an elusive task. In this paper, we make progress on this\ntask by utilizing instrumental variables (IVs). IVs are a classic tool for\nmitigating bias from unobserved confounders when estimating causal effects.\nWhile IV methods have been extended to non-separable structural models at the\npopulation level, existing approaches to counterfactual prediction typically\nassume additive noise in the outcome. In this paper, we show that under\nstandard IV assumptions, along with the assumptions that latent noises in\ntreatment and outcome are strictly monotonic and jointly Gaussian, the\ntreatment-outcome relationship becomes uniquely identifiable from observed\ndata. This enables counterfactual inference even in nonseparable models. We\nimplement our approach by training a normalizing flow to maximize the\nlikelihood of the observed data, demonstrating accurate recovery of the\nunderlying outcome function. We call our method Flow IV.",
+      "pdf_url": "http://arxiv.org/pdf/2508.01321v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.01321v1",
+      "published": "2025-08-02",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Frugal, Flexible, Faithful: Causal Data Simulation via Frengression",
+      "authors": [
+        "Linying Yang",
+        "Robin J. Evans",
+        "Xinwei Shen"
+      ],
+      "abstract": "Machine learning has revitalized causal inference by combining flexible\nmodels and principled estimators, yet robust benchmarking and evaluation remain\nchallenging with real-world data. In this work, we introduce frengression, a\ndeep generative realization of the frugal parameterization that models the\njoint distribution of covariates, treatments and outcomes around the causal\nmargin of interest. Frengression provides accurate estimation and flexible,\nfaithful simulation of multivariate, time-varying data; it also enables direct\nsampling from user-specified interventional distributions. Model consistency\nand extrapolation guarantees are established, with validation on real-world\nclinical trial data demonstrating frengression's practical utility. We envision\nthis framework sparking new research into generative approaches for causal\nmargin modelling.",
+      "pdf_url": "http://arxiv.org/pdf/2508.01018v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.01018v1",
+      "published": "2025-08-01",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Harnessing the Power of Interleaving and Counterfactual Evaluation for Airbnb Search Ranking",
       "authors": [
@@ -50,115 +170,6 @@
       "pdf_url": "http://arxiv.org/pdf/2508.00489v1",
       "arxiv_url": "http://arxiv.org/abs/2508.00489v1",
       "published": "2025-08-01",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Learning to Optimize Feedback for One Million Students: Insights from Multi-Armed and Contextual Bandits in Large-Scale Online Tutoring",
-      "authors": [
-        "Robin Schmucker",
-        "Nimish Pachapurkar",
-        "Shanmuga Bala",
-        "Miral Shah",
-        "Tom Mitchell"
-      ],
-      "abstract": "We present an online tutoring system that learns to provide effective\nfeedback to students after they answer questions incorrectly. Using data from\none million students, the system learns which assistance action (e.g., one of\nmultiple hints) to provide for each question to optimize student learning.\nEmploying the multi-armed bandit (MAB) framework and offline policy evaluation,\nwe assess 43,000 assistance actions, and identify trade-offs between assistance\npolicies optimized for different student outcomes (e.g., response correctness,\nsession completion). We design an algorithm that for each question decides on a\nsuitable policy training objective to enhance students' immediate second\nattempt success and overall practice session performance. We evaluate the\nresulting MAB policies in 166,000 practice sessions, verifying significant\nimprovements in student outcomes. While MAB policies optimize feedback for the\noverall student population, we further investigate whether contextual bandit\n(CB) policies can enhance outcomes by personalizing feedback based on\nindividual student features (e.g., ability estimates, response times). Using\ncausal inference, we examine (i) how effects of assistance actions vary across\nstudents and (ii) whether CB policies, which leverage such effect\nheterogeneity, outperform MAB policies. While our analysis reveals that some\nactions for some questions exhibit effect heterogeneity, effect sizes may often\nbe too small for CB policies to provide significant improvements beyond what\nwell-optimized MAB policies that deliver the same action to all students\nalready achieve. We discuss insights gained from deploying data-driven systems\nat scale and implications for future refinements. Today, the teaching policies\noptimized by our system support thousands of students daily.",
-      "pdf_url": "http://arxiv.org/pdf/2508.00270v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.00270v1",
-      "published": "2025-08-01",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Structural Causal Models for Extremes: an Approach Based on Exponent Measures",
-      "authors": [
-        "Fei Fang",
-        "Shuyang Bai",
-        "Tiandong Wang"
-      ],
-      "abstract": "We introduce a new formulation of structural causal models for extremes,\ncalled the extremal structural causal model (eSCM). Unlike conventional\nstructural causal models, where randomness is governed by a probability\ndistribution, eSCMs use an exponent measure--an infinite-mass law that\nnaturally arises in the analysis of multivariate extremes. Central to this\nframework are activation variables, which abstract the single-big-jump\nprinciple, along with additional randomization that enriches the class of eSCM\nlaws. This formulation encompasses all possible laws of directed graphical\nmodels under the recently introduced notion of extremal conditional\nindependence. We also identify an inherent asymmetry in eSCMs under natural\nassumptions, enabling the identifiability of causal directions, a central\nchallenge in causal inference. Finally, we propose a method that utilizes this\ncausal asymmetry and demonstrate its effectiveness in both simulated and real\ndatasets.",
-      "pdf_url": "http://arxiv.org/pdf/2508.00223v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.00223v1",
-      "published": "2025-08-01",
-      "categories": [
-        "math.ST",
-        "stat.ME",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Relative Bias Under Imperfect Identification in Observational Causal Inference",
-      "authors": [
-        "Melody Huang",
-        "Cory McCartan"
-      ],
-      "abstract": "To conduct causal inference in observational settings, researchers must rely\non certain identifying assumptions. In practice, these assumptions are unlikely\nto hold exactly. This paper considers the bias of selection-on-observables,\ninstrumental variables, and proximal inference estimates under violations of\ntheir identifying assumptions. We develop bias expressions for IV and proximal\ninference that show how violations of their respective assumptions are\namplified by any unmeasured confounding in the outcome variable. We propose a\nset of sensitivity tools that quantify the sensitivity of different\nidentification strategies, and an augmented bias contour plot visualizes the\nrelationship between these strategies. We argue that the act of choosing an\nidentification strategy implicitly expresses a belief about the degree of\nviolations that must be present in alternative identification strategies. Even\nwhen researchers intend to conduct an IV or proximal analysis, a sensitivity\nanalysis comparing different identification strategies can help to better\nunderstand the implications of each set of assumptions. Throughout, we compare\nthe different approaches on a re-analysis of the impact of state surveillance\non the incidence of protest in Communist Poland.",
-      "pdf_url": "http://arxiv.org/pdf/2507.23743v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.23743v1",
-      "published": "2025-07-31",
-      "categories": [
-        "stat.ME",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Incorporating structural uncertainty in causal decision making",
-      "authors": [
-        "Maurits Kaptein"
-      ],
-      "abstract": "Practitioners making decisions based on causal effects typically ignore\nstructural uncertainty. We analyze when this uncertainty is consequential\nenough to warrant methodological solutions (Bayesian model averaging over\ncompeting causal structures). Focusing on bivariate relationships ($X\n\\rightarrow Y$ vs. $X \\leftarrow Y$), we establish that model averaging is\nbeneficial when: (1) structural uncertainty is moderate to high, (2) causal\neffects differ substantially between structures, and (3) loss functions are\nsufficiently sensitive to the size of the causal effect. We prove optimality\nresults of our suggested methodological solution under regularity conditions\nand demonstrate through simulations that modern causal discovery methods can\nprovide, within limits, the necessary quantification. Our framework complements\nexisting robust causal inference approaches by addressing a distinct source of\nuncertainty typically overlooked in practice.",
-      "pdf_url": "http://arxiv.org/pdf/2507.23495v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.23495v1",
-      "published": "2025-07-31",
-      "categories": [
-        "cs.LG",
-        "math.ST",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Causal Reasoning in Pieces: Modular In-Context Learning for Causal Discovery",
-      "authors": [
-        "Kacper Kadziolka",
-        "Saber Salehkaleybar"
-      ],
-      "abstract": "Causal inference remains a fundamental challenge for large language models.\nRecent advances in internal reasoning with large language models have sparked\ninterest in whether state-of-the-art reasoning models can robustly perform\ncausal discovery-a task where conventional models often suffer from severe\noverfitting and near-random performance under data perturbations. We study\ncausal discovery on the Corr2Cause benchmark using the emergent OpenAI's\no-series and DeepSeek-R model families and find that these reasoning-first\narchitectures achieve significantly greater native gains than prior approaches.\nTo capitalize on these strengths, we introduce a modular in-context pipeline\ninspired by the Tree-of-Thoughts and Chain-of-Thoughts methodologies, yielding\nnearly three-fold improvements over conventional baselines. We further probe\nthe pipeline's impact by analyzing reasoning chain length, complexity, and\nconducting qualitative and quantitative comparisons between conventional and\nreasoning models. Our findings suggest that while advanced reasoning models\nrepresent a substantial leap forward, carefully structured in-context\nframeworks are essential to maximize their capabilities and offer a\ngeneralizable blueprint for causal discovery across diverse domains.",
-      "pdf_url": "http://arxiv.org/pdf/2507.23488v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.23488v1",
-      "published": "2025-07-31",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Causal2Vec: Improving Decoder-only LLMs as Versatile Embedding Models",
-      "authors": [
-        "Ailiang Lin",
-        "Zhuoyun Li",
-        "Kotaro Funakoshi"
-      ],
-      "abstract": "Decoder-only large language models (LLMs) are increasingly used to build\nembedding models that effectively encode the semantic information of natural\nlanguage texts into dense vector representations for various embedding tasks.\nHowever, many existing methods primarily focus on removing the causal attention\nmask in LLMs to enable bidirectional attention, potentially undermining the\nmodel's ability to extract semantic information acquired during pretraining.\nAdditionally, leading unidirectional approaches often rely on extra input text\nto overcome the inherent limitations of causal attention, inevitably increasing\ncomputational costs. In this work, we propose Causal2Vec, a general-purpose\nembedding model tailored to enhance the performance of decoder-only LLMs\nwithout altering their original architectures or introducing significant\ncomputational overhead. Specifically, we first employ a lightweight BERT-style\nmodel to pre-encode the input text into a single Contextual token, which is\nthen prepended to the LLM's input sequence, allowing each token to capture\ncontextualized information even without attending to future tokens.\nFurthermore, to mitigate the recency bias introduced by last-token pooling and\nhelp LLMs better leverage the semantic information encoded in the Contextual\ntoken, we concatenate the last hidden states of Contextual and EOS tokens as\nthe final text embedding. In practice, Causal2Vec achieves state-of-the-art\nperformance on the Massive Text Embeddings Benchmark (MTEB) among models\ntrained solely on publicly available retrieval datasets, while reducing the\nrequired sequence length by up to 85% and inference time by up to 82% compared\nto best-performing methods.",
-      "pdf_url": "http://arxiv.org/pdf/2507.23386v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.23386v1",
-      "published": "2025-07-31",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "ISO-Bench: Benchmarking Multimodal Causal Reasoning in Visual-Language Models through Procedural Plans",
-      "authors": [
-        "Ananya Sadana",
-        "Yash Kumar Lal",
-        "Jiawei Zhou"
-      ],
-      "abstract": "Understanding causal relationships across modalities is a core challenge for\nmultimodal models operating in real-world environments. We introduce ISO-Bench,\na benchmark for evaluating whether models can infer causal dependencies between\nvisual observations and procedural text. Each example presents an image of a\ntask step and a text snippet from a plan, with the goal of deciding whether the\nvisual step occurs before or after the referenced text step. Evaluation results\non ten frontier vision-language models show underwhelming performance: the best\nzero-shot F1 is only 0.57, and chain-of-thought reasoning yields only modest\ngains (up to 0.62 F1), largely behind humans (0.98 F1). Our analysis further\nhighlights concrete directions for improving causal understanding in multimodal\nmodels.",
-      "pdf_url": "http://arxiv.org/pdf/2507.23135v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.23135v1",
-      "published": "2025-07-30",
       "categories": [
         "cs.CL"
       ]
