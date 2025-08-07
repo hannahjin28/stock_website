@@ -1,6 +1,79 @@
 {
-  "last_updated": "2025-08-06T01:00:05.073511",
+  "last_updated": "2025-08-07T01:00:28.565721",
   "papers": [
+    {
+      "title": "EmbedGrad: Gradient-Based Prompt Optimization in Embedding Space for Large Language Models",
+      "authors": [
+        "Xiaoming Hou",
+        "Jiquan Zhang",
+        "Zibin Lin",
+        "DaCheng Tao",
+        "Shengli Zhang"
+      ],
+      "abstract": "Effectively adapting powerful pretrained foundation models to diverse tasks\nremains a key challenge in AI deployment. Current approaches primarily follow\ntwo paradigms:discrete optimization of text prompts through prompt engineering,\nor continuous adaptation via additional trainable parameters. Both exhibit\nlimitations-discrete methods lack refinement precision while parameter-based\ntechniques increase complexity and reduce interpretability. To address these\nconstraints, we propose EmbedGrad, a novel framework that optimizes text prompt\nembeddings through gradient-based refinement. Our approach uniquely decouples\ntraining from deployment:during optimization,labeled examples guide precise\nembedding adjustments while preserving semantic meaning; during inference, only\noptimized embeddings integrate with user queries. This enables fine-grained\ncalibration impossible in text space, such as enhancing the reasoning\ncapability of prompts like please reason step by step. Comprehensive\nevaluations across mathematical reasoning, sentiment analysis, and causal\njudgment tasks demonstrate EmbedGrad's effectiveness:optimizing this reasoning\nprompt for Qwen2.5-Math-1.5B increased accuracy from 14.74\\% to 58.96\\% on\nmathematical problems. Consistent improvements were observed across model\nscales (0.5B-14B) and all tasks, with particularly significant gains for\nsmaller models on complex problems like causal judgment. By bridging prompt\nengineering and parameter efficiency without architectural changes, our work\nestablishes embedding refinement as a powerful new paradigm for task\nadaptation.",
+      "pdf_url": "http://arxiv.org/pdf/2508.03533v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.03533v1",
+      "published": "2025-08-05",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Causal identification with $Y_0$",
+      "authors": [
+        "Charles Tapley Hoyt",
+        "Craig Bakker",
+        "Richard J. Callahan",
+        "Joseph Cottam",
+        "August George",
+        "Benjamin M. Gyori",
+        "Haley M. Hummel",
+        "Nathaniel Merrill",
+        "Sara Mohammad Taheri",
+        "Pruthvi Prakash Navada",
+        "Marc-Antoine Parent",
+        "Adam Rupe",
+        "Olga Vitek",
+        "Jeremy Zucker"
+      ],
+      "abstract": "We present the $Y_0$ Python package, which implements causal identification\nalgorithms that apply interventional, counterfactual, and transportability\nqueries to data from (randomized) controlled trials, observational studies, or\nmixtures thereof. $Y_0$ focuses on the qualitative investigation of causation,\nhelping researchers determine whether a causal relationship can be estimated\nfrom available data before attempting to estimate how strong that relationship\nis. Furthermore, $Y_0$ provides guidance on how to transform the causal query\ninto a symbolic estimand that can be non-parametrically estimated from the\navailable data. $Y_0$ provides a domain-specific language for representing\ncausal queries and estimands as symbolic probabilistic expressions, tools for\nrepresenting causal graphical models with unobserved confounders, such as\nacyclic directed mixed graphs (ADMGs), and implementations of numerous\nidentification algorithms from the recent causal inference literature. The\n$Y_0$ source code can be found under the MIT License at\nhttps://github.com/y0-causal-inference/y0 and it can be installed with pip\ninstall y0.",
+      "pdf_url": "http://arxiv.org/pdf/2508.03167v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.03167v1",
+      "published": "2025-08-05",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Bayesian Sensitivity Analyses for Policy Evaluation with Difference-in-Differences under Violations of Parallel Trends",
+      "authors": [
+        "Seong Woo Han",
+        "Nandita Mitra",
+        "Gary Hettinger",
+        "Arman Oganisian"
+      ],
+      "abstract": "Violations of the parallel trends assumption pose significant challenges for\ncausal inference in difference-in-differences (DiD) studies, especially in\npolicy evaluations where pre-treatment dynamics and external shocks may bias\nestimates. In this work, we propose a Bayesian DiD framework to allow us to\nestimate the effect of policies when parallel trends is violated. To address\npotential deviations from the parallel trends assumption, we introduce a formal\nsensitivity parameter representing the extent of the violation, specify an\nautoregressive AR(1) prior on this term to robustly model temporal correlation,\nand explore a range of prior specifications - including fixed, fully Bayesian,\nand empirical Bayes (EB) approaches calibrated from pre-treatment data. By\nsystematically comparing posterior treatment effect estimates across prior\nconfigurations when evaluating Philadelphia's sweetened beverage tax using\nBaltimore as a control, we show how Bayesian sensitivity analyses support\nrobust and interpretable policy conclusions under violations of parallel\ntrends.",
+      "pdf_url": "http://arxiv.org/pdf/2508.02970v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.02970v1",
+      "published": "2025-08-05",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Sensitivity of weighted least squares estimators to omitted variables",
+      "authors": [
+        "Leonard Wainstein",
+        "Chad Hazlett"
+      ],
+      "abstract": "This paper introduces tools for assessing the sensitivity, to unobserved\nconfounding, of a common estimator of the causal effect of a treatment on an\noutcome that employs weights: the weighted linear regression of the outcome on\nthe treatment and observed covariates. We demonstrate through the omitted\nvariable bias framework that the bias of this estimator is a function of two\nintuitive sensitivity parameters: (i) the proportion of weighted variance in\nthe treatment that unobserved confounding explains given the covariates and\n(ii) the proportion of weighted variance in the outcome that unobserved\nconfounding explains given the covariates and the treatment, i.e., two weighted\npartial $R^2$ values. Following previous work, we define sensitivity statistics\nthat lend themselves well to routine reporting, and derive formal bounds on the\nstrength of the unobserved confounding with (a multiple of) the strength of\nselect dimensions of the covariates, which help the user determine if\nunobserved confounding that would alter one's conclusions is plausible. We also\npropose tools for adjusted inference. A key choice we make is to examine only\nhow the (weighted) outcome model is influenced by unobserved confounding,\nrather than examining how the weights have been biased by omitted confounding.\nOne benefit of this choice is that the resulting tool applies with any weights\n(e.g., inverse-propensity score, matching, or covariate balancing weights).\nAnother benefit is that we can rely on simple omitted variable bias approaches\nthat, for example, impose no distributional assumptions on the data or\nunobserved confounding, and can address bias from misspecification in the\nobserved data. We make these tools available in the weightsense package for the\nR computing language.",
+      "pdf_url": "http://arxiv.org/pdf/2508.02954v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.02954v1",
+      "published": "2025-08-04",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Causality and Interpretability for Electrical Distribution System faults",
       "authors": [
@@ -103,75 +176,6 @@
       "categories": [
         "stat.ML",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Frugal, Flexible, Faithful: Causal Data Simulation via Frengression",
-      "authors": [
-        "Linying Yang",
-        "Robin J. Evans",
-        "Xinwei Shen"
-      ],
-      "abstract": "Machine learning has revitalized causal inference by combining flexible\nmodels and principled estimators, yet robust benchmarking and evaluation remain\nchallenging with real-world data. In this work, we introduce frengression, a\ndeep generative realization of the frugal parameterization that models the\njoint distribution of covariates, treatments and outcomes around the causal\nmargin of interest. Frengression provides accurate estimation and flexible,\nfaithful simulation of multivariate, time-varying data; it also enables direct\nsampling from user-specified interventional distributions. Model consistency\nand extrapolation guarantees are established, with validation on real-world\nclinical trial data demonstrating frengression's practical utility. We envision\nthis framework sparking new research into generative approaches for causal\nmargin modelling.",
-      "pdf_url": "http://arxiv.org/pdf/2508.01018v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.01018v1",
-      "published": "2025-08-01",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Harnessing the Power of Interleaving and Counterfactual Evaluation for Airbnb Search Ranking",
-      "authors": [
-        "Qing Zhang",
-        "Alex Deng",
-        "Michelle Du",
-        "Huiji Gao",
-        "Liwei He",
-        "Sanjeev Katariya"
-      ],
-      "abstract": "Evaluation plays a crucial role in the development of ranking algorithms on\nsearch and recommender systems. It enables online platforms to create\nuser-friendly features that drive commercial success in a steady and effective\nmanner. The online environment is particularly conducive to applying causal\ninference techniques, such as randomized controlled experiments (known as A/B\ntest), which are often more challenging to implement in fields like medicine\nand public policy. However, businesses face unique challenges when it comes to\neffective A/B test. Specifically, achieving sufficient statistical power for\nconversion-based metrics can be time-consuming, especially for significant\npurchases like booking accommodations. While offline evaluations are quicker\nand more cost-effective, they often lack accuracy and are inadequate for\nselecting candidates for A/B test. To address these challenges, we developed\ninterleaving and counterfactual evaluation methods to facilitate rapid online\nassessments for identifying the most promising candidates for A/B tests. Our\napproach not only increased the sensitivity of experiments by a factor of up to\n100 (depending on the approach and metrics) compared to traditional A/B testing\nbut also streamlined the experimental process. The practical insights gained\nfrom usage in production can also benefit organizations with similar interests.",
-      "pdf_url": "http://arxiv.org/pdf/2508.00751v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.00751v1",
-      "published": "2025-08-01",
-      "categories": [
-        "cs.IR",
-        "cs.AI",
-        "H.3; G.3"
-      ]
-    },
-    {
-      "title": "Multi-Band Variable-Lag Granger Causality: A Unified Framework for Causal Time Series Inference across Frequencies",
-      "authors": [
-        "Chakattrai Sookkongwaree",
-        "Tattep Lakmuang",
-        "Chainarong Amornbunchornvej"
-      ],
-      "abstract": "Understanding causal relationships in time series is fundamental to many\ndomains, including neuroscience, economics, and behavioral science. Granger\ncausality is one of the well-known techniques for inferring causality in time\nseries. Typically, Granger causality frameworks have a strong fix-lag\nassumption between cause and effect, which is often unrealistic in complex\nsystems. While recent work on variable-lag Granger causality (VLGC) addresses\nthis limitation by allowing a cause to influence an effect with different time\nlags at each time point, it fails to account for the fact that causal\ninteractions may vary not only in time delay but also across frequency bands.\nFor example, in brain signals, alpha-band activity may influence another region\nwith a shorter delay than slower delta-band oscillations. In this work, we\nformalize Multi-Band Variable-Lag Granger Causality (MB-VLGC) and propose a\nnovel framework that generalizes traditional VLGC by explicitly modeling\nfrequency-dependent causal delays. We provide a formal definition of MB-VLGC,\ndemonstrate its theoretical soundness, and propose an efficient inference\npipeline. Extensive experiments across multiple domains demonstrate that our\nframework significantly outperforms existing methods on both synthetic and\nreal-world datasets, confirming its broad applicability to any type of time\nseries data. Code and datasets are publicly available.",
-      "pdf_url": "http://arxiv.org/pdf/2508.00658v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.00658v1",
-      "published": "2025-08-01",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "econ.EM",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "The Missing Parts: Augmenting Fact Verification with Half-Truth Detection",
-      "authors": [
-        "Yixuan Tang",
-        "Jincheng Wang",
-        "Anthony K. H. Tung"
-      ],
-      "abstract": "Fact verification systems typically assess whether a claim is supported by\nretrieved evidence, assuming that truthfulness depends solely on what is\nstated. However, many real-world claims are half-truths, factually correct yet\nmisleading due to the omission of critical context. Existing models struggle\nwith such cases, as they are not designed to reason about what is left unsaid.\nWe introduce the task of half-truth detection, and propose PolitiFact-Hidden, a\nnew benchmark with 15k political claims annotated with sentence-level evidence\nalignment and inferred claim intent. To address this challenge, we present\nTRACER, a modular re-assessment framework that identifies omission-based\nmisinformation by aligning evidence, inferring implied intent, and estimating\nthe causal impact of hidden content. TRACER can be integrated into existing\nfact-checking pipelines and consistently improves performance across multiple\nstrong baselines. Notably, it boosts Half-True classification F1 by up to 16\npoints, highlighting the importance of modeling omissions for trustworthy fact\nverification.",
-      "pdf_url": "http://arxiv.org/pdf/2508.00489v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.00489v1",
-      "published": "2025-08-01",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]
