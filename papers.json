@@ -1,6 +1,103 @@
 {
-  "last_updated": "2025-08-07T01:00:28.565721",
+  "last_updated": "2025-08-08T01:00:03.918434",
   "papers": [
+    {
+      "title": "Causal Reflection with Language Models",
+      "authors": [
+        "Abi Aryan",
+        "Zac Liu"
+      ],
+      "abstract": "While LLMs exhibit impressive fluency and factual recall, they struggle with\nrobust causal reasoning, often relying on spurious correlations and brittle\npatterns. Similarly, traditional Reinforcement Learning agents also lack causal\nunderstanding, optimizing for rewards without modeling why actions lead to\noutcomes. We introduce Causal Reflection, a framework that explicitly models\ncausality as a dynamic function over state, action, time, and perturbation,\nenabling agents to reason about delayed and nonlinear effects. Additionally, we\ndefine a formal Reflect mechanism that identifies mismatches between predicted\nand observed outcomes and generates causal hypotheses to revise the agent's\ninternal model. In this architecture, LLMs serve not as black-box reasoners,\nbut as structured inference engines translating formal causal outputs into\nnatural language explanations and counterfactuals. Our framework lays the\ntheoretical groundwork for Causal Reflective agents that can adapt,\nself-correct, and communicate causal understanding in evolving environments.",
+      "pdf_url": "http://arxiv.org/pdf/2508.04495v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.04495v1",
+      "published": "2025-08-06",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Boosting Visual Knowledge-Intensive Training for LVLMs Through Causality-Driven Visual Object Completion",
+      "authors": [
+        "Qingguo Hu",
+        "Ante Wang",
+        "Jia Song",
+        "Delai Qiu",
+        "Qingsong Liu",
+        "Jinsong Su"
+      ],
+      "abstract": "Large Vision-Language Models (LVLMs) have experienced significant\nadvancements in recent years. However, their performance still falls short in\ntasks requiring deep visual perception, such as identifying subtle differences\nbetween images. A potential cause is the scarcity of visual knowledge in\npopular instruction-tuning corpora, resulting in inadequate visual perception\nand reasoning capabilities. To address this challenge, we introduce a\nself-improvement framework grounded in a novel visual knowledge-intensive task,\n\\underline{C}ausality-driven \\underline{V}isual object \\underline{C}ompletion\n(CVC). This task requires LVLMs to infer the masked object in an image based on\nits \\textit{causal} relationships with the other visible information. We first\nobtain rich examples cheaply through our automated instance construction\npipeline, without relying on sophisticated LVLMs (\\textit{e.g.}, GPT-4V) or\nhuman assistance. Then, LVLMs effectively self-improve through trial and error\nlearning using these created instances. Our experiments demonstrate substantial\ngains across four challenging specialized tasks and four widely-used\ncomprehensive benchmarks. Especially on specialized tasks, our method achieves\nan average improvement of 5.4\\% and 4.0\\% compared to the corresponding\nbaselines when utilizing LLaVA-1.5-7B and LLaVA-1.5-13B, respectively. The code\nis available at https://github.com/XMUDeepLIT/CVC.",
+      "pdf_url": "http://arxiv.org/pdf/2508.04453v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.04453v1",
+      "published": "2025-08-06",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Causal Reward Adjustment: Mitigating Reward Hacking in External Reasoning via Backdoor Correction",
+      "authors": [
+        "Ruike Song",
+        "Zeen Song",
+        "Huijie Guo",
+        "Wenwen Qiang"
+      ],
+      "abstract": "External reasoning systems combine language models with process reward models\n(PRMs) to select high-quality reasoning paths for complex tasks such as\nmathematical problem solving. However, these systems are prone to reward\nhacking, where high-scoring but logically incorrect paths are assigned high\nscores by the PRMs, leading to incorrect answers. From a causal inference\nperspective, we attribute this phenomenon primarily to the presence of\nconfounding semantic features. To address it, we propose Causal Reward\nAdjustment (CRA), a method that mitigates reward hacking by estimating the true\nreward of a reasoning path. CRA trains sparse autoencoders on the PRM's\ninternal activations to recover interpretable features, then corrects\nconfounding by using backdoor adjustment. Experiments on math solving datasets\ndemonstrate that CRA mitigates reward hacking and improves final accuracy,\nwithout modifying the policy model or retraining PRM.",
+      "pdf_url": "http://arxiv.org/pdf/2508.04216v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.04216v1",
+      "published": "2025-08-06",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Robust estimation of causal dose-response relationship using exposure data with dose as an instrumental variable",
+      "authors": [
+        "Jixian Wang",
+        "Zhiwei Zhang",
+        "Ram Tiwari"
+      ],
+      "abstract": "An accurate estimation of the dose-response relationship is important to\ndetermine the optimal dose. For this purpose, a dose finding trial in which\nsubjects are randomized to a few fixed dose levels is the most commonly used\ndesign. Often, the estimation uses response data only, although drug exposure\ndata are often obtained during the trial. The use of exposure data to improve\nthis estimation is difficult, as exposure-response relationships are typically\nsubject to confounding bias even in a randomized trial. We propose a robust\napproach to estimate the dose-response relationship without assuming a true\nexposure-response model, using dose as an instrumental variable. Our approach\ncombines the control variable approach in causal inference with unobserved\nconfounding factors and the ANCOVA adjustment of randomized trials. The\napproach presented uses working models for dose-exposure-response data, but\nthey are robust to model misspecification and remain consistent when the\nworking models are far from correct. The asymptotic properties of the proposed\napproach are also examined. A simulation study is performed to evaluate the\nperformance of the proposed approach. For illustration, the approach is used to\na Car-T trial with randomized doses.",
+      "pdf_url": "http://arxiv.org/pdf/2508.04215v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.04215v1",
+      "published": "2025-08-06",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Can Large Language Models Adequately Perform Symbolic Reasoning Over Time Series?",
+      "authors": [
+        "Zewen Liu",
+        "Juntong Ni",
+        "Xianfeng Tang",
+        "Max S. Y. Lau",
+        "Wei Jin"
+      ],
+      "abstract": "Uncovering hidden symbolic laws from time series data, as an aspiration\ndating back to Kepler's discovery of planetary motion, remains a core challenge\nin scientific discovery and artificial intelligence. While Large Language\nModels show promise in structured reasoning tasks, their ability to infer\ninterpretable, context-aligned symbolic structures from time series data is\nstill underexplored. To systematically evaluate this capability, we introduce\nSymbolBench, a comprehensive benchmark designed to assess symbolic reasoning\nover real-world time series across three tasks: multivariate symbolic\nregression, Boolean network inference, and causal discovery. Unlike prior\nefforts limited to simple algebraic equations, SymbolBench spans a diverse set\nof symbolic forms with varying complexity. We further propose a unified\nframework that integrates LLMs with genetic programming to form a closed-loop\nsymbolic reasoning system, where LLMs act both as predictors and evaluators.\nOur empirical results reveal key strengths and limitations of current models,\nhighlighting the importance of combining domain knowledge, context alignment,\nand reasoning structure to improve LLMs in automated scientific discovery.",
+      "pdf_url": "http://arxiv.org/pdf/2508.03963v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.03963v1",
+      "published": "2025-08-05",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "The Regression Discontinuity Design in Medical Science",
+      "authors": [
+        "Matias D. Cattaneo",
+        "Rocio Titiunik"
+      ],
+      "abstract": "This article provides an introduction to the Regression Discontinuity (RD)\ndesign, and its application to empirical research in the medical sciences.\nWhile the main focus of this article is on causal interpretation, key concepts\nof estimation and inference are also briefly mentioned. A running medical\nempirical example is provided.",
+      "pdf_url": "http://arxiv.org/pdf/2508.03878v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.03878v1",
+      "published": "2025-08-05",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "stat.AP"
+      ]
+    },
     {
       "title": "EmbedGrad: Gradient-Based Prompt Optimization in Embedding Space for Large Language Models",
       "authors": [
@@ -72,110 +169,6 @@
       "published": "2025-08-04",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Causality and Interpretability for Electrical Distribution System faults",
-      "authors": [
-        "Karthik Peddi",
-        "Sai Ram Aditya Parisineni",
-        "Hemanth Macharla",
-        "Mayukha Pal"
-      ],
-      "abstract": "Causal analysis helps us understand variables that are responsible for system\nfailures. This improves fault detection and makes system more reliable. In this\nwork, we present a new method that combines causal inference with machine\nlearning to classify faults in electrical distribution systems (EDS) using\ngraph-based models. We first build causal graphs using transfer entropy (TE).\nEach fault case is represented as a graph, where the nodes are features such as\nvoltage and current, and the edges demonstrate how these features influence\neach other. Then, the graphs are classified using machine learning and\nGraphSAGE where the model learns from both the node values and the structure of\nthe graph to predict the type of fault. To make the predictions understandable,\nwe further developed an integrated approach using GNNExplainer and Captums\nIntegrated Gradients to highlight the nodes (features) that influences the most\non the final prediction. This gives us clear insights into the possible causes\nof the fault. Our experiments show high accuracy: 99.44% on the EDS fault\ndataset, which is better than state of art models. By combining causal graphs\nwith machine learning, our method not only predicts faults accurately but also\nhelps understand their root causes. This makes it a strong and practical tool\nfor improving system reliability.",
-      "pdf_url": "http://arxiv.org/pdf/2508.02524v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.02524v1",
-      "published": "2025-08-04",
-      "categories": [
-        "eess.SY",
-        "cs.LG",
-        "cs.SY"
-      ]
-    },
-    {
-      "title": "CITS: Nonparametric Statistical Causal Modeling for High-Resolution Neural Time Series",
-      "authors": [
-        "Rahul Biswas",
-        "SuryaNarayana Sripada",
-        "Somabha Mukherjee",
-        "Reza Abbasi-Asl"
-      ],
-      "abstract": "Understanding how signals propagate through neural circuits is central to\ndeciphering brain computation. While functional connectivity captures\nstatistical associations, it does not reveal directionality or causal\nmechanisms. We introduce CITS (Causal Inference in Time Series), a\nnon-parametric method for inferring statistically causal neural circuitry from\nhigh-resolution time series data. CITS models neural dynamics using a\nstructural causal model with arbitrary Markov order and tests for time-lagged\nconditional independence using either Gaussian or distribution-free statistics.\nUnlike classical Granger Causality, which assumes linear autoregressive models\nand Gaussian noise, or the Peter-Clark algorithm, which assumes i.i.d. data and\nno temporal structure, CITS handles temporally dependent, potentially\nnon-Gaussian data with flexible testing procedures. We prove consistency under\nmild mixing assumptions and validate CITS on simulated linear, nonlinear, and\ncontinuous-time recurrent neural network data, where it outperforms\nstate-of-the-art methods. We then apply CITS to Neuropixels recordings from\nmouse brain during visual tasks. CITS uncovers interpretable, stimulus-specific\ncausal circuits linking cortical, thalamic, and hippocampal regions, consistent\nwith experimental literature. It also reveals that neurons with similar\norientation selectivity indices are more likely to be causally connected. Our\nresults demonstrate the utility of CITS in uncovering biologically meaningful\npathways and generating hypotheses for future experimental studies.",
-      "pdf_url": "http://arxiv.org/pdf/2508.01920v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.01920v1",
-      "published": "2025-08-03",
-      "categories": [
-        "q-bio.NC",
-        "q-bio.QM",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Structure Maintained Representation Learning Neural Network for Causal Inference",
-      "authors": [
-        "Yang Sun",
-        "Wenbin Lu",
-        "Yi-Hui Zhou"
-      ],
-      "abstract": "Recent developments in causal inference have greatly shifted the interest\nfrom estimating the average treatment effect to the individual treatment\neffect. In this article, we improve the predictive accuracy of representation\nlearning and adversarial networks in estimating individual treatment effects by\nintroducing a structure keeper which maintains the correlation between the\nbaseline covariates and their corresponding representations in the high\ndimensional space. We train a discriminator at the end of representation layers\nto trade off representation balance and information loss. We show that the\nproposed discriminator minimizes an upper bound of the treatment estimation\nerror. We can address the tradeoff between distribution balance and information\nloss by considering the correlations between the learned representation space\nand the original covariate feature space. We conduct extensive experiments with\nsimulated and real-world observational data to show that our proposed Structure\nMaintained Representation Learning (SMRL) algorithm outperforms\nstate-of-the-art methods. We also demonstrate the algorithms on real electronic\nhealth record data from the MIMIC-III database.",
-      "pdf_url": "http://arxiv.org/pdf/2508.01865v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.01865v1",
-      "published": "2025-08-03",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Anchoring-Based Causal Design (ABCD): Estimating the Effects of Beliefs",
-      "authors": [
-        "Raanan Sulitzeanu-Kenan",
-        "Micha Mandel",
-        "Yosef Rinott"
-      ],
-      "abstract": "A central challenge in any study of the effects of beliefs on outcomes, such\nas decisions and behavior, is the risk of omitted variables bias. Omitted\nvariables, frequently unmeasured or even unknown, can induce correlations\nbetween beliefs and decisions that are not genuinely causal, in which case the\nomitted variables are referred to as confounders. To address the challenge of\ncausal inference, researchers frequently rely on information provision\nexperiments to randomly manipulate beliefs. The information supplied in these\nexperiments can serve as an instrumental variable (IV), enabling causal\ninference, so long as it influences decisions exclusively through its impact on\nbeliefs. However, providing varying information to participants to shape their\nbeliefs can raise both methodological and ethical concerns. Methodological\nconcerns arise from potential violations of the exclusion restriction\nassumption. Such violations may stem from information source effects, when\nattitudes toward the source affect the outcome decision directly, thereby\nintroducing a confounder. An ethical concern arises from manipulating the\nprovided information, as it may involve deceiving participants. This paper\nproposes and empirically demonstrates a new method for treating beliefs and\nestimating their effects, the Anchoring-Based Causal Design (ABCD), which\navoids deception and source influences. ABCD combines the cognitive mechanism\nknown as anchoring with instrumental variable (IV) estimation. Instead of\nproviding substantive information, the method employs a deliberately\nnon-informative procedure in which participants compare their self-assessment\nof a concept to a randomly assigned anchor value. We present the method and the\nresults of eight experiments demonstrating its application, strengths, and\nlimitations. We conclude by discussing the potential of this design for\nadvancing experimental social science.",
-      "pdf_url": "http://arxiv.org/pdf/2508.01677v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.01677v1",
-      "published": "2025-08-03",
-      "categories": [
-        "econ.GN",
-        "q-fin.EC",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Debiasing Machine Learning Predictions for Causal Inference Without Additional Ground Truth Data: \"One Map, Many Trials\" in Satellite-Driven Poverty Analysis",
-      "authors": [
-        "Markus Pettersson",
-        "Connor T. Jerzak",
-        "Adel Daoud"
-      ],
-      "abstract": "Machine learning models trained on Earth observation data, such as satellite\nimagery, have demonstrated significant promise in predicting household-level\nwealth indices, enabling the creation of high-resolution wealth maps that can\nbe leveraged across multiple causal trials. However, because standard training\nobjectives prioritize overall predictive accuracy, these predictions inherently\nsuffer from shrinkage toward the mean, leading to attenuated estimates of\ncausal treatment effects and limiting their utility in policy. Existing\ndebiasing methods, such as Prediction-Powered Inference, can handle this\nattenuation bias but require additional fresh ground-truth data at the\ndownstream stage of causal inference, which restricts their applicability in\ndata-scarce environments. Here, we introduce and evaluate two correction\nmethods -- linear calibration correction and Tweedie's correction -- that\nsubstantially reduce prediction bias without relying on newly collected labeled\ndata. Linear calibration corrects bias through a straightforward linear\ntransformation derived from held-out calibration data, whereas Tweedie's\ncorrection leverages empirical Bayes principles to directly address\nshrinkage-induced biases by exploiting score functions derived from the model's\nlearning patterns. Through analytical exercises and experiments using\nDemographic and Health Survey data, we demonstrate that the proposed methods\nmeet or outperform existing approaches that either require (a) adjustments to\ntraining pipelines or (b) additional labeled data. These approaches may\nrepresent a promising avenue for improving the reliability of causal inference\nwhen direct outcome measures are limited or unavailable, enabling a \"one map,\nmany trials\" paradigm where a single upstream data creation team produces\npredictions usable by many downstream teams across diverse ML pipelines.",
-      "pdf_url": "http://arxiv.org/pdf/2508.01341v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.01341v1",
-      "published": "2025-08-02",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "62C12",
-        "H.3"
-      ]
-    },
-    {
-      "title": "Flow IV: Counterfactual Inference In Nonseparable Outcome Models Using Instrumental Variables",
-      "authors": [
-        "Marc Braun",
-        "Jose M. Peña",
-        "Adel Daoud"
-      ],
-      "abstract": "To reach human level intelligence, learning algorithms need to incorporate\ncausal reasoning. But identifying causality, and particularly counterfactual\nreasoning, remains an elusive task. In this paper, we make progress on this\ntask by utilizing instrumental variables (IVs). IVs are a classic tool for\nmitigating bias from unobserved confounders when estimating causal effects.\nWhile IV methods have been extended to non-separable structural models at the\npopulation level, existing approaches to counterfactual prediction typically\nassume additive noise in the outcome. In this paper, we show that under\nstandard IV assumptions, along with the assumptions that latent noises in\ntreatment and outcome are strictly monotonic and jointly Gaussian, the\ntreatment-outcome relationship becomes uniquely identifiable from observed\ndata. This enables counterfactual inference even in nonseparable models. We\nimplement our approach by training a normalizing flow to maximize the\nlikelihood of the observed data, demonstrating accurate recovery of the\nunderlying outcome function. We call our method Flow IV.",
-      "pdf_url": "http://arxiv.org/pdf/2508.01321v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.01321v1",
-      "published": "2025-08-02",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
       ]
     }
   ]
