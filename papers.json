@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-08-10T01:03:21.361731",
+  "last_updated": "2025-08-11T01:00:56.627005",
   "papers": [
     {
       "title": "MolSnap: Snap-Fast Molecular Generation with Latent Variational Mean Flow",
@@ -160,11 +160,12 @@
         "Juntong Ni",
         "Xianfeng Tang",
         "Max S. Y. Lau",
+        "Wenpeng Yin",
         "Wei Jin"
       ],
       "abstract": "Uncovering hidden symbolic laws from time series data, as an aspiration\ndating back to Kepler's discovery of planetary motion, remains a core challenge\nin scientific discovery and artificial intelligence. While Large Language\nModels show promise in structured reasoning tasks, their ability to infer\ninterpretable, context-aligned symbolic structures from time series data is\nstill underexplored. To systematically evaluate this capability, we introduce\nSymbolBench, a comprehensive benchmark designed to assess symbolic reasoning\nover real-world time series across three tasks: multivariate symbolic\nregression, Boolean network inference, and causal discovery. Unlike prior\nefforts limited to simple algebraic equations, SymbolBench spans a diverse set\nof symbolic forms with varying complexity. We further propose a unified\nframework that integrates LLMs with genetic programming to form a closed-loop\nsymbolic reasoning system, where LLMs act both as predictors and evaluators.\nOur empirical results reveal key strengths and limitations of current models,\nhighlighting the importance of combining domain knowledge, context alignment,\nand reasoning structure to improve LLMs in automated scientific discovery.",
-      "pdf_url": "http://arxiv.org/pdf/2508.03963v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.03963v1",
+      "pdf_url": "http://arxiv.org/pdf/2508.03963v2",
+      "arxiv_url": "http://arxiv.org/abs/2508.03963v2",
       "published": "2025-08-05",
       "categories": [
         "cs.AI"
