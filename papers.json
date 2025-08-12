@@ -1,6 +1,99 @@
 {
-  "last_updated": "2025-08-11T01:00:56.627005",
+  "last_updated": "2025-08-12T00:54:54.880746",
   "papers": [
+    {
+      "title": "Decorrelated feature importance from local sample weighting",
+      "authors": [
+        "Benedikt Fröhlich",
+        "Alison Durst",
+        "Merle Behr"
+      ],
+      "abstract": "Feature importance (FI) statistics provide a prominent and valuable method of\ninsight into the decision process of machine learning (ML) models, but their\neffectiveness has well-known limitations when correlation is present among the\nfeatures in the training data. In this case, the FI often tends to be\ndistributed among all features which are in correlation with the\nresponse-generating signal features. Even worse, if multiple signal features\nare in strong correlation with a noise feature, while being only modestly\ncorrelated with one another, this can result in a noise feature having a\ndistinctly larger FI score than any signal feature. Here we propose local\nsample weighting (losaw) which can flexibly be integrated into many ML\nalgorithms to improve FI scores in the presence of feature correlation in the\ntraining data. Our approach is motivated from inverse probability weighting in\ncausal inference and locally, within the ML model, uses a sample weighting\nscheme to decorrelate a target feature from the remaining features. This\nreduces model bias locally, whenever the effect of a potential signal feature\nis evaluated and compared to others. Moreover, losaw comes with a natural\ntuning parameter, the minimum effective sample size of the weighted population,\nwhich corresponds to an interpretation-prediction-tradeoff, analog to a\nbias-variance-tradeoff as for classical ML tuning parameters. We demonstrate\nhow losaw can be integrated within decision tree-based ML methods and within\nmini-batch training of neural networks. We investigate losaw for random forest\nand convolutional neural networks in a simulation study on settings showing\ndiverse correlation patterns. We found that losaw improves FI consistently.\nMoreover, it often improves prediction accuracy for out-of-distribution, while\nmaintaining a similar accuracy for in-distribution test data.",
+      "pdf_url": "http://arxiv.org/pdf/2508.06337v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.06337v1",
+      "published": "2025-08-08",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Llasa+: Free Lunch for Accelerated and Streaming Llama-Based Speech Synthesis",
+      "authors": [
+        "Wenjie Tian",
+        "Xinfa Zhu",
+        "Hanke Xie",
+        "Zhen Ye",
+        "Wei Xue",
+        "Lei Xie"
+      ],
+      "abstract": "Recent progress in text-to-speech (TTS) has achieved impressive naturalness\nand flexibility, especially with the development of large language model\n(LLM)-based approaches. However, existing autoregressive (AR) structures and\nlarge-scale models, such as Llasa, still face significant challenges in\ninference latency and streaming synthesis. To deal with the limitations, we\nintroduce Llasa+, an accelerated and streaming TTS model built on Llasa.\nSpecifically, to accelerate the generation process, we introduce two\nplug-and-play Multi-Token Prediction (MTP) modules following the frozen\nbackbone. These modules allow the model to predict multiple tokens in one AR\nstep. Additionally, to mitigate potential error propagation caused by\ninaccurate MTP, we design a novel verification algorithm that leverages the\nfrozen backbone to validate the generated tokens, thus allowing Llasa+ to\nachieve speedup without sacrificing generation quality. Furthermore, we design\na causal decoder that enables streaming speech reconstruction from tokens.\nExtensive experiments show that Llasa+ achieves a 1.48X speedup without\nsacrificing generation quality, despite being trained only on LibriTTS.\nMoreover, the MTP-and-verification framework can be applied to accelerate any\nLLM-based model. All codes and models are publicly available at\nhttps://github.com/ASLP-lab/LLaSA_Plus.",
+      "pdf_url": "http://arxiv.org/pdf/2508.06262v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.06262v1",
+      "published": "2025-08-08",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ]
+    },
+    {
+      "title": "InfoCausalQA:Can Models Perform Non-explicit Causal Reasoning Based on Infographic?",
+      "authors": [
+        "Keummin Ka",
+        "Junhyeong Park",
+        "Jahyun Jeon",
+        "Youngjae Yu"
+      ],
+      "abstract": "Recent advances in Vision-Language Models (VLMs) have demonstrated impressive\ncapabilities in perception and reasoning. However, the ability to perform\ncausal inference -- a core aspect of human cognition -- remains underexplored,\nparticularly in multimodal settings. In this study, we introduce InfoCausalQA,\na novel benchmark designed to evaluate causal reasoning grounded in\ninfographics that combine structured visual data with textual context. The\nbenchmark comprises two tasks: Task 1 focuses on quantitative causal reasoning\nbased on inferred numerical trends, while Task 2 targets semantic causal\nreasoning involving five types of causal relations: cause, effect,\nintervention, counterfactual, and temporal. We manually collected 494\ninfographic-text pairs from four public sources and used GPT-4o to generate\n1,482 high-quality multiple-choice QA pairs. These questions were then\ncarefully revised by humans to ensure they cannot be answered based on\nsurface-level cues alone but instead require genuine visual grounding. Our\nexperimental results reveal that current VLMs exhibit limited capability in\ncomputational reasoning and even more pronounced limitations in semantic causal\nreasoning. Their significantly lower performance compared to humans indicates a\nsubstantial gap in leveraging infographic-based information for causal\ninference. Through InfoCausalQA, we highlight the need for advancing the causal\nreasoning abilities of multimodal AI systems.",
+      "pdf_url": "http://arxiv.org/pdf/2508.06220v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.06220v1",
+      "published": "2025-08-08",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "DKG-LLM : A Framework for Medical Diagnosis and Personalized Treatment Recommendations via Dynamic Knowledge Graph and Large Language Model Integration",
+      "authors": [
+        "Ali Sarabadani",
+        "Maryam Abdollahi Shamami",
+        "Hamidreza Sadeghsalehi",
+        "Borhan Asadi",
+        "Saba Hesaraki"
+      ],
+      "abstract": "Large Language Models (LLMs) have grown exponentially since the release of\nChatGPT. These models have gained attention due to their robust performance on\nvarious tasks, including language processing tasks. These models achieve\nunderstanding and comprehension of tasks by training billions of parameters.\nThe development of these models is a transformative force in enhancing natural\nlanguage understanding and has taken a significant step towards artificial\ngeneral intelligence (AGI). In this study, we aim to present the DKG-LLM\nframework. The DKG-LLM framework introduces a groundbreaking approach to\nmedical diagnosis and personalized treatment recommendations by integrating a\ndynamic knowledge graph (DKG) with the Grok 3 large language model. Using the\nAdaptive Semantic Fusion Algorithm (ASFA), heterogeneous medical data\n(including clinical reports and PubMed articles) and patient records\ndynamically generate a knowledge graph consisting of 15,964 nodes in 13\ndistinct types (e.g., diseases, symptoms, treatments, patient profiles) and\n127,392 edges in 26 relationship types (e.g., causal, therapeutic,\nassociation). ASFA utilizes advanced probabilistic models, Bayesian inference,\nand graph optimization to extract semantic information, dynamically updating\nthe graph with approximately 150 new nodes and edges in each data category\nwhile maintaining scalability with up to 987,654 edges. Real-world datasets,\nincluding MIMIC-III and PubMed, were utilized to evaluate the proposed\narchitecture. The evaluation results show that DKG-LLM achieves a diagnostic\naccuracy of 84.19%. The model also has a treatment recommendation accuracy of\n89.63% and a semantic coverage of 93.48%. DKG-LLM is a reliable and\ntransformative tool that handles noisy data and complex multi-symptom diseases,\nalong with feedback-based learning from physician input.",
+      "pdf_url": "http://arxiv.org/pdf/2508.06186v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.06186v1",
+      "published": "2025-08-08",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "NanoCodec: Towards High-Quality Ultra Fast Speech LLM Inference",
+      "authors": [
+        "Edresson Casanova",
+        "Paarth Neekhara",
+        "Ryan Langman",
+        "Shehzeen Hussain",
+        "Subhankar Ghosh",
+        "Xuesong Yang",
+        "Ante Jukić",
+        "Jason Li",
+        "Boris Ginsburg"
+      ],
+      "abstract": "Large Language Models (LLMs) have significantly advanced audio processing by\nleveraging audio codecs to discretize audio into tokens, enabling the\napplication of language modeling techniques to speech data. However, existing\naudio codecs often operate at high frame rates, leading to slow training and\ninference, particularly for autoregressive models. To address this, there is\ngrowing interest in low frame-rate audio codecs, which reduce the number of\nautoregressive steps required to generate one second of audio. In this paper,\nwe conduct ablation studies to examine the impact of frame rate, bitrate, and\ncausality on codec reconstruction quality. Based on our findings, we introduce\nNanoCodec, a state-of-the-art audio codec that achieves high-quality\ncompression at just 12.5 frames per second (FPS). NanoCodec outperforms related\nworks across various bitrate ranges, establishing a new benchmark for\nlow-latency and efficient Speech LLM training and inference.",
+      "pdf_url": "http://arxiv.org/pdf/2508.05835v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.05835v1",
+      "published": "2025-08-07",
+      "categories": [
+        "eess.AS",
+        "cs.CL",
+        "cs.SD"
+      ]
+    },
     {
       "title": "MolSnap: Snap-Fast Molecular Generation with Latent Variational Mean Flow",
       "authors": [
@@ -87,88 +180,6 @@
       "published": "2025-08-07",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal Reflection with Language Models",
-      "authors": [
-        "Abi Aryan",
-        "Zac Liu"
-      ],
-      "abstract": "While LLMs exhibit impressive fluency and factual recall, they struggle with\nrobust causal reasoning, often relying on spurious correlations and brittle\npatterns. Similarly, traditional Reinforcement Learning agents also lack causal\nunderstanding, optimizing for rewards without modeling why actions lead to\noutcomes. We introduce Causal Reflection, a framework that explicitly models\ncausality as a dynamic function over state, action, time, and perturbation,\nenabling agents to reason about delayed and nonlinear effects. Additionally, we\ndefine a formal Reflect mechanism that identifies mismatches between predicted\nand observed outcomes and generates causal hypotheses to revise the agent's\ninternal model. In this architecture, LLMs serve not as black-box reasoners,\nbut as structured inference engines translating formal causal outputs into\nnatural language explanations and counterfactuals. Our framework lays the\ntheoretical groundwork for Causal Reflective agents that can adapt,\nself-correct, and communicate causal understanding in evolving environments.",
-      "pdf_url": "http://arxiv.org/pdf/2508.04495v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.04495v1",
-      "published": "2025-08-06",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Boosting Visual Knowledge-Intensive Training for LVLMs Through Causality-Driven Visual Object Completion",
-      "authors": [
-        "Qingguo Hu",
-        "Ante Wang",
-        "Jia Song",
-        "Delai Qiu",
-        "Qingsong Liu",
-        "Jinsong Su"
-      ],
-      "abstract": "Large Vision-Language Models (LVLMs) have experienced significant\nadvancements in recent years. However, their performance still falls short in\ntasks requiring deep visual perception, such as identifying subtle differences\nbetween images. A potential cause is the scarcity of visual knowledge in\npopular instruction-tuning corpora, resulting in inadequate visual perception\nand reasoning capabilities. To address this challenge, we introduce a\nself-improvement framework grounded in a novel visual knowledge-intensive task,\n\\underline{C}ausality-driven \\underline{V}isual object \\underline{C}ompletion\n(CVC). This task requires LVLMs to infer the masked object in an image based on\nits \\textit{causal} relationships with the other visible information. We first\nobtain rich examples cheaply through our automated instance construction\npipeline, without relying on sophisticated LVLMs (\\textit{e.g.}, GPT-4V) or\nhuman assistance. Then, LVLMs effectively self-improve through trial and error\nlearning using these created instances. Our experiments demonstrate substantial\ngains across four challenging specialized tasks and four widely-used\ncomprehensive benchmarks. Especially on specialized tasks, our method achieves\nan average improvement of 5.4\\% and 4.0\\% compared to the corresponding\nbaselines when utilizing LLaVA-1.5-7B and LLaVA-1.5-13B, respectively. The code\nis available at https://github.com/XMUDeepLIT/CVC.",
-      "pdf_url": "http://arxiv.org/pdf/2508.04453v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.04453v1",
-      "published": "2025-08-06",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal Reward Adjustment: Mitigating Reward Hacking in External Reasoning via Backdoor Correction",
-      "authors": [
-        "Ruike Song",
-        "Zeen Song",
-        "Huijie Guo",
-        "Wenwen Qiang"
-      ],
-      "abstract": "External reasoning systems combine language models with process reward models\n(PRMs) to select high-quality reasoning paths for complex tasks such as\nmathematical problem solving. However, these systems are prone to reward\nhacking, where high-scoring but logically incorrect paths are assigned high\nscores by the PRMs, leading to incorrect answers. From a causal inference\nperspective, we attribute this phenomenon primarily to the presence of\nconfounding semantic features. To address it, we propose Causal Reward\nAdjustment (CRA), a method that mitigates reward hacking by estimating the true\nreward of a reasoning path. CRA trains sparse autoencoders on the PRM's\ninternal activations to recover interpretable features, then corrects\nconfounding by using backdoor adjustment. Experiments on math solving datasets\ndemonstrate that CRA mitigates reward hacking and improves final accuracy,\nwithout modifying the policy model or retraining PRM.",
-      "pdf_url": "http://arxiv.org/pdf/2508.04216v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.04216v1",
-      "published": "2025-08-06",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Robust estimation of causal dose-response relationship using exposure data with dose as an instrumental variable",
-      "authors": [
-        "Jixian Wang",
-        "Zhiwei Zhang",
-        "Ram Tiwari"
-      ],
-      "abstract": "An accurate estimation of the dose-response relationship is important to\ndetermine the optimal dose. For this purpose, a dose finding trial in which\nsubjects are randomized to a few fixed dose levels is the most commonly used\ndesign. Often, the estimation uses response data only, although drug exposure\ndata are often obtained during the trial. The use of exposure data to improve\nthis estimation is difficult, as exposure-response relationships are typically\nsubject to confounding bias even in a randomized trial. We propose a robust\napproach to estimate the dose-response relationship without assuming a true\nexposure-response model, using dose as an instrumental variable. Our approach\ncombines the control variable approach in causal inference with unobserved\nconfounding factors and the ANCOVA adjustment of randomized trials. The\napproach presented uses working models for dose-exposure-response data, but\nthey are robust to model misspecification and remain consistent when the\nworking models are far from correct. The asymptotic properties of the proposed\napproach are also examined. A simulation study is performed to evaluate the\nperformance of the proposed approach. For illustration, the approach is used to\na Car-T trial with randomized doses.",
-      "pdf_url": "http://arxiv.org/pdf/2508.04215v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.04215v1",
-      "published": "2025-08-06",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Can Large Language Models Adequately Perform Symbolic Reasoning Over Time Series?",
-      "authors": [
-        "Zewen Liu",
-        "Juntong Ni",
-        "Xianfeng Tang",
-        "Max S. Y. Lau",
-        "Wenpeng Yin",
-        "Wei Jin"
-      ],
-      "abstract": "Uncovering hidden symbolic laws from time series data, as an aspiration\ndating back to Kepler's discovery of planetary motion, remains a core challenge\nin scientific discovery and artificial intelligence. While Large Language\nModels show promise in structured reasoning tasks, their ability to infer\ninterpretable, context-aligned symbolic structures from time series data is\nstill underexplored. To systematically evaluate this capability, we introduce\nSymbolBench, a comprehensive benchmark designed to assess symbolic reasoning\nover real-world time series across three tasks: multivariate symbolic\nregression, Boolean network inference, and causal discovery. Unlike prior\nefforts limited to simple algebraic equations, SymbolBench spans a diverse set\nof symbolic forms with varying complexity. We further propose a unified\nframework that integrates LLMs with genetic programming to form a closed-loop\nsymbolic reasoning system, where LLMs act both as predictors and evaluators.\nOur empirical results reveal key strengths and limitations of current models,\nhighlighting the importance of combining domain knowledge, context alignment,\nand reasoning structure to improve LLMs in automated scientific discovery.",
-      "pdf_url": "http://arxiv.org/pdf/2508.03963v2",
-      "arxiv_url": "http://arxiv.org/abs/2508.03963v2",
-      "published": "2025-08-05",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]
