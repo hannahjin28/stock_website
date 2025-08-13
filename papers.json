@@ -1,6 +1,60 @@
 {
-  "last_updated": "2025-08-12T00:54:54.880746",
+  "last_updated": "2025-08-13T00:56:08.693559",
   "papers": [
+    {
+      "title": "AURA: A Fine-Grained Benchmark and Decomposed Metric for Audio-Visual Reasoning",
+      "authors": [
+        "Siminfar Samakoush Galougah",
+        "Rishie Raj",
+        "Sanjoy Chowdhury",
+        "Sayan Nag",
+        "Ramani Duraiswami"
+      ],
+      "abstract": "Current audio-visual (AV) benchmarks focus on final answer accuracy,\noverlooking the underlying reasoning process. This makes it difficult to\ndistinguish genuine comprehension from correct answers derived through flawed\nreasoning or hallucinations. To address this, we introduce AURA (Audio-visual\nUnderstanding and Reasoning Assessment), a benchmark for evaluating the\ncross-modal reasoning capabilities of Audio-Visual Large Language Models\n(AV-LLMs) and Omni-modal Language Models (OLMs). AURA includes questions across\nsix challenging cognitive domains, such as causality, timbre and pitch, tempo\nand AV synchronization, unanswerability, implicit distractions, and skill\nprofiling, explicitly designed to be unanswerable from a single modality. This\nforces models to construct a valid logical path grounded in both audio and\nvideo, setting AURA apart from AV datasets that allow uni-modal shortcuts. To\nassess reasoning traces, we propose a novel metric, AuraScore, which addresses\nthe lack of robust tools for evaluating reasoning fidelity. It decomposes\nreasoning into two aspects: (i) Factual Consistency - whether reasoning is\ngrounded in perceptual evidence, and (ii) Core Inference - the logical validity\nof each reasoning step. Evaluations of SOTA models on AURA reveal a critical\nreasoning gap: although models achieve high accuracy (up to 92% on some tasks),\ntheir Factual Consistency and Core Inference scores fall below 45%. This\ndiscrepancy highlights that models often arrive at correct answers through\nflawed logic, underscoring the need for our benchmark and paving the way for\nmore robust multimodal evaluation.",
+      "pdf_url": "http://arxiv.org/pdf/2508.07470v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.07470v1",
+      "published": "2025-08-10",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "LLM-based Agents for Automated Confounder Discovery and Subgroup Analysis in Causal Inference",
+      "authors": [
+        "Po-Han Lee",
+        "Yu-Cheng Lin",
+        "Chan-Tung Ku",
+        "Chan Hsu",
+        "Pei-Cing Huang",
+        "Ping-Hsun Wu",
+        "Yihuang Kang"
+      ],
+      "abstract": "Estimating individualized treatment effects from observational data presents\na persistent challenge due to unmeasured confounding and structural bias.\nCausal Machine Learning (causal ML) methods, such as causal trees and doubly\nrobust estimators, provide tools for estimating conditional average treatment\neffects. These methods have limited effectiveness in complex real-world\nenvironments due to the presence of latent confounders or those described in\nunstructured formats. Moreover, reliance on domain experts for confounder\nidentification and rule interpretation introduces high annotation cost and\nscalability concerns. In this work, we proposed Large Language Model-based\nagents for automated confounder discovery and subgroup analysis that integrate\nagents into the causal ML pipeline to simulate domain expertise. Our framework\nsystematically performs subgroup identification and confounding structure\ndiscovery by leveraging the reasoning capabilities of LLM-based agents, which\nreduces human dependency while preserving interpretability. Experiments on\nreal-world medical datasets show that our proposed approach enhances treatment\neffect estimation robustness by narrowing confidence intervals and uncovering\nunrecognized confounding biases. Our findings suggest that LLM-based agents\noffer a promising path toward scalable, trustworthy, and semantically aware\ncausal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2508.07221v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.07221v1",
+      "published": "2025-08-10",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.MA",
+        "stat.AP",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Inference Under Network Interference",
+      "authors": [
+        "Subhankar Bhadra",
+        "Michael Schweinberger"
+      ],
+      "abstract": "We review and conceptualize recent advances in causal inference under network\ninterference, drawing on a complex and diverse body of work that ranges from\ncausal inference, statistical network analysis, economics, the health sciences,\nand the social sciences. Network interference arises in connected populations\nwhen the treatment assignments of units affect the outcomes of other units.\nExamples include economic, financial, and public health interventions with\nspillover in connected populations, reinforcement learning in connected\npopulations, and advertising on social media. We discuss the design of\nexperiments, targets of causal inference, interpretations and characterizations\nof causal effects, interference tests, and design- and model-based estimators\nof causal effects under network interference. We then contrast inferential\nframeworks based on fixed networks (finite population inference) and random\nnetworks (super population inference) and the generalizability afforded by\nthem. We demonstrate that expected outcomes can depend on the network structure\n(e.g., the absence or presence of superstars and communities) and could be\ndifferent if another network were observed, highlighting the need to understand\nhow network structure affects causal conclusions. We conclude with a selection\nof open problems.",
+      "pdf_url": "http://arxiv.org/pdf/2508.06808v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.06808v1",
+      "published": "2025-08-09",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Decorrelated feature importance from local sample weighting",
       "authors": [
@@ -16,6 +70,20 @@
         "stat.ML",
         "cs.LG",
         "stat.ME"
+      ]
+    },
+    {
+      "title": "Stochastic Boundaries in Spatial General Equilibrium: A Diffusion-Based Approach to Causal Inference with Spillover Effects",
+      "authors": [
+        "Tatsuru Kikuchi"
+      ],
+      "abstract": "This paper introduces a novel framework for causal inference in spatial\neconomics that explicitly models the stochastic transition from partial to\ngeneral equilibrium effects. We develop a Denoising Diffusion Probabilistic\nModel (DDPM) integrated with boundary detection methods from stochastic process\ntheory to identify when and how treatment effects propagate beyond local\nmarkets. Our approach treats the evolution of spatial spillovers as a L\\'evy\nprocess with jump-diffusion dynamics, where the first passage time to critical\nthresholds indicates regime shifts from partial to general equilibrium. Using\nCUSUM-based sequential detection, we identify the spatial and temporal\nboundaries at which local interventions become systemic. Applied to AI adoption\nacross Japanese prefectures, we find that treatment effects exhibit L\\'evy\njumps at approximately 35km spatial scales, with general equilibrium effects\namplifying partial equilibrium estimates by 42\\%. Monte Carlo simulations show\nthat ignoring these stochastic boundaries leads to underestimation of treatment\neffects by 28-67\\%, with particular severity in densely connected economic\nregions. Our framework provides the first rigorous method for determining when\nspatial spillovers necessitate general equilibrium analysis, offering crucial\nguidance for policy evaluation in interconnected economies.",
+      "pdf_url": "http://arxiv.org/pdf/2508.06594v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.06594v1",
+      "published": "2025-08-08",
+      "categories": [
+        "econ.GN",
+        "q-fin.EC"
       ]
     },
     {
@@ -107,79 +175,6 @@
       "published": "2025-08-07",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "UNCAGE: Contrastive Attention Guidance for Masked Generative Transformers in Text-to-Image Generation",
-      "authors": [
-        "Wonjun Kang",
-        "Byeongkeun Ahn",
-        "Minjae Lee",
-        "Kevin Galim",
-        "Seunghyuk Oh",
-        "Hyung Il Koo",
-        "Nam Ik Cho"
-      ],
-      "abstract": "Text-to-image (T2I) generation has been actively studied using Diffusion\nModels and Autoregressive Models. Recently, Masked Generative Transformers have\ngained attention as an alternative to Autoregressive Models to overcome the\ninherent limitations of causal attention and autoregressive decoding through\nbidirectional attention and parallel decoding, enabling efficient and\nhigh-quality image generation. However, compositional T2I generation remains\nchallenging, as even state-of-the-art Diffusion Models often fail to accurately\nbind attributes and achieve proper text-image alignment. While Diffusion Models\nhave been extensively studied for this issue, Masked Generative Transformers\nexhibit similar limitations but have not been explored in this context. To\naddress this, we propose Unmasking with Contrastive Attention Guidance\n(UNCAGE), a novel training-free method that improves compositional fidelity by\nleveraging attention maps to prioritize the unmasking of tokens that clearly\nrepresent individual objects. UNCAGE consistently improves performance in both\nquantitative and qualitative evaluations across multiple benchmarks and\nmetrics, with negligible inference overhead. Our code is available at\nhttps://github.com/furiosa-ai/uncage.",
-      "pdf_url": "http://arxiv.org/pdf/2508.05399v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.05399v1",
-      "published": "2025-08-07",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "A Novel Architecture for Symbolic Reasoning with Decision Trees and LLM Agents",
-      "authors": [
-        "Andrew Kiruluta"
-      ],
-      "abstract": "We propose a hybrid architecture that integrates decision tree-based symbolic\nreasoning with the generative capabilities of large language models (LLMs)\nwithin a coordinated multi-agent framework. Unlike prior approaches that\nloosely couple symbolic and neural modules, our design embeds decision trees\nand random forests as callable oracles within a unified reasoning system.\nTree-based modules enable interpretable rule inference and causal logic, while\nLLM agents handle abductive reasoning, generalization, and interactive\nplanning. A central orchestrator maintains belief state consistency and\nmediates communication across agents and external tools, enabling reasoning\nover both structured and unstructured inputs.\n  The system achieves strong performance on reasoning benchmarks. On\n\\textit{ProofWriter}, it improves entailment consistency by +7.2\\% through\nlogic-grounded tree validation. On GSM8k, it achieves +5.3\\% accuracy gains in\nmultistep mathematical problems via symbolic augmentation. On \\textit{ARC}, it\nboosts abstraction accuracy by +6.0\\% through integration of symbolic oracles.\nApplications in clinical decision support and scientific discovery show how the\nsystem encodes domain rules symbolically while leveraging LLMs for contextual\ninference and hypothesis generation. This architecture offers a robust,\ninterpretable, and extensible solution for general-purpose neuro-symbolic\nreasoning.",
-      "pdf_url": "http://arxiv.org/pdf/2508.05311v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.05311v1",
-      "published": "2025-08-07",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Physics-Informed Time-Integrated DeepONet: Temporal Tangent Space Operator Learning for High-Accuracy Inference",
-      "authors": [
-        "Luis Mandl",
-        "Dibyajyoti Nayak",
-        "Tim Ricken",
-        "Somdatta Goswami"
-      ],
-      "abstract": "Accurately modeling and inferring solutions to time-dependent partial\ndifferential equations (PDEs) over extended horizons remains a core challenge\nin scientific machine learning. Traditional full rollout (FR) methods, which\npredict entire trajectories in one pass, often fail to capture the causal\ndependencies and generalize poorly outside the training time horizon.\nAutoregressive (AR) approaches, evolving the system step by step, suffer from\nerror accumulation, limiting long-term accuracy. These shortcomings limit the\nlong-term accuracy and reliability of both strategies. To address these issues,\nwe introduce the Physics-Informed Time-Integrated Deep Operator Network\n(PITI-DeepONet), a dual-output architecture trained via fully physics-informed\nor hybrid physics- and data-driven objectives to ensure stable, accurate\nlong-term evolution well beyond the training horizon. Instead of forecasting\nfuture states, the network learns the time-derivative operator from the current\nstate, integrating it using classical time-stepping schemes to advance the\nsolution in time. Additionally, the framework can leverage residual monitoring\nduring inference to estimate prediction quality and detect when the system\ntransitions outside the training domain. Applied to benchmark problems,\nPITI-DeepONet shows improved accuracy over extended inference time horizons\nwhen compared to traditional methods. Mean relative $\\mathcal{L}_2$ errors\nreduced by 84% (vs. FR) and 79% (vs. AR) for the one-dimensional heat equation;\nby 87% (vs. FR) and 98% (vs. AR) for the one-dimensional Burgers equation; and\nby 42% (vs. FR) and 89% (vs. AR) for the two-dimensional Allen-Cahn equation.\nBy moving beyond classic FR and AR schemes, PITI-DeepONet paves the way for\nmore reliable, long-term integration of complex, time-dependent PDEs.",
-      "pdf_url": "http://arxiv.org/pdf/2508.05190v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.05190v1",
-      "published": "2025-08-07",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Multimodal Causal-Driven Representation Learning for Generalizable Medical Image Segmentation",
-      "authors": [
-        "Xusheng Liang",
-        "Lihua Zhou",
-        "Nianxin Li",
-        "Miao Xu",
-        "Ziyang Song",
-        "Dong Yi",
-        "Jinlin Wu",
-        "Hongbin Liu",
-        "Jiebo Luo",
-        "Zhen Lei"
-      ],
-      "abstract": "Vision-Language Models (VLMs), such as CLIP, have demonstrated remarkable\nzero-shot capabilities in various computer vision tasks. However, their\napplication to medical imaging remains challenging due to the high variability\nand complexity of medical data. Specifically, medical images often exhibit\nsignificant domain shifts caused by various confounders, including equipment\ndifferences, procedure artifacts, and imaging modes, which can lead to poor\ngeneralization when models are applied to unseen domains. To address this\nlimitation, we propose Multimodal Causal-Driven Representation Learning\n(MCDRL), a novel framework that integrates causal inference with the VLM to\ntackle domain generalization in medical image segmentation. MCDRL is\nimplemented in two steps: first, it leverages CLIP's cross-modal capabilities\nto identify candidate lesion regions and construct a confounder dictionary\nthrough text prompts, specifically designed to represent domain-specific\nvariations; second, it trains a causal intervention network that utilizes this\ndictionary to identify and eliminate the influence of these domain-specific\nvariations while preserving the anatomical structural information critical for\nsegmentation tasks. Extensive experiments demonstrate that MCDRL consistently\noutperforms competing methods, yielding superior segmentation accuracy and\nexhibiting robust generalizability.",
-      "pdf_url": "http://arxiv.org/pdf/2508.05008v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.05008v1",
-      "published": "2025-08-07",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
