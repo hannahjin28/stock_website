@@ -1,180 +1,172 @@
 {
-  "last_updated": "2025-08-13T00:56:08.693559",
+  "last_updated": "2025-08-14T00:56:16.621237",
   "papers": [
     {
-      "title": "AURA: A Fine-Grained Benchmark and Decomposed Metric for Audio-Visual Reasoning",
+      "title": "Efficient Statistical Estimation for Sequential Adaptive Experiments with Implications for Adaptive Designs",
       "authors": [
-        "Siminfar Samakoush Galougah",
-        "Rishie Raj",
-        "Sanjoy Chowdhury",
-        "Sayan Nag",
-        "Ramani Duraiswami"
+        "Wenxin Zhang",
+        "Mark van der Laan"
       ],
-      "abstract": "Current audio-visual (AV) benchmarks focus on final answer accuracy,\noverlooking the underlying reasoning process. This makes it difficult to\ndistinguish genuine comprehension from correct answers derived through flawed\nreasoning or hallucinations. To address this, we introduce AURA (Audio-visual\nUnderstanding and Reasoning Assessment), a benchmark for evaluating the\ncross-modal reasoning capabilities of Audio-Visual Large Language Models\n(AV-LLMs) and Omni-modal Language Models (OLMs). AURA includes questions across\nsix challenging cognitive domains, such as causality, timbre and pitch, tempo\nand AV synchronization, unanswerability, implicit distractions, and skill\nprofiling, explicitly designed to be unanswerable from a single modality. This\nforces models to construct a valid logical path grounded in both audio and\nvideo, setting AURA apart from AV datasets that allow uni-modal shortcuts. To\nassess reasoning traces, we propose a novel metric, AuraScore, which addresses\nthe lack of robust tools for evaluating reasoning fidelity. It decomposes\nreasoning into two aspects: (i) Factual Consistency - whether reasoning is\ngrounded in perceptual evidence, and (ii) Core Inference - the logical validity\nof each reasoning step. Evaluations of SOTA models on AURA reveal a critical\nreasoning gap: although models achieve high accuracy (up to 92% on some tasks),\ntheir Factual Consistency and Core Inference scores fall below 45%. This\ndiscrepancy highlights that models often arrive at correct answers through\nflawed logic, underscoring the need for our benchmark and paving the way for\nmore robust multimodal evaluation.",
-      "pdf_url": "http://arxiv.org/pdf/2508.07470v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.07470v1",
-      "published": "2025-08-10",
+      "abstract": "Adaptive experimental designs have gained popularity in clinical trials and\nonline experiments. Unlike traditional, fixed experimental designs, adaptive\ndesigns can dynamically adjust treatment randomization probabilities and other\ndesign features in response to data accumulated sequentially during the\nexperiment. These adaptations are useful to achieve diverse objectives,\nincluding reducing uncertainty in the estimation of causal estimands or\nincreasing participants' chances of receiving better treatments during the\nexperiment. At the end of the experiment, it is often desirable to answer\ncausal questions from the observed data. However, the adaptive nature of such\nexperiments and the resulting dependence among observations pose significant\nchallenges to providing valid statistical inference and efficient estimation of\ncausal estimands. Building upon the Targeted Maximum Likelihood Estimator\n(TMLE) framework tailored for adaptive designs (van der Laan, 2008), we\nintroduce a new adaptive-design-likelihood-based TMLE (ADL-TMLE) to estimate a\nvariety of causal estimands from adaptive experiment data. We establish\nasymptotic normality and semiparametric efficiency of ADL-TMLE under relaxed\npositivity and design stabilization assumptions for adaptive experiments.\nMotivated by efficiency results, we further propose a novel adaptive design\naimed at minimizing the variance of estimators based on data generated under\nthat design. Using the average treatment effect as a representative example,\nsimulation studies show that ADL-TMLE demonstrates superior variance-reduction\nperformance across different types of adaptive experiments, and that the\nproposed adaptive design attains lower variance than the standard\nefficiency-oriented adaptive design. Finally, we generalize this estimation and\ndesign framework to broader settings with longitudinal structures.",
+      "pdf_url": "http://arxiv.org/pdf/2508.09135v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.09135v1",
+      "published": "2025-08-12",
       "categories": [
-        "cs.CV"
+        "stat.ME"
       ]
     },
     {
-      "title": "LLM-based Agents for Automated Confounder Discovery and Subgroup Analysis in Causal Inference",
+      "title": "Link Prediction for Event Logs in the Process Industry",
       "authors": [
-        "Po-Han Lee",
-        "Yu-Cheng Lin",
-        "Chan-Tung Ku",
-        "Chan Hsu",
-        "Pei-Cing Huang",
-        "Ping-Hsun Wu",
-        "Yihuang Kang"
+        "Anastasia Zhukova",
+        "Thomas Walton",
+        "Christian E. Matt",
+        "Bela Gipp"
       ],
-      "abstract": "Estimating individualized treatment effects from observational data presents\na persistent challenge due to unmeasured confounding and structural bias.\nCausal Machine Learning (causal ML) methods, such as causal trees and doubly\nrobust estimators, provide tools for estimating conditional average treatment\neffects. These methods have limited effectiveness in complex real-world\nenvironments due to the presence of latent confounders or those described in\nunstructured formats. Moreover, reliance on domain experts for confounder\nidentification and rule interpretation introduces high annotation cost and\nscalability concerns. In this work, we proposed Large Language Model-based\nagents for automated confounder discovery and subgroup analysis that integrate\nagents into the causal ML pipeline to simulate domain expertise. Our framework\nsystematically performs subgroup identification and confounding structure\ndiscovery by leveraging the reasoning capabilities of LLM-based agents, which\nreduces human dependency while preserving interpretability. Experiments on\nreal-world medical datasets show that our proposed approach enhances treatment\neffect estimation robustness by narrowing confidence intervals and uncovering\nunrecognized confounding biases. Our findings suggest that LLM-based agents\noffer a promising path toward scalable, trustworthy, and semantically aware\ncausal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2508.07221v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.07221v1",
-      "published": "2025-08-10",
+      "abstract": "Knowledge management (KM) is vital in the process industry for optimizing\noperations, ensuring safety, and enabling continuous improvement through\neffective use of operational data and past insights. A key challenge in this\ndomain is the fragmented nature of event logs in shift books, where related\nrecords, e.g., entries documenting issues related to equipment or processes and\nthe corresponding solutions, may remain disconnected. This fragmentation\nhinders the recommendation of previous solutions to the users. To address this\nproblem, we investigate record linking (RL) as link prediction, commonly\nstudied in graph-based machine learning, by framing it as a cross-document\ncoreference resolution (CDCR) task enhanced with natural language inference\n(NLI) and semantic text similarity (STS) by shifting it into the causal\ninference (CI). We adapt CDCR, traditionally applied in the news domain, into\nan RL model to operate at the passage level, similar to NLI and STS, while\naccommodating the process industry's specific text formats, which contain\nunstructured text and structured record attributes. Our RL model outperformed\nthe best versions of NLI- and STS-driven baselines by 28% (11.43 points) and\n27% (11.21 points), respectively. Our work demonstrates how domain adaptation\nof the state-of-the-art CDCR models, enhanced with reasoning capabilities, can\nbe effectively tailored to the process industry, improving data quality and\nconnectivity in shift logs.",
+      "pdf_url": "http://arxiv.org/pdf/2508.09096v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.09096v1",
+      "published": "2025-08-12",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Nonparametric Bayesian Multi-Treatment Mixture Cure Survival Model with Application in Pediatric Oncology",
+      "authors": [
+        "Peter Chang",
+        "John Kairalla",
+        "Arkaprava Roy"
+      ],
+      "abstract": "Heterogeneous treatment effect estimation is critical in oncology,\nparticularly in multi-arm trials with overlapping therapeutic components and\nlong-term survivors. These shared mechanisms pose a central challenge to\nidentifying causal effects in precision medicine. We propose a novel\ncovariate-dependent nonparametric Bayesian multi-treatment cure survival model\nthat jointly accounts for common structures among treatments and cure\nfractions. Through latent link functions, our model leverages sharing among\ntreatments through a flexible modeling approach, enabling individualized\nsurvival inference. We adopt a Bayesian route for inference and implement an\nefficient MCMC algorithm for approximating the posterior. Simulation studies\ndemonstrate the method's robustness and superiority in various specification\nscenarios. Finally, application to the AALL0434 trial reveals clinically\nmeaningful differences in survival across methotrexate-based regimens and their\nassociations with different covariates, underscoring its practical utility for\nlearning treatment effects in real-world pediatric oncology data.",
+      "pdf_url": "http://arxiv.org/pdf/2508.08975v2",
+      "arxiv_url": "http://arxiv.org/abs/2508.08975v2",
+      "published": "2025-08-12",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Position: Causal Machine Learning Requires Rigorous Synthetic Experiments for Broader Adoption",
+      "authors": [
+        "Audrey Poinsot",
+        "Panayiotis Panayiotou",
+        "Alessandro Leite",
+        "Nicolas Chesneau",
+        "Özgür Şimşek",
+        "Marc Schoenauer"
+      ],
+      "abstract": "Causal machine learning has the potential to revolutionize decision-making by\ncombining the predictive power of machine learning algorithms with the theory\nof causal inference. However, these methods remain underutilized by the broader\nmachine learning community, in part because current empirical evaluations do\nnot permit assessment of their reliability and robustness, undermining their\npractical utility. Specifically, one of the principal criticisms made by the\ncommunity is the extensive use of synthetic experiments. We argue, on the\ncontrary, that synthetic experiments are essential and necessary to precisely\nassess and understand the capabilities of causal machine learning methods. To\nsubstantiate our position, we critically review the current evaluation\npractices, spotlight their shortcomings, and propose a set of principles for\nconducting rigorous empirical analyses with synthetic data. Adopting the\nproposed principles will enable comprehensive evaluations that build trust in\ncausal machine learning methods, driving their broader adoption and impactful\nreal-world use.",
+      "pdf_url": "http://arxiv.org/pdf/2508.08883v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.08883v1",
+      "published": "2025-08-12",
       "categories": [
         "cs.LG",
         "cs.AI",
-        "cs.MA",
-        "stat.AP",
-        "stat.ME"
+        "stat.ME",
+        "stat.ML"
       ]
     },
     {
-      "title": "Causal Inference Under Network Interference",
+      "title": "TiMoE: Time-Aware Mixture of Language Experts",
       "authors": [
-        "Subhankar Bhadra",
-        "Michael Schweinberger"
+        "Robin Faro",
+        "Dongyang Fan",
+        "Tamar Alphaidze",
+        "Martin Jaggi"
       ],
-      "abstract": "We review and conceptualize recent advances in causal inference under network\ninterference, drawing on a complex and diverse body of work that ranges from\ncausal inference, statistical network analysis, economics, the health sciences,\nand the social sciences. Network interference arises in connected populations\nwhen the treatment assignments of units affect the outcomes of other units.\nExamples include economic, financial, and public health interventions with\nspillover in connected populations, reinforcement learning in connected\npopulations, and advertising on social media. We discuss the design of\nexperiments, targets of causal inference, interpretations and characterizations\nof causal effects, interference tests, and design- and model-based estimators\nof causal effects under network interference. We then contrast inferential\nframeworks based on fixed networks (finite population inference) and random\nnetworks (super population inference) and the generalizability afforded by\nthem. We demonstrate that expected outcomes can depend on the network structure\n(e.g., the absence or presence of superstars and communities) and could be\ndifferent if another network were observed, highlighting the need to understand\nhow network structure affects causal conclusions. We conclude with a selection\nof open problems.",
-      "pdf_url": "http://arxiv.org/pdf/2508.06808v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.06808v1",
-      "published": "2025-08-09",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Decorrelated feature importance from local sample weighting",
-      "authors": [
-        "Benedikt Fröhlich",
-        "Alison Durst",
-        "Merle Behr"
-      ],
-      "abstract": "Feature importance (FI) statistics provide a prominent and valuable method of\ninsight into the decision process of machine learning (ML) models, but their\neffectiveness has well-known limitations when correlation is present among the\nfeatures in the training data. In this case, the FI often tends to be\ndistributed among all features which are in correlation with the\nresponse-generating signal features. Even worse, if multiple signal features\nare in strong correlation with a noise feature, while being only modestly\ncorrelated with one another, this can result in a noise feature having a\ndistinctly larger FI score than any signal feature. Here we propose local\nsample weighting (losaw) which can flexibly be integrated into many ML\nalgorithms to improve FI scores in the presence of feature correlation in the\ntraining data. Our approach is motivated from inverse probability weighting in\ncausal inference and locally, within the ML model, uses a sample weighting\nscheme to decorrelate a target feature from the remaining features. This\nreduces model bias locally, whenever the effect of a potential signal feature\nis evaluated and compared to others. Moreover, losaw comes with a natural\ntuning parameter, the minimum effective sample size of the weighted population,\nwhich corresponds to an interpretation-prediction-tradeoff, analog to a\nbias-variance-tradeoff as for classical ML tuning parameters. We demonstrate\nhow losaw can be integrated within decision tree-based ML methods and within\nmini-batch training of neural networks. We investigate losaw for random forest\nand convolutional neural networks in a simulation study on settings showing\ndiverse correlation patterns. We found that losaw improves FI consistently.\nMoreover, it often improves prediction accuracy for out-of-distribution, while\nmaintaining a similar accuracy for in-distribution test data.",
-      "pdf_url": "http://arxiv.org/pdf/2508.06337v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.06337v1",
-      "published": "2025-08-08",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Stochastic Boundaries in Spatial General Equilibrium: A Diffusion-Based Approach to Causal Inference with Spillover Effects",
-      "authors": [
-        "Tatsuru Kikuchi"
-      ],
-      "abstract": "This paper introduces a novel framework for causal inference in spatial\neconomics that explicitly models the stochastic transition from partial to\ngeneral equilibrium effects. We develop a Denoising Diffusion Probabilistic\nModel (DDPM) integrated with boundary detection methods from stochastic process\ntheory to identify when and how treatment effects propagate beyond local\nmarkets. Our approach treats the evolution of spatial spillovers as a L\\'evy\nprocess with jump-diffusion dynamics, where the first passage time to critical\nthresholds indicates regime shifts from partial to general equilibrium. Using\nCUSUM-based sequential detection, we identify the spatial and temporal\nboundaries at which local interventions become systemic. Applied to AI adoption\nacross Japanese prefectures, we find that treatment effects exhibit L\\'evy\njumps at approximately 35km spatial scales, with general equilibrium effects\namplifying partial equilibrium estimates by 42\\%. Monte Carlo simulations show\nthat ignoring these stochastic boundaries leads to underestimation of treatment\neffects by 28-67\\%, with particular severity in densely connected economic\nregions. Our framework provides the first rigorous method for determining when\nspatial spillovers necessitate general equilibrium analysis, offering crucial\nguidance for policy evaluation in interconnected economies.",
-      "pdf_url": "http://arxiv.org/pdf/2508.06594v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.06594v1",
-      "published": "2025-08-08",
-      "categories": [
-        "econ.GN",
-        "q-fin.EC"
-      ]
-    },
-    {
-      "title": "Llasa+: Free Lunch for Accelerated and Streaming Llama-Based Speech Synthesis",
-      "authors": [
-        "Wenjie Tian",
-        "Xinfa Zhu",
-        "Hanke Xie",
-        "Zhen Ye",
-        "Wei Xue",
-        "Lei Xie"
-      ],
-      "abstract": "Recent progress in text-to-speech (TTS) has achieved impressive naturalness\nand flexibility, especially with the development of large language model\n(LLM)-based approaches. However, existing autoregressive (AR) structures and\nlarge-scale models, such as Llasa, still face significant challenges in\ninference latency and streaming synthesis. To deal with the limitations, we\nintroduce Llasa+, an accelerated and streaming TTS model built on Llasa.\nSpecifically, to accelerate the generation process, we introduce two\nplug-and-play Multi-Token Prediction (MTP) modules following the frozen\nbackbone. These modules allow the model to predict multiple tokens in one AR\nstep. Additionally, to mitigate potential error propagation caused by\ninaccurate MTP, we design a novel verification algorithm that leverages the\nfrozen backbone to validate the generated tokens, thus allowing Llasa+ to\nachieve speedup without sacrificing generation quality. Furthermore, we design\na causal decoder that enables streaming speech reconstruction from tokens.\nExtensive experiments show that Llasa+ achieves a 1.48X speedup without\nsacrificing generation quality, despite being trained only on LibriTTS.\nMoreover, the MTP-and-verification framework can be applied to accelerate any\nLLM-based model. All codes and models are publicly available at\nhttps://github.com/ASLP-lab/LLaSA_Plus.",
-      "pdf_url": "http://arxiv.org/pdf/2508.06262v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.06262v1",
-      "published": "2025-08-08",
-      "categories": [
-        "cs.SD",
-        "eess.AS"
-      ]
-    },
-    {
-      "title": "InfoCausalQA:Can Models Perform Non-explicit Causal Reasoning Based on Infographic?",
-      "authors": [
-        "Keummin Ka",
-        "Junhyeong Park",
-        "Jahyun Jeon",
-        "Youngjae Yu"
-      ],
-      "abstract": "Recent advances in Vision-Language Models (VLMs) have demonstrated impressive\ncapabilities in perception and reasoning. However, the ability to perform\ncausal inference -- a core aspect of human cognition -- remains underexplored,\nparticularly in multimodal settings. In this study, we introduce InfoCausalQA,\na novel benchmark designed to evaluate causal reasoning grounded in\ninfographics that combine structured visual data with textual context. The\nbenchmark comprises two tasks: Task 1 focuses on quantitative causal reasoning\nbased on inferred numerical trends, while Task 2 targets semantic causal\nreasoning involving five types of causal relations: cause, effect,\nintervention, counterfactual, and temporal. We manually collected 494\ninfographic-text pairs from four public sources and used GPT-4o to generate\n1,482 high-quality multiple-choice QA pairs. These questions were then\ncarefully revised by humans to ensure they cannot be answered based on\nsurface-level cues alone but instead require genuine visual grounding. Our\nexperimental results reveal that current VLMs exhibit limited capability in\ncomputational reasoning and even more pronounced limitations in semantic causal\nreasoning. Their significantly lower performance compared to humans indicates a\nsubstantial gap in leveraging infographic-based information for causal\ninference. Through InfoCausalQA, we highlight the need for advancing the causal\nreasoning abilities of multimodal AI systems.",
-      "pdf_url": "http://arxiv.org/pdf/2508.06220v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.06220v1",
-      "published": "2025-08-08",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "DKG-LLM : A Framework for Medical Diagnosis and Personalized Treatment Recommendations via Dynamic Knowledge Graph and Large Language Model Integration",
-      "authors": [
-        "Ali Sarabadani",
-        "Maryam Abdollahi Shamami",
-        "Hamidreza Sadeghsalehi",
-        "Borhan Asadi",
-        "Saba Hesaraki"
-      ],
-      "abstract": "Large Language Models (LLMs) have grown exponentially since the release of\nChatGPT. These models have gained attention due to their robust performance on\nvarious tasks, including language processing tasks. These models achieve\nunderstanding and comprehension of tasks by training billions of parameters.\nThe development of these models is a transformative force in enhancing natural\nlanguage understanding and has taken a significant step towards artificial\ngeneral intelligence (AGI). In this study, we aim to present the DKG-LLM\nframework. The DKG-LLM framework introduces a groundbreaking approach to\nmedical diagnosis and personalized treatment recommendations by integrating a\ndynamic knowledge graph (DKG) with the Grok 3 large language model. Using the\nAdaptive Semantic Fusion Algorithm (ASFA), heterogeneous medical data\n(including clinical reports and PubMed articles) and patient records\ndynamically generate a knowledge graph consisting of 15,964 nodes in 13\ndistinct types (e.g., diseases, symptoms, treatments, patient profiles) and\n127,392 edges in 26 relationship types (e.g., causal, therapeutic,\nassociation). ASFA utilizes advanced probabilistic models, Bayesian inference,\nand graph optimization to extract semantic information, dynamically updating\nthe graph with approximately 150 new nodes and edges in each data category\nwhile maintaining scalability with up to 987,654 edges. Real-world datasets,\nincluding MIMIC-III and PubMed, were utilized to evaluate the proposed\narchitecture. The evaluation results show that DKG-LLM achieves a diagnostic\naccuracy of 84.19%. The model also has a treatment recommendation accuracy of\n89.63% and a semantic coverage of 93.48%. DKG-LLM is a reliable and\ntransformative tool that handles noisy data and complex multi-symptom diseases,\nalong with feedback-based learning from physician input.",
-      "pdf_url": "http://arxiv.org/pdf/2508.06186v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.06186v1",
-      "published": "2025-08-08",
+      "abstract": "Large language models (LLMs) are typically trained on fixed snapshots of the\nweb, which means that their knowledge becomes stale and their predictions risk\ntemporal leakage: relying on information that lies in the future relative to a\nquery. We tackle this problem by pre-training from scratch a set of GPT-style\nexperts on disjoint two-year slices of a 2013-2024 corpus and combining them\nthrough TiMoE, a Time-aware Mixture of Language Experts. At inference time,\nTiMoE masks all experts whose training window ends after the query timestamp\nand merges the remaining log-probabilities in a shared space, guaranteeing\nstrict causal validity while retaining the breadth of multi-period knowledge.\nWe also release TSQA, a 10k-question benchmark whose alternatives are\nexplicitly labelled as past, future or irrelevant, allowing fine-grained\nmeasurement of temporal hallucinations. Experiments on eight standard NLP tasks\nplus TSQA show that a co-adapted TiMoE variant matches or exceeds the best\nsingle-period expert and cuts future-knowledge errors by up to 15%. Our results\ndemonstrate that modular, time-segmented pre-training paired with causal\nrouting is a simple yet effective path toward LLMs that stay chronologically\ngrounded without sacrificing general performance much. We open source our code\nat TiMoE (Github): https://github.com/epfml/TiMoE",
+      "pdf_url": "http://arxiv.org/pdf/2508.08827v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.08827v1",
+      "published": "2025-08-12",
       "categories": [
         "cs.CL"
       ]
     },
     {
-      "title": "NanoCodec: Towards High-Quality Ultra Fast Speech LLM Inference",
+      "title": "Sensitivity Analysis to Unobserved Confounding with Copula-based Normalizing Flows",
       "authors": [
-        "Edresson Casanova",
-        "Paarth Neekhara",
-        "Ryan Langman",
-        "Shehzeen Hussain",
-        "Subhankar Ghosh",
-        "Xuesong Yang",
-        "Ante Jukić",
-        "Jason Li",
-        "Boris Ginsburg"
+        "Sourabh Balgi",
+        "Marc Braun",
+        "Jose M. Peña",
+        "Adel Daoud"
       ],
-      "abstract": "Large Language Models (LLMs) have significantly advanced audio processing by\nleveraging audio codecs to discretize audio into tokens, enabling the\napplication of language modeling techniques to speech data. However, existing\naudio codecs often operate at high frame rates, leading to slow training and\ninference, particularly for autoregressive models. To address this, there is\ngrowing interest in low frame-rate audio codecs, which reduce the number of\nautoregressive steps required to generate one second of audio. In this paper,\nwe conduct ablation studies to examine the impact of frame rate, bitrate, and\ncausality on codec reconstruction quality. Based on our findings, we introduce\nNanoCodec, a state-of-the-art audio codec that achieves high-quality\ncompression at just 12.5 frames per second (FPS). NanoCodec outperforms related\nworks across various bitrate ranges, establishing a new benchmark for\nlow-latency and efficient Speech LLM training and inference.",
-      "pdf_url": "http://arxiv.org/pdf/2508.05835v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.05835v1",
-      "published": "2025-08-07",
+      "abstract": "We propose a novel method for sensitivity analysis to unobserved confounding\nin causal inference. The method builds on a copula-based causal graphical\nnormalizing flow that we term $\\rho$-GNF, where $\\rho \\in [-1,+1]$ is the\nsensitivity parameter. The parameter represents the non-causal association\nbetween exposure and outcome due to unobserved confounding, which is modeled as\na Gaussian copula. In other words, the $\\rho$-GNF enables scholars to estimate\nthe average causal effect (ACE) as a function of $\\rho$, accounting for various\nconfounding strengths. The output of the $\\rho$-GNF is what we term the\n$\\rho_{curve}$, which provides the bounds for the ACE given an interval of\nassumed $\\rho$ values. The $\\rho_{curve}$ also enables scholars to identify the\nconfounding strength required to nullify the ACE. We also propose a Bayesian\nversion of our sensitivity analysis method. Assuming a prior over the\nsensitivity parameter $\\rho$ enables us to derive the posterior distribution\nover the ACE, which enables us to derive credible intervals. Finally,\nleveraging on experiments from simulated and real-world data, we show the\nbenefits of our sensitivity analysis method.",
+      "pdf_url": "http://arxiv.org/pdf/2508.08752v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.08752v1",
+      "published": "2025-08-12",
       "categories": [
-        "eess.AS",
-        "cs.CL",
-        "cs.SD"
+        "stat.ME",
+        "cs.LG",
+        "stat.ML"
       ]
     },
     {
-      "title": "MolSnap: Snap-Fast Molecular Generation with Latent Variational Mean Flow",
+      "title": "Re:Verse -- Can Your VLM Read a Manga?",
       "authors": [
-        "Md Atik Ahamed",
-        "Qiang Ye",
-        "Qiang Cheng"
+        "Aaditya Baranwal",
+        "Madhav Kataria",
+        "Naitik Agrawal",
+        "Yogesh S Rawat",
+        "Shruti Vyas"
       ],
-      "abstract": "Molecular generation conditioned on textual descriptions is a fundamental\ntask in computational chemistry and drug discovery. Existing methods often\nstruggle to simultaneously ensure high-quality, diverse generation and fast\ninference. In this work, we propose a novel causality-aware framework that\naddresses these challenges through two key innovations. First, we introduce a\nCausality-Aware Transformer (CAT) that jointly encodes molecular graph tokens\nand text instructions while enforcing causal dependencies during generation.\nSecond, we develop a Variational Mean Flow (VMF) framework that generalizes\nexisting flow-based methods by modeling the latent space as a mixture of\nGaussians, enhancing expressiveness beyond unimodal priors. VMF enables\nefficient one-step inference while maintaining strong generation quality and\ndiversity. Extensive experiments on four standard molecular benchmarks\ndemonstrate that our model outperforms state-of-the-art baselines, achieving\nhigher novelty (up to 74.5\\%), diversity (up to 70.3\\%), and 100\\% validity\nacross all datasets. Moreover, VMF requires only one number of function\nevaluation (NFE) during conditional generation and up to five NFEs for\nunconditional generation, offering substantial computational efficiency over\ndiffusion-based methods.",
-      "pdf_url": "http://arxiv.org/pdf/2508.05411v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.05411v1",
-      "published": "2025-08-07",
+      "abstract": "Current Vision Language Models (VLMs) demonstrate a critical gap between\nsurface-level recognition and deep narrative reasoning when processing\nsequential visual storytelling. Through a comprehensive investigation of manga\nnarrative understanding, we reveal that while recent large multimodal models\nexcel at individual panel interpretation, they systematically fail at temporal\ncausality and cross-panel cohesion, core requirements for coherent story\ncomprehension. We introduce a novel evaluation framework that combines\nfine-grained multimodal annotation, cross-modal embedding analysis, and\nretrieval-augmented assessment to systematically characterize these\nlimitations.\n  Our methodology includes (i) a rigorous annotation protocol linking visual\nelements to narrative structure through aligned light novel text, (ii)\ncomprehensive evaluation across multiple reasoning paradigms, including direct\ninference and retrieval-augmented generation, and (iii) cross-modal similarity\nanalysis revealing fundamental misalignments in current VLMs' joint\nrepresentations. Applying this framework to Re:Zero manga across 11 chapters\nwith 308 annotated panels, we conduct the first systematic study of long-form\nnarrative understanding in VLMs through three core evaluation axes: generative\nstorytelling, contextual dialogue grounding, and temporal reasoning. Our\nfindings demonstrate that current models lack genuine story-level intelligence,\nstruggling particularly with non-linear narratives, character consistency, and\ncausal inference across extended sequences. This work establishes both the\nfoundation and practical methodology for evaluating narrative intelligence,\nwhile providing actionable insights into the capability of deep sequential\nunderstanding of Discrete Visual Narratives beyond basic recognition in\nMultimodal Models.",
+      "pdf_url": "http://arxiv.org/pdf/2508.08508v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.08508v1",
+      "published": "2025-08-11",
       "categories": [
-        "cs.LG"
+        "cs.CV",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "A hierarchical modelling approach for Bayesian Causal Forests on longitudinal data: A Case Study in Multiple Sclerosis Clinical Trials",
+      "authors": [
+        "Emma Prevot",
+        "Dieter A. Häring",
+        "Thomas E. Nichols",
+        "Chris C. Holmes",
+        "Habib Ganjgahi"
+      ],
+      "abstract": "Long-running clinical trials offer a unique opportunity to study disease\nprogression and treatment response over time, enabling questions about how and\nwhen interventions alter patient trajectories. However, drawing causal\nconclusions in this setting is challenging due to irregular follow-up,\nindividual-level heterogeneity, and time-varying confounding. Bayesian Additive\nRegression Trees (BART) and their extension, Bayesian Causal Forests (BCF),\nhave proven powerful for flexible causal inference in observational data,\nespecially for heterogeneous treatment effects and non-linear outcome surfaces.\nYet, both models assume independence across observations and are fundamentally\nlimited in their ability to model within-individual correlation over time. This\nlimits their use in real-world longitudinal settings where repeated measures\nare the norm. Motivated by the NO.MS dataset, the largest and most\ncomprehensive clinical trial dataset in Multiple Sclerosis (MS), with more than\n35,000 patients and up to 15 years follow-up, we develop BCFLong, a\nhierarchical model that preserves BART's strengths while extending it for\nlongitudinal analysis. Inspired by BCF, we decompose the mean into prognostic\nand treatment effects, modelling the former on Image Quality Metrics (IQMs) to\naccount for scanner effects, and introduce individual-specific random effects,\nincluding intercepts and slope, with a sparsity-inducing horseshoe prior.\nSimulations confirm BCFLong's superior performance and robustness to sparsity,\nsignificantly improving outcome and treatment effect estimation. On NO.MS,\nBCFLong captures clinically meaningful longitudinal patterns in brain volume\nchange, which would have otherwise remained undetected. These findings\nhighlight the importance of adaptively accounting for within-individual\ncorrelations and position BCFLong as a flexible framework for causal inference\nin longitudinal data.",
+      "pdf_url": "http://arxiv.org/pdf/2508.08418v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.08418v1",
+      "published": "2025-08-11",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Doubly robust pointwise confidence intervals for a monotonic continuous treatment effect curve",
+      "authors": [
+        "Charles R. Doss"
+      ],
+      "abstract": "We study nonparametric inference for the causal dose-response (or treatment\neffect) curve when the treatment variable is continuous rather than binary or\ndiscrete. We do this by developing doubly robust confidence intervals for the\ncontinuous treatment effect curve (at a fixed point) under the assumption that\nit is monotonic, based on inverting a likelihood ratio-type test. Monotonicity\nof the treatment effect curve is often a very natural assumption, and this\nassumption removes the need to choose a smoothing or tuning parameter for the\nnonparametrically estimated curve. The likelihood ratio procedure is effective\nbecause it allows us to avoid estimating the curve's unknown bias, which is\nchallenging to do. The test statistic is ``doubly robust'' in that a remainder\nterm is the product of errors for the two so-called nuisance functions that\nnaturally arise (the outcome regression and generalized propensity score\nfunctions), which allows one nuisance to be estimated poorly if the other is\nestimated well. Furthermore, we propose a version of our test or confidence\ninterval that is adaptive to a range of the unknown curve's flatness level. We\npresent versions with and without cross fitting. We illustrate the new methods\nvia simulations and a study of a dataset relating the effect of nurse staffing\nhours on hospital performance.",
+      "pdf_url": "http://arxiv.org/pdf/2508.08415v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.08415v1",
+      "published": "2025-08-11",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Multiple Regression Analysis of Unmeasured Confounding",
+      "authors": [
+        "Brian Knaeble",
+        "R Mitchell Hughes"
+      ],
+      "abstract": "Whereas confidence intervals are used to assess uncertainty due to unmeasured\nindividuals, confounding intervals can be used to assess uncertainty due to\nunmeasured attributes. Previously, we have introduced a methodology for\ncomputing confounding intervals in a simple regression setting in a paper\ntitled ``Regression Analysis of Unmeasured Confounding.\" Here we extend that\nmethodology for more general application in the context of multiple regression.\nOur multiple regression analysis of unmeasured confounding utilizes subject\nmatter knowledge about coefficients of determination to bound omitted variables\nbias, while taking into account measured covariate data. Our generalized\nmethodology can be used to partially identify causal effects. The methodology\nis demonstrated with example applications, to show how coefficients of\ndetermination, being complementary to randomness, can support sensitivity\nanalysis for causal inference from observational data. The methodology is best\napplied when natural sources of randomness are present and identifiable within\nthe data generating process. Our main contribution is an algorithm that\nsupports our methodology. The purpose of this article is to describe our\nalgorithm in detail. In the paper we provide a link to our GitHub page for\nreaders who would like to access and utilize our algorithm.",
+      "pdf_url": "http://arxiv.org/pdf/2508.08412v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.08412v1",
+      "published": "2025-08-11",
+      "categories": [
+        "stat.ME",
+        "math.OC",
+        "62J99, 62H99, 62P10, 62P25"
       ]
     }
   ]
