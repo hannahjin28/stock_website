@@ -1,6 +1,92 @@
 {
-  "last_updated": "2025-08-14T00:56:16.621237",
+  "last_updated": "2025-08-15T00:56:29.789602",
   "papers": [
+    {
+      "title": "Embodied Tactile Perception of Soft Objects Properties",
+      "authors": [
+        "Anirvan Dutta",
+        "Alexis WM Devillard",
+        "Zhihuan Zhang",
+        "Xiaoxiao Cheng",
+        "Etienne Burdet"
+      ],
+      "abstract": "To enable robots to develop human-like fine manipulation, it is essential to\nunderstand how mechanical compliance, multi-modal sensing, and purposeful\ninteraction jointly shape tactile perception. In this study, we use a dedicated\nmodular e-Skin with tunable mechanical compliance and multi-modal sensing\n(normal, shear forces and vibrations) to systematically investigate how sensing\nembodiment and interaction strategies influence robotic perception of objects.\nLeveraging a curated set of soft wave objects with controlled viscoelastic and\nsurface properties, we explore a rich set of palpation primitives-pressing,\nprecession, sliding that vary indentation depth, frequency, and directionality.\nIn addition, we propose the latent filter, an unsupervised, action-conditioned\ndeep state-space model of the sophisticated interaction dynamics and infer\ncausal mechanical properties into a structured latent space. This provides\ngeneralizable and in-depth interpretable representation of how embodiment and\ninteraction determine and influence perception. Our investigation demonstrates\nthat multi-modal sensing outperforms uni-modal sensing. It highlights a nuanced\ninteraction between the environment and mechanical properties of e-Skin, which\nshould be examined alongside the interaction by incorporating temporal\ndynamics.",
+      "pdf_url": "http://arxiv.org/pdf/2508.09836v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.09836v1",
+      "published": "2025-08-13",
+      "categories": [
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "Structured Kernel Regression VAE: A Computationally Efficient Surrogate for GP-VAEs in ICA",
+      "authors": [
+        "Yuan-Hao Wei",
+        "Fu-Hao Deng",
+        "Lin-Yong Cui",
+        "Yan-Jie Sun"
+      ],
+      "abstract": "The interpretability of generative models is considered a key factor in\ndemonstrating their effectiveness and controllability. The generated data are\nbelieved to be determined by latent variables that are not directly observable.\nTherefore, disentangling, decoupling, decomposing, causal inference, or\nperforming Independent Component Analysis (ICA) in the latent variable space\nhelps uncover the independent factors that influence the attributes or features\naffecting the generated outputs, thereby enhancing the interpretability of\ngenerative models. As a generative model, Variational Autoencoders (VAEs)\ncombine with variational Bayesian inference algorithms. Using VAEs, the inverse\nprocess of ICA can be equivalently framed as a variational inference process.\nIn some studies, Gaussian processes (GPs) have been introduced as priors for\neach dimension of latent variables in VAEs, structuring and separating each\ndimension from temporal or spatial perspectives, and encouraging different\ndimensions to control various attributes of the generated data. However, GPs\nimpose a significant computational burden, resulting in substantial resource\nconsumption when handling large datasets. Essentially, GPs model different\ntemporal or spatial structures through various kernel functions. Structuring\nthe priors of latent variables via kernel functions-so that different kernel\nfunctions model the correlations among sequence points within different latent\ndimensions-is at the core of achieving disentanglement in VAEs. The proposed\nStructured Kernel Regression VAE (SKR-VAE) leverages this core idea in a more\nefficient way, avoiding the costly kernel matrix inversion required in GPs.\nThis research demonstrates that, while maintaining ICA performance, SKR-VAE\nachieves greater computational efficiency and significantly reduced\ncomputational burden compared to GP-VAE.",
+      "pdf_url": "http://arxiv.org/pdf/2508.09721v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.09721v1",
+      "published": "2025-08-13",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "TimeMKG: Knowledge-Infused Causal Reasoning for Multivariate Time Series Modeling",
+      "authors": [
+        "Yifei Sun",
+        "Junming Liu",
+        "Ding Wang",
+        "Yirong Chen",
+        "Xuefeng Yan"
+      ],
+      "abstract": "Multivariate time series data typically comprises two distinct modalities:\nvariable semantics and sampled numerical observations. Traditional time series\nmodels treat variables as anonymous statistical signals, overlooking the rich\nsemantic information embedded in variable names and data descriptions. However,\nthese textual descriptors often encode critical domain knowledge that is\nessential for robust and interpretable modeling. Here we present TimeMKG, a\nmultimodal causal reasoning framework that elevates time series modeling from\nlow-level signal processing to knowledge informed inference. TimeMKG employs\nlarge language models to interpret variable semantics and constructs structured\nMultivariate Knowledge Graphs that capture inter-variable relationships. A\ndual-modality encoder separately models the semantic prompts, generated from\nknowledge graph triplets, and the statistical patterns from historical time\nseries. Cross-modality attention aligns and fuses these representations at the\nvariable level, injecting causal priors into downstream tasks such as\nforecasting and classification, providing explicit and interpretable priors to\nguide model reasoning. The experiment in diverse datasets demonstrates that\nincorporating variable-level knowledge significantly improves both predictive\nperformance and generalization.",
+      "pdf_url": "http://arxiv.org/pdf/2508.09630v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.09630v1",
+      "published": "2025-08-13",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Goal Discovery with Causal Capacity for Efficient Reinforcement Learning",
+      "authors": [
+        "Yan Yu",
+        "Yaodong Yang",
+        "Zhengbo Lu",
+        "Chengdong Ma",
+        "Wengang Zhou",
+        "Houqiang Li"
+      ],
+      "abstract": "Causal inference is crucial for humans to explore the world, which can be\nmodeled to enable an agent to efficiently explore the environment in\nreinforcement learning. Existing research indicates that establishing the\ncausality between action and state transition will enhance an agent to reason\nhow a policy affects its future trajectory, thereby promoting directed\nexploration. However, it is challenging to measure the causality due to its\nintractability in the vast state-action space of complex scenarios. In this\npaper, we propose a novel Goal Discovery with Causal Capacity (GDCC) framework\nfor efficient environment exploration. Specifically, we first derive a\nmeasurement of causality in state space, \\emph{i.e.,} causal capacity, which\nrepresents the highest influence of an agent's behavior on future trajectories.\nAfter that, we present a Monte Carlo based method to identify critical points\nin discrete state space and further optimize this method for continuous\nhigh-dimensional environments. Those critical points are used to uncover where\nthe agent makes important decisions in the environment, which are then regarded\nas our subgoals to guide the agent to make exploration more purposefully and\nefficiently. Empirical results from multi-objective tasks demonstrate that\nstates with high causal capacity align with our expected subgoals, and our GDCC\nachieves significant success rate improvements compared to baselines.",
+      "pdf_url": "http://arxiv.org/pdf/2508.09624v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.09624v1",
+      "published": "2025-08-13",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Over-Squashing in GNNs and Causal Inference of Rewiring Strategies",
+      "authors": [
+        "Danial Saber",
+        "Amirali Salehi-Abari"
+      ],
+      "abstract": "Graph neural networks (GNNs) have exhibited state-of-the-art performance\nacross wide-range of domains such as recommender systems, material design, and\ndrug repurposing. Yet message-passing GNNs suffer from over-squashing --\nexponential compression of long-range information from distant nodes -- which\nlimits expressivity. Rewiring techniques can ease this bottleneck; but their\npractical impacts are unclear due to the lack of a direct empirical\nover-squashing metric. We propose a rigorous, topology-focused method for\nassessing over-squashing between node pairs using the decay rate of their\nmutual sensitivity. We then extend these pairwise assessments to four\ngraph-level statistics (prevalence, intensity, variability, extremity).\nCoupling these metrics with a within-graph causal design, we quantify how\nrewiring strategies affect over-squashing on diverse graph- and\nnode-classification benchmarks. Our extensive empirical analyses show that most\ngraph classification datasets suffer from over-squashing (but to various\nextents), and rewiring effectively mitigates it -- though the degree of\nmitigation, and its translation into performance gains, varies by dataset and\nmethod. We also found that over-squashing is less notable in node\nclassification datasets, where rewiring often increases over-squashing, and\nperformance variations are uncorrelated with over-squashing changes. These\nfindings suggest that rewiring is most beneficial when over-squashing is both\nsubstantial and corrected with restraint -- while overly aggressive rewiring,\nor rewiring applied to minimally over-squashed graphs, is unlikely to help and\nmay even harm performance. Our plug-and-play diagnostic tool lets practitioners\ndecide -- before any training -- whether rewiring is likely to pay off.",
+      "pdf_url": "http://arxiv.org/pdf/2508.09265v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.09265v1",
+      "published": "2025-08-12",
+      "categories": [
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
     {
       "title": "Efficient Statistical Estimation for Sequential Adaptive Experiments with Implications for Adaptive Designs",
       "authors": [
@@ -40,8 +126,8 @@
         "Arkaprava Roy"
       ],
       "abstract": "Heterogeneous treatment effect estimation is critical in oncology,\nparticularly in multi-arm trials with overlapping therapeutic components and\nlong-term survivors. These shared mechanisms pose a central challenge to\nidentifying causal effects in precision medicine. We propose a novel\ncovariate-dependent nonparametric Bayesian multi-treatment cure survival model\nthat jointly accounts for common structures among treatments and cure\nfractions. Through latent link functions, our model leverages sharing among\ntreatments through a flexible modeling approach, enabling individualized\nsurvival inference. We adopt a Bayesian route for inference and implement an\nefficient MCMC algorithm for approximating the posterior. Simulation studies\ndemonstrate the method's robustness and superiority in various specification\nscenarios. Finally, application to the AALL0434 trial reveals clinically\nmeaningful differences in survival across methotrexate-based regimens and their\nassociations with different covariates, underscoring its practical utility for\nlearning treatment effects in real-world pediatric oncology data.",
-      "pdf_url": "http://arxiv.org/pdf/2508.08975v2",
-      "arxiv_url": "http://arxiv.org/abs/2508.08975v2",
+      "pdf_url": "http://arxiv.org/pdf/2508.08975v3",
+      "arxiv_url": "http://arxiv.org/abs/2508.08975v3",
       "published": "2025-08-12",
       "categories": [
         "stat.ME",
@@ -83,90 +169,6 @@
       "published": "2025-08-12",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Sensitivity Analysis to Unobserved Confounding with Copula-based Normalizing Flows",
-      "authors": [
-        "Sourabh Balgi",
-        "Marc Braun",
-        "Jose M. Peña",
-        "Adel Daoud"
-      ],
-      "abstract": "We propose a novel method for sensitivity analysis to unobserved confounding\nin causal inference. The method builds on a copula-based causal graphical\nnormalizing flow that we term $\\rho$-GNF, where $\\rho \\in [-1,+1]$ is the\nsensitivity parameter. The parameter represents the non-causal association\nbetween exposure and outcome due to unobserved confounding, which is modeled as\na Gaussian copula. In other words, the $\\rho$-GNF enables scholars to estimate\nthe average causal effect (ACE) as a function of $\\rho$, accounting for various\nconfounding strengths. The output of the $\\rho$-GNF is what we term the\n$\\rho_{curve}$, which provides the bounds for the ACE given an interval of\nassumed $\\rho$ values. The $\\rho_{curve}$ also enables scholars to identify the\nconfounding strength required to nullify the ACE. We also propose a Bayesian\nversion of our sensitivity analysis method. Assuming a prior over the\nsensitivity parameter $\\rho$ enables us to derive the posterior distribution\nover the ACE, which enables us to derive credible intervals. Finally,\nleveraging on experiments from simulated and real-world data, we show the\nbenefits of our sensitivity analysis method.",
-      "pdf_url": "http://arxiv.org/pdf/2508.08752v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.08752v1",
-      "published": "2025-08-12",
-      "categories": [
-        "stat.ME",
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Re:Verse -- Can Your VLM Read a Manga?",
-      "authors": [
-        "Aaditya Baranwal",
-        "Madhav Kataria",
-        "Naitik Agrawal",
-        "Yogesh S Rawat",
-        "Shruti Vyas"
-      ],
-      "abstract": "Current Vision Language Models (VLMs) demonstrate a critical gap between\nsurface-level recognition and deep narrative reasoning when processing\nsequential visual storytelling. Through a comprehensive investigation of manga\nnarrative understanding, we reveal that while recent large multimodal models\nexcel at individual panel interpretation, they systematically fail at temporal\ncausality and cross-panel cohesion, core requirements for coherent story\ncomprehension. We introduce a novel evaluation framework that combines\nfine-grained multimodal annotation, cross-modal embedding analysis, and\nretrieval-augmented assessment to systematically characterize these\nlimitations.\n  Our methodology includes (i) a rigorous annotation protocol linking visual\nelements to narrative structure through aligned light novel text, (ii)\ncomprehensive evaluation across multiple reasoning paradigms, including direct\ninference and retrieval-augmented generation, and (iii) cross-modal similarity\nanalysis revealing fundamental misalignments in current VLMs' joint\nrepresentations. Applying this framework to Re:Zero manga across 11 chapters\nwith 308 annotated panels, we conduct the first systematic study of long-form\nnarrative understanding in VLMs through three core evaluation axes: generative\nstorytelling, contextual dialogue grounding, and temporal reasoning. Our\nfindings demonstrate that current models lack genuine story-level intelligence,\nstruggling particularly with non-linear narratives, character consistency, and\ncausal inference across extended sequences. This work establishes both the\nfoundation and practical methodology for evaluating narrative intelligence,\nwhile providing actionable insights into the capability of deep sequential\nunderstanding of Discrete Visual Narratives beyond basic recognition in\nMultimodal Models.",
-      "pdf_url": "http://arxiv.org/pdf/2508.08508v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.08508v1",
-      "published": "2025-08-11",
-      "categories": [
-        "cs.CV",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "A hierarchical modelling approach for Bayesian Causal Forests on longitudinal data: A Case Study in Multiple Sclerosis Clinical Trials",
-      "authors": [
-        "Emma Prevot",
-        "Dieter A. Häring",
-        "Thomas E. Nichols",
-        "Chris C. Holmes",
-        "Habib Ganjgahi"
-      ],
-      "abstract": "Long-running clinical trials offer a unique opportunity to study disease\nprogression and treatment response over time, enabling questions about how and\nwhen interventions alter patient trajectories. However, drawing causal\nconclusions in this setting is challenging due to irregular follow-up,\nindividual-level heterogeneity, and time-varying confounding. Bayesian Additive\nRegression Trees (BART) and their extension, Bayesian Causal Forests (BCF),\nhave proven powerful for flexible causal inference in observational data,\nespecially for heterogeneous treatment effects and non-linear outcome surfaces.\nYet, both models assume independence across observations and are fundamentally\nlimited in their ability to model within-individual correlation over time. This\nlimits their use in real-world longitudinal settings where repeated measures\nare the norm. Motivated by the NO.MS dataset, the largest and most\ncomprehensive clinical trial dataset in Multiple Sclerosis (MS), with more than\n35,000 patients and up to 15 years follow-up, we develop BCFLong, a\nhierarchical model that preserves BART's strengths while extending it for\nlongitudinal analysis. Inspired by BCF, we decompose the mean into prognostic\nand treatment effects, modelling the former on Image Quality Metrics (IQMs) to\naccount for scanner effects, and introduce individual-specific random effects,\nincluding intercepts and slope, with a sparsity-inducing horseshoe prior.\nSimulations confirm BCFLong's superior performance and robustness to sparsity,\nsignificantly improving outcome and treatment effect estimation. On NO.MS,\nBCFLong captures clinically meaningful longitudinal patterns in brain volume\nchange, which would have otherwise remained undetected. These findings\nhighlight the importance of adaptively accounting for within-individual\ncorrelations and position BCFLong as a flexible framework for causal inference\nin longitudinal data.",
-      "pdf_url": "http://arxiv.org/pdf/2508.08418v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.08418v1",
-      "published": "2025-08-11",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Doubly robust pointwise confidence intervals for a monotonic continuous treatment effect curve",
-      "authors": [
-        "Charles R. Doss"
-      ],
-      "abstract": "We study nonparametric inference for the causal dose-response (or treatment\neffect) curve when the treatment variable is continuous rather than binary or\ndiscrete. We do this by developing doubly robust confidence intervals for the\ncontinuous treatment effect curve (at a fixed point) under the assumption that\nit is monotonic, based on inverting a likelihood ratio-type test. Monotonicity\nof the treatment effect curve is often a very natural assumption, and this\nassumption removes the need to choose a smoothing or tuning parameter for the\nnonparametrically estimated curve. The likelihood ratio procedure is effective\nbecause it allows us to avoid estimating the curve's unknown bias, which is\nchallenging to do. The test statistic is ``doubly robust'' in that a remainder\nterm is the product of errors for the two so-called nuisance functions that\nnaturally arise (the outcome regression and generalized propensity score\nfunctions), which allows one nuisance to be estimated poorly if the other is\nestimated well. Furthermore, we propose a version of our test or confidence\ninterval that is adaptive to a range of the unknown curve's flatness level. We\npresent versions with and without cross fitting. We illustrate the new methods\nvia simulations and a study of a dataset relating the effect of nurse staffing\nhours on hospital performance.",
-      "pdf_url": "http://arxiv.org/pdf/2508.08415v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.08415v1",
-      "published": "2025-08-11",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Multiple Regression Analysis of Unmeasured Confounding",
-      "authors": [
-        "Brian Knaeble",
-        "R Mitchell Hughes"
-      ],
-      "abstract": "Whereas confidence intervals are used to assess uncertainty due to unmeasured\nindividuals, confounding intervals can be used to assess uncertainty due to\nunmeasured attributes. Previously, we have introduced a methodology for\ncomputing confounding intervals in a simple regression setting in a paper\ntitled ``Regression Analysis of Unmeasured Confounding.\" Here we extend that\nmethodology for more general application in the context of multiple regression.\nOur multiple regression analysis of unmeasured confounding utilizes subject\nmatter knowledge about coefficients of determination to bound omitted variables\nbias, while taking into account measured covariate data. Our generalized\nmethodology can be used to partially identify causal effects. The methodology\nis demonstrated with example applications, to show how coefficients of\ndetermination, being complementary to randomness, can support sensitivity\nanalysis for causal inference from observational data. The methodology is best\napplied when natural sources of randomness are present and identifiable within\nthe data generating process. Our main contribution is an algorithm that\nsupports our methodology. The purpose of this article is to describe our\nalgorithm in detail. In the paper we provide a link to our GitHub page for\nreaders who would like to access and utilize our algorithm.",
-      "pdf_url": "http://arxiv.org/pdf/2508.08412v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.08412v1",
-      "published": "2025-08-11",
-      "categories": [
-        "stat.ME",
-        "math.OC",
-        "62J99, 62H99, 62P10, 62P25"
       ]
     }
   ]
