@@ -1,6 +1,134 @@
 {
-  "last_updated": "2025-08-15T00:56:29.789602",
+  "last_updated": "2025-08-16T00:53:32.495355",
   "papers": [
+    {
+      "title": "The Knowledge-Reasoning Dissociation: Fundamental Limitations of LLMs in Clinical Natural Language Inference",
+      "authors": [
+        "Maël Jullien",
+        "Marco Valentino",
+        "André Freitas"
+      ],
+      "abstract": "Large language models are often assumed to acquire increasingly structured,\ngeneralizable internal representations simply by scaling data and parameters.\nWe interrogate this assumption by introducing a Clinical Trial Natural Language\nInference benchmark comprising four reasoning families, Causal Attribution,\nCompositional Grounding, Epistemic Verification, and Risk State Abstraction.\nEach item is paired with a targeted Ground Knowledge and Meta-Level Reasoning\nVerification (GKMRV) probe, allowing us to dissociate failures of factual\naccess from failures of inference. We evaluate six contemporary LLMs under both\ndirect and chain of thought prompting.\n  Models achieve near-ceiling GKMRV accuracy (mean accuracy 0.918) yet perform\npoorly on the main reasoning tasks (mean accuracy 0.25). Despite low accuracy,\noutput inferences are highly consistent across samples (mean 0.87), indicating\na systematic application of underlying heuristics and shortcuts.\n  These results reveal fundamental structural and representational limitations:\ncurrent LLMs often possess the relevant clinical knowledge but lack the\nstructured, composable internal representations needed to deploy it reliably\n(e.g., integrating constraints, weighing evidence, or simulating\ncounterfactuals). Decoupling knowledge from reasoning with GKMRV makes this\ndissociation explicit and measurable, providing an effective framework for\nprobing the reliability of LLMs in high-stakes domains.",
+      "pdf_url": "http://arxiv.org/pdf/2508.10777v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.10777v1",
+      "published": "2025-08-14",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Technical Report: Facilitating the Adoption of Causal Inference Methods Through LLM-Empowered Co-Pilot",
+      "authors": [
+        "Jeroen Berrevoets",
+        "Julianna Piskorz",
+        "Robert Davis",
+        "Harry Amad",
+        "Jim Weatherall",
+        "Mihaela van der Schaar"
+      ],
+      "abstract": "Estimating treatment effects (TE) from observational data is a critical yet\ncomplex task in many fields, from healthcare and economics to public policy.\nWhile recent advances in machine learning and causal inference have produced\npowerful estimation techniques, their adoption remains limited due to the need\nfor deep expertise in causal assumptions, adjustment strategies, and model\nselection. In this paper, we introduce CATE-B, an open-source co-pilot system\nthat uses large language models (LLMs) within an agentic framework to guide\nusers through the end-to-end process of treatment effect estimation. CATE-B\nassists in (i) constructing a structural causal model via causal discovery and\nLLM-based edge orientation, (ii) identifying robust adjustment sets through a\nnovel Minimal Uncertainty Adjustment Set criterion, and (iii) selecting\nappropriate regression methods tailored to the causal structure and dataset\ncharacteristics. To encourage reproducibility and evaluation, we release a\nsuite of benchmark tasks spanning diverse domains and causal complexities. By\ncombining causal inference with intelligent, interactive assistance, CATE-B\nlowers the barrier to rigorous causal analysis and lays the foundation for a\nnew class of benchmarks in automated treatment effect estimation.",
+      "pdf_url": "http://arxiv.org/pdf/2508.10581v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.10581v1",
+      "published": "2025-08-14",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "eDIF: A European Deep Inference Fabric for Remote Interpretability of LLM",
+      "authors": [
+        "Irma Heithoff. Marc Guggenberger",
+        "Sandra Kalogiannis",
+        "Susanne Mayer",
+        "Fabian Maag",
+        "Sigurd Schacht",
+        "Carsten Lanquillon"
+      ],
+      "abstract": "This paper presents a feasibility study on the deployment of a European Deep\nInference Fabric (eDIF), an NDIF-compatible infrastructure designed to support\nmechanistic interpretability research on large language models. The need for\nwidespread accessibility of LLM interpretability infrastructure in Europe\ndrives this initiative to democratize advanced model analysis capabilities for\nthe research community. The project introduces a GPU-based cluster hosted at\nAnsbach University of Applied Sciences and interconnected with partner\ninstitutions, enabling remote model inspection via the NNsight API. A\nstructured pilot study involving 16 researchers from across Europe evaluated\nthe platform's technical performance, usability, and scientific utility. Users\nconducted interventions such as activation patching, causal tracing, and\nrepresentation analysis on models including GPT-2 and DeepSeek-R1-70B. The\nstudy revealed a gradual increase in user engagement, stable platform\nperformance throughout, and a positive reception of the remote experimentation\ncapabilities. It also marked the starting point for building a user community\naround the platform. Identified limitations such as prolonged download\ndurations for activation data as well as intermittent execution interruptions\nare addressed in the roadmap for future development. This initiative marks a\nsignificant step towards widespread accessibility of LLM interpretability\ninfrastructure in Europe and lays the groundwork for broader deployment,\nexpanded tooling, and sustained community collaboration in mechanistic\ninterpretability research.",
+      "pdf_url": "http://arxiv.org/pdf/2508.10553v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.10553v1",
+      "published": "2025-08-14",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Identifying Unmeasured Confounders in Panel Causal Models: A Two-Stage LM-Wald Approach",
+      "authors": [
+        "Bang Quan Zheng"
+      ],
+      "abstract": "Panel data are widely used in political science to draw causal inferences.\nHowever, these models often rely on the strong and untested assumption of\nsequential ignorability--that no unmeasured variables influence both the\nindependent and outcome variables across time. Grounded in psychometric\nliterature on latent variable modeling, this paper introduces the Two-Stage\nLM-Wald (2SLW) approach, a diagnostic tool that extends the Lagrange Multiplier\n(LM) and Wald tests to detect violations of this assumption in panel causal\nmodels. Using Monte Carlo simulations within the Random Intercept Cross-Lagged\nPanel Model (RI-CLPM), which separates within and between person effects, I\ndemonstrate the 2SLW's ability to detect unmeasured confounding across three\nkey scenarios: biased corrections, distorted direct effects, and altered\nmediation pathways. I also illustrate the approach with an empirical\napplication to real-world panel data. By providing a practical and\ntheoretically grounded diagnostic, the 2SLW approach enhances the robustness of\ncausal inferences in the presence of potential time-varying confounders.\nMoreover, it can be readily implemented using the R package lavaan.",
+      "pdf_url": "http://arxiv.org/pdf/2508.10342v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.10342v1",
+      "published": "2025-08-14",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Synthesizing Evidence: Data-Pooling as a Tool for Treatment Selection in Online Experiments",
+      "authors": [
+        "Zhenkang Peng",
+        "Chengzhang Li",
+        "Ying Rong",
+        "Renyu",
+        "Zhang"
+      ],
+      "abstract": "Randomized experiments are the gold standard for causal inference but face\nsignificant challenges in business applications, including limited traffic\nallocation, the need for heterogeneous treatment effect estimation, and the\ncomplexity of managing overlapping experiments. These factors lead to high\nvariability in treatment effect estimates, making data-driven policy roll out\ndifficult. To address these issues, we introduce the data pooling treatment\nroll-out (DTR) framework, which enhances policy roll-out by pooling data across\nexperiments rather than focusing narrowly on individual ones. DTR can\neffectively accommodate both overlapping and non-overlapping traffic scenarios,\nregardless of linear or nonlinear model specifications. We demonstrate the\nframework's robustness through a three-pronged validation: (a) theoretical\nanalysis shows that DTR surpasses the traditional difference-in-mean and\nordinary least squares methods under non-overlapping experiments, particularly\nwhen the number of experiments is large; (b) synthetic simulations confirm its\nadaptability in complex scenarios with overlapping traffic, rich covariates and\nnonlinear specifications; and (c) empirical applications to two experimental\ndatasets from real world platforms, demonstrating its effectiveness in guiding\ncustomized policy roll-outs for subgroups within a single experiment, as well\nas in coordinating policy deployments across multiple experiments with\noverlapping scenarios. By reducing estimation variability to improve\ndecision-making effectiveness, DTR provides a scalable, practical solution for\nonline platforms to better leverage their experimental data in today's\nincreasingly complex business environments.",
+      "pdf_url": "http://arxiv.org/pdf/2508.10331v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.10331v1",
+      "published": "2025-08-14",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Statistical methods: Basic concepts, interpretations, and cautions",
+      "authors": [
+        "Sander Greenland"
+      ],
+      "abstract": "The study of associations and their causal explanations is a central research\nactivity whose methodology varies tremendously across fields. Even within\nspecialized subfields, comparisons across textbooks and journals reveals that\nthe basics are subject to considerable variation and controversy. This\nvariation is often obscured by the singular viewpoints presented within\ntextbooks and journal guidelines, which may be deceptively written as if the\nnorms they adopt are unchallenged. Furthermore, human limitations and the\nvastness within fields imply that no one can have expertise across all\nsubfields and that interpretations will be severely constrained by the\nlimitations of studies of human populations.\n  The present chapter outlines an approach to statistical methods that attempts\nto recognize these problems from the start, rather than assume they are absent\nas in the claims of 'statistical significance' and 'confidence' ordinarily\nattached to statistical tests and interval estimates. It does so by grounding\nmodels and statistics in data description, and treating inferences from them as\nspeculations based on assumptions that cannot be fully validated or checked\nusing the analysis data.",
+      "pdf_url": "http://arxiv.org/pdf/2508.10168v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.10168v1",
+      "published": "2025-08-13",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Linking GFAP Levels to Speech Anomalies in Acute Brain Injury: A Simulation Based Study",
+      "authors": [
+        "Shamaley Aravinthan",
+        "Bin Hu"
+      ],
+      "abstract": "Background: Glial fibrillary acidic protein (GFAP) is a biomarker for\nintracerebral hemorrhage and traumatic brain injury, but its link to acute\nspeech disruption is untested. Speech anomalies often emerge early after\ninjury, enabling rapid triage.\n  Methods: We simulated a cohort of 200 virtual patients stratified by lesion\nlocation, onset time, and severity. GFAP kinetics followed published\ntrajectories; speech anomalies were generated from lesion-specific\nneurophysiological mappings. Ensemble machine-learning models used GFAP,\nspeech, and lesion features; robustness was tested under noise, delays, and\nlabel dropout. Causal inference (inverse probability of treatment weighting and\ntargeted maximum likelihood estimation) estimated directional associations\nbetween GFAP elevation and speech severity.\n  Findings: GFAP correlated with simulated speech anomaly severity (Spearman\nrho = 0.48), strongest for cortical lesions (rho = 0.55). Voice anomalies\npreceded detectable GFAP rise by a median of 42 minutes in cortical injury.\nClassifier area under the curve values were 0.74 (GFAP only), 0.78 (voice\nonly), and 0.86 for the fused multimodal model, which showed higher sensitivity\nin mild or ambiguous cases. Causal estimates indicated higher GFAP increased\nthe modeled probability of moderate-to-severe speech anomalies by 32 to 35\npercent, independent of lesion site and onset time.\n  Conclusion: These results support a link between GFAP elevation and speech\nanomalies in acute brain injury and suggest integrated biochemical-voice\ndiagnostics could improve early triage, especially for cortical injury.\nFindings are simulation-based and require validation in prospective clinical\nstudies with synchronized GFAP assays and speech recordings.",
+      "pdf_url": "http://arxiv.org/pdf/2508.10130v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.10130v1",
+      "published": "2025-08-13",
+      "categories": [
+        "q-bio.NC"
+      ]
+    },
+    {
+      "title": "Developing an Inhaled NEU1 Inhibitor for Cystic Fibrosis via Pharmacokinetic and Biophysical Modeling",
+      "authors": [
+        "Yousra Hassan Alsaad Almeshale",
+        "Abdulelah Hassan Almeshali",
+        "Omar Alsaddique",
+        "Noura Jandali",
+        "Nadeen Garaween",
+        "Bin Hu"
+      ],
+      "abstract": "Background: Cystic fibrosis (CF) airway mucus exhibits reduced mucin\nsialylation, increasing viscosity and impairing mucociliary clearance (MCC).\nNEU1 inhibition has been proposed to restore MCC, but its quantitative\npharmacokinetic and rheological effects, particularly with inhaled delivery,\nremain uncharacterized.\n  Objective: To develop an integrated pharmacokinetic/pharmacodynamic (PK/PD)\nand biophysical model to assess the efficacy of an inhaled NEU1 inhibitor.\n  Methods: Empirical and preclinical NEU1 inhibition data were combined with\ninhalation PK/PD modeling and a biophysical viscosity framework linking mucin\nsialylation and extracellular DNA. Synthetic cohort simulations (N = 200) were\nreconciled with empirical PK benchmarks using Latin hypercube parameter\nsampling. Cross-validation, hold-out testing, and causal inference methods\n(inverse probability of treatment weighting and targeted maximum likelihood\nestimation) quantified predicted effects on lung function (delta FEV1).\n  Results: With reconciled parameters (F_dep = 0.12; k_abs = 0.21 per hour;\nk_muc = 0.24 per hour), epithelial lining fluid drug levels reached a peak\nconcentration of 7.5 micromolar (95 percent CI: 6 to 10 micromolar), achieving\nIC50 coverage for approximately 10 hours per day and greater than 80 percent\nmodeled NEU1 inhibition. Predicted mucus viscosity reduction averaged 25 to 28\npercent. Causal inference estimated delta FEV1 improvement of +0.13 liters (95\npercent CI: 0.10 to 0.15 liters), with about 70 percent mediated via MCC.\n  Conclusions: Empirically anchored PK/PD and biophysical modeling support the\nfeasibility of inhaled NEU1 inhibition as a rheology-targeting strategy in CF,\nprojecting clinically realistic efficacy while maintaining pharmacological\nviability. This calibrated proof of concept warrants in vivo validation in CF\nmodels.",
+      "pdf_url": "http://arxiv.org/pdf/2508.10082v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.10082v1",
+      "published": "2025-08-13",
+      "categories": [
+        "q-bio.QM"
+      ]
+    },
     {
       "title": "Embodied Tactile Perception of Soft Objects Properties",
       "authors": [
@@ -33,142 +161,6 @@
       "categories": [
         "stat.ML",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "TimeMKG: Knowledge-Infused Causal Reasoning for Multivariate Time Series Modeling",
-      "authors": [
-        "Yifei Sun",
-        "Junming Liu",
-        "Ding Wang",
-        "Yirong Chen",
-        "Xuefeng Yan"
-      ],
-      "abstract": "Multivariate time series data typically comprises two distinct modalities:\nvariable semantics and sampled numerical observations. Traditional time series\nmodels treat variables as anonymous statistical signals, overlooking the rich\nsemantic information embedded in variable names and data descriptions. However,\nthese textual descriptors often encode critical domain knowledge that is\nessential for robust and interpretable modeling. Here we present TimeMKG, a\nmultimodal causal reasoning framework that elevates time series modeling from\nlow-level signal processing to knowledge informed inference. TimeMKG employs\nlarge language models to interpret variable semantics and constructs structured\nMultivariate Knowledge Graphs that capture inter-variable relationships. A\ndual-modality encoder separately models the semantic prompts, generated from\nknowledge graph triplets, and the statistical patterns from historical time\nseries. Cross-modality attention aligns and fuses these representations at the\nvariable level, injecting causal priors into downstream tasks such as\nforecasting and classification, providing explicit and interpretable priors to\nguide model reasoning. The experiment in diverse datasets demonstrates that\nincorporating variable-level knowledge significantly improves both predictive\nperformance and generalization.",
-      "pdf_url": "http://arxiv.org/pdf/2508.09630v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.09630v1",
-      "published": "2025-08-13",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Goal Discovery with Causal Capacity for Efficient Reinforcement Learning",
-      "authors": [
-        "Yan Yu",
-        "Yaodong Yang",
-        "Zhengbo Lu",
-        "Chengdong Ma",
-        "Wengang Zhou",
-        "Houqiang Li"
-      ],
-      "abstract": "Causal inference is crucial for humans to explore the world, which can be\nmodeled to enable an agent to efficiently explore the environment in\nreinforcement learning. Existing research indicates that establishing the\ncausality between action and state transition will enhance an agent to reason\nhow a policy affects its future trajectory, thereby promoting directed\nexploration. However, it is challenging to measure the causality due to its\nintractability in the vast state-action space of complex scenarios. In this\npaper, we propose a novel Goal Discovery with Causal Capacity (GDCC) framework\nfor efficient environment exploration. Specifically, we first derive a\nmeasurement of causality in state space, \\emph{i.e.,} causal capacity, which\nrepresents the highest influence of an agent's behavior on future trajectories.\nAfter that, we present a Monte Carlo based method to identify critical points\nin discrete state space and further optimize this method for continuous\nhigh-dimensional environments. Those critical points are used to uncover where\nthe agent makes important decisions in the environment, which are then regarded\nas our subgoals to guide the agent to make exploration more purposefully and\nefficiently. Empirical results from multi-objective tasks demonstrate that\nstates with high causal capacity align with our expected subgoals, and our GDCC\nachieves significant success rate improvements compared to baselines.",
-      "pdf_url": "http://arxiv.org/pdf/2508.09624v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.09624v1",
-      "published": "2025-08-13",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Over-Squashing in GNNs and Causal Inference of Rewiring Strategies",
-      "authors": [
-        "Danial Saber",
-        "Amirali Salehi-Abari"
-      ],
-      "abstract": "Graph neural networks (GNNs) have exhibited state-of-the-art performance\nacross wide-range of domains such as recommender systems, material design, and\ndrug repurposing. Yet message-passing GNNs suffer from over-squashing --\nexponential compression of long-range information from distant nodes -- which\nlimits expressivity. Rewiring techniques can ease this bottleneck; but their\npractical impacts are unclear due to the lack of a direct empirical\nover-squashing metric. We propose a rigorous, topology-focused method for\nassessing over-squashing between node pairs using the decay rate of their\nmutual sensitivity. We then extend these pairwise assessments to four\ngraph-level statistics (prevalence, intensity, variability, extremity).\nCoupling these metrics with a within-graph causal design, we quantify how\nrewiring strategies affect over-squashing on diverse graph- and\nnode-classification benchmarks. Our extensive empirical analyses show that most\ngraph classification datasets suffer from over-squashing (but to various\nextents), and rewiring effectively mitigates it -- though the degree of\nmitigation, and its translation into performance gains, varies by dataset and\nmethod. We also found that over-squashing is less notable in node\nclassification datasets, where rewiring often increases over-squashing, and\nperformance variations are uncorrelated with over-squashing changes. These\nfindings suggest that rewiring is most beneficial when over-squashing is both\nsubstantial and corrected with restraint -- while overly aggressive rewiring,\nor rewiring applied to minimally over-squashed graphs, is unlikely to help and\nmay even harm performance. Our plug-and-play diagnostic tool lets practitioners\ndecide -- before any training -- whether rewiring is likely to pay off.",
-      "pdf_url": "http://arxiv.org/pdf/2508.09265v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.09265v1",
-      "published": "2025-08-12",
-      "categories": [
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Efficient Statistical Estimation for Sequential Adaptive Experiments with Implications for Adaptive Designs",
-      "authors": [
-        "Wenxin Zhang",
-        "Mark van der Laan"
-      ],
-      "abstract": "Adaptive experimental designs have gained popularity in clinical trials and\nonline experiments. Unlike traditional, fixed experimental designs, adaptive\ndesigns can dynamically adjust treatment randomization probabilities and other\ndesign features in response to data accumulated sequentially during the\nexperiment. These adaptations are useful to achieve diverse objectives,\nincluding reducing uncertainty in the estimation of causal estimands or\nincreasing participants' chances of receiving better treatments during the\nexperiment. At the end of the experiment, it is often desirable to answer\ncausal questions from the observed data. However, the adaptive nature of such\nexperiments and the resulting dependence among observations pose significant\nchallenges to providing valid statistical inference and efficient estimation of\ncausal estimands. Building upon the Targeted Maximum Likelihood Estimator\n(TMLE) framework tailored for adaptive designs (van der Laan, 2008), we\nintroduce a new adaptive-design-likelihood-based TMLE (ADL-TMLE) to estimate a\nvariety of causal estimands from adaptive experiment data. We establish\nasymptotic normality and semiparametric efficiency of ADL-TMLE under relaxed\npositivity and design stabilization assumptions for adaptive experiments.\nMotivated by efficiency results, we further propose a novel adaptive design\naimed at minimizing the variance of estimators based on data generated under\nthat design. Using the average treatment effect as a representative example,\nsimulation studies show that ADL-TMLE demonstrates superior variance-reduction\nperformance across different types of adaptive experiments, and that the\nproposed adaptive design attains lower variance than the standard\nefficiency-oriented adaptive design. Finally, we generalize this estimation and\ndesign framework to broader settings with longitudinal structures.",
-      "pdf_url": "http://arxiv.org/pdf/2508.09135v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.09135v1",
-      "published": "2025-08-12",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Link Prediction for Event Logs in the Process Industry",
-      "authors": [
-        "Anastasia Zhukova",
-        "Thomas Walton",
-        "Christian E. Matt",
-        "Bela Gipp"
-      ],
-      "abstract": "Knowledge management (KM) is vital in the process industry for optimizing\noperations, ensuring safety, and enabling continuous improvement through\neffective use of operational data and past insights. A key challenge in this\ndomain is the fragmented nature of event logs in shift books, where related\nrecords, e.g., entries documenting issues related to equipment or processes and\nthe corresponding solutions, may remain disconnected. This fragmentation\nhinders the recommendation of previous solutions to the users. To address this\nproblem, we investigate record linking (RL) as link prediction, commonly\nstudied in graph-based machine learning, by framing it as a cross-document\ncoreference resolution (CDCR) task enhanced with natural language inference\n(NLI) and semantic text similarity (STS) by shifting it into the causal\ninference (CI). We adapt CDCR, traditionally applied in the news domain, into\nan RL model to operate at the passage level, similar to NLI and STS, while\naccommodating the process industry's specific text formats, which contain\nunstructured text and structured record attributes. Our RL model outperformed\nthe best versions of NLI- and STS-driven baselines by 28% (11.43 points) and\n27% (11.21 points), respectively. Our work demonstrates how domain adaptation\nof the state-of-the-art CDCR models, enhanced with reasoning capabilities, can\nbe effectively tailored to the process industry, improving data quality and\nconnectivity in shift logs.",
-      "pdf_url": "http://arxiv.org/pdf/2508.09096v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.09096v1",
-      "published": "2025-08-12",
-      "categories": [
-        "cs.CL",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Nonparametric Bayesian Multi-Treatment Mixture Cure Survival Model with Application in Pediatric Oncology",
-      "authors": [
-        "Peter Chang",
-        "John Kairalla",
-        "Arkaprava Roy"
-      ],
-      "abstract": "Heterogeneous treatment effect estimation is critical in oncology,\nparticularly in multi-arm trials with overlapping therapeutic components and\nlong-term survivors. These shared mechanisms pose a central challenge to\nidentifying causal effects in precision medicine. We propose a novel\ncovariate-dependent nonparametric Bayesian multi-treatment cure survival model\nthat jointly accounts for common structures among treatments and cure\nfractions. Through latent link functions, our model leverages sharing among\ntreatments through a flexible modeling approach, enabling individualized\nsurvival inference. We adopt a Bayesian route for inference and implement an\nefficient MCMC algorithm for approximating the posterior. Simulation studies\ndemonstrate the method's robustness and superiority in various specification\nscenarios. Finally, application to the AALL0434 trial reveals clinically\nmeaningful differences in survival across methotrexate-based regimens and their\nassociations with different covariates, underscoring its practical utility for\nlearning treatment effects in real-world pediatric oncology data.",
-      "pdf_url": "http://arxiv.org/pdf/2508.08975v3",
-      "arxiv_url": "http://arxiv.org/abs/2508.08975v3",
-      "published": "2025-08-12",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Position: Causal Machine Learning Requires Rigorous Synthetic Experiments for Broader Adoption",
-      "authors": [
-        "Audrey Poinsot",
-        "Panayiotis Panayiotou",
-        "Alessandro Leite",
-        "Nicolas Chesneau",
-        "Özgür Şimşek",
-        "Marc Schoenauer"
-      ],
-      "abstract": "Causal machine learning has the potential to revolutionize decision-making by\ncombining the predictive power of machine learning algorithms with the theory\nof causal inference. However, these methods remain underutilized by the broader\nmachine learning community, in part because current empirical evaluations do\nnot permit assessment of their reliability and robustness, undermining their\npractical utility. Specifically, one of the principal criticisms made by the\ncommunity is the extensive use of synthetic experiments. We argue, on the\ncontrary, that synthetic experiments are essential and necessary to precisely\nassess and understand the capabilities of causal machine learning methods. To\nsubstantiate our position, we critically review the current evaluation\npractices, spotlight their shortcomings, and propose a set of principles for\nconducting rigorous empirical analyses with synthetic data. Adopting the\nproposed principles will enable comprehensive evaluations that build trust in\ncausal machine learning methods, driving their broader adoption and impactful\nreal-world use.",
-      "pdf_url": "http://arxiv.org/pdf/2508.08883v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.08883v1",
-      "published": "2025-08-12",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "TiMoE: Time-Aware Mixture of Language Experts",
-      "authors": [
-        "Robin Faro",
-        "Dongyang Fan",
-        "Tamar Alphaidze",
-        "Martin Jaggi"
-      ],
-      "abstract": "Large language models (LLMs) are typically trained on fixed snapshots of the\nweb, which means that their knowledge becomes stale and their predictions risk\ntemporal leakage: relying on information that lies in the future relative to a\nquery. We tackle this problem by pre-training from scratch a set of GPT-style\nexperts on disjoint two-year slices of a 2013-2024 corpus and combining them\nthrough TiMoE, a Time-aware Mixture of Language Experts. At inference time,\nTiMoE masks all experts whose training window ends after the query timestamp\nand merges the remaining log-probabilities in a shared space, guaranteeing\nstrict causal validity while retaining the breadth of multi-period knowledge.\nWe also release TSQA, a 10k-question benchmark whose alternatives are\nexplicitly labelled as past, future or irrelevant, allowing fine-grained\nmeasurement of temporal hallucinations. Experiments on eight standard NLP tasks\nplus TSQA show that a co-adapted TiMoE variant matches or exceeds the best\nsingle-period expert and cuts future-knowledge errors by up to 15%. Our results\ndemonstrate that modular, time-segmented pre-training paired with causal\nrouting is a simple yet effective path toward LLMs that stay chronologically\ngrounded without sacrificing general performance much. We open source our code\nat TiMoE (Github): https://github.com/epfml/TiMoE",
-      "pdf_url": "http://arxiv.org/pdf/2508.08827v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.08827v1",
-      "published": "2025-08-12",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]
