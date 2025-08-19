@@ -1,6 +1,54 @@
 {
-  "last_updated": "2025-08-18T00:59:49.022387",
+  "last_updated": "2025-08-19T00:54:22.959268",
   "papers": [
+    {
+      "title": "Deconfounding via Profiled Transfer Learning",
+      "authors": [
+        "Ziyuan Chen",
+        "Yifan Jiang",
+        "Jingyuan Liu",
+        "Fang Yao"
+      ],
+      "abstract": "Unmeasured confounders are a major source of bias in regression-based effect\nestimation and causal inference. In this paper, we advocate a new profiled\ntransfer learning framework, ProTrans, to address confounding effects in the\ntarget dataset, when additional source datasets that possess similar\nconfounding structures are available. We introduce the concept of profiled\nresiduals to characterize the shared confounding patterns between source and\ntarget datasets. By incorporating these profiled residuals into the target\ndebiasing step, we effectively mitigates the latent confounding effects. We\nalso propose a source selection strategy to enhance robustness of ProTrans\nagainst noninformative sources. As a byproduct, ProTrans can also be utilized\nto estimate treatment effects when potential confounders exist, without the use\nof auxiliary features such as instrumental or proxy variables, which are often\nchallenging to select in practice. Theoretically, we prove that the resulting\nestimated model shift from sources to target is confounding-free without any\nassumptions imposed on the true confounding structure, and that the target\nparameter estimation achieves the minimax optimal rate under mild conditions.\nSimulated and real-world experiments validate the effectiveness of ProTrans and\nsupport the theoretical findings.",
+      "pdf_url": "http://arxiv.org/pdf/2508.11622v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.11622v1",
+      "published": "2025-08-15",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "CrossTrace: Efficient Cross-Thread and Cross-Service Span Correlation in Distributed Tracing for Microservices",
+      "authors": [
+        "Linh-An Phan",
+        "MingXue Wang",
+        "Guangyu Wu",
+        "Wang Dawei",
+        "Chen Liqun",
+        "Li Jin"
+      ],
+      "abstract": "Distributed tracing has become an essential technique for debugging and\ntroubleshooting modern microservice-based applications, enabling software\nengineers to detect performance bottlenecks, identify failures, and gain\ninsights into system behavior. However, implementing distributed tracing in\nlarge-scale applications remains challenging due to the need for extensive\ninstrumentation. To reduce this burden, zero-code instrumentation solutions,\nsuch as those based on eBPF, have emerged, allowing span data to be collected\nwithout modifying application code. Despite this promise, span correlation, the\nprocess of establishing causal relationships between spans, remains a critical\nchallenge in zero-code approaches. Existing solutions often rely on thread\naffinity, compromise system security by requiring the kernel integrity mode to\nbe disabled, or incur significant computational overhead due to complex\ninference algorithms. This paper presents CrossTrace, a practical and efficient\ndistributed tracing solution designed to support the debugging of microservice\napplications without requiring source code modifications. CrossTrace employs a\ngreedy algorithm to infer intra-service span relationships from delay patterns,\neliminating reliance on thread identifiers. For inter-service correlation,\nCrossTrace embeds span identifiers into TCP packet headers via eBPF, enabling\nsecure and efficient correlation compromising system security policies.\nEvaluation results show that CrossTrace can correlate thousands of spans within\nseconds with over 90% accuracy, making it suitable for production deployment\nand valuable for microservice observability and diagnosis.",
+      "pdf_url": "http://arxiv.org/pdf/2508.11342v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.11342v1",
+      "published": "2025-08-15",
+      "categories": [
+        "cs.NI"
+      ]
+    },
+    {
+      "title": "Estimating effects of longitudinal modified treatment policies (LMTPs) on rates of change in health outcomes",
+      "authors": [
+        "Anja Shahu",
+        "Daniel Malinsky"
+      ],
+      "abstract": "Longitudinal data often contains time-varying outcomes measured at multiple\nvisits and scientific interest may lie in quantifying the effect of an\nintervention on an outcome's rate of change. For example, one may wish to study\nthe progression (or trajectory) of a disease over time under different\nhypothetical interventions. We extend the longitudinal modified treatment\npolicy (LMTP) methodology introduced in D\\'iaz et al. (2023) to estimate\neffects of complex interventions on rates of change in an outcome over time. We\nexploit the theoretical properties of a nonparametric efficient influence\nfunction (EIF)-based estimator to introduce a novel inference framework that\ncan be used to construct simultaneous confidence intervals for a variety of\ncausal effects of interest and to formally test relevant global and local\nhypotheses about rates of change. We illustrate the utility of our framework in\ninvestigating whether a longitudinal shift intervention affects an outcome's\ncounterfactual trajectory, as compared with no intervention. We present results\nfrom a simulation study to illustrate the performance of our inference\nframework in a longitudinal setting with time-varying confounding and a\ncontinuous exposure.",
+      "pdf_url": "http://arxiv.org/pdf/2508.11131v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.11131v1",
+      "published": "2025-08-15",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "The Knowledge-Reasoning Dissociation: Fundamental Limitations of LLMs in Clinical Natural Language Inference",
       "authors": [
@@ -108,58 +156,6 @@
       "published": "2025-08-13",
       "categories": [
         "q-bio.NC"
-      ]
-    },
-    {
-      "title": "Developing an Inhaled NEU1 Inhibitor for Cystic Fibrosis via Pharmacokinetic and Biophysical Modeling",
-      "authors": [
-        "Yousra Hassan Alsaad Almeshale",
-        "Abdulelah Hassan Almeshali",
-        "Omar Alsaddique",
-        "Noura Jandali",
-        "Nadeen Garaween",
-        "Bin Hu"
-      ],
-      "abstract": "Background: Cystic fibrosis (CF) airway mucus exhibits reduced mucin\nsialylation, increasing viscosity and impairing mucociliary clearance (MCC).\nNEU1 inhibition has been proposed to restore MCC, but its quantitative\npharmacokinetic and rheological effects, particularly with inhaled delivery,\nremain uncharacterized.\n  Objective: To develop an integrated pharmacokinetic/pharmacodynamic (PK/PD)\nand biophysical model to assess the efficacy of an inhaled NEU1 inhibitor.\n  Methods: Empirical and preclinical NEU1 inhibition data were combined with\ninhalation PK/PD modeling and a biophysical viscosity framework linking mucin\nsialylation and extracellular DNA. Synthetic cohort simulations (N = 200) were\nreconciled with empirical PK benchmarks using Latin hypercube parameter\nsampling. Cross-validation, hold-out testing, and causal inference methods\n(inverse probability of treatment weighting and targeted maximum likelihood\nestimation) quantified predicted effects on lung function (delta FEV1).\n  Results: With reconciled parameters (F_dep = 0.12; k_abs = 0.21 per hour;\nk_muc = 0.24 per hour), epithelial lining fluid drug levels reached a peak\nconcentration of 7.5 micromolar (95 percent CI: 6 to 10 micromolar), achieving\nIC50 coverage for approximately 10 hours per day and greater than 80 percent\nmodeled NEU1 inhibition. Predicted mucus viscosity reduction averaged 25 to 28\npercent. Causal inference estimated delta FEV1 improvement of +0.13 liters (95\npercent CI: 0.10 to 0.15 liters), with about 70 percent mediated via MCC.\n  Conclusions: Empirically anchored PK/PD and biophysical modeling support the\nfeasibility of inhaled NEU1 inhibition as a rheology-targeting strategy in CF,\nprojecting clinically realistic efficacy while maintaining pharmacological\nviability. This calibrated proof of concept warrants in vivo validation in CF\nmodels.",
-      "pdf_url": "http://arxiv.org/pdf/2508.10082v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.10082v1",
-      "published": "2025-08-13",
-      "categories": [
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "Embodied Tactile Perception of Soft Objects Properties",
-      "authors": [
-        "Anirvan Dutta",
-        "Alexis WM Devillard",
-        "Zhihuan Zhang",
-        "Xiaoxiao Cheng",
-        "Etienne Burdet"
-      ],
-      "abstract": "To enable robots to develop human-like fine manipulation, it is essential to\nunderstand how mechanical compliance, multi-modal sensing, and purposeful\ninteraction jointly shape tactile perception. In this study, we use a dedicated\nmodular e-Skin with tunable mechanical compliance and multi-modal sensing\n(normal, shear forces and vibrations) to systematically investigate how sensing\nembodiment and interaction strategies influence robotic perception of objects.\nLeveraging a curated set of soft wave objects with controlled viscoelastic and\nsurface properties, we explore a rich set of palpation primitives-pressing,\nprecession, sliding that vary indentation depth, frequency, and directionality.\nIn addition, we propose the latent filter, an unsupervised, action-conditioned\ndeep state-space model of the sophisticated interaction dynamics and infer\ncausal mechanical properties into a structured latent space. This provides\ngeneralizable and in-depth interpretable representation of how embodiment and\ninteraction determine and influence perception. Our investigation demonstrates\nthat multi-modal sensing outperforms uni-modal sensing. It highlights a nuanced\ninteraction between the environment and mechanical properties of e-Skin, which\nshould be examined alongside the interaction by incorporating temporal\ndynamics.",
-      "pdf_url": "http://arxiv.org/pdf/2508.09836v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.09836v1",
-      "published": "2025-08-13",
-      "categories": [
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "Structured Kernel Regression VAE: A Computationally Efficient Surrogate for GP-VAEs in ICA",
-      "authors": [
-        "Yuan-Hao Wei",
-        "Fu-Hao Deng",
-        "Lin-Yong Cui",
-        "Yan-Jie Sun"
-      ],
-      "abstract": "The interpretability of generative models is considered a key factor in\ndemonstrating their effectiveness and controllability. The generated data are\nbelieved to be determined by latent variables that are not directly observable.\nTherefore, disentangling, decoupling, decomposing, causal inference, or\nperforming Independent Component Analysis (ICA) in the latent variable space\nhelps uncover the independent factors that influence the attributes or features\naffecting the generated outputs, thereby enhancing the interpretability of\ngenerative models. As a generative model, Variational Autoencoders (VAEs)\ncombine with variational Bayesian inference algorithms. Using VAEs, the inverse\nprocess of ICA can be equivalently framed as a variational inference process.\nIn some studies, Gaussian processes (GPs) have been introduced as priors for\neach dimension of latent variables in VAEs, structuring and separating each\ndimension from temporal or spatial perspectives, and encouraging different\ndimensions to control various attributes of the generated data. However, GPs\nimpose a significant computational burden, resulting in substantial resource\nconsumption when handling large datasets. Essentially, GPs model different\ntemporal or spatial structures through various kernel functions. Structuring\nthe priors of latent variables via kernel functions-so that different kernel\nfunctions model the correlations among sequence points within different latent\ndimensions-is at the core of achieving disentanglement in VAEs. The proposed\nStructured Kernel Regression VAE (SKR-VAE) leverages this core idea in a more\nefficient way, avoiding the costly kernel matrix inversion required in GPs.\nThis research demonstrates that, while maintaining ICA performance, SKR-VAE\nachieves greater computational efficiency and significantly reduced\ncomputational burden compared to GP-VAE.",
-      "pdf_url": "http://arxiv.org/pdf/2508.09721v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.09721v1",
-      "published": "2025-08-13",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
       ]
     }
   ]
