@@ -1,6 +1,41 @@
 {
-  "last_updated": "2025-08-20T00:52:00.929258",
+  "last_updated": "2025-08-21T00:51:26.352517",
   "papers": [
+    {
+      "title": "Bounding Causal Effects and Counterfactuals",
+      "authors": [
+        "Tobias Maringgele"
+      ],
+      "abstract": "Causal inference often hinges on strong assumptions - such as no unmeasured\nconfounding or perfect compliance - that are rarely satisfied in practice.\nPartial identification offers a principled alternative: instead of relying on\nunverifiable assumptions to estimate causal effects precisely, it derives\nbounds that reflect the uncertainty inherent in the data. Despite its\ntheoretical appeal, partial identification remains underutilized in applied\nwork, in part due to the fragmented nature of existing methods and the lack of\npractical guidance. This thesis addresses these challenges by systematically\ncomparing a diverse set of bounding algorithms across multiple causal\nscenarios. We implement, extend, and unify state-of-the-art methods - including\nsymbolic, optimization-based, and information-theoretic approaches - within a\ncommon evaluation framework. In particular, we propose an extension of a\nrecently introduced entropy-bounded method, making it applicable to\ncounterfactual queries such as the Probability of Necessity and Sufficiency\n(PNS). Our empirical study spans thousands of randomized simulations involving\nboth discrete and continuous data-generating processes. We assess each method\nin terms of bound tightness, computational efficiency, and robustness to\nassumption violations. To support practitioners, we distill our findings into a\npractical decision tree for algorithm selection and train a machine learning\nmodel to predict the best-performing method based on observable data\ncharacteristics.\n  All implementations are released as part of an open-source Python package,\nCausalBoundingEngine, which enables users to apply and compare bounding methods\nthrough a unified interface.",
+      "pdf_url": "http://arxiv.org/pdf/2508.13607v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.13607v1",
+      "published": "2025-08-19",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ME",
+        "62A01 (Foundations of statistics), 68T01 (Artificial intelligence,\n  general)",
+        "G.3; I.2.6"
+      ]
+    },
+    {
+      "title": "Counterfactual Probabilistic Diffusion with Expert Models",
+      "authors": [
+        "Wenhao Mu",
+        "Zhi Cao",
+        "Mehmed Uludag",
+        "Alexander Rodríguez"
+      ],
+      "abstract": "Predicting counterfactual distributions in complex dynamical systems is\nessential for scientific modeling and decision-making in domains such as public\nhealth and medicine. However, existing methods often rely on point estimates or\npurely data-driven models, which tend to falter under data scarcity. We propose\na time series diffusion-based framework that incorporates guidance from\nimperfect expert models by extracting high-level signals to serve as structured\npriors for generative modeling. Our method, ODE-Diff, bridges mechanistic and\ndata-driven approaches, enabling more reliable and interpretable causal\ninference. We evaluate ODE-Diff across semi-synthetic COVID-19 simulations,\nsynthetic pharmacological dynamics, and real-world case studies, demonstrating\nthat it consistently outperforms strong baselines in both point prediction and\ndistributional accuracy.",
+      "pdf_url": "http://arxiv.org/pdf/2508.13355v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.13355v1",
+      "published": "2025-08-18",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ME"
+      ]
+    },
     {
       "title": "Reinforced Context Order Recovery for Adaptive Reasoning and Planning",
       "authors": [
@@ -29,6 +64,24 @@
       "published": "2025-08-18",
       "categories": [
         "econ.EM"
+      ]
+    },
+    {
+      "title": "The Role of AI in Facilitating Interdisciplinary Collaboration: Evidence from AlphaFold",
+      "authors": [
+        "Naixuan Zhao",
+        "Chunli Wei",
+        "Xinyan Zhang",
+        "Jiang Li"
+      ],
+      "abstract": "The acceleration of artificial intelligence (AI) in science is recognized and\nmany scholars have begun to explore its role in interdisciplinary\ncollaboration. However, the mechanisms and extent of this impact are still\nunclear. This study, using AlphaFold's impact on structural biologists,\nexamines how AI technologies influence interdisciplinary collaborative\npatterns. By analyzing 1,247 AlphaFold-related papers and 7,700 authors from\nScopus, we employ bibliometric analysis and causal inference to compare\ninterdisciplinary collaboration between AlphaFold adopters and non-adopters.\nContrary to the widespread belief that AI facilitates interdisciplinary\ncollaboration, our findings show that AlphaFold increased structural\nbiology-computer science collaborations by just 0.48%, with no measurable\neffect on other disciplines. Specifically, AI creates interdisciplinary\ncollaboration demands with specific disciplines due to its technical\ncharacteristics, but this demand is weakened by technological democratization\nand other factors. These findings demonstrate that artificial intelligence (AI)\nalone has limited efficacy in bridging disciplinary divides or fostering\nmeaningful interdisciplinary collaboration.",
+      "pdf_url": "http://arxiv.org/pdf/2508.13234v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.13234v1",
+      "published": "2025-08-18",
+      "categories": [
+        "cs.DL",
+        "cs.AI",
+        "cs.CY"
       ]
     },
     {
@@ -122,53 +175,6 @@
         "cs.LG",
         "cs.SD",
         "eess.AS"
-      ]
-    },
-    {
-      "title": "Conditional mutual information: A generalization of causal inference in quantum systems",
-      "authors": [
-        "Anupam Ghosh"
-      ],
-      "abstract": "The concept of causality is fundamental to numerous scientific explanations;\nnonetheless, its extension to the quantum regime has yet to be explored\nrigorously. This paper introduces the development of a quantum causal index, a\nnovel extension of the classical causal inference framework, tailored to grasp\nthe causal relationships inherent in quantum systems. Our study focuses on the\nasymmetric quantum conditional mutual information (QCMI), incorporating the von\nNeumann entropy, as a directional metric of causal influence in quantum\nmany-body systems. We analyze spin chains using the QCMI, implementing a\nprojective measurement on one site as the intervention and monitoring its\neffect on a distant site conditioned on intermediate spins. Additionally, we\nstudy the effective causal propagation velocity, which is the speed at which\nQCMI becomes significant at distant sites. These findings indicate the presence\nof finite-speed propagation of causal influence, along with the emergence of\ncoherent oscillations.",
-      "pdf_url": "http://arxiv.org/pdf/2508.12160v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.12160v1",
-      "published": "2025-08-16",
-      "categories": [
-        "quant-ph",
-        "nlin.CD",
-        "physics.app-ph",
-        "physics.comp-ph"
-      ]
-    },
-    {
-      "title": "Applied causality to infer protein dynamics and kinetics",
-      "authors": [
-        "Akashnathan Aranganathan",
-        "Eric R. Beyerle"
-      ],
-      "abstract": "The use of generative machine learning models, trained on the experimentally\nresolved structures deposited in the protein data bank, is an attractive\napproach to sampling conformational ensembles of proteins. Unfortunately, since\nthe machine-learned model utilized to generate these ensembles is not tied to\nan equation of motion, such as a molecular dynamics integrator or other causal\ngenerator of the dynamics, there is no timescale or causal information encoded\nin them. As such, with this work, we use the structural ensembles generated\nfrom AlphaFold2 at a range of reduced MSA depths to parameterize the potential\nof mean force of an overdamped, memory-free, coarse-grained Langevin equation.\nThis approach couples the AlphaFold2 ensembles to a causal model, allowing us\nto estimate the timescales spanned by the AlphaFold2-generated ensembles at\neach MSA depth. Performing this analysis on six variants of HIV-1 protease, we\nconfirm an inverse relationship between MSA depth and the timescale of an\nensemble's conformational fluctuations, since the MSA depth essentially serves\nas a conformational restraint, and AlphaFold2 is generally able to probe\ntimescales at or below those seen in microsecond-long, unbiased molecular\ndynamics simulations. We conclude by generalizing this approach to other\nmachine-learned structure-prediction methods.",
-      "pdf_url": "http://arxiv.org/pdf/2508.12060v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.12060v1",
-      "published": "2025-08-16",
-      "categories": [
-        "q-bio.BM",
-        "physics.bio-ph"
-      ]
-    },
-    {
-      "title": "Deconfounding via Profiled Transfer Learning",
-      "authors": [
-        "Ziyuan Chen",
-        "Yifan Jiang",
-        "Jingyuan Liu",
-        "Fang Yao"
-      ],
-      "abstract": "Unmeasured confounders are a major source of bias in regression-based effect\nestimation and causal inference. In this paper, we advocate a new profiled\ntransfer learning framework, ProTrans, to address confounding effects in the\ntarget dataset, when additional source datasets that possess similar\nconfounding structures are available. We introduce the concept of profiled\nresiduals to characterize the shared confounding patterns between source and\ntarget datasets. By incorporating these profiled residuals into the target\ndebiasing step, we effectively mitigates the latent confounding effects. We\nalso propose a source selection strategy to enhance robustness of ProTrans\nagainst noninformative sources. As a byproduct, ProTrans can also be utilized\nto estimate treatment effects when potential confounders exist, without the use\nof auxiliary features such as instrumental or proxy variables, which are often\nchallenging to select in practice. Theoretically, we prove that the resulting\nestimated model shift from sources to target is confounding-free without any\nassumptions imposed on the true confounding structure, and that the target\nparameter estimation achieves the minimax optimal rate under mild conditions.\nSimulated and real-world experiments validate the effectiveness of ProTrans and\nsupport the theoretical findings.",
-      "pdf_url": "http://arxiv.org/pdf/2508.11622v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.11622v1",
-      "published": "2025-08-15",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
