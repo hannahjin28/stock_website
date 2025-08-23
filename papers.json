@@ -1,6 +1,60 @@
 {
-  "last_updated": "2025-08-22T00:52:41.318073",
+  "last_updated": "2025-08-23T00:50:23.506199",
   "papers": [
+    {
+      "title": "Understanding Action Effects through Instrumental Empowerment in Multi-Agent Reinforcement Learning",
+      "authors": [
+        "Ardian Selmonaj",
+        "Miroslav Strupl",
+        "Oleg Szehr",
+        "Alessandro Antonucci"
+      ],
+      "abstract": "To reliably deploy Multi-Agent Reinforcement Learning (MARL) systems, it is\ncrucial to understand individual agent behaviors within a team. While prior\nwork typically evaluates overall team performance based on explicit reward\nsignals or learned value functions, it is unclear how to infer agent\ncontributions in the absence of any value feedback. In this work, we\ninvestigate whether meaningful insights into agent behaviors can be extracted\nthat are consistent with the underlying value functions, solely by analyzing\nthe policy distribution. Inspired by the phenomenon that intelligent agents\ntend to pursue convergent instrumental values, which generally increase the\nlikelihood of task success, we introduce Intended Cooperation Values (ICVs), a\nmethod based on information-theoretic Shapley values for quantifying each\nagent's causal influence on their co-players' instrumental empowerment.\nSpecifically, ICVs measure an agent's action effect on its teammates' policies\nby assessing their decision uncertainty and preference alignment. The analysis\nacross cooperative and competitive MARL environments reveals the extent to\nwhich agents adopt similar or diverse strategies. By comparing action effects\nbetween policies and value functions, our method identifies which agent\nbehaviors are beneficial to team success, either by fostering deterministic\ndecisions or by preserving flexibility for future action choices. Our proposed\nmethod offers novel insights into cooperation dynamics and enhances\nexplainability in MARL systems.",
+      "pdf_url": "http://arxiv.org/pdf/2508.15652v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.15652v1",
+      "published": "2025-08-21",
+      "categories": [
+        "cs.AI",
+        "cs.IT",
+        "cs.LG",
+        "cs.MA",
+        "math.IT"
+      ]
+    },
+    {
+      "title": "CSTEapp: An interactive R-Shiny application of the covariate-specific treatment effect curve for visualizing individualized treatment rule",
+      "authors": [
+        "Yi Zhou",
+        "Yuhao Deng",
+        "Yu-Shi Tian",
+        "Peng Wu",
+        "Wenjie Hu",
+        "Haoxiang Wang",
+        "Ewout Steyerberg",
+        "Xiao-Hua Zhou"
+      ],
+      "abstract": "In precision medicine, deriving the individualized treatment rule (ITR) is\ncrucial for recommending the optimal treatment based on patients' baseline\ncovariates. The covariate-specific treatment effect (CSTE) curve presents a\ngraphical method to visualize an ITR within a causal inference framework.\nRecent advancements have enhanced the causal interpretation of the CSTE curves\nand provided methods for deriving simultaneous confidence bands for various\nstudy types. To facilitate the implementation of these methods and make ITR\nestimation more accessible, we developed CSTEapp, a web-based application built\non the R Shiny framework. CSTEapp allows users to upload data and create CSTE\ncurves through simple point and click operations, making it the first\napplication for estimating the ITRs. CSTEapp simplifies the analytical process\nby providing interactive graphical user interfaces with dynamic results,\nenabling users to easily report optimal treatments for individual patients\nbased on their covariates information. Currently, CSTEapp is applicable to\nstudies with binary and time-to-event outcomes, and we continually expand its\ncapabilities to accommodate other outcome types as new methods emerge. We\ndemonstrate the utility of CSTEapp using real-world examples and simulation\ndatasets. By making advanced statistical methods more accessible, CSTEapp\nempowers researchers and practitioners across various fields to advance\nprecision medicine and improve patient outcomes.",
+      "pdf_url": "http://arxiv.org/pdf/2508.15265v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.15265v1",
+      "published": "2025-08-21",
+      "categories": [
+        "stat.CO",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Untangling Sample and Population Level Estimands in Bayesian Causal Inference",
+      "authors": [
+        "Arman Oganisian"
+      ],
+      "abstract": "Bayesian inference for causal estimands has been growing in popularity,\nhowever many misconceptions and implementation errors arise from conflating\nsample and population-level estimands. We have anecdotally witnessed these at\nconference talks, in the course of peer review service, and even in published\nand arXiv-ed papers. Our goal here is to elucidate the crucial differences\nbetween sample and population-level quantities when it comes to identification,\nmodeling, Bayesian computation, and interpretation. For example, common\nsample-level estimands require cross-world assumptions for identification,\nwhereas common population-level estimands do not. Similarly, the former\nrequires explicit imputation of counterfactuals from their joint posterior,\nwhereas the latter typically only requires a posterior distribution over\nparameters. We start by defining some examples of both types of estimands, then\ndiscuss the full joint posterior over all unknowns (both missing\ncounterfactuals and population distribution parameters). We continue to outline\nhow inference for different estimands are derived from different marginals of\nthis joint posterior. Because the differences are conceptually subtle but can\nbe practically substantial, we provide an illustration of using synthetic data\nin Stan. We also provide a detailed appendix with derivations and computational\ntips along with a discussion of common implementation errors. The overarching\nmessage here is to always engage in first-principles thinking about which\nmarginal of the joint posterior is of interest in a particular application,\nthen follow the strict logic of Bayes' theorem and probability to avoid common\nimplementation errors.",
+      "pdf_url": "http://arxiv.org/pdf/2508.15016v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.15016v1",
+      "published": "2025-08-20",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Bounding Causal Effects and Counterfactuals",
       "authors": [
@@ -117,64 +171,6 @@
       "published": "2025-08-17",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "LoraxBench: A Multitask, Multilingual Benchmark Suite for 20 Indonesian Languages",
-      "authors": [
-        "Alham Fikri Aji",
-        "Trevor Cohn"
-      ],
-      "abstract": "As one of the world's most populous countries, with 700 languages spoken,\nIndonesia is behind in terms of NLP progress. We introduce LoraxBench, a\nbenchmark that focuses on low-resource languages of Indonesia and covers 6\ndiverse tasks: reading comprehension, open-domain QA, language inference,\ncausal reasoning, translation, and cultural QA. Our dataset covers 20\nlanguages, with the addition of two formality registers for three languages. We\nevaluate a diverse set of multilingual and region-focused LLMs and found that\nthis benchmark is challenging. We note a visible discrepancy between\nperformance in Indonesian and other languages, especially the low-resource\nones. There is no clear lead when using a region-specific model as opposed to\nthe general multilingual model. Lastly, we show that a change in register\naffects model performance, especially with registers not commonly found in\nsocial media, such as high-level politeness `Krama' Javanese.",
-      "pdf_url": "http://arxiv.org/pdf/2508.12459v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.12459v1",
-      "published": "2025-08-17",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "MedKGent: A Large Language Model Agent Framework for Constructing Temporally Evolving Medical Knowledge Graph",
-      "authors": [
-        "Duzhen Zhang",
-        "Zixiao Wang",
-        "Zhong-Zhi Li",
-        "Yahan Yu",
-        "Shuncheng Jia",
-        "Jiahua Dong",
-        "Haotian Xu",
-        "Xing Wu",
-        "Yingying Zhang",
-        "Tielin Zhang",
-        "Jie Yang",
-        "Xiuying Chen",
-        "Le Song"
-      ],
-      "abstract": "The rapid expansion of medical literature presents growing challenges for\nstructuring and integrating domain knowledge at scale. Knowledge Graphs (KGs)\noffer a promising solution by enabling efficient retrieval, automated\nreasoning, and knowledge discovery. However, current KG construction methods\noften rely on supervised pipelines with limited generalizability or naively\naggregate outputs from Large Language Models (LLMs), treating biomedical\ncorpora as static and ignoring the temporal dynamics and contextual uncertainty\nof evolving knowledge. To address these limitations, we introduce MedKGent, a\nLLM agent framework for constructing temporally evolving medical KGs.\nLeveraging over 10 million PubMed abstracts published between 1975 and 2023, we\nsimulate the emergence of biomedical knowledge via a fine-grained daily time\nseries. MedKGent incrementally builds the KG in a day-by-day manner using two\nspecialized agents powered by the Qwen2.5-32B-Instruct model. The Extractor\nAgent identifies knowledge triples and assigns confidence scores via\nsampling-based estimation, which are used to filter low-confidence extractions\nand inform downstream processing. The Constructor Agent incrementally\nintegrates the retained triples into a temporally evolving graph, guided by\nconfidence scores and timestamps to reinforce recurring knowledge and resolve\nconflicts. The resulting KG contains 156,275 entities and 2,971,384 relational\ntriples. Quality assessments by two SOTA LLMs and three domain experts\ndemonstrate an accuracy approaching 90%, with strong inter-rater agreement. To\nevaluate downstream utility, we conduct RAG across seven medical question\nanswering benchmarks using five leading LLMs, consistently observing\nsignificant improvements over non-augmented baselines. Case studies further\ndemonstrate the KG's value in literature-based drug repurposing via\nconfidence-aware causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2508.12393v2",
-      "arxiv_url": "http://arxiv.org/abs/2508.12393v2",
-      "published": "2025-08-17",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CarelessWhisper: Turning Whisper into a Causal Streaming Model",
-      "authors": [
-        "Tomer Krichli",
-        "Bhiksha Raj",
-        "Joseph Keshet"
-      ],
-      "abstract": "Automatic Speech Recognition (ASR) has seen remarkable progress, with models\nlike OpenAI Whisper and NVIDIA Canary achieving state-of-the-art (SOTA)\nperformance in offline transcription. However, these models are not designed\nfor streaming (online or real-time) transcription, due to limitations in their\narchitecture and training methodology. We propose a method to turn the\ntransformer encoder-decoder model into a low-latency streaming model that is\ncareless about future context. We present an analysis explaining why it is not\nstraightforward to convert an encoder-decoder transformer to a low-latency\nstreaming model. Our proposed method modifies the existing (non-causal) encoder\nto a causal encoder by fine-tuning both the encoder and decoder using Low-Rank\nAdaptation (LoRA) and a weakly aligned dataset. We then propose an updated\ninference mechanism that utilizes the fine-tune causal encoder and decoder to\nyield greedy and beam-search decoding, and is shown to be locally optimal.\nExperiments on low-latency chunk sizes (less than 300 msec) show that our\nfine-tuned model outperforms existing non-fine-tuned streaming approaches in\nmost cases, while using a lower complexity. Additionally, we observe that our\ntraining process yields better alignment, enabling a simple method for\nextracting word-level timestamps. We release our training and inference code,\nalong with the fine-tuned models, to support further research and development\nin streaming ASR.",
-      "pdf_url": "http://arxiv.org/pdf/2508.12301v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.12301v1",
-      "published": "2025-08-17",
-      "categories": [
-        "cs.CL",
-        "cs.LG",
-        "cs.SD",
-        "eess.AS"
       ]
     }
   ]
