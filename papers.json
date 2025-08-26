@@ -1,6 +1,55 @@
 {
-  "last_updated": "2025-08-25T00:54:45.145894",
+  "last_updated": "2025-08-26T00:52:46.904714",
   "papers": [
+    {
+      "title": "Heterogeneous Quantile Treatment Effect Estimation for Longitudinal Data with High-Dimensional Confounding",
+      "authors": [
+        "Zhixin Qiu",
+        "Huichen Zhu",
+        "Wenjie Wang",
+        "Yanlin Tang"
+      ],
+      "abstract": "Causal inference plays a fundamental role in various real-world applications.\nHowever, in the motivating non-small cell lung cancer (NSCLC) study, it is\nchallenging to estimate the treatment effect of chemotherapy on circulating\ntumor DNA (ctDNA). First, the heterogeneous treatment effects vary across\npatient subgroups defined by baseline characteristics. Second, there exists a\nbroad set of demographic, clinical and molecular variables act as potential\nconfounders. Third, ctDNA trajectories over time show heavy-tailed non-Gaussian\nbehavior. Finally, repeated measurements within subjects introduce unknown\ncorrelation. Combining convolution-smoothed quantile regression and orthogonal\nrandom forest, we propose a framework to estimate heterogeneous quantile\ntreatment effects in the presence of high-dimensional confounding, which not\nonly captures effect heterogeneity across covariates, but also behaves robustly\nto nuisance parameter estimation error. We establish the theoretical properties\nof the proposed estimator and demonstrate its finite-sample performance through\ncomprehensive simulations. We illustrate its practical utility in the motivated\nNSCLC study.",
+      "pdf_url": "http://arxiv.org/pdf/2508.16326v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.16326v1",
+      "published": "2025-08-22",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Quasi Instrumental Variable Methods for Stable Hidden Confounding and Binary Outcome",
+      "authors": [
+        "Zhonghua Liu",
+        "Baoluo Sun",
+        "Ting Ye",
+        "David Richardson",
+        "Eric Tchetgen Tchetgen"
+      ],
+      "abstract": "Instrumental variable (IV) methods are central to causal inference from\nobservational data, particularly when a randomized experiment is not feasible.\nHowever, of the three conventional core IV identification conditions, only one,\nIV relevance, is empirically verifiable; often one or both of the other\nconditions, exclusion restriction and IV independence from unmeasured\nconfounders, are unmet in real-world applications. These challenges are\ncompounded when the outcome is binary, a setting for which robust IV methods\nremain underdeveloped. A fundamental contribution of this paper is the\ndevelopment of a general identification strategy justified under a structural\nequilibrium dynamic generative model of so-called stable confounding and a\nquasi instrumental variable (QIV), i.e. a variable that is only assumed to be\npredictive of the outcome. Such a model implies (a) stability of confounding on\nthe multiplicative scale, and (b) stability of the additive average treatment\neffect among the treated (ATT), across levels of that QIV. The former is all\nthat is necessary to ensure a valid test of the causal null hypothesis;\ntogether those two conditions establish nonparametric identification and\nestimation of the conditional and marginal ATT. To address the statistical\nchallenges posed by the need for boundedness in binary outcomes, we introduce a\ngeneralized odds product re-parametrization of the observed data distribution,\nand we develop both a principled maximum likelihood estimator and a triply\nrobust semiparametric locally efficient estimator, which we evaluate through\nsimulations and an empirical application to the UK Biobank.",
+      "pdf_url": "http://arxiv.org/pdf/2508.16096v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.16096v1",
+      "published": "2025-08-22",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Transforming Causality: Transformer-Based Temporal Causal Discovery with Prior Knowledge Integration",
+      "authors": [
+        "Jihua Huang",
+        "Yi Yao",
+        "Ajay Divakaran"
+      ],
+      "abstract": "We introduce a novel framework for temporal causal discovery and inference\nthat addresses two key challenges: complex nonlinear dependencies and spurious\ncorrelations. Our approach employs a multi-layer Transformer-based time-series\nforecaster to capture long-range, nonlinear temporal relationships among\nvariables. After training, we extract the underlying causal structure and\nassociated time lags from the forecaster using gradient-based analysis,\nenabling the construction of a causal graph. To mitigate the impact of spurious\ncausal relationships, we introduce a prior knowledge integration mechanism\nbased on attention masking, which consistently enforces user-excluded causal\nlinks across multiple Transformer layers. Extensive experiments show that our\nmethod significantly outperforms other state-of-the-art approaches, achieving a\n12.8% improvement in F1-score for causal discovery and 98.9% accuracy in\nestimating causal lags.",
+      "pdf_url": "http://arxiv.org/pdf/2508.15928v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.15928v1",
+      "published": "2025-08-21",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Understanding Action Effects through Instrumental Empowerment in Multi-Agent Reinforcement Learning",
       "authors": [
@@ -9,9 +58,9 @@
         "Oleg Szehr",
         "Alessandro Antonucci"
       ],
-      "abstract": "To reliably deploy Multi-Agent Reinforcement Learning (MARL) systems, it is\ncrucial to understand individual agent behaviors within a team. While prior\nwork typically evaluates overall team performance based on explicit reward\nsignals or learned value functions, it is unclear how to infer agent\ncontributions in the absence of any value feedback. In this work, we\ninvestigate whether meaningful insights into agent behaviors can be extracted\nthat are consistent with the underlying value functions, solely by analyzing\nthe policy distribution. Inspired by the phenomenon that intelligent agents\ntend to pursue convergent instrumental values, which generally increase the\nlikelihood of task success, we introduce Intended Cooperation Values (ICVs), a\nmethod based on information-theoretic Shapley values for quantifying each\nagent's causal influence on their co-players' instrumental empowerment.\nSpecifically, ICVs measure an agent's action effect on its teammates' policies\nby assessing their decision uncertainty and preference alignment. The analysis\nacross cooperative and competitive MARL environments reveals the extent to\nwhich agents adopt similar or diverse strategies. By comparing action effects\nbetween policies and value functions, our method identifies which agent\nbehaviors are beneficial to team success, either by fostering deterministic\ndecisions or by preserving flexibility for future action choices. Our proposed\nmethod offers novel insights into cooperation dynamics and enhances\nexplainability in MARL systems.",
-      "pdf_url": "http://arxiv.org/pdf/2508.15652v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.15652v1",
+      "abstract": "To reliably deploy Multi-Agent Reinforcement Learning (MARL) systems, it is\ncrucial to understand individual agent behaviors. While prior work typically\nevaluates overall team performance based on explicit reward signals, it is\nunclear how to infer agent contributions in the absence of any value feedback.\nIn this work, we investigate whether meaningful insights into agent behaviors\ncan be extracted solely by analyzing the policy distribution. Inspired by the\nphenomenon that intelligent agents tend to pursue convergent instrumental\nvalues, we introduce Intended Cooperation Values (ICVs), a method based on\ninformation-theoretic Shapley values for quantifying each agent's causal\ninfluence on their co-players' instrumental empowerment. Specifically, ICVs\nmeasure an agent's action effect on its teammates' policies by assessing their\ndecision (un)certainty and preference alignment. By analyzing action effects on\npolicies and value functions across cooperative and competitive MARL tasks, our\nmethod identifies which agent behaviors are beneficial to team success, either\nby fostering deterministic decisions or by preserving flexibility for future\naction choices, while also revealing the extent to which agents adopt similar\nor diverse strategies. Our proposed method offers novel insights into\ncooperation dynamics and enhances explainability in MARL systems.",
+      "pdf_url": "http://arxiv.org/pdf/2508.15652v2",
+      "arxiv_url": "http://arxiv.org/abs/2508.15652v2",
       "published": "2025-08-21",
       "categories": [
         "cs.AI",
@@ -118,59 +167,6 @@
       "published": "2025-08-18",
       "categories": [
         "econ.EM"
-      ]
-    },
-    {
-      "title": "The Role of AI in Facilitating Interdisciplinary Collaboration: Evidence from AlphaFold",
-      "authors": [
-        "Naixuan Zhao",
-        "Chunli Wei",
-        "Xinyan Zhang",
-        "Jiang Li"
-      ],
-      "abstract": "The acceleration of artificial intelligence (AI) in science is recognized and\nmany scholars have begun to explore its role in interdisciplinary\ncollaboration. However, the mechanisms and extent of this impact are still\nunclear. This study, using AlphaFold's impact on structural biologists,\nexamines how AI technologies influence interdisciplinary collaborative\npatterns. By analyzing 1,247 AlphaFold-related papers and 7,700 authors from\nScopus, we employ bibliometric analysis and causal inference to compare\ninterdisciplinary collaboration between AlphaFold adopters and non-adopters.\nContrary to the widespread belief that AI facilitates interdisciplinary\ncollaboration, our findings show that AlphaFold increased structural\nbiology-computer science collaborations by just 0.48%, with no measurable\neffect on other disciplines. Specifically, AI creates interdisciplinary\ncollaboration demands with specific disciplines due to its technical\ncharacteristics, but this demand is weakened by technological democratization\nand other factors. These findings demonstrate that artificial intelligence (AI)\nalone has limited efficacy in bridging disciplinary divides or fostering\nmeaningful interdisciplinary collaboration.",
-      "pdf_url": "http://arxiv.org/pdf/2508.13234v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.13234v1",
-      "published": "2025-08-18",
-      "categories": [
-        "cs.DL",
-        "cs.AI",
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "Root Cause Analysis of Hydrogen Bond Separation in Spatio-Temporal Molecular Dynamics using Causal Models",
-      "authors": [
-        "Rahmat K. Adesunkanmi",
-        "Ashfaq Khokhar",
-        "Goce Trajcevski",
-        "Sohail Murad"
-      ],
-      "abstract": "Molecular dynamics simulations (MDS) face challenges, including\nresource-heavy computations and the need to manually scan outputs to detect\n\"interesting events,\" such as the formation and persistence of hydrogen bonds\nbetween atoms of different molecules. A critical research gap lies in\nidentifying the underlying causes of hydrogen bond formation and separation\n-understanding which interactions or prior events contribute to their emergence\nover time. With this challenge in mind, we propose leveraging spatio-temporal\ndata analytics and machine learning models to enhance the detection of these\nphenomena. In this paper, our approach is inspired by causal modeling and aims\nto identify the root cause variables of hydrogen bond formation and separation\nevents. Specifically, we treat the separation of hydrogen bonds as an\n\"intervention\" occurring and represent the causal structure of the bonding and\nseparation events in the MDS as graphical causal models. These causal models\nare built using a variational autoencoder-inspired architecture that enables us\nto infer causal relationships across samples with diverse underlying causal\ngraphs while leveraging shared dynamic information. We further include a step\nto infer the root causes of changes in the joint distribution of the causal\nmodels. By constructing causal models that capture shifts in the conditional\ndistributions of molecular interactions during bond formation or separation,\nthis framework provides a novel perspective on root cause analysis in molecular\ndynamic systems. We validate the efficacy of our model empirically on the\natomic trajectories that used MDS for chiral separation, demonstrating that we\ncan predict many steps in the future and also find the variables driving the\nobserved changes in the system.",
-      "pdf_url": "http://arxiv.org/pdf/2508.12500v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.12500v1",
-      "published": "2025-08-17",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "GALA: Can Graph-Augmented Large Language Model Agentic Workflows Elevate Root Cause Analysis?",
-      "authors": [
-        "Yifang Tian",
-        "Yaming Liu",
-        "Zichun Chong",
-        "Zihang Huang",
-        "Hans-Arno Jacobsen"
-      ],
-      "abstract": "Root cause analysis (RCA) in microservice systems is challenging, requiring\non-call engineers to rapidly diagnose failures across heterogeneous telemetry\nsuch as metrics, logs, and traces. Traditional RCA methods often focus on\nsingle modalities or merely rank suspect services, falling short of providing\nactionable diagnostic insights with remediation guidance. This paper introduces\nGALA, a novel multi-modal framework that combines statistical causal inference\nwith LLM-driven iterative reasoning for enhanced RCA. Evaluated on an\nopen-source benchmark, GALA achieves substantial improvements over\nstate-of-the-art methods of up to 42.22% accuracy. Our novel human-guided LLM\nevaluation score shows GALA generates significantly more causally sound and\nactionable diagnostic outputs than existing methods. Through comprehensive\nexperiments and a case study, we show that GALA bridges the gap between\nautomated failure diagnosis and practical incident resolution by providing both\naccurate root cause identification and human-interpretable remediation\nguidance.",
-      "pdf_url": "http://arxiv.org/pdf/2508.12472v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.12472v1",
-      "published": "2025-08-17",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]
