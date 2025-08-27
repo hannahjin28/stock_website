@@ -1,6 +1,127 @@
 {
-  "last_updated": "2025-08-26T00:52:46.904714",
+  "last_updated": "2025-08-27T00:51:30.624822",
   "papers": [
+    {
+      "title": "Estimating the average treatment effect in cluster-randomized trials with misclassified outcomes and non-random validation subsets",
+      "authors": [
+        "Dane Isenberg",
+        "Nandita Mitra",
+        "Steven C. Marcus",
+        "Rinad S. Beidas",
+        "Kristin A. Linn"
+      ],
+      "abstract": "Randomized trials are viewed as the benchmark for assessing causal effects of\ntreatments on outcomes of interest. Nonetheless, challenges such as measurement\nerror can undermine the standard causal assumptions for randomized trials. In\nASPIRE, a cluster-randomized trial, pediatric primary care clinics were\nassigned to one of two treatments aimed at promoting clinician delivery of a\nsecure firearm program to parents during well-child visits. A key outcome of\ninterest is thus parent receipt of the program at each visit. Clinicians\ndocumented program delivery in patients' electronic health records for all\nvisits, but their reporting is a proxy measure for the parent receipt outcome.\nParents were also surveyed to report directly on program receipt after their\nchild's visit; however, only a small subset of them completed the survey. Here,\nwe develop a causal inference framework for a binary outcome that is subject to\nmisclassification through silver-standard measures (clinician reports), but\ngold-standard measures (parent reports) are only available for a non-random\ninternal validation subset. We propose a method for identifying the average\ntreatment effect (ATE) that addresses the risk of bias due to misclassification\nand non-random validation selection, even when the outcome (parent receipt) may\ndirectly impact selection propensity (survey responsiveness). We show that ATE\nestimation relies on specifying the relationship between the gold- and\nsilver-standard outcome measures in the validation subset, which may depend on\ntreatment and covariates. Additionally, the clustered design is reflected in\nour causal assumptions and in our cluster-robust approach to estimation of the\nATE. Simulation studies demonstrate acceptable finite-sample operating\ncharacteristics of our ATE estimator, supporting its application to ASPIRE.",
+      "pdf_url": "http://arxiv.org/pdf/2508.18137v2",
+      "arxiv_url": "http://arxiv.org/abs/2508.18137v2",
+      "published": "2025-08-25",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "CausalSent: Interpretable Sentiment Classification with RieszNet",
+      "authors": [
+        "Daniel Frees",
+        "Martin Pollack"
+      ],
+      "abstract": "Despite the overwhelming performance improvements offered by recent natural\nlanguage processing (NLP) models, the decisions made by these models are\nlargely a black box. Towards closing this gap, the field of causal NLP combines\ncausal inference literature with modern NLP models to elucidate causal effects\nof text features. We replicate and extend Bansal et al's work on regularizing\ntext classifiers to adhere to estimated effects, focusing instead on model\ninterpretability. Specifically, we focus on developing a two-headed\nRieszNet-based neural network architecture which achieves better treatment\neffect estimation accuracy. Our framework, CausalSent, accurately predicts\ntreatment effects in semi-synthetic IMDB movie reviews, reducing MAE of effect\nestimates by 2-3x compared to Bansal et al's MAE on synthetic Civil Comments\ndata. With an ensemble of validated models, we perform an observational case\nstudy on the causal effect of the word \"love\" in IMDB movie reviews, finding\nthat the presence of the word \"love\" causes a +2.9% increase in the probability\nof a positive sentiment.",
+      "pdf_url": "http://arxiv.org/pdf/2508.17576v2",
+      "arxiv_url": "http://arxiv.org/abs/2508.17576v2",
+      "published": "2025-08-25",
+      "categories": [
+        "cs.CL",
+        "cs.LG",
+        "68T50"
+      ]
+    },
+    {
+      "title": "Visual Analytics for Causal Reasoning from Real-World Health Data",
+      "authors": [
+        "Arran Zeyu Wang",
+        "David Borland",
+        "David Gotz"
+      ],
+      "abstract": "The increasing capture and analysis of large-scale longitudinal health data\noffer opportunities to improve healthcare and advance medical understanding.\nHowever, a critical gap exists between (a) -- the observation of patterns and\ncorrelations, versus (b) -- the understanding of true causal mechanisms that\ndrive outcomes. An accurate understanding of the underlying mechanisms that\ncause various changes in medical status is crucial for decision-makers across\nvarious healthcare domains and roles, yet inferring causality from real-world\nobservational data is difficult for both methodological and practical\nchallenges. This Grand Challenge advocates increased Visual Analytics (VA)\nresearch on this topic to empower people with the tool for sound causal\nreasoning from health data. We note this is complicated by the complex nature\nof medical data -- the volume, variety, sparsity, and temporality of health\ndata streams make the use of causal inference algorithms difficult. Combined\nwith challenges imposed by the realities of health-focused settings, including\ntime constraints and traditional medical work practices, existing causal\nreasoning approaches are valuable but insufficient. We argue that advances in\nresearch can lead to new VA tools that augment human expertise with intuitive\nand robust causal inference capabilities, which can help realize a new paradigm\nof data-driven, causality-aware healthcare practices that improve human health\noutcomes.",
+      "pdf_url": "http://arxiv.org/pdf/2508.17474v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.17474v1",
+      "published": "2025-08-24",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Mimicking the Physicist's Eye:A VLM-centric Approach for Physics Formula Discovery",
+      "authors": [
+        "Jiaqi Liu",
+        "Songning Lai",
+        "Pengze Li",
+        "Di Yu",
+        "Wenjie Zhou",
+        "Yiyang Zhou",
+        "Peng Xia",
+        "Zijun Wang",
+        "Xi Chen",
+        "Shixiang Tang",
+        "Lei Bai",
+        "Wanli Ouyang",
+        "Mingyu Ding",
+        "Huaxiu Yao",
+        "Aoran Wang"
+      ],
+      "abstract": "Automated discovery of physical laws from observational data in the real\nworld is a grand challenge in AI. Current methods, relying on symbolic\nregression or LLMs, are limited to uni-modal data and overlook the rich, visual\nphenomenological representations of motion that are indispensable to\nphysicists. This \"sensory deprivation\" severely weakens their ability to\ninterpret the inherent spatio-temporal patterns within dynamic phenomena. To\naddress this gap, we propose VIPER-R1, a multimodal model that performs Visual\nInduction for Physics-based Equation Reasoning to discover fundamental symbolic\nformulas. It integrates visual perception, trajectory data, and symbolic\nreasoning to emulate the scientific discovery process. The model is trained via\na curriculum of Motion Structure Induction (MSI), using supervised fine-tuning\nto interpret kinematic phase portraits and to construct hypotheses guided by a\nCausal Chain of Thought (C-CoT), followed by Reward-Guided Symbolic Calibration\n(RGSC) to refine the formula structure with reinforcement learning. During\ninference, the trained VIPER-R1 acts as an agent: it first posits a\nhigh-confidence symbolic ansatz, then proactively invokes an external symbolic\nregression tool to perform Symbolic Residual Realignment (SR^2). This final\nstep, analogous to a physicist's perturbation analysis, reconciles the\ntheoretical model with empirical data. To support this research, we introduce\nPhysSymbol, a new 5,000-instance multimodal corpus. Experiments show that\nVIPER-R1 consistently outperforms state-of-the-art VLM baselines in accuracy\nand interpretability, enabling more precise discovery of physical laws. Project\npage: https://jiaaqiliu.github.io/VIPER-R1/",
+      "pdf_url": "http://arxiv.org/pdf/2508.17380v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.17380v1",
+      "published": "2025-08-24",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Challenges in Statistics: A Dozen Challenges in Causality and Causal Inference",
+      "authors": [
+        "Carlos Cinelli",
+        "Avi Feller",
+        "Guido Imbens",
+        "Edward Kennedy",
+        "Sara Magliacane",
+        "Jose Zubizarreta"
+      ],
+      "abstract": "Causality and causal inference have emerged as core research areas at the\ninterface of modern statistics and domains including biomedical sciences,\nsocial sciences, computer science, and beyond. The field's inherently\ninterdisciplinary nature -- particularly the central role of incorporating\ndomain knowledge -- creates a rich and varied set of statistical challenges.\nMuch progress has been made, especially in the last three decades, but there\nremain many open questions. Our goal in this discussion is to outline research\ndirections and open problems we view as particularly promising for future work.\nThroughout we emphasize that advancing causal research requires a wide range of\ncontributions, from novel theory and methodological innovations to improved\nsoftware tools and closer engagement with domain scientists and practitioners.",
+      "pdf_url": "http://arxiv.org/pdf/2508.17099v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.17099v1",
+      "published": "2025-08-23",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Individualized Treatment Effects in Advanced Prostate Cancer: A Causal-Survival Modeling Approach to Risk-Guided Therapy",
+      "authors": [
+        "J. T. Korley"
+      ],
+      "abstract": "We conducted a proof-of-concept evaluation of individualized treatment effect\n(ITE) estimation using survival data from a randomized trial of 475 men with\nadvanced prostate cancer treated with high- versus low-dose diethylstilbestrol\n(DES). A Weibull accelerated failure time (AFT) model with interaction terms\nfor treatment-by-age and treatment-by-log tumor size was used to capture\nsubgroup-specific treatment effects. The estimated main effect of high-dose DES\nindicated a time ratio of 0.582 (95% CI: [0.306, 1.110]), reflecting reduced\nsurvival at the reference levels of age and tumor size. However,\ninteraction-adjusted ITEs revealed marked effect modification: younger patients\n(e.g., age 50 years) had over fourfold expected survival gains (time ratio\n4.09), whereas older patients (e.g., age 80 years) experienced reduced benefit\n(time ratio 0.71). Similarly, patients with larger tumors (log size $\\sim$4.25,\n$\\sim$70 $cm^2$) derived a stronger benefit (time ratio 1.89) than those with\nsmaller tumors. To evaluate the reliability of these individualized estimates,\nboth the delta method and bootstrap resampling were applied for uncertainty\nquantification, producing closely aligned intervals across the risk spectrum.\nThis analysis illustrates how parametric survival models with clinically\nmotivated interactions and robust inference procedures can yield interpretable\npatient-level treatment effect estimates, even in moderately sized oncology\ntrials.",
+      "pdf_url": "http://arxiv.org/pdf/2508.16894v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.16894v1",
+      "published": "2025-08-23",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "A coalgebraic perspective on predictive processing",
+      "authors": [
+        "Manuel Baltieri",
+        "Filippo Torresan",
+        "Tomoya Nakai"
+      ],
+      "abstract": "Predictive processing and active inference posit that the brain is a system\nperforming Bayesian inference on the environment. By virtue of this, a\nprominent interpretation of predictive processing states that the generative\nmodel (a POMDP) encoded by the brain synchronises with the generative process\n(another POMDP) representing the environment while trying to explain what\nhidden properties of the world generated its sensory input. In this view, the\nbrain is thought to become a copy of the environment. This claim has however\nbeen disputed, stressing the fact that a structural copy, or isomorphism as it\nis at times invoked to be, is not an accurate description of this process since\nthe environment is necessarily more complex than the brain, and what matters is\nnot the capacity to exactly recapitulate the veridical causal structure of the\nworld. In this work, we make parts of this counterargument formal by using\nideas from the theory of coalgebras, an abstract mathematical framework for\ndynamical systems that brings together work from automata theory, concurrency\ntheory, probabilistic processes and other fields. To do so, we cast generative\nmodel and process, in the form of POMDPs, as coalgebras, and use maps between\nthem to describe a form of consistency that goes beyond mere structural\nsimilarity, giving the necessary mathematical background to describe how\ndifferent processes can be seen as behaviourally, rather than structurally,\nequivalent, i.e. how they can be seen as emitting the same observations, and\nthus minimise prediction error, over time without strict assumptions about\nstructural similarity. In particular, we will introduce three standard notions\nof equivalence from the literature on coalgebras, evaluating them in the\ncontext of predictive processing and identifying the one closest to claims made\nby proponents of this framework.",
+      "pdf_url": "http://arxiv.org/pdf/2508.16877v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.16877v1",
+      "published": "2025-08-23",
+      "categories": [
+        "q-bio.NC"
+      ]
+    },
     {
       "title": "Heterogeneous Quantile Treatment Effect Estimation for Longitudinal Data with High-Dimensional Confounding",
       "authors": [
@@ -48,125 +169,6 @@
       "categories": [
         "cs.LG",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Understanding Action Effects through Instrumental Empowerment in Multi-Agent Reinforcement Learning",
-      "authors": [
-        "Ardian Selmonaj",
-        "Miroslav Strupl",
-        "Oleg Szehr",
-        "Alessandro Antonucci"
-      ],
-      "abstract": "To reliably deploy Multi-Agent Reinforcement Learning (MARL) systems, it is\ncrucial to understand individual agent behaviors. While prior work typically\nevaluates overall team performance based on explicit reward signals, it is\nunclear how to infer agent contributions in the absence of any value feedback.\nIn this work, we investigate whether meaningful insights into agent behaviors\ncan be extracted solely by analyzing the policy distribution. Inspired by the\nphenomenon that intelligent agents tend to pursue convergent instrumental\nvalues, we introduce Intended Cooperation Values (ICVs), a method based on\ninformation-theoretic Shapley values for quantifying each agent's causal\ninfluence on their co-players' instrumental empowerment. Specifically, ICVs\nmeasure an agent's action effect on its teammates' policies by assessing their\ndecision (un)certainty and preference alignment. By analyzing action effects on\npolicies and value functions across cooperative and competitive MARL tasks, our\nmethod identifies which agent behaviors are beneficial to team success, either\nby fostering deterministic decisions or by preserving flexibility for future\naction choices, while also revealing the extent to which agents adopt similar\nor diverse strategies. Our proposed method offers novel insights into\ncooperation dynamics and enhances explainability in MARL systems.",
-      "pdf_url": "http://arxiv.org/pdf/2508.15652v2",
-      "arxiv_url": "http://arxiv.org/abs/2508.15652v2",
-      "published": "2025-08-21",
-      "categories": [
-        "cs.AI",
-        "cs.IT",
-        "cs.LG",
-        "cs.MA",
-        "math.IT"
-      ]
-    },
-    {
-      "title": "CSTEapp: An interactive R-Shiny application of the covariate-specific treatment effect curve for visualizing individualized treatment rule",
-      "authors": [
-        "Yi Zhou",
-        "Yuhao Deng",
-        "Yu-Shi Tian",
-        "Peng Wu",
-        "Wenjie Hu",
-        "Haoxiang Wang",
-        "Ewout Steyerberg",
-        "Xiao-Hua Zhou"
-      ],
-      "abstract": "In precision medicine, deriving the individualized treatment rule (ITR) is\ncrucial for recommending the optimal treatment based on patients' baseline\ncovariates. The covariate-specific treatment effect (CSTE) curve presents a\ngraphical method to visualize an ITR within a causal inference framework.\nRecent advancements have enhanced the causal interpretation of the CSTE curves\nand provided methods for deriving simultaneous confidence bands for various\nstudy types. To facilitate the implementation of these methods and make ITR\nestimation more accessible, we developed CSTEapp, a web-based application built\non the R Shiny framework. CSTEapp allows users to upload data and create CSTE\ncurves through simple point and click operations, making it the first\napplication for estimating the ITRs. CSTEapp simplifies the analytical process\nby providing interactive graphical user interfaces with dynamic results,\nenabling users to easily report optimal treatments for individual patients\nbased on their covariates information. Currently, CSTEapp is applicable to\nstudies with binary and time-to-event outcomes, and we continually expand its\ncapabilities to accommodate other outcome types as new methods emerge. We\ndemonstrate the utility of CSTEapp using real-world examples and simulation\ndatasets. By making advanced statistical methods more accessible, CSTEapp\nempowers researchers and practitioners across various fields to advance\nprecision medicine and improve patient outcomes.",
-      "pdf_url": "http://arxiv.org/pdf/2508.15265v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.15265v1",
-      "published": "2025-08-21",
-      "categories": [
-        "stat.CO",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Untangling Sample and Population Level Estimands in Bayesian Causal Inference",
-      "authors": [
-        "Arman Oganisian"
-      ],
-      "abstract": "Bayesian inference for causal estimands has been growing in popularity,\nhowever many misconceptions and implementation errors arise from conflating\nsample and population-level estimands. We have anecdotally witnessed these at\nconference talks, in the course of peer review service, and even in published\nand arXiv-ed papers. Our goal here is to elucidate the crucial differences\nbetween sample and population-level quantities when it comes to identification,\nmodeling, Bayesian computation, and interpretation. For example, common\nsample-level estimands require cross-world assumptions for identification,\nwhereas common population-level estimands do not. Similarly, the former\nrequires explicit imputation of counterfactuals from their joint posterior,\nwhereas the latter typically only requires a posterior distribution over\nparameters. We start by defining some examples of both types of estimands, then\ndiscuss the full joint posterior over all unknowns (both missing\ncounterfactuals and population distribution parameters). We continue to outline\nhow inference for different estimands are derived from different marginals of\nthis joint posterior. Because the differences are conceptually subtle but can\nbe practically substantial, we provide an illustration of using synthetic data\nin Stan. We also provide a detailed appendix with derivations and computational\ntips along with a discussion of common implementation errors. The overarching\nmessage here is to always engage in first-principles thinking about which\nmarginal of the joint posterior is of interest in a particular application,\nthen follow the strict logic of Bayes' theorem and probability to avoid common\nimplementation errors.",
-      "pdf_url": "http://arxiv.org/pdf/2508.15016v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.15016v1",
-      "published": "2025-08-20",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Bounding Causal Effects and Counterfactuals",
-      "authors": [
-        "Tobias Maringgele"
-      ],
-      "abstract": "Causal inference often hinges on strong assumptions - such as no unmeasured\nconfounding or perfect compliance - that are rarely satisfied in practice.\nPartial identification offers a principled alternative: instead of relying on\nunverifiable assumptions to estimate causal effects precisely, it derives\nbounds that reflect the uncertainty inherent in the data. Despite its\ntheoretical appeal, partial identification remains underutilized in applied\nwork, in part due to the fragmented nature of existing methods and the lack of\npractical guidance. This thesis addresses these challenges by systematically\ncomparing a diverse set of bounding algorithms across multiple causal\nscenarios. We implement, extend, and unify state-of-the-art methods - including\nsymbolic, optimization-based, and information-theoretic approaches - within a\ncommon evaluation framework. In particular, we propose an extension of a\nrecently introduced entropy-bounded method, making it applicable to\ncounterfactual queries such as the Probability of Necessity and Sufficiency\n(PNS). Our empirical study spans thousands of randomized simulations involving\nboth discrete and continuous data-generating processes. We assess each method\nin terms of bound tightness, computational efficiency, and robustness to\nassumption violations. To support practitioners, we distill our findings into a\npractical decision tree for algorithm selection and train a machine learning\nmodel to predict the best-performing method based on observable data\ncharacteristics.\n  All implementations are released as part of an open-source Python package,\nCausalBoundingEngine, which enables users to apply and compare bounding methods\nthrough a unified interface.",
-      "pdf_url": "http://arxiv.org/pdf/2508.13607v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.13607v1",
-      "published": "2025-08-19",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ME",
-        "62A01 (Foundations of statistics), 68T01 (Artificial intelligence,\n  general)",
-        "G.3; I.2.6"
-      ]
-    },
-    {
-      "title": "Counterfactual Probabilistic Diffusion with Expert Models",
-      "authors": [
-        "Wenhao Mu",
-        "Zhi Cao",
-        "Mehmed Uludag",
-        "Alexander Rodríguez"
-      ],
-      "abstract": "Predicting counterfactual distributions in complex dynamical systems is\nessential for scientific modeling and decision-making in domains such as public\nhealth and medicine. However, existing methods often rely on point estimates or\npurely data-driven models, which tend to falter under data scarcity. We propose\na time series diffusion-based framework that incorporates guidance from\nimperfect expert models by extracting high-level signals to serve as structured\npriors for generative modeling. Our method, ODE-Diff, bridges mechanistic and\ndata-driven approaches, enabling more reliable and interpretable causal\ninference. We evaluate ODE-Diff across semi-synthetic COVID-19 simulations,\nsynthetic pharmacological dynamics, and real-world case studies, demonstrating\nthat it consistently outperforms strong baselines in both point prediction and\ndistributional accuracy.",
-      "pdf_url": "http://arxiv.org/pdf/2508.13355v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.13355v1",
-      "published": "2025-08-18",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Reinforced Context Order Recovery for Adaptive Reasoning and Planning",
-      "authors": [
-        "Long Ma",
-        "Fangwei Zhong",
-        "Yizhou Wang"
-      ],
-      "abstract": "Modern causal language models, followed by rapid developments in discrete\ndiffusion models, can now produce a wide variety of interesting and useful\ncontent. However, these families of models are predominantly trained to output\ntokens with a fixed (left-to-right) or random order, which may deviate from the\nlogical order in which tokens are generated originally. In this paper, we\nobserve that current causal and diffusion models encounter difficulties in\nproblems that require adaptive token generation orders to solve tractably,\nwhich we characterize with the $\\mathcal{V}$-information framework. Motivated\nby this, we propose Reinforced Context Order Recovery (ReCOR), a\nreinforcement-learning-based framework to extract adaptive, data-dependent\ntoken generation orders from text data without annotations. Self-supervised by\ntoken prediction statistics, ReCOR estimates the hardness of predicting every\nunfilled token and adaptively selects the next token during both training and\ninference. Experiments on challenging reasoning and planning datasets\ndemonstrate the superior performance of ReCOR compared with baselines,\nsometimes outperforming oracle models supervised with the ground-truth order.",
-      "pdf_url": "http://arxiv.org/pdf/2508.13070v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.13070v1",
-      "published": "2025-08-18",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Bayesian Double Machine Learning for Causal Inference",
-      "authors": [
-        "Francis J. DiTraglia",
-        "Laura Liu"
-      ],
-      "abstract": "This paper proposes a simple, novel, and fully-Bayesian approach for causal\ninference in partially linear models with high-dimensional control variables.\nOff-the-shelf machine learning methods can introduce biases in the causal\nparameter known as regularization-induced confounding. To address this, we\npropose a Bayesian Double Machine Learning (BDML) method, which modifies a\nstandard Bayesian multivariate regression model and recovers the causal effect\nof interest from the reduced-form covariance matrix. Our BDML is related to the\nburgeoning frequentist literature on DML while addressing its limitations in\nfinite-sample inference. Moreover, the BDML is based on a fully generative\nprobability model in the DML context, adhering to the likelihood principle. We\nshow that in high dimensional setups the naive estimator implicitly assumes no\nselection on observables--unlike our BDML. The BDML exhibits lower asymptotic\nbias and achieves asymptotic normality and semiparametric efficiency as\nestablished by a Bernstein-von Mises theorem, thereby ensuring robustness to\nmisspecification. In simulations, our BDML achieves lower RMSE, better\nfrequentist coverage, and shorter confidence interval width than alternatives\nfrom the literature, both Bayesian and frequentist.",
-      "pdf_url": "http://arxiv.org/pdf/2508.12688v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.12688v1",
-      "published": "2025-08-18",
-      "categories": [
-        "econ.EM"
       ]
     }
   ]
