@@ -1,6 +1,44 @@
 {
-  "last_updated": "2025-08-27T00:51:30.624822",
+  "last_updated": "2025-08-28T00:50:52.966342",
   "papers": [
+    {
+      "title": "STARec: An Efficient Agent Framework for Recommender Systems via Autonomous Deliberate Reasoning",
+      "authors": [
+        "Chenghao Wu",
+        "Ruiyang Ren",
+        "Junjie Zhang",
+        "Ruirui Wang",
+        "Zhongrui Ma",
+        "Qi Ye",
+        "Wayne Xin Zhao"
+      ],
+      "abstract": "While modern recommender systems are instrumental in navigating information\nabundance, they remain fundamentally limited by static user modeling and\nreactive decision-making paradigms. Current large language model (LLM)-based\nagents inherit these shortcomings through their overreliance on heuristic\npattern matching, yielding recommendations prone to shallow correlation bias,\nlimited causal inference, and brittleness in sparse-data scenarios. We\nintroduce STARec, a slow-thinking augmented agent framework that endows\nrecommender systems with autonomous deliberative reasoning capabilities. Each\nuser is modeled as an agent with parallel cognitions: fast response for\nimmediate interactions and slow reasoning that performs chain-of-thought\nrationales. To cultivate intrinsic slow thinking, we develop anchored\nreinforcement training - a two-stage paradigm combining structured knowledge\ndistillation from advanced reasoning models with preference-aligned reward\nshaping. This hybrid approach scaffolds agents in acquiring foundational\ncapabilities (preference summarization, rationale generation) while enabling\ndynamic policy adaptation through simulated feedback loops. Experiments on\nMovieLens 1M and Amazon CDs benchmarks demonstrate that STARec achieves\nsubstantial performance gains compared with state-of-the-art baselines, despite\nusing only 0.4% of the full training data.",
+      "pdf_url": "http://arxiv.org/pdf/2508.18812v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.18812v1",
+      "published": "2025-08-26",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Mapping beyond diseases: Controlled variable selection for secondary phenotypes using tilted knockoffs",
+      "authors": [
+        "Qian Zhao",
+        "Susan Service",
+        "Carrie E. Bearden",
+        "Carlos Lopez-Jaramillo",
+        "Freimer Nelson",
+        "Chiara Sabatti"
+      ],
+      "abstract": "Researchers in biomedical studies often work with samples that are not\nselected uniformly at random from the population of interest, a major example\nbeing a case-control study. While these designs are motivated by specific\nscientific questions, it is often of interest to use the data collected to\npursue secondary lines of investigations. In these cases, ignoring the fact\nthat observations are not sampled uniformly at random can lead to spurious\nresults. For example, in a case-control study, one might identify a spurious\nassociation between an exposure and a secondary phenotype when both affect the\ncase-control status. This phenomenon is known as collider bias in the causal\ninference literature. While tests of independence under biased sampling are\navailable, these methods typically do not apply when the number of variables is\nlarge.\n  Here, we are interested in using the biased sample to select important\nexposures among a multitude of possible variables with replicability\nguarantees. While the model-X knockoff framework has been developed to test\nconditional independence hypotheses with False Discovery Rate (FDR) control, we\nshow that its naive application fails to control FDR in the presence of biased\nsampling. We show how tilting the population distribution with the selection\nprobability and constructing knockoff variables according to this tilted\ndistribution instead leads to selection with FDR control. We study the FDR and\npower of the tilted knockoff method using simulated examples, and apply it to\nidentify genetic underpinning of endophenotypes in a case-control study.",
+      "pdf_url": "http://arxiv.org/pdf/2508.18548v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.18548v1",
+      "published": "2025-08-25",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
     {
       "title": "Estimating the average treatment effect in cluster-randomized trials with misclassified outcomes and non-random validation subsets",
       "authors": [
@@ -136,39 +174,6 @@
       "published": "2025-08-22",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Quasi Instrumental Variable Methods for Stable Hidden Confounding and Binary Outcome",
-      "authors": [
-        "Zhonghua Liu",
-        "Baoluo Sun",
-        "Ting Ye",
-        "David Richardson",
-        "Eric Tchetgen Tchetgen"
-      ],
-      "abstract": "Instrumental variable (IV) methods are central to causal inference from\nobservational data, particularly when a randomized experiment is not feasible.\nHowever, of the three conventional core IV identification conditions, only one,\nIV relevance, is empirically verifiable; often one or both of the other\nconditions, exclusion restriction and IV independence from unmeasured\nconfounders, are unmet in real-world applications. These challenges are\ncompounded when the outcome is binary, a setting for which robust IV methods\nremain underdeveloped. A fundamental contribution of this paper is the\ndevelopment of a general identification strategy justified under a structural\nequilibrium dynamic generative model of so-called stable confounding and a\nquasi instrumental variable (QIV), i.e. a variable that is only assumed to be\npredictive of the outcome. Such a model implies (a) stability of confounding on\nthe multiplicative scale, and (b) stability of the additive average treatment\neffect among the treated (ATT), across levels of that QIV. The former is all\nthat is necessary to ensure a valid test of the causal null hypothesis;\ntogether those two conditions establish nonparametric identification and\nestimation of the conditional and marginal ATT. To address the statistical\nchallenges posed by the need for boundedness in binary outcomes, we introduce a\ngeneralized odds product re-parametrization of the observed data distribution,\nand we develop both a principled maximum likelihood estimator and a triply\nrobust semiparametric locally efficient estimator, which we evaluate through\nsimulations and an empirical application to the UK Biobank.",
-      "pdf_url": "http://arxiv.org/pdf/2508.16096v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.16096v1",
-      "published": "2025-08-22",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Transforming Causality: Transformer-Based Temporal Causal Discovery with Prior Knowledge Integration",
-      "authors": [
-        "Jihua Huang",
-        "Yi Yao",
-        "Ajay Divakaran"
-      ],
-      "abstract": "We introduce a novel framework for temporal causal discovery and inference\nthat addresses two key challenges: complex nonlinear dependencies and spurious\ncorrelations. Our approach employs a multi-layer Transformer-based time-series\nforecaster to capture long-range, nonlinear temporal relationships among\nvariables. After training, we extract the underlying causal structure and\nassociated time lags from the forecaster using gradient-based analysis,\nenabling the construction of a causal graph. To mitigate the impact of spurious\ncausal relationships, we introduce a prior knowledge integration mechanism\nbased on attention masking, which consistently enforces user-excluded causal\nlinks across multiple Transformer layers. Extensive experiments show that our\nmethod significantly outperforms other state-of-the-art approaches, achieving a\n12.8% improvement in F1-score for causal discovery and 98.9% accuracy in\nestimating causal lags.",
-      "pdf_url": "http://arxiv.org/pdf/2508.15928v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.15928v1",
-      "published": "2025-08-21",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
       ]
     }
   ]
