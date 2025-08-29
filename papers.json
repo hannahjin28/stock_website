@@ -1,6 +1,83 @@
 {
-  "last_updated": "2025-08-28T00:50:52.966342",
+  "last_updated": "2025-08-29T00:51:05.751205",
   "papers": [
+    {
+      "title": "Ego-centric Predictive Model Conditioned on Hand Trajectories",
+      "authors": [
+        "Binjie Zhang",
+        "Mike Zheng Shou"
+      ],
+      "abstract": "In egocentric scenarios, anticipating both the next action and its visual\noutcome is essential for understanding human-object interactions and for\nenabling robotic planning. However, existing paradigms fall short of jointly\nmodeling these aspects. Vision-Language-Action (VLA) models focus on action\nprediction but lack explicit modeling of how actions influence the visual\nscene, while video prediction models generate future frames without\nconditioning on specific actions, often resulting in implausible or\ncontextually inconsistent outcomes. To bridge this gap, we propose a unified\ntwo-stage predictive framework that jointly models action and visual future in\negocentric scenarios, conditioned on hand trajectories. In the first stage, we\nperform consecutive state modeling to process heterogeneous inputs (visual\nobservations, language, and action history) and explicitly predict future hand\ntrajectories. In the second stage, we introduce causal cross-attention to fuse\nmulti-modal cues, leveraging inferred action signals to guide an image-based\nLatent Diffusion Model (LDM) for frame-by-frame future video generation. Our\napproach is the first unified model designed to handle both egocentric human\nactivity understanding and robotic manipulation tasks, providing explicit\npredictions of both upcoming actions and their visual consequences. Extensive\nexperiments on Ego4D, BridgeData, and RLBench demonstrate that our method\noutperforms state-of-the-art baselines in both action prediction and future\nvideo synthesis.",
+      "pdf_url": "http://arxiv.org/pdf/2508.19852v2",
+      "arxiv_url": "http://arxiv.org/abs/2508.19852v2",
+      "published": "2025-08-27",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Understanding Spatial Regression Models from a Weighting Perspective in an Observational Study of Superfund Remediation",
+      "authors": [
+        "Sophie M. Woodward",
+        "Francesca Dominici",
+        "Jose R. Zubizarreta"
+      ],
+      "abstract": "Superfund sites are locations in the United States with high levels of\nenvironmental toxicants, often resulting from industrial activity or improper\nwaste management. Given mounting evidence linking prenatal environmental\nexposures to adverse birth outcomes, estimating the impact of Superfund\nremediation is of substantial policy relevance. A widespread approach is to fit\na spatial regression, i.e., a linear regression of the outcome (e.g., birth\nweight) on binary treatment (e.g., indicator for Superfund site remediation)\nand covariates, along with a spatially structured error term to account for\nunmeasured spatial confounding. Despite this common practice, it remains\nunclear to what extent spatial regression models account for unmeasured spatial\nconfounding in finite samples and whether such adjustments can be reformulated\nwithin a design-based framework for causal inference. To fill this knowledge\ngap, we introduce a weighting framework that encompasses three canonical types\nof spatial regression models: random effects, conditional autoregressive, and\nGaussian process models. This framework yields new insights into how spatial\nregression models build causal contrasts between treated and control units.\nSpecifically, we show that: 1) the spatially autocorrelated error term produces\napproximate balance on a hidden set of covariates, thereby adjusting for a\nspecific class of unmeasured confounders; and 2) the error covariance structure\ncan be equivalently expressed as regressors in a linear model. We also\nintroduce a new average treatment effect estimator that simultaneously accounts\nfor multiple forms of unmeasured spatial confounding, as well as diagnostics\nthat enhance interpretability. In a study of Superfund remediation, our\napproach illuminates the role of design-based adjustment for confounding and\nprovides guidance for evaluating environmental interventions in spatial\nsettings.",
+      "pdf_url": "http://arxiv.org/pdf/2508.19572v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.19572v1",
+      "published": "2025-08-27",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Counterfactual Reward Model Training for Bias Mitigation in Multimodal Reinforcement Learning",
+      "authors": [
+        "Sheryl Mathew",
+        "N Harshit"
+      ],
+      "abstract": "In reinforcement learning with human feedback (RLHF), reward models can\nefficiently learn and amplify latent biases within multimodal datasets, which\ncan lead to imperfect policy optimization through flawed reward signals and\ndecreased fairness. Bias mitigation studies have often applied passive\nconstraints, which can fail under causal confounding. Here, we present a\ncounterfactual reward model that introduces causal inference with multimodal\nrepresentation learning to provide an unsupervised, bias-resilient reward\nsignal. The heart of our contribution is the Counterfactual Trust Score, an\naggregated score consisting of four components: (1) counterfactual shifts that\ndecompose political framing bias from topical bias; (2) reconstruction\nuncertainty during counterfactual perturbations; (3) demonstrable violations of\nfairness rules for each protected attribute; and (4) temporal reward shifts\naligned with dynamic trust measures. We evaluated the framework on a multimodal\nfake versus true news dataset, which exhibits framing bias, class imbalance,\nand distributional drift. Following methodologies similar to unsupervised drift\ndetection from representation-based distances [1] and temporal robustness\nbenchmarking in language models [2], we also inject synthetic bias across\nsequential batches to test robustness. The resulting system achieved an\naccuracy of 89.12% in fake news detection, outperforming the baseline reward\nmodels. More importantly, it reduced spurious correlations and unfair\nreinforcement signals. This pipeline outlines a robust and interpretable\napproach to fairness-aware RLHF, offering tunable bias reduction thresholds and\nincreasing reliability in dynamic real-time policy making.",
+      "pdf_url": "http://arxiv.org/pdf/2508.19567v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.19567v1",
+      "published": "2025-08-27",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "When Routers, Switches and Interconnects Compute: A processing-in-interconnect Paradigm for Scalable Neuromorphic AI",
+      "authors": [
+        "Madhuvanthi Srivatsav R",
+        "Chiranjib Bhattacharyya",
+        "Shantanu Chakrabartty",
+        "Chetan Singh Thakur"
+      ],
+      "abstract": "Routing, switching, and the interconnect fabric are essential for large-scale\nneuromorphic computing. While this fabric only plays a supporting role in the\nprocess of computing, for large AI workloads it ultimately determines energy\nconsumption and speed. In this paper, we address this bottleneck by asking: (a)\nWhat computing paradigms are inherent in existing routing, switching, and\ninterconnect systems, and how can they be used to implement a\nprocessing-in-Interconnect (\\pi^2) computing paradigm? and (b) leveraging\ncurrent and future interconnect trends, how will a \\pi^2 system's performance\nscale compared to other neuromorphic architectures? For (a), we show that\noperations required for typical AI workloads can be mapped onto delays,\ncausality, time-outs, packet drop, and broadcast operations -- primitives\nalready implemented in packet-switching and packet-routing hardware. We show\nthat existing buffering and traffic-shaping embedded algorithms can be\nleveraged to implement neuron models and synaptic operations. Additionally, a\nknowledge-distillation framework can train and cross-map well-established\nneural network topologies onto $\\pi^2$ without degrading generalization\nperformance. For (b), analytical modeling shows that, unlike other neuromorphic\nplatforms, the energy scaling of $\\pi^2$ improves with interconnect bandwidth\nand energy efficiency. We predict that by leveraging trends in interconnect\ntechnology, a \\pi^2 architecture can be more easily scaled to execute\nbrain-scale AI inference workloads with power consumption levels in the range\nof hundreds of watts.",
+      "pdf_url": "http://arxiv.org/pdf/2508.19548v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.19548v1",
+      "published": "2025-08-27",
+      "categories": [
+        "cs.NE",
+        "cs.AR",
+        "cs.NI"
+      ]
+    },
+    {
+      "title": "Quantum Entanglement as Super-Confounding: From Bell's Theorem to Robust Machine Learning",
+      "authors": [
+        "Pilsung Kang"
+      ],
+      "abstract": "Bell's theorem reveals a profound conflict between quantum mechanics and\nlocal realism, a conflict we reinterpret through the modern lens of causal\ninference. We propose and computationally validate a framework where quantum\nentanglement acts as a \"super-confounding\" resource, generating correlations\nthat violate the classical causal bounds set by Bell's inequalities. This work\nmakes three key contributions: First, we establish a physical hierarchy of\nconfounding (Quantum > Classical) and introduce Confounding Strength (CS) to\nquantify this effect. Second, we provide a circuit-based implementation of the\nquantum $\\mathcal{DO}$-calculus to distinguish causality from spurious\ncorrelation. Finally, we apply this calculus to a quantum machine learning\nproblem, where causal feature selection yields a statistically significant\n11.3% average absolute improvement in model robustness. Our framework bridges\nquantum foundations and causal AI, offering a new, practical perspective on\nquantum correlations.",
+      "pdf_url": "http://arxiv.org/pdf/2508.19327v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.19327v1",
+      "published": "2025-08-26",
+      "categories": [
+        "quant-ph",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
     {
       "title": "STARec: An Efficient Agent Framework for Recommender Systems via Autonomous Deliberate Reasoning",
       "authors": [
@@ -85,95 +162,6 @@
       "published": "2025-08-24",
       "categories": [
         "cs.HC"
-      ]
-    },
-    {
-      "title": "Mimicking the Physicist's Eye:A VLM-centric Approach for Physics Formula Discovery",
-      "authors": [
-        "Jiaqi Liu",
-        "Songning Lai",
-        "Pengze Li",
-        "Di Yu",
-        "Wenjie Zhou",
-        "Yiyang Zhou",
-        "Peng Xia",
-        "Zijun Wang",
-        "Xi Chen",
-        "Shixiang Tang",
-        "Lei Bai",
-        "Wanli Ouyang",
-        "Mingyu Ding",
-        "Huaxiu Yao",
-        "Aoran Wang"
-      ],
-      "abstract": "Automated discovery of physical laws from observational data in the real\nworld is a grand challenge in AI. Current methods, relying on symbolic\nregression or LLMs, are limited to uni-modal data and overlook the rich, visual\nphenomenological representations of motion that are indispensable to\nphysicists. This \"sensory deprivation\" severely weakens their ability to\ninterpret the inherent spatio-temporal patterns within dynamic phenomena. To\naddress this gap, we propose VIPER-R1, a multimodal model that performs Visual\nInduction for Physics-based Equation Reasoning to discover fundamental symbolic\nformulas. It integrates visual perception, trajectory data, and symbolic\nreasoning to emulate the scientific discovery process. The model is trained via\na curriculum of Motion Structure Induction (MSI), using supervised fine-tuning\nto interpret kinematic phase portraits and to construct hypotheses guided by a\nCausal Chain of Thought (C-CoT), followed by Reward-Guided Symbolic Calibration\n(RGSC) to refine the formula structure with reinforcement learning. During\ninference, the trained VIPER-R1 acts as an agent: it first posits a\nhigh-confidence symbolic ansatz, then proactively invokes an external symbolic\nregression tool to perform Symbolic Residual Realignment (SR^2). This final\nstep, analogous to a physicist's perturbation analysis, reconciles the\ntheoretical model with empirical data. To support this research, we introduce\nPhysSymbol, a new 5,000-instance multimodal corpus. Experiments show that\nVIPER-R1 consistently outperforms state-of-the-art VLM baselines in accuracy\nand interpretability, enabling more precise discovery of physical laws. Project\npage: https://jiaaqiliu.github.io/VIPER-R1/",
-      "pdf_url": "http://arxiv.org/pdf/2508.17380v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.17380v1",
-      "published": "2025-08-24",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Challenges in Statistics: A Dozen Challenges in Causality and Causal Inference",
-      "authors": [
-        "Carlos Cinelli",
-        "Avi Feller",
-        "Guido Imbens",
-        "Edward Kennedy",
-        "Sara Magliacane",
-        "Jose Zubizarreta"
-      ],
-      "abstract": "Causality and causal inference have emerged as core research areas at the\ninterface of modern statistics and domains including biomedical sciences,\nsocial sciences, computer science, and beyond. The field's inherently\ninterdisciplinary nature -- particularly the central role of incorporating\ndomain knowledge -- creates a rich and varied set of statistical challenges.\nMuch progress has been made, especially in the last three decades, but there\nremain many open questions. Our goal in this discussion is to outline research\ndirections and open problems we view as particularly promising for future work.\nThroughout we emphasize that advancing causal research requires a wide range of\ncontributions, from novel theory and methodological innovations to improved\nsoftware tools and closer engagement with domain scientists and practitioners.",
-      "pdf_url": "http://arxiv.org/pdf/2508.17099v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.17099v1",
-      "published": "2025-08-23",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Individualized Treatment Effects in Advanced Prostate Cancer: A Causal-Survival Modeling Approach to Risk-Guided Therapy",
-      "authors": [
-        "J. T. Korley"
-      ],
-      "abstract": "We conducted a proof-of-concept evaluation of individualized treatment effect\n(ITE) estimation using survival data from a randomized trial of 475 men with\nadvanced prostate cancer treated with high- versus low-dose diethylstilbestrol\n(DES). A Weibull accelerated failure time (AFT) model with interaction terms\nfor treatment-by-age and treatment-by-log tumor size was used to capture\nsubgroup-specific treatment effects. The estimated main effect of high-dose DES\nindicated a time ratio of 0.582 (95% CI: [0.306, 1.110]), reflecting reduced\nsurvival at the reference levels of age and tumor size. However,\ninteraction-adjusted ITEs revealed marked effect modification: younger patients\n(e.g., age 50 years) had over fourfold expected survival gains (time ratio\n4.09), whereas older patients (e.g., age 80 years) experienced reduced benefit\n(time ratio 0.71). Similarly, patients with larger tumors (log size $\\sim$4.25,\n$\\sim$70 $cm^2$) derived a stronger benefit (time ratio 1.89) than those with\nsmaller tumors. To evaluate the reliability of these individualized estimates,\nboth the delta method and bootstrap resampling were applied for uncertainty\nquantification, producing closely aligned intervals across the risk spectrum.\nThis analysis illustrates how parametric survival models with clinically\nmotivated interactions and robust inference procedures can yield interpretable\npatient-level treatment effect estimates, even in moderately sized oncology\ntrials.",
-      "pdf_url": "http://arxiv.org/pdf/2508.16894v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.16894v1",
-      "published": "2025-08-23",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "A coalgebraic perspective on predictive processing",
-      "authors": [
-        "Manuel Baltieri",
-        "Filippo Torresan",
-        "Tomoya Nakai"
-      ],
-      "abstract": "Predictive processing and active inference posit that the brain is a system\nperforming Bayesian inference on the environment. By virtue of this, a\nprominent interpretation of predictive processing states that the generative\nmodel (a POMDP) encoded by the brain synchronises with the generative process\n(another POMDP) representing the environment while trying to explain what\nhidden properties of the world generated its sensory input. In this view, the\nbrain is thought to become a copy of the environment. This claim has however\nbeen disputed, stressing the fact that a structural copy, or isomorphism as it\nis at times invoked to be, is not an accurate description of this process since\nthe environment is necessarily more complex than the brain, and what matters is\nnot the capacity to exactly recapitulate the veridical causal structure of the\nworld. In this work, we make parts of this counterargument formal by using\nideas from the theory of coalgebras, an abstract mathematical framework for\ndynamical systems that brings together work from automata theory, concurrency\ntheory, probabilistic processes and other fields. To do so, we cast generative\nmodel and process, in the form of POMDPs, as coalgebras, and use maps between\nthem to describe a form of consistency that goes beyond mere structural\nsimilarity, giving the necessary mathematical background to describe how\ndifferent processes can be seen as behaviourally, rather than structurally,\nequivalent, i.e. how they can be seen as emitting the same observations, and\nthus minimise prediction error, over time without strict assumptions about\nstructural similarity. In particular, we will introduce three standard notions\nof equivalence from the literature on coalgebras, evaluating them in the\ncontext of predictive processing and identifying the one closest to claims made\nby proponents of this framework.",
-      "pdf_url": "http://arxiv.org/pdf/2508.16877v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.16877v1",
-      "published": "2025-08-23",
-      "categories": [
-        "q-bio.NC"
-      ]
-    },
-    {
-      "title": "Heterogeneous Quantile Treatment Effect Estimation for Longitudinal Data with High-Dimensional Confounding",
-      "authors": [
-        "Zhixin Qiu",
-        "Huichen Zhu",
-        "Wenjie Wang",
-        "Yanlin Tang"
-      ],
-      "abstract": "Causal inference plays a fundamental role in various real-world applications.\nHowever, in the motivating non-small cell lung cancer (NSCLC) study, it is\nchallenging to estimate the treatment effect of chemotherapy on circulating\ntumor DNA (ctDNA). First, the heterogeneous treatment effects vary across\npatient subgroups defined by baseline characteristics. Second, there exists a\nbroad set of demographic, clinical and molecular variables act as potential\nconfounders. Third, ctDNA trajectories over time show heavy-tailed non-Gaussian\nbehavior. Finally, repeated measurements within subjects introduce unknown\ncorrelation. Combining convolution-smoothed quantile regression and orthogonal\nrandom forest, we propose a framework to estimate heterogeneous quantile\ntreatment effects in the presence of high-dimensional confounding, which not\nonly captures effect heterogeneity across covariates, but also behaves robustly\nto nuisance parameter estimation error. We establish the theoretical properties\nof the proposed estimator and demonstrate its finite-sample performance through\ncomprehensive simulations. We illustrate its practical utility in the motivated\nNSCLC study.",
-      "pdf_url": "http://arxiv.org/pdf/2508.16326v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.16326v1",
-      "published": "2025-08-22",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
