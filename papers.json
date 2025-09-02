@@ -1,6 +1,83 @@
 {
-  "last_updated": "2025-09-01T01:00:53.428717",
+  "last_updated": "2025-09-02T00:51:37.984184",
   "papers": [
+    {
+      "title": "Considerations for Estimating Causal Effects of Informatively Timed Treatments",
+      "authors": [
+        "Arman Oganisian"
+      ],
+      "abstract": "Epidemiological studies are often concerned with estimating causal effects of\na sequence of treatment decisions on survival outcomes. In many settings,\ntreatment decisions do not occur at fixed, pre-specified followup times.\nRather, timing varies across subjects in ways that may be informative of\nsubsequent treatment decisions and potential outcomes. Awareness of the issue\nand its potential solutions is lacking in the literature, which motivate this\nwork. Here, we formalize the issue of informative timing, problems associated\nwith ignoring it, and show how g-methods can be used to analyze sequential\ntreatments that are informatively timed. As we describe, in such settings, the\nwaiting times between successive treatment decisions may be properly viewed as\na time-varying confounders. Using synthetic examples, we illustrate how\ng-methods that do not adjust for these waiting times may be biased and how\nadjustment can be done in scenarios where patients may die or be censored in\nbetween treatments. We draw connections between adjustment and identification\nwith discrete-time versus continuous-time models. Finally, we provide\nimplementation guidance and examples using publicly available software. Our\nconcluding message is that 1) considering timing is important for valid\ninference and 2) correcting for informative timing can be done with g-methods\nthat adjust for waiting times between treatments as time-varying confounders.",
+      "pdf_url": "http://arxiv.org/pdf/2508.21804v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.21804v1",
+      "published": "2025-08-29",
+      "categories": [
+        "stat.ME",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Orientability of Causal Relations in Time Series using Summary Causal Graphs and Faithful Distributions",
+      "authors": [
+        "Timothée Loranchet",
+        "Charles K. Assaad"
+      ],
+      "abstract": "Understanding causal relations between temporal variables is a central\nchallenge in time series analysis, particularly when the full causal structure\nis unknown. Even when the full causal structure cannot be fully specified,\nexperts often succeed in providing a high-level abstraction of the causal\ngraph, known as a summary causal graph, which captures the main causal\nrelations between different time series while abstracting away micro-level\ndetails. In this work, we present conditions that guarantee the orientability\nof micro-level edges between temporal variables given the background knowledge\nencoded in a summary causal graph and assuming having access to a faithful and\ncausally sufficient distribution with respect to the true unknown graph. Our\nresults provide theoretical guarantees for edge orientation at the micro-level,\neven in the presence of cycles or bidirected edges at the macro-level. These\nfindings offer practical guidance for leveraging SCGs to inform causal\ndiscovery in complex temporal systems and highlight the value of incorporating\nexpert knowledge to improve causal inference from observational time series\ndata.",
+      "pdf_url": "http://arxiv.org/pdf/2508.21742v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.21742v1",
+      "published": "2025-08-29",
+      "categories": [
+        "cs.AI",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Inferring Effects of Major Events through Discontinuity Forecasting of Population Anxiety",
+      "authors": [
+        "Siddharth Mangalik",
+        "Ojas Deshpande",
+        "Adithya V. Ganesan",
+        "Sean A. P. Clouston",
+        "H. Andrew Schwartz"
+      ],
+      "abstract": "Estimating community-specific mental health effects of local events is vital\nfor public health policy. While forecasting mental health scores alone offers\nlimited insights into the impact of events on community well-being,\nquasi-experimental designs like the Longitudinal Regression Discontinuity\nDesign (LRDD) from econometrics help researchers derive more effects that are\nmore likely to be causal from observational data. LRDDs aim to extrapolate the\nsize of changes in an outcome (e.g. a discontinuity in running scores for\nanxiety) due to a time-specific event. Here, we propose adapting LRDDs beyond\ntraditional forecasting into a statistical learning framework whereby future\ndiscontinuities (i.e. time-specific shifts) and changes in slope (i.e. linear\ntrajectories) are estimated given a location's history of the score, dynamic\ncovariates (other running assessments), and exogenous variables (static\nrepresentations). Applying our framework to predict discontinuities in the\nanxiety of US counties from COVID-19 events, we found the task was difficult\nbut more achievable as the sophistication of models was increased, with the\nbest results coming from integrating exogenous and dynamic covariates. Our\napproach shows strong improvement ($r=+.46$ for discontinuity and $r = +.65$\nfor slope) over traditional static community representations. Discontinuity\nforecasting raises new possibilities for estimating the idiosyncratic effects\nof potential future or hypothetical events on specific communities.",
+      "pdf_url": "http://arxiv.org/pdf/2508.21722v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.21722v1",
+      "published": "2025-08-29",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Treatment effects at the margin: Everyone is marginal",
+      "authors": [
+        "Haotian Deng"
+      ],
+      "abstract": "This paper develops a framework for identifying treatment effects when a\npolicy simultaneously alters both the incentive to participate and the outcome\nof interest -- such as hiring decisions and wages in response to employment\nsubsidies; or working decisions and wages in response to job trainings. This\nframework was inspired by my PhD project on a Belgian reform that subsidised\nfirst-time hiring, inducing entry by marginal firms yet meanwhile changing the\nwages they pay. Standard methods addressing selection-into-treatment concepts\n(like Heckman selection equations and local average treatment effects), or\nbefore-after comparisons (including simple DiD or RDD), cannot isolate effects\nat this shifting margin where treatment defines who is observed. I introduce\nmarginality-weighted estimands that recover causal effects among policy-induced\nentrants, offering a policy-relevant alternative in settings with endogenous\nselection. This method can thus be applied widely to understanding the economic\nimpacts of public programmes, especially in fields largely relying on\nreduced-form causal inference estimation (e.g. labour economics, development\neconomics, health economics).",
+      "pdf_url": "http://arxiv.org/pdf/2508.21583v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.21583v1",
+      "published": "2025-08-29",
+      "categories": [
+        "econ.EM",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "ORCA: ORchestrating Causal Agent",
+      "authors": [
+        "Joanie Hayoun Chung",
+        "Chaemyung Lim",
+        "Sumin Lee",
+        "Sungbin Lim"
+      ],
+      "abstract": "Causal inference is essential for decision-making science while the\ncomplexity of the data analysis workflow, ranging from data wrangling to causal\nanalysis, increases substantially as the scale of data grows in complicated\nbusiness environments. Especially, the execution of the workflow in relational\ndatabases by non-experts can result in repetitive bottlenecks which impede\ntimely and responsible business insights. To address this challenge, we propose\nORCA (Orchestrating Causal Agent), an LLM agentic system that can automate\nroutine workflows in RDBMS while preserving expert oversight via human-AI\ninteractions. ORCA orchestrates the full data analysis pipeline: interpreting\nnatural language queries, navigating tables from DB servers, generating proper\nSQL codes, preprocessing data, and configuring modeling processes using causal\ninference libraries. Domain experts still can control the automation through\niterative interactions with ORCA, enabling robust data-driven decision making\nwith less technical expertise in statistical computing. Empirical evaluations\non benchmark and synthetic e-commerce datasets demonstrate competitive\nperformance of ORCA in table understanding, query generation, and cause-effect\nestimation -- achieving over $7\\times$ improvement in estimating average\ntreatment compared to GPT-4o mini.",
+      "pdf_url": "http://arxiv.org/pdf/2508.21304v1",
+      "arxiv_url": "http://arxiv.org/abs/2508.21304v1",
+      "published": "2025-08-29",
+      "categories": [
+        "cs.DB",
+        "cs.MA"
+      ]
+    },
     {
       "title": "CogVLA: Cognition-Aligned Vision-Language-Action Model via Instruction-Driven Routing & Sparsification",
       "authors": [
@@ -83,92 +160,6 @@
         "stat.ML",
         "cs.LG",
         "math.OC"
-      ]
-    },
-    {
-      "title": "Towards Enhancing Data Equity in Public Health Data Science",
-      "authors": [
-        "Yiran Wang",
-        "Alicia E. Boyd",
-        "Lillian Rountree",
-        "Yi Ren",
-        "Kate Nyhan",
-        "Ruchit Nagar",
-        "Jackson Higginbottom",
-        "Megan L. Ranney",
-        "Harsh Parikh",
-        "Bhramar Mukherjee"
-      ],
-      "abstract": "Data-driven decisions shape public health policies and practice, yet\npersistent disparities in data representation skew insights and undermine\ninterventions. To address this, we advance a structured roadmap that integrates\npublic health data science with computer science and is grounded in\nreflexivity. We adopt data equity as a guiding concept: ensuring the fair and\ninclusive representation, collection, and use of data to prevent the\nintroduction or exacerbation of systemic biases that could lead to invalid\ndownstream inference and decisions. To underscore urgency, we present three\npublic health cases where non-representative datasets and skewed knowledge\nimpede decisions across diverse subgroups. These challenges echo themes in two\nliteratures: public health highlights gaps in high-quality data for specific\npopulations, while computer science and statistics contribute criteria and\nmetrics for diagnosing bias in data and models. Building on these foundations,\nwe propose a working definition of public health data equity and a structured\nself-audit framework. Our framework integrates core computational principles\n(fairness, accountability, transparency, ethics, privacy, confidentiality) with\nkey public health considerations (selection bias, representativeness,\ngeneralizability, causality, information bias) to guide equitable practice\nacross the data life cycle, from study design and data collection to\nmeasurement, analysis, interpretation, and translation. Embedding data equity\nin routine practice offers a practical path for ensuring that data-driven\npolicies, artificial intelligence, and emerging technologies improve health\noutcomes for all. Finally, we emphasize the critical understanding that,\nalthough data equity is an essential first step, it does not inherently\nguarantee information, learning, or decision equity.",
-      "pdf_url": "http://arxiv.org/pdf/2508.20301v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.20301v1",
-      "published": "2025-08-27",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Latent Variable Modeling for Robust Causal Effect Estimation",
-      "authors": [
-        "Tetsuro Morimura",
-        "Tatsushi Oka",
-        "Yugo Suzuki",
-        "Daisuke Moriwaki"
-      ],
-      "abstract": "Latent variable models provide a powerful framework for incorporating and\ninferring unobserved factors in observational data. In causal inference, they\nhelp account for hidden factors influencing treatment or outcome, thereby\naddressing challenges posed by missing or unmeasured covariates. This paper\nproposes a new framework that integrates latent variable modeling into the\ndouble machine learning (DML) paradigm to enable robust causal effect\nestimation in the presence of such hidden factors. We consider two scenarios:\none where a latent variable affects only the outcome, and another where it may\ninfluence both treatment and outcome. To ensure tractability, we incorporate\nlatent variables only in the second stage of DML, separating representation\nlearning from latent inference. We demonstrate the robustness and effectiveness\nof our method through extensive experiments on both synthetic and real-world\ndatasets.",
-      "pdf_url": "http://arxiv.org/pdf/2508.20259v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.20259v1",
-      "published": "2025-08-27",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Ego-centric Predictive Model Conditioned on Hand Trajectories",
-      "authors": [
-        "Binjie Zhang",
-        "Mike Zheng Shou"
-      ],
-      "abstract": "In egocentric scenarios, anticipating both the next action and its visual\noutcome is essential for understanding human-object interactions and for\nenabling robotic planning. However, existing paradigms fall short of jointly\nmodeling these aspects. Vision-Language-Action (VLA) models focus on action\nprediction but lack explicit modeling of how actions influence the visual\nscene, while video prediction models generate future frames without\nconditioning on specific actions, often resulting in implausible or\ncontextually inconsistent outcomes. To bridge this gap, we propose a unified\ntwo-stage predictive framework that jointly models action and visual future in\negocentric scenarios, conditioned on hand trajectories. In the first stage, we\nperform consecutive state modeling to process heterogeneous inputs (visual\nobservations, language, and action history) and explicitly predict future hand\ntrajectories. In the second stage, we introduce causal cross-attention to fuse\nmulti-modal cues, leveraging inferred action signals to guide an image-based\nLatent Diffusion Model (LDM) for frame-by-frame future video generation. Our\napproach is the first unified model designed to handle both egocentric human\nactivity understanding and robotic manipulation tasks, providing explicit\npredictions of both upcoming actions and their visual consequences. Extensive\nexperiments on Ego4D, BridgeData, and RLBench demonstrate that our method\noutperforms state-of-the-art baselines in both action prediction and future\nvideo synthesis.",
-      "pdf_url": "http://arxiv.org/pdf/2508.19852v2",
-      "arxiv_url": "http://arxiv.org/abs/2508.19852v2",
-      "published": "2025-08-27",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Whom We Trust, What We Fear: COVID-19 Fear and the Politics of Information",
-      "authors": [
-        "Daniele Baccega",
-        "Paolo Castagno",
-        "Antonio Fernández Anta",
-        "Juan Marcos Ramirez",
-        "Matteo Sereno"
-      ],
-      "abstract": "The COVID-19 pandemic triggered not only a global health crisis but also an\ninfodemic, an overload of information from diverse sources influencing public\nperception and emotional responses. In this context, fear emerged as a central\nemotional reaction, shaped by both media exposure and demographic factors. In\nthis study, we analyzed the relationship between individuals' self-reported\nlevels of fear about COVID-19 and the information sources they rely on, across\nnine source categories, including medical experts, government institutions,\nmedia, and personal networks. In particular, we defined a score that ranks fear\nlevels based on self-reported concerns about the pandemic, collected through\nthe Delphi CTIS survey in the United States between May 2021 and June 2022. We\nfound that both fear levels and information source usage closely follow\nCOVID-19 infection trends, exhibit strong correlations within each group (fear\nlevels across sources are strongly correlated, as are patterns of source\nusage), and vary significantly across demographic groups, particularly by age\nand education. Applying causal inference methods, we showed that the type of\ninformation source significantly affects individuals' fear levels. Furthermore,\nwe demonstrated that information source preferences can reliably match the\npolitical orientation of U.S. states. These findings highlight the importance\nof information ecosystem dynamics in shaping emotional and behavioral responses\nduring large-scale crises.",
-      "pdf_url": "http://arxiv.org/pdf/2508.20146v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.20146v1",
-      "published": "2025-08-27",
-      "categories": [
-        "cs.SI",
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "Understanding Spatial Regression Models from a Weighting Perspective in an Observational Study of Superfund Remediation",
-      "authors": [
-        "Sophie M. Woodward",
-        "Francesca Dominici",
-        "Jose R. Zubizarreta"
-      ],
-      "abstract": "Superfund sites are locations in the United States with high levels of\nenvironmental toxicants, often resulting from industrial activity or improper\nwaste management. Given mounting evidence linking prenatal environmental\nexposures to adverse birth outcomes, estimating the impact of Superfund\nremediation is of substantial policy relevance. A widespread approach is to fit\na spatial regression, i.e., a linear regression of the outcome (e.g., birth\nweight) on binary treatment (e.g., indicator for Superfund site remediation)\nand covariates, along with a spatially structured error term to account for\nunmeasured spatial confounding. Despite this common practice, it remains\nunclear to what extent spatial regression models account for unmeasured spatial\nconfounding in finite samples and whether such adjustments can be reformulated\nwithin a design-based framework for causal inference. To fill this knowledge\ngap, we introduce a weighting framework that encompasses three canonical types\nof spatial regression models: random effects, conditional autoregressive, and\nGaussian process models. This framework yields new insights into how spatial\nregression models build causal contrasts between treated and control units.\nSpecifically, we show that: 1) the spatially autocorrelated error term produces\napproximate balance on a hidden set of covariates, thereby adjusting for a\nspecific class of unmeasured confounders; and 2) the error covariance structure\ncan be equivalently expressed as regressors in a linear model. We also\nintroduce a new average treatment effect estimator that simultaneously accounts\nfor multiple forms of unmeasured spatial confounding, as well as diagnostics\nthat enhance interpretability. In a study of Superfund remediation, our\napproach illuminates the role of design-based adjustment for confounding and\nprovides guidance for evaluating environmental interventions in spatial\nsettings.",
-      "pdf_url": "http://arxiv.org/pdf/2508.19572v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.19572v1",
-      "published": "2025-08-27",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
       ]
     }
   ]
