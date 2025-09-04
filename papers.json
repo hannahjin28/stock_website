@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-09-03T00:47:36.317064",
+  "last_updated": "2025-09-04T00:48:17.171391",
   "papers": [
     {
       "title": "Considerations for Estimating Causal Effects of Informatively Timed Treatments",
@@ -67,11 +67,12 @@
         "Joanie Hayoun Chung",
         "Chaemyung Lim",
         "Sumin Lee",
+        "Songseong Kim",
         "Sungbin Lim"
       ],
       "abstract": "Causal inference is essential for decision-making science while the\ncomplexity of the data analysis workflow, ranging from data wrangling to causal\nanalysis, increases substantially as the scale of data grows in complicated\nbusiness environments. Especially, the execution of the workflow in relational\ndatabases by non-experts can result in repetitive bottlenecks which impede\ntimely and responsible business insights. To address this challenge, we propose\nORCA (Orchestrating Causal Agent), an LLM agentic system that can automate\nroutine workflows in RDBMS while preserving expert oversight via human-AI\ninteractions. ORCA orchestrates the full data analysis pipeline: interpreting\nnatural language queries, navigating tables from DB servers, generating proper\nSQL codes, preprocessing data, and configuring modeling processes using causal\ninference libraries. Domain experts still can control the automation through\niterative interactions with ORCA, enabling robust data-driven decision making\nwith less technical expertise in statistical computing. Empirical evaluations\non benchmark and synthetic e-commerce datasets demonstrate competitive\nperformance of ORCA in table understanding, query generation, and cause-effect\nestimation -- achieving over $7\\times$ improvement in estimating average\ntreatment compared to GPT-4o mini.",
-      "pdf_url": "http://arxiv.org/pdf/2508.21304v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.21304v1",
+      "pdf_url": "http://arxiv.org/pdf/2508.21304v2",
+      "arxiv_url": "http://arxiv.org/abs/2508.21304v2",
       "published": "2025-08-29",
       "categories": [
         "cs.DB",
