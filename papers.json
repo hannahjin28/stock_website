@@ -1,166 +1,172 @@
 {
-  "last_updated": "2025-09-04T00:48:17.171391",
+  "last_updated": "2025-09-05T00:49:45.199312",
   "papers": [
     {
-      "title": "Considerations for Estimating Causal Effects of Informatively Timed Treatments",
+      "title": "The super learner for time-to-event outcomes: A tutorial",
       "authors": [
-        "Arman Oganisian"
+        "Ruth H. Keogh",
+        "Karla Diaz-Ordaz",
+        "Nan van Geloven",
+        "Jon Michael Gran",
+        "Kamaryn T. Tanner"
       ],
-      "abstract": "Epidemiological studies are often concerned with estimating causal effects of\na sequence of treatment decisions on survival outcomes. In many settings,\ntreatment decisions do not occur at fixed, pre-specified followup times.\nRather, timing varies across subjects in ways that may be informative of\nsubsequent treatment decisions and potential outcomes. Awareness of the issue\nand its potential solutions is lacking in the literature, which motivate this\nwork. Here, we formalize the issue of informative timing, problems associated\nwith ignoring it, and show how g-methods can be used to analyze sequential\ntreatments that are informatively timed. As we describe, in such settings, the\nwaiting times between successive treatment decisions may be properly viewed as\na time-varying confounders. Using synthetic examples, we illustrate how\ng-methods that do not adjust for these waiting times may be biased and how\nadjustment can be done in scenarios where patients may die or be censored in\nbetween treatments. We draw connections between adjustment and identification\nwith discrete-time versus continuous-time models. Finally, we provide\nimplementation guidance and examples using publicly available software. Our\nconcluding message is that 1) considering timing is important for valid\ninference and 2) correcting for informative timing can be done with g-methods\nthat adjust for waiting times between treatments as time-varying confounders.",
-      "pdf_url": "http://arxiv.org/pdf/2508.21804v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.21804v1",
-      "published": "2025-08-29",
+      "abstract": "Estimating risks or survival probabilities conditional on individual\ncharacteristics based on censored time-to-event data is a commonly faced task.\nThis may be for the purpose of developing a prediction model or may be part of\na wider estimation procedure, such as in causal inference. A challenge is that\nit is impossible to know at the outset which of a set of candidate models will\nprovide the best predictions. The super learner is a powerful approach for\nfinding the best model or combination of models ('ensemble') among a\npre-specified set of candidate models or 'learners', which can include\nparametric and machine learning models. Super learners for time-to-event\noutcomes have been developed, but the literature is technical and a reader may\nfind it challenging to gather together the full details of how these methods\nwork and can be implemented. In this paper we provide a practical tutorial on\nsuper learner methods for time-to-event outcomes. An overview of the general\nsteps involved in the super learner is given, followed by details of three\nspecific implementations for time-to-event outcomes. We cover discrete-time and\ncontinuous-time versions of the super learner, as described by Polley and van\nder Laan (2011), Westling et al. (2023) and Munch and Gerds (2024). We compare\nthe properties of the methods and provide information on how they can be\nimplemented in R. The methods are illustrated using an open access data set and\nR code is provided.",
+      "pdf_url": "http://arxiv.org/pdf/2509.03315v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.03315v1",
+      "published": "2025-09-03",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Bayesian Network Propensity Score to Evaluate Treatment Effects in Observational Studies",
+      "authors": [
+        "Clelia Di Serio",
+        "Federica Cugnata",
+        "Pier Luigi Conti",
+        "Alberto Briganti",
+        "Fulvia Mecatti",
+        "Paola Vicard",
+        "Paola Maria Vittoria Rancoita"
+      ],
+      "abstract": "This paper focuses on the Bayesian Network Propensity Score (BNPS), a novel\napproach for estimating treatment effects in observational studies\ncharacterized by unknown (and likely unbalanced) designs and complex dependency\nstructures among covariates. Traditional methods, such as logistic regression,\noften impose rigid parametric assumptions that may lead to misspecification\nerrors, compromising causal inference. Recent classical and machine learning\nalternatives, such as boosted CART, random forests, and Stable Balancing\nWeights, seem to be attractive in a predictive perspective, but they typically\nlack asymptotic properties, such as consistency, efficiency, and valid variance\nestimation. In contrast, the recently proposed BNPS to estimate propensity\nscores uses Bayesian Networks to flexibly model conditional dependencies while\npreserving essential statistical properties such as consistency, asymptotic\nnormality and asymptotic efficiency. Combined with the H\\'ajek estimator, BNPS\nenables robust estimation of the Average Treatment Effect (ATE) in scenarios\nwith strong covariate interactions and unknown data-generating mechanisms.\nThrough extensive simulations across fifteen realistic scenarios and varying\nsample sizes, BNPS consistently outperforms benchmark methods in both empirical\nrejection rates and coverage accuracy. Finally, an application to a real-world\ndataset of 7,162 prostate cancer patients from San Raffaele Hospital (Milan,\nItaly) demonstrates BNPS's practical value in assessing the impact of pelvic\nlymph node dissection on hospitalization duration and biochemical recurrence.\nThe findings support BNPS as a statistically robust, interpretable and\ntransparent alternative for causal inference in complex observational settings,\nenhancing the reliability of evidence from real-world biomedical data.",
+      "pdf_url": "http://arxiv.org/pdf/2509.03194v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.03194v1",
+      "published": "2025-09-03",
       "categories": [
         "stat.ME",
-        "cs.LG"
+        "stat.AP"
       ]
     },
     {
-      "title": "Orientability of Causal Relations in Time Series using Summary Causal Graphs and Faithful Distributions",
+      "title": "Distribution-valued Causal Machine Learning: Implications of Credit on Spending Patterns",
       "authors": [
-        "Timothée Loranchet",
-        "Charles K. Assaad"
+        "Cheuk Hang Leung",
+        "Yijun Li",
+        "Qi Wu"
       ],
-      "abstract": "Understanding causal relations between temporal variables is a central\nchallenge in time series analysis, particularly when the full causal structure\nis unknown. Even when the full causal structure cannot be fully specified,\nexperts often succeed in providing a high-level abstraction of the causal\ngraph, known as a summary causal graph, which captures the main causal\nrelations between different time series while abstracting away micro-level\ndetails. In this work, we present conditions that guarantee the orientability\nof micro-level edges between temporal variables given the background knowledge\nencoded in a summary causal graph and assuming having access to a faithful and\ncausally sufficient distribution with respect to the true unknown graph. Our\nresults provide theoretical guarantees for edge orientation at the micro-level,\neven in the presence of cycles or bidirected edges at the macro-level. These\nfindings offer practical guidance for leveraging SCGs to inform causal\ndiscovery in complex temporal systems and highlight the value of incorporating\nexpert knowledge to improve causal inference from observational time series\ndata.",
-      "pdf_url": "http://arxiv.org/pdf/2508.21742v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.21742v1",
-      "published": "2025-08-29",
+      "abstract": "Fintech lending has become a central mechanism through which digital\nplatforms stimulate consumption, offering dynamic, personalized credit limits\nthat directly shape the purchasing power of consumers. Although prior research\nshows that higher limits increase average spending, scalar-based outcomes\nobscure the heterogeneous distributional nature of consumer responses. This\npaper addresses this gap by proposing a new causal inference framework that\nestimates how continuous changes in the credit limit affect the entire\ndistribution of consumer spending. We formalize distributional causal effects\nwithin the Wasserstein space and introduce a robust Distributional Double\nMachine Learning estimator, supported by asymptotic theory to ensure\nconsistency and validity. To implement this estimator, we design a deep\nlearning architecture comprising two components: a Neural Functional Regression\nNet to capture complex, nonlinear relationships between treatments, covariates,\nand distributional outcomes, and a Conditional Normalizing Flow Net to estimate\ngeneralized propensity scores under continuous treatment. Numerical experiments\ndemonstrate that the proposed estimator accurately recovers distributional\neffects in a range of data-generating scenarios. Applying our framework to\ntransaction-level data from a major BigTech platform, we find that increased\ncredit limits primarily shift consumers towards higher-value purchases rather\nthan uniformly increasing spending, offering new insights for personalized\nmarketing strategies and digital consumer finance.",
+      "pdf_url": "http://arxiv.org/pdf/2509.03063v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.03063v1",
+      "published": "2025-09-03",
       "categories": [
-        "cs.AI",
+        "econ.GN",
+        "q-fin.EC"
+      ]
+    },
+    {
+      "title": "Covariate Adjustment Cannot Hurt: Treatment Effect Estimation under Interference with Low-Order Outcome Interactions",
+      "authors": [
+        "Xinyi Wang",
+        "Shuangning Li"
+      ],
+      "abstract": "In randomized experiments, covariates are often used to reduce variance and\nimprove the precision of treatment effect estimates. However, in many real\nworld settings, interference between units, where one unit's treatment affects\nanother's outcome, complicates causal inference. This raises a key question:\nhow can covariates be effectively used in the presence of interference?\nAddressing this challenge is nontrivial, as direct covariate adjustment, such\nas through regression, can sometimes increase variance due to dependencies\nacross units. In this paper, we study how to use covariate information to\nreduce the variance of treatment effect estimators under interference. We focus\non the total treatment effect (TTE), defined as the difference in average\noutcomes when all units are treated versus when all are controlled. Our\nanalysis is conducted under the neighborhood interference model and a low order\ninteraction outcome model. Building on the SNIPE estimator from\nCortez-Rodriguez et al. (2023), we propose a covariate adjusted SNIPE estimator\nand show that, under sparsity conditions on the interference network, the\nproposed estimator is asymptotically unbiased and has asymptotic variance no\ngreater than that of the original SNIPE estimator. This parallels the classical\nresult of Lin (2013) under the no interference assumption, where covariate\nadjustment does not worsen estimation precision. Importantly, our variance\nimprovement result does not rely on strong assumptions about the covariates:\nthe covariates may be arbitrarily dependent, affect outcomes across units, and\ndepend on the interference network itself.",
+      "pdf_url": "http://arxiv.org/pdf/2509.03050v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.03050v1",
+      "published": "2025-09-03",
+      "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "Inferring Effects of Major Events through Discontinuity Forecasting of Population Anxiety",
+      "title": "Improving Generative Methods for Causal Evaluation via Simulation-Based Inference",
       "authors": [
-        "Siddharth Mangalik",
-        "Ojas Deshpande",
-        "Adithya V. Ganesan",
-        "Sean A. P. Clouston",
-        "H. Andrew Schwartz"
+        "Pracheta Amaranath",
+        "Vinitra Muralikrishnan",
+        "Amit Sharma",
+        "David D. Jensen"
       ],
-      "abstract": "Estimating community-specific mental health effects of local events is vital\nfor public health policy. While forecasting mental health scores alone offers\nlimited insights into the impact of events on community well-being,\nquasi-experimental designs like the Longitudinal Regression Discontinuity\nDesign (LRDD) from econometrics help researchers derive more effects that are\nmore likely to be causal from observational data. LRDDs aim to extrapolate the\nsize of changes in an outcome (e.g. a discontinuity in running scores for\nanxiety) due to a time-specific event. Here, we propose adapting LRDDs beyond\ntraditional forecasting into a statistical learning framework whereby future\ndiscontinuities (i.e. time-specific shifts) and changes in slope (i.e. linear\ntrajectories) are estimated given a location's history of the score, dynamic\ncovariates (other running assessments), and exogenous variables (static\nrepresentations). Applying our framework to predict discontinuities in the\nanxiety of US counties from COVID-19 events, we found the task was difficult\nbut more achievable as the sophistication of models was increased, with the\nbest results coming from integrating exogenous and dynamic covariates. Our\napproach shows strong improvement ($r=+.46$ for discontinuity and $r = +.65$\nfor slope) over traditional static community representations. Discontinuity\nforecasting raises new possibilities for estimating the idiosyncratic effects\nof potential future or hypothetical events on specific communities.",
-      "pdf_url": "http://arxiv.org/pdf/2508.21722v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.21722v1",
-      "published": "2025-08-29",
+      "abstract": "Generating synthetic datasets that accurately reflect real-world\nobservational data is critical for evaluating causal estimators, but remains a\nchallenging task. Existing generative methods offer a solution by producing\nsynthetic datasets anchored in the observed data (source data) while allowing\nvariation in key parameters such as the treatment effect and amount of\nconfounding bias. However, existing methods typically require users to provide\npoint estimates of such parameters (rather than distributions) and fixed\nestimates (rather than estimates that can be improved with reference to the\nsource data). This denies users the ability to express uncertainty over\nparameter values and removes the potential for posterior inference, potentially\nleading to unreliable estimator comparisons. We introduce simulation-based\ninference for causal evaluation (SBICE), a framework that models generative\nparameters as uncertain and infers their posterior distribution given a source\ndataset. Leveraging techniques in simulation-based inference, SBICE identifies\nparameter configurations that produce synthetic datasets closely aligned with\nthe source data distribution. Empirical results demonstrate that SBICE improves\nthe reliability of estimator evaluations by generating more realistic datasets,\nwhich supports a robust and data-consistent approach to causal benchmarking\nunder uncertainty.",
+      "pdf_url": "http://arxiv.org/pdf/2509.02892v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.02892v1",
+      "published": "2025-09-02",
       "categories": [
-        "cs.LG"
+        "cs.LG",
+        "stat.ME"
       ]
     },
     {
-      "title": "Treatment effects at the margin: Everyone is marginal",
+      "title": "Causal Spatial Quantile Regression",
       "authors": [
-        "Haotian Deng"
+        "Yan Gong",
+        "Reetam Majumder",
+        "Brian J. Reich",
+        "Raphaël Huser"
       ],
-      "abstract": "This paper develops a framework for identifying treatment effects when a\npolicy simultaneously alters both the incentive to participate and the outcome\nof interest -- such as hiring decisions and wages in response to employment\nsubsidies; or working decisions and wages in response to job trainings. This\nframework was inspired by my PhD project on a Belgian reform that subsidised\nfirst-time hiring, inducing entry by marginal firms yet meanwhile changing the\nwages they pay. Standard methods addressing selection-into-treatment concepts\n(like Heckman selection equations and local average treatment effects), or\nbefore-after comparisons (including simple DiD or RDD), cannot isolate effects\nat this shifting margin where treatment defines who is observed. I introduce\nmarginality-weighted estimands that recover causal effects among policy-induced\nentrants, offering a policy-relevant alternative in settings with endogenous\nselection. This method can thus be applied widely to understanding the economic\nimpacts of public programmes, especially in fields largely relying on\nreduced-form causal inference estimation (e.g. labour economics, development\neconomics, health economics).",
-      "pdf_url": "http://arxiv.org/pdf/2508.21583v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.21583v1",
-      "published": "2025-08-29",
+      "abstract": "Treatment effects in a wide range of economic, environmental, and\nepidemiological applications often vary across space, and understanding the\nheterogeneity of causal effects across space and outcome quantiles is a\ncritical challenge in spatial causal inference. To effectively capture spatial\nheterogeneity in distributional treatment effects, we propose a novel\nsemiparametric neural network-based causal framework leveraging deep spatial\nquantile regression and then construct a plug-in estimator for spatial quantile\ntreatment effects (SQTE). This framework incorporates an efficient adjustment\nprocedure to mitigate the impact of spatial hidden confounders. Extensive\nsimulations across various scenarios demonstrate that our methodology can\naccurately estimate SQTE, even with the presence of spatial hidden confounders.\nAdditionally, the spatial confounding adjustment procedure effectively reduces\nneighborhood spatial patterns in the residuals. We apply this method to assess\nthe spatially varying quantile treatment effects of maternal smoking on newborn\nbirth weight in North Carolina, United States. Our findings consistently show\nnegative effects across all birth weight quantiles, with particularly severe\nimpacts observed in the lower quantile regions.",
+      "pdf_url": "http://arxiv.org/pdf/2509.02294v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.02294v1",
+      "published": "2025-09-02",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Interpretational errors with instrumental variables",
+      "authors": [
+        "Luca Locher",
+        "Mats J. Stensrud",
+        "Aaron L. Sarvet"
+      ],
+      "abstract": "Instrumental variables (IV) are often used to identify causal effects in\nobservational settings and experiments subject to non-compliance. Under\ncanonical assumptions, IVs allow us to identify a so-called local average\ntreatment effect (LATE). The use of IVs is often accompanied by a pragmatic\ndecision to abandon the identification of the causal parameter that corresponds\nto the original research question and target the LATE instead. This pragmatic\ndecision presents a potential source of error: an investigator mistakenly\ninterprets findings as if they had made inference on their original causal\nparameter of interest. We conducted a systematic review and meta-analysis of\npatterns of pragmatism and interpretational errors in the applied IV literature\npublished in leading journals of economics, political science, epidemiology,\nand clinical medicine (n = 309 unique studies). We found that a large fraction\nof studies targeted the LATE, although specific interest in this parameter was\nrare. Of these studies, 61% contained claims that mistakenly suggested that\nanother parameter was targeted -- one whose value likely differs, and could\neven have the opposite sign, from the parameter actually estimated. Our\nfindings suggest that the validity of conclusions drawn from IV applications is\noften compromised by interpretational errors.",
+      "pdf_url": "http://arxiv.org/pdf/2509.02045v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.02045v1",
+      "published": "2025-09-02",
       "categories": [
         "econ.EM",
-        "stat.ME"
+        "stat.AP"
       ]
     },
     {
-      "title": "ORCA: ORchestrating Causal Agent",
+      "title": "Any-Order Flexible Length Masked Diffusion",
       "authors": [
-        "Joanie Hayoun Chung",
-        "Chaemyung Lim",
-        "Sumin Lee",
-        "Songseong Kim",
-        "Sungbin Lim"
+        "Jaeyeon Kim",
+        "Lee Cheuk-Kit",
+        "Carles Domingo-Enrich",
+        "Yilun Du",
+        "Sham Kakade",
+        "Timothy Ngotiaoco",
+        "Sitan Chen",
+        "Michael Albergo"
       ],
-      "abstract": "Causal inference is essential for decision-making science while the\ncomplexity of the data analysis workflow, ranging from data wrangling to causal\nanalysis, increases substantially as the scale of data grows in complicated\nbusiness environments. Especially, the execution of the workflow in relational\ndatabases by non-experts can result in repetitive bottlenecks which impede\ntimely and responsible business insights. To address this challenge, we propose\nORCA (Orchestrating Causal Agent), an LLM agentic system that can automate\nroutine workflows in RDBMS while preserving expert oversight via human-AI\ninteractions. ORCA orchestrates the full data analysis pipeline: interpreting\nnatural language queries, navigating tables from DB servers, generating proper\nSQL codes, preprocessing data, and configuring modeling processes using causal\ninference libraries. Domain experts still can control the automation through\niterative interactions with ORCA, enabling robust data-driven decision making\nwith less technical expertise in statistical computing. Empirical evaluations\non benchmark and synthetic e-commerce datasets demonstrate competitive\nperformance of ORCA in table understanding, query generation, and cause-effect\nestimation -- achieving over $7\\times$ improvement in estimating average\ntreatment compared to GPT-4o mini.",
-      "pdf_url": "http://arxiv.org/pdf/2508.21304v2",
-      "arxiv_url": "http://arxiv.org/abs/2508.21304v2",
-      "published": "2025-08-29",
-      "categories": [
-        "cs.DB",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "CogVLA: Cognition-Aligned Vision-Language-Action Model via Instruction-Driven Routing & Sparsification",
-      "authors": [
-        "Wei Li",
-        "Renshan Zhang",
-        "Rui Shao",
-        "Jie He",
-        "Liqiang Nie"
-      ],
-      "abstract": "Recent Vision-Language-Action (VLA) models built on pre-trained\nVision-Language Models (VLMs) require extensive post-training, resulting in\nhigh computational overhead that limits scalability and deployment.We propose\nCogVLA, a Cognition-Aligned Vision-Language-Action framework that leverages\ninstruction-driven routing and sparsification to improve both efficiency and\nperformance. CogVLA draws inspiration from human multimodal coordination and\nintroduces a 3-stage progressive architecture. 1) Encoder-FiLM based\nAggregation Routing (EFA-Routing) injects instruction information into the\nvision encoder to selectively aggregate and compress dual-stream visual tokens,\nforming a instruction-aware latent representation. 2) Building upon this\ncompact visual encoding, LLM-FiLM based Pruning Routing (LFP-Routing)\nintroduces action intent into the language model by pruning\ninstruction-irrelevant visually grounded tokens, thereby achieving token-level\nsparsity. 3) To ensure that compressed perception inputs can still support\naccurate and coherent action generation, we introduce V-L-A Coupled Attention\n(CAtten), which combines causal vision-language attention with bidirectional\naction parallel decoding. Extensive experiments on the LIBERO benchmark and\nreal-world robotic tasks demonstrate that CogVLA achieves state-of-the-art\nperformance with success rates of 97.4% and 70.0%, respectively, while reducing\ntraining costs by 2.5-fold and decreasing inference latency by 2.8-fold\ncompared to OpenVLA. CogVLA is open-sourced and publicly available at\nhttps://github.com/JiuTian-VL/CogVLA.",
-      "pdf_url": "http://arxiv.org/pdf/2508.21046v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.21046v1",
-      "published": "2025-08-28",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "ChainReaction! Structured Approach with Causal Chains as Intermediate Representations for Improved and Explainable Causal Video Question Answering",
-      "authors": [
-        "Paritosh Parmar",
-        "Eric Peh",
-        "Basura Fernando"
-      ],
-      "abstract": "Existing Causal-Why Video Question Answering (VideoQA) models often struggle\nwith higher-order reasoning, relying on opaque, monolithic pipelines that\nentangle video understanding, causal inference, and answer generation. These\nblack-box approaches offer limited interpretability and tend to depend on\nshallow heuristics. We propose a novel, modular framework that explicitly\ndecouples causal reasoning from answer generation, introducing natural language\ncausal chains as interpretable intermediate representations. Inspired by human\ncognitive models, these structured cause-effect sequences bridge low-level\nvideo content with high-level causal reasoning, enabling transparent and\nlogically coherent inference. Our two-stage architecture comprises a Causal\nChain Extractor (CCE) that generates causal chains from video-question pairs,\nand a Causal Chain-Driven Answerer (CCDA) that produces answers grounded in\nthese chains. To address the lack of annotated reasoning traces, we introduce a\nscalable method for generating high-quality causal chains from existing\ndatasets using large language models. We also propose CauCo, a new evaluation\nmetric for causality-oriented captioning. Experiments on three large-scale\nbenchmarks demonstrate that our approach not only outperforms state-of-the-art\nmodels, but also yields substantial gains in explainability, user trust, and\ngeneralization -- positioning the CCE as a reusable causal reasoning engine\nacross diverse domains. Project page:\nhttps://paritoshparmar.github.io/chainreaction/",
-      "pdf_url": "http://arxiv.org/pdf/2508.21010v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.21010v1",
-      "published": "2025-08-28",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL",
-        "cs.HC",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "When Is Causal Inference Possible? A Statistical Test for Unmeasured Confounding",
-      "authors": [
-        "Muye Liu",
-        "Jun Xie"
-      ],
-      "abstract": "This paper clarifies a fundamental difference between causal inference and\ntraditional statistical inference by formalizing a mathematical distinction\nbetween their respective parameters. We connect two major approaches to causal\ninference, the potential outcomes framework and causal structure graphs, which\nare typically studied separately. While the unconfoundedness assumption in the\npotential outcomes framework cannot be assessed from an observational dataset\nalone, causal structure graphs help explain when causal effects are\nidentifiable through graphical models. We propose a statistical test to assess\nthe unconfoundedness assumption, equivalent to the absence of unmeasured\nconfounding, by comparing two datasets: a randomized controlled trial and an\nobservational study. The test controls the Type I error probability, and we\nanalyze its power under linear models. Our approach provides a practical method\nto evaluate when real-world data are suitable for causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2508.20366v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.20366v1",
-      "published": "2025-08-28",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Dynamic Synthetic Controls vs. Panel-Aware Double Machine Learning for Geo-Level Marketing Impact Estimation",
-      "authors": [
-        "Sang Su Lee",
-        "Vineeth Loganathan",
-        "Vijay Raghavan"
-      ],
-      "abstract": "Accurately quantifying geo-level marketing lift in two-sided marketplaces is\nchallenging: the Synthetic Control Method (SCM) often exhibits high power yet\nsystematically under-estimates effect size, while panel-style Double Machine\nLearning (DML) is seldom benchmarked against SCM. We build an open, fully\ndocumented simulator that mimics a typical large-scale geo roll-out: N_unit\nregional markets are tracked for T_pre weeks before launch and for a further\nT_post-week campaign window, allowing all key parameters to be varied by the\nuser and probe both families under five stylized stress tests: 1) curved\nbaseline trends, 2) heterogeneous response lags, 3) treated-biased shocks, 4) a\nnon-linear outcome link, and 5) a drifting control group trend.\n  Seven estimators are evaluated: three standard Augmented SCM (ASC) variants\nand four panel-DML flavors (TWFE, CRE/Mundlak, first-difference, and\nwithin-group). Across 100 replications per scenario, ASC models consistently\ndemonstrate severe bias and near-zero coverage in challenging scenarios\ninvolving nonlinearities or external shocks. By contrast, panel-DML variants\ndramatically reduce this bias and restore nominal 95%-CI coverage, proving far\nmore robust.\n  The results indicate that while ASC provides a simple baseline, it is\nunreliable in common, complex situations. We therefore propose a\n'diagnose-first' framework where practitioners first identify the primary\nbusiness challenge (e.g., nonlinear trends, response lags) and then select the\nspecific DML model best suited for that scenario, providing a more robust and\nreliable blueprint for analyzing geo-experiments.",
-      "pdf_url": "http://arxiv.org/pdf/2508.20335v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.20335v1",
-      "published": "2025-08-28",
+      "abstract": "Masked diffusion models (MDMs) have recently emerged as a promising\nalternative to autoregressive models over discrete domains. MDMs generate\nsequences in an any-order, parallel fashion, enabling fast inference and strong\nperformance on non-causal tasks. However, a crucial limitation is that they do\nnot support token insertions and are thus limited to fixed-length generations.\nTo this end, we introduce Flexible Masked Diffusion Models (FlexMDMs), a\ndiscrete diffusion paradigm that simultaneously can model sequences of flexible\nlength while provably retaining MDMs' flexibility of any-order inference.\nGrounded in an extension of the stochastic interpolant framework, FlexMDMs\ngenerate sequences by inserting mask tokens and unmasking them. Empirically, we\nshow that FlexMDMs match MDMs in perplexity while modeling length statistics\nwith much higher fidelity. On a synthetic maze planning task, they achieve\n$\\approx 60 \\%$ higher success rate than MDM baselines. Finally, we show\npretrained MDMs can easily be retrofitted into FlexMDMs: on 16 H100s, it takes\nonly three days to fine-tune LLaDA-8B into a FlexMDM, achieving superior\nperformance on math (GSM8K, $58\\% \\to 67\\%$) and code infilling performance\n($52\\% \\to 65\\%$).",
+      "pdf_url": "http://arxiv.org/pdf/2509.01025v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.01025v1",
+      "published": "2025-08-31",
       "categories": [
         "cs.LG"
       ]
     },
     {
-      "title": "Stochastic Gradients under Nuisances",
+      "title": "ProCause: Generating Counterfactual Outcomes to Evaluate Prescriptive Process Monitoring Methods",
       "authors": [
-        "Facheng Yu",
-        "Ronak Mehta",
-        "Alex Luedtke",
-        "Zaid Harchaoui"
+        "Jakob De Moor",
+        "Hans Weytjens",
+        "Johannes De Smedt"
       ],
-      "abstract": "Stochastic gradient optimization is the dominant learning paradigm for a\nvariety of scenarios, from classical supervised learning to modern\nself-supervised learning. We consider stochastic gradient algorithms for\nlearning problems whose objectives rely on unknown nuisance parameters, and\nestablish non-asymptotic convergence guarantees. Our results show that, while\nthe presence of a nuisance can alter the optimum and upset the optimization\ntrajectory, the classical stochastic gradient algorithm may still converge\nunder appropriate conditions, such as Neyman orthogonality. Moreover, even when\nNeyman orthogonality is not satisfied, we show that an algorithm variant with\napproximately orthogonalized updates (with an approximately orthogonalized\ngradient oracle) may achieve similar convergence rates. Examples from\northogonal statistical learning/double machine learning and causal inference\nare discussed.",
-      "pdf_url": "http://arxiv.org/pdf/2508.20326v1",
-      "arxiv_url": "http://arxiv.org/abs/2508.20326v1",
-      "published": "2025-08-28",
+      "abstract": "Prescriptive Process Monitoring (PresPM) is the subfield of Process Mining\nthat focuses on optimizing processes through real-time interventions based on\nevent log data. Evaluating PresPM methods is challenging due to the lack of\nground-truth outcomes for all intervention actions in datasets. A generative\ndeep learning approach from the field of Causal Inference (CI), RealCause, has\nbeen commonly used to estimate the outcomes for proposed intervention actions\nto evaluate a new policy. However, RealCause overlooks the temporal\ndependencies in process data, and relies on a single CI model architecture,\nTARNet, limiting its effectiveness. To address both shortcomings, we introduce\nProCause, a generative approach that supports both sequential (e.g., LSTMs) and\nnon-sequential models while integrating multiple CI architectures (S-Learner,\nT-Learner, TARNet, and an ensemble). Our research using a simulator with known\nground truths reveals that TARNet is not always the best choice; instead, an\nensemble of models offers more consistent reliability, and leveraging LSTMs\nshows potential for improved evaluations when temporal dependencies are\npresent. We further validate ProCause's practical effectiveness through a\nreal-world data analysis, ensuring a more reliable evaluation of PresPM\nmethods.",
+      "pdf_url": "http://arxiv.org/pdf/2509.00797v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.00797v1",
+      "published": "2025-08-31",
       "categories": [
-        "stat.ML",
         "cs.LG",
-        "math.OC"
+        "cs.AI",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Quantum Causality: Resolving Simpson's Paradox with $\\mathcal{DO}$-Calculus",
+      "authors": [
+        "Pilsung Kang"
+      ],
+      "abstract": "Distinguishing correlation from causation is a fundamental challenge in\nmachine intelligence, often representing a critical barrier to building robust\nand trustworthy systems. While Pearl's $\\mathcal{DO}$-calculus provides a\nrigorous framework for causal inference, a parallel challenge lies in its\nphysical implementation. Here, we apply and experimentally validate a quantum\nalgorithmic framework for performing causal interventions. Our approach maps\ncausal networks onto quantum circuits where probabilistic links are encoded by\ncontrolled-rotation gates, and interventions are realized by a structural\nremodeling of the circuit -- a physical analogue to Pearl's ``graph surgery''.\nWe demonstrate the method's efficacy by resolving Simpson's Paradox in a\n3-qubit model, and show its scalability by quantifying confounding bias in a\n10-qubit healthcare simulation. Critically, we provide a proof-of-principle\nexperimental validation on an IonQ Aria quantum computer, successfully\nreproducing the paradox and its resolution in the presence of real-world noise.\nThis work establishes a practical pathway for quantum causal inference,\noffering a new computational tool to address deep-rooted challenges in\nalgorithmic fairness and explainable AI (XAI).",
+      "pdf_url": "http://arxiv.org/pdf/2509.00744v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.00744v1",
+      "published": "2025-08-31",
+      "categories": [
+        "quant-ph",
+        "cs.AI",
+        "cs.LG"
       ]
     }
   ]
