@@ -1,6 +1,55 @@
 {
-  "last_updated": "2025-09-05T00:49:45.199312",
+  "last_updated": "2025-09-06T00:47:55.230367",
   "papers": [
+    {
+      "title": "Interpretable Clustering with Adaptive Heterogeneous Causal Structure Learning in Mixed Observational Data",
+      "authors": [
+        "Wenrui Li",
+        "Qinghao Zhang",
+        "Xiaowo Wang"
+      ],
+      "abstract": "Understanding causal heterogeneity is essential for scientific discovery in\ndomains such as biology and medicine. However, existing methods lack causal\nawareness, with insufficient modeling of heterogeneity, confounding, and\nobservational constraints, leading to poor interpretability and difficulty\ndistinguishing true causal heterogeneity from spurious associations. We propose\nan unsupervised framework, HCL (Interpretable Causal Mechanism-Aware Clustering\nwith Adaptive Heterogeneous Causal Structure Learning), that jointly infers\nlatent clusters and their associated causal structures from mixed-type\nobservational data without requiring temporal ordering, environment labels,\ninterventions or other prior knowledge. HCL relaxes the homogeneity and\nsufficiency assumptions by introducing an equivalent representation that\nencodes both structural heterogeneity and confounding. It further develops a\nbi-directional iterative strategy to alternately refine causal clustering and\nstructure learning, along with a self-supervised regularization that balance\ncross-cluster universality and specificity. Together, these components enable\nconvergence toward interpretable, heterogeneous causal patterns. Theoretically,\nwe show identifiability of heterogeneous causal structures under mild\nconditions. Empirically, HCL achieves superior performance in both clustering\nand structure learning tasks, and recovers biologically meaningful mechanisms\nin real-world single-cell perturbation data, demonstrating its utility for\ndiscovering interpretable, mechanism-level causal heterogeneity.",
+      "pdf_url": "http://arxiv.org/pdf/2509.04415v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.04415v1",
+      "published": "2025-09-04",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "OccTENS: 3D Occupancy World Model via Temporal Next-Scale Prediction",
+      "authors": [
+        "Bu Jin",
+        "Songen Gu",
+        "Xiaotao Hu",
+        "Yupeng Zheng",
+        "Xiaoyang Guo",
+        "Qian Zhang",
+        "Xiaoxiao Long",
+        "Wei Yin"
+      ],
+      "abstract": "In this paper, we propose OccTENS, a generative occupancy world model that\nenables controllable, high-fidelity long-term occupancy generation while\nmaintaining computational efficiency. Different from visual generation, the\noccupancy world model must capture the fine-grained 3D geometry and dynamic\nevolution of the 3D scenes, posing great challenges for the generative models.\nRecent approaches based on autoregression (AR) have demonstrated the potential\nto predict vehicle movement and future occupancy scenes simultaneously from\nhistorical observations, but they typically suffer from \\textbf{inefficiency},\n\\textbf{temporal degradation} in long-term generation and \\textbf{lack of\ncontrollability}. To holistically address these issues, we reformulate the\noccupancy world model as a temporal next-scale prediction (TENS) task, which\ndecomposes the temporal sequence modeling problem into the modeling of spatial\nscale-by-scale generation and temporal scene-by-scene prediction. With a\n\\textbf{TensFormer}, OccTENS can effectively manage the temporal causality and\nspatial relationships of occupancy sequences in a flexible and scalable way. To\nenhance the pose controllability, we further propose a holistic pose\naggregation strategy, which features a unified sequence modeling for occupancy\nand ego-motion. Experiments show that OccTENS outperforms the state-of-the-art\nmethod with both higher occupancy quality and faster inference time.",
+      "pdf_url": "http://arxiv.org/pdf/2509.03887v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.03887v1",
+      "published": "2025-09-04",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Causality-guided Prompt Learning for Vision-language Models via Visual Granulation",
+      "authors": [
+        "Mengyu Gao",
+        "Qiulei Dong"
+      ],
+      "abstract": "Prompt learning has recently attracted much attention for adapting\npre-trained vision-language models (e.g., CLIP) to downstream recognition\ntasks. However, most of the existing CLIP-based prompt learning methods only\nshow a limited ability for handling fine-grained datasets. To address this\nissue, we propose a causality-guided text prompt learning method via visual\ngranulation for CLIP, called CaPL, where the explored visual granulation\ntechnique could construct sets of visual granules for the text prompt to\ncapture subtle discrepancies among different fine-grained classes through\ncasual inference. The CaPL method contains the following two modules: (1) An\nattribute disentanglement module is proposed to decompose visual features into\nnon-individualized attributes (shared by some classes) and individualized\nattributes (specific to single classes) using a Brownian Bridge Diffusion\nModel; (2) A granule learning module is proposed to construct visual granules\nby integrating the aforementioned attributes for recognition under two causal\ninference strategies. Thanks to the learned visual granules, more\ndiscriminative text prompt is expected to be learned. Extensive experimental\nresults on 15 datasets demonstrate that our CaPL method significantly\noutperforms the state-of-the-art prompt learning methods, especially on\nfine-grained datasets.",
+      "pdf_url": "http://arxiv.org/pdf/2509.03803v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.03803v1",
+      "published": "2025-09-04",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "The super learner for time-to-event outcomes: A tutorial",
       "authors": [
@@ -115,58 +164,6 @@
       "categories": [
         "econ.EM",
         "stat.AP"
-      ]
-    },
-    {
-      "title": "Any-Order Flexible Length Masked Diffusion",
-      "authors": [
-        "Jaeyeon Kim",
-        "Lee Cheuk-Kit",
-        "Carles Domingo-Enrich",
-        "Yilun Du",
-        "Sham Kakade",
-        "Timothy Ngotiaoco",
-        "Sitan Chen",
-        "Michael Albergo"
-      ],
-      "abstract": "Masked diffusion models (MDMs) have recently emerged as a promising\nalternative to autoregressive models over discrete domains. MDMs generate\nsequences in an any-order, parallel fashion, enabling fast inference and strong\nperformance on non-causal tasks. However, a crucial limitation is that they do\nnot support token insertions and are thus limited to fixed-length generations.\nTo this end, we introduce Flexible Masked Diffusion Models (FlexMDMs), a\ndiscrete diffusion paradigm that simultaneously can model sequences of flexible\nlength while provably retaining MDMs' flexibility of any-order inference.\nGrounded in an extension of the stochastic interpolant framework, FlexMDMs\ngenerate sequences by inserting mask tokens and unmasking them. Empirically, we\nshow that FlexMDMs match MDMs in perplexity while modeling length statistics\nwith much higher fidelity. On a synthetic maze planning task, they achieve\n$\\approx 60 \\%$ higher success rate than MDM baselines. Finally, we show\npretrained MDMs can easily be retrofitted into FlexMDMs: on 16 H100s, it takes\nonly three days to fine-tune LLaDA-8B into a FlexMDM, achieving superior\nperformance on math (GSM8K, $58\\% \\to 67\\%$) and code infilling performance\n($52\\% \\to 65\\%$).",
-      "pdf_url": "http://arxiv.org/pdf/2509.01025v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.01025v1",
-      "published": "2025-08-31",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "ProCause: Generating Counterfactual Outcomes to Evaluate Prescriptive Process Monitoring Methods",
-      "authors": [
-        "Jakob De Moor",
-        "Hans Weytjens",
-        "Johannes De Smedt"
-      ],
-      "abstract": "Prescriptive Process Monitoring (PresPM) is the subfield of Process Mining\nthat focuses on optimizing processes through real-time interventions based on\nevent log data. Evaluating PresPM methods is challenging due to the lack of\nground-truth outcomes for all intervention actions in datasets. A generative\ndeep learning approach from the field of Causal Inference (CI), RealCause, has\nbeen commonly used to estimate the outcomes for proposed intervention actions\nto evaluate a new policy. However, RealCause overlooks the temporal\ndependencies in process data, and relies on a single CI model architecture,\nTARNet, limiting its effectiveness. To address both shortcomings, we introduce\nProCause, a generative approach that supports both sequential (e.g., LSTMs) and\nnon-sequential models while integrating multiple CI architectures (S-Learner,\nT-Learner, TARNet, and an ensemble). Our research using a simulator with known\nground truths reveals that TARNet is not always the best choice; instead, an\nensemble of models offers more consistent reliability, and leveraging LSTMs\nshows potential for improved evaluations when temporal dependencies are\npresent. We further validate ProCause's practical effectiveness through a\nreal-world data analysis, ensuring a more reliable evaluation of PresPM\nmethods.",
-      "pdf_url": "http://arxiv.org/pdf/2509.00797v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.00797v1",
-      "published": "2025-08-31",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Quantum Causality: Resolving Simpson's Paradox with $\\mathcal{DO}$-Calculus",
-      "authors": [
-        "Pilsung Kang"
-      ],
-      "abstract": "Distinguishing correlation from causation is a fundamental challenge in\nmachine intelligence, often representing a critical barrier to building robust\nand trustworthy systems. While Pearl's $\\mathcal{DO}$-calculus provides a\nrigorous framework for causal inference, a parallel challenge lies in its\nphysical implementation. Here, we apply and experimentally validate a quantum\nalgorithmic framework for performing causal interventions. Our approach maps\ncausal networks onto quantum circuits where probabilistic links are encoded by\ncontrolled-rotation gates, and interventions are realized by a structural\nremodeling of the circuit -- a physical analogue to Pearl's ``graph surgery''.\nWe demonstrate the method's efficacy by resolving Simpson's Paradox in a\n3-qubit model, and show its scalability by quantifying confounding bias in a\n10-qubit healthcare simulation. Critically, we provide a proof-of-principle\nexperimental validation on an IonQ Aria quantum computer, successfully\nreproducing the paradox and its resolution in the presence of real-world noise.\nThis work establishes a practical pathway for quantum causal inference,\noffering a new computational tool to address deep-rooted challenges in\nalgorithmic fairness and explainable AI (XAI).",
-      "pdf_url": "http://arxiv.org/pdf/2509.00744v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.00744v1",
-      "published": "2025-08-31",
-      "categories": [
-        "quant-ph",
-        "cs.AI",
-        "cs.LG"
       ]
     }
   ]
