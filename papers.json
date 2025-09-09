@@ -1,6 +1,73 @@
 {
-  "last_updated": "2025-09-08T00:53:10.468277",
+  "last_updated": "2025-09-09T00:50:24.172700",
   "papers": [
+    {
+      "title": "Semi-supervised inference for treatment heterogeneity",
+      "authors": [
+        "Yilizhati Anniwaer",
+        "Yuqian Zhang"
+      ],
+      "abstract": "In causal inference, measuring treatment heterogeneity is crucial as it\nprovides scientific insights into how treatments influence outcomes and guides\npersonalized decision-making. In this work, we study semi-supervised settings\nwhere a labeled dataset is accompanied by a large unlabeled dataset, and\ndevelop semi-supervised estimators for two measures of treatment heterogeneity:\nthe total treatment heterogeneity (TTH) and the explained treatment\nheterogeneity (ETH) of a simplified working model. We propose semi-supervised\nestimators for both quantities and demonstrate their improved robustness and\nefficiency compared with supervised methods. For ETH estimation, we show that\ndirect semi-supervised approaches may result in efficiency loss relative to\nsupervised counterparts. To address this, we introduce a re-weighting strategy\nthat assigns data-dependent weights to labeled and unlabeled samples to\noptimize efficiency. The proposed approach guarantees an asymptotic variance no\nlarger than that of the supervised method, ensuring its safe use. We evaluate\nthe performance of the proposed estimators through simulation studies and a\nreal-data application based on an AIDS clinical trial.",
+      "pdf_url": "http://arxiv.org/pdf/2509.05048v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.05048v1",
+      "published": "2025-09-05",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Detecting extreme event-driven causality",
+      "authors": [
+        "Siyang Yu",
+        "Yu Huang",
+        "Zuntao Fu"
+      ],
+      "abstract": "The occurrence of some extreme events (such as marine heatwaves or\nexceptional circulations) can cause other extreme events (such as heatwave,\ndrought and flood). These concurrent extreme events have a great impact on\nenvironment and human health. However, how to detect and quantify the causes\nand impacts of these extreme events by a data-driven way is still unsolved. In\nthis study, the dynamic system method is extended to develop a method for\ndetecting the causality between extreme events. Taking the coupled\nLorenz-Lorenz systems with extreme event-driven coupling as an example, it is\ndemonstrated that this proposed detecting method is able to capture the extreme\nevent-driven causality, with even better causality detecting performance\nbetween concurrent extreme events. Comparison among three kinds of measured\nseries, full measurements outperform partial ones in event-to-event causality\ndetecting. The successful applicability of our proposed approach in Walker\ncirculation phenomenon indicates that our method contributes a novel way to the\nstudy of causal inference in complex systems. This method offers valuable\ninsights into multi-scale, nonlinear dynamics, particularly in uncovering\nassociations among extreme events.",
+      "pdf_url": "http://arxiv.org/pdf/2509.05043v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.05043v1",
+      "published": "2025-09-05",
+      "categories": [
+        "physics.ao-ph",
+        "math-ph",
+        "math.DS",
+        "math.MP"
+      ]
+    },
+    {
+      "title": "DarkStream: real-time speech anonymization with low latency",
+      "authors": [
+        "Waris Quamer",
+        "Ricardo Gutierrez-Osuna"
+      ],
+      "abstract": "We propose DarkStream, a streaming speech synthesis model for real-time\nspeaker anonymization. To improve content encoding under strict latency\nconstraints, DarkStream combines a causal waveform encoder, a short lookahead\nbuffer, and transformer-based contextual layers. To further reduce inference\ntime, the model generates waveforms directly via a neural vocoder, thus\nremoving intermediate mel-spectrogram conversions. Finally, DarkStream\nanonymizes speaker identity by injecting a GAN-generated pseudo-speaker\nembedding into linguistic features from the content encoder. Evaluations show\nour model achieves strong anonymization, yielding close to 50% speaker\nverification EER (near-chance performance) on the lazy-informed attack\nscenario, while maintaining acceptable linguistic intelligibility (WER within\n9%). By balancing low-latency, robust privacy, and minimal intelligibility\ndegradation, DarkStream provides a practical solution for privacy-preserving\nreal-time speech communication.",
+      "pdf_url": "http://arxiv.org/pdf/2509.04667v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.04667v1",
+      "published": "2025-09-04",
+      "categories": [
+        "eess.AS",
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Precision Mental Health: Predicting Heterogeneous Treatment Effects for Depression through Data Integration",
+      "authors": [
+        "Carly L. Brantner",
+        "Trang Quynh Nguyen",
+        "Harsh Parikh",
+        "Congwen Zhao",
+        "Hwanhee Hong",
+        "Elizabeth A. Stuart"
+      ],
+      "abstract": "When treating depression, clinicians are interested in determining the\noptimal treatment for a given patient, which is challenging given the amount of\ntreatments available. To advance individualized treatment allocation,\nintegrating data across multiple randomized controlled trials (RCTs) can\nenhance our understanding of treatment effect heterogeneity by increasing\navailable information. However, extending these inferences to individuals\noutside of the original RCTs remains crucial for clinical decision-making. We\nintroduce a two-stage meta-analytic method that predicts conditional average\ntreatment effects (CATEs) in target patient populations by leveraging the\ndistribution of CATEs across RCTs. Our approach generates 95\\% prediction\nintervals for CATEs in target settings using first-stage models that can\nincorporate parametric regression or non-parametric methods such as causal\nforests or Bayesian additive regression trees (BART). We validate our method\nthrough simulation studies and operationalize it to integrate multiple RCTs\ncomparing depression treatments, duloxetine and vortioxetine, to generate\nprediction intervals for target patient profiles. Our analysis reveals no\nstrong evidence of effect heterogeneity across trials, with the exception of\npotential age-related variability. Importantly, we show that CATE prediction\nintervals capture broader uncertainty than study-specific confidence intervals\nwhen warranted, reflecting both within-study and between-study variability.",
+      "pdf_url": "http://arxiv.org/pdf/2509.04604v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.04604v1",
+      "published": "2025-09-04",
+      "categories": [
+        "stat.AP",
+        "stat.ME"
+      ]
+    },
     {
       "title": "Interpretable Clustering with Adaptive Heterogeneous Causal Structure Learning in Mixed Observational Data",
       "authors": [
@@ -101,69 +168,6 @@
       "categories": [
         "econ.GN",
         "q-fin.EC"
-      ]
-    },
-    {
-      "title": "Covariate Adjustment Cannot Hurt: Treatment Effect Estimation under Interference with Low-Order Outcome Interactions",
-      "authors": [
-        "Xinyi Wang",
-        "Shuangning Li"
-      ],
-      "abstract": "In randomized experiments, covariates are often used to reduce variance and\nimprove the precision of treatment effect estimates. However, in many real\nworld settings, interference between units, where one unit's treatment affects\nanother's outcome, complicates causal inference. This raises a key question:\nhow can covariates be effectively used in the presence of interference?\nAddressing this challenge is nontrivial, as direct covariate adjustment, such\nas through regression, can sometimes increase variance due to dependencies\nacross units. In this paper, we study how to use covariate information to\nreduce the variance of treatment effect estimators under interference. We focus\non the total treatment effect (TTE), defined as the difference in average\noutcomes when all units are treated versus when all are controlled. Our\nanalysis is conducted under the neighborhood interference model and a low order\ninteraction outcome model. Building on the SNIPE estimator from\nCortez-Rodriguez et al. (2023), we propose a covariate adjusted SNIPE estimator\nand show that, under sparsity conditions on the interference network, the\nproposed estimator is asymptotically unbiased and has asymptotic variance no\ngreater than that of the original SNIPE estimator. This parallels the classical\nresult of Lin (2013) under the no interference assumption, where covariate\nadjustment does not worsen estimation precision. Importantly, our variance\nimprovement result does not rely on strong assumptions about the covariates:\nthe covariates may be arbitrarily dependent, affect outcomes across units, and\ndepend on the interference network itself.",
-      "pdf_url": "http://arxiv.org/pdf/2509.03050v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.03050v1",
-      "published": "2025-09-03",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Improving Generative Methods for Causal Evaluation via Simulation-Based Inference",
-      "authors": [
-        "Pracheta Amaranath",
-        "Vinitra Muralikrishnan",
-        "Amit Sharma",
-        "David D. Jensen"
-      ],
-      "abstract": "Generating synthetic datasets that accurately reflect real-world\nobservational data is critical for evaluating causal estimators, but remains a\nchallenging task. Existing generative methods offer a solution by producing\nsynthetic datasets anchored in the observed data (source data) while allowing\nvariation in key parameters such as the treatment effect and amount of\nconfounding bias. However, existing methods typically require users to provide\npoint estimates of such parameters (rather than distributions) and fixed\nestimates (rather than estimates that can be improved with reference to the\nsource data). This denies users the ability to express uncertainty over\nparameter values and removes the potential for posterior inference, potentially\nleading to unreliable estimator comparisons. We introduce simulation-based\ninference for causal evaluation (SBICE), a framework that models generative\nparameters as uncertain and infers their posterior distribution given a source\ndataset. Leveraging techniques in simulation-based inference, SBICE identifies\nparameter configurations that produce synthetic datasets closely aligned with\nthe source data distribution. Empirical results demonstrate that SBICE improves\nthe reliability of estimator evaluations by generating more realistic datasets,\nwhich supports a robust and data-consistent approach to causal benchmarking\nunder uncertainty.",
-      "pdf_url": "http://arxiv.org/pdf/2509.02892v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.02892v1",
-      "published": "2025-09-02",
-      "categories": [
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Spatial Quantile Regression",
-      "authors": [
-        "Yan Gong",
-        "Reetam Majumder",
-        "Brian J. Reich",
-        "Raphaël Huser"
-      ],
-      "abstract": "Treatment effects in a wide range of economic, environmental, and\nepidemiological applications often vary across space, and understanding the\nheterogeneity of causal effects across space and outcome quantiles is a\ncritical challenge in spatial causal inference. To effectively capture spatial\nheterogeneity in distributional treatment effects, we propose a novel\nsemiparametric neural network-based causal framework leveraging deep spatial\nquantile regression and then construct a plug-in estimator for spatial quantile\ntreatment effects (SQTE). This framework incorporates an efficient adjustment\nprocedure to mitigate the impact of spatial hidden confounders. Extensive\nsimulations across various scenarios demonstrate that our methodology can\naccurately estimate SQTE, even with the presence of spatial hidden confounders.\nAdditionally, the spatial confounding adjustment procedure effectively reduces\nneighborhood spatial patterns in the residuals. We apply this method to assess\nthe spatially varying quantile treatment effects of maternal smoking on newborn\nbirth weight in North Carolina, United States. Our findings consistently show\nnegative effects across all birth weight quantiles, with particularly severe\nimpacts observed in the lower quantile regions.",
-      "pdf_url": "http://arxiv.org/pdf/2509.02294v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.02294v1",
-      "published": "2025-09-02",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Interpretational errors with instrumental variables",
-      "authors": [
-        "Luca Locher",
-        "Mats J. Stensrud",
-        "Aaron L. Sarvet"
-      ],
-      "abstract": "Instrumental variables (IV) are often used to identify causal effects in\nobservational settings and experiments subject to non-compliance. Under\ncanonical assumptions, IVs allow us to identify a so-called local average\ntreatment effect (LATE). The use of IVs is often accompanied by a pragmatic\ndecision to abandon the identification of the causal parameter that corresponds\nto the original research question and target the LATE instead. This pragmatic\ndecision presents a potential source of error: an investigator mistakenly\ninterprets findings as if they had made inference on their original causal\nparameter of interest. We conducted a systematic review and meta-analysis of\npatterns of pragmatism and interpretational errors in the applied IV literature\npublished in leading journals of economics, political science, epidemiology,\nand clinical medicine (n = 309 unique studies). We found that a large fraction\nof studies targeted the LATE, although specific interest in this parameter was\nrare. Of these studies, 61% contained claims that mistakenly suggested that\nanother parameter was targeted -- one whose value likely differs, and could\neven have the opposite sign, from the parameter actually estimated. Our\nfindings suggest that the validity of conclusions drawn from IV applications is\noften compromised by interpretational errors.",
-      "pdf_url": "http://arxiv.org/pdf/2509.02045v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.02045v1",
-      "published": "2025-09-02",
-      "categories": [
-        "econ.EM",
-        "stat.AP"
       ]
     }
   ]
