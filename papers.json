@@ -1,6 +1,90 @@
 {
-  "last_updated": "2025-09-09T00:50:24.172700",
+  "last_updated": "2025-09-10T00:48:42.129768",
   "papers": [
+    {
+      "title": "MachineLearningLM: Continued Pretraining Language Models on Millions of Synthetic Tabular Prediction Tasks Scales In-Context ML",
+      "authors": [
+        "Haoyu Dong",
+        "Pengkun Zhang",
+        "Mingzhe Lu",
+        "Yanzhen Shen",
+        "Guolin Ke"
+      ],
+      "abstract": "Large language models (LLMs) possess broad world knowledge and strong\ngeneral-purpose reasoning ability, yet they struggle to learn from many\nin-context examples on standard machine learning (ML) tasks, that is, to\nleverage many-shot demonstrations purely via in-context learning (ICL) without\ngradient descent. We introduce MachineLearningLM, a portable\ncontinued-pretraining framework that equips a general-purpose LLM with robust\nin-context ML capability while preserving its general knowledge and reasoning\nfor broader chat workflows.\n  Our pretraining procedure synthesizes ML tasks from millions of structural\ncausal models (SCMs), spanning shot counts up to 1,024. We begin with a\nrandom-forest teacher, distilling tree-based decision strategies into the LLM\nto strengthen robustness in numerical modeling. All tasks are serialized with a\ntoken-efficient prompt, enabling 3x to 6x more examples per context window and\ndelivering up to 50x amortized throughput via batch inference.\n  Despite a modest setup (Qwen-2.5-7B-Instruct with LoRA rank 8),\nMachineLearningLM outperforms strong LLM baselines (e.g., GPT-5-mini) by an\naverage of about 15% on out-of-distribution tabular classification across\nfinance, physics, biology, and healthcare domains. It exhibits a striking\nmany-shot scaling law: accuracy increases monotonically as in-context\ndemonstrations grow from 8 to 1,024. Without any task-specific training, it\nattains random-forest-level accuracy across hundreds of shots. General chat\ncapabilities, including knowledge and reasoning, are preserved: it achieves\n75.4% on MMLU.",
+      "pdf_url": "http://arxiv.org/pdf/2509.06806v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.06806v1",
+      "published": "2025-09-08",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "CausNVS: Autoregressive Multi-view Diffusion for Flexible 3D Novel View Synthesis",
+      "authors": [
+        "Xin Kong",
+        "Daniel Watson",
+        "Yannick Strümpler",
+        "Michael Niemeyer",
+        "Federico Tombari"
+      ],
+      "abstract": "Multi-view diffusion models have shown promise in 3D novel view synthesis,\nbut most existing methods adopt a non-autoregressive formulation. This limits\ntheir applicability in world modeling, as they only support a fixed number of\nviews and suffer from slow inference due to denoising all frames\nsimultaneously. To address these limitations, we propose CausNVS, a multi-view\ndiffusion model in an autoregressive setting, which supports arbitrary\ninput-output view configurations and generates views sequentially. We train\nCausNVS with causal masking and per-frame noise, using pairwise-relative camera\npose encodings (CaPE) for precise camera control. At inference time, we combine\na spatially-aware sliding-window with key-value caching and noise conditioning\naugmentation to mitigate drift. Our experiments demonstrate that CausNVS\nsupports a broad range of camera trajectories, enables flexible autoregressive\nnovel view synthesis, and achieves consistently strong visual quality across\ndiverse settings. Project page: https://kxhit.github.io/CausNVS.html.",
+      "pdf_url": "http://arxiv.org/pdf/2509.06579v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.06579v1",
+      "published": "2025-09-08",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Predicting Market Troughs: A Machine Learning Approach with Causal Interpretation",
+      "authors": [
+        "Peilin Rao",
+        "Randall R. Rojas"
+      ],
+      "abstract": "This paper provides robust, new evidence on the causal drivers of market\ntroughs. We demonstrate that conclusions about these triggers are critically\nsensitive to model specification, moving beyond restrictive linear models with\na flexible DML average partial effect causal machine learning framework. Our\nrobust estimates identify the volatility of options-implied risk appetite and\nmarket liquidity as key causal drivers, relationships misrepresented or\nobscured by simpler models. These findings provide high-frequency empirical\nsupport for intermediary asset pricing theories. This causal analysis is\nenabled by a high-performance nowcasting model that accurately identifies\ncapitulation events in real-time.",
+      "pdf_url": "http://arxiv.org/pdf/2509.05922v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.05922v1",
+      "published": "2025-09-07",
+      "categories": [
+        "q-fin.ST",
+        "econ.EM",
+        "stat.ML",
+        "91G80, 62P05",
+        "J.4"
+      ]
+    },
+    {
+      "title": "Causal Clustering for Conditional Average Treatment Effects Estimation and Subgroup Discovery",
+      "authors": [
+        "Zilong Wang",
+        "Turgay Ayer",
+        "Shihao Yang"
+      ],
+      "abstract": "Estimating heterogeneous treatment effects is critical in domains such as\npersonalized medicine, resource allocation, and policy evaluation. A central\nchallenge lies in identifying subpopulations that respond differently to\ninterventions, thereby enabling more targeted and effective decision-making.\nWhile clustering methods are well-studied in unsupervised learning, their\nintegration with causal inference remains limited. We propose a novel framework\nthat clusters individuals based on estimated treatment effects using a learned\nkernel derived from causal forests, revealing latent subgroup structures. Our\napproach consists of two main steps. First, we estimate debiased Conditional\nAverage Treatment Effects (CATEs) using orthogonalized learners via the\nRobinson decomposition, yielding a kernel matrix that encodes sample-level\nsimilarities in treatment responsiveness. Second, we apply kernelized\nclustering to this matrix to uncover distinct, treatment-sensitive\nsubpopulations and compute cluster-level average CATEs. We present this\nkernelized clustering step as a form of regularization within the\nresidual-on-residual regression framework. Through extensive experiments on\nsemi-synthetic and real-world datasets, supported by ablation studies and\nexploratory analyses, we demonstrate the effectiveness of our method in\ncapturing meaningful treatment effect heterogeneity.",
+      "pdf_url": "http://arxiv.org/pdf/2509.05775v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.05775v1",
+      "published": "2025-09-06",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Bayesian Inference for Confounding Variables and Limited Information",
+      "authors": [
+        "Ellis Scharfenaker",
+        "Duncan K. Foley"
+      ],
+      "abstract": "A central challenge in statistical inference is the presence of confounding\nvariables that may distort observed associations between treatment and outcome.\nConventional \"causal\" methods, grounded in assumptions such as ignorability,\nexclude the possibility of unobserved confounders, leading to posterior\ninferences that overstate certainty. We develop a Bayesian framework that\nrelaxes these assumptions by introducing entropy-favoring priors over\nhypothesis spaces that explicitly allow for latent confounding variables and\npartial information. Using the case of Simpson's paradox, we demonstrate how\nthis approach produces logically consistent posterior distributions that widen\ncredibly intervals in the presence of potential confounding. Our method\nprovides a generalizable, information-theoretic foundation for more robust\npredictive inference in observational sciences.",
+      "pdf_url": "http://arxiv.org/pdf/2509.05520v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.05520v1",
+      "published": "2025-09-05",
+      "categories": [
+        "stat.ME",
+        "econ.EM"
+      ]
+    },
     {
       "title": "Semi-supervised inference for treatment heterogeneity",
       "authors": [
@@ -81,93 +165,6 @@
       "published": "2025-09-04",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "OccTENS: 3D Occupancy World Model via Temporal Next-Scale Prediction",
-      "authors": [
-        "Bu Jin",
-        "Songen Gu",
-        "Xiaotao Hu",
-        "Yupeng Zheng",
-        "Xiaoyang Guo",
-        "Qian Zhang",
-        "Xiaoxiao Long",
-        "Wei Yin"
-      ],
-      "abstract": "In this paper, we propose OccTENS, a generative occupancy world model that\nenables controllable, high-fidelity long-term occupancy generation while\nmaintaining computational efficiency. Different from visual generation, the\noccupancy world model must capture the fine-grained 3D geometry and dynamic\nevolution of the 3D scenes, posing great challenges for the generative models.\nRecent approaches based on autoregression (AR) have demonstrated the potential\nto predict vehicle movement and future occupancy scenes simultaneously from\nhistorical observations, but they typically suffer from \\textbf{inefficiency},\n\\textbf{temporal degradation} in long-term generation and \\textbf{lack of\ncontrollability}. To holistically address these issues, we reformulate the\noccupancy world model as a temporal next-scale prediction (TENS) task, which\ndecomposes the temporal sequence modeling problem into the modeling of spatial\nscale-by-scale generation and temporal scene-by-scene prediction. With a\n\\textbf{TensFormer}, OccTENS can effectively manage the temporal causality and\nspatial relationships of occupancy sequences in a flexible and scalable way. To\nenhance the pose controllability, we further propose a holistic pose\naggregation strategy, which features a unified sequence modeling for occupancy\nand ego-motion. Experiments show that OccTENS outperforms the state-of-the-art\nmethod with both higher occupancy quality and faster inference time.",
-      "pdf_url": "http://arxiv.org/pdf/2509.03887v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.03887v1",
-      "published": "2025-09-04",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causality-guided Prompt Learning for Vision-language Models via Visual Granulation",
-      "authors": [
-        "Mengyu Gao",
-        "Qiulei Dong"
-      ],
-      "abstract": "Prompt learning has recently attracted much attention for adapting\npre-trained vision-language models (e.g., CLIP) to downstream recognition\ntasks. However, most of the existing CLIP-based prompt learning methods only\nshow a limited ability for handling fine-grained datasets. To address this\nissue, we propose a causality-guided text prompt learning method via visual\ngranulation for CLIP, called CaPL, where the explored visual granulation\ntechnique could construct sets of visual granules for the text prompt to\ncapture subtle discrepancies among different fine-grained classes through\ncasual inference. The CaPL method contains the following two modules: (1) An\nattribute disentanglement module is proposed to decompose visual features into\nnon-individualized attributes (shared by some classes) and individualized\nattributes (specific to single classes) using a Brownian Bridge Diffusion\nModel; (2) A granule learning module is proposed to construct visual granules\nby integrating the aforementioned attributes for recognition under two causal\ninference strategies. Thanks to the learned visual granules, more\ndiscriminative text prompt is expected to be learned. Extensive experimental\nresults on 15 datasets demonstrate that our CaPL method significantly\noutperforms the state-of-the-art prompt learning methods, especially on\nfine-grained datasets.",
-      "pdf_url": "http://arxiv.org/pdf/2509.03803v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.03803v1",
-      "published": "2025-09-04",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "The super learner for time-to-event outcomes: A tutorial",
-      "authors": [
-        "Ruth H. Keogh",
-        "Karla Diaz-Ordaz",
-        "Nan van Geloven",
-        "Jon Michael Gran",
-        "Kamaryn T. Tanner"
-      ],
-      "abstract": "Estimating risks or survival probabilities conditional on individual\ncharacteristics based on censored time-to-event data is a commonly faced task.\nThis may be for the purpose of developing a prediction model or may be part of\na wider estimation procedure, such as in causal inference. A challenge is that\nit is impossible to know at the outset which of a set of candidate models will\nprovide the best predictions. The super learner is a powerful approach for\nfinding the best model or combination of models ('ensemble') among a\npre-specified set of candidate models or 'learners', which can include\nparametric and machine learning models. Super learners for time-to-event\noutcomes have been developed, but the literature is technical and a reader may\nfind it challenging to gather together the full details of how these methods\nwork and can be implemented. In this paper we provide a practical tutorial on\nsuper learner methods for time-to-event outcomes. An overview of the general\nsteps involved in the super learner is given, followed by details of three\nspecific implementations for time-to-event outcomes. We cover discrete-time and\ncontinuous-time versions of the super learner, as described by Polley and van\nder Laan (2011), Westling et al. (2023) and Munch and Gerds (2024). We compare\nthe properties of the methods and provide information on how they can be\nimplemented in R. The methods are illustrated using an open access data set and\nR code is provided.",
-      "pdf_url": "http://arxiv.org/pdf/2509.03315v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.03315v1",
-      "published": "2025-09-03",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Bayesian Network Propensity Score to Evaluate Treatment Effects in Observational Studies",
-      "authors": [
-        "Clelia Di Serio",
-        "Federica Cugnata",
-        "Pier Luigi Conti",
-        "Alberto Briganti",
-        "Fulvia Mecatti",
-        "Paola Vicard",
-        "Paola Maria Vittoria Rancoita"
-      ],
-      "abstract": "This paper focuses on the Bayesian Network Propensity Score (BNPS), a novel\napproach for estimating treatment effects in observational studies\ncharacterized by unknown (and likely unbalanced) designs and complex dependency\nstructures among covariates. Traditional methods, such as logistic regression,\noften impose rigid parametric assumptions that may lead to misspecification\nerrors, compromising causal inference. Recent classical and machine learning\nalternatives, such as boosted CART, random forests, and Stable Balancing\nWeights, seem to be attractive in a predictive perspective, but they typically\nlack asymptotic properties, such as consistency, efficiency, and valid variance\nestimation. In contrast, the recently proposed BNPS to estimate propensity\nscores uses Bayesian Networks to flexibly model conditional dependencies while\npreserving essential statistical properties such as consistency, asymptotic\nnormality and asymptotic efficiency. Combined with the H\\'ajek estimator, BNPS\nenables robust estimation of the Average Treatment Effect (ATE) in scenarios\nwith strong covariate interactions and unknown data-generating mechanisms.\nThrough extensive simulations across fifteen realistic scenarios and varying\nsample sizes, BNPS consistently outperforms benchmark methods in both empirical\nrejection rates and coverage accuracy. Finally, an application to a real-world\ndataset of 7,162 prostate cancer patients from San Raffaele Hospital (Milan,\nItaly) demonstrates BNPS's practical value in assessing the impact of pelvic\nlymph node dissection on hospitalization duration and biochemical recurrence.\nThe findings support BNPS as a statistically robust, interpretable and\ntransparent alternative for causal inference in complex observational settings,\nenhancing the reliability of evidence from real-world biomedical data.",
-      "pdf_url": "http://arxiv.org/pdf/2509.03194v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.03194v1",
-      "published": "2025-09-03",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Distribution-valued Causal Machine Learning: Implications of Credit on Spending Patterns",
-      "authors": [
-        "Cheuk Hang Leung",
-        "Yijun Li",
-        "Qi Wu"
-      ],
-      "abstract": "Fintech lending has become a central mechanism through which digital\nplatforms stimulate consumption, offering dynamic, personalized credit limits\nthat directly shape the purchasing power of consumers. Although prior research\nshows that higher limits increase average spending, scalar-based outcomes\nobscure the heterogeneous distributional nature of consumer responses. This\npaper addresses this gap by proposing a new causal inference framework that\nestimates how continuous changes in the credit limit affect the entire\ndistribution of consumer spending. We formalize distributional causal effects\nwithin the Wasserstein space and introduce a robust Distributional Double\nMachine Learning estimator, supported by asymptotic theory to ensure\nconsistency and validity. To implement this estimator, we design a deep\nlearning architecture comprising two components: a Neural Functional Regression\nNet to capture complex, nonlinear relationships between treatments, covariates,\nand distributional outcomes, and a Conditional Normalizing Flow Net to estimate\ngeneralized propensity scores under continuous treatment. Numerical experiments\ndemonstrate that the proposed estimator accurately recovers distributional\neffects in a range of data-generating scenarios. Applying our framework to\ntransaction-level data from a major BigTech platform, we find that increased\ncredit limits primarily shift consumers towards higher-value purchases rather\nthan uniformly increasing spending, offering new insights for personalized\nmarketing strategies and digital consumer finance.",
-      "pdf_url": "http://arxiv.org/pdf/2509.03063v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.03063v1",
-      "published": "2025-09-03",
-      "categories": [
-        "econ.GN",
-        "q-fin.EC"
       ]
     }
   ]
