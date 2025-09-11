@@ -1,8 +1,21 @@
 {
-  "last_updated": "2025-09-10T00:48:42.129768",
+  "last_updated": "2025-09-11T00:50:27.141268",
   "papers": [
     {
-      "title": "MachineLearningLM: Continued Pretraining Language Models on Millions of Synthetic Tabular Prediction Tasks Scales In-Context ML",
+      "title": "On the Ambiguities of Incompatibility in Frequentist Inference",
+      "authors": [
+        "Alessandro Rovetta"
+      ],
+      "abstract": "The interpretation of the P-value and its monotone transform s=-log2(p), or\nS-value, remains debated despite decades of dedicated literature. Within the\nneo-Fisherian framework, these values are often described as indices of\n(in)compatibility between the observed data and a set of ideal assumptions\n(i.e., the statistical model). In this regard, this paper proposes the\ndistinction between two domains: the model domain, where assumptions are taken\nas perfectly true and every admissible outcome is, by construction, fully\ncompatible with the model; and the real domain, where assumptions may fail and\nface empirical scrutiny. I argue that, although interpreted through an\nobjective numerical index, any level of incompatibility can arise only in the\nlatter domain, where the epistemic status of the model under examination is\nuncertain and a genuine conflict between data and hypotheses can therefore\noccur. The extent to which P- and S-values are taken as indicating\nincompatibility is a matter of contextual judgment. Within this framework,\ndescriptive approaches serve to quantify the numerical values of P and S; these\ncan be interpreted as indicative of a certain degree (or amount) of\nincompatibility between data and hypotheses once causal knowledge of the\ndata-generating process and information about the costs and benefits of related\ndecisions become clearer. Although the distinction between the model domain and\nthe real domain may appear merely theoretical or even philosophical, I argue\nthat this perspective is useful for developing a clear mental representation of\nhow statistical estimates should be evaluated in practical settings and\napplications.",
+      "pdf_url": "http://arxiv.org/pdf/2509.07147v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.07147v1",
+      "published": "2025-09-08",
+      "categories": [
+        "stat.OT"
+      ]
+    },
+    {
+      "title": "MachineLearningLM: Scaling Many-shot In-context Learning via Continued Pretraining",
       "authors": [
         "Haoyu Dong",
         "Pengkun Zhang",
@@ -11,8 +24,8 @@
         "Guolin Ke"
       ],
       "abstract": "Large language models (LLMs) possess broad world knowledge and strong\ngeneral-purpose reasoning ability, yet they struggle to learn from many\nin-context examples on standard machine learning (ML) tasks, that is, to\nleverage many-shot demonstrations purely via in-context learning (ICL) without\ngradient descent. We introduce MachineLearningLM, a portable\ncontinued-pretraining framework that equips a general-purpose LLM with robust\nin-context ML capability while preserving its general knowledge and reasoning\nfor broader chat workflows.\n  Our pretraining procedure synthesizes ML tasks from millions of structural\ncausal models (SCMs), spanning shot counts up to 1,024. We begin with a\nrandom-forest teacher, distilling tree-based decision strategies into the LLM\nto strengthen robustness in numerical modeling. All tasks are serialized with a\ntoken-efficient prompt, enabling 3x to 6x more examples per context window and\ndelivering up to 50x amortized throughput via batch inference.\n  Despite a modest setup (Qwen-2.5-7B-Instruct with LoRA rank 8),\nMachineLearningLM outperforms strong LLM baselines (e.g., GPT-5-mini) by an\naverage of about 15% on out-of-distribution tabular classification across\nfinance, physics, biology, and healthcare domains. It exhibits a striking\nmany-shot scaling law: accuracy increases monotonically as in-context\ndemonstrations grow from 8 to 1,024. Without any task-specific training, it\nattains random-forest-level accuracy across hundreds of shots. General chat\ncapabilities, including knowledge and reasoning, are preserved: it achieves\n75.4% on MMLU.",
-      "pdf_url": "http://arxiv.org/pdf/2509.06806v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.06806v1",
+      "pdf_url": "http://arxiv.org/pdf/2509.06806v2",
+      "arxiv_url": "http://arxiv.org/abs/2509.06806v2",
       "published": "2025-09-08",
       "categories": [
         "cs.CL",
@@ -52,6 +65,22 @@
         "stat.ML",
         "91G80, 62P05",
         "J.4"
+      ]
+    },
+    {
+      "title": "From Eigenmodes to Proofs: Integrating Graph Spectral Operators with Symbolic Interpretable Reasoning",
+      "authors": [
+        "Andrew Kiruluta",
+        "Priscilla Burity"
+      ],
+      "abstract": "We introduce Spectral NSR, a fully spectral neuro-symbolic reasoning\nframework that embeds logical rules as spectral templates and performs\ninference directly in the graph spectral domain. By leveraging graph signal\nprocessing (GSP) and frequency-selective filters grounded in the Laplacian\neigenstructure of knowledge graphs, the architecture unifies the\ninterpretability of symbolic reasoning with the scalability and adaptability of\nspectral learning. Beyond the core formulation, we incorporate a comprehensive\nset of extensions, including dynamic graph and basis learning, rational and\ndiffusion filters for sharper spectral selectivity, mixture-of-spectral-experts\nfor modular specialization, proof-guided training with spectral curricula, and\nuncertainty quantification for calibrated confidence. Additional enhancements\nsuch as large language model coupling, co-spectral transfer alignment,\nadversarial robustness, efficient GPU kernels, generalized Laplacians, and\ncausal interventions further expand the versatility of the framework.\n  Empirical evaluation on state-of-the-art reasoning benchmarks such as\nProofWriter and CLUTRR demonstrates that Spectral NSR achieves superior\naccuracy, faster inference, improved robustness to adversarial perturbations,\nand higher interpretability compared to leading baselines including\ntransformers, message-passing neural networks, and neuro-symbolic logic\nprogramming systems. Spectral attribution and proof-band agreement analyses\nconfirm that model decisions align closely with symbolic proof structures,\nwhile transfer experiments validate effective domain adaptation through\nco-spectral alignment. These results establish Spectral NSR as a scalable and\nprincipled foundation for the next generation of reasoning systems, offering\ntransparency, robustness, and generalization beyond conventional approaches.",
+      "pdf_url": "http://arxiv.org/pdf/2509.07017v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.07017v1",
+      "published": "2025-09-07",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
       ]
     },
     {
@@ -130,40 +159,6 @@
       "categories": [
         "eess.AS",
         "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Precision Mental Health: Predicting Heterogeneous Treatment Effects for Depression through Data Integration",
-      "authors": [
-        "Carly L. Brantner",
-        "Trang Quynh Nguyen",
-        "Harsh Parikh",
-        "Congwen Zhao",
-        "Hwanhee Hong",
-        "Elizabeth A. Stuart"
-      ],
-      "abstract": "When treating depression, clinicians are interested in determining the\noptimal treatment for a given patient, which is challenging given the amount of\ntreatments available. To advance individualized treatment allocation,\nintegrating data across multiple randomized controlled trials (RCTs) can\nenhance our understanding of treatment effect heterogeneity by increasing\navailable information. However, extending these inferences to individuals\noutside of the original RCTs remains crucial for clinical decision-making. We\nintroduce a two-stage meta-analytic method that predicts conditional average\ntreatment effects (CATEs) in target patient populations by leveraging the\ndistribution of CATEs across RCTs. Our approach generates 95\\% prediction\nintervals for CATEs in target settings using first-stage models that can\nincorporate parametric regression or non-parametric methods such as causal\nforests or Bayesian additive regression trees (BART). We validate our method\nthrough simulation studies and operationalize it to integrate multiple RCTs\ncomparing depression treatments, duloxetine and vortioxetine, to generate\nprediction intervals for target patient profiles. Our analysis reveals no\nstrong evidence of effect heterogeneity across trials, with the exception of\npotential age-related variability. Importantly, we show that CATE prediction\nintervals capture broader uncertainty than study-specific confidence intervals\nwhen warranted, reflecting both within-study and between-study variability.",
-      "pdf_url": "http://arxiv.org/pdf/2509.04604v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.04604v1",
-      "published": "2025-09-04",
-      "categories": [
-        "stat.AP",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Interpretable Clustering with Adaptive Heterogeneous Causal Structure Learning in Mixed Observational Data",
-      "authors": [
-        "Wenrui Li",
-        "Qinghao Zhang",
-        "Xiaowo Wang"
-      ],
-      "abstract": "Understanding causal heterogeneity is essential for scientific discovery in\ndomains such as biology and medicine. However, existing methods lack causal\nawareness, with insufficient modeling of heterogeneity, confounding, and\nobservational constraints, leading to poor interpretability and difficulty\ndistinguishing true causal heterogeneity from spurious associations. We propose\nan unsupervised framework, HCL (Interpretable Causal Mechanism-Aware Clustering\nwith Adaptive Heterogeneous Causal Structure Learning), that jointly infers\nlatent clusters and their associated causal structures from mixed-type\nobservational data without requiring temporal ordering, environment labels,\ninterventions or other prior knowledge. HCL relaxes the homogeneity and\nsufficiency assumptions by introducing an equivalent representation that\nencodes both structural heterogeneity and confounding. It further develops a\nbi-directional iterative strategy to alternately refine causal clustering and\nstructure learning, along with a self-supervised regularization that balance\ncross-cluster universality and specificity. Together, these components enable\nconvergence toward interpretable, heterogeneous causal patterns. Theoretically,\nwe show identifiability of heterogeneous causal structures under mild\nconditions. Empirically, HCL achieves superior performance in both clustering\nand structure learning tasks, and recovers biologically meaningful mechanisms\nin real-world single-cell perturbation data, demonstrating its utility for\ndiscovering interpretable, mechanism-level causal heterogeneity.",
-      "pdf_url": "http://arxiv.org/pdf/2509.04415v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.04415v1",
-      "published": "2025-09-04",
-      "categories": [
         "cs.LG"
       ]
     }
