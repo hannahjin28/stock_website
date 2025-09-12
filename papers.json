@@ -1,6 +1,74 @@
 {
-  "last_updated": "2025-09-11T00:50:27.141268",
+  "last_updated": "2025-09-12T00:47:38.802088",
   "papers": [
+    {
+      "title": "Teamwork as Linear Interpersonal Dynamics",
+      "authors": [
+        "Andrew Jun Lee",
+        "Grace Qiyuan Miao",
+        "Rick Dale",
+        "Alexia Galati",
+        "Hongjing Lu"
+      ],
+      "abstract": "Successful teamwork depends on interpersonal dynamics, the ways in which\nindividuals coordinate, influence, and adapt to one another over time. Existing\nmeasures of interpersonal dynamics, such as CRQA, correlation, Granger\ncausality, and transfer entropy, typically capture only a single dimension:\neither the synchrony/coordination or the direction of influence between\nindividuals. What is missing is a psychologically meaningful representation\nthat unifies these dimensions and varies systematically with behavior. We\npropose the context matrix as one such representation. The context matrix is\nthe transition matrix in a linear dynamical system, with entries specifying how\nmuch each individual's current behavior is attributable to their own versus\nevery other group member's past behaviors. Its values can be distilled into\npsychologically interpretable summary features of synchrony and directional\ninfluence. Evidence for the context matrix as psychologically meaningful is\nprovided in two steps. First, we develop a sequential Bayesian model that\ninfers context matrices from timeseries data and show that it accurately\nrecovers them in noisy simulations. Second, applying the model to human\neyetracking data, we show that summary features of the inferred context\nmatrices capture expected task-based differences in interpersonal dynamics (or\nlack thereof), predict task accuracy in psychologically reasonable ways, and\nshow some correspondence with existing measures (CRQA and Granger causality).\nWe conclude by situating the context matrix within a broader agenda for\nmodeling interpersonal dynamics.",
+      "pdf_url": "http://arxiv.org/pdf/2509.08811v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.08811v1",
+      "published": "2025-09-10",
+      "categories": [
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "Doubly robust average treatment effect estimation for survival data",
+      "authors": [
+        "Byeonghee Lee",
+        "Joonsung Kang"
+      ],
+      "abstract": "Considering censored outcomes in survival analysis can lead to quite complex\nresults in the model setting of causal inference. Causal inference has\nattracted a lot of attention over the past few years, but little research has\nbeen done on survival analysis. Even for the only research conducted, the\nmachine learning method was considered assuming a large sample, which is not\nsuitable in that the actual data are high dimensional low sample size (HDLSS)\nmethod. Therefore, penalty is considered for numerous covariates, and the\nrelationship between these covariates and treatment variables is reflected as a\ncovariate balancing property score (CBPS). It also considers censored results.\nTo this end, we will try to solve the above-mentioned problems by using\npenalized empirical likelihood, which considers both estimating equation and\npenalty. The proposed average treatment effect (ATE) estimator possesses the\noracle property, exhibiting key characteristics such as double robustness for\nunbiasedness, sparsity in model selection, and asymptotic normality.",
+      "pdf_url": "http://arxiv.org/pdf/2509.08788v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.08788v1",
+      "published": "2025-09-10",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Automatic Failure Attribution and Critical Step Prediction Method for Multi-Agent Systems Based on Causal Inference",
+      "authors": [
+        "Guoqing Ma",
+        "Jia Zhu",
+        "Hanghui Guo",
+        "Weijie Shi",
+        "Jiawei Shen",
+        "Jingjiang Liu",
+        "Yidan Liang"
+      ],
+      "abstract": "Multi-agent systems (MAS) are critical for automating complex tasks, yet\ntheir practical deployment is severely hampered by the challenge of failure\nattribution. Current diagnostic tools, which rely on statistical correlations,\nare fundamentally inadequate; on challenging benchmarks like Who\\&When,\nstate-of-the-art methods achieve less than 15\\% accuracy in locating the\nroot-cause step of a failure. To address this critical gap, we introduce the\nfirst failure attribution framework for MAS grounded in multi-granularity\ncausal inference. Our approach makes two key technical contributions: (1) a\nperformance causal inversion principle, which correctly models performance\ndependencies by reversing the data flow in execution logs, combined with\nShapley values to accurately assign agent-level blame; (2) a novel causal\ndiscovery algorithm, CDC-MAS, that robustly identifies critical failure steps\nby tackling the non-stationary nature of MAS interaction data. The framework's\nattribution results directly fuel an automated optimization loop, generating\ntargeted suggestions whose efficacy is validated via counterfactual\nsimulations. Evaluations on the Who\\&When and TRAIL benchmarks demonstrate a\nsignificant leap in performance. Our method achieves up to 36.2\\% step-level\naccuracy. Crucially, the generated optimizations boost overall task success\nrates by an average of 22.4\\%. This work provides a principled and effective\nsolution for debugging complex agent interactions, paving the way for more\nreliable and interpretable multi-agent systems.",
+      "pdf_url": "http://arxiv.org/pdf/2509.08682v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.08682v1",
+      "published": "2025-09-10",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LD-ViCE: Latent Diffusion Model for Video Counterfactual Explanations",
+      "authors": [
+        "Payal Varshney",
+        "Adriano Lucieri",
+        "Christoph Balada",
+        "Sheraz Ahmed",
+        "Andreas Dengel"
+      ],
+      "abstract": "Video-based AI systems are increasingly adopted in safety-critical domains\nsuch as autonomous driving and healthcare. However, interpreting their\ndecisions remains challenging due to the inherent spatiotemporal complexity of\nvideo data and the opacity of deep learning models. Existing explanation\ntechniques often suffer from limited temporal coherence, insufficient\nrobustness, and a lack of actionable causal insights. Current counterfactual\nexplanation methods typically do not incorporate guidance from the target\nmodel, reducing semantic fidelity and practical utility. We introduce Latent\nDiffusion for Video Counterfactual Explanations (LD-ViCE), a novel framework\ndesigned to explain the behavior of video-based AI models. Compared to previous\napproaches, LD-ViCE reduces the computational costs of generating explanations\nby operating in latent space using a state-of-the-art diffusion model, while\nproducing realistic and interpretable counterfactuals through an additional\nrefinement step. Our experiments demonstrate the effectiveness of LD-ViCE\nacross three diverse video datasets, including EchoNet-Dynamic (cardiac\nultrasound), FERV39k (facial expression), and Something-Something V2 (action\nrecognition). LD-ViCE outperforms a recent state-of-the-art method, achieving\nan increase in R2 score of up to 68% while reducing inference time by half.\nQualitative analysis confirms that LD-ViCE generates semantically meaningful\nand temporally coherent explanations, offering valuable insights into the\ntarget model behavior. LD-ViCE represents a valuable step toward the\ntrustworthy deployment of AI in safety-critical domains.",
+      "pdf_url": "http://arxiv.org/pdf/2509.08422v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.08422v1",
+      "published": "2025-09-10",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
     {
       "title": "On the Ambiguities of Incompatibility in Frequentist Inference",
       "authors": [
@@ -24,8 +92,8 @@
         "Guolin Ke"
       ],
       "abstract": "Large language models (LLMs) possess broad world knowledge and strong\ngeneral-purpose reasoning ability, yet they struggle to learn from many\nin-context examples on standard machine learning (ML) tasks, that is, to\nleverage many-shot demonstrations purely via in-context learning (ICL) without\ngradient descent. We introduce MachineLearningLM, a portable\ncontinued-pretraining framework that equips a general-purpose LLM with robust\nin-context ML capability while preserving its general knowledge and reasoning\nfor broader chat workflows.\n  Our pretraining procedure synthesizes ML tasks from millions of structural\ncausal models (SCMs), spanning shot counts up to 1,024. We begin with a\nrandom-forest teacher, distilling tree-based decision strategies into the LLM\nto strengthen robustness in numerical modeling. All tasks are serialized with a\ntoken-efficient prompt, enabling 3x to 6x more examples per context window and\ndelivering up to 50x amortized throughput via batch inference.\n  Despite a modest setup (Qwen-2.5-7B-Instruct with LoRA rank 8),\nMachineLearningLM outperforms strong LLM baselines (e.g., GPT-5-mini) by an\naverage of about 15% on out-of-distribution tabular classification across\nfinance, physics, biology, and healthcare domains. It exhibits a striking\nmany-shot scaling law: accuracy increases monotonically as in-context\ndemonstrations grow from 8 to 1,024. Without any task-specific training, it\nattains random-forest-level accuracy across hundreds of shots. General chat\ncapabilities, including knowledge and reasoning, are preserved: it achieves\n75.4% on MMLU.",
-      "pdf_url": "http://arxiv.org/pdf/2509.06806v2",
-      "arxiv_url": "http://arxiv.org/abs/2509.06806v2",
+      "pdf_url": "http://arxiv.org/pdf/2509.06806v3",
+      "arxiv_url": "http://arxiv.org/abs/2509.06806v3",
       "published": "2025-09-08",
       "categories": [
         "cs.CL",
@@ -96,69 +164,6 @@
       "published": "2025-09-06",
       "categories": [
         "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Bayesian Inference for Confounding Variables and Limited Information",
-      "authors": [
-        "Ellis Scharfenaker",
-        "Duncan K. Foley"
-      ],
-      "abstract": "A central challenge in statistical inference is the presence of confounding\nvariables that may distort observed associations between treatment and outcome.\nConventional \"causal\" methods, grounded in assumptions such as ignorability,\nexclude the possibility of unobserved confounders, leading to posterior\ninferences that overstate certainty. We develop a Bayesian framework that\nrelaxes these assumptions by introducing entropy-favoring priors over\nhypothesis spaces that explicitly allow for latent confounding variables and\npartial information. Using the case of Simpson's paradox, we demonstrate how\nthis approach produces logically consistent posterior distributions that widen\ncredibly intervals in the presence of potential confounding. Our method\nprovides a generalizable, information-theoretic foundation for more robust\npredictive inference in observational sciences.",
-      "pdf_url": "http://arxiv.org/pdf/2509.05520v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.05520v1",
-      "published": "2025-09-05",
-      "categories": [
-        "stat.ME",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Semi-supervised inference for treatment heterogeneity",
-      "authors": [
-        "Yilizhati Anniwaer",
-        "Yuqian Zhang"
-      ],
-      "abstract": "In causal inference, measuring treatment heterogeneity is crucial as it\nprovides scientific insights into how treatments influence outcomes and guides\npersonalized decision-making. In this work, we study semi-supervised settings\nwhere a labeled dataset is accompanied by a large unlabeled dataset, and\ndevelop semi-supervised estimators for two measures of treatment heterogeneity:\nthe total treatment heterogeneity (TTH) and the explained treatment\nheterogeneity (ETH) of a simplified working model. We propose semi-supervised\nestimators for both quantities and demonstrate their improved robustness and\nefficiency compared with supervised methods. For ETH estimation, we show that\ndirect semi-supervised approaches may result in efficiency loss relative to\nsupervised counterparts. To address this, we introduce a re-weighting strategy\nthat assigns data-dependent weights to labeled and unlabeled samples to\noptimize efficiency. The proposed approach guarantees an asymptotic variance no\nlarger than that of the supervised method, ensuring its safe use. We evaluate\nthe performance of the proposed estimators through simulation studies and a\nreal-data application based on an AIDS clinical trial.",
-      "pdf_url": "http://arxiv.org/pdf/2509.05048v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.05048v1",
-      "published": "2025-09-05",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Detecting extreme event-driven causality",
-      "authors": [
-        "Siyang Yu",
-        "Yu Huang",
-        "Zuntao Fu"
-      ],
-      "abstract": "The occurrence of some extreme events (such as marine heatwaves or\nexceptional circulations) can cause other extreme events (such as heatwave,\ndrought and flood). These concurrent extreme events have a great impact on\nenvironment and human health. However, how to detect and quantify the causes\nand impacts of these extreme events by a data-driven way is still unsolved. In\nthis study, the dynamic system method is extended to develop a method for\ndetecting the causality between extreme events. Taking the coupled\nLorenz-Lorenz systems with extreme event-driven coupling as an example, it is\ndemonstrated that this proposed detecting method is able to capture the extreme\nevent-driven causality, with even better causality detecting performance\nbetween concurrent extreme events. Comparison among three kinds of measured\nseries, full measurements outperform partial ones in event-to-event causality\ndetecting. The successful applicability of our proposed approach in Walker\ncirculation phenomenon indicates that our method contributes a novel way to the\nstudy of causal inference in complex systems. This method offers valuable\ninsights into multi-scale, nonlinear dynamics, particularly in uncovering\nassociations among extreme events.",
-      "pdf_url": "http://arxiv.org/pdf/2509.05043v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.05043v1",
-      "published": "2025-09-05",
-      "categories": [
-        "physics.ao-ph",
-        "math-ph",
-        "math.DS",
-        "math.MP"
-      ]
-    },
-    {
-      "title": "DarkStream: real-time speech anonymization with low latency",
-      "authors": [
-        "Waris Quamer",
-        "Ricardo Gutierrez-Osuna"
-      ],
-      "abstract": "We propose DarkStream, a streaming speech synthesis model for real-time\nspeaker anonymization. To improve content encoding under strict latency\nconstraints, DarkStream combines a causal waveform encoder, a short lookahead\nbuffer, and transformer-based contextual layers. To further reduce inference\ntime, the model generates waveforms directly via a neural vocoder, thus\nremoving intermediate mel-spectrogram conversions. Finally, DarkStream\nanonymizes speaker identity by injecting a GAN-generated pseudo-speaker\nembedding into linguistic features from the content encoder. Evaluations show\nour model achieves strong anonymization, yielding close to 50% speaker\nverification EER (near-chance performance) on the lazy-informed attack\nscenario, while maintaining acceptable linguistic intelligibility (WER within\n9%). By balancing low-latency, robust privacy, and minimal intelligibility\ndegradation, DarkStream provides a practical solution for privacy-preserving\nreal-time speech communication.",
-      "pdf_url": "http://arxiv.org/pdf/2509.04667v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.04667v1",
-      "published": "2025-09-04",
-      "categories": [
-        "eess.AS",
-        "cs.CL",
         "cs.LG"
       ]
     }
