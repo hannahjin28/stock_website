@@ -1,6 +1,20 @@
 {
-  "last_updated": "2025-09-12T00:47:38.802088",
+  "last_updated": "2025-09-13T00:45:12.877164",
   "papers": [
+    {
+      "title": "Causal PDE-Control Models: A Structural Framework for Dynamic Portfolio Optimization",
+      "authors": [
+        "Alejandro Rodriguez Dominguez"
+      ],
+      "abstract": "Classical portfolio models collapse under structural breaks, while modern\nmachine-learning allocators adapt flexibly but often at the cost of\ntransparency and interpretability. This paper introduces Causal PDE-Control\nModels (CPCMs), a unifying framework that integrates causal inference,\nnonlinear filtering, and forward-backward partial differential equations for\ndynamic portfolio optimization. The framework delivers three theoretical\nadvances: (i) the existence of conditional risk-neutral measures under evolving\ninformation sets; (ii) a projection-divergence duality that quantifies the\nstability cost of departing from the causal driver manifold; and (iii) causal\ncompleteness, establishing that a finite driver span can capture all systematic\npremia. Classical methods such as Markowitz, CAPM, and Black-Litterman appear\nas degenerate cases, while reinforcement learning and deep-hedging policies\nemerge as unconstrained, symmetry-breaking approximations. Empirically, CPCM\nsolvers implemented with physics-informed neural networks achieve higher Sharpe\nratios, lower turnover, and more persistent premia than both econometric and\nmachine-learning benchmarks, using a global equity panel with more than 300\ncandidate drivers. By reframing portfolio optimization around structural\ncausality and PDE control, CPCMs provide a rigorous, interpretable, and\ncomputationally tractable foundation for robust asset allocation under\nnonstationary conditions.",
+      "pdf_url": "http://arxiv.org/pdf/2509.09585v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.09585v1",
+      "published": "2025-09-11",
+      "categories": [
+        "q-fin.PM",
+        "G.1.6; G.1.8; G.1.10; G.3; I.2.6; I.5.3; I.5.4; I.6.5; J.2; J.4; J.6"
+      ]
+    },
     {
       "title": "Teamwork as Linear Interpersonal Dynamics",
       "authors": [
@@ -148,22 +162,6 @@
       "categories": [
         "cs.AI",
         "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Clustering for Conditional Average Treatment Effects Estimation and Subgroup Discovery",
-      "authors": [
-        "Zilong Wang",
-        "Turgay Ayer",
-        "Shihao Yang"
-      ],
-      "abstract": "Estimating heterogeneous treatment effects is critical in domains such as\npersonalized medicine, resource allocation, and policy evaluation. A central\nchallenge lies in identifying subpopulations that respond differently to\ninterventions, thereby enabling more targeted and effective decision-making.\nWhile clustering methods are well-studied in unsupervised learning, their\nintegration with causal inference remains limited. We propose a novel framework\nthat clusters individuals based on estimated treatment effects using a learned\nkernel derived from causal forests, revealing latent subgroup structures. Our\napproach consists of two main steps. First, we estimate debiased Conditional\nAverage Treatment Effects (CATEs) using orthogonalized learners via the\nRobinson decomposition, yielding a kernel matrix that encodes sample-level\nsimilarities in treatment responsiveness. Second, we apply kernelized\nclustering to this matrix to uncover distinct, treatment-sensitive\nsubpopulations and compute cluster-level average CATEs. We present this\nkernelized clustering step as a form of regularization within the\nresidual-on-residual regression framework. Through extensive experiments on\nsemi-synthetic and real-world datasets, supported by ablation studies and\nexploratory analyses, we demonstrate the effectiveness of our method in\ncapturing meaningful treatment effect heterogeneity.",
-      "pdf_url": "http://arxiv.org/pdf/2509.05775v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.05775v1",
-      "published": "2025-09-06",
-      "categories": [
-        "stat.ML",
         "cs.LG"
       ]
     }
