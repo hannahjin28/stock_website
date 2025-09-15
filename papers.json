@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-09-14T00:53:37.524937",
+  "last_updated": "2025-09-15T00:53:48.954302",
   "papers": [
     {
       "title": "Causal PDE-Control Models: A Structural Framework for Dynamic Portfolio Optimization",
@@ -89,8 +89,8 @@
         "Alessandro Rovetta"
       ],
       "abstract": "The interpretation of the P-value and its monotone transform s=-log2(p), or\nS-value, remains debated despite decades of dedicated literature. Within the\nneo-Fisherian framework, these values are often described as indices of\n(in)compatibility between the observed data and a set of ideal assumptions\n(i.e., the statistical model). In this regard, this paper proposes the\ndistinction between two domains: the model domain, where assumptions are taken\nas perfectly true and every admissible outcome is, by construction, fully\ncompatible with the model; and the real domain, where assumptions may fail and\nface empirical scrutiny. I argue that, although interpreted through an\nobjective numerical index, any level of incompatibility can arise only in the\nlatter domain, where the epistemic status of the model under examination is\nuncertain and a genuine conflict between data and hypotheses can therefore\noccur. The extent to which P- and S-values are taken as indicating\nincompatibility is a matter of contextual judgment. Within this framework,\ndescriptive approaches serve to quantify the numerical values of P and S; these\ncan be interpreted as indicative of a certain degree (or amount) of\nincompatibility between data and hypotheses once causal knowledge of the\ndata-generating process and information about the costs and benefits of related\ndecisions become clearer. Although the distinction between the model domain and\nthe real domain may appear merely theoretical or even philosophical, I argue\nthat this perspective is useful for developing a clear mental representation of\nhow statistical estimates should be evaluated in practical settings and\napplications.",
-      "pdf_url": "http://arxiv.org/pdf/2509.07147v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.07147v1",
+      "pdf_url": "http://arxiv.org/pdf/2509.07147v2",
+      "arxiv_url": "http://arxiv.org/abs/2509.07147v2",
       "published": "2025-09-08",
       "categories": [
         "stat.OT"
@@ -106,8 +106,8 @@
         "Guolin Ke"
       ],
       "abstract": "Large language models (LLMs) possess broad world knowledge and strong\ngeneral-purpose reasoning ability, yet they struggle to learn from many\nin-context examples on standard machine learning (ML) tasks, that is, to\nleverage many-shot demonstrations purely via in-context learning (ICL) without\ngradient descent. We introduce MachineLearningLM, a portable\ncontinued-pretraining framework that equips a general-purpose LLM with robust\nin-context ML capability while preserving its general knowledge and reasoning\nfor broader chat workflows.\n  Our pretraining procedure synthesizes ML tasks from millions of structural\ncausal models (SCMs), spanning shot counts up to 1,024. We begin with a\nrandom-forest teacher, distilling tree-based decision strategies into the LLM\nto strengthen robustness in numerical modeling. All tasks are serialized with a\ntoken-efficient prompt, enabling 3x to 6x more examples per context window and\ndelivering up to 50x amortized throughput via batch inference.\n  Despite a modest setup (Qwen-2.5-7B-Instruct with LoRA rank 8),\nMachineLearningLM outperforms strong LLM baselines (e.g., GPT-5-mini) by an\naverage of about 15% on out-of-distribution tabular classification across\nfinance, physics, biology, and healthcare domains. It exhibits a striking\nmany-shot scaling law: accuracy increases monotonically as in-context\ndemonstrations grow from 8 to 1,024. Without any task-specific training, it\nattains random-forest-level accuracy across hundreds of shots. General chat\ncapabilities, including knowledge and reasoning, are preserved: it achieves\n75.4% on MMLU.",
-      "pdf_url": "http://arxiv.org/pdf/2509.06806v3",
-      "arxiv_url": "http://arxiv.org/abs/2509.06806v3",
+      "pdf_url": "http://arxiv.org/pdf/2509.06806v4",
+      "arxiv_url": "http://arxiv.org/abs/2509.06806v4",
       "published": "2025-09-08",
       "categories": [
         "cs.CL",
