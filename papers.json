@@ -1,6 +1,70 @@
 {
-  "last_updated": "2025-09-15T00:53:48.954302",
+  "last_updated": "2025-09-16T00:48:47.544256",
   "papers": [
+    {
+      "title": "Abduct, Act, Predict: Scaffolding Causal Inference for Automated Failure Attribution in Multi-Agent Systems",
+      "authors": [
+        "Alva West",
+        "Yixuan Weng",
+        "Minjun Zhu",
+        "Zhen Lin",
+        "Yue Zhang"
+      ],
+      "abstract": "Failure attribution in multi-agent systems -- pinpointing the exact step\nwhere a decisive error occurs -- is a critical yet unsolved challenge. Current\nmethods treat this as a pattern recognition task over long conversation logs,\nleading to critically low step-level accuracy (below 17\\%), which renders them\nimpractical for debugging complex systems. Their core weakness is a fundamental\ninability to perform robust counterfactual reasoning: to determine if\ncorrecting a single action would have actually averted the task failure. To\nbridge this counterfactual inference gap, we introduce Abduct-Act-Predict (A2P)\nScaffolding, a novel agent framework that transforms failure attribution from\npattern recognition into a structured causal inference task. A2P explicitly\nguides a large language model through a formal three-step reasoning process\nwithin a single inference pass: (1) Abduction, to infer the hidden root causes\nbehind an agent's actions; (2) Action, to define a minimal corrective\nintervention; and (3) Prediction, to simulate the subsequent trajectory and\nverify if the intervention resolves the failure. This structured approach\nleverages the holistic context of the entire conversation while imposing a\nrigorous causal logic on the model's analysis. Our extensive experiments on the\nWho\\&When benchmark demonstrate its efficacy. On the Algorithm-Generated\ndataset, A2P achieves 47.46\\% step-level accuracy, a 2.85$\\times$ improvement\nover the 16.67\\% of the baseline. On the more complex Hand-Crafted dataset, it\nachieves 29.31\\% step accuracy, a 2.43$\\times$ improvement over the baseline's\n12.07\\%. By reframing the problem through a causal lens, A2P Scaffolding\nprovides a robust, verifiable, and significantly more accurate solution for\nautomated failure attribution.",
+      "pdf_url": "http://arxiv.org/pdf/2509.10401v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.10401v1",
+      "published": "2025-09-12",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "The Language of Approval: Identifying the Drivers of Positive Feedback Online",
+      "authors": [
+        "Agam Goyal",
+        "Charlotte Lambert",
+        "Eshwar Chandrasekharan"
+      ],
+      "abstract": "Positive feedback via likes and awards is central to online governance, yet\nwhich attributes of users' posts elicit rewards -- and how these vary across\nauthors and communities -- remains unclear. To examine this, we combine\nquasi-experimental causal inference with predictive modeling on 11M posts from\n100 subreddits. We identify linguistic patterns and stylistic attributes\ncausally linked to rewards, controlling for author reputation, timing, and\ncommunity context. For example, overtly complicated language, tentative style,\nand toxicity reduce rewards. We use our set of curated features to train models\nthat can detect highly-upvoted posts with high AUC. Our audit of community\nguidelines highlights a ``policy-practice gap'' -- most rules focus primarily\non civility and formatting requirements, with little emphasis on the attributes\nidentified to drive positive feedback. These results inform the design of\ncommunity guidelines, support interfaces that teach users how to craft\ndesirable contributions, and moderation workflows that emphasize positive\nreinforcement over purely punitive enforcement.",
+      "pdf_url": "http://arxiv.org/pdf/2509.10370v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.10370v1",
+      "published": "2025-09-12",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Compartmentalised Agentic Reasoning for Clinical NLI",
+      "authors": [
+        "Maël Jullien",
+        "Lei Xu",
+        "Marco Valentino",
+        "André Freitas"
+      ],
+      "abstract": "A common assumption holds that scaling data and parameters yields\nincreasingly structured, generalisable internal representations. We interrogate\nthis assumption in clinical natural language inference (NLI) by adopting a\nbenchmark decomposed into four reasoning families, Causal Attribution,\nCompositional Grounding, Epistemic Verification, and Risk State Abstraction,\nand introducing CARENLI, a Compartmentalised Agentic Reasoning for Clinical NLI\nthat separates knowledge access from principled inference. CARENLI routes each\npremise, statement pair to a family specific solver and enforces auditable\nprocedures via a planner, verifier, and refiner.\n  Across four LLMs, CARENLI improves fidelity by up to 42 points, reaching\n98.0% in Causal Attribution and 81.2% in Risk State Abstraction. Verifiers flag\nviolations with near-ceiling reliability, while refiners correct a substantial\nshare of epistemic errors. Remaining failures cluster in routing, identifying\nfamily classification as the main bottleneck. These results show that LLMs\noften retain relevant facts but default to heuristics when inference is\nunderspecified, a dissociation CARENLI makes explicit while offering a\nframework for safer, auditable reasoning.",
+      "pdf_url": "http://arxiv.org/pdf/2509.10222v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.10222v1",
+      "published": "2025-09-12",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Weakening assumptions in the evaluation of treatment effects in longitudinal randomized trials with truncation by death or other intercurrent events",
+      "authors": [
+        "Georgi Baklicharov",
+        "Kelly Van Lancker",
+        "Stijn Vansteelandt"
+      ],
+      "abstract": "Intercurrent events, such as treatment switching, rescue medication, or\ntruncation by death, can complicate the interpretation of intention-to-treat\n(ITT) analyses in randomized clinical trials. Recent advances in causal\ninference address these challenges by targeting alternative estimands, such as\nhypothetical estimands or principal stratum estimands (e.g., survivor average\ncausal effects). However, such approaches often require strong, unverifiable\nassumptions, partly due to limited data on time-varying confounders and the\ndifficulty of adjusting for them. Additionally, strict trial protocols\nfrequently lead to (near) violations of the positivity assumption, resulting in\nlimited information for identifying these estimands.\n  In this paper, we propose a novel approach that sidesteps these difficulties\nby focusing on testing the null hypothesis of no treatment effect in the\npresence of arbitrary intercurrent events, including truncation by death, using\nlongitudinal trial data. Our key idea is to compare treated and untreated\nindividuals, matched on baseline covariates, at the most recent time point\nbefore either experiences an intercurrent event. We refer to such contrasts as\nPairwise Last Observation Time (PLOT) estimands. These estimands can be\nidentified in randomized clinical trials without requiring additional\nstructural assumptions, and even in the presence of the aforementioned\npositivity violations. However, they may still be susceptible to a form of\nresidual selection bias. We show that this bias vanishes under the conditions\ntypically required by alternative methods, and find it to be more generally\nsmall in extensive simulation studies. Building on this, we develop\nasymptotically efficient, model-free tests using data-adaptive estimation of\nnuisance parameters. We evaluate the method's performance via simulation\nstudies.",
+      "pdf_url": "http://arxiv.org/pdf/2509.10067v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.10067v1",
+      "published": "2025-09-12",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Causal PDE-Control Models: A Structural Framework for Dynamic Portfolio Optimization",
       "authors": [
@@ -13,6 +77,36 @@
       "categories": [
         "q-fin.PM",
         "G.1.6; G.1.8; G.1.10; G.3; I.2.6; I.5.3; I.5.4; I.6.5; J.2; J.4; J.6"
+      ]
+    },
+    {
+      "title": "World Modeling with Probabilistic Structure Integration",
+      "authors": [
+        "Klemen Kotar",
+        "Wanhee Lee",
+        "Rahul Venkatesh",
+        "Honglin Chen",
+        "Daniel Bear",
+        "Jared Watrous",
+        "Simon Kim",
+        "Khai Loong Aw",
+        "Lilian Naing Chen",
+        "Stefan Stojanov",
+        "Kevin Feigelis",
+        "Imran Thobani",
+        "Alex Durango",
+        "Khaled Jedoui",
+        "Atlas Kazemian",
+        "Dan Yamins"
+      ],
+      "abstract": "We present Probabilistic Structure Integration (PSI), a system for learning\nrichly controllable and flexibly promptable world models from data. PSI\nconsists of a three-step cycle. The first step, Probabilistic prediction,\ninvolves building a probabilistic graphical model Psi of the data, in the form\nof a random-access autoregressive sequence model. Psi supports a complete set\nof learned conditional distributions describing the dependence of any variables\nin the data on any other set of variables. In step 2, Structure extraction, we\nshow how to extract underlying low-dimensional properties in the data,\ncorresponding to a diverse set of meaningful \"intermediate structures\", in a\nzero-shot fashion via causal inference on Psi. Step 3, Integration, completes\nthe cycle by converting these structures into new token types that are then\ncontinually mixed back into the training diet as conditioning signals and\nprediction targets. Each such cycle augments the capabilities of Psi, both\nallowing it to model the underlying data better, and creating new control\nhandles -- akin to an LLM-like universal prompting language. We train an\ninstance of Psi on 1.4 trillion tokens of internet video data; we use it to\nperform a variety of useful video prediction and understanding inferences; we\nextract state-of-the-art optical flow, self-supervised depth and object\nsegmentation; and we use these structures to support a full cycle of predictive\nimprovements.",
+      "pdf_url": "http://arxiv.org/pdf/2509.09737v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.09737v1",
+      "published": "2025-09-10",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
       ]
     },
     {
@@ -80,88 +174,6 @@
       "published": "2025-09-10",
       "categories": [
         "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "On the Ambiguities of Incompatibility in Frequentist Inference",
-      "authors": [
-        "Alessandro Rovetta"
-      ],
-      "abstract": "The interpretation of the P-value and its monotone transform s=-log2(p), or\nS-value, remains debated despite decades of dedicated literature. Within the\nneo-Fisherian framework, these values are often described as indices of\n(in)compatibility between the observed data and a set of ideal assumptions\n(i.e., the statistical model). In this regard, this paper proposes the\ndistinction between two domains: the model domain, where assumptions are taken\nas perfectly true and every admissible outcome is, by construction, fully\ncompatible with the model; and the real domain, where assumptions may fail and\nface empirical scrutiny. I argue that, although interpreted through an\nobjective numerical index, any level of incompatibility can arise only in the\nlatter domain, where the epistemic status of the model under examination is\nuncertain and a genuine conflict between data and hypotheses can therefore\noccur. The extent to which P- and S-values are taken as indicating\nincompatibility is a matter of contextual judgment. Within this framework,\ndescriptive approaches serve to quantify the numerical values of P and S; these\ncan be interpreted as indicative of a certain degree (or amount) of\nincompatibility between data and hypotheses once causal knowledge of the\ndata-generating process and information about the costs and benefits of related\ndecisions become clearer. Although the distinction between the model domain and\nthe real domain may appear merely theoretical or even philosophical, I argue\nthat this perspective is useful for developing a clear mental representation of\nhow statistical estimates should be evaluated in practical settings and\napplications.",
-      "pdf_url": "http://arxiv.org/pdf/2509.07147v2",
-      "arxiv_url": "http://arxiv.org/abs/2509.07147v2",
-      "published": "2025-09-08",
-      "categories": [
-        "stat.OT"
-      ]
-    },
-    {
-      "title": "MachineLearningLM: Scaling Many-shot In-context Learning via Continued Pretraining",
-      "authors": [
-        "Haoyu Dong",
-        "Pengkun Zhang",
-        "Mingzhe Lu",
-        "Yanzhen Shen",
-        "Guolin Ke"
-      ],
-      "abstract": "Large language models (LLMs) possess broad world knowledge and strong\ngeneral-purpose reasoning ability, yet they struggle to learn from many\nin-context examples on standard machine learning (ML) tasks, that is, to\nleverage many-shot demonstrations purely via in-context learning (ICL) without\ngradient descent. We introduce MachineLearningLM, a portable\ncontinued-pretraining framework that equips a general-purpose LLM with robust\nin-context ML capability while preserving its general knowledge and reasoning\nfor broader chat workflows.\n  Our pretraining procedure synthesizes ML tasks from millions of structural\ncausal models (SCMs), spanning shot counts up to 1,024. We begin with a\nrandom-forest teacher, distilling tree-based decision strategies into the LLM\nto strengthen robustness in numerical modeling. All tasks are serialized with a\ntoken-efficient prompt, enabling 3x to 6x more examples per context window and\ndelivering up to 50x amortized throughput via batch inference.\n  Despite a modest setup (Qwen-2.5-7B-Instruct with LoRA rank 8),\nMachineLearningLM outperforms strong LLM baselines (e.g., GPT-5-mini) by an\naverage of about 15% on out-of-distribution tabular classification across\nfinance, physics, biology, and healthcare domains. It exhibits a striking\nmany-shot scaling law: accuracy increases monotonically as in-context\ndemonstrations grow from 8 to 1,024. Without any task-specific training, it\nattains random-forest-level accuracy across hundreds of shots. General chat\ncapabilities, including knowledge and reasoning, are preserved: it achieves\n75.4% on MMLU.",
-      "pdf_url": "http://arxiv.org/pdf/2509.06806v4",
-      "arxiv_url": "http://arxiv.org/abs/2509.06806v4",
-      "published": "2025-09-08",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CausNVS: Autoregressive Multi-view Diffusion for Flexible 3D Novel View Synthesis",
-      "authors": [
-        "Xin Kong",
-        "Daniel Watson",
-        "Yannick Strümpler",
-        "Michael Niemeyer",
-        "Federico Tombari"
-      ],
-      "abstract": "Multi-view diffusion models have shown promise in 3D novel view synthesis,\nbut most existing methods adopt a non-autoregressive formulation. This limits\ntheir applicability in world modeling, as they only support a fixed number of\nviews and suffer from slow inference due to denoising all frames\nsimultaneously. To address these limitations, we propose CausNVS, a multi-view\ndiffusion model in an autoregressive setting, which supports arbitrary\ninput-output view configurations and generates views sequentially. We train\nCausNVS with causal masking and per-frame noise, using pairwise-relative camera\npose encodings (CaPE) for precise camera control. At inference time, we combine\na spatially-aware sliding-window with key-value caching and noise conditioning\naugmentation to mitigate drift. Our experiments demonstrate that CausNVS\nsupports a broad range of camera trajectories, enables flexible autoregressive\nnovel view synthesis, and achieves consistently strong visual quality across\ndiverse settings. Project page: https://kxhit.github.io/CausNVS.html.",
-      "pdf_url": "http://arxiv.org/pdf/2509.06579v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.06579v1",
-      "published": "2025-09-08",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Predicting Market Troughs: A Machine Learning Approach with Causal Interpretation",
-      "authors": [
-        "Peilin Rao",
-        "Randall R. Rojas"
-      ],
-      "abstract": "This paper provides robust, new evidence on the causal drivers of market\ntroughs. We demonstrate that conclusions about these triggers are critically\nsensitive to model specification, moving beyond restrictive linear models with\na flexible DML average partial effect causal machine learning framework. Our\nrobust estimates identify the volatility of options-implied risk appetite and\nmarket liquidity as key causal drivers, relationships misrepresented or\nobscured by simpler models. These findings provide high-frequency empirical\nsupport for intermediary asset pricing theories. This causal analysis is\nenabled by a high-performance nowcasting model that accurately identifies\ncapitulation events in real-time.",
-      "pdf_url": "http://arxiv.org/pdf/2509.05922v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.05922v1",
-      "published": "2025-09-07",
-      "categories": [
-        "q-fin.ST",
-        "econ.EM",
-        "stat.ML",
-        "91G80, 62P05",
-        "J.4"
-      ]
-    },
-    {
-      "title": "From Eigenmodes to Proofs: Integrating Graph Spectral Operators with Symbolic Interpretable Reasoning",
-      "authors": [
-        "Andrew Kiruluta",
-        "Priscilla Burity"
-      ],
-      "abstract": "We introduce Spectral NSR, a fully spectral neuro-symbolic reasoning\nframework that embeds logical rules as spectral templates and performs\ninference directly in the graph spectral domain. By leveraging graph signal\nprocessing (GSP) and frequency-selective filters grounded in the Laplacian\neigenstructure of knowledge graphs, the architecture unifies the\ninterpretability of symbolic reasoning with the scalability and adaptability of\nspectral learning. Beyond the core formulation, we incorporate a comprehensive\nset of extensions, including dynamic graph and basis learning, rational and\ndiffusion filters for sharper spectral selectivity, mixture-of-spectral-experts\nfor modular specialization, proof-guided training with spectral curricula, and\nuncertainty quantification for calibrated confidence. Additional enhancements\nsuch as large language model coupling, co-spectral transfer alignment,\nadversarial robustness, efficient GPU kernels, generalized Laplacians, and\ncausal interventions further expand the versatility of the framework.\n  Empirical evaluation on state-of-the-art reasoning benchmarks such as\nProofWriter and CLUTRR demonstrates that Spectral NSR achieves superior\naccuracy, faster inference, improved robustness to adversarial perturbations,\nand higher interpretability compared to leading baselines including\ntransformers, message-passing neural networks, and neuro-symbolic logic\nprogramming systems. Spectral attribution and proof-band agreement analyses\nconfirm that model decisions align closely with symbolic proof structures,\nwhile transfer experiments validate effective domain adaptation through\nco-spectral alignment. These results establish Spectral NSR as a scalable and\nprincipled foundation for the next generation of reasoning systems, offering\ntransparency, robustness, and generalization beyond conventional approaches.",
-      "pdf_url": "http://arxiv.org/pdf/2509.07017v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.07017v1",
-      "published": "2025-09-07",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
         "cs.LG"
       ]
     }
