@@ -1,6 +1,171 @@
 {
-  "last_updated": "2025-09-16T00:48:47.544256",
+  "last_updated": "2025-09-17T00:48:48.179359",
   "papers": [
+    {
+      "title": "AvatarSync: Rethinking Talking-Head Animation through Autoregressive Perspective",
+      "authors": [
+        "Yuchen Deng",
+        "Xiuyang Wu",
+        "Hai-Tao Zheng",
+        "Suiyang Zhang",
+        "Yi He",
+        "Yuxing Han"
+      ],
+      "abstract": "Existing talking-head animation approaches based on Generative Adversarial\nNetworks (GANs) or diffusion models often suffer from inter-frame flicker,\nidentity drift, and slow inference. These limitations inherent to their video\ngeneration pipelines restrict their suitability for applications. To address\nthis, we introduce AvatarSync, an autoregressive framework on phoneme\nrepresentations that generates realistic and controllable talking-head\nanimations from a single reference image, driven directly text or audio input.\nIn addition, AvatarSync adopts a two-stage generation strategy, decoupling\nsemantic modeling from visual dynamics, which is a deliberate \"Divide and\nConquer\" design. The first stage, Facial Keyframe Generation (FKG), focuses on\nphoneme-level semantic representation by leveraging the many-to-one mapping\nfrom text or audio to phonemes. A Phoneme-to-Visual Mapping is constructed to\nanchor abstract phonemes to character-level units. Combined with a customized\nText-Frame Causal Attention Mask, the keyframes are generated. The second\nstage, inter-frame interpolation, emphasizes temporal coherence and visual\nsmoothness. We introduce a timestamp-aware adaptive strategy based on a\nselective state space model, enabling efficient bidirectional context\nreasoning. To support deployment, we optimize the inference pipeline to reduce\nlatency without compromising visual fidelity. Extensive experiments show that\nAvatarSync outperforms existing talking-head animation methods in visual\nfidelity, temporal consistency, and computational efficiency, providing a\nscalable and controllable solution.",
+      "pdf_url": "http://arxiv.org/pdf/2509.12052v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.12052v1",
+      "published": "2025-09-15",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "A Survey of Reasoning and Agentic Systems in Time Series with Large Language Models",
+      "authors": [
+        "Ching Chang",
+        "Yidan Shi",
+        "Defu Cao",
+        "Wei Yang",
+        "Jeehyun Hwang",
+        "Haixin Wang",
+        "Jiacheng Pang",
+        "Wei Wang",
+        "Yan Liu",
+        "Wen-Chih Peng",
+        "Tien-Fu Chen"
+      ],
+      "abstract": "Time series reasoning treats time as a first-class axis and incorporates\nintermediate evidence directly into the answer. This survey defines the problem\nand organizes the literature by reasoning topology with three families: direct\nreasoning in one step, linear chain reasoning with explicit intermediates, and\nbranch-structured reasoning that explores, revises, and aggregates. The\ntopology is crossed with the main objectives of the field, including\ntraditional time series analysis, explanation and understanding, causal\ninference and decision making, and time series generation, while a compact tag\nset spans these axes and captures decomposition and verification, ensembling,\ntool use, knowledge access, multimodality, agent loops, and LLM alignment\nregimes. Methods and systems are reviewed across domains, showing what each\ntopology enables and where it breaks down in faithfulness or robustness, along\nwith curated datasets, benchmarks, and resources that support study and\ndeployment (https://github.com/blacksnail789521/Time-Series-Reasoning-Survey).\nEvaluation practices that keep evidence visible and temporally aligned are\nhighlighted, and guidance is distilled on matching topology to uncertainty,\ngrounding with observable artifacts, planning for shift and streaming, and\ntreating cost and latency as design budgets. We emphasize that reasoning\nstructures must balance capacity for grounding and self-correction against\ncomputational cost and reproducibility, while future progress will likely\ndepend on benchmarks that tie reasoning quality to utility and on closed-loop\ntestbeds that trade off cost and risk under shift-aware, streaming, and\nlong-horizon settings. Taken together, these directions mark a shift from\nnarrow accuracy toward reliability at scale, enabling systems that not only\nanalyze but also understand, explain, and act on dynamic worlds with traceable\nevidence and credible outcomes.",
+      "pdf_url": "http://arxiv.org/pdf/2509.11575v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.11575v1",
+      "published": "2025-09-15",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Mendelian Randomization Methods for Causal Inference: Estimands, Identification and Inference",
+      "authors": [
+        "Minhao Yao",
+        "Anqi Wang",
+        "Xihao Li",
+        "Zhonghua Liu"
+      ],
+      "abstract": "Mendelian randomization (MR) has become an essential tool for causal\ninference in biomedical and public health research. By using genetic variants\nas instrumental variables, MR helps address unmeasured confounding and reverse\ncausation, offering a quasi-experimental framework to evaluate causal effects\nof modifiable exposures on health outcomes. Despite its promise, MR faces\nsubstantial methodological challenges, including invalid instruments, weak\ninstrument bias, and design complexities across different data structures. In\nthis tutorial review, we provide a comprehensive overview of MR methods for\ncausal inference, emphasizing clarity of causal interpretation, study design\ncomparisons, availability of software tools, and practical guidance for applied\nscientists. We organize the review around causal estimands, ensuring that\nanalyses are anchored to well-defined causal questions. We discuss the problems\nof invalid and weak instruments, comparing available strategies for their\ndetection and correction. We integrate discussions of population-based versus\nfamily-based MR designs, analyses based on individual-level versus\nsummary-level data, and one-sample versus two-sample MR designs, highlighting\ntheir relative advantages and limitations. We also summarize recent\nmethodological advances and software developments that extend MR to settings\nwith many weak or invalid instruments and to modern high-dimensional omics\ndata. Real-data applications, including UK Biobank and Alzheimer's disease\nproteomics studies, illustrate the use of these methods in practice. This\nreview aims to serve as a tutorial-style reference for both methodologists and\napplied scientists.",
+      "pdf_url": "http://arxiv.org/pdf/2509.11519v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.11519v1",
+      "published": "2025-09-15",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "The Honest Truth About Causal Trees: Accuracy Limits for Heterogeneous Treatment Effect Estimation",
+      "authors": [
+        "Matias D. Cattaneo",
+        "Jason M. Klusowski",
+        "Ruiqi Rae Yu"
+      ],
+      "abstract": "Recursive decision trees have emerged as a leading methodology for\nheterogeneous causal treatment effect estimation and inference in experimental\nand observational settings. These procedures are fitted using the celebrated\nCART (Classification And Regression Tree) algorithm [Breiman et al., 1984], or\ncustom variants thereof, and hence are believed to be \"adaptive\" to\nhigh-dimensional data, sparsity, or other specific features of the underlying\ndata generating process. Athey and Imbens [2016] proposed several \"honest\"\ncausal decision tree estimators, which have become the standard in both\nacademia and industry. We study their estimators, and variants thereof, and\nestablish lower bounds on their estimation error. We demonstrate that these\npopular heterogeneous treatment effect estimators cannot achieve a\npolynomial-in-$n$ convergence rate under basic conditions, where $n$ denotes\nthe sample size. Contrary to common belief, honesty does not resolve these\nlimitations and at best delivers negligible logarithmic improvements in sample\nsize or dimension. As a result, these commonly used estimators can exhibit poor\nperformance in practice, and even be inconsistent in some settings. Our\ntheoretical insights are empirically validated through simulations.",
+      "pdf_url": "http://arxiv.org/pdf/2509.11381v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.11381v1",
+      "published": "2025-09-14",
+      "categories": [
+        "math.ST",
+        "econ.EM",
+        "stat.ME",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "PersonaX: Multimodal Datasets with LLM-Inferred Behavior Traits",
+      "authors": [
+        "Loka Li",
+        "Wong Yu Kang",
+        "Minghao Fu",
+        "Guangyi Chen",
+        "Zhenhao Chen",
+        "Gongxu Luo",
+        "Yuewen Sun",
+        "Salman Khan",
+        "Peter Spirtes",
+        "Kun Zhang"
+      ],
+      "abstract": "Understanding human behavior traits is central to applications in\nhuman-computer interaction, computational social science, and personalized AI\nsystems. Such understanding often requires integrating multiple modalities to\ncapture nuanced patterns and relationships. However, existing resources rarely\nprovide datasets that combine behavioral descriptors with complementary\nmodalities such as facial attributes and biographical information. To address\nthis gap, we present PersonaX, a curated collection of multimodal datasets\ndesigned to enable comprehensive analysis of public traits across modalities.\nPersonaX consists of (1) CelebPersona, featuring 9444 public figures from\ndiverse occupations, and (2) AthlePersona, covering 4181 professional athletes\nacross 7 major sports leagues. Each dataset includes behavioral trait\nassessments inferred by three high-performing large language models, alongside\nfacial imagery and structured biographical features. We analyze PersonaX at two\ncomplementary levels. First, we abstract high-level trait scores from text\ndescriptions and apply five statistical independence tests to examine their\nrelationships with other modalities. Second, we introduce a novel causal\nrepresentation learning (CRL) framework tailored to multimodal and\nmulti-measurement data, providing theoretical identifiability guarantees.\nExperiments on both synthetic and real-world data demonstrate the effectiveness\nof our approach. By unifying structured and unstructured analysis, PersonaX\nestablishes a foundation for studying LLM-inferred behavioral traits in\nconjunction with visual and biographical attributes, advancing multimodal trait\nanalysis and causal reasoning.",
+      "pdf_url": "http://arxiv.org/pdf/2509.11362v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.11362v1",
+      "published": "2025-09-14",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Traffic-MLLM: A Spatio-Temporal MLLM with Retrieval-Augmented Generation for Causal Inference in Traffic",
+      "authors": [
+        "Waikit Xiu",
+        "Qiang Lu",
+        "Xiying Li",
+        "Chen Hu",
+        "Shengbo Sun"
+      ],
+      "abstract": "As intelligent transportation systems advance, traffic video understanding\nplays an increasingly pivotal role in comprehensive scene perception and causal\nanalysis. Yet, existing approaches face notable challenges in accurately\nmodeling spatiotemporal causality and integrating domain-specific knowledge,\nlimiting their effectiveness in complex scenarios. To address these\nlimitations, we propose Traffic-MLLM, a multimodal large language model\ntailored for fine-grained traffic analysis. Built on the Qwen2.5-VL backbone,\nour model leverages high-quality traffic-specific multimodal datasets and uses\nLow-Rank Adaptation (LoRA) for lightweight fine-tuning, significantly enhancing\nits capacity to model continuous spatiotemporal features in video sequences.\nFurthermore, we introduce an innovative knowledge prompting module fusing\nChain-of-Thought (CoT) reasoning with Retrieval-Augmented Generation (RAG),\nenabling precise injection of detailed traffic regulations and domain knowledge\ninto the inference process. This design markedly boosts the model's logical\nreasoning and knowledge adaptation capabilities. Experimental results on\nTrafficQA and DriveQA benchmarks show Traffic-MLLM achieves state-of-the-art\nperformance, validating its superior ability to process multimodal traffic\ndata. It also exhibits remarkable zero-shot reasoning and cross-scenario\ngeneralization capabilities.",
+      "pdf_url": "http://arxiv.org/pdf/2509.11165v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.11165v1",
+      "published": "2025-09-14",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "A Latent Factor Panel Approach to Spatiotemporal Causal Inference",
+      "authors": [
+        "Jiaxi Wu",
+        "Alexander Franks"
+      ],
+      "abstract": "Unmeasured confounding can severely bias causal effect estimates from\nspatiotemporal observational data, especially when the confounders do not vary\nsmoothly in time and space. In this work, we develop a method for addressing\nunmeasured confounding in spatiotemporal contexts by building on models from\nthe panel data literature and methods in multivariate causal inference. Our\nmethod is based on a factor confounding assumption, which posits that effects\nof unmeasured confounders on exposures and outcomes can be captured by a shared\nlatent factor model. Factor confounding is sufficient to partially identify\ncausal effects, even when there is interference between units. Additional\nassumptions that limit the degree of spatiotemporal interference, reasonable in\nmost applications, are sufficient to point identify the effects. Simulation\nstudies demonstrate that the proposed approach can substantially reduce omitted\nvariable bias relative to other spatial smoothing and panel data baselines. We\nillustrate our method in a case study of the effect of prenatal PM2.5 exposure\non birth weight in California.",
+      "pdf_url": "http://arxiv.org/pdf/2509.10974v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.10974v1",
+      "published": "2025-09-13",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Two-Stage Least Squares Instrumental Variable Estimation for Semiparametric Accelerated Failure Time Models with Right-Censored Data",
+      "authors": [
+        "Zian Zhuang",
+        "Hua Zhou",
+        "Jin Zhou",
+        "Gang Li"
+      ],
+      "abstract": "Instrumental variable (IV) analysis is widely used in fields such as\neconomics and epidemiology to address unobserved confounding and measurement\nerror when estimating the causal effects of intermediate covariates on\noutcomes. However, extending the commonly used two-stage least squares (TSLS)\napproach to survival settings is nontrivial due to censoring. This paper\nintroduces a novel extension of TSLS to the semiparametric accelerated failure\ntime (AFT) model with right-censored data, supported by rigorous theoretical\njustification. Specifically, we propose an iterative reweighted generalized\nestimating equation (GEE) approach that incorporates Leurgans' synthetic\nvariable method, establish the asymptotic properties of the resulting\nestimator, and derive a consistent variance estimator, enabling valid causal\ninference. Simulation studies are conducted to evaluate the finite-sample\nperformance of the proposed method across different scenarios. The results show\nthat it outperforms the naive unweighted GEE method, a parametric IV approach,\nand a one-stage estimator without IV. The proposed method is also highly\nscalable to large datasets, achieving a 300- to 1500-fold speedup relative to a\nBayesian parametric IV approach in both simulations and the real-data example.\nWe further illustrate the utility of the proposed method through a real-data\napplication using the UK Biobank data.",
+      "pdf_url": "http://arxiv.org/pdf/2509.10905v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.10905v1",
+      "published": "2025-09-13",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Emergence of Consciousness through Learned Multiscale Neural Dynamics in Mice",
+      "authors": [
+        "Zhipeng Wang",
+        "Yingqi Rong",
+        "Kaiwei Liu",
+        "Mingzhe Yang",
+        "Jiang Zhang",
+        "Jing He"
+      ],
+      "abstract": "Consciousness spans macroscopic experience and microscopic neuronal activity,\nyet linking these scales remains challenging. Prevailing theories, such as\nIntegrated Information Theory, focus on a single scale, overlooking how causal\npower and its dynamics unfold across scales. Progress is constrained by scarce\ncross-scale data and difficulties in quantifying multiscale causality and\ndynamics. Here, we present a machine learning framework that infers multiscale\ncausal variables and their dynamics from near-cellular-resolution calcium\nimaging in the mouse dorsal cortex. At lower levels, variables primarily\naggregate input-driven information, whereas at higher levels they realize\ncausality through metastable or saddle-point dynamics during wakefulness,\ncollapsing into localized, stochastic dynamics under anesthesia. A\none-dimensional top-level conscious variable captures the majority of causal\npower, yet variables across other scales also contribute substantially, giving\nrise to high emergent complexity in the conscious state. Together, these\nfindings provide a multiscale causal framework that links neural activity to\nconscious states.",
+      "pdf_url": "http://arxiv.org/pdf/2509.10891v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.10891v1",
+      "published": "2025-09-13",
+      "categories": [
+        "q-bio.NC"
+      ]
+    },
     {
       "title": "Abduct, Act, Predict: Scaffolding Causal Inference for Automated Failure Attribution in Multi-Agent Systems",
       "authors": [
@@ -17,164 +182,6 @@
       "categories": [
         "cs.AI",
         "cs.CL"
-      ]
-    },
-    {
-      "title": "The Language of Approval: Identifying the Drivers of Positive Feedback Online",
-      "authors": [
-        "Agam Goyal",
-        "Charlotte Lambert",
-        "Eshwar Chandrasekharan"
-      ],
-      "abstract": "Positive feedback via likes and awards is central to online governance, yet\nwhich attributes of users' posts elicit rewards -- and how these vary across\nauthors and communities -- remains unclear. To examine this, we combine\nquasi-experimental causal inference with predictive modeling on 11M posts from\n100 subreddits. We identify linguistic patterns and stylistic attributes\ncausally linked to rewards, controlling for author reputation, timing, and\ncommunity context. For example, overtly complicated language, tentative style,\nand toxicity reduce rewards. We use our set of curated features to train models\nthat can detect highly-upvoted posts with high AUC. Our audit of community\nguidelines highlights a ``policy-practice gap'' -- most rules focus primarily\non civility and formatting requirements, with little emphasis on the attributes\nidentified to drive positive feedback. These results inform the design of\ncommunity guidelines, support interfaces that teach users how to craft\ndesirable contributions, and moderation workflows that emphasize positive\nreinforcement over purely punitive enforcement.",
-      "pdf_url": "http://arxiv.org/pdf/2509.10370v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.10370v1",
-      "published": "2025-09-12",
-      "categories": [
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Compartmentalised Agentic Reasoning for Clinical NLI",
-      "authors": [
-        "Maël Jullien",
-        "Lei Xu",
-        "Marco Valentino",
-        "André Freitas"
-      ],
-      "abstract": "A common assumption holds that scaling data and parameters yields\nincreasingly structured, generalisable internal representations. We interrogate\nthis assumption in clinical natural language inference (NLI) by adopting a\nbenchmark decomposed into four reasoning families, Causal Attribution,\nCompositional Grounding, Epistemic Verification, and Risk State Abstraction,\nand introducing CARENLI, a Compartmentalised Agentic Reasoning for Clinical NLI\nthat separates knowledge access from principled inference. CARENLI routes each\npremise, statement pair to a family specific solver and enforces auditable\nprocedures via a planner, verifier, and refiner.\n  Across four LLMs, CARENLI improves fidelity by up to 42 points, reaching\n98.0% in Causal Attribution and 81.2% in Risk State Abstraction. Verifiers flag\nviolations with near-ceiling reliability, while refiners correct a substantial\nshare of epistemic errors. Remaining failures cluster in routing, identifying\nfamily classification as the main bottleneck. These results show that LLMs\noften retain relevant facts but default to heuristics when inference is\nunderspecified, a dissociation CARENLI makes explicit while offering a\nframework for safer, auditable reasoning.",
-      "pdf_url": "http://arxiv.org/pdf/2509.10222v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.10222v1",
-      "published": "2025-09-12",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Weakening assumptions in the evaluation of treatment effects in longitudinal randomized trials with truncation by death or other intercurrent events",
-      "authors": [
-        "Georgi Baklicharov",
-        "Kelly Van Lancker",
-        "Stijn Vansteelandt"
-      ],
-      "abstract": "Intercurrent events, such as treatment switching, rescue medication, or\ntruncation by death, can complicate the interpretation of intention-to-treat\n(ITT) analyses in randomized clinical trials. Recent advances in causal\ninference address these challenges by targeting alternative estimands, such as\nhypothetical estimands or principal stratum estimands (e.g., survivor average\ncausal effects). However, such approaches often require strong, unverifiable\nassumptions, partly due to limited data on time-varying confounders and the\ndifficulty of adjusting for them. Additionally, strict trial protocols\nfrequently lead to (near) violations of the positivity assumption, resulting in\nlimited information for identifying these estimands.\n  In this paper, we propose a novel approach that sidesteps these difficulties\nby focusing on testing the null hypothesis of no treatment effect in the\npresence of arbitrary intercurrent events, including truncation by death, using\nlongitudinal trial data. Our key idea is to compare treated and untreated\nindividuals, matched on baseline covariates, at the most recent time point\nbefore either experiences an intercurrent event. We refer to such contrasts as\nPairwise Last Observation Time (PLOT) estimands. These estimands can be\nidentified in randomized clinical trials without requiring additional\nstructural assumptions, and even in the presence of the aforementioned\npositivity violations. However, they may still be susceptible to a form of\nresidual selection bias. We show that this bias vanishes under the conditions\ntypically required by alternative methods, and find it to be more generally\nsmall in extensive simulation studies. Building on this, we develop\nasymptotically efficient, model-free tests using data-adaptive estimation of\nnuisance parameters. We evaluate the method's performance via simulation\nstudies.",
-      "pdf_url": "http://arxiv.org/pdf/2509.10067v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.10067v1",
-      "published": "2025-09-12",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal PDE-Control Models: A Structural Framework for Dynamic Portfolio Optimization",
-      "authors": [
-        "Alejandro Rodriguez Dominguez"
-      ],
-      "abstract": "Classical portfolio models collapse under structural breaks, while modern\nmachine-learning allocators adapt flexibly but often at the cost of\ntransparency and interpretability. This paper introduces Causal PDE-Control\nModels (CPCMs), a unifying framework that integrates causal inference,\nnonlinear filtering, and forward-backward partial differential equations for\ndynamic portfolio optimization. The framework delivers three theoretical\nadvances: (i) the existence of conditional risk-neutral measures under evolving\ninformation sets; (ii) a projection-divergence duality that quantifies the\nstability cost of departing from the causal driver manifold; and (iii) causal\ncompleteness, establishing that a finite driver span can capture all systematic\npremia. Classical methods such as Markowitz, CAPM, and Black-Litterman appear\nas degenerate cases, while reinforcement learning and deep-hedging policies\nemerge as unconstrained, symmetry-breaking approximations. Empirically, CPCM\nsolvers implemented with physics-informed neural networks achieve higher Sharpe\nratios, lower turnover, and more persistent premia than both econometric and\nmachine-learning benchmarks, using a global equity panel with more than 300\ncandidate drivers. By reframing portfolio optimization around structural\ncausality and PDE control, CPCMs provide a rigorous, interpretable, and\ncomputationally tractable foundation for robust asset allocation under\nnonstationary conditions.",
-      "pdf_url": "http://arxiv.org/pdf/2509.09585v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.09585v1",
-      "published": "2025-09-11",
-      "categories": [
-        "q-fin.PM",
-        "G.1.6; G.1.8; G.1.10; G.3; I.2.6; I.5.3; I.5.4; I.6.5; J.2; J.4; J.6"
-      ]
-    },
-    {
-      "title": "World Modeling with Probabilistic Structure Integration",
-      "authors": [
-        "Klemen Kotar",
-        "Wanhee Lee",
-        "Rahul Venkatesh",
-        "Honglin Chen",
-        "Daniel Bear",
-        "Jared Watrous",
-        "Simon Kim",
-        "Khai Loong Aw",
-        "Lilian Naing Chen",
-        "Stefan Stojanov",
-        "Kevin Feigelis",
-        "Imran Thobani",
-        "Alex Durango",
-        "Khaled Jedoui",
-        "Atlas Kazemian",
-        "Dan Yamins"
-      ],
-      "abstract": "We present Probabilistic Structure Integration (PSI), a system for learning\nrichly controllable and flexibly promptable world models from data. PSI\nconsists of a three-step cycle. The first step, Probabilistic prediction,\ninvolves building a probabilistic graphical model Psi of the data, in the form\nof a random-access autoregressive sequence model. Psi supports a complete set\nof learned conditional distributions describing the dependence of any variables\nin the data on any other set of variables. In step 2, Structure extraction, we\nshow how to extract underlying low-dimensional properties in the data,\ncorresponding to a diverse set of meaningful \"intermediate structures\", in a\nzero-shot fashion via causal inference on Psi. Step 3, Integration, completes\nthe cycle by converting these structures into new token types that are then\ncontinually mixed back into the training diet as conditioning signals and\nprediction targets. Each such cycle augments the capabilities of Psi, both\nallowing it to model the underlying data better, and creating new control\nhandles -- akin to an LLM-like universal prompting language. We train an\ninstance of Psi on 1.4 trillion tokens of internet video data; we use it to\nperform a variety of useful video prediction and understanding inferences; we\nextract state-of-the-art optical flow, self-supervised depth and object\nsegmentation; and we use these structures to support a full cycle of predictive\nimprovements.",
-      "pdf_url": "http://arxiv.org/pdf/2509.09737v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.09737v1",
-      "published": "2025-09-10",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Teamwork as Linear Interpersonal Dynamics",
-      "authors": [
-        "Andrew Jun Lee",
-        "Grace Qiyuan Miao",
-        "Rick Dale",
-        "Alexia Galati",
-        "Hongjing Lu"
-      ],
-      "abstract": "Successful teamwork depends on interpersonal dynamics, the ways in which\nindividuals coordinate, influence, and adapt to one another over time. Existing\nmeasures of interpersonal dynamics, such as CRQA, correlation, Granger\ncausality, and transfer entropy, typically capture only a single dimension:\neither the synchrony/coordination or the direction of influence between\nindividuals. What is missing is a psychologically meaningful representation\nthat unifies these dimensions and varies systematically with behavior. We\npropose the context matrix as one such representation. The context matrix is\nthe transition matrix in a linear dynamical system, with entries specifying how\nmuch each individual's current behavior is attributable to their own versus\nevery other group member's past behaviors. Its values can be distilled into\npsychologically interpretable summary features of synchrony and directional\ninfluence. Evidence for the context matrix as psychologically meaningful is\nprovided in two steps. First, we develop a sequential Bayesian model that\ninfers context matrices from timeseries data and show that it accurately\nrecovers them in noisy simulations. Second, applying the model to human\neyetracking data, we show that summary features of the inferred context\nmatrices capture expected task-based differences in interpersonal dynamics (or\nlack thereof), predict task accuracy in psychologically reasonable ways, and\nshow some correspondence with existing measures (CRQA and Granger causality).\nWe conclude by situating the context matrix within a broader agenda for\nmodeling interpersonal dynamics.",
-      "pdf_url": "http://arxiv.org/pdf/2509.08811v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.08811v1",
-      "published": "2025-09-10",
-      "categories": [
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "Doubly robust average treatment effect estimation for survival data",
-      "authors": [
-        "Byeonghee Lee",
-        "Joonsung Kang"
-      ],
-      "abstract": "Considering censored outcomes in survival analysis can lead to quite complex\nresults in the model setting of causal inference. Causal inference has\nattracted a lot of attention over the past few years, but little research has\nbeen done on survival analysis. Even for the only research conducted, the\nmachine learning method was considered assuming a large sample, which is not\nsuitable in that the actual data are high dimensional low sample size (HDLSS)\nmethod. Therefore, penalty is considered for numerous covariates, and the\nrelationship between these covariates and treatment variables is reflected as a\ncovariate balancing property score (CBPS). It also considers censored results.\nTo this end, we will try to solve the above-mentioned problems by using\npenalized empirical likelihood, which considers both estimating equation and\npenalty. The proposed average treatment effect (ATE) estimator possesses the\noracle property, exhibiting key characteristics such as double robustness for\nunbiasedness, sparsity in model selection, and asymptotic normality.",
-      "pdf_url": "http://arxiv.org/pdf/2509.08788v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.08788v1",
-      "published": "2025-09-10",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Automatic Failure Attribution and Critical Step Prediction Method for Multi-Agent Systems Based on Causal Inference",
-      "authors": [
-        "Guoqing Ma",
-        "Jia Zhu",
-        "Hanghui Guo",
-        "Weijie Shi",
-        "Jiawei Shen",
-        "Jingjiang Liu",
-        "Yidan Liang"
-      ],
-      "abstract": "Multi-agent systems (MAS) are critical for automating complex tasks, yet\ntheir practical deployment is severely hampered by the challenge of failure\nattribution. Current diagnostic tools, which rely on statistical correlations,\nare fundamentally inadequate; on challenging benchmarks like Who\\&When,\nstate-of-the-art methods achieve less than 15\\% accuracy in locating the\nroot-cause step of a failure. To address this critical gap, we introduce the\nfirst failure attribution framework for MAS grounded in multi-granularity\ncausal inference. Our approach makes two key technical contributions: (1) a\nperformance causal inversion principle, which correctly models performance\ndependencies by reversing the data flow in execution logs, combined with\nShapley values to accurately assign agent-level blame; (2) a novel causal\ndiscovery algorithm, CDC-MAS, that robustly identifies critical failure steps\nby tackling the non-stationary nature of MAS interaction data. The framework's\nattribution results directly fuel an automated optimization loop, generating\ntargeted suggestions whose efficacy is validated via counterfactual\nsimulations. Evaluations on the Who\\&When and TRAIL benchmarks demonstrate a\nsignificant leap in performance. Our method achieves up to 36.2\\% step-level\naccuracy. Crucially, the generated optimizations boost overall task success\nrates by an average of 22.4\\%. This work provides a principled and effective\nsolution for debugging complex agent interactions, paving the way for more\nreliable and interpretable multi-agent systems.",
-      "pdf_url": "http://arxiv.org/pdf/2509.08682v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.08682v1",
-      "published": "2025-09-10",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "LD-ViCE: Latent Diffusion Model for Video Counterfactual Explanations",
-      "authors": [
-        "Payal Varshney",
-        "Adriano Lucieri",
-        "Christoph Balada",
-        "Sheraz Ahmed",
-        "Andreas Dengel"
-      ],
-      "abstract": "Video-based AI systems are increasingly adopted in safety-critical domains\nsuch as autonomous driving and healthcare. However, interpreting their\ndecisions remains challenging due to the inherent spatiotemporal complexity of\nvideo data and the opacity of deep learning models. Existing explanation\ntechniques often suffer from limited temporal coherence, insufficient\nrobustness, and a lack of actionable causal insights. Current counterfactual\nexplanation methods typically do not incorporate guidance from the target\nmodel, reducing semantic fidelity and practical utility. We introduce Latent\nDiffusion for Video Counterfactual Explanations (LD-ViCE), a novel framework\ndesigned to explain the behavior of video-based AI models. Compared to previous\napproaches, LD-ViCE reduces the computational costs of generating explanations\nby operating in latent space using a state-of-the-art diffusion model, while\nproducing realistic and interpretable counterfactuals through an additional\nrefinement step. Our experiments demonstrate the effectiveness of LD-ViCE\nacross three diverse video datasets, including EchoNet-Dynamic (cardiac\nultrasound), FERV39k (facial expression), and Something-Something V2 (action\nrecognition). LD-ViCE outperforms a recent state-of-the-art method, achieving\nan increase in R2 score of up to 68% while reducing inference time by half.\nQualitative analysis confirms that LD-ViCE generates semantically meaningful\nand temporally coherent explanations, offering valuable insights into the\ntarget model behavior. LD-ViCE represents a valuable step toward the\ntrustworthy deployment of AI in safety-critical domains.",
-      "pdf_url": "http://arxiv.org/pdf/2509.08422v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.08422v1",
-      "published": "2025-09-10",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
       ]
     }
   ]
