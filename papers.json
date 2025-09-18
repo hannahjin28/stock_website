@@ -1,6 +1,82 @@
 {
-  "last_updated": "2025-09-17T00:48:48.179359",
+  "last_updated": "2025-09-18T00:48:00.861153",
   "papers": [
+    {
+      "title": "Semiparametric Causal Inference for Right-Censored Outcomes with Many Weak Invalid Instruments",
+      "authors": [
+        "Qiushi Bu",
+        "Wen Su",
+        "Xingqiu Zhao",
+        "Zhonghua Liu"
+      ],
+      "abstract": "We propose a semiparametric framework for causal inference with\nright-censored survival outcomes and many weak invalid instruments, motivated\nby Mendelian randomization in biobank studies where classical methods may fail.\nWe adopt an accelerated failure time model and construct a moment condition\nbased on augmented inverse probability of censoring weighting, incorporating\nboth uncensored and censored observations. Under a heteroscedasticity-based\ncondition on the treatment model, we establish point identification of the\ncausal effect despite censoring and invalid instruments. We propose GEL-NOW\n(Generalized Empirical Likelihood with Non-Orthogonal and Weak moments) for\nvalid inference under these conditions. A divergent number of Neyman orthogonal\nnuisance functions is estimated using deep neural networks. A key challenge is\nthat the conditional censoring distribution is a non-Neyman orthogonal\nnuisance, contributing to the first-order asymptotics of the estimator for the\ntarget causal effect parameter. We derive the asymptotic distribution and\nexplicitly incorporate this additional uncertainty into the asymptotic variance\nformula. We also introduce a censoring-adjusted over-identification test that\naccounts for this variance component. Simulation studies and UK Biobank\napplications demonstrate the method's robustness and practical utility.",
+      "pdf_url": "http://arxiv.org/pdf/2509.13176v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.13176v1",
+      "published": "2025-09-16",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Robust Sensitivity Analysis via Augmented Percentile Bootstrap under Simultaneous Violations of Unconfoundedness and Overlap",
+      "authors": [
+        "Han Cui",
+        "Xinran Li"
+      ],
+      "abstract": "The identification of causal effects in observational studies typically\nrelies on two standard assumptions: unconfoundedness and overlap. However, both\nassumptions are often questionable in practice: unconfoundedness is inherently\nuntestable, and overlap may fail in the presence of extreme unmeasured\nconfounding. While various approaches have been developed to address unmeasured\nconfounding and extreme propensity scores separately, few methods accommodate\nsimultaneous violations of both assumptions. In this paper, we propose a\nsensitivity analysis framework that relaxes both unconfoundedness and overlap,\nbuilding upon the marginal sensitivity model. Specifically, we allow the bound\non unmeasured confounding to hold for only a subset of the population, thereby\naccommodating heterogeneity in confounding and allowing treatment probabilities\nto be zero or one. Moreover, unlike prior work, our approach does not require\nbounded outcomes and focuses on overlap-weighted average treatment effects,\nwhich are both practically meaningful and robust to non-overlap. We develop\ncomputationally efficient methods to obtain worst-case bounds via linear\nprogramming, and introduce a novel augmented percentile bootstrap procedure for\nstatistical inference. This bootstrap method handles parameters defined through\nover-identified estimating equations involving unobserved variables and may be\nof independent interest. Our work provides a unified and flexible framework for\nsensitivity analysis under violations of both unconfoundedness and overlap.",
+      "pdf_url": "http://arxiv.org/pdf/2509.13169v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.13169v1",
+      "published": "2025-09-16",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Inverse regression for causal inference with multiple outcomes",
+      "authors": [
+        "Wei Zhang",
+        "Qizhai Li",
+        "Peng Ding"
+      ],
+      "abstract": "With multiple outcomes in empirical research, a common strategy is to define\na composite outcome as a weighted average of the original outcomes. However,\nthe choices of weights are often subjective and can be controversial. We\npropose an inverse regression strategy for causal inference with multiple\noutcomes. The key idea is to regress the treatment on the outcomes, which is\nthe inverse of the standard regression of the outcomes on the treatment.\nAlthough this strategy is simple and even counterintuitive, it has several\nadvantages. First, testing for zero coefficients of the outcomes is equivalent\nto testing for the null hypothesis of zero effects, even though the inverse\nregression is deemed misspecified. Second, the coefficients of the outcomes\nprovide a data-driven choice of the weights for defining a composite outcome.\nWe also discuss the associated inference issues. Third, this strategy is\napplicable to general study designs. We illustrate the theory in both\nrandomized experiments and observational studies.",
+      "pdf_url": "http://arxiv.org/pdf/2509.12587v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.12587v1",
+      "published": "2025-09-16",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Prediction and Causality of functional MRI and synthetic signal using a Zero-Shot Time-Series Foundation Model",
+      "authors": [
+        "Alessandro Crimi",
+        "Andrea Brovelli"
+      ],
+      "abstract": "Time-series forecasting and causal discovery are central in neuroscience, as\npredicting brain activity and identifying causal relationships between neural\npopulations and circuits can shed light on the mechanisms underlying cognition\nand disease. With the rise of foundation models, an open question is how they\ncompare to traditional methods for brain signal forecasting and causality\nanalysis, and whether they can be applied in a zero-shot setting. In this work,\nwe evaluate a foundation model against classical methods for inferring\ndirectional interactions from spontaneous brain activity measured with\nfunctional magnetic resonance imaging (fMRI) in humans. Traditional approaches\noften rely on Wiener-Granger causality. We tested the forecasting ability of\nthe foundation model in both zero-shot and fine-tuned settings, and assessed\ncausality by comparing Granger-like estimates from the model with standard\nGranger causality. We validated the approach using synthetic time series\ngenerated from ground-truth causal models, including logistic map coupling and\nOrnstein-Uhlenbeck processes. The foundation model achieved competitive\nzero-shot forecasting fMRI time series (mean absolute percentage error of 0.55\nin controls and 0.27 in patients). Although standard Granger causality did not\nshow clear quantitative differences between models, the foundation model\nprovided a more precise detection of causal interactions.\n  Overall, these findings suggest that foundation models offer versatility,\nstrong zero-shot performance, and potential utility for forecasting and causal\ndiscovery in time-series data.",
+      "pdf_url": "http://arxiv.org/pdf/2509.12497v2",
+      "arxiv_url": "http://arxiv.org/abs/2509.12497v2",
+      "published": "2025-09-15",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal-Symbolic Meta-Learning (CSML): Inducing Causal World Models for Few-Shot Generalization",
+      "authors": [
+        "Mohamed Zayaan S"
+      ],
+      "abstract": "Modern deep learning models excel at pattern recognition but remain\nfundamentally limited by their reliance on spurious correlations, leading to\npoor generalization and a demand for massive datasets. We argue that a key\ningredient for human-like intelligence-robust, sample-efficient learning-stems\nfrom an understanding of causal mechanisms. In this work, we introduce\nCausal-Symbolic Meta-Learning (CSML), a novel framework that learns to infer\nthe latent causal structure of a task distribution. CSML comprises three key\nmodules: a perception module that maps raw inputs to disentangled symbolic\nrepresentations; a differentiable causal induction module that discovers the\nunderlying causal graph governing these symbols and a graph-based reasoning\nmodule that leverages this graph to make predictions. By meta-learning a shared\ncausal world model across a distribution of tasks, CSML can rapidly adapt to\nnovel tasks, including those requiring reasoning about interventions and\ncounterfactuals, from only a handful of examples. We introduce CausalWorld, a\nnew physics-based benchmark designed to test these capabilities. Our\nexperiments show that CSML dramatically outperforms state-of-the-art\nmeta-learning and neuro-symbolic baselines, particularly on tasks demanding\ntrue causal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2509.12387v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.12387v1",
+      "published": "2025-09-15",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
     {
       "title": "AvatarSync: Rethinking Talking-Head Animation through Autoregressive Perspective",
       "authors": [
@@ -99,89 +175,6 @@
       "categories": [
         "cs.LG",
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Traffic-MLLM: A Spatio-Temporal MLLM with Retrieval-Augmented Generation for Causal Inference in Traffic",
-      "authors": [
-        "Waikit Xiu",
-        "Qiang Lu",
-        "Xiying Li",
-        "Chen Hu",
-        "Shengbo Sun"
-      ],
-      "abstract": "As intelligent transportation systems advance, traffic video understanding\nplays an increasingly pivotal role in comprehensive scene perception and causal\nanalysis. Yet, existing approaches face notable challenges in accurately\nmodeling spatiotemporal causality and integrating domain-specific knowledge,\nlimiting their effectiveness in complex scenarios. To address these\nlimitations, we propose Traffic-MLLM, a multimodal large language model\ntailored for fine-grained traffic analysis. Built on the Qwen2.5-VL backbone,\nour model leverages high-quality traffic-specific multimodal datasets and uses\nLow-Rank Adaptation (LoRA) for lightweight fine-tuning, significantly enhancing\nits capacity to model continuous spatiotemporal features in video sequences.\nFurthermore, we introduce an innovative knowledge prompting module fusing\nChain-of-Thought (CoT) reasoning with Retrieval-Augmented Generation (RAG),\nenabling precise injection of detailed traffic regulations and domain knowledge\ninto the inference process. This design markedly boosts the model's logical\nreasoning and knowledge adaptation capabilities. Experimental results on\nTrafficQA and DriveQA benchmarks show Traffic-MLLM achieves state-of-the-art\nperformance, validating its superior ability to process multimodal traffic\ndata. It also exhibits remarkable zero-shot reasoning and cross-scenario\ngeneralization capabilities.",
-      "pdf_url": "http://arxiv.org/pdf/2509.11165v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.11165v1",
-      "published": "2025-09-14",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "A Latent Factor Panel Approach to Spatiotemporal Causal Inference",
-      "authors": [
-        "Jiaxi Wu",
-        "Alexander Franks"
-      ],
-      "abstract": "Unmeasured confounding can severely bias causal effect estimates from\nspatiotemporal observational data, especially when the confounders do not vary\nsmoothly in time and space. In this work, we develop a method for addressing\nunmeasured confounding in spatiotemporal contexts by building on models from\nthe panel data literature and methods in multivariate causal inference. Our\nmethod is based on a factor confounding assumption, which posits that effects\nof unmeasured confounders on exposures and outcomes can be captured by a shared\nlatent factor model. Factor confounding is sufficient to partially identify\ncausal effects, even when there is interference between units. Additional\nassumptions that limit the degree of spatiotemporal interference, reasonable in\nmost applications, are sufficient to point identify the effects. Simulation\nstudies demonstrate that the proposed approach can substantially reduce omitted\nvariable bias relative to other spatial smoothing and panel data baselines. We\nillustrate our method in a case study of the effect of prenatal PM2.5 exposure\non birth weight in California.",
-      "pdf_url": "http://arxiv.org/pdf/2509.10974v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.10974v1",
-      "published": "2025-09-13",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Two-Stage Least Squares Instrumental Variable Estimation for Semiparametric Accelerated Failure Time Models with Right-Censored Data",
-      "authors": [
-        "Zian Zhuang",
-        "Hua Zhou",
-        "Jin Zhou",
-        "Gang Li"
-      ],
-      "abstract": "Instrumental variable (IV) analysis is widely used in fields such as\neconomics and epidemiology to address unobserved confounding and measurement\nerror when estimating the causal effects of intermediate covariates on\noutcomes. However, extending the commonly used two-stage least squares (TSLS)\napproach to survival settings is nontrivial due to censoring. This paper\nintroduces a novel extension of TSLS to the semiparametric accelerated failure\ntime (AFT) model with right-censored data, supported by rigorous theoretical\njustification. Specifically, we propose an iterative reweighted generalized\nestimating equation (GEE) approach that incorporates Leurgans' synthetic\nvariable method, establish the asymptotic properties of the resulting\nestimator, and derive a consistent variance estimator, enabling valid causal\ninference. Simulation studies are conducted to evaluate the finite-sample\nperformance of the proposed method across different scenarios. The results show\nthat it outperforms the naive unweighted GEE method, a parametric IV approach,\nand a one-stage estimator without IV. The proposed method is also highly\nscalable to large datasets, achieving a 300- to 1500-fold speedup relative to a\nBayesian parametric IV approach in both simulations and the real-data example.\nWe further illustrate the utility of the proposed method through a real-data\napplication using the UK Biobank data.",
-      "pdf_url": "http://arxiv.org/pdf/2509.10905v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.10905v1",
-      "published": "2025-09-13",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Emergence of Consciousness through Learned Multiscale Neural Dynamics in Mice",
-      "authors": [
-        "Zhipeng Wang",
-        "Yingqi Rong",
-        "Kaiwei Liu",
-        "Mingzhe Yang",
-        "Jiang Zhang",
-        "Jing He"
-      ],
-      "abstract": "Consciousness spans macroscopic experience and microscopic neuronal activity,\nyet linking these scales remains challenging. Prevailing theories, such as\nIntegrated Information Theory, focus on a single scale, overlooking how causal\npower and its dynamics unfold across scales. Progress is constrained by scarce\ncross-scale data and difficulties in quantifying multiscale causality and\ndynamics. Here, we present a machine learning framework that infers multiscale\ncausal variables and their dynamics from near-cellular-resolution calcium\nimaging in the mouse dorsal cortex. At lower levels, variables primarily\naggregate input-driven information, whereas at higher levels they realize\ncausality through metastable or saddle-point dynamics during wakefulness,\ncollapsing into localized, stochastic dynamics under anesthesia. A\none-dimensional top-level conscious variable captures the majority of causal\npower, yet variables across other scales also contribute substantially, giving\nrise to high emergent complexity in the conscious state. Together, these\nfindings provide a multiscale causal framework that links neural activity to\nconscious states.",
-      "pdf_url": "http://arxiv.org/pdf/2509.10891v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.10891v1",
-      "published": "2025-09-13",
-      "categories": [
-        "q-bio.NC"
-      ]
-    },
-    {
-      "title": "Abduct, Act, Predict: Scaffolding Causal Inference for Automated Failure Attribution in Multi-Agent Systems",
-      "authors": [
-        "Alva West",
-        "Yixuan Weng",
-        "Minjun Zhu",
-        "Zhen Lin",
-        "Yue Zhang"
-      ],
-      "abstract": "Failure attribution in multi-agent systems -- pinpointing the exact step\nwhere a decisive error occurs -- is a critical yet unsolved challenge. Current\nmethods treat this as a pattern recognition task over long conversation logs,\nleading to critically low step-level accuracy (below 17\\%), which renders them\nimpractical for debugging complex systems. Their core weakness is a fundamental\ninability to perform robust counterfactual reasoning: to determine if\ncorrecting a single action would have actually averted the task failure. To\nbridge this counterfactual inference gap, we introduce Abduct-Act-Predict (A2P)\nScaffolding, a novel agent framework that transforms failure attribution from\npattern recognition into a structured causal inference task. A2P explicitly\nguides a large language model through a formal three-step reasoning process\nwithin a single inference pass: (1) Abduction, to infer the hidden root causes\nbehind an agent's actions; (2) Action, to define a minimal corrective\nintervention; and (3) Prediction, to simulate the subsequent trajectory and\nverify if the intervention resolves the failure. This structured approach\nleverages the holistic context of the entire conversation while imposing a\nrigorous causal logic on the model's analysis. Our extensive experiments on the\nWho\\&When benchmark demonstrate its efficacy. On the Algorithm-Generated\ndataset, A2P achieves 47.46\\% step-level accuracy, a 2.85$\\times$ improvement\nover the 16.67\\% of the baseline. On the more complex Hand-Crafted dataset, it\nachieves 29.31\\% step accuracy, a 2.43$\\times$ improvement over the baseline's\n12.07\\%. By reframing the problem through a causal lens, A2P Scaffolding\nprovides a robust, verifiable, and significantly more accurate solution for\nautomated failure attribution.",
-      "pdf_url": "http://arxiv.org/pdf/2509.10401v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.10401v1",
-      "published": "2025-09-12",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
       ]
     }
   ]
