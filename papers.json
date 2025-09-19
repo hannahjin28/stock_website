@@ -1,6 +1,25 @@
 {
-  "last_updated": "2025-09-18T00:48:00.861153",
+  "last_updated": "2025-09-19T00:50:54.155027",
   "papers": [
+    {
+      "title": "CETUS: Causal Event-Driven Temporal Modeling With Unified Variable-Rate Scheduling",
+      "authors": [
+        "Hanfang Liang",
+        "Bing Wang",
+        "Shizhen Zhang",
+        "Wen Jiang",
+        "Yizhuo Yang",
+        "Weixiang Guo",
+        "Shenghai Yuan"
+      ],
+      "abstract": "Event cameras capture asynchronous pixel-level brightness changes with\nmicrosecond temporal resolution, offering unique advantages for high-speed\nvision tasks. Existing methods often convert event streams into intermediate\nrepresentations such as frames, voxel grids, or point clouds, which inevitably\nrequire predefined time windows and thus introduce window latency. Meanwhile,\npointwise detection methods face computational challenges that prevent\nreal-time efficiency due to their high computational cost. To overcome these\nlimitations, we propose the Variable-Rate Spatial Event Mamba, a novel\narchitecture that directly processes raw event streams without intermediate\nrepresentations. Our method introduces a lightweight causal spatial\nneighborhood encoder to efficiently capture local geometric relations, followed\nby Mamba-based state space models for scalable temporal modeling with linear\ncomplexity. During inference, a controller adaptively adjusts the processing\nspeed according to the event rate, achieving an optimal balance between window\nlatency and inference latency.",
+      "pdf_url": "http://arxiv.org/pdf/2509.13784v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.13784v1",
+      "published": "2025-09-17",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "Semiparametric Causal Inference for Right-Censored Outcomes with Many Weak Invalid Instruments",
       "authors": [
@@ -152,29 +171,6 @@
         "stat.ME",
         "stat.ML",
         "stat.TH"
-      ]
-    },
-    {
-      "title": "PersonaX: Multimodal Datasets with LLM-Inferred Behavior Traits",
-      "authors": [
-        "Loka Li",
-        "Wong Yu Kang",
-        "Minghao Fu",
-        "Guangyi Chen",
-        "Zhenhao Chen",
-        "Gongxu Luo",
-        "Yuewen Sun",
-        "Salman Khan",
-        "Peter Spirtes",
-        "Kun Zhang"
-      ],
-      "abstract": "Understanding human behavior traits is central to applications in\nhuman-computer interaction, computational social science, and personalized AI\nsystems. Such understanding often requires integrating multiple modalities to\ncapture nuanced patterns and relationships. However, existing resources rarely\nprovide datasets that combine behavioral descriptors with complementary\nmodalities such as facial attributes and biographical information. To address\nthis gap, we present PersonaX, a curated collection of multimodal datasets\ndesigned to enable comprehensive analysis of public traits across modalities.\nPersonaX consists of (1) CelebPersona, featuring 9444 public figures from\ndiverse occupations, and (2) AthlePersona, covering 4181 professional athletes\nacross 7 major sports leagues. Each dataset includes behavioral trait\nassessments inferred by three high-performing large language models, alongside\nfacial imagery and structured biographical features. We analyze PersonaX at two\ncomplementary levels. First, we abstract high-level trait scores from text\ndescriptions and apply five statistical independence tests to examine their\nrelationships with other modalities. Second, we introduce a novel causal\nrepresentation learning (CRL) framework tailored to multimodal and\nmulti-measurement data, providing theoretical identifiability guarantees.\nExperiments on both synthetic and real-world data demonstrate the effectiveness\nof our approach. By unifying structured and unstructured analysis, PersonaX\nestablishes a foundation for studying LLM-inferred behavioral traits in\nconjunction with visual and biographical attributes, advancing multimodal trait\nanalysis and causal reasoning.",
-      "pdf_url": "http://arxiv.org/pdf/2509.11362v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.11362v1",
-      "published": "2025-09-14",
-      "categories": [
-        "cs.LG",
-        "cs.CV"
       ]
     }
   ]
