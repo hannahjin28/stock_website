@@ -1,6 +1,58 @@
 {
-  "last_updated": "2025-09-19T00:50:54.155027",
+  "last_updated": "2025-09-20T00:46:51.122629",
   "papers": [
+    {
+      "title": "Randomization inference for stepped-wedge designs with noncompliance with application to a palliative care pragmatic trial",
+      "authors": [
+        "Jeffrey Zhang",
+        "Zhe Chen",
+        "Katherine R. Courtright",
+        "Scott D. Halpern",
+        "Michael O. Harhay",
+        "Dylan S. Small",
+        "Fan Li"
+      ],
+      "abstract": "While palliative care is increasingly commonly delivered to hospitalized\npatients with serious illnesses, few studies have estimated its causal effects.\nCourtright et al. (2016) adopted a cluster-randomized stepped-wedge design to\nassess the effect of palliative care on a patient-centered outcome. The\nrandomized intervention was a nudge to administer palliative care but did not\nguarantee receipt of palliative care, resulting in noncompliance (compliance\nrate ~30%). A subsequent analysis using methods suited for standard trial\ndesigns produced statistically anomalous results, as an intention-to-treat\nanalysis found no effect while an instrumental variable analysis did\n(Courtright et al., 2024). This highlights the need for a more principled\napproach to address noncompliance in stepped-wedge designs. We provide a formal\ncausal inference framework for the stepped-wedge design with noncompliance by\nintroducing a relevant causal estimand and corresponding estimators and\ninferential procedures. Through simulation, we compare an array of estimators\nacross a range of stepped-wedge designs and provide practical guidance in\nchoosing an analysis method. Finally, we apply our recommended methods to\nreanalyze the trial of Courtright et al. (2016), producing point estimates\nsuggesting a larger effect than the original analysis of (Courtright et al.,\n2024), but intervals that did not reach statistical significance.",
+      "pdf_url": "http://arxiv.org/pdf/2509.14598v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.14598v1",
+      "published": "2025-09-18",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Modeling User Redemption Behavior in Complex Incentive Digital Environment: An Empirical Study Using Large-Scale Transactional Data",
+      "authors": [
+        "Akira Matsui",
+        "Takashi Teramoto",
+        "Eiji Motohashi",
+        "Hiroyuki Tsurumi"
+      ],
+      "abstract": "The digital economy implements complex incentive systems to retain users\nthrough point redemption. Understanding user behavior in such complex incentive\nstructures presents a fundamental challenge, especially in estimating the value\nof these digital assets against traditional money. This study tackles this\nquestion by analyzing large-scale, real-world transaction data from a popular\npersonal finance application that captures both monetary spending and\npoint-based transactions across Japan's deeply integrated loyalty networks. We\nfind that point usage is not random but is systematically linked to\ndemographics, with older users tending to convert points into financial assets.\nFurthermore, our analysis using a natural experiment and a causal inference\ntechnique reveals that a large point grant stimulated an increase in point\nspending without affecting cash expenditure. We also find that consumers'\nshopping styles are associated with their point redemption patterns. This\nstudy, conducted within a massive real-world economic ecosystem, examines how\nconsumers navigate multi-currency environments, with direct implications for\nmodeling economic behavior and designing digital platforms.",
+      "pdf_url": "http://arxiv.org/pdf/2509.14508v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.14508v1",
+      "published": "2025-09-18",
+      "categories": [
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "Theoretical Note: The Relation Between Structure and Dynamics in Psychological Networks of Attitudes",
+      "authors": [
+        "Mark G. Orr",
+        "Emily S. Teti",
+        "Andrei Bura",
+        "Henning Mortveit"
+      ],
+      "abstract": "Two claims of the Causal Attitude Network (CAN) model and the descendent\nAttitude Entropy framework (AE) are indicative of significant theoretical\nhurdles facing the psychological network modeling efforts of attitudes. The\nfirst claim is that the dynamics of change in an Ising like attitude network,\nunder perturbation of any one single node, can be inferred from the static\nnetwork attributes of said node. The second claim is that psychological network\nmodels of attitudes with Ising like dynamics will maximize both attitudinal\nconsistency and accuracy when within the small world topological regime. The\nfirst claim, one with significant application potentials, has not been\nsufficiently tested; the second claim, one with high theoretical novelty, has\nnever been addressed. Using a set of analytic results and simulations, we found\nlittle support for these claims; in short, the predictions are not logically\nconsistent with the theory. Our results have implications beyond attitude\nmodels to the larger field of psychological networks (e.g., in clinical\npsychology) in reference to how we should explain and understand their\ndynamics.",
+      "pdf_url": "http://arxiv.org/pdf/2509.14418v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.14418v1",
+      "published": "2025-09-17",
+      "categories": [
+        "q-bio.NC"
+      ]
+    },
     {
       "title": "CETUS: Causal Event-Driven Temporal Modeling With Unified Variable-Rate Scheduling",
       "authors": [
@@ -112,65 +164,6 @@
       "published": "2025-09-15",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "A Survey of Reasoning and Agentic Systems in Time Series with Large Language Models",
-      "authors": [
-        "Ching Chang",
-        "Yidan Shi",
-        "Defu Cao",
-        "Wei Yang",
-        "Jeehyun Hwang",
-        "Haixin Wang",
-        "Jiacheng Pang",
-        "Wei Wang",
-        "Yan Liu",
-        "Wen-Chih Peng",
-        "Tien-Fu Chen"
-      ],
-      "abstract": "Time series reasoning treats time as a first-class axis and incorporates\nintermediate evidence directly into the answer. This survey defines the problem\nand organizes the literature by reasoning topology with three families: direct\nreasoning in one step, linear chain reasoning with explicit intermediates, and\nbranch-structured reasoning that explores, revises, and aggregates. The\ntopology is crossed with the main objectives of the field, including\ntraditional time series analysis, explanation and understanding, causal\ninference and decision making, and time series generation, while a compact tag\nset spans these axes and captures decomposition and verification, ensembling,\ntool use, knowledge access, multimodality, agent loops, and LLM alignment\nregimes. Methods and systems are reviewed across domains, showing what each\ntopology enables and where it breaks down in faithfulness or robustness, along\nwith curated datasets, benchmarks, and resources that support study and\ndeployment (https://github.com/blacksnail789521/Time-Series-Reasoning-Survey).\nEvaluation practices that keep evidence visible and temporally aligned are\nhighlighted, and guidance is distilled on matching topology to uncertainty,\ngrounding with observable artifacts, planning for shift and streaming, and\ntreating cost and latency as design budgets. We emphasize that reasoning\nstructures must balance capacity for grounding and self-correction against\ncomputational cost and reproducibility, while future progress will likely\ndepend on benchmarks that tie reasoning quality to utility and on closed-loop\ntestbeds that trade off cost and risk under shift-aware, streaming, and\nlong-horizon settings. Taken together, these directions mark a shift from\nnarrow accuracy toward reliability at scale, enabling systems that not only\nanalyze but also understand, explain, and act on dynamic worlds with traceable\nevidence and credible outcomes.",
-      "pdf_url": "http://arxiv.org/pdf/2509.11575v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.11575v1",
-      "published": "2025-09-15",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Mendelian Randomization Methods for Causal Inference: Estimands, Identification and Inference",
-      "authors": [
-        "Minhao Yao",
-        "Anqi Wang",
-        "Xihao Li",
-        "Zhonghua Liu"
-      ],
-      "abstract": "Mendelian randomization (MR) has become an essential tool for causal\ninference in biomedical and public health research. By using genetic variants\nas instrumental variables, MR helps address unmeasured confounding and reverse\ncausation, offering a quasi-experimental framework to evaluate causal effects\nof modifiable exposures on health outcomes. Despite its promise, MR faces\nsubstantial methodological challenges, including invalid instruments, weak\ninstrument bias, and design complexities across different data structures. In\nthis tutorial review, we provide a comprehensive overview of MR methods for\ncausal inference, emphasizing clarity of causal interpretation, study design\ncomparisons, availability of software tools, and practical guidance for applied\nscientists. We organize the review around causal estimands, ensuring that\nanalyses are anchored to well-defined causal questions. We discuss the problems\nof invalid and weak instruments, comparing available strategies for their\ndetection and correction. We integrate discussions of population-based versus\nfamily-based MR designs, analyses based on individual-level versus\nsummary-level data, and one-sample versus two-sample MR designs, highlighting\ntheir relative advantages and limitations. We also summarize recent\nmethodological advances and software developments that extend MR to settings\nwith many weak or invalid instruments and to modern high-dimensional omics\ndata. Real-data applications, including UK Biobank and Alzheimer's disease\nproteomics studies, illustrate the use of these methods in practice. This\nreview aims to serve as a tutorial-style reference for both methodologists and\napplied scientists.",
-      "pdf_url": "http://arxiv.org/pdf/2509.11519v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.11519v1",
-      "published": "2025-09-15",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "The Honest Truth About Causal Trees: Accuracy Limits for Heterogeneous Treatment Effect Estimation",
-      "authors": [
-        "Matias D. Cattaneo",
-        "Jason M. Klusowski",
-        "Ruiqi Rae Yu"
-      ],
-      "abstract": "Recursive decision trees have emerged as a leading methodology for\nheterogeneous causal treatment effect estimation and inference in experimental\nand observational settings. These procedures are fitted using the celebrated\nCART (Classification And Regression Tree) algorithm [Breiman et al., 1984], or\ncustom variants thereof, and hence are believed to be \"adaptive\" to\nhigh-dimensional data, sparsity, or other specific features of the underlying\ndata generating process. Athey and Imbens [2016] proposed several \"honest\"\ncausal decision tree estimators, which have become the standard in both\nacademia and industry. We study their estimators, and variants thereof, and\nestablish lower bounds on their estimation error. We demonstrate that these\npopular heterogeneous treatment effect estimators cannot achieve a\npolynomial-in-$n$ convergence rate under basic conditions, where $n$ denotes\nthe sample size. Contrary to common belief, honesty does not resolve these\nlimitations and at best delivers negligible logarithmic improvements in sample\nsize or dimension. As a result, these commonly used estimators can exhibit poor\nperformance in practice, and even be inconsistent in some settings. Our\ntheoretical insights are empirically validated through simulations.",
-      "pdf_url": "http://arxiv.org/pdf/2509.11381v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.11381v1",
-      "published": "2025-09-14",
-      "categories": [
-        "math.ST",
-        "econ.EM",
-        "stat.ME",
-        "stat.ML",
-        "stat.TH"
       ]
     }
   ]
