@@ -1,6 +1,154 @@
 {
-  "last_updated": "2025-09-22T00:54:37.280299",
+  "last_updated": "2025-09-23T00:49:09.582379",
   "papers": [
+    {
+      "title": "What is a good matching of probability measures? A counterfactual lens on transport maps",
+      "authors": [
+        "Lucas De Lara",
+        "Luca Ganassali"
+      ],
+      "abstract": "Coupling probability measures lies at the core of many problems in statistics\nand machine learning, from domain adaptation to transfer learning and causal\ninference. Yet, even when restricted to deterministic transports, such\ncouplings are not identifiable: two atomless marginals admit infinitely many\ntransport maps. The common recourse to optimal transport, motivated by cost\nminimization and cyclical monotonicity, obscures the fact that several distinct\nnotions of multivariate monotone matchings coexist. In this work, we first\ncarry a comparative analysis of three constructions of transport maps:\ncyclically monotone, quantile-preserving and triangular monotone maps. We\nestablish necessary and sufficient conditions for their equivalence, thereby\nclarifying their respective structural properties. In parallel, we formulate\ncounterfactual reasoning within the framework of structural causal models as a\nproblem of selecting transport maps between fixed marginals, which makes\nexplicit the role of untestable assumptions in counterfactual reasoning. Then,\nwe are able to connect these two perspectives by identifying conditions on\ncausal graphs and structural equations under which counterfactual maps coincide\nwith classical statistical transports. In this way, we delineate the\ncircumstances in which causal assumptions support the use of a specific\nstructure of transport map. Taken together, our results aim to enrich the\ntheoretical understanding of families of transport maps and to clarify their\npossible causal interpretations. We hope this work contributes to establishing\nnew bridges between statistical transport and causal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2509.16027v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.16027v1",
+      "published": "2025-09-19",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.ST",
+        "stat.ME",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Generalized Deep Multi-view Clustering via Causal Learning with Partially Aligned Cross-view Correspondence",
+      "authors": [
+        "Xihong Yang",
+        "Siwei Wang",
+        "Jiaqi Jin",
+        "Fangdi Wang",
+        "Tianrui Liu",
+        "Yueming Jin",
+        "Xinwang Liu",
+        "En Zhu",
+        "Kunlun He"
+      ],
+      "abstract": "Multi-view clustering (MVC) aims to explore the common clustering structure\nacross multiple views. Many existing MVC methods heavily rely on the assumption\nof view consistency, where alignments for corresponding samples across\ndifferent views are ordered in advance. However, real-world scenarios often\npresent a challenge as only partial data is consistently aligned across\ndifferent views, restricting the overall clustering performance. In this work,\nwe consider the model performance decreasing phenomenon caused by data order\nshift (i.e., from fully to partially aligned) as a generalized multi-view\nclustering problem. To tackle this problem, we design a causal multi-view\nclustering network, termed CauMVC. We adopt a causal modeling approach to\nunderstand multi-view clustering procedure. To be specific, we formulate the\npartially aligned data as an intervention and multi-view clustering with\npartially aligned data as an post-intervention inference. However, obtaining\ninvariant features directly can be challenging. Thus, we design a Variational\nAuto-Encoder for causal learning by incorporating an encoder from existing\ninformation to estimate the invariant features. Moreover, a decoder is designed\nto perform the post-intervention inference. Lastly, we design a contrastive\nregularizer to capture sample correlations. To the best of our knowledge, this\npaper is the first work to deal generalized multi-view clustering via causal\nlearning. Empirical experiments on both fully and partially aligned data\nillustrate the strong generalization and effectiveness of CauMVC.",
+      "pdf_url": "http://arxiv.org/pdf/2509.16022v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.16022v1",
+      "published": "2025-09-19",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "CIDER: A Causal Cure for Brand-Obsessed Text-to-Image Models",
+      "authors": [
+        "Fangjian Shen",
+        "Zifeng Liang",
+        "Chao Wang",
+        "Wushao Wen"
+      ],
+      "abstract": "Text-to-image (T2I) models exhibit a significant yet under-explored \"brand\nbias\", a tendency to generate contents featuring dominant commercial brands\nfrom generic prompts, posing ethical and legal risks. We propose CIDER, a\nnovel, model-agnostic framework to mitigate bias at inference-time through\nprompt refinement to avoid costly retraining. CIDER uses a lightweight detector\nto identify branded content and a Vision-Language Model (VLM) to generate\nstylistically divergent alternatives. We introduce the Brand Neutrality Score\n(BNS) to quantify this issue and perform extensive experiments on leading T2I\nmodels. Results show CIDER significantly reduces both explicit and implicit\nbiases while maintaining image quality and aesthetic appeal. Our work offers a\npractical solution for more original and equitable content, contributing to the\ndevelopment of trustworthy generative AI.",
+      "pdf_url": "http://arxiv.org/pdf/2509.15803v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.15803v1",
+      "published": "2025-09-19",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Deep learning based doubly robust test for Granger causality",
+      "authors": [
+        "Yongchang Hui",
+        "Chijin Liu",
+        "Xiaojun Song"
+      ],
+      "abstract": "Granger causality is popular for analyzing time series data in many\napplications from natural science to social science including genomics,\nneuroscience, economics, and finance. Consequently, the Granger causality test\nhas become one of the main concerns of the econometrician for decades. Taking\nadvantage of the theoretical breakthroughs in deep learning in recent years, we\npropose a doubly robust Granger causality test (DRGCT). Our method offers\nseveral key advantages. The first and most direct benefit is for the users,\nDRGCT allows them to handle large lag orders while alleviating the curse of\ndimensionality that traditional nonlinear Granger causality tests usually face.\nSecond, introducing a doubly robust test statistic for time series based on\nneural networks that achieves a parametric convergence rate not only suggests a\nnew paradigm for nonparametric inference in econometrics, but also broadens the\napplication scope of deep learning. Third, a multiplier bootstrap method,\ncombined with the doubly robust approach, provides an efficient way to obtain\ncritical values, effectively reducing computational time and avoiding redundant\ncalculations. We prove that the test asymptotically controls the type I error,\nwhile achieving power approaches one, and validate the effectiveness of our\ntest through numerical simulations. In real data analysis, we apply DRGCT to\nrevisit the price-volume relationship problem in the stock markets of America,\nChina, and Japan.",
+      "pdf_url": "http://arxiv.org/pdf/2509.15798v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.15798v1",
+      "published": "2025-09-19",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "RMT-KD: Random Matrix Theoretic Causal Knowledge Distillation",
+      "authors": [
+        "Davide Ettori",
+        "Nastaran Darabi",
+        "Sureshkumar Senthilkumar",
+        "Amit Ranjan Trivedi"
+      ],
+      "abstract": "Large deep learning models such as BERT and ResNet achieve state-of-the-art\nperformance but are costly to deploy at the edge due to their size and compute\ndemands. We present RMT-KD, a compression method that leverages Random Matrix\nTheory (RMT) for knowledge distillation to iteratively reduce network size.\nInstead of pruning or heuristic rank selection, RMT-KD preserves only\ninformative directions identified via the spectral properties of hidden\nrepresentations. RMT-based causal reduction is applied layer by layer with\nself-distillation to maintain stability and accuracy. On GLUE, AG News, and\nCIFAR-10, RMT-KD achieves up to 80% parameter reduction with only 2% accuracy\nloss, delivering 2.8x faster inference and nearly halved power consumption.\nThese results establish RMT-KD as a mathematically grounded approach to network\ndistillation.",
+      "pdf_url": "http://arxiv.org/pdf/2509.15724v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.15724v1",
+      "published": "2025-09-19",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Beyond the Average: Distributional Causal Inference under Imperfect Compliance",
+      "authors": [
+        "Undral Byambadalai",
+        "Tomu Hirata",
+        "Tatsushi Oka",
+        "Shota Yasui"
+      ],
+      "abstract": "We study the estimation of distributional treatment effects in randomized\nexperiments with imperfect compliance. When participants do not adhere to their\nassigned treatments, we leverage treatment assignment as an instrumental\nvariable to identify the local distributional treatment effect-the difference\nin outcome distributions between treatment and control groups for the\nsubpopulation of compliers. We propose a regression-adjusted estimator based on\na distribution regression framework with Neyman-orthogonal moment conditions,\nenabling robustness and flexibility with high-dimensional covariates. Our\napproach accommodates continuous, discrete, and mixed discrete-continuous\noutcomes, and applies under a broad class of covariate-adaptive randomization\nschemes, including stratified block designs and simple random sampling. We\nderive the estimator's asymptotic distribution and show that it achieves the\nsemiparametric efficiency bound. Simulation results demonstrate favorable\nfinite-sample performance, and we demonstrate the method's practical relevance\nin an application to the Oregon Health Insurance Experiment.",
+      "pdf_url": "http://arxiv.org/pdf/2509.15594v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.15594v1",
+      "published": "2025-09-19",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "math.ST",
+        "stat.AP",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "SAMPO:Scale-wise Autoregression with Motion PrOmpt for generative world models",
+      "authors": [
+        "Sen Wang",
+        "Jingyi Tian",
+        "Le Wang",
+        "Zhimin Liao",
+        "Jiayi Li",
+        "Huaiyi Dong",
+        "Kun Xia",
+        "Sanping Zhou",
+        "Wei Tang",
+        "Hua Gang"
+      ],
+      "abstract": "World models allow agents to simulate the consequences of actions in imagined\nenvironments for planning, control, and long-horizon decision-making. However,\nexisting autoregressive world models struggle with visually coherent\npredictions due to disrupted spatial structure, inefficient decoding, and\ninadequate motion modeling. In response, we propose \\textbf{S}cale-wise\n\\textbf{A}utoregression with \\textbf{M}otion \\textbf{P}r\\textbf{O}mpt\n(\\textbf{SAMPO}), a hybrid framework that combines visual autoregressive\nmodeling for intra-frame generation with causal modeling for next-frame\ngeneration. Specifically, SAMPO integrates temporal causal decoding with\nbidirectional spatial attention, which preserves spatial locality and supports\nparallel decoding within each scale. This design significantly enhances both\ntemporal consistency and rollout efficiency. To further improve dynamic scene\nunderstanding, we devise an asymmetric multi-scale tokenizer that preserves\nspatial details in observed frames and extracts compact dynamic representations\nfor future frames, optimizing both memory usage and model performance.\nAdditionally, we introduce a trajectory-aware motion prompt module that injects\nspatiotemporal cues about object and robot trajectories, focusing attention on\ndynamic regions and improving temporal consistency and physical realism.\nExtensive experiments show that SAMPO achieves competitive performance in\naction-conditioned video prediction and model-based control, improving\ngeneration quality with 4.4$\\times$ faster inference. We also evaluate SAMPO's\nzero-shot generalization and scaling behavior, demonstrating its ability to\ngeneralize to unseen tasks and benefit from larger model sizes.",
+      "pdf_url": "http://arxiv.org/pdf/2509.15536v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.15536v1",
+      "published": "2025-09-19",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "Beyond Spurious Signals: Debiasing Multimodal Large Language Models via Counterfactual Inference and Adaptive Expert Routing",
+      "authors": [
+        "Zichen Wu",
+        "Hsiu-Yuan Huang",
+        "Yunfang Wu"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) have shown substantial capabilities\nin integrating visual and textual information, yet frequently rely on spurious\ncorrelations, undermining their robustness and generalization in complex\nmultimodal reasoning tasks. This paper addresses the critical challenge of\nsuperficial correlation bias in MLLMs through a novel causal mediation-based\ndebiasing framework. Specially, we distinguishing core semantics from spurious\ntextual and visual contexts via counterfactual examples to activate\ntraining-stage debiasing and employ a Mixture-of-Experts (MoE) architecture\nwith dynamic routing to selectively engages modality-specific debiasing\nexperts. Empirical evaluation on multimodal sarcasm detection and sentiment\nanalysis tasks demonstrates that our framework significantly surpasses unimodal\ndebiasing strategies and existing state-of-the-art models.",
+      "pdf_url": "http://arxiv.org/pdf/2509.15361v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.15361v1",
+      "published": "2025-09-18",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.MM"
+      ]
+    },
     {
       "title": "Randomization inference for stepped-wedge designs with noncompliance with application to a palliative care pragmatic trial",
       "authors": [
@@ -35,135 +183,6 @@
       "published": "2025-09-18",
       "categories": [
         "cs.CY"
-      ]
-    },
-    {
-      "title": "Theoretical Note: The Relation Between Structure and Dynamics in Psychological Networks of Attitudes",
-      "authors": [
-        "Mark G. Orr",
-        "Emily S. Teti",
-        "Andrei Bura",
-        "Henning Mortveit"
-      ],
-      "abstract": "Two claims of the Causal Attitude Network (CAN) model and the descendent\nAttitude Entropy framework (AE) are indicative of significant theoretical\nhurdles facing the psychological network modeling efforts of attitudes. The\nfirst claim is that the dynamics of change in an Ising like attitude network,\nunder perturbation of any one single node, can be inferred from the static\nnetwork attributes of said node. The second claim is that psychological network\nmodels of attitudes with Ising like dynamics will maximize both attitudinal\nconsistency and accuracy when within the small world topological regime. The\nfirst claim, one with significant application potentials, has not been\nsufficiently tested; the second claim, one with high theoretical novelty, has\nnever been addressed. Using a set of analytic results and simulations, we found\nlittle support for these claims; in short, the predictions are not logically\nconsistent with the theory. Our results have implications beyond attitude\nmodels to the larger field of psychological networks (e.g., in clinical\npsychology) in reference to how we should explain and understand their\ndynamics.",
-      "pdf_url": "http://arxiv.org/pdf/2509.14418v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.14418v1",
-      "published": "2025-09-17",
-      "categories": [
-        "q-bio.NC"
-      ]
-    },
-    {
-      "title": "CETUS: Causal Event-Driven Temporal Modeling With Unified Variable-Rate Scheduling",
-      "authors": [
-        "Hanfang Liang",
-        "Bing Wang",
-        "Shizhen Zhang",
-        "Wen Jiang",
-        "Yizhuo Yang",
-        "Weixiang Guo",
-        "Shenghai Yuan"
-      ],
-      "abstract": "Event cameras capture asynchronous pixel-level brightness changes with\nmicrosecond temporal resolution, offering unique advantages for high-speed\nvision tasks. Existing methods often convert event streams into intermediate\nrepresentations such as frames, voxel grids, or point clouds, which inevitably\nrequire predefined time windows and thus introduce window latency. Meanwhile,\npointwise detection methods face computational challenges that prevent\nreal-time efficiency due to their high computational cost. To overcome these\nlimitations, we propose the Variable-Rate Spatial Event Mamba, a novel\narchitecture that directly processes raw event streams without intermediate\nrepresentations. Our method introduces a lightweight causal spatial\nneighborhood encoder to efficiently capture local geometric relations, followed\nby Mamba-based state space models for scalable temporal modeling with linear\ncomplexity. During inference, a controller adaptively adjusts the processing\nspeed according to the event rate, achieving an optimal balance between window\nlatency and inference latency.",
-      "pdf_url": "http://arxiv.org/pdf/2509.13784v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.13784v1",
-      "published": "2025-09-17",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Semiparametric Causal Inference for Right-Censored Outcomes with Many Weak Invalid Instruments",
-      "authors": [
-        "Qiushi Bu",
-        "Wen Su",
-        "Xingqiu Zhao",
-        "Zhonghua Liu"
-      ],
-      "abstract": "We propose a semiparametric framework for causal inference with\nright-censored survival outcomes and many weak invalid instruments, motivated\nby Mendelian randomization in biobank studies where classical methods may fail.\nWe adopt an accelerated failure time model and construct a moment condition\nbased on augmented inverse probability of censoring weighting, incorporating\nboth uncensored and censored observations. Under a heteroscedasticity-based\ncondition on the treatment model, we establish point identification of the\ncausal effect despite censoring and invalid instruments. We propose GEL-NOW\n(Generalized Empirical Likelihood with Non-Orthogonal and Weak moments) for\nvalid inference under these conditions. A divergent number of Neyman orthogonal\nnuisance functions is estimated using deep neural networks. A key challenge is\nthat the conditional censoring distribution is a non-Neyman orthogonal\nnuisance, contributing to the first-order asymptotics of the estimator for the\ntarget causal effect parameter. We derive the asymptotic distribution and\nexplicitly incorporate this additional uncertainty into the asymptotic variance\nformula. We also introduce a censoring-adjusted over-identification test that\naccounts for this variance component. Simulation studies and UK Biobank\napplications demonstrate the method's robustness and practical utility.",
-      "pdf_url": "http://arxiv.org/pdf/2509.13176v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.13176v1",
-      "published": "2025-09-16",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Robust Sensitivity Analysis via Augmented Percentile Bootstrap under Simultaneous Violations of Unconfoundedness and Overlap",
-      "authors": [
-        "Han Cui",
-        "Xinran Li"
-      ],
-      "abstract": "The identification of causal effects in observational studies typically\nrelies on two standard assumptions: unconfoundedness and overlap. However, both\nassumptions are often questionable in practice: unconfoundedness is inherently\nuntestable, and overlap may fail in the presence of extreme unmeasured\nconfounding. While various approaches have been developed to address unmeasured\nconfounding and extreme propensity scores separately, few methods accommodate\nsimultaneous violations of both assumptions. In this paper, we propose a\nsensitivity analysis framework that relaxes both unconfoundedness and overlap,\nbuilding upon the marginal sensitivity model. Specifically, we allow the bound\non unmeasured confounding to hold for only a subset of the population, thereby\naccommodating heterogeneity in confounding and allowing treatment probabilities\nto be zero or one. Moreover, unlike prior work, our approach does not require\nbounded outcomes and focuses on overlap-weighted average treatment effects,\nwhich are both practically meaningful and robust to non-overlap. We develop\ncomputationally efficient methods to obtain worst-case bounds via linear\nprogramming, and introduce a novel augmented percentile bootstrap procedure for\nstatistical inference. This bootstrap method handles parameters defined through\nover-identified estimating equations involving unobserved variables and may be\nof independent interest. Our work provides a unified and flexible framework for\nsensitivity analysis under violations of both unconfoundedness and overlap.",
-      "pdf_url": "http://arxiv.org/pdf/2509.13169v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.13169v1",
-      "published": "2025-09-16",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Inverse regression for causal inference with multiple outcomes",
-      "authors": [
-        "Wei Zhang",
-        "Qizhai Li",
-        "Peng Ding"
-      ],
-      "abstract": "With multiple outcomes in empirical research, a common strategy is to define\na composite outcome as a weighted average of the original outcomes. However,\nthe choices of weights are often subjective and can be controversial. We\npropose an inverse regression strategy for causal inference with multiple\noutcomes. The key idea is to regress the treatment on the outcomes, which is\nthe inverse of the standard regression of the outcomes on the treatment.\nAlthough this strategy is simple and even counterintuitive, it has several\nadvantages. First, testing for zero coefficients of the outcomes is equivalent\nto testing for the null hypothesis of zero effects, even though the inverse\nregression is deemed misspecified. Second, the coefficients of the outcomes\nprovide a data-driven choice of the weights for defining a composite outcome.\nWe also discuss the associated inference issues. Third, this strategy is\napplicable to general study designs. We illustrate the theory in both\nrandomized experiments and observational studies.",
-      "pdf_url": "http://arxiv.org/pdf/2509.12587v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.12587v1",
-      "published": "2025-09-16",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Prediction and Causality of functional MRI and synthetic signal using a Zero-Shot Time-Series Foundation Model",
-      "authors": [
-        "Alessandro Crimi",
-        "Andrea Brovelli"
-      ],
-      "abstract": "Time-series forecasting and causal discovery are central in neuroscience, as\npredicting brain activity and identifying causal relationships between neural\npopulations and circuits can shed light on the mechanisms underlying cognition\nand disease. With the rise of foundation models, an open question is how they\ncompare to traditional methods for brain signal forecasting and causality\nanalysis, and whether they can be applied in a zero-shot setting. In this work,\nwe evaluate a foundation model against classical methods for inferring\ndirectional interactions from spontaneous brain activity measured with\nfunctional magnetic resonance imaging (fMRI) in humans. Traditional approaches\noften rely on Wiener-Granger causality. We tested the forecasting ability of\nthe foundation model in both zero-shot and fine-tuned settings, and assessed\ncausality by comparing Granger-like estimates from the model with standard\nGranger causality. We validated the approach using synthetic time series\ngenerated from ground-truth causal models, including logistic map coupling and\nOrnstein-Uhlenbeck processes. The foundation model achieved competitive\nzero-shot forecasting fMRI time series (mean absolute percentage error of 0.55\nin controls and 0.27 in patients). Although standard Granger causality did not\nshow clear quantitative differences between models, the foundation model\nprovided a more precise detection of causal interactions.\n  Overall, these findings suggest that foundation models offer versatility,\nstrong zero-shot performance, and potential utility for forecasting and causal\ndiscovery in time-series data.",
-      "pdf_url": "http://arxiv.org/pdf/2509.12497v2",
-      "arxiv_url": "http://arxiv.org/abs/2509.12497v2",
-      "published": "2025-09-15",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal-Symbolic Meta-Learning (CSML): Inducing Causal World Models for Few-Shot Generalization",
-      "authors": [
-        "Mohamed Zayaan S"
-      ],
-      "abstract": "Modern deep learning models excel at pattern recognition but remain\nfundamentally limited by their reliance on spurious correlations, leading to\npoor generalization and a demand for massive datasets. We argue that a key\ningredient for human-like intelligence-robust, sample-efficient learning-stems\nfrom an understanding of causal mechanisms. In this work, we introduce\nCausal-Symbolic Meta-Learning (CSML), a novel framework that learns to infer\nthe latent causal structure of a task distribution. CSML comprises three key\nmodules: a perception module that maps raw inputs to disentangled symbolic\nrepresentations; a differentiable causal induction module that discovers the\nunderlying causal graph governing these symbols and a graph-based reasoning\nmodule that leverages this graph to make predictions. By meta-learning a shared\ncausal world model across a distribution of tasks, CSML can rapidly adapt to\nnovel tasks, including those requiring reasoning about interventions and\ncounterfactuals, from only a handful of examples. We introduce CausalWorld, a\nnew physics-based benchmark designed to test these capabilities. Our\nexperiments show that CSML dramatically outperforms state-of-the-art\nmeta-learning and neuro-symbolic baselines, particularly on tasks demanding\ntrue causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2509.12387v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.12387v1",
-      "published": "2025-09-15",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "AvatarSync: Rethinking Talking-Head Animation through Autoregressive Perspective",
-      "authors": [
-        "Yuchen Deng",
-        "Xiuyang Wu",
-        "Hai-Tao Zheng",
-        "Suiyang Zhang",
-        "Yi He",
-        "Yuxing Han"
-      ],
-      "abstract": "Existing talking-head animation approaches based on Generative Adversarial\nNetworks (GANs) or diffusion models often suffer from inter-frame flicker,\nidentity drift, and slow inference. These limitations inherent to their video\ngeneration pipelines restrict their suitability for applications. To address\nthis, we introduce AvatarSync, an autoregressive framework on phoneme\nrepresentations that generates realistic and controllable talking-head\nanimations from a single reference image, driven directly text or audio input.\nIn addition, AvatarSync adopts a two-stage generation strategy, decoupling\nsemantic modeling from visual dynamics, which is a deliberate \"Divide and\nConquer\" design. The first stage, Facial Keyframe Generation (FKG), focuses on\nphoneme-level semantic representation by leveraging the many-to-one mapping\nfrom text or audio to phonemes. A Phoneme-to-Visual Mapping is constructed to\nanchor abstract phonemes to character-level units. Combined with a customized\nText-Frame Causal Attention Mask, the keyframes are generated. The second\nstage, inter-frame interpolation, emphasizes temporal coherence and visual\nsmoothness. We introduce a timestamp-aware adaptive strategy based on a\nselective state space model, enabling efficient bidirectional context\nreasoning. To support deployment, we optimize the inference pipeline to reduce\nlatency without compromising visual fidelity. Extensive experiments show that\nAvatarSync outperforms existing talking-head animation methods in visual\nfidelity, temporal consistency, and computational efficiency, providing a\nscalable and controllable solution.",
-      "pdf_url": "http://arxiv.org/pdf/2509.12052v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.12052v1",
-      "published": "2025-09-15",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
