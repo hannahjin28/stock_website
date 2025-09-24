@@ -1,6 +1,117 @@
 {
-  "last_updated": "2025-09-23T00:49:09.582379",
+  "last_updated": "2025-09-24T00:50:06.399961",
   "papers": [
+    {
+      "title": "The Narcissus Hypothesis:Descending to the Rung of Illusion",
+      "authors": [
+        "Riccardo Cadei",
+        "Christian Internò"
+      ],
+      "abstract": "Modern foundational models increasingly reflect not just world knowledge, but\npatterns of human preference embedded in their training data. We hypothesize\nthat recursive alignment-via human feedback and model-generated corpora-induces\na social desirability bias, nudging models to favor agreeable or flattering\nresponses over objective reasoning. We refer to it as the Narcissus Hypothesis\nand test it across 31 models using standardized personality assessments and a\nnovel Social Desirability Bias score. Results reveal a significant drift toward\nsocially conforming traits, with profound implications for corpus integrity and\nthe reliability of downstream inferences. We then offer a novel epistemological\ninterpretation, tracing how recursive bias may collapse higher-order reasoning\ndown Pearl's Ladder of Causality, culminating in what we refer to as the Rung\nof Illusion.",
+      "pdf_url": "http://arxiv.org/pdf/2509.17999v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.17999v1",
+      "published": "2025-09-22",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.HC",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Everything all at once: On choosing an estimand for multi-component environmental exposures",
+      "authors": [
+        "Kara E. Rudolph",
+        "Shodai Inose",
+        "Nicholas Williams",
+        "Ivan Diaz",
+        "Lucia Calderon",
+        "Jacqueline M. Torres",
+        "Marianthi-Anna Kioumourtzoglou"
+      ],
+      "abstract": "Many research questions -- particularly those in environmental health -- do\nnot involve binary exposures. In environmental epidemiology, this includes\nmultivariate exposure mixtures with nondiscrete components. Causal inference\nestimands and estimators to quantify the relationship between an exposure\nmixture and an outcome are relatively few. We propose an approach to quantify a\nrelationship between a shift in the exposure mixture and the outcome -- either\nin the single timepoint or longitudinal setting. The shift in the exposure\nmixture can be defined flexibly in terms of shifting one or more components,\nincluding examining interaction between mixture components, and in terms of\nshifting the same or different amounts across components. The estimand we\ndiscuss has a similar interpretation as a main effect regression coefficient.\nFirst, we focus on choosing a shift in the exposure mixture supported by\nobserved data. We demonstrate how to assess extrapolation and modify the shift\nto minimize reliance on extrapolation. Second, we propose estimating the\nrelationship between the exposure mixture shift and outcome completely\nnonparametrically, using machine learning in model-fitting. This is in contrast\nto other current approaches, which employ parametric modeling for at least some\nrelationships, which we would like to avoid because parametric modeling\nassumptions in complex, nonrandomized settings are tenuous at best. We are\nmotivated by longitudinal data on pesticide exposures among participants in the\nCHAMACOS Maternal Cognition cohort. We examine the relationship between\nlongitudinal exposure to agricultural pesticides and risk of hypertension. We\nprovide step-by-step code to facilitate the easy replication and adaptation of\nthe approaches we use.",
+      "pdf_url": "http://arxiv.org/pdf/2509.17960v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.17960v1",
+      "published": "2025-09-22",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Revealing Multimodal Causality with Large Language Models",
+      "authors": [
+        "Jin Li",
+        "Shoujin Wang",
+        "Qi Zhang",
+        "Feng Liu",
+        "Tongliang Liu",
+        "Longbing Cao",
+        "Shui Yu",
+        "Fang Chen"
+      ],
+      "abstract": "Uncovering cause-and-effect mechanisms from data is fundamental to scientific\nprogress. While large language models (LLMs) show promise for enhancing causal\ndiscovery (CD) from unstructured data, their application to the increasingly\nprevalent multimodal setting remains a critical challenge. Even with the advent\nof multimodal LLMs (MLLMs), their efficacy in multimodal CD is hindered by two\nprimary limitations: (1) difficulty in exploring intra- and inter-modal\ninteractions for comprehensive causal variable identification; and (2)\ninsufficiency to handle structural ambiguities with purely observational data.\nTo address these challenges, we propose MLLM-CD, a novel framework for\nmultimodal causal discovery from unstructured data. It consists of three key\ncomponents: (1) a novel contrastive factor discovery module to identify genuine\nmultimodal factors based on the interactions explored from contrastive sample\npairs; (2) a statistical causal structure discovery module to infer causal\nrelationships among discovered factors; and (3) an iterative multimodal\ncounterfactual reasoning module to refine the discovery outcomes iteratively by\nincorporating the world knowledge and reasoning capabilities of MLLMs.\nExtensive experiments on both synthetic and real-world datasets demonstrate the\neffectiveness of MLLM-CD in revealing genuine factors and causal relationships\namong them from multimodal unstructured data.",
+      "pdf_url": "http://arxiv.org/pdf/2509.17784v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.17784v1",
+      "published": "2025-09-22",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Regularizing Extrapolation in Causal Inference",
+      "authors": [
+        "David Arbour",
+        "Harsh Parikh",
+        "Bijan Niknam",
+        "Elizabeth Stuart",
+        "Kara Rudolph",
+        "Avi Feller"
+      ],
+      "abstract": "Many common estimators in machine learning and causal inference are linear\nsmoothers, where the prediction is a weighted average of the training outcomes.\nSome estimators, such as ordinary least squares and kernel ridge regression,\nallow for arbitrarily negative weights, which improve feature imbalance but\noften at the cost of increased dependence on parametric modeling assumptions\nand higher variance. By contrast, estimators like importance weighting and\nrandom forests (sometimes implicitly) restrict weights to be non-negative,\nreducing dependence on parametric modeling and variance at the cost of worse\nimbalance. In this paper, we propose a unified framework that directly\npenalizes the level of extrapolation, replacing the current practice of a hard\nnon-negativity constraint with a soft constraint and corresponding\nhyperparameter. We derive a worst-case extrapolation error bound and introduce\na novel \"bias-bias-variance\" tradeoff, encompassing biases due to feature\nimbalance, model misspecification, and estimator variance; this tradeoff is\nespecially pronounced in high dimensions, particularly when positivity is poor.\nWe then develop an optimization procedure that regularizes this bound while\nminimizing imbalance and outline how to use this approach as a sensitivity\nanalysis for dependence on parametric modeling assumptions. We demonstrate the\neffectiveness of our approach through synthetic experiments and a real-world\napplication, involving the generalization of randomized controlled trial\nestimates to a target population of interest.",
+      "pdf_url": "http://arxiv.org/pdf/2509.17180v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.17180v1",
+      "published": "2025-09-21",
+      "categories": [
+        "cs.LG",
+        "econ.EM",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Closing the Loop Inside Neural Networks: Causality-Guided Layer Adaptation for Fault Recovery Control",
+      "authors": [
+        "Mahdi Taheri",
+        "Soon-Jo Chung",
+        "Fred Y. Hadaegh"
+      ],
+      "abstract": "This paper studies the problem of real-time fault recovery control for\nnonlinear control-affine systems subject to actuator loss of effectiveness\nfaults and external disturbances. We derive a two-stage framework that combines\ncausal inference with selective online adaptation to achieve an effective\nlearning-based recovery control method. In the offline phase, we develop a\ncausal layer attribution technique based on the average causal effect (ACE) to\nevaluate the relative importance of each layer in a pretrained deep neural\nnetwork (DNN) controller compensating for faults. This methodology identifies a\nsubset of high-impact layers responsible for robust fault compensation. In the\nonline phase, we deploy a Lyapunov-based gradient update to adapt only the\nACE-selected layer to circumvent the need for full-network or last-layer only\nupdates. The proposed adaptive controller guarantees uniform ultimate\nboundedness (UUB) with exponential convergence of the closed-loop system in the\npresence of actuator faults and external disturbances. Compared to conventional\nadaptive DNN controllers with full-network adaptation, our methodology has a\nreduced computational overhead. To demonstrate the effectiveness of our\nproposed methodology, a case study is provided on a 3-axis attitude control\nsystem of a spacecraft with four reaction wheels.",
+      "pdf_url": "http://arxiv.org/pdf/2509.16837v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.16837v1",
+      "published": "2025-09-20",
+      "categories": [
+        "eess.SY",
+        "cs.SY"
+      ]
+    },
+    {
+      "title": "Entropic Causal Inference: Graph Identifiability",
+      "authors": [
+        "Spencer Compton",
+        "Kristjan Greenewald",
+        "Dmitriy Katz",
+        "Murat Kocaoglu"
+      ],
+      "abstract": "Entropic causal inference is a recent framework for learning the causal graph\nbetween two variables from observational data by finding the\ninformation-theoretically simplest structural explanation of the data, i.e.,\nthe model with smallest entropy. In our work, we first extend the causal graph\nidentifiability result in the two-variable setting under relaxed assumptions.\nWe then show the first identifiability result using the entropic approach for\nlearning causal graphs with more than two nodes. Our approach utilizes the\nproperty that ancestrality between a source node and its descendants can be\ndetermined using the bivariate entropic tests. We provide a sound sequential\npeeling algorithm for general graphs that relies on this property. We also\npropose a heuristic algorithm for small graphs that shows strong empirical\nperformance. We rigorously evaluate the performance of our algorithms on\nsynthetic data generated from a variety of models, observing improvement over\nprior work. Finally we test our algorithms on real-world datasets.",
+      "pdf_url": "http://arxiv.org/pdf/2509.16463v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.16463v1",
+      "published": "2025-09-19",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "What is a good matching of probability measures? A counterfactual lens on transport maps",
       "authors": [
@@ -70,119 +181,6 @@
       "published": "2025-09-19",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "RMT-KD: Random Matrix Theoretic Causal Knowledge Distillation",
-      "authors": [
-        "Davide Ettori",
-        "Nastaran Darabi",
-        "Sureshkumar Senthilkumar",
-        "Amit Ranjan Trivedi"
-      ],
-      "abstract": "Large deep learning models such as BERT and ResNet achieve state-of-the-art\nperformance but are costly to deploy at the edge due to their size and compute\ndemands. We present RMT-KD, a compression method that leverages Random Matrix\nTheory (RMT) for knowledge distillation to iteratively reduce network size.\nInstead of pruning or heuristic rank selection, RMT-KD preserves only\ninformative directions identified via the spectral properties of hidden\nrepresentations. RMT-based causal reduction is applied layer by layer with\nself-distillation to maintain stability and accuracy. On GLUE, AG News, and\nCIFAR-10, RMT-KD achieves up to 80% parameter reduction with only 2% accuracy\nloss, delivering 2.8x faster inference and nearly halved power consumption.\nThese results establish RMT-KD as a mathematically grounded approach to network\ndistillation.",
-      "pdf_url": "http://arxiv.org/pdf/2509.15724v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.15724v1",
-      "published": "2025-09-19",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Beyond the Average: Distributional Causal Inference under Imperfect Compliance",
-      "authors": [
-        "Undral Byambadalai",
-        "Tomu Hirata",
-        "Tatsushi Oka",
-        "Shota Yasui"
-      ],
-      "abstract": "We study the estimation of distributional treatment effects in randomized\nexperiments with imperfect compliance. When participants do not adhere to their\nassigned treatments, we leverage treatment assignment as an instrumental\nvariable to identify the local distributional treatment effect-the difference\nin outcome distributions between treatment and control groups for the\nsubpopulation of compliers. We propose a regression-adjusted estimator based on\na distribution regression framework with Neyman-orthogonal moment conditions,\nenabling robustness and flexibility with high-dimensional covariates. Our\napproach accommodates continuous, discrete, and mixed discrete-continuous\noutcomes, and applies under a broad class of covariate-adaptive randomization\nschemes, including stratified block designs and simple random sampling. We\nderive the estimator's asymptotic distribution and show that it achieves the\nsemiparametric efficiency bound. Simulation results demonstrate favorable\nfinite-sample performance, and we demonstrate the method's practical relevance\nin an application to the Oregon Health Insurance Experiment.",
-      "pdf_url": "http://arxiv.org/pdf/2509.15594v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.15594v1",
-      "published": "2025-09-19",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "math.ST",
-        "stat.AP",
-        "stat.ML",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "SAMPO:Scale-wise Autoregression with Motion PrOmpt for generative world models",
-      "authors": [
-        "Sen Wang",
-        "Jingyi Tian",
-        "Le Wang",
-        "Zhimin Liao",
-        "Jiayi Li",
-        "Huaiyi Dong",
-        "Kun Xia",
-        "Sanping Zhou",
-        "Wei Tang",
-        "Hua Gang"
-      ],
-      "abstract": "World models allow agents to simulate the consequences of actions in imagined\nenvironments for planning, control, and long-horizon decision-making. However,\nexisting autoregressive world models struggle with visually coherent\npredictions due to disrupted spatial structure, inefficient decoding, and\ninadequate motion modeling. In response, we propose \\textbf{S}cale-wise\n\\textbf{A}utoregression with \\textbf{M}otion \\textbf{P}r\\textbf{O}mpt\n(\\textbf{SAMPO}), a hybrid framework that combines visual autoregressive\nmodeling for intra-frame generation with causal modeling for next-frame\ngeneration. Specifically, SAMPO integrates temporal causal decoding with\nbidirectional spatial attention, which preserves spatial locality and supports\nparallel decoding within each scale. This design significantly enhances both\ntemporal consistency and rollout efficiency. To further improve dynamic scene\nunderstanding, we devise an asymmetric multi-scale tokenizer that preserves\nspatial details in observed frames and extracts compact dynamic representations\nfor future frames, optimizing both memory usage and model performance.\nAdditionally, we introduce a trajectory-aware motion prompt module that injects\nspatiotemporal cues about object and robot trajectories, focusing attention on\ndynamic regions and improving temporal consistency and physical realism.\nExtensive experiments show that SAMPO achieves competitive performance in\naction-conditioned video prediction and model-based control, improving\ngeneration quality with 4.4$\\times$ faster inference. We also evaluate SAMPO's\nzero-shot generalization and scaling behavior, demonstrating its ability to\ngeneralize to unseen tasks and benefit from larger model sizes.",
-      "pdf_url": "http://arxiv.org/pdf/2509.15536v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.15536v1",
-      "published": "2025-09-19",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "Beyond Spurious Signals: Debiasing Multimodal Large Language Models via Counterfactual Inference and Adaptive Expert Routing",
-      "authors": [
-        "Zichen Wu",
-        "Hsiu-Yuan Huang",
-        "Yunfang Wu"
-      ],
-      "abstract": "Multimodal Large Language Models (MLLMs) have shown substantial capabilities\nin integrating visual and textual information, yet frequently rely on spurious\ncorrelations, undermining their robustness and generalization in complex\nmultimodal reasoning tasks. This paper addresses the critical challenge of\nsuperficial correlation bias in MLLMs through a novel causal mediation-based\ndebiasing framework. Specially, we distinguishing core semantics from spurious\ntextual and visual contexts via counterfactual examples to activate\ntraining-stage debiasing and employ a Mixture-of-Experts (MoE) architecture\nwith dynamic routing to selectively engages modality-specific debiasing\nexperts. Empirical evaluation on multimodal sarcasm detection and sentiment\nanalysis tasks demonstrates that our framework significantly surpasses unimodal\ndebiasing strategies and existing state-of-the-art models.",
-      "pdf_url": "http://arxiv.org/pdf/2509.15361v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.15361v1",
-      "published": "2025-09-18",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.MM"
-      ]
-    },
-    {
-      "title": "Randomization inference for stepped-wedge designs with noncompliance with application to a palliative care pragmatic trial",
-      "authors": [
-        "Jeffrey Zhang",
-        "Zhe Chen",
-        "Katherine R. Courtright",
-        "Scott D. Halpern",
-        "Michael O. Harhay",
-        "Dylan S. Small",
-        "Fan Li"
-      ],
-      "abstract": "While palliative care is increasingly commonly delivered to hospitalized\npatients with serious illnesses, few studies have estimated its causal effects.\nCourtright et al. (2016) adopted a cluster-randomized stepped-wedge design to\nassess the effect of palliative care on a patient-centered outcome. The\nrandomized intervention was a nudge to administer palliative care but did not\nguarantee receipt of palliative care, resulting in noncompliance (compliance\nrate ~30%). A subsequent analysis using methods suited for standard trial\ndesigns produced statistically anomalous results, as an intention-to-treat\nanalysis found no effect while an instrumental variable analysis did\n(Courtright et al., 2024). This highlights the need for a more principled\napproach to address noncompliance in stepped-wedge designs. We provide a formal\ncausal inference framework for the stepped-wedge design with noncompliance by\nintroducing a relevant causal estimand and corresponding estimators and\ninferential procedures. Through simulation, we compare an array of estimators\nacross a range of stepped-wedge designs and provide practical guidance in\nchoosing an analysis method. Finally, we apply our recommended methods to\nreanalyze the trial of Courtright et al. (2016), producing point estimates\nsuggesting a larger effect than the original analysis of (Courtright et al.,\n2024), but intervals that did not reach statistical significance.",
-      "pdf_url": "http://arxiv.org/pdf/2509.14598v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.14598v1",
-      "published": "2025-09-18",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Modeling User Redemption Behavior in Complex Incentive Digital Environment: An Empirical Study Using Large-Scale Transactional Data",
-      "authors": [
-        "Akira Matsui",
-        "Takashi Teramoto",
-        "Eiji Motohashi",
-        "Hiroyuki Tsurumi"
-      ],
-      "abstract": "The digital economy implements complex incentive systems to retain users\nthrough point redemption. Understanding user behavior in such complex incentive\nstructures presents a fundamental challenge, especially in estimating the value\nof these digital assets against traditional money. This study tackles this\nquestion by analyzing large-scale, real-world transaction data from a popular\npersonal finance application that captures both monetary spending and\npoint-based transactions across Japan's deeply integrated loyalty networks. We\nfind that point usage is not random but is systematically linked to\ndemographics, with older users tending to convert points into financial assets.\nFurthermore, our analysis using a natural experiment and a causal inference\ntechnique reveals that a large point grant stimulated an increase in point\nspending without affecting cash expenditure. We also find that consumers'\nshopping styles are associated with their point redemption patterns. This\nstudy, conducted within a massive real-world economic ecosystem, examines how\nconsumers navigate multi-currency environments, with direct implications for\nmodeling economic behavior and designing digital platforms.",
-      "pdf_url": "http://arxiv.org/pdf/2509.14508v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.14508v1",
-      "published": "2025-09-18",
-      "categories": [
-        "cs.CY"
       ]
     }
   ]
