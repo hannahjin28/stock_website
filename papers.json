@@ -1,15 +1,97 @@
 {
-  "last_updated": "2025-09-24T00:50:06.399961",
+  "last_updated": "2025-09-25T00:50:07.703591",
   "papers": [
     {
-      "title": "The Narcissus Hypothesis:Descending to the Rung of Illusion",
+      "title": "Track-On2: Enhancing Online Point Tracking with Memory",
+      "authors": [
+        "Görkay Aydemir",
+        "Weidi Xie",
+        "Fatma Güney"
+      ],
+      "abstract": "In this paper, we consider the problem of long-term point tracking, which\nrequires consistent identification of points across video frames under\nsignificant appearance changes, motion, and occlusion. We target the online\nsetting, i.e. tracking points frame-by-frame, making it suitable for real-time\nand streaming applications. We extend our prior model Track-On into Track-On2,\na simple and efficient transformer-based model for online long-term tracking.\nTrack-On2 improves both performance and efficiency through architectural\nrefinements, more effective use of memory, and improved synthetic training\nstrategies. Unlike prior approaches that rely on full-sequence access or\niterative updates, our model processes frames causally and maintains temporal\ncoherence via a memory mechanism, which is key to handling drift and occlusions\nwithout requiring future frames. At inference, we perform coarse patch-level\nclassification followed by refinement. Beyond architecture, we systematically\nstudy synthetic training setups and their impact on memory behavior, showing\nhow they shape temporal robustness over long sequences. Through comprehensive\nexperiments, Track-On2 achieves state-of-the-art results across five synthetic\nand real-world benchmarks, surpassing prior online trackers and even strong\noffline methods that exploit bidirectional context. These results highlight the\neffectiveness of causal, memory-based architectures trained purely on synthetic\ndata as scalable solutions for real-world point tracking. Project page:\nhttps://kuis-ai.github.io/track_on2",
+      "pdf_url": "http://arxiv.org/pdf/2509.19115v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.19115v1",
+      "published": "2025-09-23",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Towards Practical Multi-label Causal Discovery in High-Dimensional Event Sequences via One-Shot Graph Aggregation",
+      "authors": [
+        "Hugo Math",
+        "Rainer Lienhart"
+      ],
+      "abstract": "Understanding causality in event sequences where outcome labels such as\ndiseases or system failures arise from preceding events like symptoms or error\ncodes is critical. Yet remains an unsolved challenge across domains like\nhealthcare or vehicle diagnostics. We introduce CARGO, a scalable multi-label\ncausal discovery method for sparse, high-dimensional event sequences comprising\nof thousands of unique event types. Using two pretrained causal Transformers as\ndomain-specific foundation models for event sequences. CARGO infers in\nparallel, per sequence one-shot causal graphs and aggregates them using an\nadaptive frequency fusion to reconstruct the global Markov boundaries of\nlabels. This two-stage approach enables efficient probabilistic reasoning at\nscale while bypassing the intractable cost of full-dataset conditional\nindependence testing. Our results on a challenging real-world automotive fault\nprediction dataset with over 29,100 unique event types and 474 imbalanced\nlabels demonstrate CARGO's ability to perform structured reasoning.",
+      "pdf_url": "http://arxiv.org/pdf/2509.19112v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.19112v1",
+      "published": "2025-09-23",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Memory in Large Language Models: Mechanisms, Evaluation and Evolution",
+      "authors": [
+        "Dianxing Zhang",
+        "Wendong Li",
+        "Kani Song",
+        "Jiaye Lu",
+        "Gang Li",
+        "Liuchun Yang",
+        "Sheng Li"
+      ],
+      "abstract": "Under a unified operational definition, we define LLM memory as a persistent\nstate written during pretraining, finetuning, or inference that can later be\naddressed and that stably influences outputs. We propose a four-part taxonomy\n(parametric, contextual, external, procedural/episodic) and a memory quadruple\n(location, persistence, write/access path, controllability). We link mechanism,\nevaluation, and governance via the chain write -> read -> inhibit/update. To\navoid distorted comparisons across heterogeneous setups, we adopt a\nthree-setting protocol (parametric only, offline retrieval, online retrieval)\nthat decouples capability from information availability on the same data and\ntimeline. On this basis we build a layered evaluation: parametric (closed-book\nrecall, edit differential, memorization/privacy), contextual (position curves\nand the mid-sequence drop), external (answer correctness vs snippet\nattribution/faithfulness), and procedural/episodic (cross-session consistency\nand timeline replay, E MARS+). The framework integrates temporal governance and\nleakage auditing (freshness hits, outdated answers, refusal slices) and\nuncertainty reporting via inter-rater agreement plus paired tests with\nmultiple-comparison correction. For updating and forgetting, we present DMM\nGov: coordinating DAPT/TAPT, PEFT, model editing (ROME, MEND, MEMIT, SERAC),\nand RAG to form an auditable loop covering admission thresholds, rollout,\nmonitoring, rollback, and change audits, with specs for timeliness, conflict\nhandling, and long-horizon consistency. Finally, we give four testable\npropositions: minimum identifiability; a minimal evaluation card; causally\nconstrained editing with verifiable forgetting; and when retrieval with\nsmall-window replay outperforms ultra-long-context reading. This yields a\nreproducible, comparable, and governable coordinate system for research and\ndeployment.",
+      "pdf_url": "http://arxiv.org/pdf/2509.18868v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.18868v1",
+      "published": "2025-09-23",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Optimization-centric cutting feedback for semiparametric models",
+      "authors": [
+        "Linda S. L. Tan",
+        "David J. Nott",
+        "David T. Frazier"
+      ],
+      "abstract": "Modern statistics deals with complex models from which the joint model used\nfor inference is built by coupling submodels, called modules. We consider\nmodular inference where the modules may depend on parametric and nonparametric\ncomponents. In such cases, a joint Bayesian inference is highly susceptible to\nmisspecification across any module, and inappropriate priors for nonparametric\ncomponents may deliver subpar inferences for parametric components, and vice\nversa. We propose a novel ``optimization-centric'' approach to cutting feedback\nfor semiparametric modular inference, which can address misspecification and\nprior-data conflicts. The proposed generalized cut posteriors are defined\nthrough a variational optimization problem for generalized posteriors where\nregularization is based on R\\'{e}nyi divergence, rather than Kullback-Leibler\ndivergence (KLD), and variational computational methods are developed. We show\nempirically that using R\\'{e}nyi divergence to define the cut posterior\ndelivers more robust inferences than KLD. We derive novel posterior\nconcentration results that accommodate the R\\'{e}nyi divergence and allow for\nsemiparametric components, greatly extending existing results for cut\nposteriors that were derived for parametric models and KLD. We demonstrate\nthese new methods in a benchmark toy example and two real examples: Gaussian\nprocess adjustments for confounding in causal inference and misspecified copula\nmodels with nonparametric marginals.",
+      "pdf_url": "http://arxiv.org/pdf/2509.18708v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.18708v1",
+      "published": "2025-09-23",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.CO",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Estimating Heterogeneous Causal Effect on Networks via Orthogonal Learning",
+      "authors": [
+        "Yuanchen Wu",
+        "Yubai Yuan"
+      ],
+      "abstract": "Estimating causal effects on networks is important for both scientific\nresearch and practical applications. Unlike traditional settings that assume\nthe Stable Unit Treatment Value Assumption (SUTVA), interference allows an\nintervention/treatment on one unit to affect the outcomes of others.\nUnderstanding both direct and spillover effects is critical in fields such as\nepidemiology, political science, and economics. Causal inference on networks\nfaces two main challenges. First, causal effects are typically heterogeneous,\nvarying with unit features and local network structure. Second, connected units\noften exhibit dependence due to network homophily, creating confounding between\nstructural correlations and causal effects. In this paper, we propose a\ntwo-stage method to estimate heterogeneous direct and spillover effects on\nnetworks. The first stage uses graph neural networks to estimate nuisance\ncomponents that depend on the complex network topology. In the second stage, we\nadjust for network confounding using these estimates and infer causal effects\nthrough a novel attention-based interference model. Our approach balances\nexpressiveness and interpretability, enabling downstream tasks such as\nidentifying influential neighborhoods and recovering the sign of spillover\neffects. We integrate the two stages using Neyman orthogonalization and\ncross-fitting, which ensures that errors from nuisance estimation contribute\nonly at higher order. As a result, our causal effect estimates are robust to\nbias and misspecification in modeling causal effects under network\ndependencies.",
+      "pdf_url": "http://arxiv.org/pdf/2509.18484v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.18484v1",
+      "published": "2025-09-23",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "The Narcissus Hypothesis: Descending to the Rung of Illusion",
       "authors": [
         "Riccardo Cadei",
         "Christian Internò"
       ],
       "abstract": "Modern foundational models increasingly reflect not just world knowledge, but\npatterns of human preference embedded in their training data. We hypothesize\nthat recursive alignment-via human feedback and model-generated corpora-induces\na social desirability bias, nudging models to favor agreeable or flattering\nresponses over objective reasoning. We refer to it as the Narcissus Hypothesis\nand test it across 31 models using standardized personality assessments and a\nnovel Social Desirability Bias score. Results reveal a significant drift toward\nsocially conforming traits, with profound implications for corpus integrity and\nthe reliability of downstream inferences. We then offer a novel epistemological\ninterpretation, tracing how recursive bias may collapse higher-order reasoning\ndown Pearl's Ladder of Causality, culminating in what we refer to as the Rung\nof Illusion.",
-      "pdf_url": "http://arxiv.org/pdf/2509.17999v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.17999v1",
+      "pdf_url": "http://arxiv.org/pdf/2509.17999v2",
+      "arxiv_url": "http://arxiv.org/abs/2509.17999v2",
       "published": "2025-09-22",
       "categories": [
         "cs.CY",
@@ -60,6 +142,22 @@
       ]
     },
     {
+      "title": "Multimodal Health Risk Prediction System for Chronic Diseases via Vision-Language Fusion and Large Language Models",
+      "authors": [
+        "Dingxin Lu",
+        "Shurui Wu",
+        "Xinyi Huang"
+      ],
+      "abstract": "With the rising global burden of chronic diseases and the multimodal and\nheterogeneous clinical data (medical imaging, free-text recordings, wearable\nsensor streams, etc.), there is an urgent need for a unified multimodal AI\nframework that can proactively predict individual health risks. We propose\nVL-RiskFormer, a hierarchical stacked visual-language multimodal Transformer\nwith a large language model (LLM) inference head embedded in its top layer. The\nsystem builds on the dual-stream architecture of existing visual-linguistic\nmodels (e.g., PaLM-E, LLaVA) with four key innovations: (i) pre-training with\ncross-modal comparison and fine-grained alignment of radiological images,\nfundus maps, and wearable device photos with corresponding clinical narratives\nusing momentum update encoders and debiased InfoNCE losses; (ii) a time fusion\nblock that integrates irregular visit sequences into the causal Transformer\ndecoder through adaptive time interval position coding; (iii) a disease\nontology map adapter that injects ICD-10 codes into visual and textual channels\nin layers and infers comorbid patterns with the help of a graph attention\nmechanism. On the MIMIC-IV longitudinal cohort, VL-RiskFormer achieved an\naverage AUROC of 0.90 with an expected calibration error of 2.7 percent.",
+      "pdf_url": "http://arxiv.org/pdf/2509.18221v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.18221v1",
+      "published": "2025-09-22",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
       "title": "Regularizing Extrapolation in Causal Inference",
       "authors": [
         "David Arbour",
@@ -76,110 +174,6 @@
       "categories": [
         "cs.LG",
         "econ.EM",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Closing the Loop Inside Neural Networks: Causality-Guided Layer Adaptation for Fault Recovery Control",
-      "authors": [
-        "Mahdi Taheri",
-        "Soon-Jo Chung",
-        "Fred Y. Hadaegh"
-      ],
-      "abstract": "This paper studies the problem of real-time fault recovery control for\nnonlinear control-affine systems subject to actuator loss of effectiveness\nfaults and external disturbances. We derive a two-stage framework that combines\ncausal inference with selective online adaptation to achieve an effective\nlearning-based recovery control method. In the offline phase, we develop a\ncausal layer attribution technique based on the average causal effect (ACE) to\nevaluate the relative importance of each layer in a pretrained deep neural\nnetwork (DNN) controller compensating for faults. This methodology identifies a\nsubset of high-impact layers responsible for robust fault compensation. In the\nonline phase, we deploy a Lyapunov-based gradient update to adapt only the\nACE-selected layer to circumvent the need for full-network or last-layer only\nupdates. The proposed adaptive controller guarantees uniform ultimate\nboundedness (UUB) with exponential convergence of the closed-loop system in the\npresence of actuator faults and external disturbances. Compared to conventional\nadaptive DNN controllers with full-network adaptation, our methodology has a\nreduced computational overhead. To demonstrate the effectiveness of our\nproposed methodology, a case study is provided on a 3-axis attitude control\nsystem of a spacecraft with four reaction wheels.",
-      "pdf_url": "http://arxiv.org/pdf/2509.16837v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.16837v1",
-      "published": "2025-09-20",
-      "categories": [
-        "eess.SY",
-        "cs.SY"
-      ]
-    },
-    {
-      "title": "Entropic Causal Inference: Graph Identifiability",
-      "authors": [
-        "Spencer Compton",
-        "Kristjan Greenewald",
-        "Dmitriy Katz",
-        "Murat Kocaoglu"
-      ],
-      "abstract": "Entropic causal inference is a recent framework for learning the causal graph\nbetween two variables from observational data by finding the\ninformation-theoretically simplest structural explanation of the data, i.e.,\nthe model with smallest entropy. In our work, we first extend the causal graph\nidentifiability result in the two-variable setting under relaxed assumptions.\nWe then show the first identifiability result using the entropic approach for\nlearning causal graphs with more than two nodes. Our approach utilizes the\nproperty that ancestrality between a source node and its descendants can be\ndetermined using the bivariate entropic tests. We provide a sound sequential\npeeling algorithm for general graphs that relies on this property. We also\npropose a heuristic algorithm for small graphs that shows strong empirical\nperformance. We rigorously evaluate the performance of our algorithms on\nsynthetic data generated from a variety of models, observing improvement over\nprior work. Finally we test our algorithms on real-world datasets.",
-      "pdf_url": "http://arxiv.org/pdf/2509.16463v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.16463v1",
-      "published": "2025-09-19",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "What is a good matching of probability measures? A counterfactual lens on transport maps",
-      "authors": [
-        "Lucas De Lara",
-        "Luca Ganassali"
-      ],
-      "abstract": "Coupling probability measures lies at the core of many problems in statistics\nand machine learning, from domain adaptation to transfer learning and causal\ninference. Yet, even when restricted to deterministic transports, such\ncouplings are not identifiable: two atomless marginals admit infinitely many\ntransport maps. The common recourse to optimal transport, motivated by cost\nminimization and cyclical monotonicity, obscures the fact that several distinct\nnotions of multivariate monotone matchings coexist. In this work, we first\ncarry a comparative analysis of three constructions of transport maps:\ncyclically monotone, quantile-preserving and triangular monotone maps. We\nestablish necessary and sufficient conditions for their equivalence, thereby\nclarifying their respective structural properties. In parallel, we formulate\ncounterfactual reasoning within the framework of structural causal models as a\nproblem of selecting transport maps between fixed marginals, which makes\nexplicit the role of untestable assumptions in counterfactual reasoning. Then,\nwe are able to connect these two perspectives by identifying conditions on\ncausal graphs and structural equations under which counterfactual maps coincide\nwith classical statistical transports. In this way, we delineate the\ncircumstances in which causal assumptions support the use of a specific\nstructure of transport map. Taken together, our results aim to enrich the\ntheoretical understanding of families of transport maps and to clarify their\npossible causal interpretations. We hope this work contributes to establishing\nnew bridges between statistical transport and causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2509.16027v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.16027v1",
-      "published": "2025-09-19",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "math.ST",
-        "stat.ME",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Generalized Deep Multi-view Clustering via Causal Learning with Partially Aligned Cross-view Correspondence",
-      "authors": [
-        "Xihong Yang",
-        "Siwei Wang",
-        "Jiaqi Jin",
-        "Fangdi Wang",
-        "Tianrui Liu",
-        "Yueming Jin",
-        "Xinwang Liu",
-        "En Zhu",
-        "Kunlun He"
-      ],
-      "abstract": "Multi-view clustering (MVC) aims to explore the common clustering structure\nacross multiple views. Many existing MVC methods heavily rely on the assumption\nof view consistency, where alignments for corresponding samples across\ndifferent views are ordered in advance. However, real-world scenarios often\npresent a challenge as only partial data is consistently aligned across\ndifferent views, restricting the overall clustering performance. In this work,\nwe consider the model performance decreasing phenomenon caused by data order\nshift (i.e., from fully to partially aligned) as a generalized multi-view\nclustering problem. To tackle this problem, we design a causal multi-view\nclustering network, termed CauMVC. We adopt a causal modeling approach to\nunderstand multi-view clustering procedure. To be specific, we formulate the\npartially aligned data as an intervention and multi-view clustering with\npartially aligned data as an post-intervention inference. However, obtaining\ninvariant features directly can be challenging. Thus, we design a Variational\nAuto-Encoder for causal learning by incorporating an encoder from existing\ninformation to estimate the invariant features. Moreover, a decoder is designed\nto perform the post-intervention inference. Lastly, we design a contrastive\nregularizer to capture sample correlations. To the best of our knowledge, this\npaper is the first work to deal generalized multi-view clustering via causal\nlearning. Empirical experiments on both fully and partially aligned data\nillustrate the strong generalization and effectiveness of CauMVC.",
-      "pdf_url": "http://arxiv.org/pdf/2509.16022v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.16022v1",
-      "published": "2025-09-19",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "CIDER: A Causal Cure for Brand-Obsessed Text-to-Image Models",
-      "authors": [
-        "Fangjian Shen",
-        "Zifeng Liang",
-        "Chao Wang",
-        "Wushao Wen"
-      ],
-      "abstract": "Text-to-image (T2I) models exhibit a significant yet under-explored \"brand\nbias\", a tendency to generate contents featuring dominant commercial brands\nfrom generic prompts, posing ethical and legal risks. We propose CIDER, a\nnovel, model-agnostic framework to mitigate bias at inference-time through\nprompt refinement to avoid costly retraining. CIDER uses a lightweight detector\nto identify branded content and a Vision-Language Model (VLM) to generate\nstylistically divergent alternatives. We introduce the Brand Neutrality Score\n(BNS) to quantify this issue and perform extensive experiments on leading T2I\nmodels. Results show CIDER significantly reduces both explicit and implicit\nbiases while maintaining image quality and aesthetic appeal. Our work offers a\npractical solution for more original and equitable content, contributing to the\ndevelopment of trustworthy generative AI.",
-      "pdf_url": "http://arxiv.org/pdf/2509.15803v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.15803v1",
-      "published": "2025-09-19",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Deep learning based doubly robust test for Granger causality",
-      "authors": [
-        "Yongchang Hui",
-        "Chijin Liu",
-        "Xiaojun Song"
-      ],
-      "abstract": "Granger causality is popular for analyzing time series data in many\napplications from natural science to social science including genomics,\nneuroscience, economics, and finance. Consequently, the Granger causality test\nhas become one of the main concerns of the econometrician for decades. Taking\nadvantage of the theoretical breakthroughs in deep learning in recent years, we\npropose a doubly robust Granger causality test (DRGCT). Our method offers\nseveral key advantages. The first and most direct benefit is for the users,\nDRGCT allows them to handle large lag orders while alleviating the curse of\ndimensionality that traditional nonlinear Granger causality tests usually face.\nSecond, introducing a doubly robust test statistic for time series based on\nneural networks that achieves a parametric convergence rate not only suggests a\nnew paradigm for nonparametric inference in econometrics, but also broadens the\napplication scope of deep learning. Third, a multiplier bootstrap method,\ncombined with the doubly robust approach, provides an efficient way to obtain\ncritical values, effectively reducing computational time and avoiding redundant\ncalculations. We prove that the test asymptotically controls the type I error,\nwhile achieving power approaches one, and validate the effectiveness of our\ntest through numerical simulations. In real data analysis, we apply DRGCT to\nrevisit the price-volume relationship problem in the stock markets of America,\nChina, and Japan.",
-      "pdf_url": "http://arxiv.org/pdf/2509.15798v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.15798v1",
-      "published": "2025-09-19",
-      "categories": [
         "stat.ME"
       ]
     }
