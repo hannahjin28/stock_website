@@ -1,6 +1,72 @@
 {
-  "last_updated": "2025-09-25T00:50:07.703591",
+  "last_updated": "2025-09-26T00:49:17.441831",
   "papers": [
+    {
+      "title": "Practical do-Shapley Explanations with Estimand-Agnostic Causal Inference",
+      "authors": [
+        "Álvaro Parafita",
+        "Tomas Garriga",
+        "Axel Brando",
+        "Francisco J. Cazorla"
+      ],
+      "abstract": "Among explainability techniques, SHAP stands out as one of the most popular,\nbut often overlooks the causal structure of the problem. In response, do-SHAP\nemploys interventional queries, but its reliance on estimands hinders its\npractical application. To address this problem, we propose the use of\nestimand-agnostic approaches, which allow for the estimation of any\nidentifiable query from a single model, making do-SHAP feasible on complex\ngraphs. We also develop a novel algorithm to significantly accelerate its\ncomputation at a negligible cost, as well as a method to explain inaccessible\nData Generating Processes. We demonstrate the estimation and computational\nperformance of our approach, and validate it on two real-world datasets,\nhighlighting its potential in obtaining reliable explanations.",
+      "pdf_url": "http://arxiv.org/pdf/2509.20211v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.20211v1",
+      "published": "2025-09-24",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal Inference under Threshold Manipulation: Bayesian Mixture Modeling and Heterogeneous Treatment Effects",
+      "authors": [
+        "Kohsuke Kubota",
+        "Shonosuke Sugasawa"
+      ],
+      "abstract": "Many marketing applications, including credit card incentive programs, offer\nrewards to customers who exceed specific spending thresholds to encourage\nincreased consumption. Quantifying the causal effect of these thresholds on\ncustomers is crucial for effective marketing strategy design. Although\nregression discontinuity design is a standard method for such causal inference\ntasks, its assumptions can be violated when customers, aware of the thresholds,\nstrategically manipulate their spending to qualify for the rewards. To address\nthis issue, we propose a novel framework for estimating the causal effect under\nthreshold manipulation. The main idea is to model the observed spending\ndistribution as a mixture of two distributions: one representing customers\nstrategically affected by the threshold, and the other representing those\nunaffected. To fit the mixture model, we adopt a two-step Bayesian approach\nconsisting of modeling non-bunching customers and fitting a mixture model to a\nsample around the threshold. We show posterior contraction of the resulting\nposterior distribution of the causal effect under large samples. Furthermore,\nwe extend this framework to a hierarchical Bayesian setting to estimate\nheterogeneous causal effects across customer subgroups, allowing for stable\ninference even with small subgroup sample sizes. We demonstrate the\neffectiveness of our proposed methods through simulation studies and illustrate\ntheir practical implications using a real-world marketing dataset.",
+      "pdf_url": "http://arxiv.org/pdf/2509.19814v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.19814v1",
+      "published": "2025-09-24",
+      "categories": [
+        "stat.ME",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "iFinder: Structured Zero-Shot Vision-Based LLM Grounding for Dash-Cam Video Reasoning",
+      "authors": [
+        "Manyi Yao",
+        "Bingbing Zhuang",
+        "Sparsh Garg",
+        "Amit Roy-Chowdhury",
+        "Christian Shelton",
+        "Manmohan Chandraker",
+        "Abhishek Aich"
+      ],
+      "abstract": "Grounding large language models (LLMs) in domain-specific tasks like post-hoc\ndash-cam driving video analysis is challenging due to their general-purpose\ntraining and lack of structured inductive biases. As vision is often the sole\nmodality available for such analysis (i.e., no LiDAR, GPS, etc.), existing\nvideo-based vision-language models (V-VLMs) struggle with spatial reasoning,\ncausal inference, and explainability of events in the input video. To this end,\nwe introduce iFinder, a structured semantic grounding framework that decouples\nperception from reasoning by translating dash-cam videos into a hierarchical,\ninterpretable data structure for LLMs. iFinder operates as a modular,\ntraining-free pipeline that employs pretrained vision models to extract\ncritical cues -- object pose, lane positions, and object trajectories -- which\nare hierarchically organized into frame- and video-level structures. Combined\nwith a three-block prompting strategy, it enables step-wise, grounded reasoning\nfor the LLM to refine a peer V-VLM's outputs and provide accurate reasoning.\nEvaluations on four public dash-cam video benchmarks show that iFinder's\nproposed grounding with domain-specific cues, especially object orientation and\nglobal context, significantly outperforms end-to-end V-VLMs on four zero-shot\ndriving benchmarks, with up to 39% gains in accident reasoning accuracy. By\ngrounding LLMs with driving domain-specific representations, iFinder offers a\nzero-shot, interpretable, and reliable alternative to end-to-end V-VLMs for\npost-hoc driving video understanding.",
+      "pdf_url": "http://arxiv.org/pdf/2509.19552v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.19552v1",
+      "published": "2025-09-23",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Chiseling: Powerful and Valid Subgroup Selection via Interactive Machine Learning",
+      "authors": [
+        "Nathan Cheng",
+        "Asher Spector",
+        "Lucas Janson"
+      ],
+      "abstract": "In regression and causal inference, controlled subgroup selection aims to\nidentify, with inferential guarantees, a subgroup (defined as a subset of the\ncovariate space) on which the average response or treatment effect is above a\ngiven threshold. E.g., in a clinical trial, it may be of interest to find a\nsubgroup with a positive average treatment effect. However, existing methods\neither lack inferential guarantees, heavily restrict the search for the\nsubgroup, or sacrifice efficiency by naive data splitting. We propose a novel\nframework called chiseling that allows the analyst to interactively refine and\ntest a candidate subgroup by iteratively shrinking it. The sole restriction is\nthat the shrinkage direction only depends on the points outside the current\nsubgroup, but otherwise the analyst may leverage any prior information or\nmachine learning algorithm. Despite this flexibility, chiseling controls the\nprobability that the discovered subgroup is null (e.g., has a non-positive\naverage treatment effect) under minimal assumptions: for example, in randomized\nexperiments, this inferential validity guarantee holds under only bounded\nmoment conditions. When applied to a variety of simulated datasets and a real\nsurvey experiment, chiseling identifies substantially better subgroups than\nexisting methods with inferential guarantees.",
+      "pdf_url": "http://arxiv.org/pdf/2509.19490v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.19490v1",
+      "published": "2025-09-23",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Track-On2: Enhancing Online Point Tracking with Memory",
       "authors": [
@@ -98,83 +164,6 @@
         "cs.AI",
         "cs.HC",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Everything all at once: On choosing an estimand for multi-component environmental exposures",
-      "authors": [
-        "Kara E. Rudolph",
-        "Shodai Inose",
-        "Nicholas Williams",
-        "Ivan Diaz",
-        "Lucia Calderon",
-        "Jacqueline M. Torres",
-        "Marianthi-Anna Kioumourtzoglou"
-      ],
-      "abstract": "Many research questions -- particularly those in environmental health -- do\nnot involve binary exposures. In environmental epidemiology, this includes\nmultivariate exposure mixtures with nondiscrete components. Causal inference\nestimands and estimators to quantify the relationship between an exposure\nmixture and an outcome are relatively few. We propose an approach to quantify a\nrelationship between a shift in the exposure mixture and the outcome -- either\nin the single timepoint or longitudinal setting. The shift in the exposure\nmixture can be defined flexibly in terms of shifting one or more components,\nincluding examining interaction between mixture components, and in terms of\nshifting the same or different amounts across components. The estimand we\ndiscuss has a similar interpretation as a main effect regression coefficient.\nFirst, we focus on choosing a shift in the exposure mixture supported by\nobserved data. We demonstrate how to assess extrapolation and modify the shift\nto minimize reliance on extrapolation. Second, we propose estimating the\nrelationship between the exposure mixture shift and outcome completely\nnonparametrically, using machine learning in model-fitting. This is in contrast\nto other current approaches, which employ parametric modeling for at least some\nrelationships, which we would like to avoid because parametric modeling\nassumptions in complex, nonrandomized settings are tenuous at best. We are\nmotivated by longitudinal data on pesticide exposures among participants in the\nCHAMACOS Maternal Cognition cohort. We examine the relationship between\nlongitudinal exposure to agricultural pesticides and risk of hypertension. We\nprovide step-by-step code to facilitate the easy replication and adaptation of\nthe approaches we use.",
-      "pdf_url": "http://arxiv.org/pdf/2509.17960v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.17960v1",
-      "published": "2025-09-22",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Revealing Multimodal Causality with Large Language Models",
-      "authors": [
-        "Jin Li",
-        "Shoujin Wang",
-        "Qi Zhang",
-        "Feng Liu",
-        "Tongliang Liu",
-        "Longbing Cao",
-        "Shui Yu",
-        "Fang Chen"
-      ],
-      "abstract": "Uncovering cause-and-effect mechanisms from data is fundamental to scientific\nprogress. While large language models (LLMs) show promise for enhancing causal\ndiscovery (CD) from unstructured data, their application to the increasingly\nprevalent multimodal setting remains a critical challenge. Even with the advent\nof multimodal LLMs (MLLMs), their efficacy in multimodal CD is hindered by two\nprimary limitations: (1) difficulty in exploring intra- and inter-modal\ninteractions for comprehensive causal variable identification; and (2)\ninsufficiency to handle structural ambiguities with purely observational data.\nTo address these challenges, we propose MLLM-CD, a novel framework for\nmultimodal causal discovery from unstructured data. It consists of three key\ncomponents: (1) a novel contrastive factor discovery module to identify genuine\nmultimodal factors based on the interactions explored from contrastive sample\npairs; (2) a statistical causal structure discovery module to infer causal\nrelationships among discovered factors; and (3) an iterative multimodal\ncounterfactual reasoning module to refine the discovery outcomes iteratively by\nincorporating the world knowledge and reasoning capabilities of MLLMs.\nExtensive experiments on both synthetic and real-world datasets demonstrate the\neffectiveness of MLLM-CD in revealing genuine factors and causal relationships\namong them from multimodal unstructured data.",
-      "pdf_url": "http://arxiv.org/pdf/2509.17784v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.17784v1",
-      "published": "2025-09-22",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Multimodal Health Risk Prediction System for Chronic Diseases via Vision-Language Fusion and Large Language Models",
-      "authors": [
-        "Dingxin Lu",
-        "Shurui Wu",
-        "Xinyi Huang"
-      ],
-      "abstract": "With the rising global burden of chronic diseases and the multimodal and\nheterogeneous clinical data (medical imaging, free-text recordings, wearable\nsensor streams, etc.), there is an urgent need for a unified multimodal AI\nframework that can proactively predict individual health risks. We propose\nVL-RiskFormer, a hierarchical stacked visual-language multimodal Transformer\nwith a large language model (LLM) inference head embedded in its top layer. The\nsystem builds on the dual-stream architecture of existing visual-linguistic\nmodels (e.g., PaLM-E, LLaVA) with four key innovations: (i) pre-training with\ncross-modal comparison and fine-grained alignment of radiological images,\nfundus maps, and wearable device photos with corresponding clinical narratives\nusing momentum update encoders and debiased InfoNCE losses; (ii) a time fusion\nblock that integrates irregular visit sequences into the causal Transformer\ndecoder through adaptive time interval position coding; (iii) a disease\nontology map adapter that injects ICD-10 codes into visual and textual channels\nin layers and infers comorbid patterns with the help of a graph attention\nmechanism. On the MIMIC-IV longitudinal cohort, VL-RiskFormer achieved an\naverage AUROC of 0.90 with an expected calibration error of 2.7 percent.",
-      "pdf_url": "http://arxiv.org/pdf/2509.18221v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.18221v1",
-      "published": "2025-09-22",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Regularizing Extrapolation in Causal Inference",
-      "authors": [
-        "David Arbour",
-        "Harsh Parikh",
-        "Bijan Niknam",
-        "Elizabeth Stuart",
-        "Kara Rudolph",
-        "Avi Feller"
-      ],
-      "abstract": "Many common estimators in machine learning and causal inference are linear\nsmoothers, where the prediction is a weighted average of the training outcomes.\nSome estimators, such as ordinary least squares and kernel ridge regression,\nallow for arbitrarily negative weights, which improve feature imbalance but\noften at the cost of increased dependence on parametric modeling assumptions\nand higher variance. By contrast, estimators like importance weighting and\nrandom forests (sometimes implicitly) restrict weights to be non-negative,\nreducing dependence on parametric modeling and variance at the cost of worse\nimbalance. In this paper, we propose a unified framework that directly\npenalizes the level of extrapolation, replacing the current practice of a hard\nnon-negativity constraint with a soft constraint and corresponding\nhyperparameter. We derive a worst-case extrapolation error bound and introduce\na novel \"bias-bias-variance\" tradeoff, encompassing biases due to feature\nimbalance, model misspecification, and estimator variance; this tradeoff is\nespecially pronounced in high dimensions, particularly when positivity is poor.\nWe then develop an optimization procedure that regularizes this bound while\nminimizing imbalance and outline how to use this approach as a sensitivity\nanalysis for dependence on parametric modeling assumptions. We demonstrate the\neffectiveness of our approach through synthetic experiments and a real-world\napplication, involving the generalization of randomized controlled trial\nestimates to a target population of interest.",
-      "pdf_url": "http://arxiv.org/pdf/2509.17180v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.17180v1",
-      "published": "2025-09-21",
-      "categories": [
-        "cs.LG",
-        "econ.EM",
-        "stat.ME"
       ]
     }
   ]
