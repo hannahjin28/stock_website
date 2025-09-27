@@ -1,6 +1,56 @@
 {
-  "last_updated": "2025-09-26T00:49:17.441831",
+  "last_updated": "2025-09-27T00:47:22.883086",
   "papers": [
+    {
+      "title": "WAVECLIP: Wavelet Tokenization for Adaptive-Resolution CLIP",
+      "authors": [
+        "Moshe Kimhi",
+        "Erez Koifman",
+        "Ehud Rivlin",
+        "Eli Schwartz",
+        "Chaim Baskin"
+      ],
+      "abstract": "We introduce WAVECLIP, a single unified model for adaptive resolution\ninference in CLIP, enabled by wavelet-based tokenization. WAVECLIP replaces\nstandard patch embeddings with a multi-level wavelet decomposition, enabling\nthe model to process images coarse to fine while naturally supporting multiple\nresolutions within the same model. At inference time, the model begins with low\nresolution tokens and refines only when needed, using key-value caching and\ncausal cross-level attention to reuse computation, effectively introducing to\nthe model only new information when needed. We evaluate WAVECLIP in zero-shot\nclassification, demonstrating that a simple confidence-based gating mechanism\nenables adaptive early exits. This allows users to dynamically choose a\ncompute-accuracy trade-off using a single deployed model. Our approach requires\nonly lightweight distillation from a frozen CLIP teacher and achieves\ncompetitive accuracy with significant computational savings.",
+      "pdf_url": "http://arxiv.org/pdf/2509.21153v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.21153v1",
+      "published": "2025-09-25",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.MM"
+      ]
+    },
+    {
+      "title": "Incorporating External Controls for Estimating the Average Treatment Effect on the Treated with High-Dimensional Data: Retaining Double Robustness and Ensuring Double Safety",
+      "authors": [
+        "Chi-Shian Dai",
+        "Chao Ying",
+        "Yang Ning",
+        "Jiwei Zhao"
+      ],
+      "abstract": "Randomized controlled trials (RCTs) are widely regarded as the gold standard\nfor causal inference in biomedical research. For instance, when estimating the\naverage treatment effect on the treated (ATT), a doubly robust estimation\nprocedure can be applied, requiring either the propensity score model or the\ncontrol outcome model to be correctly specified. In this paper, we address\nscenarios where external control data, often with a much larger sample size,\nare available. Such data are typically easier to obtain from historical records\nor third-party sources. However, we find that incorporating external controls\ninto the standard doubly robust estimator for ATT may paradoxically result in\nreduced efficiency compared to using the estimator without external controls.\nThis counterintuitive outcome suggests that the naive incorporation of external\ncontrols could be detrimental to estimation efficiency. To resolve this issue,\nwe propose a novel doubly robust estimator that guarantees higher efficiency\nthan the standard approach without external controls, even under model\nmisspecification. When all models are correctly specified, this estimator\naligns with the standard doubly robust estimator that incorporates external\ncontrols and achieves semiparametric efficiency. The asymptotic theory\ndeveloped in this work applies to high-dimensional confounder settings, which\nare increasingly common with the growing prevalence of electronic health record\ndata. We demonstrate the effectiveness of our methodology through extensive\nsimulation studies and a real-world data application.",
+      "pdf_url": "http://arxiv.org/pdf/2509.20586v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.20586v1",
+      "published": "2025-09-24",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Identification and Estimation of Joint Potential Outcome Distributions from a Single Study",
+      "authors": [
+        "Zach Shahn",
+        "David Madigan"
+      ],
+      "abstract": "Most causal inference methods focus on estimating marginal average treatment\neffects, but many important causal estimands depend on the joint distribution\nof potential outcomes, including the probability of causation and proportions\nbenefiting from or harmed by treatment. Wu et al (2025) recently established\nnonparametric identification of this joint distribution for categorical\noutcomes under binary treatment by leveraging variation across multiple\nstudies. We demonstrate that their multi-study framework can be implemented\nwithin a single study by using a baseline covariate that is associated with\nuntreated potential outcomes but does not modify treatment effects conditional\non those outcomes. This reframing substantially broadens the practical\napplicability of their results, as it eliminates the need for multiple\nindependent datasets and gives analysts control over covariate selection to\nsatisfy key identifying assumptions. We provide complete identification and\nestimation theory for the single-study setting, including a Neyman-orthogonal\nestimator for cases where the conditional independence assumption only holds\nafter adjusting for covariates. We validate the estimator in a simulation and\napply it to data from a large field experiment assessing the effect of mailings\non voter turnout.",
+      "pdf_url": "http://arxiv.org/pdf/2509.20506v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.20506v1",
+      "published": "2025-09-24",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Practical do-Shapley Explanations with Estimand-Agnostic Causal Inference",
       "authors": [
@@ -14,6 +64,42 @@
       "arxiv_url": "http://arxiv.org/abs/2509.20211v1",
       "published": "2025-09-24",
       "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "From Text to Talk: Audio-Language Model Needs Non-Autoregressive Joint Training",
+      "authors": [
+        "Tianqiao Liu",
+        "Xueyi Li",
+        "Hao Wang",
+        "Haoxuan Li",
+        "Zhichao Chen",
+        "Weiqi Luo",
+        "Zitao Liu"
+      ],
+      "abstract": "Recent advances in large language models (LLMs) have attracted significant\ninterest in extending their capabilities to multimodal scenarios, particularly\nfor speech-to-speech conversational systems. However, existing multimodal\nmodels handling interleaved audio and text rely on autoregressive methods,\noverlooking that text depends on target-target relations whereas audio depends\nmainly on source-target relations. In this work, we propose Text-to-Talk (TtT),\na unified audio-text framework that integrates autoregressive (AR) text\ngeneration with non-autoregressive (NAR) audio diffusion in a single\nTransformer. By leveraging the any-order autoregressive property of absorbing\ndiscrete diffusion, our approach provides a unified training objective for text\nand audio. To support this hybrid generation paradigm, we design a\nmodality-aware attention mechanism that enforces causal decoding for text while\nallowing bidirectional modeling within audio spans, and further introduce three\ntraining strategies that reduce train-test discrepancies. During inference, TtT\nemploys block-wise diffusion to synthesize audio in parallel while flexibly\nhandling variable-length outputs. Extensive experiments across Audio-QA and ASR\ntasks demonstrate the effectiveness of our approach, with detailed ablation\nstudies validating each proposed component. We will open-source our models,\ndata and code to facilitate future research in this direction.",
+      "pdf_url": "http://arxiv.org/pdf/2509.20072v2",
+      "arxiv_url": "http://arxiv.org/abs/2509.20072v2",
+      "published": "2025-09-24",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Structuring Collective Action with LLM-Guided Evolution: From Ill-Structured Problems to Executable Heuristics",
+      "authors": [
+        "Kevin Bradley Dsouza",
+        "Graham Alexander Watt",
+        "Yuri Leonenko",
+        "Juan Moreno-Cruz"
+      ],
+      "abstract": "Collective action problems, which require aligning individual incentives with\ncollective goals, are classic examples of Ill-Structured Problems (ISPs). For\nan individual agent, the causal links between local actions and global outcomes\nare unclear, stakeholder objectives often conflict, and no single, clear\nalgorithm can bridge micro-level choices with macro-level welfare. We present\nECHO-MIMIC, a computational framework that converts this global complexity into\na tractable, Well-Structured Problem (WSP) for each agent by discovering\ncompact, executable heuristics and persuasive rationales. The framework\noperates in two stages: ECHO (Evolutionary Crafting of Heuristics from\nOutcomes) evolves snippets of Python code that encode candidate behavioral\npolicies, while MIMIC (Mechanism Inference & Messaging for\nIndividual-to-Collective Alignment) evolves companion natural language messages\nthat motivate agents to adopt those policies. Both phases employ a\nlarge-language-model-driven evolutionary search: the LLM proposes diverse and\ncontext-aware code or text variants, while population-level selection retains\nthose that maximize collective performance in a simulated environment. We\ndemonstrate this framework on a canonical ISP in agricultural landscape\nmanagement, where local farming decisions impact global ecological\nconnectivity. Results show that ECHO-MIMIC discovers high-performing heuristics\ncompared to baselines and crafts tailored messages that successfully align\nsimulated farmer behavior with landscape-level ecological goals. By coupling\nalgorithmic rule discovery with tailored communication, ECHO-MIMIC transforms\nthe cognitive burden of collective action into a simple set of agent-level\ninstructions, making previously ill-structured problems solvable in practice\nand opening a new path toward scalable, adaptive policy design.",
+      "pdf_url": "http://arxiv.org/pdf/2509.20412v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.20412v1",
+      "published": "2025-09-24",
+      "categories": [
+        "cs.MA",
         "cs.LG"
       ]
     },
@@ -80,90 +166,6 @@
       "published": "2025-09-23",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Towards Practical Multi-label Causal Discovery in High-Dimensional Event Sequences via One-Shot Graph Aggregation",
-      "authors": [
-        "Hugo Math",
-        "Rainer Lienhart"
-      ],
-      "abstract": "Understanding causality in event sequences where outcome labels such as\ndiseases or system failures arise from preceding events like symptoms or error\ncodes is critical. Yet remains an unsolved challenge across domains like\nhealthcare or vehicle diagnostics. We introduce CARGO, a scalable multi-label\ncausal discovery method for sparse, high-dimensional event sequences comprising\nof thousands of unique event types. Using two pretrained causal Transformers as\ndomain-specific foundation models for event sequences. CARGO infers in\nparallel, per sequence one-shot causal graphs and aggregates them using an\nadaptive frequency fusion to reconstruct the global Markov boundaries of\nlabels. This two-stage approach enables efficient probabilistic reasoning at\nscale while bypassing the intractable cost of full-dataset conditional\nindependence testing. Our results on a challenging real-world automotive fault\nprediction dataset with over 29,100 unique event types and 474 imbalanced\nlabels demonstrate CARGO's ability to perform structured reasoning.",
-      "pdf_url": "http://arxiv.org/pdf/2509.19112v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.19112v1",
-      "published": "2025-09-23",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Memory in Large Language Models: Mechanisms, Evaluation and Evolution",
-      "authors": [
-        "Dianxing Zhang",
-        "Wendong Li",
-        "Kani Song",
-        "Jiaye Lu",
-        "Gang Li",
-        "Liuchun Yang",
-        "Sheng Li"
-      ],
-      "abstract": "Under a unified operational definition, we define LLM memory as a persistent\nstate written during pretraining, finetuning, or inference that can later be\naddressed and that stably influences outputs. We propose a four-part taxonomy\n(parametric, contextual, external, procedural/episodic) and a memory quadruple\n(location, persistence, write/access path, controllability). We link mechanism,\nevaluation, and governance via the chain write -> read -> inhibit/update. To\navoid distorted comparisons across heterogeneous setups, we adopt a\nthree-setting protocol (parametric only, offline retrieval, online retrieval)\nthat decouples capability from information availability on the same data and\ntimeline. On this basis we build a layered evaluation: parametric (closed-book\nrecall, edit differential, memorization/privacy), contextual (position curves\nand the mid-sequence drop), external (answer correctness vs snippet\nattribution/faithfulness), and procedural/episodic (cross-session consistency\nand timeline replay, E MARS+). The framework integrates temporal governance and\nleakage auditing (freshness hits, outdated answers, refusal slices) and\nuncertainty reporting via inter-rater agreement plus paired tests with\nmultiple-comparison correction. For updating and forgetting, we present DMM\nGov: coordinating DAPT/TAPT, PEFT, model editing (ROME, MEND, MEMIT, SERAC),\nand RAG to form an auditable loop covering admission thresholds, rollout,\nmonitoring, rollback, and change audits, with specs for timeliness, conflict\nhandling, and long-horizon consistency. Finally, we give four testable\npropositions: minimum identifiability; a minimal evaluation card; causally\nconstrained editing with verifiable forgetting; and when retrieval with\nsmall-window replay outperforms ultra-long-context reading. This yields a\nreproducible, comparable, and governable coordinate system for research and\ndeployment.",
-      "pdf_url": "http://arxiv.org/pdf/2509.18868v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.18868v1",
-      "published": "2025-09-23",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Optimization-centric cutting feedback for semiparametric models",
-      "authors": [
-        "Linda S. L. Tan",
-        "David J. Nott",
-        "David T. Frazier"
-      ],
-      "abstract": "Modern statistics deals with complex models from which the joint model used\nfor inference is built by coupling submodels, called modules. We consider\nmodular inference where the modules may depend on parametric and nonparametric\ncomponents. In such cases, a joint Bayesian inference is highly susceptible to\nmisspecification across any module, and inappropriate priors for nonparametric\ncomponents may deliver subpar inferences for parametric components, and vice\nversa. We propose a novel ``optimization-centric'' approach to cutting feedback\nfor semiparametric modular inference, which can address misspecification and\nprior-data conflicts. The proposed generalized cut posteriors are defined\nthrough a variational optimization problem for generalized posteriors where\nregularization is based on R\\'{e}nyi divergence, rather than Kullback-Leibler\ndivergence (KLD), and variational computational methods are developed. We show\nempirically that using R\\'{e}nyi divergence to define the cut posterior\ndelivers more robust inferences than KLD. We derive novel posterior\nconcentration results that accommodate the R\\'{e}nyi divergence and allow for\nsemiparametric components, greatly extending existing results for cut\nposteriors that were derived for parametric models and KLD. We demonstrate\nthese new methods in a benchmark toy example and two real examples: Gaussian\nprocess adjustments for confounding in causal inference and misspecified copula\nmodels with nonparametric marginals.",
-      "pdf_url": "http://arxiv.org/pdf/2509.18708v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.18708v1",
-      "published": "2025-09-23",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.CO",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Estimating Heterogeneous Causal Effect on Networks via Orthogonal Learning",
-      "authors": [
-        "Yuanchen Wu",
-        "Yubai Yuan"
-      ],
-      "abstract": "Estimating causal effects on networks is important for both scientific\nresearch and practical applications. Unlike traditional settings that assume\nthe Stable Unit Treatment Value Assumption (SUTVA), interference allows an\nintervention/treatment on one unit to affect the outcomes of others.\nUnderstanding both direct and spillover effects is critical in fields such as\nepidemiology, political science, and economics. Causal inference on networks\nfaces two main challenges. First, causal effects are typically heterogeneous,\nvarying with unit features and local network structure. Second, connected units\noften exhibit dependence due to network homophily, creating confounding between\nstructural correlations and causal effects. In this paper, we propose a\ntwo-stage method to estimate heterogeneous direct and spillover effects on\nnetworks. The first stage uses graph neural networks to estimate nuisance\ncomponents that depend on the complex network topology. In the second stage, we\nadjust for network confounding using these estimates and infer causal effects\nthrough a novel attention-based interference model. Our approach balances\nexpressiveness and interpretability, enabling downstream tasks such as\nidentifying influential neighborhoods and recovering the sign of spillover\neffects. We integrate the two stages using Neyman orthogonalization and\ncross-fitting, which ensures that errors from nuisance estimation contribute\nonly at higher order. As a result, our causal effect estimates are robust to\nbias and misspecification in modeling causal effects under network\ndependencies.",
-      "pdf_url": "http://arxiv.org/pdf/2509.18484v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.18484v1",
-      "published": "2025-09-23",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "The Narcissus Hypothesis: Descending to the Rung of Illusion",
-      "authors": [
-        "Riccardo Cadei",
-        "Christian Internò"
-      ],
-      "abstract": "Modern foundational models increasingly reflect not just world knowledge, but\npatterns of human preference embedded in their training data. We hypothesize\nthat recursive alignment-via human feedback and model-generated corpora-induces\na social desirability bias, nudging models to favor agreeable or flattering\nresponses over objective reasoning. We refer to it as the Narcissus Hypothesis\nand test it across 31 models using standardized personality assessments and a\nnovel Social Desirability Bias score. Results reveal a significant drift toward\nsocially conforming traits, with profound implications for corpus integrity and\nthe reliability of downstream inferences. We then offer a novel epistemological\ninterpretation, tracing how recursive bias may collapse higher-order reasoning\ndown Pearl's Ladder of Causality, culminating in what we refer to as the Rung\nof Illusion.",
-      "pdf_url": "http://arxiv.org/pdf/2509.17999v2",
-      "arxiv_url": "http://arxiv.org/abs/2509.17999v2",
-      "published": "2025-09-22",
-      "categories": [
-        "cs.CY",
-        "cs.AI",
-        "cs.HC",
-        "cs.LG"
       ]
     }
   ]
