@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-09-28T00:55:38.163086",
+  "last_updated": "2025-09-29T00:51:48.210709",
   "papers": [
     {
       "title": "WAVECLIP: Wavelet Tokenization for Adaptive-Resolution CLIP",
@@ -145,8 +145,8 @@
         "Lucas Janson"
       ],
       "abstract": "In regression and causal inference, controlled subgroup selection aims to\nidentify, with inferential guarantees, a subgroup (defined as a subset of the\ncovariate space) on which the average response or treatment effect is above a\ngiven threshold. E.g., in a clinical trial, it may be of interest to find a\nsubgroup with a positive average treatment effect. However, existing methods\neither lack inferential guarantees, heavily restrict the search for the\nsubgroup, or sacrifice efficiency by naive data splitting. We propose a novel\nframework called chiseling that allows the analyst to interactively refine and\ntest a candidate subgroup by iteratively shrinking it. The sole restriction is\nthat the shrinkage direction only depends on the points outside the current\nsubgroup, but otherwise the analyst may leverage any prior information or\nmachine learning algorithm. Despite this flexibility, chiseling controls the\nprobability that the discovered subgroup is null (e.g., has a non-positive\naverage treatment effect) under minimal assumptions: for example, in randomized\nexperiments, this inferential validity guarantee holds under only bounded\nmoment conditions. When applied to a variety of simulated datasets and a real\nsurvey experiment, chiseling identifies substantially better subgroups than\nexisting methods with inferential guarantees.",
-      "pdf_url": "http://arxiv.org/pdf/2509.19490v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.19490v1",
+      "pdf_url": "http://arxiv.org/pdf/2509.19490v2",
+      "arxiv_url": "http://arxiv.org/abs/2509.19490v2",
       "published": "2025-09-23",
       "categories": [
         "stat.ME",
