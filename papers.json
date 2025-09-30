@@ -1,171 +1,172 @@
 {
-  "last_updated": "2025-09-29T00:51:48.210709",
+  "last_updated": "2025-09-30T00:50:51.962322",
   "papers": [
     {
-      "title": "WAVECLIP: Wavelet Tokenization for Adaptive-Resolution CLIP",
+      "title": "LongLive: Real-time Interactive Long Video Generation",
       "authors": [
-        "Moshe Kimhi",
-        "Erez Koifman",
-        "Ehud Rivlin",
-        "Eli Schwartz",
-        "Chaim Baskin"
+        "Shuai Yang",
+        "Wei Huang",
+        "Ruihang Chu",
+        "Yicheng Xiao",
+        "Yuyang Zhao",
+        "Xianbang Wang",
+        "Muyang Li",
+        "Enze Xie",
+        "Yingcong Chen",
+        "Yao Lu",
+        "Song Han",
+        "Yukang Chen"
       ],
-      "abstract": "We introduce WAVECLIP, a single unified model for adaptive resolution\ninference in CLIP, enabled by wavelet-based tokenization. WAVECLIP replaces\nstandard patch embeddings with a multi-level wavelet decomposition, enabling\nthe model to process images coarse to fine while naturally supporting multiple\nresolutions within the same model. At inference time, the model begins with low\nresolution tokens and refines only when needed, using key-value caching and\ncausal cross-level attention to reuse computation, effectively introducing to\nthe model only new information when needed. We evaluate WAVECLIP in zero-shot\nclassification, demonstrating that a simple confidence-based gating mechanism\nenables adaptive early exits. This allows users to dynamically choose a\ncompute-accuracy trade-off using a single deployed model. Our approach requires\nonly lightweight distillation from a frozen CLIP teacher and achieves\ncompetitive accuracy with significant computational savings.",
-      "pdf_url": "http://arxiv.org/pdf/2509.21153v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.21153v1",
-      "published": "2025-09-25",
+      "abstract": "We present LongLive, a frame-level autoregressive (AR) framework for\nreal-time and interactive long video generation. Long video generation presents\nchallenges in both efficiency and quality. Diffusion and Diffusion-Forcing\nmodels can produce high-quality videos but suffer from low efficiency due to\nbidirectional attention. Causal attention AR models support KV caching for\nfaster inference, but often degrade in quality on long videos due to memory\nchallenges during long-video training. In addition, beyond static prompt-based\ngeneration, interactive capabilities, such as streaming prompt inputs, are\ncritical for dynamic content creation, enabling users to guide narratives in\nreal time. This interactive requirement significantly increases complexity,\nespecially in ensuring visual consistency and semantic coherence during prompt\ntransitions. To address these challenges, LongLive adopts a causal, frame-level\nAR design that integrates a KV-recache mechanism that refreshes cached states\nwith new prompts for smooth, adherent switches; streaming long tuning to enable\nlong video training and to align training and inference (train-long-test-long);\nand short window attention paired with a frame-level attention sink, shorten as\nframe sink, preserving long-range consistency while enabling faster generation.\nWith these key designs, LongLive fine-tunes a 1.3B-parameter short-clip model\nto minute-long generation in just 32 GPU-days. At inference, LongLive sustains\n20.7 FPS on a single NVIDIA H100, achieves strong performance on VBench in both\nshort and long videos. LongLive supports up to 240-second videos on a single\nH100 GPU. LongLive further supports INT8-quantized inference with only marginal\nquality loss.",
+      "pdf_url": "http://arxiv.org/pdf/2509.22622v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.22622v1",
+      "published": "2025-09-26",
       "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.MM"
+        "cs.CV"
       ]
     },
     {
-      "title": "Incorporating External Controls for Estimating the Average Treatment Effect on the Treated with High-Dimensional Data: Retaining Double Robustness and Ensuring Double Safety",
+      "title": "Linear Causal Representation Learning by Topological Ordering, Pruning, and Disentanglement",
       "authors": [
-        "Chi-Shian Dai",
-        "Chao Ying",
-        "Yang Ning",
-        "Jiwei Zhao"
+        "Hao Chen",
+        "Lin Liu",
+        "Yu Guang Wang"
       ],
-      "abstract": "Randomized controlled trials (RCTs) are widely regarded as the gold standard\nfor causal inference in biomedical research. For instance, when estimating the\naverage treatment effect on the treated (ATT), a doubly robust estimation\nprocedure can be applied, requiring either the propensity score model or the\ncontrol outcome model to be correctly specified. In this paper, we address\nscenarios where external control data, often with a much larger sample size,\nare available. Such data are typically easier to obtain from historical records\nor third-party sources. However, we find that incorporating external controls\ninto the standard doubly robust estimator for ATT may paradoxically result in\nreduced efficiency compared to using the estimator without external controls.\nThis counterintuitive outcome suggests that the naive incorporation of external\ncontrols could be detrimental to estimation efficiency. To resolve this issue,\nwe propose a novel doubly robust estimator that guarantees higher efficiency\nthan the standard approach without external controls, even under model\nmisspecification. When all models are correctly specified, this estimator\naligns with the standard doubly robust estimator that incorporates external\ncontrols and achieves semiparametric efficiency. The asymptotic theory\ndeveloped in this work applies to high-dimensional confounder settings, which\nare increasingly common with the growing prevalence of electronic health record\ndata. We demonstrate the effectiveness of our methodology through extensive\nsimulation studies and a real-world data application.",
-      "pdf_url": "http://arxiv.org/pdf/2509.20586v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.20586v1",
-      "published": "2025-09-24",
+      "abstract": "Causal representation learning (CRL) has garnered increasing interests from\nthe causal inference and artificial intelligence community, due to its\ncapability of disentangling potentially complex data-generating mechanism into\ncausally interpretable latent features, by leveraging the heterogeneity of\nmodern datasets. In this paper, we further contribute to the CRL literature, by\nfocusing on the stylized linear structural causal model over the latent\nfeatures and assuming a linear mixing function that maps latent features to the\nobserved data or measurements. Existing linear CRL methods often rely on\nstringent assumptions, such as accessibility to single-node interventional data\nor restrictive distributional constraints on latent features and exogenous\nmeasurement noise. However, these prerequisites can be challenging to satisfy\nin certain scenarios. In this work, we propose a novel linear CRL algorithm\nthat, unlike most existing linear CRL methods, operates under weaker\nassumptions about environment heterogeneity and data-generating distributions\nwhile still recovering latent causal features up to an equivalence class. We\nfurther validate our new algorithm via synthetic experiments and an\ninterpretability analysis of large language models (LLMs), demonstrating both\nits superiority over competing methods in finite samples and its potential in\nintegrating causality into AI.",
+      "pdf_url": "http://arxiv.org/pdf/2509.22553v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.22553v1",
+      "published": "2025-09-26",
       "categories": [
-        "stat.ME",
-        "stat.ML"
+        "stat.ML",
+        "cs.LG"
       ]
     },
     {
-      "title": "Identification and Estimation of Joint Potential Outcome Distributions from a Single Study",
+      "title": "Debiased Front-Door Learners for Heterogeneous Effects",
       "authors": [
-        "Zach Shahn",
-        "David Madigan"
+        "Yonghan Jung"
       ],
-      "abstract": "Most causal inference methods focus on estimating marginal average treatment\neffects, but many important causal estimands depend on the joint distribution\nof potential outcomes, including the probability of causation and proportions\nbenefiting from or harmed by treatment. Wu et al (2025) recently established\nnonparametric identification of this joint distribution for categorical\noutcomes under binary treatment by leveraging variation across multiple\nstudies. We demonstrate that their multi-study framework can be implemented\nwithin a single study by using a baseline covariate that is associated with\nuntreated potential outcomes but does not modify treatment effects conditional\non those outcomes. This reframing substantially broadens the practical\napplicability of their results, as it eliminates the need for multiple\nindependent datasets and gives analysts control over covariate selection to\nsatisfy key identifying assumptions. We provide complete identification and\nestimation theory for the single-study setting, including a Neyman-orthogonal\nestimator for cases where the conditional independence assumption only holds\nafter adjusting for covariates. We validate the estimator in a simulation and\napply it to data from a large field experiment assessing the effect of mailings\non voter turnout.",
-      "pdf_url": "http://arxiv.org/pdf/2509.20506v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.20506v1",
-      "published": "2025-09-24",
+      "abstract": "In observational settings where treatment and outcome share unmeasured\nconfounders but an observed mediator remains unconfounded, the front-door (FD)\nadjustment identifies causal effects through the mediator. We study the\nheterogeneous treatment effect (HTE) under FD identification and introduce two\ndebiased learners: FD-DR-Learner and FD-R-Learner. Both attain fast,\nquasi-oracle rates (i.e., performance comparable to an oracle that knows the\nnuisances) even when nuisance functions converge as slowly as n^-1/4. We\nprovide error analyses establishing debiasedness and demonstrate robust\nempirical performance in synthetic studies and a real-world case study of\nprimary seat-belt laws using Fatality Analysis Reporting System (FARS) dataset.\nTogether, these results indicate that the proposed learners deliver reliable\nand sample-efficient HTE estimates in FD scenarios. The implementation is\navailable at https://github.com/yonghanjung/FD-CATE.\n  Keywords: Front-door adjustment; Heterogeneous treatment effects; Debiased\nlearning; Quasi-oracle rates; Causal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2509.22531v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.22531v1",
+      "published": "2025-09-26",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "A Multiplicative Instrumental Variable Model for Data Missing Not-at-Random",
+      "authors": [
+        "Yunshu Zhang",
+        "Chan Park",
+        "Jiewen Liu",
+        "Yonghoon Lee",
+        "Mengxin Yu",
+        "James M. Robins",
+        "Eric J. Tchetgen Tchetgen"
+      ],
+      "abstract": "Instrumental variable (IV) methods offer a valuable approach to account for\noutcome data missing not-at-random. A valid missing data instrument is a\nmeasured factor which (i) predicts the nonresponse process and (ii) is\nindependent of the outcome in the underlying population. For point\nidentification, all existing IV methods for missing data including the\ncelebrated Heckman selection model, a priori restrict the extent of selection\nbias on the outcome scale, therefore potentially understating uncertainty due\nto missing data. In this work, we introduce an IV framework which allows the\ndegree of selection bias on the outcome scale to remain completely\nunrestricted. The new approach instead relies for identification on (iii) a key\nmultiplicative selection model, which posits that the instrument and any hidden\ncommon correlate of selection and the outcome, do not interact on the\nmultiplicative scale. Interestingly, we establish that any regular statistical\nfunctional of the missing outcome is nonparametrically identified under\n(i)-(iii) via a single-arm Wald ratio estimand reminiscent of the standard Wald\nratio estimand in causal inference. For estimation and inference, we\ncharacterize the influence function for any functional defined on a\nnonparametric model for the observed data, which we leverage to develop\nsemiparametric multiply robust IV estimators. Several extensions of the methods\nare also considered, including the important practical setting of polytomous\nand continuous instruments. Simulation studies illustrate the favorable finite\nsample performance of proposed methods, which we further showcase in an HIV\nstudy nested within a household health survey study we conducted in Mochudi,\nBotswana, in which interviewer characteristics are used as instruments to\ncorrect for selection bias due to dependent nonresponse in the HIV component of\nthe survey study.",
+      "pdf_url": "http://arxiv.org/pdf/2509.22499v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.22499v1",
+      "published": "2025-09-26",
       "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "Practical do-Shapley Explanations with Estimand-Agnostic Causal Inference",
+      "title": "Detecting (Un)answerability in Large Language Models with Linear Directions",
       "authors": [
-        "Álvaro Parafita",
-        "Tomas Garriga",
-        "Axel Brando",
-        "Francisco J. Cazorla"
+        "Maor Juliet Lavi",
+        "Tova Milo",
+        "Mor Geva"
       ],
-      "abstract": "Among explainability techniques, SHAP stands out as one of the most popular,\nbut often overlooks the causal structure of the problem. In response, do-SHAP\nemploys interventional queries, but its reliance on estimands hinders its\npractical application. To address this problem, we propose the use of\nestimand-agnostic approaches, which allow for the estimation of any\nidentifiable query from a single model, making do-SHAP feasible on complex\ngraphs. We also develop a novel algorithm to significantly accelerate its\ncomputation at a negligible cost, as well as a method to explain inaccessible\nData Generating Processes. We demonstrate the estimation and computational\nperformance of our approach, and validate it on two real-world datasets,\nhighlighting its potential in obtaining reliable explanations.",
-      "pdf_url": "http://arxiv.org/pdf/2509.20211v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.20211v1",
-      "published": "2025-09-24",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "From Text to Talk: Audio-Language Model Needs Non-Autoregressive Joint Training",
-      "authors": [
-        "Tianqiao Liu",
-        "Xueyi Li",
-        "Hao Wang",
-        "Haoxuan Li",
-        "Zhichao Chen",
-        "Weiqi Luo",
-        "Zitao Liu"
-      ],
-      "abstract": "Recent advances in large language models (LLMs) have attracted significant\ninterest in extending their capabilities to multimodal scenarios, particularly\nfor speech-to-speech conversational systems. However, existing multimodal\nmodels handling interleaved audio and text rely on autoregressive methods,\noverlooking that text depends on target-target relations whereas audio depends\nmainly on source-target relations. In this work, we propose Text-to-Talk (TtT),\na unified audio-text framework that integrates autoregressive (AR) text\ngeneration with non-autoregressive (NAR) audio diffusion in a single\nTransformer. By leveraging the any-order autoregressive property of absorbing\ndiscrete diffusion, our approach provides a unified training objective for text\nand audio. To support this hybrid generation paradigm, we design a\nmodality-aware attention mechanism that enforces causal decoding for text while\nallowing bidirectional modeling within audio spans, and further introduce three\ntraining strategies that reduce train-test discrepancies. During inference, TtT\nemploys block-wise diffusion to synthesize audio in parallel while flexibly\nhandling variable-length outputs. Extensive experiments across Audio-QA and ASR\ntasks demonstrate the effectiveness of our approach, with detailed ablation\nstudies validating each proposed component. We will open-source our models,\ndata and code to facilitate future research in this direction.",
-      "pdf_url": "http://arxiv.org/pdf/2509.20072v2",
-      "arxiv_url": "http://arxiv.org/abs/2509.20072v2",
-      "published": "2025-09-24",
+      "abstract": "Large language models (LLMs) often respond confidently to questions even when\nthey lack the necessary information, leading to hallucinated answers. In this\nwork, we study the problem of (un)answerability detection, focusing on\nextractive question answering (QA) where the model should determine if a\npassage contains sufficient information to answer a given question. We propose\na simple approach for identifying a direction in the model's activation space\nthat captures unanswerability and uses it for classification. This direction is\nselected by applying activation additions during inference and measuring their\nimpact on the model's abstention behavior. We show that projecting hidden\nactivations onto this direction yields a reliable score for (un)answerability\nclassification. Experiments on two open-weight LLMs and four extractive QA\nbenchmarks show that our method effectively detects unanswerable questions and\ngeneralizes better across datasets than existing prompt-based and\nclassifier-based approaches. Moreover, the obtained directions extend beyond\nextractive QA to unanswerability that stems from factors, such as lack of\nscientific consensus and subjectivity. Last, causal interventions show that\nadding or ablating the directions effectively controls the abstention behavior\nof the model.",
+      "pdf_url": "http://arxiv.org/pdf/2509.22449v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.22449v1",
+      "published": "2025-09-26",
       "categories": [
         "cs.CL"
       ]
     },
     {
-      "title": "Structuring Collective Action with LLM-Guided Evolution: From Ill-Structured Problems to Executable Heuristics",
+      "title": "Exploratory Semantic Reliability Analysis of Wind Turbine Maintenance Logs using Large Language Models",
       "authors": [
-        "Kevin Bradley Dsouza",
-        "Graham Alexander Watt",
-        "Yuri Leonenko",
-        "Juan Moreno-Cruz"
+        "Max Malyi",
+        "Jonathan Shek",
+        "Andre Biscaya"
       ],
-      "abstract": "Collective action problems, which require aligning individual incentives with\ncollective goals, are classic examples of Ill-Structured Problems (ISPs). For\nan individual agent, the causal links between local actions and global outcomes\nare unclear, stakeholder objectives often conflict, and no single, clear\nalgorithm can bridge micro-level choices with macro-level welfare. We present\nECHO-MIMIC, a computational framework that converts this global complexity into\na tractable, Well-Structured Problem (WSP) for each agent by discovering\ncompact, executable heuristics and persuasive rationales. The framework\noperates in two stages: ECHO (Evolutionary Crafting of Heuristics from\nOutcomes) evolves snippets of Python code that encode candidate behavioral\npolicies, while MIMIC (Mechanism Inference & Messaging for\nIndividual-to-Collective Alignment) evolves companion natural language messages\nthat motivate agents to adopt those policies. Both phases employ a\nlarge-language-model-driven evolutionary search: the LLM proposes diverse and\ncontext-aware code or text variants, while population-level selection retains\nthose that maximize collective performance in a simulated environment. We\ndemonstrate this framework on a canonical ISP in agricultural landscape\nmanagement, where local farming decisions impact global ecological\nconnectivity. Results show that ECHO-MIMIC discovers high-performing heuristics\ncompared to baselines and crafts tailored messages that successfully align\nsimulated farmer behavior with landscape-level ecological goals. By coupling\nalgorithmic rule discovery with tailored communication, ECHO-MIMIC transforms\nthe cognitive burden of collective action into a simple set of agent-level\ninstructions, making previously ill-structured problems solvable in practice\nand opening a new path toward scalable, adaptive policy design.",
-      "pdf_url": "http://arxiv.org/pdf/2509.20412v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.20412v1",
-      "published": "2025-09-24",
+      "abstract": "A wealth of operational intelligence is locked within the unstructured\nfree-text of wind turbine maintenance logs, a resource largely inaccessible to\ntraditional quantitative reliability analysis. While machine learning has been\napplied to this data, existing approaches typically stop at classification,\ncategorising text into predefined labels. This paper addresses the gap in\nleveraging modern large language models (LLMs) for more complex reasoning\ntasks. We introduce an exploratory framework that uses LLMs to move beyond\nclassification and perform deep semantic analysis. We apply this framework to a\nlarge industrial dataset to execute four analytical workflows: failure mode\nidentification, causal chain inference, comparative site analysis, and data\nquality auditing. The results demonstrate that LLMs can function as powerful\n\"reliability co-pilots,\" moving beyond labelling to synthesise textual\ninformation and generate actionable, expert-level hypotheses. This work\ncontributes a novel and reproducible methodology for using LLMs as a reasoning\ntool, offering a new pathway to enhance operational intelligence in the wind\nenergy sector by unlocking insights previously obscured in unstructured data.",
+      "pdf_url": "http://arxiv.org/pdf/2509.22366v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.22366v1",
+      "published": "2025-09-26",
       "categories": [
-        "cs.MA",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Transformers Can Learn Connectivity in Some Graphs but Not Others",
+      "authors": [
+        "Amit Roy",
+        "Abulhair Saparov"
+      ],
+      "abstract": "Reasoning capability is essential to ensure the factual correctness of the\nresponses of transformer-based Large Language Models (LLMs), and robust\nreasoning about transitive relations is instrumental in many settings, such as\ncausal inference. Hence, it is essential to investigate the capability of\ntransformers in the task of inferring transitive relations (e.g., knowing A\ncauses B and B causes C, then A causes C). The task of inferring transitive\nrelations is equivalent to the task of connectivity in directed graphs (e.g.,\nknowing there is a path from A to B, and there is a path from B to C, then\nthere is a path from A to C). Past research focused on whether transformers can\nlearn to infer transitivity from in-context examples provided in the input\nprompt. However, transformers' capability to infer transitive relations from\ntraining examples and how scaling affects the ability is unexplored. In this\nstudy, we seek to answer this question by generating directed graphs to train\ntransformer models of varying sizes and evaluate their ability to infer\ntransitive relations for various graph sizes. Our findings suggest that\ntransformers are capable of learning connectivity on \"grid-like'' directed\ngraphs where each node can be embedded in a low-dimensional subspace, and\nconnectivity is easily inferable from the embeddings of the nodes. We find that\nthe dimensionality of the underlying grid graph is a strong predictor of\ntransformers' ability to learn the connectivity task, where higher-dimensional\ngrid graphs pose a greater challenge than low-dimensional grid graphs. In\naddition, we observe that increasing the model scale leads to increasingly\nbetter generalization to infer connectivity over grid graphs. However, if the\ngraph is not a grid graph and contains many disconnected components,\ntransformers struggle to learn the connectivity task, especially when the\nnumber of components is large.",
+      "pdf_url": "http://arxiv.org/pdf/2509.22343v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.22343v1",
+      "published": "2025-09-26",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG",
+        "cs.LO"
+      ]
+    },
+    {
+      "title": "Personalized Oncology: Feasibility of Evaluating Treatment Effects for Individual Patients",
+      "authors": [
+        "Lydia Jang",
+        "Stefan Konigorski"
+      ],
+      "abstract": "The effectiveness of personalized oncology treatments ultimately depends on\nwhether outcomes can be causally attributed to the treatment. Advances in\nprecision oncology have improved molecular profiling of individuals, and\ntailored therapies have led to more effective treatments for select patient\ngroups. However, treatment responses still vary among individuals. As cancer is\na heterogeneous and dynamic disease with varying treatment outcomes across\ndifferent molecular types and resistance mechanisms, it requires customized\napproaches to identify cause-and-effect relationships. N-of-1 trials, or\nsingle-subject clinical trials, are designed to evaluate individual treatment\neffects. Several works have described different causal frameworks to identify\ntreatment effects in N-of-1 trials, yet whether these approaches can be\nextended to single-cancer patient settings remains unclear. To explore this\npossibility, a longitudinal dataset from a single metastatic cancer patient\nwith adaptively chosen treatments was considered. The dataset consisted of a\ndetailed treatment plan as well as biomarker and lesion measurements recorded\nover time. After data processing, a treatment period with sufficient data\npoints to conduct causal inference was selected. Under this setting, a causal\nframework was applied to define an estimand, identify causal relationships and\nassumptions, and calculate an individual-specific treatment effect using a\ntime-varying g-formula. Through this application, we illustrate explicitly when\nand how causal treatment effects can be estimated in single-patient oncology\nsettings. Our findings not only demonstrate the feasibility of applying causal\nmethods in a single-cancer patient setting but also offer a blueprint for using\ncausal methods across a broader spectrum of cancer types in individualized\nsettings.",
+      "pdf_url": "http://arxiv.org/pdf/2509.22089v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.22089v1",
+      "published": "2025-09-26",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Towards Minimal Causal Representations for Human Multimodal Language Understanding",
+      "authors": [
+        "Menghua Jiang",
+        "Yuncheng Jiang",
+        "Haifeng Hu",
+        "Sijie Mai"
+      ],
+      "abstract": "Human Multimodal Language Understanding (MLU) aims to infer human intentions\nby integrating related cues from heterogeneous modalities. Existing works\npredominantly follow a ``learning to attend\" paradigm, which maximizes mutual\ninformation between data and labels to enhance predictive performance. However,\nsuch methods are vulnerable to unintended dataset biases, causing models to\nconflate statistical shortcuts with genuine causal features and resulting in\ndegraded out-of-distribution (OOD) generalization. To alleviate this issue, we\nintroduce a Causal Multimodal Information Bottleneck (CaMIB) model that\nleverages causal principles rather than traditional likelihood. Concretely, we\nfirst applies the information bottleneck to filter unimodal inputs, removing\ntask-irrelevant noise. A parameterized mask generator then disentangles the\nfused multimodal representation into causal and shortcut subrepresentations. To\nensure global consistency of causal features, we incorporate an instrumental\nvariable constraint, and further adopt backdoor adjustment by randomly\nrecombining causal and shortcut features to stabilize causal estimation.\nExtensive experiments on multimodal sentiment analysis, humor detection, and\nsarcasm detection, along with OOD test sets, demonstrate the effectiveness of\nCaMIB. Theoretical and empirical analyses further highlight its\ninterpretability and soundness.",
+      "pdf_url": "http://arxiv.org/pdf/2509.21805v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.21805v1",
+      "published": "2025-09-26",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Navigating the Impact of Structured Output Format on Large Language Models through the Compass of Causal Inference",
+      "authors": [
+        "Han Yuan",
+        "Yue Zhao",
+        "Li Zhang",
+        "Wuqiong Luo",
+        "Zheng Ma"
+      ],
+      "abstract": "Structured output from large language models (LLMs) has enhanced efficiency\nin processing generated information and is increasingly adopted in industrial\napplications. Prior studies have investigated the impact of structured output\non LLMs' generation quality, often presenting one-way findings. Some suggest\nthat structured format enhances completeness and factual accuracy, while others\nargue that it restricts the reasoning capacity of LLMs and leads to reductions\nin standard evaluation metrics. Potential limitations of these assessments\ninclude restricted testing scenarios, weakly controlled comparative settings,\nand reliance on coarse metrics. In this work, we present a refined analysis\nusing causal inference. Based on one assumed and two guaranteed constraints, we\nderive five potential causal structures characterizing the influence of\nstructured output on LLMs' generation: (1) collider without m-bias, (2)\ncollider with m-bias, (3) single cause from instruction, (4) single cause from\noutput format, and (5) independence. Across seven public and one developed\nreasoning tasks, we find that coarse metrics report positive, negative, or\nneutral effects of structured output on GPT-4o's generation. However, causal\ninference reveals no causal impact in 43 out of 48 scenarios. In the remaining\n5, 3 involve multifaceted causal structures influenced by concrete\ninstructions.",
+      "pdf_url": "http://arxiv.org/pdf/2509.21791v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.21791v1",
+      "published": "2025-09-26",
+      "categories": [
+        "cs.CL",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Inference under Threshold Manipulation: Bayesian Mixture Modeling and Heterogeneous Treatment Effects",
-      "authors": [
-        "Kohsuke Kubota",
-        "Shonosuke Sugasawa"
-      ],
-      "abstract": "Many marketing applications, including credit card incentive programs, offer\nrewards to customers who exceed specific spending thresholds to encourage\nincreased consumption. Quantifying the causal effect of these thresholds on\ncustomers is crucial for effective marketing strategy design. Although\nregression discontinuity design is a standard method for such causal inference\ntasks, its assumptions can be violated when customers, aware of the thresholds,\nstrategically manipulate their spending to qualify for the rewards. To address\nthis issue, we propose a novel framework for estimating the causal effect under\nthreshold manipulation. The main idea is to model the observed spending\ndistribution as a mixture of two distributions: one representing customers\nstrategically affected by the threshold, and the other representing those\nunaffected. To fit the mixture model, we adopt a two-step Bayesian approach\nconsisting of modeling non-bunching customers and fitting a mixture model to a\nsample around the threshold. We show posterior contraction of the resulting\nposterior distribution of the causal effect under large samples. Furthermore,\nwe extend this framework to a hierarchical Bayesian setting to estimate\nheterogeneous causal effects across customer subgroups, allowing for stable\ninference even with small subgroup sample sizes. We demonstrate the\neffectiveness of our proposed methods through simulation studies and illustrate\ntheir practical implications using a real-world marketing dataset.",
-      "pdf_url": "http://arxiv.org/pdf/2509.19814v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.19814v1",
-      "published": "2025-09-24",
-      "categories": [
-        "stat.ME",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "iFinder: Structured Zero-Shot Vision-Based LLM Grounding for Dash-Cam Video Reasoning",
-      "authors": [
-        "Manyi Yao",
-        "Bingbing Zhuang",
-        "Sparsh Garg",
-        "Amit Roy-Chowdhury",
-        "Christian Shelton",
-        "Manmohan Chandraker",
-        "Abhishek Aich"
-      ],
-      "abstract": "Grounding large language models (LLMs) in domain-specific tasks like post-hoc\ndash-cam driving video analysis is challenging due to their general-purpose\ntraining and lack of structured inductive biases. As vision is often the sole\nmodality available for such analysis (i.e., no LiDAR, GPS, etc.), existing\nvideo-based vision-language models (V-VLMs) struggle with spatial reasoning,\ncausal inference, and explainability of events in the input video. To this end,\nwe introduce iFinder, a structured semantic grounding framework that decouples\nperception from reasoning by translating dash-cam videos into a hierarchical,\ninterpretable data structure for LLMs. iFinder operates as a modular,\ntraining-free pipeline that employs pretrained vision models to extract\ncritical cues -- object pose, lane positions, and object trajectories -- which\nare hierarchically organized into frame- and video-level structures. Combined\nwith a three-block prompting strategy, it enables step-wise, grounded reasoning\nfor the LLM to refine a peer V-VLM's outputs and provide accurate reasoning.\nEvaluations on four public dash-cam video benchmarks show that iFinder's\nproposed grounding with domain-specific cues, especially object orientation and\nglobal context, significantly outperforms end-to-end V-VLMs on four zero-shot\ndriving benchmarks, with up to 39% gains in accident reasoning accuracy. By\ngrounding LLMs with driving domain-specific representations, iFinder offers a\nzero-shot, interpretable, and reliable alternative to end-to-end V-VLMs for\npost-hoc driving video understanding.",
-      "pdf_url": "http://arxiv.org/pdf/2509.19552v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.19552v1",
-      "published": "2025-09-23",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Chiseling: Powerful and Valid Subgroup Selection via Interactive Machine Learning",
-      "authors": [
-        "Nathan Cheng",
-        "Asher Spector",
-        "Lucas Janson"
-      ],
-      "abstract": "In regression and causal inference, controlled subgroup selection aims to\nidentify, with inferential guarantees, a subgroup (defined as a subset of the\ncovariate space) on which the average response or treatment effect is above a\ngiven threshold. E.g., in a clinical trial, it may be of interest to find a\nsubgroup with a positive average treatment effect. However, existing methods\neither lack inferential guarantees, heavily restrict the search for the\nsubgroup, or sacrifice efficiency by naive data splitting. We propose a novel\nframework called chiseling that allows the analyst to interactively refine and\ntest a candidate subgroup by iteratively shrinking it. The sole restriction is\nthat the shrinkage direction only depends on the points outside the current\nsubgroup, but otherwise the analyst may leverage any prior information or\nmachine learning algorithm. Despite this flexibility, chiseling controls the\nprobability that the discovered subgroup is null (e.g., has a non-positive\naverage treatment effect) under minimal assumptions: for example, in randomized\nexperiments, this inferential validity guarantee holds under only bounded\nmoment conditions. When applied to a variety of simulated datasets and a real\nsurvey experiment, chiseling identifies substantially better subgroups than\nexisting methods with inferential guarantees.",
-      "pdf_url": "http://arxiv.org/pdf/2509.19490v2",
-      "arxiv_url": "http://arxiv.org/abs/2509.19490v2",
-      "published": "2025-09-23",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Track-On2: Enhancing Online Point Tracking with Memory",
-      "authors": [
-        "Görkay Aydemir",
-        "Weidi Xie",
-        "Fatma Güney"
-      ],
-      "abstract": "In this paper, we consider the problem of long-term point tracking, which\nrequires consistent identification of points across video frames under\nsignificant appearance changes, motion, and occlusion. We target the online\nsetting, i.e. tracking points frame-by-frame, making it suitable for real-time\nand streaming applications. We extend our prior model Track-On into Track-On2,\na simple and efficient transformer-based model for online long-term tracking.\nTrack-On2 improves both performance and efficiency through architectural\nrefinements, more effective use of memory, and improved synthetic training\nstrategies. Unlike prior approaches that rely on full-sequence access or\niterative updates, our model processes frames causally and maintains temporal\ncoherence via a memory mechanism, which is key to handling drift and occlusions\nwithout requiring future frames. At inference, we perform coarse patch-level\nclassification followed by refinement. Beyond architecture, we systematically\nstudy synthetic training setups and their impact on memory behavior, showing\nhow they shape temporal robustness over long sequences. Through comprehensive\nexperiments, Track-On2 achieves state-of-the-art results across five synthetic\nand real-world benchmarks, surpassing prior online trackers and even strong\noffline methods that exploit bidirectional context. These results highlight the\neffectiveness of causal, memory-based architectures trained purely on synthetic\ndata as scalable solutions for real-world point tracking. Project page:\nhttps://kuis-ai.github.io/track_on2",
-      "pdf_url": "http://arxiv.org/pdf/2509.19115v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.19115v1",
-      "published": "2025-09-23",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
