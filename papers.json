@@ -1,6 +1,72 @@
 {
-  "last_updated": "2025-09-30T00:50:51.962322",
+  "last_updated": "2025-10-01T00:56:45.602643",
   "papers": [
+    {
+      "title": "Efficient Difference-in-Differences Estimation when Outcomes are Missing at Random",
+      "authors": [
+        "Lorenzo Testa",
+        "Edward H. Kennedy",
+        "Matthew Reimherr"
+      ],
+      "abstract": "The Difference-in-Differences (DiD) method is a fundamental tool for causal\ninference, yet its application is often complicated by missing data. Although\nrecent work has developed robust DiD estimators for complex settings like\nstaggered treatment adoption, these methods typically assume complete data and\nfail to address the critical challenge of outcomes that are missing at random\n(MAR) -- a common problem that invalidates standard estimators. We develop a\nrigorous framework, rooted in semiparametric theory, for identifying and\nefficiently estimating the Average Treatment Effect on the Treated (ATT) when\neither pre- or post-treatment (or both) outcomes are missing at random. We\nfirst establish nonparametric identification of the ATT under two minimal sets\nof sufficient conditions. For each, we derive the semiparametric efficiency\nbound, which provides a formal benchmark for asymptotic optimality. We then\npropose novel estimators that are asymptotically efficient, achieving this\ntheoretical bound. A key feature of our estimators is their multiple\nrobustness, which ensures consistency even if some nuisance function models are\nmisspecified. We validate the properties of our estimators and showcase their\nbroad applicability through an extensive simulation study.",
+      "pdf_url": "http://arxiv.org/pdf/2509.25009v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.25009v1",
+      "published": "2025-09-29",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "RAPSEM: Identifying Latent Mediators Without Sequential Ignorability via a Rank-Preserving Structural Equation Model",
+      "authors": [
+        "Sofia Morelli",
+        "Roberto Faleh",
+        "Holger Brandt"
+      ],
+      "abstract": "The identification of latent mediator variables is typically conducted using\nstandard structural equation models (SEMs). When SEM is applied to mediation\nanalysis with a causal interpretation, valid inference relies on the strong\nassumption of no unmeasured confounding, that is, all relevant covariates must\nbe included in the analysis. This assumption is often violated in empirical\napplications, leading to biased estimates of direct and indirect effects. We\naddress this limitation by weakening the causal assumptions and proposing a\nprocedure that combines g-estimation with a two-stage method of moments to\nincorporate latent variables, thereby enabling more robust mediation analysis\nin settings common to the social sciences. We establish consistency and\nasymptotic normality of the resulting estimator. Simulation studies demonstrate\nthat the estimator is unbiased across a wide range of settings, robust to\nviolations of its underlying no-effect-modifier assumption, and achieves\nreasonable power to detect medium to large effects for sample sizes above 500,\nwith power increasing as the strength of treatment-covariate interactions\ngrows.",
+      "pdf_url": "http://arxiv.org/pdf/2509.23935v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.23935v1",
+      "published": "2025-09-28",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Taming Masked Diffusion Language Models via Consistency Trajectory Reinforcement Learning with Fewer Decoding Step",
+      "authors": [
+        "Jingyi Yang",
+        "Guanxu Chen",
+        "Xuhao Hu",
+        "Jing Shao"
+      ],
+      "abstract": "Masked diffusion language models (MDLMs) have recently emerged as a promising\nalternative to autoregressive (AR) language models, offering properties such as\nparallel decoding, flexible generation orders, and the potential for fewer\ninference steps. Despite these advantages, decoding strategies and\nreinforcement learning (RL) algorithms tailored for MDLMs remain underexplored.\nA naive approach is to directly transfer techniques well-established for AR\nmodels to MDLMs. However, this raises an immediate question: Is such a naive\ntransfer truly optimal? For example, 1) Block-wise and semi-AR decoding\nstrategies are not employed during the training of MDLMs, so why do they\noutperform full diffusion-style decoding during inference? 2) Applying RL\nalgorithms designed for AR models directly to MDLMs exhibits a\ntraining-inference inconsistency, since MDLM decoding are non-causal\n(parallel). This results in inconsistencies between the rollout trajectory and\nthe optimization trajectory. To address these challenges, we propose EOS Early\nRejection (EOSER) and Ascending Step-Size (ASS) decoding scheduler, which\nunlock the potential of MDLMs to perform full diffusion-style decoding,\nachieving competitive performance with fewer decoding steps. Additionally, we\nintroduce Consistency Trajectory Group Relative Policy Optimization (CJ-GRPO)\nfor taming MDLMs, which emphasizes the consistency between rollout trajectory\nand optimization trajectory, and reduces the optimization errors caused by\nskip-step optimization. We conduct extensive experiments on reasoning tasks,\nsuch as mathematical and planning benchmarks, using LLaDA-8B-Instruct. The\nresults demonstrate that the proposed EOSER and ASS mechanisms, together with\nCJ-GRPO, hold significant promise for effectively and efficiently taming MDLMs.\nCode: https://github.com/yjyddq/EOSER-ASS-RL.",
+      "pdf_url": "http://arxiv.org/pdf/2509.23924v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.23924v1",
+      "published": "2025-09-28",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "One-Shot Multi-Label Causal Discovery in High-Dimensional Event Sequences",
+      "authors": [
+        "Hugo Math",
+        "Robin Schön",
+        "Rainer Lienhart"
+      ],
+      "abstract": "Understanding causality in event sequences with thousands of sparse event\ntypes is critical in domains such as healthcare, cybersecurity, or vehicle\ndiagnostics, yet current methods fail to scale. We present OSCAR, a one-shot\ncausal autoregressive method that infers per-sequence Markov Boundaries using\ntwo pretrained Transformers as density estimators. This enables efficient,\nparallel causal discovery without costly global CI testing. On a real-world\nautomotive dataset with 29,100 events and 474 labels, OSCAR recovers\ninterpretable causal structures in minutes, while classical methods fail to\nscale, enabling practical scientific diagnostics at production scale.",
+      "pdf_url": "http://arxiv.org/pdf/2509.23213v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.23213v1",
+      "published": "2025-09-27",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "LongLive: Real-time Interactive Long Video Generation",
       "authors": [
@@ -102,71 +168,6 @@
       "published": "2025-09-26",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Transformers Can Learn Connectivity in Some Graphs but Not Others",
-      "authors": [
-        "Amit Roy",
-        "Abulhair Saparov"
-      ],
-      "abstract": "Reasoning capability is essential to ensure the factual correctness of the\nresponses of transformer-based Large Language Models (LLMs), and robust\nreasoning about transitive relations is instrumental in many settings, such as\ncausal inference. Hence, it is essential to investigate the capability of\ntransformers in the task of inferring transitive relations (e.g., knowing A\ncauses B and B causes C, then A causes C). The task of inferring transitive\nrelations is equivalent to the task of connectivity in directed graphs (e.g.,\nknowing there is a path from A to B, and there is a path from B to C, then\nthere is a path from A to C). Past research focused on whether transformers can\nlearn to infer transitivity from in-context examples provided in the input\nprompt. However, transformers' capability to infer transitive relations from\ntraining examples and how scaling affects the ability is unexplored. In this\nstudy, we seek to answer this question by generating directed graphs to train\ntransformer models of varying sizes and evaluate their ability to infer\ntransitive relations for various graph sizes. Our findings suggest that\ntransformers are capable of learning connectivity on \"grid-like'' directed\ngraphs where each node can be embedded in a low-dimensional subspace, and\nconnectivity is easily inferable from the embeddings of the nodes. We find that\nthe dimensionality of the underlying grid graph is a strong predictor of\ntransformers' ability to learn the connectivity task, where higher-dimensional\ngrid graphs pose a greater challenge than low-dimensional grid graphs. In\naddition, we observe that increasing the model scale leads to increasingly\nbetter generalization to infer connectivity over grid graphs. However, if the\ngraph is not a grid graph and contains many disconnected components,\ntransformers struggle to learn the connectivity task, especially when the\nnumber of components is large.",
-      "pdf_url": "http://arxiv.org/pdf/2509.22343v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.22343v1",
-      "published": "2025-09-26",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG",
-        "cs.LO"
-      ]
-    },
-    {
-      "title": "Personalized Oncology: Feasibility of Evaluating Treatment Effects for Individual Patients",
-      "authors": [
-        "Lydia Jang",
-        "Stefan Konigorski"
-      ],
-      "abstract": "The effectiveness of personalized oncology treatments ultimately depends on\nwhether outcomes can be causally attributed to the treatment. Advances in\nprecision oncology have improved molecular profiling of individuals, and\ntailored therapies have led to more effective treatments for select patient\ngroups. However, treatment responses still vary among individuals. As cancer is\na heterogeneous and dynamic disease with varying treatment outcomes across\ndifferent molecular types and resistance mechanisms, it requires customized\napproaches to identify cause-and-effect relationships. N-of-1 trials, or\nsingle-subject clinical trials, are designed to evaluate individual treatment\neffects. Several works have described different causal frameworks to identify\ntreatment effects in N-of-1 trials, yet whether these approaches can be\nextended to single-cancer patient settings remains unclear. To explore this\npossibility, a longitudinal dataset from a single metastatic cancer patient\nwith adaptively chosen treatments was considered. The dataset consisted of a\ndetailed treatment plan as well as biomarker and lesion measurements recorded\nover time. After data processing, a treatment period with sufficient data\npoints to conduct causal inference was selected. Under this setting, a causal\nframework was applied to define an estimand, identify causal relationships and\nassumptions, and calculate an individual-specific treatment effect using a\ntime-varying g-formula. Through this application, we illustrate explicitly when\nand how causal treatment effects can be estimated in single-patient oncology\nsettings. Our findings not only demonstrate the feasibility of applying causal\nmethods in a single-cancer patient setting but also offer a blueprint for using\ncausal methods across a broader spectrum of cancer types in individualized\nsettings.",
-      "pdf_url": "http://arxiv.org/pdf/2509.22089v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.22089v1",
-      "published": "2025-09-26",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Towards Minimal Causal Representations for Human Multimodal Language Understanding",
-      "authors": [
-        "Menghua Jiang",
-        "Yuncheng Jiang",
-        "Haifeng Hu",
-        "Sijie Mai"
-      ],
-      "abstract": "Human Multimodal Language Understanding (MLU) aims to infer human intentions\nby integrating related cues from heterogeneous modalities. Existing works\npredominantly follow a ``learning to attend\" paradigm, which maximizes mutual\ninformation between data and labels to enhance predictive performance. However,\nsuch methods are vulnerable to unintended dataset biases, causing models to\nconflate statistical shortcuts with genuine causal features and resulting in\ndegraded out-of-distribution (OOD) generalization. To alleviate this issue, we\nintroduce a Causal Multimodal Information Bottleneck (CaMIB) model that\nleverages causal principles rather than traditional likelihood. Concretely, we\nfirst applies the information bottleneck to filter unimodal inputs, removing\ntask-irrelevant noise. A parameterized mask generator then disentangles the\nfused multimodal representation into causal and shortcut subrepresentations. To\nensure global consistency of causal features, we incorporate an instrumental\nvariable constraint, and further adopt backdoor adjustment by randomly\nrecombining causal and shortcut features to stabilize causal estimation.\nExtensive experiments on multimodal sentiment analysis, humor detection, and\nsarcasm detection, along with OOD test sets, demonstrate the effectiveness of\nCaMIB. Theoretical and empirical analyses further highlight its\ninterpretability and soundness.",
-      "pdf_url": "http://arxiv.org/pdf/2509.21805v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.21805v1",
-      "published": "2025-09-26",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Navigating the Impact of Structured Output Format on Large Language Models through the Compass of Causal Inference",
-      "authors": [
-        "Han Yuan",
-        "Yue Zhao",
-        "Li Zhang",
-        "Wuqiong Luo",
-        "Zheng Ma"
-      ],
-      "abstract": "Structured output from large language models (LLMs) has enhanced efficiency\nin processing generated information and is increasingly adopted in industrial\napplications. Prior studies have investigated the impact of structured output\non LLMs' generation quality, often presenting one-way findings. Some suggest\nthat structured format enhances completeness and factual accuracy, while others\nargue that it restricts the reasoning capacity of LLMs and leads to reductions\nin standard evaluation metrics. Potential limitations of these assessments\ninclude restricted testing scenarios, weakly controlled comparative settings,\nand reliance on coarse metrics. In this work, we present a refined analysis\nusing causal inference. Based on one assumed and two guaranteed constraints, we\nderive five potential causal structures characterizing the influence of\nstructured output on LLMs' generation: (1) collider without m-bias, (2)\ncollider with m-bias, (3) single cause from instruction, (4) single cause from\noutput format, and (5) independence. Across seven public and one developed\nreasoning tasks, we find that coarse metrics report positive, negative, or\nneutral effects of structured output on GPT-4o's generation. However, causal\ninference reveals no causal impact in 43 out of 48 scenarios. In the remaining\n5, 3 involve multifaceted causal structures influenced by concrete\ninstructions.",
-      "pdf_url": "http://arxiv.org/pdf/2509.21791v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.21791v1",
-      "published": "2025-09-26",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
       ]
     }
   ]
