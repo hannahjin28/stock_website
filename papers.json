@@ -1,173 +1,196 @@
 {
-  "last_updated": "2025-10-01T00:56:45.602643",
+  "last_updated": "2025-10-02T00:48:45.097028",
   "papers": [
     {
-      "title": "Efficient Difference-in-Differences Estimation when Outcomes are Missing at Random",
+      "title": "Computationally and statistically efficient estimation of time-smoothed counterfactual curves",
       "authors": [
-        "Lorenzo Testa",
-        "Edward H. Kennedy",
-        "Matthew Reimherr"
+        "Herbert P. Susmann",
+        "Nicholas T. Williams",
+        "Richard Liu",
+        "Jessica G. Young",
+        "Iván Díaz"
       ],
-      "abstract": "The Difference-in-Differences (DiD) method is a fundamental tool for causal\ninference, yet its application is often complicated by missing data. Although\nrecent work has developed robust DiD estimators for complex settings like\nstaggered treatment adoption, these methods typically assume complete data and\nfail to address the critical challenge of outcomes that are missing at random\n(MAR) -- a common problem that invalidates standard estimators. We develop a\nrigorous framework, rooted in semiparametric theory, for identifying and\nefficiently estimating the Average Treatment Effect on the Treated (ATT) when\neither pre- or post-treatment (or both) outcomes are missing at random. We\nfirst establish nonparametric identification of the ATT under two minimal sets\nof sufficient conditions. For each, we derive the semiparametric efficiency\nbound, which provides a formal benchmark for asymptotic optimality. We then\npropose novel estimators that are asymptotically efficient, achieving this\ntheoretical bound. A key feature of our estimators is their multiple\nrobustness, which ensures consistency even if some nuisance function models are\nmisspecified. We validate the properties of our estimators and showcase their\nbroad applicability through an extensive simulation study.",
-      "pdf_url": "http://arxiv.org/pdf/2509.25009v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.25009v1",
-      "published": "2025-09-29",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "math.ST",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "RAPSEM: Identifying Latent Mediators Without Sequential Ignorability via a Rank-Preserving Structural Equation Model",
-      "authors": [
-        "Sofia Morelli",
-        "Roberto Faleh",
-        "Holger Brandt"
-      ],
-      "abstract": "The identification of latent mediator variables is typically conducted using\nstandard structural equation models (SEMs). When SEM is applied to mediation\nanalysis with a causal interpretation, valid inference relies on the strong\nassumption of no unmeasured confounding, that is, all relevant covariates must\nbe included in the analysis. This assumption is often violated in empirical\napplications, leading to biased estimates of direct and indirect effects. We\naddress this limitation by weakening the causal assumptions and proposing a\nprocedure that combines g-estimation with a two-stage method of moments to\nincorporate latent variables, thereby enabling more robust mediation analysis\nin settings common to the social sciences. We establish consistency and\nasymptotic normality of the resulting estimator. Simulation studies demonstrate\nthat the estimator is unbiased across a wide range of settings, robust to\nviolations of its underlying no-effect-modifier assumption, and achieves\nreasonable power to detect medium to large effects for sample sizes above 500,\nwith power increasing as the strength of treatment-covariate interactions\ngrows.",
-      "pdf_url": "http://arxiv.org/pdf/2509.23935v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.23935v1",
-      "published": "2025-09-28",
+      "abstract": "Longitudinal causal inference is concerned with defining, identifying, and\nestimating the effect of a time-varying intervention on a time-varying outcome\nthat is indexed by a follow-up time. In an observational study, Robins's\ngeneralized g-formula can identify causal effects induced by a broad class of\ntime-varying interventions. Various methods for estimating the generalized\ng-formula have been posed for different outcome types, such as a failure event\nindicator by a specified time (e.g. mortality by 5 year follow-up), as well as\ncontinuous or dichotomous/multi-valued outcomes measures at a specified time\n(e.g. blood pressure in mm/hg or an indicator of high blood pressure at 5-year\nfollow-up). Multiply-robust, data-adaptive estimators leverage flexible\nnonparametric estimation algorithms while allowing for statistical inference.\nHowever, extant methods do not accommodate time-smoothing when multiple\noutcomes are measured over time, which can lead to substantial loss of\nprecision. We propose a novel multiply-robust estimator of the generalized\ng-formula that accommodates time-smoothing over numerous available outcome\nmeasures. Our approach accommodates any intervention that can be described as a\nLongitudinal Modified Treatment Policy, a flexible class suitable for binary,\nmulti-valued, and continuous longitudinal treatments. Our method produces an\nestimate of the effect curve: the causal effect of the intervention on the\noutcome at each measurement time, taking into account censoring and\nnon-monotonic outcome missingness patterns. In simulations we find that the\nproposed algorithm outperforms extant multiply-robust approaches for effect\ncurve estimation in scenarios with high degrees of outcome missingness and when\nthere is strong confounding. We apply the method to study longitudinal effects\nof union membership on wages.",
+      "pdf_url": "http://arxiv.org/pdf/2509.26554v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.26554v1",
+      "published": "2025-09-30",
       "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "Taming Masked Diffusion Language Models via Consistency Trajectory Reinforcement Learning with Fewer Decoding Step",
+      "title": "An Orthogonal Learner for Individualized Outcomes in Markov Decision Processes",
       "authors": [
-        "Jingyi Yang",
-        "Guanxu Chen",
-        "Xuhao Hu",
-        "Jing Shao"
+        "Emil Javurek",
+        "Valentyn Melnychuk",
+        "Jonas Schweisthal",
+        "Konstantin Hess",
+        "Dennis Frauen",
+        "Stefan Feuerriegel"
       ],
-      "abstract": "Masked diffusion language models (MDLMs) have recently emerged as a promising\nalternative to autoregressive (AR) language models, offering properties such as\nparallel decoding, flexible generation orders, and the potential for fewer\ninference steps. Despite these advantages, decoding strategies and\nreinforcement learning (RL) algorithms tailored for MDLMs remain underexplored.\nA naive approach is to directly transfer techniques well-established for AR\nmodels to MDLMs. However, this raises an immediate question: Is such a naive\ntransfer truly optimal? For example, 1) Block-wise and semi-AR decoding\nstrategies are not employed during the training of MDLMs, so why do they\noutperform full diffusion-style decoding during inference? 2) Applying RL\nalgorithms designed for AR models directly to MDLMs exhibits a\ntraining-inference inconsistency, since MDLM decoding are non-causal\n(parallel). This results in inconsistencies between the rollout trajectory and\nthe optimization trajectory. To address these challenges, we propose EOS Early\nRejection (EOSER) and Ascending Step-Size (ASS) decoding scheduler, which\nunlock the potential of MDLMs to perform full diffusion-style decoding,\nachieving competitive performance with fewer decoding steps. Additionally, we\nintroduce Consistency Trajectory Group Relative Policy Optimization (CJ-GRPO)\nfor taming MDLMs, which emphasizes the consistency between rollout trajectory\nand optimization trajectory, and reduces the optimization errors caused by\nskip-step optimization. We conduct extensive experiments on reasoning tasks,\nsuch as mathematical and planning benchmarks, using LLaDA-8B-Instruct. The\nresults demonstrate that the proposed EOSER and ASS mechanisms, together with\nCJ-GRPO, hold significant promise for effectively and efficiently taming MDLMs.\nCode: https://github.com/yjyddq/EOSER-ASS-RL.",
-      "pdf_url": "http://arxiv.org/pdf/2509.23924v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.23924v1",
-      "published": "2025-09-28",
+      "abstract": "Predicting individualized potential outcomes in sequential decision-making is\ncentral for optimizing therapeutic decisions in personalized medicine (e.g.,\nwhich dosing sequence to give to a cancer patient). However, predicting\npotential outcomes over long horizons is notoriously difficult. Existing\nmethods that break the curse of the horizon typically lack strong theoretical\nguarantees such as orthogonality and quasi-oracle efficiency. In this paper, we\nrevisit the problem of predicting individualized potential outcomes in\nsequential decision-making (i.e., estimating Q-functions in Markov decision\nprocesses with observational data) through a causal inference lens. In\nparticular, we develop a comprehensive theoretical foundation for meta-learners\nin this setting with a focus on beneficial theoretical properties. As a result,\nwe yield a novel meta-learner called DRQ-learner and establish that it is: (1)\ndoubly robust (i.e., valid inference under the misspecification of one of the\nnuisances), (2) Neyman-orthogonal (i.e., insensitive to first-order estimation\nerrors in the nuisance functions), and (3) achieves quasi-oracle efficiency\n(i.e., behaves asymptotically as if the ground-truth nuisance functions were\nknown). Our DRQ-learner is applicable to settings with both discrete and\ncontinuous state spaces. Further, our DRQ-learner is flexible and can be used\ntogether with arbitrary machine learning models (e.g., neural networks). We\nvalidate our theoretical results through numerical experiments, thereby showing\nthat our meta-learner outperforms state-of-the-art baselines.",
+      "pdf_url": "http://arxiv.org/pdf/2509.26429v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.26429v1",
+      "published": "2025-09-30",
       "categories": [
-        "cs.CL",
-        "cs.AI"
+        "stat.ML",
+        "cs.LG"
       ]
     },
     {
-      "title": "One-Shot Multi-Label Causal Discovery in High-Dimensional Event Sequences",
+      "title": "MotionRAG: Motion Retrieval-Augmented Image-to-Video Generation",
       "authors": [
-        "Hugo Math",
-        "Robin Schön",
-        "Rainer Lienhart"
+        "Chenhui Zhu",
+        "Yilu Wu",
+        "Shuai Wang",
+        "Gangshan Wu",
+        "Limin Wang"
       ],
-      "abstract": "Understanding causality in event sequences with thousands of sparse event\ntypes is critical in domains such as healthcare, cybersecurity, or vehicle\ndiagnostics, yet current methods fail to scale. We present OSCAR, a one-shot\ncausal autoregressive method that infers per-sequence Markov Boundaries using\ntwo pretrained Transformers as density estimators. This enables efficient,\nparallel causal discovery without costly global CI testing. On a real-world\nautomotive dataset with 29,100 events and 474 labels, OSCAR recovers\ninterpretable causal structures in minutes, while classical methods fail to\nscale, enabling practical scientific diagnostics at production scale.",
-      "pdf_url": "http://arxiv.org/pdf/2509.23213v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.23213v1",
-      "published": "2025-09-27",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "LongLive: Real-time Interactive Long Video Generation",
-      "authors": [
-        "Shuai Yang",
-        "Wei Huang",
-        "Ruihang Chu",
-        "Yicheng Xiao",
-        "Yuyang Zhao",
-        "Xianbang Wang",
-        "Muyang Li",
-        "Enze Xie",
-        "Yingcong Chen",
-        "Yao Lu",
-        "Song Han",
-        "Yukang Chen"
-      ],
-      "abstract": "We present LongLive, a frame-level autoregressive (AR) framework for\nreal-time and interactive long video generation. Long video generation presents\nchallenges in both efficiency and quality. Diffusion and Diffusion-Forcing\nmodels can produce high-quality videos but suffer from low efficiency due to\nbidirectional attention. Causal attention AR models support KV caching for\nfaster inference, but often degrade in quality on long videos due to memory\nchallenges during long-video training. In addition, beyond static prompt-based\ngeneration, interactive capabilities, such as streaming prompt inputs, are\ncritical for dynamic content creation, enabling users to guide narratives in\nreal time. This interactive requirement significantly increases complexity,\nespecially in ensuring visual consistency and semantic coherence during prompt\ntransitions. To address these challenges, LongLive adopts a causal, frame-level\nAR design that integrates a KV-recache mechanism that refreshes cached states\nwith new prompts for smooth, adherent switches; streaming long tuning to enable\nlong video training and to align training and inference (train-long-test-long);\nand short window attention paired with a frame-level attention sink, shorten as\nframe sink, preserving long-range consistency while enabling faster generation.\nWith these key designs, LongLive fine-tunes a 1.3B-parameter short-clip model\nto minute-long generation in just 32 GPU-days. At inference, LongLive sustains\n20.7 FPS on a single NVIDIA H100, achieves strong performance on VBench in both\nshort and long videos. LongLive supports up to 240-second videos on a single\nH100 GPU. LongLive further supports INT8-quantized inference with only marginal\nquality loss.",
-      "pdf_url": "http://arxiv.org/pdf/2509.22622v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.22622v1",
-      "published": "2025-09-26",
+      "abstract": "Image-to-video generation has made remarkable progress with the advancements\nin diffusion models, yet generating videos with realistic motion remains highly\nchallenging. This difficulty arises from the complexity of accurately modeling\nmotion, which involves capturing physical constraints, object interactions, and\ndomain-specific dynamics that are not easily generalized across diverse\nscenarios. To address this, we propose MotionRAG, a retrieval-augmented\nframework that enhances motion realism by adapting motion priors from relevant\nreference videos through Context-Aware Motion Adaptation (CAMA). The key\ntechnical innovations include: (i) a retrieval-based pipeline extracting\nhigh-level motion features using video encoder and specialized resamplers to\ndistill semantic motion representations; (ii) an in-context learning approach\nfor motion adaptation implemented through a causal transformer architecture;\n(iii) an attention-based motion injection adapter that seamlessly integrates\ntransferred motion features into pretrained video diffusion models. Extensive\nexperiments demonstrate that our method achieves significant improvements\nacross multiple domains and various base models, all with negligible\ncomputational overhead during inference. Furthermore, our modular design\nenables zero-shot generalization to new domains by simply updating the\nretrieval database without retraining any components. This research enhances\nthe core capability of video generation systems by enabling the effective\nretrieval and transfer of motion priors, facilitating the synthesis of\nrealistic motion dynamics.",
+      "pdf_url": "http://arxiv.org/pdf/2509.26391v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.26391v1",
+      "published": "2025-09-30",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "Linear Causal Representation Learning by Topological Ordering, Pruning, and Disentanglement",
+      "title": "MR$^2$-Bench: Going Beyond Matching to Reasoning in Multimodal Retrieval",
       "authors": [
-        "Hao Chen",
-        "Lin Liu",
-        "Yu Guang Wang"
+        "Junjie Zhou",
+        "Ze Liu",
+        "Lei Xiong",
+        "Jin-Ge Yao",
+        "Yueze Wang",
+        "Shitao Xiao",
+        "Fenfen Lin",
+        "Miguel Hu Chen",
+        "Zhicheng Dou",
+        "Siqi Bao",
+        "Defu Lian",
+        "Yongping Xiong",
+        "Zheng Liu"
       ],
-      "abstract": "Causal representation learning (CRL) has garnered increasing interests from\nthe causal inference and artificial intelligence community, due to its\ncapability of disentangling potentially complex data-generating mechanism into\ncausally interpretable latent features, by leveraging the heterogeneity of\nmodern datasets. In this paper, we further contribute to the CRL literature, by\nfocusing on the stylized linear structural causal model over the latent\nfeatures and assuming a linear mixing function that maps latent features to the\nobserved data or measurements. Existing linear CRL methods often rely on\nstringent assumptions, such as accessibility to single-node interventional data\nor restrictive distributional constraints on latent features and exogenous\nmeasurement noise. However, these prerequisites can be challenging to satisfy\nin certain scenarios. In this work, we propose a novel linear CRL algorithm\nthat, unlike most existing linear CRL methods, operates under weaker\nassumptions about environment heterogeneity and data-generating distributions\nwhile still recovering latent causal features up to an equivalence class. We\nfurther validate our new algorithm via synthetic experiments and an\ninterpretability analysis of large language models (LLMs), demonstrating both\nits superiority over competing methods in finite samples and its potential in\nintegrating causality into AI.",
-      "pdf_url": "http://arxiv.org/pdf/2509.22553v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.22553v1",
-      "published": "2025-09-26",
+      "abstract": "Multimodal retrieval is becoming a crucial component of modern AI\napplications, yet its evaluation lags behind the demands of more realistic and\nchallenging scenarios. Existing benchmarks primarily probe surface-level\nsemantic correspondence (e.g., object-text matching) while failing to assess\nthe deeper reasoning required to capture complex relationships between visual\nand textual information. To address this gap, we introduce MR$^2$-Bench, a\nreasoning-intensive benchmark for multimodal retrieval. MR$^2$-Bench presents\nthe following critical values: 1) all tasks are reasoning-driven, going beyond\nshallow matching to effectively assess models' capacity for logical, spatial,\nand causal inference; 2) it features diverse multimodal data, such as natural\nimages, diagrams, and visual puzzles, enabling comprehensive evaluation across\ncontent types; 3) it supports complex queries and documents containing multiple\nimages and covers diverse retrieval scenarios, more accurately reflecting\nreal-world applications. Our benchmark contains 1,309 curated queries, derived\neither from manual collection and annotation or from selective consolidation of\npublic datasets. Despite achieving strong results on existing benchmarks,\ncurrent state-of-the-art models still struggle on MR$^2$-Bench: for example,\nthe leading Seed1.6-Embedding model attains a Recall@1 of 77.78 on MMEB, but\nonly 9.91 on MR$^2$-Bench. This substantial performance gap highlights both the\nincreased challenge posed by our benchmark and the pressing need for further\nadvances in reasoning-intensive multimodal retrieval. The dataset and\nevaluation code will be made publicly available at\nhttps://github.com/VectorSpaceLab/MR2-Bench.",
+      "pdf_url": "http://arxiv.org/pdf/2509.26378v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.26378v1",
+      "published": "2025-09-30",
       "categories": [
-        "stat.ML",
+        "cs.IR",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Staged Event Trees for Transparent Treatment Effect Estimation",
+      "authors": [
+        "Gherardo Varando",
+        "Manuele Leonelli",
+        "Jordi Cerdà-Bautista",
+        "Vasileios Sitokonstantinou",
+        "Gustau Camps-Valls"
+      ],
+      "abstract": "Average and conditional treatment effects are fundamental causal quantities\nused to evaluate the effectiveness of treatments in various critical\napplications, including clinical settings and policy-making. Beyond the\ngold-standard estimators from randomized trials, numerous methods have been\nproposed to estimate treatment effects using observational data. In this paper,\nwe provide a novel characterization of widely used causal inference techniques\nwithin the framework of staged event trees, demonstrating their capacity to\nenhance treatment effect estimation. These models offer a distinct advantage\ndue to their interpretability, making them particularly valuable for practical\napplications. We implement classical estimators within the framework of staged\nevent trees and illustrate their capabilities through both simulation studies\nand real-world applications. Furthermore, we showcase how staged event trees\nexplicitly and visually describe when standard causal assumptions, such as\npositivity, hold, further enhancing their practical utility.",
+      "pdf_url": "http://arxiv.org/pdf/2509.26265v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.26265v1",
+      "published": "2025-09-30",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "ExoPredicator: Learning Abstract Models of Dynamic Worlds for Robot Planning",
+      "authors": [
+        "Yichao Liang",
+        "Dat Nguyen",
+        "Cambridge Yang",
+        "Tianyang Li",
+        "Joshua B. Tenenbaum",
+        "Carl Edward Rasmussen",
+        "Adrian Weller",
+        "Zenna Tavares",
+        "Tom Silver",
+        "Kevin Ellis"
+      ],
+      "abstract": "Long-horizon embodied planning is challenging because the world does not only\nchange through an agent's actions: exogenous processes (e.g., water heating,\ndominoes cascading) unfold concurrently with the agent's actions. We propose a\nframework for abstract world models that jointly learns (i) symbolic state\nrepresentations and (ii) causal processes for both endogenous actions and\nexogenous mechanisms. Each causal process models the time course of a\nstochastic cause-effect relation. We learn these world models from limited data\nvia variational Bayesian inference combined with LLM proposals. Across five\nsimulated tabletop robotics environments, the learned models enable fast\nplanning that generalizes to held-out tasks with more objects and more complex\ngoals, outperforming a range of baselines.",
+      "pdf_url": "http://arxiv.org/pdf/2509.26255v2",
+      "arxiv_url": "http://arxiv.org/abs/2509.26255v2",
+      "published": "2025-09-30",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
         "cs.LG"
       ]
     },
     {
-      "title": "Debiased Front-Door Learners for Heterogeneous Effects",
+      "title": "Act to See, See to Act: Diffusion-Driven Perception-Action Interplay for Adaptive Policies",
       "authors": [
-        "Yonghan Jung"
+        "Jing Wang",
+        "Weiting Peng",
+        "Jing Tang",
+        "Zeyu Gong",
+        "Xihua Wang",
+        "Bo Tao",
+        "Li Cheng"
       ],
-      "abstract": "In observational settings where treatment and outcome share unmeasured\nconfounders but an observed mediator remains unconfounded, the front-door (FD)\nadjustment identifies causal effects through the mediator. We study the\nheterogeneous treatment effect (HTE) under FD identification and introduce two\ndebiased learners: FD-DR-Learner and FD-R-Learner. Both attain fast,\nquasi-oracle rates (i.e., performance comparable to an oracle that knows the\nnuisances) even when nuisance functions converge as slowly as n^-1/4. We\nprovide error analyses establishing debiasedness and demonstrate robust\nempirical performance in synthetic studies and a real-world case study of\nprimary seat-belt laws using Fatality Analysis Reporting System (FARS) dataset.\nTogether, these results indicate that the proposed learners deliver reliable\nand sample-efficient HTE estimates in FD scenarios. The implementation is\navailable at https://github.com/yonghanjung/FD-CATE.\n  Keywords: Front-door adjustment; Heterogeneous treatment effects; Debiased\nlearning; Quasi-oracle rates; Causal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2509.22531v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.22531v1",
-      "published": "2025-09-26",
+      "abstract": "Existing imitation learning methods decouple perception and action, which\noverlooks the causal reciprocity between sensory representations and action\nexecution that humans naturally leverage for adaptive behaviors. To bridge this\ngap, we introduce Action--Guided Diffusion Policy (DP--AG), a unified\nrepresentation learning that explicitly models a dynamic interplay between\nperception and action through probabilistic latent dynamics. DP--AG encodes\nlatent observations into a Gaussian posterior via variational inference and\nevolves them using an action-guided SDE, where the Vector-Jacobian Product\n(VJP) of the diffusion policy's noise predictions serves as a structured\nstochastic force driving latent updates. To promote bidirectional learning\nbetween perception and action, we introduce a cycle--consistent contrastive\nloss that organizes the gradient flow of the noise predictor into a coherent\nperception--action loop, enforcing mutually consistent transitions in both\nlatent updates and action refinements. Theoretically, we derive a variational\nlower bound for the action-guided SDE, and prove that the contrastive objective\nenhances continuity in both latent and action trajectories. Empirically, DP--AG\nsignificantly outperforms state--of--the--art methods across simulation\nbenchmarks and real-world UR5 manipulation tasks. As a result, our DP--AG\noffers a promising step toward bridging biological adaptability and artificial\npolicy learning.",
+      "pdf_url": "http://arxiv.org/pdf/2509.25822v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.25822v1",
+      "published": "2025-09-30",
       "categories": [
-        "stat.ML",
-        "cs.LG"
+        "cs.RO"
       ]
     },
     {
-      "title": "A Multiplicative Instrumental Variable Model for Data Missing Not-at-Random",
+      "title": "Dynamic Causal Attack Graph based Cyber-security Risk Assessment Framework for CTCS System",
       "authors": [
-        "Yunshu Zhang",
-        "Chan Park",
-        "Jiewen Liu",
-        "Yonghoon Lee",
-        "Mengxin Yu",
-        "James M. Robins",
-        "Eric J. Tchetgen Tchetgen"
+        "Zikai Zhang"
       ],
-      "abstract": "Instrumental variable (IV) methods offer a valuable approach to account for\noutcome data missing not-at-random. A valid missing data instrument is a\nmeasured factor which (i) predicts the nonresponse process and (ii) is\nindependent of the outcome in the underlying population. For point\nidentification, all existing IV methods for missing data including the\ncelebrated Heckman selection model, a priori restrict the extent of selection\nbias on the outcome scale, therefore potentially understating uncertainty due\nto missing data. In this work, we introduce an IV framework which allows the\ndegree of selection bias on the outcome scale to remain completely\nunrestricted. The new approach instead relies for identification on (iii) a key\nmultiplicative selection model, which posits that the instrument and any hidden\ncommon correlate of selection and the outcome, do not interact on the\nmultiplicative scale. Interestingly, we establish that any regular statistical\nfunctional of the missing outcome is nonparametrically identified under\n(i)-(iii) via a single-arm Wald ratio estimand reminiscent of the standard Wald\nratio estimand in causal inference. For estimation and inference, we\ncharacterize the influence function for any functional defined on a\nnonparametric model for the observed data, which we leverage to develop\nsemiparametric multiply robust IV estimators. Several extensions of the methods\nare also considered, including the important practical setting of polytomous\nand continuous instruments. Simulation studies illustrate the favorable finite\nsample performance of proposed methods, which we further showcase in an HIV\nstudy nested within a household health survey study we conducted in Mochudi,\nBotswana, in which interviewer characteristics are used as instruments to\ncorrect for selection bias due to dependent nonresponse in the HIV component of\nthe survey study.",
-      "pdf_url": "http://arxiv.org/pdf/2509.22499v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.22499v1",
-      "published": "2025-09-26",
+      "abstract": "Protecting the security of the train control system is a critical issue to\nensure the safe and reliable operation of high-speed trains. Scientific\nmodeling and analysis for the security risk is a promising way to guarantee\nsystem security. However, the representation and assessment of the\nmulti-staged, causally related, and temporal-dynamic changed attack\ndependencies are difficult in the train control system. To solve the above\nchallenges, a security assessment framework based on the Dynamical Causality\nAttack Graph (DCAG) model is introduced in this paper. Firstly, the DCAG model\nis generated based on the attack graph with consideration of temporal attack\npropagation and multi-stage attack event causality propagation. Then, the DCAG\nmodel is analyzed based on Bayesian inference and logic gateway-based\ninference. Through the case analysis of the CTCS-3 system, the security\nassessment framework is validated. With the DCAG-based security assessment\nframework, we can not only perform appropriate security risk quantification\ncalculations, but also explore the importance of different attacks on system\nsecurity risks, which is helpful in adjusting the cyber security defense\npolicy.",
+      "pdf_url": "http://arxiv.org/pdf/2509.25786v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.25786v1",
+      "published": "2025-09-30",
       "categories": [
+        "eess.SY",
+        "cs.SY"
+      ]
+    },
+    {
+      "title": "Coupling Generative Modeling and an Autoencoder with the Causal Bridge",
+      "authors": [
+        "Ruolin Meng",
+        "Ming-Yu Chung",
+        "Dhanajit Brahma",
+        "Ricardo Henao",
+        "Lawrence Carin"
+      ],
+      "abstract": "We consider inferring the causal effect of a treatment (intervention) on an\noutcome of interest in situations where there is potentially an unobserved\nconfounder influencing both the treatment and the outcome. This is achievable\nby assuming access to two separate sets of control (proxy) measurements\nassociated with treatment and outcomes, which are used to estimate treatment\neffects through a function termed the em causal bridge (CB). We present a new\ntheoretical perspective, associated assumptions for when estimating treatment\neffects with the CB is feasible, and a bound on the average error of the\ntreatment effect when the CB assumptions are violated. From this new\nperspective, we then demonstrate how coupling the CB with an autoencoder\narchitecture allows for the sharing of statistical strength between observed\nquantities (proxies, treatment, and outcomes), thus improving the quality of\nthe CB estimates. Experiments on synthetic and real-world data demonstrate the\neffectiveness of the proposed approach in relation to the state-of-the-art\nmethodology for proxy measurements.",
+      "pdf_url": "http://arxiv.org/pdf/2509.25599v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.25599v1",
+      "published": "2025-09-29",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
         "stat.ME"
       ]
     },
     {
-      "title": "Detecting (Un)answerability in Large Language Models with Linear Directions",
+      "title": "Optimal Nuisance Function Tuning for Estimating a Doubly Robust Functional under Proportional Asymptotics",
       "authors": [
-        "Maor Juliet Lavi",
-        "Tova Milo",
-        "Mor Geva"
+        "Sean McGrath",
+        "Debarghya Mukherjee",
+        "Rajarshi Mukherjee",
+        "Zixiao Jolene Wang"
       ],
-      "abstract": "Large language models (LLMs) often respond confidently to questions even when\nthey lack the necessary information, leading to hallucinated answers. In this\nwork, we study the problem of (un)answerability detection, focusing on\nextractive question answering (QA) where the model should determine if a\npassage contains sufficient information to answer a given question. We propose\na simple approach for identifying a direction in the model's activation space\nthat captures unanswerability and uses it for classification. This direction is\nselected by applying activation additions during inference and measuring their\nimpact on the model's abstention behavior. We show that projecting hidden\nactivations onto this direction yields a reliable score for (un)answerability\nclassification. Experiments on two open-weight LLMs and four extractive QA\nbenchmarks show that our method effectively detects unanswerable questions and\ngeneralizes better across datasets than existing prompt-based and\nclassifier-based approaches. Moreover, the obtained directions extend beyond\nextractive QA to unanswerability that stems from factors, such as lack of\nscientific consensus and subjectivity. Last, causal interventions show that\nadding or ablating the directions effectively controls the abstention behavior\nof the model.",
-      "pdf_url": "http://arxiv.org/pdf/2509.22449v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.22449v1",
-      "published": "2025-09-26",
+      "abstract": "In this paper, we explore the asymptotically optimal tuning parameter choice\nin ridge regression for estimating nuisance functions of a statistical\nfunctional that has recently gained prominence in conditional independence\ntesting and causal inference. Given a sample of size $n$, we study estimators\nof the Expected Conditional Covariance (ECC) between variables $Y$ and $A$\ngiven a high-dimensional covariate $X \\in \\mathbb{R}^p$. Under linear\nregression models for $Y$ and $A$ on $X$ and the proportional asymptotic regime\n$p/n \\to c \\in (0, \\infty)$, we evaluate three existing ECC estimators and two\nsample splitting strategies for estimating the required nuisance functions.\nSince no consistent estimator of the nuisance functions exists in the\nproportional asymptotic regime without imposing further structure on the\nproblem, we first derive debiased versions of the ECC estimators that utilize\nthe ridge regression nuisance function estimators. We show that our bias\ncorrection strategy yields $\\sqrt{n}$-consistent estimators of the ECC across\ndifferent sample splitting strategies and estimator choices. We then derive the\nasymptotic variances of these debiased estimators to illustrate the nuanced\ninterplay between the sample splitting strategy, estimator choice, and tuning\nparameters of the nuisance function estimators for optimally estimating the\nECC. Our analysis reveals that prediction-optimal tuning parameters (i.e.,\nthose that optimally estimate the nuisance functions) may not lead to the\nlowest asymptotic variance of the ECC estimator -- thereby demonstrating the\nneed to be careful in selecting tuning parameters based on the final goal of\ninference. Finally, we verify our theoretical results through extensive\nnumerical experiments.",
+      "pdf_url": "http://arxiv.org/pdf/2509.25536v1",
+      "arxiv_url": "http://arxiv.org/abs/2509.25536v1",
+      "published": "2025-09-29",
       "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Exploratory Semantic Reliability Analysis of Wind Turbine Maintenance Logs using Large Language Models",
-      "authors": [
-        "Max Malyi",
-        "Jonathan Shek",
-        "Andre Biscaya"
-      ],
-      "abstract": "A wealth of operational intelligence is locked within the unstructured\nfree-text of wind turbine maintenance logs, a resource largely inaccessible to\ntraditional quantitative reliability analysis. While machine learning has been\napplied to this data, existing approaches typically stop at classification,\ncategorising text into predefined labels. This paper addresses the gap in\nleveraging modern large language models (LLMs) for more complex reasoning\ntasks. We introduce an exploratory framework that uses LLMs to move beyond\nclassification and perform deep semantic analysis. We apply this framework to a\nlarge industrial dataset to execute four analytical workflows: failure mode\nidentification, causal chain inference, comparative site analysis, and data\nquality auditing. The results demonstrate that LLMs can function as powerful\n\"reliability co-pilots,\" moving beyond labelling to synthesise textual\ninformation and generate actionable, expert-level hypotheses. This work\ncontributes a novel and reproducible methodology for using LLMs as a reasoning\ntool, offering a new pathway to enhance operational intelligence in the wind\nenergy sector by unlocking insights previously obscured in unstructured data.",
-      "pdf_url": "http://arxiv.org/pdf/2509.22366v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.22366v1",
-      "published": "2025-09-26",
-      "categories": [
-        "cs.CL"
+        "math.ST",
+        "stat.ME",
+        "stat.ML",
+        "stat.TH"
       ]
     }
   ]
