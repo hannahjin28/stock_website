@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-10-02T00:48:45.097028",
+  "last_updated": "2025-10-03T00:48:40.754145",
   "papers": [
     {
       "title": "Computationally and statistically efficient estimation of time-smoothed counterfactual curves",
@@ -133,9 +133,9 @@
         "Bo Tao",
         "Li Cheng"
       ],
-      "abstract": "Existing imitation learning methods decouple perception and action, which\noverlooks the causal reciprocity between sensory representations and action\nexecution that humans naturally leverage for adaptive behaviors. To bridge this\ngap, we introduce Action--Guided Diffusion Policy (DP--AG), a unified\nrepresentation learning that explicitly models a dynamic interplay between\nperception and action through probabilistic latent dynamics. DP--AG encodes\nlatent observations into a Gaussian posterior via variational inference and\nevolves them using an action-guided SDE, where the Vector-Jacobian Product\n(VJP) of the diffusion policy's noise predictions serves as a structured\nstochastic force driving latent updates. To promote bidirectional learning\nbetween perception and action, we introduce a cycle--consistent contrastive\nloss that organizes the gradient flow of the noise predictor into a coherent\nperception--action loop, enforcing mutually consistent transitions in both\nlatent updates and action refinements. Theoretically, we derive a variational\nlower bound for the action-guided SDE, and prove that the contrastive objective\nenhances continuity in both latent and action trajectories. Empirically, DP--AG\nsignificantly outperforms state--of--the--art methods across simulation\nbenchmarks and real-world UR5 manipulation tasks. As a result, our DP--AG\noffers a promising step toward bridging biological adaptability and artificial\npolicy learning.",
-      "pdf_url": "http://arxiv.org/pdf/2509.25822v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.25822v1",
+      "abstract": "Existing imitation learning methods decouple perception and action, which\noverlooks the causal reciprocity between sensory representations and action\nexecution that humans naturally leverage for adaptive behaviors. To bridge this\ngap, we introduce Action-Guided Diffusion Policy (DP-AG), a unified\nrepresentation learning that explicitly models a dynamic interplay between\nperception and action through probabilistic latent dynamics. DP-AG encodes\nlatent observations into a Gaussian posterior via variational inference and\nevolves them using an action-guided SDE, where the Vector-Jacobian Product\n(VJP) of the diffusion policy's noise predictions serves as a structured\nstochastic force driving latent updates. To promote bidirectional learning\nbetween perception and action, we introduce a cycle-consistent contrastive loss\nthat organizes the gradient flow of the noise predictor into a coherent\nperception-action loop, enforcing mutually consistent transitions in both\nlatent updates and action refinements. Theoretically, we derive a variational\nlower bound for the action-guided SDE, and prove that the contrastive objective\nenhances continuity in both latent and action trajectories. Empirically, DP-AG\nsignificantly outperforms state-of-the-art methods across simulation benchmarks\nand real-world UR5 manipulation tasks. As a result, our DP-AG offers a\npromising step toward bridging biological adaptability and artificial policy\nlearning.",
+      "pdf_url": "http://arxiv.org/pdf/2509.25822v2",
+      "arxiv_url": "http://arxiv.org/abs/2509.25822v2",
       "published": "2025-09-30",
       "categories": [
         "cs.RO"
