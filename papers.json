@@ -1,196 +1,175 @@
 {
-  "last_updated": "2025-10-03T00:48:40.754145",
+  "last_updated": "2025-10-04T00:45:55.241211",
   "papers": [
     {
-      "title": "Computationally and statistically efficient estimation of time-smoothed counterfactual curves",
+      "title": "LLM4Rec: Large Language Models for Multimodal Generative Recommendation with Causal Debiasing",
       "authors": [
-        "Herbert P. Susmann",
-        "Nicholas T. Williams",
-        "Richard Liu",
-        "Jessica G. Young",
-        "Iván Díaz"
+        "Bo Ma",
+        "Hang Li",
+        "ZeHua Hu",
+        "XiaoFan Gui",
+        "LuYao Liu",
+        "Simon Lau"
       ],
-      "abstract": "Longitudinal causal inference is concerned with defining, identifying, and\nestimating the effect of a time-varying intervention on a time-varying outcome\nthat is indexed by a follow-up time. In an observational study, Robins's\ngeneralized g-formula can identify causal effects induced by a broad class of\ntime-varying interventions. Various methods for estimating the generalized\ng-formula have been posed for different outcome types, such as a failure event\nindicator by a specified time (e.g. mortality by 5 year follow-up), as well as\ncontinuous or dichotomous/multi-valued outcomes measures at a specified time\n(e.g. blood pressure in mm/hg or an indicator of high blood pressure at 5-year\nfollow-up). Multiply-robust, data-adaptive estimators leverage flexible\nnonparametric estimation algorithms while allowing for statistical inference.\nHowever, extant methods do not accommodate time-smoothing when multiple\noutcomes are measured over time, which can lead to substantial loss of\nprecision. We propose a novel multiply-robust estimator of the generalized\ng-formula that accommodates time-smoothing over numerous available outcome\nmeasures. Our approach accommodates any intervention that can be described as a\nLongitudinal Modified Treatment Policy, a flexible class suitable for binary,\nmulti-valued, and continuous longitudinal treatments. Our method produces an\nestimate of the effect curve: the causal effect of the intervention on the\noutcome at each measurement time, taking into account censoring and\nnon-monotonic outcome missingness patterns. In simulations we find that the\nproposed algorithm outperforms extant multiply-robust approaches for effect\ncurve estimation in scenarios with high degrees of outcome missingness and when\nthere is strong confounding. We apply the method to study longitudinal effects\nof union membership on wages.",
-      "pdf_url": "http://arxiv.org/pdf/2509.26554v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.26554v1",
-      "published": "2025-09-30",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "An Orthogonal Learner for Individualized Outcomes in Markov Decision Processes",
-      "authors": [
-        "Emil Javurek",
-        "Valentyn Melnychuk",
-        "Jonas Schweisthal",
-        "Konstantin Hess",
-        "Dennis Frauen",
-        "Stefan Feuerriegel"
-      ],
-      "abstract": "Predicting individualized potential outcomes in sequential decision-making is\ncentral for optimizing therapeutic decisions in personalized medicine (e.g.,\nwhich dosing sequence to give to a cancer patient). However, predicting\npotential outcomes over long horizons is notoriously difficult. Existing\nmethods that break the curse of the horizon typically lack strong theoretical\nguarantees such as orthogonality and quasi-oracle efficiency. In this paper, we\nrevisit the problem of predicting individualized potential outcomes in\nsequential decision-making (i.e., estimating Q-functions in Markov decision\nprocesses with observational data) through a causal inference lens. In\nparticular, we develop a comprehensive theoretical foundation for meta-learners\nin this setting with a focus on beneficial theoretical properties. As a result,\nwe yield a novel meta-learner called DRQ-learner and establish that it is: (1)\ndoubly robust (i.e., valid inference under the misspecification of one of the\nnuisances), (2) Neyman-orthogonal (i.e., insensitive to first-order estimation\nerrors in the nuisance functions), and (3) achieves quasi-oracle efficiency\n(i.e., behaves asymptotically as if the ground-truth nuisance functions were\nknown). Our DRQ-learner is applicable to settings with both discrete and\ncontinuous state spaces. Further, our DRQ-learner is flexible and can be used\ntogether with arbitrary machine learning models (e.g., neural networks). We\nvalidate our theoretical results through numerical experiments, thereby showing\nthat our meta-learner outperforms state-of-the-art baselines.",
-      "pdf_url": "http://arxiv.org/pdf/2509.26429v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.26429v1",
-      "published": "2025-09-30",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "MotionRAG: Motion Retrieval-Augmented Image-to-Video Generation",
-      "authors": [
-        "Chenhui Zhu",
-        "Yilu Wu",
-        "Shuai Wang",
-        "Gangshan Wu",
-        "Limin Wang"
-      ],
-      "abstract": "Image-to-video generation has made remarkable progress with the advancements\nin diffusion models, yet generating videos with realistic motion remains highly\nchallenging. This difficulty arises from the complexity of accurately modeling\nmotion, which involves capturing physical constraints, object interactions, and\ndomain-specific dynamics that are not easily generalized across diverse\nscenarios. To address this, we propose MotionRAG, a retrieval-augmented\nframework that enhances motion realism by adapting motion priors from relevant\nreference videos through Context-Aware Motion Adaptation (CAMA). The key\ntechnical innovations include: (i) a retrieval-based pipeline extracting\nhigh-level motion features using video encoder and specialized resamplers to\ndistill semantic motion representations; (ii) an in-context learning approach\nfor motion adaptation implemented through a causal transformer architecture;\n(iii) an attention-based motion injection adapter that seamlessly integrates\ntransferred motion features into pretrained video diffusion models. Extensive\nexperiments demonstrate that our method achieves significant improvements\nacross multiple domains and various base models, all with negligible\ncomputational overhead during inference. Furthermore, our modular design\nenables zero-shot generalization to new domains by simply updating the\nretrieval database without retraining any components. This research enhances\nthe core capability of video generation systems by enabling the effective\nretrieval and transfer of motion priors, facilitating the synthesis of\nrealistic motion dynamics.",
-      "pdf_url": "http://arxiv.org/pdf/2509.26391v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.26391v1",
-      "published": "2025-09-30",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "MR$^2$-Bench: Going Beyond Matching to Reasoning in Multimodal Retrieval",
-      "authors": [
-        "Junjie Zhou",
-        "Ze Liu",
-        "Lei Xiong",
-        "Jin-Ge Yao",
-        "Yueze Wang",
-        "Shitao Xiao",
-        "Fenfen Lin",
-        "Miguel Hu Chen",
-        "Zhicheng Dou",
-        "Siqi Bao",
-        "Defu Lian",
-        "Yongping Xiong",
-        "Zheng Liu"
-      ],
-      "abstract": "Multimodal retrieval is becoming a crucial component of modern AI\napplications, yet its evaluation lags behind the demands of more realistic and\nchallenging scenarios. Existing benchmarks primarily probe surface-level\nsemantic correspondence (e.g., object-text matching) while failing to assess\nthe deeper reasoning required to capture complex relationships between visual\nand textual information. To address this gap, we introduce MR$^2$-Bench, a\nreasoning-intensive benchmark for multimodal retrieval. MR$^2$-Bench presents\nthe following critical values: 1) all tasks are reasoning-driven, going beyond\nshallow matching to effectively assess models' capacity for logical, spatial,\nand causal inference; 2) it features diverse multimodal data, such as natural\nimages, diagrams, and visual puzzles, enabling comprehensive evaluation across\ncontent types; 3) it supports complex queries and documents containing multiple\nimages and covers diverse retrieval scenarios, more accurately reflecting\nreal-world applications. Our benchmark contains 1,309 curated queries, derived\neither from manual collection and annotation or from selective consolidation of\npublic datasets. Despite achieving strong results on existing benchmarks,\ncurrent state-of-the-art models still struggle on MR$^2$-Bench: for example,\nthe leading Seed1.6-Embedding model attains a Recall@1 of 77.78 on MMEB, but\nonly 9.91 on MR$^2$-Bench. This substantial performance gap highlights both the\nincreased challenge posed by our benchmark and the pressing need for further\nadvances in reasoning-intensive multimodal retrieval. The dataset and\nevaluation code will be made publicly available at\nhttps://github.com/VectorSpaceLab/MR2-Bench.",
-      "pdf_url": "http://arxiv.org/pdf/2509.26378v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.26378v1",
-      "published": "2025-09-30",
+      "abstract": "Contemporary generative recommendation systems face significant challenges in\nhandling multimodal data, eliminating algorithmic biases, and providing\ntransparent decision-making processes. This paper introduces an enhanced\ngenerative recommendation framework that addresses these limitations through\nfive key innovations: multimodal fusion architecture, retrieval-augmented\ngeneration mechanisms, causal inference-based debiasing, explainable\nrecommendation generation, and real-time adaptive learning capabilities. Our\nframework leverages advanced large language models as the backbone while\nincorporating specialized modules for cross-modal understanding, contextual\nknowledge integration, bias mitigation, explanation synthesis, and continuous\nmodel adaptation. Extensive experiments on three benchmark datasets\n(MovieLens-25M, Amazon-Electronics, Yelp-2023) demonstrate consistent\nimprovements in recommendation accuracy, fairness, and diversity compared to\nexisting approaches. The proposed framework achieves up to 2.3% improvement in\nNDCG@10 and 1.4% enhancement in diversity metrics while maintaining\ncomputational efficiency through optimized inference strategies.",
+      "pdf_url": "http://arxiv.org/pdf/2510.01622v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.01622v1",
+      "published": "2025-10-02",
       "categories": [
         "cs.IR",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Staged Event Trees for Transparent Treatment Effect Estimation",
-      "authors": [
-        "Gherardo Varando",
-        "Manuele Leonelli",
-        "Jordi Cerdà-Bautista",
-        "Vasileios Sitokonstantinou",
-        "Gustau Camps-Valls"
-      ],
-      "abstract": "Average and conditional treatment effects are fundamental causal quantities\nused to evaluate the effectiveness of treatments in various critical\napplications, including clinical settings and policy-making. Beyond the\ngold-standard estimators from randomized trials, numerous methods have been\nproposed to estimate treatment effects using observational data. In this paper,\nwe provide a novel characterization of widely used causal inference techniques\nwithin the framework of staged event trees, demonstrating their capacity to\nenhance treatment effect estimation. These models offer a distinct advantage\ndue to their interpretability, making them particularly valuable for practical\napplications. We implement classical estimators within the framework of staged\nevent trees and illustrate their capabilities through both simulation studies\nand real-world applications. Furthermore, we showcase how staged event trees\nexplicitly and visually describe when standard causal assumptions, such as\npositivity, hold, further enhancing their practical utility.",
-      "pdf_url": "http://arxiv.org/pdf/2509.26265v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.26265v1",
-      "published": "2025-09-30",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "ExoPredicator: Learning Abstract Models of Dynamic Worlds for Robot Planning",
-      "authors": [
-        "Yichao Liang",
-        "Dat Nguyen",
-        "Cambridge Yang",
-        "Tianyang Li",
-        "Joshua B. Tenenbaum",
-        "Carl Edward Rasmussen",
-        "Adrian Weller",
-        "Zenna Tavares",
-        "Tom Silver",
-        "Kevin Ellis"
-      ],
-      "abstract": "Long-horizon embodied planning is challenging because the world does not only\nchange through an agent's actions: exogenous processes (e.g., water heating,\ndominoes cascading) unfold concurrently with the agent's actions. We propose a\nframework for abstract world models that jointly learns (i) symbolic state\nrepresentations and (ii) causal processes for both endogenous actions and\nexogenous mechanisms. Each causal process models the time course of a\nstochastic cause-effect relation. We learn these world models from limited data\nvia variational Bayesian inference combined with LLM proposals. Across five\nsimulated tabletop robotics environments, the learned models enable fast\nplanning that generalizes to held-out tasks with more objects and more complex\ngoals, outperforming a range of baselines.",
-      "pdf_url": "http://arxiv.org/pdf/2509.26255v2",
-      "arxiv_url": "http://arxiv.org/abs/2509.26255v2",
-      "published": "2025-09-30",
-      "categories": [
         "cs.AI",
-        "cs.CV",
-        "cs.LG"
+        "cs.CL"
       ]
     },
     {
-      "title": "Act to See, See to Act: Diffusion-Driven Perception-Action Interplay for Adaptive Policies",
+      "title": "SLOPE and Designing Robust Studies for Generalization",
       "authors": [
-        "Jing Wang",
-        "Weiting Peng",
-        "Jing Tang",
-        "Zeyu Gong",
-        "Xihua Wang",
-        "Bo Tao",
-        "Li Cheng"
+        "Xinran Miao",
+        "Jiwei Zhao",
+        "Hyunseung Kang"
       ],
-      "abstract": "Existing imitation learning methods decouple perception and action, which\noverlooks the causal reciprocity between sensory representations and action\nexecution that humans naturally leverage for adaptive behaviors. To bridge this\ngap, we introduce Action-Guided Diffusion Policy (DP-AG), a unified\nrepresentation learning that explicitly models a dynamic interplay between\nperception and action through probabilistic latent dynamics. DP-AG encodes\nlatent observations into a Gaussian posterior via variational inference and\nevolves them using an action-guided SDE, where the Vector-Jacobian Product\n(VJP) of the diffusion policy's noise predictions serves as a structured\nstochastic force driving latent updates. To promote bidirectional learning\nbetween perception and action, we introduce a cycle-consistent contrastive loss\nthat organizes the gradient flow of the noise predictor into a coherent\nperception-action loop, enforcing mutually consistent transitions in both\nlatent updates and action refinements. Theoretically, we derive a variational\nlower bound for the action-guided SDE, and prove that the contrastive objective\nenhances continuity in both latent and action trajectories. Empirically, DP-AG\nsignificantly outperforms state-of-the-art methods across simulation benchmarks\nand real-world UR5 manipulation tasks. As a result, our DP-AG offers a\npromising step toward bridging biological adaptability and artificial policy\nlearning.",
-      "pdf_url": "http://arxiv.org/pdf/2509.25822v2",
-      "arxiv_url": "http://arxiv.org/abs/2509.25822v2",
-      "published": "2025-09-30",
+      "abstract": "A popular task in generalization is to learn about a new, target population\nbased on data from an existing, source population. This task relies on\nconditional exchangeability, which asserts that differences between the source\nand target populations are fully captured by observable characteristics of the\ntwo populations. Unfortunately, this assumption is often untenable in practice\ndue to unobservable differences between the source and target populations.\nWorse, the assumption cannot be verified with data, warranting the need for\nrobust data collection processes and study designs that are inherently less\nsensitive to violation of the assumption. In this paper, we propose SLOPE\n(Sensitivity of LOcal Perturbations from Exchangeability), a simple, intuitive,\nand novel measure that quantifies the sensitivity to local violation of\nconditional exchangeability. SLOPE combines ideas from sensitivity analysis in\ncausal inference and derivative-based measure of robustness from Hampel (1974).\nAmong other properties, SLOPE can help investigators to choose (a) a robust\nsource or target population or (b) a robust estimand. Also, we show an analytic\nrelationship between SLOPE and influence functions (IFs), which investigators\ncan use to derive SLOPE given an IF. We conclude with a re-analysis of a\nmulti-national randomized experiment and illustrate the role of SLOPE in\ninforming robust study designs for generalization.",
+      "pdf_url": "http://arxiv.org/pdf/2510.01577v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.01577v1",
+      "published": "2025-10-02",
       "categories": [
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "Dynamic Causal Attack Graph based Cyber-security Risk Assessment Framework for CTCS System",
-      "authors": [
-        "Zikai Zhang"
-      ],
-      "abstract": "Protecting the security of the train control system is a critical issue to\nensure the safe and reliable operation of high-speed trains. Scientific\nmodeling and analysis for the security risk is a promising way to guarantee\nsystem security. However, the representation and assessment of the\nmulti-staged, causally related, and temporal-dynamic changed attack\ndependencies are difficult in the train control system. To solve the above\nchallenges, a security assessment framework based on the Dynamical Causality\nAttack Graph (DCAG) model is introduced in this paper. Firstly, the DCAG model\nis generated based on the attack graph with consideration of temporal attack\npropagation and multi-stage attack event causality propagation. Then, the DCAG\nmodel is analyzed based on Bayesian inference and logic gateway-based\ninference. Through the case analysis of the CTCS-3 system, the security\nassessment framework is validated. With the DCAG-based security assessment\nframework, we can not only perform appropriate security risk quantification\ncalculations, but also explore the importance of different attacks on system\nsecurity risks, which is helpful in adjusting the cyber security defense\npolicy.",
-      "pdf_url": "http://arxiv.org/pdf/2509.25786v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.25786v1",
-      "published": "2025-09-30",
-      "categories": [
-        "eess.SY",
-        "cs.SY"
-      ]
-    },
-    {
-      "title": "Coupling Generative Modeling and an Autoencoder with the Causal Bridge",
-      "authors": [
-        "Ruolin Meng",
-        "Ming-Yu Chung",
-        "Dhanajit Brahma",
-        "Ricardo Henao",
-        "Lawrence Carin"
-      ],
-      "abstract": "We consider inferring the causal effect of a treatment (intervention) on an\noutcome of interest in situations where there is potentially an unobserved\nconfounder influencing both the treatment and the outcome. This is achievable\nby assuming access to two separate sets of control (proxy) measurements\nassociated with treatment and outcomes, which are used to estimate treatment\neffects through a function termed the em causal bridge (CB). We present a new\ntheoretical perspective, associated assumptions for when estimating treatment\neffects with the CB is feasible, and a bound on the average error of the\ntreatment effect when the CB assumptions are violated. From this new\nperspective, we then demonstrate how coupling the CB with an autoencoder\narchitecture allows for the sharing of statistical strength between observed\nquantities (proxies, treatment, and outcomes), thus improving the quality of\nthe CB estimates. Experiments on synthetic and real-world data demonstrate the\neffectiveness of the proposed approach in relation to the state-of-the-art\nmethodology for proxy measurements.",
-      "pdf_url": "http://arxiv.org/pdf/2509.25599v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.25599v1",
-      "published": "2025-09-29",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
         "stat.ME"
       ]
     },
     {
-      "title": "Optimal Nuisance Function Tuning for Estimating a Doubly Robust Functional under Proportional Asymptotics",
+      "title": "Large-Scale Bayesian Causal Discovery with Interventional Data",
       "authors": [
-        "Sean McGrath",
-        "Debarghya Mukherjee",
-        "Rajarshi Mukherjee",
-        "Zixiao Jolene Wang"
+        "Seong Woo Han",
+        "Daniel Duy Vo",
+        "Brielin C. Brown"
       ],
-      "abstract": "In this paper, we explore the asymptotically optimal tuning parameter choice\nin ridge regression for estimating nuisance functions of a statistical\nfunctional that has recently gained prominence in conditional independence\ntesting and causal inference. Given a sample of size $n$, we study estimators\nof the Expected Conditional Covariance (ECC) between variables $Y$ and $A$\ngiven a high-dimensional covariate $X \\in \\mathbb{R}^p$. Under linear\nregression models for $Y$ and $A$ on $X$ and the proportional asymptotic regime\n$p/n \\to c \\in (0, \\infty)$, we evaluate three existing ECC estimators and two\nsample splitting strategies for estimating the required nuisance functions.\nSince no consistent estimator of the nuisance functions exists in the\nproportional asymptotic regime without imposing further structure on the\nproblem, we first derive debiased versions of the ECC estimators that utilize\nthe ridge regression nuisance function estimators. We show that our bias\ncorrection strategy yields $\\sqrt{n}$-consistent estimators of the ECC across\ndifferent sample splitting strategies and estimator choices. We then derive the\nasymptotic variances of these debiased estimators to illustrate the nuanced\ninterplay between the sample splitting strategy, estimator choice, and tuning\nparameters of the nuisance function estimators for optimally estimating the\nECC. Our analysis reveals that prediction-optimal tuning parameters (i.e.,\nthose that optimally estimate the nuisance functions) may not lead to the\nlowest asymptotic variance of the ECC estimator -- thereby demonstrating the\nneed to be careful in selecting tuning parameters based on the final goal of\ninference. Finally, we verify our theoretical results through extensive\nnumerical experiments.",
-      "pdf_url": "http://arxiv.org/pdf/2509.25536v1",
-      "arxiv_url": "http://arxiv.org/abs/2509.25536v1",
-      "published": "2025-09-29",
+      "abstract": "Inferring the causal relationships among a set of variables in the form of a\ndirected acyclic graph (DAG) is an important but notoriously challenging\nproblem. Recently, advancements in high-throughput genomic perturbation screens\nhave inspired development of methods that leverage interventional data to\nimprove model identification. However, existing methods still suffer poor\nperformance on large-scale tasks and fail to quantify uncertainty. Here, we\npropose Interventional Bayesian Causal Discovery (IBCD), an empirical Bayesian\nframework for causal discovery with interventional data. Our approach models\nthe likelihood of the matrix of total causal effects, which can be approximated\nby a matrix normal distribution, rather than the full data matrix. We place a\nspike-and-slab horseshoe prior on the edges and separately learn data-driven\nweights for scale-free and Erd\\H{o}s-R\\'enyi structures from observational\ndata, treating each edge as a latent variable to enable uncertainty-aware\ninference. Through extensive simulation, we show that IBCD achieves superior\nstructure recovery compared to existing baselines. We apply IBCD to CRISPR\nperturbation (Perturb-seq) data on 521 genes, demonstrating that edge posterior\ninclusion probabilities enable identification of robust graph structures.",
+      "pdf_url": "http://arxiv.org/pdf/2510.01562v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.01562v1",
+      "published": "2025-10-02",
       "categories": [
-        "math.ST",
-        "stat.ME",
-        "stat.ML",
-        "stat.TH"
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Executable Counterfactuals: Improving LLMs' Causal Reasoning Through Code",
+      "authors": [
+        "Aniket Vashishtha",
+        "Qirun Dai",
+        "Hongyuan Mei",
+        "Amit Sharma",
+        "Chenhao Tan",
+        "Hao Peng"
+      ],
+      "abstract": "Counterfactual reasoning, a hallmark of intelligence, consists of three\nsteps: inferring latent variables from observations (abduction), constructing\nalternatives (interventions), and predicting their outcomes (prediction). This\nskill is essential for advancing LLMs' causal understanding and expanding their\napplications in high-stakes domains such as scientific research. However,\nexisting efforts in assessing LLM's counterfactual reasoning capabilities tend\nto skip the abduction step, effectively reducing to interventional reasoning\nand leading to overestimation of LLM performance. To address this, we introduce\nexecutable counterfactuals, a novel framework that operationalizes causal\nreasoning through code and math problems. Our framework explicitly requires all\nthree steps of counterfactual reasoning and enables scalable synthetic data\ncreation with varying difficulty, creating a frontier for evaluating and\nimproving LLM's reasoning. Our results reveal substantial drop in accuracy\n(25-40%) from interventional to counterfactual reasoning for SOTA models like\no4-mini and Claude-4-Sonnet. To address this gap, we construct a training set\ncomprising counterfactual code problems having if-else condition and test on\nout-of-domain code structures (e.g. having while-loop); we also test whether a\nmodel trained on code would generalize to counterfactual math word problems.\nWhile supervised finetuning on stronger models' reasoning traces improves\nin-domain performance of Qwen models, it leads to a decrease in accuracy on OOD\ntasks such as counterfactual math problems. In contrast, reinforcement learning\ninduces the core cognitive behaviors and generalizes to new domains, yielding\ngains over the base model on both code (improvement of 1.5x-2x) and math\nproblems. Analysis of the reasoning traces reinforces these findings and\nhighlights the promise of RL for improving LLMs' counterfactual reasoning.",
+      "pdf_url": "http://arxiv.org/pdf/2510.01539v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.01539v1",
+      "published": "2025-10-02",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "TAG-EQA: Text-And-Graph for Event Question Answering via Structured Prompting Strategies",
+      "authors": [
+        "Maithili Kadam",
+        "Francis Ferraro"
+      ],
+      "abstract": "Large language models (LLMs) excel at general language tasks but often\nstruggle with event-based questions-especially those requiring causal or\ntemporal reasoning. We introduce TAG-EQA (Text-And-Graph for Event Question\nAnswering), a prompting framework that injects causal event graphs into LLM\ninputs by converting structured relations into natural-language statements.\nTAG-EQA spans nine prompting configurations, combining three strategies\n(zero-shot, few-shot, chain-of-thought) with three input modalities (text-only,\ngraph-only, text+graph), enabling a systematic analysis of when and how\nstructured knowledge aids inference. On the TORQUESTRA benchmark, TAG-EQA\nimproves accuracy by 5% on average over text-only baselines, with gains up to\n12% in zero-shot settings and 18% when graph-augmented CoT prompting is\neffective. While performance varies by model and configuration, our findings\nshow that causal graphs can enhance event reasoning in LLMs without\nfine-tuning, offering a flexible way to encode structure in prompt-based QA.",
+      "pdf_url": "http://arxiv.org/pdf/2510.01391v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.01391v1",
+      "published": "2025-10-01",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "The causal structure of galactic astrophysics",
+      "authors": [
+        "Harry Desmond",
+        "Joseph Ramsey"
+      ],
+      "abstract": "Data-driven astrophysics currently relies on the detection and\ncharacterisation of correlations between objects' properties, which are then\nused to test physical theories that make predictions for them. This process\nfails to utilise information in the data that forms a crucial part of the\ntheories' predictions, namely which variables are directly correlated (as\nopposed to accidentally correlated through others), the directions of these\ndeterminations, and the presence or absence of confounders that correlate\nvariables in the dataset but are themselves absent from it. We propose to\nrecover this information through causal discovery, a well-developed methodology\nfor inferring the causal structure of datasets that is however almost entirely\nunknown to astrophysics. We develop a causal discovery algorithm suitable for\nastrophysical datasets and illustrate it on $\\sim$5$\\times10^5$ low-redshift\ngalaxies from the Nasa Sloan Atlas, demonstrating its ability to distinguish\nphysical mechanisms that are degenerate on the basis of correlations alone.",
+      "pdf_url": "http://arxiv.org/pdf/2510.01112v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.01112v1",
+      "published": "2025-10-01",
+      "categories": [
+        "astro-ph.GA",
+        "astro-ph.CO",
+        "cs.LG",
+        "stat.AP",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "InfVSR: Breaking Length Limits of Generic Video Super-Resolution",
+      "authors": [
+        "Ziqing Zhang",
+        "Kai Liu",
+        "Zheng Chen",
+        "Xi Li",
+        "Yucong Chen",
+        "Bingnan Duan",
+        "Linghe Kong",
+        "Yulun Zhang"
+      ],
+      "abstract": "Real-world videos often extend over thousands of frames. Existing video\nsuper-resolution (VSR) approaches, however, face two persistent challenges when\nprocessing long sequences: (1) inefficiency due to the heavy cost of multi-step\ndenoising for full-length sequences; and (2) poor scalability hindered by\ntemporal decomposition that causes artifacts and discontinuities. To break\nthese limits, we propose InfVSR, which novelly reformulates VSR as an\nautoregressive-one-step-diffusion paradigm. This enables streaming inference\nwhile fully leveraging pre-trained video diffusion priors. First, we adapt the\npre-trained DiT into a causal structure, maintaining both local and global\ncoherence via rolling KV-cache and joint visual guidance. Second, we distill\nthe diffusion process into a single step efficiently, with patch-wise pixel\nsupervision and cross-chunk distribution matching. Together, these designs\nenable efficient and scalable VSR for unbounded-length videos. To fill the gap\nin long-form video evaluation, we build a new benchmark tailored for extended\nsequences and further introduce semantic-level metrics to comprehensively\nassess temporal consistency. Our method pushes the frontier of long-form VSR,\nachieves state-of-the-art quality with enhanced semantic consistency, and\ndelivers up to 58x speed-up over existing methods such as MGLD-VSR. Code will\nbe available at https://github.com/Kai-Liu001/InfVSR.",
+      "pdf_url": "http://arxiv.org/pdf/2510.00948v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.00948v1",
+      "published": "2025-10-01",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Gather-Scatter Mamba: Accelerating Propagation with Efficient State Space Model",
+      "authors": [
+        "Hyun-kyu Ko",
+        "Youbin Kim",
+        "Jihyeon Park",
+        "Dongheok Park",
+        "Gyeongjin Kang",
+        "Wonjun Cho",
+        "Hyung Yi",
+        "Eunbyung Park"
+      ],
+      "abstract": "State Space Models (SSMs)-most notably RNNs-have historically played a\ncentral role in sequential modeling. Although attention mechanisms such as\nTransformers have since dominated due to their ability to model global context,\ntheir quadratic complexity and limited scalability make them less suited for\nlong sequences. Video super-resolution (VSR) methods have traditionally relied\non recurrent architectures to propagate features across frames. However, such\napproaches suffer from well-known issues including vanishing gradients, lack of\nparallelism, and slow inference speed. Recent advances in selective SSMs like\nMamba offer a compelling alternative: by enabling input-dependent state\ntransitions with linear-time complexity, Mamba mitigates these issues while\nmaintaining strong long-range modeling capabilities. Despite this potential,\nMamba alone struggles to capture fine-grained spatial dependencies due to its\ncausal nature and lack of explicit context aggregation. To address this, we\npropose a hybrid architecture that combines shifted window self-attention for\nspatial context aggregation with Mamba-based selective scanning for efficient\ntemporal propagation. Furthermore, we introduce Gather-Scatter Mamba (GSM), an\nalignment-aware mechanism that warps features toward a center anchor frame\nwithin the temporal window before Mamba propagation and scatters them back\nafterward, effectively reducing occlusion artifacts and ensuring effective\nredistribution of aggregated information across all frames. The official\nimplementation is provided at: https://github.com/Ko-Lani/GSMamba.",
+      "pdf_url": "http://arxiv.org/pdf/2510.00862v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.00862v1",
+      "published": "2025-10-01",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "The Economic Impact of DeFi Crime Events on Decentralized Autonomous Organizations (DAOs)",
+      "authors": [
+        "Stefan Kitzler",
+        "Masarah Paquet-Clouston",
+        "Bernhard Haslhofer"
+      ],
+      "abstract": "The Decentralized Finance (DeFi) ecosystem has experienced over \\$10 billion\nin direct losses due to crime events. Beyond these immediate losses, such\nevents often trigger broader market reactions, including price declines,\ntrading activity changes, and reductions in market capitalization.\nDecentralized Autonomous Organizations (DAOs) govern DeFi applications through\ntradable governance assets that function like corporate shares for voting and\ndecision-making. Leveraging DeFi's granular trading data, we conduct an event\nstudy on 22 crime events between 2020 and 2022 to assess their economic impact\non governance asset prices, trading volumes, and market capitalization. Using a\ndynamic difference-in-differences (DiD) framework with counterfactual\ngovernance assets, we aim for causal inference of intraday temporal effects.\nOur results show that 55% of crime events lead to significant negative price\nimpacts, with an average decline of about 14%. Additionally, 68% of crime\nevents lead to increased governance asset trading volume. Based on these\nimpacts, we estimate indirect economic losses of over $1.3 billion in DAO\nmarket capitalization, far exceeding direct victim costs and accounting for 74%\nof total losses. Our study provides valuable insights into how crime events\nshape market dynamics and affect DAOs. Moreover, our methodological approach is\nreproducible and applicable beyond DAOs, offering a framework to assess the\nindirect economic impact on other cryptoassets.",
+      "pdf_url": "http://arxiv.org/pdf/2510.00669v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.00669v1",
+      "published": "2025-10-01",
+      "categories": [
+        "cs.CE"
+      ]
+    },
+    {
+      "title": "Threats to the sustainability of Community Notes on X",
+      "authors": [
+        "Zahra Arjmandi-Lari",
+        "Alexios Mantzarlis",
+        "Tom Stafford"
+      ],
+      "abstract": "Community Notes are emerging as an important option for content moderation.\nThe Community Notes system pioneered by Twitter, now known as X, uses a\nbridging algorithm to identify user-generated context with upvotes across\npolitical divides, supposedly spinning consensual gold from partisan straw. It\nis important to understand the nature of the community behind Community Notes,\nespecially as the feature has now been imitated by several billion-user\nplatforms. We look for signs of stability and disruption in the X Community\nNotes community and interrogate the motivations other than partisan animus\n(Allen, Martel, and Rand 2022) which may be driving users to contribute. We\nconduct a novel analysis of the impact of having a note published, which\nrequires being considered \"helpful\" by the bridging algorithm, utilising a\nregression discontinuity design. This allows stronger causal inference than\nconventional methods used with observational data. Our analysis shows the\npositive effect on future note authoring of having a note published. This\nhighlights the risk of the current system, where the proportion of notes\nconsidered \"helpful\" (and therefore shown to users on X) is low, 10%, and\ndeclining. This analysis has implications for the future of Community Notes on\nX and the extension of this approach to other platforms.",
+      "pdf_url": "http://arxiv.org/pdf/2510.00650v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.00650v1",
+      "published": "2025-10-01",
+      "categories": [
+        "cs.SI"
       ]
     }
   ]
