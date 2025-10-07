@@ -1,6 +1,37 @@
 {
-  "last_updated": "2025-10-06T00:51:18.702059",
+  "last_updated": "2025-10-07T00:50:11.753884",
   "papers": [
+    {
+      "title": "GCVAMD: A Modified CausalVAE Model for Causal Age-related Macular Degeneration Risk Factor Detection and Prediction",
+      "authors": [
+        "Daeyoung Kim"
+      ],
+      "abstract": "Age Related Macular Degeneration(AMD) has been one of the most leading causes\nof permanent vision impairment in ophthalmology. Though treatments, such as\nanti VEGF drugs or photodynamic therapies, were developed to slow down the\ndegenerative process of AMD, there is still no specific cure to reverse vision\nloss caused by AMD. Thus, for AMD, detecting existence of risk factors of AMD\nor AMD itself within the patient retina in early stages is a crucial task to\nreduce the possibility of vision impairment. Apart from traditional approaches,\ndeep learning based methods, especially attention mechanism based CNNs and\nGradCAM based XAI analysis on OCT scans, exhibited successful performance in\ndistinguishing AMD retina from normal retinas, making it possible to use AI\ndriven models to aid medical diagnosis and analysis by ophthalmologists\nregarding AMD. However, though having significant success, previous works\nmostly focused on prediction performance itself, not pathologies or underlying\ncausal mechanisms of AMD, which can prohibit intervention analysis on specific\nfactors or even lead to less reliable decisions. Thus, this paper introduces a\nnovel causal AMD analysis model: GCVAMD, which incorporates a modified\nCausalVAE approach that can extract latent causal factors from only raw OCT\nimages. By considering causality in AMD detection, GCVAMD enables causal\ninference such as treatment simulation or intervention analysis regarding major\nrisk factors: drusen and neovascularization, while returning informative latent\ncausal features that can enhance downstream tasks. Results show that through\nGCVAMD, drusen status and neovascularization status can be identified with AMD\ncausal mechanisms in GCVAMD latent spaces, which can in turn be used for\nvarious tasks from AMD detection(classification) to intervention analysis.",
+      "pdf_url": "http://arxiv.org/pdf/2510.02781v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.02781v1",
+      "published": "2025-10-03",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Multimodal Function Vectors for Spatial Relations",
+      "authors": [
+        "Shuhao Fu",
+        "Esther Goldberg",
+        "Ying Nian Wu",
+        "Hongjing Lu"
+      ],
+      "abstract": "Large Multimodal Models (LMMs) demonstrate impressive in-context learning\nabilities from limited multimodal demonstrations, yet the internal mechanisms\nsupporting such task learning remain opaque. Building on prior work of large\nlanguage models, we show that a small subset of attention heads in the\nvision-language model OpenFlamingo-4B is responsible for transmitting\nrepresentations of spatial relations. The activations of these attention heads,\ntermed function vectors, can be extracted and manipulated to alter an LMM's\nperformance on relational tasks. First, using both synthetic and real image\ndatasets, we apply causal mediation analysis to identify attention heads that\nstrongly influence relational predictions, and extract multimodal function\nvectors that improve zero-shot accuracy at inference time. We further\ndemonstrate that these multimodal function vectors can be fine-tuned with a\nmodest amount of training data, while keeping LMM parameters frozen, to\nsignificantly outperform in-context learning baselines. Finally, we show that\nrelation-specific function vectors can be linearly combined to solve analogy\nproblems involving novel and untrained spatial relations, highlighting the\nstrong generalization ability of this approach. Our results show that LMMs\nencode spatial relational knowledge within localized internal structures, which\ncan be systematically extracted and optimized, thereby advancing our\nunderstanding of model modularity and enhancing control over relational\nreasoning in LMMs.",
+      "pdf_url": "http://arxiv.org/pdf/2510.02528v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.02528v1",
+      "published": "2025-10-02",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
     {
       "title": "LLM4Rec: Large Language Models for Multimodal Generative Recommendation with Causal Debiasing",
       "authors": [
@@ -140,36 +171,6 @@
       "categories": [
         "cs.CV",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "The Economic Impact of DeFi Crime Events on Decentralized Autonomous Organizations (DAOs)",
-      "authors": [
-        "Stefan Kitzler",
-        "Masarah Paquet-Clouston",
-        "Bernhard Haslhofer"
-      ],
-      "abstract": "The Decentralized Finance (DeFi) ecosystem has experienced over \\$10 billion\nin direct losses due to crime events. Beyond these immediate losses, such\nevents often trigger broader market reactions, including price declines,\ntrading activity changes, and reductions in market capitalization.\nDecentralized Autonomous Organizations (DAOs) govern DeFi applications through\ntradable governance assets that function like corporate shares for voting and\ndecision-making. Leveraging DeFi's granular trading data, we conduct an event\nstudy on 22 crime events between 2020 and 2022 to assess their economic impact\non governance asset prices, trading volumes, and market capitalization. Using a\ndynamic difference-in-differences (DiD) framework with counterfactual\ngovernance assets, we aim for causal inference of intraday temporal effects.\nOur results show that 55% of crime events lead to significant negative price\nimpacts, with an average decline of about 14%. Additionally, 68% of crime\nevents lead to increased governance asset trading volume. Based on these\nimpacts, we estimate indirect economic losses of over $1.3 billion in DAO\nmarket capitalization, far exceeding direct victim costs and accounting for 74%\nof total losses. Our study provides valuable insights into how crime events\nshape market dynamics and affect DAOs. Moreover, our methodological approach is\nreproducible and applicable beyond DAOs, offering a framework to assess the\nindirect economic impact on other cryptoassets.",
-      "pdf_url": "http://arxiv.org/pdf/2510.00669v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.00669v1",
-      "published": "2025-10-01",
-      "categories": [
-        "cs.CE"
-      ]
-    },
-    {
-      "title": "Threats to the sustainability of Community Notes on X",
-      "authors": [
-        "Zahra Arjmandi-Lari",
-        "Alexios Mantzarlis",
-        "Tom Stafford"
-      ],
-      "abstract": "Community Notes are emerging as an important option for content moderation.\nThe Community Notes system pioneered by Twitter, now known as X, uses a\nbridging algorithm to identify user-generated context with upvotes across\npolitical divides, supposedly spinning consensual gold from partisan straw. It\nis important to understand the nature of the community behind Community Notes,\nespecially as the feature has now been imitated by several billion-user\nplatforms. We look for signs of stability and disruption in the X Community\nNotes community and interrogate the motivations other than partisan animus\n(Allen, Martel, and Rand 2022) which may be driving users to contribute. We\nconduct a novel analysis of the impact of having a note published, which\nrequires being considered \"helpful\" by the bridging algorithm, utilising a\nregression discontinuity design. This allows stronger causal inference than\nconventional methods used with observational data. Our analysis shows the\npositive effect on future note authoring of having a note published. This\nhighlights the risk of the current system, where the proportion of notes\nconsidered \"helpful\" (and therefore shown to users on X) is low, 10%, and\ndeclining. This analysis has implications for the future of Community Notes on\nX and the extension of this approach to other platforms.",
-      "pdf_url": "http://arxiv.org/pdf/2510.00650v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.00650v1",
-      "published": "2025-10-01",
-      "categories": [
-        "cs.SI"
       ]
     }
   ]
