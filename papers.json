@@ -1,6 +1,108 @@
 {
-  "last_updated": "2025-10-07T00:50:11.753884",
+  "last_updated": "2025-10-08T00:49:10.246191",
   "papers": [
+    {
+      "title": "Structural Identifiability of Graphical Continuous Lyapunov Models",
+      "authors": [
+        "Carlos Améndola",
+        "Tobias Boege",
+        "Benjamin Hollering",
+        "Pratik Misra"
+      ],
+      "abstract": "We prove two characterizations of model equivalence of acyclic graphical\ncontinuous Lyapunov models (GCLMs) with uncorrelated noise. The first result\nshows that two graphs are model equivalent if and only if they have the same\nskeleton and equivalent induced 4-node subgraphs. We also give a\ntransformational characterization via structured edge reversals. The two\ntheorems are Lyapunov analogues of celebrated results for Bayesian networks by\nVerma and Pearl, and Chickering, respectively. Our results have broad\nconsequences for the theory of causal inference of GCLMs. First, we find that\nmodel equivalence classes of acyclic GCLMs refine the corresponding classes of\nBayesian networks. Furthermore, we obtain polynomial-time algorithms to test\nmodel equivalence and structural identifiability of given directed acyclic\ngraphs.",
+      "pdf_url": "http://arxiv.org/pdf/2510.04985v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.04985v1",
+      "published": "2025-10-06",
+      "categories": [
+        "math.ST",
+        "stat.TH",
+        "62H22, 60J60 (Primary) 15A24, 62R01, 60J70 (Secondary)"
+      ]
+    },
+    {
+      "title": "On Predicting Post-Click Conversion Rate via Counterfactual Inference",
+      "authors": [
+        "Junhyung Ahn",
+        "Sanghack Lee"
+      ],
+      "abstract": "Accurately predicting conversion rate (CVR) is essential in various\nrecommendation domains such as online advertising systems and e-commerce. These\nsystems utilize user interaction logs, which consist of exposures, clicks, and\nconversions. CVR prediction models are typically trained solely based on\nclicked samples, as conversions can only be determined following clicks.\nHowever, the sparsity of clicked instances necessitates the collection of a\nsubstantial amount of logs for effective model training. Recent works address\nthis issue by devising frameworks that leverage non-clicked samples. While\nthese frameworks aim to reduce biases caused by the discrepancy between clicked\nand non-clicked samples, they often rely on heuristics. Against this\nbackground, we propose a method to counterfactually generate conversion labels\nfor non-clicked samples by using causality as a guiding principle, attempting\nto answer the question, \"Would the user have converted if he or she had clicked\nthe recommended item?\" Our approach is named the Entire Space Counterfactual\nInference Multi-task Model (ESCIM). We initially train a structural causal\nmodel (SCM) of user sequential behaviors and conduct a hypothetical\nintervention (i.e., click) on non-clicked items to infer counterfactual CVRs.\nWe then introduce several approaches to transform predicted counterfactual CVRs\ninto binary counterfactual conversion labels for the non-clicked samples.\nFinally, the generated samples are incorporated into the training process.\nExtensive experiments on public datasets illustrate the superiority of the\nproposed algorithm. Online A/B testing further empirically validates the\neffectiveness of our proposed algorithm in real-world scenarios. In addition,\nwe demonstrate the improved performance of the proposed method on latent\nconversion data, showcasing its robustness and superior generalization\ncapabilities.",
+      "pdf_url": "http://arxiv.org/pdf/2510.04816v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.04816v1",
+      "published": "2025-10-06",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Causality-aware Graph Aggregation Weight Estimator for Popularity Debiasing in Top-K Recommendation",
+      "authors": [
+        "Yue Que",
+        "Yingyi Zhang",
+        "Xiangyu Zhao",
+        "Chen Ma"
+      ],
+      "abstract": "Graph-based recommender systems leverage neighborhood aggregation to generate\nnode representations, which is highly sensitive to popularity bias, resulting\nin an echo effect during information propagation. Existing graph-based\ndebiasing solutions refine the aggregation process with attempts such as edge\nreconstruction or weight adjustment. However, these methods remain inadequate\nin fully alleviating popularity bias. Specifically, this is because 1) they\nprovide no insights into graph aggregation rationality, thus lacking an\noptimality guarantee; 2) they fail to well balance the training and debiasing\nprocess, which undermines the effectiveness. In this paper, we propose a novel\napproach to mitigate popularity bias through rational modeling of the graph\naggregation process. We reveal that graph aggregation is a special form of\nbackdoor adjustment in causal inference, where the aggregation weight\ncorresponds to the historical interaction likelihood distribution. Based on\nthis insight, we devise an encoder-decoder architecture, namely Causality-aware\nGraph Aggregation Weight Estimator for Debiasing (CAGED), to approximate the\nunbiased aggregation weight by optimizing the evidence lower bound of the\ninteraction likelihood. In order to enhance the debiasing effectiveness during\nearly training stages, we further design a momentum update strategy that\nincrementally refines the aggregation weight matrix. Extensive experiments on\nthree datasets demonstrate that CAGED outperforms existing graph-based\ndebiasing methods. Our implementation is available at\nhttps://github.com/QueYork/CAGED.",
+      "pdf_url": "http://arxiv.org/pdf/2510.04502v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.04502v1",
+      "published": "2025-10-06",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "REAR: Rethinking Visual Autoregressive Models via Generator-Tokenizer Consistency Regularization",
+      "authors": [
+        "Qiyuan He",
+        "Yicong Li",
+        "Haotian Ye",
+        "Jinghao Wang",
+        "Xinyao Liao",
+        "Pheng-Ann Heng",
+        "Stefano Ermon",
+        "James Zou",
+        "Angela Yao"
+      ],
+      "abstract": "Visual autoregressive (AR) generation offers a promising path toward unifying\nvision and language models, yet its performance remains suboptimal against\ndiffusion models. Prior work often attributes this gap to tokenizer limitations\nand rasterization ordering. In this work, we identify a core bottleneck from\nthe perspective of generator-tokenizer inconsistency, i.e., the AR-generated\ntokens may not be well-decoded by the tokenizer. To address this, we propose\nreAR, a simple training strategy introducing a token-wise regularization\nobjective: when predicting the next token, the causal transformer is also\ntrained to recover the visual embedding of the current token and predict the\nembedding of the target token under a noisy context. It requires no changes to\nthe tokenizer, generation order, inference pipeline, or external models.\nDespite its simplicity, reAR substantially improves performance. On ImageNet,\nit reduces gFID from 3.02 to 1.86 and improves IS to 316.9 using a standard\nrasterization-based tokenizer. When applied to advanced tokenizers, it achieves\na gFID of 1.42 with only 177M parameters, matching the performance with larger\nstate-of-the-art diffusion models (675M).",
+      "pdf_url": "http://arxiv.org/pdf/2510.04450v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.04450v1",
+      "published": "2025-10-06",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Efficient Latent Variable Causal Discovery: Combining Score Search and Targeted Testing",
+      "authors": [
+        "Joseph Ramsey",
+        "Bryan Andrews"
+      ],
+      "abstract": "Learning causal structure from observational data is especially challenging\nwhen latent variables or selection bias are present. The Fast Causal Inference\n(FCI) algorithm addresses this setting but often performs exhaustive\nconditional independence tests across many subsets, leading to spurious\nindependence claims, extra or missing edges, and unreliable orientations. We\npresent a family of score-guided mixed-strategy causal search algorithms that\nbuild on this tradition. First, we introduce BOSS-FCI and GRaSP-FCI,\nstraightforward variants of GFCI that substitute BOSS or GRaSP for FGES,\nthereby retaining correctness while incurring different scalability tradeoffs.\nSecond, we develop FCI Targeted-testing (FCIT), a novel mixed-strategy method\nthat improves upon these variants by replacing exhaustive all-subsets testing\nwith targeted tests guided by BOSS, yielding well-formed PAGs with higher\nprecision and efficiency. Finally, we propose a simple heuristic, LV-Dumb (also\nknown as BOSS-POD), which bypasses latent-variable-specific reasoning and\ndirectly returns the PAG of the BOSS DAG. Although not strictly correct in the\nFCI sense, it scales better and often achieves superior accuracy in practice.\nSimulations and real-data analyses demonstrate that BOSS-FCI and GRaSP-FCI\nprovide sound baselines, FCIT improves both efficiency and reliability, and\nLV-Dumb offers a practical heuristic with strong empirical performance.\nTogether, these method highlight the value of score-guided and targeted\nstrategies for scalable latent-variable causal discovery.",
+      "pdf_url": "http://arxiv.org/pdf/2510.04263v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.04263v1",
+      "published": "2025-10-05",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Bridging the Gap Between Multimodal Foundation Models and World Models",
+      "authors": [
+        "Xuehai He"
+      ],
+      "abstract": "Humans understand the world through the integration of multiple sensory\nmodalities, enabling them to perceive, reason about, and imagine dynamic\nphysical processes. Inspired by this capability, multimodal foundation models\n(MFMs) have emerged as powerful tools for multimodal understanding and\ngeneration. However, today's MFMs fall short of serving as effective world\nmodels. They lack the essential ability such as perform counterfactual\nreasoning, simulate dynamics, understand the spatiotemporal information,\ncontrol generated visual outcomes, and perform multifaceted reasoning. We\ninvestigates what it takes to bridge the gap between multimodal foundation\nmodels and world models. We begin by improving the reasoning capabilities of\nMFMs through discriminative tasks and equipping MFMs with structured reasoning\nskills, such as causal inference, counterfactual thinking, and spatiotemporal\nreasoning, enabling them to go beyond surface correlations and understand\ndeeper relationships within visual and textual data. Next, we explore\ngenerative capabilities of multimodal foundation models across both image and\nvideo modalities, introducing new frameworks for structured and controllable\ngeneration. Our approaches incorporate scene graphs, multimodal conditioning,\nand multimodal alignment strategies to guide the generation process, ensuring\nconsistency with high-level semantics and fine-grained user intent. We further\nextend these techniques to controllable 4D generation, enabling interactive,\neditable, and morphable object synthesis over time and space.",
+      "pdf_url": "http://arxiv.org/pdf/2510.03727v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.03727v1",
+      "published": "2025-10-04",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
     {
       "title": "GCVAMD: A Modified CausalVAE Model for Causal Age-related Macular Degeneration Risk Factor Detection and Prediction",
       "authors": [
@@ -13,6 +115,25 @@
       "categories": [
         "eess.IV",
         "cs.CV"
+      ]
+    },
+    {
+      "title": "Disentangling Recall and Reasoning in Transformer Models through Layer-wise Attention and Activation Analysis",
+      "authors": [
+        "Harshwardhan Fartale",
+        "Ashish Kattamuri",
+        "Rahul Raja",
+        "Arpita Vats",
+        "Ishita Prasad",
+        "Akshata Kishore Moharir"
+      ],
+      "abstract": "Transformer-based language models excel at both recall (retrieving memorized\nfacts) and reasoning (performing multi-step inference), but whether these\nabilities rely on distinct internal mechanisms remains unclear. Distinguishing\nrecall from reasoning is crucial for predicting model generalization, designing\ntargeted evaluations, and building safer interventions that affect one ability\nwithout disrupting the other.We approach this question through mechanistic\ninterpretability, using controlled datasets of synthetic linguistic puzzles to\nprobe transformer models at the layer, head, and neuron level. Our pipeline\ncombines activation patching and structured ablations to causally measure\ncomponent contributions to each task type. Across two model families (Qwen and\nLLaMA), we find that interventions on distinct layers and attention heads lead\nto selective impairments: disabling identified \"recall circuits\" reduces\nfact-retrieval accuracy by up to 15\\% while leaving reasoning intact, whereas\ndisabling \"reasoning circuits\" reduces multi-step inference by a comparable\nmargin. At the neuron level, we observe task-specific firing patterns, though\nthese effects are less robust, consistent with neuronal polysemanticity.Our\nresults provide the first causal evidence that recall and reasoning rely on\nseparable but interacting circuits in transformer models. These findings\nadvance mechanistic interpretability by linking circuit-level structure to\nfunctional specialization and demonstrate how controlled datasets and causal\ninterventions can yield mechanistic insights into model cognition, informing\nsafer deployment of large language models.",
+      "pdf_url": "http://arxiv.org/pdf/2510.03366v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.03366v1",
+      "published": "2025-10-03",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
       ]
     },
     {
@@ -33,144 +154,18 @@
       ]
     },
     {
-      "title": "LLM4Rec: Large Language Models for Multimodal Generative Recommendation with Causal Debiasing",
+      "title": "How does course recommendation impact student outcomes? Examining directed self-placement with regression discontinuity analysis",
       "authors": [
-        "Bo Ma",
-        "Hang Li",
-        "ZeHua Hu",
-        "XiaoFan Gui",
-        "LuYao Liu",
-        "Simon Lau"
+        "Jason Godfrey"
       ],
-      "abstract": "Contemporary generative recommendation systems face significant challenges in\nhandling multimodal data, eliminating algorithmic biases, and providing\ntransparent decision-making processes. This paper introduces an enhanced\ngenerative recommendation framework that addresses these limitations through\nfive key innovations: multimodal fusion architecture, retrieval-augmented\ngeneration mechanisms, causal inference-based debiasing, explainable\nrecommendation generation, and real-time adaptive learning capabilities. Our\nframework leverages advanced large language models as the backbone while\nincorporating specialized modules for cross-modal understanding, contextual\nknowledge integration, bias mitigation, explanation synthesis, and continuous\nmodel adaptation. Extensive experiments on three benchmark datasets\n(MovieLens-25M, Amazon-Electronics, Yelp-2023) demonstrate consistent\nimprovements in recommendation accuracy, fairness, and diversity compared to\nexisting approaches. The proposed framework achieves up to 2.3% improvement in\nNDCG@10 and 1.4% enhancement in diversity metrics while maintaining\ncomputational efficiency through optimized inference strategies.",
-      "pdf_url": "http://arxiv.org/pdf/2510.01622v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.01622v1",
+      "abstract": "For many students, placement into developmental education becomes a\nself-fulfilling prophecy. Placing college students into developmental education\nsignificantly negatively impacts student attainment, student probability of\npassing, and college credits earned. To combat these negative effects, many\nuniversities are investigating alternative placement mechanisms. Could directed\nself-placement be an effective alternative mechanism? Do students who\nself-place suffer the same negative impacts from placement recommendations as\ntheir traditionally placed counterparts? This paper uses longitudinal data with\ncausal inference methods to examine whether directed self-placement has similar\nnegative impacts on student grades and pass rates as mandatory placement\nschema. We begin with an analysis of over 20,000 student placement records into\none of two different placement tracks for first-year writing. Longitudinal and\ninstitutional data allow us to control for characteristic variables such as\nstudent race, family income, and sex. The results of our regression\ndiscontinuity design show that directed self-placement does not negatively\nimpact student grades or pass rate. This may be an improvement for students who\nplace at or near the threshold for developmental/remedial education; However,\nclass, race, and gender-based statistical differences persist in the program\nat-large, demonstrating that placement technique plays only one part in\nbuilding a more equitable program.",
+      "pdf_url": "http://arxiv.org/pdf/2510.03350v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.03350v1",
       "published": "2025-10-02",
       "categories": [
-        "cs.IR",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "SLOPE and Designing Robust Studies for Generalization",
-      "authors": [
-        "Xinran Miao",
-        "Jiwei Zhao",
-        "Hyunseung Kang"
-      ],
-      "abstract": "A popular task in generalization is to learn about a new, target population\nbased on data from an existing, source population. This task relies on\nconditional exchangeability, which asserts that differences between the source\nand target populations are fully captured by observable characteristics of the\ntwo populations. Unfortunately, this assumption is often untenable in practice\ndue to unobservable differences between the source and target populations.\nWorse, the assumption cannot be verified with data, warranting the need for\nrobust data collection processes and study designs that are inherently less\nsensitive to violation of the assumption. In this paper, we propose SLOPE\n(Sensitivity of LOcal Perturbations from Exchangeability), a simple, intuitive,\nand novel measure that quantifies the sensitivity to local violation of\nconditional exchangeability. SLOPE combines ideas from sensitivity analysis in\ncausal inference and derivative-based measure of robustness from Hampel (1974).\nAmong other properties, SLOPE can help investigators to choose (a) a robust\nsource or target population or (b) a robust estimand. Also, we show an analytic\nrelationship between SLOPE and influence functions (IFs), which investigators\ncan use to derive SLOPE given an IF. We conclude with a re-analysis of a\nmulti-national randomized experiment and illustrate the role of SLOPE in\ninforming robust study designs for generalization.",
-      "pdf_url": "http://arxiv.org/pdf/2510.01577v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.01577v1",
-      "published": "2025-10-02",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Large-Scale Bayesian Causal Discovery with Interventional Data",
-      "authors": [
-        "Seong Woo Han",
-        "Daniel Duy Vo",
-        "Brielin C. Brown"
-      ],
-      "abstract": "Inferring the causal relationships among a set of variables in the form of a\ndirected acyclic graph (DAG) is an important but notoriously challenging\nproblem. Recently, advancements in high-throughput genomic perturbation screens\nhave inspired development of methods that leverage interventional data to\nimprove model identification. However, existing methods still suffer poor\nperformance on large-scale tasks and fail to quantify uncertainty. Here, we\npropose Interventional Bayesian Causal Discovery (IBCD), an empirical Bayesian\nframework for causal discovery with interventional data. Our approach models\nthe likelihood of the matrix of total causal effects, which can be approximated\nby a matrix normal distribution, rather than the full data matrix. We place a\nspike-and-slab horseshoe prior on the edges and separately learn data-driven\nweights for scale-free and Erd\\H{o}s-R\\'enyi structures from observational\ndata, treating each edge as a latent variable to enable uncertainty-aware\ninference. Through extensive simulation, we show that IBCD achieves superior\nstructure recovery compared to existing baselines. We apply IBCD to CRISPR\nperturbation (Perturb-seq) data on 521 genes, demonstrating that edge posterior\ninclusion probabilities enable identification of robust graph structures.",
-      "pdf_url": "http://arxiv.org/pdf/2510.01562v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.01562v1",
-      "published": "2025-10-02",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Executable Counterfactuals: Improving LLMs' Causal Reasoning Through Code",
-      "authors": [
-        "Aniket Vashishtha",
-        "Qirun Dai",
-        "Hongyuan Mei",
-        "Amit Sharma",
-        "Chenhao Tan",
-        "Hao Peng"
-      ],
-      "abstract": "Counterfactual reasoning, a hallmark of intelligence, consists of three\nsteps: inferring latent variables from observations (abduction), constructing\nalternatives (interventions), and predicting their outcomes (prediction). This\nskill is essential for advancing LLMs' causal understanding and expanding their\napplications in high-stakes domains such as scientific research. However,\nexisting efforts in assessing LLM's counterfactual reasoning capabilities tend\nto skip the abduction step, effectively reducing to interventional reasoning\nand leading to overestimation of LLM performance. To address this, we introduce\nexecutable counterfactuals, a novel framework that operationalizes causal\nreasoning through code and math problems. Our framework explicitly requires all\nthree steps of counterfactual reasoning and enables scalable synthetic data\ncreation with varying difficulty, creating a frontier for evaluating and\nimproving LLM's reasoning. Our results reveal substantial drop in accuracy\n(25-40%) from interventional to counterfactual reasoning for SOTA models like\no4-mini and Claude-4-Sonnet. To address this gap, we construct a training set\ncomprising counterfactual code problems having if-else condition and test on\nout-of-domain code structures (e.g. having while-loop); we also test whether a\nmodel trained on code would generalize to counterfactual math word problems.\nWhile supervised finetuning on stronger models' reasoning traces improves\nin-domain performance of Qwen models, it leads to a decrease in accuracy on OOD\ntasks such as counterfactual math problems. In contrast, reinforcement learning\ninduces the core cognitive behaviors and generalizes to new domains, yielding\ngains over the base model on both code (improvement of 1.5x-2x) and math\nproblems. Analysis of the reasoning traces reinforces these findings and\nhighlights the promise of RL for improving LLMs' counterfactual reasoning.",
-      "pdf_url": "http://arxiv.org/pdf/2510.01539v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.01539v1",
-      "published": "2025-10-02",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "TAG-EQA: Text-And-Graph for Event Question Answering via Structured Prompting Strategies",
-      "authors": [
-        "Maithili Kadam",
-        "Francis Ferraro"
-      ],
-      "abstract": "Large language models (LLMs) excel at general language tasks but often\nstruggle with event-based questions-especially those requiring causal or\ntemporal reasoning. We introduce TAG-EQA (Text-And-Graph for Event Question\nAnswering), a prompting framework that injects causal event graphs into LLM\ninputs by converting structured relations into natural-language statements.\nTAG-EQA spans nine prompting configurations, combining three strategies\n(zero-shot, few-shot, chain-of-thought) with three input modalities (text-only,\ngraph-only, text+graph), enabling a systematic analysis of when and how\nstructured knowledge aids inference. On the TORQUESTRA benchmark, TAG-EQA\nimproves accuracy by 5% on average over text-only baselines, with gains up to\n12% in zero-shot settings and 18% when graph-augmented CoT prompting is\neffective. While performance varies by model and configuration, our findings\nshow that causal graphs can enhance event reasoning in LLMs without\nfine-tuning, offering a flexible way to encode structure in prompt-based QA.",
-      "pdf_url": "http://arxiv.org/pdf/2510.01391v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.01391v1",
-      "published": "2025-10-01",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "The causal structure of galactic astrophysics",
-      "authors": [
-        "Harry Desmond",
-        "Joseph Ramsey"
-      ],
-      "abstract": "Data-driven astrophysics currently relies on the detection and\ncharacterisation of correlations between objects' properties, which are then\nused to test physical theories that make predictions for them. This process\nfails to utilise information in the data that forms a crucial part of the\ntheories' predictions, namely which variables are directly correlated (as\nopposed to accidentally correlated through others), the directions of these\ndeterminations, and the presence or absence of confounders that correlate\nvariables in the dataset but are themselves absent from it. We propose to\nrecover this information through causal discovery, a well-developed methodology\nfor inferring the causal structure of datasets that is however almost entirely\nunknown to astrophysics. We develop a causal discovery algorithm suitable for\nastrophysical datasets and illustrate it on $\\sim$5$\\times10^5$ low-redshift\ngalaxies from the Nasa Sloan Atlas, demonstrating its ability to distinguish\nphysical mechanisms that are degenerate on the basis of correlations alone.",
-      "pdf_url": "http://arxiv.org/pdf/2510.01112v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.01112v1",
-      "published": "2025-10-01",
-      "categories": [
-        "astro-ph.GA",
-        "astro-ph.CO",
-        "cs.LG",
-        "stat.AP",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "InfVSR: Breaking Length Limits of Generic Video Super-Resolution",
-      "authors": [
-        "Ziqing Zhang",
-        "Kai Liu",
-        "Zheng Chen",
-        "Xi Li",
-        "Yucong Chen",
-        "Bingnan Duan",
-        "Linghe Kong",
-        "Yulun Zhang"
-      ],
-      "abstract": "Real-world videos often extend over thousands of frames. Existing video\nsuper-resolution (VSR) approaches, however, face two persistent challenges when\nprocessing long sequences: (1) inefficiency due to the heavy cost of multi-step\ndenoising for full-length sequences; and (2) poor scalability hindered by\ntemporal decomposition that causes artifacts and discontinuities. To break\nthese limits, we propose InfVSR, which novelly reformulates VSR as an\nautoregressive-one-step-diffusion paradigm. This enables streaming inference\nwhile fully leveraging pre-trained video diffusion priors. First, we adapt the\npre-trained DiT into a causal structure, maintaining both local and global\ncoherence via rolling KV-cache and joint visual guidance. Second, we distill\nthe diffusion process into a single step efficiently, with patch-wise pixel\nsupervision and cross-chunk distribution matching. Together, these designs\nenable efficient and scalable VSR for unbounded-length videos. To fill the gap\nin long-form video evaluation, we build a new benchmark tailored for extended\nsequences and further introduce semantic-level metrics to comprehensively\nassess temporal consistency. Our method pushes the frontier of long-form VSR,\nachieves state-of-the-art quality with enhanced semantic consistency, and\ndelivers up to 58x speed-up over existing methods such as MGLD-VSR. Code will\nbe available at https://github.com/Kai-Liu001/InfVSR.",
-      "pdf_url": "http://arxiv.org/pdf/2510.00948v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.00948v1",
-      "published": "2025-10-01",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Gather-Scatter Mamba: Accelerating Propagation with Efficient State Space Model",
-      "authors": [
-        "Hyun-kyu Ko",
-        "Youbin Kim",
-        "Jihyeon Park",
-        "Dongheok Park",
-        "Gyeongjin Kang",
-        "Wonjun Cho",
-        "Hyung Yi",
-        "Eunbyung Park"
-      ],
-      "abstract": "State Space Models (SSMs)-most notably RNNs-have historically played a\ncentral role in sequential modeling. Although attention mechanisms such as\nTransformers have since dominated due to their ability to model global context,\ntheir quadratic complexity and limited scalability make them less suited for\nlong sequences. Video super-resolution (VSR) methods have traditionally relied\non recurrent architectures to propagate features across frames. However, such\napproaches suffer from well-known issues including vanishing gradients, lack of\nparallelism, and slow inference speed. Recent advances in selective SSMs like\nMamba offer a compelling alternative: by enabling input-dependent state\ntransitions with linear-time complexity, Mamba mitigates these issues while\nmaintaining strong long-range modeling capabilities. Despite this potential,\nMamba alone struggles to capture fine-grained spatial dependencies due to its\ncausal nature and lack of explicit context aggregation. To address this, we\npropose a hybrid architecture that combines shifted window self-attention for\nspatial context aggregation with Mamba-based selective scanning for efficient\ntemporal propagation. Furthermore, we introduce Gather-Scatter Mamba (GSM), an\nalignment-aware mechanism that warps features toward a center anchor frame\nwithin the temporal window before Mamba propagation and scatters them back\nafterward, effectively reducing occlusion artifacts and ensuring effective\nredistribution of aggregated information across all frames. The official\nimplementation is provided at: https://github.com/Ko-Lani/GSMamba.",
-      "pdf_url": "http://arxiv.org/pdf/2510.00862v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.00862v1",
-      "published": "2025-10-01",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
+        "econ.GN",
+        "q-fin.EC",
+        "stat.AP"
       ]
     }
   ]
