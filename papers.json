@@ -1,6 +1,42 @@
 {
-  "last_updated": "2025-10-08T00:49:10.246191",
+  "last_updated": "2025-10-09T00:50:23.800080",
   "papers": [
+    {
+      "title": "Can language models boost the power of randomized experiments without statistical bias?",
+      "authors": [
+        "Xinrui Ruan",
+        "Xinwei Ma",
+        "Yingfei Wang",
+        "Waverly Wei",
+        "Jingshen Wang"
+      ],
+      "abstract": "Randomized experiments or randomized controlled trials (RCTs) are gold\nstandards for causal inference, yet cost and sample-size constraints limit\npower. Meanwhile, modern RCTs routinely collect rich, unstructured data that\nare highly prognostic of outcomes but rarely used in causal analyses. We\nintroduce CALM (Causal Analysis leveraging Language Models), a statistical\nframework that integrates large language models (LLMs) predictions with\nestablished causal estimators to increase precision while preserving\nstatistical validity. CALM treats LLM outputs as auxiliary prognostic\ninformation and corrects their potential bias via a heterogeneous calibration\nstep that residualizes and optimally reweights predictions. We prove that CALM\nremains consistent even when LLM predictions are biased and achieves efficiency\ngains over augmented inverse probability weighting estimators for various\ncausal effects. In particular, CALM develops a few-shot variant that aggregates\npredictions across randomly sampled demonstration sets. The resulting\nU-statistic-like predictor restores i.i.d. structure and also mitigates\nprompt-selection variability. Empirically, in simulations calibrated to a\nmobile-app depression RCT, CALM delivers lower variance relative to other\nbenchmarking methods, is effective in zero- and few-shot settings, and remains\nstable across prompt designs. By principled use of LLMs to harness unstructured\ndata and external knowledge learned during pretraining, CALM provides a\npractical path to more precise causal analyses in RCTs.",
+      "pdf_url": "http://arxiv.org/pdf/2510.05545v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.05545v1",
+      "published": "2025-10-07",
+      "categories": [
+        "stat.ME",
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Rivaling Transformers: Multi-Scale Structured State-Space Mixtures for Agentic 6G O-RAN",
+      "authors": [
+        "Farhad Rezazadeh",
+        "Hatim Chergui",
+        "Merouane Debbah",
+        "Houbing Song",
+        "Dusit Niyato",
+        "Lingjia Liu"
+      ],
+      "abstract": "In sixth-generation (6G) Open Radio Access Networks (O-RAN), proactive\ncontrol is preferable. A key open challenge is delivering control-grade\npredictions within Near-Real-Time (Near-RT) latency and computational\nconstraints under multi-timescale dynamics. We therefore cast RAN Intelligent\nController (RIC) analytics as an agentic perceive-predict xApp that turns\nnoisy, multivariate RAN telemetry into short-horizon per-User Equipment (UE)\nkey performance indicator (KPI) forecasts to drive anticipatory control. In\nthis regard, Transformers are powerful for sequence learning and time-series\nforecasting, but they are memory-intensive, which limits Near-RT RIC use.\nTherefore, we need models that maintain accuracy while reducing latency and\ndata movement. To this end, we propose a lightweight Multi-Scale Structured\nState-Space Mixtures (MS3M) forecaster that mixes HiPPO-LegS kernels to capture\nmulti-timescale radio dynamics. We develop stable discrete state-space models\n(SSMs) via bilinear (Tustin) discretization and apply their causal impulse\nresponses as per-feature depthwise convolutions. Squeeze-and-Excitation gating\ndynamically reweights KPI channels as conditions change, and a compact gated\nchannel-mixing layer models cross-feature nonlinearities without\nTransformer-level cost. The model is KPI-agnostic -- Reference Signal Received\nPower (RSRP) serves as a canonical use case -- and is trained on sliding\nwindows to predict the immediate next step. Empirical evaluations conducted\nusing our bespoke O-RAN testbed KPI time-series dataset (59,441 windows across\n13 KPIs). Crucially for O-RAN constraints, MS3M achieves a 0.057 s\nper-inference latency with 0.70M parameters, yielding 3-10x lower latency than\nthe Transformer baselines evaluated on the same hardware, while maintaining\ncompetitive accuracy.",
+      "pdf_url": "http://arxiv.org/pdf/2510.05255v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.05255v1",
+      "published": "2025-10-06",
+      "categories": [
+        "cs.NI"
+      ]
+    },
     {
       "title": "Structural Identifiability of Graphical Continuous Lyapunov Models",
       "authors": [
@@ -88,6 +124,21 @@
       ]
     },
     {
+      "title": "Domain-Adapted Granger Causality for Real-Time Cross-Slice Attack Attribution in 6G Networks",
+      "authors": [
+        "Minh K. Quan",
+        "Pubudu N. Pathirana"
+      ],
+      "abstract": "Cross-slice attack attribution in 6G networks faces the fundamental challenge\nof distinguishing genuine causal relationships from spurious correlations in\nshared infrastructure environments. We propose a theoretically-grounded\ndomain-adapted Granger causality framework that integrates statistical causal\ninference with network-specific resource modeling for real-time attack\nattribution. Our approach addresses key limitations of existing methods by\nincorporating resource contention dynamics and providing formal statistical\nguarantees. Comprehensive evaluation on a production-grade 6G testbed with\n1,100 empirically-validated attack scenarios demonstrates 89.2% attribution\naccuracy with sub-100ms response time, representing a statistically significant\n10.1 percentage point improvement over state-of-the-art baselines. The\nframework provides interpretable causal explanations suitable for autonomous 6G\nsecurity orchestration.",
+      "pdf_url": "http://arxiv.org/pdf/2510.05165v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.05165v1",
+      "published": "2025-10-04",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ]
+    },
+    {
       "title": "Bridging the Gap Between Multimodal Foundation Models and World Models",
       "authors": [
         "Xuehai He"
@@ -115,57 +166,6 @@
       "categories": [
         "eess.IV",
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Disentangling Recall and Reasoning in Transformer Models through Layer-wise Attention and Activation Analysis",
-      "authors": [
-        "Harshwardhan Fartale",
-        "Ashish Kattamuri",
-        "Rahul Raja",
-        "Arpita Vats",
-        "Ishita Prasad",
-        "Akshata Kishore Moharir"
-      ],
-      "abstract": "Transformer-based language models excel at both recall (retrieving memorized\nfacts) and reasoning (performing multi-step inference), but whether these\nabilities rely on distinct internal mechanisms remains unclear. Distinguishing\nrecall from reasoning is crucial for predicting model generalization, designing\ntargeted evaluations, and building safer interventions that affect one ability\nwithout disrupting the other.We approach this question through mechanistic\ninterpretability, using controlled datasets of synthetic linguistic puzzles to\nprobe transformer models at the layer, head, and neuron level. Our pipeline\ncombines activation patching and structured ablations to causally measure\ncomponent contributions to each task type. Across two model families (Qwen and\nLLaMA), we find that interventions on distinct layers and attention heads lead\nto selective impairments: disabling identified \"recall circuits\" reduces\nfact-retrieval accuracy by up to 15\\% while leaving reasoning intact, whereas\ndisabling \"reasoning circuits\" reduces multi-step inference by a comparable\nmargin. At the neuron level, we observe task-specific firing patterns, though\nthese effects are less robust, consistent with neuronal polysemanticity.Our\nresults provide the first causal evidence that recall and reasoning rely on\nseparable but interacting circuits in transformer models. These findings\nadvance mechanistic interpretability by linking circuit-level structure to\nfunctional specialization and demonstrate how controlled datasets and causal\ninterventions can yield mechanistic insights into model cognition, informing\nsafer deployment of large language models.",
-      "pdf_url": "http://arxiv.org/pdf/2510.03366v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.03366v1",
-      "published": "2025-10-03",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Multimodal Function Vectors for Spatial Relations",
-      "authors": [
-        "Shuhao Fu",
-        "Esther Goldberg",
-        "Ying Nian Wu",
-        "Hongjing Lu"
-      ],
-      "abstract": "Large Multimodal Models (LMMs) demonstrate impressive in-context learning\nabilities from limited multimodal demonstrations, yet the internal mechanisms\nsupporting such task learning remain opaque. Building on prior work of large\nlanguage models, we show that a small subset of attention heads in the\nvision-language model OpenFlamingo-4B is responsible for transmitting\nrepresentations of spatial relations. The activations of these attention heads,\ntermed function vectors, can be extracted and manipulated to alter an LMM's\nperformance on relational tasks. First, using both synthetic and real image\ndatasets, we apply causal mediation analysis to identify attention heads that\nstrongly influence relational predictions, and extract multimodal function\nvectors that improve zero-shot accuracy at inference time. We further\ndemonstrate that these multimodal function vectors can be fine-tuned with a\nmodest amount of training data, while keeping LMM parameters frozen, to\nsignificantly outperform in-context learning baselines. Finally, we show that\nrelation-specific function vectors can be linearly combined to solve analogy\nproblems involving novel and untrained spatial relations, highlighting the\nstrong generalization ability of this approach. Our results show that LMMs\nencode spatial relational knowledge within localized internal structures, which\ncan be systematically extracted and optimized, thereby advancing our\nunderstanding of model modularity and enhancing control over relational\nreasoning in LMMs.",
-      "pdf_url": "http://arxiv.org/pdf/2510.02528v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.02528v1",
-      "published": "2025-10-02",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "How does course recommendation impact student outcomes? Examining directed self-placement with regression discontinuity analysis",
-      "authors": [
-        "Jason Godfrey"
-      ],
-      "abstract": "For many students, placement into developmental education becomes a\nself-fulfilling prophecy. Placing college students into developmental education\nsignificantly negatively impacts student attainment, student probability of\npassing, and college credits earned. To combat these negative effects, many\nuniversities are investigating alternative placement mechanisms. Could directed\nself-placement be an effective alternative mechanism? Do students who\nself-place suffer the same negative impacts from placement recommendations as\ntheir traditionally placed counterparts? This paper uses longitudinal data with\ncausal inference methods to examine whether directed self-placement has similar\nnegative impacts on student grades and pass rates as mandatory placement\nschema. We begin with an analysis of over 20,000 student placement records into\none of two different placement tracks for first-year writing. Longitudinal and\ninstitutional data allow us to control for characteristic variables such as\nstudent race, family income, and sex. The results of our regression\ndiscontinuity design show that directed self-placement does not negatively\nimpact student grades or pass rate. This may be an improvement for students who\nplace at or near the threshold for developmental/remedial education; However,\nclass, race, and gender-based statistical differences persist in the program\nat-large, demonstrating that placement technique plays only one part in\nbuilding a more equitable program.",
-      "pdf_url": "http://arxiv.org/pdf/2510.03350v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.03350v1",
-      "published": "2025-10-02",
-      "categories": [
-        "econ.GN",
-        "q-fin.EC",
-        "stat.AP"
       ]
     }
   ]
