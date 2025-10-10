@@ -1,6 +1,62 @@
 {
-  "last_updated": "2025-10-09T00:50:23.800080",
+  "last_updated": "2025-10-10T00:50:00.537809",
   "papers": [
+    {
+      "title": "Incorporating Expert Knowledge into Bayesian Causal Discovery of Mixtures of Directed Acyclic Graphs",
+      "authors": [
+        "Zachris Björkman",
+        "Jorge Loría",
+        "Sophie Wharrie",
+        "Samuel Kaski"
+      ],
+      "abstract": "Bayesian causal discovery benefits from prior information elicited from\ndomain experts, and in heterogeneous domains any prior knowledge would be badly\nneeded. However, so far prior elicitation approaches have assumed a single\ncausal graph and hence are not suited to heterogeneous domains. We propose a\ncausal elicitation strategy for heterogeneous settings, based on Bayesian\nexperimental design (BED) principles, and a variational mixture structure\nlearning (VaMSL) method -- extending the earlier differentiable Bayesian\nstructure learning (DiBS) method -- to iteratively infer mixtures of causal\nBayesian networks (CBNs). We construct an informative graph prior incorporating\nelicited expert feedback in the inference of mixtures of CBNs. Our proposed\nmethod successfully produces a set of alternative causal models (mixture\ncomponents or clusters), and achieves an improved structure learning\nperformance on heterogeneous synthetic data when informed by a simulated\nexpert. Finally, we demonstrate that our approach is capable of capturing\ncomplex distributions in a breast cancer database.",
+      "pdf_url": "http://arxiv.org/pdf/2510.06735v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.06735v1",
+      "published": "2025-10-08",
+      "categories": [
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Stable central limit theorems for discrete-time lag martingale difference arrays",
+      "authors": [
+        "Easton Huch",
+        "Walter Dempsey"
+      ],
+      "abstract": "Recent work in dynamic causal inference introduced a class of discrete-time\nstochastic processes that generalize martingale difference sequences and arrays\nas follows: the random variates in each sequence have expectation zero given\ncertain lagged filtrations but not given the natural filtration. We formalize\nthis class of stochastic processes and prove a stable central limit theorem\n(CLT) via a Bernstein blocking scheme and an application of the classical\nmartingale CLT. We generalize our limit theorem to vector-valued processes via\nthe Cram\\'er-Wold device and develop a simple form for the limiting variance.\nWe demonstrate the application of these results to a problem in dynamic causal\ninference and present a simulation study supporting their validity.",
+      "pdf_url": "http://arxiv.org/pdf/2510.06524v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.06524v1",
+      "published": "2025-10-07",
+      "categories": [
+        "math.ST",
+        "math.PR",
+        "stat.TH",
+        "60G48, 60F05 (Primary), 60G42, 60B12 (Secondary)"
+      ]
+    },
+    {
+      "title": "BlockGPT: Spatio-Temporal Modelling of Rainfall via Frame-Level Autoregression",
+      "authors": [
+        "Cristian Meo",
+        "Varun Sarathchandran",
+        "Avijit Majhi",
+        "Shao Hung",
+        "Carlo Saccardi",
+        "Ruben Imhoff",
+        "Roberto Deidda",
+        "Remko Uijlenhoet",
+        "Justin Dauwels"
+      ],
+      "abstract": "Predicting precipitation maps is a highly complex spatiotemporal modeling\ntask, critical for mitigating the impacts of extreme weather events. Short-term\nprecipitation forecasting, or nowcasting, requires models that are not only\naccurate but also computationally efficient for real-time applications. Current\nmethods, such as token-based autoregressive models, often suffer from flawed\ninductive biases and slow inference, while diffusion models can be\ncomputationally intensive. To address these limitations, we introduce BlockGPT,\na generative autoregressive transformer using batched tokenization (Block)\nmethod that predicts full two-dimensional fields (frames) at each time step.\nConceived as a model-agnostic paradigm for video prediction, BlockGPT\nfactorizes space-time by using self-attention within each frame and causal\nattention across frames; in this work, we instantiate it for precipitation\nnowcasting. We evaluate BlockGPT on two precipitation datasets, viz. KNMI\n(Netherlands) and SEVIR (U.S.), comparing it to state-of-the-art baselines\nincluding token-based (NowcastingGPT) and diffusion-based (DiffCast+Phydnet)\nmodels. The results show that BlockGPT achieves superior accuracy, event\nlocalization as measured by categorical metrics, and inference speeds up to 31x\nfaster than comparable baselines.",
+      "pdf_url": "http://arxiv.org/pdf/2510.06293v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.06293v1",
+      "published": "2025-10-07",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Can language models boost the power of randomized experiments without statistical bias?",
       "authors": [
@@ -121,51 +177,6 @@
       "categories": [
         "cs.LG",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Domain-Adapted Granger Causality for Real-Time Cross-Slice Attack Attribution in 6G Networks",
-      "authors": [
-        "Minh K. Quan",
-        "Pubudu N. Pathirana"
-      ],
-      "abstract": "Cross-slice attack attribution in 6G networks faces the fundamental challenge\nof distinguishing genuine causal relationships from spurious correlations in\nshared infrastructure environments. We propose a theoretically-grounded\ndomain-adapted Granger causality framework that integrates statistical causal\ninference with network-specific resource modeling for real-time attack\nattribution. Our approach addresses key limitations of existing methods by\nincorporating resource contention dynamics and providing formal statistical\nguarantees. Comprehensive evaluation on a production-grade 6G testbed with\n1,100 empirically-validated attack scenarios demonstrates 89.2% attribution\naccuracy with sub-100ms response time, representing a statistically significant\n10.1 percentage point improvement over state-of-the-art baselines. The\nframework provides interpretable causal explanations suitable for autonomous 6G\nsecurity orchestration.",
-      "pdf_url": "http://arxiv.org/pdf/2510.05165v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.05165v1",
-      "published": "2025-10-04",
-      "categories": [
-        "cs.CR",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Bridging the Gap Between Multimodal Foundation Models and World Models",
-      "authors": [
-        "Xuehai He"
-      ],
-      "abstract": "Humans understand the world through the integration of multiple sensory\nmodalities, enabling them to perceive, reason about, and imagine dynamic\nphysical processes. Inspired by this capability, multimodal foundation models\n(MFMs) have emerged as powerful tools for multimodal understanding and\ngeneration. However, today's MFMs fall short of serving as effective world\nmodels. They lack the essential ability such as perform counterfactual\nreasoning, simulate dynamics, understand the spatiotemporal information,\ncontrol generated visual outcomes, and perform multifaceted reasoning. We\ninvestigates what it takes to bridge the gap between multimodal foundation\nmodels and world models. We begin by improving the reasoning capabilities of\nMFMs through discriminative tasks and equipping MFMs with structured reasoning\nskills, such as causal inference, counterfactual thinking, and spatiotemporal\nreasoning, enabling them to go beyond surface correlations and understand\ndeeper relationships within visual and textual data. Next, we explore\ngenerative capabilities of multimodal foundation models across both image and\nvideo modalities, introducing new frameworks for structured and controllable\ngeneration. Our approaches incorporate scene graphs, multimodal conditioning,\nand multimodal alignment strategies to guide the generation process, ensuring\nconsistency with high-level semantics and fine-grained user intent. We further\nextend these techniques to controllable 4D generation, enabling interactive,\neditable, and morphable object synthesis over time and space.",
-      "pdf_url": "http://arxiv.org/pdf/2510.03727v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.03727v1",
-      "published": "2025-10-04",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "GCVAMD: A Modified CausalVAE Model for Causal Age-related Macular Degeneration Risk Factor Detection and Prediction",
-      "authors": [
-        "Daeyoung Kim"
-      ],
-      "abstract": "Age Related Macular Degeneration(AMD) has been one of the most leading causes\nof permanent vision impairment in ophthalmology. Though treatments, such as\nanti VEGF drugs or photodynamic therapies, were developed to slow down the\ndegenerative process of AMD, there is still no specific cure to reverse vision\nloss caused by AMD. Thus, for AMD, detecting existence of risk factors of AMD\nor AMD itself within the patient retina in early stages is a crucial task to\nreduce the possibility of vision impairment. Apart from traditional approaches,\ndeep learning based methods, especially attention mechanism based CNNs and\nGradCAM based XAI analysis on OCT scans, exhibited successful performance in\ndistinguishing AMD retina from normal retinas, making it possible to use AI\ndriven models to aid medical diagnosis and analysis by ophthalmologists\nregarding AMD. However, though having significant success, previous works\nmostly focused on prediction performance itself, not pathologies or underlying\ncausal mechanisms of AMD, which can prohibit intervention analysis on specific\nfactors or even lead to less reliable decisions. Thus, this paper introduces a\nnovel causal AMD analysis model: GCVAMD, which incorporates a modified\nCausalVAE approach that can extract latent causal factors from only raw OCT\nimages. By considering causality in AMD detection, GCVAMD enables causal\ninference such as treatment simulation or intervention analysis regarding major\nrisk factors: drusen and neovascularization, while returning informative latent\ncausal features that can enhance downstream tasks. Results show that through\nGCVAMD, drusen status and neovascularization status can be identified with AMD\ncausal mechanisms in GCVAMD latent spaces, which can in turn be used for\nvarious tasks from AMD detection(classification) to intervention analysis.",
-      "pdf_url": "http://arxiv.org/pdf/2510.02781v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.02781v1",
-      "published": "2025-10-03",
-      "categories": [
-        "eess.IV",
-        "cs.CV"
       ]
     }
   ]
