@@ -1,6 +1,116 @@
 {
-  "last_updated": "2025-10-10T00:50:00.537809",
+  "last_updated": "2025-10-11T00:46:36.771203",
   "papers": [
+    {
+      "title": "ResAD: Normalized Residual Trajectory Modeling for End-to-End Autonomous Driving",
+      "authors": [
+        "Zhiyu Zheng",
+        "Shaoyu Chen",
+        "Haoran Yin",
+        "Xinbang Zhang",
+        "Jialv Zou",
+        "Xinggang Wang",
+        "Qian Zhang",
+        "Lefei Zhang"
+      ],
+      "abstract": "End-to-end autonomous driving (E2EAD) systems, which learn to predict future\ntrajectories directly from sensor data, are fundamentally challenged by the\ninherent spatio-temporal imbalance of trajectory data. This imbalance creates a\nsignificant optimization burden, causing models to learn spurious correlations\ninstead of causal inference, while also prioritizing uncertain, distant\npredictions, thereby compromising immediate safety. To address these issues, we\npropose ResAD, a novel Normalized Residual Trajectory Modeling framework.\nInstead of predicting the future trajectory directly, our approach reframes the\nlearning task to predict the residual deviation from a deterministic inertial\nreference. The inertial reference serves as a counterfactual, forcing the model\nto move beyond simple pattern recognition and instead identify the underlying\ncausal factors (e.g., traffic rules, obstacles) that necessitate deviations\nfrom a default, inertially-guided path. To deal with the optimization imbalance\ncaused by uncertain, long-term horizons, ResAD further incorporates Point-wise\nNormalization of the predicted residual. It re-weights the optimization\nobjective, preventing large-magnitude errors associated with distant, uncertain\nwaypoints from dominating the learning signal. Extensive experiments validate\nthe effectiveness of our framework. On the NAVSIM benchmark, ResAD achieves a\nstate-of-the-art PDMS of 88.6 using a vanilla diffusion policy with only two\ndenoising steps, demonstrating that our approach significantly simplifies the\nlearning task and improves model performance. The code will be released to\nfacilitate further research.",
+      "pdf_url": "http://arxiv.org/pdf/2510.08562v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.08562v1",
+      "published": "2025-10-09",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "Learning to Mitigate Post-Outage Load Surges: A Data-Driven Framework for Electrifying and Decarbonizing Grids",
+      "authors": [
+        "Wenlong Shi",
+        "Dingwei Wang",
+        "Liming Liu",
+        "Zhaoyu Wang"
+      ],
+      "abstract": "Electrification and decarbonization are transforming power system demand and\nrecovery dynamics, yet their implications for post-outage load surges remain\npoorly understood. Here we analyze a metropolitan-scale heterogeneous dataset\nfor Indianapolis comprising 30,046 feeder-level outages between 2020 and 2024,\nlinked to smart meters and submetering, to quantify the causal impact of\nelectric vehicles (EVs), heat pumps (HPs) and distributed energy resources\n(DERs) on restoration surges. Statistical analysis and causal forest inference\ndemonstrate that rising penetrations of all three assets significantly increase\nsurge ratios, with effects strongly modulated by restoration timing, outage\nduration and weather conditions. We develop a component-aware multi-task\nTransformer estimator that disaggregates EV, HP and DER contributions, and\napply it to project historical outages under counterfactual 2035 adoption\npathways. In a policy-aligned pathway, evening restorations emerge as the\nbinding reliability constraint, with exceedance probabilities of 0.057 when\n30\\% of system load is restored within the first 15 minutes. Mitigation\nmeasures, probabilistic EV restarts, short thermostat offsets and accelerated\nDER reconnection, reduce exceedance to 0.019 and eliminate it entirely when\n20\\% or less of system load is restored. These results demonstrate that\ntransition-era surges are asset-driven and causally linked to electrification\nand decarbonization, but can be effectively managed through integrated\noperational strategies.",
+      "pdf_url": "http://arxiv.org/pdf/2510.08357v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.08357v1",
+      "published": "2025-10-09",
+      "categories": [
+        "eess.SY",
+        "cs.SY"
+      ]
+    },
+    {
+      "title": "Counterfactual Identifiability via Dynamic Optimal Transport",
+      "authors": [
+        "Fabio De Sousa Ribeiro",
+        "Ainkaran Santhirasekaram",
+        "Ben Glocker"
+      ],
+      "abstract": "We address the open question of counterfactual identification for\nhigh-dimensional multivariate outcomes from observational data. Pearl (2000)\nargues that counterfactuals must be identifiable (i.e., recoverable from the\nobserved data distribution) to justify causal claims. A recent line of work on\ncounterfactual inference shows promising results but lacks identification,\nundermining the causal validity of its estimates. To address this, we establish\na foundation for multivariate counterfactual identification using\ncontinuous-time flows, including non-Markovian settings under standard\ncriteria. We characterise the conditions under which flow matching yields a\nunique, monotone and rank-preserving counterfactual transport map with tools\nfrom dynamic optimal transport, ensuring consistent inference. Building on\nthis, we validate the theory in controlled scenarios with counterfactual\nground-truth and demonstrate improvements in axiomatic counterfactual soundness\non real images.",
+      "pdf_url": "http://arxiv.org/pdf/2510.08294v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.08294v1",
+      "published": "2025-10-09",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "DODO: Causal Structure Learning with Budgeted Interventions",
+      "authors": [
+        "Matteo Gregorini",
+        "Chiara Boldrini",
+        "Lorenzo Valerio"
+      ],
+      "abstract": "Artificial Intelligence has achieved remarkable advancements in recent years,\nyet much of its progress relies on identifying increasingly complex\ncorrelations. Enabling causality awareness in AI has the potential to enhance\nits performance by enabling a deeper understanding of the underlying mechanisms\nof the environment. In this paper, we introduce DODO, an algorithm defining how\nan Agent can autonomously learn the causal structure of its environment through\nrepeated interventions. We assume a scenario where an Agent interacts with a\nworld governed by a causal Directed Acyclic Graph (DAG), which dictates the\nsystem's dynamics but remains hidden from the Agent. The Agent's task is to\naccurately infer the causal DAG, even in the presence of noise. To achieve\nthis, the Agent performs interventions, leveraging causal inference techniques\nto analyze the statistical significance of observed changes. Results show\nbetter performance for DODO, compared to observational approaches, in all but\nthe most limited resource conditions. DODO is often able to reconstruct with as\nlow as zero errors the structure of the causal graph. In the most challenging\nconfiguration, DODO outperforms the best baseline by +0.25 F1 points.",
+      "pdf_url": "http://arxiv.org/pdf/2510.08207v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.08207v1",
+      "published": "2025-10-09",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Augur: Modeling Covariate Causal Associations in Time Series via Large Language Models",
+      "authors": [
+        "Zhiqing Cui",
+        "Binwu Wang",
+        "Qingxiang Liu",
+        "Yeqiang Wang",
+        "Zhengyang Zhou",
+        "Yuxuan Liang",
+        "Yang Wang"
+      ],
+      "abstract": "Large language models (LLM) have emerged as a promising avenue for time\nseries forecasting, offering the potential to integrate multimodal data.\nHowever, existing LLM-based approaches face notable limitations-such as\nmarginalized role in model architectures, reliance on coarse statistical text\nprompts, and lack of interpretability. In this work, we introduce Augur, a\nfully LLM driven time series forecasting framework that exploits LLM causal\nreasoning to discover and use directed causal associations among covariates.\nAugur uses a two stage teacher student architecture where a powerful teacher\nLLM infers a directed causal graph from time series using heuristic search\ntogether with pairwise causality testing. A lightweight student agent then\nrefines the graph and fine tune on high confidence causal associations that are\nencoded as rich textual prompts to perform forecasting. This design improves\npredictive accuracy while yielding transparent, traceable reasoning about\nvariable interactions. Extensive experiments on real-world datasets with 25\nbaselines demonstrate that Augur achieves competitive performance and robust\nzero-shot generalization.",
+      "pdf_url": "http://arxiv.org/pdf/2510.07858v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.07858v1",
+      "published": "2025-10-09",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "62M10",
+        "I.2.7"
+      ]
+    },
+    {
+      "title": "Base Models Know How to Reason, Thinking Models Learn When",
+      "authors": [
+        "Constantin Venhoff",
+        "Iván Arcuschin",
+        "Philip Torr",
+        "Arthur Conmy",
+        "Neel Nanda"
+      ],
+      "abstract": "Why do thinking language models like DeepSeek R1 outperform their base\ncounterparts? Despite consistent performance gains, it remains unclear to what\nextent thinking models learn entirely new reasoning capabilities or repurpose\npre-existing base model ones. In this work, we propose a hybrid model where we\nactivate reasoning mechanisms in base models at the right time to elicit\nthinking-model-level reasoning chains, implying that thinking models exploit\nalready existing capabilities. To ground our analysis, we introduce an\nunsupervised, bottom-up approach for uncovering human-interpretable reasoning\nbehaviors in thinking models. This approach provides an unbiased method to\ndiscover reasoning behaviors without imposing manual or LLM-derived\nassumptions. Across three base and four thinking models, using GSM8K and\nMATH500, our hybrid model recovers up to 91% of the performance gap to thinking\nmodels without any weight updates while steering only 12% of tokens.\nConcretely, our empirical setup provides a simple, causal way to test the\neffectiveness of existing reasoning mechanisms in base models by invoking them\ndirectly and measuring the resulting task performance. More broadly, these\nresults reframe our understanding of how thinking models are trained:\npre-training is when models acquire most of their reasoning mechanisms, and\npost-training teaches efficient deployment of these mechanisms at the right\ntime, enabling efficient use of their inference-time compute.",
+      "pdf_url": "http://arxiv.org/pdf/2510.07364v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.07364v1",
+      "published": "2025-10-08",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Incorporating Expert Knowledge into Bayesian Causal Discovery of Mixtures of Directed Acyclic Graphs",
       "authors": [
@@ -73,110 +183,6 @@
       "categories": [
         "stat.ME",
         "econ.EM"
-      ]
-    },
-    {
-      "title": "Rivaling Transformers: Multi-Scale Structured State-Space Mixtures for Agentic 6G O-RAN",
-      "authors": [
-        "Farhad Rezazadeh",
-        "Hatim Chergui",
-        "Merouane Debbah",
-        "Houbing Song",
-        "Dusit Niyato",
-        "Lingjia Liu"
-      ],
-      "abstract": "In sixth-generation (6G) Open Radio Access Networks (O-RAN), proactive\ncontrol is preferable. A key open challenge is delivering control-grade\npredictions within Near-Real-Time (Near-RT) latency and computational\nconstraints under multi-timescale dynamics. We therefore cast RAN Intelligent\nController (RIC) analytics as an agentic perceive-predict xApp that turns\nnoisy, multivariate RAN telemetry into short-horizon per-User Equipment (UE)\nkey performance indicator (KPI) forecasts to drive anticipatory control. In\nthis regard, Transformers are powerful for sequence learning and time-series\nforecasting, but they are memory-intensive, which limits Near-RT RIC use.\nTherefore, we need models that maintain accuracy while reducing latency and\ndata movement. To this end, we propose a lightweight Multi-Scale Structured\nState-Space Mixtures (MS3M) forecaster that mixes HiPPO-LegS kernels to capture\nmulti-timescale radio dynamics. We develop stable discrete state-space models\n(SSMs) via bilinear (Tustin) discretization and apply their causal impulse\nresponses as per-feature depthwise convolutions. Squeeze-and-Excitation gating\ndynamically reweights KPI channels as conditions change, and a compact gated\nchannel-mixing layer models cross-feature nonlinearities without\nTransformer-level cost. The model is KPI-agnostic -- Reference Signal Received\nPower (RSRP) serves as a canonical use case -- and is trained on sliding\nwindows to predict the immediate next step. Empirical evaluations conducted\nusing our bespoke O-RAN testbed KPI time-series dataset (59,441 windows across\n13 KPIs). Crucially for O-RAN constraints, MS3M achieves a 0.057 s\nper-inference latency with 0.70M parameters, yielding 3-10x lower latency than\nthe Transformer baselines evaluated on the same hardware, while maintaining\ncompetitive accuracy.",
-      "pdf_url": "http://arxiv.org/pdf/2510.05255v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.05255v1",
-      "published": "2025-10-06",
-      "categories": [
-        "cs.NI"
-      ]
-    },
-    {
-      "title": "Structural Identifiability of Graphical Continuous Lyapunov Models",
-      "authors": [
-        "Carlos Améndola",
-        "Tobias Boege",
-        "Benjamin Hollering",
-        "Pratik Misra"
-      ],
-      "abstract": "We prove two characterizations of model equivalence of acyclic graphical\ncontinuous Lyapunov models (GCLMs) with uncorrelated noise. The first result\nshows that two graphs are model equivalent if and only if they have the same\nskeleton and equivalent induced 4-node subgraphs. We also give a\ntransformational characterization via structured edge reversals. The two\ntheorems are Lyapunov analogues of celebrated results for Bayesian networks by\nVerma and Pearl, and Chickering, respectively. Our results have broad\nconsequences for the theory of causal inference of GCLMs. First, we find that\nmodel equivalence classes of acyclic GCLMs refine the corresponding classes of\nBayesian networks. Furthermore, we obtain polynomial-time algorithms to test\nmodel equivalence and structural identifiability of given directed acyclic\ngraphs.",
-      "pdf_url": "http://arxiv.org/pdf/2510.04985v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.04985v1",
-      "published": "2025-10-06",
-      "categories": [
-        "math.ST",
-        "stat.TH",
-        "62H22, 60J60 (Primary) 15A24, 62R01, 60J70 (Secondary)"
-      ]
-    },
-    {
-      "title": "On Predicting Post-Click Conversion Rate via Counterfactual Inference",
-      "authors": [
-        "Junhyung Ahn",
-        "Sanghack Lee"
-      ],
-      "abstract": "Accurately predicting conversion rate (CVR) is essential in various\nrecommendation domains such as online advertising systems and e-commerce. These\nsystems utilize user interaction logs, which consist of exposures, clicks, and\nconversions. CVR prediction models are typically trained solely based on\nclicked samples, as conversions can only be determined following clicks.\nHowever, the sparsity of clicked instances necessitates the collection of a\nsubstantial amount of logs for effective model training. Recent works address\nthis issue by devising frameworks that leverage non-clicked samples. While\nthese frameworks aim to reduce biases caused by the discrepancy between clicked\nand non-clicked samples, they often rely on heuristics. Against this\nbackground, we propose a method to counterfactually generate conversion labels\nfor non-clicked samples by using causality as a guiding principle, attempting\nto answer the question, \"Would the user have converted if he or she had clicked\nthe recommended item?\" Our approach is named the Entire Space Counterfactual\nInference Multi-task Model (ESCIM). We initially train a structural causal\nmodel (SCM) of user sequential behaviors and conduct a hypothetical\nintervention (i.e., click) on non-clicked items to infer counterfactual CVRs.\nWe then introduce several approaches to transform predicted counterfactual CVRs\ninto binary counterfactual conversion labels for the non-clicked samples.\nFinally, the generated samples are incorporated into the training process.\nExtensive experiments on public datasets illustrate the superiority of the\nproposed algorithm. Online A/B testing further empirically validates the\neffectiveness of our proposed algorithm in real-world scenarios. In addition,\nwe demonstrate the improved performance of the proposed method on latent\nconversion data, showcasing its robustness and superior generalization\ncapabilities.",
-      "pdf_url": "http://arxiv.org/pdf/2510.04816v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.04816v1",
-      "published": "2025-10-06",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Causality-aware Graph Aggregation Weight Estimator for Popularity Debiasing in Top-K Recommendation",
-      "authors": [
-        "Yue Que",
-        "Yingyi Zhang",
-        "Xiangyu Zhao",
-        "Chen Ma"
-      ],
-      "abstract": "Graph-based recommender systems leverage neighborhood aggregation to generate\nnode representations, which is highly sensitive to popularity bias, resulting\nin an echo effect during information propagation. Existing graph-based\ndebiasing solutions refine the aggregation process with attempts such as edge\nreconstruction or weight adjustment. However, these methods remain inadequate\nin fully alleviating popularity bias. Specifically, this is because 1) they\nprovide no insights into graph aggregation rationality, thus lacking an\noptimality guarantee; 2) they fail to well balance the training and debiasing\nprocess, which undermines the effectiveness. In this paper, we propose a novel\napproach to mitigate popularity bias through rational modeling of the graph\naggregation process. We reveal that graph aggregation is a special form of\nbackdoor adjustment in causal inference, where the aggregation weight\ncorresponds to the historical interaction likelihood distribution. Based on\nthis insight, we devise an encoder-decoder architecture, namely Causality-aware\nGraph Aggregation Weight Estimator for Debiasing (CAGED), to approximate the\nunbiased aggregation weight by optimizing the evidence lower bound of the\ninteraction likelihood. In order to enhance the debiasing effectiveness during\nearly training stages, we further design a momentum update strategy that\nincrementally refines the aggregation weight matrix. Extensive experiments on\nthree datasets demonstrate that CAGED outperforms existing graph-based\ndebiasing methods. Our implementation is available at\nhttps://github.com/QueYork/CAGED.",
-      "pdf_url": "http://arxiv.org/pdf/2510.04502v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.04502v1",
-      "published": "2025-10-06",
-      "categories": [
-        "cs.IR",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "REAR: Rethinking Visual Autoregressive Models via Generator-Tokenizer Consistency Regularization",
-      "authors": [
-        "Qiyuan He",
-        "Yicong Li",
-        "Haotian Ye",
-        "Jinghao Wang",
-        "Xinyao Liao",
-        "Pheng-Ann Heng",
-        "Stefano Ermon",
-        "James Zou",
-        "Angela Yao"
-      ],
-      "abstract": "Visual autoregressive (AR) generation offers a promising path toward unifying\nvision and language models, yet its performance remains suboptimal against\ndiffusion models. Prior work often attributes this gap to tokenizer limitations\nand rasterization ordering. In this work, we identify a core bottleneck from\nthe perspective of generator-tokenizer inconsistency, i.e., the AR-generated\ntokens may not be well-decoded by the tokenizer. To address this, we propose\nreAR, a simple training strategy introducing a token-wise regularization\nobjective: when predicting the next token, the causal transformer is also\ntrained to recover the visual embedding of the current token and predict the\nembedding of the target token under a noisy context. It requires no changes to\nthe tokenizer, generation order, inference pipeline, or external models.\nDespite its simplicity, reAR substantially improves performance. On ImageNet,\nit reduces gFID from 3.02 to 1.86 and improves IS to 316.9 using a standard\nrasterization-based tokenizer. When applied to advanced tokenizers, it achieves\na gFID of 1.42 with only 177M parameters, matching the performance with larger\nstate-of-the-art diffusion models (675M).",
-      "pdf_url": "http://arxiv.org/pdf/2510.04450v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.04450v1",
-      "published": "2025-10-06",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Efficient Latent Variable Causal Discovery: Combining Score Search and Targeted Testing",
-      "authors": [
-        "Joseph Ramsey",
-        "Bryan Andrews"
-      ],
-      "abstract": "Learning causal structure from observational data is especially challenging\nwhen latent variables or selection bias are present. The Fast Causal Inference\n(FCI) algorithm addresses this setting but often performs exhaustive\nconditional independence tests across many subsets, leading to spurious\nindependence claims, extra or missing edges, and unreliable orientations. We\npresent a family of score-guided mixed-strategy causal search algorithms that\nbuild on this tradition. First, we introduce BOSS-FCI and GRaSP-FCI,\nstraightforward variants of GFCI that substitute BOSS or GRaSP for FGES,\nthereby retaining correctness while incurring different scalability tradeoffs.\nSecond, we develop FCI Targeted-testing (FCIT), a novel mixed-strategy method\nthat improves upon these variants by replacing exhaustive all-subsets testing\nwith targeted tests guided by BOSS, yielding well-formed PAGs with higher\nprecision and efficiency. Finally, we propose a simple heuristic, LV-Dumb (also\nknown as BOSS-POD), which bypasses latent-variable-specific reasoning and\ndirectly returns the PAG of the BOSS DAG. Although not strictly correct in the\nFCI sense, it scales better and often achieves superior accuracy in practice.\nSimulations and real-data analyses demonstrate that BOSS-FCI and GRaSP-FCI\nprovide sound baselines, FCIT improves both efficiency and reliability, and\nLV-Dumb offers a practical heuristic with strong empirical performance.\nTogether, these method highlight the value of score-guided and targeted\nstrategies for scalable latent-variable causal discovery.",
-      "pdf_url": "http://arxiv.org/pdf/2510.04263v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.04263v1",
-      "published": "2025-10-05",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
       ]
     }
   ]
