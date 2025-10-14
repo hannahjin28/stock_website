@@ -1,4 +1,194 @@
 {
-  "last_updated": "2025-10-13T00:54:10.981713",
-  "papers": []
+  "last_updated": "2025-10-14T00:50:25.471728",
+  "papers": [
+    {
+      "title": "Efficient Autoregressive Inference for Transformer Probabilistic Models",
+      "authors": [
+        "Conor Hassan",
+        "Nasrulloh Loka",
+        "Cen-You Li",
+        "Daolang Huang",
+        "Paul E. Chang",
+        "Yang Yang",
+        "Francesco Silvestrin",
+        "Samuel Kaski",
+        "Luigi Acerbi"
+      ],
+      "abstract": "Transformer-based models for amortized probabilistic inference, such as\nneural processes, prior-fitted networks, and tabular foundation models, excel\nat single-pass marginal prediction. However, many real-world applications, from\nsignal interpolation to multi-column tabular predictions, require coherent\njoint distributions that capture dependencies between predictions. While purely\nautoregressive architectures efficiently generate such distributions, they\nsacrifice the flexible set-conditioning that makes these models powerful for\nmeta-learning. Conversely, the standard approach to obtain joint distributions\nfrom set-based models requires expensive re-encoding of the entire augmented\nconditioning set at each autoregressive step. We introduce a causal\nautoregressive buffer that preserves the advantages of both paradigms. Our\napproach decouples context encoding from updating the conditioning set. The\nmodel processes the context once and caches it. A dynamic buffer then captures\ntarget dependencies: as targets are incorporated, they enter the buffer and\nattend to both the cached context and previously buffered targets. This enables\nefficient batched autoregressive generation and one-pass joint log-likelihood\nevaluation. A unified training strategy allows seamless integration of\nset-based and autoregressive modes at minimal additional cost. Across synthetic\nfunctions, EEG signals, cognitive models, and tabular data, our method matches\npredictive accuracy of strong baselines while delivering up to 20 times faster\njoint sampling. Our approach combines the efficiency of autoregressive\ngenerative models with the representational power of set-based conditioning,\nmaking joint prediction practical for transformer-based probabilistic models.",
+      "pdf_url": "http://arxiv.org/pdf/2510.09477v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.09477v1",
+      "published": "2025-10-10",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Sensitivity Analysis for Causal ML: A Use Case at Booking.com",
+      "authors": [
+        "Philipp Bach",
+        "Victor Chernozhukov",
+        "Carlos Cinelli",
+        "Lin Jia",
+        "Sven Klaassen",
+        "Nils Skotara",
+        "Martin Spindler"
+      ],
+      "abstract": "Causal Machine Learning has emerged as a powerful tool for flexibly\nestimating causal effects from observational data in both industry and\nacademia. However, causal inference from observational data relies on\nuntestable assumptions about the data-generating process, such as the absence\nof unobserved confounders. When these assumptions are violated, causal effect\nestimates may become biased, undermining the validity of research findings. In\nthese contexts, sensitivity analysis plays a crucial role, by enabling data\nscientists to assess the robustness of their findings to plausible violations\nof unconfoundedness. This paper introduces sensitivity analysis and\ndemonstrates its practical relevance through a (simulated) data example based\non a use case at Booking.com. We focus our presentation on a recently proposed\nmethod by Chernozhukov et al. (2023), which derives general non-parametric\nbounds on biases due to omitted variables, and is fully compatible with (though\nnot limited to) modern inferential tools of Causal Machine Learning. By\npresenting this use case, we aim to raise awareness of sensitivity analysis and\nhighlight its importance in real-world scenarios.",
+      "pdf_url": "http://arxiv.org/pdf/2510.09109v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.09109v1",
+      "published": "2025-10-10",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Spatial Deconfounder: Interference-Aware Deconfounding for Spatial Causal Inference",
+      "authors": [
+        "Ayush Khot",
+        "Miruna Oprescu",
+        "Maresa Schröder",
+        "Ai Kagawa",
+        "Xihaier Luo"
+      ],
+      "abstract": "Causal inference in spatial domains faces two intertwined challenges: (1)\nunmeasured spatial factors, such as weather, air pollution, or mobility, that\nconfound treatment and outcome, and (2) interference from nearby treatments\nthat violate standard no-interference assumptions. While existing methods\ntypically address one by assuming away the other, we show they are deeply\nconnected: interference reveals structure in the latent confounder. Leveraging\nthis insight, we propose the Spatial Deconfounder, a two-stage method that\nreconstructs a substitute confounder from local treatment vectors using a\nconditional variational autoencoder (CVAE) with a spatial prior, then estimates\ncausal effects via a flexible outcome model. We show that this approach enables\nnonparametric identification of both direct and spillover effects under weak\nassumptions--without requiring multiple treatment types or a known model of the\nlatent field. Empirically, we extend SpaCE, a benchmark suite for spatial\nconfounding, to include treatment interference, and show that the Spatial\nDeconfounder consistently improves effect estimation across real-world datasets\nin environmental health and social science. By turning interference into a\nmulti-cause signal, our framework bridges spatial and deconfounding literatures\nto advance robust causal inference in structured data.",
+      "pdf_url": "http://arxiv.org/pdf/2510.08762v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.08762v1",
+      "published": "2025-10-09",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "A Design-based Solution for Causal Inference with Text: Can a Language Model Be Too Large?",
+      "authors": [
+        "Graham Tierney",
+        "Srikar Katta",
+        "Christopher Bail",
+        "Sunshine Hillygus",
+        "Alexander Volfovsky"
+      ],
+      "abstract": "Many social science questions ask how linguistic properties causally affect\nan audience's attitudes and behaviors. Because text properties are often\ninterlinked (e.g., angry reviews use profane language), we must control for\npossible latent confounding to isolate causal effects. Recent literature\nproposes adapting large language models (LLMs) to learn latent representations\nof text that successfully predict both treatment and the outcome. However,\nbecause the treatment is a component of the text, these deep learning methods\nrisk learning representations that actually encode the treatment itself,\ninducing overlap bias. Rather than depending on post-hoc adjustments, we\nintroduce a new experimental design that handles latent confounding, avoids the\noverlap issue, and unbiasedly estimates treatment effects. We apply this design\nin an experiment evaluating the persuasiveness of expressing humility in\npolitical communication. Methodologically, we demonstrate that LLM-based\nmethods perform worse than even simple bag-of-words models using our real text\nand outcomes from our experiment. Substantively, we isolate the causal effect\nof expressing humility on the perceived persuasiveness of political statements,\noffering new insights on communication effects for social media platforms,\npolicy makers, and social scientists.",
+      "pdf_url": "http://arxiv.org/pdf/2510.08758v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.08758v1",
+      "published": "2025-10-09",
+      "categories": [
+        "stat.ME",
+        "cs.CL",
+        "cs.LG",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "ResAD: Normalized Residual Trajectory Modeling for End-to-End Autonomous Driving",
+      "authors": [
+        "Zhiyu Zheng",
+        "Shaoyu Chen",
+        "Haoran Yin",
+        "Xinbang Zhang",
+        "Jialv Zou",
+        "Xinggang Wang",
+        "Qian Zhang",
+        "Lefei Zhang"
+      ],
+      "abstract": "End-to-end autonomous driving (E2EAD) systems, which learn to predict future\ntrajectories directly from sensor data, are fundamentally challenged by the\ninherent spatio-temporal imbalance of trajectory data. This imbalance creates a\nsignificant optimization burden, causing models to learn spurious correlations\ninstead of causal inference, while also prioritizing uncertain, distant\npredictions, thereby compromising immediate safety. To address these issues, we\npropose ResAD, a novel Normalized Residual Trajectory Modeling framework.\nInstead of predicting the future trajectory directly, our approach reframes the\nlearning task to predict the residual deviation from a deterministic inertial\nreference. The inertial reference serves as a counterfactual, forcing the model\nto move beyond simple pattern recognition and instead identify the underlying\ncausal factors (e.g., traffic rules, obstacles) that necessitate deviations\nfrom a default, inertially-guided path. To deal with the optimization imbalance\ncaused by uncertain, long-term horizons, ResAD further incorporates Point-wise\nNormalization of the predicted residual. It re-weights the optimization\nobjective, preventing large-magnitude errors associated with distant, uncertain\nwaypoints from dominating the learning signal. Extensive experiments validate\nthe effectiveness of our framework. On the NAVSIM benchmark, ResAD achieves a\nstate-of-the-art PDMS of 88.6 using a vanilla diffusion policy with only two\ndenoising steps, demonstrating that our approach significantly simplifies the\nlearning task and improves model performance. The code will be released to\nfacilitate further research.",
+      "pdf_url": "http://arxiv.org/pdf/2510.08562v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.08562v1",
+      "published": "2025-10-09",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "Learning to Mitigate Post-Outage Load Surges: A Data-Driven Framework for Electrifying and Decarbonizing Grids",
+      "authors": [
+        "Wenlong Shi",
+        "Dingwei Wang",
+        "Liming Liu",
+        "Zhaoyu Wang"
+      ],
+      "abstract": "Electrification and decarbonization are transforming power system demand and\nrecovery dynamics, yet their implications for post-outage load surges remain\npoorly understood. Here we analyze a metropolitan-scale heterogeneous dataset\nfor Indianapolis comprising 30,046 feeder-level outages between 2020 and 2024,\nlinked to smart meters and submetering, to quantify the causal impact of\nelectric vehicles (EVs), heat pumps (HPs) and distributed energy resources\n(DERs) on restoration surges. Statistical analysis and causal forest inference\ndemonstrate that rising penetrations of all three assets significantly increase\nsurge ratios, with effects strongly modulated by restoration timing, outage\nduration and weather conditions. We develop a component-aware multi-task\nTransformer estimator that disaggregates EV, HP and DER contributions, and\napply it to project historical outages under counterfactual 2035 adoption\npathways. In a policy-aligned pathway, evening restorations emerge as the\nbinding reliability constraint, with exceedance probabilities of 0.057 when\n30\\% of system load is restored within the first 15 minutes. Mitigation\nmeasures, probabilistic EV restarts, short thermostat offsets and accelerated\nDER reconnection, reduce exceedance to 0.019 and eliminate it entirely when\n20\\% or less of system load is restored. These results demonstrate that\ntransition-era surges are asset-driven and causally linked to electrification\nand decarbonization, but can be effectively managed through integrated\noperational strategies.",
+      "pdf_url": "http://arxiv.org/pdf/2510.08357v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.08357v1",
+      "published": "2025-10-09",
+      "categories": [
+        "eess.SY",
+        "cs.SY"
+      ]
+    },
+    {
+      "title": "Counterfactual Identifiability via Dynamic Optimal Transport",
+      "authors": [
+        "Fabio De Sousa Ribeiro",
+        "Ainkaran Santhirasekaram",
+        "Ben Glocker"
+      ],
+      "abstract": "We address the open question of counterfactual identification for\nhigh-dimensional multivariate outcomes from observational data. Pearl (2000)\nargues that counterfactuals must be identifiable (i.e., recoverable from the\nobserved data distribution) to justify causal claims. A recent line of work on\ncounterfactual inference shows promising results but lacks identification,\nundermining the causal validity of its estimates. To address this, we establish\na foundation for multivariate counterfactual identification using\ncontinuous-time flows, including non-Markovian settings under standard\ncriteria. We characterise the conditions under which flow matching yields a\nunique, monotone and rank-preserving counterfactual transport map with tools\nfrom dynamic optimal transport, ensuring consistent inference. Building on\nthis, we validate the theory in controlled scenarios with counterfactual\nground-truth and demonstrate improvements in axiomatic counterfactual soundness\non real images.",
+      "pdf_url": "http://arxiv.org/pdf/2510.08294v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.08294v1",
+      "published": "2025-10-09",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "DODO: Causal Structure Learning with Budgeted Interventions",
+      "authors": [
+        "Matteo Gregorini",
+        "Chiara Boldrini",
+        "Lorenzo Valerio"
+      ],
+      "abstract": "Artificial Intelligence has achieved remarkable advancements in recent years,\nyet much of its progress relies on identifying increasingly complex\ncorrelations. Enabling causality awareness in AI has the potential to enhance\nits performance by enabling a deeper understanding of the underlying mechanisms\nof the environment. In this paper, we introduce DODO, an algorithm defining how\nan Agent can autonomously learn the causal structure of its environment through\nrepeated interventions. We assume a scenario where an Agent interacts with a\nworld governed by a causal Directed Acyclic Graph (DAG), which dictates the\nsystem's dynamics but remains hidden from the Agent. The Agent's task is to\naccurately infer the causal DAG, even in the presence of noise. To achieve\nthis, the Agent performs interventions, leveraging causal inference techniques\nto analyze the statistical significance of observed changes. Results show\nbetter performance for DODO, compared to observational approaches, in all but\nthe most limited resource conditions. DODO is often able to reconstruct with as\nlow as zero errors the structure of the causal graph. In the most challenging\nconfiguration, DODO outperforms the best baseline by +0.25 F1 points.",
+      "pdf_url": "http://arxiv.org/pdf/2510.08207v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.08207v1",
+      "published": "2025-10-09",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Augur: Modeling Covariate Causal Associations in Time Series via Large Language Models",
+      "authors": [
+        "Zhiqing Cui",
+        "Binwu Wang",
+        "Qingxiang Liu",
+        "Yeqiang Wang",
+        "Zhengyang Zhou",
+        "Yuxuan Liang",
+        "Yang Wang"
+      ],
+      "abstract": "Large language models (LLM) have emerged as a promising avenue for time\nseries forecasting, offering the potential to integrate multimodal data.\nHowever, existing LLM-based approaches face notable limitations-such as\nmarginalized role in model architectures, reliance on coarse statistical text\nprompts, and lack of interpretability. In this work, we introduce Augur, a\nfully LLM driven time series forecasting framework that exploits LLM causal\nreasoning to discover and use directed causal associations among covariates.\nAugur uses a two stage teacher student architecture where a powerful teacher\nLLM infers a directed causal graph from time series using heuristic search\ntogether with pairwise causality testing. A lightweight student agent then\nrefines the graph and fine tune on high confidence causal associations that are\nencoded as rich textual prompts to perform forecasting. This design improves\npredictive accuracy while yielding transparent, traceable reasoning about\nvariable interactions. Extensive experiments on real-world datasets with 25\nbaselines demonstrate that Augur achieves competitive performance and robust\nzero-shot generalization.",
+      "pdf_url": "http://arxiv.org/pdf/2510.07858v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.07858v1",
+      "published": "2025-10-09",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "62M10",
+        "I.2.7"
+      ]
+    },
+    {
+      "title": "Base Models Know How to Reason, Thinking Models Learn When",
+      "authors": [
+        "Constantin Venhoff",
+        "Iván Arcuschin",
+        "Philip Torr",
+        "Arthur Conmy",
+        "Neel Nanda"
+      ],
+      "abstract": "Why do thinking language models like DeepSeek R1 outperform their base\ncounterparts? Despite consistent performance gains, it remains unclear to what\nextent thinking models learn entirely new reasoning capabilities or repurpose\npre-existing base model ones. In this work, we propose a hybrid model where we\nactivate reasoning mechanisms in base models at the right time to elicit\nthinking-model-level reasoning chains, implying that thinking models exploit\nalready existing capabilities. To ground our analysis, we introduce an\nunsupervised, bottom-up approach for uncovering human-interpretable reasoning\nbehaviors in thinking models. This approach provides an unbiased method to\ndiscover reasoning behaviors without imposing manual or LLM-derived\nassumptions. Across three base and four thinking models, using GSM8K and\nMATH500, our hybrid model recovers up to 91% of the performance gap to thinking\nmodels without any weight updates while steering only 12% of tokens.\nConcretely, our empirical setup provides a simple, causal way to test the\neffectiveness of existing reasoning mechanisms in base models by invoking them\ndirectly and measuring the resulting task performance. More broadly, these\nresults reframe our understanding of how thinking models are trained:\npre-training is when models acquire most of their reasoning mechanisms, and\npost-training teaches efficient deployment of these mechanisms at the right\ntime, enabling efficient use of their inference-time compute.",
+      "pdf_url": "http://arxiv.org/pdf/2510.07364v2",
+      "arxiv_url": "http://arxiv.org/abs/2510.07364v2",
+      "published": "2025-10-08",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    }
+  ]
 }
