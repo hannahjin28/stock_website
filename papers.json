@@ -1,6 +1,182 @@
 {
-  "last_updated": "2025-10-14T00:50:25.471728",
+  "last_updated": "2025-10-15T00:52:01.299456",
   "papers": [
+    {
+      "title": "The Role of Congeniality in Multiple Imputation for Doubly Robust Causal Estimation",
+      "authors": [
+        "Lucy D'Agostino McGowan"
+      ],
+      "abstract": "This paper provides clear and practical guidance on the specification of\nimputation models when multiple imputation is used in conjunction with doubly\nrobust estimation methods for causal inference. Through theoretical arguments\nand targeted simulations, we show that when a confounder has missing data the\ncorresponding imputation model must include all variables used in either the\npropensity score model or the outcome model, and that these variables must\nappear in the same functional form as in the final analysis. Violating these\nconditions can lead to biased treatment effect estimates, even when both\ncomponents of the doubly robust estimator are correctly specified. We present a\nmathematical framework for doubly robust estimation combined with multiple\nimputation, establish the theoretical requirements for proper imputation in\nthis setting, and demonstrate the consequences of misspecification through\nsimulation. Based on these findings, we offer concrete recommendations to\nensure valid inference when using multiple imputation with doubly robust\nmethods in applied causal analyses.",
+      "pdf_url": "http://arxiv.org/pdf/2510.11633v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.11633v1",
+      "published": "2025-10-13",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Causal Disentanglement Learning for Accurate Anomaly Detection in Multivariate Time Series",
+      "authors": [
+        "Wonah Kim",
+        "Jeonghyeon Park",
+        "Dongsan Jun",
+        "Jungkyu Han",
+        "Sejin Chun"
+      ],
+      "abstract": "Disentangling complex causal relationships is important for accurate\ndetection of anomalies. In multivariate time series analysis, dynamic\ninteractions among data variables over time complicate the interpretation of\ncausal relationships. Traditional approaches assume statistical independence\nbetween variables in unsupervised settings, whereas recent methods capture\nfeature correlations through graph representation learning. However, their\nrepresentations fail to explicitly infer the causal relationships over\ndifferent time periods. To solve the problem, we propose Causally Disentangled\nRepresentation Learning for Anomaly Detection (CDRL4AD) to detect anomalies and\nidentify their causal relationships in multivariate time series. First, we\ndesign the causal process as model input, the temporal heterogeneous graph, and\ncausal relationships. Second, our representation identifies causal\nrelationships over different time periods and disentangles latent variables to\ninfer the corresponding causal factors. Third, our experiments on real-world\ndatasets demonstrate that CDRL4AD outperforms state-of-the-art methods in terms\nof accuracy and root cause analysis. Fourth, our model analysis validates\nhyperparameter sensitivity and the time complexity of CDRL4AD. Last, we conduct\na case study to show how our approach assists human experts in diagnosing the\nroot causes of anomalies.",
+      "pdf_url": "http://arxiv.org/pdf/2510.11084v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.11084v1",
+      "published": "2025-10-13",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "FBS Model-based Maintenance Record Accumulation for Failure-Cause Inference in Manufacturing Systems",
+      "authors": [
+        "Takuma Fujiu",
+        "Sho Okazaki",
+        "Kohei Kaminishi",
+        "Yuji Nakata",
+        "Shota Hamamoto",
+        "Kenshin Yokose",
+        "Tatsunori Hara",
+        "Yasushi Umeda",
+        "Jun Ota"
+      ],
+      "abstract": "In manufacturing systems, identifying the causes of failures is crucial for\nmaintaining and improving production efficiency. In knowledge-based\nfailure-cause inference, it is important that the knowledge base (1) explicitly\nstructures knowledge about the target system and about failures, and (2)\ncontains sufficiently long causal chains of failures. In this study, we\nconstructed Diagnostic Knowledge Ontology and proposed a\nFunction-Behavior-Structure (FBS) model-based maintenance-record accumulation\nmethod based on it. Failure-cause inference using the maintenance records\naccumulated by the proposed method showed better agreement with the set of\ncandidate causes enumerated by experts, especially in difficult cases where the\nnumber of related cases is small and the vocabulary used differs. In the\nfuture, it will be necessary to develop inference methods tailored to these\nmaintenance records, build a user interface, and carry out validation on larger\nand more diverse systems. Additionally, this approach leverages the\nunderstanding and knowledge of the target in the design phase to support\nknowledge accumulation and problem solving during the maintenance phase, and it\nis expected to become a foundation for knowledge sharing across the entire\nengineering chain in the future.",
+      "pdf_url": "http://arxiv.org/pdf/2510.11003v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.11003v1",
+      "published": "2025-10-13",
+      "categories": [
+        "cs.AI",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Identifying treatment effects on categorical outcomes in IV models",
+      "authors": [
+        "Onil Boussim"
+      ],
+      "abstract": "This paper provides a nonparametric framework for causal inference with\ncategorical outcomes under binary treatment and binary instrument settings. We\ndecompose the observed joint probability of outcomes and treatment into\nmarginal probabilities of potential outcomes and treatment, and association\nparameters that capture selection bias due to unobserved heterogeneity. Under a\nnovel identifying assumption, association similarity, which requires the\ndependence between unobserved factors and potential outcomes to be invariant\nacross treatment states, we achieve point identification of the full\ndistribution of potential outcomes. Recognizing that this assumption may be\nstrong in some contexts, we propose two weaker alternatives: monotonic\nassociation, which restricts the direction of selection heterogeneity, and\nbounded association, which constrains its magnitude. These relaxed assumptions\ndeliver sharp partial identification bounds that nest point identification as a\nspecial case and facilitate transparent sensitivity analysis. We illustrate the\nframework in an empirical application, estimating the causal effect of private\nhealth insurance on health outcomes.",
+      "pdf_url": "http://arxiv.org/pdf/2510.10946v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.10946v1",
+      "published": "2025-10-13",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Large Language Models for Full-Text Methods Assessment: A Case Study on Mediation Analysis",
+      "authors": [
+        "Wenqing Zhang",
+        "Trang Nguyen",
+        "Elizabeth A. Stuart",
+        "Yiqun T. Chen"
+      ],
+      "abstract": "Systematic reviews are crucial for synthesizing scientific evidence but\nremain labor-intensive, especially when extracting detailed methodological\ninformation. Large language models (LLMs) offer potential for automating\nmethodological assessments, promising to transform evidence synthesis. Here,\nusing causal mediation analysis as a representative methodological domain, we\nbenchmarked state-of-the-art LLMs against expert human reviewers across 180\nfull-text scientific articles. Model performance closely correlated with human\njudgments (accuracy correlation 0.71; F1 correlation 0.97), achieving\nnear-human accuracy on straightforward, explicitly stated methodological\ncriteria. However, accuracy sharply declined on complex, inference-intensive\nassessments, lagging expert reviewers by up to 15%. Errors commonly resulted\nfrom superficial linguistic cues -- for instance, models frequently\nmisinterpreted keywords like \"longitudinal\" or \"sensitivity\" as automatic\nevidence of rigorous methodological approache, leading to systematic\nmisclassifications. Longer documents yielded lower model accuracy, whereas\npublication year showed no significant effect. Our findings highlight an\nimportant pattern for practitioners using LLMs for methods review and synthesis\nfrom full texts: current LLMs excel at identifying explicit methodological\nfeatures but require human oversight for nuanced interpretations. Integrating\nautomated information extraction with targeted expert review thus provides a\npromising approach to enhance efficiency and methodological rigor in evidence\nsynthesis across diverse scientific fields.",
+      "pdf_url": "http://arxiv.org/pdf/2510.10762v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.10762v1",
+      "published": "2025-10-12",
+      "categories": [
+        "cs.CL",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs",
+      "authors": [
+        "Caorui Li",
+        "Yu Chen",
+        "Yiyan Ji",
+        "Jin Xu",
+        "Zhenyu Cui",
+        "Shihao Li",
+        "Yuanxing Zhang",
+        "Jiafu Tang",
+        "Zhenghao Song",
+        "Dingling Zhang",
+        "Ying He",
+        "Haoxiang Liu",
+        "Yuxuan Wang",
+        "Qiufeng Wang",
+        "Zhenhe Wu",
+        "Jiehui Luo",
+        "Zhiyu Pan",
+        "Weihao Xie",
+        "Chenchen Zhang",
+        "Zhaohui Wang",
+        "Jiayi Tian",
+        "Yanghai Wang",
+        "Zhe Cao",
+        "Minxin Dai",
+        "Ke Wang",
+        "Runzhe Wen",
+        "Yinghao Ma",
+        "Yaning Pan",
+        "Sungkyun Chang",
+        "Termeh Taheri",
+        "Haiwen Xia",
+        "Christos Plachouras",
+        "Emmanouil Benetos",
+        "Yizhi Li",
+        "Ge Zhang",
+        "Jian Yang",
+        "Tianhao Peng",
+        "Zili Wang",
+        "Minghao Liu",
+        "Junran Peng",
+        "Zhaoxiang Zhang",
+        "Jiaheng Liu"
+      ],
+      "abstract": "Recent advances in multimodal large language models (MLLMs) have demonstrated\nsubstantial potential in video understanding. However, existing benchmarks fail\nto comprehensively evaluate synergistic reasoning capabilities across audio and\nvisual modalities, often neglecting either one of the modalities or integrating\nthem in a logically inconsistent manner. To bridge this gap, we introduce\nOmniVideoBench, a large-scale and rigorously designed benchmark dedicated to\nassessing synergistic audio-visual understanding, with a strong emphasis on\nmodality complementarity and logical consistency. Specifically, OmniVideoBench\ncomprises 1000 high-quality question-answer(QA) pairs, each annotated with\nstep-by-step reasoning traces, derived from 628 diverse videos ranging from\nseveral seconds to 30 minutes, and manually verified to guarantee complete\ncorrectness and uniqueness. Moreover, OmniVideoBench encompasses 13 carefully\ndesigned question types, covering temporal reasoning, spatial localization,\ncounting, causal inference, summarization, and beyond, thereby capturing the\nessential challenges of video understanding. Evaluation of multiple MLLMs on\nOmniVideoBench reveals a pronounced gap between model performance and human\nreasoning, with open-source models lagging significantly behind their\nclosed-source counterparts, underscoring the inherent difficulty of genuine\naudio-visual reasoning. We will release OmniVideoBench to foster the\ndevelopment of MLLMs with stronger and more generalizable reasoning\ncapabilities.",
+      "pdf_url": "http://arxiv.org/pdf/2510.10689v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.10689v1",
+      "published": "2025-10-12",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "DiffHeads: Differential Analysis and Inference-Time Masking of Bias Heads in Large Language Models",
+      "authors": [
+        "Tingxu Han",
+        "Wei Song",
+        "Ziqi Ding",
+        "Ziming Li",
+        "Chunrong Fang",
+        "Yuekang Li",
+        "Dongfang Liu",
+        "Zhenyu Chen",
+        "Zhenting Wang"
+      ],
+      "abstract": "Large language models (LLMs) increasingly mediate decisions in domains where\nunfair treatment of demographic groups is unacceptable. Existing work probes\nwhen biased outputs appear, but gives little insight into the mechanisms that\ngenerate them, leaving existing mitigations largely fragile. In this paper, we\nconduct a systematic investigation LLM unfairness and propose DiffHeads, a\nlightweight debiasing framework for LLMs. We first compare Direct-Answer (DA)\nprompting to Chain-of-Thought (CoT) prompting across eight representative open-\nand closed-source LLMs. DA will trigger the nature bias part of LLM and improve\nmeasured unfairness by 534.5%-391.9% in both one-turn and two-turn dialogues.\nNext, we define a token-to-head contribution score that traces each token's\ninfluence back to individual attention heads. This reveals a small cluster of\nbias heads that activate under DA but stay largely dormant with CoT, providing\nthe first causal link between prompting strategy and bias emergence. Finally,\nbuilding on this insight, we propose DiffHeads that identifies bias heads\nthrough differential activation analysis between DA and CoT, and selectively\nmasks only those heads. DiffHeads reduces unfairness by 49.4%, and 40.3% under\nDA and CoT, respectively, without harming model utility.",
+      "pdf_url": "http://arxiv.org/pdf/2510.10142v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.10142v1",
+      "published": "2025-10-11",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Bayesian Multivariable Bidirectional Mendelian Randomization",
+      "authors": [
+        "Bitan Sarkar",
+        "Yuchao Jiang",
+        "Yang Ni"
+      ],
+      "abstract": "Mendelian randomization (MR) is a pivotal tool in genetic epidemiology,\nleveraging genetic variants as instrumental variables to infer causal\nrelationships between modifiable exposures and health outcomes. Traditional MR\nmethods, while powerful, often rest on stringent assumptions such as the\nabsence of feedback loops, which are frequently violated in complex biological\nsystems. In addition, many popular MR approaches focus on only two variables\n(i.e., one exposure and one outcome) whereas our motivating applications have\nmany variables. In this article, we introduce a novel Bayesian framework for\n\\emph{multivariable} MR that concurrently addresses \\emph{unmeasured\nconfounding} and \\emph{feedback loops}. Central to our approach is a sparse\nconditional cyclic graphical model with a sparse error variance-covariance\nmatrix. Two structural priors are employed to enable the modeling and inference\nof causal relationships as well as latent confounding structures. Our method is\ndesigned to operate effectively with summary-level data, facilitating its\napplication in contexts where individual-level data are inaccessible, e.g., due\nto privacy concerns. It can also account for horizontal pleiotropy. Through\nextensive simulations and applications to the GTEx and OneK1K data, we\ndemonstrate the superior performance of our approach in recovering biologically\nplausible causal relationships in the presence of possible feedback loops and\nunmeasured confounding. The R package that implements the proposed method is\navailable at \\texttt{MR.RGM}.",
+      "pdf_url": "http://arxiv.org/pdf/2510.09991v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.09991v1",
+      "published": "2025-10-11",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
     {
       "title": "Efficient Autoregressive Inference for Transformer Probabilistic Models",
       "authors": [
@@ -40,154 +216,6 @@
       "published": "2025-10-10",
       "categories": [
         "econ.EM"
-      ]
-    },
-    {
-      "title": "Spatial Deconfounder: Interference-Aware Deconfounding for Spatial Causal Inference",
-      "authors": [
-        "Ayush Khot",
-        "Miruna Oprescu",
-        "Maresa Schröder",
-        "Ai Kagawa",
-        "Xihaier Luo"
-      ],
-      "abstract": "Causal inference in spatial domains faces two intertwined challenges: (1)\nunmeasured spatial factors, such as weather, air pollution, or mobility, that\nconfound treatment and outcome, and (2) interference from nearby treatments\nthat violate standard no-interference assumptions. While existing methods\ntypically address one by assuming away the other, we show they are deeply\nconnected: interference reveals structure in the latent confounder. Leveraging\nthis insight, we propose the Spatial Deconfounder, a two-stage method that\nreconstructs a substitute confounder from local treatment vectors using a\nconditional variational autoencoder (CVAE) with a spatial prior, then estimates\ncausal effects via a flexible outcome model. We show that this approach enables\nnonparametric identification of both direct and spillover effects under weak\nassumptions--without requiring multiple treatment types or a known model of the\nlatent field. Empirically, we extend SpaCE, a benchmark suite for spatial\nconfounding, to include treatment interference, and show that the Spatial\nDeconfounder consistently improves effect estimation across real-world datasets\nin environmental health and social science. By turning interference into a\nmulti-cause signal, our framework bridges spatial and deconfounding literatures\nto advance robust causal inference in structured data.",
-      "pdf_url": "http://arxiv.org/pdf/2510.08762v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.08762v1",
-      "published": "2025-10-09",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "A Design-based Solution for Causal Inference with Text: Can a Language Model Be Too Large?",
-      "authors": [
-        "Graham Tierney",
-        "Srikar Katta",
-        "Christopher Bail",
-        "Sunshine Hillygus",
-        "Alexander Volfovsky"
-      ],
-      "abstract": "Many social science questions ask how linguistic properties causally affect\nan audience's attitudes and behaviors. Because text properties are often\ninterlinked (e.g., angry reviews use profane language), we must control for\npossible latent confounding to isolate causal effects. Recent literature\nproposes adapting large language models (LLMs) to learn latent representations\nof text that successfully predict both treatment and the outcome. However,\nbecause the treatment is a component of the text, these deep learning methods\nrisk learning representations that actually encode the treatment itself,\ninducing overlap bias. Rather than depending on post-hoc adjustments, we\nintroduce a new experimental design that handles latent confounding, avoids the\noverlap issue, and unbiasedly estimates treatment effects. We apply this design\nin an experiment evaluating the persuasiveness of expressing humility in\npolitical communication. Methodologically, we demonstrate that LLM-based\nmethods perform worse than even simple bag-of-words models using our real text\nand outcomes from our experiment. Substantively, we isolate the causal effect\nof expressing humility on the perceived persuasiveness of political statements,\noffering new insights on communication effects for social media platforms,\npolicy makers, and social scientists.",
-      "pdf_url": "http://arxiv.org/pdf/2510.08758v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.08758v1",
-      "published": "2025-10-09",
-      "categories": [
-        "stat.ME",
-        "cs.CL",
-        "cs.LG",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "ResAD: Normalized Residual Trajectory Modeling for End-to-End Autonomous Driving",
-      "authors": [
-        "Zhiyu Zheng",
-        "Shaoyu Chen",
-        "Haoran Yin",
-        "Xinbang Zhang",
-        "Jialv Zou",
-        "Xinggang Wang",
-        "Qian Zhang",
-        "Lefei Zhang"
-      ],
-      "abstract": "End-to-end autonomous driving (E2EAD) systems, which learn to predict future\ntrajectories directly from sensor data, are fundamentally challenged by the\ninherent spatio-temporal imbalance of trajectory data. This imbalance creates a\nsignificant optimization burden, causing models to learn spurious correlations\ninstead of causal inference, while also prioritizing uncertain, distant\npredictions, thereby compromising immediate safety. To address these issues, we\npropose ResAD, a novel Normalized Residual Trajectory Modeling framework.\nInstead of predicting the future trajectory directly, our approach reframes the\nlearning task to predict the residual deviation from a deterministic inertial\nreference. The inertial reference serves as a counterfactual, forcing the model\nto move beyond simple pattern recognition and instead identify the underlying\ncausal factors (e.g., traffic rules, obstacles) that necessitate deviations\nfrom a default, inertially-guided path. To deal with the optimization imbalance\ncaused by uncertain, long-term horizons, ResAD further incorporates Point-wise\nNormalization of the predicted residual. It re-weights the optimization\nobjective, preventing large-magnitude errors associated with distant, uncertain\nwaypoints from dominating the learning signal. Extensive experiments validate\nthe effectiveness of our framework. On the NAVSIM benchmark, ResAD achieves a\nstate-of-the-art PDMS of 88.6 using a vanilla diffusion policy with only two\ndenoising steps, demonstrating that our approach significantly simplifies the\nlearning task and improves model performance. The code will be released to\nfacilitate further research.",
-      "pdf_url": "http://arxiv.org/pdf/2510.08562v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.08562v1",
-      "published": "2025-10-09",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "Learning to Mitigate Post-Outage Load Surges: A Data-Driven Framework for Electrifying and Decarbonizing Grids",
-      "authors": [
-        "Wenlong Shi",
-        "Dingwei Wang",
-        "Liming Liu",
-        "Zhaoyu Wang"
-      ],
-      "abstract": "Electrification and decarbonization are transforming power system demand and\nrecovery dynamics, yet their implications for post-outage load surges remain\npoorly understood. Here we analyze a metropolitan-scale heterogeneous dataset\nfor Indianapolis comprising 30,046 feeder-level outages between 2020 and 2024,\nlinked to smart meters and submetering, to quantify the causal impact of\nelectric vehicles (EVs), heat pumps (HPs) and distributed energy resources\n(DERs) on restoration surges. Statistical analysis and causal forest inference\ndemonstrate that rising penetrations of all three assets significantly increase\nsurge ratios, with effects strongly modulated by restoration timing, outage\nduration and weather conditions. We develop a component-aware multi-task\nTransformer estimator that disaggregates EV, HP and DER contributions, and\napply it to project historical outages under counterfactual 2035 adoption\npathways. In a policy-aligned pathway, evening restorations emerge as the\nbinding reliability constraint, with exceedance probabilities of 0.057 when\n30\\% of system load is restored within the first 15 minutes. Mitigation\nmeasures, probabilistic EV restarts, short thermostat offsets and accelerated\nDER reconnection, reduce exceedance to 0.019 and eliminate it entirely when\n20\\% or less of system load is restored. These results demonstrate that\ntransition-era surges are asset-driven and causally linked to electrification\nand decarbonization, but can be effectively managed through integrated\noperational strategies.",
-      "pdf_url": "http://arxiv.org/pdf/2510.08357v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.08357v1",
-      "published": "2025-10-09",
-      "categories": [
-        "eess.SY",
-        "cs.SY"
-      ]
-    },
-    {
-      "title": "Counterfactual Identifiability via Dynamic Optimal Transport",
-      "authors": [
-        "Fabio De Sousa Ribeiro",
-        "Ainkaran Santhirasekaram",
-        "Ben Glocker"
-      ],
-      "abstract": "We address the open question of counterfactual identification for\nhigh-dimensional multivariate outcomes from observational data. Pearl (2000)\nargues that counterfactuals must be identifiable (i.e., recoverable from the\nobserved data distribution) to justify causal claims. A recent line of work on\ncounterfactual inference shows promising results but lacks identification,\nundermining the causal validity of its estimates. To address this, we establish\na foundation for multivariate counterfactual identification using\ncontinuous-time flows, including non-Markovian settings under standard\ncriteria. We characterise the conditions under which flow matching yields a\nunique, monotone and rank-preserving counterfactual transport map with tools\nfrom dynamic optimal transport, ensuring consistent inference. Building on\nthis, we validate the theory in controlled scenarios with counterfactual\nground-truth and demonstrate improvements in axiomatic counterfactual soundness\non real images.",
-      "pdf_url": "http://arxiv.org/pdf/2510.08294v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.08294v1",
-      "published": "2025-10-09",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "DODO: Causal Structure Learning with Budgeted Interventions",
-      "authors": [
-        "Matteo Gregorini",
-        "Chiara Boldrini",
-        "Lorenzo Valerio"
-      ],
-      "abstract": "Artificial Intelligence has achieved remarkable advancements in recent years,\nyet much of its progress relies on identifying increasingly complex\ncorrelations. Enabling causality awareness in AI has the potential to enhance\nits performance by enabling a deeper understanding of the underlying mechanisms\nof the environment. In this paper, we introduce DODO, an algorithm defining how\nan Agent can autonomously learn the causal structure of its environment through\nrepeated interventions. We assume a scenario where an Agent interacts with a\nworld governed by a causal Directed Acyclic Graph (DAG), which dictates the\nsystem's dynamics but remains hidden from the Agent. The Agent's task is to\naccurately infer the causal DAG, even in the presence of noise. To achieve\nthis, the Agent performs interventions, leveraging causal inference techniques\nto analyze the statistical significance of observed changes. Results show\nbetter performance for DODO, compared to observational approaches, in all but\nthe most limited resource conditions. DODO is often able to reconstruct with as\nlow as zero errors the structure of the causal graph. In the most challenging\nconfiguration, DODO outperforms the best baseline by +0.25 F1 points.",
-      "pdf_url": "http://arxiv.org/pdf/2510.08207v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.08207v1",
-      "published": "2025-10-09",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Augur: Modeling Covariate Causal Associations in Time Series via Large Language Models",
-      "authors": [
-        "Zhiqing Cui",
-        "Binwu Wang",
-        "Qingxiang Liu",
-        "Yeqiang Wang",
-        "Zhengyang Zhou",
-        "Yuxuan Liang",
-        "Yang Wang"
-      ],
-      "abstract": "Large language models (LLM) have emerged as a promising avenue for time\nseries forecasting, offering the potential to integrate multimodal data.\nHowever, existing LLM-based approaches face notable limitations-such as\nmarginalized role in model architectures, reliance on coarse statistical text\nprompts, and lack of interpretability. In this work, we introduce Augur, a\nfully LLM driven time series forecasting framework that exploits LLM causal\nreasoning to discover and use directed causal associations among covariates.\nAugur uses a two stage teacher student architecture where a powerful teacher\nLLM infers a directed causal graph from time series using heuristic search\ntogether with pairwise causality testing. A lightweight student agent then\nrefines the graph and fine tune on high confidence causal associations that are\nencoded as rich textual prompts to perform forecasting. This design improves\npredictive accuracy while yielding transparent, traceable reasoning about\nvariable interactions. Extensive experiments on real-world datasets with 25\nbaselines demonstrate that Augur achieves competitive performance and robust\nzero-shot generalization.",
-      "pdf_url": "http://arxiv.org/pdf/2510.07858v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.07858v1",
-      "published": "2025-10-09",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "62M10",
-        "I.2.7"
-      ]
-    },
-    {
-      "title": "Base Models Know How to Reason, Thinking Models Learn When",
-      "authors": [
-        "Constantin Venhoff",
-        "Iván Arcuschin",
-        "Philip Torr",
-        "Arthur Conmy",
-        "Neel Nanda"
-      ],
-      "abstract": "Why do thinking language models like DeepSeek R1 outperform their base\ncounterparts? Despite consistent performance gains, it remains unclear to what\nextent thinking models learn entirely new reasoning capabilities or repurpose\npre-existing base model ones. In this work, we propose a hybrid model where we\nactivate reasoning mechanisms in base models at the right time to elicit\nthinking-model-level reasoning chains, implying that thinking models exploit\nalready existing capabilities. To ground our analysis, we introduce an\nunsupervised, bottom-up approach for uncovering human-interpretable reasoning\nbehaviors in thinking models. This approach provides an unbiased method to\ndiscover reasoning behaviors without imposing manual or LLM-derived\nassumptions. Across three base and four thinking models, using GSM8K and\nMATH500, our hybrid model recovers up to 91% of the performance gap to thinking\nmodels without any weight updates while steering only 12% of tokens.\nConcretely, our empirical setup provides a simple, causal way to test the\neffectiveness of existing reasoning mechanisms in base models by invoking them\ndirectly and measuring the resulting task performance. More broadly, these\nresults reframe our understanding of how thinking models are trained:\npre-training is when models acquire most of their reasoning mechanisms, and\npost-training teaches efficient deployment of these mechanisms at the right\ntime, enabling efficient use of their inference-time compute.",
-      "pdf_url": "http://arxiv.org/pdf/2510.07364v2",
-      "arxiv_url": "http://arxiv.org/abs/2510.07364v2",
-      "published": "2025-10-08",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
       ]
     }
   ]
