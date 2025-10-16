@@ -1,6 +1,89 @@
 {
-  "last_updated": "2025-10-15T00:52:01.299456",
+  "last_updated": "2025-10-16T00:51:32.318777",
   "papers": [
+    {
+      "title": "A Quantum Generative Framework for Modeling Single-Cell Transcriptomes with Gene-Gene and Cell-Cell Interactions",
+      "authors": [
+        "Selim Romero",
+        "Vignesh Kumar",
+        "Robert S. Chapkin",
+        "James J. Cai"
+      ],
+      "abstract": "Single-cell RNA sequencing (scRNA-seq) data simulation is limited by\nclassical methods that rely on linear correlations, failing to capture the\nintrinsic, nonlinear dependencies and the simultaneous gene-gene and cell-cell\ninteractions. We introduce qSimCells, a novel hybrid quantum-classical\nsimulator that leverages quantum entanglement to model single-cell\ntranscriptomes. The core innovation is a quantum kernel that uses a\nparameterized quantum circuit with CNOT gates to encode complex, nonlinear gene\nregulatory network (GRN) and cell-cell communication topologies with explicit\ndirectionality (causality). The synthetic data exhibits non-classical\ndependencies that challenge standard analysis. We demonstrated that classical\ncorrelation methods (Pearson and Spearman) failed to reconstruct the complete\nprogrammed quantum causal paths, instead reporting spurious statistical\nartifacts driven by high base-gene expression probabilities. Applying\nCellChat2.0 to the simulated cell-cell communication validated the true\nmechanistic links by showing a robust, relative increase in communication\nprobability (up to 75-fold) only when the quantum entanglement was active. This\nwork confirms that the quantum kernel is essential for creating high-fidelity\nground truth data, highlighting the need for advanced inference techniques to\ncapture the complex, non-classical dependencies inherent in gene regulation.",
+      "pdf_url": "http://arxiv.org/pdf/2510.12776v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.12776v1",
+      "published": "2025-10-14",
+      "categories": [
+        "q-bio.QM",
+        "cs.ET",
+        "physics.bio-ph",
+        "q-bio.GN"
+      ]
+    },
+    {
+      "title": "Causal inference of post-transcriptional regulation timelines from long-read sequencing in Arabidopsis thaliana",
+      "authors": [
+        "Rubén Martos",
+        "Christophe Ambroise",
+        "Guillem Rigaill"
+      ],
+      "abstract": "We propose a novel framework for reconstructing the chronology of genetic\nregulation using causal inference based on Pearl's theory. The approach\nproceeds in three main stages: causal discovery, causal inference, and\nchronology construction. We apply it to the ndhB and ndhD genes of the\nchloroplast in Arabidopsis thaliana, generating four alternative maturation\ntimeline models per gene, each derived from a different causal discovery\nalgorithm (HC, PC, LiNGAM, or NOTEARS). Two methodological challenges are\naddressed: the presence of missing data, handled via an EM algorithm that\njointly imputes missing values and estimates the Bayesian network, and the\nselection of the $\\ell_1$-regularization parameter in NOTEARS, for which we\nintroduce a stability selection strategy. The resulting causal models\nconsistently outperform reference chronologies in terms of both reliability and\nmodel fit. Moreover, by combining causal reasoning with domain expertise, the\nframework enables the formulation of testable hypotheses and the design of\ntargeted experimental interventions grounded in theoretical predictions.",
+      "pdf_url": "http://arxiv.org/pdf/2510.12504v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.12504v1",
+      "published": "2025-10-14",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "The Robustness of Differentiable Causal Discovery in Misspecified Scenarios",
+      "authors": [
+        "Huiyang Yi",
+        "Yanyan He",
+        "Duxin Chen",
+        "Mingyu Kang",
+        "He Wang",
+        "Wenwu Yu"
+      ],
+      "abstract": "Causal discovery aims to learn causal relationships between variables from\ntargeted data, making it a fundamental task in machine learning. However,\ncausal discovery algorithms often rely on unverifiable causal assumptions,\nwhich are usually difficult to satisfy in real-world data, thereby limiting the\nbroad application of causal discovery in practical scenarios. Inspired by these\nconsiderations, this work extensively benchmarks the empirical performance of\nvarious mainstream causal discovery algorithms, which assume i.i.d. data, under\neight model assumption violations. Our experimental results show that\ndifferentiable causal discovery methods exhibit robustness under the metrics of\nStructural Hamming Distance and Structural Intervention Distance of the\ninferred graphs in commonly used challenging scenarios, except for scale\nvariation. We also provide the theoretical explanations for the performance of\ndifferentiable causal discovery methods. Finally, our work aims to\ncomprehensively benchmark the performance of recent differentiable causal\ndiscovery methods under model assumption violations, and provide the standard\nfor reasonable evaluation of causal discovery, as well as to further promote\nits application in real-world scenarios.",
+      "pdf_url": "http://arxiv.org/pdf/2510.12503v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.12503v1",
+      "published": "2025-10-14",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "On the permutation invariance principle for causal estimands",
+      "authors": [
+        "Jiaqi Tong",
+        "Fan Li"
+      ],
+      "abstract": "In many causal inference problems, multiple action variables share the same\ncausal role, such as mediators, factors, network units, or genotypes, yet lack\na natural ordering. To avoid ambiguity in interpretation, causal estimands\nshould remain unchanged under relabeling, an implicit principle we refer to as\npermutation invariance. We formally characterize this principle, analyze its\nalgebraic and combinatorial structure for verification, and present a class of\nweighted estimands that are permutation-invariant while capturing interactions\nof all orders. We further provide guidance on selecting weights that yield\nresidual-free estimands, whose inclusion-exclusion sums capture the maximal\neffect, and extend our results to ratio effect measures.",
+      "pdf_url": "http://arxiv.org/pdf/2510.11863v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.11863v1",
+      "published": "2025-10-13",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "WaveletDiff: Multilevel Wavelet Diffusion For Time Series Generation",
+      "authors": [
+        "Yu-Hsiang Wang",
+        "Olgica Milenkovic"
+      ],
+      "abstract": "Time series are ubiquitous in many applications that involve forecasting,\nclassification and causal inference tasks, such as healthcare, finance, audio\nsignal processing and climate sciences. Still, large, high-quality time series\ndatasets remain scarce. Synthetic generation can address this limitation;\nhowever, current models confined either to the time or frequency domains\nstruggle to reproduce the inherently multi-scaled structure of real-world time\nseries. We introduce WaveletDiff, a novel framework that trains diffusion\nmodels directly on wavelet coefficients to exploit the inherent\nmulti-resolution structure of time series data. The model combines dedicated\ntransformers for each decomposition level with cross-level attention mechanisms\nthat enable selective information exchange between temporal and frequency\nscales through adaptive gating. It also incorporates energy preservation\nconstraints for individual levels based on Parseval's theorem to preserve\nspectral fidelity throughout the diffusion process. Comprehensive tests across\nsix real-world datasets from energy, finance, and neuroscience domains\ndemonstrate that WaveletDiff consistently outperforms state-of-the-art\ntime-domain and frequency-domain generative methods on both short and long time\nseries across five diverse performance metrics. For example, WaveletDiff\nachieves discriminative scores and Context-FID scores that are $3\\times$\nsmaller on average than the second-best baseline across all datasets.",
+      "pdf_url": "http://arxiv.org/pdf/2510.11839v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.11839v1",
+      "published": "2025-10-13",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "The Role of Congeniality in Multiple Imputation for Doubly Robust Causal Estimation",
       "authors": [
@@ -83,139 +166,6 @@
       "categories": [
         "cs.CL",
         "stat.AP"
-      ]
-    },
-    {
-      "title": "OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs",
-      "authors": [
-        "Caorui Li",
-        "Yu Chen",
-        "Yiyan Ji",
-        "Jin Xu",
-        "Zhenyu Cui",
-        "Shihao Li",
-        "Yuanxing Zhang",
-        "Jiafu Tang",
-        "Zhenghao Song",
-        "Dingling Zhang",
-        "Ying He",
-        "Haoxiang Liu",
-        "Yuxuan Wang",
-        "Qiufeng Wang",
-        "Zhenhe Wu",
-        "Jiehui Luo",
-        "Zhiyu Pan",
-        "Weihao Xie",
-        "Chenchen Zhang",
-        "Zhaohui Wang",
-        "Jiayi Tian",
-        "Yanghai Wang",
-        "Zhe Cao",
-        "Minxin Dai",
-        "Ke Wang",
-        "Runzhe Wen",
-        "Yinghao Ma",
-        "Yaning Pan",
-        "Sungkyun Chang",
-        "Termeh Taheri",
-        "Haiwen Xia",
-        "Christos Plachouras",
-        "Emmanouil Benetos",
-        "Yizhi Li",
-        "Ge Zhang",
-        "Jian Yang",
-        "Tianhao Peng",
-        "Zili Wang",
-        "Minghao Liu",
-        "Junran Peng",
-        "Zhaoxiang Zhang",
-        "Jiaheng Liu"
-      ],
-      "abstract": "Recent advances in multimodal large language models (MLLMs) have demonstrated\nsubstantial potential in video understanding. However, existing benchmarks fail\nto comprehensively evaluate synergistic reasoning capabilities across audio and\nvisual modalities, often neglecting either one of the modalities or integrating\nthem in a logically inconsistent manner. To bridge this gap, we introduce\nOmniVideoBench, a large-scale and rigorously designed benchmark dedicated to\nassessing synergistic audio-visual understanding, with a strong emphasis on\nmodality complementarity and logical consistency. Specifically, OmniVideoBench\ncomprises 1000 high-quality question-answer(QA) pairs, each annotated with\nstep-by-step reasoning traces, derived from 628 diverse videos ranging from\nseveral seconds to 30 minutes, and manually verified to guarantee complete\ncorrectness and uniqueness. Moreover, OmniVideoBench encompasses 13 carefully\ndesigned question types, covering temporal reasoning, spatial localization,\ncounting, causal inference, summarization, and beyond, thereby capturing the\nessential challenges of video understanding. Evaluation of multiple MLLMs on\nOmniVideoBench reveals a pronounced gap between model performance and human\nreasoning, with open-source models lagging significantly behind their\nclosed-source counterparts, underscoring the inherent difficulty of genuine\naudio-visual reasoning. We will release OmniVideoBench to foster the\ndevelopment of MLLMs with stronger and more generalizable reasoning\ncapabilities.",
-      "pdf_url": "http://arxiv.org/pdf/2510.10689v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.10689v1",
-      "published": "2025-10-12",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "DiffHeads: Differential Analysis and Inference-Time Masking of Bias Heads in Large Language Models",
-      "authors": [
-        "Tingxu Han",
-        "Wei Song",
-        "Ziqi Ding",
-        "Ziming Li",
-        "Chunrong Fang",
-        "Yuekang Li",
-        "Dongfang Liu",
-        "Zhenyu Chen",
-        "Zhenting Wang"
-      ],
-      "abstract": "Large language models (LLMs) increasingly mediate decisions in domains where\nunfair treatment of demographic groups is unacceptable. Existing work probes\nwhen biased outputs appear, but gives little insight into the mechanisms that\ngenerate them, leaving existing mitigations largely fragile. In this paper, we\nconduct a systematic investigation LLM unfairness and propose DiffHeads, a\nlightweight debiasing framework for LLMs. We first compare Direct-Answer (DA)\nprompting to Chain-of-Thought (CoT) prompting across eight representative open-\nand closed-source LLMs. DA will trigger the nature bias part of LLM and improve\nmeasured unfairness by 534.5%-391.9% in both one-turn and two-turn dialogues.\nNext, we define a token-to-head contribution score that traces each token's\ninfluence back to individual attention heads. This reveals a small cluster of\nbias heads that activate under DA but stay largely dormant with CoT, providing\nthe first causal link between prompting strategy and bias emergence. Finally,\nbuilding on this insight, we propose DiffHeads that identifies bias heads\nthrough differential activation analysis between DA and CoT, and selectively\nmasks only those heads. DiffHeads reduces unfairness by 49.4%, and 40.3% under\nDA and CoT, respectively, without harming model utility.",
-      "pdf_url": "http://arxiv.org/pdf/2510.10142v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.10142v1",
-      "published": "2025-10-11",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Bayesian Multivariable Bidirectional Mendelian Randomization",
-      "authors": [
-        "Bitan Sarkar",
-        "Yuchao Jiang",
-        "Yang Ni"
-      ],
-      "abstract": "Mendelian randomization (MR) is a pivotal tool in genetic epidemiology,\nleveraging genetic variants as instrumental variables to infer causal\nrelationships between modifiable exposures and health outcomes. Traditional MR\nmethods, while powerful, often rest on stringent assumptions such as the\nabsence of feedback loops, which are frequently violated in complex biological\nsystems. In addition, many popular MR approaches focus on only two variables\n(i.e., one exposure and one outcome) whereas our motivating applications have\nmany variables. In this article, we introduce a novel Bayesian framework for\n\\emph{multivariable} MR that concurrently addresses \\emph{unmeasured\nconfounding} and \\emph{feedback loops}. Central to our approach is a sparse\nconditional cyclic graphical model with a sparse error variance-covariance\nmatrix. Two structural priors are employed to enable the modeling and inference\nof causal relationships as well as latent confounding structures. Our method is\ndesigned to operate effectively with summary-level data, facilitating its\napplication in contexts where individual-level data are inaccessible, e.g., due\nto privacy concerns. It can also account for horizontal pleiotropy. Through\nextensive simulations and applications to the GTEx and OneK1K data, we\ndemonstrate the superior performance of our approach in recovering biologically\nplausible causal relationships in the presence of possible feedback loops and\nunmeasured confounding. The R package that implements the proposed method is\navailable at \\texttt{MR.RGM}.",
-      "pdf_url": "http://arxiv.org/pdf/2510.09991v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.09991v1",
-      "published": "2025-10-11",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Efficient Autoregressive Inference for Transformer Probabilistic Models",
-      "authors": [
-        "Conor Hassan",
-        "Nasrulloh Loka",
-        "Cen-You Li",
-        "Daolang Huang",
-        "Paul E. Chang",
-        "Yang Yang",
-        "Francesco Silvestrin",
-        "Samuel Kaski",
-        "Luigi Acerbi"
-      ],
-      "abstract": "Transformer-based models for amortized probabilistic inference, such as\nneural processes, prior-fitted networks, and tabular foundation models, excel\nat single-pass marginal prediction. However, many real-world applications, from\nsignal interpolation to multi-column tabular predictions, require coherent\njoint distributions that capture dependencies between predictions. While purely\nautoregressive architectures efficiently generate such distributions, they\nsacrifice the flexible set-conditioning that makes these models powerful for\nmeta-learning. Conversely, the standard approach to obtain joint distributions\nfrom set-based models requires expensive re-encoding of the entire augmented\nconditioning set at each autoregressive step. We introduce a causal\nautoregressive buffer that preserves the advantages of both paradigms. Our\napproach decouples context encoding from updating the conditioning set. The\nmodel processes the context once and caches it. A dynamic buffer then captures\ntarget dependencies: as targets are incorporated, they enter the buffer and\nattend to both the cached context and previously buffered targets. This enables\nefficient batched autoregressive generation and one-pass joint log-likelihood\nevaluation. A unified training strategy allows seamless integration of\nset-based and autoregressive modes at minimal additional cost. Across synthetic\nfunctions, EEG signals, cognitive models, and tabular data, our method matches\npredictive accuracy of strong baselines while delivering up to 20 times faster\njoint sampling. Our approach combines the efficiency of autoregressive\ngenerative models with the representational power of set-based conditioning,\nmaking joint prediction practical for transformer-based probabilistic models.",
-      "pdf_url": "http://arxiv.org/pdf/2510.09477v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.09477v1",
-      "published": "2025-10-10",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Sensitivity Analysis for Causal ML: A Use Case at Booking.com",
-      "authors": [
-        "Philipp Bach",
-        "Victor Chernozhukov",
-        "Carlos Cinelli",
-        "Lin Jia",
-        "Sven Klaassen",
-        "Nils Skotara",
-        "Martin Spindler"
-      ],
-      "abstract": "Causal Machine Learning has emerged as a powerful tool for flexibly\nestimating causal effects from observational data in both industry and\nacademia. However, causal inference from observational data relies on\nuntestable assumptions about the data-generating process, such as the absence\nof unobserved confounders. When these assumptions are violated, causal effect\nestimates may become biased, undermining the validity of research findings. In\nthese contexts, sensitivity analysis plays a crucial role, by enabling data\nscientists to assess the robustness of their findings to plausible violations\nof unconfoundedness. This paper introduces sensitivity analysis and\ndemonstrates its practical relevance through a (simulated) data example based\non a use case at Booking.com. We focus our presentation on a recently proposed\nmethod by Chernozhukov et al. (2023), which derives general non-parametric\nbounds on biases due to omitted variables, and is fully compatible with (though\nnot limited to) modern inferential tools of Causal Machine Learning. By\npresenting this use case, we aim to raise awareness of sensitivity analysis and\nhighlight its importance in real-world scenarios.",
-      "pdf_url": "http://arxiv.org/pdf/2510.09109v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.09109v1",
-      "published": "2025-10-10",
-      "categories": [
-        "econ.EM"
       ]
     }
   ]
