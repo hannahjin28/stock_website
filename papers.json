@@ -1,6 +1,72 @@
 {
-  "last_updated": "2025-10-16T00:51:32.318777",
+  "last_updated": "2025-10-17T00:51:17.194216",
   "papers": [
+    {
+      "title": "Doing Things with Words: Rethinking Theory of Mind Simulation in Large Language Models",
+      "authors": [
+        "Agnese Lombardi",
+        "Alessandro Lenci"
+      ],
+      "abstract": "Language is fundamental to human cooperation, facilitating not only the\nexchange of information but also the coordination of actions through shared\ninterpretations of situational contexts. This study explores whether the\nGenerative Agent-Based Model (GABM) Concordia can effectively model Theory of\nMind (ToM) within simulated real-world environments. Specifically, we assess\nwhether this framework successfully simulates ToM abilities and whether GPT-4\ncan perform tasks by making genuine inferences from social context, rather than\nrelying on linguistic memorization. Our findings reveal a critical limitation:\nGPT-4 frequently fails to select actions based on belief attribution,\nsuggesting that apparent ToM-like abilities observed in previous studies may\nstem from shallow statistical associations rather than true reasoning.\nAdditionally, the model struggles to generate coherent causal effects from\nagent actions, exposing difficulties in processing complex social interactions.\nThese results challenge current statements about emergent ToM-like capabilities\nin LLMs and highlight the need for more rigorous, action-based evaluation\nframeworks.",
+      "pdf_url": "http://arxiv.org/pdf/2510.13395v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.13395v1",
+      "published": "2025-10-15",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Novel Class Discovery for Point Cloud Segmentation via Joint Learning of Causal Representation and Reasoning",
+      "authors": [
+        "Yang Li",
+        "Aming Wu",
+        "Zihao Zhang",
+        "Yahong Han"
+      ],
+      "abstract": "In this paper, we focus on Novel Class Discovery for Point Cloud Segmentation\n(3D-NCD), aiming to learn a model that can segment unlabeled (novel) 3D classes\nusing only the supervision from labeled (base) 3D classes. The key to this task\nis to setup the exact correlations between the point representations and their\nbase class labels, as well as the representation correlations between the\npoints from base and novel classes. A coarse or statistical correlation\nlearning may lead to the confusion in novel class inference. lf we impose a\ncausal relationship as a strong correlated constraint upon the learning\nprocess, the essential point cloud representations that accurately correspond\nto the classes should be uncovered. To this end, we introduce a structural\ncausal model (SCM) to re-formalize the 3D-NCD problem and propose a new method,\ni.e., Joint Learning of Causal Representation and Reasoning. Specifically, we\nfirst analyze hidden confounders in the base class representations and the\ncausal relationships between the base and novel classes through SCM. We devise\na causal representation prototype that eliminates confounders to capture the\ncausal representations of base classes. A graph structure is then used to model\nthe causal relationships between the base classes' causal representation\nprototypes and the novel class prototypes, enabling causal reasoning from base\nto novel classes. Extensive experiments and visualization results on 3D and 2D\nNCD semantic segmentation demonstrate the superiorities of our method.",
+      "pdf_url": "http://arxiv.org/pdf/2510.13307v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.13307v1",
+      "published": "2025-10-15",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "DeepCausalMMM: A Deep Learning Framework for Marketing Mix Modeling with Causal Inference",
+      "authors": [
+        "Aditya Puttaparthi Tirumala"
+      ],
+      "abstract": "Marketing Mix Modeling (MMM) is a statistical technique used to estimate the\nimpact of marketing activities on business outcomes such as sales, revenue, or\ncustomer visits. Traditional MMM approaches often rely on linear regression or\nBayesian hierarchical models that assume independence between marketing\nchannels and struggle to capture complex temporal dynamics and non-linear\nsaturation effects [@Hanssens2005; @Ng2021Bayesian].\n  DeepCausalMMM is a Python package that addresses these limitations by\ncombining deep learning, causal inference, and advanced marketing science. The\npackage uses Gated Recurrent Units (GRUs) to automatically learn temporal\npatterns such as adstock (carryover effects) and lag, while simultaneously\nlearning statistical dependencies and potential causal structures between\nmarketing channels through Directed Acyclic Graph (DAG) learning\n[@Zheng2018NOTEARS; @Gong2024CausalMMM]. Additionally, it implements Hill\nequation-based saturation curves to model diminishing returns and optimize\nbudget allocation.\n  Key innovations include: (1) a data-driven design where hyperparameters and\ntransformations (e.g., adstock decay, saturation curves) are learned or\nestimated from data with sensible defaults, rather than requiring fixed\nheuristics or manual specification, (2) multi-region modeling with both shared\nand region-specific parameters, (3) robust statistical methods including Huber\nloss and advanced regularization, (4) comprehensive response curve analysis for\nunderstanding channel saturation, and (5) an extensive visualization suite with\n14+ interactive dashboards for business insights.",
+      "pdf_url": "http://arxiv.org/pdf/2510.13087v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.13087v1",
+      "published": "2025-10-15",
+      "categories": [
+        "cs.LG",
+        "stat.ME",
+        "stat.ML",
+        "62P20, 62M10, 68T05",
+        "D.2.2; I.2.6; G.3"
+      ]
+    },
+    {
+      "title": "Towards xApp Conflict Evaluation with Explainable Machine Learning and Causal Inference in O-RAN",
+      "authors": [
+        "Pragya Sharma",
+        "Shihua Sun",
+        "Shachi Deshpande",
+        "Angelos Stavrou",
+        "Haining Wang"
+      ],
+      "abstract": "The Open Radio Access Network (O-RAN) architecture enables a flexible,\nvendor-neutral deployment of 5G networks by disaggregating base station\ncomponents and supporting third-party xApps for near real-time RAN control.\nHowever, the concurrent operation of multiple xApps can lead to conflicting\ncontrol actions, which may cause network performance degradation. In this work,\nwe propose a framework for xApp conflict management that combines explainable\nmachine learning and causal inference to evaluate the causal relationships\nbetween RAN Control Parameters (RCPs) and Key Performance Indicators (KPIs). We\nuse model explainability tools such as SHAP to identify RCPs that jointly\naffect the same KPI, signaling potential conflicts, and represent these\ninteractions as a causal Directed Acyclic Graph (DAG). We then estimate the\ncausal impact of each of these RCPs on their associated KPIs using metrics such\nas Average Treatment Effect (ATE) and Conditional Average Treatment Effect\n(CATE). This approach offers network operators guided insights into identifying\nconflicts and quantifying their impacts, enabling more informed and effective\nconflict resolution strategies across diverse xApp deployments.",
+      "pdf_url": "http://arxiv.org/pdf/2510.13031v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.13031v1",
+      "published": "2025-10-14",
+      "categories": [
+        "cs.NI",
+        "cs.SY",
+        "eess.SY"
+      ]
+    },
     {
       "title": "A Quantum Generative Framework for Modeling Single-Cell Transcriptomes with Gene-Gene and Cell-Cell Interactions",
       "authors": [
@@ -95,76 +161,6 @@
       "published": "2025-10-13",
       "categories": [
         "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Causal Disentanglement Learning for Accurate Anomaly Detection in Multivariate Time Series",
-      "authors": [
-        "Wonah Kim",
-        "Jeonghyeon Park",
-        "Dongsan Jun",
-        "Jungkyu Han",
-        "Sejin Chun"
-      ],
-      "abstract": "Disentangling complex causal relationships is important for accurate\ndetection of anomalies. In multivariate time series analysis, dynamic\ninteractions among data variables over time complicate the interpretation of\ncausal relationships. Traditional approaches assume statistical independence\nbetween variables in unsupervised settings, whereas recent methods capture\nfeature correlations through graph representation learning. However, their\nrepresentations fail to explicitly infer the causal relationships over\ndifferent time periods. To solve the problem, we propose Causally Disentangled\nRepresentation Learning for Anomaly Detection (CDRL4AD) to detect anomalies and\nidentify their causal relationships in multivariate time series. First, we\ndesign the causal process as model input, the temporal heterogeneous graph, and\ncausal relationships. Second, our representation identifies causal\nrelationships over different time periods and disentangles latent variables to\ninfer the corresponding causal factors. Third, our experiments on real-world\ndatasets demonstrate that CDRL4AD outperforms state-of-the-art methods in terms\nof accuracy and root cause analysis. Fourth, our model analysis validates\nhyperparameter sensitivity and the time complexity of CDRL4AD. Last, we conduct\na case study to show how our approach assists human experts in diagnosing the\nroot causes of anomalies.",
-      "pdf_url": "http://arxiv.org/pdf/2510.11084v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.11084v1",
-      "published": "2025-10-13",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "FBS Model-based Maintenance Record Accumulation for Failure-Cause Inference in Manufacturing Systems",
-      "authors": [
-        "Takuma Fujiu",
-        "Sho Okazaki",
-        "Kohei Kaminishi",
-        "Yuji Nakata",
-        "Shota Hamamoto",
-        "Kenshin Yokose",
-        "Tatsunori Hara",
-        "Yasushi Umeda",
-        "Jun Ota"
-      ],
-      "abstract": "In manufacturing systems, identifying the causes of failures is crucial for\nmaintaining and improving production efficiency. In knowledge-based\nfailure-cause inference, it is important that the knowledge base (1) explicitly\nstructures knowledge about the target system and about failures, and (2)\ncontains sufficiently long causal chains of failures. In this study, we\nconstructed Diagnostic Knowledge Ontology and proposed a\nFunction-Behavior-Structure (FBS) model-based maintenance-record accumulation\nmethod based on it. Failure-cause inference using the maintenance records\naccumulated by the proposed method showed better agreement with the set of\ncandidate causes enumerated by experts, especially in difficult cases where the\nnumber of related cases is small and the vocabulary used differs. In the\nfuture, it will be necessary to develop inference methods tailored to these\nmaintenance records, build a user interface, and carry out validation on larger\nand more diverse systems. Additionally, this approach leverages the\nunderstanding and knowledge of the target in the design phase to support\nknowledge accumulation and problem solving during the maintenance phase, and it\nis expected to become a foundation for knowledge sharing across the entire\nengineering chain in the future.",
-      "pdf_url": "http://arxiv.org/pdf/2510.11003v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.11003v1",
-      "published": "2025-10-13",
-      "categories": [
-        "cs.AI",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Identifying treatment effects on categorical outcomes in IV models",
-      "authors": [
-        "Onil Boussim"
-      ],
-      "abstract": "This paper provides a nonparametric framework for causal inference with\ncategorical outcomes under binary treatment and binary instrument settings. We\ndecompose the observed joint probability of outcomes and treatment into\nmarginal probabilities of potential outcomes and treatment, and association\nparameters that capture selection bias due to unobserved heterogeneity. Under a\nnovel identifying assumption, association similarity, which requires the\ndependence between unobserved factors and potential outcomes to be invariant\nacross treatment states, we achieve point identification of the full\ndistribution of potential outcomes. Recognizing that this assumption may be\nstrong in some contexts, we propose two weaker alternatives: monotonic\nassociation, which restricts the direction of selection heterogeneity, and\nbounded association, which constrains its magnitude. These relaxed assumptions\ndeliver sharp partial identification bounds that nest point identification as a\nspecial case and facilitate transparent sensitivity analysis. We illustrate the\nframework in an empirical application, estimating the causal effect of private\nhealth insurance on health outcomes.",
-      "pdf_url": "http://arxiv.org/pdf/2510.10946v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.10946v1",
-      "published": "2025-10-13",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Large Language Models for Full-Text Methods Assessment: A Case Study on Mediation Analysis",
-      "authors": [
-        "Wenqing Zhang",
-        "Trang Nguyen",
-        "Elizabeth A. Stuart",
-        "Yiqun T. Chen"
-      ],
-      "abstract": "Systematic reviews are crucial for synthesizing scientific evidence but\nremain labor-intensive, especially when extracting detailed methodological\ninformation. Large language models (LLMs) offer potential for automating\nmethodological assessments, promising to transform evidence synthesis. Here,\nusing causal mediation analysis as a representative methodological domain, we\nbenchmarked state-of-the-art LLMs against expert human reviewers across 180\nfull-text scientific articles. Model performance closely correlated with human\njudgments (accuracy correlation 0.71; F1 correlation 0.97), achieving\nnear-human accuracy on straightforward, explicitly stated methodological\ncriteria. However, accuracy sharply declined on complex, inference-intensive\nassessments, lagging expert reviewers by up to 15%. Errors commonly resulted\nfrom superficial linguistic cues -- for instance, models frequently\nmisinterpreted keywords like \"longitudinal\" or \"sensitivity\" as automatic\nevidence of rigorous methodological approache, leading to systematic\nmisclassifications. Longer documents yielded lower model accuracy, whereas\npublication year showed no significant effect. Our findings highlight an\nimportant pattern for practitioners using LLMs for methods review and synthesis\nfrom full texts: current LLMs excel at identifying explicit methodological\nfeatures but require human oversight for nuanced interpretations. Integrating\nautomated information extraction with targeted expert review thus provides a\npromising approach to enhance efficiency and methodological rigor in evidence\nsynthesis across diverse scientific fields.",
-      "pdf_url": "http://arxiv.org/pdf/2510.10762v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.10762v1",
-      "published": "2025-10-12",
-      "categories": [
-        "cs.CL",
         "stat.AP"
       ]
     }
