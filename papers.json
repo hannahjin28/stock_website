@@ -1,6 +1,104 @@
 {
-  "last_updated": "2025-10-17T00:51:17.194216",
+  "last_updated": "2025-10-18T00:47:08.545591",
   "papers": [
+    {
+      "title": "Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models",
+      "authors": [
+        "Jonas Geiping",
+        "Xinyu Yang",
+        "Guinan Su"
+      ],
+      "abstract": "Language models with recurrent depth, also referred to as universal or looped\nwhen considering transformers, are defined by the capacity to increase their\ncomputation through the repetition of layers. Recent efforts in pretraining\nhave demonstrated that these architectures can scale to modern language\nmodeling tasks while exhibiting advantages in reasoning tasks. In this work, we\nexamine the relationship between recurrent-depth models and diffusion language\nmodels. Building on their similarities, we develop a new diffusion forcing\nsampler for these models to accelerate generation. The sampler advances by\ndecoding new tokens at every forward pass of the model, while the latent states\nof these tokens can be further refined in parallel through recurrence.\nTheoretically, generation with our sampler is strictly more expressive than the\nbaseline autoregressive generation using the same time budget on modern\nhardware. Moreover, this sampler, based on principles from diffusion\nliterature, can be directly applied to existing 3.5B recurrent-depth\ntransformers without any tuning, leading to up to a 5x speedup. Consequently,\nour findings not only provide an efficient mechanism for parallelizing the\nextra computation in recurrent-depth models at inference, but also suggest that\nsuch models can be naturally viewed as strong continuous, though causal,\ndiffusion language models.",
+      "pdf_url": "http://arxiv.org/pdf/2510.14961v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.14961v1",
+      "published": "2025-10-16",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Local Causal Discovery for Statistically Efficient Causal Inference",
+      "authors": [
+        "Mátyás Schubert",
+        "Tom Claassen",
+        "Sara Magliacane"
+      ],
+      "abstract": "Causal discovery methods can identify valid adjustment sets for causal effect\nestimation for a pair of target variables, even when the underlying causal\ngraph is unknown. Global causal discovery methods focus on learning the whole\ncausal graph and therefore enable the recovery of optimal adjustment sets,\ni.e., sets with the lowest asymptotic variance, but they quickly become\ncomputationally prohibitive as the number of variables grows. Local causal\ndiscovery methods offer a more scalable alternative by focusing on the local\nneighborhood of the target variables, but are restricted to statistically\nsuboptimal adjustment sets. In this work, we propose Local Optimal Adjustments\nDiscovery (LOAD), a sound and complete causal discovery approach that combines\nthe computational efficiency of local methods with the statistical optimality\nof global methods. First, LOAD identifies the causal relation between the\ntargets and tests if the causal effect is identifiable by using only local\ninformation. If it is identifiable, it then finds the optimal adjustment set by\nleveraging local causal discovery to infer the mediators and their parents.\nOtherwise, it returns the locally valid parent adjustment sets based on the\nlearned local structure. In our experiments on synthetic and realistic data\nLOAD outperforms global methods in scalability, while providing more accurate\neffect estimation than local methods.",
+      "pdf_url": "http://arxiv.org/pdf/2510.14582v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.14582v1",
+      "published": "2025-10-16",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "CLEAR: Causal Learning Framework For Robust Histopathology Tumor Detection Under Out-Of-Distribution Shifts",
+      "authors": [
+        "Kieu-Anh Truong Thi",
+        "Huy-Hieu Pham",
+        "Duc-Trong Le"
+      ],
+      "abstract": "Domain shift in histopathology, often caused by differences in acquisition\nprocesses or data sources, poses a major challenge to the generalization\nability of deep learning models. Existing methods primarily rely on modeling\nstatistical correlations by aligning feature distributions or introducing\nstatistical variation, yet they often overlook causal relationships. In this\nwork, we propose a novel causal-inference-based framework that leverages\nsemantic features while mitigating the impact of confounders. Our method\nimplements the front-door principle by designing transformation strategies that\nexplicitly incorporate mediators and observed tissue slides. We validate our\nmethod on the CAMELYON17 dataset and a private histopathology dataset,\ndemonstrating consistent performance gains across unseen domains. As a result,\nour approach achieved up to a 7% improvement in both the CAMELYON17 dataset and\nthe private histopathology dataset, outperforming existing baselines. These\nresults highlight the potential of causal inference as a powerful tool for\naddressing domain shift in histopathology image analysis.",
+      "pdf_url": "http://arxiv.org/pdf/2510.14273v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.14273v1",
+      "published": "2025-10-16",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Exploratory Causal Inference in SAEnce",
+      "authors": [
+        "Tommaso Mencattini",
+        "Riccardo Cadei",
+        "Francesco Locatello"
+      ],
+      "abstract": "Randomized Controlled Trials are one of the pillars of science; nevertheless,\nthey rely on hand-crafted hypotheses and expensive analysis. Such constraints\nprevent causal effect estimation at scale, potentially anchoring on popular yet\nincomplete hypotheses. We propose to discover the unknown effects of a\ntreatment directly from data. For this, we turn unstructured data from a trial\ninto meaningful representations via pretrained foundation models and interpret\nthem via a sparse autoencoder. However, discovering significant causal effects\nat the neural level is not trivial due to multiple-testing issues and effects\nentanglement. To address these challenges, we introduce Neural Effect Search, a\nnovel recursive procedure solving both issues by progressive stratification.\nAfter assessing the robustness of our algorithm on semi-synthetic experiments,\nwe showcase, in the context of experimental ecology, the first successful\nunsupervised causal effect identification on a real-world scientific trial.",
+      "pdf_url": "http://arxiv.org/pdf/2510.14073v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.14073v1",
+      "published": "2025-10-15",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Joint modeling and inference of multiple-subject high-dimensional sparse vector autoregressive models",
+      "authors": [
+        "Younghoon Kim",
+        "Zachary F. Fisher",
+        "Vladas Pipiras"
+      ],
+      "abstract": "The multiple-subject vector autoregression (multi-VAR) model captures\nheterogeneous network Granger causality across subjects by decomposing\nindividual sparse VAR transition matrices into commonly shared and\nsubject-unique paths. The model has been applied to characterize hidden shared\nand unique paths among subjects and has demonstrated performance compared to\nmethods commonly used in psychology and neuroscience. Despite this innovation,\nthe model suffers from using a weighted median for identifying the common\neffects, leading to statistical inefficiency as the convergence rates of the\ncommon and unique paths are determined by the least sparse subject and the\nsmallest sample size across all subjects. We propose a new identifiability\ncondition for the multi-VAR model based on a communication-efficient data\nintegration framework. We show that this approach achieves convergence rates\ntailored to each subject's sparsity level and sample size. Furthermore, we\ndevelop hypothesis tests to assess the nullity and homogeneity of individual\npaths, using Wald-type test statistics constructed from individual debiased\nestimators. A test for the significance of the common paths can also be derived\nthrough the framework. Simulation studies under various heterogeneity scenarios\nand a real data application demonstrate the performance of the proposed method\ncompared to existing benchmark across standard evaluation metrics.",
+      "pdf_url": "http://arxiv.org/pdf/2510.14044v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.14044v1",
+      "published": "2025-10-15",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Do Large Language Models Show Biases in Causal Learning? Insights from Contingency Judgment",
+      "authors": [
+        "María Victoria Carro",
+        "Denise Alejandra Mester",
+        "Francisca Gauna Selasco",
+        "Giovanni Franco Gabriel Marraffini",
+        "Mario Alejandro Leiva",
+        "Gerardo I. Simari",
+        "María Vanina Martinez"
+      ],
+      "abstract": "Causal learning is the cognitive process of developing the capability of\nmaking causal inferences based on available information, often guided by\nnormative principles. This process is prone to errors and biases, such as the\nillusion of causality, in which people perceive a causal relationship between\ntwo variables despite lacking supporting evidence. This cognitive bias has been\nproposed to underlie many societal problems, including social prejudice,\nstereotype formation, misinformation, and superstitious thinking. In this work,\nwe examine whether large language models are prone to developing causal\nillusions when faced with a classic cognitive science paradigm: the contingency\njudgment task. To investigate this, we constructed a dataset of 1,000 null\ncontingency scenarios (in which the available information is not sufficient to\nestablish a causal relationship between variables) within medical contexts and\nprompted LLMs to evaluate the effectiveness of potential causes. Our findings\nshow that all evaluated models systematically inferred unwarranted causal\nrelationships, revealing a strong susceptibility to the illusion of causality.\nWhile there is ongoing debate about whether LLMs genuinely understand causality\nor merely reproduce causal language without true comprehension, our findings\nsupport the latter hypothesis and raise concerns about the use of language\nmodels in domains where accurate causal reasoning is essential for informed\ndecision-making.",
+      "pdf_url": "http://arxiv.org/pdf/2510.13985v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.13985v1",
+      "published": "2025-10-15",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Doing Things with Words: Rethinking Theory of Mind Simulation in Large Language Models",
       "authors": [
@@ -65,103 +163,6 @@
         "cs.NI",
         "cs.SY",
         "eess.SY"
-      ]
-    },
-    {
-      "title": "A Quantum Generative Framework for Modeling Single-Cell Transcriptomes with Gene-Gene and Cell-Cell Interactions",
-      "authors": [
-        "Selim Romero",
-        "Vignesh Kumar",
-        "Robert S. Chapkin",
-        "James J. Cai"
-      ],
-      "abstract": "Single-cell RNA sequencing (scRNA-seq) data simulation is limited by\nclassical methods that rely on linear correlations, failing to capture the\nintrinsic, nonlinear dependencies and the simultaneous gene-gene and cell-cell\ninteractions. We introduce qSimCells, a novel hybrid quantum-classical\nsimulator that leverages quantum entanglement to model single-cell\ntranscriptomes. The core innovation is a quantum kernel that uses a\nparameterized quantum circuit with CNOT gates to encode complex, nonlinear gene\nregulatory network (GRN) and cell-cell communication topologies with explicit\ndirectionality (causality). The synthetic data exhibits non-classical\ndependencies that challenge standard analysis. We demonstrated that classical\ncorrelation methods (Pearson and Spearman) failed to reconstruct the complete\nprogrammed quantum causal paths, instead reporting spurious statistical\nartifacts driven by high base-gene expression probabilities. Applying\nCellChat2.0 to the simulated cell-cell communication validated the true\nmechanistic links by showing a robust, relative increase in communication\nprobability (up to 75-fold) only when the quantum entanglement was active. This\nwork confirms that the quantum kernel is essential for creating high-fidelity\nground truth data, highlighting the need for advanced inference techniques to\ncapture the complex, non-classical dependencies inherent in gene regulation.",
-      "pdf_url": "http://arxiv.org/pdf/2510.12776v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.12776v1",
-      "published": "2025-10-14",
-      "categories": [
-        "q-bio.QM",
-        "cs.ET",
-        "physics.bio-ph",
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "Causal inference of post-transcriptional regulation timelines from long-read sequencing in Arabidopsis thaliana",
-      "authors": [
-        "Rubén Martos",
-        "Christophe Ambroise",
-        "Guillem Rigaill"
-      ],
-      "abstract": "We propose a novel framework for reconstructing the chronology of genetic\nregulation using causal inference based on Pearl's theory. The approach\nproceeds in three main stages: causal discovery, causal inference, and\nchronology construction. We apply it to the ndhB and ndhD genes of the\nchloroplast in Arabidopsis thaliana, generating four alternative maturation\ntimeline models per gene, each derived from a different causal discovery\nalgorithm (HC, PC, LiNGAM, or NOTEARS). Two methodological challenges are\naddressed: the presence of missing data, handled via an EM algorithm that\njointly imputes missing values and estimates the Bayesian network, and the\nselection of the $\\ell_1$-regularization parameter in NOTEARS, for which we\nintroduce a stability selection strategy. The resulting causal models\nconsistently outperform reference chronologies in terms of both reliability and\nmodel fit. Moreover, by combining causal reasoning with domain expertise, the\nframework enables the formulation of testable hypotheses and the design of\ntargeted experimental interventions grounded in theoretical predictions.",
-      "pdf_url": "http://arxiv.org/pdf/2510.12504v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.12504v1",
-      "published": "2025-10-14",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "The Robustness of Differentiable Causal Discovery in Misspecified Scenarios",
-      "authors": [
-        "Huiyang Yi",
-        "Yanyan He",
-        "Duxin Chen",
-        "Mingyu Kang",
-        "He Wang",
-        "Wenwu Yu"
-      ],
-      "abstract": "Causal discovery aims to learn causal relationships between variables from\ntargeted data, making it a fundamental task in machine learning. However,\ncausal discovery algorithms often rely on unverifiable causal assumptions,\nwhich are usually difficult to satisfy in real-world data, thereby limiting the\nbroad application of causal discovery in practical scenarios. Inspired by these\nconsiderations, this work extensively benchmarks the empirical performance of\nvarious mainstream causal discovery algorithms, which assume i.i.d. data, under\neight model assumption violations. Our experimental results show that\ndifferentiable causal discovery methods exhibit robustness under the metrics of\nStructural Hamming Distance and Structural Intervention Distance of the\ninferred graphs in commonly used challenging scenarios, except for scale\nvariation. We also provide the theoretical explanations for the performance of\ndifferentiable causal discovery methods. Finally, our work aims to\ncomprehensively benchmark the performance of recent differentiable causal\ndiscovery methods under model assumption violations, and provide the standard\nfor reasonable evaluation of causal discovery, as well as to further promote\nits application in real-world scenarios.",
-      "pdf_url": "http://arxiv.org/pdf/2510.12503v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.12503v1",
-      "published": "2025-10-14",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "On the permutation invariance principle for causal estimands",
-      "authors": [
-        "Jiaqi Tong",
-        "Fan Li"
-      ],
-      "abstract": "In many causal inference problems, multiple action variables share the same\ncausal role, such as mediators, factors, network units, or genotypes, yet lack\na natural ordering. To avoid ambiguity in interpretation, causal estimands\nshould remain unchanged under relabeling, an implicit principle we refer to as\npermutation invariance. We formally characterize this principle, analyze its\nalgebraic and combinatorial structure for verification, and present a class of\nweighted estimands that are permutation-invariant while capturing interactions\nof all orders. We further provide guidance on selecting weights that yield\nresidual-free estimands, whose inclusion-exclusion sums capture the maximal\neffect, and extend our results to ratio effect measures.",
-      "pdf_url": "http://arxiv.org/pdf/2510.11863v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.11863v1",
-      "published": "2025-10-13",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "WaveletDiff: Multilevel Wavelet Diffusion For Time Series Generation",
-      "authors": [
-        "Yu-Hsiang Wang",
-        "Olgica Milenkovic"
-      ],
-      "abstract": "Time series are ubiquitous in many applications that involve forecasting,\nclassification and causal inference tasks, such as healthcare, finance, audio\nsignal processing and climate sciences. Still, large, high-quality time series\ndatasets remain scarce. Synthetic generation can address this limitation;\nhowever, current models confined either to the time or frequency domains\nstruggle to reproduce the inherently multi-scaled structure of real-world time\nseries. We introduce WaveletDiff, a novel framework that trains diffusion\nmodels directly on wavelet coefficients to exploit the inherent\nmulti-resolution structure of time series data. The model combines dedicated\ntransformers for each decomposition level with cross-level attention mechanisms\nthat enable selective information exchange between temporal and frequency\nscales through adaptive gating. It also incorporates energy preservation\nconstraints for individual levels based on Parseval's theorem to preserve\nspectral fidelity throughout the diffusion process. Comprehensive tests across\nsix real-world datasets from energy, finance, and neuroscience domains\ndemonstrate that WaveletDiff consistently outperforms state-of-the-art\ntime-domain and frequency-domain generative methods on both short and long time\nseries across five diverse performance metrics. For example, WaveletDiff\nachieves discriminative scores and Context-FID scores that are $3\\times$\nsmaller on average than the second-best baseline across all datasets.",
-      "pdf_url": "http://arxiv.org/pdf/2510.11839v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.11839v1",
-      "published": "2025-10-13",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "The Role of Congeniality in Multiple Imputation for Doubly Robust Causal Estimation",
-      "authors": [
-        "Lucy D'Agostino McGowan"
-      ],
-      "abstract": "This paper provides clear and practical guidance on the specification of\nimputation models when multiple imputation is used in conjunction with doubly\nrobust estimation methods for causal inference. Through theoretical arguments\nand targeted simulations, we show that when a confounder has missing data the\ncorresponding imputation model must include all variables used in either the\npropensity score model or the outcome model, and that these variables must\nappear in the same functional form as in the final analysis. Violating these\nconditions can lead to biased treatment effect estimates, even when both\ncomponents of the doubly robust estimator are correctly specified. We present a\nmathematical framework for doubly robust estimation combined with multiple\nimputation, establish the theoretical requirements for proper imputation in\nthis setting, and demonstrate the consequences of misspecification through\nsimulation. Based on these findings, we offer concrete recommendations to\nensure valid inference when using multiple imputation with doubly robust\nmethods in applied causal analyses.",
-      "pdf_url": "http://arxiv.org/pdf/2510.11633v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.11633v1",
-      "published": "2025-10-13",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
       ]
     }
   ]
