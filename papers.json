@@ -1,6 +1,159 @@
 {
-  "last_updated": "2025-10-20T00:55:26.978625",
+  "last_updated": "2025-10-21T00:52:29.186316",
   "papers": [
+    {
+      "title": "Doubly Robust Estimation of Causal Effects in Strategic Equilibrium Systems",
+      "authors": [
+        "Sibo Xiao"
+      ],
+      "abstract": "We introduce the Strategic Doubly Robust (SDR) estimator, a novel framework\nthat integrates strategic equilibrium modeling with doubly robust estimation\nfor causal inference in strategic environments. SDR addresses endogenous\ntreatment assignment arising from strategic agent behavior, maintaining double\nrobustness while incorporating strategic considerations. Theoretical analysis\nconfirms SDR's consistency and asymptotic normality under strategic\nunconfoundedness. Empirical evaluations demonstrate SDR's superior performance\nover baseline methods, achieving 7.6\\%-29.3\\% bias reduction across varying\nstrategic strengths and maintaining robust scalability with agent populations.\nThe framework provides a principled approach for reliable causal inference when\nagents respond strategically to interventions.",
+      "pdf_url": "http://arxiv.org/pdf/2510.15555v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.15555v1",
+      "published": "2025-10-17",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Semantic4Safety: Causal Insights from Zero-shot Street View Imagery Segmentation for Urban Road Safety",
+      "authors": [
+        "Huan Chen",
+        "Ting Han",
+        "Siyu Chen",
+        "Zhihao Guo",
+        "Yiping Chen",
+        "Meiliu Wu"
+      ],
+      "abstract": "Street-view imagery (SVI) offers a fine-grained lens on traffic risk, yet two\nfundamental challenges persist: (1) how to construct street-level indicators\nthat capture accident-related features, and (2) how to quantify their causal\nimpacts across different accident types. To address these challenges, we\npropose Semantic4Safety, a framework that applies zero-shot semantic\nsegmentation to SVIs to derive 11 interpretable streetscape indicators, and\nintegrates road type as contextual information to analyze approximately 30,000\naccident records in Austin. Specifically, we train an eXtreme Gradient Boosting\n(XGBoost) multi-class classifier and use Shapley Additive Explanations (SHAP)\nto interpret both global and local feature contributions, and then apply\nGeneralized Propensity Score (GPS) weighting and Average Treatment Effect (ATE)\nestimation to control confounding and quantify causal effects. Results uncover\nheterogeneous, accident-type-specific causal patterns: features capturing scene\ncomplexity, exposure, and roadway geometry dominate predictive power; larger\ndrivable area and emergency space reduce risk, whereas excessive visual\nopenness can increase it. By bridging predictive modeling with causal\ninference, Semantic4Safety supports targeted interventions and high-risk\ncorridor diagnosis, offering a scalable, data-informed tool for urban road\nsafety planning.",
+      "pdf_url": "http://arxiv.org/pdf/2510.15434v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.15434v1",
+      "published": "2025-10-17",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Reflections from Research Roundtables at the Conference on Health, Inference, and Learning (CHIL) 2025",
+      "authors": [
+        "Emily Alsentzer",
+        "Marie-Laure Charpignon",
+        "Bill Chen",
+        "Niharika D'Souza",
+        "Jason Fries",
+        "Yixing Jiang",
+        "Aparajita Kashyap",
+        "Chanwoo Kim",
+        "Simon Lee",
+        "Aishwarya Mandyam",
+        "Ashery Christopher Mbilinyi",
+        "Nikita Mehandru",
+        "Nitish Nagesh",
+        "Brighton Nuwagira",
+        "Emma Pierson",
+        "Arvind Pillai",
+        "Akane Sano",
+        "Tanveer Syeda-Mahmood",
+        "Shashank Yadav",
+        "Elias Adhanom",
+        "Muhammad Umar Afza",
+        "Amelia Archer",
+        "Suhana Bedi",
+        "Vasiliki Bikia",
+        "Trenton Chang",
+        "George H. Chen",
+        "Winston Chen",
+        "Erica Chiang",
+        "Edward Choi",
+        "Octavia Ciora",
+        "Paz Dozie-Nnamah",
+        "Shaza Elsharief",
+        "Matthew Engelhard",
+        "Ali Eshragh",
+        "Jean Feng",
+        "Josh Fessel",
+        "Scott Fleming",
+        "Kei Sen Fong",
+        "Thomas Frost",
+        "Soham Gadgil",
+        "Judy Gichoya",
+        "Leeor Hershkovich",
+        "Sujeong Im",
+        "Bhavya Jain",
+        "Vincent Jeanselme",
+        "Furong Jia",
+        "Qixuan",
+        "Jin",
+        "Yuxuan Jin",
+        "Daniel Kapash",
+        "Geetika Kapoor",
+        "Behdokht Kiafar",
+        "Matthias Kleiner",
+        "Stefan Kraft",
+        "Annika Kumar",
+        "Daeun Kyung",
+        "Zhongyuan Liang",
+        "Joanna Lin",
+        "Qianchu",
+        "Liu",
+        "Chang Liu",
+        "Hongzhou Luan",
+        "Chris Lunt",
+        "Leopoldo Julían Lechuga López",
+        "Matthew B. A. McDermott",
+        "Shahriar Noroozizadeh",
+        "Connor O'Brien",
+        "YongKyung Oh",
+        "Mixail Ota",
+        "Stephen Pfohl",
+        "Meagan Pi",
+        "Tanmoy Sarkar Pias",
+        "Emma Rocheteau",
+        "Avishaan Sethi",
+        "Toru Shirakawa",
+        "Anita Silver",
+        "Neha Simha",
+        "Kamile Stankeviciute",
+        "Max Sunog",
+        "Peter Szolovits",
+        "Shengpu Tang",
+        "Jialu Tang",
+        "Aaron Tierney",
+        "John Valdovinos",
+        "Byron Wallace",
+        "Will Ke Wang",
+        "Peter Washington",
+        "Jeremy Weiss",
+        "Daniel Wolfe",
+        "Emily Wong",
+        "Hye Sun Yun",
+        "Xiaoman Zhang",
+        "Xiao Yu Cindy Zhang",
+        "Hayoung Jeong",
+        "Kaveri A. Thakoor"
+      ],
+      "abstract": "The 6th Annual Conference on Health, Inference, and Learning (CHIL 2025),\nhosted by the Association for Health Learning and Inference (AHLI), was held in\nperson on June 25-27, 2025, at the University of California, Berkeley, in\nBerkeley, California, USA. As part of this year's program, we hosted Research\nRoundtables to catalyze collaborative, small-group dialogue around critical,\ntimely topics at the intersection of machine learning and healthcare. Each\nroundtable was moderated by a team of senior and junior chairs who fostered\nopen exchange, intellectual curiosity, and inclusive engagement. The sessions\nemphasized rigorous discussion of key challenges, exploration of emerging\nopportunities, and collective ideation toward actionable directions in the\nfield. In total, eight roundtables were held by 19 roundtable chairs on topics\nof \"Explainability, Interpretability, and Transparency,\" \"Uncertainty, Bias,\nand Fairness,\" \"Causality,\" \"Domain Adaptation,\" \"Foundation Models,\" \"Learning\nfrom Small Medical Data,\" \"Multimodal Methods,\" and \"Scalable, Translational\nHealthcare Solutions.\"",
+      "pdf_url": "http://arxiv.org/pdf/2510.15217v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.15217v1",
+      "published": "2025-10-17",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "The Elegant Joint Measurement is Non-Classical in the Triangle Network",
+      "authors": [
+        "Victor Gitton",
+        "Renato Renner"
+      ],
+      "abstract": "When quantum systems are shared by multiple parties in a network, the\nmeasurement outcomes of the parties can exhibit non-classical correlations,\ni.e., correlations that cannot be obtained if the parties shared classical\nsystems instead. This phenomenon is known as quantum nonlocality and is\ntypically demonstrated in the Bell scenario. However, the Bell scenario is\nfundamentally simpler to investigate than general networks, since the latter\ncome with non-convex optimization problems that are often intractable. The\ntriangle network is one of the simplest networks exhibiting this non-convexity\ndue to the presence of three independent sources. Although some special cases\nof quantum nonlocality are known in the triangle network, general methods to\ncertify classical incompatibility are still lacking, which suggests that our\nunderstanding of networks is still rather limited. For instance, the Elegant\nJoint Measurement (EJM) distribution is a simple and highly-symmetric outcome\ndistribution that can be obtained with quantum systems and measurements in the\ntriangle network. This distribution was conjectured to be non-classical eight\nyears ago. In this article, we provide the first proof of non-classicality of\nthe EJM distribution. To do so, we show how to combine inflation, a causal\ninference technique, with powerful symmetry reductions and Frank-Wolfe\nalgorithms for large-scale optimization. We then use these methods to obtain\ncomputer-assisted proofs of non-classicality in exact arithmetic.",
+      "pdf_url": "http://arxiv.org/pdf/2510.15143v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.15143v1",
+      "published": "2025-10-16",
+      "categories": [
+        "quant-ph"
+      ]
+    },
     {
       "title": "Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models",
       "authors": [
@@ -97,72 +250,6 @@
       "published": "2025-10-15",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Doing Things with Words: Rethinking Theory of Mind Simulation in Large Language Models",
-      "authors": [
-        "Agnese Lombardi",
-        "Alessandro Lenci"
-      ],
-      "abstract": "Language is fundamental to human cooperation, facilitating not only the\nexchange of information but also the coordination of actions through shared\ninterpretations of situational contexts. This study explores whether the\nGenerative Agent-Based Model (GABM) Concordia can effectively model Theory of\nMind (ToM) within simulated real-world environments. Specifically, we assess\nwhether this framework successfully simulates ToM abilities and whether GPT-4\ncan perform tasks by making genuine inferences from social context, rather than\nrelying on linguistic memorization. Our findings reveal a critical limitation:\nGPT-4 frequently fails to select actions based on belief attribution,\nsuggesting that apparent ToM-like abilities observed in previous studies may\nstem from shallow statistical associations rather than true reasoning.\nAdditionally, the model struggles to generate coherent causal effects from\nagent actions, exposing difficulties in processing complex social interactions.\nThese results challenge current statements about emergent ToM-like capabilities\nin LLMs and highlight the need for more rigorous, action-based evaluation\nframeworks.",
-      "pdf_url": "http://arxiv.org/pdf/2510.13395v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.13395v1",
-      "published": "2025-10-15",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Novel Class Discovery for Point Cloud Segmentation via Joint Learning of Causal Representation and Reasoning",
-      "authors": [
-        "Yang Li",
-        "Aming Wu",
-        "Zihao Zhang",
-        "Yahong Han"
-      ],
-      "abstract": "In this paper, we focus on Novel Class Discovery for Point Cloud Segmentation\n(3D-NCD), aiming to learn a model that can segment unlabeled (novel) 3D classes\nusing only the supervision from labeled (base) 3D classes. The key to this task\nis to setup the exact correlations between the point representations and their\nbase class labels, as well as the representation correlations between the\npoints from base and novel classes. A coarse or statistical correlation\nlearning may lead to the confusion in novel class inference. lf we impose a\ncausal relationship as a strong correlated constraint upon the learning\nprocess, the essential point cloud representations that accurately correspond\nto the classes should be uncovered. To this end, we introduce a structural\ncausal model (SCM) to re-formalize the 3D-NCD problem and propose a new method,\ni.e., Joint Learning of Causal Representation and Reasoning. Specifically, we\nfirst analyze hidden confounders in the base class representations and the\ncausal relationships between the base and novel classes through SCM. We devise\na causal representation prototype that eliminates confounders to capture the\ncausal representations of base classes. A graph structure is then used to model\nthe causal relationships between the base classes' causal representation\nprototypes and the novel class prototypes, enabling causal reasoning from base\nto novel classes. Extensive experiments and visualization results on 3D and 2D\nNCD semantic segmentation demonstrate the superiorities of our method.",
-      "pdf_url": "http://arxiv.org/pdf/2510.13307v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.13307v1",
-      "published": "2025-10-15",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "DeepCausalMMM: A Deep Learning Framework for Marketing Mix Modeling with Causal Inference",
-      "authors": [
-        "Aditya Puttaparthi Tirumala"
-      ],
-      "abstract": "Marketing Mix Modeling (MMM) is a statistical technique used to estimate the\nimpact of marketing activities on business outcomes such as sales, revenue, or\ncustomer visits. Traditional MMM approaches often rely on linear regression or\nBayesian hierarchical models that assume independence between marketing\nchannels and struggle to capture complex temporal dynamics and non-linear\nsaturation effects [@Hanssens2005; @Ng2021Bayesian].\n  DeepCausalMMM is a Python package that addresses these limitations by\ncombining deep learning, causal inference, and advanced marketing science. The\npackage uses Gated Recurrent Units (GRUs) to automatically learn temporal\npatterns such as adstock (carryover effects) and lag, while simultaneously\nlearning statistical dependencies and potential causal structures between\nmarketing channels through Directed Acyclic Graph (DAG) learning\n[@Zheng2018NOTEARS; @Gong2024CausalMMM]. Additionally, it implements Hill\nequation-based saturation curves to model diminishing returns and optimize\nbudget allocation.\n  Key innovations include: (1) a data-driven design where hyperparameters and\ntransformations (e.g., adstock decay, saturation curves) are learned or\nestimated from data with sensible defaults, rather than requiring fixed\nheuristics or manual specification, (2) multi-region modeling with both shared\nand region-specific parameters, (3) robust statistical methods including Huber\nloss and advanced regularization, (4) comprehensive response curve analysis for\nunderstanding channel saturation, and (5) an extensive visualization suite with\n14+ interactive dashboards for business insights.",
-      "pdf_url": "http://arxiv.org/pdf/2510.13087v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.13087v1",
-      "published": "2025-10-15",
-      "categories": [
-        "cs.LG",
-        "stat.ME",
-        "stat.ML",
-        "62P20, 62M10, 68T05",
-        "D.2.2; I.2.6; G.3"
-      ]
-    },
-    {
-      "title": "Towards xApp Conflict Evaluation with Explainable Machine Learning and Causal Inference in O-RAN",
-      "authors": [
-        "Pragya Sharma",
-        "Shihua Sun",
-        "Shachi Deshpande",
-        "Angelos Stavrou",
-        "Haining Wang"
-      ],
-      "abstract": "The Open Radio Access Network (O-RAN) architecture enables a flexible,\nvendor-neutral deployment of 5G networks by disaggregating base station\ncomponents and supporting third-party xApps for near real-time RAN control.\nHowever, the concurrent operation of multiple xApps can lead to conflicting\ncontrol actions, which may cause network performance degradation. In this work,\nwe propose a framework for xApp conflict management that combines explainable\nmachine learning and causal inference to evaluate the causal relationships\nbetween RAN Control Parameters (RCPs) and Key Performance Indicators (KPIs). We\nuse model explainability tools such as SHAP to identify RCPs that jointly\naffect the same KPI, signaling potential conflicts, and represent these\ninteractions as a causal Directed Acyclic Graph (DAG). We then estimate the\ncausal impact of each of these RCPs on their associated KPIs using metrics such\nas Average Treatment Effect (ATE) and Conditional Average Treatment Effect\n(CATE). This approach offers network operators guided insights into identifying\nconflicts and quantifying their impacts, enabling more informed and effective\nconflict resolution strategies across diverse xApp deployments.",
-      "pdf_url": "http://arxiv.org/pdf/2510.13031v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.13031v1",
-      "published": "2025-10-14",
-      "categories": [
-        "cs.NI",
-        "cs.SY",
-        "eess.SY"
       ]
     }
   ]
