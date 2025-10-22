@@ -1,255 +1,162 @@
 {
-  "last_updated": "2025-10-21T00:52:29.186316",
+  "last_updated": "2025-10-22T00:53:30.115591",
   "papers": [
     {
-      "title": "Doubly Robust Estimation of Causal Effects in Strategic Equilibrium Systems",
+      "title": "A Principle of Targeted Intervention for Multi-Agent Reinforcement Learning",
       "authors": [
-        "Sibo Xiao"
+        "Anjie Liu",
+        "Jianhong Wang",
+        "Samuel Kaski",
+        "Jun Wang",
+        "Mengyue Yang"
       ],
-      "abstract": "We introduce the Strategic Doubly Robust (SDR) estimator, a novel framework\nthat integrates strategic equilibrium modeling with doubly robust estimation\nfor causal inference in strategic environments. SDR addresses endogenous\ntreatment assignment arising from strategic agent behavior, maintaining double\nrobustness while incorporating strategic considerations. Theoretical analysis\nconfirms SDR's consistency and asymptotic normality under strategic\nunconfoundedness. Empirical evaluations demonstrate SDR's superior performance\nover baseline methods, achieving 7.6\\%-29.3\\% bias reduction across varying\nstrategic strengths and maintaining robust scalability with agent populations.\nThe framework provides a principled approach for reliable causal inference when\nagents respond strategically to interventions.",
-      "pdf_url": "http://arxiv.org/pdf/2510.15555v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.15555v1",
-      "published": "2025-10-17",
+      "abstract": "Steering cooperative multi-agent reinforcement learning (MARL) towards\ndesired outcomes is challenging, particularly when the global guidance from a\nhuman on the whole multi-agent system is impractical in a large-scale MARL. On\nthe other hand, designing mechanisms to coordinate agents most relies on\nempirical studies, lacking a easy-to-use research tool. In this work, we employ\nmulti-agent influence diagrams (MAIDs) as a graphical framework to address the\nabove issues. First, we introduce interaction paradigms that leverage MAIDs to\nanalyze and visualize existing approaches in MARL. Then, we design a new\ninteraction paradigm based on MAIDs, referred to as targeted intervention that\nis applied to only a single targeted agent, so the problem of global guidance\ncan be mitigated. In our implementation, we introduce a causal inference\ntechnique-referred to as Pre-Strategy Intervention (PSI)-to realize the\ntargeted intervention paradigm. Since MAIDs can be regarded as a special class\nof causal diagrams, a composite desired outcome that integrates the primary\ntask goal and an additional desired outcome can be achieved by maximizing the\ncorresponding causal effect through the PSI. Moreover, the bundled relevance\ngraph analysis of MAIDs provides a tool to identify whether an MARL learning\nparadigm is workable under the design of an interaction paradigm. In\nexperiments, we demonstrate the effectiveness of our proposed targeted\nintervention, and verify the result of relevance graph analysis.",
+      "pdf_url": "http://arxiv.org/pdf/2510.17697v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.17697v1",
+      "published": "2025-10-20",
       "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Semantic4Safety: Causal Insights from Zero-shot Street View Imagery Segmentation for Urban Road Safety",
-      "authors": [
-        "Huan Chen",
-        "Ting Han",
-        "Siyu Chen",
-        "Zhihao Guo",
-        "Yiping Chen",
-        "Meiliu Wu"
-      ],
-      "abstract": "Street-view imagery (SVI) offers a fine-grained lens on traffic risk, yet two\nfundamental challenges persist: (1) how to construct street-level indicators\nthat capture accident-related features, and (2) how to quantify their causal\nimpacts across different accident types. To address these challenges, we\npropose Semantic4Safety, a framework that applies zero-shot semantic\nsegmentation to SVIs to derive 11 interpretable streetscape indicators, and\nintegrates road type as contextual information to analyze approximately 30,000\naccident records in Austin. Specifically, we train an eXtreme Gradient Boosting\n(XGBoost) multi-class classifier and use Shapley Additive Explanations (SHAP)\nto interpret both global and local feature contributions, and then apply\nGeneralized Propensity Score (GPS) weighting and Average Treatment Effect (ATE)\nestimation to control confounding and quantify causal effects. Results uncover\nheterogeneous, accident-type-specific causal patterns: features capturing scene\ncomplexity, exposure, and roadway geometry dominate predictive power; larger\ndrivable area and emergency space reduce risk, whereas excessive visual\nopenness can increase it. By bridging predictive modeling with causal\ninference, Semantic4Safety supports targeted interventions and high-risk\ncorridor diagnosis, offering a scalable, data-informed tool for urban road\nsafety planning.",
-      "pdf_url": "http://arxiv.org/pdf/2510.15434v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.15434v1",
-      "published": "2025-10-17",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Reflections from Research Roundtables at the Conference on Health, Inference, and Learning (CHIL) 2025",
-      "authors": [
-        "Emily Alsentzer",
-        "Marie-Laure Charpignon",
-        "Bill Chen",
-        "Niharika D'Souza",
-        "Jason Fries",
-        "Yixing Jiang",
-        "Aparajita Kashyap",
-        "Chanwoo Kim",
-        "Simon Lee",
-        "Aishwarya Mandyam",
-        "Ashery Christopher Mbilinyi",
-        "Nikita Mehandru",
-        "Nitish Nagesh",
-        "Brighton Nuwagira",
-        "Emma Pierson",
-        "Arvind Pillai",
-        "Akane Sano",
-        "Tanveer Syeda-Mahmood",
-        "Shashank Yadav",
-        "Elias Adhanom",
-        "Muhammad Umar Afza",
-        "Amelia Archer",
-        "Suhana Bedi",
-        "Vasiliki Bikia",
-        "Trenton Chang",
-        "George H. Chen",
-        "Winston Chen",
-        "Erica Chiang",
-        "Edward Choi",
-        "Octavia Ciora",
-        "Paz Dozie-Nnamah",
-        "Shaza Elsharief",
-        "Matthew Engelhard",
-        "Ali Eshragh",
-        "Jean Feng",
-        "Josh Fessel",
-        "Scott Fleming",
-        "Kei Sen Fong",
-        "Thomas Frost",
-        "Soham Gadgil",
-        "Judy Gichoya",
-        "Leeor Hershkovich",
-        "Sujeong Im",
-        "Bhavya Jain",
-        "Vincent Jeanselme",
-        "Furong Jia",
-        "Qixuan",
-        "Jin",
-        "Yuxuan Jin",
-        "Daniel Kapash",
-        "Geetika Kapoor",
-        "Behdokht Kiafar",
-        "Matthias Kleiner",
-        "Stefan Kraft",
-        "Annika Kumar",
-        "Daeun Kyung",
-        "Zhongyuan Liang",
-        "Joanna Lin",
-        "Qianchu",
-        "Liu",
-        "Chang Liu",
-        "Hongzhou Luan",
-        "Chris Lunt",
-        "Leopoldo Julían Lechuga López",
-        "Matthew B. A. McDermott",
-        "Shahriar Noroozizadeh",
-        "Connor O'Brien",
-        "YongKyung Oh",
-        "Mixail Ota",
-        "Stephen Pfohl",
-        "Meagan Pi",
-        "Tanmoy Sarkar Pias",
-        "Emma Rocheteau",
-        "Avishaan Sethi",
-        "Toru Shirakawa",
-        "Anita Silver",
-        "Neha Simha",
-        "Kamile Stankeviciute",
-        "Max Sunog",
-        "Peter Szolovits",
-        "Shengpu Tang",
-        "Jialu Tang",
-        "Aaron Tierney",
-        "John Valdovinos",
-        "Byron Wallace",
-        "Will Ke Wang",
-        "Peter Washington",
-        "Jeremy Weiss",
-        "Daniel Wolfe",
-        "Emily Wong",
-        "Hye Sun Yun",
-        "Xiaoman Zhang",
-        "Xiao Yu Cindy Zhang",
-        "Hayoung Jeong",
-        "Kaveri A. Thakoor"
-      ],
-      "abstract": "The 6th Annual Conference on Health, Inference, and Learning (CHIL 2025),\nhosted by the Association for Health Learning and Inference (AHLI), was held in\nperson on June 25-27, 2025, at the University of California, Berkeley, in\nBerkeley, California, USA. As part of this year's program, we hosted Research\nRoundtables to catalyze collaborative, small-group dialogue around critical,\ntimely topics at the intersection of machine learning and healthcare. Each\nroundtable was moderated by a team of senior and junior chairs who fostered\nopen exchange, intellectual curiosity, and inclusive engagement. The sessions\nemphasized rigorous discussion of key challenges, exploration of emerging\nopportunities, and collective ideation toward actionable directions in the\nfield. In total, eight roundtables were held by 19 roundtable chairs on topics\nof \"Explainability, Interpretability, and Transparency,\" \"Uncertainty, Bias,\nand Fairness,\" \"Causality,\" \"Domain Adaptation,\" \"Foundation Models,\" \"Learning\nfrom Small Medical Data,\" \"Multimodal Methods,\" and \"Scalable, Translational\nHealthcare Solutions.\"",
-      "pdf_url": "http://arxiv.org/pdf/2510.15217v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.15217v1",
-      "published": "2025-10-17",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "The Elegant Joint Measurement is Non-Classical in the Triangle Network",
-      "authors": [
-        "Victor Gitton",
-        "Renato Renner"
-      ],
-      "abstract": "When quantum systems are shared by multiple parties in a network, the\nmeasurement outcomes of the parties can exhibit non-classical correlations,\ni.e., correlations that cannot be obtained if the parties shared classical\nsystems instead. This phenomenon is known as quantum nonlocality and is\ntypically demonstrated in the Bell scenario. However, the Bell scenario is\nfundamentally simpler to investigate than general networks, since the latter\ncome with non-convex optimization problems that are often intractable. The\ntriangle network is one of the simplest networks exhibiting this non-convexity\ndue to the presence of three independent sources. Although some special cases\nof quantum nonlocality are known in the triangle network, general methods to\ncertify classical incompatibility are still lacking, which suggests that our\nunderstanding of networks is still rather limited. For instance, the Elegant\nJoint Measurement (EJM) distribution is a simple and highly-symmetric outcome\ndistribution that can be obtained with quantum systems and measurements in the\ntriangle network. This distribution was conjectured to be non-classical eight\nyears ago. In this article, we provide the first proof of non-classicality of\nthe EJM distribution. To do so, we show how to combine inflation, a causal\ninference technique, with powerful symmetry reductions and Frank-Wolfe\nalgorithms for large-scale optimization. We then use these methods to obtain\ncomputer-assisted proofs of non-classicality in exact arithmetic.",
-      "pdf_url": "http://arxiv.org/pdf/2510.15143v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.15143v1",
-      "published": "2025-10-16",
-      "categories": [
-        "quant-ph"
-      ]
-    },
-    {
-      "title": "Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models",
-      "authors": [
-        "Jonas Geiping",
-        "Xinyu Yang",
-        "Guinan Su"
-      ],
-      "abstract": "Language models with recurrent depth, also referred to as universal or looped\nwhen considering transformers, are defined by the capacity to increase their\ncomputation through the repetition of layers. Recent efforts in pretraining\nhave demonstrated that these architectures can scale to modern language\nmodeling tasks while exhibiting advantages in reasoning tasks. In this work, we\nexamine the relationship between recurrent-depth models and diffusion language\nmodels. Building on their similarities, we develop a new diffusion forcing\nsampler for these models to accelerate generation. The sampler advances by\ndecoding new tokens at every forward pass of the model, while the latent states\nof these tokens can be further refined in parallel through recurrence.\nTheoretically, generation with our sampler is strictly more expressive than the\nbaseline autoregressive generation using the same time budget on modern\nhardware. Moreover, this sampler, based on principles from diffusion\nliterature, can be directly applied to existing 3.5B recurrent-depth\ntransformers without any tuning, leading to up to a 5x speedup. Consequently,\nour findings not only provide an efficient mechanism for parallelizing the\nextra computation in recurrent-depth models at inference, but also suggest that\nsuch models can be naturally viewed as strong continuous, though causal,\ndiffusion language models.",
-      "pdf_url": "http://arxiv.org/pdf/2510.14961v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.14961v1",
-      "published": "2025-10-16",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Local Causal Discovery for Statistically Efficient Causal Inference",
-      "authors": [
-        "Mátyás Schubert",
-        "Tom Claassen",
-        "Sara Magliacane"
-      ],
-      "abstract": "Causal discovery methods can identify valid adjustment sets for causal effect\nestimation for a pair of target variables, even when the underlying causal\ngraph is unknown. Global causal discovery methods focus on learning the whole\ncausal graph and therefore enable the recovery of optimal adjustment sets,\ni.e., sets with the lowest asymptotic variance, but they quickly become\ncomputationally prohibitive as the number of variables grows. Local causal\ndiscovery methods offer a more scalable alternative by focusing on the local\nneighborhood of the target variables, but are restricted to statistically\nsuboptimal adjustment sets. In this work, we propose Local Optimal Adjustments\nDiscovery (LOAD), a sound and complete causal discovery approach that combines\nthe computational efficiency of local methods with the statistical optimality\nof global methods. First, LOAD identifies the causal relation between the\ntargets and tests if the causal effect is identifiable by using only local\ninformation. If it is identifiable, it then finds the optimal adjustment set by\nleveraging local causal discovery to infer the mediators and their parents.\nOtherwise, it returns the locally valid parent adjustment sets based on the\nlearned local structure. In our experiments on synthetic and realistic data\nLOAD outperforms global methods in scalability, while providing more accurate\neffect estimation than local methods.",
-      "pdf_url": "http://arxiv.org/pdf/2510.14582v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.14582v1",
-      "published": "2025-10-16",
-      "categories": [
-        "stat.ML",
         "cs.AI",
-        "cs.LG"
+        "cs.LG",
+        "cs.MA",
+        "I.2.11; I.2.6"
       ]
     },
     {
-      "title": "CLEAR: Causal Learning Framework For Robust Histopathology Tumor Detection Under Out-Of-Distribution Shifts",
+      "title": "CausalMamba: Scalable Conditional State Space Models for Neural Causal Inference",
       "authors": [
-        "Kieu-Anh Truong Thi",
-        "Huy-Hieu Pham",
-        "Duc-Trong Le"
+        "Sangyoon Bae",
+        "Jiook Cha"
       ],
-      "abstract": "Domain shift in histopathology, often caused by differences in acquisition\nprocesses or data sources, poses a major challenge to the generalization\nability of deep learning models. Existing methods primarily rely on modeling\nstatistical correlations by aligning feature distributions or introducing\nstatistical variation, yet they often overlook causal relationships. In this\nwork, we propose a novel causal-inference-based framework that leverages\nsemantic features while mitigating the impact of confounders. Our method\nimplements the front-door principle by designing transformation strategies that\nexplicitly incorporate mediators and observed tissue slides. We validate our\nmethod on the CAMELYON17 dataset and a private histopathology dataset,\ndemonstrating consistent performance gains across unseen domains. As a result,\nour approach achieved up to a 7% improvement in both the CAMELYON17 dataset and\nthe private histopathology dataset, outperforming existing baselines. These\nresults highlight the potential of causal inference as a powerful tool for\naddressing domain shift in histopathology image analysis.",
-      "pdf_url": "http://arxiv.org/pdf/2510.14273v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.14273v1",
-      "published": "2025-10-16",
+      "abstract": "We introduce CausalMamba, a scalable framework that addresses fundamental\nlimitations in fMRI-based causal inference: the ill-posed nature of inferring\nneural causality from hemodynamically distorted BOLD signals and the\ncomputational intractability of existing methods like Dynamic Causal Modeling\n(DCM). Our approach decomposes this complex inverse problem into two tractable\nstages: BOLD deconvolution to recover latent neural activity, followed by\ncausal graph inference using a novel Conditional Mamba architecture. On\nsimulated data, CausalMamba achieves 37% higher accuracy than DCM. Critically,\nwhen applied to real task fMRI data, our method recovers well-established\nneural pathways with 88% fidelity, whereas conventional approaches fail to\nidentify these canonical circuits in over 99% of subjects. Furthermore, our\nnetwork analysis of working memory data reveals that the brain strategically\nshifts its primary causal hub-recruiting executive or salience networks\ndepending on the stimulus-a sophisticated reconfiguration that remains\nundetected by traditional methods. This work provides neuroscientists with a\npractical tool for large-scale causal inference that captures both fundamental\ncircuit motifs and flexible network dynamics underlying cognitive function.",
+      "pdf_url": "http://arxiv.org/pdf/2510.17318v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.17318v1",
+      "published": "2025-10-20",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "Exploratory Causal Inference in SAEnce",
+      "title": "LongInsightBench: A Comprehensive Benchmark for Evaluating Omni-Modal Models on Human-Centric Long-Video Understanding",
       "authors": [
-        "Tommaso Mencattini",
-        "Riccardo Cadei",
-        "Francesco Locatello"
+        "ZhaoYang Han",
+        "Qihan Lin",
+        "Hao Liang",
+        "Bowen Chen",
+        "Zhou Liu",
+        "Wentao Zhang"
       ],
-      "abstract": "Randomized Controlled Trials are one of the pillars of science; nevertheless,\nthey rely on hand-crafted hypotheses and expensive analysis. Such constraints\nprevent causal effect estimation at scale, potentially anchoring on popular yet\nincomplete hypotheses. We propose to discover the unknown effects of a\ntreatment directly from data. For this, we turn unstructured data from a trial\ninto meaningful representations via pretrained foundation models and interpret\nthem via a sparse autoencoder. However, discovering significant causal effects\nat the neural level is not trivial due to multiple-testing issues and effects\nentanglement. To address these challenges, we introduce Neural Effect Search, a\nnovel recursive procedure solving both issues by progressive stratification.\nAfter assessing the robustness of our algorithm on semi-synthetic experiments,\nwe showcase, in the context of experimental ecology, the first successful\nunsupervised causal effect identification on a real-world scientific trial.",
-      "pdf_url": "http://arxiv.org/pdf/2510.14073v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.14073v1",
-      "published": "2025-10-15",
+      "abstract": "We introduce \\textbf{LongInsightBench}, the first benchmark designed to\nassess models' ability to understand long videos, with a focus on human\nlanguage, viewpoints, actions, and other contextual elements, while integrating\n\\textbf{visual, audio, and text} modalities. Our benchmark excels in three key\nareas: \\textbf{a) Long-Duration, Information-Dense Videos:} We carefully select\napproximately 1,000 videos from open-source datasets FineVideo based on\nduration limit and the information density of both visual and audio modalities,\nfocusing on content like lectures, interviews, and vlogs, which contain rich\nlanguage elements. \\textbf{b) Diverse and Challenging Task Scenarios:} We have\ndesigned six challenging task scenarios, including both Intra-Event and\nInter-Event Tasks. \\textbf{c) Rigorous and Comprehensive Quality Assurance\nPipelines:} We have developed a three-step, semi-automated data quality\nassurance pipeline to ensure the difficulty and validity of the synthesized\nquestions and answer options. Based on LongInsightBench, we designed a series\nof experiments. Experimental results shows that Omni-modal models(OLMs) still\nface challenge in tasks requiring precise temporal localization (T-Loc) and\nlong-range causal inference (CE-Caus). Extended experiments reveal the\ninformation loss and processing bias in multi-modal fusion of OLMs. Our dataset\nand code is available at\nhttps://anonymous.4open.science/r/LongInsightBench-910F/.",
+      "pdf_url": "http://arxiv.org/pdf/2510.17305v2",
+      "arxiv_url": "http://arxiv.org/abs/2510.17305v2",
+      "published": "2025-10-20",
       "categories": [
-        "cs.LG",
-        "cs.AI"
+        "cs.CV",
+        "cs.MM"
       ]
     },
     {
-      "title": "Joint modeling and inference of multiple-subject high-dimensional sparse vector autoregressive models",
+      "title": "Discovering Causal Relationships using Proxy Variables under Unmeasured Confounding",
       "authors": [
-        "Younghoon Kim",
-        "Zachary F. Fisher",
-        "Vladas Pipiras"
+        "Yong Wu",
+        "Yanwei Fu",
+        "Shouyan Wang",
+        "Yizhou Wang",
+        "Xinwei Sun"
       ],
-      "abstract": "The multiple-subject vector autoregression (multi-VAR) model captures\nheterogeneous network Granger causality across subjects by decomposing\nindividual sparse VAR transition matrices into commonly shared and\nsubject-unique paths. The model has been applied to characterize hidden shared\nand unique paths among subjects and has demonstrated performance compared to\nmethods commonly used in psychology and neuroscience. Despite this innovation,\nthe model suffers from using a weighted median for identifying the common\neffects, leading to statistical inefficiency as the convergence rates of the\ncommon and unique paths are determined by the least sparse subject and the\nsmallest sample size across all subjects. We propose a new identifiability\ncondition for the multi-VAR model based on a communication-efficient data\nintegration framework. We show that this approach achieves convergence rates\ntailored to each subject's sparsity level and sample size. Furthermore, we\ndevelop hypothesis tests to assess the nullity and homogeneity of individual\npaths, using Wald-type test statistics constructed from individual debiased\nestimators. A test for the significance of the common paths can also be derived\nthrough the framework. Simulation studies under various heterogeneity scenarios\nand a real data application demonstrate the performance of the proposed method\ncompared to existing benchmark across standard evaluation metrics.",
-      "pdf_url": "http://arxiv.org/pdf/2510.14044v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.14044v1",
-      "published": "2025-10-15",
+      "abstract": "Inferring causal relationships between variable pairs in the observational\nstudy is crucial but challenging, due to the presence of unmeasured\nconfounding. While previous methods employed the negative controls to adjust\nfor the confounding bias, they were either restricted to the discrete setting\n(i.e., all variables are discrete) or relied on strong assumptions for\nidentification. To address these problems, we develop a general nonparametric\napproach that accommodates both discrete and continuous settings for testing\ncausal hypothesis under unmeasured confounders. By using only a single negative\ncontrol outcome (NCO), we establish a new identification result based on a\nnewly proposed integral equation that links the outcome and NCO, requiring only\nthe completeness and mild regularity conditions. We then propose a kernel-based\ntesting procedure that is more efficient than existing moment-restriction\nmethods. We derive the asymptotic level and power properties for our tests.\nFurthermore, we examine cases where our procedure using only NCO fails to\nachieve identification, and introduce a new procedure that incorporates a\nnegative control exposure (NCE) to restore identifiability. We demonstrate the\neffectiveness of our approach through extensive simulations and real-world data\nfrom the Intensive Care Data and World Values Survey.",
+      "pdf_url": "http://arxiv.org/pdf/2510.17167v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.17167v1",
+      "published": "2025-10-20",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Diverse Influence Component Analysis: A Geometric Approach to Nonlinear Mixture Identifiability",
+      "authors": [
+        "Hoang-Son Nguyen",
+        "Xiao Fu"
+      ],
+      "abstract": "Latent component identification from unknown nonlinear mixtures is a\nfoundational challenge in machine learning, with applications in tasks such as\ndisentangled representation learning and causal inference. Prior work in\nnonlinear independent component analysis (nICA) has shown that auxiliary\nsignals -- such as weak supervision -- can support identifiability of\nconditionally independent latent components. More recent approaches explore\nstructural assumptions, e.g., sparsity in the Jacobian of the mixing function,\nto relax such requirements. In this work, we introduce Diverse Influence\nComponent Analysis (DICA), a framework that exploits the convex geometry of the\nmixing function's Jacobian. We propose a Jacobian Volume Maximization\n(J-VolMax) criterion, which enables latent component identification by\nencouraging diversity in their influence on the observed variables. Under\nreasonable conditions, this approach achieves identifiability without relying\non auxiliary information, latent component independence, or Jacobian sparsity\nassumptions. These results extend the scope of identifiability analysis and\noffer a complementary perspective to existing methods.",
+      "pdf_url": "http://arxiv.org/pdf/2510.17040v2",
+      "arxiv_url": "http://arxiv.org/abs/2510.17040v2",
+      "published": "2025-10-19",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Where, Not What: Compelling Video LLMs to Learn Geometric Causality for 3D-Grounding",
+      "authors": [
+        "Yutong Zhong"
+      ],
+      "abstract": "Multimodal 3D grounding has garnered considerable interest in Vision-Language\nModels (VLMs) \\cite{yin2025spatial} for advancing spatial reasoning in complex\nenvironments. However, these models suffer from a severe \"2D semantic bias\"\nthat arises from over-reliance on 2D image features for coarse localization,\nlargely disregarding 3D geometric inputs and resulting in suboptimal fusion\nperformance. In this paper, we propose a novel training framework called\nWhat-Where Representation Re-Forming (W2R2) to tackle this issue via\ndisentangled representation learning and targeted shortcut suppression. Our\napproach fundamentally reshapes the model's internal space by designating 2D\nfeatures as semantic beacons for \"What\" identification and 3D features as\nspatial anchors for \"Where\" localization, enabling precise 3D grounding without\nmodifying inference architecture. Key components include a dual-objective loss\nfunction with an Alignment Loss that supervises fused predictions using adapted\ncross-entropy for multimodal synergy, and a Pseudo-Label Loss that penalizes\noverly effective 2D-dominant pseudo-outputs via a margin-based mechanism.\nExperiments conducted on ScanRefer and ScanQA demonstrate the effectiveness of\nW2R2, with significant gains in localization accuracy and robustness,\nparticularly in cluttered outdoor scenes.",
+      "pdf_url": "http://arxiv.org/pdf/2510.17034v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.17034v1",
+      "published": "2025-10-19",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Towards Real-Time Generative Speech Restoration with Flow-Matching",
+      "authors": [
+        "Tsun-An Hsieh",
+        "Sebastian Braun"
+      ],
+      "abstract": "Generative models have shown robust performance on speech enhancement and\nrestoration tasks, but most prior approaches operate offline with high latency,\nmaking them unsuitable for streaming applications. In this work, we investigate\nthe feasibility of a low-latency, real-time generative speech restoration\nsystem based on flow-matching (FM). Our method tackles diverse real-world\ntasks, including denoising, dereverberation, and generative restoration. The\nproposed causal architecture without time-downsampling achieves introduces an\ntotal latency of only 20 ms, suitable for real-time communication. In addition,\nwe explore a broad set of architectural variations and sampling strategies to\nensure effective training and efficient inference. Notably, our flow-matching\nmodel maintains high enhancement quality with only 5 number of function\nevaluations (NFEs) during sampling, achieving similar performance as when using\n~20 NFEs under the same conditions. Experimental results indicate that causal\nFM-based models favor few-step reverse sampling, and smaller backbones degrade\nwith longer reverse trajectories. We further show a side-by-side comparison of\nFM to typical adversarial-loss-based training for the same model architecture.",
+      "pdf_url": "http://arxiv.org/pdf/2510.16997v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.16997v1",
+      "published": "2025-10-19",
+      "categories": [
+        "eess.AS"
+      ]
+    },
+    {
+      "title": "Causal Variance Decompositions for Measuring Health Inequalities",
+      "authors": [
+        "Lin Yu",
+        "Zhihui Liu",
+        "Kathy Han",
+        "Olli Saarela"
+      ],
+      "abstract": "Recent causal inference literature has introduced causal effect\ndecompositions to quantify sources of observed inequalities or disparities in\noutcomes but usually limiting this to pairwise comparisons. In the context of\nhospital profiling, comparison of hospital performance may reveal inequalities\nin healthcare delivery between sociodemographic groups, which may be explained\nby access/selection or actual effect modification. We consider the case of\npolytomous exposures in hospital profiling where the comparison is often to the\nsystem wide average performance, and decompose the observed variance in care\ndelivery as the quantity of interest. For this, we formulate a new eight-way\ncausal variance decomposition where we attribute the observed variation to\ncomponents describing the main effects of hospital and group membership,\nmodification of the hospital effect by group membership, hospital\naccess/selection, effect of case-mix covariates and residual variance. We\ndiscuss the causal interpretation of the components, formulate parametric and\nnonparametric model based estimators and study the properties of these\nestimators through simulation. Finally, we illustrate our method by an example\nof cancer care delivery using data from the SEER database.",
+      "pdf_url": "http://arxiv.org/pdf/2510.16975v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.16975v1",
+      "published": "2025-10-19",
       "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "Do Large Language Models Show Biases in Causal Learning? Insights from Contingency Judgment",
+      "title": "Causal inference for calibrated scaling interventions on time-to-event processes",
       "authors": [
-        "María Victoria Carro",
-        "Denise Alejandra Mester",
-        "Francisca Gauna Selasco",
-        "Giovanni Franco Gabriel Marraffini",
-        "Mario Alejandro Leiva",
-        "Gerardo I. Simari",
-        "María Vanina Martinez"
+        "Helene Charlotte Wiese Rytgaard",
+        "Mark van der Laan"
       ],
-      "abstract": "Causal learning is the cognitive process of developing the capability of\nmaking causal inferences based on available information, often guided by\nnormative principles. This process is prone to errors and biases, such as the\nillusion of causality, in which people perceive a causal relationship between\ntwo variables despite lacking supporting evidence. This cognitive bias has been\nproposed to underlie many societal problems, including social prejudice,\nstereotype formation, misinformation, and superstitious thinking. In this work,\nwe examine whether large language models are prone to developing causal\nillusions when faced with a classic cognitive science paradigm: the contingency\njudgment task. To investigate this, we constructed a dataset of 1,000 null\ncontingency scenarios (in which the available information is not sufficient to\nestablish a causal relationship between variables) within medical contexts and\nprompted LLMs to evaluate the effectiveness of potential causes. Our findings\nshow that all evaluated models systematically inferred unwarranted causal\nrelationships, revealing a strong susceptibility to the illusion of causality.\nWhile there is ongoing debate about whether LLMs genuinely understand causality\nor merely reproduce causal language without true comprehension, our findings\nsupport the latter hypothesis and raise concerns about the use of language\nmodels in domains where accurate causal reasoning is essential for informed\ndecision-making.",
-      "pdf_url": "http://arxiv.org/pdf/2510.13985v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.13985v1",
-      "published": "2025-10-15",
+      "abstract": "This work studies stochastic interventions in continuous-time event-history\nsettings formulated as multiplicative scalings of the observed intensity\ngoverning an intermediate event process. This gives rise to a family of causal\nestimands indexed by a scalar parameter {\\alpha}, which changes the event rate\nwhile preserving the temporal and covariate structure of the data-generating\nprocess. We introduce calibrated interventions, where \\(\\alpha\\) is chosen to\nachieve a pre-specified goal, such as a desired level of cumulative risk of the\nintermediate event, and define corresponding composite target parameters\ncapturing the resulting effects on the outcome process. Our proposal enables\npractical yet statistically principled intervention analysis in survival and\nlongitudinal settings, which offers a flexible alternative to deterministic or\nstatic interventions that are often ill-defined. The framework applies broadly\nto causal questions involving time-to-event treatments or mediators, and offers\na pragmatic analogue to indirect/direct effect decompositions. We present the\nefficient influence curves for various versions of target parameters under a\nnonparametric statistical model, discuss their double robustness properties,\nand propose an estimation procedure based on targeted maximum likelihood\nestimation (TMLE). The proposed estimands are illustrated through examples of\nevent-history scenarios addressing distinct causal questions.",
+      "pdf_url": "http://arxiv.org/pdf/2510.16798v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.16798v1",
+      "published": "2025-10-19",
       "categories": [
-        "cs.AI"
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Local Overidentification and Efficiency Gains in Modern Causal Inference and Data Combination",
+      "authors": [
+        "Xiaohong Chen",
+        "Haitian Xie"
+      ],
+      "abstract": "This paper studies nonparametric local (over-)identification, in the sense of\nChen and Santos (2018), and the associated semiparametric efficiency in modern\ncausal frameworks. We develop a unified approach that begins by translating\nstructural models with latent variables into their induced statistical models\nof observables and then analyzes local overidentification through conditional\nmoment restrictions. We apply this approach to three leading models: (i) the\ngeneral treatment model under unconfoundedness, (ii) the negative control\nmodel, and (iii) the long-term causal inference model under unobserved\nconfounding. The first design yields a locally just-identified statistical\nmodel, implying that all regular asymptotically linear estimators of the\ntreatment effect share the same asymptotic variance, equal to the (trivial)\nsemiparametric efficiency bound. In contrast, the latter two models involve\nnonparametric endogeneity and are naturally locally overidentified;\nconsequently, some doubly robust orthogonal moment estimators of the average\ntreatment effect are inefficient. Whereas existing work typically imposes\nstrong conditions to restore just-identification before deriving the efficiency\nbound, we relax such assumptions and characterize the general efficiency bound,\nalong with efficient estimators, in the overidentified models (ii) and (iii).",
+      "pdf_url": "http://arxiv.org/pdf/2510.16683v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.16683v1",
+      "published": "2025-10-19",
+      "categories": [
+        "econ.EM"
       ]
     }
   ]
