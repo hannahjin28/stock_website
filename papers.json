@@ -1,6 +1,145 @@
 {
-  "last_updated": "2025-10-22T00:53:30.115591",
+  "last_updated": "2025-10-23T00:52:02.382394",
   "papers": [
+    {
+      "title": "A Hybrid Enumeration Framework for Optimal Counterfactual Generation in Post-Acute COVID-19 Heart Failure",
+      "authors": [
+        "Jingya Cheng",
+        "Alaleh Azhir",
+        "Jiazi Tian",
+        "Hossein Estiri"
+      ],
+      "abstract": "Counterfactual inference provides a mathematical framework for reasoning\nabout hypothetical outcomes under alternative interventions, bridging causal\nreasoning and predictive modeling. We present a counterfactual inference\nframework for individualized risk estimation and intervention analysis,\nillustrated through a clinical application to post-acute sequelae of COVID-19\n(PASC) among patients with pre-existing heart failure (HF). Using longitudinal\ndiagnosis, laboratory, and medication data from a large health-system cohort,\nwe integrate regularized predictive modeling with counterfactual search to\nidentify actionable pathways to PASC-related HF hospital admissions. The\nframework combines exact enumeration with optimization-based methods, including\nthe Nearest Instance Counterfactual Explanations (NICE) and Multi-Objective\nCounterfactuals (MOC) algorithms, to efficiently explore high-dimensional\nintervention spaces. Applied to more than 2700 individuals with confirmed\nSARS-CoV-2 infection and prior HF, the model achieved strong discriminative\nperformance (AUROC: 0.88, 95% CI: 0.84-0.91) and generated interpretable,\npatient-specific counterfactuals that quantify how modifying comorbidity\npatterns or treatment factors could alter predicted outcomes. This work\ndemonstrates how counterfactual reasoning can be formalized as an optimization\nproblem over predictive functions, offering a rigorous, interpretable, and\ncomputationally efficient approach to personalized inference in complex\nbiomedical systems.",
+      "pdf_url": "http://arxiv.org/pdf/2510.18841v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.18841v1",
+      "published": "2025-10-21",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Improving the Generation and Evaluation of Synthetic Data for Downstream Medical Causal Inference",
+      "authors": [
+        "Harry Amad",
+        "Zhaozhi Qian",
+        "Dennis Frauen",
+        "Julianna Piskorz",
+        "Stefan Feuerriegel",
+        "Mihaela van der Schaar"
+      ],
+      "abstract": "Causal inference is essential for developing and evaluating medical\ninterventions, yet real-world medical datasets are often difficult to access\ndue to regulatory barriers. This makes synthetic data a potentially valuable\nasset that enables these medical analyses, along with the development of new\ninference methods themselves. Generative models can produce synthetic data that\nclosely approximate real data distributions, yet existing methods do not\nconsider the unique challenges that downstream causal inference tasks, and\nspecifically those focused on treatments, pose. We establish a set of\ndesiderata that synthetic data containing treatments should satisfy to maximise\ndownstream utility: preservation of (i) the covariate distribution, (ii) the\ntreatment assignment mechanism, and (iii) the outcome generation mechanism.\nBased on these desiderata, we propose a set of evaluation metrics to assess\nsuch synthetic data. Finally, we present STEAM: a novel method for generating\nSynthetic data for Treatment Effect Analysis in Medicine that mimics the\ndata-generating process of data containing treatments and optimises for our\ndesiderata. We empirically demonstrate that STEAM achieves state-of-the-art\nperformance across our metrics as compared to existing generative models,\nparticularly as the complexity of the true data-generating process increases.",
+      "pdf_url": "http://arxiv.org/pdf/2510.18768v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.18768v1",
+      "published": "2025-10-21",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causally Perturbed Fairness Testing",
+      "authors": [
+        "Chengwen Du",
+        "Tao Chen"
+      ],
+      "abstract": "To mitigate unfair and unethical discrimination over sensitive features\n(e.g., gender, age, or race), fairness testing plays an integral role in\nengineering systems that leverage AI models to handle tabular data. A key\nchallenge therein is how to effectively reveal fairness bugs under an\nintractable sample size using perturbation. Much current work has been focusing\non designing the test sample generators, ignoring the valuable knowledge about\ndata characteristics that can help guide the perturbation and hence limiting\ntheir full potential. In this paper, we seek to bridge such a gap by proposing\na generic framework of causally perturbed fairness testing, dubbed CausalFT.\nThrough causal inference, the key idea of CausalFT is to extract the most\ndirectly and causally relevant non-sensitive feature to its sensitive\ncounterpart, which can jointly influence the prediction of the label. Such a\ncausal relationship is then seamlessly injected into the perturbation to guide\na test sample generator. Unlike existing generator-level work, CausalFT serves\nas a higher-level framework that can be paired with diverse base generators.\nExtensive experiments on 1296 cases confirm that CausalFT can considerably\nimprove arbitrary base generators in revealing fairness bugs over 93% of the\ncases with acceptable extra runtime overhead. Compared with a state-of-the-art\napproach that ranks the non-sensitive features solely based on correlation,\nCausalFT performs significantly better on 64% cases while being much more\nefficient. Further, CausalFT can better improve bias resilience in nearly all\ncases.",
+      "pdf_url": "http://arxiv.org/pdf/2510.18719v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.18719v1",
+      "published": "2025-10-21",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "C-SWAP: Explainability-Aware Structured Pruning for Efficient Neural Networks Compression",
+      "authors": [
+        "Baptiste Bauvin",
+        "Loïc Baret",
+        "Ola Ahmad"
+      ],
+      "abstract": "Neural network compression has gained increasing attention in recent years,\nparticularly in computer vision applications, where the need for model\nreduction is crucial for overcoming deployment constraints. Pruning is a widely\nused technique that prompts sparsity in model structures, e.g. weights,\nneurons, and layers, reducing size and inference costs. Structured pruning is\nespecially important as it allows for the removal of entire structures, which\nfurther accelerates inference time and reduces memory overhead. However, it can\nbe computationally expensive, requiring iterative retraining and optimization.\nTo overcome this problem, recent methods considered one-shot setting, which\napplies pruning directly at post-training. Unfortunately, they often lead to a\nconsiderable drop in performance. In this paper, we focus on this issue by\nproposing a novel one-shot pruning framework that relies on explainable deep\nlearning. First, we introduce a causal-aware pruning approach that leverages\ncause-effect relations between model predictions and structures in a\nprogressive pruning process. It allows us to efficiently reduce the size of the\nnetwork, ensuring that the removed structures do not deter the performance of\nthe model. Then, through experiments conducted on convolution neural network\nand vision transformer baselines, pre-trained on classification tasks, we\ndemonstrate that our method consistently achieves substantial reductions in\nmodel size, with minimal impact on performance, and without the need for\nfine-tuning. Overall, our approach outperforms its counterparts, offering the\nbest trade-off. Our code is available on GitHub.",
+      "pdf_url": "http://arxiv.org/pdf/2510.18636v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.18636v1",
+      "published": "2025-10-21",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "A Multi-Evidence Framework Rescues Low-Power Prognostic Signals and Rejects Statistical Artifacts in Cancer Genomics",
+      "authors": [
+        "Gokturk Aytug Akarlar"
+      ],
+      "abstract": "Motivation: Standard genome-wide association studies in cancer genomics rely\non statistical significance with multiple testing correction, but\nsystematically fail in underpowered cohorts. In TCGA breast cancer (n=967, 133\ndeaths), low event rates (13.8%) create severe power limitations, producing\nfalse negatives for known drivers and false positives for large passenger\ngenes. Results: We developed a five-criteria computational framework\nintegrating causal inference (inverse probability weighting, doubly robust\nestimation) with orthogonal biological validation (expression, mutation\npatterns, literature evidence). Applied to TCGA-BRCA mortality analysis,\nstandard Cox+FDR detected zero genes at FDR<0.05, confirming complete failure\nin underpowered settings. Our framework correctly identified RYR2 -- a cardiac\ngene with no cancer function -- as a false positive despite nominal\nsignificance (p=0.024), while identifying KMT2C as a complex candidate\nrequiring validation despite marginal significance (p=0.047, q=0.954). Power\nanalysis revealed median power of 15.1% across genes, with KMT2C achieving only\n29.8% power (HR=1.55), explaining borderline statistical significance despite\nstrong biological evidence. The framework distinguished true signals from\nartifacts through mutation pattern analysis: RYR2 showed 29.8% silent mutations\n(passenger signature) with no hotspots, while KMT2C showed 6.7% silent\nmutations with 31.4% truncating variants (driver signature). This\nmulti-evidence approach provides a template for analyzing underpowered cohorts,\nprioritizing biological interpretability over purely statistical significance.\n  Availability: All code and analysis pipelines available at\ngithub.com/akarlaraytu/causal-inference-for-cancer-genomics",
+      "pdf_url": "http://arxiv.org/pdf/2510.18571v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.18571v1",
+      "published": "2025-10-21",
+      "categories": [
+        "q-bio.GN",
+        "cs.LG",
+        "92B15, 62P10, 62F10, 62H17",
+        "J.3; I.2.6; G.3"
+      ]
+    },
+    {
+      "title": "Towards Identifiability of Hierarchical Temporal Causal Representation Learning",
+      "authors": [
+        "Zijian Li",
+        "Minghao Fu",
+        "Junxian Huang",
+        "Yifan Shen",
+        "Ruichu Cai",
+        "Yuewen Sun",
+        "Guangyi Chen",
+        "Kun Zhang"
+      ],
+      "abstract": "Modeling hierarchical latent dynamics behind time series data is critical for\ncapturing temporal dependencies across multiple levels of abstraction in\nreal-world tasks. However, existing temporal causal representation learning\nmethods fail to capture such dynamics, as they fail to recover the joint\ndistribution of hierarchical latent variables from \\textit{single-timestep\nobserved variables}. Interestingly, we find that the joint distribution of\nhierarchical latent variables can be uniquely determined using three\nconditionally independent observations. Building on this insight, we propose a\nCausally Hierarchical Latent Dynamic (CHiLD) identification framework. Our\napproach first employs temporal contextual observed variables to identify the\njoint distribution of multi-layer latent variables. Sequentially, we exploit\nthe natural sparsity of the hierarchical structure among latent variables to\nidentify latent variables within each layer. Guided by the theoretical results,\nwe develop a time series generative model grounded in variational inference.\nThis model incorporates a contextual encoder to reconstruct multi-layer latent\nvariables and normalize flow-based hierarchical prior networks to impose the\nindependent noise condition of hierarchical latent dynamics. Empirical\nevaluations on both synthetic and real-world datasets validate our theoretical\nclaims and demonstrate the effectiveness of CHiLD in modeling hierarchical\nlatent dynamics.",
+      "pdf_url": "http://arxiv.org/pdf/2510.18310v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.18310v1",
+      "published": "2025-10-21",
+      "categories": [
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Online Time Series Forecasting with Theoretical Guarantees",
+      "authors": [
+        "Zijian Li",
+        "Changze Zhou",
+        "Minghao Fu",
+        "Sanjay Manjunath",
+        "Fan Feng",
+        "Guangyi Chen",
+        "Yingyao Hu",
+        "Ruichu Cai",
+        "Kun Zhang"
+      ],
+      "abstract": "This paper is concerned with online time series forecasting, where unknown\ndistribution shifts occur over time, i.e., latent variables influence the\nmapping from historical to future observations. To develop an automated way of\nonline time series forecasting, we propose a Theoretical framework for Online\nTime-series forecasting (TOT in short) with theoretical guarantees.\nSpecifically, we prove that supplying a forecaster with latent variables\ntightens the Bayes risk, the benefit endures under estimation uncertainty of\nlatent variables and grows as the latent variables achieve a more precise\nidentifiability. To better introduce latent variables into online forecasting\nalgorithms, we further propose to identify latent variables with minimal\nadjacent observations. Based on these results, we devise a model-agnostic\nblueprint by employing a temporal decoder to match the distribution of observed\nvariables and two independent noise estimators to model the causal inference of\nlatent variables and mixing procedures of observed variables, respectively.\nExperiment results on synthetic data support our theoretical claims. Moreover,\nplug-in implementations built on several baselines yield general improvement\nacross multiple benchmarks, highlighting the effectiveness in real-world\napplications.",
+      "pdf_url": "http://arxiv.org/pdf/2510.18281v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.18281v1",
+      "published": "2025-10-21",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Intuitionistic $j$-Do-Calculus in Topos Causal Models",
+      "authors": [
+        "Sridhar Mahadevan"
+      ],
+      "abstract": "In this paper, we generalize Pearl's do-calculus to an Intuitionistic setting\ncalled $j$-stable causal inference inside a topos of sheaves. Our framework is\nan elaboration of the recently proposed framework of Topos Causal Models\n(TCMs), where causal interventions are defined as subobjects. We generalize the\noriginal setting of TCM using the Lawvere-Tierney topology on a topos, defined\nby a modal operator $j$ on the subobject classifier $\\Omega$. We introduce\n$j$-do-calculus, where we replace global truth with local truth defined by\nKripke-Joyal semantics, and formalize causal reasoning as structure-preserving\nmorphisms that are stable along $j$-covers. $j$-do-calculus is a sound rule\nsystem whose premises and conclusions are formulas of the internal\nIntuitionistic logic of the causal topos. We define $j$-stability for\nconditional independences and interventional claims as local truth in the\ninternal logic of the causal topos. We give three inference rules that mirror\nPearl's insertion/deletion and action/observation exchange, and we prove\nsoundness in the Kripke-Joyal semantics. A companion paper in preparation will\ndescribe how to estimate the required entities from data and instantiate $j$-do\nwith standard discovery procedures (e.g., score-based and constraint-based\nmethods), and will include experimental results on how to (i) form data-driven\n$j$-covers (via regime/section constructions), (ii) compute chartwise\nconditional independences after graph surgeries, and (iii) glue them to certify\nthe premises of the $j$-do rules in practice",
+      "pdf_url": "http://arxiv.org/pdf/2510.17944v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.17944v1",
+      "published": "2025-10-20",
+      "categories": [
+        "cs.LO",
+        "cs.AI"
+      ]
+    },
     {
       "title": "A Principle of Targeted Intervention for Multi-Agent Reinforcement Learning",
       "authors": [
@@ -33,130 +172,6 @@
       "published": "2025-10-20",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "LongInsightBench: A Comprehensive Benchmark for Evaluating Omni-Modal Models on Human-Centric Long-Video Understanding",
-      "authors": [
-        "ZhaoYang Han",
-        "Qihan Lin",
-        "Hao Liang",
-        "Bowen Chen",
-        "Zhou Liu",
-        "Wentao Zhang"
-      ],
-      "abstract": "We introduce \\textbf{LongInsightBench}, the first benchmark designed to\nassess models' ability to understand long videos, with a focus on human\nlanguage, viewpoints, actions, and other contextual elements, while integrating\n\\textbf{visual, audio, and text} modalities. Our benchmark excels in three key\nareas: \\textbf{a) Long-Duration, Information-Dense Videos:} We carefully select\napproximately 1,000 videos from open-source datasets FineVideo based on\nduration limit and the information density of both visual and audio modalities,\nfocusing on content like lectures, interviews, and vlogs, which contain rich\nlanguage elements. \\textbf{b) Diverse and Challenging Task Scenarios:} We have\ndesigned six challenging task scenarios, including both Intra-Event and\nInter-Event Tasks. \\textbf{c) Rigorous and Comprehensive Quality Assurance\nPipelines:} We have developed a three-step, semi-automated data quality\nassurance pipeline to ensure the difficulty and validity of the synthesized\nquestions and answer options. Based on LongInsightBench, we designed a series\nof experiments. Experimental results shows that Omni-modal models(OLMs) still\nface challenge in tasks requiring precise temporal localization (T-Loc) and\nlong-range causal inference (CE-Caus). Extended experiments reveal the\ninformation loss and processing bias in multi-modal fusion of OLMs. Our dataset\nand code is available at\nhttps://anonymous.4open.science/r/LongInsightBench-910F/.",
-      "pdf_url": "http://arxiv.org/pdf/2510.17305v2",
-      "arxiv_url": "http://arxiv.org/abs/2510.17305v2",
-      "published": "2025-10-20",
-      "categories": [
-        "cs.CV",
-        "cs.MM"
-      ]
-    },
-    {
-      "title": "Discovering Causal Relationships using Proxy Variables under Unmeasured Confounding",
-      "authors": [
-        "Yong Wu",
-        "Yanwei Fu",
-        "Shouyan Wang",
-        "Yizhou Wang",
-        "Xinwei Sun"
-      ],
-      "abstract": "Inferring causal relationships between variable pairs in the observational\nstudy is crucial but challenging, due to the presence of unmeasured\nconfounding. While previous methods employed the negative controls to adjust\nfor the confounding bias, they were either restricted to the discrete setting\n(i.e., all variables are discrete) or relied on strong assumptions for\nidentification. To address these problems, we develop a general nonparametric\napproach that accommodates both discrete and continuous settings for testing\ncausal hypothesis under unmeasured confounders. By using only a single negative\ncontrol outcome (NCO), we establish a new identification result based on a\nnewly proposed integral equation that links the outcome and NCO, requiring only\nthe completeness and mild regularity conditions. We then propose a kernel-based\ntesting procedure that is more efficient than existing moment-restriction\nmethods. We derive the asymptotic level and power properties for our tests.\nFurthermore, we examine cases where our procedure using only NCO fails to\nachieve identification, and introduce a new procedure that incorporates a\nnegative control exposure (NCE) to restore identifiability. We demonstrate the\neffectiveness of our approach through extensive simulations and real-world data\nfrom the Intensive Care Data and World Values Survey.",
-      "pdf_url": "http://arxiv.org/pdf/2510.17167v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.17167v1",
-      "published": "2025-10-20",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.ML",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Diverse Influence Component Analysis: A Geometric Approach to Nonlinear Mixture Identifiability",
-      "authors": [
-        "Hoang-Son Nguyen",
-        "Xiao Fu"
-      ],
-      "abstract": "Latent component identification from unknown nonlinear mixtures is a\nfoundational challenge in machine learning, with applications in tasks such as\ndisentangled representation learning and causal inference. Prior work in\nnonlinear independent component analysis (nICA) has shown that auxiliary\nsignals -- such as weak supervision -- can support identifiability of\nconditionally independent latent components. More recent approaches explore\nstructural assumptions, e.g., sparsity in the Jacobian of the mixing function,\nto relax such requirements. In this work, we introduce Diverse Influence\nComponent Analysis (DICA), a framework that exploits the convex geometry of the\nmixing function's Jacobian. We propose a Jacobian Volume Maximization\n(J-VolMax) criterion, which enables latent component identification by\nencouraging diversity in their influence on the observed variables. Under\nreasonable conditions, this approach achieves identifiability without relying\non auxiliary information, latent component independence, or Jacobian sparsity\nassumptions. These results extend the scope of identifiability analysis and\noffer a complementary perspective to existing methods.",
-      "pdf_url": "http://arxiv.org/pdf/2510.17040v2",
-      "arxiv_url": "http://arxiv.org/abs/2510.17040v2",
-      "published": "2025-10-19",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Where, Not What: Compelling Video LLMs to Learn Geometric Causality for 3D-Grounding",
-      "authors": [
-        "Yutong Zhong"
-      ],
-      "abstract": "Multimodal 3D grounding has garnered considerable interest in Vision-Language\nModels (VLMs) \\cite{yin2025spatial} for advancing spatial reasoning in complex\nenvironments. However, these models suffer from a severe \"2D semantic bias\"\nthat arises from over-reliance on 2D image features for coarse localization,\nlargely disregarding 3D geometric inputs and resulting in suboptimal fusion\nperformance. In this paper, we propose a novel training framework called\nWhat-Where Representation Re-Forming (W2R2) to tackle this issue via\ndisentangled representation learning and targeted shortcut suppression. Our\napproach fundamentally reshapes the model's internal space by designating 2D\nfeatures as semantic beacons for \"What\" identification and 3D features as\nspatial anchors for \"Where\" localization, enabling precise 3D grounding without\nmodifying inference architecture. Key components include a dual-objective loss\nfunction with an Alignment Loss that supervises fused predictions using adapted\ncross-entropy for multimodal synergy, and a Pseudo-Label Loss that penalizes\noverly effective 2D-dominant pseudo-outputs via a margin-based mechanism.\nExperiments conducted on ScanRefer and ScanQA demonstrate the effectiveness of\nW2R2, with significant gains in localization accuracy and robustness,\nparticularly in cluttered outdoor scenes.",
-      "pdf_url": "http://arxiv.org/pdf/2510.17034v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.17034v1",
-      "published": "2025-10-19",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Towards Real-Time Generative Speech Restoration with Flow-Matching",
-      "authors": [
-        "Tsun-An Hsieh",
-        "Sebastian Braun"
-      ],
-      "abstract": "Generative models have shown robust performance on speech enhancement and\nrestoration tasks, but most prior approaches operate offline with high latency,\nmaking them unsuitable for streaming applications. In this work, we investigate\nthe feasibility of a low-latency, real-time generative speech restoration\nsystem based on flow-matching (FM). Our method tackles diverse real-world\ntasks, including denoising, dereverberation, and generative restoration. The\nproposed causal architecture without time-downsampling achieves introduces an\ntotal latency of only 20 ms, suitable for real-time communication. In addition,\nwe explore a broad set of architectural variations and sampling strategies to\nensure effective training and efficient inference. Notably, our flow-matching\nmodel maintains high enhancement quality with only 5 number of function\nevaluations (NFEs) during sampling, achieving similar performance as when using\n~20 NFEs under the same conditions. Experimental results indicate that causal\nFM-based models favor few-step reverse sampling, and smaller backbones degrade\nwith longer reverse trajectories. We further show a side-by-side comparison of\nFM to typical adversarial-loss-based training for the same model architecture.",
-      "pdf_url": "http://arxiv.org/pdf/2510.16997v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.16997v1",
-      "published": "2025-10-19",
-      "categories": [
-        "eess.AS"
-      ]
-    },
-    {
-      "title": "Causal Variance Decompositions for Measuring Health Inequalities",
-      "authors": [
-        "Lin Yu",
-        "Zhihui Liu",
-        "Kathy Han",
-        "Olli Saarela"
-      ],
-      "abstract": "Recent causal inference literature has introduced causal effect\ndecompositions to quantify sources of observed inequalities or disparities in\noutcomes but usually limiting this to pairwise comparisons. In the context of\nhospital profiling, comparison of hospital performance may reveal inequalities\nin healthcare delivery between sociodemographic groups, which may be explained\nby access/selection or actual effect modification. We consider the case of\npolytomous exposures in hospital profiling where the comparison is often to the\nsystem wide average performance, and decompose the observed variance in care\ndelivery as the quantity of interest. For this, we formulate a new eight-way\ncausal variance decomposition where we attribute the observed variation to\ncomponents describing the main effects of hospital and group membership,\nmodification of the hospital effect by group membership, hospital\naccess/selection, effect of case-mix covariates and residual variance. We\ndiscuss the causal interpretation of the components, formulate parametric and\nnonparametric model based estimators and study the properties of these\nestimators through simulation. Finally, we illustrate our method by an example\nof cancer care delivery using data from the SEER database.",
-      "pdf_url": "http://arxiv.org/pdf/2510.16975v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.16975v1",
-      "published": "2025-10-19",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal inference for calibrated scaling interventions on time-to-event processes",
-      "authors": [
-        "Helene Charlotte Wiese Rytgaard",
-        "Mark van der Laan"
-      ],
-      "abstract": "This work studies stochastic interventions in continuous-time event-history\nsettings formulated as multiplicative scalings of the observed intensity\ngoverning an intermediate event process. This gives rise to a family of causal\nestimands indexed by a scalar parameter {\\alpha}, which changes the event rate\nwhile preserving the temporal and covariate structure of the data-generating\nprocess. We introduce calibrated interventions, where \\(\\alpha\\) is chosen to\nachieve a pre-specified goal, such as a desired level of cumulative risk of the\nintermediate event, and define corresponding composite target parameters\ncapturing the resulting effects on the outcome process. Our proposal enables\npractical yet statistically principled intervention analysis in survival and\nlongitudinal settings, which offers a flexible alternative to deterministic or\nstatic interventions that are often ill-defined. The framework applies broadly\nto causal questions involving time-to-event treatments or mediators, and offers\na pragmatic analogue to indirect/direct effect decompositions. We present the\nefficient influence curves for various versions of target parameters under a\nnonparametric statistical model, discuss their double robustness properties,\nand propose an estimation procedure based on targeted maximum likelihood\nestimation (TMLE). The proposed estimands are illustrated through examples of\nevent-history scenarios addressing distinct causal questions.",
-      "pdf_url": "http://arxiv.org/pdf/2510.16798v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.16798v1",
-      "published": "2025-10-19",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Local Overidentification and Efficiency Gains in Modern Causal Inference and Data Combination",
-      "authors": [
-        "Xiaohong Chen",
-        "Haitian Xie"
-      ],
-      "abstract": "This paper studies nonparametric local (over-)identification, in the sense of\nChen and Santos (2018), and the associated semiparametric efficiency in modern\ncausal frameworks. We develop a unified approach that begins by translating\nstructural models with latent variables into their induced statistical models\nof observables and then analyzes local overidentification through conditional\nmoment restrictions. We apply this approach to three leading models: (i) the\ngeneral treatment model under unconfoundedness, (ii) the negative control\nmodel, and (iii) the long-term causal inference model under unobserved\nconfounding. The first design yields a locally just-identified statistical\nmodel, implying that all regular asymptotically linear estimators of the\ntreatment effect share the same asymptotic variance, equal to the (trivial)\nsemiparametric efficiency bound. In contrast, the latter two models involve\nnonparametric endogeneity and are naturally locally overidentified;\nconsequently, some doubly robust orthogonal moment estimators of the average\ntreatment effect are inefficient. Whereas existing work typically imposes\nstrong conditions to restore just-identification before deriving the efficiency\nbound, we relax such assumptions and characterize the general efficiency bound,\nalong with efficient estimators, in the overidentified models (ii) and (iii).",
-      "pdf_url": "http://arxiv.org/pdf/2510.16683v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.16683v1",
-      "published": "2025-10-19",
-      "categories": [
-        "econ.EM"
       ]
     }
   ]
