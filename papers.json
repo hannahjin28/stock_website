@@ -1,6 +1,96 @@
 {
-  "last_updated": "2025-10-23T00:52:02.382394",
+  "last_updated": "2025-10-24T00:47:59.045873",
   "papers": [
+    {
+      "title": "Benchmarking World-Model Learning",
+      "authors": [
+        "Archana Warrier",
+        "Dat Nguyen",
+        "Michelangelo Naim",
+        "Moksh Jain",
+        "Yichao Liang",
+        "Karen Schroeder",
+        "Cambridge Yang",
+        "Joshua B. Tenenbaum",
+        "Sebastian Vollmer",
+        "Kevin Ellis",
+        "Zenna Tavares"
+      ],
+      "abstract": "Model-learning agents should gather information to learn world models that\nsupport many downstream tasks and inferences, such as predicting unobserved\nstates, estimating near- and far-term consequences of actions, planning action\nsequences, and detecting changes in dynamics. Current methods for learning and\nevaluating world models diverge from this goal: training and evaluation are\nanchored to next-frame prediction, and success is scored by reward maximization\nin the same environment. We propose WorldTest, a protocol to evaluate\nmodel-learning agents that separates reward-free interaction from a scored test\nphase in a different but related environment. WorldTest is\nopen-ended$\\unicode{x2014}$models should support many different tasks unknown\nahead of time$\\unicode{x2014}$and agnostic to model representation, allowing\ncomparison across approaches. We instantiated WorldTest with AutumnBench, a\nsuite of 43 interactive grid-world environments and 129 tasks across three\nfamilies: masked-frame prediction, planning, and predicting changes to the\ncausal dynamics. We compared 517 human participants and three frontier models\non AutumnBench. We found that humans outperform the models, and scaling compute\nimproves performance only in some environments but not others. WorldTest\nprovides a novel template$\\unicode{x2014}$reward-free exploration, derived\ntests, and behavior-based scoring$\\unicode{x2014}$to evaluate what agents learn\nabout environment dynamics, and AutumnBench exposes significant headroom in\nworld-model learning.",
+      "pdf_url": "http://arxiv.org/pdf/2510.19788v2",
+      "arxiv_url": "http://arxiv.org/abs/2510.19788v2",
+      "published": "2025-10-22",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Lookahead Routing for Large Language Models",
+      "authors": [
+        "Canbin Huang",
+        "Tianyuan Shi",
+        "Yuhua Zhu",
+        "Ruijun Chen",
+        "Xiaojun Quan"
+      ],
+      "abstract": "Large language model (LLM) routers improve the efficiency of multi-model\nsystems by directing each query to the most appropriate model while leveraging\nthe diverse strengths of heterogeneous LLMs. Most existing approaches frame\nrouting as a classification problem based solely on the input query. While this\nreduces overhead by avoiding inference across all models, it overlooks valuable\ninformation that could be gleaned from potential outputs and fails to capture\nimplicit intent or contextual nuances that often emerge only during response\ngeneration. These limitations can result in suboptimal routing decisions,\nparticularly for complex or ambiguous queries that require deeper semantic\nunderstanding. To address this challenge, we propose Lookahead, a routing\nframework that \"foresees\" potential model outputs by predicting their latent\nrepresentations and uses these predictions to guide model selection, thus\nenabling more informed routing without full inference. Within this framework,\nwe implement two approaches based on causal and masked language models.\nEmpirical evaluations across seven public benchmarks - spanning instruction\nfollowing, mathematical reasoning, and code generation - show that Lookahead\nconsistently outperforms existing routing baselines, achieving an average\nperformance gain of 7.7% over the state-of-the-art. Our code is available at\nhttps://github.com/huangcb01/lookahead-routing.",
+      "pdf_url": "http://arxiv.org/pdf/2510.19506v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.19506v1",
+      "published": "2025-10-22",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "A New Targeted-Federated Learning Framework for Estimating Heterogeneity of Treatment Effects: A Robust Framework with Applications in Aging Cohorts",
+      "authors": [
+        "Rong Zhao",
+        "Jason Falvey",
+        "Xu Shi",
+        "Vernon M. Chinchilli",
+        "Chixiang Chen"
+      ],
+      "abstract": "Analyzing data from multiple sources offers valuable opportunities to improve\nthe estimation efficiency of causal estimands. However, this analysis also\nposes many challenges due to population heterogeneity and data privacy\nconstraints. While several advanced methods for causal inference in federated\nsettings have been developed in recent years, many focus on difference-based\naveraged causal effects and are not designed to study effect modification. In\nthis study, we introduce a novel targeted-federated learning framework to study\nthe heterogeneity of treatment effects (HTEs) for a targeted population by\nproposing a projection-based estimand. This HTE framework integrates\ninformation from multiple data sources without sharing raw data, while\naccounting for covariate distribution shifts among sources. Our proposed\napproach is shown to be doubly robust, conveniently supporting both\ndifference-based estimands for continuous outcomes and odds ratio-based\nestimands for binary outcomes. Furthermore, we develop a\ncommunication-efficient bootstrap-based selection procedure to detect\nnon-transportable data sources, thereby enhancing robust information\naggregation without introducing bias. The superior performance of the proposed\nestimator over existing methods is demonstrated through extensive simulation\nstudies, and the utility of our approach has been shown in a real-world data\napplication using nationwide Medicare-linked data.",
+      "pdf_url": "http://arxiv.org/pdf/2510.19243v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.19243v1",
+      "published": "2025-10-22",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "No Intelligence Without Statistics: The Invisible Backbone of Artificial Intelligence",
+      "authors": [
+        "Ernest Fokoué"
+      ],
+      "abstract": "The rapid ascent of artificial intelligence (AI) is often portrayed as a\nrevolution born from computer science and engineering. This narrative, however,\nobscures a fundamental truth: the theoretical and methodological core of AI is,\nand has always been, statistical. This paper systematically argues that the\nfield of statistics provides the indispensable foundation for machine learning\nand modern AI. We deconstruct AI into nine foundational pillars-Inference,\nDensity Estimation, Sequential Learning, Generalization, Representation\nLearning, Interpretability, Causality, Optimization, and\nUnification-demonstrating that each is built upon century-old statistical\nprinciples. From the inferential frameworks of hypothesis testing and\nestimation that underpin model evaluation, to the density estimation roots of\nclustering and generative AI; from the time-series analysis inspiring recurrent\nnetworks to the causal models that promise true understanding, we trace an\nunbroken statistical lineage. While celebrating the computational engines that\npower modern AI, we contend that statistics provides the brain-the theoretical\nframeworks, uncertainty quantification, and inferential goals-while computer\nscience provides the brawn-the scalable algorithms and hardware. Recognizing\nthis statistical backbone is not merely an academic exercise, but a necessary\nstep for developing more robust, interpretable, and trustworthy intelligent\nsystems. We issue a call to action for education, research, and practice to\nre-embrace this statistical foundation. Ignoring these roots risks building a\nfragile future; embracing them is the path to truly intelligent machines. There\nis no machine learning without statistical learning; no artificial intelligence\nwithout statistical thought.",
+      "pdf_url": "http://arxiv.org/pdf/2510.19212v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.19212v1",
+      "published": "2025-10-22",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "62-02, 68T01",
+        "G.3; I.2.6"
+      ]
+    },
+    {
+      "title": "Desirable Effort Fairness and Optimality Trade-offs in Strategic Learning",
+      "authors": [
+        "Valia Efthymiou",
+        "Ekaterina Fedorova",
+        "Chara Podimata"
+      ],
+      "abstract": "Strategic learning studies how decision rules interact with agents who may\nstrategically change their inputs/features to achieve better outcomes. In\nstandard settings, models assume that the decision-maker's sole scope is to\nlearn a classifier that maximizes an objective (e.g., accuracy) assuming that\nagents best respond. However, real decision-making systems' goals do not align\nexclusively with producing good predictions. They may consider the external\neffects of inducing certain incentives, which translates to the change of\ncertain features being more desirable for the decision maker. Further, the\nprincipal may also need to incentivize desirable feature changes fairly across\nheterogeneous agents. How much does this constrained optimization (i.e.,\nmaximize the objective, but restrict agents' incentive disparity) cost the\nprincipal? We propose a unified model of principal-agent interaction that\ncaptures this trade-off under three additional components: (1) causal\ndependencies between features, such that changes in one feature affect others;\n(2) heterogeneous manipulation costs between agents; and (3) peer learning,\nthrough which agents infer the principal's rule. We provide theoretical\nguarantees on the principal's optimality loss constrained to a particular\ndesirability fairness tolerance for multiple broad classes of fairness\nmeasures. Finally, through experiments on real datasets, we show the explicit\ntradeoff between maximizing accuracy and fairness in desirability effort.",
+      "pdf_url": "http://arxiv.org/pdf/2510.19098v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.19098v1",
+      "published": "2025-10-21",
+      "categories": [
+        "cs.GT",
+        "cs.CY"
+      ]
+    },
     {
       "title": "A Hybrid Enumeration Framework for Optimal Counterfactual Generation in Post-Acute COVID-19 Heart Failure",
       "authors": [
@@ -82,96 +172,6 @@
         "cs.LG",
         "92B15, 62P10, 62F10, 62H17",
         "J.3; I.2.6; G.3"
-      ]
-    },
-    {
-      "title": "Towards Identifiability of Hierarchical Temporal Causal Representation Learning",
-      "authors": [
-        "Zijian Li",
-        "Minghao Fu",
-        "Junxian Huang",
-        "Yifan Shen",
-        "Ruichu Cai",
-        "Yuewen Sun",
-        "Guangyi Chen",
-        "Kun Zhang"
-      ],
-      "abstract": "Modeling hierarchical latent dynamics behind time series data is critical for\ncapturing temporal dependencies across multiple levels of abstraction in\nreal-world tasks. However, existing temporal causal representation learning\nmethods fail to capture such dynamics, as they fail to recover the joint\ndistribution of hierarchical latent variables from \\textit{single-timestep\nobserved variables}. Interestingly, we find that the joint distribution of\nhierarchical latent variables can be uniquely determined using three\nconditionally independent observations. Building on this insight, we propose a\nCausally Hierarchical Latent Dynamic (CHiLD) identification framework. Our\napproach first employs temporal contextual observed variables to identify the\njoint distribution of multi-layer latent variables. Sequentially, we exploit\nthe natural sparsity of the hierarchical structure among latent variables to\nidentify latent variables within each layer. Guided by the theoretical results,\nwe develop a time series generative model grounded in variational inference.\nThis model incorporates a contextual encoder to reconstruct multi-layer latent\nvariables and normalize flow-based hierarchical prior networks to impose the\nindependent noise condition of hierarchical latent dynamics. Empirical\nevaluations on both synthetic and real-world datasets validate our theoretical\nclaims and demonstrate the effectiveness of CHiLD in modeling hierarchical\nlatent dynamics.",
-      "pdf_url": "http://arxiv.org/pdf/2510.18310v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.18310v1",
-      "published": "2025-10-21",
-      "categories": [
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Online Time Series Forecasting with Theoretical Guarantees",
-      "authors": [
-        "Zijian Li",
-        "Changze Zhou",
-        "Minghao Fu",
-        "Sanjay Manjunath",
-        "Fan Feng",
-        "Guangyi Chen",
-        "Yingyao Hu",
-        "Ruichu Cai",
-        "Kun Zhang"
-      ],
-      "abstract": "This paper is concerned with online time series forecasting, where unknown\ndistribution shifts occur over time, i.e., latent variables influence the\nmapping from historical to future observations. To develop an automated way of\nonline time series forecasting, we propose a Theoretical framework for Online\nTime-series forecasting (TOT in short) with theoretical guarantees.\nSpecifically, we prove that supplying a forecaster with latent variables\ntightens the Bayes risk, the benefit endures under estimation uncertainty of\nlatent variables and grows as the latent variables achieve a more precise\nidentifiability. To better introduce latent variables into online forecasting\nalgorithms, we further propose to identify latent variables with minimal\nadjacent observations. Based on these results, we devise a model-agnostic\nblueprint by employing a temporal decoder to match the distribution of observed\nvariables and two independent noise estimators to model the causal inference of\nlatent variables and mixing procedures of observed variables, respectively.\nExperiment results on synthetic data support our theoretical claims. Moreover,\nplug-in implementations built on several baselines yield general improvement\nacross multiple benchmarks, highlighting the effectiveness in real-world\napplications.",
-      "pdf_url": "http://arxiv.org/pdf/2510.18281v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.18281v1",
-      "published": "2025-10-21",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Intuitionistic $j$-Do-Calculus in Topos Causal Models",
-      "authors": [
-        "Sridhar Mahadevan"
-      ],
-      "abstract": "In this paper, we generalize Pearl's do-calculus to an Intuitionistic setting\ncalled $j$-stable causal inference inside a topos of sheaves. Our framework is\nan elaboration of the recently proposed framework of Topos Causal Models\n(TCMs), where causal interventions are defined as subobjects. We generalize the\noriginal setting of TCM using the Lawvere-Tierney topology on a topos, defined\nby a modal operator $j$ on the subobject classifier $\\Omega$. We introduce\n$j$-do-calculus, where we replace global truth with local truth defined by\nKripke-Joyal semantics, and formalize causal reasoning as structure-preserving\nmorphisms that are stable along $j$-covers. $j$-do-calculus is a sound rule\nsystem whose premises and conclusions are formulas of the internal\nIntuitionistic logic of the causal topos. We define $j$-stability for\nconditional independences and interventional claims as local truth in the\ninternal logic of the causal topos. We give three inference rules that mirror\nPearl's insertion/deletion and action/observation exchange, and we prove\nsoundness in the Kripke-Joyal semantics. A companion paper in preparation will\ndescribe how to estimate the required entities from data and instantiate $j$-do\nwith standard discovery procedures (e.g., score-based and constraint-based\nmethods), and will include experimental results on how to (i) form data-driven\n$j$-covers (via regime/section constructions), (ii) compute chartwise\nconditional independences after graph surgeries, and (iii) glue them to certify\nthe premises of the $j$-do rules in practice",
-      "pdf_url": "http://arxiv.org/pdf/2510.17944v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.17944v1",
-      "published": "2025-10-20",
-      "categories": [
-        "cs.LO",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A Principle of Targeted Intervention for Multi-Agent Reinforcement Learning",
-      "authors": [
-        "Anjie Liu",
-        "Jianhong Wang",
-        "Samuel Kaski",
-        "Jun Wang",
-        "Mengyue Yang"
-      ],
-      "abstract": "Steering cooperative multi-agent reinforcement learning (MARL) towards\ndesired outcomes is challenging, particularly when the global guidance from a\nhuman on the whole multi-agent system is impractical in a large-scale MARL. On\nthe other hand, designing mechanisms to coordinate agents most relies on\nempirical studies, lacking a easy-to-use research tool. In this work, we employ\nmulti-agent influence diagrams (MAIDs) as a graphical framework to address the\nabove issues. First, we introduce interaction paradigms that leverage MAIDs to\nanalyze and visualize existing approaches in MARL. Then, we design a new\ninteraction paradigm based on MAIDs, referred to as targeted intervention that\nis applied to only a single targeted agent, so the problem of global guidance\ncan be mitigated. In our implementation, we introduce a causal inference\ntechnique-referred to as Pre-Strategy Intervention (PSI)-to realize the\ntargeted intervention paradigm. Since MAIDs can be regarded as a special class\nof causal diagrams, a composite desired outcome that integrates the primary\ntask goal and an additional desired outcome can be achieved by maximizing the\ncorresponding causal effect through the PSI. Moreover, the bundled relevance\ngraph analysis of MAIDs provides a tool to identify whether an MARL learning\nparadigm is workable under the design of an interaction paradigm. In\nexperiments, we demonstrate the effectiveness of our proposed targeted\nintervention, and verify the result of relevance graph analysis.",
-      "pdf_url": "http://arxiv.org/pdf/2510.17697v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.17697v1",
-      "published": "2025-10-20",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.MA",
-        "I.2.11; I.2.6"
-      ]
-    },
-    {
-      "title": "CausalMamba: Scalable Conditional State Space Models for Neural Causal Inference",
-      "authors": [
-        "Sangyoon Bae",
-        "Jiook Cha"
-      ],
-      "abstract": "We introduce CausalMamba, a scalable framework that addresses fundamental\nlimitations in fMRI-based causal inference: the ill-posed nature of inferring\nneural causality from hemodynamically distorted BOLD signals and the\ncomputational intractability of existing methods like Dynamic Causal Modeling\n(DCM). Our approach decomposes this complex inverse problem into two tractable\nstages: BOLD deconvolution to recover latent neural activity, followed by\ncausal graph inference using a novel Conditional Mamba architecture. On\nsimulated data, CausalMamba achieves 37% higher accuracy than DCM. Critically,\nwhen applied to real task fMRI data, our method recovers well-established\nneural pathways with 88% fidelity, whereas conventional approaches fail to\nidentify these canonical circuits in over 99% of subjects. Furthermore, our\nnetwork analysis of working memory data reveals that the brain strategically\nshifts its primary causal hub-recruiting executive or salience networks\ndepending on the stimulus-a sophisticated reconfiguration that remains\nundetected by traditional methods. This work provides neuroscientists with a\npractical tool for large-scale causal inference that captures both fundamental\ncircuit motifs and flexible network dynamics underlying cognitive function.",
-      "pdf_url": "http://arxiv.org/pdf/2510.17318v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.17318v1",
-      "published": "2025-10-20",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
