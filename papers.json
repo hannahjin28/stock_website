@@ -1,6 +1,134 @@
 {
-  "last_updated": "2025-10-24T00:47:59.045873",
+  "last_updated": "2025-10-25T00:50:32.440683",
   "papers": [
+    {
+      "title": "Generative Reasoning Recommendation via LLMs",
+      "authors": [
+        "Minjie Hong",
+        "Zetong Zhou",
+        "Zirun Guo",
+        "Ziang Zhang",
+        "Ruofan Hu",
+        "Weinan Gan",
+        "Jieming Zhu",
+        "Zhou Zhao"
+      ],
+      "abstract": "Despite their remarkable reasoning capabilities across diverse domains, large\nlanguage models (LLMs) face fundamental challenges in natively functioning as\ngenerative reasoning recommendation models (GRRMs), where the intrinsic\nmodeling gap between textual semantics and collaborative filtering signals,\ncombined with the sparsity and stochasticity of user feedback, presents\nsignificant obstacles. This work explores how to build GRRMs by adapting\npre-trained LLMs, which achieves a unified understanding-reasoning-prediction\nmanner for recommendation tasks. We propose GREAM, an end-to-end framework that\nintegrates three components: (i) Collaborative-Semantic Alignment, which fuses\nheterogeneous textual evidence to construct semantically consistent, discrete\nitem indices and auxiliary alignment tasks that ground linguistic\nrepresentations in interaction semantics; (ii) Reasoning Curriculum Activation,\nwhich builds a synthetic dataset with explicit Chain-of-Thought supervision and\na curriculum that progresses through behavioral evidence extraction, latent\npreference modeling, intent inference, recommendation formulation, and denoised\nsequence rewriting; and (iii) Sparse-Regularized Group Policy Optimization\n(SRPO), which stabilizes post-training via Residual-Sensitive Verifiable Reward\nand Bonus-Calibrated Group Advantage Estimation, enabling end-to-end\noptimization under verifiable signals despite sparse successes. GREAM natively\nsupports two complementary inference modes: Direct Sequence Recommendation for\nhigh-throughput, low-latency deployment, and Sequential Reasoning\nRecommendation that first emits an interpretable reasoning chain for causal\ntransparency. Experiments on three datasets demonstrate consistent gains over\nstrong baselines, providing a practical path toward verifiable-RL-driven LLM\nrecommenders.",
+      "pdf_url": "http://arxiv.org/pdf/2510.20815v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.20815v1",
+      "published": "2025-10-23",
+      "categories": [
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Better Tokens for Better 3D: Advancing Vision-Language Modeling in 3D Medical Imaging",
+      "authors": [
+        "Ibrahim Ethem Hamamci",
+        "Sezgin Er",
+        "Suprosanna Shit",
+        "Hadrien Reynaud",
+        "Dong Yang",
+        "Pengfei Guo",
+        "Marc Edgar",
+        "Daguang Xu",
+        "Bernhard Kainz",
+        "Bjoern Menze"
+      ],
+      "abstract": "Recent progress in vision-language modeling for 3D medical imaging has been\nfueled by large-scale computed tomography (CT) corpora with paired free-text\nreports, stronger architectures, and powerful pretrained models. This has\nenabled applications such as automated report generation and text-conditioned\n3D image synthesis. Yet, current approaches struggle with high-resolution,\nlong-sequence volumes: contrastive pretraining often yields vision encoders\nthat are misaligned with clinical language, and slice-wise tokenization blurs\nfine anatomy, reducing diagnostic performance on downstream tasks. We introduce\nBTB3D (Better Tokens for Better 3D), a causal convolutional encoder-decoder\nthat unifies 2D and 3D training and inference while producing compact,\nfrequency-aware volumetric tokens. A three-stage training curriculum enables\n(i) local reconstruction, (ii) overlapping-window tiling, and (iii)\nlong-context decoder refinement, during which the model learns from short slice\nexcerpts yet generalizes to scans exceeding 300 slices without additional\nmemory overhead. BTB3D sets a new state-of-the-art on two key tasks: it\nimproves BLEU scores and increases clinical F1 by 40% over CT2Rep, CT-CHAT, and\nMerlin for report generation; and it reduces FID by 75% and halves FVD compared\nto GenerateCT and MedSyn for text-to-CT synthesis, producing anatomically\nconsistent 512*512*241 volumes. These results confirm that precise\nthree-dimensional tokenization, rather than larger language backbones alone, is\nessential for scalable vision-language modeling in 3D medical imaging. The\ncodebase is available at: https://github.com/ibrahimethemhamamci/BTB3D",
+      "pdf_url": "http://arxiv.org/pdf/2510.20639v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.20639v1",
+      "published": "2025-10-23",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "On Multiple Robustness of Proximal Dynamic Treatment Regimes",
+      "authors": [
+        "Yuanshan Gao",
+        "Yang Bai",
+        "Yifan Cui"
+      ],
+      "abstract": "Dynamic treatment regimes are sequential decision rules that adapt treatment\naccording to individual time-varying characteristics and outcomes to achieve\noptimal effects, with applications in precision medicine, personalized\nrecommendations, and dynamic marketing. Estimating optimal dynamic treatment\nregimes via sequential randomized trials might face costly and ethical hurdles,\noften necessitating the use of historical observational data. In this work, we\nutilize proximal causal inference framework for learning optimal dynamic\ntreatment regimes when the unconfoundedness assumption fails. Our contributions\nare four-fold: (i) we propose three nonparametric identification methods for\noptimal dynamic treatment regimes; (ii) we establish the semiparametric\nefficiency bound for the value function of a given regime; (iii) we propose a\n(K+1)-robust method for learning optimal dynamic treatment regimes, where K is\nthe number of stages; (iv) as a by-product for marginal structural models, we\nestablish identification and estimation of counterfactual means under a static\nregime. Numerical experiments validate the efficiency and multiple robustness\nof our proposed methods.",
+      "pdf_url": "http://arxiv.org/pdf/2510.20451v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.20451v1",
+      "published": "2025-10-23",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Identification and Debiased Learning of Causal Effects with General Instrumental Variables",
+      "authors": [
+        "Shuyuan Chen",
+        "Peng Zhang",
+        "Yifan Cui"
+      ],
+      "abstract": "Instrumental variable methods are fundamental to causal inference when\ntreatment assignment is confounded by unobserved variables. In this article, we\ndevelop a general nonparametric framework for identification and learning with\nmulti-categorical or continuous instrumental variables. Specifically, we\npropose an additive instrumental variable framework to identify mean potential\noutcomes and the average treatment effect with a weighting function. Leveraging\nsemiparametric theory, we derive efficient influence functions and construct\nconsistent, asymptotically normal estimators via debiased machine learning.\nExtensions to longitudinal data, dynamic treatment regimes, and multiplicative\ninstrumental variables are further developed. We demonstrate the proposed\nmethod by employing simulation studies and analyzing real data from the Job\nTraining Partnership Act program.",
+      "pdf_url": "http://arxiv.org/pdf/2510.20404v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.20404v1",
+      "published": "2025-10-23",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "math.ST",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "Bias-Variance Tradeoff of Matching Prior to Difference-in-Differences When Parallel Trends is Violated",
+      "authors": [
+        "Mingxuan Ge",
+        "Dae Woong Ham"
+      ],
+      "abstract": "Quasi-experimental causal inference methods have become central in empirical\noperations management (OM) for guiding managerial decisions. Among these,\nempiricists utilize the Difference-in-Differences (DiD) estimator, which relies\non the parallel trends assumption. To improve its plausibility, researchers\noften match treated and control units before applying DiD, with the intuition\nthat matched groups are more likely to evolve similarly absent treatment.\nExisting work that analyze this practice, however, has focused solely on bias.\nWe complement and fill an important gap by analyzing the full bias-variance\ntradeoff. Under a linear structural model with unobserved time-varying\nconfounders, we show that variance results contrast with established bias\ninsights: matching on observed covariates prior to DiD is not always\nrecommended over the classic (unmatched) DiD due to a sample size tradeoff;\nfurthermore, matching additionally on pre-treatment outcomes is always\nbeneficial as such tradeoff no longer exists once matching is performed. We\ntherefore advocate mean squared error (MSE) as a final metric and give\npractitioner-friendly guidelines with theoretical guarantees on when (and on\nwhat variables) they should match on. We apply these insights to a recent study\non how the introduction of monetary incentives by a knowledge-sharing platform\naffects its general engagement and show that the authors' matching choice prior\nto DiD was both warranted and critical. In particular, we provide new\nmanagerial insights that after a full bias correction, their estimated effect\nwith matching still remains statistically significant, demonstrating that the\nchosen matching-DiD approach is sufficiently robust to address managerial\nconcerns over violations of parallel trends.",
+      "pdf_url": "http://arxiv.org/pdf/2510.20191v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.20191v1",
+      "published": "2025-10-23",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Treatment Effect Learning Under Sequential Randomization",
+      "authors": [
+        "Rina Friedberg",
+        "Richard Mudd",
+        "Patrick Johnstone",
+        "Melissa Pothen",
+        "Vishal Vaingankar",
+        "Vishwanath Sangale",
+        "Abbas Zaidi"
+      ],
+      "abstract": "Sequential treatment assignments in online experiments lead to complex\ndependency structures, often rendering identification, estimation and inference\nover treatments a challenge. Treatments in one session (e.g., a user logging\non) can have an effect that persists into subsequent sessions, leading to\ncumulative effects on outcomes measured at a later stage. This can render\nstandard methods for identification and inference trivially misspecified. We\npropose T-Learners layered into the G-Formula for this setting, building on\nliterature from causal machine learning and identification in sequential\nsettings. In a simple simulation, this approach prevents decaying accuracy in\nthe presence of carry-over effects, highlighting the importance of\nidentification and inference strategies tailored to the nature of systems often\nseen in the tech domain.",
+      "pdf_url": "http://arxiv.org/pdf/2510.20078v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.20078v1",
+      "published": "2025-10-22",
+      "categories": [
+        "stat.AP",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "LLM-Augmented Symbolic NLU System for More Reliable Continuous Causal Statement Interpretation",
+      "authors": [
+        "Xin Lian",
+        "Kenneth D. Forbus"
+      ],
+      "abstract": "Despite the broad applicability of large language models (LLMs), their\nreliance on probabilistic inference makes them vulnerable to errors such as\nhallucination in generated facts and inconsistent output structure in natural\nlanguage understanding (NLU) tasks. By contrast, symbolic NLU systems provide\ninterpretable understanding grounded in curated lexicons, semantic resources,\nand syntactic & semantic interpretation rules. They produce relational\nrepresentations that can be used for accurate reasoning and planning, as well\nas incremental debuggable learning. However, symbolic NLU systems tend to be\nmore limited in coverage than LLMs and require scarce knowledge representation\nand linguistics skills to extend and maintain. This paper explores a hybrid\napproach that integrates the broad-coverage language processing of LLMs with\nthe symbolic NLU capabilities of producing structured relational\nrepresentations to hopefully get the best of both approaches. We use LLMs for\nrephrasing and text simplification, to provide broad coverage, and as a source\nof information to fill in knowledge gaps more automatically. We use symbolic\nNLU to produce representations that can be used for reasoning and for\nincremental learning. We evaluate this approach on the task of extracting and\ninterpreting quantities and causal laws from commonsense science texts, along\nwith symbolic- and LLM-only pipelines. Our results suggest that our hybrid\nmethod works significantly better than the symbolic-only pipeline.",
+      "pdf_url": "http://arxiv.org/pdf/2510.19988v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.19988v1",
+      "published": "2025-10-22",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Benchmarking World-Model Learning",
       "authors": [
@@ -57,121 +185,6 @@
       "published": "2025-10-22",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "No Intelligence Without Statistics: The Invisible Backbone of Artificial Intelligence",
-      "authors": [
-        "Ernest Fokoué"
-      ],
-      "abstract": "The rapid ascent of artificial intelligence (AI) is often portrayed as a\nrevolution born from computer science and engineering. This narrative, however,\nobscures a fundamental truth: the theoretical and methodological core of AI is,\nand has always been, statistical. This paper systematically argues that the\nfield of statistics provides the indispensable foundation for machine learning\nand modern AI. We deconstruct AI into nine foundational pillars-Inference,\nDensity Estimation, Sequential Learning, Generalization, Representation\nLearning, Interpretability, Causality, Optimization, and\nUnification-demonstrating that each is built upon century-old statistical\nprinciples. From the inferential frameworks of hypothesis testing and\nestimation that underpin model evaluation, to the density estimation roots of\nclustering and generative AI; from the time-series analysis inspiring recurrent\nnetworks to the causal models that promise true understanding, we trace an\nunbroken statistical lineage. While celebrating the computational engines that\npower modern AI, we contend that statistics provides the brain-the theoretical\nframeworks, uncertainty quantification, and inferential goals-while computer\nscience provides the brawn-the scalable algorithms and hardware. Recognizing\nthis statistical backbone is not merely an academic exercise, but a necessary\nstep for developing more robust, interpretable, and trustworthy intelligent\nsystems. We issue a call to action for education, research, and practice to\nre-embrace this statistical foundation. Ignoring these roots risks building a\nfragile future; embracing them is the path to truly intelligent machines. There\nis no machine learning without statistical learning; no artificial intelligence\nwithout statistical thought.",
-      "pdf_url": "http://arxiv.org/pdf/2510.19212v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.19212v1",
-      "published": "2025-10-22",
-      "categories": [
-        "stat.ME",
-        "cs.AI",
-        "62-02, 68T01",
-        "G.3; I.2.6"
-      ]
-    },
-    {
-      "title": "Desirable Effort Fairness and Optimality Trade-offs in Strategic Learning",
-      "authors": [
-        "Valia Efthymiou",
-        "Ekaterina Fedorova",
-        "Chara Podimata"
-      ],
-      "abstract": "Strategic learning studies how decision rules interact with agents who may\nstrategically change their inputs/features to achieve better outcomes. In\nstandard settings, models assume that the decision-maker's sole scope is to\nlearn a classifier that maximizes an objective (e.g., accuracy) assuming that\nagents best respond. However, real decision-making systems' goals do not align\nexclusively with producing good predictions. They may consider the external\neffects of inducing certain incentives, which translates to the change of\ncertain features being more desirable for the decision maker. Further, the\nprincipal may also need to incentivize desirable feature changes fairly across\nheterogeneous agents. How much does this constrained optimization (i.e.,\nmaximize the objective, but restrict agents' incentive disparity) cost the\nprincipal? We propose a unified model of principal-agent interaction that\ncaptures this trade-off under three additional components: (1) causal\ndependencies between features, such that changes in one feature affect others;\n(2) heterogeneous manipulation costs between agents; and (3) peer learning,\nthrough which agents infer the principal's rule. We provide theoretical\nguarantees on the principal's optimality loss constrained to a particular\ndesirability fairness tolerance for multiple broad classes of fairness\nmeasures. Finally, through experiments on real datasets, we show the explicit\ntradeoff between maximizing accuracy and fairness in desirability effort.",
-      "pdf_url": "http://arxiv.org/pdf/2510.19098v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.19098v1",
-      "published": "2025-10-21",
-      "categories": [
-        "cs.GT",
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "A Hybrid Enumeration Framework for Optimal Counterfactual Generation in Post-Acute COVID-19 Heart Failure",
-      "authors": [
-        "Jingya Cheng",
-        "Alaleh Azhir",
-        "Jiazi Tian",
-        "Hossein Estiri"
-      ],
-      "abstract": "Counterfactual inference provides a mathematical framework for reasoning\nabout hypothetical outcomes under alternative interventions, bridging causal\nreasoning and predictive modeling. We present a counterfactual inference\nframework for individualized risk estimation and intervention analysis,\nillustrated through a clinical application to post-acute sequelae of COVID-19\n(PASC) among patients with pre-existing heart failure (HF). Using longitudinal\ndiagnosis, laboratory, and medication data from a large health-system cohort,\nwe integrate regularized predictive modeling with counterfactual search to\nidentify actionable pathways to PASC-related HF hospital admissions. The\nframework combines exact enumeration with optimization-based methods, including\nthe Nearest Instance Counterfactual Explanations (NICE) and Multi-Objective\nCounterfactuals (MOC) algorithms, to efficiently explore high-dimensional\nintervention spaces. Applied to more than 2700 individuals with confirmed\nSARS-CoV-2 infection and prior HF, the model achieved strong discriminative\nperformance (AUROC: 0.88, 95% CI: 0.84-0.91) and generated interpretable,\npatient-specific counterfactuals that quantify how modifying comorbidity\npatterns or treatment factors could alter predicted outcomes. This work\ndemonstrates how counterfactual reasoning can be formalized as an optimization\nproblem over predictive functions, offering a rigorous, interpretable, and\ncomputationally efficient approach to personalized inference in complex\nbiomedical systems.",
-      "pdf_url": "http://arxiv.org/pdf/2510.18841v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.18841v1",
-      "published": "2025-10-21",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Improving the Generation and Evaluation of Synthetic Data for Downstream Medical Causal Inference",
-      "authors": [
-        "Harry Amad",
-        "Zhaozhi Qian",
-        "Dennis Frauen",
-        "Julianna Piskorz",
-        "Stefan Feuerriegel",
-        "Mihaela van der Schaar"
-      ],
-      "abstract": "Causal inference is essential for developing and evaluating medical\ninterventions, yet real-world medical datasets are often difficult to access\ndue to regulatory barriers. This makes synthetic data a potentially valuable\nasset that enables these medical analyses, along with the development of new\ninference methods themselves. Generative models can produce synthetic data that\nclosely approximate real data distributions, yet existing methods do not\nconsider the unique challenges that downstream causal inference tasks, and\nspecifically those focused on treatments, pose. We establish a set of\ndesiderata that synthetic data containing treatments should satisfy to maximise\ndownstream utility: preservation of (i) the covariate distribution, (ii) the\ntreatment assignment mechanism, and (iii) the outcome generation mechanism.\nBased on these desiderata, we propose a set of evaluation metrics to assess\nsuch synthetic data. Finally, we present STEAM: a novel method for generating\nSynthetic data for Treatment Effect Analysis in Medicine that mimics the\ndata-generating process of data containing treatments and optimises for our\ndesiderata. We empirically demonstrate that STEAM achieves state-of-the-art\nperformance across our metrics as compared to existing generative models,\nparticularly as the complexity of the true data-generating process increases.",
-      "pdf_url": "http://arxiv.org/pdf/2510.18768v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.18768v1",
-      "published": "2025-10-21",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causally Perturbed Fairness Testing",
-      "authors": [
-        "Chengwen Du",
-        "Tao Chen"
-      ],
-      "abstract": "To mitigate unfair and unethical discrimination over sensitive features\n(e.g., gender, age, or race), fairness testing plays an integral role in\nengineering systems that leverage AI models to handle tabular data. A key\nchallenge therein is how to effectively reveal fairness bugs under an\nintractable sample size using perturbation. Much current work has been focusing\non designing the test sample generators, ignoring the valuable knowledge about\ndata characteristics that can help guide the perturbation and hence limiting\ntheir full potential. In this paper, we seek to bridge such a gap by proposing\na generic framework of causally perturbed fairness testing, dubbed CausalFT.\nThrough causal inference, the key idea of CausalFT is to extract the most\ndirectly and causally relevant non-sensitive feature to its sensitive\ncounterpart, which can jointly influence the prediction of the label. Such a\ncausal relationship is then seamlessly injected into the perturbation to guide\na test sample generator. Unlike existing generator-level work, CausalFT serves\nas a higher-level framework that can be paired with diverse base generators.\nExtensive experiments on 1296 cases confirm that CausalFT can considerably\nimprove arbitrary base generators in revealing fairness bugs over 93% of the\ncases with acceptable extra runtime overhead. Compared with a state-of-the-art\napproach that ranks the non-sensitive features solely based on correlation,\nCausalFT performs significantly better on 64% cases while being much more\nefficient. Further, CausalFT can better improve bias resilience in nearly all\ncases.",
-      "pdf_url": "http://arxiv.org/pdf/2510.18719v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.18719v1",
-      "published": "2025-10-21",
-      "categories": [
-        "cs.SE",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "C-SWAP: Explainability-Aware Structured Pruning for Efficient Neural Networks Compression",
-      "authors": [
-        "Baptiste Bauvin",
-        "Loïc Baret",
-        "Ola Ahmad"
-      ],
-      "abstract": "Neural network compression has gained increasing attention in recent years,\nparticularly in computer vision applications, where the need for model\nreduction is crucial for overcoming deployment constraints. Pruning is a widely\nused technique that prompts sparsity in model structures, e.g. weights,\nneurons, and layers, reducing size and inference costs. Structured pruning is\nespecially important as it allows for the removal of entire structures, which\nfurther accelerates inference time and reduces memory overhead. However, it can\nbe computationally expensive, requiring iterative retraining and optimization.\nTo overcome this problem, recent methods considered one-shot setting, which\napplies pruning directly at post-training. Unfortunately, they often lead to a\nconsiderable drop in performance. In this paper, we focus on this issue by\nproposing a novel one-shot pruning framework that relies on explainable deep\nlearning. First, we introduce a causal-aware pruning approach that leverages\ncause-effect relations between model predictions and structures in a\nprogressive pruning process. It allows us to efficiently reduce the size of the\nnetwork, ensuring that the removed structures do not deter the performance of\nthe model. Then, through experiments conducted on convolution neural network\nand vision transformer baselines, pre-trained on classification tasks, we\ndemonstrate that our method consistently achieves substantial reductions in\nmodel size, with minimal impact on performance, and without the need for\nfine-tuning. Overall, our approach outperforms its counterparts, offering the\nbest trade-off. Our code is available on GitHub.",
-      "pdf_url": "http://arxiv.org/pdf/2510.18636v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.18636v1",
-      "published": "2025-10-21",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "A Multi-Evidence Framework Rescues Low-Power Prognostic Signals and Rejects Statistical Artifacts in Cancer Genomics",
-      "authors": [
-        "Gokturk Aytug Akarlar"
-      ],
-      "abstract": "Motivation: Standard genome-wide association studies in cancer genomics rely\non statistical significance with multiple testing correction, but\nsystematically fail in underpowered cohorts. In TCGA breast cancer (n=967, 133\ndeaths), low event rates (13.8%) create severe power limitations, producing\nfalse negatives for known drivers and false positives for large passenger\ngenes. Results: We developed a five-criteria computational framework\nintegrating causal inference (inverse probability weighting, doubly robust\nestimation) with orthogonal biological validation (expression, mutation\npatterns, literature evidence). Applied to TCGA-BRCA mortality analysis,\nstandard Cox+FDR detected zero genes at FDR<0.05, confirming complete failure\nin underpowered settings. Our framework correctly identified RYR2 -- a cardiac\ngene with no cancer function -- as a false positive despite nominal\nsignificance (p=0.024), while identifying KMT2C as a complex candidate\nrequiring validation despite marginal significance (p=0.047, q=0.954). Power\nanalysis revealed median power of 15.1% across genes, with KMT2C achieving only\n29.8% power (HR=1.55), explaining borderline statistical significance despite\nstrong biological evidence. The framework distinguished true signals from\nartifacts through mutation pattern analysis: RYR2 showed 29.8% silent mutations\n(passenger signature) with no hotspots, while KMT2C showed 6.7% silent\nmutations with 31.4% truncating variants (driver signature). This\nmulti-evidence approach provides a template for analyzing underpowered cohorts,\nprioritizing biological interpretability over purely statistical significance.\n  Availability: All code and analysis pipelines available at\ngithub.com/akarlaraytu/causal-inference-for-cancer-genomics",
-      "pdf_url": "http://arxiv.org/pdf/2510.18571v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.18571v1",
-      "published": "2025-10-21",
-      "categories": [
-        "q-bio.GN",
-        "cs.LG",
-        "92B15, 62P10, 62F10, 62H17",
-        "J.3; I.2.6; G.3"
       ]
     }
   ]
