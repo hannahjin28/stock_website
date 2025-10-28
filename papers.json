@@ -1,6 +1,40 @@
 {
-  "last_updated": "2025-10-27T00:57:13.602440",
+  "last_updated": "2025-10-28T00:51:04.782460",
   "papers": [
+    {
+      "title": "Resilient Radio Access Networks: AI and the Unknown Unknowns",
+      "authors": [
+        "Bho Matthiesen",
+        "Armin Dekorsy",
+        "Petar Popovski"
+      ],
+      "abstract": "5G networks offer exceptional reliability and availability, ensuring\nconsistent performance and user satisfaction. Yet they might still fail when\nconfronted with the unexpected. A resilient system is able to adapt to\nreal-world complexity, including operating conditions completely unanticipated\nduring system design. This makes resilience a vital attribute for communication\nsystems that must sustain service in scenarios where models are absent or too\nintricate to provide statistical guarantees. Such considerations indicate that\nartifical intelligence (AI) will play a major role in delivering resilience. In\nthis paper, we examine the challenges of designing AIs for resilient radio\naccess networks, especially with respect to unanticipated and rare disruptions.\nOur theoretical results indicate strong limitations of current statistical\nlearning methods for resilience and suggest connections to online learning and\ncausal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2510.21587v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.21587v1",
+      "published": "2025-10-24",
+      "categories": [
+        "cs.IT",
+        "math.IT"
+      ]
+    },
+    {
+      "title": "Handling Missing Responses under Cluster Dependence with Applications to Language Model Evaluation",
+      "authors": [
+        "Zhenghao Zeng",
+        "David Arbour",
+        "Avi Feller",
+        "Ishita Dasgupta",
+        "Atanu R Sinha",
+        "Edward H. Kennedy"
+      ],
+      "abstract": "Human annotations play a crucial role in evaluating the performance of GenAI\nmodels. Two common challenges in practice, however, are missing annotations\n(the response variable of interest) and cluster dependence among human-AI\ninteractions (e.g., questions asked by the same user may be highly correlated).\nReliable inference must address both these issues to achieve unbiased\nestimation and appropriately quantify uncertainty when estimating average\nscores from human annotations. In this paper, we analyze the doubly robust\nestimator, a widely used method in missing data analysis and causal inference,\napplied to this setting and establish novel theoretical properties under\ncluster dependence. We further illustrate our findings through simulations and\na real-world conversation quality dataset. Our theoretical and empirical\nresults underscore the importance of incorporating cluster dependence in\nmissing response problems to perform valid statistical inference.",
+      "pdf_url": "http://arxiv.org/pdf/2510.20928v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.20928v1",
+      "published": "2025-10-23",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Generative Reasoning Recommendation via LLMs",
       "authors": [
@@ -81,6 +115,28 @@
       ]
     },
     {
+      "title": "Incentivizing Consistent, Effective and Scalable Reasoning Capability in Audio LLMs via Reasoning Process Rewards",
+      "authors": [
+        "Jiajun Fan",
+        "Roger Ren",
+        "Jingyuan Li",
+        "Rahul Pandey",
+        "Prashanth Gurunath Shivakumar",
+        "Ivan Bulyko",
+        "Ankur Gandhe",
+        "Ge Liu",
+        "Yile Gu"
+      ],
+      "abstract": "The role of reasoning in Audio Large Language Models remains widely\nunderexplored, as introducing a reasoning process often degrades rather than\nimproves performance during inference, a phenomenon we term test-time inverse\nscaling, where longer reasoning chains yield progressively worse results. We\ndemonstrate that this stems not from fundamental limitations of reasoning\nitself, but from inadequate training: models without proper guidance for the\nreasoning process produce hallucinatory, inconsistent reasoning that\naccumulates errors over longer chains. To address these challenges, we\nintroduce CESAR (Consistent, Effective, and Scalable Audio Reasoners), shifting\nfrom outcome verification to rewarding the reasoning process. Our online\nreinforcement learning framework employs Group Relative Policy Optimization\nwith a multi-faceted reward suite that incentivizes not only correctness and\nformat but also consistency, structured analytical patterns, causal reasoning,\ndomain-knowledge integration, and calibrated reasoning depth. CESAR resolves\ntest-time inverse scaling, transforming reasoning from detriments into gains\nwhile revealing model-specific ``reasoning sweet spots\", where performance\npeaks during test-time scaling. We achieve state-of-the-art results on MMAU\nTest-mini, substantially outperforming Gemini 2.5 Pro and GPT-4o Audio, and\nnear-human-level performance on MMSU reasoning tasks. Through AI-as-judge\nevaluations and qualitative comparisons, we provide both quantitative and\nqualitative validation of our improved reasoning quality. Importantly, enhanced\nreasoning creates synergistic effects, simultaneously improving multimodal\nreasoning and perception capabilities. Overall, CESAR establishes a principled\nmethod for developing robust and scalable reasoning in Audio LLMs.",
+      "pdf_url": "http://arxiv.org/pdf/2510.20867v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.20867v1",
+      "published": "2025-10-23",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
       "title": "Bias-Variance Tradeoff of Matching Prior to Difference-in-Differences When Parallel Trends is Violated",
       "authors": [
         "Mingxuan Ge",
@@ -127,64 +183,6 @@
       "categories": [
         "cs.CL",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Benchmarking World-Model Learning",
-      "authors": [
-        "Archana Warrier",
-        "Dat Nguyen",
-        "Michelangelo Naim",
-        "Moksh Jain",
-        "Yichao Liang",
-        "Karen Schroeder",
-        "Cambridge Yang",
-        "Joshua B. Tenenbaum",
-        "Sebastian Vollmer",
-        "Kevin Ellis",
-        "Zenna Tavares"
-      ],
-      "abstract": "Model-learning agents should gather information to learn world models that\nsupport many downstream tasks and inferences, such as predicting unobserved\nstates, estimating near- and far-term consequences of actions, planning action\nsequences, and detecting changes in dynamics. Current methods for learning and\nevaluating world models diverge from this goal: training and evaluation are\nanchored to next-frame prediction, and success is scored by reward maximization\nin the same environment. We propose WorldTest, a protocol to evaluate\nmodel-learning agents that separates reward-free interaction from a scored test\nphase in a different but related environment. WorldTest is\nopen-ended$\\unicode{x2014}$models should support many different tasks unknown\nahead of time$\\unicode{x2014}$and agnostic to model representation, allowing\ncomparison across approaches. We instantiated WorldTest with AutumnBench, a\nsuite of 43 interactive grid-world environments and 129 tasks across three\nfamilies: masked-frame prediction, planning, and predicting changes to the\ncausal dynamics. We compared 517 human participants and three frontier models\non AutumnBench. We found that humans outperform the models, and scaling compute\nimproves performance only in some environments but not others. WorldTest\nprovides a novel template$\\unicode{x2014}$reward-free exploration, derived\ntests, and behavior-based scoring$\\unicode{x2014}$to evaluate what agents learn\nabout environment dynamics, and AutumnBench exposes significant headroom in\nworld-model learning.",
-      "pdf_url": "http://arxiv.org/pdf/2510.19788v2",
-      "arxiv_url": "http://arxiv.org/abs/2510.19788v2",
-      "published": "2025-10-22",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Lookahead Routing for Large Language Models",
-      "authors": [
-        "Canbin Huang",
-        "Tianyuan Shi",
-        "Yuhua Zhu",
-        "Ruijun Chen",
-        "Xiaojun Quan"
-      ],
-      "abstract": "Large language model (LLM) routers improve the efficiency of multi-model\nsystems by directing each query to the most appropriate model while leveraging\nthe diverse strengths of heterogeneous LLMs. Most existing approaches frame\nrouting as a classification problem based solely on the input query. While this\nreduces overhead by avoiding inference across all models, it overlooks valuable\ninformation that could be gleaned from potential outputs and fails to capture\nimplicit intent or contextual nuances that often emerge only during response\ngeneration. These limitations can result in suboptimal routing decisions,\nparticularly for complex or ambiguous queries that require deeper semantic\nunderstanding. To address this challenge, we propose Lookahead, a routing\nframework that \"foresees\" potential model outputs by predicting their latent\nrepresentations and uses these predictions to guide model selection, thus\nenabling more informed routing without full inference. Within this framework,\nwe implement two approaches based on causal and masked language models.\nEmpirical evaluations across seven public benchmarks - spanning instruction\nfollowing, mathematical reasoning, and code generation - show that Lookahead\nconsistently outperforms existing routing baselines, achieving an average\nperformance gain of 7.7% over the state-of-the-art. Our code is available at\nhttps://github.com/huangcb01/lookahead-routing.",
-      "pdf_url": "http://arxiv.org/pdf/2510.19506v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.19506v1",
-      "published": "2025-10-22",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "A New Targeted-Federated Learning Framework for Estimating Heterogeneity of Treatment Effects: A Robust Framework with Applications in Aging Cohorts",
-      "authors": [
-        "Rong Zhao",
-        "Jason Falvey",
-        "Xu Shi",
-        "Vernon M. Chinchilli",
-        "Chixiang Chen"
-      ],
-      "abstract": "Analyzing data from multiple sources offers valuable opportunities to improve\nthe estimation efficiency of causal estimands. However, this analysis also\nposes many challenges due to population heterogeneity and data privacy\nconstraints. While several advanced methods for causal inference in federated\nsettings have been developed in recent years, many focus on difference-based\naveraged causal effects and are not designed to study effect modification. In\nthis study, we introduce a novel targeted-federated learning framework to study\nthe heterogeneity of treatment effects (HTEs) for a targeted population by\nproposing a projection-based estimand. This HTE framework integrates\ninformation from multiple data sources without sharing raw data, while\naccounting for covariate distribution shifts among sources. Our proposed\napproach is shown to be doubly robust, conveniently supporting both\ndifference-based estimands for continuous outcomes and odds ratio-based\nestimands for binary outcomes. Furthermore, we develop a\ncommunication-efficient bootstrap-based selection procedure to detect\nnon-transportable data sources, thereby enhancing robust information\naggregation without introducing bias. The superior performance of the proposed\nestimator over existing methods is demonstrated through extensive simulation\nstudies, and the utility of our approach has been shown in a real-world data\napplication using nationwide Medicare-linked data.",
-      "pdf_url": "http://arxiv.org/pdf/2510.19243v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.19243v1",
-      "published": "2025-10-22",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
