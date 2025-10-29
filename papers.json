@@ -1,6 +1,129 @@
 {
-  "last_updated": "2025-10-28T00:51:04.782460",
+  "last_updated": "2025-10-29T00:55:11.384011",
   "papers": [
+    {
+      "title": "Causal Deep Q Network",
+      "authors": [
+        "Elouanes Khelifi",
+        "Amir Saki",
+        "Usef Faghihi"
+      ],
+      "abstract": "Deep Q Networks (DQN) have shown remarkable success in various reinforcement\nlearning tasks. However, their reliance on associative learning often leads to\nthe acquisition of spurious correlations, hindering their problem-solving\ncapabilities. In this paper, we introduce a novel approach to integrate causal\nprinciples into DQNs, leveraging the PEACE (Probabilistic Easy vAriational\nCausal Effect) formula for estimating causal effects. By incorporating causal\nreasoning during training, our proposed framework enhances the DQN's\nunderstanding of the underlying causal structure of the environment, thereby\nmitigating the influence of confounding factors and spurious correlations. We\ndemonstrate that integrating DQNs with causal capabilities significantly\nenhances their problem-solving capabilities without compromising performance.\nExperimental results on standard benchmark environments showcase that our\napproach outperforms conventional DQNs, highlighting the effectiveness of\ncausal reasoning in reinforcement learning. Overall, our work presents a\npromising avenue for advancing the capabilities of deep reinforcement learning\nagents through principled causal inference.",
+      "pdf_url": "http://arxiv.org/pdf/2510.23424v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.23424v1",
+      "published": "2025-10-27",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "The Reasoning Trap: How Enhancing LLM Reasoning Amplifies Tool Hallucination",
+      "authors": [
+        "Chenlong Yin",
+        "Zeyang Sha",
+        "Shiwen Cui",
+        "Changhua Meng"
+      ],
+      "abstract": "Enhancing the reasoning capabilities of Large Language Models (LLMs) is a key\nstrategy for building Agents that \"think then act.\" However, recent\nobservations, like OpenAI's o3, suggest a paradox: stronger reasoning often\ncoincides with increased hallucination, yet no prior work has systematically\nexamined whether reasoning enhancement itself causes tool hallucination. To\naddress this gap, we pose the central question: Does strengthening reasoning\nincrease tool hallucination? To answer this, we introduce SimpleToolHalluBench,\na diagnostic benchmark measuring tool hallucination in two failure modes: (i)\nno tool available, and (ii) only distractor tools available. Through controlled\nexperiments, we establish three key findings. First, we demonstrate a causal\nrelationship: progressively enhancing reasoning through RL increases tool\nhallucination proportionally with task performance gains. Second, this effect\ntranscends overfitting - training on non-tool tasks (e.g., mathematics) still\namplifies subsequent tool hallucination. Third, the effect is method-agnostic,\nappearing when reasoning is instilled via supervised fine-tuning and when it is\nmerely elicited at inference by switching from direct answers to step-by-step\nthinking. We also evaluate mitigation strategies including Prompt Engineering\nand Direct Preference Optimization (DPO), revealing a fundamental\nreliability-capability trade-off: reducing hallucination consistently degrades\nutility. Mechanistically, Reasoning RL disproportionately collapses\ntool-reliability-related representations, and hallucinations surface as\namplified divergences concentrated in late-layer residual streams. These\nfindings reveal that current reasoning enhancement methods inherently amplify\ntool hallucination, highlighting the need for new training objectives that\njointly optimize for capability and reliability.",
+      "pdf_url": "http://arxiv.org/pdf/2510.22977v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.22977v1",
+      "published": "2025-10-27",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "I.2"
+      ]
+    },
+    {
+      "title": "Exploring Structures of Inferential Mechanisms through Simplistic Digital Circuits",
+      "authors": [
+        "Giovanni Sileno",
+        "Jean-Louis Dessalles"
+      ],
+      "abstract": "Cognitive studies and artificial intelligence have developed distinct models\nfor various inferential mechanisms (categorization, induction, abduction,\ncausal inference, contrast, merge, ...). Yet, both natural and artificial views\non cognition lack apparently a unifying framework. This paper formulates a\nspeculative answer attempting to respond to this gap. To postulate on\nhigher-level activation processes from a material perspective, we consider\ninferential mechanisms informed by symbolic AI modelling techniques, through\nthe simplistic lenses of electronic circuits based on logic gates. We observe\nthat a logic gate view entails a different treatment of implication and\nnegation compared to standard logic and logic programming. Then, by\ncombinatorial exploration, we identify four main forms of dependencies that can\nbe realized by these inferential circuits. Looking at how these forms are\ngenerally used in the context of logic programs, we identify eight common\ninferential patterns, exposing traditionally distinct inferential mechanisms in\nan unifying framework. Finally, following a probabilistic interpretation of\nlogic programs, we unveil inner functional dependencies. The paper concludes\nelaborating in what sense, even if our arguments are mostly informed by\nsymbolic means and digital systems infrastructures, our observations may\npinpoint to more generally applicable structures.",
+      "pdf_url": "http://arxiv.org/pdf/2510.22883v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.22883v1",
+      "published": "2025-10-27",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Unifying regression-based and design-based causal inference in time-series experiments",
+      "authors": [
+        "Zhexiao Lin",
+        "Peng Ding"
+      ],
+      "abstract": "Time-series experiments, also called switchback experiments or N-of-1 trials,\nplay increasingly important roles in modern applications in medical and\nindustrial areas. Under the potential outcomes framework, recent research has\nstudied time-series experiments from the design-based perspective, relying\nsolely on the randomness in the design to drive the statistical inference.\nFocusing on simpler statistical methods, we examine the design-based properties\nof regression-based methods for estimating treatment effects in time-series\nexperiments. We demonstrate that the treatment effects of interest can be\nconsistently estimated using ordinary least squares with an appropriately\nspecified working model and transformed regressors. Our analysis allows for\nestimating a diverging number of treatment effects simultaneously, and\nestablishes the consistency and asymptotic normality of the regression-based\nestimators. Additionally, we show that asymptotically, the heteroskedasticity\nand autocorrelation consistent variance estimators provide conservative\nestimates of the true, design-based variances. Importantly, although our\napproach relies on regression, our design-based framework allows for\nmisspecification of the regression model.",
+      "pdf_url": "http://arxiv.org/pdf/2510.22864v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.22864v1",
+      "published": "2025-10-26",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "math.ST",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "A Theory of the Mechanics of Information: Generalization Through Measurement of Uncertainty (Learning is Measuring)",
+      "authors": [
+        "Christopher J. Hazard",
+        "Michael Resnick",
+        "Jacob Beel",
+        "Jack Xia",
+        "Cade Mack",
+        "Dominic Glennie",
+        "Matthew Fulp",
+        "David Maze",
+        "Andrew Bassett",
+        "Martin Koistinen"
+      ],
+      "abstract": "Traditional machine learning relies on explicit models and domain\nassumptions, limiting flexibility and interpretability. We introduce a\nmodel-free framework using surprisal (information theoretic uncertainty) to\ndirectly analyze and perform inferences from raw data, eliminating distribution\nmodeling, reducing bias, and enabling efficient updates including direct edits\nand deletion of training data. By quantifying relevance through uncertainty,\nthe approach enables generalizable inference across tasks including generative\ninference, causal discovery, anomaly detection, and time series forecasting. It\nemphasizes traceability, interpretability, and data-driven decision making,\noffering a unified, human-understandable framework for machine learning, and\nachieves at or near state-of-the-art performance across most common machine\nlearning tasks. The mathematical foundations create a ``physics'' of\ninformation, which enable these techniques to apply effectively to a wide\nvariety of complex data types, including missing data. Empirical results\nindicate that this may be a viable alternative path to neural networks with\nregard to scalable machine learning and artificial intelligence that can\nmaintain human understandability of the underlying mechanics.",
+      "pdf_url": "http://arxiv.org/pdf/2510.22809v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.22809v1",
+      "published": "2025-10-26",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.ST",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
+    {
+      "title": "SteerX: Disentangled Steering for LLM Personalization",
+      "authors": [
+        "Xiaoyan Zhao",
+        "Ming Yan",
+        "Yilun Qiu",
+        "Haoting Ni",
+        "Yang Zhang",
+        "Fuli Feng",
+        "Hong Cheng",
+        "Tat-Seng Chua"
+      ],
+      "abstract": "Large language models (LLMs) have shown remarkable success in recent years,\nenabling a wide range of applications, including intelligent assistants that\nsupport users' daily life and work. A critical factor in building such\nassistants is personalizing LLMs, as user preferences and needs vary widely.\nActivation steering, which directly leverages directions representing user\npreference in the LLM activation space to adjust its behavior, offers a\ncost-effective way to align the model's outputs with individual users. However,\nexisting methods rely on all historical data to compute the steering vector,\nignoring that not all content reflects true user preferences, which undermines\nthe personalization signal. To address this, we propose SteerX, a disentangled\nsteering method that isolates preference-driven components from\npreference-agnostic components. Grounded in causal inference theory, SteerX\nestimates token-level causal effects to identify preference-driven tokens,\ntransforms these discrete signals into a coherent description, and then\nleverages them to steer personalized LLM generation. By focusing on the truly\npreference-driven information, SteerX produces more accurate activation\nsteering vectors and enhances personalization. Experiments on two\nrepresentative steering backbone methods across real-world datasets demonstrate\nthat SteerX consistently enhances steering vector quality, offering a practical\nsolution for more effective LLM personalization.",
+      "pdf_url": "http://arxiv.org/pdf/2510.22256v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.22256v1",
+      "published": "2025-10-25",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Generalization or Memorization: Dynamic Decoding for Mode Steering",
+      "authors": [
+        "Xuanming Zhang"
+      ],
+      "abstract": "Large Language Models (LLMs) exhibit a troubling duality, capable of both\nremarkable generalization and brittle, verbatim memorization of their training\ndata. This unpredictability undermines their reliability in high-stakes\napplications. In this work, we propose a unified framework to understand,\nidentify, and control these distinct reasoning modes. First, we introduce a\ntheoretical model based on the Information Bottleneck (IB) principle,\nformalizing generalization as the learning of a compressed, task-relevant\nrepresentation and memorization as a failure to compress. Building on this\ntheory, we develop Dynamic Mode Steering (DMS), a novel inference-time\nalgorithm which comprises two components: (1) a lightweight, causally-grounded\nlinear probe that identifies the model's instantaneous reliance on\nmemorization, and (2) a dynamic activation steering mechanism that nudges the\nmodel's computation towards pre-identified generalization circuits. We frame\nDMS as a form of adaptive, self-contrastive decoding. Experiments on reasoning\nand faithfulness tasks demonstrate that DMS significantly improves logical\nconsistency and factual accuracy, thereby offering a principled approach to\nenhancing LLM reliability.",
+      "pdf_url": "http://arxiv.org/pdf/2510.22099v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.22099v1",
+      "published": "2025-10-25",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "Resilient Radio Access Networks: AI and the Unknown Unknowns",
       "authors": [
@@ -15,6 +138,26 @@
       "categories": [
         "cs.IT",
         "math.IT"
+      ]
+    },
+    {
+      "title": "Bridging Prediction and Attribution: Identifying Forward and Backward Causal Influence Ranges Using Assimilative Causal Inference",
+      "authors": [
+        "Marios Andreou",
+        "Nan Chen"
+      ],
+      "abstract": "Causal inference identifies cause-and-effect relationships between variables.\nWhile traditional approaches rely on data to reveal causal links, a recently\ndeveloped method, assimilative causal inference (ACI), integrates observations\nwith dynamical models. It utilizes Bayesian data assimilation to trace causes\nback from observed effects by quantifying the reduction in uncertainty. ACI\nadvances the detection of instantaneous causal relationships and the\nintermittent reversal of causal roles over time. Beyond identifying causal\nconnections, an equally important challenge is determining the associated\ncausal influence range (CIR), indicating when causal influences emerged and for\nhow long they persist. In this paper, ACI is employed to develop mathematically\nrigorous formulations of both forward and backward CIRs at each time. The\nforward CIR quantifies the temporal impact of a cause, while the backward CIR\ntraces the onset of triggers for an observed effect, thus characterizing causal\npredictability and attribution of outcomes at each transient phase,\nrespectively. Objective and robust metrics for both CIRs are introduced,\neliminating the need for empirical thresholds. Computationally efficient\napproximation algorithms to compute CIRs are developed, which facilitate the\nuse of closed-form expressions for a broad class of nonlinear dynamical\nsystems. Numerical simulations demonstrate how this forward and backward CIR\nframework provides new possibilities for probing complex dynamical systems. It\nadvances the study of bifurcation-driven and noise-induced tipping points in\nEarth systems, investigates the impact from resolving the interfering variables\nwhen determining the influence ranges, and elucidates atmospheric blocking\nmechanisms in the equatorial region. These results have direct implications for\nscience, policy, and decision-making.",
+      "pdf_url": "http://arxiv.org/pdf/2510.21889v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.21889v1",
+      "published": "2025-10-24",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.ST",
+        "physics.data-an",
+        "stat.ME",
+        "stat.TH",
+        "62F15, 62D20, 62M20, 93E11, 93E14, 60H10"
       ]
     },
     {
@@ -33,156 +176,6 @@
       "published": "2025-10-23",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Generative Reasoning Recommendation via LLMs",
-      "authors": [
-        "Minjie Hong",
-        "Zetong Zhou",
-        "Zirun Guo",
-        "Ziang Zhang",
-        "Ruofan Hu",
-        "Weinan Gan",
-        "Jieming Zhu",
-        "Zhou Zhao"
-      ],
-      "abstract": "Despite their remarkable reasoning capabilities across diverse domains, large\nlanguage models (LLMs) face fundamental challenges in natively functioning as\ngenerative reasoning recommendation models (GRRMs), where the intrinsic\nmodeling gap between textual semantics and collaborative filtering signals,\ncombined with the sparsity and stochasticity of user feedback, presents\nsignificant obstacles. This work explores how to build GRRMs by adapting\npre-trained LLMs, which achieves a unified understanding-reasoning-prediction\nmanner for recommendation tasks. We propose GREAM, an end-to-end framework that\nintegrates three components: (i) Collaborative-Semantic Alignment, which fuses\nheterogeneous textual evidence to construct semantically consistent, discrete\nitem indices and auxiliary alignment tasks that ground linguistic\nrepresentations in interaction semantics; (ii) Reasoning Curriculum Activation,\nwhich builds a synthetic dataset with explicit Chain-of-Thought supervision and\na curriculum that progresses through behavioral evidence extraction, latent\npreference modeling, intent inference, recommendation formulation, and denoised\nsequence rewriting; and (iii) Sparse-Regularized Group Policy Optimization\n(SRPO), which stabilizes post-training via Residual-Sensitive Verifiable Reward\nand Bonus-Calibrated Group Advantage Estimation, enabling end-to-end\noptimization under verifiable signals despite sparse successes. GREAM natively\nsupports two complementary inference modes: Direct Sequence Recommendation for\nhigh-throughput, low-latency deployment, and Sequential Reasoning\nRecommendation that first emits an interpretable reasoning chain for causal\ntransparency. Experiments on three datasets demonstrate consistent gains over\nstrong baselines, providing a practical path toward verifiable-RL-driven LLM\nrecommenders.",
-      "pdf_url": "http://arxiv.org/pdf/2510.20815v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.20815v1",
-      "published": "2025-10-23",
-      "categories": [
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Better Tokens for Better 3D: Advancing Vision-Language Modeling in 3D Medical Imaging",
-      "authors": [
-        "Ibrahim Ethem Hamamci",
-        "Sezgin Er",
-        "Suprosanna Shit",
-        "Hadrien Reynaud",
-        "Dong Yang",
-        "Pengfei Guo",
-        "Marc Edgar",
-        "Daguang Xu",
-        "Bernhard Kainz",
-        "Bjoern Menze"
-      ],
-      "abstract": "Recent progress in vision-language modeling for 3D medical imaging has been\nfueled by large-scale computed tomography (CT) corpora with paired free-text\nreports, stronger architectures, and powerful pretrained models. This has\nenabled applications such as automated report generation and text-conditioned\n3D image synthesis. Yet, current approaches struggle with high-resolution,\nlong-sequence volumes: contrastive pretraining often yields vision encoders\nthat are misaligned with clinical language, and slice-wise tokenization blurs\nfine anatomy, reducing diagnostic performance on downstream tasks. We introduce\nBTB3D (Better Tokens for Better 3D), a causal convolutional encoder-decoder\nthat unifies 2D and 3D training and inference while producing compact,\nfrequency-aware volumetric tokens. A three-stage training curriculum enables\n(i) local reconstruction, (ii) overlapping-window tiling, and (iii)\nlong-context decoder refinement, during which the model learns from short slice\nexcerpts yet generalizes to scans exceeding 300 slices without additional\nmemory overhead. BTB3D sets a new state-of-the-art on two key tasks: it\nimproves BLEU scores and increases clinical F1 by 40% over CT2Rep, CT-CHAT, and\nMerlin for report generation; and it reduces FID by 75% and halves FVD compared\nto GenerateCT and MedSyn for text-to-CT synthesis, producing anatomically\nconsistent 512*512*241 volumes. These results confirm that precise\nthree-dimensional tokenization, rather than larger language backbones alone, is\nessential for scalable vision-language modeling in 3D medical imaging. The\ncodebase is available at: https://github.com/ibrahimethemhamamci/BTB3D",
-      "pdf_url": "http://arxiv.org/pdf/2510.20639v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.20639v1",
-      "published": "2025-10-23",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "On Multiple Robustness of Proximal Dynamic Treatment Regimes",
-      "authors": [
-        "Yuanshan Gao",
-        "Yang Bai",
-        "Yifan Cui"
-      ],
-      "abstract": "Dynamic treatment regimes are sequential decision rules that adapt treatment\naccording to individual time-varying characteristics and outcomes to achieve\noptimal effects, with applications in precision medicine, personalized\nrecommendations, and dynamic marketing. Estimating optimal dynamic treatment\nregimes via sequential randomized trials might face costly and ethical hurdles,\noften necessitating the use of historical observational data. In this work, we\nutilize proximal causal inference framework for learning optimal dynamic\ntreatment regimes when the unconfoundedness assumption fails. Our contributions\nare four-fold: (i) we propose three nonparametric identification methods for\noptimal dynamic treatment regimes; (ii) we establish the semiparametric\nefficiency bound for the value function of a given regime; (iii) we propose a\n(K+1)-robust method for learning optimal dynamic treatment regimes, where K is\nthe number of stages; (iv) as a by-product for marginal structural models, we\nestablish identification and estimation of counterfactual means under a static\nregime. Numerical experiments validate the efficiency and multiple robustness\nof our proposed methods.",
-      "pdf_url": "http://arxiv.org/pdf/2510.20451v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.20451v1",
-      "published": "2025-10-23",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.ML",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Identification and Debiased Learning of Causal Effects with General Instrumental Variables",
-      "authors": [
-        "Shuyuan Chen",
-        "Peng Zhang",
-        "Yifan Cui"
-      ],
-      "abstract": "Instrumental variable methods are fundamental to causal inference when\ntreatment assignment is confounded by unobserved variables. In this article, we\ndevelop a general nonparametric framework for identification and learning with\nmulti-categorical or continuous instrumental variables. Specifically, we\npropose an additive instrumental variable framework to identify mean potential\noutcomes and the average treatment effect with a weighting function. Leveraging\nsemiparametric theory, we derive efficient influence functions and construct\nconsistent, asymptotically normal estimators via debiased machine learning.\nExtensions to longitudinal data, dynamic treatment regimes, and multiplicative\ninstrumental variables are further developed. We demonstrate the proposed\nmethod by employing simulation studies and analyzing real data from the Job\nTraining Partnership Act program.",
-      "pdf_url": "http://arxiv.org/pdf/2510.20404v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.20404v1",
-      "published": "2025-10-23",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "math.ST",
-        "stat.ML",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Incentivizing Consistent, Effective and Scalable Reasoning Capability in Audio LLMs via Reasoning Process Rewards",
-      "authors": [
-        "Jiajun Fan",
-        "Roger Ren",
-        "Jingyuan Li",
-        "Rahul Pandey",
-        "Prashanth Gurunath Shivakumar",
-        "Ivan Bulyko",
-        "Ankur Gandhe",
-        "Ge Liu",
-        "Yile Gu"
-      ],
-      "abstract": "The role of reasoning in Audio Large Language Models remains widely\nunderexplored, as introducing a reasoning process often degrades rather than\nimproves performance during inference, a phenomenon we term test-time inverse\nscaling, where longer reasoning chains yield progressively worse results. We\ndemonstrate that this stems not from fundamental limitations of reasoning\nitself, but from inadequate training: models without proper guidance for the\nreasoning process produce hallucinatory, inconsistent reasoning that\naccumulates errors over longer chains. To address these challenges, we\nintroduce CESAR (Consistent, Effective, and Scalable Audio Reasoners), shifting\nfrom outcome verification to rewarding the reasoning process. Our online\nreinforcement learning framework employs Group Relative Policy Optimization\nwith a multi-faceted reward suite that incentivizes not only correctness and\nformat but also consistency, structured analytical patterns, causal reasoning,\ndomain-knowledge integration, and calibrated reasoning depth. CESAR resolves\ntest-time inverse scaling, transforming reasoning from detriments into gains\nwhile revealing model-specific ``reasoning sweet spots\", where performance\npeaks during test-time scaling. We achieve state-of-the-art results on MMAU\nTest-mini, substantially outperforming Gemini 2.5 Pro and GPT-4o Audio, and\nnear-human-level performance on MMSU reasoning tasks. Through AI-as-judge\nevaluations and qualitative comparisons, we provide both quantitative and\nqualitative validation of our improved reasoning quality. Importantly, enhanced\nreasoning creates synergistic effects, simultaneously improving multimodal\nreasoning and perception capabilities. Overall, CESAR establishes a principled\nmethod for developing robust and scalable reasoning in Audio LLMs.",
-      "pdf_url": "http://arxiv.org/pdf/2510.20867v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.20867v1",
-      "published": "2025-10-23",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Bias-Variance Tradeoff of Matching Prior to Difference-in-Differences When Parallel Trends is Violated",
-      "authors": [
-        "Mingxuan Ge",
-        "Dae Woong Ham"
-      ],
-      "abstract": "Quasi-experimental causal inference methods have become central in empirical\noperations management (OM) for guiding managerial decisions. Among these,\nempiricists utilize the Difference-in-Differences (DiD) estimator, which relies\non the parallel trends assumption. To improve its plausibility, researchers\noften match treated and control units before applying DiD, with the intuition\nthat matched groups are more likely to evolve similarly absent treatment.\nExisting work that analyze this practice, however, has focused solely on bias.\nWe complement and fill an important gap by analyzing the full bias-variance\ntradeoff. Under a linear structural model with unobserved time-varying\nconfounders, we show that variance results contrast with established bias\ninsights: matching on observed covariates prior to DiD is not always\nrecommended over the classic (unmatched) DiD due to a sample size tradeoff;\nfurthermore, matching additionally on pre-treatment outcomes is always\nbeneficial as such tradeoff no longer exists once matching is performed. We\ntherefore advocate mean squared error (MSE) as a final metric and give\npractitioner-friendly guidelines with theoretical guarantees on when (and on\nwhat variables) they should match on. We apply these insights to a recent study\non how the introduction of monetary incentives by a knowledge-sharing platform\naffects its general engagement and show that the authors' matching choice prior\nto DiD was both warranted and critical. In particular, we provide new\nmanagerial insights that after a full bias correction, their estimated effect\nwith matching still remains statistically significant, demonstrating that the\nchosen matching-DiD approach is sufficiently robust to address managerial\nconcerns over violations of parallel trends.",
-      "pdf_url": "http://arxiv.org/pdf/2510.20191v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.20191v1",
-      "published": "2025-10-23",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Treatment Effect Learning Under Sequential Randomization",
-      "authors": [
-        "Rina Friedberg",
-        "Richard Mudd",
-        "Patrick Johnstone",
-        "Melissa Pothen",
-        "Vishal Vaingankar",
-        "Vishwanath Sangale",
-        "Abbas Zaidi"
-      ],
-      "abstract": "Sequential treatment assignments in online experiments lead to complex\ndependency structures, often rendering identification, estimation and inference\nover treatments a challenge. Treatments in one session (e.g., a user logging\non) can have an effect that persists into subsequent sessions, leading to\ncumulative effects on outcomes measured at a later stage. This can render\nstandard methods for identification and inference trivially misspecified. We\npropose T-Learners layered into the G-Formula for this setting, building on\nliterature from causal machine learning and identification in sequential\nsettings. In a simple simulation, this approach prevents decaying accuracy in\nthe presence of carry-over effects, highlighting the importance of\nidentification and inference strategies tailored to the nature of systems often\nseen in the tech domain.",
-      "pdf_url": "http://arxiv.org/pdf/2510.20078v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.20078v1",
-      "published": "2025-10-22",
-      "categories": [
-        "stat.AP",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "LLM-Augmented Symbolic NLU System for More Reliable Continuous Causal Statement Interpretation",
-      "authors": [
-        "Xin Lian",
-        "Kenneth D. Forbus"
-      ],
-      "abstract": "Despite the broad applicability of large language models (LLMs), their\nreliance on probabilistic inference makes them vulnerable to errors such as\nhallucination in generated facts and inconsistent output structure in natural\nlanguage understanding (NLU) tasks. By contrast, symbolic NLU systems provide\ninterpretable understanding grounded in curated lexicons, semantic resources,\nand syntactic & semantic interpretation rules. They produce relational\nrepresentations that can be used for accurate reasoning and planning, as well\nas incremental debuggable learning. However, symbolic NLU systems tend to be\nmore limited in coverage than LLMs and require scarce knowledge representation\nand linguistics skills to extend and maintain. This paper explores a hybrid\napproach that integrates the broad-coverage language processing of LLMs with\nthe symbolic NLU capabilities of producing structured relational\nrepresentations to hopefully get the best of both approaches. We use LLMs for\nrephrasing and text simplification, to provide broad coverage, and as a source\nof information to fill in knowledge gaps more automatically. We use symbolic\nNLU to produce representations that can be used for reasoning and for\nincremental learning. We evaluate this approach on the task of extracting and\ninterpreting quantities and causal laws from commonsense science texts, along\nwith symbolic- and LLM-only pipelines. Our results suggest that our hybrid\nmethod works significantly better than the symbolic-only pipeline.",
-      "pdf_url": "http://arxiv.org/pdf/2510.19988v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.19988v1",
-      "published": "2025-10-22",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]
