@@ -1,6 +1,105 @@
 {
-  "last_updated": "2025-10-29T00:55:11.384011",
+  "last_updated": "2025-10-30T00:54:31.906322",
   "papers": [
+    {
+      "title": "Machine-Learning-Assisted Comparison of Regression Functions",
+      "authors": [
+        "Jian Yan",
+        "Zhuoxi Li",
+        "Yang Ning",
+        "Yong Chen"
+      ],
+      "abstract": "We revisit the classical problem of comparing regression functions, a\nfundamental question in statistical inference with broad relevance to modern\napplications such as data integration, transfer learning, and causal inference.\nExisting approaches typically rely on smoothing techniques and are thus\nhindered by the curse of dimensionality. We propose a generalized notion of\nkernel-based conditional mean dependence that provides a new characterization\nof the null hypothesis of equal regression functions. Building on this\nreformulation, we develop two novel tests that leverage modern machine learning\nmethods for flexible estimation. We establish the asymptotic properties of the\ntest statistics, which hold under both fixed- and high-dimensional regimes.\nUnlike existing methods that often require restrictive distributional\nassumptions, our framework only imposes mild moment conditions. The efficacy of\nthe proposed tests is demonstrated through extensive numerical studies.",
+      "pdf_url": "http://arxiv.org/pdf/2510.24714v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.24714v1",
+      "published": "2025-10-28",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Decentralized Causal Discovery using Judo Calculus",
+      "authors": [
+        "Sridhar Mahadevan"
+      ],
+      "abstract": "We describe a theory and implementation of an intuitionistic decentralized\nframework for causal discovery using judo calculus, which is formally defined\nas j-stable causal inference using j-do-calculus in a topos of sheaves. In\nreal-world applications -- from biology to medicine and social science --\ncausal effects depend on regime (age, country, dose, genotype, or lab\nprotocol). Our proposed judo calculus formalizes this context dependence\nformally as local truth: a causal claim is proven true on a cover of regimes,\nnot everywhere at once. The Lawvere-Tierney modal operator j chooses which\nregimes are relevant; j-stability means the claim holds constructively and\nconsistently across that family. We describe an algorithmic and implementation\nframework for judo calculus, combining it with standard score-based,\nconstraint-based, and gradient-based causal discovery methods. We describe\nexperimental results on a range of domains, from synthetic to real-world\ndatasets from biology and economics. Our experimental results show the\ncomputational efficiency gained by the decentralized nature of sheaf-theoretic\ncausal discovery, as well as improved performance over classical causal\ndiscovery methods.",
+      "pdf_url": "http://arxiv.org/pdf/2510.23942v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.23942v1",
+      "published": "2025-10-27",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Group Interventions on Deep Networks for Causal Discovery in Subsystems",
+      "authors": [
+        "Wasim Ahmad",
+        "Joachim Denzler",
+        "Maha Shadaydeh"
+      ],
+      "abstract": "Causal discovery uncovers complex relationships between variables, enhancing\npredictions, decision-making, and insights into real-world systems, especially\nin nonlinear multivariate time series. However, most existing methods primarily\nfocus on pairwise cause-effect relationships, overlooking interactions among\ngroups of variables, i.e., subsystems and their collective causal influence. In\nthis study, we introduce gCDMI, a novel multi-group causal discovery method\nthat leverages group-level interventions on trained deep neural networks and\nemploys model invariance testing to infer causal relationships. Our approach\ninvolves three key steps. First, we use deep learning to jointly model the\nstructural relationships among groups of all time series. Second, we apply\ngroup-wise interventions to the trained model. Finally, we conduct model\ninvariance testing to determine the presence of causal links among variable\ngroups. We evaluate our method on simulated datasets, demonstrating its\nsuperior performance in identifying group-level causal relationships compared\nto existing methods. Additionally, we validate our approach on real-world\ndatasets, including brain networks and climate ecosystems. Our results\nhighlight that applying group-level interventions to deep learning models,\ncombined with invariance testing, can effectively reveal complex causal\nstructures, offering valuable insights for domains such as neuroscience and\nclimate science.",
+      "pdf_url": "http://arxiv.org/pdf/2510.23906v2",
+      "arxiv_url": "http://arxiv.org/abs/2510.23906v2",
+      "published": "2025-10-27",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Control VAR: a counterfactual based approach to inference in macroeconomics",
+      "authors": [
+        "Raimondo Pala"
+      ],
+      "abstract": "This paper addresses the challenges of giving a causal interpretation to\nvector autoregressions (VARs). I show that under independence assumptions VARs\ncan identify average treatment effects, average causal responses, or a mix of\nthe two, depending on the distribution of the policy. But what about situations\nin which the economist cannot rely on independence assumptions? I propose an\nalternative method, defined as control-VAR, which uses control variables to\nestimate causal effects. Control-VAR can estimate average treatment effects on\nthe treated for dummy policies or average causal responses over time for\ncontinuous policies.\n  The advantages of control-based approaches are demonstrated by examining the\nimpact of natural disasters on the US economy, using Germany as a control.\nContrary to previous literature, the results indicate that natural disasters\nhave a negative economic impact without any cyclical positive effect. These\nfindings suggest that control-VARs provide a viable alternative to strict\nindependence assumptions, offering more credible causal estimates and\nsignificant implications for policy design in response to natural disasters.",
+      "pdf_url": "http://arxiv.org/pdf/2510.23762v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.23762v1",
+      "published": "2025-10-27",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Game-TARS: Pretrained Foundation Models for Scalable Generalist Multimodal Game Agents",
+      "authors": [
+        "Zihao Wang",
+        "Xujing Li",
+        "Yining Ye",
+        "Junjie Fang",
+        "Haoming Wang",
+        "Longxiang Liu",
+        "Shihao Liang",
+        "Junting Lu",
+        "Zhiyong Wu",
+        "Jiazhan Feng",
+        "Wanjun Zhong",
+        "Zili Li",
+        "Yu Wang",
+        "Yu Miao",
+        "Bo Zhou",
+        "Yuanfan Li",
+        "Hao Wang",
+        "Zhongkai Zhao",
+        "Faming Wu",
+        "Zhengxuan Jiang",
+        "Weihao Tan",
+        "Heyuan Yao",
+        "Shi Yan",
+        "Xiangyang Li",
+        "Yitao Liang",
+        "Yujia Qin",
+        "Guang Shi"
+      ],
+      "abstract": "We present Game-TARS, a generalist game agent trained with a unified,\nscalable action space anchored to human-aligned native keyboard-mouse inputs.\nUnlike API- or GUI-based approaches, this paradigm enables large-scale\ncontinual pre-training across heterogeneous domains, including OS, web, and\nsimulation games. Game-TARS is pre-trained on over 500B tokens with diverse\ntrajectories and multimodal data. Key techniques include a decaying continual\nloss to reduce causal confusion and an efficient Sparse-Thinking strategy that\nbalances reasoning depth and inference cost. Experiments show that Game-TARS\nachieves about 2 times the success rate over the previous sota model on\nopen-world Minecraft tasks, is close to the generality of fresh humans in\nunseen web 3d games, and outperforms GPT-5, Gemini-2.5-Pro, and Claude-4-Sonnet\nin FPS benchmarks. Scaling results on training-time and test-time confirm that\nthe unified action space sustains improvements when scaled to cross-game and\nmultimodal data. Our results demonstrate that simple, scalable action\nrepresentations combined with large-scale pre-training provide a promising path\ntoward generalist agents with broad computer-use abilities.",
+      "pdf_url": "http://arxiv.org/pdf/2510.23691v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.23691v1",
+      "published": "2025-10-27",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Causal Deep Q Network",
       "authors": [
@@ -14,6 +113,23 @@
       "published": "2025-10-27",
       "categories": [
         "cs.AI"
+      ]
+    },
+    {
+      "title": "Beyond Prompt Engineering: Neuro-Symbolic-Causal Architecture for Robust Multi-Objective AI Agents",
+      "authors": [
+        "Gokturk Aytug Akarlar"
+      ],
+      "abstract": "Large language models show promise as autonomous decision-making agents, yet\ntheir deployment in high-stakes domains remains fraught with risk. Without\narchitectural safeguards, LLM agents exhibit catastrophic brittleness:\nidentical capabilities produce wildly different outcomes depending solely on\nprompt framing. We present Chimera, a neuro-symbolic-causal architecture that\nintegrates three complementary components - an LLM strategist, a formally\nverified symbolic constraint engine, and a causal inference module for\ncounterfactual reasoning. We benchmark Chimera against baseline architectures\n(LLM-only, LLM with symbolic constraints) across 52-week simulations in a\nrealistic e-commerce environment featuring price elasticity, trust dynamics,\nand seasonal demand. Under organizational biases toward either volume or margin\noptimization, LLM-only agents fail catastrophically (total loss of \\$99K in\nvolume scenarios) or destroy brand trust (-48.6% in margin scenarios). Adding\nsymbolic constraints prevents disasters but achieves only 43-87% of Chimera's\nprofit. Chimera consistently delivers the highest returns (\\$1.52M and \\$1.96M\nrespectively, some cases +\\$2.2M) while improving brand trust (+1.8% and\n+10.8%, some cases +20.86%), demonstrating prompt-agnostic robustness. Our TLA+\nformal verification proves zero constraint violations across all scenarios.\nThese results establish that architectural design not prompt engineering\ndetermines the reliability of autonomous agents in production environments. We\nprovide open-source implementations and interactive demonstrations for\nreproducibility.",
+      "pdf_url": "http://arxiv.org/pdf/2510.23682v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.23682v1",
+      "published": "2025-10-27",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.LO",
+        "cs.SE",
+        "I.2.11; I.2.6; I.2.8"
       ]
     },
     {
@@ -63,119 +179,6 @@
         "econ.EM",
         "math.ST",
         "stat.TH"
-      ]
-    },
-    {
-      "title": "A Theory of the Mechanics of Information: Generalization Through Measurement of Uncertainty (Learning is Measuring)",
-      "authors": [
-        "Christopher J. Hazard",
-        "Michael Resnick",
-        "Jacob Beel",
-        "Jack Xia",
-        "Cade Mack",
-        "Dominic Glennie",
-        "Matthew Fulp",
-        "David Maze",
-        "Andrew Bassett",
-        "Martin Koistinen"
-      ],
-      "abstract": "Traditional machine learning relies on explicit models and domain\nassumptions, limiting flexibility and interpretability. We introduce a\nmodel-free framework using surprisal (information theoretic uncertainty) to\ndirectly analyze and perform inferences from raw data, eliminating distribution\nmodeling, reducing bias, and enabling efficient updates including direct edits\nand deletion of training data. By quantifying relevance through uncertainty,\nthe approach enables generalizable inference across tasks including generative\ninference, causal discovery, anomaly detection, and time series forecasting. It\nemphasizes traceability, interpretability, and data-driven decision making,\noffering a unified, human-understandable framework for machine learning, and\nachieves at or near state-of-the-art performance across most common machine\nlearning tasks. The mathematical foundations create a ``physics'' of\ninformation, which enable these techniques to apply effectively to a wide\nvariety of complex data types, including missing data. Empirical results\nindicate that this may be a viable alternative path to neural networks with\nregard to scalable machine learning and artificial intelligence that can\nmaintain human understandability of the underlying mechanics.",
-      "pdf_url": "http://arxiv.org/pdf/2510.22809v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.22809v1",
-      "published": "2025-10-26",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "math.ST",
-        "stat.ML",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "SteerX: Disentangled Steering for LLM Personalization",
-      "authors": [
-        "Xiaoyan Zhao",
-        "Ming Yan",
-        "Yilun Qiu",
-        "Haoting Ni",
-        "Yang Zhang",
-        "Fuli Feng",
-        "Hong Cheng",
-        "Tat-Seng Chua"
-      ],
-      "abstract": "Large language models (LLMs) have shown remarkable success in recent years,\nenabling a wide range of applications, including intelligent assistants that\nsupport users' daily life and work. A critical factor in building such\nassistants is personalizing LLMs, as user preferences and needs vary widely.\nActivation steering, which directly leverages directions representing user\npreference in the LLM activation space to adjust its behavior, offers a\ncost-effective way to align the model's outputs with individual users. However,\nexisting methods rely on all historical data to compute the steering vector,\nignoring that not all content reflects true user preferences, which undermines\nthe personalization signal. To address this, we propose SteerX, a disentangled\nsteering method that isolates preference-driven components from\npreference-agnostic components. Grounded in causal inference theory, SteerX\nestimates token-level causal effects to identify preference-driven tokens,\ntransforms these discrete signals into a coherent description, and then\nleverages them to steer personalized LLM generation. By focusing on the truly\npreference-driven information, SteerX produces more accurate activation\nsteering vectors and enhances personalization. Experiments on two\nrepresentative steering backbone methods across real-world datasets demonstrate\nthat SteerX consistently enhances steering vector quality, offering a practical\nsolution for more effective LLM personalization.",
-      "pdf_url": "http://arxiv.org/pdf/2510.22256v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.22256v1",
-      "published": "2025-10-25",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Generalization or Memorization: Dynamic Decoding for Mode Steering",
-      "authors": [
-        "Xuanming Zhang"
-      ],
-      "abstract": "Large Language Models (LLMs) exhibit a troubling duality, capable of both\nremarkable generalization and brittle, verbatim memorization of their training\ndata. This unpredictability undermines their reliability in high-stakes\napplications. In this work, we propose a unified framework to understand,\nidentify, and control these distinct reasoning modes. First, we introduce a\ntheoretical model based on the Information Bottleneck (IB) principle,\nformalizing generalization as the learning of a compressed, task-relevant\nrepresentation and memorization as a failure to compress. Building on this\ntheory, we develop Dynamic Mode Steering (DMS), a novel inference-time\nalgorithm which comprises two components: (1) a lightweight, causally-grounded\nlinear probe that identifies the model's instantaneous reliance on\nmemorization, and (2) a dynamic activation steering mechanism that nudges the\nmodel's computation towards pre-identified generalization circuits. We frame\nDMS as a form of adaptive, self-contrastive decoding. Experiments on reasoning\nand faithfulness tasks demonstrate that DMS significantly improves logical\nconsistency and factual accuracy, thereby offering a principled approach to\nenhancing LLM reliability.",
-      "pdf_url": "http://arxiv.org/pdf/2510.22099v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.22099v1",
-      "published": "2025-10-25",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Resilient Radio Access Networks: AI and the Unknown Unknowns",
-      "authors": [
-        "Bho Matthiesen",
-        "Armin Dekorsy",
-        "Petar Popovski"
-      ],
-      "abstract": "5G networks offer exceptional reliability and availability, ensuring\nconsistent performance and user satisfaction. Yet they might still fail when\nconfronted with the unexpected. A resilient system is able to adapt to\nreal-world complexity, including operating conditions completely unanticipated\nduring system design. This makes resilience a vital attribute for communication\nsystems that must sustain service in scenarios where models are absent or too\nintricate to provide statistical guarantees. Such considerations indicate that\nartifical intelligence (AI) will play a major role in delivering resilience. In\nthis paper, we examine the challenges of designing AIs for resilient radio\naccess networks, especially with respect to unanticipated and rare disruptions.\nOur theoretical results indicate strong limitations of current statistical\nlearning methods for resilience and suggest connections to online learning and\ncausal inference.",
-      "pdf_url": "http://arxiv.org/pdf/2510.21587v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.21587v1",
-      "published": "2025-10-24",
-      "categories": [
-        "cs.IT",
-        "math.IT"
-      ]
-    },
-    {
-      "title": "Bridging Prediction and Attribution: Identifying Forward and Backward Causal Influence Ranges Using Assimilative Causal Inference",
-      "authors": [
-        "Marios Andreou",
-        "Nan Chen"
-      ],
-      "abstract": "Causal inference identifies cause-and-effect relationships between variables.\nWhile traditional approaches rely on data to reveal causal links, a recently\ndeveloped method, assimilative causal inference (ACI), integrates observations\nwith dynamical models. It utilizes Bayesian data assimilation to trace causes\nback from observed effects by quantifying the reduction in uncertainty. ACI\nadvances the detection of instantaneous causal relationships and the\nintermittent reversal of causal roles over time. Beyond identifying causal\nconnections, an equally important challenge is determining the associated\ncausal influence range (CIR), indicating when causal influences emerged and for\nhow long they persist. In this paper, ACI is employed to develop mathematically\nrigorous formulations of both forward and backward CIRs at each time. The\nforward CIR quantifies the temporal impact of a cause, while the backward CIR\ntraces the onset of triggers for an observed effect, thus characterizing causal\npredictability and attribution of outcomes at each transient phase,\nrespectively. Objective and robust metrics for both CIRs are introduced,\neliminating the need for empirical thresholds. Computationally efficient\napproximation algorithms to compute CIRs are developed, which facilitate the\nuse of closed-form expressions for a broad class of nonlinear dynamical\nsystems. Numerical simulations demonstrate how this forward and backward CIR\nframework provides new possibilities for probing complex dynamical systems. It\nadvances the study of bifurcation-driven and noise-induced tipping points in\nEarth systems, investigates the impact from resolving the interfering variables\nwhen determining the influence ranges, and elucidates atmospheric blocking\nmechanisms in the equatorial region. These results have direct implications for\nscience, policy, and decision-making.",
-      "pdf_url": "http://arxiv.org/pdf/2510.21889v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.21889v1",
-      "published": "2025-10-24",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "math.ST",
-        "physics.data-an",
-        "stat.ME",
-        "stat.TH",
-        "62F15, 62D20, 62M20, 93E11, 93E14, 60H10"
-      ]
-    },
-    {
-      "title": "Handling Missing Responses under Cluster Dependence with Applications to Language Model Evaluation",
-      "authors": [
-        "Zhenghao Zeng",
-        "David Arbour",
-        "Avi Feller",
-        "Ishita Dasgupta",
-        "Atanu R Sinha",
-        "Edward H. Kennedy"
-      ],
-      "abstract": "Human annotations play a crucial role in evaluating the performance of GenAI\nmodels. Two common challenges in practice, however, are missing annotations\n(the response variable of interest) and cluster dependence among human-AI\ninteractions (e.g., questions asked by the same user may be highly correlated).\nReliable inference must address both these issues to achieve unbiased\nestimation and appropriately quantify uncertainty when estimating average\nscores from human annotations. In this paper, we analyze the doubly robust\nestimator, a widely used method in missing data analysis and causal inference,\napplied to this setting and establish novel theoretical properties under\ncluster dependence. We further illustrate our findings through simulations and\na real-world conversation quality dataset. Our theoretical and empirical\nresults underscore the importance of incorporating cluster dependence in\nmissing response problems to perform valid statistical inference.",
-      "pdf_url": "http://arxiv.org/pdf/2510.20928v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.20928v1",
-      "published": "2025-10-23",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
