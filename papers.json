@@ -1,6 +1,81 @@
 {
-  "last_updated": "2025-10-30T00:54:31.906322",
+  "last_updated": "2025-10-31T00:52:59.410326",
   "papers": [
+    {
+      "title": "GReF: A Unified Generative Framework for Efficient Reranking via Ordered Multi-token Prediction",
+      "authors": [
+        "Zhijie Lin",
+        "Zhuofeng Li",
+        "Chenglei Dai",
+        "Wentian Bao",
+        "Shuai Lin",
+        "Enyun Yu",
+        "Haoxiang Zhang",
+        "Liang Zhao"
+      ],
+      "abstract": "In a multi-stage recommendation system, reranking plays a crucial role in\nmodeling intra-list correlations among items. A key challenge lies in exploring\noptimal sequences within the combinatorial space of permutations. Recent\nresearch follows a two-stage (generator-evaluator) paradigm, where a generator\nproduces multiple feasible sequences, and an evaluator selects the best one. In\npractice, the generator is typically implemented as an autoregressive model.\nHowever, these two-stage methods face two main challenges. First, the\nseparation of the generator and evaluator hinders end-to-end training. Second,\nautoregressive generators suffer from inference efficiency. In this work, we\npropose a Unified Generative Efficient Reranking Framework (GReF) to address\nthe two primary challenges. Specifically, we introduce Gen-Reranker, an\nautoregressive generator featuring a bidirectional encoder and a dynamic\nautoregressive decoder to generate causal reranking sequences. Subsequently, we\npre-train Gen-Reranker on the item exposure order for high-quality parameter\ninitialization. To eliminate the need for the evaluator while integrating\nsequence-level evaluation during training for end-to-end optimization, we\npropose post-training the model through Rerank-DPO. Moreover, for efficient\nautoregressive inference, we introduce ordered multi-token prediction (OMTP),\nwhich trains Gen-Reranker to simultaneously generate multiple future items\nwhile preserving their order, ensuring practical deployment in real-time\nrecommender systems. Extensive offline experiments demonstrate that GReF\noutperforms state-of-the-art reranking methods while achieving latency that is\nnearly comparable to non-autoregressive models. Additionally, GReF has also\nbeen deployed in a real-world video app Kuaishou with over 300 million daily\nactive users, significantly improving online recommendation quality.",
+      "pdf_url": "http://arxiv.org/pdf/2510.25220v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.25220v1",
+      "published": "2025-10-29",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Bidirectional yet asymmetric causality between urban systems and traffic dynamics in 30 cities worldwide",
+      "authors": [
+        "Yatao Zhang",
+        "Ye Hong",
+        "Song Gao",
+        "Martin Raubal"
+      ],
+      "abstract": "Understanding how urban systems and traffic dynamics co-evolve is crucial for\nadvancing sustainable and resilient cities. However, their bidirectional causal\nrelationships remain underexplored due to challenges of simultaneously\ninferring spatial heterogeneity, temporal variation, and feedback mechanisms.\nTo address this gap, we propose a novel spatio-temporal causality framework\nthat bridges correlation and causation by integrating spatio-temporal weighted\nregression with a newly developed spatio-temporal convergent cross-mapping\napproach. Characterizing cities through urban structure, form, and function,\nthe framework uncovers bidirectional causal patterns between urban systems and\ntraffic dynamics across 30 cities on six continents. Our findings reveal\nasymmetric bidirectional causality, with urban systems exerting stronger\ninfluences on traffic dynamics than the reverse in most cities. Urban form and\nfunction shape mobility more profoundly than structure, even though structure\noften exhibits higher correlations, as observed in cities such as Singapore,\nNew Delhi, London, Chicago, and Moscow. This does not preclude the reversed\ncausal direction, whereby long-established mobility patterns can also reshape\nthe built environment over time. Finally, we identify three distinct causal\narchetypes: tightly coupled, pattern-heterogeneous, and workday-attenuated,\nwhich map pathways from causal diagnosis to intervention. This typology\nsupports city-to-city learning and lays a foundation for context-sensitive\nstrategies in sustainable urban and transport planning.",
+      "pdf_url": "http://arxiv.org/pdf/2510.25155v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.25155v1",
+      "published": "2025-10-29",
+      "categories": [
+        "physics.soc-ph"
+      ]
+    },
+    {
+      "title": "An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation",
+      "authors": [
+        "Uzair Akbar",
+        "Niki Kilbertus",
+        "Hao Shen",
+        "Krikamol Muandet",
+        "Bo Dai"
+      ],
+      "abstract": "The technique of data augmentation (DA) is often used in machine learning for\nregularization purposes to better generalize under i.i.d. settings. In this\nwork, we present a unifying framework with topics in causal inference to make a\ncase for the use of DA beyond just the i.i.d. setting, but for generalization\nacross interventions as well. Specifically, we argue that when the outcome\ngenerating mechanism is invariant to our choice of DA, then such augmentations\ncan effectively be thought of as interventions on the treatment generating\nmechanism itself. This can potentially help to reduce bias in causal effect\nestimation arising from hidden confounders. In the presence of such unobserved\nconfounding we typically make use of instrumental variables (IVs) -- sources of\ntreatment randomization that are conditionally independent of the outcome.\nHowever, IVs may not be as readily available as DA for many applications, which\nis the main motivation behind this work. By appropriately regularizing IV based\nestimators, we introduce the concept of IV-like (IVL) regression for mitigating\nconfounding bias and improving predictive performance across interventions even\nwhen certain IV properties are relaxed. Finally, we cast parameterized DA as an\nIVL regression problem and show that when used in composition can simulate a\nworst-case application of such DA, further improving performance on causal\nestimation and generalization tasks beyond what simple DA may offer. This is\nshown both theoretically for the population case and via simulation experiments\nfor the finite sample case using a simple linear example. We also present real\ndata experiments to support our case.",
+      "pdf_url": "http://arxiv.org/pdf/2510.25128v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.25128v1",
+      "published": "2025-10-29",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Cyclic Counterfactuals under Shift-Scale Interventions",
+      "authors": [
+        "Saptarshi Saha",
+        "Dhruv Vansraj Rathore",
+        "Utpal Garain"
+      ],
+      "abstract": "Most counterfactual inference frameworks traditionally assume acyclic\nstructural causal models (SCMs), i.e. directed acyclic graphs (DAGs). However,\nmany real-world systems (e.g. biological systems) contain feedback loops or\ncyclic dependencies that violate acyclicity. In this work, we study\ncounterfactual inference in cyclic SCMs under shift-scale interventions, i.e.,\nsoft, policy-style changes that rescale and/or shift a variable's mechanism.",
+      "pdf_url": "http://arxiv.org/pdf/2510.25005v1",
+      "arxiv_url": "http://arxiv.org/abs/2510.25005v1",
+      "published": "2025-10-28",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "math.ST",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
     {
       "title": "Machine-Learning-Assisted Comparison of Regression Functions",
       "authors": [
@@ -113,72 +188,6 @@
       "published": "2025-10-27",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Beyond Prompt Engineering: Neuro-Symbolic-Causal Architecture for Robust Multi-Objective AI Agents",
-      "authors": [
-        "Gokturk Aytug Akarlar"
-      ],
-      "abstract": "Large language models show promise as autonomous decision-making agents, yet\ntheir deployment in high-stakes domains remains fraught with risk. Without\narchitectural safeguards, LLM agents exhibit catastrophic brittleness:\nidentical capabilities produce wildly different outcomes depending solely on\nprompt framing. We present Chimera, a neuro-symbolic-causal architecture that\nintegrates three complementary components - an LLM strategist, a formally\nverified symbolic constraint engine, and a causal inference module for\ncounterfactual reasoning. We benchmark Chimera against baseline architectures\n(LLM-only, LLM with symbolic constraints) across 52-week simulations in a\nrealistic e-commerce environment featuring price elasticity, trust dynamics,\nand seasonal demand. Under organizational biases toward either volume or margin\noptimization, LLM-only agents fail catastrophically (total loss of \\$99K in\nvolume scenarios) or destroy brand trust (-48.6% in margin scenarios). Adding\nsymbolic constraints prevents disasters but achieves only 43-87% of Chimera's\nprofit. Chimera consistently delivers the highest returns (\\$1.52M and \\$1.96M\nrespectively, some cases +\\$2.2M) while improving brand trust (+1.8% and\n+10.8%, some cases +20.86%), demonstrating prompt-agnostic robustness. Our TLA+\nformal verification proves zero constraint violations across all scenarios.\nThese results establish that architectural design not prompt engineering\ndetermines the reliability of autonomous agents in production environments. We\nprovide open-source implementations and interactive demonstrations for\nreproducibility.",
-      "pdf_url": "http://arxiv.org/pdf/2510.23682v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.23682v1",
-      "published": "2025-10-27",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.LO",
-        "cs.SE",
-        "I.2.11; I.2.6; I.2.8"
-      ]
-    },
-    {
-      "title": "The Reasoning Trap: How Enhancing LLM Reasoning Amplifies Tool Hallucination",
-      "authors": [
-        "Chenlong Yin",
-        "Zeyang Sha",
-        "Shiwen Cui",
-        "Changhua Meng"
-      ],
-      "abstract": "Enhancing the reasoning capabilities of Large Language Models (LLMs) is a key\nstrategy for building Agents that \"think then act.\" However, recent\nobservations, like OpenAI's o3, suggest a paradox: stronger reasoning often\ncoincides with increased hallucination, yet no prior work has systematically\nexamined whether reasoning enhancement itself causes tool hallucination. To\naddress this gap, we pose the central question: Does strengthening reasoning\nincrease tool hallucination? To answer this, we introduce SimpleToolHalluBench,\na diagnostic benchmark measuring tool hallucination in two failure modes: (i)\nno tool available, and (ii) only distractor tools available. Through controlled\nexperiments, we establish three key findings. First, we demonstrate a causal\nrelationship: progressively enhancing reasoning through RL increases tool\nhallucination proportionally with task performance gains. Second, this effect\ntranscends overfitting - training on non-tool tasks (e.g., mathematics) still\namplifies subsequent tool hallucination. Third, the effect is method-agnostic,\nappearing when reasoning is instilled via supervised fine-tuning and when it is\nmerely elicited at inference by switching from direct answers to step-by-step\nthinking. We also evaluate mitigation strategies including Prompt Engineering\nand Direct Preference Optimization (DPO), revealing a fundamental\nreliability-capability trade-off: reducing hallucination consistently degrades\nutility. Mechanistically, Reasoning RL disproportionately collapses\ntool-reliability-related representations, and hallucinations surface as\namplified divergences concentrated in late-layer residual streams. These\nfindings reveal that current reasoning enhancement methods inherently amplify\ntool hallucination, highlighting the need for new training objectives that\njointly optimize for capability and reliability.",
-      "pdf_url": "http://arxiv.org/pdf/2510.22977v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.22977v1",
-      "published": "2025-10-27",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "I.2"
-      ]
-    },
-    {
-      "title": "Exploring Structures of Inferential Mechanisms through Simplistic Digital Circuits",
-      "authors": [
-        "Giovanni Sileno",
-        "Jean-Louis Dessalles"
-      ],
-      "abstract": "Cognitive studies and artificial intelligence have developed distinct models\nfor various inferential mechanisms (categorization, induction, abduction,\ncausal inference, contrast, merge, ...). Yet, both natural and artificial views\non cognition lack apparently a unifying framework. This paper formulates a\nspeculative answer attempting to respond to this gap. To postulate on\nhigher-level activation processes from a material perspective, we consider\ninferential mechanisms informed by symbolic AI modelling techniques, through\nthe simplistic lenses of electronic circuits based on logic gates. We observe\nthat a logic gate view entails a different treatment of implication and\nnegation compared to standard logic and logic programming. Then, by\ncombinatorial exploration, we identify four main forms of dependencies that can\nbe realized by these inferential circuits. Looking at how these forms are\ngenerally used in the context of logic programs, we identify eight common\ninferential patterns, exposing traditionally distinct inferential mechanisms in\nan unifying framework. Finally, following a probabilistic interpretation of\nlogic programs, we unveil inner functional dependencies. The paper concludes\nelaborating in what sense, even if our arguments are mostly informed by\nsymbolic means and digital systems infrastructures, our observations may\npinpoint to more generally applicable structures.",
-      "pdf_url": "http://arxiv.org/pdf/2510.22883v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.22883v1",
-      "published": "2025-10-27",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Unifying regression-based and design-based causal inference in time-series experiments",
-      "authors": [
-        "Zhexiao Lin",
-        "Peng Ding"
-      ],
-      "abstract": "Time-series experiments, also called switchback experiments or N-of-1 trials,\nplay increasingly important roles in modern applications in medical and\nindustrial areas. Under the potential outcomes framework, recent research has\nstudied time-series experiments from the design-based perspective, relying\nsolely on the randomness in the design to drive the statistical inference.\nFocusing on simpler statistical methods, we examine the design-based properties\nof regression-based methods for estimating treatment effects in time-series\nexperiments. We demonstrate that the treatment effects of interest can be\nconsistently estimated using ordinary least squares with an appropriately\nspecified working model and transformed regressors. Our analysis allows for\nestimating a diverging number of treatment effects simultaneously, and\nestablishes the consistency and asymptotic normality of the regression-based\nestimators. Additionally, we show that asymptotically, the heteroskedasticity\nand autocorrelation consistent variance estimators provide conservative\nestimates of the true, design-based variances. Importantly, although our\napproach relies on regression, our design-based framework allows for\nmisspecification of the regression model.",
-      "pdf_url": "http://arxiv.org/pdf/2510.22864v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.22864v1",
-      "published": "2025-10-26",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "math.ST",
-        "stat.TH"
       ]
     }
   ]
