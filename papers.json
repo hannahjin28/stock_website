@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-04T00:53:02.456964",
+  "last_updated": "2025-11-05T00:54:53.992608",
   "papers": [
     {
       "title": "A Unified Theory for Causal Inference: Direct Debiased Machine Learning via Bregman-Riesz Regression",
@@ -94,8 +94,8 @@
         "ShengJun Huang"
       ],
       "abstract": "Object-context shortcuts remain a persistent challenge in vision-language\nmodels, undermining zero-shot reliability when test-time scenes differ from\nfamiliar training co-occurrences. We recast this issue as a causal inference\nproblem and ask: Would the prediction remain if the object appeared in a\ndifferent environment? To answer this at inference time, we estimate object and\nbackground expectations within CLIP's representation space, and synthesize\ncounterfactual embeddings by recombining object features with diverse\nalternative contexts sampled from external datasets, batch neighbors, or\ntext-derived descriptions. By estimating the Total Direct Effect and simulating\nintervention, we further subtract background-only activation, preserving\nbeneficial object-context interactions while mitigating hallucinated scores.\nWithout retraining or prompt design, our method substantially improves both\nworst-group and average accuracy on context-sensitive benchmarks, establishing\na new zero-shot state of the art. Beyond performance, our framework provides a\nlightweight representation-level counterfactual approach, offering a practical\ncausal avenue for debiased and reliable multimodal reasoning.",
-      "pdf_url": "http://arxiv.org/pdf/2510.26466v1",
-      "arxiv_url": "http://arxiv.org/abs/2510.26466v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.26466v2",
+      "arxiv_url": "http://arxiv.org/abs/2510.26466v2",
       "published": "2025-10-30",
       "categories": [
         "cs.CV",
