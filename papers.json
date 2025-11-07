@@ -1,6 +1,54 @@
 {
-  "last_updated": "2025-11-06T00:53:44.127971",
+  "last_updated": "2025-11-07T00:53:48.017226",
   "papers": [
+    {
+      "title": "Bayesian Causal Effect Estimation for Categorical Data using Staged Tree Models",
+      "authors": [
+        "Andrea Cremaschi",
+        "Manuele Leonelli",
+        "Gherardo Varando"
+      ],
+      "abstract": "We propose a fully Bayesian approach for causal inference with multivariate\ncategorical data based on staged tree models, a class of probabilistic\ngraphical models capable of representing asymmetric and context-specific\ndependencies. To account for uncertainty in both structure and parameters, we\nintroduce a flexible family of prior distributions over staged trees. These\ninclude product partition models to encourage parsimony, a novel distance-based\nprior to promote interpretable dependence patterns, and an extension that\nincorporates continuous covariates into the learning process. Posterior\ninference is achieved via a tailored Markov Chain Monte Carlo algorithm with\nsplit-and-merge moves, yielding posterior samples of staged trees from which\naverage treatment effects and uncertainty measures are derived. Posterior\nsummaries and uncertainty measures are obtained via techniques from the\nBayesian nonparametrics literature. Two case studies on electronic fetal\nmonitoring and cesarean delivery and on anthracycline therapy and cardiac\ndysfunction in breast cancer illustrate the methods.",
+      "pdf_url": "http://arxiv.org/pdf/2511.03399v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.03399v1",
+      "published": "2025-11-05",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "UnCLe: Towards Scalable Dynamic Causal Discovery in Non-linear Temporal Systems",
+      "authors": [
+        "Tingzhu Bi",
+        "Yicheng Pan",
+        "Xinrui Jiang",
+        "Huize Sun",
+        "Meng Ma",
+        "Ping Wang"
+      ],
+      "abstract": "Uncovering cause-effect relationships from observational time series is\nfundamental to understanding complex systems. While many methods infer static\ncausal graphs, real-world systems often exhibit dynamic causality-where\nrelationships evolve over time. Accurately capturing these temporal dynamics\nrequires time-resolved causal graphs. We propose UnCLe, a novel deep learning\nmethod for scalable dynamic causal discovery. UnCLe employs a pair of Uncoupler\nand Recoupler networks to disentangle input time series into semantic\nrepresentations and learns inter-variable dependencies via auto-regressive\nDependency Matrices. It estimates dynamic causal influences by analyzing\ndatapoint-wise prediction errors induced by temporal perturbations. Extensive\nexperiments demonstrate that UnCLe not only outperforms state-of-the-art\nbaselines on static causal discovery benchmarks but, more importantly, exhibits\na unique capability to accurately capture and represent evolving temporal\ncausality in both synthetic and real-world dynamic systems (e.g., human\nmotion). UnCLe offers a promising approach for revealing the underlying,\ntime-varying mechanisms of complex phenomena.",
+      "pdf_url": "http://arxiv.org/pdf/2511.03168v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.03168v1",
+      "published": "2025-11-05",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Adaptive Orthogonalization for Stable Estimation of the Effects of Time-Varying Treatments",
+      "authors": [
+        "Yige Li",
+        "María de los Angeles Resa",
+        "José R. Zubizarreta"
+      ],
+      "abstract": "Inferring the causal effects of time-varying treatments is often hindered by\nhighly variable inverse propensity weights, particularly in settings with\nlimited covariate overlap. Building on the key framework of Imai and Ratkovic\n(2015), we establish sufficient balancing conditions for identification in\nlongitudinal studies of treatment effects and propose a novel estimator that\ndirectly targets features of counterfactual or potential covariates. Instead of\nbalancing observed covariates, our method balances the components of covariates\nthat are orthogonal to their history, thereby isolating the new information at\neach time point. This strategy directly targets the joint distribution of\npotential covariates and prioritizes features that are most relevant to the\noutcome. We prove that the resulting estimator for the mean potential outcome\nis consistent and asymptotically normal, even in settings where standard\ninverse propensity weighting fails. Extensive simulations show that our\nestimator attains efficiency comparable to that of g-computation while\nproviding superior robustness to model misspecification. We apply our method to\na longitudinal study of private versus public schooling in Chile, demonstrating\nits stability and interpretability in estimating their effects on university\nadmission scores.",
+      "pdf_url": "http://arxiv.org/pdf/2511.02971v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.02971v1",
+      "published": "2025-11-04",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Peer effect analysis with latent processes",
       "authors": [
@@ -118,55 +166,6 @@
       "categories": [
         "stat.OT",
         "q-bio.OT"
-      ]
-    },
-    {
-      "title": "Making Interpretable Discoveries from Unstructured Data: A High-Dimensional Multiple Hypothesis Testing Approach",
-      "authors": [
-        "Jacob Carlson"
-      ],
-      "abstract": "Social scientists are increasingly turning to unstructured datasets to unlock\nnew empirical insights, e.g., estimating causal effects on text outcomes,\nmeasuring beliefs from open-ended survey responses. In such settings,\nunsupervised analysis is often of interest, in that the researcher does not\nwant to pre-specify the objects of measurement or otherwise artificially\ndelimit the space of measurable concepts; they are interested in discovery.\nThis paper proposes a general and flexible framework for pursuing discovery\nfrom unstructured data in a statistically principled way. The framework\nleverages recent methods from the literature on machine learning\ninterpretability to map unstructured data points to high-dimensional, sparse,\nand interpretable dictionaries of concepts; computes (test) statistics of these\ndictionary entries; and then performs selective inference on them using newly\ndeveloped statistical procedures for high-dimensional exceedance control of the\n$k$-FWER under arbitrary dependence. The proposed framework has few researcher\ndegrees of freedom, is fully replicable, and is cheap to implement -- both in\nterms of financial cost and researcher time. Applications to recent descriptive\nand causal analyses of unstructured data in empirical economics are explored.\nAn open source Jupyter notebook is provided for researchers to implement the\nframework in their own projects.",
-      "pdf_url": "http://arxiv.org/pdf/2511.01680v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.01680v1",
-      "published": "2025-11-03",
-      "categories": [
-        "econ.EM",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Selecting valid adjustment sets with uncertain causal graphs",
-      "authors": [
-        "Zhongyi Hu",
-        "Stéphanie van der Pas"
-      ],
-      "abstract": "Precise knowledge of causal directed acyclic graphs (DAGs) is assumed for\nstandard approaches towards valid adjustment set selection for unbiased\nestimation, but in practice, the DAG is often inferred from data or expert\nknowledge, introducing uncertainty. We present techniques to identify valid\nadjustment sets despite potential errors in the estimated causal graph.\nSpecifically, we assume that only the skeleton of the DAG is known. Under a\nBayesian framework, we place a prior on graphs and wish to sample graphs and\ncompute the posterior probability of each set being valid; however, directly\ndoing so is inefficient as the number of sets grows exponentially with the\nnumber of nodes in the DAG. We develop theory and techniques so that a limited\nnumber of sets are tested while the probability of finding valid adjustment\nsets remains high. Empirical results demonstrate the effectiveness of the\nmethod.",
-      "pdf_url": "http://arxiv.org/pdf/2511.01662v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.01662v1",
-      "published": "2025-11-03",
-      "categories": [
-        "math.ST",
-        "stat.TH"
-      ]
-    },
-    {
-      "title": "Cross-Treatment Effect Estimation for Multi-Category, Multi-Valued Causal Inference via Dynamic Neural Masking",
-      "authors": [
-        "Xiaopeng Ke",
-        "Yihan Yu",
-        "Ruyue Zhang",
-        "Zhishuo Zhou",
-        "Fangzhou Shi",
-        "Chang Men",
-        "Zhengdan Zhu"
-      ],
-      "abstract": "Counterfactual causal inference faces significant challenges when extended to\nmulti-category, multi-valued treatments, where complex cross-effects between\nheterogeneous interventions are difficult to model. Existing methodologies\nremain constrained to binary or single-type treatments and suffer from\nrestrictive assumptions, limited scalability, and inadequate evaluation\nframeworks for complex intervention scenarios.\n  We present XTNet, a novel network architecture for multi-category,\nmulti-valued treatment effect estimation. Our approach introduces a\ncross-effect estimation module with dynamic masking mechanisms to capture\ntreatment interactions without restrictive structural assumptions. The\narchitecture employs a decomposition strategy separating basic effects from\ncross-treatment interactions, enabling efficient modeling of combinatorial\ntreatment spaces. We also propose MCMV-AUCC, a suitable evaluation metric that\naccounts for treatment costs and interaction effects. Extensive experiments on\nsynthetic and real-world datasets demonstrate that XTNet consistently\noutperforms state-of-the-art baselines in both ranking accuracy and effect\nestimation quality. The results of the real-world A/B test further confirm its\neffectiveness.",
-      "pdf_url": "http://arxiv.org/pdf/2511.01641v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.01641v1",
-      "published": "2025-11-03",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
       ]
     }
   ]
