@@ -1,6 +1,78 @@
 {
-  "last_updated": "2025-11-07T00:53:48.017226",
+  "last_updated": "2025-11-08T00:50:06.538838",
   "papers": [
+    {
+      "title": "Dynamic causal discovery in Alzheimer's disease through latent pseudotime modelling",
+      "authors": [
+        "Natalia Glazman",
+        "Jyoti Mangal",
+        "Pedro Borges",
+        "Sebastien Ourselin",
+        "M. Jorge Cardoso"
+      ],
+      "abstract": "The application of causal discovery to diseases like Alzheimer's (AD) is\nlimited by the static graph assumptions of most methods; such models cannot\naccount for an evolving pathophysiology, modulated by a latent disease\npseudotime. We propose to apply an existing latent variable model to real-world\nAD data, inferring a pseudotime that orders patients along a data-driven\ndisease trajectory independent of chronological age, then learning how causal\nrelationships evolve. Pseudotime outperformed age in predicting diagnosis (AUC\n0.82 vs 0.59). Incorporating minimal, disease-agnostic background knowledge\nsubstantially improved graph accuracy and orientation. Our framework reveals\ndynamic interactions between novel (NfL, GFAP) and established AD markers,\nenabling practical causal discovery despite violated assumptions.",
+      "pdf_url": "http://arxiv.org/pdf/2511.04619v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.04619v1",
+      "published": "2025-11-06",
+      "categories": [
+        "stat.AP",
+        "cs.CE",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Extracting Causal Relations in Deep Knowledge Tracing",
+      "authors": [
+        "Kevin Hong",
+        "Kia Karbasi",
+        "Gregory Pottie"
+      ],
+      "abstract": "A longstanding goal in computational educational research is to develop\nexplainable knowledge tracing (KT) models. Deep Knowledge Tracing (DKT), which\nleverages a Recurrent Neural Network (RNN) to predict student knowledge and\nperformance on exercises, has been proposed as a major advancement over\ntraditional KT methods. Several studies suggest that its performance gains stem\nfrom its ability to model bidirectional relationships between different\nknowledge components (KCs) within a course, enabling the inference of a\nstudent's understanding of one KC from their performance on others. In this\npaper, we challenge this prevailing explanation and demonstrate that DKT's\nstrength lies in its implicit ability to model prerequisite relationships as a\ncausal structure, rather than bidirectional relationships. By pruning exercise\nrelation graphs into Directed Acyclic Graphs (DAGs) and training DKT on causal\nsubsets of the Assistments dataset, we show that DKT's predictive capabilities\nalign strongly with these causal structures. Furthermore, we propose an\nalternative method for extracting exercise relation DAGs using DKT's learned\nrepresentations and provide empirical evidence supporting our claim. Our\nfindings suggest that DKT's effectiveness is largely driven by its capacity to\napproximate causal dependencies between KCs rather than simple relational\nmappings.",
+      "pdf_url": "http://arxiv.org/pdf/2511.03948v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.03948v1",
+      "published": "2025-11-06",
+      "categories": [
+        "cs.AI",
+        "cs.HC",
+        "I.2.6; K.3.1"
+      ]
+    },
+    {
+      "title": "Tutorial Debriefing: Applied Statistical Causal Inference in Requirements Engineering",
+      "authors": [
+        "Julian Frattini",
+        "Hans-Martin Heyn",
+        "Robert Feldt",
+        "Richard Torkar"
+      ],
+      "abstract": "As any scientific discipline, the software engineering (SE) research\ncommunity strives to contribute to the betterment of the target population of\nour research: software producers and consumers. We will only achieve this\nbetterment if we manage to transfer the knowledge acquired during research into\npractice. This transferal of knowledge may come in the form of tools,\nprocesses, and guidelines for software developers. However, the value of these\ncontributions hinges on the assumption that applying them causes an improvement\nof the development process, user experience, or other performance metrics. Such\na promise requires evidence of causal relationships between an exposure or\nintervention (i.e., the contributed tool, process or guideline) and an outcome\n(i.e., performance metrics). A straight-forward approach to obtaining this\nevidence is via controlled experiments in which a sample of a population is\nrandomly divided into a group exposed to the new tool, process, or guideline,\nand a control group. However, such randomized control trials may not be\nlegally, ethically, or logistically feasible. In these cases, we need a\nreliable process for statistical causal inference (SCI) from observational\ndata.",
+      "pdf_url": "http://arxiv.org/pdf/2511.03875v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.03875v1",
+      "published": "2025-11-05",
+      "categories": [
+        "cs.SE"
+      ]
+    },
+    {
+      "title": "Higher-Order Causal Structure Learning with Additive Models",
+      "authors": [
+        "James Enouen",
+        "Yujia Zheng",
+        "Ignavier Ng",
+        "Yan Liu",
+        "Kun Zhang"
+      ],
+      "abstract": "Causal structure learning has long been the central task of inferring causal\ninsights from data. Despite the abundance of real-world processes exhibiting\nhigher-order mechanisms, however, an explicit treatment of interactions in\ncausal discovery has received little attention. In this work, we focus on\nextending the causal additive model (CAM) to additive models with higher-order\ninteractions. This second level of modularity we introduce to the structure\nlearning problem is most easily represented by a directed acyclic hypergraph\nwhich extends the DAG. We introduce the necessary definitions and theoretical\ntools to handle the novel structure we introduce and then provide\nidentifiability results for the hyper DAG, extending the typical Markov\nequivalence classes. We next provide insights into why learning the more\ncomplex hypergraph structure may actually lead to better empirical results. In\nparticular, more restrictive assumptions like CAM correspond to easier-to-learn\nhyper DAGs and better finite sample complexity. We finally develop an extension\nof the greedy CAM algorithm which can handle the more complex hyper DAG search\nspace and demonstrate its empirical usefulness in synthetic experiments.",
+      "pdf_url": "http://arxiv.org/pdf/2511.03831v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.03831v1",
+      "published": "2025-11-05",
+      "categories": [
+        "cs.LG",
+        "math.ST",
+        "stat.ML",
+        "stat.TH"
+      ]
+    },
     {
       "title": "Bayesian Causal Effect Estimation for Categorical Data using Staged Tree Models",
       "authors": [
@@ -98,74 +170,6 @@
         "astro-ph.HE",
         "gr-qc",
         "hep-ph"
-      ]
-    },
-    {
-      "title": "Causal Graph Neural Networks for Healthcare",
-      "authors": [
-        "Munib Mesinovic",
-        "Max Buhlan",
-        "Tingting Zhu"
-      ],
-      "abstract": "Healthcare artificial intelligence systems routinely fail when deployed\nacross institutions, with documented performance drops and perpetuation of\ndiscriminatory patterns embedded in historical data. This brittleness stems, in\npart, from learning statistical associations rather than causal mechanisms.\nCausal graph neural networks address this triple crisis of distribution shift,\ndiscrimination, and inscrutability by combining graph-based representations of\nbiomedical data with causal inference principles to learn invariant mechanisms\nrather than spurious correlations. This Review examines methodological\nfoundations spanning structural causal models, disentangled causal\nrepresentation learning, and techniques for interventional prediction and\ncounterfactual reasoning on graphs. We analyse applications demonstrating\nclinical value across psychiatric diagnosis through brain network analysis,\ncancer subtyping via multi-omics causal integration, continuous physiological\nmonitoring with mechanistic interpretation, and drug recommendation correcting\nprescription bias. These advances establish foundations for patient-specific\nCausal Digital Twins, enabling in silico clinical experimentation, with\nintegration of large language models for hypothesis generation and causal graph\nneural networks for mechanistic validation. Substantial barriers remain,\nincluding computational requirements precluding real-time deployment,\nvalidation challenges demanding multi-modal evidence triangulation beyond\ncross-validation, and risks of causal-washing where methods employ causal\nterminology without rigorous evidentiary support. We propose tiered frameworks\ndistinguishing causally-inspired architectures from causally-validated\ndiscoveries and identify critical research priorities making causal rather than\npurely associational claims.",
-      "pdf_url": "http://arxiv.org/pdf/2511.02531v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.02531v1",
-      "published": "2025-11-04",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Evolving Graph Learning for Out-of-Distribution Generalization in Non-stationary Environments",
-      "authors": [
-        "Qingyun Sun",
-        "Jiayi Luo",
-        "Haonan Yuan",
-        "Xingcheng Fu",
-        "Hao Peng",
-        "Jianxin Li",
-        "Philip S. Yu"
-      ],
-      "abstract": "Graph neural networks have shown remarkable success in exploiting the spatial\nand temporal patterns on dynamic graphs. However, existing GNNs exhibit poor\ngeneralization ability under distribution shifts, which is inevitable in\ndynamic scenarios. As dynamic graph generation progresses amid evolving latent\nnon-stationary environments, it is imperative to explore their effects on\nout-of-distribution (OOD) generalization. This paper proposes a novel Evolving\nGraph Learning framework for OOD generalization (EvoOOD) by environment-aware\ninvariant pattern recognition. Specifically, we first design an environment\nsequential variational auto-encoder to model environment evolution and infer\nthe underlying environment distribution. Then, we introduce a mechanism for\nenvironment-aware invariant pattern recognition, tailored to address\nenvironmental diversification through inferred distributions. Finally, we\nconduct fine-grained causal interventions on individual nodes using a mixture\nof instantiated environment samples. This approach helps to distinguish\nspatio-temporal invariant patterns for OOD prediction, especially in\nnon-stationary environments. Experimental results demonstrate the superiority\nof EvoGOOD on both real-world and synthetic dynamic datasets under distribution\nshifts. To the best of our knowledge, it is the first attempt to study the\ndynamic graph OOD generalization problem from the environment evolution\nperspective.",
-      "pdf_url": "http://arxiv.org/pdf/2511.02354v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.02354v1",
-      "published": "2025-11-04",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Biological Regulatory Network Inference through Circular Causal Structure Learning",
-      "authors": [
-        "Hongyang Jiang",
-        "Yuezhu Wang",
-        "Ke Feng",
-        "Chaoyi Yin",
-        "Yi Chang",
-        "Huiyan Sun"
-      ],
-      "abstract": "Biological networks are pivotal in deciphering the complexity and\nfunctionality of biological systems. Causal inference, which focuses on\ndetermining the directionality and strength of interactions between variables\nrather than merely relying on correlations, is considered a logical approach\nfor inferring biological networks. Existing methods for causal structure\ninference typically assume that causal relationships between variables can be\nrepresented by directed acyclic graphs (DAGs). However, this assumption is at\nodds with the reality of widespread feedback loops in biological systems,\nmaking these methods unsuitable for direct use in biological network inference.\nIn this study, we propose a new framework named SCALD (Structural CAusal model\nfor Loop Diagram), which employs a nonlinear structure equation model and a\nstable feedback loop conditional constraint through continuous optimization to\ninfer causal regulatory relationships under feedback loops. We observe that\nSCALD outperforms state-of-the-art methods in inferring both transcriptional\nregulatory networks and signaling transduction networks. SCALD has\nirreplaceable advantages in identifying feedback regulation. Through\ntranscription factor (TF) perturbation data analysis, we further validate the\naccuracy and sensitivity of SCALD. Additionally, SCALD facilitates the\ndiscovery of previously unknown regulatory relationships, which we have\nsubsequently confirmed through ChIP-seq data analysis. Furthermore, by\nutilizing SCALD, we infer the key driver genes that facilitate the\ntransformation from colon inflammation to cancer by examining the dynamic\nchanges within regulatory networks during the process.",
-      "pdf_url": "http://arxiv.org/pdf/2511.02332v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.02332v1",
-      "published": "2025-11-04",
-      "categories": [
-        "q-bio.MN",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Towards a Unified Framework for Statistical and Mathematical Modeling",
-      "authors": [
-        "Paul N Zivich"
-      ],
-      "abstract": "Within the biological, physical, and social sciences, there are two broad\nquantitative traditions: statistical and mathematical modeling. Both traditions\nhave the common pursuit of advancing our scientific knowledge, but these\ntraditions have developed largely independently using distinct languages and\ninferential frameworks. This paper uses the notion of identification from\ncausal inference, a field originating from the statistical modeling tradition,\nto develop a shared language. I first review foundational identification\nresults for statistical models and then extend these ideas to mathematical\nmodels. Central to this framework is the use of bounds, ranges of plausible\nnumerical values, to analyze both statistical and mathematical models. I\ndiscuss the implications of this perspective for the interpretation,\ncomparison, and integration of different modeling approaches, and illustrate\nthe framework with a simple pharmacodynamic model for hypertension. To\nconclude, I describe areas where the approach taken here should be extended in\nthe future. By formalizing connections between statistical and mathematical\nmodeling, this work contributes to a shared framework for quantitative science.\nMy hope is that this work will advance interactions between these two\ntraditions.",
-      "pdf_url": "http://arxiv.org/pdf/2511.01960v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.01960v1",
-      "published": "2025-11-03",
-      "categories": [
-        "stat.OT",
-        "q-bio.OT"
       ]
     }
   ]
