@@ -1,6 +1,52 @@
 {
-  "last_updated": "2025-11-10T00:56:32.479649",
+  "last_updated": "2025-11-11T00:54:30.880699",
   "papers": [
+    {
+      "title": "The Causal Round Trip: Generating Authentic Counterfactuals by Eliminating Information Loss",
+      "authors": [
+        "Rui Wu",
+        "Lizheng Wang",
+        "Yongjun Li"
+      ],
+      "abstract": "Judea Pearl's vision of Structural Causal Models (SCMs) as engines for\ncounterfactual reasoning hinges on faithful abduction: the precise inference of\nlatent exogenous noise. For decades, operationalizing this step for complex,\nnon-linear mechanisms has remained a significant computational challenge. The\nadvent of diffusion models, powerful universal function approximators, offers a\npromising solution. However, we argue that their standard design, optimized for\nperceptual generation over logical inference, introduces a fundamental flaw for\nthis classical problem: an inherent information loss we term the Structural\nReconstruction Error (SRE). To address this challenge, we formalize the\nprinciple of Causal Information Conservation (CIC) as the necessary condition\nfor faithful abduction. We then introduce BELM-MDCM, the first diffusion-based\nframework engineered to be causally sound by eliminating SRE by construction\nthrough an analytically invertible mechanism. To operationalize this framework,\na Targeted Modeling strategy provides structural regularization, while a Hybrid\nTraining Objective instills a strong causal inductive bias. Rigorous\nexperiments demonstrate that our Zero-SRE framework not only achieves\nstate-of-the-art accuracy but, more importantly, enables the high-fidelity,\nindividual-level counterfactuals required for deep causal inquiries. Our work\nprovides a foundational blueprint that reconciles the power of modern\ngenerative models with the rigor of classical causal theory, establishing a new\nand more rigorous standard for this emerging field.",
+      "pdf_url": "http://arxiv.org/pdf/2511.05236v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.05236v1",
+      "published": "2025-11-07",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Estimating Bidirectional Causal Effects with Large Scale Online Kernel Learning",
+      "authors": [
+        "Masahiro Tanaka"
+      ],
+      "abstract": "In this study, a scalable online kernel learning framework is proposed for\nestimating bidirectional causal effects in systems characterized by mutual\ndependence and heteroskedasticity. Traditional causal inference often focuses\non unidirectional effects, overlooking the common bidirectional relationships\nin real-world phenomena. Building on heteroskedasticity-based identification,\nthe proposed method integrates a quasi-maximum likelihood estimator for\nsimultaneous equation models with large scale online kernel learning. It\nemploys random Fourier feature approximations to flexibly model nonlinear\nconditional means and variances, while an adaptive online gradient descent\nalgorithm ensures computational efficiency for streaming and high-dimensional\ndata. Results from extensive simulations demonstrate that the proposed method\nachieves superior accuracy and stability than single equation and polynomial\napproximation baselines, exhibiting lower bias and root mean squared error\nacross various data-generating processes. These results confirm that the\nproposed approach effectively captures complex bidirectional causal effects\nwith near-linear computational scaling. By combining econometric identification\nwith modern machine learning techniques, the proposed framework offers a\npractical, scalable, and theoretically grounded solution for large scale causal\ninference in natural/social science, policy making, business, and industrial\napplications.",
+      "pdf_url": "http://arxiv.org/pdf/2511.05050v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.05050v1",
+      "published": "2025-11-07",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Structure and Representation Learning with Biomedical Applications",
+      "authors": [
+        "Caroline Uhler",
+        "Jiaqi Zhang"
+      ],
+      "abstract": "Massive data collection holds the promise of a better understanding of\ncomplex phenomena and, ultimately, better decisions. Representation learning\nhas become a key driver of deep learning applications, as it allows learning\nlatent spaces that capture important properties of the data without requiring\nany supervised annotations. Although representation learning has been hugely\nsuccessful in predictive tasks, it can fail miserably in causal tasks including\npredicting the effect of a perturbation/intervention. This calls for a marriage\nbetween representation learning and causal inference. An exciting opportunity\nin this regard stems from the growing availability of multi-modal data\n(observational and perturbational, imaging-based and sequencing-based, at the\nsingle-cell level, tissue-level, and organism-level). We outline a statistical\nand computational framework for causal structure and representation learning\nmotivated by fundamental biomedical questions: how to effectively use\nobservational and perturbational data to perform causal discovery on observed\ncausal variables; how to use multi-modal views of the system to learn causal\nvariables; and how to design optimal perturbations.",
+      "pdf_url": "http://arxiv.org/pdf/2511.04790v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.04790v1",
+      "published": "2025-11-06",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Dynamic causal discovery in Alzheimer's disease through latent pseudotime modelling",
       "authors": [
@@ -119,57 +165,6 @@
       "published": "2025-11-04",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Peer effect analysis with latent processes",
-      "authors": [
-        "Vincent Starck"
-      ],
-      "abstract": "I study peer effects that arise from irreversible decisions in the absence of\na standard social equilibrium. I model a latent sequence of decisions in\ncontinuous time and obtain a closed-form expression for the likelihood, which\nallows to estimate proposed causal estimands. The method avoids regression on\nconditional expectations or linear-in-means regression -- and thus\nreflection-type problems (Manski, 1993) or simultaneity issues -- by modeling\nthe (unobserved) realized direction of causality, whose probability is\nidentified. Under a parsimonious parametric specification, I introduce a peer\neffect parameter meant to capture the causal influence of first-movers on their\npeers. Various forms of peer effect heterogeneity can be accommodated.\nParameters are shown to be consistently estimated by maximum likelihood methods\nand lend themselves to standard inference.",
-      "pdf_url": "http://arxiv.org/pdf/2511.02764v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.02764v1",
-      "published": "2025-11-04",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Agentic World Modeling for 6G: Near-Real-Time Generative State-Space Reasoning",
-      "authors": [
-        "Farhad Rezazadeh",
-        "Hatim Chergui",
-        "Merouane Debbah",
-        "Houbing Song",
-        "Dusit Niyato",
-        "Lingjia Liu"
-      ],
-      "abstract": "We argue that sixth-generation (6G) intelligence is not fluent token\nprediction but the capacity to imagine and choose -- to simulate future\nscenarios, weigh trade-offs, and act with calibrated uncertainty. We reframe\nopen radio access network (O-RAN) near-real-time (Near-RT) control via\ncounterfactual dynamics and a world modeling (WM) paradigm that learns an\naction-conditioned generative state space. This enables quantitative \"what-if\"\nforecasting beyond large language models (LLMs) as the primary modeling\nprimitive. Actions such as physical resource blocks (PRBs) are treated as\nfirst-class control inputs in a causal world model, and both aleatoric and\nepistemic uncertainty are modeled for prediction and what-if analysis. An\nagentic, model predictive control (MPC)-based cross-entropy method (CEM)\nplanner operates over short horizons, using prior-mean rollouts within\ndata-driven PRB bounds to maximize a deterministic reward. The model couples\nmulti-scale structured state-space mixtures (MS3M) with a compact stochastic\nlatent to form WM-MS3M, summarizing key performance indicators (KPIs) histories\nand predicting next-step KPIs under hypothetical PRB sequences. On realistic\nO-RAN traces, WM-MS3M cuts mean absolute error (MAE) by 1.69% versus MS3M with\n32% fewer parameters and similar latency, and achieves 35-80% lower root mean\nsquared error (RMSE) than attention/hybrid baselines with 2.3-4.1x faster\ninference, enabling rare-event simulation and offline policy screening.",
-      "pdf_url": "http://arxiv.org/pdf/2511.02748v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.02748v1",
-      "published": "2025-11-04",
-      "categories": [
-        "cs.NI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "A Bayesian Inference of Hybrid Stars with Large Quark Cores",
-      "authors": [
-        "Milena Albino",
-        "Tuhin Malik",
-        "Márcio Ferreira",
-        "Constança Providência"
-      ],
-      "abstract": "Neutron stars (NSs) are interesting objects capable of reaching densities\nunattainable on Earth. The properties of matter under these conditions remain a\nmystery. Exotic matter, including quark matter, may be present in the NS core.\nIn this work, we explore the possible compositions of NS cores, in particular,\nthe possible existence of large quark cores. We use the Relativistic Mean Field\n(RMF) model with nonlinear terms for the hadron phase and the\nNambu-Jona-Lasinio (NJL) model and Mean Field Theory of Quantum Chromodynamics\n(MFTQCD) for the quark phase. Through Bayesian inference, we obtain different\nsets of equations: four sets with hybrid equations (three using the NJL model\nand the other using the MFTQCD model), and one set with only the hadron phase.\nWe impose constraints regarding the properties of nuclear matter, X-ray\nobservational data from NICER, perturbative QCD (pQCD) calculations, and\ncausality on all sets. One set of hybrid NJL equations of state was also\nconstrained by adding the GW170817 detection. All sets can describe\nobservational data and theoretical restrictions. The MFTQCD allows for a phase\ntransition to quark matter at lower densities compared to the NJL models. The\nMFTQCD model indicates that NSs with 1.4 solar mass have quark matter in their\ninner core. However, NJL models suggest that it is more probable that 1.4 solar\nmass NSs do not contain quark matter. Both the MFTQCD and NJL models agree that\nthere is quark matter in 2 solar mass NSs. It is discussed that hybrid stars\nwith a stiff quark equation of state could explain a larger radius of more\nmassive stars, such as two solar mass stars, with respect to the canonical NS.",
-      "pdf_url": "http://arxiv.org/pdf/2511.02653v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.02653v1",
-      "published": "2025-11-04",
-      "categories": [
-        "nucl-th",
-        "astro-ph.HE",
-        "gr-qc",
-        "hep-ph"
       ]
     }
   ]
