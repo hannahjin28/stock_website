@@ -1,168 +1,171 @@
 {
-  "last_updated": "2025-11-14T00:54:10.702727",
+  "last_updated": "2025-11-15T00:52:48.826365",
   "papers": [
     {
-      "title": "Causal inference via algebraic geometry: feasibility tests for functional causal structures with two binary observed variables",
+      "title": "GraphFaaS: Serverless GNN Inference for Burst-Resilient, Real-Time Intrusion Detection",
       "authors": [
-        "Ciarán M. Lee",
-        "Robert W. Spekkens"
+        "Lingzhi Wang",
+        "Vinod Yegneswaran",
+        "Xinyi Shi",
+        "Ziyu Li",
+        "Ashish Gehani",
+        "Yan Chen"
       ],
-      "abstract": "We provide a scheme for inferring causal relations from uncontrolled statistical data based on tools from computational algebraic geometry, in particular, the computation of Groebner bases. We focus on causal structures containing just two observed variables, each of which is binary. We consider the consequences of imposing different restrictions on the number and cardinality of latent variables and of assuming different functional dependences of the observed variables on the latent ones (in particular, the noise need not be additive). We provide an inductive scheme for classifying functional causal structures into distinct observational equivalence classes. For each observational equivalence class, we provide a procedure for deriving constraints on the joint distribution that are necessary and sufficient conditions for it to arise from a model in that class. We also demonstrate how this sort of approach provides a means of determining which causal parameters are identifiable and how to solve for these. Prospects for expanding the scope of our scheme, in particular to the problem of quantum causal inference, are also discussed.",
-      "pdf_url": "https://arxiv.org/pdf/1506.03880v2",
-      "arxiv_url": "http://arxiv.org/abs/1506.03880v2",
-      "published": "2015-06-12",
+      "abstract": "Provenance-based intrusion detection is an increasingly popular application of graphical machine learning in cybersecurity, where system activities are modeled as provenance graphs to capture causality and correlations among potentially malicious actions. Graph Neural Networks (GNNs) have demonstrated strong performance in this setting. However, traditional statically-provisioned GNN inference architectures fall short in meeting two crucial demands of intrusion detection: (1) maintaining consistently low detection latency, and (2) handling highly irregular and bursty workloads. To holistically address these challenges, we present GraphFaaS, a serverless architecture tailored for GNN-based intrusion detection. GraphFaaS leverages the elasticity and agility of serverless computing to dynamically scale the GNN inference pipeline. We parallelize and adapt GNN workflows to a serverless environment, ensuring that the system can respond in real time to fluctuating workloads. By decoupling compute resources from static provisioning, GraphFaaS delivers stable inference latency, which is critical for dependable intrusion detection and timely incident response in cybersecurity operations. Preliminary evaluation shows GraphFaaS reduces average detection latency by 85% and coefficient of variation (CV) by 64% compared to the baseline.",
+      "pdf_url": "https://arxiv.org/pdf/2511.10554v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.10554v1",
+      "published": "2025-11-13",
       "categories": [
-        "stat.ML",
-        "quant-ph"
+        "cs.CR"
       ]
     },
     {
-      "title": "Quantitative probing: Validating causal models using quantitative domain knowledge",
+      "title": "Causal Model-Based Reinforcement Learning for Sample-Efficient IoT Channel Access",
       "authors": [
-        "Daniel Grünbaum",
-        "Maike L. Stern",
-        "Elmar W. Lang"
+        "Aswin Arun",
+        "Christo Kurisummoottil Thomas",
+        "Rimalpudi Sarvendranath",
+        "Walid Saad"
       ],
-      "abstract": "We present quantitative probing as a model-agnostic framework for validating causal models in the presence of quantitative domain knowledge. The method is constructed as an analogue of the train/test split in correlation-based machine learning and as an enhancement of current causal validation strategies that are consistent with the logic of scientific discovery. The effectiveness of the method is illustrated using Pearl's sprinkler example, before a thorough simulation-based investigation is conducted. Limits of the technique are identified by studying exemplary failing scenarios, which are furthermore used to propose a list of topics for future research and improvements of the presented version of quantitative probing. The code for integrating quantitative probing into causal analysis, as well as the code for the presented simulation-based studies of the effectiveness of quantitative probing is provided in two separate open-source Python packages.",
-      "pdf_url": "https://arxiv.org/pdf/2209.03013v1",
-      "arxiv_url": "http://arxiv.org/abs/2209.03013v1",
-      "published": "2022-09-07",
+      "abstract": "Despite the advantages of multi-agent reinforcement learning (MARL) for wireless use case such as medium access control (MAC), their real-world deployment in Internet of Things (IoT) is hindered by their sample inefficiency. To alleviate this challenge, one can leverage model-based reinforcement learning (MBRL) solutions, however, conventional MBRL approaches rely on black-box models that are not interpretable and cannot reason. In contrast, in this paper, a novel causal model-based MARL framework is developed by leveraging tools from causal learn- ing. In particular, the proposed model can explicitly represent causal dependencies between network variables using structural causal models (SCMs) and attention-based inference networks. Interpretable causal models are then developed to capture how MAC control messages influence observations, how transmission actions determine outcomes, and how channel observations affect rewards. Data augmentation techniques are then used to generate synthetic rollouts using the learned causal model for policy optimization via proximal policy optimization (PPO). Analytical results demonstrate exponential sample complexity gains of causal MBRL over black-box approaches. Extensive simulations demonstrate that, on average, the proposed approach can reduce environment interactions by 58%, and yield faster convergence compared to model-free baselines. The proposed approach inherently is also shown to provide interpretable scheduling decisions via attention-based causal attribution, revealing which network conditions drive the policy. The resulting combination of sample efficiency and interpretability establishes causal MBRL as a practical approach for resource-constrained wireless systems.",
+      "pdf_url": "https://arxiv.org/pdf/2511.10291v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.10291v1",
+      "published": "2025-11-13",
+      "categories": [
+        "cs.IT",
+        "cs.LG",
+        "cs.NI"
+      ]
+    },
+    {
+      "title": "Temporal Latent Variable Structural Causal Model for Causal Discovery under External Interferences",
+      "authors": [
+        "Ruichu Cai",
+        "Xiaokai Huang",
+        "Wei Chen",
+        "Zijian Li",
+        "Zhifeng Hao"
+      ],
+      "abstract": "Inferring causal relationships from observed data is an important task, yet it becomes challenging when the data is subject to various external interferences. Most of these interferences are the additional effects of external factors on observed variables. Since these external factors are often unknown, we introduce latent variables to represent these unobserved factors that affect the observed data. Specifically, to capture the causal strength and adjacency information, we propose a new temporal latent variable structural causal model, incorporating causal strength and adjacency coefficients that represent the causal relationships between variables. Considering that expert knowledge can provide information about unknown interferences in certain scenarios, we develop a method that facilitates the incorporation of prior knowledge into parameter learning based on Variational Inference, to guide the model estimation. Experimental results demonstrate the stability and accuracy of our proposed method.",
+      "pdf_url": "https://arxiv.org/pdf/2511.10031v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.10031v1",
+      "published": "2025-11-13",
       "categories": [
         "cs.LG",
-        "stat.ME"
+        "cs.AI"
       ]
     },
     {
-      "title": "A Unifying Causal Framework for Analyzing Dataset Shift-stable Learning Algorithms",
+      "title": "AI-Integrated Decision Support System for Real-Time Market Growth Forecasting and Multi-Source Content Diffusion Analytics",
       "authors": [
-        "Adarsh Subbaswamy",
-        "Bryant Chen",
-        "Suchi Saria"
+        "Ziqing Yin",
+        "Xuanjing Chen",
+        "Xi Zhang"
       ],
-      "abstract": "Recent interest in the external validity of prediction models (i.e., the problem of different train and test distributions, known as dataset shift) has produced many methods for finding predictive distributions that are invariant to dataset shifts and can be used for prediction in new, unseen environments. However, these methods consider different types of shifts and have been developed under disparate frameworks, making it difficult to theoretically analyze how solutions differ with respect to stability and accuracy. Taking a causal graphical view, we use a flexible graphical representation to express various types of dataset shifts. Given a known graph of the data generating process, we show that all invariant distributions correspond to a causal hierarchy of graphical operators which disable the edges in the graph that are responsible for the shifts. The hierarchy provides a common theoretical underpinning for understanding when and how stability to shifts can be achieved, and in what ways stable distributions can differ. We use it to establish conditions for minimax optimal performance across environments, and derive new algorithms that find optimal stable distributions. Using this new perspective, we empirically demonstrate that that there is a tradeoff between minimax and average performance.",
-      "pdf_url": "https://arxiv.org/pdf/1905.11374v5",
-      "arxiv_url": "http://arxiv.org/abs/1905.11374v5",
-      "published": "2019-05-27",
-      "categories": [
-        "stat.ML",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "OpportunityFinder: A Framework for Automated Causal Inference",
-      "authors": [
-        "Huy Nguyen",
-        "Prince Grover",
-        "Devashish Khatwani"
-      ],
-      "abstract": "We introduce OpportunityFinder, a code-less framework for performing a variety of causal inference studies with panel data for non-expert users. In its current state, OpportunityFinder only requires users to provide raw observational data and a configuration file. A pipeline is then triggered that inspects/processes data, chooses the suitable algorithm(s) to execute the causal study. It returns the causal impact of the treatment on the configured outcome, together with sensitivity and robustness results. Causal inference is widely studied and used to estimate the downstream impact of individual's interactions with products and features. It is common that these causal studies are performed by scientists and/or economists periodically. Business stakeholders are often bottle-necked on scientist or economist bandwidth to conduct causal studies. We offer OpportunityFinder as a solution for commonly performed causal studies with four key features: (1) easy to use for both Business Analysts and Scientists, (2) abstraction of multiple algorithms under a single I/O interface, (3) support for causal impact analysis under binary treatment with panel data and (4) dynamic selection of algorithm based on scale of data.",
-      "pdf_url": "https://arxiv.org/pdf/2309.13103v1",
-      "arxiv_url": "http://arxiv.org/abs/2309.13103v1",
-      "published": "2023-09-22",
+      "abstract": "The rapid proliferation of AI-generated content (AIGC) has reshaped the dynamics of digital marketing and online consumer behavior. However, predicting the diffusion trajectory and market impact of such content remains challenging due to data heterogeneity, non linear propagation mechanisms, and evolving consumer interactions. This study proposes an AI driven Decision Support System (DSS) that integrates multi source data including social media streams, marketing expenditure records, consumer engagement logs, and sentiment dynamics using a hybrid Graph Neural Network (GNN) and Temporal Transformer framework. The model jointly learns the content diffusion structure and temporal influence evolution through a dual channel architecture, while causal inference modules disentangle the effects of marketing stimuli on return on investment (ROI) and market visibility. Experiments on large scale real-world datasets collected from multiple online platforms such as Twitter, TikTok, and YouTube advertising show that our system outperforms existing baselines in all six metrics. The proposed DSS enhances marketing decisions by providing interpretable real-time insights into AIGC driven content dissemination and market growth patterns.",
+      "pdf_url": "https://arxiv.org/pdf/2511.09962v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.09962v1",
+      "published": "2025-11-13",
       "categories": [
         "cs.LG",
         "cs.AI",
-        "stat.ME"
+        "cs.MM"
       ]
     },
     {
-      "title": "Text as Causal Mediators: Research Design for Causal Estimates of Differential Treatment of Social Groups via Language Aspects",
+      "title": "NeuroLingua: A Language-Inspired Hierarchical Framework for Multimodal Sleep Stage Classification Using EEG and EOG",
       "authors": [
-        "Katherine A. Keith",
-        "Douglas Rice",
-        "Brendan O'Connor"
+        "Mahdi Samaee",
+        "Mehran Yazdi",
+        "Daniel Massicotte"
       ],
-      "abstract": "Using observed language to understand interpersonal interactions is important in high-stakes decision making. We propose a causal research design for observational (non-experimental) data to estimate the natural direct and indirect effects of social group signals (e.g. race or gender) on speakers' responses with separate aspects of language as causal mediators. We illustrate the promises and challenges of this framework via a theoretical case study of the effect of an advocate's gender on interruptions from justices during U.S. Supreme Court oral arguments. We also discuss challenges conceptualizing and operationalizing causal variables such as gender and language that comprise of many components, and we articulate technical open challenges such as temporal dependence between language mediators in conversational settings.",
-      "pdf_url": "https://arxiv.org/pdf/2109.07542v1",
-      "arxiv_url": "http://arxiv.org/abs/2109.07542v1",
-      "published": "2021-09-15",
+      "abstract": "Automated sleep stage classification from polysomnography remains limited by the lack of expressive temporal hierarchies, challenges in multimodal EEG and EOG fusion, and the limited interpretability of deep learning models. We propose NeuroLingua, a language-inspired framework that conceptualizes sleep as a structured physiological language. Each 30-second epoch is decomposed into overlapping 3-second subwindows (\"tokens\") using a CNN-based tokenizer, enabling hierarchical temporal modeling through dual-level Transformers: intra-segment encoding of local dependencies and inter-segment integration across seven consecutive epochs (3.5 minutes) for extended context. Modality-specific embeddings from EEG and EOG channels are fused via a Graph Convolutional Network, facilitating robust multimodal integration. NeuroLingua is evaluated on the Sleep-EDF Expanded and ISRUC-Sleep datasets, achieving state-of-the-art results on Sleep-EDF (85.3% accuracy, 0.800 macro F1, and 0.796 Cohen's kappa) and competitive performance on ISRUC (81.9% accuracy, 0.802 macro F1, and 0.755 kappa), matching or exceeding published baselines in overall and per-class metrics. The architecture's attention mechanisms enhance the detection of clinically relevant sleep microevents, providing a principled foundation for future interpretability, explainability, and causal inference in sleep research. By framing sleep as a compositional language, NeuroLingua unifies hierarchical sequence modeling and multimodal fusion, advancing automated sleep staging toward more transparent and clinically meaningful applications.",
+      "pdf_url": "https://arxiv.org/pdf/2511.09773v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.09773v1",
+      "published": "2025-11-12",
       "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Causal Inference Using Tractable Circuits",
-      "authors": [
-        "Adnan Darwiche"
-      ],
-      "abstract": "The aim of this paper is to discuss a recent result which shows that probabilistic inference in the presence of (unknown) causal mechanisms can be tractable for models that have traditionally been viewed as intractable. This result was reported recently to facilitate model-based supervised learning but it can be interpreted in a causality context as follows. One can compile a non-parametric causal graph into an arithmetic circuit that supports inference in time linear in the circuit size. The circuit is also non-parametric so it can be used to estimate parameters from data and to further reason (in linear time) about the causal graph parametrized by these estimates. Moreover, the circuit size can sometimes be bounded even when the treewidth of the causal graph is not, leading to tractable inference on models that have been deemed intractable previously. This has been enabled by a new technique that can exploit causal mechanisms computationally but without needing to know their identities (the classical setup in causal inference). Our goal is to provide a causality-oriented exposure to these new results and to speculate on how they may potentially contribute to more scalable and versatile causal inference.",
-      "pdf_url": "https://arxiv.org/pdf/2202.02891v1",
-      "arxiv_url": "http://arxiv.org/abs/2202.02891v1",
-      "published": "2022-02-07",
-      "categories": [
-        "cs.AI",
-        "cs.CC",
         "cs.LG",
-        "cs.LO",
-        "stat.ME"
+        "eess.SP"
       ]
     },
     {
-      "title": "Bridging Finite and Super Population Causal Inference",
+      "title": "Distributional Treatment Effect Estimation across Heterogeneous Sites via Optimal Transport",
       "authors": [
-        "Peng Ding",
-        "Xinran Li",
-        "Luke W. Miratrix"
+        "Borna Bateni",
+        "Yubai Yuan",
+        "Qi Xu",
+        "Annie Qu"
       ],
-      "abstract": "There are two general views in causal analysis of experimental data: the super population view that the units are an independent sample from some hypothetical infinite populations, and the finite population view that the potential outcomes of the experimental units are fixed and the randomness comes solely from the physical randomization of the treatment assignment. These two views differs conceptually and mathematically, resulting in different sampling variances of the usual difference-in-means estimator of the average causal effect. Practically, however, these two views result in identical variance estimators. By recalling a variance decomposition and exploiting a completeness-type argument, we establish a connection between these two views in completely randomized experiments. This alternative formulation could serve as a template for bridging finite and super population causal inference in other scenarios.",
-      "pdf_url": "https://arxiv.org/pdf/1702.08615v1",
-      "arxiv_url": "http://arxiv.org/abs/1702.08615v1",
-      "published": "2017-02-28",
+      "abstract": "We propose a novel framework for synthesizing counterfactual treatment group data in a target site by integrating full treatment and control group data from a source site with control group data from the target. Departing from conventional average treatment effect estimation, our approach adopts a distributional causal inference perspective by modeling treatment and control as distinct probability measures on the source and target sites. We formalize the cross-site heterogeneity (effect modification) as a push-forward transformation that maps the joint feature-outcome distribution from the source to the target site. This transformation is learned by aligning the control group distributions between sites using an Optimal Transport-based procedure, and subsequently applied to the source treatment group to generate the synthetic target treatment distribution. Under general regularity conditions, we establish theoretical guarantees for the consistency and asymptotic convergence of the synthetic treatment group data to the true target distribution. Simulation studies across multiple data-generating scenarios and a real-world application to patient-derived xenograft data demonstrate that our framework robustly recovers the full distributional properties of treatment effects.",
+      "pdf_url": "https://arxiv.org/pdf/2511.09759v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.09759v1",
+      "published": "2025-11-12",
       "categories": [
-        "math.ST"
-      ]
-    },
-    {
-      "title": "The Inflation Technique for Causal Inference with Latent Variables",
-      "authors": [
-        "Elie Wolfe",
-        "Robert W. Spekkens",
-        "Tobias Fritz"
-      ],
-      "abstract": "The problem of causal inference is to determine if a given probability distribution on observed variables is compatible with some causal structure. The difficult case is when the causal structure includes latent variables. We here introduce the $\\textit{inflation technique}$ for tackling this problem. An inflation of a causal structure is a new causal structure that can contain multiple copies of each of the original variables, but where the ancestry of each copy mirrors that of the original. To every distribution of the observed variables that is compatible with the original causal structure, we assign a family of marginal distributions on certain subsets of the copies that are compatible with the inflated causal structure. It follows that compatibility constraints for the inflation can be translated into compatibility constraints for the original causal structure. Even if the constraints at the level of inflation are weak, such as observable statistical independences implied by disjoint causal ancestry, the translated constraints can be strong. We apply this method to derive new inequalities whose violation by a distribution witnesses that distribution's incompatibility with the causal structure (of which Bell inequalities and Pearl's instrumental inequality are prominent examples). We describe an algorithm for deriving all such inequalities for the original causal structure that follow from ancestral independences in the inflation. For three observed binary variables with pairwise common causes, it yields inequalities that are stronger in at least some aspects than those obtainable by existing methods. We also describe an algorithm that derives a weaker set of inequalities but is more efficient. Finally, we discuss which inflations are such that the inequalities one obtains from them remain valid even for quantum (and post-quantum) generalizations of the notion of a causal model.",
-      "pdf_url": "https://arxiv.org/pdf/1609.00672v5",
-      "arxiv_url": "http://arxiv.org/abs/1609.00672v5",
-      "published": "2016-09-02",
-      "categories": [
-        "quant-ph",
-        "math.ST",
         "stat.ME",
+        "math.ST",
         "stat.ML"
       ]
     },
     {
-      "title": "Positive-Unlabeled Learning for Control Group Construction in Observational Causal Inference",
+      "title": "History Rhymes: Macro-Contextual Retrieval for Robust Financial Forecasting",
       "authors": [
-        "Ilias Tsoumas",
-        "Dimitrios Bormpoudakis",
-        "Vasileios Sitokonstantinou",
-        "Athanasios Askitopoulos",
-        "Andreas Kalogeras",
-        "Charalampos Kontoes",
-        "Ioannis Athanasiadis"
+        "Sarthak Khanna",
+        "Armin Berger",
+        "Muskaan Chopra",
+        "Rafet Sifa"
       ],
-      "abstract": "In causal inference, whether through randomized controlled trials or observational studies, access to both treated and control units is essential for estimating the effect of a treatment on an outcome of interest. When treatment assignment is random, the average treatment effect (ATE) can be estimated directly by comparing outcomes between groups. In non-randomized settings, various techniques are employed to adjust for confounding and approximate the counterfactual scenario to recover an unbiased ATE. A common challenge, especially in observational studies, is the absence of units clearly labeled as controls-that is, units known not to have received the treatment. To address this, we propose positive-unlabeled (PU) learning as a framework for identifying, with high confidence, control units from a pool of unlabeled ones, using only the available treated (positive) units. We evaluate this approach using both simulated and real-world data. We construct a causal graph with diverse relationships and use it to generate synthetic data under various scenarios, assessing how reliably the method recovers control groups that allow estimates of true ATE. We also apply our approach to real-world data on optimal sowing and fertilizer treatments in sustainable agriculture. Our findings show that PU learning can successfully identify control (negative) units from unlabeled data based only on treated units and, through the resulting control group, estimate an ATE that closely approximates the true value. This work has important implications for observational causal inference, especially in fields where randomized experiments are difficult or costly. In domains such as earth, environmental, and agricultural sciences, it enables a plethora of quasi-experiments by leveraging available earth observation and climate data, particularly when treated units are available but control units are lacking.",
-      "pdf_url": "https://arxiv.org/pdf/2507.14528v1",
-      "arxiv_url": "http://arxiv.org/abs/2507.14528v1",
-      "published": "2025-07-19",
+      "abstract": "Financial markets are inherently non-stationary: structural breaks and macroeconomic regime shifts often cause forecasting models to fail when deployed out of distribution (OOD). Conventional multimodal approaches that simply fuse numerical indicators and textual sentiment rarely adapt to such shifts. We introduce macro-contextual retrieval, a retrieval-augmented forecasting framework that grounds each prediction in historically analogous macroeconomic regimes. The method jointly embeds macro indicators (e.g., CPI, unemployment, yield spread, GDP growth) and financial news sentiment in a shared similarity space, enabling causal retrieval of precedent periods during inference without retraining.\n  Trained on seventeen years of S&P 500 data (2007-2023) and evaluated OOD on AAPL (2024) and XOM (2024), the framework consistently narrows the CV to OOD performance gap. Macro-conditioned retrieval achieves the only positive out-of-sample trading outcomes (AAPL: PF=1.18, Sharpe=0.95; XOM: PF=1.16, Sharpe=0.61), while static numeric, text-only, and naive multimodal baselines collapse under regime shifts. Beyond metric gains, retrieved neighbors form interpretable evidence chains that correspond to recognizable macro contexts, such as inflationary or yield-curve inversion phases, supporting causal interpretability and transparency. By operationalizing the principle that \"financial history may not repeat, but it often rhymes,\" this work demonstrates that macro-aware retrieval yields robust, explainable forecasts under distributional change.\n  All datasets, models, and source code are publicly available.",
+      "pdf_url": "https://arxiv.org/pdf/2511.09754v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.09754v1",
+      "published": "2025-11-12",
       "categories": [
-        "cs.LG"
+        "cs.LG",
+        "cs.AI"
       ]
     },
     {
-      "title": "Confidence in Causal Inference under Structure Uncertainty in Linear Causal Models with Equal Variances",
+      "title": "Principled analysis of crossover designs: causal effects, efficient estimation, and robust inference",
       "authors": [
-        "David Strieder",
-        "Mathias Drton"
+        "Zhichao Jiang",
+        "Peng Ding"
       ],
-      "abstract": "Inferring the effect of interventions within complex systems is a fundamental problem of statistics. A widely studied approach employs structural causal models that postulate noisy functional relations among a set of interacting variables. The underlying causal structure is then naturally represented by a directed graph whose edges indicate direct causal dependencies. In a recent line of work, additional assumptions on the causal models have been shown to render this causal graph identifiable from observational data alone. One example is the assumption of linear causal relations with equal error variances that we will take up in this work. When the graph structure is known, classical methods may be used for calculating estimates and confidence intervals for causal effects. However, in many applications, expert knowledge that provides an a priori valid causal structure is not available. Lacking alternatives, a commonly used two-step approach first learns a graph and then treats the graph as known in inference. This, however, yields confidence intervals that are overly optimistic and fail to account for the data-driven model choice. We argue that to draw reliable conclusions, it is necessary to incorporate the remaining uncertainty about the underlying causal structure in confidence statements about causal effects. To address this issue, we present a framework based on test inversion that allows us to give confidence regions for total causal effects that capture both sources of uncertainty: causal structure and numerical size of nonzero effects.",
-      "pdf_url": "https://arxiv.org/pdf/2309.04298v1",
-      "arxiv_url": "http://arxiv.org/abs/2309.04298v1",
-      "published": "2023-09-08",
+      "abstract": "Crossover designs randomly assign each unit to receive a sequence of treatments. By comparing outcomes within the same unit, these designs can effectively eliminate between-unit variation and facilitate the identification of both instantaneous effects of current treatments and carryover effects from past treatments. They are widely used in traditional biomedical studies and are increasingly adopted in modern digital platforms. However, standard analyses of crossover designs often rely on strong parametric models, making inference vulnerable to model misspecification. This paper adopts a design-based framework to analyze general crossover designs. We make two main contributions. First, we use potential outcomes to formally define the causal estimands and assumptions on the data-generating process. For any given type of crossover design and assumptions on potential outcomes, we outline a procedure for identification and estimation, emphasizing the central role of the treatment assignment mechanism in design-based inference. Second, we unify the analysis of crossover designs using least squares, with restrictions on the coefficients and weights on the units. Based on the theory, we recommend the specification of the regression function, weighting scheme, and coefficient restrictions to assess identifiability, construct efficient estimators, and estimate variances in a unified fashion. Crucially, the least squares procedure is simple to implement, and yields not only consistent and efficient point estimates but also valid variance estimates even when the working regression model is misspecified.",
+      "pdf_url": "https://arxiv.org/pdf/2511.09215v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.09215v1",
+      "published": "2025-11-12",
       "categories": [
-        "stat.ME",
-        "math.ST"
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "FedSDWC: Federated Synergistic Dual-Representation Weak Causal Learning for OOD",
+      "authors": [
+        "Zhenyuan Huang",
+        "Hui Zhang",
+        "Wenzhong Tang",
+        "Haijun Yang"
+      ],
+      "abstract": "Amid growing demands for data privacy and advances in computational infrastructure, federated learning (FL) has emerged as a prominent distributed learning paradigm. Nevertheless, differences in data distribution (such as covariate and semantic shifts) severely affect its reliability in real-world deployments. To address this issue, we propose FedSDWC, a causal inference method that integrates both invariant and variant features. FedSDWC infers causal semantic representations by modeling the weak causal influence between invariant and variant features, effectively overcoming the limitations of existing invariant learning methods in accurately capturing invariant features and directly constructing causal representations. This approach significantly enhances FL's ability to generalize and detect OOD data. Theoretically, we derive FedSDWC's generalization error bound under specific conditions and, for the first time, establish its relationship with client prior distributions. Moreover, extensive experiments conducted on multiple benchmark datasets validate the superior performance of FedSDWC in handling covariate and semantic shifts. For example, FedSDWC outperforms FedICON, the next best baseline, by an average of 3.04% on CIFAR-10 and 8.11% on CIFAR-100.",
+      "pdf_url": "https://arxiv.org/pdf/2511.09036v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.09036v1",
+      "published": "2025-11-12",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Group-Theoretic Structure Governing Identifiability in Inverse Problems",
+      "authors": [
+        "Isshin Arai",
+        "Tomoaki Itano"
+      ],
+      "abstract": "In physical systems possessing symmetry, reconstructing the underlying causal structure from observational data constitutes an inverse problem of fundamental importance. In this work, we formulate the inverse problem of causal inference within the framework of group-representation theory, clarifying the structure of the representation spaces to which the {\\it causality} and estimation maps belong. This formulation leads to both theoretical and practical limits of reconstructability (identifiability). We show that the local velocity-gradient tensor, regarded as a {\\it causal factor}, can be reconstructed from the orientational motion of suspended particles. In this setting, the estimation map must act as a group homomorphism between the observation and causal spaces, and the reconstructable subspace is constrained by the decomposition structure of the SO(3) representation. Based on this principle, we construct an SO(3)-equivariant neural network (implemented with the e3nn framework) and verify that the identifiability determined by the group-representation structure is reproduced in the actual learning process. These results demonstrate a fundamental principle that the group-representation structure determines the reconstructability (identifiability limit) in inverse problems of causal inference.",
+      "pdf_url": "https://arxiv.org/pdf/2511.08995v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.08995v1",
+      "published": "2025-11-12",
+      "categories": [
+        "math-ph"
       ]
     }
   ]
