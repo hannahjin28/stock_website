@@ -1,6 +1,58 @@
 {
-  "last_updated": "2025-11-17T00:55:21.251503",
+  "last_updated": "2025-11-18T00:53:50.763011",
   "papers": [
+    {
+      "title": "Estimating the Effects of Heatwaves on Health: A Causal Inference Framework",
+      "authors": [
+        "Giulio Grossi",
+        "Leo Vanciu",
+        "Veronica Ballerini",
+        "Danielle Braun",
+        "Falco J. Bargagli Stoffi"
+      ],
+      "abstract": "The harmful relationship between heatwaves and health has been extensively documented in medical and epidemiological literature. However, most evidence is associational and cannot be interpreted causally unless strong assumptions are made. In this paper, we first make explicit the assumptions underlying the statistical methods frequently used in the heatwave literature and demonstrate when these assumptions might break down in heatwave contexts. To address these shortcomings, we propose a causal inference framework that transparently elicits causal identification assumptions. Within this new framework, we first introduce synthetic controls (SC) for estimating heatwave effects, then propose a spatially augmented Bayesian synthetic control (SA-SC) method that accounts for spatial dependence and spillovers. Empirical Monte Carlo simulations show both methods perform well, with SA-SC reducing root mean squared error and improving posterior interval coverage under spillovers and spatial dependence. Finally, we apply the proposed methods to estimate the causal effects of heatwaves on Medicare heat-related hospitalizations among 13,753,273 beneficiaries residing in Northeastern U.S. from 2000 to 2019. This causal inference framework provides spatially coherent counterfactual outcomes and robust, interpretable, and transparent causal estimates while explicitly addressing the unexamined assumptions in existing methods that pervade the heatwave effect literature.",
+      "pdf_url": "https://arxiv.org/pdf/2511.11433v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.11433v1",
+      "published": "2025-11-14",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Interpolated stochastic interventions based on propensity scores, target policies and treatment-specific costs",
+      "authors": [
+        "Johan de Aguas"
+      ],
+      "abstract": "We introduce families of stochastic interventions for discrete treatments that connect causal modeling to cost-sensitive decision making. The interventions arise from a cost-penalized information projection of the independent product of the organic propensity and a user-specified target, yielding closed-form Boltzmann-Gibbs couplings. The induced marginals define modified stochastic policies that interpolate smoothly, via a single tilt parameter, from the organic law or from the target distribution toward a product-of-experts limit when all destination costs are strictly positive. One of these families recovers and extends incremental propensity score interventions, retaining identification without global positivity. For inference, we derive efficient influence functions under a nonparametric model for the expected outcomes after these policies and construct one-step estimators with uniform confidence bands. In simulations, the proposed estimators improve stability and robustness to nuisance misspecification relative to plug-in baselines. The framework can operationalize graded scientific hypotheses under realistic constraints: because inputs are modular, analysts can sweep feasible policy spaces, prototype candidates, and align interventions with budgets and logistics before committing experimental resources. This could help close the loop between observational evidence and resource-aware experimental design.",
+      "pdf_url": "https://arxiv.org/pdf/2511.11353v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.11353v1",
+      "published": "2025-11-14",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "MeCaMIL: Causality-Aware Multiple Instance Learning for Fair and Interpretable Whole Slide Image Diagnosis",
+      "authors": [
+        "Yiran Song",
+        "Yikai Zhang",
+        "Shuang Zhou",
+        "Guojun Xiong",
+        "Xiaofeng Yang",
+        "Nian Wang",
+        "Fenglong Ma",
+        "Rui Zhang",
+        "Mingquan Lin"
+      ],
+      "abstract": "Multiple instance learning (MIL) has emerged as the dominant paradigm for whole slide image (WSI) analysis in computational pathology, achieving strong diagnostic performance through patch-level feature aggregation. However, existing MIL methods face critical limitations: (1) they rely on attention mechanisms that lack causal interpretability, and (2) they fail to integrate patient demographics (age, gender, race), leading to fairness concerns across diverse populations. These shortcomings hinder clinical translation, where algorithmic bias can exacerbate health disparities. We introduce \\textbf{MeCaMIL}, a causality-aware MIL framework that explicitly models demographic confounders through structured causal graphs. Unlike prior approaches treating demographics as auxiliary features, MeCaMIL employs principled causal inference -- leveraging do-calculus and collider structures -- to disentangle disease-relevant signals from spurious demographic correlations. Extensive evaluation on three benchmarks demonstrates state-of-the-art performance across CAMELYON16 (ACC/AUC/F1: 0.939/0.983/0.946), TCGA-Lung (0.935/0.979/0.931), and TCGA-Multi (0.977/0.993/0.970, five cancer types). Critically, MeCaMIL achieves superior fairness -- demographic disparity variance drops by over 65% relative reduction on average across attributes, with notable improvements for underserved populations. The framework generalizes to survival prediction (mean C-index: 0.653, +0.017 over best baseline across five cancer types). Ablation studies confirm causal graph structure is essential -- alternative designs yield 0.048 lower accuracy and 4.2x times worse fairness. These results establish MeCaMIL as a principled framework for fair, interpretable, and clinically actionable AI in digital pathology. Code will be released upon acceptance.",
+      "pdf_url": "https://arxiv.org/pdf/2511.11004v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.11004v1",
+      "published": "2025-11-14",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "GraphFaaS: Serverless GNN Inference for Burst-Resilient, Real-Time Intrusion Detection",
       "authors": [
@@ -121,51 +173,6 @@
       "categories": [
         "cs.LG",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Principled analysis of crossover designs: causal effects, efficient estimation, and robust inference",
-      "authors": [
-        "Zhichao Jiang",
-        "Peng Ding"
-      ],
-      "abstract": "Crossover designs randomly assign each unit to receive a sequence of treatments. By comparing outcomes within the same unit, these designs can effectively eliminate between-unit variation and facilitate the identification of both instantaneous effects of current treatments and carryover effects from past treatments. They are widely used in traditional biomedical studies and are increasingly adopted in modern digital platforms. However, standard analyses of crossover designs often rely on strong parametric models, making inference vulnerable to model misspecification. This paper adopts a design-based framework to analyze general crossover designs. We make two main contributions. First, we use potential outcomes to formally define the causal estimands and assumptions on the data-generating process. For any given type of crossover design and assumptions on potential outcomes, we outline a procedure for identification and estimation, emphasizing the central role of the treatment assignment mechanism in design-based inference. Second, we unify the analysis of crossover designs using least squares, with restrictions on the coefficients and weights on the units. Based on the theory, we recommend the specification of the regression function, weighting scheme, and coefficient restrictions to assess identifiability, construct efficient estimators, and estimate variances in a unified fashion. Crucially, the least squares procedure is simple to implement, and yields not only consistent and efficient point estimates but also valid variance estimates even when the working regression model is misspecified.",
-      "pdf_url": "https://arxiv.org/pdf/2511.09215v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.09215v1",
-      "published": "2025-11-12",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "FedSDWC: Federated Synergistic Dual-Representation Weak Causal Learning for OOD",
-      "authors": [
-        "Zhenyuan Huang",
-        "Hui Zhang",
-        "Wenzhong Tang",
-        "Haijun Yang"
-      ],
-      "abstract": "Amid growing demands for data privacy and advances in computational infrastructure, federated learning (FL) has emerged as a prominent distributed learning paradigm. Nevertheless, differences in data distribution (such as covariate and semantic shifts) severely affect its reliability in real-world deployments. To address this issue, we propose FedSDWC, a causal inference method that integrates both invariant and variant features. FedSDWC infers causal semantic representations by modeling the weak causal influence between invariant and variant features, effectively overcoming the limitations of existing invariant learning methods in accurately capturing invariant features and directly constructing causal representations. This approach significantly enhances FL's ability to generalize and detect OOD data. Theoretically, we derive FedSDWC's generalization error bound under specific conditions and, for the first time, establish its relationship with client prior distributions. Moreover, extensive experiments conducted on multiple benchmark datasets validate the superior performance of FedSDWC in handling covariate and semantic shifts. For example, FedSDWC outperforms FedICON, the next best baseline, by an average of 3.04% on CIFAR-10 and 8.11% on CIFAR-100.",
-      "pdf_url": "https://arxiv.org/pdf/2511.09036v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.09036v1",
-      "published": "2025-11-12",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Group-Theoretic Structure Governing Identifiability in Inverse Problems",
-      "authors": [
-        "Isshin Arai",
-        "Tomoaki Itano"
-      ],
-      "abstract": "In physical systems possessing symmetry, reconstructing the underlying causal structure from observational data constitutes an inverse problem of fundamental importance. In this work, we formulate the inverse problem of causal inference within the framework of group-representation theory, clarifying the structure of the representation spaces to which the {\\it causality} and estimation maps belong. This formulation leads to both theoretical and practical limits of reconstructability (identifiability). We show that the local velocity-gradient tensor, regarded as a {\\it causal factor}, can be reconstructed from the orientational motion of suspended particles. In this setting, the estimation map must act as a group homomorphism between the observation and causal spaces, and the reconstructable subspace is constrained by the decomposition structure of the SO(3) representation. Based on this principle, we construct an SO(3)-equivariant neural network (implemented with the e3nn framework) and verify that the identifiability determined by the group-representation structure is reproduced in the actual learning process. These results demonstrate a fundamental principle that the group-representation structure determines the reconstructability (identifiability limit) in inverse problems of causal inference.",
-      "pdf_url": "https://arxiv.org/pdf/2511.08995v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.08995v1",
-      "published": "2025-11-12",
-      "categories": [
-        "math-ph"
       ]
     }
   ]
