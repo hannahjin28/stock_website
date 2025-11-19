@@ -1,177 +1,167 @@
 {
-  "last_updated": "2025-11-18T00:53:50.763011",
+  "last_updated": "2025-11-19T00:54:02.479050",
   "papers": [
     {
-      "title": "Estimating the Effects of Heatwaves on Health: A Causal Inference Framework",
+      "title": "Uncovering Causal Drivers of Energy Efficiency for Industrial Process in Foundry via Time-Series Causal Inference",
       "authors": [
-        "Giulio Grossi",
-        "Leo Vanciu",
-        "Veronica Ballerini",
-        "Danielle Braun",
-        "Falco J. Bargagli Stoffi"
+        "Zhipeng Ma",
+        "Bo Nørregaard Jørgensen",
+        "Zheng Grace Ma"
       ],
-      "abstract": "The harmful relationship between heatwaves and health has been extensively documented in medical and epidemiological literature. However, most evidence is associational and cannot be interpreted causally unless strong assumptions are made. In this paper, we first make explicit the assumptions underlying the statistical methods frequently used in the heatwave literature and demonstrate when these assumptions might break down in heatwave contexts. To address these shortcomings, we propose a causal inference framework that transparently elicits causal identification assumptions. Within this new framework, we first introduce synthetic controls (SC) for estimating heatwave effects, then propose a spatially augmented Bayesian synthetic control (SA-SC) method that accounts for spatial dependence and spillovers. Empirical Monte Carlo simulations show both methods perform well, with SA-SC reducing root mean squared error and improving posterior interval coverage under spillovers and spatial dependence. Finally, we apply the proposed methods to estimate the causal effects of heatwaves on Medicare heat-related hospitalizations among 13,753,273 beneficiaries residing in Northeastern U.S. from 2000 to 2019. This causal inference framework provides spatially coherent counterfactual outcomes and robust, interpretable, and transparent causal estimates while explicitly addressing the unexamined assumptions in existing methods that pervade the heatwave effect literature.",
-      "pdf_url": "https://arxiv.org/pdf/2511.11433v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.11433v1",
-      "published": "2025-11-14",
+      "abstract": "Improving energy efficiency in industrial foundry processes is a critical challenge, as these operations are highly energy-intensive and marked by complex interdependencies among process variables. Correlation-based analyses often fail to distinguish true causal drivers from spurious associations, limiting their usefulness for decision-making. This paper applies a time-series causal inference framework to identify the operational factors that directly affect energy efficiency in induction furnace melting. Using production data from a Danish foundry, the study integrates time-series clustering to segment melting cycles into distinct operational modes with the PCMCI+ algorithm, a state-of-the-art causal discovery method, to uncover cause-effect relationships within each mode. Across clusters, robust causal relations among energy consumption, furnace temperature, and material weight define the core drivers of efficiency, while voltage consistently influences cooling water temperature with a delayed response. Cluster-specific differences further distinguish operational regimes: efficient clusters are characterized by stable causal structures, whereas inefficient ones exhibit reinforcing feedback loops and atypical dependencies. The contributions of this study are twofold. First, it introduces an integrated clustering-causal inference pipeline as a methodological innovation for analyzing energy-intensive processes. Second, it provides actionable insights that enable foundry operators to optimize performance, reduce energy consumption, and lower emissions.",
+      "pdf_url": "https://arxiv.org/pdf/2511.13389v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.13389v1",
+      "published": "2025-11-17",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Cognitive Maps in Language Models: A Mechanistic Analysis of Spatial Planning",
+      "authors": [
+        "Caroline Baumgartner",
+        "Eleanor Spens",
+        "Neil Burgess",
+        "Petru Manescu"
+      ],
+      "abstract": "How do large language models solve spatial navigation tasks? We investigate this by training GPT-2 models on three spatial learning paradigms in grid environments: passive exploration (Foraging Model- predicting steps in random walks), goal-directed planning (generating optimal shortest paths) on structured Hamiltonian paths (SP-Hamiltonian), and a hybrid model fine-tuned with exploratory data (SP-Random Walk). Using behavioural, representational and mechanistic analyses, we uncover two fundamentally different learned algorithms. The Foraging model develops a robust, map-like representation of space, akin to a 'cognitive map'. Causal interventions reveal that it learns to consolidate spatial information into a self-sufficient coordinate system, evidenced by a sharp phase transition where its reliance on historical direction tokens vanishes by the middle layers of the network. The model also adopts an adaptive, hierarchical reasoning system, switching between a low-level heuristic for short contexts and map-based inference for longer ones. In contrast, the goal-directed models learn a path-dependent algorithm, remaining reliant on explicit directional inputs throughout all layers. The hybrid model, despite demonstrating improved generalisation over its parent, retains the same path-dependent strategy. These findings suggest that the nature of spatial intelligence in transformers may lie on a spectrum, ranging from generalisable world models shaped by exploratory data to heuristics optimised for goal-directed tasks. We provide a mechanistic account of this generalisation-optimisation trade-off and highlight how the choice of training regime influences the strategies that emerge.",
+      "pdf_url": "https://arxiv.org/pdf/2511.13371v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.13371v1",
+      "published": "2025-11-17",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Causal Inference, Biomarker Discovery, Graph Neural Network, Feature Selection",
+      "authors": [
+        "Chaowang Lan",
+        "Jingxin Wu",
+        "Yulong Yuan",
+        "Chuxun Liu",
+        "Huangyi Kang",
+        "Caihua Liu"
+      ],
+      "abstract": "Biomarker discovery from high-throughput transcriptomic data is crucial for advancing precision medicine. However, existing methods often neglect gene-gene regulatory relationships and lack stability across datasets, leading to conflation of spurious correlations with genuine causal effects. To address these issues, we develop a causal graph neural network (Causal-GNN) method that integrates causal inference with multi-layer graph neural networks (GNNs). The key innovation is the incorporation of causal effect estimation for identifying stable biomarkers, coupled with a GNN-based propensity scoring mechanism that leverages cross-gene regulatory networks. Experimental results demonstrate that our method achieves consistently high predictive accuracy across four distinct datasets and four independent classifiers. Moreover, it enables the identification of more stable biomarkers compared to traditional methods. Our work provides a robust, efficient, and biologically interpretable tool for biomarker discovery, demonstrating strong potential for broad application across medical disciplines.",
+      "pdf_url": "https://arxiv.org/pdf/2511.13295v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.13295v1",
+      "published": "2025-11-17",
+      "categories": [
+        "q-bio.QM",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "The Final-Stage Bottleneck: A Systematic Dissection of the R-Learner for Network Causal Inference",
+      "authors": [
+        "Sairam S",
+        "Sara Girdhar",
+        "Shivam Soni"
+      ],
+      "abstract": "The R-Learner is a powerful, theoretically-grounded framework for estimating heterogeneous treatment effects, prized for its robustness to nuisance model errors. However, its application to network data, where causal heterogeneity is often graph-dependent, presents a critical challenge to its core assumption of a well-specified final-stage model. In this paper, we conduct a large-scale empirical study to systematically dissect the R-Learner framework on graphs. We provide the first rigorous evidence that the primary driver of performance is the inductive bias of the final-stage CATE estimator, an effect that dominates the choice of nuisance models. Our central finding is the quantification of a catastrophic \"representation bottleneck\": we prove with overwhelming statistical significance (p < 0.001) that R-Learners with a graph-blind final stage fail completely (MSE > 4.0), even when paired with powerful GNN nuisance models. Conversely, our proposed end-to-end Graph R-Learner succeeds and significantly outperforms a strong, non-DML GNN T-Learner baseline. Furthermore, we identify and provide a mechanistic explanation for a subtle, topology-dependent \"nuisance bottleneck,\" linking it to GNN over-squashing via a targeted \"Hub-Periphery Trade-off\" analysis. Our findings are validated across diverse synthetic and semi-synthetic benchmarks. We release our code as a reproducible benchmark to facilitate future research on this critical \"final-stage bottleneck.\"",
+      "pdf_url": "https://arxiv.org/pdf/2511.13018v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.13018v1",
+      "published": "2025-11-17",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Practical Causal Evaluation Metrics for Biological Networks",
+      "authors": [
+        "Noriaki Sato",
+        "Marco Scutari",
+        "Shuichi Kawano",
+        "Rui Yamaguchi",
+        "Seiya Imoto"
+      ],
+      "abstract": "Estimating causal networks from biological data is a critical step in systems biology. When evaluating the inferred network, assessing the networks based on their intervention effects is particularly important for downstream probabilistic reasoning and the identification of potential drug targets. In the context of gene regulatory network inference, biological databases are often used as reference sources. These databases typically describe relationships in a qualitative rather than quantitative manner. However, few evaluation metrics have been developed that take this qualitative nature into account. To address this, we developed a metric, the sign-augmented Structural Intervention Distance (sSID), and a weighted sSID that incorporates the net effects of the intervention. Through simulations and analyses of real transcriptomic datasets, we found that our proposed metrics could identify a different algorithm as optimal compared to conventional metrics, and the network selected by sSID had a superior performance in the classification task of clinical covariates using transcriptomic data. This suggests that sSID can distinguish networks that are structurally correct but functionally incorrect, highlighting its potential as a more biologically meaningful and practical evaluation metric.",
+      "pdf_url": "https://arxiv.org/pdf/2511.12805v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.12805v1",
+      "published": "2025-11-16",
+      "categories": [
+        "q-bio.MN",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Improving Direct Persian-English Speech-to-Speech Translation with Discrete Units and Synthetic Parallel Data",
+      "authors": [
+        "Sina Rashidi",
+        "Hossein Sameti"
+      ],
+      "abstract": "Direct speech-to-speech translation (S2ST), in which all components are trained jointly, is an attractive alternative to cascaded systems because it offers a simpler pipeline and lower inference latency. However, direct S2ST models require large amounts of parallel speech data in the source and target languages, which are rarely available for low-resource languages such as Persian. This paper presents a direct S2ST system for translating Persian speech into English speech, as well as a pipeline for synthetic parallel Persian-English speech generation. The model comprises three components: (1) a conformer-based encoder, initialized from self-supervised pre-training, maps source speech to high-level acoustic representations; (2) a causal transformer decoder with relative position multi-head attention translates these representations into discrete target speech units; (3) a unit-based neural vocoder generates waveforms from the predicted discrete units. To mitigate the data scarcity problem, we construct a new Persian-English parallel speech corpus by translating Persian speech transcriptions into English using a large language model and then synthesizing the corresponding English speech with a state-of-the-art zero-shot text-to-speech system. The resulting corpus increases the amount of available parallel speech by roughly a factor of six. On the Persian-English portion of the CVSS corpus, the proposed model achieves improvement of 4.6 ASR BLEU with the synthetic data over direct baselines. These results indicate that combining self-supervised pre-training, discrete speech units, and synthetic parallel data is effective for improving direct S2ST in low-resource language pairs such as Persian-English",
+      "pdf_url": "https://arxiv.org/pdf/2511.12690v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.12690v1",
+      "published": "2025-11-16",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "DensePercept-NCSSD: Vision Mamba towards Real-time Dense Visual Perception with Non-Causal State Space Duality",
+      "authors": [
+        "Tushar Anand",
+        "Advik Sinha",
+        "Abhijit Das"
+      ],
+      "abstract": "In this work, we propose an accurate and real-time optical flow and disparity estimation model by fusing pairwise input images in the proposed non-causal selective state space for dense perception tasks. We propose a non-causal Mamba block-based model that is fast and efficient and aptly manages the constraints present in a real-time applications. Our proposed model reduces inference times while maintaining high accuracy and low GPU usage for optical flow and disparity map generation. The results and analysis, and validation in real-life scenario justify that our proposed model can be used for unified real-time and accurate 3D dense perception estimation tasks. The code, along with the models, can be found at https://github.com/vimstereo/DensePerceptNCSSD",
+      "pdf_url": "https://arxiv.org/pdf/2511.12671v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.12671v1",
+      "published": "2025-11-16",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Double machine learning for causal inference in a multivariate sample selection model",
+      "authors": [
+        "Sofiia Dolgikh",
+        "Bodan Potanin"
+      ],
+      "abstract": "We propose plug-in (PI) and double machine learning (DML) estimators of average treatment effect (ATE), average treatment effect on the treated (ATET) and local average treatment effect (LATE) in the multivariate sample selection model with ordinal selection equations. Our DML estimators are doubly-robust and based on the efficient influence functions. Finite sample properties of the proposed estimators are studied and compared on simulated data. Specifically, the results of the analysis suggest that without addressing multivariate sample selection, the estimates of the causal parameters may be highly biased. However, the proposed estimators allow us to avoid these biases.",
+      "pdf_url": "https://arxiv.org/pdf/2511.12640v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.12640v1",
+      "published": "2025-11-16",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Group Identification and Variable Selection in Multivariable Mendelian Randomization with Highly-Correlated Exposures",
+      "authors": [
+        "Yinxiang Wu",
+        "Neil M. Davies",
+        "Ting Ye"
+      ],
+      "abstract": "Multivariable Mendelian Randomization (MVMR) estimates the direct causal effects of multiple risk factors on an outcome using genetic variants as instruments. The growing availability of summary-level genetic data has created opportunities to apply MVMR in high-dimensional settings with many strongly correlated candidate risk factors. However, existing methods face three major limitations: weak instrument bias, limited interpretability, and the absence of valid post-selection inference. Here we introduce MVMR-PACS, a method that identifies signal-groups -- sets of causal risk factors with high genetic correlation or indistinguishable causal effects -- and estimates the direct effect of each group. MVMR-PACS minimizes a debiased objective function that reduces weak instrument bias while yielding interpretable estimates with theoretical guarantees for variable selection. We adapt a data-thinning strategy to summary-data MVMR to enable valid post-selection inference. In simulations, MVMR-PACS outperforms existing approaches in both estimation accuracy and variable selection. When applied to 27 lipoprotein subfraction traits and coronary artery disease risk, MVMR-PACS identifies biologically meaningful and robust signal-groups with interpretable direct causal effects.",
+      "pdf_url": "https://arxiv.org/pdf/2511.12375v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.12375v1",
+      "published": "2025-11-15",
       "categories": [
         "stat.ME",
         "stat.AP"
       ]
     },
     {
-      "title": "Interpolated stochastic interventions based on propensity scores, target policies and treatment-specific costs",
+      "title": "GCAgent: Long-Video Understanding via Schematic and Narrative Episodic Memory",
       "authors": [
-        "Johan de Aguas"
+        "Jeong Hun Yeo",
+        "Sangyun Chung",
+        "Sungjune Park",
+        "Dae Hoe Kim",
+        "Jinyoung Moon",
+        "Yong Man Ro"
       ],
-      "abstract": "We introduce families of stochastic interventions for discrete treatments that connect causal modeling to cost-sensitive decision making. The interventions arise from a cost-penalized information projection of the independent product of the organic propensity and a user-specified target, yielding closed-form Boltzmann-Gibbs couplings. The induced marginals define modified stochastic policies that interpolate smoothly, via a single tilt parameter, from the organic law or from the target distribution toward a product-of-experts limit when all destination costs are strictly positive. One of these families recovers and extends incremental propensity score interventions, retaining identification without global positivity. For inference, we derive efficient influence functions under a nonparametric model for the expected outcomes after these policies and construct one-step estimators with uniform confidence bands. In simulations, the proposed estimators improve stability and robustness to nuisance misspecification relative to plug-in baselines. The framework can operationalize graded scientific hypotheses under realistic constraints: because inputs are modular, analysts can sweep feasible policy spaces, prototype candidates, and align interventions with budgets and logistics before committing experimental resources. This could help close the loop between observational evidence and resource-aware experimental design.",
-      "pdf_url": "https://arxiv.org/pdf/2511.11353v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.11353v1",
-      "published": "2025-11-14",
+      "abstract": "Long-video understanding remains a significant challenge for Multimodal Large Language Models (MLLMs) due to inherent token limitations and the complexity of capturing long-term temporal dependencies. Existing methods often fail to capture the global context and complex event relationships necessary for deep video reasoning. To address this, we introduce GCAgent, a novel Global-Context-Aware Agent framework that achieves comprehensive long-video understanding. Our core innovation is the Schematic and Narrative Episodic Memory. This memory structurally models events and their causal and temporal relations into a concise, organized context, fundamentally resolving the long-term dependency problem. Operating in a multi-stage Perception-Action-Reflection cycle, our GCAgent utilizes a Memory Manager to retrieve relevant episodic context for robust, context-aware inference. Extensive experiments confirm that GCAgent significantly enhances long-video understanding, achieving up to 23.5\\% accuracy improvement on the Video-MME Long split over a strong MLLM baseline. Furthermore, our framework establishes state-of-the-art performance among comparable 7B-scale MLLMs, achieving 73.4\\% accuracy on the Long split and the highest overall average (71.9\\%) on the Video-MME benchmark, validating our agent-based reasoning paradigm and structured memory for cognitively-inspired long-video understanding.",
+      "pdf_url": "https://arxiv.org/pdf/2511.12027v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.12027v1",
+      "published": "2025-11-15",
       "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "MeCaMIL: Causality-Aware Multiple Instance Learning for Fair and Interpretable Whole Slide Image Diagnosis",
-      "authors": [
-        "Yiran Song",
-        "Yikai Zhang",
-        "Shuang Zhou",
-        "Guojun Xiong",
-        "Xiaofeng Yang",
-        "Nian Wang",
-        "Fenglong Ma",
-        "Rui Zhang",
-        "Mingquan Lin"
-      ],
-      "abstract": "Multiple instance learning (MIL) has emerged as the dominant paradigm for whole slide image (WSI) analysis in computational pathology, achieving strong diagnostic performance through patch-level feature aggregation. However, existing MIL methods face critical limitations: (1) they rely on attention mechanisms that lack causal interpretability, and (2) they fail to integrate patient demographics (age, gender, race), leading to fairness concerns across diverse populations. These shortcomings hinder clinical translation, where algorithmic bias can exacerbate health disparities. We introduce \\textbf{MeCaMIL}, a causality-aware MIL framework that explicitly models demographic confounders through structured causal graphs. Unlike prior approaches treating demographics as auxiliary features, MeCaMIL employs principled causal inference -- leveraging do-calculus and collider structures -- to disentangle disease-relevant signals from spurious demographic correlations. Extensive evaluation on three benchmarks demonstrates state-of-the-art performance across CAMELYON16 (ACC/AUC/F1: 0.939/0.983/0.946), TCGA-Lung (0.935/0.979/0.931), and TCGA-Multi (0.977/0.993/0.970, five cancer types). Critically, MeCaMIL achieves superior fairness -- demographic disparity variance drops by over 65% relative reduction on average across attributes, with notable improvements for underserved populations. The framework generalizes to survival prediction (mean C-index: 0.653, +0.017 over best baseline across five cancer types). Ablation studies confirm causal graph structure is essential -- alternative designs yield 0.048 lower accuracy and 4.2x times worse fairness. These results establish MeCaMIL as a principled framework for fair, interpretable, and clinically actionable AI in digital pathology. Code will be released upon acceptance.",
-      "pdf_url": "https://arxiv.org/pdf/2511.11004v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.11004v1",
-      "published": "2025-11-14",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "GraphFaaS: Serverless GNN Inference for Burst-Resilient, Real-Time Intrusion Detection",
-      "authors": [
-        "Lingzhi Wang",
-        "Vinod Yegneswaran",
-        "Xinyi Shi",
-        "Ziyu Li",
-        "Ashish Gehani",
-        "Yan Chen"
-      ],
-      "abstract": "Provenance-based intrusion detection is an increasingly popular application of graphical machine learning in cybersecurity, where system activities are modeled as provenance graphs to capture causality and correlations among potentially malicious actions. Graph Neural Networks (GNNs) have demonstrated strong performance in this setting. However, traditional statically-provisioned GNN inference architectures fall short in meeting two crucial demands of intrusion detection: (1) maintaining consistently low detection latency, and (2) handling highly irregular and bursty workloads. To holistically address these challenges, we present GraphFaaS, a serverless architecture tailored for GNN-based intrusion detection. GraphFaaS leverages the elasticity and agility of serverless computing to dynamically scale the GNN inference pipeline. We parallelize and adapt GNN workflows to a serverless environment, ensuring that the system can respond in real time to fluctuating workloads. By decoupling compute resources from static provisioning, GraphFaaS delivers stable inference latency, which is critical for dependable intrusion detection and timely incident response in cybersecurity operations. Preliminary evaluation shows GraphFaaS reduces average detection latency by 85% and coefficient of variation (CV) by 64% compared to the baseline.",
-      "pdf_url": "https://arxiv.org/pdf/2511.10554v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.10554v1",
-      "published": "2025-11-13",
-      "categories": [
-        "cs.CR"
-      ]
-    },
-    {
-      "title": "Causal Model-Based Reinforcement Learning for Sample-Efficient IoT Channel Access",
-      "authors": [
-        "Aswin Arun",
-        "Christo Kurisummoottil Thomas",
-        "Rimalpudi Sarvendranath",
-        "Walid Saad"
-      ],
-      "abstract": "Despite the advantages of multi-agent reinforcement learning (MARL) for wireless use case such as medium access control (MAC), their real-world deployment in Internet of Things (IoT) is hindered by their sample inefficiency. To alleviate this challenge, one can leverage model-based reinforcement learning (MBRL) solutions, however, conventional MBRL approaches rely on black-box models that are not interpretable and cannot reason. In contrast, in this paper, a novel causal model-based MARL framework is developed by leveraging tools from causal learn- ing. In particular, the proposed model can explicitly represent causal dependencies between network variables using structural causal models (SCMs) and attention-based inference networks. Interpretable causal models are then developed to capture how MAC control messages influence observations, how transmission actions determine outcomes, and how channel observations affect rewards. Data augmentation techniques are then used to generate synthetic rollouts using the learned causal model for policy optimization via proximal policy optimization (PPO). Analytical results demonstrate exponential sample complexity gains of causal MBRL over black-box approaches. Extensive simulations demonstrate that, on average, the proposed approach can reduce environment interactions by 58%, and yield faster convergence compared to model-free baselines. The proposed approach inherently is also shown to provide interpretable scheduling decisions via attention-based causal attribution, revealing which network conditions drive the policy. The resulting combination of sample efficiency and interpretability establishes causal MBRL as a practical approach for resource-constrained wireless systems.",
-      "pdf_url": "https://arxiv.org/pdf/2511.10291v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.10291v1",
-      "published": "2025-11-13",
-      "categories": [
-        "cs.IT",
-        "cs.LG",
-        "cs.NI"
-      ]
-    },
-    {
-      "title": "Temporal Latent Variable Structural Causal Model for Causal Discovery under External Interferences",
-      "authors": [
-        "Ruichu Cai",
-        "Xiaokai Huang",
-        "Wei Chen",
-        "Zijian Li",
-        "Zhifeng Hao"
-      ],
-      "abstract": "Inferring causal relationships from observed data is an important task, yet it becomes challenging when the data is subject to various external interferences. Most of these interferences are the additional effects of external factors on observed variables. Since these external factors are often unknown, we introduce latent variables to represent these unobserved factors that affect the observed data. Specifically, to capture the causal strength and adjacency information, we propose a new temporal latent variable structural causal model, incorporating causal strength and adjacency coefficients that represent the causal relationships between variables. Considering that expert knowledge can provide information about unknown interferences in certain scenarios, we develop a method that facilitates the incorporation of prior knowledge into parameter learning based on Variational Inference, to guide the model estimation. Experimental results demonstrate the stability and accuracy of our proposed method.",
-      "pdf_url": "https://arxiv.org/pdf/2511.10031v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.10031v1",
-      "published": "2025-11-13",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "AI-Integrated Decision Support System for Real-Time Market Growth Forecasting and Multi-Source Content Diffusion Analytics",
-      "authors": [
-        "Ziqing Yin",
-        "Xuanjing Chen",
-        "Xi Zhang"
-      ],
-      "abstract": "The rapid proliferation of AI-generated content (AIGC) has reshaped the dynamics of digital marketing and online consumer behavior. However, predicting the diffusion trajectory and market impact of such content remains challenging due to data heterogeneity, non linear propagation mechanisms, and evolving consumer interactions. This study proposes an AI driven Decision Support System (DSS) that integrates multi source data including social media streams, marketing expenditure records, consumer engagement logs, and sentiment dynamics using a hybrid Graph Neural Network (GNN) and Temporal Transformer framework. The model jointly learns the content diffusion structure and temporal influence evolution through a dual channel architecture, while causal inference modules disentangle the effects of marketing stimuli on return on investment (ROI) and market visibility. Experiments on large scale real-world datasets collected from multiple online platforms such as Twitter, TikTok, and YouTube advertising show that our system outperforms existing baselines in all six metrics. The proposed DSS enhances marketing decisions by providing interpretable real-time insights into AIGC driven content dissemination and market growth patterns.",
-      "pdf_url": "https://arxiv.org/pdf/2511.09962v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.09962v1",
-      "published": "2025-11-13",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.MM"
-      ]
-    },
-    {
-      "title": "NeuroLingua: A Language-Inspired Hierarchical Framework for Multimodal Sleep Stage Classification Using EEG and EOG",
-      "authors": [
-        "Mahdi Samaee",
-        "Mehran Yazdi",
-        "Daniel Massicotte"
-      ],
-      "abstract": "Automated sleep stage classification from polysomnography remains limited by the lack of expressive temporal hierarchies, challenges in multimodal EEG and EOG fusion, and the limited interpretability of deep learning models. We propose NeuroLingua, a language-inspired framework that conceptualizes sleep as a structured physiological language. Each 30-second epoch is decomposed into overlapping 3-second subwindows (\"tokens\") using a CNN-based tokenizer, enabling hierarchical temporal modeling through dual-level Transformers: intra-segment encoding of local dependencies and inter-segment integration across seven consecutive epochs (3.5 minutes) for extended context. Modality-specific embeddings from EEG and EOG channels are fused via a Graph Convolutional Network, facilitating robust multimodal integration. NeuroLingua is evaluated on the Sleep-EDF Expanded and ISRUC-Sleep datasets, achieving state-of-the-art results on Sleep-EDF (85.3% accuracy, 0.800 macro F1, and 0.796 Cohen's kappa) and competitive performance on ISRUC (81.9% accuracy, 0.802 macro F1, and 0.755 kappa), matching or exceeding published baselines in overall and per-class metrics. The architecture's attention mechanisms enhance the detection of clinically relevant sleep microevents, providing a principled foundation for future interpretability, explainability, and causal inference in sleep research. By framing sleep as a compositional language, NeuroLingua unifies hierarchical sequence modeling and multimodal fusion, advancing automated sleep staging toward more transparent and clinically meaningful applications.",
-      "pdf_url": "https://arxiv.org/pdf/2511.09773v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.09773v1",
-      "published": "2025-11-12",
-      "categories": [
-        "cs.LG",
-        "eess.SP"
-      ]
-    },
-    {
-      "title": "Distributional Treatment Effect Estimation across Heterogeneous Sites via Optimal Transport",
-      "authors": [
-        "Borna Bateni",
-        "Yubai Yuan",
-        "Qi Xu",
-        "Annie Qu"
-      ],
-      "abstract": "We propose a novel framework for synthesizing counterfactual treatment group data in a target site by integrating full treatment and control group data from a source site with control group data from the target. Departing from conventional average treatment effect estimation, our approach adopts a distributional causal inference perspective by modeling treatment and control as distinct probability measures on the source and target sites. We formalize the cross-site heterogeneity (effect modification) as a push-forward transformation that maps the joint feature-outcome distribution from the source to the target site. This transformation is learned by aligning the control group distributions between sites using an Optimal Transport-based procedure, and subsequently applied to the source treatment group to generate the synthetic target treatment distribution. Under general regularity conditions, we establish theoretical guarantees for the consistency and asymptotic convergence of the synthetic treatment group data to the true target distribution. Simulation studies across multiple data-generating scenarios and a real-world application to patient-derived xenograft data demonstrate that our framework robustly recovers the full distributional properties of treatment effects.",
-      "pdf_url": "https://arxiv.org/pdf/2511.09759v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.09759v1",
-      "published": "2025-11-12",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "History Rhymes: Macro-Contextual Retrieval for Robust Financial Forecasting",
-      "authors": [
-        "Sarthak Khanna",
-        "Armin Berger",
-        "Muskaan Chopra",
-        "Rafet Sifa"
-      ],
-      "abstract": "Financial markets are inherently non-stationary: structural breaks and macroeconomic regime shifts often cause forecasting models to fail when deployed out of distribution (OOD). Conventional multimodal approaches that simply fuse numerical indicators and textual sentiment rarely adapt to such shifts. We introduce macro-contextual retrieval, a retrieval-augmented forecasting framework that grounds each prediction in historically analogous macroeconomic regimes. The method jointly embeds macro indicators (e.g., CPI, unemployment, yield spread, GDP growth) and financial news sentiment in a shared similarity space, enabling causal retrieval of precedent periods during inference without retraining.\n  Trained on seventeen years of S&P 500 data (2007-2023) and evaluated OOD on AAPL (2024) and XOM (2024), the framework consistently narrows the CV to OOD performance gap. Macro-conditioned retrieval achieves the only positive out-of-sample trading outcomes (AAPL: PF=1.18, Sharpe=0.95; XOM: PF=1.16, Sharpe=0.61), while static numeric, text-only, and naive multimodal baselines collapse under regime shifts. Beyond metric gains, retrieved neighbors form interpretable evidence chains that correspond to recognizable macro contexts, such as inflationary or yield-curve inversion phases, supporting causal interpretability and transparency. By operationalizing the principle that \"financial history may not repeat, but it often rhymes,\" this work demonstrates that macro-aware retrieval yields robust, explainable forecasts under distributional change.\n  All datasets, models, and source code are publicly available.",
-      "pdf_url": "https://arxiv.org/pdf/2511.09754v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.09754v1",
-      "published": "2025-11-12",
-      "categories": [
-        "cs.LG",
+        "cs.CV",
         "cs.AI"
       ]
     }
