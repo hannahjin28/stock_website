@@ -1,6 +1,102 @@
 {
-  "last_updated": "2025-11-19T00:54:02.479050",
+  "last_updated": "2025-11-20T00:52:54.608422",
   "papers": [
+    {
+      "title": "Skewness-Robust Causal Discovery in Location-Scale Noise Models",
+      "authors": [
+        "Daniel Klippert",
+        "Alexander Marx"
+      ],
+      "abstract": "To distinguish Markov equivalent graphs in causal discovery, it is necessary to restrict the structural causal model. Crucially, we need to be able to distinguish cause $X$ from effect $Y$ in bivariate models, that is, distinguish the two graphs $X \\to Y$ and $Y \\to X$. Location-scale noise models (LSNMs), in which the effect $Y$ is modeled based on the cause $X$ as $Y = f(X) + g(X)N$, form a flexible class of models that is general and identifiable in most cases. Estimating these models for arbitrary noise terms $N$, however, is challenging. Therefore, practical estimators are typically restricted to symmetric distributions, such as the normal distribution. As we showcase in this paper, when $N$ is a skewed random variable, which is likely in real-world domains, the reliability of these approaches decreases. To approach this limitation, we propose SkewD, a likelihood-based algorithm for bivariate causal discovery under LSNMs with skewed noise distributions. SkewD extends the usual normal-distribution framework to the skew-normal setting, enabling reliable inference under symmetric and skewed noise. For parameter estimation, we employ a combination of a heuristic search and an expectation conditional maximization algorithm. We evaluate SkewD on novel synthetically generated datasets with skewed noise as well as established benchmark datasets. Throughout our experiments, SkewD exhibits a strong performance and, in comparison to prior work, remains robust under high skewness.",
+      "pdf_url": "https://arxiv.org/pdf/2511.14441v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.14441v1",
+      "published": "2025-11-18",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "InstantViR: Real-Time Video Inverse Problem Solver with Distilled Diffusion Prior",
+      "authors": [
+        "Weimin Bai",
+        "Suzhe Xu",
+        "Yiwei Ren",
+        "Jinhua Hao",
+        "Ming Sun",
+        "Wenzheng Chen",
+        "He Sun"
+      ],
+      "abstract": "Video inverse problems are fundamental to streaming, telepresence, and AR/VR, where high perceptual quality must coexist with tight latency constraints. Diffusion-based priors currently deliver state-of-the-art reconstructions, but existing approaches either adapt image diffusion models with ad hoc temporal regularizers - leading to temporal artifacts - or rely on native video diffusion models whose iterative posterior sampling is far too slow for real-time use. We introduce InstantViR, an amortized inference framework for ultra-fast video reconstruction powered by a pre-trained video diffusion prior. We distill a powerful bidirectional video diffusion model (teacher) into a causal autoregressive student that maps a degraded video directly to its restored version in a single forward pass, inheriting the teacher's strong temporal modeling while completely removing iterative test-time optimization. The distillation is prior-driven: it only requires the teacher diffusion model and known degradation operators, and does not rely on externally paired clean/noisy video data. To further boost throughput, we replace the video-diffusion backbone VAE with a high-efficiency LeanVAE via an innovative teacher-space regularized distillation scheme, enabling low-latency latent-space processing. Across streaming random inpainting, Gaussian deblurring and super-resolution, InstantViR matches or surpasses the reconstruction quality of diffusion-based baselines while running at over 35 FPS on NVIDIA A100 GPUs, achieving up to 100 times speedups over iterative video diffusion solvers. These results show that diffusion-based video reconstruction is compatible with real-time, interactive, editable, streaming scenarios, turning high-quality video restoration into a practical component of modern vision systems.",
+      "pdf_url": "https://arxiv.org/pdf/2511.14208v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.14208v1",
+      "published": "2025-11-18",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Synthetic Survival Control: Extending Synthetic Controls for \"When-If\" Decision",
+      "authors": [
+        "Jessy Xinyi Han",
+        "Devavrat Shah"
+      ],
+      "abstract": "Estimating causal effects on time-to-event outcomes from observational data is particularly challenging due to censoring, limited sample sizes, and non-random treatment assignment. The need for answering such \"when-if\" questions--how the timing of an event would change under a specified intervention--commonly arises in real-world settings with heterogeneous treatment adoption and confounding. To address these challenges, we propose Synthetic Survival Control (SSC) to estimate counterfactual hazard trajectories in a panel data setting where multiple units experience potentially different treatments over multiple periods. In such a setting, SSC estimates the counterfactual hazard trajectory for a unit of interest as a weighted combination of the observed trajectories from other units. To provide formal justification, we introduce a panel framework with a low-rank structure for causal survival analysis. Indeed, such a structure naturally arises under classical parametric survival models. Within this framework, for the causal estimand of interest, we establish identification and finite sample guarantees for SSC. We validate our approach using a multi-country clinical dataset of cancer treatment outcomes, where the staggered introduction of new therapies creates a quasi-experimental setting. Empirically, we find that access to novel treatments is associated with improved survival, as reflected by lower post-intervention hazard trajectories relative to their synthetic counterparts. Given the broad relevance of survival analysis across medicine, economics, and public policy, our framework offers a general and interpretable tool for counterfactual survival inference using observational data.",
+      "pdf_url": "https://arxiv.org/pdf/2511.14133v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.14133v1",
+      "published": "2025-11-18",
+      "categories": [
+        "cs.LG",
+        "econ.EM",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "How to Marginalize in Causal Structure Learning?",
+      "authors": [
+        "William Zhao",
+        "Guy Van den Broeck",
+        "Benjie Wang"
+      ],
+      "abstract": "Bayesian networks (BNs) are a widely used class of probabilistic graphical models employed in numerous application domains. However, inferring the network's graphical structure from data remains challenging. Bayesian structure learners approach this problem by inferring a posterior distribution over the possible directed acyclic graphs underlying the BN. The inference process often requires marginalizing over probability distributions, which is typically done using dynamic programming methods that restrict the set of possible parents for each node. Instead, we present a novel method that utilizes tractable probabilistic circuits to circumvent this restriction. This method utilizes a new learning routine that trains these circuits on both the original distribution and marginal queries. The architecture of probabilistic circuits then inherently allows for fast and exact marginalization on the learned distribution. We then show empirically that utilizing our method to answer marginals allows Bayesian structure learners to improve their performance compared to current methods.",
+      "pdf_url": "https://arxiv.org/pdf/2511.14001v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.14001v1",
+      "published": "2025-11-18",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "On robust Bayesian causal inference",
+      "authors": [
+        "Angelos Alexopoulos",
+        "Nikolaos Demiris"
+      ],
+      "abstract": "This paper develops a Bayesian framework for robust causal inference from longitudinal observational data. Many contemporary methods rely on structural assumptions, such as factor models, to adjust for unobserved confounding, but they can lead to biased causal estimands when mis-specified. We focus on directly estimating time--unit--specific causal effects and use generalised Bayesian inference to quantify model mis-specification and adjust for it, while retaining interpretable posterior inference. We select the learning rate~$ω$ based on a proper scoring rule that jointly evaluates point and interval accuracy of the causal estimand, thus providing a coherent, decision-theoretic foundation for tuning~$ω$. Simulation studies and applications to real data demonstrate improved calibration, sharpness, and robustness in estimating causal effects.",
+      "pdf_url": "https://arxiv.org/pdf/2511.13895v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.13895v1",
+      "published": "2025-11-17",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal computations in Semi Markovian Structural Causal Models using divide and conquer",
+      "authors": [
+        "Anna Rodum Bjøru",
+        "Rafael Cabañas",
+        "Helge Langseth",
+        "Antonio Salmerón"
+      ],
+      "abstract": "Recently, Bjøru et al. proposed a novel divide-and-conquer algorithm for bounding counterfactual probabilities in structural causal models (SCMs). They assumed that the SCMs were learned from purely observational data, leading to an imprecise characterization of the marginal distributions of exogenous variables. Their method leveraged the canonical representation of structural equations to decompose a general SCM with high-cardinality exogenous variables into a set of sub-models with low-cardinality exogenous variables. These sub-models had precise marginals over the exogenous variables and therefore admitted efficient exact inference. The aggregated results were used to bound counterfactual probabilities in the original model. The approach was developed for Markovian models, where each exogenous variable affects only a single endogenous variable. In this paper, we investigate extending the methodology to \\textit{semi-Markovian} SCMs, where exogenous variables may influence multiple endogenous variables. Such models are capable of representing confounding relationships that Markovian models cannot. We illustrate the challenges of this extension using a minimal example, which motivates a set of alternative solution strategies. These strategies are evaluated both theoretically and through a computational study.",
+      "pdf_url": "https://arxiv.org/pdf/2511.13852v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.13852v1",
+      "published": "2025-11-17",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Uncovering Causal Drivers of Energy Efficiency for Industrial Process in Foundry via Time-Series Causal Inference",
       "authors": [
@@ -65,104 +161,6 @@
       "published": "2025-11-17",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Practical Causal Evaluation Metrics for Biological Networks",
-      "authors": [
-        "Noriaki Sato",
-        "Marco Scutari",
-        "Shuichi Kawano",
-        "Rui Yamaguchi",
-        "Seiya Imoto"
-      ],
-      "abstract": "Estimating causal networks from biological data is a critical step in systems biology. When evaluating the inferred network, assessing the networks based on their intervention effects is particularly important for downstream probabilistic reasoning and the identification of potential drug targets. In the context of gene regulatory network inference, biological databases are often used as reference sources. These databases typically describe relationships in a qualitative rather than quantitative manner. However, few evaluation metrics have been developed that take this qualitative nature into account. To address this, we developed a metric, the sign-augmented Structural Intervention Distance (sSID), and a weighted sSID that incorporates the net effects of the intervention. Through simulations and analyses of real transcriptomic datasets, we found that our proposed metrics could identify a different algorithm as optimal compared to conventional metrics, and the network selected by sSID had a superior performance in the classification task of clinical covariates using transcriptomic data. This suggests that sSID can distinguish networks that are structurally correct but functionally incorrect, highlighting its potential as a more biologically meaningful and practical evaluation metric.",
-      "pdf_url": "https://arxiv.org/pdf/2511.12805v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.12805v1",
-      "published": "2025-11-16",
-      "categories": [
-        "q-bio.MN",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Improving Direct Persian-English Speech-to-Speech Translation with Discrete Units and Synthetic Parallel Data",
-      "authors": [
-        "Sina Rashidi",
-        "Hossein Sameti"
-      ],
-      "abstract": "Direct speech-to-speech translation (S2ST), in which all components are trained jointly, is an attractive alternative to cascaded systems because it offers a simpler pipeline and lower inference latency. However, direct S2ST models require large amounts of parallel speech data in the source and target languages, which are rarely available for low-resource languages such as Persian. This paper presents a direct S2ST system for translating Persian speech into English speech, as well as a pipeline for synthetic parallel Persian-English speech generation. The model comprises three components: (1) a conformer-based encoder, initialized from self-supervised pre-training, maps source speech to high-level acoustic representations; (2) a causal transformer decoder with relative position multi-head attention translates these representations into discrete target speech units; (3) a unit-based neural vocoder generates waveforms from the predicted discrete units. To mitigate the data scarcity problem, we construct a new Persian-English parallel speech corpus by translating Persian speech transcriptions into English using a large language model and then synthesizing the corresponding English speech with a state-of-the-art zero-shot text-to-speech system. The resulting corpus increases the amount of available parallel speech by roughly a factor of six. On the Persian-English portion of the CVSS corpus, the proposed model achieves improvement of 4.6 ASR BLEU with the synthetic data over direct baselines. These results indicate that combining self-supervised pre-training, discrete speech units, and synthetic parallel data is effective for improving direct S2ST in low-resource language pairs such as Persian-English",
-      "pdf_url": "https://arxiv.org/pdf/2511.12690v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.12690v1",
-      "published": "2025-11-16",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "DensePercept-NCSSD: Vision Mamba towards Real-time Dense Visual Perception with Non-Causal State Space Duality",
-      "authors": [
-        "Tushar Anand",
-        "Advik Sinha",
-        "Abhijit Das"
-      ],
-      "abstract": "In this work, we propose an accurate and real-time optical flow and disparity estimation model by fusing pairwise input images in the proposed non-causal selective state space for dense perception tasks. We propose a non-causal Mamba block-based model that is fast and efficient and aptly manages the constraints present in a real-time applications. Our proposed model reduces inference times while maintaining high accuracy and low GPU usage for optical flow and disparity map generation. The results and analysis, and validation in real-life scenario justify that our proposed model can be used for unified real-time and accurate 3D dense perception estimation tasks. The code, along with the models, can be found at https://github.com/vimstereo/DensePerceptNCSSD",
-      "pdf_url": "https://arxiv.org/pdf/2511.12671v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.12671v1",
-      "published": "2025-11-16",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Double machine learning for causal inference in a multivariate sample selection model",
-      "authors": [
-        "Sofiia Dolgikh",
-        "Bodan Potanin"
-      ],
-      "abstract": "We propose plug-in (PI) and double machine learning (DML) estimators of average treatment effect (ATE), average treatment effect on the treated (ATET) and local average treatment effect (LATE) in the multivariate sample selection model with ordinal selection equations. Our DML estimators are doubly-robust and based on the efficient influence functions. Finite sample properties of the proposed estimators are studied and compared on simulated data. Specifically, the results of the analysis suggest that without addressing multivariate sample selection, the estimates of the causal parameters may be highly biased. However, the proposed estimators allow us to avoid these biases.",
-      "pdf_url": "https://arxiv.org/pdf/2511.12640v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.12640v1",
-      "published": "2025-11-16",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Group Identification and Variable Selection in Multivariable Mendelian Randomization with Highly-Correlated Exposures",
-      "authors": [
-        "Yinxiang Wu",
-        "Neil M. Davies",
-        "Ting Ye"
-      ],
-      "abstract": "Multivariable Mendelian Randomization (MVMR) estimates the direct causal effects of multiple risk factors on an outcome using genetic variants as instruments. The growing availability of summary-level genetic data has created opportunities to apply MVMR in high-dimensional settings with many strongly correlated candidate risk factors. However, existing methods face three major limitations: weak instrument bias, limited interpretability, and the absence of valid post-selection inference. Here we introduce MVMR-PACS, a method that identifies signal-groups -- sets of causal risk factors with high genetic correlation or indistinguishable causal effects -- and estimates the direct effect of each group. MVMR-PACS minimizes a debiased objective function that reduces weak instrument bias while yielding interpretable estimates with theoretical guarantees for variable selection. We adapt a data-thinning strategy to summary-data MVMR to enable valid post-selection inference. In simulations, MVMR-PACS outperforms existing approaches in both estimation accuracy and variable selection. When applied to 27 lipoprotein subfraction traits and coronary artery disease risk, MVMR-PACS identifies biologically meaningful and robust signal-groups with interpretable direct causal effects.",
-      "pdf_url": "https://arxiv.org/pdf/2511.12375v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.12375v1",
-      "published": "2025-11-15",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "GCAgent: Long-Video Understanding via Schematic and Narrative Episodic Memory",
-      "authors": [
-        "Jeong Hun Yeo",
-        "Sangyun Chung",
-        "Sungjune Park",
-        "Dae Hoe Kim",
-        "Jinyoung Moon",
-        "Yong Man Ro"
-      ],
-      "abstract": "Long-video understanding remains a significant challenge for Multimodal Large Language Models (MLLMs) due to inherent token limitations and the complexity of capturing long-term temporal dependencies. Existing methods often fail to capture the global context and complex event relationships necessary for deep video reasoning. To address this, we introduce GCAgent, a novel Global-Context-Aware Agent framework that achieves comprehensive long-video understanding. Our core innovation is the Schematic and Narrative Episodic Memory. This memory structurally models events and their causal and temporal relations into a concise, organized context, fundamentally resolving the long-term dependency problem. Operating in a multi-stage Perception-Action-Reflection cycle, our GCAgent utilizes a Memory Manager to retrieve relevant episodic context for robust, context-aware inference. Extensive experiments confirm that GCAgent significantly enhances long-video understanding, achieving up to 23.5\\% accuracy improvement on the Video-MME Long split over a strong MLLM baseline. Furthermore, our framework establishes state-of-the-art performance among comparable 7B-scale MLLMs, achieving 73.4\\% accuracy on the Long split and the highest overall average (71.9\\%) on the Video-MME benchmark, validating our agent-based reasoning paradigm and structured memory for cognitively-inspired long-video understanding.",
-      "pdf_url": "https://arxiv.org/pdf/2511.12027v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.12027v1",
-      "published": "2025-11-15",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
       ]
     }
   ]
