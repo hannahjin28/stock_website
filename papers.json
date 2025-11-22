@@ -1,6 +1,74 @@
 {
-  "last_updated": "2025-11-21T00:53:22.235868",
+  "last_updated": "2025-11-22T00:51:40.350295",
   "papers": [
+    {
+      "title": "Possibilistic Instrumental Variable Regression",
+      "authors": [
+        "Gregor Steiner",
+        "Jeremie Houssineau",
+        "Mark F. J. Steel"
+      ],
+      "abstract": "Instrumental variable regression is a common approach for causal inference in the presence of unobserved confounding. However, identifying valid instruments is often difficult in practice. In this paper, we propose a novel method based on possibility theory that performs posterior inference on the treatment effect, conditional on a user-specified set of potential violations of the exogeneity assumption. Our method can provide informative results even when only a single, potentially invalid, instrument is available, offering a natural and principled framework for sensitivity analysis. Simulation experiments and a real-data application indicate strong performance of the proposed approach.",
+      "pdf_url": "https://arxiv.org/pdf/2511.16029v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.16029v1",
+      "published": "2025-11-20",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Bayesian Semiparametric Causal Inference: Targeted Doubly Robust Estimation of Treatment Effects",
+      "authors": [
+        "Gözde Sert",
+        "Abhishek Chakrabortty",
+        "Anirban Bhattacharya"
+      ],
+      "abstract": "We propose a semiparametric Bayesian methodology for estimating the average treatment effect (ATE) within the potential outcomes framework using observational data with high-dimensional nuisance parameters. Our method introduces a Bayesian debiasing procedure that corrects for bias arising from nuisance estimation and employs a targeted modeling strategy based on summary statistics rather than the full data. These summary statistics are identified in a debiased manner, enabling the estimation of nuisance bias via weighted observables and facilitating hierarchical learning of the ATE. By combining debiasing with sample splitting, our approach separates nuisance estimation from inference on the target parameter, reducing sensitivity to nuisance model specification. We establish that, under mild conditions, the marginal posterior for the ATE satisfies a Bernstein-von Mises theorem when both nuisance models are correctly specified and remains consistent and robust when only one is correct, achieving Bayesian double robustness. This ensures asymptotic efficiency and frequentist validity. Extensive simulations confirm the theoretical results, demonstrating accurate point estimation and credible intervals with nominal coverage, even in high-dimensional settings. The proposed framework can also be extended to other causal estimands, and its key principles offer a general foundation for advancing Bayesian semiparametric inference more broadly.",
+      "pdf_url": "https://arxiv.org/pdf/2511.15904v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.15904v1",
+      "published": "2025-11-19",
+      "categories": [
+        "stat.ME",
+        "econ.EM",
+        "math.ST",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Cross-Balancing for Data-Informed Design and Efficient Analysis of Observational Studies",
+      "authors": [
+        "Ying Jin",
+        "José Zubizarreta"
+      ],
+      "abstract": "Causal inference starts with a simple idea: compare groups that differ by treatment, not much else. Traditionally, similar groups are constructed using only observed covariates; however, it remains a long-standing challenge to incorporate available outcome data into the study design while preserving valid inference. In this paper, we study the general problem of covariate adjustment, effect estimation, and statistical inference when balancing features are constructed or selected with the aid of outcome information from the data. We propose cross-balancing, a method that uses sample splitting to separate the error in feature construction from the error in weight estimation. Our framework addresses two cases: one where the features are learned functions and one where they are selected from a potentially high-dimensional dictionary. In both cases, we establish mild and general conditions under which cross-balancing produces consistent, asymptotically normal, and efficient estimators. In the learned-function case, cross-balancing achieves finite-sample bias reduction relative to plug-in-type estimators, and is multiply robust when the learned features converge at slow rates. In the variable-selection case, cross-balancing only requires a product condition on how well the selected variables approximate true functions. We illustrate cross-balancing in extensive simulations and an observational study, showing that careful use of outcome information can substantially improve both estimation and inference while maintaining interpretability.",
+      "pdf_url": "https://arxiv.org/pdf/2511.15896v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.15896v1",
+      "published": "2025-11-19",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.AP",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Causal Inference on Sequential Treatments via Tensor Completion",
+      "authors": [
+        "Chenyin Gao",
+        "Han Chen",
+        "Anru R. Zhang",
+        "Shu Yang"
+      ],
+      "abstract": "Marginal Structural Models (MSMs) are popular for causal inference of sequential treatments in longitudinal observational studies, which however are sensitive to model misspecification. To achieve flexible modeling, we envision the potential outcomes to form a three-dimensional tensor indexed by subject, time, and treatment regime and propose a tensorized history-restricted MSM (HRMSM). The semi-parametric tensor factor model allows us to leverage the underlying low-rank structure of the potential outcomes tensor and exploit the pre-treatment covariate information to recover the counterfactual outcomes. We incorporate the inverse probability of treatment weighting in the loss function for tensor completion to adjust for time-varying confounding. Theoretically, a non-asymptotic upper bound on the Frobenius norm error for the proposed estimator is provided. Empirically, simulation studies show that the proposed tensor completion approach outperforms the parametric HRMSM and existing matrix/tensor completion methods. Finally, we illustrate the practical utility of the proposed approach to study the effect of ventilation on organ dysfunction from the Medical Information Mart for Intensive Care database.",
+      "pdf_url": "https://arxiv.org/pdf/2511.15866v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.15866v1",
+      "published": "2025-11-19",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Reflexive Evidence-Based Multimodal Learning for Clean Energy Transitions: Causal Insights on Cooking Fuel Access, Urbanization, and Carbon Emissions",
       "authors": [
@@ -92,72 +160,6 @@
       "categories": [
         "stat.AP",
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Skewness-Robust Causal Discovery in Location-Scale Noise Models",
-      "authors": [
-        "Daniel Klippert",
-        "Alexander Marx"
-      ],
-      "abstract": "To distinguish Markov equivalent graphs in causal discovery, it is necessary to restrict the structural causal model. Crucially, we need to be able to distinguish cause $X$ from effect $Y$ in bivariate models, that is, distinguish the two graphs $X \\to Y$ and $Y \\to X$. Location-scale noise models (LSNMs), in which the effect $Y$ is modeled based on the cause $X$ as $Y = f(X) + g(X)N$, form a flexible class of models that is general and identifiable in most cases. Estimating these models for arbitrary noise terms $N$, however, is challenging. Therefore, practical estimators are typically restricted to symmetric distributions, such as the normal distribution. As we showcase in this paper, when $N$ is a skewed random variable, which is likely in real-world domains, the reliability of these approaches decreases. To approach this limitation, we propose SkewD, a likelihood-based algorithm for bivariate causal discovery under LSNMs with skewed noise distributions. SkewD extends the usual normal-distribution framework to the skew-normal setting, enabling reliable inference under symmetric and skewed noise. For parameter estimation, we employ a combination of a heuristic search and an expectation conditional maximization algorithm. We evaluate SkewD on novel synthetically generated datasets with skewed noise as well as established benchmark datasets. Throughout our experiments, SkewD exhibits a strong performance and, in comparison to prior work, remains robust under high skewness.",
-      "pdf_url": "https://arxiv.org/pdf/2511.14441v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.14441v1",
-      "published": "2025-11-18",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "InstantViR: Real-Time Video Inverse Problem Solver with Distilled Diffusion Prior",
-      "authors": [
-        "Weimin Bai",
-        "Suzhe Xu",
-        "Yiwei Ren",
-        "Jinhua Hao",
-        "Ming Sun",
-        "Wenzheng Chen",
-        "He Sun"
-      ],
-      "abstract": "Video inverse problems are fundamental to streaming, telepresence, and AR/VR, where high perceptual quality must coexist with tight latency constraints. Diffusion-based priors currently deliver state-of-the-art reconstructions, but existing approaches either adapt image diffusion models with ad hoc temporal regularizers - leading to temporal artifacts - or rely on native video diffusion models whose iterative posterior sampling is far too slow for real-time use. We introduce InstantViR, an amortized inference framework for ultra-fast video reconstruction powered by a pre-trained video diffusion prior. We distill a powerful bidirectional video diffusion model (teacher) into a causal autoregressive student that maps a degraded video directly to its restored version in a single forward pass, inheriting the teacher's strong temporal modeling while completely removing iterative test-time optimization. The distillation is prior-driven: it only requires the teacher diffusion model and known degradation operators, and does not rely on externally paired clean/noisy video data. To further boost throughput, we replace the video-diffusion backbone VAE with a high-efficiency LeanVAE via an innovative teacher-space regularized distillation scheme, enabling low-latency latent-space processing. Across streaming random inpainting, Gaussian deblurring and super-resolution, InstantViR matches or surpasses the reconstruction quality of diffusion-based baselines while running at over 35 FPS on NVIDIA A100 GPUs, achieving up to 100 times speedups over iterative video diffusion solvers. These results show that diffusion-based video reconstruction is compatible with real-time, interactive, editable, streaming scenarios, turning high-quality video restoration into a practical component of modern vision systems.",
-      "pdf_url": "https://arxiv.org/pdf/2511.14208v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.14208v1",
-      "published": "2025-11-18",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Synthetic Survival Control: Extending Synthetic Controls for \"When-If\" Decision",
-      "authors": [
-        "Jessy Xinyi Han",
-        "Devavrat Shah"
-      ],
-      "abstract": "Estimating causal effects on time-to-event outcomes from observational data is particularly challenging due to censoring, limited sample sizes, and non-random treatment assignment. The need for answering such \"when-if\" questions--how the timing of an event would change under a specified intervention--commonly arises in real-world settings with heterogeneous treatment adoption and confounding. To address these challenges, we propose Synthetic Survival Control (SSC) to estimate counterfactual hazard trajectories in a panel data setting where multiple units experience potentially different treatments over multiple periods. In such a setting, SSC estimates the counterfactual hazard trajectory for a unit of interest as a weighted combination of the observed trajectories from other units. To provide formal justification, we introduce a panel framework with a low-rank structure for causal survival analysis. Indeed, such a structure naturally arises under classical parametric survival models. Within this framework, for the causal estimand of interest, we establish identification and finite sample guarantees for SSC. We validate our approach using a multi-country clinical dataset of cancer treatment outcomes, where the staggered introduction of new therapies creates a quasi-experimental setting. Empirically, we find that access to novel treatments is associated with improved survival, as reflected by lower post-intervention hazard trajectories relative to their synthetic counterparts. Given the broad relevance of survival analysis across medicine, economics, and public policy, our framework offers a general and interpretable tool for counterfactual survival inference using observational data.",
-      "pdf_url": "https://arxiv.org/pdf/2511.14133v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.14133v1",
-      "published": "2025-11-18",
-      "categories": [
-        "cs.LG",
-        "econ.EM",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "How to Marginalize in Causal Structure Learning?",
-      "authors": [
-        "William Zhao",
-        "Guy Van den Broeck",
-        "Benjie Wang"
-      ],
-      "abstract": "Bayesian networks (BNs) are a widely used class of probabilistic graphical models employed in numerous application domains. However, inferring the network's graphical structure from data remains challenging. Bayesian structure learners approach this problem by inferring a posterior distribution over the possible directed acyclic graphs underlying the BN. The inference process often requires marginalizing over probability distributions, which is typically done using dynamic programming methods that restrict the set of possible parents for each node. Instead, we present a novel method that utilizes tractable probabilistic circuits to circumvent this restriction. This method utilizes a new learning routine that trains these circuits on both the original distribution and marginal queries. The architecture of probabilistic circuits then inherently allows for fast and exact marginalization on the learned distribution. We then show empirically that utilizing our method to answer marginals allows Bayesian structure learners to improve their performance compared to current methods.",
-      "pdf_url": "https://arxiv.org/pdf/2511.14001v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.14001v1",
-      "published": "2025-11-18",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
       ]
     }
   ]
