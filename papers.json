@@ -1,6 +1,60 @@
 {
-  "last_updated": "2025-11-24T00:57:53.837389",
+  "last_updated": "2025-11-25T00:53:14.488174",
   "papers": [
+    {
+      "title": "On treating right-censoring events like treatments",
+      "authors": [
+        "Lan Wen",
+        "Aaron L. Sarvet",
+        "Jessica G. Young"
+      ],
+      "abstract": "In causal inference literature, potential outcomes are often indexed by the \"elimination of all right-censoring events,\" leading to the perception that such a restriction is necessary for defining well-posed causal estimands. In this paper, we clarify that this restriction is not required: a well-defined estimand can be formulated without indexing on the elimination of such events. Achieving this requires a more precise classification of right-censoring events than has historically been considered, as the nature of these events has direct implications for identification of the target estimand. We provide a framework that distinguishes different types of right-censoring events from a causal perspective, and demonstrate how this framework relates to censoring definitions and assumptions in classical survival analysis literature. By bridging these perspectives, we provide a clearer understanding of how to handle right-censoring events and provide guidance for identifying causal estimands when right-censored events are present.",
+      "pdf_url": "https://arxiv.org/pdf/2511.17379v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.17379v1",
+      "published": "2025-11-21",
+      "categories": [
+        "stat.ME",
+        "math.ST",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "FireScope: Wildfire Risk Prediction with a Chain-of-Thought Oracle",
+      "authors": [
+        "Mario Markov",
+        "Stefan Maria Ailuro",
+        "Luc Van Gool",
+        "Konrad Schindler",
+        "Danda Pani Paudel"
+      ],
+      "abstract": "Predicting wildfire risk is a reasoning-intensive spatial problem that requires the integration of visual, climatic, and geographic factors to infer continuous risk maps. Existing methods lack the causal reasoning and multimodal understanding required for reliable generalization. We introduce $\\textbf{FireScope-Bench}$, a large-scale dataset and benchmark that couples Sentinel-2 imagery and climate data with expert-defined risk rasters across the USA, and real wildfire events in Europe for cross-continental evaluation. Building on this dataset, we propose $\\textbf{FireScope}$, a VLM-based reasoning-to-generation framework that learns from both reinforcement learning and visual supervision to predict risk rasters with complementary reasoning traces. When trained in the USA and tested in Europe, $\\textbf{FireScope}$ achieves substantial performance gains, while expert feedback and automated analysis confirm that its reasoning traces are faithful and semantically meaningful. Our findings demonstrate that reasoning can ground raster prediction models, improving both generalization and interpretability. To our knowledge, this is the first framework to (1) demonstrate that language-based reasoning can improve generalization in visual generation, (2) propose a high-resolution wildfire risk model that can be applied across continents, and (3) enable systematic studies of robust cross-continental generalization for multimodal fire risk models. We believe that $\\textbf{FireScope-Bench}$ has the potential to serve as a foundation for advancing reasoning-driven, interpretable and generalizable spatial modeling. Data and source code will be made publicly available.",
+      "pdf_url": "https://arxiv.org/pdf/2511.17171v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.17171v1",
+      "published": "2025-11-21",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Hallucinate Less by Thinking More: Aspect-Based Causal Abstention for Large Language Models",
+      "authors": [
+        "Vy Nguyen",
+        "Ziqi Xu",
+        "Jeffrey Chan",
+        "Estrid He",
+        "Feng Xia",
+        "Xiuzhen Zhang"
+      ],
+      "abstract": "Large Language Models (LLMs) often produce fluent but factually incorrect responses, a phenomenon known as hallucination. Abstention, where the model chooses not to answer and instead outputs phrases such as \"I don't know\", is a common safeguard. However, existing abstention methods typically rely on post-generation signals, such as generation variations or feedback, which limits their ability to prevent unreliable responses in advance. In this paper, we introduce Aspect-Based Causal Abstention (ABCA), a new framework that enables early abstention by analysing the internal diversity of LLM knowledge through causal inference. This diversity reflects the multifaceted nature of parametric knowledge acquired from various sources, representing diverse aspects such as disciplines, legal contexts, or temporal frames. ABCA estimates causal effects conditioned on these aspects to assess the reliability of knowledge relevant to a given query. Based on these estimates, we enable two types of abstention: Type-1, where aspect effects are inconsistent (knowledge conflict), and Type-2, where aspect effects consistently support abstention (knowledge insufficiency). Experiments on standard benchmarks demonstrate that ABCA improves abstention reliability, achieves state-of-the-art performance, and enhances the interpretability of abstention decisions.",
+      "pdf_url": "https://arxiv.org/pdf/2511.17170v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.17170v1",
+      "published": "2025-11-21",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Possibilistic Instrumental Variable Regression",
       "authors": [
@@ -112,54 +166,6 @@
       "categories": [
         "stat.ME",
         "stat.AP"
-      ]
-    },
-    {
-      "title": "An Estimand-Focused Approach for AUC Estimation, Generalization, and Comparison: From Non-representative Samples to Target Population",
-      "authors": [
-        "Jiajun Liu",
-        "Guangcai Mao",
-        "Xiaofei Wang"
-      ],
-      "abstract": "The area under the ROC curve (AUC) is the standard measure of a biomarker's discriminatory accuracy; however, naive AUC estimates can be misleading when validation cohorts differ from the intended target population. Such covariate shifts commonly arise under biased or non-random sampling, distorting AUC estimations and thus impeding both generalization and cross-study comparison of AUC. We develop an estimand-focused framework for valid AUC estimation and benchmarking under covariate shift. Leveraging balancing ideas from causal inference, we extend calibration weighting to the U-statistic framework for AUC estimation and introduce a family of estimators that accommodate both summary-level and patient-level information; in certain specifications, some of these estimators attain double robustness. Furthermore, we establish asymptotic properties and study their performances across a spectrum of covariate shift severities and calibration choices in comprehensive simulations. Finally, we demonstrate practical utility in the POWER trials by evaluating how baseline stair-climb power (SCP) predicts 6-month survival among advanced non-small-cell lung cancer (NSCLC) patients. Together, the results provide a principled toolkit for anchoring biomarker AUCs to clinically relevant target populations and for comparing them fairly across studies despite distributional differences.",
-      "pdf_url": "https://arxiv.org/pdf/2511.14992v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.14992v1",
-      "published": "2025-11-19",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Integrating Causal Inference with Graph Neural Networks for Alzheimer's Disease Analysis",
-      "authors": [
-        "Pranay Kumar Peddi",
-        "Dhrubajyoti Ghosh"
-      ],
-      "abstract": "Deep graph learning has advanced Alzheimer's (AD) disease classification from MRI, but most models remain correlational, confounding demographic and genetic factors with disease specific features. We present Causal-GCN, an interventional graph convolutional framework that integrates do-calculus-based back-door adjustment to identify brain regions exerting stable causal influence on AD progression. Each subject's MRI is represented as a structural connectome where nodes denote cortical and subcortical regions and edges encode anatomical connectivity. Confounders such as age, sec, and APOE4 genotype are summarized via principal components and included in the causal adjustment set. After training, interventions on individual regions are simulated by serving their incoming edges and altering node features to estimate average causal effects on disease probability. Applied to 484 subjects from the ADNI cohort, Causal-GCN achieves performance comparable to baseline GNNs while providing interpretable causal effect rankings that highlight posterior, cingulate, and insular hubs consistent with established AD neuropathology.",
-      "pdf_url": "https://arxiv.org/pdf/2511.14922v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.14922v1",
-      "published": "2025-11-18",
-      "categories": [
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Uncovering Treatment Effect Heterogeneity in Pragmatic Gerontology Trials",
-      "authors": [
-        "Changjun Li",
-        "Heather Allore",
-        "Michael O. Harhay",
-        "Fan Li",
-        "Guangyu Tong"
-      ],
-      "abstract": "Detecting heterogeneity in treatment response enriches the interpretation of gerontologic trials. In aging research, estimating the effect of the intervention on clinically meaningful outcomes faces analytical challenges when it is truncated by death. For example, in the Whole Systems Demonstrator trial, a large cluster-randomized study evaluating telecare among older adults, the overall effect of the intervention on quality of life was found to be null. However, this marginal intervention estimate obscures potential heterogeneity of individuals responding to the intervention, particularly among those who survive to the end of follow-up. To explore this heterogeneity, we adopt a causal framework grounded in principal stratification, targeting the Survivor Average Causal Effect (SACE)-the treatment effect among \"always-survivors,\" or those who would survive regardless of treatment assignment. We extend this framework using Bayesian Additive Regression Trees (BART), a nonparametric machine learning method, to flexibly model both latent principal strata and stratum-specific potential outcomes. This enables the estimation of the Conditional SACE (CSACE), allowing us to uncover variation in treatment effects across subgroups defined by baseline characteristics. Our analysis reveals that despite the null average effect, some subgroups experience distinct quality of life benefits (or lack thereof) from telecare, highlighting opportunities for more personalized intervention strategies. This study demonstrates how embedding machine learning methods, such as BART, within a principled causal inference framework can offer deeper insights into trial data with complex features including truncation by death and clustering-key considerations in analyzing pragmatic gerontology trials.",
-      "pdf_url": "https://arxiv.org/pdf/2511.14893v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.14893v1",
-      "published": "2025-11-18",
-      "categories": [
-        "stat.AP",
-        "stat.ME"
       ]
     }
   ]
