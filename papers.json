@@ -1,6 +1,149 @@
 {
-  "last_updated": "2025-11-25T00:53:14.488174",
+  "last_updated": "2025-11-26T00:54:29.563279",
   "papers": [
+    {
+      "title": "Nonparametric Instrumental Variable Regression with Observed Covariates",
+      "authors": [
+        "Zikai Shen",
+        "Zonghao Chen",
+        "Dimitri Meunier",
+        "Ingo Steinwart",
+        "Arthur Gretton",
+        "Zhu Li"
+      ],
+      "abstract": "We study the problem of nonparametric instrumental variable regression with observed covariates, which we refer to as NPIV-O. Compared with standard nonparametric instrumental variable regression (NPIV), the additional observed covariates facilitate causal identification and enables heterogeneous causal effect estimation. However, the presence of observed covariates introduces two challenges for its theoretical analysis. First, it induces a partial identity structure, which renders previous NPIV analyses - based on measures of ill-posedness, stability conditions, or link conditions - inapplicable. Second, it imposes anisotropic smoothness on the structural function. To address the first challenge, we introduce a novel Fourier measure of partial smoothing; for the second challenge, we extend the existing kernel 2SLS instrumental variable algorithm with observed covariates, termed KIV-O, to incorporate Gaussian kernel lengthscales adaptive to the anisotropic smoothness. We prove upper $L^2$-learning rates for KIV-O and the first $L^2$-minimax lower learning rates for NPIV-O. Both rates interpolate between known optimal rates of NPIV and nonparametric regression (NPR). Interestingly, we identify a gap between our upper and lower bounds, which arises from the choice of kernel lengthscales tuned to minimize a projected risk. Our theoretical analysis also applies to proximal causal inference, an emerging framework for causal effect estimation that shares the same conditional moment restriction as NPIV-O.",
+      "pdf_url": "https://arxiv.org/pdf/2511.19404v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.19404v1",
+      "published": "2025-11-24",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "The Unified Non-Convex Framework for Robust Causal Inference: Overcoming the Gaussian Barrier and Optimization Fragility",
+      "authors": [
+        "Eichi Uehara"
+      ],
+      "abstract": "This document proposes a Unified Robust Framework that re-engineers the estimation of the Average Treatment Effect on the Overlap (ATO). It synthesizes gamma-Divergence for outlier robustness, Graduated Non-Convexity (GNC) for global optimization, and a \"Gatekeeper\" mechanism to address the impossibility of higher-order orthogonality in Gaussian regimes.",
+      "pdf_url": "https://arxiv.org/pdf/2511.19284v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.19284v1",
+      "published": "2025-11-24",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Scalable Bayesian Network Structure Learning Using Tsetlin Machine to Constrain the Search Space",
+      "authors": [
+        "Kunal Dumbre",
+        "Lei Jiao",
+        "Ole-Christoffer Granmo"
+      ],
+      "abstract": "The PC algorithm is a widely used method in causal inference for learning the structure of Bayesian networks. Despite its popularity, the PC algorithm suffers from significant time complexity, particularly as the size of the dataset increases, which limits its applicability in large-scale real-world problems. In this study, we propose a novel approach that utilises the Tsetlin Machine (TM) to construct Bayesian structures more efficiently. Our method leverages the most significant literals extracted from the TM and performs conditional independence (CI) tests on these selected literals instead of the full set of variables, resulting in a considerable reduction in computational time. We implemented our approach and compared it with various state-of-the-art methods. Our evaluation includes categorical datasets from the bnlearn repository, such as Munin1, Hepar2. The findings indicate that the proposed TM-based method not only reduces computational complexity but also maintains competitive accuracy in causal discovery, making it a viable alternative to traditional PC algorithm implementations by offering improved efficiency without compromising performance.",
+      "pdf_url": "https://arxiv.org/pdf/2511.19273v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.19273v1",
+      "published": "2025-11-24",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "CDLM: Consistency Diffusion Language Models For Faster Sampling",
+      "authors": [
+        "Minseo Kim",
+        "Chenfeng Xu",
+        "Coleman Hooper",
+        "Harman Singh",
+        "Ben Athiwaratkun",
+        "Ce Zhang",
+        "Kurt Keutzer",
+        "Amir Gholami"
+      ],
+      "abstract": "Diffusion Language Models (DLMs) offer a promising parallel generation paradigm but suffer from slow inference due to numerous refinement steps and the inability to use standard KV caching. We introduce CDLM (Consistency Diffusion Language Models), a training-based acceleration method that simultaneously tackles both bottlenecks. CDLM integrates consistency modeling to drastically reduce the number of required sampling steps by enabling multi-token finalization. Furthermore, we enforce a block-wise causal attention mask during fine-tuning, making the model fully compatible with KV caching. Experiments show CDLM achieves 3.6x-14.5x lower latency while maintaining competitive accuracy on math and coding tasks. The full training and evaluation code is available at https://github.com/SqueezeAILab/CDLM.",
+      "pdf_url": "https://arxiv.org/pdf/2511.19269v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.19269v1",
+      "published": "2025-11-24",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Prior-Free Information Design",
+      "authors": [
+        "Maxwell Rosenthal"
+      ],
+      "abstract": "This paper introduces a prior-free framework for information design based on partial identification and applies it to robust causal inference. The decision maker observes the distribution of signals generated by an information structure and ranks alternatives by their worst-case payoff over the state distributions consistent with those signals. We characterize the set of robustly implementable actions and show that each can be implemented by an information structure that withholds at most one dimension of information from the decision maker. In the potential outcomes model, every treatment is implementable via an experiment that is almost fully informative.",
+      "pdf_url": "https://arxiv.org/pdf/2511.18647v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.18647v1",
+      "published": "2025-11-23",
+      "categories": [
+        "econ.TH",
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "VCU-Bridge: Hierarchical Visual Connotation Understanding via Semantic Bridging",
+      "authors": [
+        "Ming Zhong",
+        "Yuanlei Wang",
+        "Liuzhou Zhang",
+        "Arctanx An",
+        "Renrui Zhang",
+        "Hao Liang",
+        "Ming Lu",
+        "Ying Shen",
+        "Wentao Zhang"
+      ],
+      "abstract": "While Multimodal Large Language Models (MLLMs) excel on benchmarks, their processing paradigm differs from the human ability to integrate visual information. Unlike humans who naturally bridge details and high-level concepts, models tend to treat these elements in isolation. Prevailing evaluation protocols often decouple low-level perception from high-level reasoning, overlooking their semantic and causal dependencies, which yields non-diagnostic results and obscures performance bottlenecks. We present VCU-Bridge, a framework that operationalizes a human-like hierarchy of visual connotation understanding: multi-level reasoning that advances from foundational perception through semantic bridging to abstract connotation, with an explicit evidence-to-inference trace from concrete cues to abstract conclusions. Building on this framework, we construct HVCU-Bench, a benchmark for hierarchical visual connotation understanding with explicit, level-wise diagnostics. Comprehensive experiments demonstrate a consistent decline in performance as reasoning progresses to higher levels. We further develop a data generation pipeline for instruction tuning guided by Monte Carlo Tree Search (MCTS) and show that strengthening low-level capabilities yields measurable gains at higher levels. Interestingly, it not only improves on HVCU-Bench but also brings benefits on general benchmarks (average +2.53%), especially with substantial gains on MMStar (+7.26%), demonstrating the significance of the hierarchical thinking pattern and its effectiveness in enhancing MLLM capabilities. The project page is at https://vcu-bridge.github.io .",
+      "pdf_url": "https://arxiv.org/pdf/2511.18121v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.18121v1",
+      "published": "2025-11-22",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "On Transportability for Structural Causal Bandits",
+      "authors": [
+        "Min Woo Park",
+        "Sanghack Lee"
+      ],
+      "abstract": "Intelligent agents equipped with causal knowledge can optimize their action spaces to avoid unnecessary exploration. The structural causal bandit framework provides a graphical characterization for identifying actions that are unable to maximize rewards by leveraging prior knowledge of the underlying causal structure. While such knowledge enables an agent to estimate the expected rewards of certain actions based on others in online interactions, there has been little guidance on how to transfer information inferred from arbitrary combinations of datasets collected under different conditions -- observational or experimental -- and from heterogeneous environments. In this paper, we investigate the structural causal bandit with transportability, where priors from the source environments are fused to enhance learning in the deployment setting. We demonstrate that it is possible to exploit invariances across environments to consistently improve learning. The resulting bandit algorithm achieves a sub-linear regret bound with an explicit dependence on informativeness of prior data, and it may outperform standard bandit approaches that rely solely on online learning.",
+      "pdf_url": "https://arxiv.org/pdf/2511.17953v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.17953v1",
+      "published": "2025-11-22",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Why Is the Double-Robust Estimator for Causal Inference Not Doubly Robust for Variance Estimation?",
+      "authors": [
+        "Hao Wu",
+        "Lucy Shao",
+        "Toni Gui",
+        "Tsungchin Wu",
+        "Zhuochao Huang",
+        "Shengjia Tu",
+        "Xin Tu",
+        "Jinyuan Liu",
+        "Tuo Lin"
+      ],
+      "abstract": "Doubly robust estimators (DRE) are widely used in causal inference because they yield consistent estimators of average causal effect when at least one of the nuisance models, the propensity for treatment (exposure) or the outcome regression, is correct. However, double robustness does not extend to variance estimation; the influence-function (IF)-based variance estimator is consistent only when both nuisance parameters are correct. This raises concerns about applying DRE in practice, where model misspecification is inevitable. The recent paper by Shook-Sa et al. (2025, Biometrics, 81(2), ujaf054) demonstrated through Monte Carlo simulations that the IF-based variance estimator is biased. However, the paper's findings are empirical. The key question remains: why does the variance estimator fail in double robustness, and under what conditions do alternatives succeed, such as the ones demonstrated in Shook-Sa et al. 2025. In this paper, we develop a formal theory to clarify the efficiency properties of DRE that underlie these empirical findings. We also introduce alternative strategies, including a mixture-based framework underlying the sample-splitting and crossfitting approaches, to achieve valid inference with misspecified nuisance parameters. Our considerations are illustrated with simulation and real study data.",
+      "pdf_url": "https://arxiv.org/pdf/2511.17907v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.17907v1",
+      "published": "2025-11-22",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "On treating right-censoring events like treatments",
       "authors": [
@@ -34,138 +177,6 @@
       "categories": [
         "cs.CV",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Hallucinate Less by Thinking More: Aspect-Based Causal Abstention for Large Language Models",
-      "authors": [
-        "Vy Nguyen",
-        "Ziqi Xu",
-        "Jeffrey Chan",
-        "Estrid He",
-        "Feng Xia",
-        "Xiuzhen Zhang"
-      ],
-      "abstract": "Large Language Models (LLMs) often produce fluent but factually incorrect responses, a phenomenon known as hallucination. Abstention, where the model chooses not to answer and instead outputs phrases such as \"I don't know\", is a common safeguard. However, existing abstention methods typically rely on post-generation signals, such as generation variations or feedback, which limits their ability to prevent unreliable responses in advance. In this paper, we introduce Aspect-Based Causal Abstention (ABCA), a new framework that enables early abstention by analysing the internal diversity of LLM knowledge through causal inference. This diversity reflects the multifaceted nature of parametric knowledge acquired from various sources, representing diverse aspects such as disciplines, legal contexts, or temporal frames. ABCA estimates causal effects conditioned on these aspects to assess the reliability of knowledge relevant to a given query. Based on these estimates, we enable two types of abstention: Type-1, where aspect effects are inconsistent (knowledge conflict), and Type-2, where aspect effects consistently support abstention (knowledge insufficiency). Experiments on standard benchmarks demonstrate that ABCA improves abstention reliability, achieves state-of-the-art performance, and enhances the interpretability of abstention decisions.",
-      "pdf_url": "https://arxiv.org/pdf/2511.17170v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.17170v1",
-      "published": "2025-11-21",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Possibilistic Instrumental Variable Regression",
-      "authors": [
-        "Gregor Steiner",
-        "Jeremie Houssineau",
-        "Mark F. J. Steel"
-      ],
-      "abstract": "Instrumental variable regression is a common approach for causal inference in the presence of unobserved confounding. However, identifying valid instruments is often difficult in practice. In this paper, we propose a novel method based on possibility theory that performs posterior inference on the treatment effect, conditional on a user-specified set of potential violations of the exogeneity assumption. Our method can provide informative results even when only a single, potentially invalid, instrument is available, offering a natural and principled framework for sensitivity analysis. Simulation experiments and a real-data application indicate strong performance of the proposed approach.",
-      "pdf_url": "https://arxiv.org/pdf/2511.16029v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.16029v1",
-      "published": "2025-11-20",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "Bayesian Semiparametric Causal Inference: Targeted Doubly Robust Estimation of Treatment Effects",
-      "authors": [
-        "Gözde Sert",
-        "Abhishek Chakrabortty",
-        "Anirban Bhattacharya"
-      ],
-      "abstract": "We propose a semiparametric Bayesian methodology for estimating the average treatment effect (ATE) within the potential outcomes framework using observational data with high-dimensional nuisance parameters. Our method introduces a Bayesian debiasing procedure that corrects for bias arising from nuisance estimation and employs a targeted modeling strategy based on summary statistics rather than the full data. These summary statistics are identified in a debiased manner, enabling the estimation of nuisance bias via weighted observables and facilitating hierarchical learning of the ATE. By combining debiasing with sample splitting, our approach separates nuisance estimation from inference on the target parameter, reducing sensitivity to nuisance model specification. We establish that, under mild conditions, the marginal posterior for the ATE satisfies a Bernstein-von Mises theorem when both nuisance models are correctly specified and remains consistent and robust when only one is correct, achieving Bayesian double robustness. This ensures asymptotic efficiency and frequentist validity. Extensive simulations confirm the theoretical results, demonstrating accurate point estimation and credible intervals with nominal coverage, even in high-dimensional settings. The proposed framework can also be extended to other causal estimands, and its key principles offer a general foundation for advancing Bayesian semiparametric inference more broadly.",
-      "pdf_url": "https://arxiv.org/pdf/2511.15904v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.15904v1",
-      "published": "2025-11-19",
-      "categories": [
-        "stat.ME",
-        "econ.EM",
-        "math.ST",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Cross-Balancing for Data-Informed Design and Efficient Analysis of Observational Studies",
-      "authors": [
-        "Ying Jin",
-        "José Zubizarreta"
-      ],
-      "abstract": "Causal inference starts with a simple idea: compare groups that differ by treatment, not much else. Traditionally, similar groups are constructed using only observed covariates; however, it remains a long-standing challenge to incorporate available outcome data into the study design while preserving valid inference. In this paper, we study the general problem of covariate adjustment, effect estimation, and statistical inference when balancing features are constructed or selected with the aid of outcome information from the data. We propose cross-balancing, a method that uses sample splitting to separate the error in feature construction from the error in weight estimation. Our framework addresses two cases: one where the features are learned functions and one where they are selected from a potentially high-dimensional dictionary. In both cases, we establish mild and general conditions under which cross-balancing produces consistent, asymptotically normal, and efficient estimators. In the learned-function case, cross-balancing achieves finite-sample bias reduction relative to plug-in-type estimators, and is multiply robust when the learned features converge at slow rates. In the variable-selection case, cross-balancing only requires a product condition on how well the selected variables approximate true functions. We illustrate cross-balancing in extensive simulations and an observational study, showing that careful use of outcome information can substantially improve both estimation and inference while maintaining interpretability.",
-      "pdf_url": "https://arxiv.org/pdf/2511.15896v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.15896v1",
-      "published": "2025-11-19",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.AP",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Causal Inference on Sequential Treatments via Tensor Completion",
-      "authors": [
-        "Chenyin Gao",
-        "Han Chen",
-        "Anru R. Zhang",
-        "Shu Yang"
-      ],
-      "abstract": "Marginal Structural Models (MSMs) are popular for causal inference of sequential treatments in longitudinal observational studies, which however are sensitive to model misspecification. To achieve flexible modeling, we envision the potential outcomes to form a three-dimensional tensor indexed by subject, time, and treatment regime and propose a tensorized history-restricted MSM (HRMSM). The semi-parametric tensor factor model allows us to leverage the underlying low-rank structure of the potential outcomes tensor and exploit the pre-treatment covariate information to recover the counterfactual outcomes. We incorporate the inverse probability of treatment weighting in the loss function for tensor completion to adjust for time-varying confounding. Theoretically, a non-asymptotic upper bound on the Frobenius norm error for the proposed estimator is provided. Empirically, simulation studies show that the proposed tensor completion approach outperforms the parametric HRMSM and existing matrix/tensor completion methods. Finally, we illustrate the practical utility of the proposed approach to study the effect of ventilation on organ dysfunction from the Medical Information Mart for Intensive Care database.",
-      "pdf_url": "https://arxiv.org/pdf/2511.15866v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.15866v1",
-      "published": "2025-11-19",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Reflexive Evidence-Based Multimodal Learning for Clean Energy Transitions: Causal Insights on Cooking Fuel Access, Urbanization, and Carbon Emissions",
-      "authors": [
-        "Shan Shan"
-      ],
-      "abstract": "Achieving Sustainable Development Goal 7 (Affordable and Clean Energy) requires not only technological innovation but also a deeper understanding of the socioeconomic factors influencing energy access and carbon emissions. While these factors are gaining attention, critical questions remain, particularly regarding how to quantify their impacts on energy systems, model their cross-domain interactions, and capture feedback dynamics in the broader context of energy transitions. To address these gaps, this study introduces ClimateAgents, an AI-based framework that combines large language models with domain-specialized agents to support hypothesis generation and scenario exploration. Leveraging 20 years of socioeconomic and emissions data from 265 economies, countries and regions, and 98 indicators drawn from the World Bank database, the framework applies a machine learning based causal inference approach to identify key determinants of carbon emissions in an evidence-based, data driven manner. The analysis highlights three primary drivers: access to clean cooking fuels in rural areas, access to clean cooking fuels in urban areas, and the percentage of population living in urban areas. These findings underscore the critical role of clean cooking technologies and urbanization patterns in shaping emission outcomes. In line with growing calls for evidence-based AI policy, ClimateAgents offers a modular and reflexive learning system that supports the generation of credible and actionable insights for policy. By integrating heterogeneous data modalities, including structured indicators, policy documents, and semantic reasoning, the framework contributes to adaptive policymaking infrastructures that can evolve with complex socio-technical challenges. This approach aims to support a shift from siloed modeling to reflexive, modular systems designed for dynamic, context-aware climate action.",
-      "pdf_url": "https://arxiv.org/pdf/2511.15342v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.15342v1",
-      "published": "2025-11-19",
-      "categories": [
-        "cs.HC",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Causal Inference in Financial Event Studies",
-      "authors": [
-        "Paul Goldsmith-Pinkham",
-        "Tianshu Lyu"
-      ],
-      "abstract": "Financial event studies, ubiquitous in finance research, typically use linear factor models with known factors to estimate abnormal returns and identify causal effects of information events. This paper demonstrates that when factor models are misspecified -- an almost certain reality -- traditional event study estimators produce inconsistent estimates of treatment effects. The bias is particularly severe during volatile periods, over long horizons, and when event timing correlates with market conditions. We derive precise conditions for identification and expressions for asymptotic bias. As an alternative, we propose synthetic control methods that construct replicating portfolios from control securities without imposing specific factor structures. Revisiting four empirical applications, we show that some established findings may reflect model misspecification rather than true treatment effects. While traditional methods remain reliable for short-horizon studies with random event timing, our results suggest caution when interpreting long-horizon or volatile-period event studies and highlight the importance of quasi-experimental designs when available.",
-      "pdf_url": "https://arxiv.org/pdf/2511.15123v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.15123v1",
-      "published": "2025-11-19",
-      "categories": [
-        "econ.EM",
-        "econ.GN",
-        "q-fin.GN"
-      ]
-    },
-    {
-      "title": "Individualized Prediction Bands in Causal Inference with Continuous Treatments",
-      "authors": [
-        "Max Sampson",
-        "Kung-Sik Chan"
-      ],
-      "abstract": "Individualized treatments are crucial for optimal decision making and treatment allocation, specifically in personalized medicine based on the estimation of an individual's dose-response curve across a continuum of treatment levels, e.g., drug dosage. Current works focus on conditional mean and median estimates, which are useful but do not provide the full picture. We propose viewing causal inference with a continuous treatment as a covariate shift. This allows us to leverage existing weighted conformal prediction methods with both quantile and point estimates to compute individualized uncertainty quantification for dose-response curves. Our method, individualized prediction bands (IPB), is demonstrated via simulations and a real data analysis, which demonstrates the additional medical expenditure caused by continued smoking for selected individuals. The results demonstrate that IPB provides an effective solution to a gap in individual dose-response uncertainty quantification literature.",
-      "pdf_url": "https://arxiv.org/pdf/2511.15075v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.15075v1",
-      "published": "2025-11-19",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
       ]
     }
   ]
