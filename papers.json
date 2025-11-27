@@ -1,6 +1,102 @@
 {
-  "last_updated": "2025-11-26T00:54:29.563279",
+  "last_updated": "2025-11-27T00:53:25.550759",
   "papers": [
+    {
+      "title": "Spatio-Temporal Hierarchical Causal Models",
+      "authors": [
+        "Xintong Li",
+        "Haoran Zhang",
+        "Xiao Zhou"
+      ],
+      "abstract": "The abundance of fine-grained spatio-temporal data, such as traffic sensor networks, offers vast opportunities for scientific discovery. However, inferring causal relationships from such observational data remains challenging, particularly due to unobserved confounders that are specific to units (e.g., geographical locations) yet influence outcomes over time. Most existing methods for spatio-temporal causal inference assume that all confounders are observed, an assumption that is often violated in practice. In this paper, we introduce Spatio-Temporal Hierarchical Causal Models (ST-HCMs), a novel graphical framework that extends hierarchical causal modeling to the spatio-temporal domain. At the core of our approach is the Spatio-Temporal Collapse Theorem, which shows that a complex ST-HCM converges to a simpler flat causal model as the amount of subunit data increases. This theoretical result enables a general procedure for causal identification, allowing ST-HCMs to recover causal effects even in the presence of unobserved, time-invariant unit-level confounders, a scenario where standard non-hierarchical models fail. We validate the effectiveness of our framework on both synthetic and real-world datasets, demonstrating its potential for robust causal inference in complex dynamic systems.",
+      "pdf_url": "https://arxiv.org/pdf/2511.20558v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.20558v1",
+      "published": "2025-11-25",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Block Cascading: Training Free Acceleration of Block-Causal Video Models",
+      "authors": [
+        "Hmrishav Bandyopadhyay",
+        "Nikhil Pinnaparaju",
+        "Rahim Entezari",
+        "Jim Scott",
+        "Yi-Zhe Song",
+        "Varun Jampani"
+      ],
+      "abstract": "Block-causal video generation faces a stark speed-quality trade-off: small 1.3B models manage only 16 FPS while large 14B models crawl at 4.5 FPS, forcing users to choose between responsiveness and quality. Block Cascading significantly mitigates this trade-off through training-free parallelization. Our key insight: future video blocks do not need fully denoised current blocks to begin generation. By starting block generation with partially denoised context from predecessors, we transform sequential pipelines into parallel cascades where multiple blocks denoise simultaneously. With 5 GPUs exploiting temporal parallelism, we achieve ~2x acceleration across all model scales: 1.3B models accelerate from 16 to 30 FPS, 14B models from 4.5 to 12.5 FPS. Beyond inference speed, Block Cascading eliminates overhead from KV-recaching (of ~200ms) during context switches for interactive generation. Extensive evaluations validated against multiple block-causal pipelines demonstrate no significant loss in generation quality when switching from block-causal to Block Cascading pipelines for inference. Project Page: https://hmrishavbandy.github.io/block_cascading_page/",
+      "pdf_url": "https://arxiv.org/pdf/2511.20426v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.20426v1",
+      "published": "2025-11-25",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "CounterVQA: Evaluating and Improving Counterfactual Reasoning in Vision-Language Models for Video Understanding",
+      "authors": [
+        "Yuefei Chen",
+        "Jiang Liu",
+        "Xiaodong Lin",
+        "Ruixiang Tang"
+      ],
+      "abstract": "Vision Language Models (VLMs) have recently shown significant advancements in video understanding, especially in feature alignment, event reasoning, and instruction-following tasks. However, their capability for counterfactual reasoning, inferring alternative outcomes under hypothetical conditions, remains underexplored. This capability is essential for robust video understanding, as it requires identifying underlying causal structures and reasoning about unobserved possibilities, rather than merely recognizing observed patterns. To systematically evaluate this capability, we introduce CounterVQA, a video-based benchmark featuring three progressive difficulty levels that assess different aspects of counterfactual reasoning. Through comprehensive evaluation of both state-of-the-art open-source and closed-source models, we uncover a substantial performance gap: while these models achieve reasonable accuracy on simple counterfactual questions, performance degrades significantly on complex multi-hop causal chains. To address these limitations, we develop a post-training method, CFGPT, that enhances a model's visual counterfactual reasoning ability by distilling its counterfactual reasoning capability from the language modality, yielding consistent improvements across all CounterVQA difficulty levels. Dataset and code will be further released.",
+      "pdf_url": "https://arxiv.org/pdf/2511.19923v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.19923v1",
+      "published": "2025-11-25",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "CoC-VLA: Delving into Adversarial Domain Transfer for Explainable Autonomous Driving via Chain-of-Causality Visual-Language-Action Model",
+      "authors": [
+        "Dapeng Zhang",
+        "Fei Shen",
+        "Rui Zhao",
+        "Yinda Chen",
+        "Peng Zhi",
+        "Chenyang Li",
+        "Rui Zhou",
+        "Qingguo Zhou"
+      ],
+      "abstract": "Autonomous driving represents a prominent application of artificial intelligence. Recent approaches have shifted from focusing solely on common scenarios to addressing complex, long-tail situations such as subtle human behaviors, traffic accidents, and non-compliant driving patterns. Given the demonstrated capabilities of large language models (LLMs) in understanding visual and natural language inputs and following instructions, recent methods have integrated LLMs into autonomous driving systems to enhance reasoning, interpretability, and performance across diverse scenarios. However, existing methods typically rely either on real-world data, which is suitable for industrial deployment, or on simulation data tailored to rare or hard case scenarios. Few approaches effectively integrate the complementary advantages of both data sources. To address this limitation, we propose a novel VLM-guided, end-to-end adversarial transfer framework for autonomous driving that transfers long-tail handling capabilities from simulation to real-world deployment, named CoC-VLA. The framework comprises a teacher VLM model, a student VLM model, and a discriminator. Both the teacher and student VLM models utilize a shared base architecture, termed the Chain-of-Causality Visual-Language Model (CoC VLM), which integrates temporal information via an end-to-end text adapter. This architecture supports chain-of-thought reasoning to infer complex driving logic. The teacher and student VLM models are pre-trained separately on simulated and real-world datasets. The discriminator is trained adversarially to facilitate the transfer of long-tail handling capabilities from simulated to real-world environments by the student VLM model, using a novel backpropagation strategy.",
+      "pdf_url": "https://arxiv.org/pdf/2511.19914v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.19914v1",
+      "published": "2025-11-25",
+      "categories": [
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "Clarifying identification and estimation of treatment effects in the Sequential Parallel Comparison Design",
+      "authors": [
+        "Benjamin Stockton",
+        "Michele Santacatterina",
+        "Soutrik Mandal",
+        "Charles M. Cleland",
+        "Erinn M. Hade",
+        "Nicholas Illenberger",
+        "Sharon Meropol",
+        "Andrea B. Troxel",
+        "Eva Petkova",
+        "Chang Yu",
+        "Thaddeus Tarpey"
+      ],
+      "abstract": "Sequential parallel comparison design (SPCD) clinical trials aim to adjust active treatment effect estimates for placebo response to minimize the impact of placebo responders on the estimates. This is potentially accomplished using a two stage design by measuring treatment effects among all participants during the first stage, then classifying some placebo arm participants as placebo non-responders who will be re-randomized in the second stage. In this paper, we use causal inference tools to clarify under what assumptions treatment effects can be identified in SPCD trials and what effects the conventional estimators target at each stage of the SPCD trial. We further illustrate the highly influential impact of placebo response misclassification on the second stage estimate. We conclude that the conventional SPCD estimators do not target meaningful treatment effects.",
+      "pdf_url": "https://arxiv.org/pdf/2511.19677v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.19677v1",
+      "published": "2025-11-24",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
     {
       "title": "Nonparametric Instrumental Variable Regression with Observed Covariates",
       "authors": [
@@ -84,99 +180,6 @@
       "categories": [
         "econ.TH",
         "econ.EM"
-      ]
-    },
-    {
-      "title": "VCU-Bridge: Hierarchical Visual Connotation Understanding via Semantic Bridging",
-      "authors": [
-        "Ming Zhong",
-        "Yuanlei Wang",
-        "Liuzhou Zhang",
-        "Arctanx An",
-        "Renrui Zhang",
-        "Hao Liang",
-        "Ming Lu",
-        "Ying Shen",
-        "Wentao Zhang"
-      ],
-      "abstract": "While Multimodal Large Language Models (MLLMs) excel on benchmarks, their processing paradigm differs from the human ability to integrate visual information. Unlike humans who naturally bridge details and high-level concepts, models tend to treat these elements in isolation. Prevailing evaluation protocols often decouple low-level perception from high-level reasoning, overlooking their semantic and causal dependencies, which yields non-diagnostic results and obscures performance bottlenecks. We present VCU-Bridge, a framework that operationalizes a human-like hierarchy of visual connotation understanding: multi-level reasoning that advances from foundational perception through semantic bridging to abstract connotation, with an explicit evidence-to-inference trace from concrete cues to abstract conclusions. Building on this framework, we construct HVCU-Bench, a benchmark for hierarchical visual connotation understanding with explicit, level-wise diagnostics. Comprehensive experiments demonstrate a consistent decline in performance as reasoning progresses to higher levels. We further develop a data generation pipeline for instruction tuning guided by Monte Carlo Tree Search (MCTS) and show that strengthening low-level capabilities yields measurable gains at higher levels. Interestingly, it not only improves on HVCU-Bench but also brings benefits on general benchmarks (average +2.53%), especially with substantial gains on MMStar (+7.26%), demonstrating the significance of the hierarchical thinking pattern and its effectiveness in enhancing MLLM capabilities. The project page is at https://vcu-bridge.github.io .",
-      "pdf_url": "https://arxiv.org/pdf/2511.18121v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.18121v1",
-      "published": "2025-11-22",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "On Transportability for Structural Causal Bandits",
-      "authors": [
-        "Min Woo Park",
-        "Sanghack Lee"
-      ],
-      "abstract": "Intelligent agents equipped with causal knowledge can optimize their action spaces to avoid unnecessary exploration. The structural causal bandit framework provides a graphical characterization for identifying actions that are unable to maximize rewards by leveraging prior knowledge of the underlying causal structure. While such knowledge enables an agent to estimate the expected rewards of certain actions based on others in online interactions, there has been little guidance on how to transfer information inferred from arbitrary combinations of datasets collected under different conditions -- observational or experimental -- and from heterogeneous environments. In this paper, we investigate the structural causal bandit with transportability, where priors from the source environments are fused to enhance learning in the deployment setting. We demonstrate that it is possible to exploit invariances across environments to consistently improve learning. The resulting bandit algorithm achieves a sub-linear regret bound with an explicit dependence on informativeness of prior data, and it may outperform standard bandit approaches that rely solely on online learning.",
-      "pdf_url": "https://arxiv.org/pdf/2511.17953v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.17953v1",
-      "published": "2025-11-22",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Why Is the Double-Robust Estimator for Causal Inference Not Doubly Robust for Variance Estimation?",
-      "authors": [
-        "Hao Wu",
-        "Lucy Shao",
-        "Toni Gui",
-        "Tsungchin Wu",
-        "Zhuochao Huang",
-        "Shengjia Tu",
-        "Xin Tu",
-        "Jinyuan Liu",
-        "Tuo Lin"
-      ],
-      "abstract": "Doubly robust estimators (DRE) are widely used in causal inference because they yield consistent estimators of average causal effect when at least one of the nuisance models, the propensity for treatment (exposure) or the outcome regression, is correct. However, double robustness does not extend to variance estimation; the influence-function (IF)-based variance estimator is consistent only when both nuisance parameters are correct. This raises concerns about applying DRE in practice, where model misspecification is inevitable. The recent paper by Shook-Sa et al. (2025, Biometrics, 81(2), ujaf054) demonstrated through Monte Carlo simulations that the IF-based variance estimator is biased. However, the paper's findings are empirical. The key question remains: why does the variance estimator fail in double robustness, and under what conditions do alternatives succeed, such as the ones demonstrated in Shook-Sa et al. 2025. In this paper, we develop a formal theory to clarify the efficiency properties of DRE that underlie these empirical findings. We also introduce alternative strategies, including a mixture-based framework underlying the sample-splitting and crossfitting approaches, to achieve valid inference with misspecified nuisance parameters. Our considerations are illustrated with simulation and real study data.",
-      "pdf_url": "https://arxiv.org/pdf/2511.17907v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.17907v1",
-      "published": "2025-11-22",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "On treating right-censoring events like treatments",
-      "authors": [
-        "Lan Wen",
-        "Aaron L. Sarvet",
-        "Jessica G. Young"
-      ],
-      "abstract": "In causal inference literature, potential outcomes are often indexed by the \"elimination of all right-censoring events,\" leading to the perception that such a restriction is necessary for defining well-posed causal estimands. In this paper, we clarify that this restriction is not required: a well-defined estimand can be formulated without indexing on the elimination of such events. Achieving this requires a more precise classification of right-censoring events than has historically been considered, as the nature of these events has direct implications for identification of the target estimand. We provide a framework that distinguishes different types of right-censoring events from a causal perspective, and demonstrate how this framework relates to censoring definitions and assumptions in classical survival analysis literature. By bridging these perspectives, we provide a clearer understanding of how to handle right-censoring events and provide guidance for identifying causal estimands when right-censored events are present.",
-      "pdf_url": "https://arxiv.org/pdf/2511.17379v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.17379v1",
-      "published": "2025-11-21",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "FireScope: Wildfire Risk Prediction with a Chain-of-Thought Oracle",
-      "authors": [
-        "Mario Markov",
-        "Stefan Maria Ailuro",
-        "Luc Van Gool",
-        "Konrad Schindler",
-        "Danda Pani Paudel"
-      ],
-      "abstract": "Predicting wildfire risk is a reasoning-intensive spatial problem that requires the integration of visual, climatic, and geographic factors to infer continuous risk maps. Existing methods lack the causal reasoning and multimodal understanding required for reliable generalization. We introduce $\\textbf{FireScope-Bench}$, a large-scale dataset and benchmark that couples Sentinel-2 imagery and climate data with expert-defined risk rasters across the USA, and real wildfire events in Europe for cross-continental evaluation. Building on this dataset, we propose $\\textbf{FireScope}$, a VLM-based reasoning-to-generation framework that learns from both reinforcement learning and visual supervision to predict risk rasters with complementary reasoning traces. When trained in the USA and tested in Europe, $\\textbf{FireScope}$ achieves substantial performance gains, while expert feedback and automated analysis confirm that its reasoning traces are faithful and semantically meaningful. Our findings demonstrate that reasoning can ground raster prediction models, improving both generalization and interpretability. To our knowledge, this is the first framework to (1) demonstrate that language-based reasoning can improve generalization in visual generation, (2) propose a high-resolution wildfire risk model that can be applied across continents, and (3) enable systematic studies of robust cross-continental generalization for multimodal fire risk models. We believe that $\\textbf{FireScope-Bench}$ has the potential to serve as a foundation for advancing reasoning-driven, interpretable and generalizable spatial modeling. Data and source code will be made publicly available.",
-      "pdf_url": "https://arxiv.org/pdf/2511.17171v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.17171v1",
-      "published": "2025-11-21",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
       ]
     }
   ]
