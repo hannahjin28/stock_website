@@ -1,6 +1,120 @@
 {
-  "last_updated": "2025-11-27T00:53:25.550759",
+  "last_updated": "2025-11-28T00:52:23.640509",
   "papers": [
+    {
+      "title": "Uniform inference for kernel instrumental variable regression",
+      "authors": [
+        "Marvin Lob",
+        "Rahul Singh",
+        "Suhas Vijaykumar"
+      ],
+      "abstract": "Instrumental variable regression is a foundational tool for causal analysis across the social and biomedical sciences. Recent advances use kernel methods to estimate nonparametric causal relationships, with general data types, while retaining a simple closed-form expression. Empirical researchers ultimately need reliable inference on causal estimates; however, uniform confidence sets for the method remain unavailable. To fill this gap, we develop valid and sharp confidence sets for kernel instrumental variable regression, allowing general nonlinearities and data types. Computationally, our bootstrap procedure requires only a single run of the kernel instrumental variable regression estimator. Theoretically, it relies on the same key assumptions. Overall, we provide a practical procedure for inference that substantially increases the value of kernel methods for causal analysis.",
+      "pdf_url": "https://arxiv.org/pdf/2511.21603v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.21603v1",
+      "published": "2025-11-26",
+      "categories": [
+        "math.ST"
+      ]
+    },
+    {
+      "title": "A Sensitivity Analysis Framework for Causal Inference Under Interference",
+      "authors": [
+        "Matvey Ortyashov",
+        "AmirEmad Ghassami"
+      ],
+      "abstract": "In many applications of causal inference, the treatment received by one unit may influence the outcome of another, a phenomenon referred to as interference. Although there are several frameworks for conducting causal inference in the presence of interference, practitioners often lack the data necessary to adjust for its effects. In this paper, we propose a weighting-based sensitivity analysis framework that can be used to assess the systematic bias arising from ignoring interference. Unlike most of the existing literature, we allow for the presence of unmeasured confounding, and show that the combination of interference and unmeasured confounding is a notable challenge to causal inference. We also study a third factor contributing to systematic bias: lack of transportability. Our framework enables practitioners to assess the impact of these three issues simultaneously through several easily interpretable sensitivity parameters that can reflect a wide range of intuitions about the data.",
+      "pdf_url": "https://arxiv.org/pdf/2511.21534v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.21534v1",
+      "published": "2025-11-26",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Inference: A Tale of Three Frameworks",
+      "authors": [
+        "Linbo Wang",
+        "Thomas Richardson",
+        "James Robins"
+      ],
+      "abstract": "Causal inference is a central goal across many scientific disciplines. Over the past several decades, three major frameworks have emerged to formalize causal questions and guide their analysis: the potential outcomes framework, structural equation models, and directed acyclic graphs. Although these frameworks differ in language, assumptions, and philosophical orientation, they often lead to compatible or complementary insights. This paper provides a comparative introduction to the three frameworks, clarifying their connections, highlighting their distinct strengths and limitations, and illustrating how they can be used together in practice. The discussion is aimed at researchers and graduate students with some background in statistics or causal inference who are seeking a conceptual foundation for applying causal methods across a range of substantive domains.",
+      "pdf_url": "https://arxiv.org/pdf/2511.21516v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.21516v1",
+      "published": "2025-11-26",
+      "categories": [
+        "math.ST"
+      ]
+    },
+    {
+      "title": "SpatialBench: Benchmarking Multimodal Large Language Models for Spatial Cognition",
+      "authors": [
+        "Peiran Xu",
+        "Sudong Wang",
+        "Yao Zhu",
+        "Jianing Li",
+        "Yunjian Zhang"
+      ],
+      "abstract": "Spatial cognition is fundamental to real-world multimodal intelligence, allowing models to effectively interact with the physical environment. While multimodal large language models (MLLMs) have made significant strides, existing benchmarks often oversimplify spatial cognition, reducing it to a single-dimensional metric, which fails to capture the hierarchical structure and interdependence of spatial abilities. To address this gap, we propose a hierarchical spatial cognition framework that decomposes spatial intelligence into five progressively complex levels from basic observation to high-level planning. Building upon this taxonomy, we construct SpatialBench, a large-scale, fine-grained benchmark covering 15 tasks aligned with these cognitive levels. To provide a unified evaluation across heterogeneous tasks, we further introduce a high-level capability-oriented metric that reliably assesses a model's overall spatial reasoning ability. Extensive experiments over massive MLLMs reveal distinct performance stratification across cognitive levels: models exhibit strong perceptual grounding yet remain limited in symbolic reasoning, causal inference, and planning. Additional human tests demonstrate that humans perform selective, goal-directed abstraction, while MLLMs tend to over-attend to surface details without coherent spatial intent. Our work establishes the first systematic framework for measuring hierarchical spatial cognition in MLLMs, laying the foundation for future spatially intelligent systems.",
+      "pdf_url": "https://arxiv.org/pdf/2511.21471v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.21471v1",
+      "published": "2025-11-26",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Two-stage Estimation for Causal Inference Involving a Semi-continuous Exposure",
+      "authors": [
+        "Xiaoya Wang",
+        "Richard J. Cook",
+        "Yeying Zhu",
+        "Tugba Akkaya-Hocagil",
+        "R. Colin Carter",
+        "Sandra W. Jacobson",
+        "Joseph L. Jacobson",
+        "Louise M. Ryan"
+      ],
+      "abstract": "Methods for causal inference are well developed for binary and continuous exposures, but in many settings, the exposure has a substantial mass at zero-such exposures are called semi-continuous. We propose a general causal framework for such semi-continuous exposures, together with a novel two-stage estimation strategy. A two-part propensity structure is introduced for the semi-continuous exposure, with one component for exposure status (exposed vs unexposed) and another for the exposure level among those exposed, and incorporates both into a marginal structural model that disentangles the effects of exposure status and dose. The two-stage procedure sequentially targets the causal dose-response among exposed individuals and the causal effect of exposure status at a reference dose, allowing flexibility in the choice of propensity score methods in the second stage. We establish consistency and asymptotic normality for the resulting estimators, and characterise their limiting values under misspecification of the propensity score models. Simulation studies evaluate finite sample performance and robustness, and an application to a study of prenatal alcohol exposure and child cognition demonstrates how the proposed methods can be used to address a range of scientific questions about both exposure status and exposure intensity.",
+      "pdf_url": "https://arxiv.org/pdf/2511.20985v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.20985v1",
+      "published": "2025-11-26",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Differentially Private Fisher Randomization Tests for Binary Outcomes",
+      "authors": [
+        "Qingyang Sun",
+        "Jerome P. Reiter"
+      ],
+      "abstract": "Across many disciplines, causal inference often relies on randomized experiments with binary outcomes. In such experiments, the Fisher randomization test provides exact, assumption-free tests for causal effects. Sometimes the outcomes are sensitive and must be kept confidential, for example, when they comprise physical or mental health measurements. Releasing test statistics or p-values computed with the confidential outcomes can leak information about the individuals in the study. Those responsible for sharing the analysis results may wish to bound this information leakage, which they can do by ensuring the released outputs satisfy differential privacy. In this article, we develop and compare several differentially private versions of the Fisher randomization test for binary outcomes. Specifically, we consider direct perturbation approaches that inject calibrated noise into test statistics or p-values, as well as a mechanism-aware, Bayesian denoising framework that explicitly models the privacy mechanism. We further develop decision-making procedures under privacy constraints, including a Bayes risk-optimal rule and a frequentist-calibrated significance test. Through theoretical results, simulation studies, and an application to the ADAPTABLE clinical trial, we demonstrate that our methods can achieve valid and interpretable causal inference while ensuring the differential privacy guarantee.",
+      "pdf_url": "https://arxiv.org/pdf/2511.20884v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.20884v1",
+      "published": "2025-11-25",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Physics Steering: Causal Control of Cross-Domain Concepts in a Physics Foundation Model",
+      "authors": [
+        "Rio Alexa Fear",
+        "Payel Mukhopadhyay",
+        "Michael McCabe",
+        "Alberto Bietti",
+        "Miles Cranmer"
+      ],
+      "abstract": "Recent advances in mechanistic interpretability have revealed that large language models (LLMs) develop internal representations corresponding not only to concrete entities but also distinct, human-understandable abstract concepts and behaviour. Moreover, these hidden features can be directly manipulated to steer model behaviour. However, it remains an open question whether this phenomenon is unique to models trained on inherently structured data (ie. language, images) or if it is a general property of foundation models. In this work, we investigate the internal representations of a large physics-focused foundation model. Inspired by recent work identifying single directions in activation space for complex behaviours in LLMs, we extract activation vectors from the model during forward passes over simulation datasets for different physical regimes. We then compute \"delta\" representations between the two regimes. These delta tensors act as concept directions in activation space, encoding specific physical features. By injecting these concept directions back into the model during inference, we can steer its predictions, demonstrating causal control over physical behaviours, such as inducing or removing some particular physical feature from a simulation. These results suggest that scientific foundation models learn generalised representations of physical principles. They do not merely rely on superficial correlations and patterns in the simulations. Our findings open new avenues for understanding and controlling scientific foundation models and has implications for AI-enabled scientific discovery.",
+      "pdf_url": "https://arxiv.org/pdf/2511.20798v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.20798v1",
+      "published": "2025-11-25",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "physics.comp-ph"
+      ]
+    },
     {
       "title": "Spatio-Temporal Hierarchical Causal Models",
       "authors": [
@@ -51,135 +165,6 @@
       "categories": [
         "cs.CV",
         "cs.CL"
-      ]
-    },
-    {
-      "title": "CoC-VLA: Delving into Adversarial Domain Transfer for Explainable Autonomous Driving via Chain-of-Causality Visual-Language-Action Model",
-      "authors": [
-        "Dapeng Zhang",
-        "Fei Shen",
-        "Rui Zhao",
-        "Yinda Chen",
-        "Peng Zhi",
-        "Chenyang Li",
-        "Rui Zhou",
-        "Qingguo Zhou"
-      ],
-      "abstract": "Autonomous driving represents a prominent application of artificial intelligence. Recent approaches have shifted from focusing solely on common scenarios to addressing complex, long-tail situations such as subtle human behaviors, traffic accidents, and non-compliant driving patterns. Given the demonstrated capabilities of large language models (LLMs) in understanding visual and natural language inputs and following instructions, recent methods have integrated LLMs into autonomous driving systems to enhance reasoning, interpretability, and performance across diverse scenarios. However, existing methods typically rely either on real-world data, which is suitable for industrial deployment, or on simulation data tailored to rare or hard case scenarios. Few approaches effectively integrate the complementary advantages of both data sources. To address this limitation, we propose a novel VLM-guided, end-to-end adversarial transfer framework for autonomous driving that transfers long-tail handling capabilities from simulation to real-world deployment, named CoC-VLA. The framework comprises a teacher VLM model, a student VLM model, and a discriminator. Both the teacher and student VLM models utilize a shared base architecture, termed the Chain-of-Causality Visual-Language Model (CoC VLM), which integrates temporal information via an end-to-end text adapter. This architecture supports chain-of-thought reasoning to infer complex driving logic. The teacher and student VLM models are pre-trained separately on simulated and real-world datasets. The discriminator is trained adversarially to facilitate the transfer of long-tail handling capabilities from simulated to real-world environments by the student VLM model, using a novel backpropagation strategy.",
-      "pdf_url": "https://arxiv.org/pdf/2511.19914v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.19914v1",
-      "published": "2025-11-25",
-      "categories": [
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "Clarifying identification and estimation of treatment effects in the Sequential Parallel Comparison Design",
-      "authors": [
-        "Benjamin Stockton",
-        "Michele Santacatterina",
-        "Soutrik Mandal",
-        "Charles M. Cleland",
-        "Erinn M. Hade",
-        "Nicholas Illenberger",
-        "Sharon Meropol",
-        "Andrea B. Troxel",
-        "Eva Petkova",
-        "Chang Yu",
-        "Thaddeus Tarpey"
-      ],
-      "abstract": "Sequential parallel comparison design (SPCD) clinical trials aim to adjust active treatment effect estimates for placebo response to minimize the impact of placebo responders on the estimates. This is potentially accomplished using a two stage design by measuring treatment effects among all participants during the first stage, then classifying some placebo arm participants as placebo non-responders who will be re-randomized in the second stage. In this paper, we use causal inference tools to clarify under what assumptions treatment effects can be identified in SPCD trials and what effects the conventional estimators target at each stage of the SPCD trial. We further illustrate the highly influential impact of placebo response misclassification on the second stage estimate. We conclude that the conventional SPCD estimators do not target meaningful treatment effects.",
-      "pdf_url": "https://arxiv.org/pdf/2511.19677v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.19677v1",
-      "published": "2025-11-24",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Nonparametric Instrumental Variable Regression with Observed Covariates",
-      "authors": [
-        "Zikai Shen",
-        "Zonghao Chen",
-        "Dimitri Meunier",
-        "Ingo Steinwart",
-        "Arthur Gretton",
-        "Zhu Li"
-      ],
-      "abstract": "We study the problem of nonparametric instrumental variable regression with observed covariates, which we refer to as NPIV-O. Compared with standard nonparametric instrumental variable regression (NPIV), the additional observed covariates facilitate causal identification and enables heterogeneous causal effect estimation. However, the presence of observed covariates introduces two challenges for its theoretical analysis. First, it induces a partial identity structure, which renders previous NPIV analyses - based on measures of ill-posedness, stability conditions, or link conditions - inapplicable. Second, it imposes anisotropic smoothness on the structural function. To address the first challenge, we introduce a novel Fourier measure of partial smoothing; for the second challenge, we extend the existing kernel 2SLS instrumental variable algorithm with observed covariates, termed KIV-O, to incorporate Gaussian kernel lengthscales adaptive to the anisotropic smoothness. We prove upper $L^2$-learning rates for KIV-O and the first $L^2$-minimax lower learning rates for NPIV-O. Both rates interpolate between known optimal rates of NPIV and nonparametric regression (NPR). Interestingly, we identify a gap between our upper and lower bounds, which arises from the choice of kernel lengthscales tuned to minimize a projected risk. Our theoretical analysis also applies to proximal causal inference, an emerging framework for causal effect estimation that shares the same conditional moment restriction as NPIV-O.",
-      "pdf_url": "https://arxiv.org/pdf/2511.19404v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.19404v1",
-      "published": "2025-11-24",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "The Unified Non-Convex Framework for Robust Causal Inference: Overcoming the Gaussian Barrier and Optimization Fragility",
-      "authors": [
-        "Eichi Uehara"
-      ],
-      "abstract": "This document proposes a Unified Robust Framework that re-engineers the estimation of the Average Treatment Effect on the Overlap (ATO). It synthesizes gamma-Divergence for outlier robustness, Graduated Non-Convexity (GNC) for global optimization, and a \"Gatekeeper\" mechanism to address the impossibility of higher-order orthogonality in Gaussian regimes.",
-      "pdf_url": "https://arxiv.org/pdf/2511.19284v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.19284v1",
-      "published": "2025-11-24",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Scalable Bayesian Network Structure Learning Using Tsetlin Machine to Constrain the Search Space",
-      "authors": [
-        "Kunal Dumbre",
-        "Lei Jiao",
-        "Ole-Christoffer Granmo"
-      ],
-      "abstract": "The PC algorithm is a widely used method in causal inference for learning the structure of Bayesian networks. Despite its popularity, the PC algorithm suffers from significant time complexity, particularly as the size of the dataset increases, which limits its applicability in large-scale real-world problems. In this study, we propose a novel approach that utilises the Tsetlin Machine (TM) to construct Bayesian structures more efficiently. Our method leverages the most significant literals extracted from the TM and performs conditional independence (CI) tests on these selected literals instead of the full set of variables, resulting in a considerable reduction in computational time. We implemented our approach and compared it with various state-of-the-art methods. Our evaluation includes categorical datasets from the bnlearn repository, such as Munin1, Hepar2. The findings indicate that the proposed TM-based method not only reduces computational complexity but also maintains competitive accuracy in causal discovery, making it a viable alternative to traditional PC algorithm implementations by offering improved efficiency without compromising performance.",
-      "pdf_url": "https://arxiv.org/pdf/2511.19273v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.19273v1",
-      "published": "2025-11-24",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "CDLM: Consistency Diffusion Language Models For Faster Sampling",
-      "authors": [
-        "Minseo Kim",
-        "Chenfeng Xu",
-        "Coleman Hooper",
-        "Harman Singh",
-        "Ben Athiwaratkun",
-        "Ce Zhang",
-        "Kurt Keutzer",
-        "Amir Gholami"
-      ],
-      "abstract": "Diffusion Language Models (DLMs) offer a promising parallel generation paradigm but suffer from slow inference due to numerous refinement steps and the inability to use standard KV caching. We introduce CDLM (Consistency Diffusion Language Models), a training-based acceleration method that simultaneously tackles both bottlenecks. CDLM integrates consistency modeling to drastically reduce the number of required sampling steps by enabling multi-token finalization. Furthermore, we enforce a block-wise causal attention mask during fine-tuning, making the model fully compatible with KV caching. Experiments show CDLM achieves 3.6x-14.5x lower latency while maintaining competitive accuracy on math and coding tasks. The full training and evaluation code is available at https://github.com/SqueezeAILab/CDLM.",
-      "pdf_url": "https://arxiv.org/pdf/2511.19269v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.19269v1",
-      "published": "2025-11-24",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Prior-Free Information Design",
-      "authors": [
-        "Maxwell Rosenthal"
-      ],
-      "abstract": "This paper introduces a prior-free framework for information design based on partial identification and applies it to robust causal inference. The decision maker observes the distribution of signals generated by an information structure and ranks alternatives by their worst-case payoff over the state distributions consistent with those signals. We characterize the set of robustly implementable actions and show that each can be implemented by an information structure that withholds at most one dimension of information from the decision maker. In the potential outcomes model, every treatment is implementable via an experiment that is almost fully informative.",
-      "pdf_url": "https://arxiv.org/pdf/2511.18647v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.18647v1",
-      "published": "2025-11-23",
-      "categories": [
-        "econ.TH",
-        "econ.EM"
       ]
     }
   ]
