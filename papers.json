@@ -1,170 +1,173 @@
 {
-  "last_updated": "2025-12-01T01:05:42.295139",
+  "last_updated": "2025-12-02T00:55:22.060935",
   "papers": [
     {
-      "title": "Uniform inference for kernel instrumental variable regression",
+      "title": "A Design-Based Matching Framework for Staggered Adoption with Time-Varying Confounding",
       "authors": [
-        "Marvin Lob",
-        "Rahul Singh",
-        "Suhas Vijaykumar"
+        "Suehyun Kim",
+        "Kwonsang Lee"
       ],
-      "abstract": "Instrumental variable regression is a foundational tool for causal analysis across the social and biomedical sciences. Recent advances use kernel methods to estimate nonparametric causal relationships, with general data types, while retaining a simple closed-form expression. Empirical researchers ultimately need reliable inference on causal estimates; however, uniform confidence sets for the method remain unavailable. To fill this gap, we develop valid and sharp confidence sets for kernel instrumental variable regression, allowing general nonlinearities and data types. Computationally, our bootstrap procedure requires only a single run of the kernel instrumental variable regression estimator. Theoretically, it relies on the same key assumptions. Overall, we provide a practical procedure for inference that substantially increases the value of kernel methods for causal analysis.",
-      "pdf_url": "https://arxiv.org/pdf/2511.21603v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.21603v1",
-      "published": "2025-11-26",
-      "categories": [
-        "math.ST"
-      ]
-    },
-    {
-      "title": "A Sensitivity Analysis Framework for Causal Inference Under Interference",
-      "authors": [
-        "Matvey Ortyashov",
-        "AmirEmad Ghassami"
-      ],
-      "abstract": "In many applications of causal inference, the treatment received by one unit may influence the outcome of another, a phenomenon referred to as interference. Although there are several frameworks for conducting causal inference in the presence of interference, practitioners often lack the data necessary to adjust for its effects. In this paper, we propose a weighting-based sensitivity analysis framework that can be used to assess the systematic bias arising from ignoring interference. Unlike most of the existing literature, we allow for the presence of unmeasured confounding, and show that the combination of interference and unmeasured confounding is a notable challenge to causal inference. We also study a third factor contributing to systematic bias: lack of transportability. Our framework enables practitioners to assess the impact of these three issues simultaneously through several easily interpretable sensitivity parameters that can reflect a wide range of intuitions about the data.",
-      "pdf_url": "https://arxiv.org/pdf/2511.21534v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.21534v1",
-      "published": "2025-11-26",
+      "abstract": "Causal inference in longitudinal datasets has long been challenging due to dynamic treatment adoption and confounding by time-varying covariates. Prior work either fails to account for heterogeneity across treatment adoption cohorts and treatment timings or relies on modeling assumptions. In this paper, we develop a novel design-based framework for inference on group- and time-specific treatment effects in panel data with staggered treatment adoption. We establish identification results for causal effects under this structure and introduce corresponding estimators, together with a block bootstrap procedure for estimating the covariance matrix and testing the homogeneity of group-time treatment effects. To implement the framework in practice, we propose the Reverse-Time Nested Matching algorithm, which constructs matched strata by pairing units from different adoption cohorts in a way that ensures comparability of covariate histories at each treatment time. Applying the algorithm to the Netflix-IPTV dataset, we find that while Netflix subscription does not significantly affect total IPTV viewing time, it does negatively affect VoD usage. We also provide statistical evidence that the causal effects of Netflix subscription may vary even within the same treatment cohort or across the same outcome and event times.",
+      "pdf_url": "https://arxiv.org/pdf/2511.23208v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.23208v1",
+      "published": "2025-11-28",
       "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "Causal Inference: A Tale of Three Frameworks",
+      "title": "A General Bayesian Nonparametric Approach for Estimating Population-Level and Conditional Causal Effects",
       "authors": [
-        "Linbo Wang",
-        "Thomas Richardson",
-        "James Robins"
+        "Yongseok Hur",
+        "Joonhyuk Jung",
+        "Juhee Lee"
       ],
-      "abstract": "Causal inference is a central goal across many scientific disciplines. Over the past several decades, three major frameworks have emerged to formalize causal questions and guide their analysis: the potential outcomes framework, structural equation models, and directed acyclic graphs. Although these frameworks differ in language, assumptions, and philosophical orientation, they often lead to compatible or complementary insights. This paper provides a comparative introduction to the three frameworks, clarifying their connections, highlighting their distinct strengths and limitations, and illustrating how they can be used together in practice. The discussion is aimed at researchers and graduate students with some background in statistics or causal inference who are seeking a conceptual foundation for applying causal methods across a range of substantive domains.",
-      "pdf_url": "https://arxiv.org/pdf/2511.21516v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.21516v1",
-      "published": "2025-11-26",
-      "categories": [
-        "math.ST"
-      ]
-    },
-    {
-      "title": "SpatialBench: Benchmarking Multimodal Large Language Models for Spatial Cognition",
-      "authors": [
-        "Peiran Xu",
-        "Sudong Wang",
-        "Yao Zhu",
-        "Jianing Li",
-        "Yunjian Zhang"
-      ],
-      "abstract": "Spatial cognition is fundamental to real-world multimodal intelligence, allowing models to effectively interact with the physical environment. While multimodal large language models (MLLMs) have made significant strides, existing benchmarks often oversimplify spatial cognition, reducing it to a single-dimensional metric, which fails to capture the hierarchical structure and interdependence of spatial abilities. To address this gap, we propose a hierarchical spatial cognition framework that decomposes spatial intelligence into five progressively complex levels from basic observation to high-level planning. Building upon this taxonomy, we construct SpatialBench, a large-scale, fine-grained benchmark covering 15 tasks aligned with these cognitive levels. To provide a unified evaluation across heterogeneous tasks, we further introduce a high-level capability-oriented metric that reliably assesses a model's overall spatial reasoning ability. Extensive experiments over massive MLLMs reveal distinct performance stratification across cognitive levels: models exhibit strong perceptual grounding yet remain limited in symbolic reasoning, causal inference, and planning. Additional human tests demonstrate that humans perform selective, goal-directed abstraction, while MLLMs tend to over-attend to surface details without coherent spatial intent. Our work establishes the first systematic framework for measuring hierarchical spatial cognition in MLLMs, laying the foundation for future spatially intelligent systems.",
-      "pdf_url": "https://arxiv.org/pdf/2511.21471v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.21471v1",
-      "published": "2025-11-26",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Two-stage Estimation for Causal Inference Involving a Semi-continuous Exposure",
-      "authors": [
-        "Xiaoya Wang",
-        "Richard J. Cook",
-        "Yeying Zhu",
-        "Tugba Akkaya-Hocagil",
-        "R. Colin Carter",
-        "Sandra W. Jacobson",
-        "Joseph L. Jacobson",
-        "Louise M. Ryan"
-      ],
-      "abstract": "Methods for causal inference are well developed for binary and continuous exposures, but in many settings, the exposure has a substantial mass at zero-such exposures are called semi-continuous. We propose a general causal framework for such semi-continuous exposures, together with a novel two-stage estimation strategy. A two-part propensity structure is introduced for the semi-continuous exposure, with one component for exposure status (exposed vs unexposed) and another for the exposure level among those exposed, and incorporates both into a marginal structural model that disentangles the effects of exposure status and dose. The two-stage procedure sequentially targets the causal dose-response among exposed individuals and the causal effect of exposure status at a reference dose, allowing flexibility in the choice of propensity score methods in the second stage. We establish consistency and asymptotic normality for the resulting estimators, and characterise their limiting values under misspecification of the propensity score models. Simulation studies evaluate finite sample performance and robustness, and an application to a study of prenatal alcohol exposure and child cognition demonstrates how the proposed methods can be used to address a range of scientific questions about both exposure status and exposure intensity.",
-      "pdf_url": "https://arxiv.org/pdf/2511.20985v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.20985v1",
-      "published": "2025-11-26",
+      "abstract": "We propose a Bayesian nonparametric (BNP) approach to causal inference using observational data consisting of outcome, treatment, and a set of confounders. The conditional distribution of the outcome given treatment and confounders is modeled flexibly using a dependent nonparametric mixture model, in which both the atoms and the weights vary with the confounders. The proposed BNP model is well suited for causal inference problems, as it does not rely on parametric assumptions about how the conditional distribution depends on the confounders. In particular, the model effectively adjusts for confounding and improves the modeling of treatment effect heterogeneity, leading to more accurate estimation of both the average treatment effect (ATE) and heterogeneous treatment effects (HTE). Posterior inference under the proposed model is computationally efficient due to the use of data augmentation. Extensive evaluations demonstrate that the proposed model offers competitive or superior performance compared to a wide range of recent methods spanning various statistical approaches, including Bayesian additive regression tree (BART) models, which are well known for their strong empirical performance. More importantly, the model provides fully probabilistic inference on quantities of interest that other methods cannot easily provide, using their posterior distributions.",
+      "pdf_url": "https://arxiv.org/pdf/2511.23085v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.23085v1",
+      "published": "2025-11-28",
       "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "Differentially Private Fisher Randomization Tests for Binary Outcomes",
+      "title": "An empirical estimate of the electricity supply curve from market outcomes",
       "authors": [
-        "Qingyang Sun",
-        "Jerome P. Reiter"
+        "Jorge Sánchez Canales",
+        "Alice Lixuan Xu",
+        "Chiara Fusar Bassini",
+        "Lynn H. Kaack",
+        "Lion Hirth"
       ],
-      "abstract": "Across many disciplines, causal inference often relies on randomized experiments with binary outcomes. In such experiments, the Fisher randomization test provides exact, assumption-free tests for causal effects. Sometimes the outcomes are sensitive and must be kept confidential, for example, when they comprise physical or mental health measurements. Releasing test statistics or p-values computed with the confidential outcomes can leak information about the individuals in the study. Those responsible for sharing the analysis results may wish to bound this information leakage, which they can do by ensuring the released outputs satisfy differential privacy. In this article, we develop and compare several differentially private versions of the Fisher randomization test for binary outcomes. Specifically, we consider direct perturbation approaches that inject calibrated noise into test statistics or p-values, as well as a mechanism-aware, Bayesian denoising framework that explicitly models the privacy mechanism. We further develop decision-making procedures under privacy constraints, including a Bayes risk-optimal rule and a frequentist-calibrated significance test. Through theoretical results, simulation studies, and an application to the ADAPTABLE clinical trial, we demonstrate that our methods can achieve valid and interpretable causal inference while ensuring the differential privacy guarantee.",
-      "pdf_url": "https://arxiv.org/pdf/2511.20884v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.20884v1",
-      "published": "2025-11-25",
+      "abstract": "Researchers and electricity sector practitioners frequently require the supply curve of electricity markets and the price elasticity of supply for purposes such as price forecasting, policy analyses or market power assessment. It is common practice to construct supply curves from engineering data such as installed capacity and fuel prices. In this study, we propose a data-driven methodology to estimate the supply curve of electricity market empirically, i.e. from observed prices and quantities without further modeling assumptions. Due to the massive swings in fuel prices during the European energy crisis, a central task is detecting periods of stable supply curves. To this end, we implement two alternative clustering methods, one based on the fundamental drivers of electricity supply and the other directly on observed market outcomes. We apply our methods to the German electricity market between 2019 and 2024. We find that both approaches identify almost identical regimes shifts, supporting the idea of stable supply regimes stemming from stable drivers. Supply conditions are often stable for extended periods, but evolved rapidly during the energy crisis, triggering a rapid succession of regimes. Fuel prices were the dominant drivers of regime shifts, while conventional plant availability and the nuclear phase-out play a comparatively minor role. Our approach produces empirical supply curves suitable for causal inference and counterfactual analysis of market outcomes.",
+      "pdf_url": "https://arxiv.org/pdf/2511.23068v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.23068v1",
+      "published": "2025-11-28",
       "categories": [
-        "stat.ME"
+        "econ.EM"
       ]
     },
     {
-      "title": "Physics Steering: Causal Control of Cross-Domain Concepts in a Physics Foundation Model",
+      "title": "Time Extrapolation with Graph Convolutional Autoencoder and Tensor Train Decomposition",
       "authors": [
-        "Rio Alexa Fear",
-        "Payel Mukhopadhyay",
-        "Michael McCabe",
-        "Alberto Bietti",
-        "Miles Cranmer"
+        "Yuanhong Chen",
+        "Federico Pichi",
+        "Zhen Gao",
+        "Gianluigi Rozza"
       ],
-      "abstract": "Recent advances in mechanistic interpretability have revealed that large language models (LLMs) develop internal representations corresponding not only to concrete entities but also distinct, human-understandable abstract concepts and behaviour. Moreover, these hidden features can be directly manipulated to steer model behaviour. However, it remains an open question whether this phenomenon is unique to models trained on inherently structured data (ie. language, images) or if it is a general property of foundation models. In this work, we investigate the internal representations of a large physics-focused foundation model. Inspired by recent work identifying single directions in activation space for complex behaviours in LLMs, we extract activation vectors from the model during forward passes over simulation datasets for different physical regimes. We then compute \"delta\" representations between the two regimes. These delta tensors act as concept directions in activation space, encoding specific physical features. By injecting these concept directions back into the model during inference, we can steer its predictions, demonstrating causal control over physical behaviours, such as inducing or removing some particular physical feature from a simulation. These results suggest that scientific foundation models learn generalised representations of physical principles. They do not merely rely on superficial correlations and patterns in the simulations. Our findings open new avenues for understanding and controlling scientific foundation models and has implications for AI-enabled scientific discovery.",
-      "pdf_url": "https://arxiv.org/pdf/2511.20798v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.20798v1",
-      "published": "2025-11-25",
+      "abstract": "Graph autoencoders have gained attention in nonlinear reduced-order modeling of parameterized partial differential equations defined on unstructured grids. Despite they provide a geometrically consistent way of treating complex domains, applying such architectures to parameterized dynamical systems for temporal prediction beyond the training data, i.e. the extrapolation regime, is still a challenging task due to the simultaneous need of temporal causality and generalizability in the parametric space. In this work, we explore the integration of graph convolutional autoencoders (GCAs) with tensor train (TT) decomposition and Operator Inference (OpInf) to develop a time-consistent reduced-order model. In particular, high-fidelity snapshots are represented as a combination of parametric, spatial, and temporal cores via TT decomposition, while OpInf is used to learn the evolution of the latter. Moreover, we enhance the generalization performance by developing a multi-fidelity two-stages approach in the framework of Deep Operator Networks (DeepONet), treating the spatial and temporal cores as the trunk networks, and the parametric core as the branch network. Numerical results, including heat-conduction, advection-diffusion and vortex-shedding phenomena, demonstrate great performance in effectively learning the dynamic in the extrapolation regime for complex geometries, also in comparison with state-of-the-art approaches e.g. MeshGraphNets.",
+      "pdf_url": "https://arxiv.org/pdf/2511.23037v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.23037v1",
+      "published": "2025-11-28",
       "categories": [
-        "cs.LG",
-        "cs.AI",
-        "physics.comp-ph"
-      ]
-    },
-    {
-      "title": "Spatio-Temporal Hierarchical Causal Models",
-      "authors": [
-        "Xintong Li",
-        "Haoran Zhang",
-        "Xiao Zhou"
-      ],
-      "abstract": "The abundance of fine-grained spatio-temporal data, such as traffic sensor networks, offers vast opportunities for scientific discovery. However, inferring causal relationships from such observational data remains challenging, particularly due to unobserved confounders that are specific to units (e.g., geographical locations) yet influence outcomes over time. Most existing methods for spatio-temporal causal inference assume that all confounders are observed, an assumption that is often violated in practice. In this paper, we introduce Spatio-Temporal Hierarchical Causal Models (ST-HCMs), a novel graphical framework that extends hierarchical causal modeling to the spatio-temporal domain. At the core of our approach is the Spatio-Temporal Collapse Theorem, which shows that a complex ST-HCM converges to a simpler flat causal model as the amount of subunit data increases. This theoretical result enables a general procedure for causal identification, allowing ST-HCMs to recover causal effects even in the presence of unobserved, time-invariant unit-level confounders, a scenario where standard non-hierarchical models fail. We validate the effectiveness of our framework on both synthetic and real-world datasets, demonstrating its potential for robust causal inference in complex dynamic systems.",
-      "pdf_url": "https://arxiv.org/pdf/2511.20558v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.20558v1",
-      "published": "2025-11-25",
-      "categories": [
-        "stat.ML",
+        "math.NA",
         "cs.LG"
       ]
     },
     {
-      "title": "Block Cascading: Training Free Acceleration of Block-Causal Video Models",
+      "title": "Seeing before Observable: Potential Risk Reasoning in Autonomous Driving via Vision Language Models",
       "authors": [
-        "Hmrishav Bandyopadhyay",
-        "Nikhil Pinnaparaju",
-        "Rahim Entezari",
-        "Jim Scott",
-        "Yi-Zhe Song",
-        "Varun Jampani"
+        "Jiaxin Liu",
+        "Xiangyu Yan",
+        "Liang Peng",
+        "Lei Yang",
+        "Lingjun Zhang",
+        "Yuechen Luo",
+        "Yueming Tao",
+        "Ashton Yu Xuan Tan",
+        "Mu Li",
+        "Lei Zhang",
+        "Ziqi Zhan",
+        "Sai Guo",
+        "Hong Wang",
+        "Jun Li"
       ],
-      "abstract": "Block-causal video generation faces a stark speed-quality trade-off: small 1.3B models manage only 16 FPS while large 14B models crawl at 4.5 FPS, forcing users to choose between responsiveness and quality. Block Cascading significantly mitigates this trade-off through training-free parallelization. Our key insight: future video blocks do not need fully denoised current blocks to begin generation. By starting block generation with partially denoised context from predecessors, we transform sequential pipelines into parallel cascades where multiple blocks denoise simultaneously. With 5 GPUs exploiting temporal parallelism, we achieve ~2x acceleration across all model scales: 1.3B models accelerate from 16 to 30 FPS, 14B models from 4.5 to 12.5 FPS. Beyond inference speed, Block Cascading eliminates overhead from KV-recaching (of ~200ms) during context switches for interactive generation. Extensive evaluations validated against multiple block-causal pipelines demonstrate no significant loss in generation quality when switching from block-causal to Block Cascading pipelines for inference. Project Page: https://hmrishavbandy.github.io/block_cascading_page/",
-      "pdf_url": "https://arxiv.org/pdf/2511.20426v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.20426v1",
-      "published": "2025-11-25",
+      "abstract": "Ensuring safety remains a key challenge for autonomous vehicles (AVs), especially in rare and complex scenarios. One critical but understudied aspect is the \\textbf{potential risk} situations, where the risk is \\textbf{not yet observable} but can be inferred from subtle precursors, such as anomalous behaviors or commonsense violations. Recognizing these precursors requires strong semantic understanding and reasoning capabilities, which are often absent in current AV systems due to the scarcity of such cases in existing driving or risk-centric datasets. Moreover, current autonomous driving accident datasets often lack annotations of the causal reasoning chains behind incidents, which are essential for identifying potential risks before they become observable. To address these gaps, we introduce PotentialRiskQA, a novel vision-language dataset designed for reasoning about potential risks prior to observation. Each sample is annotated with structured scene descriptions, semantic precursors, and inferred risk outcomes. Based on this dataset, we further propose PR-Reasoner, a vision-language-model-based framework tailored for onboard potential risk reasoning. Experimental results show that fine-tuning on PotentialRiskQA enables PR-Reasoner to significantly enhance its performance on the potential risk reasoning task compared to baseline VLMs. Together, our dataset and model provide a foundation for developing autonomous systems with improved foresight and proactive safety capabilities, moving toward more intelligent and resilient AVs.",
+      "pdf_url": "https://arxiv.org/pdf/2511.22928v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.22928v1",
+      "published": "2025-11-28",
+      "categories": [
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "CRAwDAD: Causal Reasoning Augmentation with Dual-Agent Debate",
+      "authors": [
+        "Finn G. Vamosi",
+        "Nils D. Forkert"
+      ],
+      "abstract": "When people reason about cause and effect, they often consider many competing \"what if\" scenarios before deciding which explanation fits best. Analogously, advanced language models capable of causal inference can consider multiple interventions and counterfactuals to judge the validity of causal claims. Crucially, this type of reasoning is less like a single calculation and more like an internal dialogue between alternative hypotheses. In this paper, we make this dialogue explicit through a dual-agent debate framework where one model provides a structured causal inference, and the other critically examines this reasoning for logical flaws. When disagreements arise, agents attempt to persuade each other, challenging each other's logic and revising their conclusions until they converge on a mutually agreed answer. To take advantage of this deliberative process, we specifically use reasoning language models, whose strengths in both causal inference and adversarial debate remain under-explored relative to standard large language models. We evaluate our approach on the CLadder dataset, a benchmark linking natural language questions to formally defined causal graphs across all three rungs of Pearl's ladder of causation. With Qwen3 and DeepSeek-R1 as debater agents, we demonstrate that multi-agent debate improves DeepSeek-R1's overall accuracy in causal inference from 78.03% to 87.45%, with the counterfactual category specifically improving from 67.94% to 80.04% accuracy. Similarly, Qwen3's overall accuracy improves from 84.16% to 89.41%, and counterfactual questions from 71.53% to 80.35%, showing that strong models can still benefit greatly from debate with weaker agents. Our results highlight the potential of reasoning models as building blocks for multi-agent systems in causal inference, and demonstrate the importance of diverse perspectives in causal problem-solving.",
+      "pdf_url": "https://arxiv.org/pdf/2511.22854v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.22854v1",
+      "published": "2025-11-28",
+      "categories": [
+        "cs.LG",
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "The Causal Uncertainty Principle",
+      "authors": [
+        "Daniel D. Reidpath"
+      ],
+      "abstract": "This paper explains why internal and external validity cannot be simultaneously maximised. It introduces \"evidential states\" to represent the information available for causal inference and shows that routine study operations (restriction, conditioning, and intervention) transform these states in ways that do not commute. Because each operation removes or reorganises information differently, changing their order yields evidential states that support different causal claims. This non-commutativity creates a structural trade-off: the steps that secure precise causal identification also eliminate the heterogeneity required for generalisation. Small model, observational and experimental examples illustrate how familiar failures of transportability arise from this order dependence. The result is a concise structural account of why increasing causal precision necessarily narrows the world to which findings apply.",
+      "pdf_url": "https://arxiv.org/pdf/2511.22649v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.22649v1",
+      "published": "2025-11-27",
+      "categories": [
+        "stat.AP",
+        "cs.IT"
+      ]
+    },
+    {
+      "title": "CoT4AD: A Vision-Language-Action Model with Explicit Chain-of-Thought Reasoning for Autonomous Driving",
+      "authors": [
+        "Zhaohui Wang",
+        "Tengbo Yu",
+        "Hao Tang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have recently attracted growing attention in end-to-end autonomous driving for their strong reasoning capabilities and rich world knowledge. However, existing VLAs often suffer from limited numerical reasoning ability and overly simplified input-output mappings, which hinder their performance in complex driving scenarios requiring step-by-step causal reasoning. To address these challenges, we propose CoT4AD, a novel VLA framework that introduces Chain-of-Thought (CoT) reasoning for autonomous driving to enhance both numerical and causal reasoning in Vision-Language Models (VLMs). CoT4AD integrates visual observations and language instructions to perform semantic reasoning, scene understanding, and trajectory planning. During training, it explicitly models a perception-question-prediction-action CoT to align the reasoning space with the action space across multiple driving tasks. During inference, it performs implicit CoT reasoning to enable consistent numerical reasoning and robust decision-making in dynamic environments. Extensive experiments on both real-world and simulated benchmarks, including nuScenes and Bench2Drive, demonstrate that CoT4AD achieves state-of-the-art performance in both open-loop and closed-loop evaluations. Code will be released upon paper acceptance.",
+      "pdf_url": "https://arxiv.org/pdf/2511.22532v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.22532v1",
+      "published": "2025-11-27",
       "categories": [
         "cs.CV",
         "cs.AI"
       ]
     },
     {
-      "title": "CounterVQA: Evaluating and Improving Counterfactual Reasoning in Vision-Language Models for Video Understanding",
+      "title": "Design-based theory for causal inference",
       "authors": [
-        "Yuefei Chen",
-        "Jiang Liu",
-        "Xiaodong Lin",
-        "Ruixiang Tang"
+        "Xin Lu",
+        "Wanjia Fu",
+        "Hongzi Li",
+        "Haoyang Yu",
+        "Honghao Zhang",
+        "Ke Zhu",
+        "Hanzhong Liu"
       ],
-      "abstract": "Vision Language Models (VLMs) have recently shown significant advancements in video understanding, especially in feature alignment, event reasoning, and instruction-following tasks. However, their capability for counterfactual reasoning, inferring alternative outcomes under hypothetical conditions, remains underexplored. This capability is essential for robust video understanding, as it requires identifying underlying causal structures and reasoning about unobserved possibilities, rather than merely recognizing observed patterns. To systematically evaluate this capability, we introduce CounterVQA, a video-based benchmark featuring three progressive difficulty levels that assess different aspects of counterfactual reasoning. Through comprehensive evaluation of both state-of-the-art open-source and closed-source models, we uncover a substantial performance gap: while these models achieve reasonable accuracy on simple counterfactual questions, performance degrades significantly on complex multi-hop causal chains. To address these limitations, we develop a post-training method, CFGPT, that enhances a model's visual counterfactual reasoning ability by distilling its counterfactual reasoning capability from the language modality, yielding consistent improvements across all CounterVQA difficulty levels. Dataset and code will be further released.",
-      "pdf_url": "https://arxiv.org/pdf/2511.19923v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.19923v1",
-      "published": "2025-11-25",
+      "abstract": "Causal inference, as a major research area in statistics and data science, plays a central role across diverse fields such as medicine, economics, education, and the social sciences. Design-based causal inference begins with randomized experiments and emphasizes conducting statistical inference by leveraging the known randomization mechanism, thereby enabling identification and estimation of causal effects under weak model dependence. Grounded in the seminal works of Fisher and Neyman, this paradigm has evolved to include various design strategies, such as stratified randomization and rerandomization, and analytical methods including Fisher randomization tests, Neyman-style asymptotic inference, and regression adjustment. In recent years, with the emergence of complex settings involving high-dimensional data, individual noncompliance, and network interference, design-based causal inference has witnessed remarkable theoretical and methodological advances. This paper provides a systematic review of recent progress in this field, focusing on covariate-balanced randomization designs, design-based statistical inference methods, and their extensions to high-dimensional, noncompliance, and network interference scenarios. It concludes with a comprehensive perspective on future directions for the theoretical development and practical applications of causal inference.",
+      "pdf_url": "https://arxiv.org/pdf/2511.22518v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.22518v1",
+      "published": "2025-11-27",
       "categories": [
-        "cs.CV",
-        "cs.CL"
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "A Sensitivity Approach to Causal Inference Under Limited Overlap",
+      "authors": [
+        "Yuanzhe Ma",
+        "Hongseok Namkoong"
+      ],
+      "abstract": "Limited overlap between treated and control groups is a key challenge in observational analysis. Standard approaches like trimming importance weights can reduce variance but introduce a fundamental bias. We propose a sensitivity framework for contextualizing findings under limited overlap, where we assess how irregular the outcome function has to be in order for the main finding to be invalidated. Our approach is based on worst-case confidence bounds on the bias introduced by standard trimming practices, under explicit assumptions necessary to extrapolate counterfactual estimates from regions of overlap to those without. Empirically, we demonstrate how our sensitivity framework protects against spurious findings by quantifying uncertainty in regions with limited overlap.",
+      "pdf_url": "https://arxiv.org/pdf/2511.22003v1",
+      "arxiv_url": "http://arxiv.org/abs/2511.22003v1",
+      "published": "2025-11-27",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
       ]
     }
   ]
