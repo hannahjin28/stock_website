@@ -1,173 +1,184 @@
 {
-  "last_updated": "2025-12-02T00:55:22.060935",
+  "last_updated": "2025-12-03T00:55:33.321042",
   "papers": [
     {
-      "title": "A Design-Based Matching Framework for Staggered Adoption with Time-Varying Confounding",
+      "title": "SpriteHand: Real-Time Versatile Hand-Object Interaction with Autoregressive Video Generation",
       "authors": [
-        "Suehyun Kim",
-        "Kwonsang Lee"
+        "Zisu Li",
+        "Hengye Lyu",
+        "Jiaxin Shi",
+        "Yufeng Zeng",
+        "Mingming Fan",
+        "Hanwang Zhang",
+        "Chen Liang"
       ],
-      "abstract": "Causal inference in longitudinal datasets has long been challenging due to dynamic treatment adoption and confounding by time-varying covariates. Prior work either fails to account for heterogeneity across treatment adoption cohorts and treatment timings or relies on modeling assumptions. In this paper, we develop a novel design-based framework for inference on group- and time-specific treatment effects in panel data with staggered treatment adoption. We establish identification results for causal effects under this structure and introduce corresponding estimators, together with a block bootstrap procedure for estimating the covariance matrix and testing the homogeneity of group-time treatment effects. To implement the framework in practice, we propose the Reverse-Time Nested Matching algorithm, which constructs matched strata by pairing units from different adoption cohorts in a way that ensures comparability of covariate histories at each treatment time. Applying the algorithm to the Netflix-IPTV dataset, we find that while Netflix subscription does not significantly affect total IPTV viewing time, it does negatively affect VoD usage. We also provide statistical evidence that the causal effects of Netflix subscription may vary even within the same treatment cohort or across the same outcome and event times.",
-      "pdf_url": "https://arxiv.org/pdf/2511.23208v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.23208v1",
-      "published": "2025-11-28",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "A General Bayesian Nonparametric Approach for Estimating Population-Level and Conditional Causal Effects",
-      "authors": [
-        "Yongseok Hur",
-        "Joonhyuk Jung",
-        "Juhee Lee"
-      ],
-      "abstract": "We propose a Bayesian nonparametric (BNP) approach to causal inference using observational data consisting of outcome, treatment, and a set of confounders. The conditional distribution of the outcome given treatment and confounders is modeled flexibly using a dependent nonparametric mixture model, in which both the atoms and the weights vary with the confounders. The proposed BNP model is well suited for causal inference problems, as it does not rely on parametric assumptions about how the conditional distribution depends on the confounders. In particular, the model effectively adjusts for confounding and improves the modeling of treatment effect heterogeneity, leading to more accurate estimation of both the average treatment effect (ATE) and heterogeneous treatment effects (HTE). Posterior inference under the proposed model is computationally efficient due to the use of data augmentation. Extensive evaluations demonstrate that the proposed model offers competitive or superior performance compared to a wide range of recent methods spanning various statistical approaches, including Bayesian additive regression tree (BART) models, which are well known for their strong empirical performance. More importantly, the model provides fully probabilistic inference on quantities of interest that other methods cannot easily provide, using their posterior distributions.",
-      "pdf_url": "https://arxiv.org/pdf/2511.23085v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.23085v1",
-      "published": "2025-11-28",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "An empirical estimate of the electricity supply curve from market outcomes",
-      "authors": [
-        "Jorge Sánchez Canales",
-        "Alice Lixuan Xu",
-        "Chiara Fusar Bassini",
-        "Lynn H. Kaack",
-        "Lion Hirth"
-      ],
-      "abstract": "Researchers and electricity sector practitioners frequently require the supply curve of electricity markets and the price elasticity of supply for purposes such as price forecasting, policy analyses or market power assessment. It is common practice to construct supply curves from engineering data such as installed capacity and fuel prices. In this study, we propose a data-driven methodology to estimate the supply curve of electricity market empirically, i.e. from observed prices and quantities without further modeling assumptions. Due to the massive swings in fuel prices during the European energy crisis, a central task is detecting periods of stable supply curves. To this end, we implement two alternative clustering methods, one based on the fundamental drivers of electricity supply and the other directly on observed market outcomes. We apply our methods to the German electricity market between 2019 and 2024. We find that both approaches identify almost identical regimes shifts, supporting the idea of stable supply regimes stemming from stable drivers. Supply conditions are often stable for extended periods, but evolved rapidly during the energy crisis, triggering a rapid succession of regimes. Fuel prices were the dominant drivers of regime shifts, while conventional plant availability and the nuclear phase-out play a comparatively minor role. Our approach produces empirical supply curves suitable for causal inference and counterfactual analysis of market outcomes.",
-      "pdf_url": "https://arxiv.org/pdf/2511.23068v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.23068v1",
-      "published": "2025-11-28",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Time Extrapolation with Graph Convolutional Autoencoder and Tensor Train Decomposition",
-      "authors": [
-        "Yuanhong Chen",
-        "Federico Pichi",
-        "Zhen Gao",
-        "Gianluigi Rozza"
-      ],
-      "abstract": "Graph autoencoders have gained attention in nonlinear reduced-order modeling of parameterized partial differential equations defined on unstructured grids. Despite they provide a geometrically consistent way of treating complex domains, applying such architectures to parameterized dynamical systems for temporal prediction beyond the training data, i.e. the extrapolation regime, is still a challenging task due to the simultaneous need of temporal causality and generalizability in the parametric space. In this work, we explore the integration of graph convolutional autoencoders (GCAs) with tensor train (TT) decomposition and Operator Inference (OpInf) to develop a time-consistent reduced-order model. In particular, high-fidelity snapshots are represented as a combination of parametric, spatial, and temporal cores via TT decomposition, while OpInf is used to learn the evolution of the latter. Moreover, we enhance the generalization performance by developing a multi-fidelity two-stages approach in the framework of Deep Operator Networks (DeepONet), treating the spatial and temporal cores as the trunk networks, and the parametric core as the branch network. Numerical results, including heat-conduction, advection-diffusion and vortex-shedding phenomena, demonstrate great performance in effectively learning the dynamic in the extrapolation regime for complex geometries, also in comparison with state-of-the-art approaches e.g. MeshGraphNets.",
-      "pdf_url": "https://arxiv.org/pdf/2511.23037v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.23037v1",
-      "published": "2025-11-28",
-      "categories": [
-        "math.NA",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Seeing before Observable: Potential Risk Reasoning in Autonomous Driving via Vision Language Models",
-      "authors": [
-        "Jiaxin Liu",
-        "Xiangyu Yan",
-        "Liang Peng",
-        "Lei Yang",
-        "Lingjun Zhang",
-        "Yuechen Luo",
-        "Yueming Tao",
-        "Ashton Yu Xuan Tan",
-        "Mu Li",
-        "Lei Zhang",
-        "Ziqi Zhan",
-        "Sai Guo",
-        "Hong Wang",
-        "Jun Li"
-      ],
-      "abstract": "Ensuring safety remains a key challenge for autonomous vehicles (AVs), especially in rare and complex scenarios. One critical but understudied aspect is the \\textbf{potential risk} situations, where the risk is \\textbf{not yet observable} but can be inferred from subtle precursors, such as anomalous behaviors or commonsense violations. Recognizing these precursors requires strong semantic understanding and reasoning capabilities, which are often absent in current AV systems due to the scarcity of such cases in existing driving or risk-centric datasets. Moreover, current autonomous driving accident datasets often lack annotations of the causal reasoning chains behind incidents, which are essential for identifying potential risks before they become observable. To address these gaps, we introduce PotentialRiskQA, a novel vision-language dataset designed for reasoning about potential risks prior to observation. Each sample is annotated with structured scene descriptions, semantic precursors, and inferred risk outcomes. Based on this dataset, we further propose PR-Reasoner, a vision-language-model-based framework tailored for onboard potential risk reasoning. Experimental results show that fine-tuning on PotentialRiskQA enables PR-Reasoner to significantly enhance its performance on the potential risk reasoning task compared to baseline VLMs. Together, our dataset and model provide a foundation for developing autonomous systems with improved foresight and proactive safety capabilities, moving toward more intelligent and resilient AVs.",
-      "pdf_url": "https://arxiv.org/pdf/2511.22928v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.22928v1",
-      "published": "2025-11-28",
-      "categories": [
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "CRAwDAD: Causal Reasoning Augmentation with Dual-Agent Debate",
-      "authors": [
-        "Finn G. Vamosi",
-        "Nils D. Forkert"
-      ],
-      "abstract": "When people reason about cause and effect, they often consider many competing \"what if\" scenarios before deciding which explanation fits best. Analogously, advanced language models capable of causal inference can consider multiple interventions and counterfactuals to judge the validity of causal claims. Crucially, this type of reasoning is less like a single calculation and more like an internal dialogue between alternative hypotheses. In this paper, we make this dialogue explicit through a dual-agent debate framework where one model provides a structured causal inference, and the other critically examines this reasoning for logical flaws. When disagreements arise, agents attempt to persuade each other, challenging each other's logic and revising their conclusions until they converge on a mutually agreed answer. To take advantage of this deliberative process, we specifically use reasoning language models, whose strengths in both causal inference and adversarial debate remain under-explored relative to standard large language models. We evaluate our approach on the CLadder dataset, a benchmark linking natural language questions to formally defined causal graphs across all three rungs of Pearl's ladder of causation. With Qwen3 and DeepSeek-R1 as debater agents, we demonstrate that multi-agent debate improves DeepSeek-R1's overall accuracy in causal inference from 78.03% to 87.45%, with the counterfactual category specifically improving from 67.94% to 80.04% accuracy. Similarly, Qwen3's overall accuracy improves from 84.16% to 89.41%, and counterfactual questions from 71.53% to 80.35%, showing that strong models can still benefit greatly from debate with weaker agents. Our results highlight the potential of reasoning models as building blocks for multi-agent systems in causal inference, and demonstrate the importance of diverse perspectives in causal problem-solving.",
-      "pdf_url": "https://arxiv.org/pdf/2511.22854v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.22854v1",
-      "published": "2025-11-28",
-      "categories": [
-        "cs.LG",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "The Causal Uncertainty Principle",
-      "authors": [
-        "Daniel D. Reidpath"
-      ],
-      "abstract": "This paper explains why internal and external validity cannot be simultaneously maximised. It introduces \"evidential states\" to represent the information available for causal inference and shows that routine study operations (restriction, conditioning, and intervention) transform these states in ways that do not commute. Because each operation removes or reorganises information differently, changing their order yields evidential states that support different causal claims. This non-commutativity creates a structural trade-off: the steps that secure precise causal identification also eliminate the heterogeneity required for generalisation. Small model, observational and experimental examples illustrate how familiar failures of transportability arise from this order dependence. The result is a concise structural account of why increasing causal precision necessarily narrows the world to which findings apply.",
-      "pdf_url": "https://arxiv.org/pdf/2511.22649v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.22649v1",
-      "published": "2025-11-27",
-      "categories": [
-        "stat.AP",
-        "cs.IT"
-      ]
-    },
-    {
-      "title": "CoT4AD: A Vision-Language-Action Model with Explicit Chain-of-Thought Reasoning for Autonomous Driving",
-      "authors": [
-        "Zhaohui Wang",
-        "Tengbo Yu",
-        "Hao Tang"
-      ],
-      "abstract": "Vision-Language-Action (VLA) models have recently attracted growing attention in end-to-end autonomous driving for their strong reasoning capabilities and rich world knowledge. However, existing VLAs often suffer from limited numerical reasoning ability and overly simplified input-output mappings, which hinder their performance in complex driving scenarios requiring step-by-step causal reasoning. To address these challenges, we propose CoT4AD, a novel VLA framework that introduces Chain-of-Thought (CoT) reasoning for autonomous driving to enhance both numerical and causal reasoning in Vision-Language Models (VLMs). CoT4AD integrates visual observations and language instructions to perform semantic reasoning, scene understanding, and trajectory planning. During training, it explicitly models a perception-question-prediction-action CoT to align the reasoning space with the action space across multiple driving tasks. During inference, it performs implicit CoT reasoning to enable consistent numerical reasoning and robust decision-making in dynamic environments. Extensive experiments on both real-world and simulated benchmarks, including nuScenes and Bench2Drive, demonstrate that CoT4AD achieves state-of-the-art performance in both open-loop and closed-loop evaluations. Code will be released upon paper acceptance.",
-      "pdf_url": "https://arxiv.org/pdf/2511.22532v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.22532v1",
-      "published": "2025-11-27",
+      "abstract": "Modeling and synthesizing complex hand-object interactions remains a significant challenge, even for state-of-the-art physics engines. Conventional simulation-based approaches rely on explicitly defined rigid object models and pre-scripted hand gestures, making them inadequate for capturing dynamic interactions with non-rigid or articulated entities such as deformable fabrics, elastic materials, hinge-based structures, furry surfaces, or even living creatures. In this paper, we present SpriteHand, an autoregressive video generation framework for real-time synthesis of versatile hand-object interaction videos across a wide range of object types and motion patterns. SpriteHand takes as input a static object image and a video stream in which the hands are imagined to interact with the virtual object embedded in a real-world scene, and generates corresponding hand-object interaction effects in real time. Our model employs a causal inference architecture for autoregressive generation and leverages a hybrid post-training approach to enhance visual realism and temporal coherence. Our 1.3B model supports real-time streaming generation at around 18 FPS and 640x368 resolution, with an approximate 150 ms latency on a single NVIDIA RTX 5090 GPU, and more than a minute of continuous output. Experiments demonstrate superior visual quality, physical plausibility, and interaction fidelity compared to both generative and engine-based baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2512.01960v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.01960v1",
+      "published": "2025-12-01",
       "categories": [
         "cs.CV",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Mitigating Gender Bias in Depression Detection via Counterfactual Inference",
+      "authors": [
+        "Mingxuan Hu",
+        "Hongbo Ma",
+        "Xinlan Wu",
+        "Ziqi Liu",
+        "Jiaqi Liu",
+        "Yangbin Chen"
+      ],
+      "abstract": "Audio-based depression detection models have demonstrated promising performance but often suffer from gender bias due to imbalanced training data. Epidemiological statistics show a higher prevalence of depression in females, leading models to learn spurious correlations between gender and depression. Consequently, models tend to over-diagnose female patients while underperforming on male patients, raising significant fairness concerns. To address this, we propose a novel Counterfactual Debiasing Framework grounded in causal inference. We construct a causal graph to model the decision-making process and identify gender bias as the direct causal effect of gender on the prediction. During inference, we employ counterfactual inference to estimate and subtract this direct effect, ensuring the model relies primarily on authentic acoustic pathological features. Extensive experiments on the DAIC-WOZ dataset using two advanced acoustic backbones demonstrate that our framework not only significantly reduces gender bias but also improves overall detection performance compared to existing debiasing strategies.",
+      "pdf_url": "https://arxiv.org/pdf/2512.01834v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.01834v1",
+      "published": "2025-12-01",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "CauSight: Learning to Supersense for Visual Causal Discovery",
+      "authors": [
+        "Yize Zhang",
+        "Meiqi Chen",
+        "Sirui Chen",
+        "Bo Peng",
+        "Yanxi Zhang",
+        "Tianyu Li",
+        "Chaochao Lu"
+      ],
+      "abstract": "Causal thinking enables humans to understand not just what is seen, but why it happens. To replicate this capability in modern AI systems, we introduce the task of visual causal discovery. It requires models to infer cause-and-effect relations among visual entities across diverse scenarios instead of merely perceiving their presence. To this end, we first construct the Visual Causal Graph dataset (VCG-32K), a large-scale collection of over 32,000 images annotated with entity-level causal graphs, and further develop CauSight, a novel vision-language model to perform visual causal discovery through causally aware reasoning. Our training recipe integrates three components: (1) training data curation from VCG-32K, (2) Tree-of-Causal-Thought (ToCT) for synthesizing reasoning trajectories, and (3) reinforcement learning with a designed causal reward to refine the reasoning policy. Experiments show that CauSight outperforms GPT-4.1 on visual causal discovery, achieving over a threefold performance boost (21% absolute gain). Our code, model, and dataset are fully open-sourced at project page: https://github.com/OpenCausaLab/CauSight.",
+      "pdf_url": "https://arxiv.org/pdf/2512.01827v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.01827v1",
+      "published": "2025-12-01",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Probabilistic Neuro-Symbolic Reasoning for Sparse Historical Data: A Framework Integrating Bayesian Inference, Causal Models, and Game-Theoretic Allocation",
+      "authors": [
+        "Saba Kublashvili"
+      ],
+      "abstract": "Modeling historical events poses fundamental challenges for machine learning: extreme data scarcity (N << 100), heterogeneous and noisy measurements, missing counterfactuals, and the requirement for human interpretable explanations. We present HistoricalML, a probabilistic neuro-symbolic framework that addresses these challenges through principled integration of (1) Bayesian uncertainty quantification to separate epistemic from aleatoric uncertainty, (2) structural causal models for counterfactual reasoning under confounding, (3) cooperative game theory (Shapley values) for fair allocation modeling, and (4) attention based neural architectures for context dependent factor weighting. We provide theoretical analysis showing that our approach achieves consistent estimation in the sparse data regime when strong priors from domain knowledge are available, and that Shapley based allocation satisfies axiomatic fairness guarantees that pure regression approaches cannot provide. We instantiate the framework on two historical case studies: the 19th century partition of Africa (N = 7 colonial powers) and the Second Punic War (N = 2 factions). Our model identifies Germany's +107.9 percent discrepancy as a quantifiable structural tension preceding World War I, with tension factor 36.43 and 0.79 naval arms race correlation. For the Punic Wars, Monte Carlo battle simulations achieve a 57.3 percent win probability for Carthage at Cannae and 57.8 percent for Rome at Zama, aligning with historical outcomes. Counterfactual analysis reveals that Carthaginian political support (support score 6.4 vs Napoleon's 7.1), rather than military capability, was the decisive factor.",
+      "pdf_url": "https://arxiv.org/pdf/2512.01723v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.01723v1",
+      "published": "2025-12-01",
+      "categories": [
+        "cs.AI",
+        "cs.GT",
+        "math.PR"
+      ]
+    },
+    {
+      "title": "Parallel Delayed Memory Units for Enhanced Temporal Modeling in Biomedical and Bioacoustic Signal Analysis",
+      "authors": [
+        "Pengfei Sun",
+        "Wenyu Jiang",
+        "Paul Devos",
+        "Dick Botteldooren"
+      ],
+      "abstract": "Advanced deep learning architectures, particularly recurrent neural networks (RNNs), have been widely applied in audio, bioacoustic, and biomedical signal analysis, especially in data-scarce environments. While gated RNNs remain effective, they can be relatively over-parameterised and less training-efficient in some regimes, while linear RNNs tend to fall short in capturing the complexity inherent in bio-signals. To address these challenges, we propose the Parallel Delayed Memory Unit (PDMU), a {delay-gated state-space module for short-term temporal credit assignment} targeting audio and bioacoustic signals, which enhances short-term temporal state interactions and memory efficiency via a gated delay-line mechanism. Unlike previous Delayed Memory Units (DMU) that embed temporal dynamics into the delay-line architecture, the PDMU further compresses temporal information into vector representations using Legendre Memory Units (LMU). This design serves as a form of causal attention, allowing the model to dynamically adjust its reliance on past states and improve real-time learning performance. Notably, in low-information scenarios, the gating mechanism behaves similarly to skip connections by bypassing state decay and preserving early representations, thereby facilitating long-term memory retention. The PDMU is modular, supporting parallel training and sequential inference, and can be easily integrated into existing linear RNN frameworks. Furthermore, we introduce bidirectional, efficient, and spiking variants of the architecture, each offering additional gains in performance or energy efficiency. Experimental results on diverse audio and biomedical benchmarks demonstrate that the PDMU significantly enhances both memory capacity and overall model performance.",
+      "pdf_url": "https://arxiv.org/pdf/2512.01626v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.01626v1",
+      "published": "2025-12-01",
+      "categories": [
+        "cs.SD",
+        "cs.NE"
+      ]
+    },
+    {
+      "title": "A Self-explainable Model of Long Time Series by Extracting Informative Structured Causal Patterns",
+      "authors": [
+        "Ziqian Wang",
+        "Yuxiao Cheng",
+        "Jinli Suo"
+      ],
+      "abstract": "Explainability is essential for neural networks that model long time series, yet most existing explainable AI methods only produce point-wise importance scores and fail to capture temporal structures such as trends, cycles, and regime changes. This limitation weakens human interpretability and trust in long-horizon models. To address these issues, we identify four key requirements for interpretable time-series modeling: temporal continuity, pattern-centric explanation, causal disentanglement, and faithfulness to the model's inference process. We propose EXCAP, a unified framework that satisfies all four requirements. EXCAP combines an attention-based segmenter that extracts coherent temporal patterns, a causally structured decoder guided by a pre-trained causal graph, and a latent aggregation mechanism that enforces representation stability. Our theoretical analysis shows that EXCAP provides smooth and stable explanations over time and is robust to perturbations in causal masks. Extensive experiments on classification and forecasting benchmarks demonstrate that EXCAP achieves strong predictive accuracy while generating coherent and causally grounded explanations. These results show that EXCAP offers a principled and scalable approach to interpretable modeling of long time series with relevance to high-stakes domains such as healthcare and finance.",
+      "pdf_url": "https://arxiv.org/pdf/2512.01412v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.01412v1",
+      "published": "2025-12-01",
+      "categories": [
+        "cs.LG",
         "cs.AI"
       ]
     },
     {
-      "title": "Design-based theory for causal inference",
+      "title": "A Benchmark of Causal vs Correlation AI for Predictive Maintenance",
       "authors": [
-        "Xin Lu",
-        "Wanjia Fu",
-        "Hongzi Li",
-        "Haoyang Yu",
-        "Honghao Zhang",
-        "Ke Zhu",
-        "Hanzhong Liu"
+        "Krishna Taduri",
+        "Shaunak Dhande",
+        "Giacinto Paolo",
+        "Saggese",
+        "Paul Smith"
       ],
-      "abstract": "Causal inference, as a major research area in statistics and data science, plays a central role across diverse fields such as medicine, economics, education, and the social sciences. Design-based causal inference begins with randomized experiments and emphasizes conducting statistical inference by leveraging the known randomization mechanism, thereby enabling identification and estimation of causal effects under weak model dependence. Grounded in the seminal works of Fisher and Neyman, this paradigm has evolved to include various design strategies, such as stratified randomization and rerandomization, and analytical methods including Fisher randomization tests, Neyman-style asymptotic inference, and regression adjustment. In recent years, with the emergence of complex settings involving high-dimensional data, individual noncompliance, and network interference, design-based causal inference has witnessed remarkable theoretical and methodological advances. This paper provides a systematic review of recent progress in this field, focusing on covariate-balanced randomization designs, design-based statistical inference methods, and their extensions to high-dimensional, noncompliance, and network interference scenarios. It concludes with a comprehensive perspective on future directions for the theoretical development and practical applications of causal inference.",
-      "pdf_url": "https://arxiv.org/pdf/2511.22518v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.22518v1",
-      "published": "2025-11-27",
+      "abstract": "Predictive maintenance in manufacturing environments presents a challenging optimization problem characterized by extreme cost asymmetry, where missed failures incur costs roughly fifty times higher than false alarms. Conventional machine learning approaches typically optimize statistical accuracy metrics that do not reflect this operational reality and cannot reliably distinguish causal relationships from spurious correlations. This study evaluates eight predictive models, ranging from baseline statistical approaches to formal causal inference methods, on a dataset of 10,000 CNC machines with a 3.3% failure prevalence. The formal causal inference model (L5) achieved estimated annual cost savings of 1.16 million USD (a 70.2 percent reduction), outperforming the best correlation-based decision tree model (L3) by approximately 80,000 USD per year. The causal model matched the highest observed recall (87.9 percent) while reducing false alarms by 97 percent (from 165 to 5) and attained a precision of 92.1 percent, with a train-test performance gap of only 2.6 percentage points. These results indicate that causal AI methods, when combined with domain knowledge, can yield superior financial outcomes and more interpretable predictions compared to correlation-based approaches in predictive maintenance applications.",
+      "pdf_url": "https://arxiv.org/pdf/2512.01149v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.01149v1",
+      "published": "2025-11-30",
       "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "FC-ADL: Efficient Microservice Anomaly Detection and Localisation Through Functional Connectivity",
+      "authors": [
+        "Giles Winchester",
+        "George Parisis",
+        "Luc Berthouze"
+      ],
+      "abstract": "Microservices have transformed software architecture through the creation of modular and independent services. However, they introduce operational complexities in service integration and system management that makes swift and accurate anomaly detection and localisation challenging. Despite the complex, dynamic, and interconnected nature of microservice architectures, prior works that investigate metrics for anomaly detection rarely include explicit information about time-varying interdependencies. And whilst prior works on fault localisation typically do incorporate information about dependencies between microservices, they scale poorly to real world large-scale deployments due to their reliance on computationally expensive causal inference. To address these challenges we propose FC-ADL, an end-to-end scalable approach for detecting and localising anomalous changes from microservice metrics based on the neuroscientific concept of functional connectivity. We show that by efficiently characterising time-varying changes in dependencies between microservice metrics we can both detect anomalies and provide root cause candidates without incurring the significant overheads of causal and multivariate approaches. We demonstrate that our approach can achieve top detection and localisation performance across a wide degree of different fault scenarios when compared to state-of-the-art approaches. Furthermore, we illustrate the scalability of our approach by applying it to Alibaba's extremely large real-world microservice deployment.",
+      "pdf_url": "https://arxiv.org/pdf/2512.00844v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.00844v1",
+      "published": "2025-11-30",
+      "categories": [
+        "cs.SE",
+        "cs.DC",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "ARCADIA: Scalable Causal Discovery for Corporate Bankruptcy Analysis Using Agentic AI",
+      "authors": [
+        "Fabrizio Maturo",
+        "Donato Riccio",
+        "Andrea Mazzitelli",
+        "Giuseppe Bifulco",
+        "Francesco Paolone",
+        "Iulia Brezeanu"
+      ],
+      "abstract": "This paper introduces ARCADIA, an agentic AI framework for causal discovery that integrates large-language-model reasoning with statistical diagnostics to construct valid, temporally coherent causal structures. Unlike traditional algorithms, ARCADIA iteratively refines candidate DAGs through constraint-guided prompting and causal-validity feedback, leading to stable and interpretable models for real-world high-stakes domains. Experiments on corporate bankruptcy data show that ARCADIA produces more reliable causal graphs than NOTEARS, GOLEM, and DirectLiNGAM while offering a fully explainable, intervention-ready pipeline. The framework advances AI by demonstrating how agentic LLMs can participate in autonomous scientific modeling and structured causal inference.",
+      "pdf_url": "https://arxiv.org/pdf/2512.00839v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.00839v1",
+      "published": "2025-11-30",
+      "categories": [
+        "cs.AI",
+        "stat.CO",
         "stat.ME"
       ]
     },
     {
-      "title": "A Sensitivity Approach to Causal Inference Under Limited Overlap",
+      "title": "Causal Invariance and Counterfactual Learning Driven Cooperative Game for Multi-Label Classification",
       "authors": [
-        "Yuanzhe Ma",
-        "Hongseok Namkoong"
+        "Yijia Fan",
+        "Jusheng Zhang",
+        "Kaitong Cai",
+        "Jing Yang",
+        "Keze Wang"
       ],
-      "abstract": "Limited overlap between treated and control groups is a key challenge in observational analysis. Standard approaches like trimming importance weights can reduce variance but introduce a fundamental bias. We propose a sensitivity framework for contextualizing findings under limited overlap, where we assess how irregular the outcome function has to be in order for the main finding to be invalidated. Our approach is based on worst-case confidence bounds on the bias introduced by standard trimming practices, under explicit assumptions necessary to extrapolate counterfactual estimates from regions of overlap to those without. Empirically, we demonstrate how our sensitivity framework protects against spurious findings by quantifying uncertainty in regions with limited overlap.",
-      "pdf_url": "https://arxiv.org/pdf/2511.22003v1",
-      "arxiv_url": "http://arxiv.org/abs/2511.22003v1",
-      "published": "2025-11-27",
+      "abstract": "Multi-label classification (MLC) remains vulnerable to label imbalance, spurious correlations, and distribution shifts, challenges that are particularly detrimental to rare label prediction. To address these limitations, we introduce the Causal Cooperative Game (CCG) framework, which conceptualizes MLC as a cooperative multi-player interaction. CCG unifies explicit causal discovery via Neural Structural Equation Models with a counterfactual curiosity reward to drive robust feature learning. Furthermore, it incorporates a causal invariance loss to ensure generalization across diverse environments, complemented by a specialized enhancement strategy for rare labels. Extensive benchmarking demonstrates that CCG substantially outperforms strong baselines in both rare label prediction and overall robustness. Through rigorous ablation studies and qualitative analysis, we validate the efficacy and interpretability of our components, underscoring the potential of synergizing causal inference with cooperative game theory for advancing multi-label learning.",
+      "pdf_url": "https://arxiv.org/pdf/2512.00812v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.00812v1",
+      "published": "2025-11-30",
       "categories": [
-        "stat.ML",
         "cs.LG",
-        "stat.ME"
+        "cs.AI"
       ]
     }
   ]
