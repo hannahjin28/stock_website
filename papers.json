@@ -1,6 +1,60 @@
 {
-  "last_updated": "2025-12-04T00:55:23.139350",
+  "last_updated": "2025-12-05T00:56:03.887945",
   "papers": [
+    {
+      "title": "GaussDetect-LiNGAM:Causal Direction Identification without Gaussianity test",
+      "authors": [
+        "Ziyi Ding",
+        "Xiao-Ping Zhang"
+      ],
+      "abstract": "We propose GaussDetect-LiNGAM, a novel approach for bivariate causal discovery that eliminates the need for explicit Gaussianity tests by leveraging a fundamental equivalence between noise Gaussianity and residual independence in the reverse regression. Under the standard LiNGAM assumptions of linearity, acyclicity, and exogeneity, we prove that the Gaussianity of the forward-model noise is equivalent to the independence between the regressor and residual in the reverse model. This theoretical insight allows us to replace fragile and sample-sensitive Gaussianity tests with robust kernel-based independence tests. Experimental results validate the equivalence and demonstrate that GaussDetect-LiNGAM maintains high consistency across diverse noise types and sample sizes, while reducing the number of tests per decision (TPD). Our method enhances both the efficiency and practical applicability of causal inference, making LiNGAM more accessible and reliable in real-world scenarios.",
+      "pdf_url": "https://arxiv.org/pdf/2512.03428v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.03428v1",
+      "published": "2025-12-03",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Assumption-Lean Differential Variance Inference for Heterogeneous Treatment Effect Detection",
+      "authors": [
+        "Philippe A. Boileau",
+        "Hani Zaki",
+        "Gabriele Lileikyte",
+        "Niklas Nielsen",
+        "Patrick R. Lawler",
+        "Mireille E. Schnitzer"
+      ],
+      "abstract": "The conditional average treatment effect (CATE) is frequently estimated to refute the homogeneous treatment effect assumption. Under this assumption, all units making up the population under study experience identical benefit from a given treatment. Uncovering heterogeneous treatment effects through inference about the CATE, however, requires that covariates truly modifying the treatment effect be reliably collected at baseline. CATE-based techniques will necessarily fail to detect violations when effect modifiers are omitted from the data due to, for example, resource constraints. Severe measurement error has a similar impact. To address these limitations, we prove that the homogeneous treatment effect assumption can be gauged through inference about contrasts of the potential outcomes' variances. We derive causal machine learning estimators of these contrasts and study their asymptotic properties. We establish that these estimators are doubly robust and asymptotically linear under mild conditions, permitting formal hypothesis testing about the homogeneous treatment effect assumption even when effect modifiers are missing or mismeasured. Numerical experiments demonstrate that these estimators' asymptotic guarantees are approximately achieved in experimental and observational data alike. These inference procedures are then used to detect heterogeneous treatment effects in the re-analysis of randomized controlled trials investigating targeted temperature management in cardiac arrest patients.",
+      "pdf_url": "https://arxiv.org/pdf/2512.03254v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.03254v1",
+      "published": "2025-12-02",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "The BEAT-CF Causal Model: A model for guiding the design of trials and observational analyses of cystic fibrosis exacerbations",
+      "authors": [
+        "Steven Mascaro",
+        "Owen Woodberry",
+        "Charlie McLeod",
+        "Mitch Messer",
+        "Hiran Selvadurai",
+        "Yue Wu",
+        "Andre Schultz",
+        "Thomas L Snelling"
+      ],
+      "abstract": "Loss of lung function in cystic fibrosis (CF) occurs progressively, punctuated by acute pulmonary exacerbations (PEx) in which abrupt declines in lung function are not fully recovered. A key component of CF management over the past half century has been the treatment of PEx to slow lung function decline. This has been credited with improvements in survival for people with CF (PwCF), but there is no consensus on the optimal approach to PEx management. BEAT-CF (Bayesian evidence-adaptive treatment of CF) was established to build an evidence-informed knowledge base for CF management. The BEAT-CF causal model is a directed acyclic graph (DAG) and Bayesian network (BN) for PEx that aims to inform the design and analysis of clinical trials comparing the effectiveness of alternative approaches to PEx management. The causal model describes relationships between background risk factors, treatments, and pathogen colonisation of the airways that affect the outcome of an individual PEx episode. The key factors, outcomes, and causal relationships were elicited from CF clinical experts and together represent current expert understanding of the pathophysiology of a PEx episode, guiding the design of data collection and studies and enabling causal inference. Here, we present the DAG that documents this understanding, along with the processes used in its development, providing transparency around our trial design and study processes, as well as a reusable framework for others.",
+      "pdf_url": "https://arxiv.org/pdf/2512.03110v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.03110v1",
+      "published": "2025-12-02",
+      "categories": [
+        "q-bio.QM",
+        "cs.AI"
+      ]
+    },
     {
       "title": "SpriteHand: Real-Time Versatile Hand-Object Interaction with Autoregressive Video Generation",
       "authors": [
@@ -124,61 +178,6 @@
       "categories": [
         "cs.AI",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "FC-ADL: Efficient Microservice Anomaly Detection and Localisation Through Functional Connectivity",
-      "authors": [
-        "Giles Winchester",
-        "George Parisis",
-        "Luc Berthouze"
-      ],
-      "abstract": "Microservices have transformed software architecture through the creation of modular and independent services. However, they introduce operational complexities in service integration and system management that makes swift and accurate anomaly detection and localisation challenging. Despite the complex, dynamic, and interconnected nature of microservice architectures, prior works that investigate metrics for anomaly detection rarely include explicit information about time-varying interdependencies. And whilst prior works on fault localisation typically do incorporate information about dependencies between microservices, they scale poorly to real world large-scale deployments due to their reliance on computationally expensive causal inference. To address these challenges we propose FC-ADL, an end-to-end scalable approach for detecting and localising anomalous changes from microservice metrics based on the neuroscientific concept of functional connectivity. We show that by efficiently characterising time-varying changes in dependencies between microservice metrics we can both detect anomalies and provide root cause candidates without incurring the significant overheads of causal and multivariate approaches. We demonstrate that our approach can achieve top detection and localisation performance across a wide degree of different fault scenarios when compared to state-of-the-art approaches. Furthermore, we illustrate the scalability of our approach by applying it to Alibaba's extremely large real-world microservice deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2512.00844v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.00844v1",
-      "published": "2025-11-30",
-      "categories": [
-        "cs.SE",
-        "cs.DC",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "ARCADIA: Scalable Causal Discovery for Corporate Bankruptcy Analysis Using Agentic AI",
-      "authors": [
-        "Fabrizio Maturo",
-        "Donato Riccio",
-        "Andrea Mazzitelli",
-        "Giuseppe Bifulco",
-        "Francesco Paolone",
-        "Iulia Brezeanu"
-      ],
-      "abstract": "This paper introduces ARCADIA, an agentic AI framework for causal discovery that integrates large-language-model reasoning with statistical diagnostics to construct valid, temporally coherent causal structures. Unlike traditional algorithms, ARCADIA iteratively refines candidate DAGs through constraint-guided prompting and causal-validity feedback, leading to stable and interpretable models for real-world high-stakes domains. Experiments on corporate bankruptcy data show that ARCADIA produces more reliable causal graphs than NOTEARS, GOLEM, and DirectLiNGAM while offering a fully explainable, intervention-ready pipeline. The framework advances AI by demonstrating how agentic LLMs can participate in autonomous scientific modeling and structured causal inference.",
-      "pdf_url": "https://arxiv.org/pdf/2512.00839v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.00839v1",
-      "published": "2025-11-30",
-      "categories": [
-        "cs.AI",
-        "stat.CO",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Invariance and Counterfactual Learning Driven Cooperative Game for Multi-Label Classification",
-      "authors": [
-        "Yijia Fan",
-        "Jusheng Zhang",
-        "Kaitong Cai",
-        "Jing Yang",
-        "Keze Wang"
-      ],
-      "abstract": "Multi-label classification (MLC) remains vulnerable to label imbalance, spurious correlations, and distribution shifts, challenges that are particularly detrimental to rare label prediction. To address these limitations, we introduce the Causal Cooperative Game (CCG) framework, which conceptualizes MLC as a cooperative multi-player interaction. CCG unifies explicit causal discovery via Neural Structural Equation Models with a counterfactual curiosity reward to drive robust feature learning. Furthermore, it incorporates a causal invariance loss to ensure generalization across diverse environments, complemented by a specialized enhancement strategy for rare labels. Extensive benchmarking demonstrates that CCG substantially outperforms strong baselines in both rare label prediction and overall robustness. Through rigorous ablation studies and qualitative analysis, we validate the efficacy and interpretability of our components, underscoring the potential of synergizing causal inference with cooperative game theory for advancing multi-label learning.",
-      "pdf_url": "https://arxiv.org/pdf/2512.00812v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.00812v1",
-      "published": "2025-11-30",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
       ]
     }
   ]
