@@ -1,6 +1,62 @@
 {
-  "last_updated": "2025-12-05T00:56:03.887945",
+  "last_updated": "2025-12-06T00:53:06.686570",
   "papers": [
+    {
+      "title": "Learning Causality for Longitudinal Data",
+      "authors": [
+        "Mouad EL Bouchattaoui"
+      ],
+      "abstract": "This thesis develops methods for causal inference and causal representation learning (CRL) in high-dimensional, time-varying data.\n  The first contribution introduces the Causal Dynamic Variational Autoencoder (CDVAE), a model for estimating Individual Treatment Effects (ITEs) by capturing unobserved heterogeneity in treatment response driven by latent risk factors that affect only outcomes. CDVAE comes with theoretical guarantees on valid latent adjustment and generalization bounds for ITE error. Experiments on synthetic and real datasets show that CDVAE outperforms baselines, and that state-of-the-art models greatly improve when augmented with its latent substitutes, approaching oracle performance without access to true adjustment variables.\n  The second contribution proposes an efficient framework for long-term counterfactual regression based on RNNs enhanced with Contrastive Predictive Coding (CPC) and InfoMax. It captures long-range dependencies under time-varying confounding while avoiding the computational cost of transformers, achieving state-of-the-art results and introducing CPC into causal inference.\n  The third contribution advances CRL by addressing how latent causes manifest in observed variables. We introduce a model-agnostic interpretability layer based on the geometry of the decoder Jacobian. A sparse self-expression prior induces modular, possibly overlapping groups of observed features aligned with shared latent influences. We provide recovery guarantees in both disjoint and overlapping settings and show that meaningful latent-to-observed structure can be recovered without anchor features or single-parent assumptions. Scalable Jacobian-based regularization techniques are also developed.",
+      "pdf_url": "https://arxiv.org/pdf/2512.04980v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.04980v1",
+      "published": "2025-12-04",
+      "categories": [
+        "stat.ML",
+        "cs.IT",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Live Avatar: Streaming Real-time Audio-Driven Avatar Generation with Infinite Length",
+      "authors": [
+        "Yubo Huang",
+        "Hailong Guo",
+        "Fangtai Wu",
+        "Shifeng Zhang",
+        "Shijie Huang",
+        "Qijun Gan",
+        "Lin Liu",
+        "Sirui Zhao",
+        "Enhong Chen",
+        "Jiaming Liu",
+        "Steven Hoi"
+      ],
+      "abstract": "Existing diffusion-based video generation methods are fundamentally constrained by sequential computation and long-horizon inconsistency, limiting their practical adoption in real-time, streaming audio-driven avatar synthesis. We present Live Avatar, an algorithm-system co-designed framework that enables efficient, high-fidelity, and infinite-length avatar generation using a 14-billion-parameter diffusion model. Our approach introduces Timestep-forcing Pipeline Parallelism (TPP), a distributed inference paradigm that pipelines denoising steps across multiple GPUs, effectively breaking the autoregressive bottleneck and ensuring stable, low-latency real-time streaming. To further enhance temporal consistency and mitigate identity drift and color artifacts, we propose the Rolling Sink Frame Mechanism (RSFM), which maintains sequence fidelity by dynamically recalibrating appearance using a cached reference image. Additionally, we leverage Self-Forcing Distribution Matching Distillation to facilitate causal, streamable adaptation of large-scale models without sacrificing visual quality. Live Avatar demonstrates state-of-the-art performance, reaching 20 FPS end-to-end generation on 5 H800 GPUs, and, to the best of our knowledge, is the first to achieve practical, real-time, high-fidelity avatar generation at this scale. Our work establishes a new paradigm for deploying advanced diffusion models in industrial long-form video synthesis applications.",
+      "pdf_url": "https://arxiv.org/pdf/2512.04677v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.04677v1",
+      "published": "2025-12-04",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Addressing Logical Fallacies In Scientific Reasoning From Large Language Models: Towards a Dual-Inference Training Framework",
+      "authors": [
+        "Peter B. Walker",
+        "Hannah Davidson",
+        "Aiden Foster",
+        "Matthew Lienert",
+        "Thomas Pardue",
+        "Dale Russell"
+      ],
+      "abstract": "Large Language Models (LLMs) have transformed natural language processing and hold growing promise for advancing science, healthcare, and decision-making. Yet their training paradigms remain dominated by affirmation-based inference, akin to \\textit{modus ponens}, where accepted premises yield predicted consequents. While effective for generative fluency, this one-directional approach leaves models vulnerable to logical fallacies, adversarial manipulation, and failures in causal reasoning. This paper makes two contributions. First, it demonstrates how existing LLMs from major platforms exhibit systematic weaknesses when reasoning in scientific domains with negation, counterexamples, or faulty premises \\footnote{Code to recreate these experiments are at https://github.com/hannahdavidsoncollege-maker/ScientificReasoningForEnvironment-MedicineWithLLMs. Second, it introduces a dual-reasoning training framework that integrates affirmative generation with structured counterfactual denial. Grounded in formal logic, cognitive science, and adversarial training, this training paradigm formalizes a computational analogue of ``denying the antecedent'' as a mechanism for disconfirmation and robustness. By coupling generative synthesis with explicit negation-aware objectives, the framework enables models that not only affirm valid inferences but also reject invalid ones, yielding systems that are more resilient, interpretable, and aligned with human reasoning.",
+      "pdf_url": "https://arxiv.org/pdf/2512.04228v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.04228v1",
+      "published": "2025-12-03",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "GaussDetect-LiNGAM:Causal Direction Identification without Gaussianity test",
       "authors": [
@@ -127,57 +183,6 @@
         "cs.AI",
         "cs.GT",
         "math.PR"
-      ]
-    },
-    {
-      "title": "Parallel Delayed Memory Units for Enhanced Temporal Modeling in Biomedical and Bioacoustic Signal Analysis",
-      "authors": [
-        "Pengfei Sun",
-        "Wenyu Jiang",
-        "Paul Devos",
-        "Dick Botteldooren"
-      ],
-      "abstract": "Advanced deep learning architectures, particularly recurrent neural networks (RNNs), have been widely applied in audio, bioacoustic, and biomedical signal analysis, especially in data-scarce environments. While gated RNNs remain effective, they can be relatively over-parameterised and less training-efficient in some regimes, while linear RNNs tend to fall short in capturing the complexity inherent in bio-signals. To address these challenges, we propose the Parallel Delayed Memory Unit (PDMU), a {delay-gated state-space module for short-term temporal credit assignment} targeting audio and bioacoustic signals, which enhances short-term temporal state interactions and memory efficiency via a gated delay-line mechanism. Unlike previous Delayed Memory Units (DMU) that embed temporal dynamics into the delay-line architecture, the PDMU further compresses temporal information into vector representations using Legendre Memory Units (LMU). This design serves as a form of causal attention, allowing the model to dynamically adjust its reliance on past states and improve real-time learning performance. Notably, in low-information scenarios, the gating mechanism behaves similarly to skip connections by bypassing state decay and preserving early representations, thereby facilitating long-term memory retention. The PDMU is modular, supporting parallel training and sequential inference, and can be easily integrated into existing linear RNN frameworks. Furthermore, we introduce bidirectional, efficient, and spiking variants of the architecture, each offering additional gains in performance or energy efficiency. Experimental results on diverse audio and biomedical benchmarks demonstrate that the PDMU significantly enhances both memory capacity and overall model performance.",
-      "pdf_url": "https://arxiv.org/pdf/2512.01626v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.01626v1",
-      "published": "2025-12-01",
-      "categories": [
-        "cs.SD",
-        "cs.NE"
-      ]
-    },
-    {
-      "title": "A Self-explainable Model of Long Time Series by Extracting Informative Structured Causal Patterns",
-      "authors": [
-        "Ziqian Wang",
-        "Yuxiao Cheng",
-        "Jinli Suo"
-      ],
-      "abstract": "Explainability is essential for neural networks that model long time series, yet most existing explainable AI methods only produce point-wise importance scores and fail to capture temporal structures such as trends, cycles, and regime changes. This limitation weakens human interpretability and trust in long-horizon models. To address these issues, we identify four key requirements for interpretable time-series modeling: temporal continuity, pattern-centric explanation, causal disentanglement, and faithfulness to the model's inference process. We propose EXCAP, a unified framework that satisfies all four requirements. EXCAP combines an attention-based segmenter that extracts coherent temporal patterns, a causally structured decoder guided by a pre-trained causal graph, and a latent aggregation mechanism that enforces representation stability. Our theoretical analysis shows that EXCAP provides smooth and stable explanations over time and is robust to perturbations in causal masks. Extensive experiments on classification and forecasting benchmarks demonstrate that EXCAP achieves strong predictive accuracy while generating coherent and causally grounded explanations. These results show that EXCAP offers a principled and scalable approach to interpretable modeling of long time series with relevance to high-stakes domains such as healthcare and finance.",
-      "pdf_url": "https://arxiv.org/pdf/2512.01412v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.01412v1",
-      "published": "2025-12-01",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A Benchmark of Causal vs Correlation AI for Predictive Maintenance",
-      "authors": [
-        "Krishna Taduri",
-        "Shaunak Dhande",
-        "Giacinto Paolo",
-        "Saggese",
-        "Paul Smith"
-      ],
-      "abstract": "Predictive maintenance in manufacturing environments presents a challenging optimization problem characterized by extreme cost asymmetry, where missed failures incur costs roughly fifty times higher than false alarms. Conventional machine learning approaches typically optimize statistical accuracy metrics that do not reflect this operational reality and cannot reliably distinguish causal relationships from spurious correlations. This study evaluates eight predictive models, ranging from baseline statistical approaches to formal causal inference methods, on a dataset of 10,000 CNC machines with a 3.3% failure prevalence. The formal causal inference model (L5) achieved estimated annual cost savings of 1.16 million USD (a 70.2 percent reduction), outperforming the best correlation-based decision tree model (L3) by approximately 80,000 USD per year. The causal model matched the highest observed recall (87.9 percent) while reducing false alarms by 97 percent (from 165 to 5) and attained a precision of 92.1 percent, with a train-test performance gap of only 2.6 percentage points. These results indicate that causal AI methods, when combined with domain knowledge, can yield superior financial outcomes and more interpretable predictions compared to correlation-based approaches in predictive maintenance applications.",
-      "pdf_url": "https://arxiv.org/pdf/2512.01149v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.01149v1",
-      "published": "2025-11-30",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
       ]
     }
   ]
