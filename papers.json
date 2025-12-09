@@ -1,6 +1,58 @@
 {
-  "last_updated": "2025-12-08T00:56:14.427149",
+  "last_updated": "2025-12-09T00:55:40.156430",
   "papers": [
+    {
+      "title": "Standard and stressed value at risk forecasting using dynamic Bayesian networks",
+      "authors": [
+        "Eden Gross",
+        "Ryan Kruger",
+        "Francois Toerien"
+      ],
+      "abstract": "This study introduces a dynamic Bayesian network (DBN) framework for forecasting value at risk (VaR) and stressed VaR (SVaR) and compares its performance to several commonly applied models. Using daily S&P 500 index returns from 1991 to 2020, we produce 10-day 99% VaR and SVaR forecasts using a rolling period and historical returns for the traditional models, while three DBNs use both historical and forecasted returns. We evaluate the models' forecasting accuracy using standard backtests and forecasting error measures. Results show that autoregressive models deliver the most accurate VaR forecasts, while the DBNs achieve comparable performance to the historical simulation model, despite incorporating forward-looking return forecasts. For SVaR, all models produce highly conservative forecasts, with minimal breaches and limited differentiation in accuracy. While DBNs do not outperform traditional models, they demonstrate feasibility as a forward-looking approach to provide a foundation for future research on integrating causal inference into financial risk forecasting.",
+      "pdf_url": "https://arxiv.org/pdf/2512.05661v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.05661v1",
+      "published": "2025-12-05",
+      "categories": [
+        "q-fin.RM"
+      ]
+    },
+    {
+      "title": "ShaRP: SHAllow-LayeR Pruning for Video Large Language Models Acceleration",
+      "authors": [
+        "Yingjie Xia",
+        "Tao Liu",
+        "Jinglei Shi",
+        "Qingsong Xie",
+        "Heng Guo",
+        "Jian Yang",
+        "Xi Wang"
+      ],
+      "abstract": "Video Large Language Models (VLLMs) face the challenge of high computational load during the pre-filling stage due to the processing of an enormous number of visual tokens. Although attention-based pruning methods are widely used to accelerate inference, trials at early decoder layers often result in significant performance degradation, especially under high compression rates. We argue that while attention-based pruning inherently holds the potential to identify the most relevant visual tokens, its effectiveness in shallow decoder layers is limited by factors such as positional encoding bias and insufficient information interaction. In this paper, we propose an improved attention-based pruning framework, termed ShaRP, that integrates segment-aware causal masking, positional debiasing, and token deduplication for enhanced token selection. It enables effective pruning at shallow layers while maintaining stable performance under high compression rates without retraining. Extensive experiments demonstrate that ShaRP achieves competitive performance across multiple video understanding benchmarks, establishing a new paradigm for accelerating VLLM inference.",
+      "pdf_url": "https://arxiv.org/pdf/2512.05385v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.05385v1",
+      "published": "2025-12-05",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Text Rationalization for Robust Causal Effect Estimation",
+      "authors": [
+        "Lijinghua Zhang",
+        "Hengrui Cai"
+      ],
+      "abstract": "Recent advances in natural language processing have enabled the increasing use of text data in causal inference, particularly for adjusting confounding factors in treatment effect estimation. Although high-dimensional text can encode rich contextual information, it also poses unique challenges for causal identification and estimation. In particular, the positivity assumption, which requires sufficient treatment overlap across confounder values, is often violated at the observational level, when massive text is represented in feature spaces. Redundant or spurious textual features inflate dimensionality, producing extreme propensity scores, unstable weights, and inflated variance in effect estimates. We address these challenges with Confounding-Aware Token Rationalization (CATR), a framework that selects a sparse necessary subset of tokens using a residual-independence diagnostic designed to preserve confounding information sufficient for unconfoundedness. By discarding irrelevant texts while retaining key signals, CATR mitigates observational-level positivity violations and stabilizes downstream causal effect estimators. Experiments on synthetic data and a real-world study using the MIMIC-III database demonstrate that CATR yields more accurate, stable, and interpretable causal effect estimates than existing baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2512.05373v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.05373v1",
+      "published": "2025-12-05",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Learning Causality for Longitudinal Data",
       "authors": [
@@ -32,8 +84,8 @@
         "Steven Hoi"
       ],
       "abstract": "Existing diffusion-based video generation methods are fundamentally constrained by sequential computation and long-horizon inconsistency, limiting their practical adoption in real-time, streaming audio-driven avatar synthesis. We present Live Avatar, an algorithm-system co-designed framework that enables efficient, high-fidelity, and infinite-length avatar generation using a 14-billion-parameter diffusion model. Our approach introduces Timestep-forcing Pipeline Parallelism (TPP), a distributed inference paradigm that pipelines denoising steps across multiple GPUs, effectively breaking the autoregressive bottleneck and ensuring stable, low-latency real-time streaming. To further enhance temporal consistency and mitigate identity drift and color artifacts, we propose the Rolling Sink Frame Mechanism (RSFM), which maintains sequence fidelity by dynamically recalibrating appearance using a cached reference image. Additionally, we leverage Self-Forcing Distribution Matching Distillation to facilitate causal, streamable adaptation of large-scale models without sacrificing visual quality. Live Avatar demonstrates state-of-the-art performance, reaching 20 FPS end-to-end generation on 5 H800 GPUs, and, to the best of our knowledge, is the first to achieve practical, real-time, high-fidelity avatar generation at this scale. Our work establishes a new paradigm for deploying advanced diffusion models in industrial long-form video synthesis applications.",
-      "pdf_url": "https://arxiv.org/pdf/2512.04677v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.04677v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.04677v2",
+      "arxiv_url": "http://arxiv.org/abs/2512.04677v2",
       "published": "2025-12-04",
       "categories": [
         "cs.CV"
@@ -129,60 +181,6 @@
       "categories": [
         "cs.CV",
         "cs.HC"
-      ]
-    },
-    {
-      "title": "Mitigating Gender Bias in Depression Detection via Counterfactual Inference",
-      "authors": [
-        "Mingxuan Hu",
-        "Hongbo Ma",
-        "Xinlan Wu",
-        "Ziqi Liu",
-        "Jiaqi Liu",
-        "Yangbin Chen"
-      ],
-      "abstract": "Audio-based depression detection models have demonstrated promising performance but often suffer from gender bias due to imbalanced training data. Epidemiological statistics show a higher prevalence of depression in females, leading models to learn spurious correlations between gender and depression. Consequently, models tend to over-diagnose female patients while underperforming on male patients, raising significant fairness concerns. To address this, we propose a novel Counterfactual Debiasing Framework grounded in causal inference. We construct a causal graph to model the decision-making process and identify gender bias as the direct causal effect of gender on the prediction. During inference, we employ counterfactual inference to estimate and subtract this direct effect, ensuring the model relies primarily on authentic acoustic pathological features. Extensive experiments on the DAIC-WOZ dataset using two advanced acoustic backbones demonstrate that our framework not only significantly reduces gender bias but also improves overall detection performance compared to existing debiasing strategies.",
-      "pdf_url": "https://arxiv.org/pdf/2512.01834v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.01834v1",
-      "published": "2025-12-01",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "CauSight: Learning to Supersense for Visual Causal Discovery",
-      "authors": [
-        "Yize Zhang",
-        "Meiqi Chen",
-        "Sirui Chen",
-        "Bo Peng",
-        "Yanxi Zhang",
-        "Tianyu Li",
-        "Chaochao Lu"
-      ],
-      "abstract": "Causal thinking enables humans to understand not just what is seen, but why it happens. To replicate this capability in modern AI systems, we introduce the task of visual causal discovery. It requires models to infer cause-and-effect relations among visual entities across diverse scenarios instead of merely perceiving their presence. To this end, we first construct the Visual Causal Graph dataset (VCG-32K), a large-scale collection of over 32,000 images annotated with entity-level causal graphs, and further develop CauSight, a novel vision-language model to perform visual causal discovery through causally aware reasoning. Our training recipe integrates three components: (1) training data curation from VCG-32K, (2) Tree-of-Causal-Thought (ToCT) for synthesizing reasoning trajectories, and (3) reinforcement learning with a designed causal reward to refine the reasoning policy. Experiments show that CauSight outperforms GPT-4.1 on visual causal discovery, achieving over a threefold performance boost (21% absolute gain). Our code, model, and dataset are fully open-sourced at project page: https://github.com/OpenCausaLab/CauSight.",
-      "pdf_url": "https://arxiv.org/pdf/2512.01827v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.01827v1",
-      "published": "2025-12-01",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Probabilistic Neuro-Symbolic Reasoning for Sparse Historical Data: A Framework Integrating Bayesian Inference, Causal Models, and Game-Theoretic Allocation",
-      "authors": [
-        "Saba Kublashvili"
-      ],
-      "abstract": "Modeling historical events poses fundamental challenges for machine learning: extreme data scarcity (N << 100), heterogeneous and noisy measurements, missing counterfactuals, and the requirement for human interpretable explanations. We present HistoricalML, a probabilistic neuro-symbolic framework that addresses these challenges through principled integration of (1) Bayesian uncertainty quantification to separate epistemic from aleatoric uncertainty, (2) structural causal models for counterfactual reasoning under confounding, (3) cooperative game theory (Shapley values) for fair allocation modeling, and (4) attention based neural architectures for context dependent factor weighting. We provide theoretical analysis showing that our approach achieves consistent estimation in the sparse data regime when strong priors from domain knowledge are available, and that Shapley based allocation satisfies axiomatic fairness guarantees that pure regression approaches cannot provide. We instantiate the framework on two historical case studies: the 19th century partition of Africa (N = 7 colonial powers) and the Second Punic War (N = 2 factions). Our model identifies Germany's +107.9 percent discrepancy as a quantifiable structural tension preceding World War I, with tension factor 36.43 and 0.79 naval arms race correlation. For the Punic Wars, Monte Carlo battle simulations achieve a 57.3 percent win probability for Carthage at Cannae and 57.8 percent for Rome at Zama, aligning with historical outcomes. Counterfactual analysis reveals that Carthaginian political support (support score 6.4 vs Napoleon's 7.1), rather than military capability, was the decisive factor.",
-      "pdf_url": "https://arxiv.org/pdf/2512.01723v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.01723v1",
-      "published": "2025-12-01",
-      "categories": [
-        "cs.AI",
-        "cs.GT",
-        "math.PR"
       ]
     }
   ]
