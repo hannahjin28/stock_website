@@ -1,6 +1,118 @@
 {
-  "last_updated": "2025-12-09T00:55:40.156430",
+  "last_updated": "2025-12-10T00:57:16.172488",
   "papers": [
+    {
+      "title": "Large Causal Models from Large Language Models",
+      "authors": [
+        "Sridhar Mahadevan"
+      ],
+      "abstract": "We introduce a new paradigm for building large causal models (LCMs) that exploits the enormous potential latent in today's large language models (LLMs). We describe our ongoing experiments with an implemented system called DEMOCRITUS (Decentralized Extraction of Manifold Ontologies of Causal Relations Integrating Topos Universal Slices) aimed at building, organizing, and visualizing LCMs that span disparate domains extracted from carefully targeted textual queries to LLMs. DEMOCRITUS is methodologically distinct from traditional narrow domain and hypothesis centered causal inference that builds causal models from experiments that produce numerical data. A high-quality LLM is used to propose topics, generate causal questions, and extract plausible causal statements from a diverse range of domains. The technical challenge is then to take these isolated, fragmented, potentially ambiguous and possibly conflicting causal claims, and weave them into a coherent whole, converting them into relational causal triples and embedding them into a LCM. Addressing this technical challenge required inventing new categorical machine learning methods, which we can only briefly summarize in this paper, as it is focused more on the systems side of building DEMOCRITUS. We describe the implementation pipeline for DEMOCRITUS comprising of six modules, examine its computational cost profile to determine where the current bottlenecks in scaling the system to larger models. We describe the results of using DEMOCRITUS over a wide range of domains, spanning archaeology, biology, climate change, economics, medicine and technology. We discuss the limitations of the current DEMOCRITUS system, and outline directions for extending its capabilities.",
+      "pdf_url": "https://arxiv.org/pdf/2512.07796v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.07796v1",
+      "published": "2025-12-08",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Generating Storytelling Images with Rich Chains-of-Reasoning",
+      "authors": [
+        "Xiujie Song",
+        "Qi Jia",
+        "Shota Watanabe",
+        "Xiaoyi Pang",
+        "Ruijie Chen",
+        "Mengyue Wu",
+        "Kenny Q. Zhu"
+      ],
+      "abstract": "An image can convey a compelling story by presenting rich, logically connected visual clues. These connections form Chains-of-Reasoning (CoRs) within the image, enabling viewers to infer events, causal relationships, and other information, thereby understanding the underlying story. In this paper, we focus on these semantically rich images and define them as Storytelling Images. Such images have diverse applications beyond illustration creation and cognitive screening, leveraging their ability to convey multi-layered information visually and inspire active interpretation. However, due to their complex semantic nature, Storytelling Images are inherently challenging to create, and thus remain relatively scarce. To address this challenge, we introduce the Storytelling Image Generation task, which explores how generative AI models can be leveraged to create such images. Specifically, we propose a two-stage pipeline, StorytellingPainter, which combines the creative reasoning abilities of Large Language Models (LLMs) with the visual synthesis capabilities of Text-to-Image (T2I) models to generate Storytelling Images. Alongside this pipeline, we develop a dedicated evaluation framework comprising three main evaluators: a Semantic Complexity Evaluator, a KNN-based Diversity Evaluator and a Story-Image Alignment Evaluator. Given the critical role of story generation in the Storytelling Image Generation task and the performance disparity between open-source and proprietary LLMs, we further explore tailored training strategies to reduce this gap, resulting in a series of lightweight yet effective models named Mini-Storytellers. Experimental results demonstrate the feasibility and effectiveness of our approaches. The code is available at https://github.com/xiujiesong/StorytellingImageGeneration.",
+      "pdf_url": "https://arxiv.org/pdf/2512.07198v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.07198v1",
+      "published": "2025-12-08",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "SLOACI: Surrogate-Leveraged Online Adaptive Causal Inference",
+      "authors": [
+        "Yingying Fan",
+        "Zihan Wang",
+        "Waverly Wei"
+      ],
+      "abstract": "Adaptive experimental designs have gained increasing attention across a range of domains. In this paper, we propose a new methodological framework, surrogate-leveraged online adaptive causal inference (SLOACI), which integrates predictive surrogate outcomes into adaptive designs to enhance efficiency. For downstream analysis, we construct the adaptive augmented inverse probability weighting estimator for the average treatment effect using collected data. Our procedure remains robust even when surrogates are noisy or weak. We provide a comprehensive theoretical foundation for SLOACI. Under the asymptotic regime, we show that the proposed estimator attains the semiparametric efficiency bound. From a non-asymptotic perspective, we derive a regret bound to provide practical insights. We also develop a toolbox of sequential testing procedures that accommodates both asymptotic and non-asymptotic regimes, allowing experimenters to choose the perspective that best aligns with their practical needs. Extensive simulations and a synthetic case study are conducted to showcase the superior finite-sample performance of our method.",
+      "pdf_url": "https://arxiv.org/pdf/2512.06872v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.06872v1",
+      "published": "2025-12-07",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Making Event Study Plots Honest: A Functional Data Approach to Causal Inference",
+      "authors": [
+        "Chencheng Fang",
+        "Dominik Liebl"
+      ],
+      "abstract": "Event study plots are the centerpiece of Difference-in-Differences (DiD) analysis, but current plotting methods cannot provide honest causal inference when the parallel trends and/or no-anticipation assumptions fail. We introduce a novel functional data approach to DiD that directly enables honest causal inference via event study plots. Our DiD estimator converges to a Gaussian process in the Banach space of continuous functions, enabling fast and powerful simultaneous confidence bands. This theoretical contribution allows us to turn an event study plot into a rigorous honest causal inference tool through equivalence and relevance testing: Honest reference bands can be validated using equivalence testing in the pre-anticipation period, and honest causal effects can be tested using relevance testing in the post-treatment period. We demonstrate the performance of the method in simulations and two case studies.",
+      "pdf_url": "https://arxiv.org/pdf/2512.06804v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.06804v1",
+      "published": "2025-12-07",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "From Next-Token to Next-Block: A Principled Adaptation Path for Diffusion LLMs",
+      "authors": [
+        "Yuchuan Tian",
+        "Yuchen Liang",
+        "Jiacheng Sun",
+        "Shuo Zhang",
+        "Guangwen Yang",
+        "Yingte Shu",
+        "Sibo Fang",
+        "Tianyu Guo",
+        "Kai Han",
+        "Chao Xu",
+        "Hanting Chen",
+        "Xinghao Chen",
+        "Yunhe Wang"
+      ],
+      "abstract": "Large language models (LLMs) excel at generation but dominant autoregressive (AR) decoding is inherently sequential, creating a throughput bottleneck. Diffusion Language Models (DLMs)--especially block-wise variants--enable parallel generation and intra-block bidirectional reasoning, yet training large DLMs from scratch is costly and wastes the knowledge in mature AR checkpoints. Prior \"adaptation\" attempts either modify logits or randomly grow attention masks to full-sequence diffusion, or simply transplant AR weights into a block-diffusion recipe, leaving a fundamental mismatch between AR causality and block-wise bidirectionality unaddressed. We reframe adaptation as a intra-paradigm path from AR to Block-Diffusion by viewing AR as Block-Diffusion with blocksize=1. Concretely, we design the pathway of adaptation as follows: we use a context-causal attention mask (causal in context, bidirectional only within the active block), an efficient parallel adaptation procedure, an auxiliary AR loss to maximize data utilization and retain pretrained knowledge, and gradual increment of the generation block size. The recipe integrates cleanly with masked block-diffusion and maintains train-inference consistency. Built on these components, NBDiff-7B (Base and Instruct) could inherit the long-context modeling and reasoning capabilities, and achieve state-of-the-art performance among the 7B-class DLMs, delivering strong gains on general-knowledge, math, and code benchmarks over strong baselines. These results demonstrate that principled AR-to-block-diffusion adaptation is an effective and compute-efficient alternative to training DLMs from scratch. Codes: https://github.com/YuchuanTian/NBDiff.",
+      "pdf_url": "https://arxiv.org/pdf/2512.06776v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.06776v1",
+      "published": "2025-12-07",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "WAM-Flow: Parallel Coarse-to-Fine Motion Planning via Discrete Flow Matching for Autonomous Driving",
+      "authors": [
+        "Yifang Xu",
+        "Jiahao Cui",
+        "Feipeng Cai",
+        "Zhihao Zhu",
+        "Hanlin Shang",
+        "Shan Luan",
+        "Mingwang Xu",
+        "Neng Zhang",
+        "Yaoyi Li",
+        "Jia Cai",
+        "Siyu Zhu"
+      ],
+      "abstract": "We introduce WAM-Flow, a vision-language-action (VLA) model that casts ego-trajectory planning as discrete flow matching over a structured token space. In contrast to autoregressive decoders, WAM-Flow performs fully parallel, bidirectional denoising, enabling coarse-to-fine refinement with a tunable compute-accuracy trade-off. Specifically, the approach combines a metric-aligned numerical tokenizer that preserves scalar geometry via triplet-margin learning, a geometry-aware flow objective and a simulator-guided GRPO alignment that integrates safety, ego progress, and comfort rewards while retaining parallel generation. A multi-stage adaptation converts a pre-trained auto-regressive backbone (Janus-1.5B) from causal decoding to non-causal flow model and strengthens road-scene competence through continued multimodal pretraining. Thanks to the inherent nature of consistency model training and parallel decoding inference, WAM-Flow achieves superior closed-loop performance against autoregressive and diffusion-based VLA baselines, with 1-step inference attaining 89.1 PDMS and 5-step inference reaching 90.3 PDMS on NAVSIM v1 benchmark. These results establish discrete flow matching as a new promising paradigm for end-to-end autonomous driving. The code will be publicly available soon.",
+      "pdf_url": "https://arxiv.org/pdf/2512.06112v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.06112v1",
+      "published": "2025-12-05",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Standard and stressed value at risk forecasting using dynamic Bayesian networks",
       "authors": [
@@ -66,121 +178,6 @@
         "stat.ML",
         "cs.IT",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Live Avatar: Streaming Real-time Audio-Driven Avatar Generation with Infinite Length",
-      "authors": [
-        "Yubo Huang",
-        "Hailong Guo",
-        "Fangtai Wu",
-        "Shifeng Zhang",
-        "Shijie Huang",
-        "Qijun Gan",
-        "Lin Liu",
-        "Sirui Zhao",
-        "Enhong Chen",
-        "Jiaming Liu",
-        "Steven Hoi"
-      ],
-      "abstract": "Existing diffusion-based video generation methods are fundamentally constrained by sequential computation and long-horizon inconsistency, limiting their practical adoption in real-time, streaming audio-driven avatar synthesis. We present Live Avatar, an algorithm-system co-designed framework that enables efficient, high-fidelity, and infinite-length avatar generation using a 14-billion-parameter diffusion model. Our approach introduces Timestep-forcing Pipeline Parallelism (TPP), a distributed inference paradigm that pipelines denoising steps across multiple GPUs, effectively breaking the autoregressive bottleneck and ensuring stable, low-latency real-time streaming. To further enhance temporal consistency and mitigate identity drift and color artifacts, we propose the Rolling Sink Frame Mechanism (RSFM), which maintains sequence fidelity by dynamically recalibrating appearance using a cached reference image. Additionally, we leverage Self-Forcing Distribution Matching Distillation to facilitate causal, streamable adaptation of large-scale models without sacrificing visual quality. Live Avatar demonstrates state-of-the-art performance, reaching 20 FPS end-to-end generation on 5 H800 GPUs, and, to the best of our knowledge, is the first to achieve practical, real-time, high-fidelity avatar generation at this scale. Our work establishes a new paradigm for deploying advanced diffusion models in industrial long-form video synthesis applications.",
-      "pdf_url": "https://arxiv.org/pdf/2512.04677v2",
-      "arxiv_url": "http://arxiv.org/abs/2512.04677v2",
-      "published": "2025-12-04",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Addressing Logical Fallacies In Scientific Reasoning From Large Language Models: Towards a Dual-Inference Training Framework",
-      "authors": [
-        "Peter B. Walker",
-        "Hannah Davidson",
-        "Aiden Foster",
-        "Matthew Lienert",
-        "Thomas Pardue",
-        "Dale Russell"
-      ],
-      "abstract": "Large Language Models (LLMs) have transformed natural language processing and hold growing promise for advancing science, healthcare, and decision-making. Yet their training paradigms remain dominated by affirmation-based inference, akin to \\textit{modus ponens}, where accepted premises yield predicted consequents. While effective for generative fluency, this one-directional approach leaves models vulnerable to logical fallacies, adversarial manipulation, and failures in causal reasoning. This paper makes two contributions. First, it demonstrates how existing LLMs from major platforms exhibit systematic weaknesses when reasoning in scientific domains with negation, counterexamples, or faulty premises \\footnote{Code to recreate these experiments are at https://github.com/hannahdavidsoncollege-maker/ScientificReasoningForEnvironment-MedicineWithLLMs. Second, it introduces a dual-reasoning training framework that integrates affirmative generation with structured counterfactual denial. Grounded in formal logic, cognitive science, and adversarial training, this training paradigm formalizes a computational analogue of ``denying the antecedent'' as a mechanism for disconfirmation and robustness. By coupling generative synthesis with explicit negation-aware objectives, the framework enables models that not only affirm valid inferences but also reject invalid ones, yielding systems that are more resilient, interpretable, and aligned with human reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2512.04228v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.04228v1",
-      "published": "2025-12-03",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "GaussDetect-LiNGAM:Causal Direction Identification without Gaussianity test",
-      "authors": [
-        "Ziyi Ding",
-        "Xiao-Ping Zhang"
-      ],
-      "abstract": "We propose GaussDetect-LiNGAM, a novel approach for bivariate causal discovery that eliminates the need for explicit Gaussianity tests by leveraging a fundamental equivalence between noise Gaussianity and residual independence in the reverse regression. Under the standard LiNGAM assumptions of linearity, acyclicity, and exogeneity, we prove that the Gaussianity of the forward-model noise is equivalent to the independence between the regressor and residual in the reverse model. This theoretical insight allows us to replace fragile and sample-sensitive Gaussianity tests with robust kernel-based independence tests. Experimental results validate the equivalence and demonstrate that GaussDetect-LiNGAM maintains high consistency across diverse noise types and sample sizes, while reducing the number of tests per decision (TPD). Our method enhances both the efficiency and practical applicability of causal inference, making LiNGAM more accessible and reliable in real-world scenarios.",
-      "pdf_url": "https://arxiv.org/pdf/2512.03428v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.03428v1",
-      "published": "2025-12-03",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Assumption-Lean Differential Variance Inference for Heterogeneous Treatment Effect Detection",
-      "authors": [
-        "Philippe A. Boileau",
-        "Hani Zaki",
-        "Gabriele Lileikyte",
-        "Niklas Nielsen",
-        "Patrick R. Lawler",
-        "Mireille E. Schnitzer"
-      ],
-      "abstract": "The conditional average treatment effect (CATE) is frequently estimated to refute the homogeneous treatment effect assumption. Under this assumption, all units making up the population under study experience identical benefit from a given treatment. Uncovering heterogeneous treatment effects through inference about the CATE, however, requires that covariates truly modifying the treatment effect be reliably collected at baseline. CATE-based techniques will necessarily fail to detect violations when effect modifiers are omitted from the data due to, for example, resource constraints. Severe measurement error has a similar impact. To address these limitations, we prove that the homogeneous treatment effect assumption can be gauged through inference about contrasts of the potential outcomes' variances. We derive causal machine learning estimators of these contrasts and study their asymptotic properties. We establish that these estimators are doubly robust and asymptotically linear under mild conditions, permitting formal hypothesis testing about the homogeneous treatment effect assumption even when effect modifiers are missing or mismeasured. Numerical experiments demonstrate that these estimators' asymptotic guarantees are approximately achieved in experimental and observational data alike. These inference procedures are then used to detect heterogeneous treatment effects in the re-analysis of randomized controlled trials investigating targeted temperature management in cardiac arrest patients.",
-      "pdf_url": "https://arxiv.org/pdf/2512.03254v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.03254v1",
-      "published": "2025-12-02",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "The BEAT-CF Causal Model: A model for guiding the design of trials and observational analyses of cystic fibrosis exacerbations",
-      "authors": [
-        "Steven Mascaro",
-        "Owen Woodberry",
-        "Charlie McLeod",
-        "Mitch Messer",
-        "Hiran Selvadurai",
-        "Yue Wu",
-        "Andre Schultz",
-        "Thomas L Snelling"
-      ],
-      "abstract": "Loss of lung function in cystic fibrosis (CF) occurs progressively, punctuated by acute pulmonary exacerbations (PEx) in which abrupt declines in lung function are not fully recovered. A key component of CF management over the past half century has been the treatment of PEx to slow lung function decline. This has been credited with improvements in survival for people with CF (PwCF), but there is no consensus on the optimal approach to PEx management. BEAT-CF (Bayesian evidence-adaptive treatment of CF) was established to build an evidence-informed knowledge base for CF management. The BEAT-CF causal model is a directed acyclic graph (DAG) and Bayesian network (BN) for PEx that aims to inform the design and analysis of clinical trials comparing the effectiveness of alternative approaches to PEx management. The causal model describes relationships between background risk factors, treatments, and pathogen colonisation of the airways that affect the outcome of an individual PEx episode. The key factors, outcomes, and causal relationships were elicited from CF clinical experts and together represent current expert understanding of the pathophysiology of a PEx episode, guiding the design of data collection and studies and enabling causal inference. Here, we present the DAG that documents this understanding, along with the processes used in its development, providing transparency around our trial design and study processes, as well as a reusable framework for others.",
-      "pdf_url": "https://arxiv.org/pdf/2512.03110v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.03110v1",
-      "published": "2025-12-02",
-      "categories": [
-        "q-bio.QM",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "SpriteHand: Real-Time Versatile Hand-Object Interaction with Autoregressive Video Generation",
-      "authors": [
-        "Zisu Li",
-        "Hengye Lyu",
-        "Jiaxin Shi",
-        "Yufeng Zeng",
-        "Mingming Fan",
-        "Hanwang Zhang",
-        "Chen Liang"
-      ],
-      "abstract": "Modeling and synthesizing complex hand-object interactions remains a significant challenge, even for state-of-the-art physics engines. Conventional simulation-based approaches rely on explicitly defined rigid object models and pre-scripted hand gestures, making them inadequate for capturing dynamic interactions with non-rigid or articulated entities such as deformable fabrics, elastic materials, hinge-based structures, furry surfaces, or even living creatures. In this paper, we present SpriteHand, an autoregressive video generation framework for real-time synthesis of versatile hand-object interaction videos across a wide range of object types and motion patterns. SpriteHand takes as input a static object image and a video stream in which the hands are imagined to interact with the virtual object embedded in a real-world scene, and generates corresponding hand-object interaction effects in real time. Our model employs a causal inference architecture for autoregressive generation and leverages a hybrid post-training approach to enhance visual realism and temporal coherence. Our 1.3B model supports real-time streaming generation at around 18 FPS and 640x368 resolution, with an approximate 150 ms latency on a single NVIDIA RTX 5090 GPU, and more than a minute of continuous output. Experiments demonstrate superior visual quality, physical plausibility, and interaction fidelity compared to both generative and engine-based baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2512.01960v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.01960v1",
-      "published": "2025-12-01",
-      "categories": [
-        "cs.CV",
-        "cs.HC"
       ]
     }
   ]
