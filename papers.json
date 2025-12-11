@@ -1,6 +1,102 @@
 {
-  "last_updated": "2025-12-10T00:57:16.172488",
+  "last_updated": "2025-12-11T00:57:45.651669",
   "papers": [
+    {
+      "title": "Prediction Intervals for Individual Treatment Effects in a Multiple Decision Point Framework using Conformal Inference",
+      "authors": [
+        "Swaraj Bose",
+        "Walter Dempsey"
+      ],
+      "abstract": "Accurately quantifying uncertainty of individual treatment effects (ITEs) across multiple decision points is crucial for personalized decision-making in fields such as healthcare, finance, education, and online marketplaces. Previous work has focused on predicting non-causal longitudinal estimands or constructing prediction bands for ITEs using cross-sectional data based on exchangeability assumptions. We propose a novel method for constructing prediction intervals using conformal inference techniques for time-varying ITEs with weaker assumptions than prior literature. We guarantee a lower bound for coverage, which is dependent on the degree of non-exchangeability in the data. Although our method is broadly applicable across decision-making contexts, we support our theoretical claims with simulations emulating micro-randomized trials (MRTs) -- a sequential experimental design for mobile health (mHealth) studies. We demonstrate the practical utility of our method by applying it to a real-world MRT - the Intern Health Study (IHS).",
+      "pdf_url": "https://arxiv.org/pdf/2512.08828v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.08828v1",
+      "published": "2025-12-09",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Inferring Causal Relationships to Improve Caching for Clients with Correlated Requests: Applications to VR",
+      "authors": [
+        "Agrim Bari",
+        "Gustavo de Veciana",
+        "Yuqi Zhou"
+      ],
+      "abstract": "Efficient edge caching reduces latency and alleviates backhaul congestion in modern networks. Traditional caching policies, such as Least Recently Used (LRU) and Least Frequently Used (LFU), perform well under specific request patterns. LRU excels in workloads with strong temporal locality, while LFU is effective when content popularity remains static. However, real-world client requests often exhibit correlations due to shared contexts and coordinated activities. This is particularly evident in Virtual Reality (VR) environments, where groups of clients navigate shared virtual spaces, leading to correlated content requests.\n  In this paper, we introduce the \\textit{grouped client request model}, a generalization of the Independent Reference Model that explicitly captures different types of request correlations. Our theoretical analysis of LRU under this model reveals that the optimal causal caching policy depends on cache size: LFU is optimal for small to moderate caches, while LRU outperforms it for larger caches. To address the limitations of existing policies, we propose Least Following and Recently Used (LFRU), a novel online caching policy that dynamically infers and adapts to causal relationships in client requests to optimize evictions. LFRU prioritizes objects likely to be requested based on inferred dependencies, achieving near-optimal performance compared to the offline optimal Belady policy in structured correlation settings.\n  We develop VR based datasets to evaluate caching policies under realistic correlated requests. Our results show that LFRU consistently performs at least as well as LRU and LFU, outperforming LRU by up to 2.9x and LFU by up to1.9x in certain settings.",
+      "pdf_url": "https://arxiv.org/pdf/2512.08626v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.08626v1",
+      "published": "2025-12-09",
+      "categories": [
+        "cs.NI",
+        "cs.SE"
+      ]
+    },
+    {
+      "title": "From Accuracy to Impact: The Impact-Driven AI Framework (IDAIF) for Aligning Engineering Architecture with Theory of Change",
+      "authors": [
+        "Yong-Woon Kim"
+      ],
+      "abstract": "This paper introduces the Impact-Driven AI Framework (IDAIF), a novel architectural methodology that integrates Theory of Change (ToC) principles with modern artificial intelligence system design. As AI systems increasingly influence high-stakes domains including healthcare, finance, and public policy, the alignment problem--ensuring AI behavior corresponds with human values and intentions--has become critical. Current approaches predominantly optimize technical performance metrics while neglecting the sociotechnical dimensions of AI deployment. IDAIF addresses this gap by establishing a systematic mapping between ToC's five-stage model (Inputs-Activities-Outputs-Outcomes-Impact) and corresponding AI architectural layers (Data Layer-Pipeline Layer-Inference Layer-Agentic Layer-Normative Layer). Each layer incorporates rigorous theoretical foundations: multi-objective Pareto optimization for value alignment, hierarchical multi-agent orchestration for outcome achievement, causal directed acyclic graphs (DAGs) for hallucination mitigation, and adversarial debiasing with Reinforcement Learning from Human Feedback (RLHF) for fairness assurance. We provide formal mathematical formulations for each component and introduce an Assurance Layer that manages assumption failures through guardian architectures. Three case studies demonstrate IDAIF application across healthcare, cybersecurity, and software engineering domains. This framework represents a paradigm shift from model-centric to impact-centric AI development, providing engineers with concrete architectural patterns for building ethical, trustworthy, and socially beneficial AI systems.",
+      "pdf_url": "https://arxiv.org/pdf/2512.08449v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.08449v1",
+      "published": "2025-12-09",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Causal inference under interference: computational barriers and algorithmic solutions",
+      "authors": [
+        "Sohom Bhattacharya",
+        "Subhabrata Sen"
+      ],
+      "abstract": "We study causal effect estimation under interference from network data. We work under the chain-graph formulation pioneered in Tchetgen Tchetgen et. al (2021). Our first result shows that polynomial time evaluation of treatment effects is computationally hard in this framework without additional assumptions on the underlying chain graph. Subsequently, we assume that the interactions among the study units are governed either by (i) a dense graph or (ii) an i.i.d. Gaussian matrix. In each case, we show that the treatment effects have well-defined limits as the population size diverges to infinity. Additionally, we develop polynomial time algorithms to consistently evaluate the treatment effects in each case. Finally, we estimate the unknown parameters from the observed data using maximum pseudo-likelihood estimates, and establish the stability of our causal effect estimators under this perturbation. Our algorithms provably approximate the causal effects in polynomial time even in low-temperature regimes where the canonical MCMC samplers are slow mixing. For dense graphs, our results use the notion of regularity partitions; for Gaussian interactions, our approach uses ideas from spin glass theory and Approximate Message Passing.",
+      "pdf_url": "https://arxiv.org/pdf/2512.08252v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.08252v1",
+      "published": "2025-12-09",
+      "categories": [
+        "math.ST",
+        "math.PR",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Empowerment Gain and Causal Model Construction: Children and adults are sensitive to controllability and variability in their causal interventions",
+      "authors": [
+        "Eunice Yiu",
+        "Kelsey Allen",
+        "Shiry Ginosar",
+        "Alison Gopnik"
+      ],
+      "abstract": "Learning about the causal structure of the world is a fundamental problem for human cognition. Causal models and especially causal learning have proved to be difficult for large pretrained models using standard techniques of deep learning. In contrast, cognitive scientists have applied advances in our formal understanding of causation in computer science, particularly within the Causal Bayes Net formalism, to understand human causal learning. In the very different tradition of reinforcement learning, researchers have described an intrinsic reward signal called \"empowerment\" which maximizes mutual information between actions and their outcomes. \"Empowerment\" may be an important bridge between classical Bayesian causal learning and reinforcement learning and may help to characterize causal learning in humans and enable it in machines. If an agent learns an accurate causal world model, they will necessarily increase their empowerment, and increasing empowerment will lead to a more accurate causal world model. Empowerment may also explain distinctive features of childrens causal learning, as well as providing a more tractable computational account of how that learning is possible. In an empirical study, we systematically test how children and adults use cues to empowerment to infer causal relations, and design effective causal interventions.",
+      "pdf_url": "https://arxiv.org/pdf/2512.08230v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.08230v1",
+      "published": "2025-12-09",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Spatially-extended Flow Phixer (SpeF-Phixer): A Spatially Extended $\\varphi$-Mixing Framework for Gene Regulatory Causal Inference in Spatial Gene Field",
+      "authors": [
+        "Toru Nagasaka",
+        "Takaaki Tachibana",
+        "Yukari Adachi",
+        "Hiroki Kagiyama",
+        "Ryota Ito",
+        "Mitsugu Fujita",
+        "Kimihiro Yamashita",
+        "Yoshihiro Kakeji"
+      ],
+      "abstract": "Background and objective: Spatial transcriptomics provides rich spatial context but lacks sufficient resolution for large-scale causal inference. We developed SpeF-Phixer, a spatially extended phi-mixing framework integrating whole-slide image (WSI)-derived spatial cell distributions with mapped scRNA-seq expression fields to infer directed gene regulatory triplets with spatial coherence. Methods: Using CD103/CD8-immunostained colorectal cancer WSIs and publicly available scRNA-seq datasets, spatial gene fields were constructed around mapped cells and discretized for signed phi-mixing computation. Pairwise dependencies, directional signs, and triplet structures were evaluated through kNN-based neighborhood screening and bootstrap consensus inference. Mediation and convergence were distinguished using generalized additive models (GAMs), with spatial validity assessed by real-null comparisons and database-backed direction checks. Results: Across tissue patches, the pipeline reduced approximately 3.6x10^4 triplet candidates to a reproducible consensus set (approximately 3x10^2 per patch). The downstream edge (Y to Z) showed significant directional bias consistent with curated regulatory databases. Spatial path tracing demonstrated markedly higher coherence for real triplets than for null controls, indicating that inferred chains represent biologically instantiated regulatory flows. Conclusion: SpeF-Phixer extracts spatially coherent, directionally consistent gene regulatory triplets from histological images. This framework bridges single-cell molecular profiles with microenvironmental organization and provides a scalable foundation for constructing spatially informed causal gene networks.",
+      "pdf_url": "https://arxiv.org/pdf/2512.08202v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.08202v1",
+      "published": "2025-12-09",
+      "categories": [
+        "q-bio.QM"
+      ]
+    },
     {
       "title": "Large Causal Models from Large Language Models",
       "authors": [
@@ -61,123 +157,6 @@
       "published": "2025-12-07",
       "categories": [
         "econ.EM"
-      ]
-    },
-    {
-      "title": "From Next-Token to Next-Block: A Principled Adaptation Path for Diffusion LLMs",
-      "authors": [
-        "Yuchuan Tian",
-        "Yuchen Liang",
-        "Jiacheng Sun",
-        "Shuo Zhang",
-        "Guangwen Yang",
-        "Yingte Shu",
-        "Sibo Fang",
-        "Tianyu Guo",
-        "Kai Han",
-        "Chao Xu",
-        "Hanting Chen",
-        "Xinghao Chen",
-        "Yunhe Wang"
-      ],
-      "abstract": "Large language models (LLMs) excel at generation but dominant autoregressive (AR) decoding is inherently sequential, creating a throughput bottleneck. Diffusion Language Models (DLMs)--especially block-wise variants--enable parallel generation and intra-block bidirectional reasoning, yet training large DLMs from scratch is costly and wastes the knowledge in mature AR checkpoints. Prior \"adaptation\" attempts either modify logits or randomly grow attention masks to full-sequence diffusion, or simply transplant AR weights into a block-diffusion recipe, leaving a fundamental mismatch between AR causality and block-wise bidirectionality unaddressed. We reframe adaptation as a intra-paradigm path from AR to Block-Diffusion by viewing AR as Block-Diffusion with blocksize=1. Concretely, we design the pathway of adaptation as follows: we use a context-causal attention mask (causal in context, bidirectional only within the active block), an efficient parallel adaptation procedure, an auxiliary AR loss to maximize data utilization and retain pretrained knowledge, and gradual increment of the generation block size. The recipe integrates cleanly with masked block-diffusion and maintains train-inference consistency. Built on these components, NBDiff-7B (Base and Instruct) could inherit the long-context modeling and reasoning capabilities, and achieve state-of-the-art performance among the 7B-class DLMs, delivering strong gains on general-knowledge, math, and code benchmarks over strong baselines. These results demonstrate that principled AR-to-block-diffusion adaptation is an effective and compute-efficient alternative to training DLMs from scratch. Codes: https://github.com/YuchuanTian/NBDiff.",
-      "pdf_url": "https://arxiv.org/pdf/2512.06776v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.06776v1",
-      "published": "2025-12-07",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "WAM-Flow: Parallel Coarse-to-Fine Motion Planning via Discrete Flow Matching for Autonomous Driving",
-      "authors": [
-        "Yifang Xu",
-        "Jiahao Cui",
-        "Feipeng Cai",
-        "Zhihao Zhu",
-        "Hanlin Shang",
-        "Shan Luan",
-        "Mingwang Xu",
-        "Neng Zhang",
-        "Yaoyi Li",
-        "Jia Cai",
-        "Siyu Zhu"
-      ],
-      "abstract": "We introduce WAM-Flow, a vision-language-action (VLA) model that casts ego-trajectory planning as discrete flow matching over a structured token space. In contrast to autoregressive decoders, WAM-Flow performs fully parallel, bidirectional denoising, enabling coarse-to-fine refinement with a tunable compute-accuracy trade-off. Specifically, the approach combines a metric-aligned numerical tokenizer that preserves scalar geometry via triplet-margin learning, a geometry-aware flow objective and a simulator-guided GRPO alignment that integrates safety, ego progress, and comfort rewards while retaining parallel generation. A multi-stage adaptation converts a pre-trained auto-regressive backbone (Janus-1.5B) from causal decoding to non-causal flow model and strengthens road-scene competence through continued multimodal pretraining. Thanks to the inherent nature of consistency model training and parallel decoding inference, WAM-Flow achieves superior closed-loop performance against autoregressive and diffusion-based VLA baselines, with 1-step inference attaining 89.1 PDMS and 5-step inference reaching 90.3 PDMS on NAVSIM v1 benchmark. These results establish discrete flow matching as a new promising paradigm for end-to-end autonomous driving. The code will be publicly available soon.",
-      "pdf_url": "https://arxiv.org/pdf/2512.06112v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.06112v1",
-      "published": "2025-12-05",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Standard and stressed value at risk forecasting using dynamic Bayesian networks",
-      "authors": [
-        "Eden Gross",
-        "Ryan Kruger",
-        "Francois Toerien"
-      ],
-      "abstract": "This study introduces a dynamic Bayesian network (DBN) framework for forecasting value at risk (VaR) and stressed VaR (SVaR) and compares its performance to several commonly applied models. Using daily S&P 500 index returns from 1991 to 2020, we produce 10-day 99% VaR and SVaR forecasts using a rolling period and historical returns for the traditional models, while three DBNs use both historical and forecasted returns. We evaluate the models' forecasting accuracy using standard backtests and forecasting error measures. Results show that autoregressive models deliver the most accurate VaR forecasts, while the DBNs achieve comparable performance to the historical simulation model, despite incorporating forward-looking return forecasts. For SVaR, all models produce highly conservative forecasts, with minimal breaches and limited differentiation in accuracy. While DBNs do not outperform traditional models, they demonstrate feasibility as a forward-looking approach to provide a foundation for future research on integrating causal inference into financial risk forecasting.",
-      "pdf_url": "https://arxiv.org/pdf/2512.05661v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.05661v1",
-      "published": "2025-12-05",
-      "categories": [
-        "q-fin.RM"
-      ]
-    },
-    {
-      "title": "ShaRP: SHAllow-LayeR Pruning for Video Large Language Models Acceleration",
-      "authors": [
-        "Yingjie Xia",
-        "Tao Liu",
-        "Jinglei Shi",
-        "Qingsong Xie",
-        "Heng Guo",
-        "Jian Yang",
-        "Xi Wang"
-      ],
-      "abstract": "Video Large Language Models (VLLMs) face the challenge of high computational load during the pre-filling stage due to the processing of an enormous number of visual tokens. Although attention-based pruning methods are widely used to accelerate inference, trials at early decoder layers often result in significant performance degradation, especially under high compression rates. We argue that while attention-based pruning inherently holds the potential to identify the most relevant visual tokens, its effectiveness in shallow decoder layers is limited by factors such as positional encoding bias and insufficient information interaction. In this paper, we propose an improved attention-based pruning framework, termed ShaRP, that integrates segment-aware causal masking, positional debiasing, and token deduplication for enhanced token selection. It enables effective pruning at shallow layers while maintaining stable performance under high compression rates without retraining. Extensive experiments demonstrate that ShaRP achieves competitive performance across multiple video understanding benchmarks, establishing a new paradigm for accelerating VLLM inference.",
-      "pdf_url": "https://arxiv.org/pdf/2512.05385v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.05385v1",
-      "published": "2025-12-05",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Text Rationalization for Robust Causal Effect Estimation",
-      "authors": [
-        "Lijinghua Zhang",
-        "Hengrui Cai"
-      ],
-      "abstract": "Recent advances in natural language processing have enabled the increasing use of text data in causal inference, particularly for adjusting confounding factors in treatment effect estimation. Although high-dimensional text can encode rich contextual information, it also poses unique challenges for causal identification and estimation. In particular, the positivity assumption, which requires sufficient treatment overlap across confounder values, is often violated at the observational level, when massive text is represented in feature spaces. Redundant or spurious textual features inflate dimensionality, producing extreme propensity scores, unstable weights, and inflated variance in effect estimates. We address these challenges with Confounding-Aware Token Rationalization (CATR), a framework that selects a sparse necessary subset of tokens using a residual-independence diagnostic designed to preserve confounding information sufficient for unconfoundedness. By discarding irrelevant texts while retaining key signals, CATR mitigates observational-level positivity violations and stabilizes downstream causal effect estimators. Experiments on synthetic data and a real-world study using the MIMIC-III database demonstrate that CATR yields more accurate, stable, and interpretable causal effect estimates than existing baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2512.05373v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.05373v1",
-      "published": "2025-12-05",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Learning Causality for Longitudinal Data",
-      "authors": [
-        "Mouad EL Bouchattaoui"
-      ],
-      "abstract": "This thesis develops methods for causal inference and causal representation learning (CRL) in high-dimensional, time-varying data.\n  The first contribution introduces the Causal Dynamic Variational Autoencoder (CDVAE), a model for estimating Individual Treatment Effects (ITEs) by capturing unobserved heterogeneity in treatment response driven by latent risk factors that affect only outcomes. CDVAE comes with theoretical guarantees on valid latent adjustment and generalization bounds for ITE error. Experiments on synthetic and real datasets show that CDVAE outperforms baselines, and that state-of-the-art models greatly improve when augmented with its latent substitutes, approaching oracle performance without access to true adjustment variables.\n  The second contribution proposes an efficient framework for long-term counterfactual regression based on RNNs enhanced with Contrastive Predictive Coding (CPC) and InfoMax. It captures long-range dependencies under time-varying confounding while avoiding the computational cost of transformers, achieving state-of-the-art results and introducing CPC into causal inference.\n  The third contribution advances CRL by addressing how latent causes manifest in observed variables. We introduce a model-agnostic interpretability layer based on the geometry of the decoder Jacobian. A sparse self-expression prior induces modular, possibly overlapping groups of observed features aligned with shared latent influences. We provide recovery guarantees in both disjoint and overlapping settings and show that meaningful latent-to-observed structure can be recovered without anchor features or single-parent assumptions. Scalable Jacobian-based regularization techniques are also developed.",
-      "pdf_url": "https://arxiv.org/pdf/2512.04980v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.04980v1",
-      "published": "2025-12-04",
-      "categories": [
-        "stat.ML",
-        "cs.IT",
-        "cs.LG"
       ]
     }
   ]
