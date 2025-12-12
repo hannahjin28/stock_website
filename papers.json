@@ -1,6 +1,85 @@
 {
-  "last_updated": "2025-12-11T00:57:45.651669",
+  "last_updated": "2025-12-12T00:56:42.410652",
   "papers": [
+    {
+      "title": "A Conversation with Mike West",
+      "authors": [
+        "Hedibert F. Lopes",
+        "Filippo Ascolani"
+      ],
+      "abstract": "Mike West is currently the Arts & Sciences Distinguished Professor Emeritus of Statistics and Decision Sciences at Duke University. Mike's research in Bayesian analysis spans multiple interlinked areas: theory and methods of dynamic models in time series analysis, foundations of inference and decision analysis, multivariate and latent structure analysis, stochastic computation and optimisation, among others. Inter-disciplinary R&D has ranged across applications in commercial forecasting, dynamic networks, finance, econometrics, signal processing, climatology, systems biology, genomics and neuroscience, among other areas. Among Mike's currently active research areas are forecasting, causal prediction and decision analysis in business, economic policy and finance, as well as in personal decision making. Mike led the development of academic statistics at Duke University from 1990-2002, and has been broadly engaged in professional leadership elsewhere. He is past president of the International Society for Bayesian Analysis (ISBA), and has served in founding roles and as board member for several professional societies, national and international centres and institutes. Recipient of numerous awards, Mike has been active in research with various companies, banks, government agencies and academic centres, co-founder of a successful biotechnology company, and board member for several financial and IT companies. He has published 4 books, several edited volumes and over 200 papers. Mike has worked with many undergraduate and Master's research students, and as of 2025 has mentored around 65 primary PhD students and postdoctoral associates who moved to academic, industrial or governmental positions involving advanced statistical and data science research.",
+      "pdf_url": "https://arxiv.org/pdf/2512.09790v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.09790v1",
+      "published": "2025-12-10",
+      "categories": [
+        "stat.OT"
+      ]
+    },
+    {
+      "title": "Temporal Windows of Integration for Multisensory Wireless Systems as Enablers of Physical AI",
+      "authors": [
+        "Anup Mishra",
+        "João Henrique Inacio de Souza",
+        "Petar Popovski"
+      ],
+      "abstract": "Physical artificial intelligence (AI) refers to the AI that interacts with the physical world in real time. Similar to multisensory perception, Physical AI makes decisions based on multimodal updates from sensors and devices. Physical AI thus operates with a finite spatial footprint of its sensory tributaries. The multimodal updates traverse heterogeneous and unreliable paths, involving wireless links. Throughput or latency guarantees do not ensure correct decision-making, as misaligned, misordered, or stale inputs still yield wrong inferences. Preserving decision-time coherence hinges on three timing primitives at the network-application interface: (i) simultaneity, a short coincidence window that groups measurements as co-temporal, (ii) causality, path-wise delivery that never lets a consequence precede its precursor, and (iii) usefulness, a validity horizon that drops information too stale to influence the current action. In this work, we focus on usefulness and adopt temporal window of integration (TWI)-Causality: the TWI enforces decision-time usefulness by assuming path-wise causal consistency and cross-path simultaneity are handled upstream. We model end-to-end path delay as the sum of sensing/propagation, computation, and access/transmission latencies, and formulate network design as minimizing the validity horizon under a delivery reliability constraint. In effect, this calibrates delay-reliability budgets for a timing-aware system operating over sensors within a finite spatial footprint. The joint choice of horizon and per-path reliability is cast as a convex optimization problem, solved to global optimality to obtain the minimal horizon and per-path allocation of reliability. This is compared favourably to a benchmark based on uniform-after-threshold allocation. Overall, this study contributes to timing-aware Physical AI in next-generation networks.",
+      "pdf_url": "https://arxiv.org/pdf/2512.09589v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.09589v1",
+      "published": "2025-12-10",
+      "categories": [
+        "eess.SP"
+      ]
+    },
+    {
+      "title": "Multiply-robust Estimator of Cumulative Incidence Function Difference for Right-Censored Competing Risks Data",
+      "authors": [
+        "Yifei Tian",
+        "Ying Wu"
+      ],
+      "abstract": "In causal inference, estimating the average treatment effect is a central objective, and in the context of competing risks data, this effect can be quantified by the cause-specific cumulative incidence function (CIF) difference. While doubly robust estimators give a more robust way to estimate the causal effect from the observational study, they remain inconsistent if both models are misspecified. To improve the robustness, we develop a multiply robust estimator for the difference in cause-specific CIFs using right-censored competing risks data. The proposed framework integrates the pseudo-value approach, which transforms the censored, time-dependent CIF into a complete-data outcome, with the multiply robust estimation framework. By specifying multiple candidate models for both the propensity score and the outcome regression, the resulting estimator is consistent and asymptotically unbiased, provided that at least one of the multiple propensity score or outcome regression models is correctly specified. Simulation studies show our multiply robust estimator remains virtually unbiased and maintains nominal coverage rates under various model misspecification scenarios and a wide range of choices for the censoring rate. Finally, the proposed multiply robust model is illustrated using the Right Heart Catheterization dataset.",
+      "pdf_url": "https://arxiv.org/pdf/2512.09433v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.09433v1",
+      "published": "2025-12-10",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Prenatal alcohol exposure and child cognition: semi-continuous exposures, causal inference and evidence synthesis",
+      "authors": [
+        "Xiaoya Wang",
+        "Richard J. Cook",
+        "Yeying Zhu",
+        "Tugba Akkaya-Hocagil",
+        "R. Colin Carter",
+        "Sandra W. Jacobson",
+        "Joseph L. Jacobson",
+        "Louise M. Ryan"
+      ],
+      "abstract": "We address the challenge of causal inference status and the dose-response effects with a semi-continuous exposure. A two-stage approach is proposed using estimating equation for multiple outcomes with large sample properties derived for the resulting estimators. Homogeneity tests are developed to assess whether causal effects of exposure status and the dose-response effects are the same across multiple outcomes. A global homogeneity test is also developed to assess whether the effect of exposure status (exposed/not exposed) and the dose-response effect of the continuous exposure level are each equal across all outcomes. The methods of estimation and testing are rigorously evaluated in simulation studies and applied to a motivating study on the effects of prenatal alcohol exposure on childhood cognition defined by executive function (EF), academic achievement in math, and learning and memory (LM).",
+      "pdf_url": "https://arxiv.org/pdf/2512.09237v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.09237v1",
+      "published": "2025-12-10",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Complementary strengths of the Neyman-Rubin and graphical causal frameworks",
+      "authors": [
+        "Tetiana Gorbach",
+        "Xavier de Luna",
+        "Juha Karvanen",
+        "Ingeborg Waernbaum"
+      ],
+      "abstract": "This article contributes to the discussion on the relationship between the Neyman-Rubin and the graphical frameworks for causal inference. We present specific examples of data-generating mechanisms - such as those involving undirected or deterministic relationships and cycles - where analyses using a directed acyclic graph are challenging, but where the tools from the Neyman-Rubin causal framework are readily applicable. We also provide examples of data-generating mechanisms with M-bias, trapdoor variables, and complex front-door structures, where the application of the Neyman-Rubin approach is complicated, but the graphical approach is directly usable. The examples offer insights into commonly used causal inference frameworks and aim to improve comprehension of the languages for causal reasoning among a broad audience.",
+      "pdf_url": "https://arxiv.org/pdf/2512.09130v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.09130v1",
+      "published": "2025-12-09",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Prediction Intervals for Individual Treatment Effects in a Multiple Decision Point Framework using Conformal Inference",
       "authors": [
@@ -75,88 +154,6 @@
       "published": "2025-12-09",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Spatially-extended Flow Phixer (SpeF-Phixer): A Spatially Extended $\\varphi$-Mixing Framework for Gene Regulatory Causal Inference in Spatial Gene Field",
-      "authors": [
-        "Toru Nagasaka",
-        "Takaaki Tachibana",
-        "Yukari Adachi",
-        "Hiroki Kagiyama",
-        "Ryota Ito",
-        "Mitsugu Fujita",
-        "Kimihiro Yamashita",
-        "Yoshihiro Kakeji"
-      ],
-      "abstract": "Background and objective: Spatial transcriptomics provides rich spatial context but lacks sufficient resolution for large-scale causal inference. We developed SpeF-Phixer, a spatially extended phi-mixing framework integrating whole-slide image (WSI)-derived spatial cell distributions with mapped scRNA-seq expression fields to infer directed gene regulatory triplets with spatial coherence. Methods: Using CD103/CD8-immunostained colorectal cancer WSIs and publicly available scRNA-seq datasets, spatial gene fields were constructed around mapped cells and discretized for signed phi-mixing computation. Pairwise dependencies, directional signs, and triplet structures were evaluated through kNN-based neighborhood screening and bootstrap consensus inference. Mediation and convergence were distinguished using generalized additive models (GAMs), with spatial validity assessed by real-null comparisons and database-backed direction checks. Results: Across tissue patches, the pipeline reduced approximately 3.6x10^4 triplet candidates to a reproducible consensus set (approximately 3x10^2 per patch). The downstream edge (Y to Z) showed significant directional bias consistent with curated regulatory databases. Spatial path tracing demonstrated markedly higher coherence for real triplets than for null controls, indicating that inferred chains represent biologically instantiated regulatory flows. Conclusion: SpeF-Phixer extracts spatially coherent, directionally consistent gene regulatory triplets from histological images. This framework bridges single-cell molecular profiles with microenvironmental organization and provides a scalable foundation for constructing spatially informed causal gene networks.",
-      "pdf_url": "https://arxiv.org/pdf/2512.08202v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.08202v1",
-      "published": "2025-12-09",
-      "categories": [
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "Large Causal Models from Large Language Models",
-      "authors": [
-        "Sridhar Mahadevan"
-      ],
-      "abstract": "We introduce a new paradigm for building large causal models (LCMs) that exploits the enormous potential latent in today's large language models (LLMs). We describe our ongoing experiments with an implemented system called DEMOCRITUS (Decentralized Extraction of Manifold Ontologies of Causal Relations Integrating Topos Universal Slices) aimed at building, organizing, and visualizing LCMs that span disparate domains extracted from carefully targeted textual queries to LLMs. DEMOCRITUS is methodologically distinct from traditional narrow domain and hypothesis centered causal inference that builds causal models from experiments that produce numerical data. A high-quality LLM is used to propose topics, generate causal questions, and extract plausible causal statements from a diverse range of domains. The technical challenge is then to take these isolated, fragmented, potentially ambiguous and possibly conflicting causal claims, and weave them into a coherent whole, converting them into relational causal triples and embedding them into a LCM. Addressing this technical challenge required inventing new categorical machine learning methods, which we can only briefly summarize in this paper, as it is focused more on the systems side of building DEMOCRITUS. We describe the implementation pipeline for DEMOCRITUS comprising of six modules, examine its computational cost profile to determine where the current bottlenecks in scaling the system to larger models. We describe the results of using DEMOCRITUS over a wide range of domains, spanning archaeology, biology, climate change, economics, medicine and technology. We discuss the limitations of the current DEMOCRITUS system, and outline directions for extending its capabilities.",
-      "pdf_url": "https://arxiv.org/pdf/2512.07796v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.07796v1",
-      "published": "2025-12-08",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Generating Storytelling Images with Rich Chains-of-Reasoning",
-      "authors": [
-        "Xiujie Song",
-        "Qi Jia",
-        "Shota Watanabe",
-        "Xiaoyi Pang",
-        "Ruijie Chen",
-        "Mengyue Wu",
-        "Kenny Q. Zhu"
-      ],
-      "abstract": "An image can convey a compelling story by presenting rich, logically connected visual clues. These connections form Chains-of-Reasoning (CoRs) within the image, enabling viewers to infer events, causal relationships, and other information, thereby understanding the underlying story. In this paper, we focus on these semantically rich images and define them as Storytelling Images. Such images have diverse applications beyond illustration creation and cognitive screening, leveraging their ability to convey multi-layered information visually and inspire active interpretation. However, due to their complex semantic nature, Storytelling Images are inherently challenging to create, and thus remain relatively scarce. To address this challenge, we introduce the Storytelling Image Generation task, which explores how generative AI models can be leveraged to create such images. Specifically, we propose a two-stage pipeline, StorytellingPainter, which combines the creative reasoning abilities of Large Language Models (LLMs) with the visual synthesis capabilities of Text-to-Image (T2I) models to generate Storytelling Images. Alongside this pipeline, we develop a dedicated evaluation framework comprising three main evaluators: a Semantic Complexity Evaluator, a KNN-based Diversity Evaluator and a Story-Image Alignment Evaluator. Given the critical role of story generation in the Storytelling Image Generation task and the performance disparity between open-source and proprietary LLMs, we further explore tailored training strategies to reduce this gap, resulting in a series of lightweight yet effective models named Mini-Storytellers. Experimental results demonstrate the feasibility and effectiveness of our approaches. The code is available at https://github.com/xiujiesong/StorytellingImageGeneration.",
-      "pdf_url": "https://arxiv.org/pdf/2512.07198v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.07198v1",
-      "published": "2025-12-08",
-      "categories": [
-        "cs.CV",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "SLOACI: Surrogate-Leveraged Online Adaptive Causal Inference",
-      "authors": [
-        "Yingying Fan",
-        "Zihan Wang",
-        "Waverly Wei"
-      ],
-      "abstract": "Adaptive experimental designs have gained increasing attention across a range of domains. In this paper, we propose a new methodological framework, surrogate-leveraged online adaptive causal inference (SLOACI), which integrates predictive surrogate outcomes into adaptive designs to enhance efficiency. For downstream analysis, we construct the adaptive augmented inverse probability weighting estimator for the average treatment effect using collected data. Our procedure remains robust even when surrogates are noisy or weak. We provide a comprehensive theoretical foundation for SLOACI. Under the asymptotic regime, we show that the proposed estimator attains the semiparametric efficiency bound. From a non-asymptotic perspective, we derive a regret bound to provide practical insights. We also develop a toolbox of sequential testing procedures that accommodates both asymptotic and non-asymptotic regimes, allowing experimenters to choose the perspective that best aligns with their practical needs. Extensive simulations and a synthetic case study are conducted to showcase the superior finite-sample performance of our method.",
-      "pdf_url": "https://arxiv.org/pdf/2512.06872v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.06872v1",
-      "published": "2025-12-07",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Making Event Study Plots Honest: A Functional Data Approach to Causal Inference",
-      "authors": [
-        "Chencheng Fang",
-        "Dominik Liebl"
-      ],
-      "abstract": "Event study plots are the centerpiece of Difference-in-Differences (DiD) analysis, but current plotting methods cannot provide honest causal inference when the parallel trends and/or no-anticipation assumptions fail. We introduce a novel functional data approach to DiD that directly enables honest causal inference via event study plots. Our DiD estimator converges to a Gaussian process in the Banach space of continuous functions, enabling fast and powerful simultaneous confidence bands. This theoretical contribution allows us to turn an event study plot into a rigorous honest causal inference tool through equivalence and relevance testing: Honest reference bands can be validated using equivalence testing in the pre-anticipation period, and honest causal effects can be tested using relevance testing in the post-treatment period. We demonstrate the performance of the method in simulations and two case studies.",
-      "pdf_url": "https://arxiv.org/pdf/2512.06804v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.06804v1",
-      "published": "2025-12-07",
-      "categories": [
-        "econ.EM"
       ]
     }
   ]
