@@ -1,6 +1,70 @@
 {
-  "last_updated": "2025-12-12T00:56:42.410652",
+  "last_updated": "2025-12-13T00:53:47.518587",
   "papers": [
+    {
+      "title": "Topology Identification and Inference over Graphs",
+      "authors": [
+        "Gonzalo Mateos",
+        "Yanning Shen",
+        "Georgios B. Giannakis",
+        "Ananthram Swami"
+      ],
+      "abstract": "Topology identification and inference of processes evolving over graphs arise in timely applications involving brain, transportation, financial, power, as well as social and information networks. This chapter provides an overview of graph topology identification and statistical inference methods for multidimensional relational data. Approaches for undirected links connecting graph nodes are outlined, going all the way from correlation metrics to covariance selection, and revealing ties with smooth signal priors. To account for directional (possibly causal) relations among nodal variables and address the limitations of linear time-invariant models in handling dynamic as well as nonlinear dependencies, a principled framework is surveyed to capture these complexities through judiciously selected kernels from a prescribed dictionary. Generalizations are also described via structural equations and vector autoregressions that can exploit attributes such as low rank, sparsity, acyclicity, and smoothness to model dynamic processes over possibly time-evolving topologies. It is argued that this approach supports both batch and online learning algorithms with convergence rate guarantees, is amenable to tensor (that is, multi-way array) formulations as well as decompositions that are well-suited for multidimensional network data, and can seamlessly leverage high-order statistical information.",
+      "pdf_url": "https://arxiv.org/pdf/2512.10183v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.10183v1",
+      "published": "2025-12-11",
+      "categories": [
+        "eess.SP",
+        "cs.SI",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Inference for Batched Adaptive Experiments",
+      "authors": [
+        "Jan Kemper",
+        "Davud Rostam-Afschar"
+      ],
+      "abstract": "The advantages of adaptive experiments have led to their rapid adoption in economics, other fields, as well as among practitioners. However, adaptive experiments pose challenges for causal inference. This note suggests a BOLS (batched ordinary least squares) test statistic for inference of treatment effects in adaptive experiments. The statistic provides a precision-equalizing aggregation of per-period treatment-control differences under heteroskedasticity. The combined test statistic is a normalized average of heteroskedastic per-period z-statistics and can be used to construct asymptotically valid confidence intervals. We provide simulation results comparing rejection rates in the typical case with few treatment periods and few (or many) observations per batch.",
+      "pdf_url": "https://arxiv.org/pdf/2512.10156v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.10156v1",
+      "published": "2025-12-10",
+      "categories": [
+        "econ.EM",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Rethinking Causal Discovery Through the Lens of Exchangeability",
+      "authors": [
+        "Tiago Brogueira",
+        "Mário Figueiredo"
+      ],
+      "abstract": "Causal discovery methods have traditionally been developed under two distinct regimes: independent and identically distributed (i.i.d.) and timeseries data, each governed by separate modelling assumptions. In this paper, we argue that the i.i.d. setting can and should be reframed in terms of exchangeability, a strictly more general symmetry principle. We present the implications of this reframing, alongside two core arguments: (1) a conceptual argument, based on extending the dependency of experimental causal inference on exchangeability to causal discovery; and (2) an empirical argument, showing that many existing i.i.d. causal-discovery methods are predicated on exchangeability assumptions, and that the sole extensive widely-used real-world \"i.i.d.\" benchmark (the Tübingen dataset) consists mainly of exchangeable (and not i.i.d.) examples. Building on this insight, we introduce a novel synthetic dataset that enforces only the exchangeability assumption, without imposing the stronger i.i.d. assumption. We show that our exchangeable synthetic dataset mirrors the statistical structure of the real-world \"i.i.d.\" dataset more closely than all other i.i.d. synthetic datasets. Furthermore, we demonstrate the predictive capability of this dataset by proposing a neural-network-based causal-discovery algorithm trained exclusively on our synthetic dataset, and which performs similarly to other state-of-the-art i.i.d. methods on the real-world benchmark.",
+      "pdf_url": "https://arxiv.org/pdf/2512.10152v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.10152v1",
+      "published": "2025-12-10",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Microfoundations and the Causal Interpretation of Price-Exposure Designs",
+      "authors": [
+        "Luca Moreno-Louzada",
+        "Guilherme Figueira",
+        "Pedro Picchetti"
+      ],
+      "abstract": "This paper studies regional exposure designs that use commodity prices as instruments to study local effects of aggregate shocks. Unlike standard shift share designs that leverage differential exposure to many shocks, the price exposure relies on exogenous variation from a single shock, leading to challenges for both identification and inference. We motivate the design using a multi sector labor model. Under the model and a potential outcomes framework, we characterize the 2SLS and TWFE estimands as weighted averages of region and sector specific effects plus contamination terms driven by the covariance structure of prices and by general-equilibrium output responses. We derive conditions under which these estimands have a clear causal interpretation and provide simple sensitivity analysis procedures for violations. Finally, we show that standard inference procedures suffer from an overrejection problem in price-exposure designs. We derive a new standard error estimator and show its desirable finite-sample properties through Monte Carlo simulations. In an application to gold mining and homicides in the Amazon, the price exposure standard errors are roughly twice as large as conventional clustered standard errors, making the main effect statistically insignificant.",
+      "pdf_url": "https://arxiv.org/pdf/2512.10076v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.10076v1",
+      "published": "2025-12-10",
+      "categories": [
+        "econ.EM"
+      ]
+    },
     {
       "title": "A Conversation with Mike West",
       "authors": [
@@ -93,67 +157,6 @@
       "categories": [
         "stat.ME",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Inferring Causal Relationships to Improve Caching for Clients with Correlated Requests: Applications to VR",
-      "authors": [
-        "Agrim Bari",
-        "Gustavo de Veciana",
-        "Yuqi Zhou"
-      ],
-      "abstract": "Efficient edge caching reduces latency and alleviates backhaul congestion in modern networks. Traditional caching policies, such as Least Recently Used (LRU) and Least Frequently Used (LFU), perform well under specific request patterns. LRU excels in workloads with strong temporal locality, while LFU is effective when content popularity remains static. However, real-world client requests often exhibit correlations due to shared contexts and coordinated activities. This is particularly evident in Virtual Reality (VR) environments, where groups of clients navigate shared virtual spaces, leading to correlated content requests.\n  In this paper, we introduce the \\textit{grouped client request model}, a generalization of the Independent Reference Model that explicitly captures different types of request correlations. Our theoretical analysis of LRU under this model reveals that the optimal causal caching policy depends on cache size: LFU is optimal for small to moderate caches, while LRU outperforms it for larger caches. To address the limitations of existing policies, we propose Least Following and Recently Used (LFRU), a novel online caching policy that dynamically infers and adapts to causal relationships in client requests to optimize evictions. LFRU prioritizes objects likely to be requested based on inferred dependencies, achieving near-optimal performance compared to the offline optimal Belady policy in structured correlation settings.\n  We develop VR based datasets to evaluate caching policies under realistic correlated requests. Our results show that LFRU consistently performs at least as well as LRU and LFU, outperforming LRU by up to 2.9x and LFU by up to1.9x in certain settings.",
-      "pdf_url": "https://arxiv.org/pdf/2512.08626v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.08626v1",
-      "published": "2025-12-09",
-      "categories": [
-        "cs.NI",
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "From Accuracy to Impact: The Impact-Driven AI Framework (IDAIF) for Aligning Engineering Architecture with Theory of Change",
-      "authors": [
-        "Yong-Woon Kim"
-      ],
-      "abstract": "This paper introduces the Impact-Driven AI Framework (IDAIF), a novel architectural methodology that integrates Theory of Change (ToC) principles with modern artificial intelligence system design. As AI systems increasingly influence high-stakes domains including healthcare, finance, and public policy, the alignment problem--ensuring AI behavior corresponds with human values and intentions--has become critical. Current approaches predominantly optimize technical performance metrics while neglecting the sociotechnical dimensions of AI deployment. IDAIF addresses this gap by establishing a systematic mapping between ToC's five-stage model (Inputs-Activities-Outputs-Outcomes-Impact) and corresponding AI architectural layers (Data Layer-Pipeline Layer-Inference Layer-Agentic Layer-Normative Layer). Each layer incorporates rigorous theoretical foundations: multi-objective Pareto optimization for value alignment, hierarchical multi-agent orchestration for outcome achievement, causal directed acyclic graphs (DAGs) for hallucination mitigation, and adversarial debiasing with Reinforcement Learning from Human Feedback (RLHF) for fairness assurance. We provide formal mathematical formulations for each component and introduce an Assurance Layer that manages assumption failures through guardian architectures. Three case studies demonstrate IDAIF application across healthcare, cybersecurity, and software engineering domains. This framework represents a paradigm shift from model-centric to impact-centric AI development, providing engineers with concrete architectural patterns for building ethical, trustworthy, and socially beneficial AI systems.",
-      "pdf_url": "https://arxiv.org/pdf/2512.08449v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.08449v1",
-      "published": "2025-12-09",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Causal inference under interference: computational barriers and algorithmic solutions",
-      "authors": [
-        "Sohom Bhattacharya",
-        "Subhabrata Sen"
-      ],
-      "abstract": "We study causal effect estimation under interference from network data. We work under the chain-graph formulation pioneered in Tchetgen Tchetgen et. al (2021). Our first result shows that polynomial time evaluation of treatment effects is computationally hard in this framework without additional assumptions on the underlying chain graph. Subsequently, we assume that the interactions among the study units are governed either by (i) a dense graph or (ii) an i.i.d. Gaussian matrix. In each case, we show that the treatment effects have well-defined limits as the population size diverges to infinity. Additionally, we develop polynomial time algorithms to consistently evaluate the treatment effects in each case. Finally, we estimate the unknown parameters from the observed data using maximum pseudo-likelihood estimates, and establish the stability of our causal effect estimators under this perturbation. Our algorithms provably approximate the causal effects in polynomial time even in low-temperature regimes where the canonical MCMC samplers are slow mixing. For dense graphs, our results use the notion of regularity partitions; for Gaussian interactions, our approach uses ideas from spin glass theory and Approximate Message Passing.",
-      "pdf_url": "https://arxiv.org/pdf/2512.08252v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.08252v1",
-      "published": "2025-12-09",
-      "categories": [
-        "math.ST",
-        "math.PR",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Empowerment Gain and Causal Model Construction: Children and adults are sensitive to controllability and variability in their causal interventions",
-      "authors": [
-        "Eunice Yiu",
-        "Kelsey Allen",
-        "Shiry Ginosar",
-        "Alison Gopnik"
-      ],
-      "abstract": "Learning about the causal structure of the world is a fundamental problem for human cognition. Causal models and especially causal learning have proved to be difficult for large pretrained models using standard techniques of deep learning. In contrast, cognitive scientists have applied advances in our formal understanding of causation in computer science, particularly within the Causal Bayes Net formalism, to understand human causal learning. In the very different tradition of reinforcement learning, researchers have described an intrinsic reward signal called \"empowerment\" which maximizes mutual information between actions and their outcomes. \"Empowerment\" may be an important bridge between classical Bayesian causal learning and reinforcement learning and may help to characterize causal learning in humans and enable it in machines. If an agent learns an accurate causal world model, they will necessarily increase their empowerment, and increasing empowerment will lead to a more accurate causal world model. Empowerment may also explain distinctive features of childrens causal learning, as well as providing a more tractable computational account of how that learning is possible. In an empirical study, we systematically test how children and adults use cues to empowerment to infer causal relations, and design effective causal interventions.",
-      "pdf_url": "https://arxiv.org/pdf/2512.08230v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.08230v1",
-      "published": "2025-12-09",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]
