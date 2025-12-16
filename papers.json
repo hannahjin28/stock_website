@@ -1,6 +1,75 @@
 {
-  "last_updated": "2025-12-15T00:59:25.467778",
+  "last_updated": "2025-12-16T00:57:49.471056",
   "papers": [
+    {
+      "title": "Forest Kernel Balancing Weights: Outcome-Guided Features for Causal Inference",
+      "authors": [
+        "Andy A. Shen",
+        "Eli Ben-Michael",
+        "Avi Feller",
+        "Luke Keele",
+        "Jared Murray"
+      ],
+      "abstract": "While balancing covariates between groups is central for observational causal inference, selecting which features to balance remains a challenging problem. Kernel balancing is a promising approach that first estimates a kernel that captures similarity across units and then balances a (possibly low-dimensional) summary of that kernel, indirectly learning important features to balance. In this paper, we propose forest kernel balancing, which leverages the underappreciated fact that tree-based machine learning models, namely random forests and Bayesian additive regression trees (BART), implicitly estimate a kernel based on the co-occurrence of observations in the same terminal leaf node. Thus, even though the resulting kernel is solely a function of baseline features, the selected nonlinearities and other interactions are important for predicting the outcome -- and therefore are important for addressing confounding. Through simulations and applied illustrations, we show that forest kernel balancing leads to meaningful computational and statistical improvement relative to standard kernel methods, which do not incorporate outcome information when learning features.",
+      "pdf_url": "https://arxiv.org/pdf/2512.11751v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.11751v1",
+      "published": "2025-12-12",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Causal Inference in Energy Demand Prediction",
+      "authors": [
+        "Chutian Ma",
+        "Grigorii Pomazkin",
+        "Giacinto Paolo Saggese",
+        "Paul Smith"
+      ],
+      "abstract": "Energy demand prediction is critical for grid operators, industrial energy\n  consumers, and service providers. Energy demand is influenced by multiple\n  factors, including weather conditions (e.g. temperature, humidity, wind\n  speed, solar radiation), and calendar information (e.g. hour of day and\n  month of year), which further affect daily work and life schedules. These\n  factors are causally interdependent, making the problem more complex than\n  simple correlation-based learning techniques satisfactorily allow for. We\n  propose a structural causal model that explains the causal relationship\n  between these variables. A full analysis is performed to validate our causal\n  beliefs, also revealing important insights consistent with prior studies.\n  For example, our causal model reveals that energy demand responds to\n  temperature fluctuations with season-dependent sensitivity. Additionally, we\n  find that energy demand exhibits lower variance in winter due to the\n  decoupling effect between temperature changes and daily activity patterns.\n  We then build a Bayesian model, which takes advantage of the causal insights\n  we learned as prior knowledge. The model is trained and tested on unseen\n  data and yields state-of-the-art performance in the form of a 3.84 percent MAPE on\n  the test set. The model also demonstrates strong robustness, as the\n  cross-validation across two years of data yields an average MAPE of 3.88 percent.",
+      "pdf_url": "https://arxiv.org/pdf/2512.11653v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.11653v1",
+      "published": "2025-12-12",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "JoyAvatar: Real-time and Infinite Audio-Driven Avatar Generation with Autoregressive Diffusion",
+      "authors": [
+        "Chaochao Li",
+        "Ruikui Wang",
+        "Liangbo Zhou",
+        "Jinheng Feng",
+        "Huaishao Luo",
+        "Huan Zhang",
+        "Youzheng Wu",
+        "Xiaodong He"
+      ],
+      "abstract": "Existing DiT-based audio-driven avatar generation methods have achieved considerable progress, yet their broader application is constrained by limitations such as high computational overhead and the inability to synthesize long-duration videos. Autoregressive methods address this problem by applying block-wise autoregressive diffusion methods. However, these methods suffer from the problem of error accumulation and quality degradation. To address this, we propose JoyAvatar, an audio-driven autoregressive model capable of real-time inference and infinite-length video generation with the following contributions: (1) Progressive Step Bootstrapping (PSB), which allocates more denoising steps to initial frames to stabilize generation and reduce error accumulation; (2) Motion Condition Injection (MCI), enhancing temporal coherence by injecting noise-corrupted previous frames as motion condition; and (3) Unbounded RoPE via Cache-Resetting (URCR), enabling infinite-length generation through dynamic positional encoding. Our 1.3B-parameter causal model achieves 16 FPS on a single GPU and achieves competitive results in visual quality, temporal consistency, and lip synchronization.",
+      "pdf_url": "https://arxiv.org/pdf/2512.11423v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.11423v1",
+      "published": "2025-12-12",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Causal Judge Evaluation: Calibrated Surrogate Metrics for LLM Systems",
+      "authors": [
+        "Eddie Landesberg"
+      ],
+      "abstract": "LLM-as-judge evaluation has become the de facto standard for scaling model assessment, but the practice is statistically unsound: uncalibrated scores can invert preferences, naive confidence intervals on uncalibrated scores achieve near-0% coverage, and importance-weighted estimators collapse under limited overlap despite high effective sample size (ESS). We introduce Causal Judge Evaluation (CJE), a framework that fixes all three failures. On n=4,961 Chatbot Arena prompts (after filtering from 5k), CJE achieves 99% pairwise ranking accuracy at full sample size (94% averaged across configurations), matching oracle quality, at 14x lower cost (for ranking 5 policies) by calibrating a 16x cheaper judge on just 5% oracle labels (~250 labels). CJE combines three components: (i) AutoCal-R, reward calibration via mean-preserving isotonic regression; (ii) SIMCal-W, weight stabilization via stacking of S-monotone candidates; and (iii) Oracle-Uncertainty Aware (OUA) inference that propagates calibration uncertainty into confidence intervals. We formalize the Coverage-Limited Efficiency (CLE) diagnostic, which explains why IPS-style estimators fail even when ESS exceeds 90%: the logger rarely visits regions where target policies concentrate. Key findings: SNIPS inverts rankings even with reward calibration (38% pairwise, negative Kendall's tau) due to weight instability; calibrated IPS remains near-random (47%) despite weight stabilization, consistent with CLE; OUA improves coverage from near-0% to ~86% (Direct) and ~96% (stacked-DR), where naive intervals severely under-cover.",
+      "pdf_url": "https://arxiv.org/pdf/2512.11150v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.11150v1",
+      "published": "2025-12-11",
+      "categories": [
+        "stat.ME",
+        "stat.AP",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Topology Identification and Inference over Graphs",
       "authors": [
@@ -92,71 +161,6 @@
       "published": "2025-12-10",
       "categories": [
         "eess.SP"
-      ]
-    },
-    {
-      "title": "Multiply-robust Estimator of Cumulative Incidence Function Difference for Right-Censored Competing Risks Data",
-      "authors": [
-        "Yifei Tian",
-        "Ying Wu"
-      ],
-      "abstract": "In causal inference, estimating the average treatment effect is a central objective, and in the context of competing risks data, this effect can be quantified by the cause-specific cumulative incidence function (CIF) difference. While doubly robust estimators give a more robust way to estimate the causal effect from the observational study, they remain inconsistent if both models are misspecified. To improve the robustness, we develop a multiply robust estimator for the difference in cause-specific CIFs using right-censored competing risks data. The proposed framework integrates the pseudo-value approach, which transforms the censored, time-dependent CIF into a complete-data outcome, with the multiply robust estimation framework. By specifying multiple candidate models for both the propensity score and the outcome regression, the resulting estimator is consistent and asymptotically unbiased, provided that at least one of the multiple propensity score or outcome regression models is correctly specified. Simulation studies show our multiply robust estimator remains virtually unbiased and maintains nominal coverage rates under various model misspecification scenarios and a wide range of choices for the censoring rate. Finally, the proposed multiply robust model is illustrated using the Right Heart Catheterization dataset.",
-      "pdf_url": "https://arxiv.org/pdf/2512.09433v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.09433v1",
-      "published": "2025-12-10",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Prenatal alcohol exposure and child cognition: semi-continuous exposures, causal inference and evidence synthesis",
-      "authors": [
-        "Xiaoya Wang",
-        "Richard J. Cook",
-        "Yeying Zhu",
-        "Tugba Akkaya-Hocagil",
-        "R. Colin Carter",
-        "Sandra W. Jacobson",
-        "Joseph L. Jacobson",
-        "Louise M. Ryan"
-      ],
-      "abstract": "We address the challenge of causal inference status and the dose-response effects with a semi-continuous exposure. A two-stage approach is proposed using estimating equation for multiple outcomes with large sample properties derived for the resulting estimators. Homogeneity tests are developed to assess whether causal effects of exposure status and the dose-response effects are the same across multiple outcomes. A global homogeneity test is also developed to assess whether the effect of exposure status (exposed/not exposed) and the dose-response effect of the continuous exposure level are each equal across all outcomes. The methods of estimation and testing are rigorously evaluated in simulation studies and applied to a motivating study on the effects of prenatal alcohol exposure on childhood cognition defined by executive function (EF), academic achievement in math, and learning and memory (LM).",
-      "pdf_url": "https://arxiv.org/pdf/2512.09237v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.09237v1",
-      "published": "2025-12-10",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Complementary strengths of the Neyman-Rubin and graphical causal frameworks",
-      "authors": [
-        "Tetiana Gorbach",
-        "Xavier de Luna",
-        "Juha Karvanen",
-        "Ingeborg Waernbaum"
-      ],
-      "abstract": "This article contributes to the discussion on the relationship between the Neyman-Rubin and the graphical frameworks for causal inference. We present specific examples of data-generating mechanisms - such as those involving undirected or deterministic relationships and cycles - where analyses using a directed acyclic graph are challenging, but where the tools from the Neyman-Rubin causal framework are readily applicable. We also provide examples of data-generating mechanisms with M-bias, trapdoor variables, and complex front-door structures, where the application of the Neyman-Rubin approach is complicated, but the graphical approach is directly usable. The examples offer insights into commonly used causal inference frameworks and aim to improve comprehension of the languages for causal reasoning among a broad audience.",
-      "pdf_url": "https://arxiv.org/pdf/2512.09130v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.09130v1",
-      "published": "2025-12-09",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Prediction Intervals for Individual Treatment Effects in a Multiple Decision Point Framework using Conformal Inference",
-      "authors": [
-        "Swaraj Bose",
-        "Walter Dempsey"
-      ],
-      "abstract": "Accurately quantifying uncertainty of individual treatment effects (ITEs) across multiple decision points is crucial for personalized decision-making in fields such as healthcare, finance, education, and online marketplaces. Previous work has focused on predicting non-causal longitudinal estimands or constructing prediction bands for ITEs using cross-sectional data based on exchangeability assumptions. We propose a novel method for constructing prediction intervals using conformal inference techniques for time-varying ITEs with weaker assumptions than prior literature. We guarantee a lower bound for coverage, which is dependent on the degree of non-exchangeability in the data. Although our method is broadly applicable across decision-making contexts, we support our theoretical claims with simulations emulating micro-randomized trials (MRTs) -- a sequential experimental design for mobile health (mHealth) studies. We demonstrate the practical utility of our method by applying it to a real-world MRT - the Intern Health Study (IHS).",
-      "pdf_url": "https://arxiv.org/pdf/2512.08828v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.08828v1",
-      "published": "2025-12-09",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
       ]
     }
   ]
