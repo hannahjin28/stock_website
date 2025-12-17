@@ -1,166 +1,164 @@
 {
-  "last_updated": "2025-12-16T00:57:49.471056",
+  "last_updated": "2025-12-17T00:52:52.884753",
   "papers": [
     {
-      "title": "Forest Kernel Balancing Weights: Outcome-Guided Features for Causal Inference",
+      "title": "A comparative overview of win ratio and joint frailty models for recurrent event endpoints with applications in oncology and cardiology",
       "authors": [
-        "Andy A. Shen",
-        "Eli Ben-Michael",
-        "Avi Feller",
-        "Luke Keele",
-        "Jared Murray"
+        "Adrien Orué",
+        "Derek Dinart",
+        "Laurent Billot",
+        "Carine Bellera",
+        "Virginie Rondeau"
       ],
-      "abstract": "While balancing covariates between groups is central for observational causal inference, selecting which features to balance remains a challenging problem. Kernel balancing is a promising approach that first estimates a kernel that captures similarity across units and then balances a (possibly low-dimensional) summary of that kernel, indirectly learning important features to balance. In this paper, we propose forest kernel balancing, which leverages the underappreciated fact that tree-based machine learning models, namely random forests and Bayesian additive regression trees (BART), implicitly estimate a kernel based on the co-occurrence of observations in the same terminal leaf node. Thus, even though the resulting kernel is solely a function of baseline features, the selected nonlinearities and other interactions are important for predicting the outcome -- and therefore are important for addressing confounding. Through simulations and applied illustrations, we show that forest kernel balancing leads to meaningful computational and statistical improvement relative to standard kernel methods, which do not incorporate outcome information when learning features.",
-      "pdf_url": "https://arxiv.org/pdf/2512.11751v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.11751v1",
-      "published": "2025-12-12",
+      "abstract": "Composite endpoints that combine recurrent non-fatal events with a terminal event are increasingly used in randomized clinical trials, yet conventional time-to-first event analyses may obscure clinically relevant information. We compared two statistical frameworks tailored to such endpoints: the joint frailty model (JFM) and the last-event assisted recurrent-event win ratio (LWR). The JFM specifies proportional hazards for the recurrent and terminal events linked through a shared frailty, yielding covariate-adjusted, component-specific hazard ratios that account for informative recurrences and dependence with death. The LWR is a nonparametric, prioritized pairwise comparison that incorporates all observed events over follow-up and summarizes a population-level benefit of treatment while respecting a pre-specified hierarchy between death and recurrences. We first assessed the performance of the methods using simulations that varied both the gamma-frailty variance and the event rates. Next, we investigated these two frameworks using practical clinical applications, to assess the performance of the methods and to estimate the sample size required to achieve adequate power. These two approaches delivered complementary insights. The JFM provided component-specific estimates, while the LWR led to a summary measure of treatment effect with direction. Power was systematically improved with JFM, which thus appeared as the most reliable approach for inference and sample size estimation. Methodological extensions of the LWR to appropriately handle censoring and to formalize causal estimands remain a promising direction for future research.",
+      "pdf_url": "https://arxiv.org/pdf/2512.13629v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.13629v1",
+      "published": "2025-12-15",
       "categories": [
-        "stat.ME",
-        "stat.AP"
+        "stat.ME"
       ]
     },
     {
-      "title": "Causal Inference in Energy Demand Prediction",
+      "title": "ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding",
       "authors": [
-        "Chutian Ma",
-        "Grigorii Pomazkin",
-        "Giacinto Paolo Saggese",
-        "Paul Smith"
+        "Jia-Nan Li",
+        "Jian Guan",
+        "Wei Wu",
+        "Chongxuan Li"
       ],
-      "abstract": "Energy demand prediction is critical for grid operators, industrial energy\n  consumers, and service providers. Energy demand is influenced by multiple\n  factors, including weather conditions (e.g. temperature, humidity, wind\n  speed, solar radiation), and calendar information (e.g. hour of day and\n  month of year), which further affect daily work and life schedules. These\n  factors are causally interdependent, making the problem more complex than\n  simple correlation-based learning techniques satisfactorily allow for. We\n  propose a structural causal model that explains the causal relationship\n  between these variables. A full analysis is performed to validate our causal\n  beliefs, also revealing important insights consistent with prior studies.\n  For example, our causal model reveals that energy demand responds to\n  temperature fluctuations with season-dependent sensitivity. Additionally, we\n  find that energy demand exhibits lower variance in winter due to the\n  decoupling effect between temperature changes and daily activity patterns.\n  We then build a Bayesian model, which takes advantage of the causal insights\n  we learned as prior knowledge. The model is trained and tested on unseen\n  data and yields state-of-the-art performance in the form of a 3.84 percent MAPE on\n  the test set. The model also demonstrates strong robustness, as the\n  cross-validation across two years of data yields an average MAPE of 3.88 percent.",
-      "pdf_url": "https://arxiv.org/pdf/2512.11653v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.11653v1",
-      "published": "2025-12-12",
+      "abstract": "Autoregressive models (ARMs) are hindered by slow sequential inference. While masked diffusion models (MDMs) offer a parallel alternative, they suffer from critical drawbacks: high computational overhead from precluding Key-Value (KV) caching, and incoherent generation arising from learning dependencies over an intractable space of token combinations. To address these limitations, we introduce ReFusion, a novel masked diffusion model that achieves superior performance and efficiency by elevating parallel decoding from the token level to a higher slot level, where each slot is a fixed-length, contiguous sub-sequence. This is achieved through an iterative ``plan-and-infill'' decoding process: a diffusion-based planning step first identifies a set of weakly dependent slots, and an autoregressive infilling step then decodes these selected slots in parallel. The slot-based design simultaneously unlocks full KV cache reuse with a unified causal framework and reduces the learning complexity from the token combination space to a manageable slot-level permutation space. Extensive experiments on seven diverse benchmarks show that ReFusion not only overwhelmingly surpasses prior MDMs with 34% performance gains and an over 18$\\times$ speedup on average, but also bridges the performance gap to strong ARMs while maintaining a 2.33$\\times$ average speedup.",
+      "pdf_url": "https://arxiv.org/pdf/2512.13586v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.13586v1",
+      "published": "2025-12-15",
       "categories": [
-        "cs.AI"
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
       ]
     },
     {
-      "title": "JoyAvatar: Real-time and Infinite Audio-Driven Avatar Generation with Autoregressive Diffusion",
+      "title": "CausalCLIP: Causally-Informed Feature Disentanglement and Filtering for Generalizable Detection of Generated Images",
       "authors": [
-        "Chaochao Li",
-        "Ruikui Wang",
-        "Liangbo Zhou",
-        "Jinheng Feng",
-        "Huaishao Luo",
-        "Huan Zhang",
-        "Youzheng Wu",
-        "Xiaodong He"
+        "Bo Liu",
+        "Qiao Qin",
+        "Qinghui He"
       ],
-      "abstract": "Existing DiT-based audio-driven avatar generation methods have achieved considerable progress, yet their broader application is constrained by limitations such as high computational overhead and the inability to synthesize long-duration videos. Autoregressive methods address this problem by applying block-wise autoregressive diffusion methods. However, these methods suffer from the problem of error accumulation and quality degradation. To address this, we propose JoyAvatar, an audio-driven autoregressive model capable of real-time inference and infinite-length video generation with the following contributions: (1) Progressive Step Bootstrapping (PSB), which allocates more denoising steps to initial frames to stabilize generation and reduce error accumulation; (2) Motion Condition Injection (MCI), enhancing temporal coherence by injecting noise-corrupted previous frames as motion condition; and (3) Unbounded RoPE via Cache-Resetting (URCR), enabling infinite-length generation through dynamic positional encoding. Our 1.3B-parameter causal model achieves 16 FPS on a single GPU and achieves competitive results in visual quality, temporal consistency, and lip synchronization.",
-      "pdf_url": "https://arxiv.org/pdf/2512.11423v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.11423v1",
-      "published": "2025-12-12",
+      "abstract": "The rapid advancement of generative models has increased the demand for generated image detectors capable of generalizing across diverse and evolving generation techniques. However, existing methods, including those leveraging pre-trained vision-language models, often produce highly entangled representations, mixing task-relevant forensic cues (causal features) with spurious or irrelevant patterns (non-causal features), thus limiting generalization. To address this issue, we propose CausalCLIP, a framework that explicitly disentangles causal from non-causal features and employs targeted filtering guided by causal inference principles to retain only the most transferable and discriminative forensic cues. By modeling the generation process with a structural causal model and enforcing statistical independence through Gumbel-Softmax-based feature masking and Hilbert-Schmidt Independence Criterion (HSIC) constraints, CausalCLIP isolates stable causal features robust to distribution shifts. When tested on unseen generative models from different series, CausalCLIP demonstrates strong generalization ability, achieving improvements of 6.83% in accuracy and 4.06% in average precision over state-of-the-art methods.",
+      "pdf_url": "https://arxiv.org/pdf/2512.13285v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.13285v1",
+      "published": "2025-12-15",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "Causal Judge Evaluation: Calibrated Surrogate Metrics for LLM Systems",
+      "title": "From Educational Analytics to AI Governance: Transferable Lessons from Complex Systems Interventions",
       "authors": [
-        "Eddie Landesberg"
+        "Hugo Roger Paz"
       ],
-      "abstract": "LLM-as-judge evaluation has become the de facto standard for scaling model assessment, but the practice is statistically unsound: uncalibrated scores can invert preferences, naive confidence intervals on uncalibrated scores achieve near-0% coverage, and importance-weighted estimators collapse under limited overlap despite high effective sample size (ESS). We introduce Causal Judge Evaluation (CJE), a framework that fixes all three failures. On n=4,961 Chatbot Arena prompts (after filtering from 5k), CJE achieves 99% pairwise ranking accuracy at full sample size (94% averaged across configurations), matching oracle quality, at 14x lower cost (for ranking 5 policies) by calibrating a 16x cheaper judge on just 5% oracle labels (~250 labels). CJE combines three components: (i) AutoCal-R, reward calibration via mean-preserving isotonic regression; (ii) SIMCal-W, weight stabilization via stacking of S-monotone candidates; and (iii) Oracle-Uncertainty Aware (OUA) inference that propagates calibration uncertainty into confidence intervals. We formalize the Coverage-Limited Efficiency (CLE) diagnostic, which explains why IPS-style estimators fail even when ESS exceeds 90%: the logger rarely visits regions where target policies concentrate. Key findings: SNIPS inverts rankings even with reward calibration (38% pairwise, negative Kendall's tau) due to weight instability; calibrated IPS remains near-random (47%) despite weight stabilization, consistent with CLE; OUA improves coverage from near-0% to ~86% (Direct) and ~96% (stacked-DR), where naive intervals severely under-cover.",
-      "pdf_url": "https://arxiv.org/pdf/2512.11150v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.11150v1",
-      "published": "2025-12-11",
+      "abstract": "Both student retention in higher education and artificial intelligence governance face a common structural challenge: the application of linear regulatory frameworks to complex adaptive systems. Risk-based approaches dominate both domains, yet systematically fail because they assume stable causal pathways, predictable actor responses, and controllable system boundaries. This paper extracts transferable methodological principles from CAPIRE (Curriculum, Archetypes, Policies, Interventions & Research Environment), an empirically validated framework for educational analytics that treats student dropout as an emergent property of curricular structures, institutional rules, and macroeconomic shocks. Drawing on longitudinal data from engineering programmes and causal inference methods, CAPIRE demonstrates that well-intentioned interventions routinely generate unintended consequences when system complexity is ignored. We argue that five core principles developed within CAPIRE - temporal observation discipline, structural mapping over categorical classification, archetype-based heterogeneity analysis, causal mechanism identification, and simulation-based policy design - transfer directly to the challenge of governing AI systems. The isomorphism is not merely analogical: both domains exhibit non-linearity, emergence, feedback loops, strategic adaptation, and path dependence. We propose Complex Systems AI Governance (CSAIG) as an integrated framework that operationalises these principles for regulatory design, shifting the central question from \"how risky is this AI system?\" to \"how does this intervention reshape system dynamics?\" The contribution is twofold: demonstrating that empirical lessons from one complex systems domain can accelerate governance design in another, and offering a concrete methodological architecture for complexity-aware AI regulation.",
+      "pdf_url": "https://arxiv.org/pdf/2512.13260v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.13260v1",
+      "published": "2025-12-15",
       "categories": [
-        "stat.ME",
-        "stat.AP",
-        "stat.ML"
+        "cs.CY"
       ]
     },
     {
-      "title": "Topology Identification and Inference over Graphs",
+      "title": "Clinical transfusion-outcomes research: A practical guide",
       "authors": [
-        "Gonzalo Mateos",
-        "Yanning Shen",
-        "Georgios B. Giannakis",
-        "Ananthram Swami"
+        "Sarah J Valk",
+        "Camila Caram-Deelder",
+        "Rolf. H. H. Groenwold",
+        "Johanna G van der Bom"
       ],
-      "abstract": "Topology identification and inference of processes evolving over graphs arise in timely applications involving brain, transportation, financial, power, as well as social and information networks. This chapter provides an overview of graph topology identification and statistical inference methods for multidimensional relational data. Approaches for undirected links connecting graph nodes are outlined, going all the way from correlation metrics to covariance selection, and revealing ties with smooth signal priors. To account for directional (possibly causal) relations among nodal variables and address the limitations of linear time-invariant models in handling dynamic as well as nonlinear dependencies, a principled framework is surveyed to capture these complexities through judiciously selected kernels from a prescribed dictionary. Generalizations are also described via structural equations and vector autoregressions that can exploit attributes such as low rank, sparsity, acyclicity, and smoothness to model dynamic processes over possibly time-evolving topologies. It is argued that this approach supports both batch and online learning algorithms with convergence rate guarantees, is amenable to tensor (that is, multi-way array) formulations as well as decompositions that are well-suited for multidimensional network data, and can seamlessly leverage high-order statistical information.",
-      "pdf_url": "https://arxiv.org/pdf/2512.10183v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.10183v1",
-      "published": "2025-12-11",
+      "abstract": "Clinical transfusion-outcomes research faces unique methodological challenges compared with other areas of clinical research. These challenges arise because patients frequently receive multiple transfusions, each unit originates from a different donor, and the probability of receiving specific blood product characteristics is influenced by external, often uncontrollable, factors. These complexities complicate causal inference in observational studies of transfusion effectiveness and safety. This guide addresses key challenges in observational transfusion research, with a focus on time-varying exposure, time-varying confounding, and treatment-confounder feedback. Using the example of donor sex and pregnancy history in relation to recipient mortality, we illustrate the strengths and limitations of commonly used analytical approaches. We compare restriction-based analyses, time-varying Cox regression, and inverse probability weighted marginal structural models using a large observational dataset of male transfusion recipients. In the applied example, restriction and conventional time-varying approaches suggested an increased mortality risk associated with transfusion of red blood cells from ever-pregnant female donors compared with male-only donors (hazard ratio [HR] 1.22; 95% CI 1.05-1.42 and HR 1.21; 95% CI 1.04-1.41, respectively). In contrast, inverse probability of treatment and censoring weighted analyses, which account for treatment-confounder feedback, showed no evidence of an association (HR 1.01; 95% CI 0.85-1.20). These findings demonstrate how conventional methods can yield biased estimates when complex longitudinal structures are not adequately handled. We provide practical guidance on study design, target trial emulation, and the use of g-methods, including a reproducible tutorial and example dataset, to support valid causal inference in clinical transfusion research.",
+      "pdf_url": "https://arxiv.org/pdf/2512.13155v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.13155v1",
+      "published": "2025-12-15",
       "categories": [
-        "eess.SP",
-        "cs.SI",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Inference for Batched Adaptive Experiments",
-      "authors": [
-        "Jan Kemper",
-        "Davud Rostam-Afschar"
-      ],
-      "abstract": "The advantages of adaptive experiments have led to their rapid adoption in economics, other fields, as well as among practitioners. However, adaptive experiments pose challenges for causal inference. This note suggests a BOLS (batched ordinary least squares) test statistic for inference of treatment effects in adaptive experiments. The statistic provides a precision-equalizing aggregation of per-period treatment-control differences under heteroskedasticity. The combined test statistic is a normalized average of heteroskedastic per-period z-statistics and can be used to construct asymptotically valid confidence intervals. We provide simulation results comparing rejection rates in the typical case with few treatment periods and few (or many) observations per batch.",
-      "pdf_url": "https://arxiv.org/pdf/2512.10156v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.10156v1",
-      "published": "2025-12-10",
-      "categories": [
-        "econ.EM",
-        "cs.LG",
         "stat.ME"
       ]
     },
     {
-      "title": "Rethinking Causal Discovery Through the Lens of Exchangeability",
+      "title": "SneakPeek: Future-Guided Instructional Streaming Video Generation",
       "authors": [
-        "Tiago Brogueira",
-        "Mário Figueiredo"
+        "Cheeun Hong",
+        "German Barquero",
+        "Fadime Sener",
+        "Markos Georgopoulos",
+        "Edgar Schönfeld",
+        "Stefan Popov",
+        "Yuming Du",
+        "Oscar Mañas",
+        "Albert Pumarola"
       ],
-      "abstract": "Causal discovery methods have traditionally been developed under two distinct regimes: independent and identically distributed (i.i.d.) and timeseries data, each governed by separate modelling assumptions. In this paper, we argue that the i.i.d. setting can and should be reframed in terms of exchangeability, a strictly more general symmetry principle. We present the implications of this reframing, alongside two core arguments: (1) a conceptual argument, based on extending the dependency of experimental causal inference on exchangeability to causal discovery; and (2) an empirical argument, showing that many existing i.i.d. causal-discovery methods are predicated on exchangeability assumptions, and that the sole extensive widely-used real-world \"i.i.d.\" benchmark (the Tübingen dataset) consists mainly of exchangeable (and not i.i.d.) examples. Building on this insight, we introduce a novel synthetic dataset that enforces only the exchangeability assumption, without imposing the stronger i.i.d. assumption. We show that our exchangeable synthetic dataset mirrors the statistical structure of the real-world \"i.i.d.\" dataset more closely than all other i.i.d. synthetic datasets. Furthermore, we demonstrate the predictive capability of this dataset by proposing a neural-network-based causal-discovery algorithm trained exclusively on our synthetic dataset, and which performs similarly to other state-of-the-art i.i.d. methods on the real-world benchmark.",
-      "pdf_url": "https://arxiv.org/pdf/2512.10152v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.10152v1",
-      "published": "2025-12-10",
+      "abstract": "Instructional video generation is an emerging task that aims to synthesize coherent demonstrations of procedural activities from textual descriptions. Such capability has broad implications for content creation, education, and human-AI interaction, yet existing video diffusion models struggle to maintain temporal consistency and controllability across long sequences of multiple action steps. We introduce a pipeline for future-driven streaming instructional video generation, dubbed SneakPeek, a diffusion-based autoregressive framework designed to generate precise, stepwise instructional videos conditioned on an initial image and structured textual prompts. Our approach introduces three key innovations to enhance consistency and controllability: (1) predictive causal adaptation, where a causal model learns to perform next-frame prediction and anticipate future keyframes; (2) future-guided self-forcing with a dual-region KV caching scheme to address the exposure bias issue at inference time; (3) multi-prompt conditioning, which provides fine-grained and procedural control over multi-step instructions. Together, these components mitigate temporal drift, preserve motion consistency, and enable interactive video generation where future prompt updates dynamically influence ongoing streaming video generation. Experimental results demonstrate that our method produces temporally coherent and semantically faithful instructional videos that accurately follow complex, multi-step task descriptions.",
+      "pdf_url": "https://arxiv.org/pdf/2512.13019v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.13019v1",
+      "published": "2025-12-15",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Causal inference and model explainability tools for retail",
+      "authors": [
+        "Pranav Gupta",
+        "Nithin Surendran"
+      ],
+      "abstract": "Most major retailers today have multiple divisions focused on various aspects, such as marketing, supply chain, online customer experience, store customer experience, employee productivity, and vendor fulfillment. They also regularly collect data corresponding to all these aspects as dashboards and weekly/monthly/quarterly reports. Although several machine learning and statistical techniques have been in place to analyze and predict key metrics, such models typically lack interpretability. Moreover, such techniques also do not allow the validation or discovery of causal links. In this paper, we aim to provide a recipe for applying model interpretability and causal inference for deriving sales insights. In this paper, we review the existing literature on causal inference and interpretability in the context of problems in e-commerce and retail, and apply them to a real-world dataset. We find that an inherently explainable model has a lower variance of SHAP values, and show that including multiple confounders through a double machine learning approach allows us to get the correct sign of causal effect.",
+      "pdf_url": "https://arxiv.org/pdf/2512.12605v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.12605v1",
+      "published": "2025-12-14",
       "categories": [
         "cs.LG"
       ]
     },
     {
-      "title": "Microfoundations and the Causal Interpretation of Price-Exposure Designs",
+      "title": "Explainable Artificial Intelligence for Economic Time Series: A Comprehensive Review and a Systematic Taxonomy of Methods and Concepts",
       "authors": [
-        "Luca Moreno-Louzada",
-        "Guilherme Figueira",
-        "Pedro Picchetti"
+        "Agustín García-García",
+        "Pablo Hidalgo",
+        "Julio E. Sandubete"
       ],
-      "abstract": "This paper studies regional exposure designs that use commodity prices as instruments to study local effects of aggregate shocks. Unlike standard shift share designs that leverage differential exposure to many shocks, the price exposure relies on exogenous variation from a single shock, leading to challenges for both identification and inference. We motivate the design using a multi sector labor model. Under the model and a potential outcomes framework, we characterize the 2SLS and TWFE estimands as weighted averages of region and sector specific effects plus contamination terms driven by the covariance structure of prices and by general-equilibrium output responses. We derive conditions under which these estimands have a clear causal interpretation and provide simple sensitivity analysis procedures for violations. Finally, we show that standard inference procedures suffer from an overrejection problem in price-exposure designs. We derive a new standard error estimator and show its desirable finite-sample properties through Monte Carlo simulations. In an application to gold mining and homicides in the Amazon, the price exposure standard errors are roughly twice as large as conventional clustered standard errors, making the main effect statistically insignificant.",
-      "pdf_url": "https://arxiv.org/pdf/2512.10076v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.10076v1",
-      "published": "2025-12-10",
+      "abstract": "Explainable Artificial Intelligence (XAI) is increasingly required in computational economics, where machine-learning forecasters can outperform classical econometric models but remain difficult to audit and use for policy. This survey reviews and organizes the growing literature on XAI for economic time series, where autocorrelation, non-stationarity, seasonality, mixed frequencies, and regime shifts can make standard explanation techniques unreliable or economically implausible. We propose a taxonomy that classifies methods by (i) explanation mechanism: propagation-based approaches (e.g., Integrated Gradients, Layer-wise Relevance Propagation), perturbation and game-theoretic attribution (e.g., permutation importance, LIME, SHAP), and function-based global tools (e.g., Accumulated Local Effects); (ii) time-series compatibility, including preservation of temporal dependence, stability over time, and respect for data-generating constraints. We synthesize time-series-specific adaptations such as vector- and window-based formulations (e.g., Vector SHAP, WindowSHAP) that reduce lag fragmentation and computational cost while improving interpretability. We also connect explainability to causal inference and policy analysis through interventional attributions (Causal Shapley values) and constrained counterfactual reasoning. Finally, we discuss intrinsically interpretable architectures (notably attention-based transformers) and provide guidance for decision-grade applications such as nowcasting, stress testing, and regime monitoring, emphasizing attribution uncertainty and explanation dynamics as indicators of structural change.",
+      "pdf_url": "https://arxiv.org/pdf/2512.12506v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.12506v1",
+      "published": "2025-12-14",
       "categories": [
-        "econ.EM"
+        "econ.GN",
+        "cs.AI"
       ]
     },
     {
-      "title": "A Conversation with Mike West",
+      "title": "Moment and Highlight Detection via MLLM Frame Segmentation",
       "authors": [
-        "Hedibert F. Lopes",
-        "Filippo Ascolani"
+        "I Putu Andika Bagas Jiwanta",
+        "Ayu Purwarianti"
       ],
-      "abstract": "Mike West is currently the Arts & Sciences Distinguished Professor Emeritus of Statistics and Decision Sciences at Duke University. Mike's research in Bayesian analysis spans multiple interlinked areas: theory and methods of dynamic models in time series analysis, foundations of inference and decision analysis, multivariate and latent structure analysis, stochastic computation and optimisation, among others. Inter-disciplinary R&D has ranged across applications in commercial forecasting, dynamic networks, finance, econometrics, signal processing, climatology, systems biology, genomics and neuroscience, among other areas. Among Mike's currently active research areas are forecasting, causal prediction and decision analysis in business, economic policy and finance, as well as in personal decision making. Mike led the development of academic statistics at Duke University from 1990-2002, and has been broadly engaged in professional leadership elsewhere. He is past president of the International Society for Bayesian Analysis (ISBA), and has served in founding roles and as board member for several professional societies, national and international centres and institutes. Recipient of numerous awards, Mike has been active in research with various companies, banks, government agencies and academic centres, co-founder of a successful biotechnology company, and board member for several financial and IT companies. He has published 4 books, several edited volumes and over 200 papers. Mike has worked with many undergraduate and Master's research students, and as of 2025 has mentored around 65 primary PhD students and postdoctoral associates who moved to academic, industrial or governmental positions involving advanced statistical and data science research.",
-      "pdf_url": "https://arxiv.org/pdf/2512.09790v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.09790v1",
-      "published": "2025-12-10",
+      "abstract": "Detecting video moments and highlights from natural-language queries have been unified by transformer-based methods. Other works use generative Multimodal LLM (MLLM) to predict moments and/or highlights as text timestamps, utilizing its reasoning capability. While effective, text-based generation cannot provide direct gradients for frame-level predictions because the model only emits language tokens. Although recent Reinforcement Learning (RL) methods attempt to address the issue, we propose a novel approach by applying segmentation objectives directly on the LLM's output tokens. The LLM is fed with a fixed number of frames alongside a prompt that enforces it to output a sequence of continuous \"0\" and/or \"1\" characters, with one character per frame. The \"0\"/\"1\" characters benefit from the LLM's inherent language capability while also acting as background and foreground probabilities, respectively. Training employs segmentation losses on the probabilities alongside a normal causal LM loss. At inference, beam search generates sequence and logits, acting as moments and saliency scores, respectively. Despite sampling only 25 frames -- less than half of comparable methods -- our method achieved strong highlight detection (56.74 HIT@1) on QVHighlights. Additionally, our efficient method scores above the baseline (35.28 MAP) for moment retrieval. Empirically, segmentation losses provide a stable complementary learning signal even when the causal LM loss plateaus.",
+      "pdf_url": "https://arxiv.org/pdf/2512.12246v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.12246v1",
+      "published": "2025-12-13",
       "categories": [
-        "stat.OT"
+        "cs.CV"
       ]
     },
     {
-      "title": "Temporal Windows of Integration for Multisensory Wireless Systems as Enablers of Physical AI",
+      "title": "MixtureKit: A General Framework for Composing, Training, and Visualizing Mixture-of-Experts Models",
       "authors": [
-        "Anup Mishra",
-        "João Henrique Inacio de Souza",
-        "Petar Popovski"
+        "Ahmad Chamma",
+        "Omar El Herraoui",
+        "Guokan Shang"
       ],
-      "abstract": "Physical artificial intelligence (AI) refers to the AI that interacts with the physical world in real time. Similar to multisensory perception, Physical AI makes decisions based on multimodal updates from sensors and devices. Physical AI thus operates with a finite spatial footprint of its sensory tributaries. The multimodal updates traverse heterogeneous and unreliable paths, involving wireless links. Throughput or latency guarantees do not ensure correct decision-making, as misaligned, misordered, or stale inputs still yield wrong inferences. Preserving decision-time coherence hinges on three timing primitives at the network-application interface: (i) simultaneity, a short coincidence window that groups measurements as co-temporal, (ii) causality, path-wise delivery that never lets a consequence precede its precursor, and (iii) usefulness, a validity horizon that drops information too stale to influence the current action. In this work, we focus on usefulness and adopt temporal window of integration (TWI)-Causality: the TWI enforces decision-time usefulness by assuming path-wise causal consistency and cross-path simultaneity are handled upstream. We model end-to-end path delay as the sum of sensing/propagation, computation, and access/transmission latencies, and formulate network design as minimizing the validity horizon under a delivery reliability constraint. In effect, this calibrates delay-reliability budgets for a timing-aware system operating over sensors within a finite spatial footprint. The joint choice of horizon and per-path reliability is cast as a convex optimization problem, solved to global optimality to obtain the minimal horizon and per-path allocation of reliability. This is compared favourably to a benchmark based on uniform-after-threshold allocation. Overall, this study contributes to timing-aware Physical AI in next-generation networks.",
-      "pdf_url": "https://arxiv.org/pdf/2512.09589v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.09589v1",
-      "published": "2025-12-10",
+      "abstract": "We introduce MixtureKit, a modular open-source framework for constructing, training, and analyzing Mixture-of-Experts (MoE) models from arbitrary pre-trained or fine-tuned models. MixtureKit currently supports three complementary methods: (i) \\emph{Traditional MoE}, which uses a single router per transformer block to select experts, (ii) \\emph{BTX} (Branch-Train-Mix), which introduces separate routers for each specified sub-layer enabling fine-grained token routing, and (iii) \\emph{BTS} (Branch-Train-Stitch), which keeps experts fully intact and introduces trainable stitch layers for controlled information exchange between hub and experts. MixtureKit automatically modifies the model configuration, patches decoder and causal LM classes, and saves a unified checkpoint ready for inference or fine-tuning. We further provide a visualization interface to inspect per-token routing decisions, expert weight distributions, and layer-wise contributions. Experiments with multilingual code-switched data (e.g. Arabic-Latin) show that a BTX-based model trained using MixtureKit can outperform baseline dense models on multiple benchmarks. We release MixtureKit as a practical foundation for research and development of MoE-based systems across diverse domains.",
+      "pdf_url": "https://arxiv.org/pdf/2512.12121v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.12121v1",
+      "published": "2025-12-13",
       "categories": [
-        "eess.SP"
+        "cs.LG",
+        "cs.AI"
       ]
     }
   ]
