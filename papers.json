@@ -1,6 +1,78 @@
 {
-  "last_updated": "2025-12-17T00:52:52.884753",
+  "last_updated": "2025-12-18T00:54:18.251235",
   "papers": [
+    {
+      "title": "Fast and Accurate Causal Parallel Decoding using Jacobi Forcing",
+      "authors": [
+        "Lanxiang Hu",
+        "Siqi Kou",
+        "Yichao Fu",
+        "Samyam Rajbhandari",
+        "Tajana Rosing",
+        "Yuxiong He",
+        "Zhijie Deng",
+        "Hao Zhang"
+      ],
+      "abstract": "Multi-token generation has emerged as a promising paradigm for accelerating transformer-based large model inference. Recent efforts primarily explore diffusion Large Language Models (dLLMs) for parallel decoding to reduce inference latency. To achieve AR-level generation quality, many techniques adapt AR models into dLLMs to enable parallel decoding. However, they suffer from limited speedup compared to AR models due to a pretrain-to-posttrain mismatch. Specifically, the masked data distribution in post-training deviates significantly from the real-world data distribution seen during pretraining, and dLLMs rely on bidirectional attention, which conflicts with the causal prior learned during pretraining and hinders the integration of exact KV cache reuse. To address this, we introduce Jacobi Forcing, a progressive distillation paradigm where models are trained on their own generated parallel decoding trajectories, smoothly shifting AR models into efficient parallel decoders while preserving their pretrained causal inference property. The models trained under this paradigm, Jacobi Forcing Model, achieves 3.8x wall-clock speedup on coding and math benchmarks with minimal loss in performance. Based on Jacobi Forcing Models' trajectory characteristics, we introduce multi-block decoding with rejection recycling, which enables up to 4.5x higher token acceptance count per iteration and nearly 4.0x wall-clock speedup, effectively trading additional compute for lower inference latency. Our code is available at https://github.com/hao-ai-lab/JacobiForcing.",
+      "pdf_url": "https://arxiv.org/pdf/2512.14681v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.14681v1",
+      "published": "2025-12-16",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "PrivATE: Differentially Private Average Treatment Effect Estimation for Observational Data",
+      "authors": [
+        "Quan Yuan",
+        "Xiaochen Li",
+        "Linkang Du",
+        "Min Chen",
+        "Mingyang Sun",
+        "Yunjun Gao",
+        "Shibo He",
+        "Jiming Chen",
+        "Zhikun Zhang"
+      ],
+      "abstract": "Causal inference plays a crucial role in scientific research across multiple disciplines. Estimating causal effects, particularly the average treatment effect (ATE), from observational data has garnered significant attention. However, computing the ATE from real-world observational data poses substantial privacy risks to users. Differential privacy, which offers strict theoretical guarantees, has emerged as a standard approach for privacy-preserving data analysis. However, existing differentially private ATE estimation works rely on specific assumptions, provide limited privacy protection, or fail to offer comprehensive information protection.\n  To this end, we introduce PrivATE, a practical ATE estimation framework that ensures differential privacy. In fact, various scenarios require varying levels of privacy protection. For example, only test scores are generally sensitive information in education evaluation, while all types of medical record data are usually private. To accommodate different privacy requirements, we design two levels (i.e., label-level and sample-level) of privacy protection in PrivATE. By deriving an adaptive matching limit, PrivATE effectively balances noise-induced error and matching error, leading to a more accurate estimate of ATE. Our evaluation validates the effectiveness of PrivATE. PrivATE outperforms the baselines on all datasets and privacy budgets.",
+      "pdf_url": "https://arxiv.org/pdf/2512.14557v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.14557v1",
+      "published": "2025-12-16",
+      "categories": [
+        "cs.CR"
+      ]
+    },
+    {
+      "title": "Causal Secondary Analysis of Linked Data in the Presence of Mismatch Error",
+      "authors": [
+        "Martin Slawski"
+      ],
+      "abstract": "The increased prevalence of observational data and the need to integrate information from multiple sources are critical challenges in contemporary data analysis. Record linkage is a widely used tool for combining datasets in the absence of unique identifiers. The presence of linkage errors such as mismatched records, however, often hampers the analysis of data sets obtained in this way. This issue is more difficult to address in secondary analysis settings, where linkage and subsequent analysis are performed separately, and analysts have limited information about linkage quality. In this paper, we investigate the estimation of average treatment effects in the conventional potential outcome-based causal inference framework under linkage uncertainty. To mitigate the bias that would be incurred with naive analyses, we propose an approach based on estimating equations that treats the unknown match status indicators as missing data. Leveraging a variant of the Expectation-Maximization algorithm, these indicators are imputed based on a corresponding two-component mixture model. The approach is amenable to asymptotic inference. Simulation studies and a case study highlight the importance of accounting for linkage uncertainty and demonstrate the effectiveness of the proposed approach.",
+      "pdf_url": "https://arxiv.org/pdf/2512.14492v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.14492v1",
+      "published": "2025-12-16",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Structure Learning for Dynamical Systems with Theoretical Score Analysis",
+      "authors": [
+        "Nicholas Tagliapietra",
+        "Katharina Ensinger",
+        "Christoph Zimmer",
+        "Osman Mian"
+      ],
+      "abstract": "Real world systems evolve in continuous-time according to their underlying causal relationships, yet their dynamics are often unknown. Existing approaches to learning such dynamics typically either discretize time -- leading to poor performance on irregularly sampled data -- or ignore the underlying causality. We propose CaDyT, a novel method for causal discovery on dynamical systems addressing both these challenges. In contrast to state-of-the-art causal discovery methods that model the problem using discrete-time Dynamic Bayesian networks, our formulation is grounded in Difference-based causal models, which allow milder assumptions for modeling the continuous nature of the system. CaDyT leverages exact Gaussian Process inference for modeling the continuous-time dynamics which is more aligned with the underlying dynamical process. We propose a practical instantiation that identifies the causal structure via a greedy search guided by the Algorithmic Markov Condition and Minimum Description Length principle. Our experiments show that CaDyT outperforms state-of-the-art methods on both regularly and irregularly-sampled data, discovering causal networks closer to the true underlying dynamics.",
+      "pdf_url": "https://arxiv.org/pdf/2512.14361v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.14361v1",
+      "published": "2025-12-16",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.DS"
+      ]
+    },
     {
       "title": "A comparative overview of win ratio and joint frailty models for recurrent event endpoints with applications in oncology and cardiology",
       "authors": [
@@ -44,8 +116,8 @@
         "Qinghui He"
       ],
       "abstract": "The rapid advancement of generative models has increased the demand for generated image detectors capable of generalizing across diverse and evolving generation techniques. However, existing methods, including those leveraging pre-trained vision-language models, often produce highly entangled representations, mixing task-relevant forensic cues (causal features) with spurious or irrelevant patterns (non-causal features), thus limiting generalization. To address this issue, we propose CausalCLIP, a framework that explicitly disentangles causal from non-causal features and employs targeted filtering guided by causal inference principles to retain only the most transferable and discriminative forensic cues. By modeling the generation process with a structural causal model and enforcing statistical independence through Gumbel-Softmax-based feature masking and Hilbert-Schmidt Independence Criterion (HSIC) constraints, CausalCLIP isolates stable causal features robust to distribution shifts. When tested on unseen generative models from different series, CausalCLIP demonstrates strong generalization ability, achieving improvements of 6.83% in accuracy and 4.06% in average precision over state-of-the-art methods.",
-      "pdf_url": "https://arxiv.org/pdf/2512.13285v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.13285v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.13285v2",
+      "arxiv_url": "http://arxiv.org/abs/2512.13285v2",
       "published": "2025-12-15",
       "categories": [
         "cs.CV"
@@ -99,66 +171,6 @@
       "published": "2025-12-15",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal inference and model explainability tools for retail",
-      "authors": [
-        "Pranav Gupta",
-        "Nithin Surendran"
-      ],
-      "abstract": "Most major retailers today have multiple divisions focused on various aspects, such as marketing, supply chain, online customer experience, store customer experience, employee productivity, and vendor fulfillment. They also regularly collect data corresponding to all these aspects as dashboards and weekly/monthly/quarterly reports. Although several machine learning and statistical techniques have been in place to analyze and predict key metrics, such models typically lack interpretability. Moreover, such techniques also do not allow the validation or discovery of causal links. In this paper, we aim to provide a recipe for applying model interpretability and causal inference for deriving sales insights. In this paper, we review the existing literature on causal inference and interpretability in the context of problems in e-commerce and retail, and apply them to a real-world dataset. We find that an inherently explainable model has a lower variance of SHAP values, and show that including multiple confounders through a double machine learning approach allows us to get the correct sign of causal effect.",
-      "pdf_url": "https://arxiv.org/pdf/2512.12605v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.12605v1",
-      "published": "2025-12-14",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Explainable Artificial Intelligence for Economic Time Series: A Comprehensive Review and a Systematic Taxonomy of Methods and Concepts",
-      "authors": [
-        "Agustín García-García",
-        "Pablo Hidalgo",
-        "Julio E. Sandubete"
-      ],
-      "abstract": "Explainable Artificial Intelligence (XAI) is increasingly required in computational economics, where machine-learning forecasters can outperform classical econometric models but remain difficult to audit and use for policy. This survey reviews and organizes the growing literature on XAI for economic time series, where autocorrelation, non-stationarity, seasonality, mixed frequencies, and regime shifts can make standard explanation techniques unreliable or economically implausible. We propose a taxonomy that classifies methods by (i) explanation mechanism: propagation-based approaches (e.g., Integrated Gradients, Layer-wise Relevance Propagation), perturbation and game-theoretic attribution (e.g., permutation importance, LIME, SHAP), and function-based global tools (e.g., Accumulated Local Effects); (ii) time-series compatibility, including preservation of temporal dependence, stability over time, and respect for data-generating constraints. We synthesize time-series-specific adaptations such as vector- and window-based formulations (e.g., Vector SHAP, WindowSHAP) that reduce lag fragmentation and computational cost while improving interpretability. We also connect explainability to causal inference and policy analysis through interventional attributions (Causal Shapley values) and constrained counterfactual reasoning. Finally, we discuss intrinsically interpretable architectures (notably attention-based transformers) and provide guidance for decision-grade applications such as nowcasting, stress testing, and regime monitoring, emphasizing attribution uncertainty and explanation dynamics as indicators of structural change.",
-      "pdf_url": "https://arxiv.org/pdf/2512.12506v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.12506v1",
-      "published": "2025-12-14",
-      "categories": [
-        "econ.GN",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Moment and Highlight Detection via MLLM Frame Segmentation",
-      "authors": [
-        "I Putu Andika Bagas Jiwanta",
-        "Ayu Purwarianti"
-      ],
-      "abstract": "Detecting video moments and highlights from natural-language queries have been unified by transformer-based methods. Other works use generative Multimodal LLM (MLLM) to predict moments and/or highlights as text timestamps, utilizing its reasoning capability. While effective, text-based generation cannot provide direct gradients for frame-level predictions because the model only emits language tokens. Although recent Reinforcement Learning (RL) methods attempt to address the issue, we propose a novel approach by applying segmentation objectives directly on the LLM's output tokens. The LLM is fed with a fixed number of frames alongside a prompt that enforces it to output a sequence of continuous \"0\" and/or \"1\" characters, with one character per frame. The \"0\"/\"1\" characters benefit from the LLM's inherent language capability while also acting as background and foreground probabilities, respectively. Training employs segmentation losses on the probabilities alongside a normal causal LM loss. At inference, beam search generates sequence and logits, acting as moments and saliency scores, respectively. Despite sampling only 25 frames -- less than half of comparable methods -- our method achieved strong highlight detection (56.74 HIT@1) on QVHighlights. Additionally, our efficient method scores above the baseline (35.28 MAP) for moment retrieval. Empirically, segmentation losses provide a stable complementary learning signal even when the causal LM loss plateaus.",
-      "pdf_url": "https://arxiv.org/pdf/2512.12246v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.12246v1",
-      "published": "2025-12-13",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "MixtureKit: A General Framework for Composing, Training, and Visualizing Mixture-of-Experts Models",
-      "authors": [
-        "Ahmad Chamma",
-        "Omar El Herraoui",
-        "Guokan Shang"
-      ],
-      "abstract": "We introduce MixtureKit, a modular open-source framework for constructing, training, and analyzing Mixture-of-Experts (MoE) models from arbitrary pre-trained or fine-tuned models. MixtureKit currently supports three complementary methods: (i) \\emph{Traditional MoE}, which uses a single router per transformer block to select experts, (ii) \\emph{BTX} (Branch-Train-Mix), which introduces separate routers for each specified sub-layer enabling fine-grained token routing, and (iii) \\emph{BTS} (Branch-Train-Stitch), which keeps experts fully intact and introduces trainable stitch layers for controlled information exchange between hub and experts. MixtureKit automatically modifies the model configuration, patches decoder and causal LM classes, and saves a unified checkpoint ready for inference or fine-tuning. We further provide a visualization interface to inspect per-token routing decisions, expert weight distributions, and layer-wise contributions. Experiments with multilingual code-switched data (e.g. Arabic-Latin) show that a BTX-based model trained using MixtureKit can outperform baseline dense models on multiple benchmarks. We release MixtureKit as a practical foundation for research and development of MoE-based systems across diverse domains.",
-      "pdf_url": "https://arxiv.org/pdf/2512.12121v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.12121v1",
-      "published": "2025-12-13",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
       ]
     }
   ]
