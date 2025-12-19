@@ -1,6 +1,82 @@
 {
-  "last_updated": "2025-12-18T00:54:18.251235",
+  "last_updated": "2025-12-19T00:57:17.260237",
   "papers": [
+    {
+      "title": "End-to-End Training for Autoregressive Video Diffusion via Self-Resampling",
+      "authors": [
+        "Yuwei Guo",
+        "Ceyuan Yang",
+        "Hao He",
+        "Yang Zhao",
+        "Meng Wei",
+        "Zhenheng Yang",
+        "Weilin Huang",
+        "Dahua Lin"
+      ],
+      "abstract": "Autoregressive video diffusion models hold promise for world simulation but are vulnerable to exposure bias arising from the train-test mismatch. While recent works address this via post-training, they typically rely on a bidirectional teacher model or online discriminator. To achieve an end-to-end solution, we introduce Resampling Forcing, a teacher-free framework that enables training autoregressive video models from scratch and at scale. Central to our approach is a self-resampling scheme that simulates inference-time model errors on history frames during training. Conditioned on these degraded histories, a sparse causal mask enforces temporal causality while enabling parallel training with frame-level diffusion loss. To facilitate efficient long-horizon generation, we further introduce history routing, a parameter-free mechanism that dynamically retrieves the top-k most relevant history frames for each query. Experiments demonstrate that our approach achieves performance comparable to distillation-based baselines while exhibiting superior temporal consistency on longer videos owing to native-length training.",
+      "pdf_url": "https://arxiv.org/pdf/2512.15702v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.15702v1",
+      "published": "2025-12-17",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "mimic-video: Video-Action Models for Generalizable Robot Control Beyond VLAs",
+      "authors": [
+        "Jonas Pai",
+        "Liam Achenbach",
+        "Victoriano Montesinos",
+        "Benedek Forrai",
+        "Oier Mees",
+        "Elvis Nava"
+      ],
+      "abstract": "Prevailing Vision-Language-Action Models (VLAs) for robotic manipulation are built upon vision-language backbones pretrained on large-scale, but disconnected static web data. As a result, despite improved semantic generalization, the policy must implicitly infer complex physical dynamics and temporal dependencies solely from robot trajectories. This reliance creates an unsustainable data burden, necessitating continuous, large-scale expert data collection to compensate for the lack of innate physical understanding. We contend that while vision-language pretraining effectively captures semantic priors, it remains blind to physical causality. A more effective paradigm leverages video to jointly capture semantics and visual dynamics during pretraining, thereby isolating the remaining task of low-level control. To this end, we introduce \\model, a novel Video-Action Model (VAM) that pairs a pretrained Internet-scale video model with a flow matching-based action decoder conditioned on its latent representations. The decoder serves as an Inverse Dynamics Model (IDM), generating low-level robot actions from the latent representation of video-space action plans. Our extensive evaluation shows that our approach achieves state-of-the-art performance on simulated and real-world robotic manipulation tasks, improving sample efficiency by 10x and convergence speed by 2x compared to traditional VLA architectures.",
+      "pdf_url": "https://arxiv.org/pdf/2512.15692v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.15692v1",
+      "published": "2025-12-17",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "How Do Semantically Equivalent Code Transformations Impact Membership Inference on LLMs for Code?",
+      "authors": [
+        "Hua Yang",
+        "Alejandro Velasco",
+        "Thanh Le-Cong",
+        "Md Nazmul Haque",
+        "Bowen Xu",
+        "Denys Poshyvanyk"
+      ],
+      "abstract": "The success of large language models for code relies on vast amounts of code data, including public open-source repositories, such as GitHub, and private, confidential code from companies. This raises concerns about intellectual property compliance and the potential unauthorized use of license-restricted code. While membership inference (MI) techniques have been proposed to detect such unauthorized usage, their effectiveness can be undermined by semantically equivalent code transformation techniques, which modify code syntax while preserving semantic.\n  In this work, we systematically investigate whether semantically equivalent code transformation rules might be leveraged to evade MI detection. The results reveal that model accuracy drops by only 1.5% in the worst case for each rule, demonstrating that transformed datasets can effectively serve as substitutes for fine-tuning. Additionally, we find that one of the rules (RenameVariable) reduces MI success by 10.19%, highlighting its potential to obscure the presence of restricted code. To validate these findings, we conduct a causal analysis confirming that variable renaming has the strongest causal effect in disrupting MI detection. Notably, we find that combining multiple transformations does not further reduce MI effectiveness. Our results expose a critical loophole in license compliance enforcement for training large language models for code, showing that MI detection can be substantially weakened by transformation-based obfuscation techniques.",
+      "pdf_url": "https://arxiv.org/pdf/2512.15468v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.15468v1",
+      "published": "2025-12-17",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CR"
+      ]
+    },
+    {
+      "title": "Non-parametric Causal Inference in Dynamic Thresholding Designs",
+      "authors": [
+        "Aditya Ghosh",
+        "Stefan Wager"
+      ],
+      "abstract": "Consider a setting where we regularly monitor patients' fasting blood sugar, and declare them to have prediabetes (and encourage preventative care) if this number crosses a pre-specified threshold. The sharp, threshold-based treatment policy suggests that we should be able to estimate the long-term benefit of this preventative care by comparing the health trajectories of patients with blood sugar measurements right above and below the threshold. A naive regression-discontinuity analysis, however, is not applicable here, as it ignores the temporal dynamics of the problem where, e.g., a patient just below the threshold on one visit may become prediabetic (and receive treatment) following their next visit. Here, we study thresholding designs in general dynamic systems, and show that simple reduced-form characterizations remain available for a relevant causal target, namely a dynamic marginal policy effect at the treatment threshold. We develop a local-linear-regression approach for estimation and inference of this estimand, and demonstrate promise of our approach in numerical experiments.",
+      "pdf_url": "https://arxiv.org/pdf/2512.15244v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.15244v1",
+      "published": "2025-12-17",
+      "categories": [
+        "stat.ME",
+        "econ.EM"
+      ]
+    },
     {
       "title": "Fast and Accurate Causal Parallel Decoding using Jacobi Forcing",
       "authors": [
@@ -74,6 +150,27 @@
       ]
     },
     {
+      "title": "Scaling Causal Mediation for Complex Systems: A Framework for Root Cause Analysis",
+      "authors": [
+        "Alessandro Casadei",
+        "Sreyoshi Bhaduri",
+        "Rohit Malshe",
+        "Pavan Mullapudi",
+        "Raj Ratan",
+        "Ankush Pole",
+        "Arkajit Rakshit"
+      ],
+      "abstract": "Modern operational systems ranging from logistics and cloud infrastructure to industrial IoT, are governed by complex, interdependent processes. Understanding how interventions propagate through such systems requires causal inference methods that go beyond direct effects to quantify mediated pathways. Traditional mediation analysis, while effective in simple settings, fails to scale to the high-dimensional directed acyclic graphs (DAGs) encountered in practice, particularly when multiple treatments and mediators interact. In this paper, we propose a scalable mediation analysis framework tailored for large causal DAGs involving multiple treatments and mediators. Our approach systematically decomposes total effects into interpretable direct and indirect components. We demonstrate its practical utility through applied case studies in fulfillment center logistics, where complex dependencies and non-controllable factors often obscure root causes.",
+      "pdf_url": "https://arxiv.org/pdf/2512.14764v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.14764v1",
+      "published": "2025-12-16",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "econ.EM"
+      ]
+    },
+    {
       "title": "A comparative overview of win ratio and joint frailty models for recurrent event endpoints with applications in oncology and cardiology",
       "authors": [
         "Adrien Orué",
@@ -88,89 +185,6 @@
       "published": "2025-12-15",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding",
-      "authors": [
-        "Jia-Nan Li",
-        "Jian Guan",
-        "Wei Wu",
-        "Chongxuan Li"
-      ],
-      "abstract": "Autoregressive models (ARMs) are hindered by slow sequential inference. While masked diffusion models (MDMs) offer a parallel alternative, they suffer from critical drawbacks: high computational overhead from precluding Key-Value (KV) caching, and incoherent generation arising from learning dependencies over an intractable space of token combinations. To address these limitations, we introduce ReFusion, a novel masked diffusion model that achieves superior performance and efficiency by elevating parallel decoding from the token level to a higher slot level, where each slot is a fixed-length, contiguous sub-sequence. This is achieved through an iterative ``plan-and-infill'' decoding process: a diffusion-based planning step first identifies a set of weakly dependent slots, and an autoregressive infilling step then decodes these selected slots in parallel. The slot-based design simultaneously unlocks full KV cache reuse with a unified causal framework and reduces the learning complexity from the token combination space to a manageable slot-level permutation space. Extensive experiments on seven diverse benchmarks show that ReFusion not only overwhelmingly surpasses prior MDMs with 34% performance gains and an over 18$\\times$ speedup on average, but also bridges the performance gap to strong ARMs while maintaining a 2.33$\\times$ average speedup.",
-      "pdf_url": "https://arxiv.org/pdf/2512.13586v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.13586v1",
-      "published": "2025-12-15",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "CausalCLIP: Causally-Informed Feature Disentanglement and Filtering for Generalizable Detection of Generated Images",
-      "authors": [
-        "Bo Liu",
-        "Qiao Qin",
-        "Qinghui He"
-      ],
-      "abstract": "The rapid advancement of generative models has increased the demand for generated image detectors capable of generalizing across diverse and evolving generation techniques. However, existing methods, including those leveraging pre-trained vision-language models, often produce highly entangled representations, mixing task-relevant forensic cues (causal features) with spurious or irrelevant patterns (non-causal features), thus limiting generalization. To address this issue, we propose CausalCLIP, a framework that explicitly disentangles causal from non-causal features and employs targeted filtering guided by causal inference principles to retain only the most transferable and discriminative forensic cues. By modeling the generation process with a structural causal model and enforcing statistical independence through Gumbel-Softmax-based feature masking and Hilbert-Schmidt Independence Criterion (HSIC) constraints, CausalCLIP isolates stable causal features robust to distribution shifts. When tested on unseen generative models from different series, CausalCLIP demonstrates strong generalization ability, achieving improvements of 6.83% in accuracy and 4.06% in average precision over state-of-the-art methods.",
-      "pdf_url": "https://arxiv.org/pdf/2512.13285v2",
-      "arxiv_url": "http://arxiv.org/abs/2512.13285v2",
-      "published": "2025-12-15",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "From Educational Analytics to AI Governance: Transferable Lessons from Complex Systems Interventions",
-      "authors": [
-        "Hugo Roger Paz"
-      ],
-      "abstract": "Both student retention in higher education and artificial intelligence governance face a common structural challenge: the application of linear regulatory frameworks to complex adaptive systems. Risk-based approaches dominate both domains, yet systematically fail because they assume stable causal pathways, predictable actor responses, and controllable system boundaries. This paper extracts transferable methodological principles from CAPIRE (Curriculum, Archetypes, Policies, Interventions & Research Environment), an empirically validated framework for educational analytics that treats student dropout as an emergent property of curricular structures, institutional rules, and macroeconomic shocks. Drawing on longitudinal data from engineering programmes and causal inference methods, CAPIRE demonstrates that well-intentioned interventions routinely generate unintended consequences when system complexity is ignored. We argue that five core principles developed within CAPIRE - temporal observation discipline, structural mapping over categorical classification, archetype-based heterogeneity analysis, causal mechanism identification, and simulation-based policy design - transfer directly to the challenge of governing AI systems. The isomorphism is not merely analogical: both domains exhibit non-linearity, emergence, feedback loops, strategic adaptation, and path dependence. We propose Complex Systems AI Governance (CSAIG) as an integrated framework that operationalises these principles for regulatory design, shifting the central question from \"how risky is this AI system?\" to \"how does this intervention reshape system dynamics?\" The contribution is twofold: demonstrating that empirical lessons from one complex systems domain can accelerate governance design in another, and offering a concrete methodological architecture for complexity-aware AI regulation.",
-      "pdf_url": "https://arxiv.org/pdf/2512.13260v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.13260v1",
-      "published": "2025-12-15",
-      "categories": [
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "Clinical transfusion-outcomes research: A practical guide",
-      "authors": [
-        "Sarah J Valk",
-        "Camila Caram-Deelder",
-        "Rolf. H. H. Groenwold",
-        "Johanna G van der Bom"
-      ],
-      "abstract": "Clinical transfusion-outcomes research faces unique methodological challenges compared with other areas of clinical research. These challenges arise because patients frequently receive multiple transfusions, each unit originates from a different donor, and the probability of receiving specific blood product characteristics is influenced by external, often uncontrollable, factors. These complexities complicate causal inference in observational studies of transfusion effectiveness and safety. This guide addresses key challenges in observational transfusion research, with a focus on time-varying exposure, time-varying confounding, and treatment-confounder feedback. Using the example of donor sex and pregnancy history in relation to recipient mortality, we illustrate the strengths and limitations of commonly used analytical approaches. We compare restriction-based analyses, time-varying Cox regression, and inverse probability weighted marginal structural models using a large observational dataset of male transfusion recipients. In the applied example, restriction and conventional time-varying approaches suggested an increased mortality risk associated with transfusion of red blood cells from ever-pregnant female donors compared with male-only donors (hazard ratio [HR] 1.22; 95% CI 1.05-1.42 and HR 1.21; 95% CI 1.04-1.41, respectively). In contrast, inverse probability of treatment and censoring weighted analyses, which account for treatment-confounder feedback, showed no evidence of an association (HR 1.01; 95% CI 0.85-1.20). These findings demonstrate how conventional methods can yield biased estimates when complex longitudinal structures are not adequately handled. We provide practical guidance on study design, target trial emulation, and the use of g-methods, including a reproducible tutorial and example dataset, to support valid causal inference in clinical transfusion research.",
-      "pdf_url": "https://arxiv.org/pdf/2512.13155v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.13155v1",
-      "published": "2025-12-15",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "SneakPeek: Future-Guided Instructional Streaming Video Generation",
-      "authors": [
-        "Cheeun Hong",
-        "German Barquero",
-        "Fadime Sener",
-        "Markos Georgopoulos",
-        "Edgar Schönfeld",
-        "Stefan Popov",
-        "Yuming Du",
-        "Oscar Mañas",
-        "Albert Pumarola"
-      ],
-      "abstract": "Instructional video generation is an emerging task that aims to synthesize coherent demonstrations of procedural activities from textual descriptions. Such capability has broad implications for content creation, education, and human-AI interaction, yet existing video diffusion models struggle to maintain temporal consistency and controllability across long sequences of multiple action steps. We introduce a pipeline for future-driven streaming instructional video generation, dubbed SneakPeek, a diffusion-based autoregressive framework designed to generate precise, stepwise instructional videos conditioned on an initial image and structured textual prompts. Our approach introduces three key innovations to enhance consistency and controllability: (1) predictive causal adaptation, where a causal model learns to perform next-frame prediction and anticipate future keyframes; (2) future-guided self-forcing with a dual-region KV caching scheme to address the exposure bias issue at inference time; (3) multi-prompt conditioning, which provides fine-grained and procedural control over multi-step instructions. Together, these components mitigate temporal drift, preserve motion consistency, and enable interactive video generation where future prompt updates dynamically influence ongoing streaming video generation. Experimental results demonstrate that our method produces temporally coherent and semantically faithful instructional videos that accurately follow complex, multi-step task descriptions.",
-      "pdf_url": "https://arxiv.org/pdf/2512.13019v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.13019v1",
-      "published": "2025-12-15",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
