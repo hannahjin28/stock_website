@@ -1,6 +1,92 @@
 {
-  "last_updated": "2025-12-19T00:57:17.260237",
+  "last_updated": "2025-12-20T00:53:49.069473",
   "papers": [
+    {
+      "title": "Identification and efficient estimation of compliance and network causal effects in cluster-randomized trials",
+      "authors": [
+        "Chao Cheng",
+        "Georgia Papadogeorgou",
+        "Fan Li"
+      ],
+      "abstract": "Treatment noncompliance is pervasive in infectious disease cluster-randomized trials. Although all individuals within a cluster are assigned the same treatment condition, the treatment uptake status may vary across individuals due to noncompliance. We propose a semiparametric framework to evaluate the individual compliance effect and network assignment effect within principal stratum exhibiting different patterns of noncompliance. The individual compliance effect captures the portion of the treatment effect attributable to changes in treatment receipt, while the network assignment effect reflects the pure impact of treatment assignment and spillover among individuals within the same cluster. Unlike prior efforts which either empirically identify or interval identify these estimands, we characterize new structural assumptions for nonparametric point identification. We then develop semiparametrically efficient estimators that combine data-adaptive machine learning methods with efficient influence functions to enable more robust inference. Additionally, we introduce sensitivity analysis methods to study the impact under assumption violations, and apply the proposed methods to reanalyze a cluster-randomized trial in Kenya that evaluated the impact of school-based mass deworming on disease transmission.",
+      "pdf_url": "https://arxiv.org/pdf/2512.16857v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.16857v1",
+      "published": "2025-12-18",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Quantile-based causal inference for spatio-temporal processes: Assessing the impacts of wildfires on US air quality",
+      "authors": [
+        "Zipei Geng",
+        "Jordan Richards",
+        "Raphael Huser",
+        "Marc G. Genton"
+      ],
+      "abstract": "Wildfires pose an increasingly severe threat to air quality, yet quantifying their causal impact remains challenging due to unmeasured meteorological and geographic confounders. Moreover, wildfire impacts on air quality may exhibit heterogeneous effects across pollution levels, which conventional mean-based causal methods fail to capture. To address these challenges, we develop a Quantile-based Latent Spatial Confounder Model (QLSCM) that substitutes conditional expectations with conditional quantiles, enabling causal analysis across the entire outcome distribution. We establish the causal interpretation of QLSCM theoretically, prove the identifiability of causal effects, and demonstrate estimator consistency under mild conditions. Simulations confirm the bias correction capability and the advantage of quantile-based inference over mean-based approaches. Applying our method to contiguous US wildfire and air quality data, we uncover important heterogeneous effects: fire radiative power exerts significant positive causal effects on aerosol optical depth at high quantiles in Western states like California and Oregon, while insignificant at lower quantiles. This indicates that wildfire impacts on air quality primarily manifest during extreme pollution events. Regional analyses reveal that Western and Northwestern regions experience the strongest causal effects during such extremes. These findings provide critical insights for environmental policy by identifying where and when mitigation efforts would be most effective.",
+      "pdf_url": "https://arxiv.org/pdf/2512.16603v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.16603v1",
+      "published": "2025-12-18",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "ARMFlow: AutoRegressive MeanFlow for Online 3D Human Reaction Generation",
+      "authors": [
+        "Zichen Geng",
+        "Zeeshan Hayder",
+        "Wei Liu",
+        "Hesheng Wang",
+        "Ajmal Mian"
+      ],
+      "abstract": "3D human reaction generation faces three main challenges:(1) high motion fidelity, (2) real-time inference, and (3) autoregressive adaptability for online scenarios. Existing methods fail to meet all three simultaneously. We propose ARMFlow, a MeanFlow-based autoregressive framework that models temporal dependencies between actor and reactor motions. It consists of a causal context encoder and an MLP-based velocity predictor. We introduce Bootstrap Contextual Encoding (BSCE) in training, encoding generated history instead of the ground-truth ones, to alleviate error accumulation in autoregressive generation. We further introduce the offline variant ReMFlow, achieving state-of-the-art performance with the fastest inference among offline methods. Our ARMFlow addresses key limitations of online settings by: (1) enhancing semantic alignment via a global contextual encoder; (2) achieving high accuracy and low latency in a single-step inference; and (3) reducing accumulated errors through BSCE. Our single-step online generation surpasses existing online methods on InterHuman and InterX by over 40% in FID, while matching offline state-of-the-art performance despite using only partial sequence conditions.",
+      "pdf_url": "https://arxiv.org/pdf/2512.16234v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.16234v1",
+      "published": "2025-12-18",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "BUILD with Precision: Bottom-Up Inference of Linear DAGs",
+      "authors": [
+        "Hamed Ajorlou",
+        "Samuel Rey",
+        "Gonzalo Mateos",
+        "Geert Leus",
+        "Antonio G. Marques"
+      ],
+      "abstract": "Learning the structure of directed acyclic graphs (DAGs) from observational data is a central problem in causal discovery, statistical signal processing, and machine learning. Under a linear Gaussian structural equation model (SEM) with equal noise variances, the problem is identifiable and we show that the ensemble precision matrix of the observations exhibits a distinctive structure that facilitates DAG recovery. Exploiting this property, we propose BUILD (Bottom-Up Inference of Linear DAGs), a deterministic stepwise algorithm that identifies leaf nodes and their parents, then prunes the leaves by removing incident edges to proceed to the next step, exactly reconstructing the DAG from the true precision matrix. In practice, precision matrices must be estimated from finite data, and ill-conditioning may lead to error accumulation across BUILD steps. As a mitigation strategy, we periodically re-estimate the precision matrix (with less variables as leaves are pruned), trading off runtime for enhanced robustness. Reproducible results on challenging synthetic benchmarks demonstrate that BUILD compares favorably to state-of-the-art DAG learning algorithms, while offering an explicit handle on complexity.",
+      "pdf_url": "https://arxiv.org/pdf/2512.16111v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.16111v1",
+      "published": "2025-12-18",
+      "categories": [
+        "cs.LG",
+        "eess.SP"
+      ]
+    },
+    {
+      "title": "CauSTream: Causal Spatio-Temporal Representation Learning for Streamflow Forecasting",
+      "authors": [
+        "Shu Wan",
+        "Reepal Shah",
+        "John Sabo",
+        "Huan Liu",
+        "K. Selçuk Candan"
+      ],
+      "abstract": "Streamflow forecasting is crucial for water resource management and risk mitigation. While deep learning models have achieved strong predictive performance, they often overlook underlying physical processes, limiting interpretability and generalization. Recent causal learning approaches address these issues by integrating domain knowledge, yet they typically rely on fixed causal graphs that fail to adapt to data. We propose CauStream, a unified framework for causal spatiotemporal streamflow forecasting. CauSTream jointly learns (i) a runoff causal graph among meteorological forcings and (ii) a routing graph capturing dynamic dependencies across stations. We further establish identifiability conditions for these causal structures under a nonparametric setting. We evaluate CauSTream on three major U.S. river basins across three forecasting horizons. The model consistently outperforms prior state-of-the-art methods, with performance gaps widening at longer forecast windows, indicating stronger generalization to unseen conditions. Beyond forecasting, CauSTream also learns causal graphs that capture relationships among hydrological factors and stations. The inferred structures align closely with established domain knowledge, offering interpretable insights into watershed dynamics. CauSTream offers a principled foundation for causal spatiotemporal modeling, with the potential to extend to a wide range of scientific and environmental applications.",
+      "pdf_url": "https://arxiv.org/pdf/2512.16046v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.16046v1",
+      "published": "2025-12-18",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CE",
+        "stat.ML"
+      ]
+    },
     {
       "title": "End-to-End Training for Autoregressive Video Diffusion via Self-Resampling",
       "authors": [
@@ -78,113 +164,27 @@
       ]
     },
     {
-      "title": "Fast and Accurate Causal Parallel Decoding using Jacobi Forcing",
+      "title": "Foundation Models in Biomedical Imaging: Turning Hype into Reality",
       "authors": [
-        "Lanxiang Hu",
-        "Siqi Kou",
-        "Yichao Fu",
-        "Samyam Rajbhandari",
-        "Tajana Rosing",
-        "Yuxiong He",
-        "Zhijie Deng",
-        "Hao Zhang"
+        "Amgad Muneer",
+        "Kai Zhang",
+        "Ibraheem Hamdi",
+        "Rizwan Qureshi",
+        "Muhammad Waqas",
+        "Shereen Fouad",
+        "Hazrat Ali",
+        "Syed Muhammad Anwar",
+        "Jia Wu"
       ],
-      "abstract": "Multi-token generation has emerged as a promising paradigm for accelerating transformer-based large model inference. Recent efforts primarily explore diffusion Large Language Models (dLLMs) for parallel decoding to reduce inference latency. To achieve AR-level generation quality, many techniques adapt AR models into dLLMs to enable parallel decoding. However, they suffer from limited speedup compared to AR models due to a pretrain-to-posttrain mismatch. Specifically, the masked data distribution in post-training deviates significantly from the real-world data distribution seen during pretraining, and dLLMs rely on bidirectional attention, which conflicts with the causal prior learned during pretraining and hinders the integration of exact KV cache reuse. To address this, we introduce Jacobi Forcing, a progressive distillation paradigm where models are trained on their own generated parallel decoding trajectories, smoothly shifting AR models into efficient parallel decoders while preserving their pretrained causal inference property. The models trained under this paradigm, Jacobi Forcing Model, achieves 3.8x wall-clock speedup on coding and math benchmarks with minimal loss in performance. Based on Jacobi Forcing Models' trajectory characteristics, we introduce multi-block decoding with rejection recycling, which enables up to 4.5x higher token acceptance count per iteration and nearly 4.0x wall-clock speedup, effectively trading additional compute for lower inference latency. Our code is available at https://github.com/hao-ai-lab/JacobiForcing.",
-      "pdf_url": "https://arxiv.org/pdf/2512.14681v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.14681v1",
-      "published": "2025-12-16",
+      "abstract": "Foundation models (FMs) are driving a prominent shift in artificial intelligence across different domains, including biomedical imaging. These models are designed to move beyond narrow pattern recognition towards emulating sophisticated clinical reasoning, understanding complex spatial relationships, and integrating multimodal data with unprecedented flexibility. However, a critical gap exists between this potential and the current reality, where the clinical evaluation and deployment of FMs are hampered by significant challenges. Herein, we critically assess the current state-of-the-art, analyzing hype by examining the core capabilities and limitations of FMs in the biomedical domain. We also provide a taxonomy of reasoning, ranging from emulated sequential logic and spatial understanding to the integration of explicit symbolic knowledge, to evaluate whether these models exhibit genuine cognition or merely mimic surface-level patterns. We argue that a critical frontier lies beyond statistical correlation, in the pursuit of causal inference, which is essential for building robust models that understand cause and effect. Furthermore, we discuss the paramount issues in deployment stemming from trustworthiness, bias, and safety, dissecting the challenges of algorithmic bias, data bias and privacy, and model hallucinations. We also draw attention to the need for more inclusive, rigorous, and clinically relevant validation frameworks to ensure their safe and ethical application. We conclude that while the vision of autonomous AI-doctors remains distant, the immediate reality is the emergence of powerful technology and assistive tools that would benefit clinical practice. The future of FMs in biomedical imaging hinges not on scale alone, but on developing hybrid, causally aware, and verifiably safe systems that augment, rather than replace, human expertise.",
+      "pdf_url": "https://arxiv.org/pdf/2512.15808v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.15808v1",
+      "published": "2025-12-17",
       "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "PrivATE: Differentially Private Average Treatment Effect Estimation for Observational Data",
-      "authors": [
-        "Quan Yuan",
-        "Xiaochen Li",
-        "Linkang Du",
-        "Min Chen",
-        "Mingyang Sun",
-        "Yunjun Gao",
-        "Shibo He",
-        "Jiming Chen",
-        "Zhikun Zhang"
-      ],
-      "abstract": "Causal inference plays a crucial role in scientific research across multiple disciplines. Estimating causal effects, particularly the average treatment effect (ATE), from observational data has garnered significant attention. However, computing the ATE from real-world observational data poses substantial privacy risks to users. Differential privacy, which offers strict theoretical guarantees, has emerged as a standard approach for privacy-preserving data analysis. However, existing differentially private ATE estimation works rely on specific assumptions, provide limited privacy protection, or fail to offer comprehensive information protection.\n  To this end, we introduce PrivATE, a practical ATE estimation framework that ensures differential privacy. In fact, various scenarios require varying levels of privacy protection. For example, only test scores are generally sensitive information in education evaluation, while all types of medical record data are usually private. To accommodate different privacy requirements, we design two levels (i.e., label-level and sample-level) of privacy protection in PrivATE. By deriving an adaptive matching limit, PrivATE effectively balances noise-induced error and matching error, leading to a more accurate estimate of ATE. Our evaluation validates the effectiveness of PrivATE. PrivATE outperforms the baselines on all datasets and privacy budgets.",
-      "pdf_url": "https://arxiv.org/pdf/2512.14557v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.14557v1",
-      "published": "2025-12-16",
-      "categories": [
-        "cs.CR"
-      ]
-    },
-    {
-      "title": "Causal Secondary Analysis of Linked Data in the Presence of Mismatch Error",
-      "authors": [
-        "Martin Slawski"
-      ],
-      "abstract": "The increased prevalence of observational data and the need to integrate information from multiple sources are critical challenges in contemporary data analysis. Record linkage is a widely used tool for combining datasets in the absence of unique identifiers. The presence of linkage errors such as mismatched records, however, often hampers the analysis of data sets obtained in this way. This issue is more difficult to address in secondary analysis settings, where linkage and subsequent analysis are performed separately, and analysts have limited information about linkage quality. In this paper, we investigate the estimation of average treatment effects in the conventional potential outcome-based causal inference framework under linkage uncertainty. To mitigate the bias that would be incurred with naive analyses, we propose an approach based on estimating equations that treats the unknown match status indicators as missing data. Leveraging a variant of the Expectation-Maximization algorithm, these indicators are imputed based on a corresponding two-component mixture model. The approach is amenable to asymptotic inference. Simulation studies and a case study highlight the importance of accounting for linkage uncertainty and demonstrate the effectiveness of the proposed approach.",
-      "pdf_url": "https://arxiv.org/pdf/2512.14492v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.14492v1",
-      "published": "2025-12-16",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Structure Learning for Dynamical Systems with Theoretical Score Analysis",
-      "authors": [
-        "Nicholas Tagliapietra",
-        "Katharina Ensinger",
-        "Christoph Zimmer",
-        "Osman Mian"
-      ],
-      "abstract": "Real world systems evolve in continuous-time according to their underlying causal relationships, yet their dynamics are often unknown. Existing approaches to learning such dynamics typically either discretize time -- leading to poor performance on irregularly sampled data -- or ignore the underlying causality. We propose CaDyT, a novel method for causal discovery on dynamical systems addressing both these challenges. In contrast to state-of-the-art causal discovery methods that model the problem using discrete-time Dynamic Bayesian networks, our formulation is grounded in Difference-based causal models, which allow milder assumptions for modeling the continuous nature of the system. CaDyT leverages exact Gaussian Process inference for modeling the continuous-time dynamics which is more aligned with the underlying dynamical process. We propose a practical instantiation that identifies the causal structure via a greedy search guided by the Algorithmic Markov Condition and Minimum Description Length principle. Our experiments show that CaDyT outperforms state-of-the-art methods on both regularly and irregularly-sampled data, discovering causal networks closer to the true underlying dynamics.",
-      "pdf_url": "https://arxiv.org/pdf/2512.14361v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.14361v1",
-      "published": "2025-12-16",
-      "categories": [
-        "cs.LG",
+        "q-bio.QM",
         "cs.AI",
-        "math.DS"
-      ]
-    },
-    {
-      "title": "Scaling Causal Mediation for Complex Systems: A Framework for Root Cause Analysis",
-      "authors": [
-        "Alessandro Casadei",
-        "Sreyoshi Bhaduri",
-        "Rohit Malshe",
-        "Pavan Mullapudi",
-        "Raj Ratan",
-        "Ankush Pole",
-        "Arkajit Rakshit"
-      ],
-      "abstract": "Modern operational systems ranging from logistics and cloud infrastructure to industrial IoT, are governed by complex, interdependent processes. Understanding how interventions propagate through such systems requires causal inference methods that go beyond direct effects to quantify mediated pathways. Traditional mediation analysis, while effective in simple settings, fails to scale to the high-dimensional directed acyclic graphs (DAGs) encountered in practice, particularly when multiple treatments and mediators interact. In this paper, we propose a scalable mediation analysis framework tailored for large causal DAGs involving multiple treatments and mediators. Our approach systematically decomposes total effects into interpretable direct and indirect components. We demonstrate its practical utility through applied case studies in fulfillment center logistics, where complex dependencies and non-controllable factors often obscure root causes.",
-      "pdf_url": "https://arxiv.org/pdf/2512.14764v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.14764v1",
-      "published": "2025-12-16",
-      "categories": [
-        "stat.ME",
-        "cs.AI",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "A comparative overview of win ratio and joint frailty models for recurrent event endpoints with applications in oncology and cardiology",
-      "authors": [
-        "Adrien Orué",
-        "Derek Dinart",
-        "Laurent Billot",
-        "Carine Bellera",
-        "Virginie Rondeau"
-      ],
-      "abstract": "Composite endpoints that combine recurrent non-fatal events with a terminal event are increasingly used in randomized clinical trials, yet conventional time-to-first event analyses may obscure clinically relevant information. We compared two statistical frameworks tailored to such endpoints: the joint frailty model (JFM) and the last-event assisted recurrent-event win ratio (LWR). The JFM specifies proportional hazards for the recurrent and terminal events linked through a shared frailty, yielding covariate-adjusted, component-specific hazard ratios that account for informative recurrences and dependence with death. The LWR is a nonparametric, prioritized pairwise comparison that incorporates all observed events over follow-up and summarizes a population-level benefit of treatment while respecting a pre-specified hierarchy between death and recurrences. We first assessed the performance of the methods using simulations that varied both the gamma-frailty variance and the event rates. Next, we investigated these two frameworks using practical clinical applications, to assess the performance of the methods and to estimate the sample size required to achieve adequate power. These two approaches delivered complementary insights. The JFM provided component-specific estimates, while the LWR led to a summary measure of treatment effect with direction. Power was systematically improved with JFM, which thus appeared as the most reliable approach for inference and sample size estimation. Methodological extensions of the LWR to appropriately handle censoring and to formalize causal estimands remain a promising direction for future research.",
-      "pdf_url": "https://arxiv.org/pdf/2512.13629v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.13629v1",
-      "published": "2025-12-15",
-      "categories": [
-        "stat.ME"
+        "cs.CV",
+        "cs.LG"
       ]
     }
   ]
