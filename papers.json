@@ -1,6 +1,86 @@
 {
-  "last_updated": "2025-12-22T01:00:09.044300",
+  "last_updated": "2025-12-23T00:57:11.869755",
   "papers": [
+    {
+      "title": "Learning What to Write: Write-Gated KV for Efficient Long-Context Inference",
+      "authors": [
+        "Yen-Chieh Huang",
+        "Rui Fang",
+        "Ming-Syan Chen",
+        "Pi-Cheng Hsiu"
+      ],
+      "abstract": "Long-context LLM inference is bottlenecked by the quadratic attention complexity and linear KV cache growth. Prior approaches mitigate this via post-hoc selection or eviction but overlook the root inefficiency: indiscriminate writing to persistent memory. In this paper, we formalize KV cache management as a causal system of three primitives: KV Admission, Selection, and Eviction. We instantiate KV Admission via Write-Gated KV, a lightweight mechanism that learns to predict token utility before it enters the cache. By filtering out low-utility states early to maintain a compact global cache alongside a sliding local cache, Write-Gated KV reduces memory usage by 46-57% and delivers 3.03-3.45$\\times$ prefill and 1.89-2.56$\\times$ decode speedups on Llama model with negligible accuracy loss, all while remaining compatible with FlashAttention and paged-KV systems. These results demonstrate that learning what to write, is a principled and practical recipe for efficient long-context inference. Code is available at https://github.com/EMCLab-Sinica/WG-KV .",
+      "pdf_url": "https://arxiv.org/pdf/2512.17452v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.17452v1",
+      "published": "2025-12-19",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Kinetic-Theory Bounds on the Equation of State of Dense QCD Matter",
+      "authors": [
+        "Michał Marczenko"
+      ],
+      "abstract": "We derive bounds on the equation of state of cold, dense matter by extending the causal, model-agnostic interpolation between chiral effective field theory and perturbative calculations with a microscopic constraint from relativistic kinetic theory. The additional condition restricts the stiffest admissible behavior of the equation of state and systematically reduces the range of allowed equations of state, with the strongest effect at high densities. The resulting bounds remain consistent with known low- and high-density limits, while the strength of the constraint depends on the density above which the kinetic-theory condition is applied. These bounds can be readily incorporated into future studies of cold, dense matter and used to assess the impact of microscopic stability conditions on equation-of-state inference.",
+      "pdf_url": "https://arxiv.org/pdf/2512.17410v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.17410v1",
+      "published": "2025-12-19",
+      "categories": [
+        "nucl-th",
+        "astro-ph.HE"
+      ]
+    },
+    {
+      "title": "Piezo1 Decodes Mechanical Forces via Allosteric Network Reprogramming",
+      "authors": [
+        "Yuling Zhang",
+        "Lei Kang",
+        "Yancong Zhang",
+        "Guohui Hu"
+      ],
+      "abstract": "Understanding how molecular machines transduce mechanical force into chemical signals is a central goal in chemistry. The mechanosensitive ion channel Piezo1 is an archetypal nanoscale mechanotransducer, but the molecular principles by which it decodes distinct mechanical stimuli remain elusive. Here, we combine large-scale molecular dynamics simulations with time-series causal inference to elucidate the dynamic allosteric communication networks within Piezo1 under both quasi-static membrane tension and shockwave-induced cavitation. Under tangential tension, Piezo1 employs the lever-like pathway, a linear, feed-forward pathway propagating the signal from peripheral mechanophores to the central pore. In contrast, a shockwave impulse in the normal direction triggers a two-stage gating mechanism based on the dynamic reprogramming of the allosteric network. An initial compression phase activates an apical shortcut pathway originating from the cap domain. A subsequent tension phase utilizes a rewired network with complex feedback loops to drive the channel to a fully open state. These findings reveal that the allosteric wiring of a molecular machine is not static but can be dynamically reconfigured by the nature of the physical input. This principle of force-dependent pathway selection offers a new framework for understanding mechanochemistry and for designing programmable, stimuli-responsive molecular systems.",
+      "pdf_url": "https://arxiv.org/pdf/2512.17403v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.17403v1",
+      "published": "2025-12-19",
+      "categories": [
+        "q-bio.MN"
+      ]
+    },
+    {
+      "title": "Sharp Structure-Agnostic Lower Bounds for General Functional Estimation",
+      "authors": [
+        "Jikai Jin",
+        "Vasilis Syrgkanis"
+      ],
+      "abstract": "The design of efficient nonparametric estimators has long been a central problem in statistics, machine learning, and decision making. Classical optimal procedures often rely on strong structural assumptions, which can be misspecified in practice and complicate deployment. This limitation has sparked growing interest in structure-agnostic approaches -- methods that debias black-box nuisance estimates without imposing structural priors. Understanding the fundamental limits of these methods is therefore crucial. This paper provides a systematic investigation of the optimal error rates achievable by structure-agnostic estimators. We first show that, for estimating the average treatment effect (ATE), a central parameter in causal inference, doubly robust learning attains optimal structure-agnostic error rates. We then extend our analysis to a general class of functionals that depend on unknown nuisance functions and establish the structure-agnostic optimality of debiased/double machine learning (DML). We distinguish two regimes -- one where double robustness is attainable and one where it is not -- leading to different optimal rates for first-order debiasing, and show that DML is optimal in both regimes. Finally, we instantiate our general lower bounds by deriving explicit optimal rates that recover existing results and extend to additional estimands of interest. Our results provide theoretical validation for widely used first-order debiasing methods and guidance for practitioners seeking optimal approaches in the absence of structural assumptions. This paper generalizes and subsumes the ATE lower bound established in \\citet{jin2024structure} by the same authors.",
+      "pdf_url": "https://arxiv.org/pdf/2512.17341v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.17341v1",
+      "published": "2025-12-19",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "econ.EM",
+        "math.ST",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "A Synthetic Instrumental Variable Method: Using the Dual Tendency Condition for Coplanar Instruments",
+      "authors": [
+        "Ratbek Dzhumashev",
+        "Ainura Tursunalieva"
+      ],
+      "abstract": "Traditional instrumental variable (IV) methods often struggle with weak or invalid instruments and rely heavily on external data. We introduce a Synthetic Instrumental Variable (SIV) approach that constructs valid instruments using only existing data. Our method leverages a data-driven dual tendency (DT) condition to identify valid instruments without requiring external variables. SIV is robust to heteroscedasticity and can determine the true sign of the correlation between endogenous regressors and errors--an assumption typically imposed in empirical work. Through simulations and real-world applications, we show that SIV improves causal inference by mitigating common IV limitations and reducing dependence on scarce instruments. This approach has broad implications for economics, epidemiology, and policy evaluation.",
+      "pdf_url": "https://arxiv.org/pdf/2512.17301v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.17301v1",
+      "published": "2025-12-19",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ]
+    },
     {
       "title": "Identification and efficient estimation of compliance and network causal effects in cluster-randomized trials",
       "authors": [
@@ -85,106 +165,6 @@
         "cs.AI",
         "cs.CE",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "End-to-End Training for Autoregressive Video Diffusion via Self-Resampling",
-      "authors": [
-        "Yuwei Guo",
-        "Ceyuan Yang",
-        "Hao He",
-        "Yang Zhao",
-        "Meng Wei",
-        "Zhenheng Yang",
-        "Weilin Huang",
-        "Dahua Lin"
-      ],
-      "abstract": "Autoregressive video diffusion models hold promise for world simulation but are vulnerable to exposure bias arising from the train-test mismatch. While recent works address this via post-training, they typically rely on a bidirectional teacher model or online discriminator. To achieve an end-to-end solution, we introduce Resampling Forcing, a teacher-free framework that enables training autoregressive video models from scratch and at scale. Central to our approach is a self-resampling scheme that simulates inference-time model errors on history frames during training. Conditioned on these degraded histories, a sparse causal mask enforces temporal causality while enabling parallel training with frame-level diffusion loss. To facilitate efficient long-horizon generation, we further introduce history routing, a parameter-free mechanism that dynamically retrieves the top-k most relevant history frames for each query. Experiments demonstrate that our approach achieves performance comparable to distillation-based baselines while exhibiting superior temporal consistency on longer videos owing to native-length training.",
-      "pdf_url": "https://arxiv.org/pdf/2512.15702v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.15702v1",
-      "published": "2025-12-17",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "mimic-video: Video-Action Models for Generalizable Robot Control Beyond VLAs",
-      "authors": [
-        "Jonas Pai",
-        "Liam Achenbach",
-        "Victoriano Montesinos",
-        "Benedek Forrai",
-        "Oier Mees",
-        "Elvis Nava"
-      ],
-      "abstract": "Prevailing Vision-Language-Action Models (VLAs) for robotic manipulation are built upon vision-language backbones pretrained on large-scale, but disconnected static web data. As a result, despite improved semantic generalization, the policy must implicitly infer complex physical dynamics and temporal dependencies solely from robot trajectories. This reliance creates an unsustainable data burden, necessitating continuous, large-scale expert data collection to compensate for the lack of innate physical understanding. We contend that while vision-language pretraining effectively captures semantic priors, it remains blind to physical causality. A more effective paradigm leverages video to jointly capture semantics and visual dynamics during pretraining, thereby isolating the remaining task of low-level control. To this end, we introduce \\model, a novel Video-Action Model (VAM) that pairs a pretrained Internet-scale video model with a flow matching-based action decoder conditioned on its latent representations. The decoder serves as an Inverse Dynamics Model (IDM), generating low-level robot actions from the latent representation of video-space action plans. Our extensive evaluation shows that our approach achieves state-of-the-art performance on simulated and real-world robotic manipulation tasks, improving sample efficiency by 10x and convergence speed by 2x compared to traditional VLA architectures.",
-      "pdf_url": "https://arxiv.org/pdf/2512.15692v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.15692v1",
-      "published": "2025-12-17",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "How Do Semantically Equivalent Code Transformations Impact Membership Inference on LLMs for Code?",
-      "authors": [
-        "Hua Yang",
-        "Alejandro Velasco",
-        "Thanh Le-Cong",
-        "Md Nazmul Haque",
-        "Bowen Xu",
-        "Denys Poshyvanyk"
-      ],
-      "abstract": "The success of large language models for code relies on vast amounts of code data, including public open-source repositories, such as GitHub, and private, confidential code from companies. This raises concerns about intellectual property compliance and the potential unauthorized use of license-restricted code. While membership inference (MI) techniques have been proposed to detect such unauthorized usage, their effectiveness can be undermined by semantically equivalent code transformation techniques, which modify code syntax while preserving semantic.\n  In this work, we systematically investigate whether semantically equivalent code transformation rules might be leveraged to evade MI detection. The results reveal that model accuracy drops by only 1.5% in the worst case for each rule, demonstrating that transformed datasets can effectively serve as substitutes for fine-tuning. Additionally, we find that one of the rules (RenameVariable) reduces MI success by 10.19%, highlighting its potential to obscure the presence of restricted code. To validate these findings, we conduct a causal analysis confirming that variable renaming has the strongest causal effect in disrupting MI detection. Notably, we find that combining multiple transformations does not further reduce MI effectiveness. Our results expose a critical loophole in license compliance enforcement for training large language models for code, showing that MI detection can be substantially weakened by transformation-based obfuscation techniques.",
-      "pdf_url": "https://arxiv.org/pdf/2512.15468v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.15468v1",
-      "published": "2025-12-17",
-      "categories": [
-        "cs.SE",
-        "cs.AI",
-        "cs.CR"
-      ]
-    },
-    {
-      "title": "Non-parametric Causal Inference in Dynamic Thresholding Designs",
-      "authors": [
-        "Aditya Ghosh",
-        "Stefan Wager"
-      ],
-      "abstract": "Consider a setting where we regularly monitor patients' fasting blood sugar, and declare them to have prediabetes (and encourage preventative care) if this number crosses a pre-specified threshold. The sharp, threshold-based treatment policy suggests that we should be able to estimate the long-term benefit of this preventative care by comparing the health trajectories of patients with blood sugar measurements right above and below the threshold. A naive regression-discontinuity analysis, however, is not applicable here, as it ignores the temporal dynamics of the problem where, e.g., a patient just below the threshold on one visit may become prediabetic (and receive treatment) following their next visit. Here, we study thresholding designs in general dynamic systems, and show that simple reduced-form characterizations remain available for a relevant causal target, namely a dynamic marginal policy effect at the treatment threshold. We develop a local-linear-regression approach for estimation and inference of this estimand, and demonstrate promise of our approach in numerical experiments.",
-      "pdf_url": "https://arxiv.org/pdf/2512.15244v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.15244v1",
-      "published": "2025-12-17",
-      "categories": [
-        "stat.ME",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Foundation Models in Biomedical Imaging: Turning Hype into Reality",
-      "authors": [
-        "Amgad Muneer",
-        "Kai Zhang",
-        "Ibraheem Hamdi",
-        "Rizwan Qureshi",
-        "Muhammad Waqas",
-        "Shereen Fouad",
-        "Hazrat Ali",
-        "Syed Muhammad Anwar",
-        "Jia Wu"
-      ],
-      "abstract": "Foundation models (FMs) are driving a prominent shift in artificial intelligence across different domains, including biomedical imaging. These models are designed to move beyond narrow pattern recognition towards emulating sophisticated clinical reasoning, understanding complex spatial relationships, and integrating multimodal data with unprecedented flexibility. However, a critical gap exists between this potential and the current reality, where the clinical evaluation and deployment of FMs are hampered by significant challenges. Herein, we critically assess the current state-of-the-art, analyzing hype by examining the core capabilities and limitations of FMs in the biomedical domain. We also provide a taxonomy of reasoning, ranging from emulated sequential logic and spatial understanding to the integration of explicit symbolic knowledge, to evaluate whether these models exhibit genuine cognition or merely mimic surface-level patterns. We argue that a critical frontier lies beyond statistical correlation, in the pursuit of causal inference, which is essential for building robust models that understand cause and effect. Furthermore, we discuss the paramount issues in deployment stemming from trustworthiness, bias, and safety, dissecting the challenges of algorithmic bias, data bias and privacy, and model hallucinations. We also draw attention to the need for more inclusive, rigorous, and clinically relevant validation frameworks to ensure their safe and ethical application. We conclude that while the vision of autonomous AI-doctors remains distant, the immediate reality is the emergence of powerful technology and assistive tools that would benefit clinical practice. The future of FMs in biomedical imaging hinges not on scale alone, but on developing hybrid, causally aware, and verifiably safe systems that augment, rather than replace, human expertise.",
-      "pdf_url": "https://arxiv.org/pdf/2512.15808v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.15808v1",
-      "published": "2025-12-17",
-      "categories": [
-        "q-bio.QM",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG"
       ]
     }
   ]
