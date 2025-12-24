@@ -1,170 +1,167 @@
 {
-  "last_updated": "2025-12-23T00:57:11.869755",
+  "last_updated": "2025-12-24T00:57:01.848170",
   "papers": [
     {
-      "title": "Learning What to Write: Write-Gated KV for Efficient Long-Context Inference",
+      "title": "Toward Scalable and Valid Conditional Independence Testing with Spectral Representations",
       "authors": [
-        "Yen-Chieh Huang",
-        "Rui Fang",
-        "Ming-Syan Chen",
-        "Pi-Cheng Hsiu"
+        "Alek Frohlich",
+        "Vladimir Kostic",
+        "Karim Lounici",
+        "Daniel Perazzo",
+        "Massimiliano Pontil"
       ],
-      "abstract": "Long-context LLM inference is bottlenecked by the quadratic attention complexity and linear KV cache growth. Prior approaches mitigate this via post-hoc selection or eviction but overlook the root inefficiency: indiscriminate writing to persistent memory. In this paper, we formalize KV cache management as a causal system of three primitives: KV Admission, Selection, and Eviction. We instantiate KV Admission via Write-Gated KV, a lightweight mechanism that learns to predict token utility before it enters the cache. By filtering out low-utility states early to maintain a compact global cache alongside a sliding local cache, Write-Gated KV reduces memory usage by 46-57% and delivers 3.03-3.45$\\times$ prefill and 1.89-2.56$\\times$ decode speedups on Llama model with negligible accuracy loss, all while remaining compatible with FlashAttention and paged-KV systems. These results demonstrate that learning what to write, is a principled and practical recipe for efficient long-context inference. Code is available at https://github.com/EMCLab-Sinica/WG-KV .",
-      "pdf_url": "https://arxiv.org/pdf/2512.17452v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.17452v1",
-      "published": "2025-12-19",
+      "abstract": "Conditional independence (CI) is central to causal inference, feature selection, and graphical modeling, yet it is untestable in many settings without additional assumptions. Existing CI tests often rely on restrictive structural conditions, limiting their validity on real-world data. Kernel methods using the partial covariance operator offer a more principled approach but suffer from limited adaptivity, slow convergence, and poor scalability. In this work, we explore whether representation learning can help address these limitations. Specifically, we focus on representations derived from the singular value decomposition of the partial covariance operator and use them to construct a simple test statistic, reminiscent of the Hilbert-Schmidt Independence Criterion (HSIC). We also introduce a practical bi-level contrastive algorithm to learn these representations. Our theory links representation learning error to test performance and establishes asymptotic validity and power guarantees. Preliminary experiments suggest that this approach offers a practical and statistically grounded path toward scalable CI testing, bridging kernel-based theory with modern representation learning.",
+      "pdf_url": "https://arxiv.org/pdf/2512.19510v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.19510v1",
+      "published": "2025-12-22",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Real-Time Streamable Generative Speech Restoration with Flow Matching",
+      "authors": [
+        "Simon Welker",
+        "Bunlong Lay",
+        "Maris Hillemann",
+        "Tal Peer",
+        "Timo Gerkmann"
+      ],
+      "abstract": "Diffusion-based generative models have greatly impacted the speech processing field in recent years, exhibiting high speech naturalness and spawning a new research direction. Their application in real-time communication is, however, still lagging behind due to their computation-heavy nature involving multiple calls of large DNNs.\n  Here, we present Stream.FM, a frame-causal flow-based generative model with an algorithmic latency of 32 milliseconds (ms) and a total latency of 48 ms, paving the way for generative speech processing in real-time communication. We propose a buffered streaming inference scheme and an optimized DNN architecture, show how learned few-step numerical solvers can boost output quality at a fixed compute budget, explore model weight compression to find favorable points along a compute/quality tradeoff, and contribute a model variant with 24 ms total latency for the speech enhancement task.\n  Our work looks beyond theoretical latencies, showing that high-quality streaming generative speech processing can be realized on consumer GPUs available today. Stream.FM can solve a variety of speech processing tasks in a streaming fashion: speech enhancement, dereverberation, codec post-filtering, bandwidth extension, STFT phase retrieval, and Mel vocoding. As we verify through comprehensive evaluations and a MUSHRA listening test, Stream.FM establishes a state-of-the-art for generative streaming speech restoration, exhibits only a reasonable reduction in quality compared to a non-streaming variant, and outperforms our recent work (Diffusion Buffer) on generative streaming speech enhancement while operating at a lower latency.",
+      "pdf_url": "https://arxiv.org/pdf/2512.19442v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.19442v1",
+      "published": "2025-12-22",
+      "categories": [
+        "eess.SP",
+        "cs.LG",
+        "cs.SD"
+      ]
+    },
+    {
+      "title": "Attention Is Not What You Need",
+      "authors": [
+        "Zhang Chong"
+      ],
+      "abstract": "We revisit a basic question in sequence modeling: is explicit self-attention actually necessary for strong performance and reasoning? We argue that standard multi-head attention is best seen as a form of tensor lifting: hidden vectors are mapped into a high-dimensional space of pairwise interactions, and learning proceeds by constraining this lifted tensor through gradient descent. This mechanism is extremely expressive but mathematically opaque, because after many layers it becomes very hard to describe the model with a small family of explicit invariants.\n  To explore an alternative, we propose an attention-free architecture based on Grassmann flows. Instead of forming an L by L attention matrix, our Causal Grassmann layer (i) linearly reduces token states, (ii) encodes local token pairs as two-dimensional subspaces on a Grassmann manifold via Plucker coordinates, and (iii) fuses these geometric features back into the hidden states through gated mixing. Information therefore propagates by controlled deformations of low-rank subspaces over multi-scale local windows, so the core computation lives on a finite-dimensional manifold rather than in an unstructured tensor space.\n  On the Wikitext-2 language modeling benchmark, purely Grassmann-based models with 13 to 18 million parameters achieve validation perplexities within about 10 to 15 percent of size-matched Transformers. On the SNLI natural language inference task, a Grassmann-Plucker head on top of DistilBERT slightly outperforms a Transformer head, with best validation and test accuracies of 0.8550 and 0.8538 compared to 0.8545 and 0.8511. We analyze the complexity of Grassmann mixing, show linear scaling in sequence length for fixed rank, and argue that such manifold-based designs offer a more structured route toward geometric and invariant-based interpretations of neural reasoning.",
+      "pdf_url": "https://arxiv.org/pdf/2512.19428v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.19428v1",
+      "published": "2025-12-22",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.AG"
+      ]
+    },
+    {
+      "title": "VIGOR+: Iterative Confounder Generation and Validation via LLM-CEVAE Feedback Loop",
+      "authors": [
+        "JiaWei Zhu",
+        "ZiHeng Liu"
+      ],
+      "abstract": "Hidden confounding remains a fundamental challenge in causal inference from observational data. Recent advances leverage Large Language Models (LLMs) to generate plausible hidden confounders based on domain knowledge, yet a critical gap exists: LLM-generated confounders often exhibit semantic plausibility without statistical utility. We propose VIGOR+ (Variational Information Gain for iterative cOnfounder Refinement), a novel framework that closes the loop between LLM-based confounder generation and CEVAE-based statistical validation. Unlike prior approaches that treat generation and validation as separate stages, VIGOR+ establishes an iterative feedback mechanism: validation signals from CEVAE (including information gain, latent consistency metrics, and diagnostic messages) are transformed into natural language feedback that guides subsequent LLM generation rounds. This iterative refinement continues until convergence criteria are met. We formalize the feedback mechanism, prove convergence properties under mild assumptions, and provide a complete algorithmic framework.",
+      "pdf_url": "https://arxiv.org/pdf/2512.19349v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.19349v1",
+      "published": "2025-12-22",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal Heterogeneous Graph Learning Method for Chronic Obstructive Pulmonary Disease Prediction",
+      "authors": [
+        "Leming Zhou",
+        "Zuo Wang",
+        "Zhigang Liu"
+      ],
+      "abstract": "Due to the insufficient diagnosis and treatment capabilities at the grassroots level, there are still deficiencies in the early identification and early warning of acute exacerbation of Chronic obstructive pulmonary disease (COPD), often resulting in a high prevalence rate and high burden, but the screening rate is relatively low. In order to gradually improve this situation. In this paper, this study develop a Causal Heterogeneous Graph Representation Learning (CHGRL) method for COPD comorbidity risk prediction method that: a) constructing a heterogeneous Our dataset includes the interaction between patients and diseases; b) A cause-aware heterogeneous graph learning architecture has been constructed, combining causal inference mechanisms with heterogeneous graph learning, which can support heterogeneous graph causal learning for different types of relationships; and c) Incorporate the causal loss function in the model design, and add counterfactual reasoning learning loss and causal regularization loss on the basis of the cross-entropy classification loss. We evaluate our method and compare its performance with strong GNN baselines. Following experimental evaluation, the proposed model demonstrates high detection accuracy.",
+      "pdf_url": "https://arxiv.org/pdf/2512.19194v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.19194v1",
+      "published": "2025-12-22",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Beyond Sliding Windows: Learning to Manage Memory in Non-Markovian Environments",
+      "authors": [
+        "Geraud Nangue Tasse",
+        "Matthew Riemer",
+        "Benjamin Rosman",
+        "Tim Klinger"
+      ],
+      "abstract": "Recent success in developing increasingly general purpose agents based on sequence models has led to increased focus on the problem of deploying computationally limited agents within the vastly more complex real-world. A key challenge experienced in these more realistic domains is highly non-Markovian dependencies with respect to the agent's observations, which are less common in small controlled domains. The predominant approach for dealing with this in the literature is to stack together a window of the most recent observations (Frame Stacking), but this window size must grow with the degree of non-Markovian dependencies, which results in prohibitive computational and memory requirements for both action inference and learning. In this paper, we are motivated by the insight that in many environments that are highly non-Markovian with respect to time, the environment only causally depends on a relatively small number of observations over that time-scale. A natural direction would then be to consider meta-algorithms that maintain relatively small adaptive stacks of memories such that it is possible to express highly non-Markovian dependencies with respect to time while considering fewer observations at each step and thus experience substantial savings in both compute and memory requirements. Hence, we propose a meta-algorithm (Adaptive Stacking) for achieving exactly that with convergence guarantees and quantify the reduced computation and memory constraints for MLP, LSTM, and Transformer-based agents. Our experiments utilize popular memory tasks, which give us control over the degree of non-Markovian dependencies. This allows us to demonstrate that an appropriate meta-algorithm can learn the removal of memories not predictive of future rewards without excessive removal of important experiences. Code: https://github.com/geraudnt/adaptive-stacking",
+      "pdf_url": "https://arxiv.org/pdf/2512.19154v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.19154v1",
+      "published": "2025-12-22",
       "categories": [
         "cs.LG",
         "cs.AI"
       ]
     },
     {
-      "title": "Kinetic-Theory Bounds on the Equation of State of Dense QCD Matter",
+      "title": "A Universal Framework for Factorial Matched Observational Studies with General Treatment Types: Design, Analysis, and Applications",
       "authors": [
-        "Michał Marczenko"
+        "Jianan Zhu",
+        "Tianruo Zhang",
+        "Diana Silver",
+        "Ellicott Matthay",
+        "Omar El-Shahawy",
+        "Hyunseung Kang",
+        "Siyu Heng"
       ],
-      "abstract": "We derive bounds on the equation of state of cold, dense matter by extending the causal, model-agnostic interpolation between chiral effective field theory and perturbative calculations with a microscopic constraint from relativistic kinetic theory. The additional condition restricts the stiffest admissible behavior of the equation of state and systematically reduces the range of allowed equations of state, with the strongest effect at high densities. The resulting bounds remain consistent with known low- and high-density limits, while the strength of the constraint depends on the density above which the kinetic-theory condition is applied. These bounds can be readily incorporated into future studies of cold, dense matter and used to assess the impact of microscopic stability conditions on equation-of-state inference.",
-      "pdf_url": "https://arxiv.org/pdf/2512.17410v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.17410v1",
-      "published": "2025-12-19",
+      "abstract": "Matching is one of the most widely used causal inference frameworks in observational studies. However, all the existing matching-based causal inference methods are designed for either a single treatment with general treatment types (e.g., binary, ordinal, or continuous) or factorial (multiple) treatments with binary treatments only. To our knowledge, no existing matching-based causal methods can handle factorial treatments with general treatment types. This critical gap substantially hinders the applicability of matching in many real-world problems, in which there are often multiple, potentially non-binary (e.g., continuous) treatment components. To address this critical gap, this work develops a universal framework for the design and analysis of factorial matched observational studies with general treatment types (e.g., binary, ordinal, or continuous). We first propose a two-stage non-bipartite matching algorithm that constructs matched sets of units with similar covariates but distinct combinations of treatment doses, thereby enabling valid estimation of both main and interaction effects. We then introduce a new class of generalized factorial Neyman-type estimands that provide model-free, finite-population-valid definitions of marginal and interaction causal effects under factorial treatments with general treatment types. Randomization-based Fisher-type and Neyman-type inference procedures are developed, including unbiased estimators, asymptotically valid variance estimators, and variance adjustments incorporating covariate information for improved efficiency. Finally, we illustrate the proposed framework through a county-level application that evaluates the causal impacts of work- and non-work-trip reductions (social distancing practices) on COVID-19-related and drug-related outcomes during the COVID-19 pandemic in the United States.",
+      "pdf_url": "https://arxiv.org/pdf/2512.18997v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.18997v1",
+      "published": "2025-12-22",
       "categories": [
-        "nucl-th",
-        "astro-ph.HE"
+        "stat.ME",
+        "stat.AP"
       ]
     },
     {
-      "title": "Piezo1 Decodes Mechanical Forces via Allosteric Network Reprogramming",
+      "title": "Model-Agnostic Bounds for Augmented Inverse Probability Weighted Estimators' Wald-Confidence Interval Coverage in Randomized Controlled Trials",
       "authors": [
-        "Yuling Zhang",
-        "Lei Kang",
-        "Yancong Zhang",
-        "Guohui Hu"
+        "Hongxiang Qiu"
       ],
-      "abstract": "Understanding how molecular machines transduce mechanical force into chemical signals is a central goal in chemistry. The mechanosensitive ion channel Piezo1 is an archetypal nanoscale mechanotransducer, but the molecular principles by which it decodes distinct mechanical stimuli remain elusive. Here, we combine large-scale molecular dynamics simulations with time-series causal inference to elucidate the dynamic allosteric communication networks within Piezo1 under both quasi-static membrane tension and shockwave-induced cavitation. Under tangential tension, Piezo1 employs the lever-like pathway, a linear, feed-forward pathway propagating the signal from peripheral mechanophores to the central pore. In contrast, a shockwave impulse in the normal direction triggers a two-stage gating mechanism based on the dynamic reprogramming of the allosteric network. An initial compression phase activates an apical shortcut pathway originating from the cap domain. A subsequent tension phase utilizes a rewired network with complex feedback loops to drive the channel to a fully open state. These findings reveal that the allosteric wiring of a molecular machine is not static but can be dynamically reconfigured by the nature of the physical input. This principle of force-dependent pathway selection offers a new framework for understanding mechanochemistry and for designing programmable, stimuli-responsive molecular systems.",
-      "pdf_url": "https://arxiv.org/pdf/2512.17403v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.17403v1",
-      "published": "2025-12-19",
+      "abstract": "Nonparametric estimators, such as the augmented inverse probability weighted (AIPW) estimator, have become increasingly popular in causal inference. Numerous nonparametric estimators have been proposed, but they are all asymptotically normal with the same asymptotic variance under similar conditions, leaving little guidance for practitioners to choose an estimator. In this paper, I focus on another important perspective of their asymptotic behaviors beyond asymptotic normality, the convergence of the Wald-confidence interval (CI) coverage to the nominal coverage. Such results have been established for simpler estimators (e.g., the Berry-Esseen Theorem), but are lacking for nonparametric estimators. I consider a simple but practical setting where the AIPW estimator based on a black-box nuisance estimator, with or without cross-fitting, is used to estimate the average treatment effect in randomized controlled trials. I derive non-asymptotic Berry-Esseen-type bounds on the difference between Wald-CI coverage and the nominal coverage. I also analyze the bias of variance estimators, showing that the cross-fit variance estimator might overestimate while the non-cross-fit variance estimator might underestimate, which might explain why cross-fitting has been empirically observed to improve Wald-CI coverage.",
+      "pdf_url": "https://arxiv.org/pdf/2512.18898v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.18898v1",
+      "published": "2025-12-21",
       "categories": [
-        "q-bio.MN"
-      ]
-    },
-    {
-      "title": "Sharp Structure-Agnostic Lower Bounds for General Functional Estimation",
-      "authors": [
-        "Jikai Jin",
-        "Vasilis Syrgkanis"
-      ],
-      "abstract": "The design of efficient nonparametric estimators has long been a central problem in statistics, machine learning, and decision making. Classical optimal procedures often rely on strong structural assumptions, which can be misspecified in practice and complicate deployment. This limitation has sparked growing interest in structure-agnostic approaches -- methods that debias black-box nuisance estimates without imposing structural priors. Understanding the fundamental limits of these methods is therefore crucial. This paper provides a systematic investigation of the optimal error rates achievable by structure-agnostic estimators. We first show that, for estimating the average treatment effect (ATE), a central parameter in causal inference, doubly robust learning attains optimal structure-agnostic error rates. We then extend our analysis to a general class of functionals that depend on unknown nuisance functions and establish the structure-agnostic optimality of debiased/double machine learning (DML). We distinguish two regimes -- one where double robustness is attainable and one where it is not -- leading to different optimal rates for first-order debiasing, and show that DML is optimal in both regimes. Finally, we instantiate our general lower bounds by deriving explicit optimal rates that recover existing results and extend to additional estimands of interest. Our results provide theoretical validation for widely used first-order debiasing methods and guidance for practitioners seeking optimal approaches in the absence of structural assumptions. This paper generalizes and subsumes the ATE lower bound established in \\citet{jin2024structure} by the same authors.",
-      "pdf_url": "https://arxiv.org/pdf/2512.17341v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.17341v1",
-      "published": "2025-12-19",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "econ.EM",
         "math.ST",
         "stat.ME"
       ]
     },
     {
-      "title": "A Synthetic Instrumental Variable Method: Using the Dual Tendency Condition for Coplanar Instruments",
+      "title": "Quantifying the Lifelong Impact of Resilience Interventions via Agent-Based LLM Simulation",
       "authors": [
-        "Ratbek Dzhumashev",
-        "Ainura Tursunalieva"
+        "Vivienne L'Ecuyer Ming"
       ],
-      "abstract": "Traditional instrumental variable (IV) methods often struggle with weak or invalid instruments and rely heavily on external data. We introduce a Synthetic Instrumental Variable (SIV) approach that constructs valid instruments using only existing data. Our method leverages a data-driven dual tendency (DT) condition to identify valid instruments without requiring external variables. SIV is robust to heteroscedasticity and can determine the true sign of the correlation between endogenous regressors and errors--an assumption typically imposed in empirical work. Through simulations and real-world applications, we show that SIV improves causal inference by mitigating common IV limitations and reducing dependence on scarce instruments. This approach has broad implications for economics, epidemiology, and policy evaluation.",
-      "pdf_url": "https://arxiv.org/pdf/2512.17301v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.17301v1",
-      "published": "2025-12-19",
+      "abstract": "Establishing the long-term, causal impact of psychological interventions on life outcomes is a grand challenge for the social sciences, caught between the limitations of correlational longitudinal studies and short-term randomized controlled trials (RCTs). This paper introduces Large-Scale Agent-based Longitudinal Simulation (LALS), a framework that resolves this impasse by simulating multi-decade, counterfactual life trajectories. The methodology employs a \"digital clone\" design where 2,500 unique LLM-based agent personas (grounded in a curated corpus of 3,917 empirical research articles) are each cloned across a 2x2 factorial experiment. Specifically, the simulation models the efficacy of extended psychological resilience training (Intervention vs. Control) either in childhood or as a young adult (age 6 vs. age 18). Comparing digital clones enables exceptionally precise causal inference. The simulation provides a quantitative, causal estimate of a resilience intervention's lifelong effects, revealing significant reductions in mortality, a lower incidence of dementia, and a substantial increase in accumulated wealth. Crucially, the results uncover a crucial developmental window: the intervention administered at age 6 produced more than double the positive impact on lifetime wealth compared to the same intervention at age 18. These benefits were most pronounced for agents from low-socioeconomic backgrounds, highlighting a powerful buffering effect. The LALS framework serves as a \"computational wind tunnel\" for social science, offering a new paradigm for generating and testing causal hypotheses about the complex, lifelong dynamics that shape human capital and well-being.",
+      "pdf_url": "https://arxiv.org/pdf/2512.18803v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.18803v1",
+      "published": "2025-12-21",
       "categories": [
-        "stat.ME",
-        "math.ST"
+        "cs.CY",
+        "cs.MA"
       ]
     },
     {
-      "title": "Identification and efficient estimation of compliance and network causal effects in cluster-randomized trials",
+      "title": "The Dead Salmons of AI Interpretability",
       "authors": [
-        "Chao Cheng",
-        "Georgia Papadogeorgou",
-        "Fan Li"
+        "Maxime Méloux",
+        "Giada Dirupo",
+        "François Portet",
+        "Maxime Peyrard"
       ],
-      "abstract": "Treatment noncompliance is pervasive in infectious disease cluster-randomized trials. Although all individuals within a cluster are assigned the same treatment condition, the treatment uptake status may vary across individuals due to noncompliance. We propose a semiparametric framework to evaluate the individual compliance effect and network assignment effect within principal stratum exhibiting different patterns of noncompliance. The individual compliance effect captures the portion of the treatment effect attributable to changes in treatment receipt, while the network assignment effect reflects the pure impact of treatment assignment and spillover among individuals within the same cluster. Unlike prior efforts which either empirically identify or interval identify these estimands, we characterize new structural assumptions for nonparametric point identification. We then develop semiparametrically efficient estimators that combine data-adaptive machine learning methods with efficient influence functions to enable more robust inference. Additionally, we introduce sensitivity analysis methods to study the impact under assumption violations, and apply the proposed methods to reanalyze a cluster-randomized trial in Kenya that evaluated the impact of school-based mass deworming on disease transmission.",
-      "pdf_url": "https://arxiv.org/pdf/2512.16857v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.16857v1",
-      "published": "2025-12-18",
+      "abstract": "In a striking neuroscience study, the authors placed a dead salmon in an MRI scanner and showed it images of humans in social situations. Astonishingly, standard analyses of the time reported brain regions predictive of social emotions. The explanation, of course, was not supernatural cognition but a cautionary tale about misapplied statistical inference. In AI interpretability, reports of similar ''dead salmon'' artifacts abound: feature attribution, probing, sparse auto-encoding, and even causal analyses can produce plausible-looking explanations for randomly initialized neural networks. In this work, we examine this phenomenon and argue for a pragmatic statistical-causal reframing: explanations of computational systems should be treated as parameters of a (statistical) model, inferred from computational traces. This perspective goes beyond simply measuring statistical variability of explanations due to finite sampling of input data; interpretability methods become statistical estimators, and findings should be tested against explicit and meaningful alternative computational hypotheses, with uncertainty quantified with respect to the postulated statistical model. It also highlights important theoretical issues, such as the identifiability of common interpretability queries, which we argue is critical to understand the field's susceptibility to false discoveries, poor generalizability, and high variance. More broadly, situating interpretability within the standard toolkit of statistical inference opens promising avenues for future work aimed at turning AI interpretability into a pragmatic and rigorous science.",
+      "pdf_url": "https://arxiv.org/pdf/2512.18792v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.18792v1",
+      "published": "2025-12-21",
       "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Quantile-based causal inference for spatio-temporal processes: Assessing the impacts of wildfires on US air quality",
-      "authors": [
-        "Zipei Geng",
-        "Jordan Richards",
-        "Raphael Huser",
-        "Marc G. Genton"
-      ],
-      "abstract": "Wildfires pose an increasingly severe threat to air quality, yet quantifying their causal impact remains challenging due to unmeasured meteorological and geographic confounders. Moreover, wildfire impacts on air quality may exhibit heterogeneous effects across pollution levels, which conventional mean-based causal methods fail to capture. To address these challenges, we develop a Quantile-based Latent Spatial Confounder Model (QLSCM) that substitutes conditional expectations with conditional quantiles, enabling causal analysis across the entire outcome distribution. We establish the causal interpretation of QLSCM theoretically, prove the identifiability of causal effects, and demonstrate estimator consistency under mild conditions. Simulations confirm the bias correction capability and the advantage of quantile-based inference over mean-based approaches. Applying our method to contiguous US wildfire and air quality data, we uncover important heterogeneous effects: fire radiative power exerts significant positive causal effects on aerosol optical depth at high quantiles in Western states like California and Oregon, while insignificant at lower quantiles. This indicates that wildfire impacts on air quality primarily manifest during extreme pollution events. Regional analyses reveal that Western and Northwestern regions experience the strongest causal effects during such extremes. These findings provide critical insights for environmental policy by identifying where and when mitigation efforts would be most effective.",
-      "pdf_url": "https://arxiv.org/pdf/2512.16603v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.16603v1",
-      "published": "2025-12-18",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "ARMFlow: AutoRegressive MeanFlow for Online 3D Human Reaction Generation",
-      "authors": [
-        "Zichen Geng",
-        "Zeeshan Hayder",
-        "Wei Liu",
-        "Hesheng Wang",
-        "Ajmal Mian"
-      ],
-      "abstract": "3D human reaction generation faces three main challenges:(1) high motion fidelity, (2) real-time inference, and (3) autoregressive adaptability for online scenarios. Existing methods fail to meet all three simultaneously. We propose ARMFlow, a MeanFlow-based autoregressive framework that models temporal dependencies between actor and reactor motions. It consists of a causal context encoder and an MLP-based velocity predictor. We introduce Bootstrap Contextual Encoding (BSCE) in training, encoding generated history instead of the ground-truth ones, to alleviate error accumulation in autoregressive generation. We further introduce the offline variant ReMFlow, achieving state-of-the-art performance with the fastest inference among offline methods. Our ARMFlow addresses key limitations of online settings by: (1) enhancing semantic alignment via a global contextual encoder; (2) achieving high accuracy and low latency in a single-step inference; and (3) reducing accumulated errors through BSCE. Our single-step online generation surpasses existing online methods on InterHuman and InterX by over 40% in FID, while matching offline state-of-the-art performance despite using only partial sequence conditions.",
-      "pdf_url": "https://arxiv.org/pdf/2512.16234v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.16234v1",
-      "published": "2025-12-18",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "BUILD with Precision: Bottom-Up Inference of Linear DAGs",
-      "authors": [
-        "Hamed Ajorlou",
-        "Samuel Rey",
-        "Gonzalo Mateos",
-        "Geert Leus",
-        "Antonio G. Marques"
-      ],
-      "abstract": "Learning the structure of directed acyclic graphs (DAGs) from observational data is a central problem in causal discovery, statistical signal processing, and machine learning. Under a linear Gaussian structural equation model (SEM) with equal noise variances, the problem is identifiable and we show that the ensemble precision matrix of the observations exhibits a distinctive structure that facilitates DAG recovery. Exploiting this property, we propose BUILD (Bottom-Up Inference of Linear DAGs), a deterministic stepwise algorithm that identifies leaf nodes and their parents, then prunes the leaves by removing incident edges to proceed to the next step, exactly reconstructing the DAG from the true precision matrix. In practice, precision matrices must be estimated from finite data, and ill-conditioning may lead to error accumulation across BUILD steps. As a mitigation strategy, we periodically re-estimate the precision matrix (with less variables as leaves are pruned), trading off runtime for enhanced robustness. Reproducible results on challenging synthetic benchmarks demonstrate that BUILD compares favorably to state-of-the-art DAG learning algorithms, while offering an explicit handle on complexity.",
-      "pdf_url": "https://arxiv.org/pdf/2512.16111v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.16111v1",
-      "published": "2025-12-18",
-      "categories": [
-        "cs.LG",
-        "eess.SP"
-      ]
-    },
-    {
-      "title": "CauSTream: Causal Spatio-Temporal Representation Learning for Streamflow Forecasting",
-      "authors": [
-        "Shu Wan",
-        "Reepal Shah",
-        "John Sabo",
-        "Huan Liu",
-        "K. Selçuk Candan"
-      ],
-      "abstract": "Streamflow forecasting is crucial for water resource management and risk mitigation. While deep learning models have achieved strong predictive performance, they often overlook underlying physical processes, limiting interpretability and generalization. Recent causal learning approaches address these issues by integrating domain knowledge, yet they typically rely on fixed causal graphs that fail to adapt to data. We propose CauStream, a unified framework for causal spatiotemporal streamflow forecasting. CauSTream jointly learns (i) a runoff causal graph among meteorological forcings and (ii) a routing graph capturing dynamic dependencies across stations. We further establish identifiability conditions for these causal structures under a nonparametric setting. We evaluate CauSTream on three major U.S. river basins across three forecasting horizons. The model consistently outperforms prior state-of-the-art methods, with performance gaps widening at longer forecast windows, indicating stronger generalization to unseen conditions. Beyond forecasting, CauSTream also learns causal graphs that capture relationships among hydrological factors and stations. The inferred structures align closely with established domain knowledge, offering interpretable insights into watershed dynamics. CauSTream offers a principled foundation for causal spatiotemporal modeling, with the potential to extend to a wide range of scientific and environmental applications.",
-      "pdf_url": "https://arxiv.org/pdf/2512.16046v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.16046v1",
-      "published": "2025-12-18",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CE",
-        "stat.ML"
+        "cs.AI"
       ]
     }
   ]
