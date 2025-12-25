@@ -1,6 +1,86 @@
 {
-  "last_updated": "2025-12-24T00:57:01.848170",
+  "last_updated": "2025-12-25T00:57:09.189502",
   "papers": [
+    {
+      "title": "Information-theoretic signatures of causality in Bayesian networks and hypergraphs",
+      "authors": [
+        "Sung En Chiang",
+        "Zhaolu Liu",
+        "Robert L. Peach",
+        "Mauricio Barahona"
+      ],
+      "abstract": "Analyzing causality in multivariate systems involves establishing how information is generated, distributed and combined, and thus requires tools that capture interactions beyond pairwise relations. Higher-order information theory provides such tools. In particular, Partial Information Decomposition (PID) allows the decomposition of the information that a set of sources provides about a target into redundant, unique, and synergistic components. Yet the mathematical connection between such higher-order information-theoretic measures and causal structure remains undeveloped. Here we establish the first theoretical correspondence between PID components and causal structure in both Bayesian networks and hypergraphs. We first show that in Bayesian networks unique information precisely characterizes direct causal neighbors, while synergy identifies collider relationships. This establishes a localist causal discovery paradigm in which the structure surrounding each variable can be recovered from its immediate informational footprint, eliminating the need for global search over graph space. Extending these results to higher-order systems, we prove that PID signatures in Bayesian hypergraphs differentiate parents, children, co-heads, and co-tails, revealing a higher-order collider effect unique to multi-tail hyperedges. We also present procedures by which our results can be used to characterize systematically the causal structure of Bayesian networks and hypergraphs. Our results position PID as a rigorous, model-agnostic foundation for inferring both pairwise and higher-order causal structure, and introduce a fundamentally local information-theoretic viewpoint on causal discovery.",
+      "pdf_url": "https://arxiv.org/pdf/2512.20552v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.20552v1",
+      "published": "2025-12-23",
+      "categories": [
+        "cs.IT",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "ScoreMatchingRiesz: Auto-DML with Infinitesimal Classification",
+      "authors": [
+        "Masahiro Kato"
+      ],
+      "abstract": "This study proposes Riesz representer estimation methods based on score matching. The Riesz representer is a key component in debiased machine learning for constructing $\\sqrt{n}$-consistent and efficient estimators in causal inference and structural parameter estimation. To estimate the Riesz representer, direct approaches have garnered attention, such as Riesz regression and the covariate balancing propensity score. These approaches can also be interpreted as variants of direct density ratio estimation (DRE) in several applications such as average treatment effect estimation. In DRE, it is well known that flexible models can easily overfit the observed data due to the estimand and the form of the loss function. To address this issue, recent work has proposed modeling the density ratio as a product of multiple intermediate density ratios and estimating it using score-matching techniques, which are often used in the diffusion model literature. We extend score-matching-based DRE methods to Riesz representer estimation. Our proposed method not only mitigates overfitting but also provides insights for causal inference by bridging marginal effects and average policy effects through time score functions.",
+      "pdf_url": "https://arxiv.org/pdf/2512.20523v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.20523v1",
+      "published": "2025-12-23",
+      "categories": [
+        "econ.EM",
+        "cs.LG",
+        "math.ST",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Exploring the nature of gravity with quantum information methods",
+      "authors": [
+        "Bruna Sahdo",
+        "Natália Salomé Móller"
+      ],
+      "abstract": "The aim of this article is to provide an introduction to the use of quantum information methods for investigating the interface between quantum theory and gravity. To this end, we discuss the basic principles of two current research streams that use this approach. The first one explores a phenomenon known as gravitationally induced entanglement, which aims to infer whether the gravitational field responsible for the interaction between two massive bodies must be quantized or not. The second stream investigates causal structures, thereby providing indirect evidence that spacetime may exhibit non-classical behavior. Before presenting these topics, we briefly review some fundamental concepts and experiments from quantum information theory, such as the Mach-Zehnder interferometer, the Stern-Gerlach experiment, Bell inequalities and entanglement, and the language of quantum circuits.",
+      "pdf_url": "https://arxiv.org/pdf/2512.20429v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.20429v1",
+      "published": "2025-12-23",
+      "categories": [
+        "quant-ph",
+        "gr-qc"
+      ]
+    },
+    {
+      "title": "Estimation and Inference for Causal Explainability",
+      "authors": [
+        "Weihan Zhang",
+        "Zijun Gao"
+      ],
+      "abstract": "Understanding how much each variable contributes to an outcome is a central question across disciplines. A causal view of explainability is favorable for its ability in uncovering underlying mechanisms and generalizing to new contexts. Based on a family of causal explainability quantities, we develop methods for their estimation and inference. In particular, we construct a one-step correction estimator using semi-parametric efficiency theory, which explicitly leverages the independence structure of variables to reduce the asymptotic variance. For a null hypothesis on the boundary, i.e., zero explainability, we show its equivalence to Fisher's sharp null, which motivates a randomization-based inference procedure. Finally, we illustrate the empirical efficacy of our approach through simulations as well as an immigration experiment dataset, where we investigate how features and their interactions shape public opinion toward admitting immigrants.",
+      "pdf_url": "https://arxiv.org/pdf/2512.20219v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.20219v1",
+      "published": "2025-12-23",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Causal Inference with the \"Napkin Graph\"",
+      "authors": [
+        "Anna Guo",
+        "David Benkeser",
+        "Razieh Nabi"
+      ],
+      "abstract": "Unmeasured confounding can render identification strategies based on adjustment functionals invalid. We study the \"Napkin graph\", a causal structure that encapsulates patterns of M-bias, instrumental variables, and the classical back-door and front-door models within a single graphical framework, yet requires a nonstandard identification strategy: the average treatment effect is expressed as a ratio of two g-formulas. We develop novel estimators for this functional, including doubly robust one-step and targeted minimum loss-based estimators that remain asymptotically linear when nuisance functions are estimated at slower-than-parametric rates using machine learning. We also show how a generalized independence restriction encoded by the Napkin graph, known as a Verma constraint, can be exploited to improve efficiency, illustrating more generally how such constraints in hidden variable DAGs can inform semiparametric inference. The proposed methods are validated through simulations and applied to the Finnish Life Course study to estimate the effect of educational attainment on income. An accompanying R package, napkincausal, implements all proposed procedures.",
+      "pdf_url": "https://arxiv.org/pdf/2512.19861v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.19861v1",
+      "published": "2025-12-22",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Toward Scalable and Valid Conditional Independence Testing with Spectral Representations",
       "authors": [
@@ -81,87 +161,6 @@
       "published": "2025-12-22",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Beyond Sliding Windows: Learning to Manage Memory in Non-Markovian Environments",
-      "authors": [
-        "Geraud Nangue Tasse",
-        "Matthew Riemer",
-        "Benjamin Rosman",
-        "Tim Klinger"
-      ],
-      "abstract": "Recent success in developing increasingly general purpose agents based on sequence models has led to increased focus on the problem of deploying computationally limited agents within the vastly more complex real-world. A key challenge experienced in these more realistic domains is highly non-Markovian dependencies with respect to the agent's observations, which are less common in small controlled domains. The predominant approach for dealing with this in the literature is to stack together a window of the most recent observations (Frame Stacking), but this window size must grow with the degree of non-Markovian dependencies, which results in prohibitive computational and memory requirements for both action inference and learning. In this paper, we are motivated by the insight that in many environments that are highly non-Markovian with respect to time, the environment only causally depends on a relatively small number of observations over that time-scale. A natural direction would then be to consider meta-algorithms that maintain relatively small adaptive stacks of memories such that it is possible to express highly non-Markovian dependencies with respect to time while considering fewer observations at each step and thus experience substantial savings in both compute and memory requirements. Hence, we propose a meta-algorithm (Adaptive Stacking) for achieving exactly that with convergence guarantees and quantify the reduced computation and memory constraints for MLP, LSTM, and Transformer-based agents. Our experiments utilize popular memory tasks, which give us control over the degree of non-Markovian dependencies. This allows us to demonstrate that an appropriate meta-algorithm can learn the removal of memories not predictive of future rewards without excessive removal of important experiences. Code: https://github.com/geraudnt/adaptive-stacking",
-      "pdf_url": "https://arxiv.org/pdf/2512.19154v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.19154v1",
-      "published": "2025-12-22",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A Universal Framework for Factorial Matched Observational Studies with General Treatment Types: Design, Analysis, and Applications",
-      "authors": [
-        "Jianan Zhu",
-        "Tianruo Zhang",
-        "Diana Silver",
-        "Ellicott Matthay",
-        "Omar El-Shahawy",
-        "Hyunseung Kang",
-        "Siyu Heng"
-      ],
-      "abstract": "Matching is one of the most widely used causal inference frameworks in observational studies. However, all the existing matching-based causal inference methods are designed for either a single treatment with general treatment types (e.g., binary, ordinal, or continuous) or factorial (multiple) treatments with binary treatments only. To our knowledge, no existing matching-based causal methods can handle factorial treatments with general treatment types. This critical gap substantially hinders the applicability of matching in many real-world problems, in which there are often multiple, potentially non-binary (e.g., continuous) treatment components. To address this critical gap, this work develops a universal framework for the design and analysis of factorial matched observational studies with general treatment types (e.g., binary, ordinal, or continuous). We first propose a two-stage non-bipartite matching algorithm that constructs matched sets of units with similar covariates but distinct combinations of treatment doses, thereby enabling valid estimation of both main and interaction effects. We then introduce a new class of generalized factorial Neyman-type estimands that provide model-free, finite-population-valid definitions of marginal and interaction causal effects under factorial treatments with general treatment types. Randomization-based Fisher-type and Neyman-type inference procedures are developed, including unbiased estimators, asymptotically valid variance estimators, and variance adjustments incorporating covariate information for improved efficiency. Finally, we illustrate the proposed framework through a county-level application that evaluates the causal impacts of work- and non-work-trip reductions (social distancing practices) on COVID-19-related and drug-related outcomes during the COVID-19 pandemic in the United States.",
-      "pdf_url": "https://arxiv.org/pdf/2512.18997v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.18997v1",
-      "published": "2025-12-22",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Model-Agnostic Bounds for Augmented Inverse Probability Weighted Estimators' Wald-Confidence Interval Coverage in Randomized Controlled Trials",
-      "authors": [
-        "Hongxiang Qiu"
-      ],
-      "abstract": "Nonparametric estimators, such as the augmented inverse probability weighted (AIPW) estimator, have become increasingly popular in causal inference. Numerous nonparametric estimators have been proposed, but they are all asymptotically normal with the same asymptotic variance under similar conditions, leaving little guidance for practitioners to choose an estimator. In this paper, I focus on another important perspective of their asymptotic behaviors beyond asymptotic normality, the convergence of the Wald-confidence interval (CI) coverage to the nominal coverage. Such results have been established for simpler estimators (e.g., the Berry-Esseen Theorem), but are lacking for nonparametric estimators. I consider a simple but practical setting where the AIPW estimator based on a black-box nuisance estimator, with or without cross-fitting, is used to estimate the average treatment effect in randomized controlled trials. I derive non-asymptotic Berry-Esseen-type bounds on the difference between Wald-CI coverage and the nominal coverage. I also analyze the bias of variance estimators, showing that the cross-fit variance estimator might overestimate while the non-cross-fit variance estimator might underestimate, which might explain why cross-fitting has been empirically observed to improve Wald-CI coverage.",
-      "pdf_url": "https://arxiv.org/pdf/2512.18898v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.18898v1",
-      "published": "2025-12-21",
-      "categories": [
-        "math.ST",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Quantifying the Lifelong Impact of Resilience Interventions via Agent-Based LLM Simulation",
-      "authors": [
-        "Vivienne L'Ecuyer Ming"
-      ],
-      "abstract": "Establishing the long-term, causal impact of psychological interventions on life outcomes is a grand challenge for the social sciences, caught between the limitations of correlational longitudinal studies and short-term randomized controlled trials (RCTs). This paper introduces Large-Scale Agent-based Longitudinal Simulation (LALS), a framework that resolves this impasse by simulating multi-decade, counterfactual life trajectories. The methodology employs a \"digital clone\" design where 2,500 unique LLM-based agent personas (grounded in a curated corpus of 3,917 empirical research articles) are each cloned across a 2x2 factorial experiment. Specifically, the simulation models the efficacy of extended psychological resilience training (Intervention vs. Control) either in childhood or as a young adult (age 6 vs. age 18). Comparing digital clones enables exceptionally precise causal inference. The simulation provides a quantitative, causal estimate of a resilience intervention's lifelong effects, revealing significant reductions in mortality, a lower incidence of dementia, and a substantial increase in accumulated wealth. Crucially, the results uncover a crucial developmental window: the intervention administered at age 6 produced more than double the positive impact on lifetime wealth compared to the same intervention at age 18. These benefits were most pronounced for agents from low-socioeconomic backgrounds, highlighting a powerful buffering effect. The LALS framework serves as a \"computational wind tunnel\" for social science, offering a new paradigm for generating and testing causal hypotheses about the complex, lifelong dynamics that shape human capital and well-being.",
-      "pdf_url": "https://arxiv.org/pdf/2512.18803v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.18803v1",
-      "published": "2025-12-21",
-      "categories": [
-        "cs.CY",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "The Dead Salmons of AI Interpretability",
-      "authors": [
-        "Maxime Méloux",
-        "Giada Dirupo",
-        "François Portet",
-        "Maxime Peyrard"
-      ],
-      "abstract": "In a striking neuroscience study, the authors placed a dead salmon in an MRI scanner and showed it images of humans in social situations. Astonishingly, standard analyses of the time reported brain regions predictive of social emotions. The explanation, of course, was not supernatural cognition but a cautionary tale about misapplied statistical inference. In AI interpretability, reports of similar ''dead salmon'' artifacts abound: feature attribution, probing, sparse auto-encoding, and even causal analyses can produce plausible-looking explanations for randomly initialized neural networks. In this work, we examine this phenomenon and argue for a pragmatic statistical-causal reframing: explanations of computational systems should be treated as parameters of a (statistical) model, inferred from computational traces. This perspective goes beyond simply measuring statistical variability of explanations due to finite sampling of input data; interpretability methods become statistical estimators, and findings should be tested against explicit and meaningful alternative computational hypotheses, with uncertainty quantified with respect to the postulated statistical model. It also highlights important theoretical issues, such as the identifiability of common interpretability queries, which we argue is critical to understand the field's susceptibility to false discoveries, poor generalizability, and high variance. More broadly, situating interpretability within the standard toolkit of statistical inference opens promising avenues for future work aimed at turning AI interpretability into a pragmatic and rigorous science.",
-      "pdf_url": "https://arxiv.org/pdf/2512.18792v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.18792v1",
-      "published": "2025-12-21",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]
