@@ -1,6 +1,74 @@
 {
-  "last_updated": "2025-12-25T00:57:09.189502",
+  "last_updated": "2025-12-26T00:57:35.432521",
   "papers": [
+    {
+      "title": "Causal-driven attribution (CDA): Estimating channel influence without user-level data",
+      "authors": [
+        "Georgios Filippou",
+        "Boi Mai Quach",
+        "Diana Lenghel",
+        "Arthur White",
+        "Ashish Kumar Jha"
+      ],
+      "abstract": "Attribution modelling lies at the heart of marketing effectiveness, yet most existing approaches depend on user-level path data, which are increasingly inaccessible due to privacy regulations and platform restrictions. This paper introduces a Causal-Driven Attribution (CDA) framework that infers channel influence using only aggregated impression-level data, avoiding any reliance on user identifiers or click-path tracking. CDA integrates temporal causal discovery (using PCMCI) with causal effect estimation via a Structural Causal Model to recover directional channel relationships and quantify their contributions to conversions. Using large-scale synthetic data designed to replicate real marketing dynamics, we show that CDA achieves an average relative RMSE of 9.50% when given the true causal graph, and 24.23% when using the predicted graph, demonstrating strong accuracy under correct structure and meaningful signal recovery even under structural uncertainty. CDA captures cross-channel interdependencies while providing interpretable, privacy-preserving attribution insights, offering a scalable and future-proof alternative to traditional path-based models.",
+      "pdf_url": "https://arxiv.org/pdf/2512.21211v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.21211v1",
+      "published": "2025-12-24",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Hierarchical Modeling Approach to Fast and Accurate Table Recognition",
+      "authors": [
+        "Takaya Kawakatsu"
+      ],
+      "abstract": "The extraction and use of diverse knowledge from numerous documents is a pressing challenge in intelligent information retrieval. Documents contain elements that require different recognition methods. Table recognition typically consists of three subtasks, namely table structure, cell position and cell content recognition. Recent models have achieved excellent recognition with a combination of multi-task learning, local attention, and mutual learning. However, their effectiveness has not been fully explained, and they require a long period of time for inference. This paper presents a novel multi-task model that utilizes non-causal attention to capture the entire table structure, and a parallel inference algorithm for faster cell content inference. The superiority is demonstrated both visually and statistically on two large public datasets.",
+      "pdf_url": "https://arxiv.org/pdf/2512.21083v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.21083v1",
+      "published": "2025-12-24",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Clever Hans in Chemistry: Chemist Style Signals Confound Activity Prediction on Public Benchmarks",
+      "authors": [
+        "Andrew D. Blevins",
+        "Ian K. Quigley"
+      ],
+      "abstract": "Can machine learning models identify which chemist made a molecule from structure alone? If so, models trained on literature data may exploit chemist intent rather than learning causal structure-activity relationships. We test this by linking CHEMBL assays to publication authors and training a 1,815-class classifier to predict authors from molecular fingerprints, achieving 60% top-5 accuracy under scaffold-based splitting. We then train an activity model that receives only a protein identifier and an author-probability vector derived from structure, with no direct access to molecular descriptors. This author-only model achieves predictive power comparable to a simple baseline that has access to structure. This reveals a \"Clever Hans\" failure mode: models can predict bioactivity largely by inferring chemist goals and favorite targets without requiring a lab-independent understanding of chemistry. We analyze the sources of this leakage, propose author-disjoint splits, and recommend dataset practices to decouple chemist intent from biological outcomes.",
+      "pdf_url": "https://arxiv.org/pdf/2512.20924v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.20924v1",
+      "published": "2025-12-24",
+      "categories": [
+        "q-bio.BM",
+        "cs.LG",
+        "physics.chem-ph"
+      ]
+    },
+    {
+      "title": "Generalization of RLVR Using Causal Reasoning as a Testbed",
+      "authors": [
+        "Brian Lu",
+        "Hongyu Zhao",
+        "Shuo Sun",
+        "Hao Peng",
+        "Rui Ding",
+        "Hongyuan Mei"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has emerged as a promising paradigm for post-training large language models (LLMs) on complex reasoning tasks. Yet, the conditions under which RLVR yields robust generalization remain poorly understood. This paper provides an empirical study of RLVR generalization in the setting of probabilistic inference over causal graphical models. This setting offers two natural axes along which to examine generalization: (i) the level of the probabilistic query -- associational, interventional, or counterfactual -- and (ii) the structural complexity of the query, measured by the size of its relevant subgraph. We construct datasets of causal graphs and queries spanning these difficulty axes and fine-tune Qwen-2.5-Instruct models using RLVR or supervised fine-tuning (SFT). We vary both the model scale (3B-32B) and the query level included in training. We find that RLVR yields stronger within-level and across-level generalization than SFT, but only for specific combinations of model size and training query level. Further analysis shows that RLVR's effectiveness depends on the model's initial reasoning competence. With sufficient initial competence, RLVR improves an LLM's marginalization strategy and reduces errors in intermediate probability calculations, producing substantial accuracy gains, particularly on more complex queries. These findings show that RLVR can improve specific causal reasoning subskills, with its benefits emerging only when the model has sufficient initial competence.",
+      "pdf_url": "https://arxiv.org/pdf/2512.20760v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.20760v1",
+      "published": "2025-12-23",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
     {
       "title": "Information-theoretic signatures of causality in Bayesian networks and hypergraphs",
       "authors": [
@@ -57,8 +125,8 @@
         "Zijun Gao"
       ],
       "abstract": "Understanding how much each variable contributes to an outcome is a central question across disciplines. A causal view of explainability is favorable for its ability in uncovering underlying mechanisms and generalizing to new contexts. Based on a family of causal explainability quantities, we develop methods for their estimation and inference. In particular, we construct a one-step correction estimator using semi-parametric efficiency theory, which explicitly leverages the independence structure of variables to reduce the asymptotic variance. For a null hypothesis on the boundary, i.e., zero explainability, we show its equivalence to Fisher's sharp null, which motivates a randomization-based inference procedure. Finally, we illustrate the empirical efficacy of our approach through simulations as well as an immigration experiment dataset, where we investigate how features and their interactions shape public opinion toward admitting immigrants.",
-      "pdf_url": "https://arxiv.org/pdf/2512.20219v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.20219v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.20219v2",
+      "arxiv_url": "http://arxiv.org/abs/2512.20219v2",
       "published": "2025-12-23",
       "categories": [
         "stat.ME",
@@ -97,70 +165,6 @@
       "categories": [
         "cs.LG",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Real-Time Streamable Generative Speech Restoration with Flow Matching",
-      "authors": [
-        "Simon Welker",
-        "Bunlong Lay",
-        "Maris Hillemann",
-        "Tal Peer",
-        "Timo Gerkmann"
-      ],
-      "abstract": "Diffusion-based generative models have greatly impacted the speech processing field in recent years, exhibiting high speech naturalness and spawning a new research direction. Their application in real-time communication is, however, still lagging behind due to their computation-heavy nature involving multiple calls of large DNNs.\n  Here, we present Stream.FM, a frame-causal flow-based generative model with an algorithmic latency of 32 milliseconds (ms) and a total latency of 48 ms, paving the way for generative speech processing in real-time communication. We propose a buffered streaming inference scheme and an optimized DNN architecture, show how learned few-step numerical solvers can boost output quality at a fixed compute budget, explore model weight compression to find favorable points along a compute/quality tradeoff, and contribute a model variant with 24 ms total latency for the speech enhancement task.\n  Our work looks beyond theoretical latencies, showing that high-quality streaming generative speech processing can be realized on consumer GPUs available today. Stream.FM can solve a variety of speech processing tasks in a streaming fashion: speech enhancement, dereverberation, codec post-filtering, bandwidth extension, STFT phase retrieval, and Mel vocoding. As we verify through comprehensive evaluations and a MUSHRA listening test, Stream.FM establishes a state-of-the-art for generative streaming speech restoration, exhibits only a reasonable reduction in quality compared to a non-streaming variant, and outperforms our recent work (Diffusion Buffer) on generative streaming speech enhancement while operating at a lower latency.",
-      "pdf_url": "https://arxiv.org/pdf/2512.19442v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.19442v1",
-      "published": "2025-12-22",
-      "categories": [
-        "eess.SP",
-        "cs.LG",
-        "cs.SD"
-      ]
-    },
-    {
-      "title": "Attention Is Not What You Need",
-      "authors": [
-        "Zhang Chong"
-      ],
-      "abstract": "We revisit a basic question in sequence modeling: is explicit self-attention actually necessary for strong performance and reasoning? We argue that standard multi-head attention is best seen as a form of tensor lifting: hidden vectors are mapped into a high-dimensional space of pairwise interactions, and learning proceeds by constraining this lifted tensor through gradient descent. This mechanism is extremely expressive but mathematically opaque, because after many layers it becomes very hard to describe the model with a small family of explicit invariants.\n  To explore an alternative, we propose an attention-free architecture based on Grassmann flows. Instead of forming an L by L attention matrix, our Causal Grassmann layer (i) linearly reduces token states, (ii) encodes local token pairs as two-dimensional subspaces on a Grassmann manifold via Plucker coordinates, and (iii) fuses these geometric features back into the hidden states through gated mixing. Information therefore propagates by controlled deformations of low-rank subspaces over multi-scale local windows, so the core computation lives on a finite-dimensional manifold rather than in an unstructured tensor space.\n  On the Wikitext-2 language modeling benchmark, purely Grassmann-based models with 13 to 18 million parameters achieve validation perplexities within about 10 to 15 percent of size-matched Transformers. On the SNLI natural language inference task, a Grassmann-Plucker head on top of DistilBERT slightly outperforms a Transformer head, with best validation and test accuracies of 0.8550 and 0.8538 compared to 0.8545 and 0.8511. We analyze the complexity of Grassmann mixing, show linear scaling in sequence length for fixed rank, and argue that such manifold-based designs offer a more structured route toward geometric and invariant-based interpretations of neural reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2512.19428v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.19428v1",
-      "published": "2025-12-22",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "math.AG"
-      ]
-    },
-    {
-      "title": "VIGOR+: Iterative Confounder Generation and Validation via LLM-CEVAE Feedback Loop",
-      "authors": [
-        "JiaWei Zhu",
-        "ZiHeng Liu"
-      ],
-      "abstract": "Hidden confounding remains a fundamental challenge in causal inference from observational data. Recent advances leverage Large Language Models (LLMs) to generate plausible hidden confounders based on domain knowledge, yet a critical gap exists: LLM-generated confounders often exhibit semantic plausibility without statistical utility. We propose VIGOR+ (Variational Information Gain for iterative cOnfounder Refinement), a novel framework that closes the loop between LLM-based confounder generation and CEVAE-based statistical validation. Unlike prior approaches that treat generation and validation as separate stages, VIGOR+ establishes an iterative feedback mechanism: validation signals from CEVAE (including information gain, latent consistency metrics, and diagnostic messages) are transformed into natural language feedback that guides subsequent LLM generation rounds. This iterative refinement continues until convergence criteria are met. We formalize the feedback mechanism, prove convergence properties under mild assumptions, and provide a complete algorithmic framework.",
-      "pdf_url": "https://arxiv.org/pdf/2512.19349v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.19349v1",
-      "published": "2025-12-22",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Heterogeneous Graph Learning Method for Chronic Obstructive Pulmonary Disease Prediction",
-      "authors": [
-        "Leming Zhou",
-        "Zuo Wang",
-        "Zhigang Liu"
-      ],
-      "abstract": "Due to the insufficient diagnosis and treatment capabilities at the grassroots level, there are still deficiencies in the early identification and early warning of acute exacerbation of Chronic obstructive pulmonary disease (COPD), often resulting in a high prevalence rate and high burden, but the screening rate is relatively low. In order to gradually improve this situation. In this paper, this study develop a Causal Heterogeneous Graph Representation Learning (CHGRL) method for COPD comorbidity risk prediction method that: a) constructing a heterogeneous Our dataset includes the interaction between patients and diseases; b) A cause-aware heterogeneous graph learning architecture has been constructed, combining causal inference mechanisms with heterogeneous graph learning, which can support heterogeneous graph causal learning for different types of relationships; and c) Incorporate the causal loss function in the model design, and add counterfactual reasoning learning loss and causal regularization loss on the basis of the cross-entropy classification loss. We evaluate our method and compare its performance with strong GNN baselines. Following experimental evaluation, the proposed model demonstrates high detection accuracy.",
-      "pdf_url": "https://arxiv.org/pdf/2512.19194v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.19194v1",
-      "published": "2025-12-22",
-      "categories": [
-        "cs.LG"
       ]
     }
   ]
