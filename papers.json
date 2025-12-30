@@ -1,6 +1,101 @@
 {
-  "last_updated": "2025-12-29T01:02:15.418253",
+  "last_updated": "2025-12-30T00:57:30.645665",
   "papers": [
+    {
+      "title": "Knot Forcing: Taming Autoregressive Video Diffusion Models for Real-time Infinite Interactive Portrait Animation",
+      "authors": [
+        "Steven Xiao",
+        "XIndi Zhang",
+        "Dechao Meng",
+        "Qi Wang",
+        "Peng Zhang",
+        "Bang Zhang"
+      ],
+      "abstract": "Real-time portrait animation is essential for interactive applications such as virtual assistants and live avatars, requiring high visual fidelity, temporal coherence, ultra-low latency, and responsive control from dynamic inputs like reference images and driving signals. While diffusion-based models achieve strong quality, their non-causal nature hinders streaming deployment. Causal autoregressive video generation approaches enable efficient frame-by-frame generation but suffer from error accumulation, motion discontinuities at chunk boundaries, and degraded long-term consistency. In this work, we present a novel streaming framework named Knot Forcing for real-time portrait animation that addresses these challenges through three key designs: (1) a chunk-wise generation strategy with global identity preservation via cached KV states of the reference image and local temporal modeling using sliding window attention; (2) a temporal knot module that overlaps adjacent chunks and propagates spatio-temporal cues via image-to-video conditioning to smooth inter-chunk motion transitions; and (3) A \"running ahead\" mechanism that dynamically updates the reference frame's temporal coordinate during inference, keeping its semantic context ahead of the current rollout frame to support long-term coherence. Knot Forcing enables high-fidelity, temporally consistent, and interactive portrait animation over infinite sequences, achieving real-time performance with strong visual stability on consumer-grade GPUs.",
+      "pdf_url": "https://arxiv.org/pdf/2512.21734v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.21734v1",
+      "published": "2025-12-25",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Enabling Conversational Behavior Reasoning Capabilities in Full-Duplex Speech",
+      "authors": [
+        "Shuchang Pan",
+        "Siddharth Banerjee",
+        "Dhruv Hebbar",
+        "Siddhant Patel",
+        "Akshaj Gupta",
+        "Kan Jen Cheng",
+        "Hanjo Kim",
+        "Zeyi Austin Li",
+        "Martin Q. Ma",
+        "Tingle Li",
+        "Gopala Anumanchipalli",
+        "Jiachen Lian"
+      ],
+      "abstract": "Human conversation is organized by an implicit chain of thoughts that manifests as timed speech acts. Capturing this causal pathway is key to building natural full-duplex interactive systems. We introduce a framework that enables reasoning over conversational behaviors by modeling this process as causal inference within a Graph-of-Thoughts (GoT). Our approach formalizes the intent-to-action pathway with a hierarchical labeling scheme, predicting high-level communicative intents and low-level speech acts to learn their causal and temporal dependencies. To train this system, we develop a hybrid corpus that pairs controllable, event-rich simulations with human-annotated rationales and real conversational speech. The GoT framework structures streaming predictions as an evolving graph, enabling a multimodal transformer to forecast the next speech act, generate concise justifications for its decisions, and dynamically refine its reasoning. Experiments on both synthetic and real duplex dialogues show that the framework delivers robust behavior detection, produces interpretable reasoning chains, and establishes a foundation for benchmarking conversational reasoning in full duplex spoken dialogue systems.",
+      "pdf_url": "https://arxiv.org/pdf/2512.21706v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.21706v1",
+      "published": "2025-12-25",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "CausalFSFG: Rethinking Few-Shot Fine-Grained Visual Categorization from Causal Perspective",
+      "authors": [
+        "Zhiwen Yang",
+        "Jinglin Xu",
+        "Yuxin Pen"
+      ],
+      "abstract": "Few-shot fine-grained visual categorization (FS-FGVC) focuses on identifying various subcategories within a common superclass given just one or few support examples. Most existing methods aim to boost classification accuracy by enriching the extracted features with discriminative part-level details. However, they often overlook the fact that the set of support samples acts as a confounding variable, which hampers the FS-FGVC performance by introducing biased data distribution and misguiding the extraction of discriminative features. To address this issue, we propose a new causal FS-FGVC (CausalFSFG) approach inspired by causal inference for addressing biased data distributions through causal intervention. Specifically, based on the structural causal model (SCM), we argue that FS-FGVC infers the subcategories (i.e., effect) from the inputs (i.e., cause), whereas both the few-shot condition disturbance and the inherent fine-grained nature (i.e., large intra-class variance and small inter-class variance) lead to unobservable variables that bring spurious correlations, compromising the final classification performance. To further eliminate the spurious correlations, our CausalFSFG approach incorporates two key components: (1) Interventional multi-scale encoder (IMSE) conducts sample-level interventions, (2) Interventional masked feature reconstruction (IMFR) conducts feature-level interventions, which together reveal real causalities from inputs to subcategories. Extensive experiments and thorough analyses on the widely-used public datasets, including CUB-200-2011, Stanford Dogs, and Stanford Cars, demonstrate that our CausalFSFG achieves new state-of-the-art performance. The code is available at https://github.com/PKU-ICST-MIPL/CausalFSFG_TMM.",
+      "pdf_url": "https://arxiv.org/pdf/2512.21617v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.21617v1",
+      "published": "2025-12-25",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "SVBench: Evaluation of Video Generation Models on Social Reasoning",
+      "authors": [
+        "Wenshuo Peng",
+        "Gongxuan Wang",
+        "Tianmeng Yang",
+        "Chuanhao Li",
+        "Xiaojie Xu",
+        "Hui He",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Recent text-to-video generation models exhibit remarkable progress in visual realism, motion fidelity, and text-video alignment, yet they remain fundamentally limited in their ability to generate socially coherent behavior. Unlike humans, who effortlessly infer intentions, beliefs, emotions, and social norms from brief visual cues, current models tend to render literal scenes without capturing the underlying causal or psychological logic. To systematically evaluate this gap, we introduce the first benchmark for social reasoning in video generation. Grounded in findings from developmental and social psychology, our benchmark organizes thirty classic social cognition paradigms into seven core dimensions, including mental-state inference, goal-directed action, joint attention, social coordination, prosocial behavior, social norms, and multi-agent strategy. To operationalize these paradigms, we develop a fully training-free agent-based pipeline that (i) distills the reasoning mechanism of each experiment, (ii) synthesizes diverse video-ready scenarios, (iii) enforces conceptual neutrality and difficulty control through cue-based critique, and (iv) evaluates generated videos using a high-capacity VLM judge across five interpretable dimensions of social reasoning. Using this framework, we conduct the first large-scale study across seven state-of-the-art video generation systems. Our results reveal substantial performance gaps: while modern models excel in surface-level plausibility, they systematically fail in intention recognition, belief reasoning, joint attention, and prosocial inference.",
+      "pdf_url": "https://arxiv.org/pdf/2512.21507v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.21507v1",
+      "published": "2025-12-25",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Sensitivity Analysis of the Consistency Assumption",
+      "authors": [
+        "Brian Knaeble",
+        "Qinyun Lin",
+        "Erich Kummerfeld",
+        "Kenneth A. Frank"
+      ],
+      "abstract": "Sensitivity analysis informs causal inference by assessing the sensitivity of conclusions to departures from assumptions. The consistency assumption states that there are no hidden versions of treatment and that the outcome arising naturally equals the outcome arising from intervention. When reasoning about the possibility of consistency violations, it can be helpful to distinguish between covariates and versions of treatment. In the context of surgery, for example, genomic variables are covariates and the skill of a particular surgeon is a version of treatment. There may be hidden versions of treatment, and this paper addresses that concern with a new kind of sensitivity analysis. Whereas many methods for sensitivity analysis are focused on confounding by unmeasured covariates, the methodology of this paper is focused on confounding by hidden versions of treatment. In this paper, new mathematical notation is introduced to support the novel method, and example applications are described.",
+      "pdf_url": "https://arxiv.org/pdf/2512.21379v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.21379v1",
+      "published": "2025-12-24",
+      "categories": [
+        "stat.ME",
+        "cs.LG",
+        "math.OC"
+      ]
+    },
     {
       "title": "Causal-driven attribution (CDA): Estimating channel influence without user-level data",
       "authors": [
@@ -83,87 +178,6 @@
       "published": "2025-12-23",
       "categories": [
         "cs.IT",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "ScoreMatchingRiesz: Auto-DML with Infinitesimal Classification",
-      "authors": [
-        "Masahiro Kato"
-      ],
-      "abstract": "This study proposes Riesz representer estimation methods based on score matching. The Riesz representer is a key component in debiased machine learning for constructing $\\sqrt{n}$-consistent and efficient estimators in causal inference and structural parameter estimation. To estimate the Riesz representer, direct approaches have garnered attention, such as Riesz regression and the covariate balancing propensity score. These approaches can also be interpreted as variants of direct density ratio estimation (DRE) in several applications such as average treatment effect estimation. In DRE, it is well known that flexible models can easily overfit the observed data due to the estimand and the form of the loss function. To address this issue, recent work has proposed modeling the density ratio as a product of multiple intermediate density ratios and estimating it using score-matching techniques, which are often used in the diffusion model literature. We extend score-matching-based DRE methods to Riesz representer estimation. Our proposed method not only mitigates overfitting but also provides insights for causal inference by bridging marginal effects and average policy effects through time score functions.",
-      "pdf_url": "https://arxiv.org/pdf/2512.20523v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.20523v1",
-      "published": "2025-12-23",
-      "categories": [
-        "econ.EM",
-        "cs.LG",
-        "math.ST",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Exploring the nature of gravity with quantum information methods",
-      "authors": [
-        "Bruna Sahdo",
-        "Natália Salomé Móller"
-      ],
-      "abstract": "The aim of this article is to provide an introduction to the use of quantum information methods for investigating the interface between quantum theory and gravity. To this end, we discuss the basic principles of two current research streams that use this approach. The first one explores a phenomenon known as gravitationally induced entanglement, which aims to infer whether the gravitational field responsible for the interaction between two massive bodies must be quantized or not. The second stream investigates causal structures, thereby providing indirect evidence that spacetime may exhibit non-classical behavior. Before presenting these topics, we briefly review some fundamental concepts and experiments from quantum information theory, such as the Mach-Zehnder interferometer, the Stern-Gerlach experiment, Bell inequalities and entanglement, and the language of quantum circuits.",
-      "pdf_url": "https://arxiv.org/pdf/2512.20429v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.20429v1",
-      "published": "2025-12-23",
-      "categories": [
-        "quant-ph",
-        "gr-qc"
-      ]
-    },
-    {
-      "title": "Estimation and Inference for Causal Explainability",
-      "authors": [
-        "Weihan Zhang",
-        "Zijun Gao"
-      ],
-      "abstract": "Understanding how much each variable contributes to an outcome is a central question across disciplines. A causal view of explainability is favorable for its ability in uncovering underlying mechanisms and generalizing to new contexts. Based on a family of causal explainability quantities, we develop methods for their estimation and inference. In particular, we construct a one-step correction estimator using semi-parametric efficiency theory, which explicitly leverages the independence structure of variables to reduce the asymptotic variance. For a null hypothesis on the boundary, i.e., zero explainability, we show its equivalence to Fisher's sharp null, which motivates a randomization-based inference procedure. Finally, we illustrate the empirical efficacy of our approach through simulations as well as an immigration experiment dataset, where we investigate how features and their interactions shape public opinion toward admitting immigrants.",
-      "pdf_url": "https://arxiv.org/pdf/2512.20219v2",
-      "arxiv_url": "http://arxiv.org/abs/2512.20219v2",
-      "published": "2025-12-23",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Causal Inference with the \"Napkin Graph\"",
-      "authors": [
-        "Anna Guo",
-        "David Benkeser",
-        "Razieh Nabi"
-      ],
-      "abstract": "Unmeasured confounding can render identification strategies based on adjustment functionals invalid. We study the \"Napkin graph\", a causal structure that encapsulates patterns of M-bias, instrumental variables, and the classical back-door and front-door models within a single graphical framework, yet requires a nonstandard identification strategy: the average treatment effect is expressed as a ratio of two g-formulas. We develop novel estimators for this functional, including doubly robust one-step and targeted minimum loss-based estimators that remain asymptotically linear when nuisance functions are estimated at slower-than-parametric rates using machine learning. We also show how a generalized independence restriction encoded by the Napkin graph, known as a Verma constraint, can be exploited to improve efficiency, illustrating more generally how such constraints in hidden variable DAGs can inform semiparametric inference. The proposed methods are validated through simulations and applied to the Finnish Life Course study to estimate the effect of educational attainment on income. An accompanying R package, napkincausal, implements all proposed procedures.",
-      "pdf_url": "https://arxiv.org/pdf/2512.19861v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.19861v1",
-      "published": "2025-12-22",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Toward Scalable and Valid Conditional Independence Testing with Spectral Representations",
-      "authors": [
-        "Alek Frohlich",
-        "Vladimir Kostic",
-        "Karim Lounici",
-        "Daniel Perazzo",
-        "Massimiliano Pontil"
-      ],
-      "abstract": "Conditional independence (CI) is central to causal inference, feature selection, and graphical modeling, yet it is untestable in many settings without additional assumptions. Existing CI tests often rely on restrictive structural conditions, limiting their validity on real-world data. Kernel methods using the partial covariance operator offer a more principled approach but suffer from limited adaptivity, slow convergence, and poor scalability. In this work, we explore whether representation learning can help address these limitations. Specifically, we focus on representations derived from the singular value decomposition of the partial covariance operator and use them to construct a simple test statistic, reminiscent of the Hilbert-Schmidt Independence Criterion (HSIC). We also introduce a practical bi-level contrastive algorithm to learn these representations. Our theory links representation learning error to test performance and establishes asymptotic validity and power guarantees. Preliminary experiments suggest that this approach offers a practical and statistically grounded path toward scalable CI testing, bridging kernel-based theory with modern representation learning.",
-      "pdf_url": "https://arxiv.org/pdf/2512.19510v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.19510v1",
-      "published": "2025-12-22",
-      "categories": [
-        "cs.LG",
         "stat.ML"
       ]
     }
