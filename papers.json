@@ -1,19 +1,138 @@
 {
-  "last_updated": "2025-12-30T00:57:30.645665",
+  "last_updated": "2026-01-01T01:04:31.787282",
   "papers": [
+    {
+      "title": "Stream-DiffVSR: Low-Latency Streamable Video Super-Resolution via Auto-Regressive Diffusion",
+      "authors": [
+        "Hau-Shiang Shiu",
+        "Chin-Yang Lin",
+        "Zhixiang Wang",
+        "Chi-Wei Hsiao",
+        "Po-Fan Yu",
+        "Yu-Chih Chen",
+        "Yu-Lun Liu"
+      ],
+      "abstract": "Diffusion-based video super-resolution (VSR) methods achieve strong perceptual quality but remain impractical for latency-sensitive settings due to reliance on future frames and expensive multi-step denoising. We propose Stream-DiffVSR, a causally conditioned diffusion framework for efficient online VSR. Operating strictly on past frames, it combines a four-step distilled denoiser for fast inference, an Auto-regressive Temporal Guidance (ARTG) module that injects motion-aligned cues during latent denoising, and a lightweight temporal-aware decoder with a Temporal Processor Module (TPM) that enhances detail and temporal coherence. Stream-DiffVSR processes 720p frames in 0.328 seconds on an RTX4090 GPU and significantly outperforms prior diffusion-based methods. Compared with the online SOTA TMP, it boosts perceptual quality (LPIPS +0.095) while reducing latency by over 130x. Stream-DiffVSR achieves the lowest latency reported for diffusion-based VSR, reducing initial delay from over 4600 seconds to 0.328 seconds, thereby making it the first diffusion VSR method suitable for low-latency online deployment. Project page: https://jamichss.github.io/stream-diffvsr-project-page/",
+      "pdf_url": "https://arxiv.org/pdf/2512.23709v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.23709v1",
+      "published": "2025-12-29",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Propensity Patchwork Kriging for Scalable Inference on Heterogeneous Treatment Effects",
+      "authors": [
+        "Hajime Ogawa",
+        "Shonosuke Sugasawa"
+      ],
+      "abstract": "Gaussian process-based models are attractive for estimating heterogeneous treatment effects (HTE), but their computational cost limits scalability in causal inference settings. In this work, we address this challenge by extending Patchwork Kriging into the causal inference framework. Our proposed method partitions the data according to the estimated propensity score and applies Patchwork Kriging to enforce continuity of HTE estimates across adjacent regions. By imposing continuity constraints only along the propensity score dimension, rather than the full covariate space, the proposed approach substantially reduces computational cost while avoiding discontinuities inherent in simple local approximations. The resulting method can be interpreted as a smoothing extension of stratification and provides an efficient approach to HTE estimation. The proposed method is demonstrated through simulation studies and a real data application.",
+      "pdf_url": "https://arxiv.org/pdf/2512.23467v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.23467v1",
+      "published": "2025-12-29",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Probabilistic Modelling is Sufficient for Causal Inference",
+      "authors": [
+        "Bruno Mlodozeniec",
+        "David Krueger",
+        "Richard E. Turner"
+      ],
+      "abstract": "Causal inference is a key research area in machine learning, yet confusion reigns over the tools needed to tackle it. There are prevalent claims in the machine learning literature that you need a bespoke causal framework or notation to answer causal questions. In this paper, we want to make it clear that you \\emph{can} answer any causal inference question within the realm of probabilistic modelling and inference, without causal-specific tools or notation. Through concrete examples, we demonstrate how causal questions can be tackled by writing down the probability of everything. Lastly, we reinterpret causal tools as emerging from standard probabilistic modelling and inference, elucidating their necessity and utility.",
+      "pdf_url": "https://arxiv.org/pdf/2512.23408v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.23408v1",
+      "published": "2025-12-29",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Is Chain-of-Thought Really Not Explainability? Chain-of-Thought Can Be Faithful without Hint Verbalization",
+      "authors": [
+        "Kerem Zaman",
+        "Shashank Srivastava"
+      ],
+      "abstract": "Recent work, using the Biasing Features metric, labels a CoT as unfaithful if it omits a prompt-injected hint that affected the prediction. We argue this metric confuses unfaithfulness with incompleteness, the lossy compression needed to turn distributed transformer computation into a linear natural language narrative. On multi-hop reasoning tasks with Llama-3 and Gemma-3, many CoTs flagged as unfaithful by Biasing Features are judged faithful by other metrics, exceeding 50% in some models. With a new faithful@k metric, we show that larger inference-time token budgets greatly increase hint verbalization (up to 90% in some settings), suggesting much apparent unfaithfulness is due to tight token limits. Using Causal Mediation Analysis, we further show that even non-verbalized hints can causally mediate prediction changes through the CoT. We therefore caution against relying solely on hint-based evaluations and advocate a broader interpretability toolkit, including causal mediation and corruption-based metrics.",
+      "pdf_url": "https://arxiv.org/pdf/2512.23032v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.23032v1",
+      "published": "2025-12-28",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal-Policy Forest for End-to-End Policy Learning",
+      "authors": [
+        "Masahiro Kato"
+      ],
+      "abstract": "This study proposes an end-to-end algorithm for policy learning in causal inference. We observe data consisting of covariates, treatment assignments, and outcomes, where only the outcome corresponding to the assigned treatment is observed. The goal of policy learning is to train a policy from the observed data, where a policy is a function that recommends an optimal treatment for each individual, to maximize the policy value. In this study, we first show that maximizing the policy value is equivalent to minimizing the mean squared error for the conditional average treatment effect (CATE) under $\\{-1, 1\\}$ restricted regression models. Based on this finding, we modify the causal forest, an end-to-end CATE estimation algorithm, for policy learning. We refer to our algorithm as the causal-policy forest. Our algorithm has three advantages. First, it is a simple modification of an existing, widely used CATE estimation method, therefore, it helps bridge the gap between policy learning and CATE estimation in practice. Second, while existing studies typically estimate nuisance parameters for policy learning as a separate task, our algorithm trains the policy in a more end-to-end manner. Third, as in standard decision trees and random forests, we train the models efficiently, avoiding computational intractability.",
+      "pdf_url": "https://arxiv.org/pdf/2512.22846v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.22846v1",
+      "published": "2025-12-28",
+      "categories": [
+        "econ.EM",
+        "cs.LG",
+        "math.ST",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "WeDLM: Reconciling Diffusion Language Models with Standard Causal Attention for Fast Inference",
+      "authors": [
+        "Aiwei Liu",
+        "Minghua He",
+        "Shaoxun Zeng",
+        "Sijun Zhang",
+        "Linhao Zhang",
+        "Chuhan Wu",
+        "Wei Jia",
+        "Yuan Liu",
+        "Xiao Zhou",
+        "Jie Zhou"
+      ],
+      "abstract": "Autoregressive (AR) generation is the standard decoding paradigm for Large Language Models (LLMs), but its token-by-token nature limits parallelism at inference time. Diffusion Language Models (DLLMs) offer parallel decoding by recovering multiple masked tokens per step; however, in practice they often fail to translate this parallelism into deployment speed gains over optimized AR engines (e.g., vLLM). A key reason is that many DLLMs rely on bidirectional attention, which breaks standard prefix KV caching and forces repeated contextualization, undermining efficiency. We propose WeDLM, a diffusion decoding framework built entirely on standard causal attention to make parallel generation prefix-cache friendly. The core idea is to let each masked position condition on all currently observed tokens while keeping a strict causal mask, achieved by Topological Reordering that moves observed tokens to the physical prefix while preserving their logical positions. Building on this property, we introduce a streaming decoding procedure that continuously commits confident tokens into a growing left-to-right prefix and maintains a fixed parallel workload, avoiding the stop-and-wait behavior common in block diffusion methods. Experiments show that WeDLM preserves the quality of strong AR backbones while delivering substantial speedups, approaching 3x on challenging reasoning benchmarks and up to 10x in low-entropy generation regimes; critically, our comparisons are against AR baselines served by vLLM under matched deployment settings, demonstrating that diffusion-style decoding can outperform an optimized AR engine in practice.",
+      "pdf_url": "https://arxiv.org/pdf/2512.22737v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.22737v1",
+      "published": "2025-12-28",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Lightweight Inference-Time Personalization for Frozen Knowledge Graph Embeddings",
+      "authors": [
+        "Ozan Oguztuzun",
+        "Cerag Oguztuzun"
+      ],
+      "abstract": "Foundation models for knowledge graphs (KGs) achieve strong cohort-level performance in link prediction, yet fail to capture individual user preferences; a key disconnect between general relational reasoning and personalized ranking. We propose GatedBias, a lightweight inference-time personalization framework that adapts frozen KG embeddings to individual user contexts without retraining or compromising global accuracy. Our approach introduces structure-gated adaptation: profile-specific features combine with graph-derived binary gates to produce interpretable, per-entity biases, requiring only ${\\sim}300$ trainable parameters. We evaluate GatedBias on two benchmark datasets (Amazon-Book and Last-FM), demonstrating statistically significant improvements in alignment metrics while preserving cohort performance. Counterfactual perturbation experiments validate causal responsiveness; entities benefiting from specific preference signals show 6--30$\\times$ greater rank improvements when those signals are boosted. These results show that personalized adaptation of foundation models can be both parameter-efficient and causally verifiable, bridging general knowledge representations with individual user needs.",
+      "pdf_url": "https://arxiv.org/pdf/2512.22398v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.22398v1",
+      "published": "2025-12-26",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Knot Forcing: Taming Autoregressive Video Diffusion Models for Real-time Infinite Interactive Portrait Animation",
       "authors": [
         "Steven Xiao",
-        "XIndi Zhang",
+        "Xindi Zhang",
         "Dechao Meng",
         "Qi Wang",
         "Peng Zhang",
         "Bang Zhang"
       ],
       "abstract": "Real-time portrait animation is essential for interactive applications such as virtual assistants and live avatars, requiring high visual fidelity, temporal coherence, ultra-low latency, and responsive control from dynamic inputs like reference images and driving signals. While diffusion-based models achieve strong quality, their non-causal nature hinders streaming deployment. Causal autoregressive video generation approaches enable efficient frame-by-frame generation but suffer from error accumulation, motion discontinuities at chunk boundaries, and degraded long-term consistency. In this work, we present a novel streaming framework named Knot Forcing for real-time portrait animation that addresses these challenges through three key designs: (1) a chunk-wise generation strategy with global identity preservation via cached KV states of the reference image and local temporal modeling using sliding window attention; (2) a temporal knot module that overlaps adjacent chunks and propagates spatio-temporal cues via image-to-video conditioning to smooth inter-chunk motion transitions; and (3) A \"running ahead\" mechanism that dynamically updates the reference frame's temporal coordinate during inference, keeping its semantic context ahead of the current rollout frame to support long-term coherence. Knot Forcing enables high-fidelity, temporally consistent, and interactive portrait animation over infinite sequences, achieving real-time performance with strong visual stability on consumer-grade GPUs.",
-      "pdf_url": "https://arxiv.org/pdf/2512.21734v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.21734v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.21734v2",
+      "arxiv_url": "http://arxiv.org/abs/2512.21734v2",
       "published": "2025-12-25",
       "categories": [
         "cs.CV"
@@ -57,128 +176,6 @@
       "published": "2025-12-25",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "SVBench: Evaluation of Video Generation Models on Social Reasoning",
-      "authors": [
-        "Wenshuo Peng",
-        "Gongxuan Wang",
-        "Tianmeng Yang",
-        "Chuanhao Li",
-        "Xiaojie Xu",
-        "Hui He",
-        "Kaipeng Zhang"
-      ],
-      "abstract": "Recent text-to-video generation models exhibit remarkable progress in visual realism, motion fidelity, and text-video alignment, yet they remain fundamentally limited in their ability to generate socially coherent behavior. Unlike humans, who effortlessly infer intentions, beliefs, emotions, and social norms from brief visual cues, current models tend to render literal scenes without capturing the underlying causal or psychological logic. To systematically evaluate this gap, we introduce the first benchmark for social reasoning in video generation. Grounded in findings from developmental and social psychology, our benchmark organizes thirty classic social cognition paradigms into seven core dimensions, including mental-state inference, goal-directed action, joint attention, social coordination, prosocial behavior, social norms, and multi-agent strategy. To operationalize these paradigms, we develop a fully training-free agent-based pipeline that (i) distills the reasoning mechanism of each experiment, (ii) synthesizes diverse video-ready scenarios, (iii) enforces conceptual neutrality and difficulty control through cue-based critique, and (iv) evaluates generated videos using a high-capacity VLM judge across five interpretable dimensions of social reasoning. Using this framework, we conduct the first large-scale study across seven state-of-the-art video generation systems. Our results reveal substantial performance gaps: while modern models excel in surface-level plausibility, they systematically fail in intention recognition, belief reasoning, joint attention, and prosocial inference.",
-      "pdf_url": "https://arxiv.org/pdf/2512.21507v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.21507v1",
-      "published": "2025-12-25",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Sensitivity Analysis of the Consistency Assumption",
-      "authors": [
-        "Brian Knaeble",
-        "Qinyun Lin",
-        "Erich Kummerfeld",
-        "Kenneth A. Frank"
-      ],
-      "abstract": "Sensitivity analysis informs causal inference by assessing the sensitivity of conclusions to departures from assumptions. The consistency assumption states that there are no hidden versions of treatment and that the outcome arising naturally equals the outcome arising from intervention. When reasoning about the possibility of consistency violations, it can be helpful to distinguish between covariates and versions of treatment. In the context of surgery, for example, genomic variables are covariates and the skill of a particular surgeon is a version of treatment. There may be hidden versions of treatment, and this paper addresses that concern with a new kind of sensitivity analysis. Whereas many methods for sensitivity analysis are focused on confounding by unmeasured covariates, the methodology of this paper is focused on confounding by hidden versions of treatment. In this paper, new mathematical notation is introduced to support the novel method, and example applications are described.",
-      "pdf_url": "https://arxiv.org/pdf/2512.21379v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.21379v1",
-      "published": "2025-12-24",
-      "categories": [
-        "stat.ME",
-        "cs.LG",
-        "math.OC"
-      ]
-    },
-    {
-      "title": "Causal-driven attribution (CDA): Estimating channel influence without user-level data",
-      "authors": [
-        "Georgios Filippou",
-        "Boi Mai Quach",
-        "Diana Lenghel",
-        "Arthur White",
-        "Ashish Kumar Jha"
-      ],
-      "abstract": "Attribution modelling lies at the heart of marketing effectiveness, yet most existing approaches depend on user-level path data, which are increasingly inaccessible due to privacy regulations and platform restrictions. This paper introduces a Causal-Driven Attribution (CDA) framework that infers channel influence using only aggregated impression-level data, avoiding any reliance on user identifiers or click-path tracking. CDA integrates temporal causal discovery (using PCMCI) with causal effect estimation via a Structural Causal Model to recover directional channel relationships and quantify their contributions to conversions. Using large-scale synthetic data designed to replicate real marketing dynamics, we show that CDA achieves an average relative RMSE of 9.50% when given the true causal graph, and 24.23% when using the predicted graph, demonstrating strong accuracy under correct structure and meaningful signal recovery even under structural uncertainty. CDA captures cross-channel interdependencies while providing interpretable, privacy-preserving attribution insights, offering a scalable and future-proof alternative to traditional path-based models.",
-      "pdf_url": "https://arxiv.org/pdf/2512.21211v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.21211v1",
-      "published": "2025-12-24",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Hierarchical Modeling Approach to Fast and Accurate Table Recognition",
-      "authors": [
-        "Takaya Kawakatsu"
-      ],
-      "abstract": "The extraction and use of diverse knowledge from numerous documents is a pressing challenge in intelligent information retrieval. Documents contain elements that require different recognition methods. Table recognition typically consists of three subtasks, namely table structure, cell position and cell content recognition. Recent models have achieved excellent recognition with a combination of multi-task learning, local attention, and mutual learning. However, their effectiveness has not been fully explained, and they require a long period of time for inference. This paper presents a novel multi-task model that utilizes non-causal attention to capture the entire table structure, and a parallel inference algorithm for faster cell content inference. The superiority is demonstrated both visually and statistically on two large public datasets.",
-      "pdf_url": "https://arxiv.org/pdf/2512.21083v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.21083v1",
-      "published": "2025-12-24",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Clever Hans in Chemistry: Chemist Style Signals Confound Activity Prediction on Public Benchmarks",
-      "authors": [
-        "Andrew D. Blevins",
-        "Ian K. Quigley"
-      ],
-      "abstract": "Can machine learning models identify which chemist made a molecule from structure alone? If so, models trained on literature data may exploit chemist intent rather than learning causal structure-activity relationships. We test this by linking CHEMBL assays to publication authors and training a 1,815-class classifier to predict authors from molecular fingerprints, achieving 60% top-5 accuracy under scaffold-based splitting. We then train an activity model that receives only a protein identifier and an author-probability vector derived from structure, with no direct access to molecular descriptors. This author-only model achieves predictive power comparable to a simple baseline that has access to structure. This reveals a \"Clever Hans\" failure mode: models can predict bioactivity largely by inferring chemist goals and favorite targets without requiring a lab-independent understanding of chemistry. We analyze the sources of this leakage, propose author-disjoint splits, and recommend dataset practices to decouple chemist intent from biological outcomes.",
-      "pdf_url": "https://arxiv.org/pdf/2512.20924v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.20924v1",
-      "published": "2025-12-24",
-      "categories": [
-        "q-bio.BM",
-        "cs.LG",
-        "physics.chem-ph"
-      ]
-    },
-    {
-      "title": "Generalization of RLVR Using Causal Reasoning as a Testbed",
-      "authors": [
-        "Brian Lu",
-        "Hongyu Zhao",
-        "Shuo Sun",
-        "Hao Peng",
-        "Rui Ding",
-        "Hongyuan Mei"
-      ],
-      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has emerged as a promising paradigm for post-training large language models (LLMs) on complex reasoning tasks. Yet, the conditions under which RLVR yields robust generalization remain poorly understood. This paper provides an empirical study of RLVR generalization in the setting of probabilistic inference over causal graphical models. This setting offers two natural axes along which to examine generalization: (i) the level of the probabilistic query -- associational, interventional, or counterfactual -- and (ii) the structural complexity of the query, measured by the size of its relevant subgraph. We construct datasets of causal graphs and queries spanning these difficulty axes and fine-tune Qwen-2.5-Instruct models using RLVR or supervised fine-tuning (SFT). We vary both the model scale (3B-32B) and the query level included in training. We find that RLVR yields stronger within-level and across-level generalization than SFT, but only for specific combinations of model size and training query level. Further analysis shows that RLVR's effectiveness depends on the model's initial reasoning competence. With sufficient initial competence, RLVR improves an LLM's marginalization strategy and reduces errors in intermediate probability calculations, producing substantial accuracy gains, particularly on more complex queries. These findings show that RLVR can improve specific causal reasoning subskills, with its benefits emerging only when the model has sufficient initial competence.",
-      "pdf_url": "https://arxiv.org/pdf/2512.20760v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.20760v1",
-      "published": "2025-12-23",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Information-theoretic signatures of causality in Bayesian networks and hypergraphs",
-      "authors": [
-        "Sung En Chiang",
-        "Zhaolu Liu",
-        "Robert L. Peach",
-        "Mauricio Barahona"
-      ],
-      "abstract": "Analyzing causality in multivariate systems involves establishing how information is generated, distributed and combined, and thus requires tools that capture interactions beyond pairwise relations. Higher-order information theory provides such tools. In particular, Partial Information Decomposition (PID) allows the decomposition of the information that a set of sources provides about a target into redundant, unique, and synergistic components. Yet the mathematical connection between such higher-order information-theoretic measures and causal structure remains undeveloped. Here we establish the first theoretical correspondence between PID components and causal structure in both Bayesian networks and hypergraphs. We first show that in Bayesian networks unique information precisely characterizes direct causal neighbors, while synergy identifies collider relationships. This establishes a localist causal discovery paradigm in which the structure surrounding each variable can be recovered from its immediate informational footprint, eliminating the need for global search over graph space. Extending these results to higher-order systems, we prove that PID signatures in Bayesian hypergraphs differentiate parents, children, co-heads, and co-tails, revealing a higher-order collider effect unique to multi-tail hyperedges. We also present procedures by which our results can be used to characterize systematically the causal structure of Bayesian networks and hypergraphs. Our results position PID as a rigorous, model-agnostic foundation for inferring both pairwise and higher-order causal structure, and introduce a fundamentally local information-theoretic viewpoint on causal discovery.",
-      "pdf_url": "https://arxiv.org/pdf/2512.20552v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.20552v1",
-      "published": "2025-12-23",
-      "categories": [
-        "cs.IT",
-        "stat.ML"
       ]
     }
   ]
