@@ -1,6 +1,38 @@
 {
-  "last_updated": "2026-01-01T01:04:31.787282",
+  "last_updated": "2026-01-02T00:58:59.083849",
   "papers": [
+    {
+      "title": "CPR: Causal Physiological Representation Learning for Robust ECG Analysis under Distribution Shifts",
+      "authors": [
+        "Shunbo Jia",
+        "Caizhi Liao"
+      ],
+      "abstract": "Deep learning models for Electrocardiogram (ECG) diagnosis have achieved remarkable accuracy but exhibit fragility against adversarial perturbations, particularly Smooth Adversarial Perturbations (SAP) that mimic biological morphology. Existing defenses face a critical dilemma: Adversarial Training (AT) provides robustness but incurs a prohibitive computational burden, while certified methods like Randomized Smoothing (RS) introduce significant inference latency, rendering them impractical for real-time clinical monitoring. We posit that this vulnerability stems from the models' reliance on non-robust spurious correlations rather than invariant pathological features. To address this, we propose Causal Physiological Representation Learning (CPR). Unlike standard denoising approaches that operate without semantic constraints, CPR incorporates a Physiological Structural Prior within a causal disentanglement framework. By modeling ECG generation via a Structural Causal Model (SCM), CPR enforces a structural intervention that strictly separates invariant pathological morphology (P-QRS-T complex) from non-causal artifacts. Empirical results on PTB-XL demonstrate that CPR significantly outperforms standard clinical preprocessing methods. Specifically, under SAP attacks, CPR achieves an F1 score of 0.632, surpassing Median Smoothing (0.541 F1) by 9.1%. Crucially, CPR matches the certified robustness of Randomized Smoothing while maintaining single-pass inference efficiency, offering a superior trade-off between robustness, efficiency, and clinical interpretability.",
+      "pdf_url": "https://arxiv.org/pdf/2512.24564v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.24564v1",
+      "published": "2025-12-31",
+      "categories": [
+        "cs.LG",
+        "eess.SP"
+      ]
+    },
+    {
+      "title": "Demystifying Proximal Causal Inference",
+      "authors": [
+        "Grace V. Ringlein",
+        "Trang Quynh Nguyen",
+        "Peter P. Zandi",
+        "Elizabeth A. Stuart",
+        "Harsh Parikh"
+      ],
+      "abstract": "Proximal causal inference (PCI) has emerged as a promising framework for identifying and estimating causal effects in the presence of unobserved confounders. While many traditional causal inference methods rely on the assumption of no unobserved confounding, this assumption is likely often violated. PCI mitigates this challenge by relying on an alternative set of assumptions regarding the relationships between treatment, outcome, and auxiliary variables that serve as proxies for unmeasured confounders. We review existing identification results, discuss the assumptions necessary for valid causal effect estimation via PCI, and compare different PCI estimation methods. We offer practical guidance on operationalizing PCI, with a focus on selecting and evaluating proxy variables using domain knowledge, measurement error perspectives, and negative control analogies. Through conceptual examples, we demonstrate tensions in proxy selection and discuss the importance of clearly defining the unobserved confounding mechanism. By bridging formal results with applied considerations, this work aims to demystify PCI, encourage thoughtful use in practice, and identify open directions for methodological development and empirical research.",
+      "pdf_url": "https://arxiv.org/pdf/2512.24413v1",
+      "arxiv_url": "http://arxiv.org/abs/2512.24413v1",
+      "published": "2025-12-30",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Stream-DiffVSR: Low-Latency Streamable Video Super-Resolution via Auto-Regressive Diffusion",
       "authors": [
@@ -133,46 +165,6 @@
       "abstract": "Real-time portrait animation is essential for interactive applications such as virtual assistants and live avatars, requiring high visual fidelity, temporal coherence, ultra-low latency, and responsive control from dynamic inputs like reference images and driving signals. While diffusion-based models achieve strong quality, their non-causal nature hinders streaming deployment. Causal autoregressive video generation approaches enable efficient frame-by-frame generation but suffer from error accumulation, motion discontinuities at chunk boundaries, and degraded long-term consistency. In this work, we present a novel streaming framework named Knot Forcing for real-time portrait animation that addresses these challenges through three key designs: (1) a chunk-wise generation strategy with global identity preservation via cached KV states of the reference image and local temporal modeling using sliding window attention; (2) a temporal knot module that overlaps adjacent chunks and propagates spatio-temporal cues via image-to-video conditioning to smooth inter-chunk motion transitions; and (3) A \"running ahead\" mechanism that dynamically updates the reference frame's temporal coordinate during inference, keeping its semantic context ahead of the current rollout frame to support long-term coherence. Knot Forcing enables high-fidelity, temporally consistent, and interactive portrait animation over infinite sequences, achieving real-time performance with strong visual stability on consumer-grade GPUs.",
       "pdf_url": "https://arxiv.org/pdf/2512.21734v2",
       "arxiv_url": "http://arxiv.org/abs/2512.21734v2",
-      "published": "2025-12-25",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Enabling Conversational Behavior Reasoning Capabilities in Full-Duplex Speech",
-      "authors": [
-        "Shuchang Pan",
-        "Siddharth Banerjee",
-        "Dhruv Hebbar",
-        "Siddhant Patel",
-        "Akshaj Gupta",
-        "Kan Jen Cheng",
-        "Hanjo Kim",
-        "Zeyi Austin Li",
-        "Martin Q. Ma",
-        "Tingle Li",
-        "Gopala Anumanchipalli",
-        "Jiachen Lian"
-      ],
-      "abstract": "Human conversation is organized by an implicit chain of thoughts that manifests as timed speech acts. Capturing this causal pathway is key to building natural full-duplex interactive systems. We introduce a framework that enables reasoning over conversational behaviors by modeling this process as causal inference within a Graph-of-Thoughts (GoT). Our approach formalizes the intent-to-action pathway with a hierarchical labeling scheme, predicting high-level communicative intents and low-level speech acts to learn their causal and temporal dependencies. To train this system, we develop a hybrid corpus that pairs controllable, event-rich simulations with human-annotated rationales and real conversational speech. The GoT framework structures streaming predictions as an evolving graph, enabling a multimodal transformer to forecast the next speech act, generate concise justifications for its decisions, and dynamically refine its reasoning. Experiments on both synthetic and real duplex dialogues show that the framework delivers robust behavior detection, produces interpretable reasoning chains, and establishes a foundation for benchmarking conversational reasoning in full duplex spoken dialogue systems.",
-      "pdf_url": "https://arxiv.org/pdf/2512.21706v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.21706v1",
-      "published": "2025-12-25",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CausalFSFG: Rethinking Few-Shot Fine-Grained Visual Categorization from Causal Perspective",
-      "authors": [
-        "Zhiwen Yang",
-        "Jinglin Xu",
-        "Yuxin Pen"
-      ],
-      "abstract": "Few-shot fine-grained visual categorization (FS-FGVC) focuses on identifying various subcategories within a common superclass given just one or few support examples. Most existing methods aim to boost classification accuracy by enriching the extracted features with discriminative part-level details. However, they often overlook the fact that the set of support samples acts as a confounding variable, which hampers the FS-FGVC performance by introducing biased data distribution and misguiding the extraction of discriminative features. To address this issue, we propose a new causal FS-FGVC (CausalFSFG) approach inspired by causal inference for addressing biased data distributions through causal intervention. Specifically, based on the structural causal model (SCM), we argue that FS-FGVC infers the subcategories (i.e., effect) from the inputs (i.e., cause), whereas both the few-shot condition disturbance and the inherent fine-grained nature (i.e., large intra-class variance and small inter-class variance) lead to unobservable variables that bring spurious correlations, compromising the final classification performance. To further eliminate the spurious correlations, our CausalFSFG approach incorporates two key components: (1) Interventional multi-scale encoder (IMSE) conducts sample-level interventions, (2) Interventional masked feature reconstruction (IMFR) conducts feature-level interventions, which together reveal real causalities from inputs to subcategories. Extensive experiments and thorough analyses on the widely-used public datasets, including CUB-200-2011, Stanford Dogs, and Stanford Cars, demonstrate that our CausalFSFG achieves new state-of-the-art performance. The code is available at https://github.com/PKU-ICST-MIPL/CausalFSFG_TMM.",
-      "pdf_url": "https://arxiv.org/pdf/2512.21617v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.21617v1",
       "published": "2025-12-25",
       "categories": [
         "cs.CV"
