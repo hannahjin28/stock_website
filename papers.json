@@ -1,6 +1,103 @@
 {
-  "last_updated": "2026-01-05T01:03:48.831133",
+  "last_updated": "2026-01-06T00:58:34.629504",
   "papers": [
+    {
+      "title": "Fair Policy Learning under Bipartite Network Interference: Learning Fair and Cost-Effective Environmental Policies",
+      "authors": [
+        "Raphael C. Kim",
+        "Rachel C. Nethery",
+        "Kevin L. Chen",
+        "Falco J. Bargagli-Stoffi"
+      ],
+      "abstract": "Numerous studies have shown the harmful effects of airborne pollutants on human health. Vulnerable groups and communities often bear a disproportionately larger health burden due to exposure to airborne pollutants. Thus, there is a need to design policies that effectively reduce the public health burdens while ensuring cost-effective policy interventions. Designing policies that optimally benefit the population while ensuring equity between groups under cost constraints is a challenging statistical and causal inference problem. In the context of environmental policy this is further complicated by the fact that interventions target emission sources but health impacts occur in potentially distant communities due to atmospheric pollutant transport -- a setting known as bipartite network interference (BNI). To address these issues, we propose a fair policy learning approach under BNI. Our approach allows to learn cost-effective policies under fairness constraints even accounting for complex BNI data structures. We derive asymptotic properties and demonstrate finite sample performance via Monte Carlo simulations. Finally, we apply the proposed method to a real-world dataset linking power plant scrubber installations to Medicare health records for more than 2 million individuals in the U.S. Our method determine fair scrubber allocations to reduce mortality under fairness and cost constraints.",
+      "pdf_url": "https://arxiv.org/pdf/2601.00531v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.00531v1",
+      "published": "2026-01-02",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Bio-inspired Agentic Self-healing Framework for Resilient Distributed Computing Continuum Systems",
+      "authors": [
+        "Alaa Saleh",
+        "Praveen Kumar Donta",
+        "Roberto Morabito",
+        "Sasu Tarkoma",
+        "Anders Lindgren",
+        "Qiyang Zhang",
+        "Schahram Dustdar",
+        "Susanna Pirttikangas",
+        "Lauri Lovén"
+      ],
+      "abstract": "Human biological systems sustain life through extraordinary resilience, continually detecting damage, orchestrating targeted responses, and restoring function through self-healing. Inspired by these capabilities, this paper introduces ReCiSt, a bio-inspired agentic self-healing framework designed to achieve resilience in Distributed Computing Continuum Systems (DCCS). Modern DCCS integrate heterogeneous computing resources, ranging from resource-constrained IoT devices to high-performance cloud infrastructures, and their inherent complexity, mobility, and dynamic operating conditions expose them to frequent faults that disrupt service continuity. These challenges underscore the need for scalable, adaptive, and self-regulated resilience strategies. ReCiSt reconstructs the biological phases of Hemostasis, Inflammation, Proliferation, and Remodeling into the computational layers Containment, Diagnosis, Meta-Cognitive, and Knowledge for DCCS. These four layers perform autonomous fault isolation, causal diagnosis, adaptive recovery, and long-term knowledge consolidation through Language Model (LM)-powered agents. These agents interpret heterogeneous logs, infer root causes, refine reasoning pathways, and reconfigure resources with minimal human intervention. The proposed ReCiSt framework is evaluated on public fault datasets using multiple LMs, and no baseline comparison is included due to the scarcity of similar approaches. Nevertheless, our results, evaluated under different LMs, confirm ReCiSt's self-healing capabilities within tens of seconds with minimum of 10% of agent CPU usage. Our results also demonstrated depth of analysis to over come uncertainties and amount of micro-agents invoked to achieve resilience.",
+      "pdf_url": "https://arxiv.org/pdf/2601.00339v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.00339v1",
+      "published": "2026-01-01",
+      "categories": [
+        "cs.AI",
+        "cs.DC",
+        "cs.ET",
+        "cs.MA",
+        "cs.NE"
+      ]
+    },
+    {
+      "title": "Identification and Estimation under Multiple Versions of Treatment: Mixture-of-Experts Approach",
+      "authors": [
+        "Kohei Yoshikawa",
+        "Shuichi Kawano"
+      ],
+      "abstract": "The Stable Unit Treatment Value Assumption (SUTVA) includes the condition that there are no multiple versions of treatment in causal inference. Though we could not control the implementation of treatment in observational studies, multiple versions may exist in the treatment. It has been pointed out that ignoring such multiple versions of treatment can lead to biased estimates of causal effects, but a causal inference framework that explicitly deals with the unbiased identification and estimation of version-specific causal effects has not been fully developed yet. Thus, obtaining a deeper understanding for mechanisms of the complex treatments is difficult. In this paper, we introduce the Mixture-of-Experts framework into causal inference and develop a methodology for estimating the causal effects of latent versions. This approach enables explicit estimation of version-specific causal effects even if the versions are not observed. Numerical experiments demonstrate the effectiveness of the proposed method.",
+      "pdf_url": "https://arxiv.org/pdf/2601.00287v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.00287v1",
+      "published": "2026-01-01",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Detecting Unobserved Confounders: A Kernelized Regression Approach",
+      "authors": [
+        "Yikai Chen",
+        "Yunxin Mao",
+        "Chunyuan Zheng",
+        "Hao Zou",
+        "Shanzhi Gu",
+        "Shixuan Liu",
+        "Yang Shi",
+        "Wenjing Yang",
+        "Kun Kuang",
+        "Haotian Wang"
+      ],
+      "abstract": "Detecting unobserved confounders is crucial for reliable causal inference in observational studies. Existing methods require either linearity assumptions or multiple heterogeneous environments, limiting applicability to nonlinear single-environment settings. To bridge this gap, we propose Kernel Regression Confounder Detection (KRCD), a novel method for detecting unobserved confounding in nonlinear observational data under single-environment conditions. KRCD leverages reproducing kernel Hilbert spaces to model complex dependencies. By comparing standard and higherorder kernel regressions, we derive a test statistic whose significant deviation from zero indicates unobserved confounding. Theoretically, we prove two key results: First, in infinite samples, regression coefficients coincide if and only if no unobserved confounders exist. Second, finite-sample differences converge to zero-mean Gaussian distributions with tractable variance. Extensive experiments on synthetic benchmarks and the Twins dataset demonstrate that KRCD not only outperforms existing baselines but also achieves superior computational efficiency.",
+      "pdf_url": "https://arxiv.org/pdf/2601.00200v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.00200v1",
+      "published": "2026-01-01",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "The Agentic Leash: Extracting Causal Feedback Fuzzy Cognitive Maps with LLMs",
+      "authors": [
+        "Akash Kumar Panda",
+        "Olaoluwa Adigun",
+        "Bart Kosko"
+      ],
+      "abstract": "We design a large-language-model (LLM) agent that extracts causal feedback fuzzy cognitive maps (FCMs) from raw text. The causal learning or extraction process is agentic both because of the LLM's semi-autonomy and because ultimately the FCM dynamical system's equilibria drive the LLM agents to fetch and process causal text. The fetched text can in principle modify the adaptive FCM causal structure and so modify the source of its quasi-autonomy--its equilibrium limit cycles and fixed-point attractors. This bidirectional process endows the evolving FCM dynamical system with a degree of autonomy while still staying on its agentic leash. We show in particular that a sequence of three finely tuned system instructions guide an LLM agent as it systematically extracts key nouns and noun phrases from text, as it extracts FCM concept nodes from among those nouns and noun phrases, and then as it extracts or infers partial or fuzzy causal edges between those FCM nodes. We test this FCM generation on a recent essay about the promise of AI from the late diplomat and political theorist Henry Kissinger and his colleagues. This three-step process produced FCM dynamical systems that converged to the same equilibrium limit cycles as did the human-generated FCMs even though the human-generated FCM differed in the number of nodes and edges. A final FCM mixed generated FCMs from separate Gemini and ChatGPT LLM agents. The mixed FCM absorbed the equilibria of its dominant mixture component but also created new equilibria of its own to better approximate the underlying causal dynamical system.",
+      "pdf_url": "https://arxiv.org/pdf/2601.00097v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.00097v1",
+      "published": "2025-12-31",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.HC",
+        "cs.IR"
+      ]
+    },
     {
       "title": "CPR: Causal Physiological Representation Learning for Robust ECG Analysis under Distribution Shifts",
       "authors": [
@@ -81,93 +178,6 @@
         "stat.ML",
         "cs.LG",
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Is Chain-of-Thought Really Not Explainability? Chain-of-Thought Can Be Faithful without Hint Verbalization",
-      "authors": [
-        "Kerem Zaman",
-        "Shashank Srivastava"
-      ],
-      "abstract": "Recent work, using the Biasing Features metric, labels a CoT as unfaithful if it omits a prompt-injected hint that affected the prediction. We argue this metric confuses unfaithfulness with incompleteness, the lossy compression needed to turn distributed transformer computation into a linear natural language narrative. On multi-hop reasoning tasks with Llama-3 and Gemma-3, many CoTs flagged as unfaithful by Biasing Features are judged faithful by other metrics, exceeding 50% in some models. With a new faithful@k metric, we show that larger inference-time token budgets greatly increase hint verbalization (up to 90% in some settings), suggesting much apparent unfaithfulness is due to tight token limits. Using Causal Mediation Analysis, we further show that even non-verbalized hints can causally mediate prediction changes through the CoT. We therefore caution against relying solely on hint-based evaluations and advocate a broader interpretability toolkit, including causal mediation and corruption-based metrics.",
-      "pdf_url": "https://arxiv.org/pdf/2512.23032v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.23032v1",
-      "published": "2025-12-28",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal-Policy Forest for End-to-End Policy Learning",
-      "authors": [
-        "Masahiro Kato"
-      ],
-      "abstract": "This study proposes an end-to-end algorithm for policy learning in causal inference. We observe data consisting of covariates, treatment assignments, and outcomes, where only the outcome corresponding to the assigned treatment is observed. The goal of policy learning is to train a policy from the observed data, where a policy is a function that recommends an optimal treatment for each individual, to maximize the policy value. In this study, we first show that maximizing the policy value is equivalent to minimizing the mean squared error for the conditional average treatment effect (CATE) under $\\{-1, 1\\}$ restricted regression models. Based on this finding, we modify the causal forest, an end-to-end CATE estimation algorithm, for policy learning. We refer to our algorithm as the causal-policy forest. Our algorithm has three advantages. First, it is a simple modification of an existing, widely used CATE estimation method, therefore, it helps bridge the gap between policy learning and CATE estimation in practice. Second, while existing studies typically estimate nuisance parameters for policy learning as a separate task, our algorithm trains the policy in a more end-to-end manner. Third, as in standard decision trees and random forests, we train the models efficiently, avoiding computational intractability.",
-      "pdf_url": "https://arxiv.org/pdf/2512.22846v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.22846v1",
-      "published": "2025-12-28",
-      "categories": [
-        "econ.EM",
-        "cs.LG",
-        "math.ST",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "WeDLM: Reconciling Diffusion Language Models with Standard Causal Attention for Fast Inference",
-      "authors": [
-        "Aiwei Liu",
-        "Minghua He",
-        "Shaoxun Zeng",
-        "Sijun Zhang",
-        "Linhao Zhang",
-        "Chuhan Wu",
-        "Wei Jia",
-        "Yuan Liu",
-        "Xiao Zhou",
-        "Jie Zhou"
-      ],
-      "abstract": "Autoregressive (AR) generation is the standard decoding paradigm for Large Language Models (LLMs), but its token-by-token nature limits parallelism at inference time. Diffusion Language Models (DLLMs) offer parallel decoding by recovering multiple masked tokens per step; however, in practice they often fail to translate this parallelism into deployment speed gains over optimized AR engines (e.g., vLLM). A key reason is that many DLLMs rely on bidirectional attention, which breaks standard prefix KV caching and forces repeated contextualization, undermining efficiency. We propose WeDLM, a diffusion decoding framework built entirely on standard causal attention to make parallel generation prefix-cache friendly. The core idea is to let each masked position condition on all currently observed tokens while keeping a strict causal mask, achieved by Topological Reordering that moves observed tokens to the physical prefix while preserving their logical positions. Building on this property, we introduce a streaming decoding procedure that continuously commits confident tokens into a growing left-to-right prefix and maintains a fixed parallel workload, avoiding the stop-and-wait behavior common in block diffusion methods. Experiments show that WeDLM preserves the quality of strong AR backbones while delivering substantial speedups, approaching 3x on challenging reasoning benchmarks and up to 10x in low-entropy generation regimes; critically, our comparisons are against AR baselines served by vLLM under matched deployment settings, demonstrating that diffusion-style decoding can outperform an optimized AR engine in practice.",
-      "pdf_url": "https://arxiv.org/pdf/2512.22737v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.22737v1",
-      "published": "2025-12-28",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Lightweight Inference-Time Personalization for Frozen Knowledge Graph Embeddings",
-      "authors": [
-        "Ozan Oguztuzun",
-        "Cerag Oguztuzun"
-      ],
-      "abstract": "Foundation models for knowledge graphs (KGs) achieve strong cohort-level performance in link prediction, yet fail to capture individual user preferences; a key disconnect between general relational reasoning and personalized ranking. We propose GatedBias, a lightweight inference-time personalization framework that adapts frozen KG embeddings to individual user contexts without retraining or compromising global accuracy. Our approach introduces structure-gated adaptation: profile-specific features combine with graph-derived binary gates to produce interpretable, per-entity biases, requiring only ${\\sim}300$ trainable parameters. We evaluate GatedBias on two benchmark datasets (Amazon-Book and Last-FM), demonstrating statistically significant improvements in alignment metrics while preserving cohort performance. Counterfactual perturbation experiments validate causal responsiveness; entities benefiting from specific preference signals show 6--30$\\times$ greater rank improvements when those signals are boosted. These results show that personalized adaptation of foundation models can be both parameter-efficient and causally verifiable, bridging general knowledge representations with individual user needs.",
-      "pdf_url": "https://arxiv.org/pdf/2512.22398v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.22398v1",
-      "published": "2025-12-26",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Knot Forcing: Taming Autoregressive Video Diffusion Models for Real-time Infinite Interactive Portrait Animation",
-      "authors": [
-        "Steven Xiao",
-        "Xindi Zhang",
-        "Dechao Meng",
-        "Qi Wang",
-        "Peng Zhang",
-        "Bang Zhang"
-      ],
-      "abstract": "Real-time portrait animation is essential for interactive applications such as virtual assistants and live avatars, requiring high visual fidelity, temporal coherence, ultra-low latency, and responsive control from dynamic inputs like reference images and driving signals. While diffusion-based models achieve strong quality, their non-causal nature hinders streaming deployment. Causal autoregressive video generation approaches enable efficient frame-by-frame generation but suffer from error accumulation, motion discontinuities at chunk boundaries, and degraded long-term consistency. In this work, we present a novel streaming framework named Knot Forcing for real-time portrait animation that addresses these challenges through three key designs: (1) a chunk-wise generation strategy with global identity preservation via cached KV states of the reference image and local temporal modeling using sliding window attention; (2) a temporal knot module that overlaps adjacent chunks and propagates spatio-temporal cues via image-to-video conditioning to smooth inter-chunk motion transitions; and (3) A \"running ahead\" mechanism that dynamically updates the reference frame's temporal coordinate during inference, keeping its semantic context ahead of the current rollout frame to support long-term coherence. Knot Forcing enables high-fidelity, temporally consistent, and interactive portrait animation over infinite sequences, achieving real-time performance with strong visual stability on consumer-grade GPUs.",
-      "pdf_url": "https://arxiv.org/pdf/2512.21734v2",
-      "arxiv_url": "http://arxiv.org/abs/2512.21734v2",
-      "published": "2025-12-25",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
