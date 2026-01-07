@@ -1,6 +1,120 @@
 {
-  "last_updated": "2026-01-06T00:58:34.629504",
+  "last_updated": "2026-01-07T00:59:18.913265",
   "papers": [
+    {
+      "title": "Causal inference for censored data with continuous marks",
+      "authors": [
+        "Lianqiang Qu",
+        "Long Lv",
+        "Liuquan Sun"
+      ],
+      "abstract": "This paper presents a framework for causal inference in the presence of censored data, where the failure time is marked by a continuous variable known as a mark. The mark can be viewed as an extension of the failure cause in the classical competing risks model where the cause of failure is replaced by a continuous mark only observed at uncensored failure times. Due to the continuous nature of the marks, observations at each specific mark are sparse, making the identification and estimation of causality a challenging task. To address this issue, we define a new mark-specific treatment effect within the potential outcomes framework and characterize its identifying conditions. We then propose a local smoothing causal estimand and establish its asymptotic properties. We evaluate our method using simulation studies as well as a real dataset from the Antibody Mediated Prevention trials.",
+      "pdf_url": "https://arxiv.org/pdf/2601.01854v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.01854v1",
+      "published": "2026-01-05",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Network Recovery in Perturb-seq Experiments Using Proxy and Instrumental Variables",
+      "authors": [
+        "Kwangmoon Park",
+        "Hongzhe Li"
+      ],
+      "abstract": "Emerging single-cell technologies that integrate CRISPR-based genetic perturbations with single-cell RNA sequencing, such as Perturb-seq, have substantially advanced our understanding of gene regulation and causal influence of genes. While Perturb-seq data provide valuable causal insights into gene-gene interactions, statistical concerns remain regarding unobserved confounders that may bias inference. These latent factors may arise not only from intrinsic molecular features of regulatory elements encoded in Perturb-seq experiments, but also from unobserved genes arising from cost-constrained experimental designs. Although methods for analyzing largescale Perturb-seq data are rapidly maturing, approaches that explicitly account for such unobserved confounders in learning the causal gene networks are still lacking. Here, we propose a novel method to recover causal gene networks from Perturb-seq experiments with robustness to arbitrarily omitted confounders. Our framework leverages proxy and instrumental variable strategies to exploit the rich information embedded in perturbations, enabling unbiased estimation of the underlying directed acyclic graph (DAG) of gene expressions. Simulation studies and analyses of CRISPR interference experiments of K562 cells demonstrate that our method outperforms baseline approaches that ignore unmeasured confounding, yielding more accurate and biologically relevant recovery of the true gene causal DAGs.",
+      "pdf_url": "https://arxiv.org/pdf/2601.01830v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.01830v1",
+      "published": "2026-01-05",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Model-Assisted Causal Inference for the Treatment Effect on Recurrent Events in the Presence of Terminal Events",
+      "authors": [
+        "Yiyuan Huang",
+        "Ling Zhou",
+        "Min Zhang",
+        "Peter X. K. Song"
+      ],
+      "abstract": "This paper is motivated by evaluating the benefits of patients receiving mechanical circulatory support (MCS) devices in end-stage heart failure management inference, in which hypothesis testing for a treatment effect on the risk of recurrent events is challenged in the presence of terminal events. Existing methods based on cumulative frequency unreasonably disadvantage longer survivors as they tend to experience more recurrent events. The While-Alive-based (WA) test has provided a solution to address this survival-length-bias problem, and it performs well when the recurrent event rate holds constant over time. However, if such a constant-rate assumption is violated, the WA test can exhibit an inflated type I error and inaccurate estimation of treatment effects. To fill this methodological gap, we propose a Proportional Rate Marginal Structural Model-assisted Test (PR-MSMaT) in the causal inference framework of separable treatment effects for recurrent and terminal events. Using the simulation study, we demonstrate that our PR-MSMaT can properly control type I error while gaining power comparable to the WA test under time-varying recurrent event rates. We employ PR-MSMaT to compare different MCS devices with the postoperative risk of gastrointestinal bleeding among patients enrolled in the Interagency Registry of Mechanically Assisted Circulatory Support program.",
+      "pdf_url": "https://arxiv.org/pdf/2601.01245v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.01245v1",
+      "published": "2026-01-03",
+      "categories": [
+        "stat.AP",
+        "q-bio.QM",
+        "q-bio.TO",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Order-Constrained Spectral Causality in Multivariate Time Series",
+      "authors": [
+        "Alejandro Rodriguez Dominguez"
+      ],
+      "abstract": "We introduce an operator-theoretic framework for causal analysis in multivariate time series based on order-constrained spectral non-invariance. Directional influence is defined as sensitivity of second-order dependence operators to admissible, order-preserving temporal deformations of a designated source component, yielding an intrinsically multivariate causal notion summarized through orthogonally invariant spectral functionals. Under linear Gaussian assumptions, the criterion coincides with linear Granger causality, while beyond this regime it captures collective and nonlinear directional dependence not reflected in pairwise predictability. We establish existence, uniform consistency, and valid inference for the resulting non-smooth supremum--infimum statistics using shift-based randomization that exploits order-induced group invariance, yielding finite-sample exactness under exact invariance and asymptotic validity under weak dependence without parametric assumptions. Simulations demonstrate correct size and strong power against distributed and bulk-dominated alternatives, including nonlinear dependence missed by linear Granger tests with appropriate feature embeddings. An empirical application to a high-dimensional panel of daily financial return series spanning major asset classes illustrates system-level causal monitoring in practice. Directional organization is episodic and stress-dependent, causal propagation strengthens while remaining multi-channel, dominant causal hubs reallocate rapidly, and statistically robust transmission channels are sparse and horizon-heterogeneous even when aggregate lead--lag asymmetry is weak. The framework provides a scalable and interpretable complement to correlation-, factor-, and pairwise Granger-style analyses for complex systems.",
+      "pdf_url": "https://arxiv.org/pdf/2601.01216v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.01216v1",
+      "published": "2026-01-03",
+      "categories": [
+        "stat.AP",
+        "math.ST",
+        "q-fin.ST"
+      ]
+    },
+    {
+      "title": "XStreamVGGT: Extremely Memory-Efficient Streaming Vision Geometry Grounded Transformer with KV Cache Compression",
+      "authors": [
+        "Zunhai Su",
+        "Weihao Ye",
+        "Hansen Feng",
+        "Keyu Fan",
+        "Jing Zhang",
+        "Dahai Yu",
+        "Zhengwu Liu",
+        "Ngai Wong"
+      ],
+      "abstract": "Learning-based 3D visual geometry models have benefited substantially from large-scale transformers. Among these, StreamVGGT leverages frame-wise causal attention for strong streaming reconstruction, but suffers from unbounded KV cache growth, leading to escalating memory consumption and inference latency as input frames accumulate. We propose XStreamVGGT, a tuning-free approach that systematically compresses the KV cache through joint pruning and quantization, enabling extremely memory-efficient streaming inference. Specifically, redundant KVs originating from multi-view inputs are pruned through efficient token importance identification, enabling a fixed memory budget. Leveraging the unique distribution of KV tensors, we incorporate KV quantization to further reduce memory consumption. Extensive evaluations show that XStreamVGGT achieves mostly negligible performance degradation while substantially reducing memory usage by 4.42$\\times$ and accelerating inference by 5.48$\\times$, enabling scalable and practical streaming 3D applications. The code is available at https://github.com/ywh187/XStreamVGGT/.",
+      "pdf_url": "https://arxiv.org/pdf/2601.01204v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.01204v1",
+      "published": "2026-01-03",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "DHI: Leveraging Diverse Hallucination Induction for Enhanced Contrastive Factuality Control in Large Language Models",
+      "authors": [
+        "Jiani Guo",
+        "Xiangke Zeng",
+        "Jie Wu",
+        "Zuchao Li"
+      ],
+      "abstract": "Large language models (LLMs) frequently produce inaccurate or fabricated information, known as \"hallucinations,\" which compromises their reliability. Existing approaches often train an \"Evil LLM\" to deliberately generate hallucinations on curated datasets, using these induced hallucinations to guide contrastive decoding against a reliable \"positive model\" for hallucination mitigation. However, this strategy is limited by the narrow diversity of hallucinations induced, as Evil LLMs trained on specific error types tend to reproduce only these particular patterns, thereby restricting their overall effectiveness. To address these limitations, we propose DHI (Diverse Hallucination Induction), a novel training framework that enables the Evil LLM to generate a broader range of hallucination types without relying on pre-annotated hallucination data. DHI employs a modified loss function that down-weights the generation of specific factually correct tokens, encouraging the Evil LLM to produce diverse hallucinations at targeted positions while maintaining overall factual content. Additionally, we introduce a causal attention masking adaptation to reduce the impact of this penalization on the generation of subsequent tokens. During inference, we apply an adaptive rationality constraint that restricts contrastive decoding to tokens where the positive model exhibits high confidence, thereby avoiding unnecessary penalties on factually correct tokens. Extensive empirical results show that DHI achieves significant performance gains over other contrastive decoding-based approaches across multiple hallucination benchmarks.",
+      "pdf_url": "https://arxiv.org/pdf/2601.01156v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.01156v1",
+      "published": "2026-01-03",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Beyond P-Values: Importing Quantitative Finance's Risk and Regret Metrics for AI in Learning Health Systems",
+      "authors": [
+        "Richik Chakraborty"
+      ],
+      "abstract": "The increasing deployment of artificial intelligence (AI) in clinical settings challenges foundational assumptions underlying traditional frameworks of medical evidence. Classical statistical approaches, centered on randomized controlled trials, frequentist hypothesis testing, and static confidence intervals, were designed for fixed interventions evaluated under stable conditions. In contrast, AI-driven clinical systems learn continuously, adapt their behavior over time, and operate in non-stationary environments shaped by evolving populations, practices, and feedback effects. In such systems, clinical harm arises less from average error rates than from calibration drift, rare but severe failures, and the accumulation of suboptimal decisions over time.\n  In this perspective, we argue that prevailing notions of statistical significance are insufficient for characterizing evidence and safety in learning health systems. Drawing on risk-theoretic concepts from quantitative finance and online decision theory, we propose reframing medical evidence for adaptive AI systems in terms of time-indexed calibration stability, bounded downside risk, and controlled cumulative regret. We emphasize that this approach does not replace randomized trials or causal inference, but complements them by addressing dimensions of risk and uncertainty that emerge only after deployment. This framework provides a principled mathematical language for evaluating AI-driven clinical systems under continual learning and offers implications for clinical practice, research design, and regulatory oversight.",
+      "pdf_url": "https://arxiv.org/pdf/2601.01116v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.01116v1",
+      "published": "2026-01-03",
+      "categories": [
+        "stat.ME",
+        "q-bio.QM"
+      ]
+    },
     {
       "title": "Fair Policy Learning under Bipartite Network Interference: Learning Fair and Cost-Effective Environmental Policies",
       "authors": [
@@ -55,129 +169,6 @@
       "categories": [
         "stat.ME",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Detecting Unobserved Confounders: A Kernelized Regression Approach",
-      "authors": [
-        "Yikai Chen",
-        "Yunxin Mao",
-        "Chunyuan Zheng",
-        "Hao Zou",
-        "Shanzhi Gu",
-        "Shixuan Liu",
-        "Yang Shi",
-        "Wenjing Yang",
-        "Kun Kuang",
-        "Haotian Wang"
-      ],
-      "abstract": "Detecting unobserved confounders is crucial for reliable causal inference in observational studies. Existing methods require either linearity assumptions or multiple heterogeneous environments, limiting applicability to nonlinear single-environment settings. To bridge this gap, we propose Kernel Regression Confounder Detection (KRCD), a novel method for detecting unobserved confounding in nonlinear observational data under single-environment conditions. KRCD leverages reproducing kernel Hilbert spaces to model complex dependencies. By comparing standard and higherorder kernel regressions, we derive a test statistic whose significant deviation from zero indicates unobserved confounding. Theoretically, we prove two key results: First, in infinite samples, regression coefficients coincide if and only if no unobserved confounders exist. Second, finite-sample differences converge to zero-mean Gaussian distributions with tractable variance. Extensive experiments on synthetic benchmarks and the Twins dataset demonstrate that KRCD not only outperforms existing baselines but also achieves superior computational efficiency.",
-      "pdf_url": "https://arxiv.org/pdf/2601.00200v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.00200v1",
-      "published": "2026-01-01",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "The Agentic Leash: Extracting Causal Feedback Fuzzy Cognitive Maps with LLMs",
-      "authors": [
-        "Akash Kumar Panda",
-        "Olaoluwa Adigun",
-        "Bart Kosko"
-      ],
-      "abstract": "We design a large-language-model (LLM) agent that extracts causal feedback fuzzy cognitive maps (FCMs) from raw text. The causal learning or extraction process is agentic both because of the LLM's semi-autonomy and because ultimately the FCM dynamical system's equilibria drive the LLM agents to fetch and process causal text. The fetched text can in principle modify the adaptive FCM causal structure and so modify the source of its quasi-autonomy--its equilibrium limit cycles and fixed-point attractors. This bidirectional process endows the evolving FCM dynamical system with a degree of autonomy while still staying on its agentic leash. We show in particular that a sequence of three finely tuned system instructions guide an LLM agent as it systematically extracts key nouns and noun phrases from text, as it extracts FCM concept nodes from among those nouns and noun phrases, and then as it extracts or infers partial or fuzzy causal edges between those FCM nodes. We test this FCM generation on a recent essay about the promise of AI from the late diplomat and political theorist Henry Kissinger and his colleagues. This three-step process produced FCM dynamical systems that converged to the same equilibrium limit cycles as did the human-generated FCMs even though the human-generated FCM differed in the number of nodes and edges. A final FCM mixed generated FCMs from separate Gemini and ChatGPT LLM agents. The mixed FCM absorbed the equilibria of its dominant mixture component but also created new equilibria of its own to better approximate the underlying causal dynamical system.",
-      "pdf_url": "https://arxiv.org/pdf/2601.00097v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.00097v1",
-      "published": "2025-12-31",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.HC",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "CPR: Causal Physiological Representation Learning for Robust ECG Analysis under Distribution Shifts",
-      "authors": [
-        "Shunbo Jia",
-        "Caizhi Liao"
-      ],
-      "abstract": "Deep learning models for Electrocardiogram (ECG) diagnosis have achieved remarkable accuracy but exhibit fragility against adversarial perturbations, particularly Smooth Adversarial Perturbations (SAP) that mimic biological morphology. Existing defenses face a critical dilemma: Adversarial Training (AT) provides robustness but incurs a prohibitive computational burden, while certified methods like Randomized Smoothing (RS) introduce significant inference latency, rendering them impractical for real-time clinical monitoring. We posit that this vulnerability stems from the models' reliance on non-robust spurious correlations rather than invariant pathological features. To address this, we propose Causal Physiological Representation Learning (CPR). Unlike standard denoising approaches that operate without semantic constraints, CPR incorporates a Physiological Structural Prior within a causal disentanglement framework. By modeling ECG generation via a Structural Causal Model (SCM), CPR enforces a structural intervention that strictly separates invariant pathological morphology (P-QRS-T complex) from non-causal artifacts. Empirical results on PTB-XL demonstrate that CPR significantly outperforms standard clinical preprocessing methods. Specifically, under SAP attacks, CPR achieves an F1 score of 0.632, surpassing Median Smoothing (0.541 F1) by 9.1%. Crucially, CPR matches the certified robustness of Randomized Smoothing while maintaining single-pass inference efficiency, offering a superior trade-off between robustness, efficiency, and clinical interpretability.",
-      "pdf_url": "https://arxiv.org/pdf/2512.24564v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.24564v1",
-      "published": "2025-12-31",
-      "categories": [
-        "cs.LG",
-        "eess.SP"
-      ]
-    },
-    {
-      "title": "Demystifying Proximal Causal Inference",
-      "authors": [
-        "Grace V. Ringlein",
-        "Trang Quynh Nguyen",
-        "Peter P. Zandi",
-        "Elizabeth A. Stuart",
-        "Harsh Parikh"
-      ],
-      "abstract": "Proximal causal inference (PCI) has emerged as a promising framework for identifying and estimating causal effects in the presence of unobserved confounders. While many traditional causal inference methods rely on the assumption of no unobserved confounding, this assumption is likely often violated. PCI mitigates this challenge by relying on an alternative set of assumptions regarding the relationships between treatment, outcome, and auxiliary variables that serve as proxies for unmeasured confounders. We review existing identification results, discuss the assumptions necessary for valid causal effect estimation via PCI, and compare different PCI estimation methods. We offer practical guidance on operationalizing PCI, with a focus on selecting and evaluating proxy variables using domain knowledge, measurement error perspectives, and negative control analogies. Through conceptual examples, we demonstrate tensions in proxy selection and discuss the importance of clearly defining the unobserved confounding mechanism. By bridging formal results with applied considerations, this work aims to demystify PCI, encourage thoughtful use in practice, and identify open directions for methodological development and empirical research.",
-      "pdf_url": "https://arxiv.org/pdf/2512.24413v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.24413v1",
-      "published": "2025-12-30",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Stream-DiffVSR: Low-Latency Streamable Video Super-Resolution via Auto-Regressive Diffusion",
-      "authors": [
-        "Hau-Shiang Shiu",
-        "Chin-Yang Lin",
-        "Zhixiang Wang",
-        "Chi-Wei Hsiao",
-        "Po-Fan Yu",
-        "Yu-Chih Chen",
-        "Yu-Lun Liu"
-      ],
-      "abstract": "Diffusion-based video super-resolution (VSR) methods achieve strong perceptual quality but remain impractical for latency-sensitive settings due to reliance on future frames and expensive multi-step denoising. We propose Stream-DiffVSR, a causally conditioned diffusion framework for efficient online VSR. Operating strictly on past frames, it combines a four-step distilled denoiser for fast inference, an Auto-regressive Temporal Guidance (ARTG) module that injects motion-aligned cues during latent denoising, and a lightweight temporal-aware decoder with a Temporal Processor Module (TPM) that enhances detail and temporal coherence. Stream-DiffVSR processes 720p frames in 0.328 seconds on an RTX4090 GPU and significantly outperforms prior diffusion-based methods. Compared with the online SOTA TMP, it boosts perceptual quality (LPIPS +0.095) while reducing latency by over 130x. Stream-DiffVSR achieves the lowest latency reported for diffusion-based VSR, reducing initial delay from over 4600 seconds to 0.328 seconds, thereby making it the first diffusion VSR method suitable for low-latency online deployment. Project page: https://jamichss.github.io/stream-diffvsr-project-page/",
-      "pdf_url": "https://arxiv.org/pdf/2512.23709v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.23709v1",
-      "published": "2025-12-29",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Propensity Patchwork Kriging for Scalable Inference on Heterogeneous Treatment Effects",
-      "authors": [
-        "Hajime Ogawa",
-        "Shonosuke Sugasawa"
-      ],
-      "abstract": "Gaussian process-based models are attractive for estimating heterogeneous treatment effects (HTE), but their computational cost limits scalability in causal inference settings. In this work, we address this challenge by extending Patchwork Kriging into the causal inference framework. Our proposed method partitions the data according to the estimated propensity score and applies Patchwork Kriging to enforce continuity of HTE estimates across adjacent regions. By imposing continuity constraints only along the propensity score dimension, rather than the full covariate space, the proposed approach substantially reduces computational cost while avoiding discontinuities inherent in simple local approximations. The resulting method can be interpreted as a smoothing extension of stratification and provides an efficient approach to HTE estimation. The proposed method is demonstrated through simulation studies and a real data application.",
-      "pdf_url": "https://arxiv.org/pdf/2512.23467v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.23467v1",
-      "published": "2025-12-29",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Probabilistic Modelling is Sufficient for Causal Inference",
-      "authors": [
-        "Bruno Mlodozeniec",
-        "David Krueger",
-        "Richard E. Turner"
-      ],
-      "abstract": "Causal inference is a key research area in machine learning, yet confusion reigns over the tools needed to tackle it. There are prevalent claims in the machine learning literature that you need a bespoke causal framework or notation to answer causal questions. In this paper, we want to make it clear that you \\emph{can} answer any causal inference question within the realm of probabilistic modelling and inference, without causal-specific tools or notation. Through concrete examples, we demonstrate how causal questions can be tackled by writing down the probability of everything. Lastly, we reinterpret causal tools as emerging from standard probabilistic modelling and inference, elucidating their necessity and utility.",
-      "pdf_url": "https://arxiv.org/pdf/2512.23408v1",
-      "arxiv_url": "http://arxiv.org/abs/2512.23408v1",
-      "published": "2025-12-29",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
       ]
     }
   ]
