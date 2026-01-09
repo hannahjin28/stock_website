@@ -1,6 +1,142 @@
 {
-  "last_updated": "2026-01-07T00:59:18.913265",
+  "last_updated": "2026-01-09T00:59:31.906375",
   "papers": [
+    {
+      "title": "Personalization of Large Foundation Models for Health Interventions",
+      "authors": [
+        "Stefan Konigorski",
+        "Johannes E. Vedder",
+        "Babajide Alamu Owoyele",
+        "İbrahim Özkan"
+      ],
+      "abstract": "Large foundation models (LFMs) transform healthcare AI in prevention, diagnostics, and treatment. However, whether LFMs can provide truly personalized treatment recommendations remains an open question. Recent research has revealed multiple challenges for personalization, including the fundamental generalizability paradox: models achieving high accuracy in one clinical study perform at chance level in others, demonstrating that personalization and external validity exist in tension. This exemplifies broader contradictions in AI-driven healthcare: the privacy-performance paradox, scale-specificity paradox, and the automation-empathy paradox. As another challenge, the degree of causal understanding required for personalized recommendations, as opposed to mere predictive capacities of LFMs, remains an open question. N-of-1 trials -- crossover self-experiments and the gold standard for individual causal inference in personalized medicine -- resolve these tensions by providing within-person causal evidence while preserving privacy through local experimentation. Despite their impressive capabilities, this paper argues that LFMs cannot replace N-of-1 trials. We argue that LFMs and N-of-1 trials are complementary: LFMs excel at rapid hypothesis generation from population patterns using multimodal data, while N-of-1 trials excel at causal validation for a given individual. We propose a hybrid framework that combines the strengths of both to enable personalization and navigate the identified paradoxes: LFMs generate ranked intervention candidates with uncertainty estimates, which trigger subsequent N-of-1 trials. Clarifying the boundary between prediction and causation and explicitly addressing the paradoxical tensions are essential for responsible AI integration in personalized medicine.",
+      "pdf_url": "https://arxiv.org/pdf/2601.03482v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.03482v1",
+      "published": "2026-01-07",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Improving operating characteristics of clinical trials by augmenting control arm using propensity score-weighted borrowing-by-parts power prior",
+      "authors": [
+        "Apu Chandra Das",
+        "Sakib Salam",
+        "Aninda Roy",
+        "Rakhi Chowdhury",
+        "Antar Chandra Das",
+        "Ashim Chandra Das"
+      ],
+      "abstract": "Borrowing external data can improve estimation efficiency but may introduce bias when populations differ in covariate distributions or outcome variability. A proper balance needs to be maintained between the two datasets to justify the borrowing. We propose a propensity score weighting borrowing-by-parts power prior (PSW-BPP) that integrates causal covariate adjustment through propensity score weighting with a flexible Bayesian borrowing approach to address these challenges in a unified framework. The proposed approach first applies propensity score weighting to align the covariate distribution of the external data with that of the current study, thereby targeting a common estimand and reducing confounding due to population heterogeneity. The weighted external likelihood is then incorporated into a Bayesian model through a borrowing-by-parts power prior, which allows distinct power parameters for the mean and variance components of the likelihood, enabling differential and calibrated information borrowing. Additionally, we adopt the idea of the minimal plausibility index (mPI) to calculate the power parameters. This separate borrowing provides greater robustness to prior-data conflict compared with traditional power prior methods that impose a single borrowing parameter. We study the operating characteristics of PSW-BPP through extensive simulation and a real data example. Simulation studies demonstrate that PSW-BPP yields more efficient and stable estimation than no borrowing and fixed borrowing, particularly under moderate covariate imbalance and outcome heterogeneity. The proposed framework offers a principled and extensible methodological contribution for Bayesian inference with external data in observational and hybrid study designs.",
+      "pdf_url": "https://arxiv.org/pdf/2601.03480v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.03480v1",
+      "published": "2026-01-07",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "On estimands in target trial emulation",
+      "authors": [
+        "Edoardo Efrem Gervasoni",
+        "Liesbet De Bus",
+        "Stijn Vansteelandt",
+        "Oliver Dukes"
+      ],
+      "abstract": "The target trial framework enables causal inference from longitudinal observational data by emulating randomized trials initiated at multiple time points. Precision is often improved by pooling information across trials, with standard models typically assuming - among other things - a time-constant treatment effect. However, this obscures interpretation when the true treatment effect varies, which we argue to be likely as a result of relying on noncollapsible estimands. To address these challenges, this paper introduces a model-free strategy for target trial analysis, centered around the choice of the estimand, rather than model specification. This ensures that treatment effects remain clearly interpretable for well-defined populations even under model misspecification. We propose estimands suitable for different study designs, and develop accompanying G-computation and inverse probability weighted estimators. Applications on simulations and real data on antimicrobial de-escalation in an intensive care unit setting demonstrate the greater clarity and reliability of the proposed methodology over traditional techniques.",
+      "pdf_url": "https://arxiv.org/pdf/2601.03377v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.03377v1",
+      "published": "2026-01-06",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Discovering and Causally Validating Emotion-Sensitive Neurons in Large Audio-Language Models",
+      "authors": [
+        "Xiutian Zhao",
+        "Björn Schuller",
+        "Berrak Sisman"
+      ],
+      "abstract": "Emotion is a central dimension of spoken communication, yet, we still lack a mechanistic account of how modern large audio-language models (LALMs) encode it internally. We present the first neuron-level interpretability study of emotion-sensitive neurons (ESNs) in LALMs and provide causal evidence that such units exist in Qwen2.5-Omni, Kimi-Audio, and Audio Flamingo 3. Across these three widely used open-source models, we compare frequency-, entropy-, magnitude-, and contrast-based neuron selectors on multiple emotion recognition benchmarks. Using inference-time interventions, we reveal a consistent emotion-specific signature: ablating neurons selected for a given emotion disproportionately degrades recognition of that emotion while largely preserving other classes, whereas gain-based amplification steers predictions toward the target emotion. These effects arise with modest identification data and scale systematically with intervention strength. We further observe that ESNs exhibit non-uniform layer-wise clustering with partial cross-dataset transfer. Taken together, our results offer a causal, neuron-level account of emotion decisions in LALMs and highlight targeted neuron interventions as an actionable handle for controllable affective behaviors.",
+      "pdf_url": "https://arxiv.org/pdf/2601.03115v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.03115v1",
+      "published": "2026-01-06",
+      "categories": [
+        "cs.CL",
+        "eess.AS"
+      ]
+    },
+    {
+      "title": "Time-Aware Synthetic Control",
+      "authors": [
+        "Saeyoung Rho",
+        "Cyrus Illick",
+        "Samhitha Narasipura",
+        "Alberto Abadie",
+        "Daniel Hsu",
+        "Vishal Misra"
+      ],
+      "abstract": "The synthetic control (SC) framework is widely used for observational causal inference with time-series panel data. SC has been successful in diverse applications, but existing methods typically treat the ordering of pre-intervention time indices interchangeable. This invariance means they may not fully take advantage of temporal structure when strong trends are present. We propose Time-Aware Synthetic Control (TASC), which employs a state-space model with a constant trend while preserving a low-rank structure of the signal. TASC uses the Kalman filter and Rauch-Tung-Striebel smoother: it first fits a generative time-series model with expectation-maximization and then performs counterfactual inference. We evaluate TASC on both simulated and real-world datasets, including policy evaluation and sports prediction. Our results suggest that TASC offers advantages in settings with strong temporal trends and high levels of observation noise.",
+      "pdf_url": "https://arxiv.org/pdf/2601.03099v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.03099v1",
+      "published": "2026-01-06",
+      "categories": [
+        "cs.LG",
+        "econ.EM",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Causal Manifold Fairness: Enforcing Geometric Invariance in Representation Learning",
+      "authors": [
+        "Vidhi Rathore"
+      ],
+      "abstract": "Fairness in machine learning is increasingly critical, yet standard approaches often treat data as static points in a high-dimensional space, ignoring the underlying generative structure. We posit that sensitive attributes (e.g., race, gender) do not merely shift data distributions but causally warp the geometry of the data manifold itself. To address this, we introduce Causal Manifold Fairness (CMF), a novel framework that bridges causal inference and geometric deep learning. CMF learns a latent representation where the local Riemannian geometry, defined by the metric tensor and curvature, remains invariant under counterfactual interventions on sensitive attributes. By enforcing constraints on the Jacobian and Hessian of the decoder, CMF ensures that the rules of the latent space (distances and shapes) are preserved across demographic groups. We validate CMF on synthetic Structural Causal Models (SCMs), demonstrating that it effectively disentangles sensitive geometric warping while preserving task utility, offering a rigorous quantification of the fairness-utility trade-off via geometric metrics.",
+      "pdf_url": "https://arxiv.org/pdf/2601.03032v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.03032v1",
+      "published": "2026-01-06",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "AbductiveMLLM: Boosting Visual Abductive Reasoning Within MLLMs",
+      "authors": [
+        "Boyu Chang",
+        "Qi Wang",
+        "Xi Guo",
+        "Zhixiong Nan",
+        "Yazhou Yao",
+        "Tianfei Zhou"
+      ],
+      "abstract": "Visual abductive reasoning (VAR) is a challenging task that requires AI systems to infer the most likely explanation for incomplete visual observations. While recent MLLMs develop strong general-purpose multimodal reasoning capabilities, they fall short in abductive inference, as compared to human beings. To bridge this gap, we draw inspiration from the interplay between verbal and pictorial abduction in human cognition, and propose to strengthen abduction of MLLMs by mimicking such dual-mode behavior. Concretely, we introduce AbductiveMLLM comprising of two synergistic components: REASONER and IMAGINER. The REASONER operates in the verbal domain. It first explores a broad space of possible explanations using a blind LLM and then prunes visually incongruent hypotheses based on cross-modal causal alignment. The remaining hypotheses are introduced into the MLLM as targeted priors, steering its reasoning toward causally coherent explanations. The IMAGINER, on the other hand, further guides MLLMs by emulating human-like pictorial thinking. It conditions a text-to-image diffusion model on both the input video and the REASONER's output embeddings to \"imagine\" plausible visual scenes that correspond to verbal explanation, thereby enriching MLLMs' contextual grounding. The two components are trained jointly in an end-to-end manner. Experiments on standard VAR benchmarks show that AbductiveMLLM achieves state-of-the-art performance, consistently outperforming traditional solutions and advanced MLLMs.",
+      "pdf_url": "https://arxiv.org/pdf/2601.02771v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.02771v1",
+      "published": "2026-01-06",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Inferring Causal Graph Temporal Logic Formulas to Expedite Reinforcement Learning in Temporally Extended Tasks",
+      "authors": [
+        "Hadi Partovi Aria",
+        "Zhe Xu"
+      ],
+      "abstract": "Decision-making tasks often unfold on graphs with spatial-temporal dynamics. Black-box reinforcement learning often overlooks how local changes spread through network structure, limiting sample efficiency and interpretability. We present GTL-CIRL, a closed-loop framework that simultaneously learns policies and mines Causal Graph Temporal Logic (Causal GTL) specifications. The method shapes rewards with robustness, collects counterexamples when effects fail, and uses Gaussian Process (GP) driven Bayesian optimization to refine parameterized cause templates. The GP models capture spatial and temporal correlations in the system dynamics, enabling efficient exploration of complex parameter spaces. Case studies in gene and power networks show faster learning and clearer, verifiable behavior compared to standard RL baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2601.02666v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.02666v1",
+      "published": "2026-01-06",
+      "categories": [
+        "cs.AI",
+        "cs.LO"
+      ]
+    },
     {
       "title": "Causal inference for censored data with continuous marks",
       "authors": [
@@ -29,146 +165,6 @@
       "categories": [
         "stat.ME",
         "stat.AP"
-      ]
-    },
-    {
-      "title": "Model-Assisted Causal Inference for the Treatment Effect on Recurrent Events in the Presence of Terminal Events",
-      "authors": [
-        "Yiyuan Huang",
-        "Ling Zhou",
-        "Min Zhang",
-        "Peter X. K. Song"
-      ],
-      "abstract": "This paper is motivated by evaluating the benefits of patients receiving mechanical circulatory support (MCS) devices in end-stage heart failure management inference, in which hypothesis testing for a treatment effect on the risk of recurrent events is challenged in the presence of terminal events. Existing methods based on cumulative frequency unreasonably disadvantage longer survivors as they tend to experience more recurrent events. The While-Alive-based (WA) test has provided a solution to address this survival-length-bias problem, and it performs well when the recurrent event rate holds constant over time. However, if such a constant-rate assumption is violated, the WA test can exhibit an inflated type I error and inaccurate estimation of treatment effects. To fill this methodological gap, we propose a Proportional Rate Marginal Structural Model-assisted Test (PR-MSMaT) in the causal inference framework of separable treatment effects for recurrent and terminal events. Using the simulation study, we demonstrate that our PR-MSMaT can properly control type I error while gaining power comparable to the WA test under time-varying recurrent event rates. We employ PR-MSMaT to compare different MCS devices with the postoperative risk of gastrointestinal bleeding among patients enrolled in the Interagency Registry of Mechanically Assisted Circulatory Support program.",
-      "pdf_url": "https://arxiv.org/pdf/2601.01245v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.01245v1",
-      "published": "2026-01-03",
-      "categories": [
-        "stat.AP",
-        "q-bio.QM",
-        "q-bio.TO",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Order-Constrained Spectral Causality in Multivariate Time Series",
-      "authors": [
-        "Alejandro Rodriguez Dominguez"
-      ],
-      "abstract": "We introduce an operator-theoretic framework for causal analysis in multivariate time series based on order-constrained spectral non-invariance. Directional influence is defined as sensitivity of second-order dependence operators to admissible, order-preserving temporal deformations of a designated source component, yielding an intrinsically multivariate causal notion summarized through orthogonally invariant spectral functionals. Under linear Gaussian assumptions, the criterion coincides with linear Granger causality, while beyond this regime it captures collective and nonlinear directional dependence not reflected in pairwise predictability. We establish existence, uniform consistency, and valid inference for the resulting non-smooth supremum--infimum statistics using shift-based randomization that exploits order-induced group invariance, yielding finite-sample exactness under exact invariance and asymptotic validity under weak dependence without parametric assumptions. Simulations demonstrate correct size and strong power against distributed and bulk-dominated alternatives, including nonlinear dependence missed by linear Granger tests with appropriate feature embeddings. An empirical application to a high-dimensional panel of daily financial return series spanning major asset classes illustrates system-level causal monitoring in practice. Directional organization is episodic and stress-dependent, causal propagation strengthens while remaining multi-channel, dominant causal hubs reallocate rapidly, and statistically robust transmission channels are sparse and horizon-heterogeneous even when aggregate lead--lag asymmetry is weak. The framework provides a scalable and interpretable complement to correlation-, factor-, and pairwise Granger-style analyses for complex systems.",
-      "pdf_url": "https://arxiv.org/pdf/2601.01216v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.01216v1",
-      "published": "2026-01-03",
-      "categories": [
-        "stat.AP",
-        "math.ST",
-        "q-fin.ST"
-      ]
-    },
-    {
-      "title": "XStreamVGGT: Extremely Memory-Efficient Streaming Vision Geometry Grounded Transformer with KV Cache Compression",
-      "authors": [
-        "Zunhai Su",
-        "Weihao Ye",
-        "Hansen Feng",
-        "Keyu Fan",
-        "Jing Zhang",
-        "Dahai Yu",
-        "Zhengwu Liu",
-        "Ngai Wong"
-      ],
-      "abstract": "Learning-based 3D visual geometry models have benefited substantially from large-scale transformers. Among these, StreamVGGT leverages frame-wise causal attention for strong streaming reconstruction, but suffers from unbounded KV cache growth, leading to escalating memory consumption and inference latency as input frames accumulate. We propose XStreamVGGT, a tuning-free approach that systematically compresses the KV cache through joint pruning and quantization, enabling extremely memory-efficient streaming inference. Specifically, redundant KVs originating from multi-view inputs are pruned through efficient token importance identification, enabling a fixed memory budget. Leveraging the unique distribution of KV tensors, we incorporate KV quantization to further reduce memory consumption. Extensive evaluations show that XStreamVGGT achieves mostly negligible performance degradation while substantially reducing memory usage by 4.42$\\times$ and accelerating inference by 5.48$\\times$, enabling scalable and practical streaming 3D applications. The code is available at https://github.com/ywh187/XStreamVGGT/.",
-      "pdf_url": "https://arxiv.org/pdf/2601.01204v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.01204v1",
-      "published": "2026-01-03",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "DHI: Leveraging Diverse Hallucination Induction for Enhanced Contrastive Factuality Control in Large Language Models",
-      "authors": [
-        "Jiani Guo",
-        "Xiangke Zeng",
-        "Jie Wu",
-        "Zuchao Li"
-      ],
-      "abstract": "Large language models (LLMs) frequently produce inaccurate or fabricated information, known as \"hallucinations,\" which compromises their reliability. Existing approaches often train an \"Evil LLM\" to deliberately generate hallucinations on curated datasets, using these induced hallucinations to guide contrastive decoding against a reliable \"positive model\" for hallucination mitigation. However, this strategy is limited by the narrow diversity of hallucinations induced, as Evil LLMs trained on specific error types tend to reproduce only these particular patterns, thereby restricting their overall effectiveness. To address these limitations, we propose DHI (Diverse Hallucination Induction), a novel training framework that enables the Evil LLM to generate a broader range of hallucination types without relying on pre-annotated hallucination data. DHI employs a modified loss function that down-weights the generation of specific factually correct tokens, encouraging the Evil LLM to produce diverse hallucinations at targeted positions while maintaining overall factual content. Additionally, we introduce a causal attention masking adaptation to reduce the impact of this penalization on the generation of subsequent tokens. During inference, we apply an adaptive rationality constraint that restricts contrastive decoding to tokens where the positive model exhibits high confidence, thereby avoiding unnecessary penalties on factually correct tokens. Extensive empirical results show that DHI achieves significant performance gains over other contrastive decoding-based approaches across multiple hallucination benchmarks.",
-      "pdf_url": "https://arxiv.org/pdf/2601.01156v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.01156v1",
-      "published": "2026-01-03",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Beyond P-Values: Importing Quantitative Finance's Risk and Regret Metrics for AI in Learning Health Systems",
-      "authors": [
-        "Richik Chakraborty"
-      ],
-      "abstract": "The increasing deployment of artificial intelligence (AI) in clinical settings challenges foundational assumptions underlying traditional frameworks of medical evidence. Classical statistical approaches, centered on randomized controlled trials, frequentist hypothesis testing, and static confidence intervals, were designed for fixed interventions evaluated under stable conditions. In contrast, AI-driven clinical systems learn continuously, adapt their behavior over time, and operate in non-stationary environments shaped by evolving populations, practices, and feedback effects. In such systems, clinical harm arises less from average error rates than from calibration drift, rare but severe failures, and the accumulation of suboptimal decisions over time.\n  In this perspective, we argue that prevailing notions of statistical significance are insufficient for characterizing evidence and safety in learning health systems. Drawing on risk-theoretic concepts from quantitative finance and online decision theory, we propose reframing medical evidence for adaptive AI systems in terms of time-indexed calibration stability, bounded downside risk, and controlled cumulative regret. We emphasize that this approach does not replace randomized trials or causal inference, but complements them by addressing dimensions of risk and uncertainty that emerge only after deployment. This framework provides a principled mathematical language for evaluating AI-driven clinical systems under continual learning and offers implications for clinical practice, research design, and regulatory oversight.",
-      "pdf_url": "https://arxiv.org/pdf/2601.01116v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.01116v1",
-      "published": "2026-01-03",
-      "categories": [
-        "stat.ME",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "Fair Policy Learning under Bipartite Network Interference: Learning Fair and Cost-Effective Environmental Policies",
-      "authors": [
-        "Raphael C. Kim",
-        "Rachel C. Nethery",
-        "Kevin L. Chen",
-        "Falco J. Bargagli-Stoffi"
-      ],
-      "abstract": "Numerous studies have shown the harmful effects of airborne pollutants on human health. Vulnerable groups and communities often bear a disproportionately larger health burden due to exposure to airborne pollutants. Thus, there is a need to design policies that effectively reduce the public health burdens while ensuring cost-effective policy interventions. Designing policies that optimally benefit the population while ensuring equity between groups under cost constraints is a challenging statistical and causal inference problem. In the context of environmental policy this is further complicated by the fact that interventions target emission sources but health impacts occur in potentially distant communities due to atmospheric pollutant transport -- a setting known as bipartite network interference (BNI). To address these issues, we propose a fair policy learning approach under BNI. Our approach allows to learn cost-effective policies under fairness constraints even accounting for complex BNI data structures. We derive asymptotic properties and demonstrate finite sample performance via Monte Carlo simulations. Finally, we apply the proposed method to a real-world dataset linking power plant scrubber installations to Medicare health records for more than 2 million individuals in the U.S. Our method determine fair scrubber allocations to reduce mortality under fairness and cost constraints.",
-      "pdf_url": "https://arxiv.org/pdf/2601.00531v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.00531v1",
-      "published": "2026-01-02",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Bio-inspired Agentic Self-healing Framework for Resilient Distributed Computing Continuum Systems",
-      "authors": [
-        "Alaa Saleh",
-        "Praveen Kumar Donta",
-        "Roberto Morabito",
-        "Sasu Tarkoma",
-        "Anders Lindgren",
-        "Qiyang Zhang",
-        "Schahram Dustdar",
-        "Susanna Pirttikangas",
-        "Lauri Lovén"
-      ],
-      "abstract": "Human biological systems sustain life through extraordinary resilience, continually detecting damage, orchestrating targeted responses, and restoring function through self-healing. Inspired by these capabilities, this paper introduces ReCiSt, a bio-inspired agentic self-healing framework designed to achieve resilience in Distributed Computing Continuum Systems (DCCS). Modern DCCS integrate heterogeneous computing resources, ranging from resource-constrained IoT devices to high-performance cloud infrastructures, and their inherent complexity, mobility, and dynamic operating conditions expose them to frequent faults that disrupt service continuity. These challenges underscore the need for scalable, adaptive, and self-regulated resilience strategies. ReCiSt reconstructs the biological phases of Hemostasis, Inflammation, Proliferation, and Remodeling into the computational layers Containment, Diagnosis, Meta-Cognitive, and Knowledge for DCCS. These four layers perform autonomous fault isolation, causal diagnosis, adaptive recovery, and long-term knowledge consolidation through Language Model (LM)-powered agents. These agents interpret heterogeneous logs, infer root causes, refine reasoning pathways, and reconfigure resources with minimal human intervention. The proposed ReCiSt framework is evaluated on public fault datasets using multiple LMs, and no baseline comparison is included due to the scarcity of similar approaches. Nevertheless, our results, evaluated under different LMs, confirm ReCiSt's self-healing capabilities within tens of seconds with minimum of 10% of agent CPU usage. Our results also demonstrated depth of analysis to over come uncertainties and amount of micro-agents invoked to achieve resilience.",
-      "pdf_url": "https://arxiv.org/pdf/2601.00339v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.00339v1",
-      "published": "2026-01-01",
-      "categories": [
-        "cs.AI",
-        "cs.DC",
-        "cs.ET",
-        "cs.MA",
-        "cs.NE"
-      ]
-    },
-    {
-      "title": "Identification and Estimation under Multiple Versions of Treatment: Mixture-of-Experts Approach",
-      "authors": [
-        "Kohei Yoshikawa",
-        "Shuichi Kawano"
-      ],
-      "abstract": "The Stable Unit Treatment Value Assumption (SUTVA) includes the condition that there are no multiple versions of treatment in causal inference. Though we could not control the implementation of treatment in observational studies, multiple versions may exist in the treatment. It has been pointed out that ignoring such multiple versions of treatment can lead to biased estimates of causal effects, but a causal inference framework that explicitly deals with the unbiased identification and estimation of version-specific causal effects has not been fully developed yet. Thus, obtaining a deeper understanding for mechanisms of the complex treatments is difficult. In this paper, we introduce the Mixture-of-Experts framework into causal inference and develop a methodology for estimating the causal effects of latent versions. This approach enables explicit estimation of version-specific causal effects even if the versions are not observed. Numerical experiments demonstrate the effectiveness of the proposed method.",
-      "pdf_url": "https://arxiv.org/pdf/2601.00287v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.00287v1",
-      "published": "2026-01-01",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
       ]
     }
   ]
