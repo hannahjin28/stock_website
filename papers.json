@@ -1,6 +1,140 @@
 {
-  "last_updated": "2026-01-09T00:59:31.906375",
+  "last_updated": "2026-01-10T00:57:23.094281",
   "papers": [
+    {
+      "title": "Robust Reasoning as a Symmetry-Protected Topological Phase",
+      "authors": [
+        "Ilmo Sung"
+      ],
+      "abstract": "Large language models suffer from \"hallucinations\"-logical inconsistencies induced by semantic noise. We propose that current architectures operate in a \"Metric Phase,\" where causal order is vulnerable to spontaneous symmetry breaking. Here, we identify robust inference as an effective Symmetry-Protected Topological phase, where logical operations are formally isomorphic to non-Abelian anyon braiding, replacing fragile geometric interpolation with robust topological invariants. Empirically, we demonstrate a sharp topological phase transition: while Transformers and RNNs exhibit gapless decay, our Holonomic Network reveals a macroscopic \"mass gap,\" maintaining invariant fidelity below a critical noise threshold. Furthermore, in a variable-binding task on $S_{10}$ ($3.6 \\times 10^6$ states) representing symbolic manipulation, we demonstrate holonomic generalization: the topological model maintains perfect fidelity extrapolating $100\\times$ beyond training ($L=50 \\to 5000$), consistent with a theoretically indefinite causal horizon, whereas Transformers lose logical coherence. Ablation studies indicate this protection emerges strictly from non-Abelian gauge symmetry. This provides strong evidence for a new universality class for logical reasoning, linking causal stability to the topology of the semantic manifold.",
+      "pdf_url": "https://arxiv.org/pdf/2601.05240v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.05240v1",
+      "published": "2026-01-08",
+      "categories": [
+        "cs.LG",
+        "cond-mat.dis-nn",
+        "cs.AI",
+        "hep-th"
+      ]
+    },
+    {
+      "title": "Vision-Language Introspection: Mitigating Overconfident Hallucinations in MLLMs via Interpretable Bi-Causal Steering",
+      "authors": [
+        "Shuliang Liu",
+        "Songbo Yang",
+        "Dong Fang",
+        "Sihang Jia",
+        "Yuqi Tang",
+        "Lingfeng Su",
+        "Ruoshui Peng",
+        "Yibo Yan",
+        "Xin Zou",
+        "Xuming Hu"
+      ],
+      "abstract": "Object hallucination critically undermines the reliability of Multimodal Large Language Models, often stemming from a fundamental failure in cognitive introspection, where models blindly trust linguistic priors over specific visual evidence. Existing mitigations remain limited: contrastive decoding approaches operate superficially without rectifying internal semantic misalignments, while current latent steering methods rely on static vectors that lack instance-specific precision. We introduce Vision-Language Introspection (VLI), a training-free inference framework that simulates a metacognitive self-correction process. VLI first performs Attributive Introspection to diagnose hallucination risks via probabilistic conflict detection and localize the causal visual anchors. It then employs Interpretable Bi-Causal Steering to actively modulate the inference process, dynamically isolating visual evidence from background noise while neutralizing blind confidence through adaptive calibration. VLI achieves state-of-the-art performance on advanced models, reducing object hallucination rates by 12.67% on MMHal-Bench and improving accuracy by 5.8% on POPE.",
+      "pdf_url": "https://arxiv.org/pdf/2601.05159v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.05159v1",
+      "published": "2026-01-08",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Revealing the Truth: Calculating True Values in Causal Inference Simulation Studies via Gaussian Quadrature",
+      "authors": [
+        "Alex Ocampo",
+        "Enrico Giudice",
+        "Zachary R. McCaw",
+        "Tim P. Morris"
+      ],
+      "abstract": "Simulation studies are used to understand the properties of statistical methods. A key luxury in many simulation studies is knowledge of the true value (i.e. the estimand) being targeted. With this oracle knowledge in-hand, the researcher conducting the simulation study can assess across repeated realizations of the data how well a given method recovers the truth. In causal inference simulation studies, the truth is rarely a simple parameter of the statistical model chosen to generate the data. Instead, the estimand is often an average treatment effect, marginalized over the distribution of confounders and/or mediators. Luckily, these variables are often generated from common distributions such as the normal, uniform, exponential, or gamma. For all these distributions, Gaussian quadratures provide efficient and accurate calculation for integrands with integral kernels that stem from known probability density functions. We demonstrate through four applications how to use Gaussian quadrature to accurately and efficiently compute the true causal estimand. We also compare the pros and cons of Gauss-Hermite quadrature to Monte Carlo integration approaches, which we use as benchmarks. Overall, we demonstrate that the Gaussian quadrature is an accurate tool with negligible computation time, yet is underused for calculating the true causal estimands in simulation studies.",
+      "pdf_url": "https://arxiv.org/pdf/2601.05128v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.05128v1",
+      "published": "2026-01-08",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Scalable neural pushbroom architectures for real-time denoising of hyperspectral images onboard satellites",
+      "authors": [
+        "Ziyao Yi",
+        "Davide Piccinini",
+        "Diego Valsesia",
+        "Tiziano Bianchi",
+        "Enrico Magli"
+      ],
+      "abstract": "The next generation of Earth observation satellites will seek to deploy intelligent models directly onboard the payload in order to minimize the latency incurred by the transmission and processing chain of the ground segment, for time-critical applications. Designing neural architectures for onboard execution, particularly for satellite-based hyperspectral imagers, poses novel challenges due to the unique constraints of this environment and imaging system that are largely unexplored by the traditional computer vision literature. In this paper, we show that this setting requires addressing three competing objectives, namely high-quality inference with low complexity, dynamic power scalability and fault tolerance. We focus on the problem of hyperspectral image denoising, which is a critical task to enable effective downstream inference, and highlights the constraints of the onboard processing scenario. We propose a neural network design that addresses the three aforementioned objectives with several novel contributions. In particular, we propose a mixture of denoisers that can be resilient to radiation-induced faults as well as allowing for time-varying power scaling. Moreover, each denoiser employs an innovative architecture where an image is processed line-by-line in a causal way, with a memory of past lines, in order to match the acquisition process of pushbroom hyperspectral sensors and greatly limit memory requirements. We show that the proposed architecture can run in real-time, i.e., process one line in the time it takes to acquire the next one, on low-power hardware and provide competitive denoising quality with respect to significantly more complex state-of-the-art models. We also show that the power scalability and fault tolerance objectives provide a design space with multiple tradeoffs between those properties and denoising quality.",
+      "pdf_url": "https://arxiv.org/pdf/2601.05020v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.05020v1",
+      "published": "2026-01-08",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Estimating Causal Effects in Gaussian Linear SCMs with Finite Data",
+      "authors": [
+        "Aurghya Maiti",
+        "Prateek Jain"
+      ],
+      "abstract": "Estimating causal effects from observational data remains a fundamental challenge in causal inference, especially in the presence of latent confounders. This paper focuses on estimating causal effects in Gaussian Linear Structural Causal Models (GL-SCMs), which are widely used due to their analytical tractability. However, parameter estimation in GL-SCMs is often infeasible with finite data, primarily due to overparameterization. To address this, we introduce the class of Centralized Gaussian Linear SCMs (CGL-SCMs), a simplified yet expressive subclass where exogenous variables follow standardized distributions. We show that CGL-SCMs are equally expressive in terms of causal effect identifiability from observational distributions and present a novel EM-based estimation algorithm that can learn CGL-SCM parameters and estimate identifiable causal effects from finite observational samples. Our theoretical analysis is validated through experiments on synthetic data and benchmark causal graphs, demonstrating that the learned models accurately recover causal distributions.",
+      "pdf_url": "https://arxiv.org/pdf/2601.04673v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.04673v1",
+      "published": "2026-01-08",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Scaling Behavior Cloning Improves Causal Reasoning: An Open Model for Real-Time Video Game Playing",
+      "authors": [
+        "Yuguang Yue",
+        "Irakli Salia",
+        "Samuel Hunt",
+        "Chris Green",
+        "Wenzhe Shi",
+        "Jonathan J Hunt"
+      ],
+      "abstract": "Behavior cloning is enjoying a resurgence in popularity as scaling both model and data sizes proves to provide a strong starting point for many tasks of interest. In this work, we introduce an open recipe for training a video game playing foundation model designed for inference in realtime on a consumer GPU. We release all data (8300+ hours of high quality human gameplay), training and inference code, and pretrained checkpoints under an open license. We show that our best model is capable of playing a variety of 3D video games at a level competitive with human play. We use this recipe to systematically examine the scaling laws of behavior cloning to understand how the model's performance and causal reasoning varies with model and data scale. We first show in a simple toy problem that, for some types of causal reasoning, increasing both the amount of training data and the depth of the network results in the model learning a more causal policy. We then systematically study how causality varies with the number of parameters (and depth) and training steps in scaled models of up to 1.2 billion parameters, and we find similar scaling results to what we observe in the toy problem.",
+      "pdf_url": "https://arxiv.org/pdf/2601.04575v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.04575v1",
+      "published": "2026-01-08",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Industrial Data-Service-Knowledge Governance: Toward Integrated and Trusted Intelligence for Industry 5.0",
+      "authors": [
+        "Hailiang Zhao",
+        "Ziqi Wang",
+        "Daojiang Hu",
+        "Zhiwei Ling",
+        "Wenzhuo Qian",
+        "Jiahui Zhai",
+        "Yuhao Yang",
+        "Zhipeng Gao",
+        "Mingyi Liu",
+        "Kai Di",
+        "Xinkui Zhao",
+        "Zhongjie Wang",
+        "Jianwei Yin",
+        "MengChu Zhou",
+        "Shuiguang Deng"
+      ],
+      "abstract": "The convergence of artificial intelligence, cyber-physical systems, and cross-enterprise data ecosystems has propelled industrial intelligence to unprecedented scales. Yet, the absence of a unified trust foundation across data, services, and knowledge layers undermines reliability, accountability, and regulatory compliance in real-world deployments. While existing surveys address isolated aspects, such as data governance, service orchestration, and knowledge representation, none provides a holistic, cross-layer perspective on trustworthiness tailored to industrial settings. To bridge this gap, we present \\textsc{Trisk} (TRusted Industrial Data-Service-Knowledge governance), a novel conceptual and taxonomic framework for trustworthy industrial intelligence. Grounded in a five-dimensional trust model (quality, security, privacy, fairness, and explainability), \\textsc{Trisk} unifies 120+ representative studies along three orthogonal axes: governance scope (data, service, and knowledge), architectural paradigm (centralized, federated, or edge-embedded), and enabling technology (knowledge graphs, zero-trust policies, causal inference, etc.). We systematically analyze how trust propagates across digital layers, identify critical gaps in semantic interoperability, runtime policy enforcement, and operational/information technologies alignment, and evaluate the maturity of current industrial implementations. Finally, we articulate a forward-looking research agenda for Industry 5.0, advocating for an integrated governance fabric that embeds verifiable trust semantics into every layer of the industrial intelligence stack. This survey serves as both a foundational reference for researchers and a practical roadmap for engineers to deploy trustworthy AI in complex and multi-stakeholder environments.",
+      "pdf_url": "https://arxiv.org/pdf/2601.04569v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.04569v1",
+      "published": "2026-01-08",
+      "categories": [
+        "cs.CE"
+      ]
+    },
     {
       "title": "Personalization of Large Foundation Models for Health Interventions",
       "authors": [
@@ -51,120 +185,6 @@
       "published": "2026-01-06",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Discovering and Causally Validating Emotion-Sensitive Neurons in Large Audio-Language Models",
-      "authors": [
-        "Xiutian Zhao",
-        "Björn Schuller",
-        "Berrak Sisman"
-      ],
-      "abstract": "Emotion is a central dimension of spoken communication, yet, we still lack a mechanistic account of how modern large audio-language models (LALMs) encode it internally. We present the first neuron-level interpretability study of emotion-sensitive neurons (ESNs) in LALMs and provide causal evidence that such units exist in Qwen2.5-Omni, Kimi-Audio, and Audio Flamingo 3. Across these three widely used open-source models, we compare frequency-, entropy-, magnitude-, and contrast-based neuron selectors on multiple emotion recognition benchmarks. Using inference-time interventions, we reveal a consistent emotion-specific signature: ablating neurons selected for a given emotion disproportionately degrades recognition of that emotion while largely preserving other classes, whereas gain-based amplification steers predictions toward the target emotion. These effects arise with modest identification data and scale systematically with intervention strength. We further observe that ESNs exhibit non-uniform layer-wise clustering with partial cross-dataset transfer. Taken together, our results offer a causal, neuron-level account of emotion decisions in LALMs and highlight targeted neuron interventions as an actionable handle for controllable affective behaviors.",
-      "pdf_url": "https://arxiv.org/pdf/2601.03115v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.03115v1",
-      "published": "2026-01-06",
-      "categories": [
-        "cs.CL",
-        "eess.AS"
-      ]
-    },
-    {
-      "title": "Time-Aware Synthetic Control",
-      "authors": [
-        "Saeyoung Rho",
-        "Cyrus Illick",
-        "Samhitha Narasipura",
-        "Alberto Abadie",
-        "Daniel Hsu",
-        "Vishal Misra"
-      ],
-      "abstract": "The synthetic control (SC) framework is widely used for observational causal inference with time-series panel data. SC has been successful in diverse applications, but existing methods typically treat the ordering of pre-intervention time indices interchangeable. This invariance means they may not fully take advantage of temporal structure when strong trends are present. We propose Time-Aware Synthetic Control (TASC), which employs a state-space model with a constant trend while preserving a low-rank structure of the signal. TASC uses the Kalman filter and Rauch-Tung-Striebel smoother: it first fits a generative time-series model with expectation-maximization and then performs counterfactual inference. We evaluate TASC on both simulated and real-world datasets, including policy evaluation and sports prediction. Our results suggest that TASC offers advantages in settings with strong temporal trends and high levels of observation noise.",
-      "pdf_url": "https://arxiv.org/pdf/2601.03099v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.03099v1",
-      "published": "2026-01-06",
-      "categories": [
-        "cs.LG",
-        "econ.EM",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Causal Manifold Fairness: Enforcing Geometric Invariance in Representation Learning",
-      "authors": [
-        "Vidhi Rathore"
-      ],
-      "abstract": "Fairness in machine learning is increasingly critical, yet standard approaches often treat data as static points in a high-dimensional space, ignoring the underlying generative structure. We posit that sensitive attributes (e.g., race, gender) do not merely shift data distributions but causally warp the geometry of the data manifold itself. To address this, we introduce Causal Manifold Fairness (CMF), a novel framework that bridges causal inference and geometric deep learning. CMF learns a latent representation where the local Riemannian geometry, defined by the metric tensor and curvature, remains invariant under counterfactual interventions on sensitive attributes. By enforcing constraints on the Jacobian and Hessian of the decoder, CMF ensures that the rules of the latent space (distances and shapes) are preserved across demographic groups. We validate CMF on synthetic Structural Causal Models (SCMs), demonstrating that it effectively disentangles sensitive geometric warping while preserving task utility, offering a rigorous quantification of the fairness-utility trade-off via geometric metrics.",
-      "pdf_url": "https://arxiv.org/pdf/2601.03032v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.03032v1",
-      "published": "2026-01-06",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "AbductiveMLLM: Boosting Visual Abductive Reasoning Within MLLMs",
-      "authors": [
-        "Boyu Chang",
-        "Qi Wang",
-        "Xi Guo",
-        "Zhixiong Nan",
-        "Yazhou Yao",
-        "Tianfei Zhou"
-      ],
-      "abstract": "Visual abductive reasoning (VAR) is a challenging task that requires AI systems to infer the most likely explanation for incomplete visual observations. While recent MLLMs develop strong general-purpose multimodal reasoning capabilities, they fall short in abductive inference, as compared to human beings. To bridge this gap, we draw inspiration from the interplay between verbal and pictorial abduction in human cognition, and propose to strengthen abduction of MLLMs by mimicking such dual-mode behavior. Concretely, we introduce AbductiveMLLM comprising of two synergistic components: REASONER and IMAGINER. The REASONER operates in the verbal domain. It first explores a broad space of possible explanations using a blind LLM and then prunes visually incongruent hypotheses based on cross-modal causal alignment. The remaining hypotheses are introduced into the MLLM as targeted priors, steering its reasoning toward causally coherent explanations. The IMAGINER, on the other hand, further guides MLLMs by emulating human-like pictorial thinking. It conditions a text-to-image diffusion model on both the input video and the REASONER's output embeddings to \"imagine\" plausible visual scenes that correspond to verbal explanation, thereby enriching MLLMs' contextual grounding. The two components are trained jointly in an end-to-end manner. Experiments on standard VAR benchmarks show that AbductiveMLLM achieves state-of-the-art performance, consistently outperforming traditional solutions and advanced MLLMs.",
-      "pdf_url": "https://arxiv.org/pdf/2601.02771v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.02771v1",
-      "published": "2026-01-06",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Inferring Causal Graph Temporal Logic Formulas to Expedite Reinforcement Learning in Temporally Extended Tasks",
-      "authors": [
-        "Hadi Partovi Aria",
-        "Zhe Xu"
-      ],
-      "abstract": "Decision-making tasks often unfold on graphs with spatial-temporal dynamics. Black-box reinforcement learning often overlooks how local changes spread through network structure, limiting sample efficiency and interpretability. We present GTL-CIRL, a closed-loop framework that simultaneously learns policies and mines Causal Graph Temporal Logic (Causal GTL) specifications. The method shapes rewards with robustness, collects counterexamples when effects fail, and uses Gaussian Process (GP) driven Bayesian optimization to refine parameterized cause templates. The GP models capture spatial and temporal correlations in the system dynamics, enabling efficient exploration of complex parameter spaces. Case studies in gene and power networks show faster learning and clearer, verifiable behavior compared to standard RL baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2601.02666v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.02666v1",
-      "published": "2026-01-06",
-      "categories": [
-        "cs.AI",
-        "cs.LO"
-      ]
-    },
-    {
-      "title": "Causal inference for censored data with continuous marks",
-      "authors": [
-        "Lianqiang Qu",
-        "Long Lv",
-        "Liuquan Sun"
-      ],
-      "abstract": "This paper presents a framework for causal inference in the presence of censored data, where the failure time is marked by a continuous variable known as a mark. The mark can be viewed as an extension of the failure cause in the classical competing risks model where the cause of failure is replaced by a continuous mark only observed at uncensored failure times. Due to the continuous nature of the marks, observations at each specific mark are sparse, making the identification and estimation of causality a challenging task. To address this issue, we define a new mark-specific treatment effect within the potential outcomes framework and characterize its identifying conditions. We then propose a local smoothing causal estimand and establish its asymptotic properties. We evaluate our method using simulation studies as well as a real dataset from the Antibody Mediated Prevention trials.",
-      "pdf_url": "https://arxiv.org/pdf/2601.01854v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.01854v1",
-      "published": "2026-01-05",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Network Recovery in Perturb-seq Experiments Using Proxy and Instrumental Variables",
-      "authors": [
-        "Kwangmoon Park",
-        "Hongzhe Li"
-      ],
-      "abstract": "Emerging single-cell technologies that integrate CRISPR-based genetic perturbations with single-cell RNA sequencing, such as Perturb-seq, have substantially advanced our understanding of gene regulation and causal influence of genes. While Perturb-seq data provide valuable causal insights into gene-gene interactions, statistical concerns remain regarding unobserved confounders that may bias inference. These latent factors may arise not only from intrinsic molecular features of regulatory elements encoded in Perturb-seq experiments, but also from unobserved genes arising from cost-constrained experimental designs. Although methods for analyzing largescale Perturb-seq data are rapidly maturing, approaches that explicitly account for such unobserved confounders in learning the causal gene networks are still lacking. Here, we propose a novel method to recover causal gene networks from Perturb-seq experiments with robustness to arbitrarily omitted confounders. Our framework leverages proxy and instrumental variable strategies to exploit the rich information embedded in perturbations, enabling unbiased estimation of the underlying directed acyclic graph (DAG) of gene expressions. Simulation studies and analyses of CRISPR interference experiments of K562 cells demonstrate that our method outperforms baseline approaches that ignore unmeasured confounding, yielding more accurate and biologically relevant recovery of the true gene causal DAGs.",
-      "pdf_url": "https://arxiv.org/pdf/2601.01830v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.01830v1",
-      "published": "2026-01-05",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
       ]
     }
   ]
