@@ -1,6 +1,62 @@
 {
-  "last_updated": "2026-01-12T01:01:57.050870",
+  "last_updated": "2026-01-13T00:54:59.775730",
   "papers": [
+    {
+      "title": "VideoAR: Autoregressive Video Generation via Next-Frame & Scale Prediction",
+      "authors": [
+        "Longbin Ji",
+        "Xiaoxiong Liu",
+        "Junyuan Shang",
+        "Shuohuan Wang",
+        "Yu Sun",
+        "Hua Wu",
+        "Haifeng Wang"
+      ],
+      "abstract": "Recent advances in video generation have been dominated by diffusion and flow-matching models, which produce high-quality results but remain computationally intensive and difficult to scale. In this work, we introduce VideoAR, the first large-scale Visual Autoregressive (VAR) framework for video generation that combines multi-scale next-frame prediction with autoregressive modeling. VideoAR disentangles spatial and temporal dependencies by integrating intra-frame VAR modeling with causal next-frame prediction, supported by a 3D multi-scale tokenizer that efficiently encodes spatio-temporal dynamics. To improve long-term consistency, we propose Multi-scale Temporal RoPE, Cross-Frame Error Correction, and Random Frame Mask, which collectively mitigate error propagation and stabilize temporal coherence. Our multi-stage pretraining pipeline progressively aligns spatial and temporal learning across increasing resolutions and durations. Empirically, VideoAR achieves new state-of-the-art results among autoregressive models, improving FVD on UCF-101 from 99.5 to 88.6 while reducing inference steps by over 10x, and reaching a VBench score of 81.74-competitive with diffusion-based models an order of magnitude larger. These results demonstrate that VideoAR narrows the performance gap between autoregressive and diffusion paradigms, offering a scalable, efficient, and temporally consistent foundation for future video generation research.",
+      "pdf_url": "https://arxiv.org/pdf/2601.05966v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.05966v1",
+      "published": "2026-01-09",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "A Causal Information-Flow Framework for Unbiased Learning-to-Rank",
+      "authors": [
+        "Haoming Gong",
+        "Qingyao Ai",
+        "Zhihao Tao",
+        "Yongfeng Zhang"
+      ],
+      "abstract": "In web search and recommendation systems, user clicks are widely used to train ranking models. However, click data is heavily biased, i.e., users tend to click higher-ranked items (position bias), choose only what was shown to them (selection bias), and trust top results more (trust bias). Without explicitly modeling these biases, the true relevance of ranked items cannot be correctly learned from clicks. Existing Unbiased Learning-to-Rank (ULTR) methods mainly correct position bias and rely on propensity estimation, but they cannot measure remaining bias, provide risk guarantees, or jointly handle multiple bias sources. To overcome these challenges, this paper introduces a novel causal learning-based ranking framework that extends ULTR by combining Structural Causal Models (SCMs) with information-theoretic tools. SCMs specify how clicks are generated and help identify the true relevance signal from click data, while conditional mutual information, measures how much bias leaks into the\n  learned relevance estimates. We use this leakage measure to define a rigorous notion of disentanglement and include it as a regularizer during model training to reduce bias. In addition, we incorporate a causal inference estimator, i.e., doubly robust estimator, to ensure more reliable risk estimation. Experiments on standard Learning-to-Rank benchmarks show that our method consistently reduces measured bias leakage and improves ranking performance, especially in realistic scenarios where multiple biases-such as position and trust bias-interact strongly.",
+      "pdf_url": "https://arxiv.org/pdf/2601.05590v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.05590v1",
+      "published": "2026-01-09",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "VIB-Probe: Detecting and Mitigating Hallucinations in Vision-Language Models via Variational Information Bottleneck",
+      "authors": [
+        "Feiran Zhang",
+        "Yixin Wu",
+        "Zhenghua Wang",
+        "Xiaohua Wang",
+        "Changze Lv",
+        "Xuanjing Huang",
+        "Xiaoqing Zheng"
+      ],
+      "abstract": "Vision-Language Models (VLMs) have demonstrated remarkable progress in multimodal tasks, but remain susceptible to hallucinations, where generated text deviates from the underlying visual content. Existing hallucination detection methods primarily rely on output logits or external verification tools, often overlooking their internal mechanisms. In this work, we investigate the outputs of internal attention heads, postulating that specific heads carry the primary signals for truthful generation.However, directly probing these high-dimensional states is challenging due to the entanglement of visual-linguistic syntax and noise. To address this, we propose VIB-Probe, a novel hallucination detection and mitigation framework leveraging the Variational Information Bottleneck (VIB) theory. Our method extracts discriminative patterns across layers and heads while filtering out semantic nuisances through the information bottleneck principle. Furthermore, by leveraging the gradients of our VIB probe, we identify attention heads with strong causal influence on hallucinations and introduce an inference-time intervention strategy for hallucination mitigation. Extensive experiments across diverse benchmarks demonstrate that VIB-Probe significantly outperforms existing baselines in both settings. Our code will be made publicly available.",
+      "pdf_url": "https://arxiv.org/pdf/2601.05547v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.05547v1",
+      "published": "2026-01-09",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Robust Reasoning as a Symmetry-Protected Topological Phase",
       "authors": [
@@ -133,58 +189,6 @@
       "published": "2026-01-08",
       "categories": [
         "cs.CE"
-      ]
-    },
-    {
-      "title": "Personalization of Large Foundation Models for Health Interventions",
-      "authors": [
-        "Stefan Konigorski",
-        "Johannes E. Vedder",
-        "Babajide Alamu Owoyele",
-        "İbrahim Özkan"
-      ],
-      "abstract": "Large foundation models (LFMs) transform healthcare AI in prevention, diagnostics, and treatment. However, whether LFMs can provide truly personalized treatment recommendations remains an open question. Recent research has revealed multiple challenges for personalization, including the fundamental generalizability paradox: models achieving high accuracy in one clinical study perform at chance level in others, demonstrating that personalization and external validity exist in tension. This exemplifies broader contradictions in AI-driven healthcare: the privacy-performance paradox, scale-specificity paradox, and the automation-empathy paradox. As another challenge, the degree of causal understanding required for personalized recommendations, as opposed to mere predictive capacities of LFMs, remains an open question. N-of-1 trials -- crossover self-experiments and the gold standard for individual causal inference in personalized medicine -- resolve these tensions by providing within-person causal evidence while preserving privacy through local experimentation. Despite their impressive capabilities, this paper argues that LFMs cannot replace N-of-1 trials. We argue that LFMs and N-of-1 trials are complementary: LFMs excel at rapid hypothesis generation from population patterns using multimodal data, while N-of-1 trials excel at causal validation for a given individual. We propose a hybrid framework that combines the strengths of both to enable personalization and navigate the identified paradoxes: LFMs generate ranked intervention candidates with uncertainty estimates, which trigger subsequent N-of-1 trials. Clarifying the boundary between prediction and causation and explicitly addressing the paradoxical tensions are essential for responsible AI integration in personalized medicine.",
-      "pdf_url": "https://arxiv.org/pdf/2601.03482v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.03482v1",
-      "published": "2026-01-07",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Improving operating characteristics of clinical trials by augmenting control arm using propensity score-weighted borrowing-by-parts power prior",
-      "authors": [
-        "Apu Chandra Das",
-        "Sakib Salam",
-        "Aninda Roy",
-        "Rakhi Chowdhury",
-        "Antar Chandra Das",
-        "Ashim Chandra Das"
-      ],
-      "abstract": "Borrowing external data can improve estimation efficiency but may introduce bias when populations differ in covariate distributions or outcome variability. A proper balance needs to be maintained between the two datasets to justify the borrowing. We propose a propensity score weighting borrowing-by-parts power prior (PSW-BPP) that integrates causal covariate adjustment through propensity score weighting with a flexible Bayesian borrowing approach to address these challenges in a unified framework. The proposed approach first applies propensity score weighting to align the covariate distribution of the external data with that of the current study, thereby targeting a common estimand and reducing confounding due to population heterogeneity. The weighted external likelihood is then incorporated into a Bayesian model through a borrowing-by-parts power prior, which allows distinct power parameters for the mean and variance components of the likelihood, enabling differential and calibrated information borrowing. Additionally, we adopt the idea of the minimal plausibility index (mPI) to calculate the power parameters. This separate borrowing provides greater robustness to prior-data conflict compared with traditional power prior methods that impose a single borrowing parameter. We study the operating characteristics of PSW-BPP through extensive simulation and a real data example. Simulation studies demonstrate that PSW-BPP yields more efficient and stable estimation than no borrowing and fixed borrowing, particularly under moderate covariate imbalance and outcome heterogeneity. The proposed framework offers a principled and extensible methodological contribution for Bayesian inference with external data in observational and hybrid study designs.",
-      "pdf_url": "https://arxiv.org/pdf/2601.03480v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.03480v1",
-      "published": "2026-01-07",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "On estimands in target trial emulation",
-      "authors": [
-        "Edoardo Efrem Gervasoni",
-        "Liesbet De Bus",
-        "Stijn Vansteelandt",
-        "Oliver Dukes"
-      ],
-      "abstract": "The target trial framework enables causal inference from longitudinal observational data by emulating randomized trials initiated at multiple time points. Precision is often improved by pooling information across trials, with standard models typically assuming - among other things - a time-constant treatment effect. However, this obscures interpretation when the true treatment effect varies, which we argue to be likely as a result of relying on noncollapsible estimands. To address these challenges, this paper introduces a model-free strategy for target trial analysis, centered around the choice of the estimand, rather than model specification. This ensures that treatment effects remain clearly interpretable for well-defined populations even under model misspecification. We propose estimands suitable for different study designs, and develop accompanying G-computation and inverse probability weighted estimators. Applications on simulations and real data on antimicrobial de-escalation in an intensive care unit setting demonstrate the greater clarity and reliability of the proposed methodology over traditional techniques.",
-      "pdf_url": "https://arxiv.org/pdf/2601.03377v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.03377v1",
-      "published": "2026-01-06",
-      "categories": [
-        "stat.ME"
       ]
     }
   ]
