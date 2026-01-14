@@ -1,6 +1,141 @@
 {
-  "last_updated": "2026-01-13T00:54:59.775730",
+  "last_updated": "2026-01-14T01:01:01.291956",
   "papers": [
+    {
+      "title": "The Role of Confounders and Linearity in Ecological Inference: A Reassessment",
+      "authors": [
+        "Shiro Kuriwaki",
+        "Cory McCartan"
+      ],
+      "abstract": "Estimating conditional means using only the marginal means available from aggregate data is commonly known as the ecological inference problem (EI). We provide a reassessment of EI, including a new formalization of identification conditions and a demonstration of how these conditions fail to hold in common cases. The identification conditions reveal that, similar to causal inference, credible ecological inference requires controlling for confounders. The aggregation process itself creates additional structure to assist in estimation by restricting the conditional expectation function to be linear in the predictor variable. A linear model perspective also clarifies the differences between the EI methods commonly used in the literature, and when they lead to ecological fallacies. We provide an overview of new methodology which builds on both the identification and linearity results to flexibly control for confounders and yield improved ecological inferences. Finally, using datasets for common EI problems in which the ground truth is fortuitously observed, we show that, while covariates can help, all methods are prone to overestimating both racial polarization and nationalized partisan voting.",
+      "pdf_url": "https://arxiv.org/pdf/2601.07668v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.07668v1",
+      "published": "2026-01-12",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Functional Synthetic Control Methods for Metric Space-Valued Outcomes",
+      "authors": [
+        "Ryo Okano",
+        "Daisuke Kurisu"
+      ],
+      "abstract": "The synthetic control method (SCM) is a widely used tool for evaluating causal effects of policy changes in panel data settings. Recent studies have extended its framework to accommodate complex outcomes that take values in metric spaces, such as distributions, functions, networks, covariance matrices, and compositional data. However, due to the lack of linear structure in general metric spaces, theoretical guarantees for estimation and inference within these extended frameworks remain underdeveloped. In this study, we propose the functional synthetic control (FSC) method as an extension of the SCM for metric space-valued outcomes. To address challenges arising from the nonlinearlity of metric spaces, we leverage isometric embeddings into Hilbert spaces. Building on this approach, we develop the FSC and augmented FSC estimators for counterfactual outcomes, with the latter being a bias-corrected version of the former. We then derive their finite-sample error bounds to establish theoretical guarantees for estimation, and construct prediction sets based on these estimators to conduct inference on causal effects. We demonstrate the usefulness of the proposed framework through simulation studies and three empirical applications.",
+      "pdf_url": "https://arxiv.org/pdf/2601.07539v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.07539v1",
+      "published": "2026-01-12",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Minimum Wasserstein distance estimator under covariate shift: closed-form, super-efficiency and irregularity",
+      "authors": [
+        "Junjun Lang",
+        "Qiong Zhang",
+        "Yukun Liu"
+      ],
+      "abstract": "Covariate shift arises when covariate distributions differ between source and target populations while the conditional distribution of the response remains invariant, and it underlies problems in missing data and causal inference. We propose a minimum Wasserstein distance estimation framework for inference under covariate shift that avoids explicit modeling of outcome regressions or importance weights. The resulting W-estimator admits a closed-form expression and is numerically equivalent to the classical 1-nearest neighbor estimator, yielding a new optimal transport interpretation of nearest neighbor methods. We establish root-$n$ asymptotic normality and show that the estimator is not asymptotically linear, leading to super-efficiency relative to the semiparametric efficient estimator under covariate shift in certain regimes, and uniformly in missing data problems. Numerical simulations, along with an analysis of a rainfall dataset, underscore the exceptional performance of our W-estimator.",
+      "pdf_url": "https://arxiv.org/pdf/2601.07282v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.07282v1",
+      "published": "2026-01-12",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Connections as treatment: causal inference with edge interventions in networks",
+      "authors": [
+        "Shuli Chen",
+        "Jie Hu",
+        "Zhichao Jiang"
+      ],
+      "abstract": "Causal inference has traditionally focused on interventions at the unit level. In many applications, however, the central question concerns the causal effects of connections between units, such as transportation links, social relationships, or collaborative ties. We develop a causal framework for edge interventions in networks, where treatments correspond to the presence or absence of edges. Our framework defines causal estimands under stochastic interventions on the network structure and introduces an inverse probability weighting estimator under an unconfoundedness assumption on edge assignment. We estimate edge probabilities using exponential random graph models, a widely used class of network models. We establish consistency and asymptotic normality of the proposed estimator. Finally, we apply our methodology to China's transportation network to estimate the causal impact of railroad connections on regional economic development.",
+      "pdf_url": "https://arxiv.org/pdf/2601.07267v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.07267v1",
+      "published": "2026-01-12",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "MeepleLM: A Virtual Playtester Simulating Diverse Subjective Experiences",
+      "authors": [
+        "Zizhen Li",
+        "Chuanhao Li",
+        "Yibin Wang",
+        "Yukang Feng",
+        "Jianwen Sun",
+        "Jiaxin Ai",
+        "Fanrui Zhang",
+        "Mingzhu Sun",
+        "Yifei Huang",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Recent advancements have expanded the role of Large Language Models in board games from playing agents to creative co-designers. However, a critical gap remains: current systems lack the capacity to offer constructive critique grounded in the emergent user experience. Bridging this gap is fundamental for harmonizing Human-AI collaboration, as it empowers designers to refine their creations via external perspectives while steering models away from biased or unpredictable outcomes. Automating critique for board games presents two challenges: inferring the latent dynamics connecting rules to gameplay without an explicit engine, and modeling the subjective heterogeneity of diverse player groups. To address these, we curate a dataset of 1,727 structurally corrected rulebooks and 150K reviews selected via quality scoring and facet-aware sampling. We augment this data with Mechanics-Dynamics-Aesthetics (MDA) reasoning to explicitly bridge the causal gap between written rules and player experience. We further distill player personas and introduce MeepleLM, a specialized model that internalizes persona-specific reasoning patterns to accurately simulate the subjective feedback of diverse player archetypes. Experiments demonstrate that MeepleLM significantly outperforms latest commercial models (e.g., GPT-5.1, Gemini3-Pro) in community alignment and critique quality, achieving a 70% preference rate in user studies assessing utility. MeepleLM serves as a reliable virtual playtester for general interactive systems, marking a pivotal step towards audience-aligned, experience-aware Human-AI collaboration.",
+      "pdf_url": "https://arxiv.org/pdf/2601.07251v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.07251v1",
+      "published": "2026-01-12",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Benchmarking Egocentric Clinical Intent Understanding Capability for Medical Multimodal Large Language Models",
+      "authors": [
+        "Shaonan Liu",
+        "Guo Yu",
+        "Xiaoling Luo",
+        "Shiyi Zheng",
+        "Wenting Chen",
+        "Jie Liu",
+        "Linlin Shen"
+      ],
+      "abstract": "Medical Multimodal Large Language Models (Med-MLLMs) require egocentric clinical intent understanding for real-world deployment, yet existing benchmarks fail to evaluate this critical capability. To address these challenges, we introduce MedGaze-Bench, the first benchmark leveraging clinician gaze as a Cognitive Cursor to assess intent understanding across surgery, emergency simulation, and diagnostic interpretation. Our benchmark addresses three fundamental challenges: visual homogeneity of anatomical structures, strict temporal-causal dependencies in clinical workflows, and implicit adherence to safety protocols. We propose a Three-Dimensional Clinical Intent Framework evaluating: (1) Spatial Intent: discriminating precise targets amid visual noise, (2) Temporal Intent: inferring causal rationale through retrospective and prospective reasoning, and (3) Standard Intent: verifying protocol compliance through safety checks. Beyond accuracy metrics, we introduce Trap QA mechanisms to stress-test clinical reliability by penalizing hallucinations and cognitive sycophancy. Experiments reveal current MLLMs struggle with egocentric intent due to over-reliance on global features, leading to fabricated observations and uncritical acceptance of invalid instructions.",
+      "pdf_url": "https://arxiv.org/pdf/2601.06750v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.06750v1",
+      "published": "2026-01-11",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "MedEinst: Benchmarking the Einstellung Effect in Medical LLMs through Counterfactual Differential Diagnosis",
+      "authors": [
+        "Wenting Chen",
+        "Zhongrui Zhu",
+        "Guolin Huang",
+        "Wenxuan Wang"
+      ],
+      "abstract": "Despite achieving high accuracy on medical benchmarks, LLMs exhibit the Einstellung Effect in clinical diagnosis--relying on statistical shortcuts rather than patient-specific evidence, causing misdiagnosis in atypical cases. Existing benchmarks fail to detect this critical failure mode. We introduce MedEinst, a counterfactual benchmark with 5,383 paired clinical cases across 49 diseases. Each pair contains a control case and a \"trap\" case with altered discriminative evidence that flips the diagnosis. We measure susceptibility via Bias Trap Rate--probability of misdiagnosing traps despite correctly diagnosing controls. Extensive Evaluation of 17 LLMs shows frontier models achieve high baseline accuracy but severe bias trap rates. Thus, we propose ECR-Agent, aligning LLM reasoning with Evidence-Based Medicine standard via two components: (1) Dynamic Causal Inference (DCI) performs structured reasoning through dual-pathway perception, dynamic causal graph reasoning across three levels (association, intervention, counterfactual), and evidence audit for final diagnosis; (2) Critic-Driven Graph and Memory Evolution (CGME) iteratively refines the system by storing validated reasoning paths in an exemplar base and consolidating disease-specific knowledge into evolving illness graphs. Source code is to be released.",
+      "pdf_url": "https://arxiv.org/pdf/2601.06636v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.06636v1",
+      "published": "2026-01-10",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Long-Term Causal Inference with Many Noisy Proxies",
+      "authors": [
+        "Apoorva Lal",
+        "Guido Imbens",
+        "Peter Hull"
+      ],
+      "abstract": "We propose a method for estimating long-term treatment effects with many short-term proxy outcomes: a central challenge when experimenting on digital platforms. We formalize this challenge as a latent variable problem where observed proxies are noisy measures of a low-dimensional set of unobserved surrogates that mediate treatment effects. Through theoretical analysis and simulations, we demonstrate that regularized regression methods substantially outperform naive proxy selection. We show in particular that the bias of Ridge regression decreases as more proxies are added, with closed-form expressions for the bias-variance tradeoff. We illustrate our method with an empirical application to the California GAIN experiment.",
+      "pdf_url": "https://arxiv.org/pdf/2601.06359v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.06359v1",
+      "published": "2026-01-09",
+      "categories": [
+        "econ.EM"
+      ]
+    },
     {
       "title": "VideoAR: Autoregressive Video Generation via Next-Frame & Scale Prediction",
       "authors": [
@@ -35,160 +170,6 @@
       "published": "2026-01-09",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "VIB-Probe: Detecting and Mitigating Hallucinations in Vision-Language Models via Variational Information Bottleneck",
-      "authors": [
-        "Feiran Zhang",
-        "Yixin Wu",
-        "Zhenghua Wang",
-        "Xiaohua Wang",
-        "Changze Lv",
-        "Xuanjing Huang",
-        "Xiaoqing Zheng"
-      ],
-      "abstract": "Vision-Language Models (VLMs) have demonstrated remarkable progress in multimodal tasks, but remain susceptible to hallucinations, where generated text deviates from the underlying visual content. Existing hallucination detection methods primarily rely on output logits or external verification tools, often overlooking their internal mechanisms. In this work, we investigate the outputs of internal attention heads, postulating that specific heads carry the primary signals for truthful generation.However, directly probing these high-dimensional states is challenging due to the entanglement of visual-linguistic syntax and noise. To address this, we propose VIB-Probe, a novel hallucination detection and mitigation framework leveraging the Variational Information Bottleneck (VIB) theory. Our method extracts discriminative patterns across layers and heads while filtering out semantic nuisances through the information bottleneck principle. Furthermore, by leveraging the gradients of our VIB probe, we identify attention heads with strong causal influence on hallucinations and introduce an inference-time intervention strategy for hallucination mitigation. Extensive experiments across diverse benchmarks demonstrate that VIB-Probe significantly outperforms existing baselines in both settings. Our code will be made publicly available.",
-      "pdf_url": "https://arxiv.org/pdf/2601.05547v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.05547v1",
-      "published": "2026-01-09",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Robust Reasoning as a Symmetry-Protected Topological Phase",
-      "authors": [
-        "Ilmo Sung"
-      ],
-      "abstract": "Large language models suffer from \"hallucinations\"-logical inconsistencies induced by semantic noise. We propose that current architectures operate in a \"Metric Phase,\" where causal order is vulnerable to spontaneous symmetry breaking. Here, we identify robust inference as an effective Symmetry-Protected Topological phase, where logical operations are formally isomorphic to non-Abelian anyon braiding, replacing fragile geometric interpolation with robust topological invariants. Empirically, we demonstrate a sharp topological phase transition: while Transformers and RNNs exhibit gapless decay, our Holonomic Network reveals a macroscopic \"mass gap,\" maintaining invariant fidelity below a critical noise threshold. Furthermore, in a variable-binding task on $S_{10}$ ($3.6 \\times 10^6$ states) representing symbolic manipulation, we demonstrate holonomic generalization: the topological model maintains perfect fidelity extrapolating $100\\times$ beyond training ($L=50 \\to 5000$), consistent with a theoretically indefinite causal horizon, whereas Transformers lose logical coherence. Ablation studies indicate this protection emerges strictly from non-Abelian gauge symmetry. This provides strong evidence for a new universality class for logical reasoning, linking causal stability to the topology of the semantic manifold.",
-      "pdf_url": "https://arxiv.org/pdf/2601.05240v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.05240v1",
-      "published": "2026-01-08",
-      "categories": [
-        "cs.LG",
-        "cond-mat.dis-nn",
-        "cs.AI",
-        "hep-th"
-      ]
-    },
-    {
-      "title": "Vision-Language Introspection: Mitigating Overconfident Hallucinations in MLLMs via Interpretable Bi-Causal Steering",
-      "authors": [
-        "Shuliang Liu",
-        "Songbo Yang",
-        "Dong Fang",
-        "Sihang Jia",
-        "Yuqi Tang",
-        "Lingfeng Su",
-        "Ruoshui Peng",
-        "Yibo Yan",
-        "Xin Zou",
-        "Xuming Hu"
-      ],
-      "abstract": "Object hallucination critically undermines the reliability of Multimodal Large Language Models, often stemming from a fundamental failure in cognitive introspection, where models blindly trust linguistic priors over specific visual evidence. Existing mitigations remain limited: contrastive decoding approaches operate superficially without rectifying internal semantic misalignments, while current latent steering methods rely on static vectors that lack instance-specific precision. We introduce Vision-Language Introspection (VLI), a training-free inference framework that simulates a metacognitive self-correction process. VLI first performs Attributive Introspection to diagnose hallucination risks via probabilistic conflict detection and localize the causal visual anchors. It then employs Interpretable Bi-Causal Steering to actively modulate the inference process, dynamically isolating visual evidence from background noise while neutralizing blind confidence through adaptive calibration. VLI achieves state-of-the-art performance on advanced models, reducing object hallucination rates by 12.67% on MMHal-Bench and improving accuracy by 5.8% on POPE.",
-      "pdf_url": "https://arxiv.org/pdf/2601.05159v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.05159v1",
-      "published": "2026-01-08",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Revealing the Truth: Calculating True Values in Causal Inference Simulation Studies via Gaussian Quadrature",
-      "authors": [
-        "Alex Ocampo",
-        "Enrico Giudice",
-        "Zachary R. McCaw",
-        "Tim P. Morris"
-      ],
-      "abstract": "Simulation studies are used to understand the properties of statistical methods. A key luxury in many simulation studies is knowledge of the true value (i.e. the estimand) being targeted. With this oracle knowledge in-hand, the researcher conducting the simulation study can assess across repeated realizations of the data how well a given method recovers the truth. In causal inference simulation studies, the truth is rarely a simple parameter of the statistical model chosen to generate the data. Instead, the estimand is often an average treatment effect, marginalized over the distribution of confounders and/or mediators. Luckily, these variables are often generated from common distributions such as the normal, uniform, exponential, or gamma. For all these distributions, Gaussian quadratures provide efficient and accurate calculation for integrands with integral kernels that stem from known probability density functions. We demonstrate through four applications how to use Gaussian quadrature to accurately and efficiently compute the true causal estimand. We also compare the pros and cons of Gauss-Hermite quadrature to Monte Carlo integration approaches, which we use as benchmarks. Overall, we demonstrate that the Gaussian quadrature is an accurate tool with negligible computation time, yet is underused for calculating the true causal estimands in simulation studies.",
-      "pdf_url": "https://arxiv.org/pdf/2601.05128v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.05128v1",
-      "published": "2026-01-08",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Scalable neural pushbroom architectures for real-time denoising of hyperspectral images onboard satellites",
-      "authors": [
-        "Ziyao Yi",
-        "Davide Piccinini",
-        "Diego Valsesia",
-        "Tiziano Bianchi",
-        "Enrico Magli"
-      ],
-      "abstract": "The next generation of Earth observation satellites will seek to deploy intelligent models directly onboard the payload in order to minimize the latency incurred by the transmission and processing chain of the ground segment, for time-critical applications. Designing neural architectures for onboard execution, particularly for satellite-based hyperspectral imagers, poses novel challenges due to the unique constraints of this environment and imaging system that are largely unexplored by the traditional computer vision literature. In this paper, we show that this setting requires addressing three competing objectives, namely high-quality inference with low complexity, dynamic power scalability and fault tolerance. We focus on the problem of hyperspectral image denoising, which is a critical task to enable effective downstream inference, and highlights the constraints of the onboard processing scenario. We propose a neural network design that addresses the three aforementioned objectives with several novel contributions. In particular, we propose a mixture of denoisers that can be resilient to radiation-induced faults as well as allowing for time-varying power scaling. Moreover, each denoiser employs an innovative architecture where an image is processed line-by-line in a causal way, with a memory of past lines, in order to match the acquisition process of pushbroom hyperspectral sensors and greatly limit memory requirements. We show that the proposed architecture can run in real-time, i.e., process one line in the time it takes to acquire the next one, on low-power hardware and provide competitive denoising quality with respect to significantly more complex state-of-the-art models. We also show that the power scalability and fault tolerance objectives provide a design space with multiple tradeoffs between those properties and denoising quality.",
-      "pdf_url": "https://arxiv.org/pdf/2601.05020v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.05020v1",
-      "published": "2026-01-08",
-      "categories": [
-        "eess.IV",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Estimating Causal Effects in Gaussian Linear SCMs with Finite Data",
-      "authors": [
-        "Aurghya Maiti",
-        "Prateek Jain"
-      ],
-      "abstract": "Estimating causal effects from observational data remains a fundamental challenge in causal inference, especially in the presence of latent confounders. This paper focuses on estimating causal effects in Gaussian Linear Structural Causal Models (GL-SCMs), which are widely used due to their analytical tractability. However, parameter estimation in GL-SCMs is often infeasible with finite data, primarily due to overparameterization. To address this, we introduce the class of Centralized Gaussian Linear SCMs (CGL-SCMs), a simplified yet expressive subclass where exogenous variables follow standardized distributions. We show that CGL-SCMs are equally expressive in terms of causal effect identifiability from observational distributions and present a novel EM-based estimation algorithm that can learn CGL-SCM parameters and estimate identifiable causal effects from finite observational samples. Our theoretical analysis is validated through experiments on synthetic data and benchmark causal graphs, demonstrating that the learned models accurately recover causal distributions.",
-      "pdf_url": "https://arxiv.org/pdf/2601.04673v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.04673v1",
-      "published": "2026-01-08",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Scaling Behavior Cloning Improves Causal Reasoning: An Open Model for Real-Time Video Game Playing",
-      "authors": [
-        "Yuguang Yue",
-        "Irakli Salia",
-        "Samuel Hunt",
-        "Chris Green",
-        "Wenzhe Shi",
-        "Jonathan J Hunt"
-      ],
-      "abstract": "Behavior cloning is enjoying a resurgence in popularity as scaling both model and data sizes proves to provide a strong starting point for many tasks of interest. In this work, we introduce an open recipe for training a video game playing foundation model designed for inference in realtime on a consumer GPU. We release all data (8300+ hours of high quality human gameplay), training and inference code, and pretrained checkpoints under an open license. We show that our best model is capable of playing a variety of 3D video games at a level competitive with human play. We use this recipe to systematically examine the scaling laws of behavior cloning to understand how the model's performance and causal reasoning varies with model and data scale. We first show in a simple toy problem that, for some types of causal reasoning, increasing both the amount of training data and the depth of the network results in the model learning a more causal policy. We then systematically study how causality varies with the number of parameters (and depth) and training steps in scaled models of up to 1.2 billion parameters, and we find similar scaling results to what we observe in the toy problem.",
-      "pdf_url": "https://arxiv.org/pdf/2601.04575v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.04575v1",
-      "published": "2026-01-08",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Industrial Data-Service-Knowledge Governance: Toward Integrated and Trusted Intelligence for Industry 5.0",
-      "authors": [
-        "Hailiang Zhao",
-        "Ziqi Wang",
-        "Daojiang Hu",
-        "Zhiwei Ling",
-        "Wenzhuo Qian",
-        "Jiahui Zhai",
-        "Yuhao Yang",
-        "Zhipeng Gao",
-        "Mingyi Liu",
-        "Kai Di",
-        "Xinkui Zhao",
-        "Zhongjie Wang",
-        "Jianwei Yin",
-        "MengChu Zhou",
-        "Shuiguang Deng"
-      ],
-      "abstract": "The convergence of artificial intelligence, cyber-physical systems, and cross-enterprise data ecosystems has propelled industrial intelligence to unprecedented scales. Yet, the absence of a unified trust foundation across data, services, and knowledge layers undermines reliability, accountability, and regulatory compliance in real-world deployments. While existing surveys address isolated aspects, such as data governance, service orchestration, and knowledge representation, none provides a holistic, cross-layer perspective on trustworthiness tailored to industrial settings. To bridge this gap, we present \\textsc{Trisk} (TRusted Industrial Data-Service-Knowledge governance), a novel conceptual and taxonomic framework for trustworthy industrial intelligence. Grounded in a five-dimensional trust model (quality, security, privacy, fairness, and explainability), \\textsc{Trisk} unifies 120+ representative studies along three orthogonal axes: governance scope (data, service, and knowledge), architectural paradigm (centralized, federated, or edge-embedded), and enabling technology (knowledge graphs, zero-trust policies, causal inference, etc.). We systematically analyze how trust propagates across digital layers, identify critical gaps in semantic interoperability, runtime policy enforcement, and operational/information technologies alignment, and evaluate the maturity of current industrial implementations. Finally, we articulate a forward-looking research agenda for Industry 5.0, advocating for an integrated governance fabric that embeds verifiable trust semantics into every layer of the industrial intelligence stack. This survey serves as both a foundational reference for researchers and a practical roadmap for engineers to deploy trustworthy AI in complex and multi-stakeholder environments.",
-      "pdf_url": "https://arxiv.org/pdf/2601.04569v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.04569v1",
-      "published": "2026-01-08",
-      "categories": [
-        "cs.CE"
       ]
     }
   ]
