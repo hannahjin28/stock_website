@@ -1,6 +1,61 @@
 {
-  "last_updated": "2026-01-14T01:01:01.291956",
+  "last_updated": "2026-01-15T00:57:06.533692",
   "papers": [
+    {
+      "title": "Automatic debiased machine learning and sensitivity analysis for sample selection models",
+      "authors": [
+        "Jakob Bjelac",
+        "Victor Chernozhukov",
+        "Phil-Adrian Klotz",
+        "Jannis Kueck",
+        "Theresa M. A. Schmitz"
+      ],
+      "abstract": "In this paper, we extend the Riesz representation framework to causal inference under sample selection, where both treatment assignment and outcome observability are non-random. Formulating the problem in terms of a Riesz representer enables stable estimation and a transparent decomposition of omitted variable bias into three interpretable components: a data-identified scale factor, outcome confounding strength, and selection confounding strength. For estimation, we employ the ForestRiesz estimator, which accounts for selective outcome observability while avoiding the instability associated with direct propensity score inversion. We assess finite-sample performance through a simulation study and show that conventional double machine learning approaches can be highly sensitive to tuning parameters due to their reliance on inverse probability weighting, whereas the ForestRiesz estimator delivers more stable performance by leveraging automatic debiased machine learning. In an empirical application to the gender wage gap in the U.S., we find that our ForestRiesz approach yields larger treatment effect estimates than a standard double machine learning approach, suggesting that ignoring sample selection leads to an underestimation of the gender wage gap. Sensitivity analysis indicates that implausibly strong unobserved confounding would be required to overturn our results. Overall, our approach provides a unified, robust, and computationally attractive framework for causal inference under sample selection.",
+      "pdf_url": "https://arxiv.org/pdf/2601.08643v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.08643v1",
+      "published": "2026-01-13",
+      "categories": [
+        "econ.EM",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Relational Knowledge Distillation Using Fine-tuned Function Vectors",
+      "authors": [
+        "Andrea Kang",
+        "Yingnian Wu",
+        "Hongjing Lu"
+      ],
+      "abstract": "Representing relations between concepts is a core prerequisite for intelligent systems to make sense of the world. Recent work using causal mediation analysis has shown that a small set of attention heads encodes task representation in in-context learning, captured in a compact representation known as the function vector. We show that fine-tuning function vectors with only a small set of examples (about 20 word pairs) yields better performance on relation-based word-completion tasks than using the original vectors derived from causal mediation analysis. These improvements hold for both small and large language models. Moreover, the fine-tuned function vectors yield improved decoding performance for relation words and show stronger alignment with human similarity judgments of semantic relations. Next, we introduce the composite function vector - a weighted combination of fine-tuned function vectors - to extract relational knowledge and support analogical reasoning. At inference time, inserting this composite vector into LLM activations markedly enhances performance on challenging analogy problems drawn from cognitive science and SAT benchmarks. Our results highlight the potential of activation patching as a controllable mechanism for encoding and manipulating relational knowledge, advancing both the interpretability and reasoning capabilities of large language models.",
+      "pdf_url": "https://arxiv.org/pdf/2601.08169v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.08169v1",
+      "published": "2026-01-13",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Debiasing Large Language Models via Adaptive Causal Prompting with Sketch-of-Thought",
+      "authors": [
+        "Bowen Li",
+        "Ziqi Xu",
+        "Jing Ren",
+        "Renqiang Luo",
+        "Xikun Zhang",
+        "Xiuzhen Zhang",
+        "Yongli Ren",
+        "Feng Xia"
+      ],
+      "abstract": "Despite notable advancements in prompting methods for Large Language Models (LLMs), such as Chain-of-Thought (CoT), existing strategies still suffer from excessive token usage and limited generalisability across diverse reasoning tasks. To address these limitations, we propose an Adaptive Causal Prompting with Sketch-of-Thought (ACPS) framework, which leverages structural causal models to infer the causal effect of a query on its answer and adaptively select an appropriate intervention (i.e., standard front-door and conditional front-door adjustments). This design enables generalisable causal reasoning across heterogeneous tasks without task-specific retraining. By replacing verbose CoT with concise Sketch-of-Thought, ACPS enables efficient reasoning that significantly reduces token usage and inference cost. Extensive experiments on multiple reasoning benchmarks and LLMs demonstrate that ACPS consistently outperforms existing prompting baselines in terms of accuracy, robustness, and computational efficiency.",
+      "pdf_url": "https://arxiv.org/pdf/2601.08108v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.08108v1",
+      "published": "2026-01-13",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "The Role of Confounders and Linearity in Ecological Inference: A Reassessment",
       "authors": [
@@ -118,57 +173,6 @@
       "published": "2026-01-10",
       "categories": [
         "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Long-Term Causal Inference with Many Noisy Proxies",
-      "authors": [
-        "Apoorva Lal",
-        "Guido Imbens",
-        "Peter Hull"
-      ],
-      "abstract": "We propose a method for estimating long-term treatment effects with many short-term proxy outcomes: a central challenge when experimenting on digital platforms. We formalize this challenge as a latent variable problem where observed proxies are noisy measures of a low-dimensional set of unobserved surrogates that mediate treatment effects. Through theoretical analysis and simulations, we demonstrate that regularized regression methods substantially outperform naive proxy selection. We show in particular that the bias of Ridge regression decreases as more proxies are added, with closed-form expressions for the bias-variance tradeoff. We illustrate our method with an empirical application to the California GAIN experiment.",
-      "pdf_url": "https://arxiv.org/pdf/2601.06359v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.06359v1",
-      "published": "2026-01-09",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "VideoAR: Autoregressive Video Generation via Next-Frame & Scale Prediction",
-      "authors": [
-        "Longbin Ji",
-        "Xiaoxiong Liu",
-        "Junyuan Shang",
-        "Shuohuan Wang",
-        "Yu Sun",
-        "Hua Wu",
-        "Haifeng Wang"
-      ],
-      "abstract": "Recent advances in video generation have been dominated by diffusion and flow-matching models, which produce high-quality results but remain computationally intensive and difficult to scale. In this work, we introduce VideoAR, the first large-scale Visual Autoregressive (VAR) framework for video generation that combines multi-scale next-frame prediction with autoregressive modeling. VideoAR disentangles spatial and temporal dependencies by integrating intra-frame VAR modeling with causal next-frame prediction, supported by a 3D multi-scale tokenizer that efficiently encodes spatio-temporal dynamics. To improve long-term consistency, we propose Multi-scale Temporal RoPE, Cross-Frame Error Correction, and Random Frame Mask, which collectively mitigate error propagation and stabilize temporal coherence. Our multi-stage pretraining pipeline progressively aligns spatial and temporal learning across increasing resolutions and durations. Empirically, VideoAR achieves new state-of-the-art results among autoregressive models, improving FVD on UCF-101 from 99.5 to 88.6 while reducing inference steps by over 10x, and reaching a VBench score of 81.74-competitive with diffusion-based models an order of magnitude larger. These results demonstrate that VideoAR narrows the performance gap between autoregressive and diffusion paradigms, offering a scalable, efficient, and temporally consistent foundation for future video generation research.",
-      "pdf_url": "https://arxiv.org/pdf/2601.05966v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.05966v1",
-      "published": "2026-01-09",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A Causal Information-Flow Framework for Unbiased Learning-to-Rank",
-      "authors": [
-        "Haoming Gong",
-        "Qingyao Ai",
-        "Zhihao Tao",
-        "Yongfeng Zhang"
-      ],
-      "abstract": "In web search and recommendation systems, user clicks are widely used to train ranking models. However, click data is heavily biased, i.e., users tend to click higher-ranked items (position bias), choose only what was shown to them (selection bias), and trust top results more (trust bias). Without explicitly modeling these biases, the true relevance of ranked items cannot be correctly learned from clicks. Existing Unbiased Learning-to-Rank (ULTR) methods mainly correct position bias and rely on propensity estimation, but they cannot measure remaining bias, provide risk guarantees, or jointly handle multiple bias sources. To overcome these challenges, this paper introduces a novel causal learning-based ranking framework that extends ULTR by combining Structural Causal Models (SCMs) with information-theoretic tools. SCMs specify how clicks are generated and help identify the true relevance signal from click data, while conditional mutual information, measures how much bias leaks into the\n  learned relevance estimates. We use this leakage measure to define a rigorous notion of disentanglement and include it as a regularizer during model training to reduce bias. In addition, we incorporate a causal inference estimator, i.e., doubly robust estimator, to ensure more reliable risk estimation. Experiments on standard Learning-to-Rank benchmarks show that our method consistently reduces measured bias leakage and improves ranking performance, especially in realistic scenarios where multiple biases-such as position and trust bias-interact strongly.",
-      "pdf_url": "https://arxiv.org/pdf/2601.05590v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.05590v1",
-      "published": "2026-01-09",
-      "categories": [
         "cs.AI"
       ]
     }
