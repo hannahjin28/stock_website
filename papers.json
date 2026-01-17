@@ -1,6 +1,25 @@
 {
-  "last_updated": "2026-01-16T00:59:35.511056",
+  "last_updated": "2026-01-17T00:56:58.232489",
   "papers": [
+    {
+      "title": "VERHallu: Evaluating and Mitigating Event Relation Hallucination in Video Large Language Models",
+      "authors": [
+        "Zefan Zhang",
+        "Kehua Zhu",
+        "Shijie Jiang",
+        "Hongyuan Lu",
+        "Shengkai Sun",
+        "Tian Bai"
+      ],
+      "abstract": "Video Large Language Models (VideoLLMs) exhibit various types of hallucinations. Existing research has primarily focused on hallucinations involving the presence of events, objects, and scenes in videos, while largely neglecting event relation hallucination. In this paper, we introduce a novel benchmark for evaluating the Video Event Relation Hallucination, named VERHallu. This benchmark focuses on causal, temporal, and subevent relations between events, encompassing three types of tasks: relation classification, question answering, and counterfactual question answering, for a comprehensive evaluation of event relation hallucination. Additionally, it features counterintuitive video scenarios that deviate from typical pretraining distributions, with each sample accompanied by human-annotated candidates covering both vision-language and pure language biases. Our analysis reveals that current state-of-the-art VideoLLMs struggle with dense-event relation reasoning, often relying on prior knowledge due to insufficient use of frame-level cues. Although these models demonstrate strong grounding capabilities for key events, they often overlook the surrounding subevents, leading to an incomplete and inaccurate understanding of event relations. To tackle this, we propose a Key-Frame Propagating (KFP) strategy, which reallocates frame-level attention within intermediate layers to enhance multi-event understanding. Experiments show it effectively mitigates the event relation hallucination without affecting inference speed.",
+      "pdf_url": "https://arxiv.org/pdf/2601.10010v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.10010v1",
+      "published": "2026-01-15",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Where Knowledge Collides: A Mechanistic Study of Intra-Memory Knowledge Conflict in Language Models",
       "authors": [
@@ -152,27 +171,6 @@
       "published": "2026-01-12",
       "categories": [
         "cs.HC"
-      ]
-    },
-    {
-      "title": "Benchmarking Egocentric Clinical Intent Understanding Capability for Medical Multimodal Large Language Models",
-      "authors": [
-        "Shaonan Liu",
-        "Guo Yu",
-        "Xiaoling Luo",
-        "Shiyi Zheng",
-        "Wenting Chen",
-        "Jie Liu",
-        "Linlin Shen"
-      ],
-      "abstract": "Medical Multimodal Large Language Models (Med-MLLMs) require egocentric clinical intent understanding for real-world deployment, yet existing benchmarks fail to evaluate this critical capability. To address these challenges, we introduce MedGaze-Bench, the first benchmark leveraging clinician gaze as a Cognitive Cursor to assess intent understanding across surgery, emergency simulation, and diagnostic interpretation. Our benchmark addresses three fundamental challenges: visual homogeneity of anatomical structures, strict temporal-causal dependencies in clinical workflows, and implicit adherence to safety protocols. We propose a Three-Dimensional Clinical Intent Framework evaluating: (1) Spatial Intent: discriminating precise targets amid visual noise, (2) Temporal Intent: inferring causal rationale through retrospective and prospective reasoning, and (3) Standard Intent: verifying protocol compliance through safety checks. Beyond accuracy metrics, we introduce Trap QA mechanisms to stress-test clinical reliability by penalizing hallucinations and cognitive sycophancy. Experiments reveal current MLLMs struggle with egocentric intent due to over-reliance on global features, leading to fabricated observations and uncritical acceptance of invalid instructions.",
-      "pdf_url": "https://arxiv.org/pdf/2601.06750v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.06750v1",
-      "published": "2026-01-11",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL"
       ]
     }
   ]
