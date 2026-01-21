@@ -1,6 +1,36 @@
 {
-  "last_updated": "2026-01-19T01:03:12.343594",
+  "last_updated": "2026-01-21T01:00:24.425969",
   "papers": [
+    {
+      "title": "Context-aware Graph Causality Inference for Few-Shot Molecular Property Prediction",
+      "authors": [
+        "Van Thuy Hoang",
+        "O-Joun Lee"
+      ],
+      "abstract": "Molecular property prediction is becoming one of the major applications of graph learning in Web-based services, e.g., online protein structure prediction and drug discovery. A key challenge arises in few-shot scenarios, where only a few labeled molecules are available for predicting unseen properties. Recently, several studies have used in-context learning to capture relationships among molecules and properties, but they face two limitations in: (1) exploiting prior knowledge of functional groups that are causally linked to properties and (2) identifying key substructures directly correlated with properties. We propose CaMol, a context-aware graph causality inference framework, to address these challenges by using a causal inference perspective, assuming that each molecule consists of a latent causal structure that determines a specific property. First, we introduce a context graph that encodes chemical knowledge by linking functional groups, molecules, and properties to guide the discovery of causal substructures. Second, we propose a learnable atom masking strategy to disentangle causal substructures from confounding ones. Third, we introduce a distribution intervener that applies backdoor adjustment by combining causal substructures with chemically grounded confounders, disentangling causal effects from real-world chemical variations. Experiments on diverse molecular datasets showed that CaMol achieved superior accuracy and sample efficiency in few-shot tasks, showing its generalizability to unseen properties. Also, the discovered causal substructures were strongly aligned with chemical knowledge about functional groups, supporting the model interpretability.",
+      "pdf_url": "https://arxiv.org/pdf/2601.11135v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.11135v1",
+      "published": "2026-01-16",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "MiCA: A Mobility-Informed Causal Adapter for Lightweight Epidemic Forecasting",
+      "authors": [
+        "Suhan Guo",
+        "Jiahong Deng",
+        "Furao Shen"
+      ],
+      "abstract": "Accurate forecasting of infectious disease dynamics is critical for public health planning and intervention. Human mobility plays a central role in shaping the spatial spread of epidemics, but mobility data are noisy, indirect, and difficult to integrate reliably with disease records. Meanwhile, epidemic case time series are typically short and reported at coarse temporal resolution. These conditions limit the effectiveness of parameter-heavy mobility-aware forecasters that rely on clean and abundant data. In this work, we propose the Mobility-Informed Causal Adapter (MiCA), a lightweight and architecture-agnostic module for epidemic forecasting. MiCA infers mobility relations through causal discovery and integrates them into temporal forecasting models via gated residual mixing. This design allows lightweight forecasters to selectively exploit mobility-derived spatial structure while remaining robust under noisy and data-limited conditions, without introducing heavy relational components such as graph neural networks or full attention. Extensive experiments on four real-world epidemic datasets, including COVID-19 incidence, COVID-19 mortality, influenza, and dengue, show that MiCA consistently improves lightweight temporal backbones, achieving an average relative error reduction of 7.5\\% across forecasting horizons. Moreover, MiCA attains performance competitive with SOTA spatio-temporal models while remaining lightweight.",
+      "pdf_url": "https://arxiv.org/pdf/2601.11089v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.11089v1",
+      "published": "2026-01-16",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "VERHallu: Evaluating and Mitigating Event Relation Hallucination in Video Large Language Models",
       "authors": [
@@ -133,44 +163,6 @@
       "categories": [
         "stat.ME",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Connections as treatment: causal inference with edge interventions in networks",
-      "authors": [
-        "Shuli Chen",
-        "Jie Hu",
-        "Zhichao Jiang"
-      ],
-      "abstract": "Causal inference has traditionally focused on interventions at the unit level. In many applications, however, the central question concerns the causal effects of connections between units, such as transportation links, social relationships, or collaborative ties. We develop a causal framework for edge interventions in networks, where treatments correspond to the presence or absence of edges. Our framework defines causal estimands under stochastic interventions on the network structure and introduces an inverse probability weighting estimator under an unconfoundedness assumption on edge assignment. We estimate edge probabilities using exponential random graph models, a widely used class of network models. We establish consistency and asymptotic normality of the proposed estimator. Finally, we apply our methodology to China's transportation network to estimate the causal impact of railroad connections on regional economic development.",
-      "pdf_url": "https://arxiv.org/pdf/2601.07267v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.07267v1",
-      "published": "2026-01-12",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "MeepleLM: A Virtual Playtester Simulating Diverse Subjective Experiences",
-      "authors": [
-        "Zizhen Li",
-        "Chuanhao Li",
-        "Yibin Wang",
-        "Yukang Feng",
-        "Jianwen Sun",
-        "Jiaxin Ai",
-        "Fanrui Zhang",
-        "Mingzhu Sun",
-        "Yifei Huang",
-        "Kaipeng Zhang"
-      ],
-      "abstract": "Recent advancements have expanded the role of Large Language Models in board games from playing agents to creative co-designers. However, a critical gap remains: current systems lack the capacity to offer constructive critique grounded in the emergent user experience. Bridging this gap is fundamental for harmonizing Human-AI collaboration, as it empowers designers to refine their creations via external perspectives while steering models away from biased or unpredictable outcomes. Automating critique for board games presents two challenges: inferring the latent dynamics connecting rules to gameplay without an explicit engine, and modeling the subjective heterogeneity of diverse player groups. To address these, we curate a dataset of 1,727 structurally corrected rulebooks and 150K reviews selected via quality scoring and facet-aware sampling. We augment this data with Mechanics-Dynamics-Aesthetics (MDA) reasoning to explicitly bridge the causal gap between written rules and player experience. We further distill player personas and introduce MeepleLM, a specialized model that internalizes persona-specific reasoning patterns to accurately simulate the subjective feedback of diverse player archetypes. Experiments demonstrate that MeepleLM significantly outperforms latest commercial models (e.g., GPT-5.1, Gemini3-Pro) in community alignment and critique quality, achieving a 70% preference rate in user studies assessing utility. MeepleLM serves as a reliable virtual playtester for general interactive systems, marking a pivotal step towards audience-aligned, experience-aware Human-AI collaboration.",
-      "pdf_url": "https://arxiv.org/pdf/2601.07251v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.07251v1",
-      "published": "2026-01-12",
-      "categories": [
-        "cs.HC"
       ]
     }
   ]
