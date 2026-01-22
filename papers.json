@@ -1,168 +1,164 @@
 {
-  "last_updated": "2026-01-21T01:00:24.425969",
+  "last_updated": "2026-01-22T01:00:22.514288",
   "papers": [
     {
-      "title": "Context-aware Graph Causality Inference for Few-Shot Molecular Property Prediction",
+      "title": "Causal feature selection framework for stable soft sensor modeling based on time-delayed cross mapping",
       "authors": [
-        "Van Thuy Hoang",
-        "O-Joun Lee"
+        "Shi-Shun Chen",
+        "Xiao-Yang Li",
+        "Enrico Zio"
       ],
-      "abstract": "Molecular property prediction is becoming one of the major applications of graph learning in Web-based services, e.g., online protein structure prediction and drug discovery. A key challenge arises in few-shot scenarios, where only a few labeled molecules are available for predicting unseen properties. Recently, several studies have used in-context learning to capture relationships among molecules and properties, but they face two limitations in: (1) exploiting prior knowledge of functional groups that are causally linked to properties and (2) identifying key substructures directly correlated with properties. We propose CaMol, a context-aware graph causality inference framework, to address these challenges by using a causal inference perspective, assuming that each molecule consists of a latent causal structure that determines a specific property. First, we introduce a context graph that encodes chemical knowledge by linking functional groups, molecules, and properties to guide the discovery of causal substructures. Second, we propose a learnable atom masking strategy to disentangle causal substructures from confounding ones. Third, we introduce a distribution intervener that applies backdoor adjustment by combining causal substructures with chemically grounded confounders, disentangling causal effects from real-world chemical variations. Experiments on diverse molecular datasets showed that CaMol achieved superior accuracy and sample efficiency in few-shot tasks, showing its generalizability to unseen properties. Also, the discovered causal substructures were strongly aligned with chemical knowledge about functional groups, supporting the model interpretability.",
-      "pdf_url": "https://arxiv.org/pdf/2601.11135v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.11135v1",
-      "published": "2026-01-16",
+      "abstract": "Soft sensor modeling plays a crucial role in process monitoring. Causal feature selection can enhance the performance of soft sensor models in industrial applications. However, existing methods ignore two critical characteristics of industrial processes. Firstly, causal relationships between variables always involve time delays, whereas most causal feature selection methods investigate causal relationships in the same time dimension. Secondly, variables in industrial processes are often interdependent, which contradicts the decorrelation assumption of traditional causal inference methods. Consequently, soft sensor models based on existing causal feature selection approaches often lack sufficient accuracy and stability. To overcome these challenges, this paper proposes a causal feature selection framework based on time-delayed cross mapping. Time-delayed cross mapping employs state space reconstruction to effectively handle interdependent variables in causality analysis, and considers varying causal strength across time delay. Time-delayed convergent cross mapping (TDCCM) is introduced for total causal inference, and time-delayed partial cross mapping (TDPCM) is developed for direct causal inference. Then, in order to achieve automatic feature selection, an objective feature selection strategy is presented. The causal threshold is automatically determined based on the model performance on the validation set, and the causal features are then selected. Two real-world case studies show that TDCCM achieves the highest average performance, while TDPCM improves soft sensor stability and performance in the worst scenario. The code is publicly available at https://github.com/dirge1/TDPCM.",
+      "pdf_url": "https://arxiv.org/pdf/2601.14099v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.14099v1",
+      "published": "2026-01-20",
       "categories": [
         "cs.LG",
         "cs.AI"
       ]
     },
     {
-      "title": "MiCA: A Mobility-Informed Causal Adapter for Lightweight Epidemic Forecasting",
+      "title": "Component systems: do null models explain everything?",
       "authors": [
-        "Suhan Guo",
-        "Jiahong Deng",
-        "Furao Shen"
+        "Andrea Mazzolini",
+        "Mattia Corigliano",
+        "Rossana Droghetti",
+        "Matteo Osella",
+        "Marco Cosentino-Lagomarsino"
       ],
-      "abstract": "Accurate forecasting of infectious disease dynamics is critical for public health planning and intervention. Human mobility plays a central role in shaping the spatial spread of epidemics, but mobility data are noisy, indirect, and difficult to integrate reliably with disease records. Meanwhile, epidemic case time series are typically short and reported at coarse temporal resolution. These conditions limit the effectiveness of parameter-heavy mobility-aware forecasters that rely on clean and abundant data. In this work, we propose the Mobility-Informed Causal Adapter (MiCA), a lightweight and architecture-agnostic module for epidemic forecasting. MiCA infers mobility relations through causal discovery and integrates them into temporal forecasting models via gated residual mixing. This design allows lightweight forecasters to selectively exploit mobility-derived spatial structure while remaining robust under noisy and data-limited conditions, without introducing heavy relational components such as graph neural networks or full attention. Extensive experiments on four real-world epidemic datasets, including COVID-19 incidence, COVID-19 mortality, influenza, and dengue, show that MiCA consistently improves lightweight temporal backbones, achieving an average relative error reduction of 7.5\\% across forecasting horizons. Moreover, MiCA attains performance competitive with SOTA spatio-temporal models while remaining lightweight.",
-      "pdf_url": "https://arxiv.org/pdf/2601.11089v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.11089v1",
-      "published": "2026-01-16",
+      "abstract": "Component systems - ensembles of realizations built from a shared repertoire of modular parts - are ubiquitous in biological, ecological, technological, and socio-cultural domains. From genomes to texts, cities, and software, these systems exhibit statistical regularities that often meet the \"bona fide\" requirements of laws in the physical sciences. Here, we argue that the generality and simplicity of those laws are often due to basic combinatorial or sampling constraints, raising the question of whether such patterns are actually revealing system-specific mechanisms and how we might move beyond them. To this end, we first present a unifying mathematical framework, which allows us to compare modular systems in different fields and highlights the common \"null\" trends as well as the system-specific uniqueness, which, arguably, are signatures of the underlying generative dynamics. Next, we can exploit the framework with statistical mechanics and modern machine-learning tools for a twofold objective. (i) Explaining why the general regularities emerge, highlighting the constraints between them and the general principles at their origins, and (ii) \"subtracting\" them from data, which will isolate the informative features for inferring hidden system-specific generative processes, mechanistic and causal aspects.",
+      "pdf_url": "https://arxiv.org/pdf/2601.13985v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.13985v1",
+      "published": "2026-01-20",
       "categories": [
-        "cs.AI"
+        "cond-mat.stat-mech",
+        "q-bio.OT"
       ]
     },
     {
-      "title": "VERHallu: Evaluating and Mitigating Event Relation Hallucination in Video Large Language Models",
+      "title": "Are Large Language Models able to Predict Highly Cited Papers? Evidence from Statistical Publications",
       "authors": [
-        "Zefan Zhang",
-        "Kehua Zhu",
-        "Shijie Jiang",
-        "Hongyuan Lu",
-        "Shengkai Sun",
-        "Tian Bai"
+        "Zhanshuo Ye",
+        "Yiming Hou",
+        "Rui Pan",
+        "Tianchen Gao",
+        "Hansheng Wang"
       ],
-      "abstract": "Video Large Language Models (VideoLLMs) exhibit various types of hallucinations. Existing research has primarily focused on hallucinations involving the presence of events, objects, and scenes in videos, while largely neglecting event relation hallucination. In this paper, we introduce a novel benchmark for evaluating the Video Event Relation Hallucination, named VERHallu. This benchmark focuses on causal, temporal, and subevent relations between events, encompassing three types of tasks: relation classification, question answering, and counterfactual question answering, for a comprehensive evaluation of event relation hallucination. Additionally, it features counterintuitive video scenarios that deviate from typical pretraining distributions, with each sample accompanied by human-annotated candidates covering both vision-language and pure language biases. Our analysis reveals that current state-of-the-art VideoLLMs struggle with dense-event relation reasoning, often relying on prior knowledge due to insufficient use of frame-level cues. Although these models demonstrate strong grounding capabilities for key events, they often overlook the surrounding subevents, leading to an incomplete and inaccurate understanding of event relations. To tackle this, we propose a Key-Frame Propagating (KFP) strategy, which reallocates frame-level attention within intermediate layers to enhance multi-event understanding. Experiments show it effectively mitigates the event relation hallucination without affecting inference speed.",
-      "pdf_url": "https://arxiv.org/pdf/2601.10010v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.10010v1",
-      "published": "2026-01-15",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Where Knowledge Collides: A Mechanistic Study of Intra-Memory Knowledge Conflict in Language Models",
-      "authors": [
-        "Minh Vu Pham",
-        "Hsuvas Borkakoty",
-        "Yufang Hou"
-      ],
-      "abstract": "In language models (LMs), intra-memory knowledge conflict largely arises when inconsistent information about the same event is encoded within the model's parametric knowledge. While prior work has primarily focused on resolving conflicts between a model's internal knowledge and external resources through approaches such as fine-tuning or knowledge editing, the problem of localizing conflicts that originate during pre-training within the model's internal representations remain unexplored. In this work, we design a framework based on mechanistic interpretability methods to identify where and how conflicting knowledge from the pre-training data is encoded within LMs. Our findings contribute to a growing body of evidence that specific internal components of a language model are responsible for encoding conflicting knowledge from pre-training, and we demonstrate how mechanistic interpretability methods can be leveraged to causally intervene in and control conflicting knowledge at inference time.",
-      "pdf_url": "https://arxiv.org/pdf/2601.09445v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.09445v1",
-      "published": "2026-01-14",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Automatic debiased machine learning and sensitivity analysis for sample selection models",
-      "authors": [
-        "Jakob Bjelac",
-        "Victor Chernozhukov",
-        "Phil-Adrian Klotz",
-        "Jannis Kueck",
-        "Theresa M. A. Schmitz"
-      ],
-      "abstract": "In this paper, we extend the Riesz representation framework to causal inference under sample selection, where both treatment assignment and outcome observability are non-random. Formulating the problem in terms of a Riesz representer enables stable estimation and a transparent decomposition of omitted variable bias into three interpretable components: a data-identified scale factor, outcome confounding strength, and selection confounding strength. For estimation, we employ the ForestRiesz estimator, which accounts for selective outcome observability while avoiding the instability associated with direct propensity score inversion. We assess finite-sample performance through a simulation study and show that conventional double machine learning approaches can be highly sensitive to tuning parameters due to their reliance on inverse probability weighting, whereas the ForestRiesz estimator delivers more stable performance by leveraging automatic debiased machine learning. In an empirical application to the gender wage gap in the U.S., we find that our ForestRiesz approach yields larger treatment effect estimates than a standard double machine learning approach, suggesting that ignoring sample selection leads to an underestimation of the gender wage gap. Sensitivity analysis indicates that implausibly strong unobserved confounding would be required to overturn our results. Overall, our approach provides a unified, robust, and computationally attractive framework for causal inference under sample selection.",
-      "pdf_url": "https://arxiv.org/pdf/2601.08643v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.08643v1",
-      "published": "2026-01-13",
-      "categories": [
-        "econ.EM",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Relational Knowledge Distillation Using Fine-tuned Function Vectors",
-      "authors": [
-        "Andrea Kang",
-        "Yingnian Wu",
-        "Hongjing Lu"
-      ],
-      "abstract": "Representing relations between concepts is a core prerequisite for intelligent systems to make sense of the world. Recent work using causal mediation analysis has shown that a small set of attention heads encodes task representation in in-context learning, captured in a compact representation known as the function vector. We show that fine-tuning function vectors with only a small set of examples (about 20 word pairs) yields better performance on relation-based word-completion tasks than using the original vectors derived from causal mediation analysis. These improvements hold for both small and large language models. Moreover, the fine-tuned function vectors yield improved decoding performance for relation words and show stronger alignment with human similarity judgments of semantic relations. Next, we introduce the composite function vector - a weighted combination of fine-tuned function vectors - to extract relational knowledge and support analogical reasoning. At inference time, inserting this composite vector into LLM activations markedly enhances performance on challenging analogy problems drawn from cognitive science and SAT benchmarks. Our results highlight the potential of activation patching as a controllable mechanism for encoding and manipulating relational knowledge, advancing both the interpretability and reasoning capabilities of large language models.",
-      "pdf_url": "https://arxiv.org/pdf/2601.08169v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.08169v1",
-      "published": "2026-01-13",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Debiasing Large Language Models via Adaptive Causal Prompting with Sketch-of-Thought",
-      "authors": [
-        "Bowen Li",
-        "Ziqi Xu",
-        "Jing Ren",
-        "Renqiang Luo",
-        "Xikun Zhang",
-        "Xiuzhen Zhang",
-        "Yongli Ren",
-        "Feng Xia"
-      ],
-      "abstract": "Despite notable advancements in prompting methods for Large Language Models (LLMs), such as Chain-of-Thought (CoT), existing strategies still suffer from excessive token usage and limited generalisability across diverse reasoning tasks. To address these limitations, we propose an Adaptive Causal Prompting with Sketch-of-Thought (ACPS) framework, which leverages structural causal models to infer the causal effect of a query on its answer and adaptively select an appropriate intervention (i.e., standard front-door and conditional front-door adjustments). This design enables generalisable causal reasoning across heterogeneous tasks without task-specific retraining. By replacing verbose CoT with concise Sketch-of-Thought, ACPS enables efficient reasoning that significantly reduces token usage and inference cost. Extensive experiments on multiple reasoning benchmarks and LLMs demonstrate that ACPS consistently outperforms existing prompting baselines in terms of accuracy, robustness, and computational efficiency.",
-      "pdf_url": "https://arxiv.org/pdf/2601.08108v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.08108v1",
-      "published": "2026-01-13",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "The Role of Confounders and Linearity in Ecological Inference: A Reassessment",
-      "authors": [
-        "Shiro Kuriwaki",
-        "Cory McCartan"
-      ],
-      "abstract": "Estimating conditional means using only the marginal means available from aggregate data is commonly known as the ecological inference problem (EI). We provide a reassessment of EI, including a new formalization of identification conditions and a demonstration of how these conditions fail to hold in common cases. The identification conditions reveal that, similar to causal inference, credible ecological inference requires controlling for confounders. The aggregation process itself creates additional structure to assist in estimation by restricting the conditional expectation function to be linear in the predictor variable. A linear model perspective also clarifies the differences between the EI methods commonly used in the literature, and when they lead to ecological fallacies. We provide an overview of new methodology which builds on both the identification and linearity results to flexibly control for confounders and yield improved ecological inferences. Finally, using datasets for common EI problems in which the ground truth is fortuitously observed, we show that, while covariates can help, all methods are prone to overestimating both racial polarization and nationalized partisan voting.",
-      "pdf_url": "https://arxiv.org/pdf/2601.07668v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.07668v1",
-      "published": "2026-01-12",
+      "abstract": "Predicting highly-cited papers is a long-standing challenge due to the complex interactions of research content, scholarly communities, and temporal dynamics. Recent advances in large language models (LLMs) raise the question of whether early-stage textual information can provide useful signals of long-term scientific impact. Focusing on statistical publications, we propose a flexible, text-centered framework that leverages LLMs and structured prompt design to predict highly cited papers. Specifically, we utilize information available at the time of publication, including titles, abstracts, keywords, and limited bibliographic metadata. Using a large corpus of statistical papers, we evaluate predictive performance across multiple publication periods and alternative definitions of highly cited papers. The proposed approach achieves stable and competitive performance relative to existing methods and demonstrates strong generalization over time. Textual analysis further reveals that papers predicted as highly cited concentrate on recurring topics such as causal inference and deep learning. To facilitate practical use of the proposed approach, we further develop a WeChat mini program, \\textit{Stat Highly Cited Papers}, which provides an accessible interface for early-stage citation impact assessment. Overall, our results provide empirical evidence that LLMs can capture meaningful early signals of long-term citation impact, while also highlighting their limitations as tools for research impact assessment.",
+      "pdf_url": "https://arxiv.org/pdf/2601.13627v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.13627v1",
+      "published": "2026-01-20",
       "categories": [
         "stat.AP"
       ]
     },
     {
-      "title": "Functional Synthetic Control Methods for Metric Space-Valued Outcomes",
+      "title": "What is Overlap Weighting, How Has it Evolved, and When to Use It for Causal Inference?",
       "authors": [
-        "Ryo Okano",
-        "Daisuke Kurisu"
+        "Haidong Lu",
+        "Fan Li",
+        "Laine E. Thomas",
+        "Fan Li"
       ],
-      "abstract": "The synthetic control method (SCM) is a widely used tool for evaluating causal effects of policy changes in panel data settings. Recent studies have extended its framework to accommodate complex outcomes that take values in metric spaces, such as distributions, functions, networks, covariance matrices, and compositional data. However, due to the lack of linear structure in general metric spaces, theoretical guarantees for estimation and inference within these extended frameworks remain underdeveloped. In this study, we propose the functional synthetic control (FSC) method as an extension of the SCM for metric space-valued outcomes. To address challenges arising from the nonlinearlity of metric spaces, we leverage isometric embeddings into Hilbert spaces. Building on this approach, we develop the FSC and augmented FSC estimators for counterfactual outcomes, with the latter being a bias-corrected version of the former. We then derive their finite-sample error bounds to establish theoretical guarantees for estimation, and construct prediction sets based on these estimators to conduct inference on causal effects. We demonstrate the usefulness of the proposed framework through simulation studies and three empirical applications.",
-      "pdf_url": "https://arxiv.org/pdf/2601.07539v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.07539v1",
-      "published": "2026-01-12",
+      "abstract": "The growing availability of large health databases has expanded the use of observational studies for comparative effectiveness research. Unlike randomized trials, observational studies must adjust for systematic differences in patient characteristics between treatment groups. Propensity score methods, including matching, weighting, stratification, and regression adjustment, address this issue by creating groups that are comparable with respect to measured covariates. Among these approaches, overlap weighting (OW) has emerged as a principled and efficient method that emphasizes individuals at empirical equipoise, those who could plausibly receive either treatment. By assigning weights proportional to the probability of receiving the opposite treatment, OW targets the Average Treatment Effect in the Overlap population (ATO), achieves exact mean covariate balance under logistic propensity score models, and minimizes asymptotic variance. Over the last decade, the OW method has been recognized as a valuable confounding adjustment tool across the statistical, epidemiologic, and clinical research communities, and is increasingly applied in clinical and health studies. Given the growing interest in using observational data to emulate randomized trials and the capacity of OW to prioritize populations at clinical equipoise while achieving covariate balance (fundamental attributes of randomized studies), this article provides a concise overview of recent methodological developments in OW and practical guidance on when it represents a suitable choice for causal inference.",
+      "pdf_url": "https://arxiv.org/pdf/2601.13535v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.13535v1",
+      "published": "2026-01-20",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Two-stage least squares with clustered data",
+      "authors": [
+        "Anqi Zhao",
+        "Peng Ding",
+        "Fan Li"
+      ],
+      "abstract": "Clustered data -- where units of observation are nested within higher-level groups, such as repeated measurements on users, or panel data of firms, industries, or geographic regions -- are ubiquitous in business research. When the objective is to estimate the causal effect of a potentially endogenous treatment, a common approach -- which we call the canonical two-stage least squares (2sls) -- is to fit a 2sls regression of the outcome on treatment status with instrumental variables (IVs) for point estimation, and apply cluster-robust standard errors to account for clustering in inference. When both the treatment and IVs vary within clusters, a natural alternative -- which we call the two-stage least squares with fixed effects (2sfe) -- is to include cluster indicators in the 2sls specification, thereby incorporating cluster information in point estimation as well. This paper clarifies the trade-off between these two approaches within the local average treatment effect (LATE) framework, and makes three contributions. First, we establish the validity of both approaches for Wald-type inference of the LATE when clusters are homogeneous, and characterize their relative efficiency. We show that, when the true outcome model includes cluster-specific effects, 2sfe is more efficient than the canonical 2sls only when the variation in cluster-specific effects dominates that in unit-level errors. Second, we show that with heterogeneous clusters, 2sfe recovers a weighted average of cluster-specific LATEs, whereas the canonical 2sls generally does not. Third, to guide empirical choice between the two procedures, we develop a joint asymptotic theory for the two estimators under homogeneous clusters, and propose a Wald-type test for detecting cluster heterogeneity.",
+      "pdf_url": "https://arxiv.org/pdf/2601.13507v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.13507v1",
+      "published": "2026-01-20",
       "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "Minimum Wasserstein distance estimator under covariate shift: closed-form, super-efficiency and irregularity",
+      "title": "Propensity Score Propagation: A General Framework for Design-Based Inference with Unknown Propensity Scores",
       "authors": [
-        "Junjun Lang",
-        "Qiong Zhang",
-        "Yukun Liu"
+        "Siyu Heng",
+        "Yanxin Shen",
+        "Zijian Guo"
       ],
-      "abstract": "Covariate shift arises when covariate distributions differ between source and target populations while the conditional distribution of the response remains invariant, and it underlies problems in missing data and causal inference. We propose a minimum Wasserstein distance estimation framework for inference under covariate shift that avoids explicit modeling of outcome regressions or importance weights. The resulting W-estimator admits a closed-form expression and is numerically equivalent to the classical 1-nearest neighbor estimator, yielding a new optimal transport interpretation of nearest neighbor methods. We establish root-$n$ asymptotic normality and show that the estimator is not asymptotically linear, leading to super-efficiency relative to the semiparametric efficient estimator under covariate shift in certain regimes, and uniformly in missing data problems. Numerical simulations, along with an analysis of a rainfall dataset, underscore the exceptional performance of our W-estimator.",
-      "pdf_url": "https://arxiv.org/pdf/2601.07282v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.07282v1",
-      "published": "2026-01-12",
+      "abstract": "Design-based inference, also known as randomization-based or finite-population inference, provides a principled framework for causal and descriptive analyses that attribute randomness solely to the design mechanism (e.g., treatment assignment, sampling, or missingness) without imposing distributional or modeling assumptions on the outcome data of study units. Despite its conceptual appeal and long history, this framework becomes challenging to apply when the underlying design probabilities (i.e., propensity scores) are unknown, as is common in observational studies, real-world surveys, and missing-data settings. Existing plug-in or matching-based approaches either ignore the uncertainty stemming from estimated propensity scores or rely on the post-matching uniform-propensity condition (an assumption typically violated when there are multiple or continuous covariates), leading to systematic under-coverage. Finite-population M-estimation partially mitigates these issues but remains limited to parametric propensity score models. In this work, we introduce propensity score propagation, a general framework for valid design-based inference with unknown propensity scores. The framework introduces a regeneration-and-union procedure that automatically propagates uncertainty in propensity score estimation into downstream design-based inference. It accommodates both parametric and nonparametric propensity score models, integrates seamlessly with standard tools in design-based inference with known propensity scores, and is universally applicable to various important design-based inference problems, such as observational studies, real-world surveys, and missing-data analyses, among many others. Simulation studies demonstrate that the proposed framework restores nominal coverage levels in settings where conventional methods suffer from severe under-coverage.",
+      "pdf_url": "https://arxiv.org/pdf/2601.13150v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.13150v1",
+      "published": "2026-01-19",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Rerandomization for quantile treatment effects",
+      "authors": [
+        "Tingxuan Han",
+        "Yuhao Wang"
+      ],
+      "abstract": "Although complete randomization is widely regarded as the gold standard for causal inference, covariate imbalance can still arise by chance in finite samples. Rerandomization has emerged as an effective tool to improve covariate balance across treatment groups and enhance the precision of causal effect estimation. While existing work focuses on average treatment effects, quantile treatment effects (QTEs) provide a richer characterization of treatment heterogeneity by capturing distributional shifts in outcomes, which is crucial for policy evaluation and equity-oriented research. In this article, we establish the asymptotic properties of the QTE estimator under rerandomization within a finite-population framework, without imposing any distributional or modeling assumptions on the covariates or outcomes.The estimator exhibits a non-Gaussian asymptotic distribution, represented as a linear combination of Gaussian and truncated Gaussian random variables. To facilitate inference, we propose a conservative variance estimator and construct corresponding confidence interval. Our theoretical analysis demonstrates that rerandomization improves efficiency over complete randomization under mild regularity conditions. Simulation studies further support the theoretical findings and illustrate the practical advantages of rerandomization for QTE estimation.",
+      "pdf_url": "https://arxiv.org/pdf/2601.12540v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.12540v1",
+      "published": "2026-01-18",
       "categories": [
         "stat.ME",
-        "stat.ML"
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Assessing Interactive Causes of an Occurred Outcome Due to Two Binary Exposures",
+      "authors": [
+        "Shanshan Luo",
+        "Wei Li",
+        "Xueli Wang",
+        "Shaojie Wei",
+        "Zhi Geng"
+      ],
+      "abstract": "In contrast to evaluating treatment effects, causal attribution analysis focuses on identifying the key factors responsible for an observed outcome. For two binary exposure variables and a binary outcome variable, researchers need to assess not only the likelihood that an observed outcome was caused by a particular exposure, but also the likelihood that it resulted from the interaction between the two exposures. For example, in the case of a male worker who smoked, was exposed to asbestos, and developed lung cancer, researchers aim to explore whether the cancer resulted from smoking, asbestos exposure, or their interaction. Even in randomized controlled trials, widely regarded as the gold standard for causal inference, identifying and evaluating retrospective causal interactions between two exposures remains challenging. In this paper, we define posterior probabilities to characterize the interactive causes of an observed outcome. We establish the identifiability of posterior probabilities by using a secondary outcome variable that may appear after the primary outcome. We apply the proposed method to the classic case of smoking and asbestos exposure. Our results indicate that for lung cancer patients who smoked and were exposed to asbestos, the disease is primarily attributable to the synergistic effect between smoking and asbestos exposure.",
+      "pdf_url": "https://arxiv.org/pdf/2601.12478v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.12478v1",
+      "published": "2026-01-18",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "EmoKGEdit: Training-free Affective Injection via Visual Cue Transformation",
+      "authors": [
+        "Jing Zhang",
+        "Bingjie Fan"
+      ],
+      "abstract": "Existing image emotion editing methods struggle to disentangle emotional cues from latent content representations, often yielding weak emotional expression and distorted visual structures. To bridge this gap, we propose EmoKGEdit, a novel training-free framework for precise and structure-preserving image emotion editing. Specifically, we construct a Multimodal Sentiment Association Knowledge Graph (MSA-KG) to disentangle the intricate relationships among objects, scenes, attributes, visual clues and emotion. MSA-KG explicitly encode the causal chain among object-attribute-emotion, and as external knowledge to support chain of thought reasoning, guiding the multimodal large model to infer plausible emotion-related visual cues and generate coherent instructions. In addition, based on MSA-KG, we design a disentangled structure-emotion editing module that explicitly separates emotional attributes from layout features within the latent space, which ensures that the target emotion is effectively injected while strictly maintaining visual spatial coherence. Extensive experiments demonstrate that EmoKGEdit achieves excellent performance in both emotion fidelity and content preservation, and outperforms the state-of-the-art methods.",
+      "pdf_url": "https://arxiv.org/pdf/2601.12326v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.12326v1",
+      "published": "2026-01-18",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Bridging Human Interpretation and Machine Representation: A Landscape of Qualitative Data Analysis in the LLM Era",
+      "authors": [
+        "Xinyu Pi",
+        "Qisen Yang",
+        "Chuong Nguyen",
+        "Hua Shen"
+      ],
+      "abstract": "LLMs are increasingly used to support qualitative research, yet existing systems produce outputs that vary widely--from trace-faithful summaries to theory-mediated explanations and system models. To make these differences explicit, we introduce a 4$\\times$4 landscape crossing four levels of meaning-making (descriptive, categorical, interpretive, theoretical) with four levels of modeling (static structure, stages/timelines, causal pathways, feedback dynamics). Applying the landscape to prior LLM-based automation highlights a strong skew toward low-level meaning and low-commitment representations, with few reliable attempts at interpretive/theoretical inference or dynamical modeling. Based on the revealed gap, we outline an agenda for applying and building LLM-systems that make their interpretive and modeling commitments explicit, selectable, and governable.",
+      "pdf_url": "https://arxiv.org/pdf/2601.11739v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.11739v1",
+      "published": "2026-01-16",
+      "categories": [
+        "cs.CL"
       ]
     }
   ]
