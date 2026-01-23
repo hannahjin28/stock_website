@@ -1,6 +1,57 @@
 {
-  "last_updated": "2026-01-22T01:00:22.514288",
+  "last_updated": "2026-01-23T01:00:09.637940",
   "papers": [
+    {
+      "title": "Many Experiments, Few Repetitions, Unpaired Data, and Sparse Effects: Is Causal Inference Possible?",
+      "authors": [
+        "Felix Schur",
+        "Niklas Pfister",
+        "Peng Ding",
+        "Sach Mukherjee",
+        "Jonas Peters"
+      ],
+      "abstract": "We study the problem of estimating causal effects under hidden confounding in the following unpaired data setting: we observe some covariates $X$ and an outcome $Y$ under different experimental conditions (environments) but do not observe them jointly; we either observe $X$ or $Y$. Under appropriate regularity conditions, the problem can be cast as an instrumental variable (IV) regression with the environment acting as a (possibly high-dimensional) instrument. When there are many environments but only a few observations per environment, standard two-sample IV estimators fail to be consistent. We propose a GMM-type estimator based on cross-fold sample splitting of the instrument-covariate sample and prove that it is consistent as the number of environments grows but the sample size per environment remains constant. We further extend the method to sparse causal effects via $\\ell_1$-regularized estimation and post-selection refitting.",
+      "pdf_url": "https://arxiv.org/pdf/2601.15254v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.15254v1",
+      "published": "2026-01-21",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "RadixMLP -- Intra-batch Deduplication for Causal Transformers",
+      "authors": [
+        "Michael Feil",
+        "Julius Lipp"
+      ],
+      "abstract": "Batch inference workloads for causal transformer models frequently process sequences that share common prefixes, such as system prompts, few-shot examples, or shared queries. Standard inference engines treat each sequence independently, redundantly recomputing identical MLP activations for every copy of the shared prefix. We introduce RadixMLP, a technique that exploits the position-wise nature of MLPs, LayerNorms, linear projections, and embeddings to eliminate this redundancy. RadixMLP dynamically maps batches to a prefix trie, gathering shared segments into a compressed representation for position-wise computation and scattering results back only at attention boundaries. RadixMLP is stateless and operates within a single forward pass. In end-to-end serving benchmarks on MS~MARCO v1.1 with Qwen3 models (0.6B to 8B parameters), RadixMLP achieves 1.44-1.59$\\times$ speedups in realistic reranking workloads, with up to $5\\times$ speedups on synthetic benchmarks with longer shared prefixes. Our code is available at https://github.com/michaelfeil/radix-mlp.",
+      "pdf_url": "https://arxiv.org/pdf/2601.15013v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.15013v1",
+      "published": "2026-01-21",
+      "categories": [
+        "cs.LG",
+        "cs.DC"
+      ]
+    },
+    {
+      "title": "Mirai: Autoregressive Visual Generation Needs Foresight",
+      "authors": [
+        "Yonghao Yu",
+        "Lang Huang",
+        "Zerun Wang",
+        "Runyi Li",
+        "Toshihiko Yamasaki"
+      ],
+      "abstract": "Autoregressive (AR) visual generators model images as sequences of discrete tokens and are trained with next token likelihood. This strict causality supervision optimizes each step only by its immediate next token, which diminishes global coherence and slows convergence. We ask whether foresight, training signals that originate from later tokens, can help AR visual generation. We conduct a series of controlled diagnostics along the injection level, foresight layout, and foresight source axes, unveiling a key insight: aligning foresight to AR models' internal representation on the 2D image grids improves causality modeling. We formulate this insight with Mirai (meaning \"future\" in Japanese), a general framework that injects future information into AR training with no architecture change and no extra inference overhead: Mirai-E uses explicit foresight from multiple future positions of unidirectional representations, whereas Mirai-I leverages implicit foresight from matched bidirectional representations. Extensive experiments show that Mirai significantly accelerates convergence and improves generation quality. For instance, Mirai can speed up LlamaGen-B's convergence by up to 10$\\times$ and reduce the generation FID from 5.34 to 4.34 on the ImageNet class-condition image generation benchmark. Our study highlights that visual autoregressive models need foresight.",
+      "pdf_url": "https://arxiv.org/pdf/2601.14671v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.14671v1",
+      "published": "2026-01-21",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "Causal feature selection framework for stable soft sensor modeling based on time-delayed cross mapping",
       "authors": [
@@ -112,53 +163,6 @@
       "categories": [
         "stat.ME",
         "math.ST"
-      ]
-    },
-    {
-      "title": "Assessing Interactive Causes of an Occurred Outcome Due to Two Binary Exposures",
-      "authors": [
-        "Shanshan Luo",
-        "Wei Li",
-        "Xueli Wang",
-        "Shaojie Wei",
-        "Zhi Geng"
-      ],
-      "abstract": "In contrast to evaluating treatment effects, causal attribution analysis focuses on identifying the key factors responsible for an observed outcome. For two binary exposure variables and a binary outcome variable, researchers need to assess not only the likelihood that an observed outcome was caused by a particular exposure, but also the likelihood that it resulted from the interaction between the two exposures. For example, in the case of a male worker who smoked, was exposed to asbestos, and developed lung cancer, researchers aim to explore whether the cancer resulted from smoking, asbestos exposure, or their interaction. Even in randomized controlled trials, widely regarded as the gold standard for causal inference, identifying and evaluating retrospective causal interactions between two exposures remains challenging. In this paper, we define posterior probabilities to characterize the interactive causes of an observed outcome. We establish the identifiability of posterior probabilities by using a secondary outcome variable that may appear after the primary outcome. We apply the proposed method to the classic case of smoking and asbestos exposure. Our results indicate that for lung cancer patients who smoked and were exposed to asbestos, the disease is primarily attributable to the synergistic effect between smoking and asbestos exposure.",
-      "pdf_url": "https://arxiv.org/pdf/2601.12478v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.12478v1",
-      "published": "2026-01-18",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "EmoKGEdit: Training-free Affective Injection via Visual Cue Transformation",
-      "authors": [
-        "Jing Zhang",
-        "Bingjie Fan"
-      ],
-      "abstract": "Existing image emotion editing methods struggle to disentangle emotional cues from latent content representations, often yielding weak emotional expression and distorted visual structures. To bridge this gap, we propose EmoKGEdit, a novel training-free framework for precise and structure-preserving image emotion editing. Specifically, we construct a Multimodal Sentiment Association Knowledge Graph (MSA-KG) to disentangle the intricate relationships among objects, scenes, attributes, visual clues and emotion. MSA-KG explicitly encode the causal chain among object-attribute-emotion, and as external knowledge to support chain of thought reasoning, guiding the multimodal large model to infer plausible emotion-related visual cues and generate coherent instructions. In addition, based on MSA-KG, we design a disentangled structure-emotion editing module that explicitly separates emotional attributes from layout features within the latent space, which ensures that the target emotion is effectively injected while strictly maintaining visual spatial coherence. Extensive experiments demonstrate that EmoKGEdit achieves excellent performance in both emotion fidelity and content preservation, and outperforms the state-of-the-art methods.",
-      "pdf_url": "https://arxiv.org/pdf/2601.12326v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.12326v1",
-      "published": "2026-01-18",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Bridging Human Interpretation and Machine Representation: A Landscape of Qualitative Data Analysis in the LLM Era",
-      "authors": [
-        "Xinyu Pi",
-        "Qisen Yang",
-        "Chuong Nguyen",
-        "Hua Shen"
-      ],
-      "abstract": "LLMs are increasingly used to support qualitative research, yet existing systems produce outputs that vary widely--from trace-faithful summaries to theory-mediated explanations and system models. To make these differences explicit, we introduce a 4$\\times$4 landscape crossing four levels of meaning-making (descriptive, categorical, interpretive, theoretical) with four levels of modeling (static structure, stages/timelines, causal pathways, feedback dynamics). Applying the landscape to prior LLM-based automation highlights a strong skew toward low-level meaning and low-commitment representations, with few reliable attempts at interpretive/theoretical inference or dynamical modeling. Based on the revealed gap, we outline an agenda for applying and building LLM-systems that make their interpretive and modeling commitments explicit, selectable, and governable.",
-      "pdf_url": "https://arxiv.org/pdf/2601.11739v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.11739v1",
-      "published": "2026-01-16",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]
