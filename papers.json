@@ -1,6 +1,39 @@
 {
-  "last_updated": "2026-01-23T01:00:09.637940",
+  "last_updated": "2026-01-24T00:57:29.978698",
   "papers": [
+    {
+      "title": "Distributional Balancing for Causal Inference: A Unified Framework via Characteristic Function Distance",
+      "authors": [
+        "Diptanil Santra",
+        "Guanhua Chen",
+        "Chan Park"
+      ],
+      "abstract": "Weighting methods are essential tools for estimating causal effects in observational studies, with the goal of balancing pre-treatment covariates across treatment groups. Traditional approaches pursue this objective indirectly, for example, via inverse propensity score weighting or by matching a finite number of covariate moments, and therefore do not guarantee balance of the full joint covariate distributions. Recently, distributional balancing methods have emerged as robust, nonparametric alternatives that directly target alignment of entire covariate distributions, but they lack a unified framework, formal theoretical guarantees, and valid inferential procedures. We introduce a unified framework for nonparametric distributional balancing based on the characteristic function distance (CFD) and show that widely used discrepancy measures, including the maximum mean discrepancy and energy distance, arise as special cases. Our theoretical analysis establishes conditions under which the resulting CFD-based weighting estimator achieves $\\sqrt{n}$-consistency. Since the standard bootstrap may fail for this estimator, we propose subsampling as a valid alternative for inference. We further extend our approach to an instrumental variable setting to address potential unmeasured confounding. Finally, we evaluate the performance of our method through simulation studies and a real-world application, where the proposed estimator performs well and exhibits results consistent with our theoretical predictions.",
+      "pdf_url": "https://arxiv.org/pdf/2601.15449v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.15449v1",
+      "published": "2026-01-21",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Improving MoE Compute Efficiency by Composing Weight and Data Sparsity",
+      "authors": [
+        "Maciej Kilian",
+        "Oleg Mkrtchyan",
+        "Luke Zettlemoyer",
+        "Akshat Shrivastava",
+        "Armen Aghajanyan"
+      ],
+      "abstract": "Mixture-of-Experts layers achieve compute efficiency through weight sparsity: each token activates only a subset of experts. Data sparsity, where each expert processes only a subset of tokens, offers a complementary axis. Expert-choice routing implements data sparsity directly but violates causality in autoregressive models, creating train-inference mismatch. We recover data sparsity within causal token-choice MoE by leveraging zero-compute (null) experts within the routing pool. When a token routes to null experts, those slots consume no compute. The standard load balancing objective trains the model to uniformly use all experts (real and null) therefore creating data sparsity in expectation without the causality violations. We evaluate on vision-language model training, where data heterogeneity is pronounced: vision encoders produce many low-information tokens while text tokens are denser. At matched expected FLOPs, composing weight and data sparsity yields a more compute-efficient frontier than weight sparsity alone, with gains in training loss and downstream performance. The model learns implicit modality-aware allocation, routing vision tokens to null experts more aggressively than text, without explicit modality routing.",
+      "pdf_url": "https://arxiv.org/pdf/2601.15370v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.15370v1",
+      "published": "2026-01-21",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Many Experiments, Few Repetitions, Unpaired Data, and Sparse Effects: Is Causal Inference Possible?",
       "authors": [
@@ -50,6 +83,24 @@
       "published": "2026-01-21",
       "categories": [
         "cs.CV"
+      ]
+    },
+    {
+      "title": "Latent Causal Diffusions for Single-Cell Perturbation Modeling",
+      "authors": [
+        "Lars Lorch",
+        "Jiaqi Zhang",
+        "Charlotte Bunne",
+        "Andreas Krause",
+        "Bernhard Schölkopf",
+        "Caroline Uhler"
+      ],
+      "abstract": "Perturbation screens hold the potential to systematically map regulatory processes at single-cell resolution, yet modeling and predicting transcriptome-wide responses to perturbations remains a major computational challenge. Existing methods often underperform simple baselines, fail to disentangle measurement noise from biological signal, and provide limited insight into the causal structure governing cellular responses. Here, we present the latent causal diffusion (LCD), a generative model that frames single-cell gene expression as a stationary diffusion process observed under measurement noise. LCD outperforms established approaches in predicting the distributional shifts of unseen perturbation combinations in single-cell RNA-sequencing screens while simultaneously learning a mechanistic dynamical system of gene regulation. To interpret these learned dynamics, we develop an approach we call causal linearization via perturbation responses (CLIPR), which yields an approximation of the direct causal effects between all genes modeled by the diffusion. CLIPR provably identifies causal effects under a linear drift assumption and recovers causal structure in both simulated systems and a genome-wide perturbation screen, where it clusters genes into coherent functional modules and resolves causal relationships that standard differential expression analysis cannot. The LCD-CLIPR framework bridges generative modeling with causal inference to predict unseen perturbation effects and map the underlying regulatory mechanisms of the transcriptome.",
+      "pdf_url": "https://arxiv.org/pdf/2601.15341v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.15341v1",
+      "published": "2026-01-20",
+      "categories": [
+        "q-bio.MN"
       ]
     },
     {
@@ -118,51 +169,6 @@
       "categories": [
         "stat.ME",
         "stat.AP"
-      ]
-    },
-    {
-      "title": "Two-stage least squares with clustered data",
-      "authors": [
-        "Anqi Zhao",
-        "Peng Ding",
-        "Fan Li"
-      ],
-      "abstract": "Clustered data -- where units of observation are nested within higher-level groups, such as repeated measurements on users, or panel data of firms, industries, or geographic regions -- are ubiquitous in business research. When the objective is to estimate the causal effect of a potentially endogenous treatment, a common approach -- which we call the canonical two-stage least squares (2sls) -- is to fit a 2sls regression of the outcome on treatment status with instrumental variables (IVs) for point estimation, and apply cluster-robust standard errors to account for clustering in inference. When both the treatment and IVs vary within clusters, a natural alternative -- which we call the two-stage least squares with fixed effects (2sfe) -- is to include cluster indicators in the 2sls specification, thereby incorporating cluster information in point estimation as well. This paper clarifies the trade-off between these two approaches within the local average treatment effect (LATE) framework, and makes three contributions. First, we establish the validity of both approaches for Wald-type inference of the LATE when clusters are homogeneous, and characterize their relative efficiency. We show that, when the true outcome model includes cluster-specific effects, 2sfe is more efficient than the canonical 2sls only when the variation in cluster-specific effects dominates that in unit-level errors. Second, we show that with heterogeneous clusters, 2sfe recovers a weighted average of cluster-specific LATEs, whereas the canonical 2sls generally does not. Third, to guide empirical choice between the two procedures, we develop a joint asymptotic theory for the two estimators under homogeneous clusters, and propose a Wald-type test for detecting cluster heterogeneity.",
-      "pdf_url": "https://arxiv.org/pdf/2601.13507v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.13507v1",
-      "published": "2026-01-20",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Propensity Score Propagation: A General Framework for Design-Based Inference with Unknown Propensity Scores",
-      "authors": [
-        "Siyu Heng",
-        "Yanxin Shen",
-        "Zijian Guo"
-      ],
-      "abstract": "Design-based inference, also known as randomization-based or finite-population inference, provides a principled framework for causal and descriptive analyses that attribute randomness solely to the design mechanism (e.g., treatment assignment, sampling, or missingness) without imposing distributional or modeling assumptions on the outcome data of study units. Despite its conceptual appeal and long history, this framework becomes challenging to apply when the underlying design probabilities (i.e., propensity scores) are unknown, as is common in observational studies, real-world surveys, and missing-data settings. Existing plug-in or matching-based approaches either ignore the uncertainty stemming from estimated propensity scores or rely on the post-matching uniform-propensity condition (an assumption typically violated when there are multiple or continuous covariates), leading to systematic under-coverage. Finite-population M-estimation partially mitigates these issues but remains limited to parametric propensity score models. In this work, we introduce propensity score propagation, a general framework for valid design-based inference with unknown propensity scores. The framework introduces a regeneration-and-union procedure that automatically propagates uncertainty in propensity score estimation into downstream design-based inference. It accommodates both parametric and nonparametric propensity score models, integrates seamlessly with standard tools in design-based inference with known propensity scores, and is universally applicable to various important design-based inference problems, such as observational studies, real-world surveys, and missing-data analyses, among many others. Simulation studies demonstrate that the proposed framework restores nominal coverage levels in settings where conventional methods suffer from severe under-coverage.",
-      "pdf_url": "https://arxiv.org/pdf/2601.13150v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.13150v1",
-      "published": "2026-01-19",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Rerandomization for quantile treatment effects",
-      "authors": [
-        "Tingxuan Han",
-        "Yuhao Wang"
-      ],
-      "abstract": "Although complete randomization is widely regarded as the gold standard for causal inference, covariate imbalance can still arise by chance in finite samples. Rerandomization has emerged as an effective tool to improve covariate balance across treatment groups and enhance the precision of causal effect estimation. While existing work focuses on average treatment effects, quantile treatment effects (QTEs) provide a richer characterization of treatment heterogeneity by capturing distributional shifts in outcomes, which is crucial for policy evaluation and equity-oriented research. In this article, we establish the asymptotic properties of the QTE estimator under rerandomization within a finite-population framework, without imposing any distributional or modeling assumptions on the covariates or outcomes.The estimator exhibits a non-Gaussian asymptotic distribution, represented as a linear combination of Gaussian and truncated Gaussian random variables. To facilitate inference, we propose a conservative variance estimator and construct corresponding confidence interval. Our theoretical analysis demonstrates that rerandomization improves efficiency over complete randomization under mild regularity conditions. Simulation studies further support the theoretical findings and illustrate the practical advantages of rerandomization for QTE estimation.",
-      "pdf_url": "https://arxiv.org/pdf/2601.12540v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.12540v1",
-      "published": "2026-01-18",
-      "categories": [
-        "stat.ME",
-        "math.ST"
       ]
     }
   ]
