@@ -1,6 +1,86 @@
 {
-  "last_updated": "2026-01-26T01:04:28.924884",
+  "last_updated": "2026-01-27T01:03:02.148065",
   "papers": [
+    {
+      "title": "Auto-Regressive Masked Diffusion Models",
+      "authors": [
+        "Mahdi Karami",
+        "Ali Ghodsi"
+      ],
+      "abstract": "Masked diffusion models (MDMs) have emerged as a promising approach for language modeling, yet they face a performance gap compared to autoregressive models (ARMs) and require more training iterations. In this work, we present the Auto-Regressive Masked Diffusion (ARMD) model, an architecture designed to close this gap by unifying the training efficiency of autoregressive models with the parallel generation capabilities of diffusion-based models. Our key insight is to reframe the masked diffusion process as a block-wise causal model. This perspective allows us to design a strictly causal, permutation-equivariant architecture that computes all conditional probabilities across multiple denoising steps in a single, parallel forward pass. The resulting architecture supports efficient, autoregressive-style decoding and a progressive permutation training scheme, allowing the model to learn both canonical left-to-right and random token orderings. Leveraging this flexibility, we introduce a novel strided parallel generation strategy that accelerates inference by generating tokens in parallel streams while maintaining global coherence. Empirical results demonstrate that ARMD achieves state-of-the-art performance on standard language modeling benchmarks, outperforming established diffusion baselines while requiring significantly fewer training steps. Furthermore, it establishes a new benchmark for parallel text generation, effectively bridging the performance gap between parallel and sequential decoding.",
+      "pdf_url": "https://arxiv.org/pdf/2601.16971v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.16971v1",
+      "published": "2026-01-23",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Finite Population Inference for Factorial Designs and Panel Experiments with Imperfect Compliance",
+      "authors": [
+        "Pedro Picchetti"
+      ],
+      "abstract": "This paper develops a finite population framework for analyzing causal effects in settings with imperfect compliance where multiple treatments affect the outcome of interest. Two prominent examples are factorial designs and panel experiments with imperfect compliance. I define finite population causal effects that capture the relative effectiveness of alternative treatment sequences. I provide nonparametric estimators for a rich class of factorial and dynamic causal effects and derive their finite population distributions as the sample size increases. Monte Carlo simulations illustrate the desirable properties of the estimators. Finally, I use the estimator for causal effects in factorial designs to revisit a famous voter mobilization experiment that analyzes the effects of voting encouragement through phone calls on turnout.",
+      "pdf_url": "https://arxiv.org/pdf/2601.16749v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.16749v1",
+      "published": "2026-01-23",
+      "categories": [
+        "stat.ME",
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Investigating Twin Star Equation of States in Light of Recent Astrophysical Observations",
+      "authors": [
+        "Shamim Haque",
+        "Atharva Shinde",
+        "Asim Kumar Saha",
+        "Tuhin Malik",
+        "Ritam Mallick"
+      ],
+      "abstract": "Twin stars are predicted to exist in nature if the hadron-to-quark phase transition is strong enough to form a new branch of hybrid stars, separated from the branch of neutron stars. We adopt an agnostic approach, using transition energy density, transition pressure, the discontinuity strength, and a constant speed of sound for quark matter as our parameter space to construct a large possibility of hybrid equations of state, and thereby encapsulating a comprehensive picture of the twin star scenario. First, we report the complete conditions on our parameter space imposed by the general relativistic hydrostatic equilibrium solutions. For a fixed transition energy density and speed of sound for quark matter, we define distinct ranges of transition pressures based on the allowed strengths of discontinuity. Below a maximum transition pressure, a range of discontinuity exists that increases as the transition pressure decreases. Thereby, we identify the loci of the limits on discontinuities as the `witch-hat' curves. Based on the causality limit, the witch-hat curves can be punctured or incomplete. Strong constraints on this picture are drawn from the inferences from GW170817 and the NICER measurements. We computed the maximum mass for twin stars to be $2.05~M_\\odot$, the allowed strongest discontinuity in rest-mass density to be $7.76ρ_\\mathrm{sat}$, and the upper bound on transition rest-mass density to be $4.03ρ_\\mathrm{sat}$. Subsequently, we compute the implications of the stiffness of the quark matter equation of state on this picture. Different confidence levels for observational inferences are considered to assess the extent of inclusion (and rejection) of hybrid equations of state and, consequently, their effects on the limits of the maximum mass of twin stars and phase transition properties.",
+      "pdf_url": "https://arxiv.org/pdf/2601.16674v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.16674v1",
+      "published": "2026-01-23",
+      "categories": [
+        "astro-ph.HE"
+      ]
+    },
+    {
+      "title": "Bayesian Nonparametric Causal Inference for High-Dimensional Nutritional Data via Factor-Based Exposure Mapping",
+      "authors": [
+        "Dafne Zorzetto",
+        "Zizhao Xie",
+        "Julian Stamp",
+        "Arman Oganisian",
+        "Roberta De Vito"
+      ],
+      "abstract": "Diet plays a crucial role in health, and understanding the causal effects of dietary patterns is essential for informing public health policy and personalized nutrition strategies. However, causal inference in nutritional epidemiology faces several challenges: (i) high-dimensional and correlated food/nutrient intake data induce massive treatment levels; (ii) nutritional studies are interested in latent dietary patterns rather than single food items; and (iii) the goal is to estimate heterogeneous causal effects of these dietary patterns on health outcomes. We address these challenges by introducing a sophisticated exposure mapping framework that reduces the high-dimensional treatment space via factor analysis and enables the identification of dietary patterns. We also extend the Bayesian Causal Forest to accommodate three ordered levels of dietary exposure, better capturing the complex structure of nutritional data and enabling estimation of heterogeneous causal effects. We evaluate the proposed method through extensive simulations and apply it to a multi-center epidemiological study of Hispanic/Latino adults residing in the US. Using high-dimensional dietary data, we identify six dietary patterns and estimate their causal link with two key health risk factors: body mass index and fasting insulin levels. Our findings suggest that higher consumption of plant lipid-antioxidant, plant-based, animal protein, and dairy product patterns is associated with reduced risk.",
+      "pdf_url": "https://arxiv.org/pdf/2601.16595v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.16595v1",
+      "published": "2026-01-23",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Ordering-based Causal Discovery via Generalized Score Matching",
+      "authors": [
+        "Vy Vo",
+        "He Zhao",
+        "Trung Le",
+        "Edwin V. Bonilla",
+        "Dinh Phung"
+      ],
+      "abstract": "Learning DAG structures from purely observational data remains a long-standing challenge across scientific domains. An emerging line of research leverages the score of the data distribution to initially identify a topological order of the underlying DAG via leaf node detection and subsequently performs edge pruning for graph recovery. This paper extends the score matching framework for causal discovery, which is originally designated for continuous data, and introduces a novel leaf discriminant criterion based on the discrete score function. Through simulated and real-world experiments, we demonstrate that our theory enables accurate inference of true causal orders from observed discrete data and the identified ordering can significantly boost the accuracy of existing causal discovery baselines on nearly all of the settings.",
+      "pdf_url": "https://arxiv.org/pdf/2601.16249v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.16249v1",
+      "published": "2026-01-22",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Distributional Balancing for Causal Inference: A Unified Framework via Characteristic Function Distance",
       "authors": [
@@ -83,92 +163,6 @@
       "published": "2026-01-21",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Latent Causal Diffusions for Single-Cell Perturbation Modeling",
-      "authors": [
-        "Lars Lorch",
-        "Jiaqi Zhang",
-        "Charlotte Bunne",
-        "Andreas Krause",
-        "Bernhard Schölkopf",
-        "Caroline Uhler"
-      ],
-      "abstract": "Perturbation screens hold the potential to systematically map regulatory processes at single-cell resolution, yet modeling and predicting transcriptome-wide responses to perturbations remains a major computational challenge. Existing methods often underperform simple baselines, fail to disentangle measurement noise from biological signal, and provide limited insight into the causal structure governing cellular responses. Here, we present the latent causal diffusion (LCD), a generative model that frames single-cell gene expression as a stationary diffusion process observed under measurement noise. LCD outperforms established approaches in predicting the distributional shifts of unseen perturbation combinations in single-cell RNA-sequencing screens while simultaneously learning a mechanistic dynamical system of gene regulation. To interpret these learned dynamics, we develop an approach we call causal linearization via perturbation responses (CLIPR), which yields an approximation of the direct causal effects between all genes modeled by the diffusion. CLIPR provably identifies causal effects under a linear drift assumption and recovers causal structure in both simulated systems and a genome-wide perturbation screen, where it clusters genes into coherent functional modules and resolves causal relationships that standard differential expression analysis cannot. The LCD-CLIPR framework bridges generative modeling with causal inference to predict unseen perturbation effects and map the underlying regulatory mechanisms of the transcriptome.",
-      "pdf_url": "https://arxiv.org/pdf/2601.15341v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.15341v1",
-      "published": "2026-01-20",
-      "categories": [
-        "q-bio.MN"
-      ]
-    },
-    {
-      "title": "Causal feature selection framework for stable soft sensor modeling based on time-delayed cross mapping",
-      "authors": [
-        "Shi-Shun Chen",
-        "Xiao-Yang Li",
-        "Enrico Zio"
-      ],
-      "abstract": "Soft sensor modeling plays a crucial role in process monitoring. Causal feature selection can enhance the performance of soft sensor models in industrial applications. However, existing methods ignore two critical characteristics of industrial processes. Firstly, causal relationships between variables always involve time delays, whereas most causal feature selection methods investigate causal relationships in the same time dimension. Secondly, variables in industrial processes are often interdependent, which contradicts the decorrelation assumption of traditional causal inference methods. Consequently, soft sensor models based on existing causal feature selection approaches often lack sufficient accuracy and stability. To overcome these challenges, this paper proposes a causal feature selection framework based on time-delayed cross mapping. Time-delayed cross mapping employs state space reconstruction to effectively handle interdependent variables in causality analysis, and considers varying causal strength across time delay. Time-delayed convergent cross mapping (TDCCM) is introduced for total causal inference, and time-delayed partial cross mapping (TDPCM) is developed for direct causal inference. Then, in order to achieve automatic feature selection, an objective feature selection strategy is presented. The causal threshold is automatically determined based on the model performance on the validation set, and the causal features are then selected. Two real-world case studies show that TDCCM achieves the highest average performance, while TDPCM improves soft sensor stability and performance in the worst scenario. The code is publicly available at https://github.com/dirge1/TDPCM.",
-      "pdf_url": "https://arxiv.org/pdf/2601.14099v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.14099v1",
-      "published": "2026-01-20",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Component systems: do null models explain everything?",
-      "authors": [
-        "Andrea Mazzolini",
-        "Mattia Corigliano",
-        "Rossana Droghetti",
-        "Matteo Osella",
-        "Marco Cosentino-Lagomarsino"
-      ],
-      "abstract": "Component systems - ensembles of realizations built from a shared repertoire of modular parts - are ubiquitous in biological, ecological, technological, and socio-cultural domains. From genomes to texts, cities, and software, these systems exhibit statistical regularities that often meet the \"bona fide\" requirements of laws in the physical sciences. Here, we argue that the generality and simplicity of those laws are often due to basic combinatorial or sampling constraints, raising the question of whether such patterns are actually revealing system-specific mechanisms and how we might move beyond them. To this end, we first present a unifying mathematical framework, which allows us to compare modular systems in different fields and highlights the common \"null\" trends as well as the system-specific uniqueness, which, arguably, are signatures of the underlying generative dynamics. Next, we can exploit the framework with statistical mechanics and modern machine-learning tools for a twofold objective. (i) Explaining why the general regularities emerge, highlighting the constraints between them and the general principles at their origins, and (ii) \"subtracting\" them from data, which will isolate the informative features for inferring hidden system-specific generative processes, mechanistic and causal aspects.",
-      "pdf_url": "https://arxiv.org/pdf/2601.13985v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.13985v1",
-      "published": "2026-01-20",
-      "categories": [
-        "cond-mat.stat-mech",
-        "q-bio.OT"
-      ]
-    },
-    {
-      "title": "Are Large Language Models able to Predict Highly Cited Papers? Evidence from Statistical Publications",
-      "authors": [
-        "Zhanshuo Ye",
-        "Yiming Hou",
-        "Rui Pan",
-        "Tianchen Gao",
-        "Hansheng Wang"
-      ],
-      "abstract": "Predicting highly-cited papers is a long-standing challenge due to the complex interactions of research content, scholarly communities, and temporal dynamics. Recent advances in large language models (LLMs) raise the question of whether early-stage textual information can provide useful signals of long-term scientific impact. Focusing on statistical publications, we propose a flexible, text-centered framework that leverages LLMs and structured prompt design to predict highly cited papers. Specifically, we utilize information available at the time of publication, including titles, abstracts, keywords, and limited bibliographic metadata. Using a large corpus of statistical papers, we evaluate predictive performance across multiple publication periods and alternative definitions of highly cited papers. The proposed approach achieves stable and competitive performance relative to existing methods and demonstrates strong generalization over time. Textual analysis further reveals that papers predicted as highly cited concentrate on recurring topics such as causal inference and deep learning. To facilitate practical use of the proposed approach, we further develop a WeChat mini program, \\textit{Stat Highly Cited Papers}, which provides an accessible interface for early-stage citation impact assessment. Overall, our results provide empirical evidence that LLMs can capture meaningful early signals of long-term citation impact, while also highlighting their limitations as tools for research impact assessment.",
-      "pdf_url": "https://arxiv.org/pdf/2601.13627v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.13627v1",
-      "published": "2026-01-20",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "What is Overlap Weighting, How Has it Evolved, and When to Use It for Causal Inference?",
-      "authors": [
-        "Haidong Lu",
-        "Fan Li",
-        "Laine E. Thomas",
-        "Fan Li"
-      ],
-      "abstract": "The growing availability of large health databases has expanded the use of observational studies for comparative effectiveness research. Unlike randomized trials, observational studies must adjust for systematic differences in patient characteristics between treatment groups. Propensity score methods, including matching, weighting, stratification, and regression adjustment, address this issue by creating groups that are comparable with respect to measured covariates. Among these approaches, overlap weighting (OW) has emerged as a principled and efficient method that emphasizes individuals at empirical equipoise, those who could plausibly receive either treatment. By assigning weights proportional to the probability of receiving the opposite treatment, OW targets the Average Treatment Effect in the Overlap population (ATO), achieves exact mean covariate balance under logistic propensity score models, and minimizes asymptotic variance. Over the last decade, the OW method has been recognized as a valuable confounding adjustment tool across the statistical, epidemiologic, and clinical research communities, and is increasingly applied in clinical and health studies. Given the growing interest in using observational data to emulate randomized trials and the capacity of OW to prioritize populations at clinical equipoise while achieving covariate balance (fundamental attributes of randomized studies), this article provides a concise overview of recent methodological developments in OW and practical guidance on when it represents a suitable choice for causal inference.",
-      "pdf_url": "https://arxiv.org/pdf/2601.13535v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.13535v1",
-      "published": "2026-01-20",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
       ]
     }
   ]
