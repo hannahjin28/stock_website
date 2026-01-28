@@ -1,168 +1,193 @@
 {
-  "last_updated": "2026-01-27T01:03:02.148065",
+  "last_updated": "2026-01-28T00:59:55.541815",
   "papers": [
     {
-      "title": "Auto-Regressive Masked Diffusion Models",
+      "title": "From Fuzzy to Exact: The Halo Architecture for Infinite-Depth Reasoning via Rational Arithmetic",
       "authors": [
-        "Mahdi Karami",
-        "Ali Ghodsi"
+        "Hansheng Ren"
       ],
-      "abstract": "Masked diffusion models (MDMs) have emerged as a promising approach for language modeling, yet they face a performance gap compared to autoregressive models (ARMs) and require more training iterations. In this work, we present the Auto-Regressive Masked Diffusion (ARMD) model, an architecture designed to close this gap by unifying the training efficiency of autoregressive models with the parallel generation capabilities of diffusion-based models. Our key insight is to reframe the masked diffusion process as a block-wise causal model. This perspective allows us to design a strictly causal, permutation-equivariant architecture that computes all conditional probabilities across multiple denoising steps in a single, parallel forward pass. The resulting architecture supports efficient, autoregressive-style decoding and a progressive permutation training scheme, allowing the model to learn both canonical left-to-right and random token orderings. Leveraging this flexibility, we introduce a novel strided parallel generation strategy that accelerates inference by generating tokens in parallel streams while maintaining global coherence. Empirical results demonstrate that ARMD achieves state-of-the-art performance on standard language modeling benchmarks, outperforming established diffusion baselines while requiring significantly fewer training steps. Furthermore, it establishes a new benchmark for parallel text generation, effectively bridging the performance gap between parallel and sequential decoding.",
-      "pdf_url": "https://arxiv.org/pdf/2601.16971v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.16971v1",
-      "published": "2026-01-23",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Finite Population Inference for Factorial Designs and Panel Experiments with Imperfect Compliance",
-      "authors": [
-        "Pedro Picchetti"
-      ],
-      "abstract": "This paper develops a finite population framework for analyzing causal effects in settings with imperfect compliance where multiple treatments affect the outcome of interest. Two prominent examples are factorial designs and panel experiments with imperfect compliance. I define finite population causal effects that capture the relative effectiveness of alternative treatment sequences. I provide nonparametric estimators for a rich class of factorial and dynamic causal effects and derive their finite population distributions as the sample size increases. Monte Carlo simulations illustrate the desirable properties of the estimators. Finally, I use the estimator for causal effects in factorial designs to revisit a famous voter mobilization experiment that analyzes the effects of voting encouragement through phone calls on turnout.",
-      "pdf_url": "https://arxiv.org/pdf/2601.16749v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.16749v1",
-      "published": "2026-01-23",
-      "categories": [
-        "stat.ME",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Investigating Twin Star Equation of States in Light of Recent Astrophysical Observations",
-      "authors": [
-        "Shamim Haque",
-        "Atharva Shinde",
-        "Asim Kumar Saha",
-        "Tuhin Malik",
-        "Ritam Mallick"
-      ],
-      "abstract": "Twin stars are predicted to exist in nature if the hadron-to-quark phase transition is strong enough to form a new branch of hybrid stars, separated from the branch of neutron stars. We adopt an agnostic approach, using transition energy density, transition pressure, the discontinuity strength, and a constant speed of sound for quark matter as our parameter space to construct a large possibility of hybrid equations of state, and thereby encapsulating a comprehensive picture of the twin star scenario. First, we report the complete conditions on our parameter space imposed by the general relativistic hydrostatic equilibrium solutions. For a fixed transition energy density and speed of sound for quark matter, we define distinct ranges of transition pressures based on the allowed strengths of discontinuity. Below a maximum transition pressure, a range of discontinuity exists that increases as the transition pressure decreases. Thereby, we identify the loci of the limits on discontinuities as the `witch-hat' curves. Based on the causality limit, the witch-hat curves can be punctured or incomplete. Strong constraints on this picture are drawn from the inferences from GW170817 and the NICER measurements. We computed the maximum mass for twin stars to be $2.05~M_\\odot$, the allowed strongest discontinuity in rest-mass density to be $7.76ρ_\\mathrm{sat}$, and the upper bound on transition rest-mass density to be $4.03ρ_\\mathrm{sat}$. Subsequently, we compute the implications of the stiffness of the quark matter equation of state on this picture. Different confidence levels for observational inferences are considered to assess the extent of inclusion (and rejection) of hybrid equations of state and, consequently, their effects on the limits of the maximum mass of twin stars and phase transition properties.",
-      "pdf_url": "https://arxiv.org/pdf/2601.16674v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.16674v1",
-      "published": "2026-01-23",
-      "categories": [
-        "astro-ph.HE"
-      ]
-    },
-    {
-      "title": "Bayesian Nonparametric Causal Inference for High-Dimensional Nutritional Data via Factor-Based Exposure Mapping",
-      "authors": [
-        "Dafne Zorzetto",
-        "Zizhao Xie",
-        "Julian Stamp",
-        "Arman Oganisian",
-        "Roberta De Vito"
-      ],
-      "abstract": "Diet plays a crucial role in health, and understanding the causal effects of dietary patterns is essential for informing public health policy and personalized nutrition strategies. However, causal inference in nutritional epidemiology faces several challenges: (i) high-dimensional and correlated food/nutrient intake data induce massive treatment levels; (ii) nutritional studies are interested in latent dietary patterns rather than single food items; and (iii) the goal is to estimate heterogeneous causal effects of these dietary patterns on health outcomes. We address these challenges by introducing a sophisticated exposure mapping framework that reduces the high-dimensional treatment space via factor analysis and enables the identification of dietary patterns. We also extend the Bayesian Causal Forest to accommodate three ordered levels of dietary exposure, better capturing the complex structure of nutritional data and enabling estimation of heterogeneous causal effects. We evaluate the proposed method through extensive simulations and apply it to a multi-center epidemiological study of Hispanic/Latino adults residing in the US. Using high-dimensional dietary data, we identify six dietary patterns and estimate their causal link with two key health risk factors: body mass index and fasting insulin levels. Our findings suggest that higher consumption of plant lipid-antioxidant, plant-based, animal protein, and dairy product patterns is associated with reduced risk.",
-      "pdf_url": "https://arxiv.org/pdf/2601.16595v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.16595v1",
-      "published": "2026-01-23",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Ordering-based Causal Discovery via Generalized Score Matching",
-      "authors": [
-        "Vy Vo",
-        "He Zhao",
-        "Trung Le",
-        "Edwin V. Bonilla",
-        "Dinh Phung"
-      ],
-      "abstract": "Learning DAG structures from purely observational data remains a long-standing challenge across scientific domains. An emerging line of research leverages the score of the data distribution to initially identify a topological order of the underlying DAG via leaf node detection and subsequently performs edge pruning for graph recovery. This paper extends the score matching framework for causal discovery, which is originally designated for continuous data, and introduces a novel leaf discriminant criterion based on the discrete score function. Through simulated and real-world experiments, we demonstrate that our theory enables accurate inference of true causal orders from observed discrete data and the identified ordering can significantly boost the accuracy of existing causal discovery baselines on nearly all of the settings.",
-      "pdf_url": "https://arxiv.org/pdf/2601.16249v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.16249v1",
-      "published": "2026-01-22",
+      "abstract": "Current paradigms in Deep Learning prioritize computational throughput over numerical precision, relying on the assumption that intelligence emerges from statistical correlation at scale. In this paper, we challenge this orthodoxy. We propose the Exactness Hypothesis: that General Intelligence (AGI), specifically high-order causal inference, requires a computational substrate capable of Arbitrary Precision Arithmetic. We argue that the \"hallucinations\" and logical incoherence seen in current Large Language Models (LLMs) are artifacts of IEEE 754 floating-point approximation errors accumulating over deep compositional functions. To mitigate this, we introduce the Halo Architecture, a paradigm shift to Rational Arithmetic ($\\mathbb{Q}$) supported by a novel Exact Inference Unit (EIU). Empirical validation on the Huginn-0125 prototype demonstrates that while 600B-parameter scale BF16 baselines collapse in chaotic systems, Halo maintains zero numerical divergence indefinitely. This work establishes exact arithmetic as a prerequisite for reducing logical uncertainty in System 2 AGI.",
+      "pdf_url": "https://arxiv.org/pdf/2601.18702v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.18702v1",
+      "published": "2026-01-26",
       "categories": [
         "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Distributional Balancing for Causal Inference: A Unified Framework via Characteristic Function Distance",
-      "authors": [
-        "Diptanil Santra",
-        "Guanhua Chen",
-        "Chan Park"
-      ],
-      "abstract": "Weighting methods are essential tools for estimating causal effects in observational studies, with the goal of balancing pre-treatment covariates across treatment groups. Traditional approaches pursue this objective indirectly, for example, via inverse propensity score weighting or by matching a finite number of covariate moments, and therefore do not guarantee balance of the full joint covariate distributions. Recently, distributional balancing methods have emerged as robust, nonparametric alternatives that directly target alignment of entire covariate distributions, but they lack a unified framework, formal theoretical guarantees, and valid inferential procedures. We introduce a unified framework for nonparametric distributional balancing based on the characteristic function distance (CFD) and show that widely used discrepancy measures, including the maximum mean discrepancy and energy distance, arise as special cases. Our theoretical analysis establishes conditions under which the resulting CFD-based weighting estimator achieves $\\sqrt{n}$-consistency. Since the standard bootstrap may fail for this estimator, we propose subsampling as a valid alternative for inference. We further extend our approach to an instrumental variable setting to address potential unmeasured confounding. Finally, we evaluate the performance of our method through simulation studies and a real-world application, where the proposed estimator performs well and exhibits results consistent with our theoretical predictions.",
-      "pdf_url": "https://arxiv.org/pdf/2601.15449v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.15449v1",
-      "published": "2026-01-21",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Improving MoE Compute Efficiency by Composing Weight and Data Sparsity",
-      "authors": [
-        "Maciej Kilian",
-        "Oleg Mkrtchyan",
-        "Luke Zettlemoyer",
-        "Akshat Shrivastava",
-        "Armen Aghajanyan"
-      ],
-      "abstract": "Mixture-of-Experts layers achieve compute efficiency through weight sparsity: each token activates only a subset of experts. Data sparsity, where each expert processes only a subset of tokens, offers a complementary axis. Expert-choice routing implements data sparsity directly but violates causality in autoregressive models, creating train-inference mismatch. We recover data sparsity within causal token-choice MoE by leveraging zero-compute (null) experts within the routing pool. When a token routes to null experts, those slots consume no compute. The standard load balancing objective trains the model to uniformly use all experts (real and null) therefore creating data sparsity in expectation without the causality violations. We evaluate on vision-language model training, where data heterogeneity is pronounced: vision encoders produce many low-information tokens while text tokens are denser. At matched expected FLOPs, composing weight and data sparsity yields a more compute-efficient frontier than weight sparsity alone, with gains in training loss and downstream performance. The model learns implicit modality-aware allocation, routing vision tokens to null experts more aggressively than text, without explicit modality routing.",
-      "pdf_url": "https://arxiv.org/pdf/2601.15370v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.15370v1",
-      "published": "2026-01-21",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Many Experiments, Few Repetitions, Unpaired Data, and Sparse Effects: Is Causal Inference Possible?",
-      "authors": [
-        "Felix Schur",
-        "Niklas Pfister",
-        "Peng Ding",
-        "Sach Mukherjee",
-        "Jonas Peters"
-      ],
-      "abstract": "We study the problem of estimating causal effects under hidden confounding in the following unpaired data setting: we observe some covariates $X$ and an outcome $Y$ under different experimental conditions (environments) but do not observe them jointly; we either observe $X$ or $Y$. Under appropriate regularity conditions, the problem can be cast as an instrumental variable (IV) regression with the environment acting as a (possibly high-dimensional) instrument. When there are many environments but only a few observations per environment, standard two-sample IV estimators fail to be consistent. We propose a GMM-type estimator based on cross-fold sample splitting of the instrument-covariate sample and prove that it is consistent as the number of environments grows but the sample size per environment remains constant. We further extend the method to sparse causal effects via $\\ell_1$-regularized estimation and post-selection refitting.",
-      "pdf_url": "https://arxiv.org/pdf/2601.15254v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.15254v1",
-      "published": "2026-01-21",
-      "categories": [
-        "stat.ML",
         "cs.AI",
+        "cs.AR"
+      ]
+    },
+    {
+      "title": "CASSANDRA: Programmatic and Probabilistic Learning and Inference for Stochastic World Modeling",
+      "authors": [
+        "Panagiotis Lymperopoulos",
+        "Abhiramon Rajasekharan",
+        "Ian Berlot-Attwell",
+        "Stéphane Aroca-Ouellette",
+        "Kaheer Suleman"
+      ],
+      "abstract": "Building world models is essential for planning in real-world domains such as businesses. Since such domains have rich semantics, we can leverage world knowledge to effectively model complex action effects and causal relationships from limited data. In this work, we propose CASSANDRA, a neurosymbolic world modeling approach that leverages an LLM as a knowledge prior to construct lightweight transition models for planning. CASSANDRA integrates two components: (1) LLM-synthesized code to model deterministic features, and (2) LLM-guided structure learning of a probabilistic graphical model to capture causal relationships among stochastic variables. We evaluate CASSANDRA in (i) a small-scale coffee-shop simulator and (ii) a complex theme park business simulator, where we demonstrate significant improvements in transition prediction and planning over baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2601.18620v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.18620v1",
+      "published": "2026-01-26",
+      "categories": [
         "cs.LG"
       ]
     },
     {
-      "title": "RadixMLP -- Intra-batch Deduplication for Causal Transformers",
+      "title": "Nearly Optimal Bayesian Inference for Structural Missingness",
       "authors": [
-        "Michael Feil",
-        "Julius Lipp"
+        "Chen Liang",
+        "Donghua Yang",
+        "Yutong Wang",
+        "Tianle Zhang",
+        "Shenghe Zhou",
+        "Zhiyu Liang",
+        "Hengtong Zhang",
+        "Hongzhi Wang",
+        "Ziqi Li",
+        "Xiyang Zhang",
+        "Zheng Liang",
+        "Yifei Li"
       ],
-      "abstract": "Batch inference workloads for causal transformer models frequently process sequences that share common prefixes, such as system prompts, few-shot examples, or shared queries. Standard inference engines treat each sequence independently, redundantly recomputing identical MLP activations for every copy of the shared prefix. We introduce RadixMLP, a technique that exploits the position-wise nature of MLPs, LayerNorms, linear projections, and embeddings to eliminate this redundancy. RadixMLP dynamically maps batches to a prefix trie, gathering shared segments into a compressed representation for position-wise computation and scattering results back only at attention boundaries. RadixMLP is stateless and operates within a single forward pass. In end-to-end serving benchmarks on MS~MARCO v1.1 with Qwen3 models (0.6B to 8B parameters), RadixMLP achieves 1.44-1.59$\\times$ speedups in realistic reranking workloads, with up to $5\\times$ speedups on synthetic benchmarks with longer shared prefixes. Our code is available at https://github.com/michaelfeil/radix-mlp.",
-      "pdf_url": "https://arxiv.org/pdf/2601.15013v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.15013v1",
-      "published": "2026-01-21",
+      "abstract": "Structural missingness breaks 'just impute and train': values can be undefined by causal or logical constraints, and the mask may depend on observed variables, unobserved variables (MNAR), and other missingness indicators. It simultaneously brings (i) a catch-22 situation with causal loop, prediction needs the missing features, yet inferring them depends on the missingness mechanism, (ii) under MNAR, the unseen are different, the missing part can come from a shifted distribution, and (iii) plug-in imputation, a single fill-in can lock in uncertainty and yield overconfident, biased decisions. In the Bayesian view, prediction via the posterior predictive distribution integrates over the full model posterior uncertainty, rather than relying on a single point estimate. This framework decouples (i) learning an in-model missing-value posterior from (ii) label prediction by optimizing the predictive posterior distribution, enabling posterior integration. This decoupling yields an in-model almost-free-lunch: once the posterior is learned, prediction is plug-and-play while preserving uncertainty propagation. It achieves SOTA on 43 classification and 15 imputation benchmarks, with finite-sample near Bayes-optimality guarantees under our SCM prior.",
+      "pdf_url": "https://arxiv.org/pdf/2601.18500v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.18500v1",
+      "published": "2026-01-26",
       "categories": [
-        "cs.LG",
-        "cs.DC"
+        "cs.LG"
       ]
     },
     {
-      "title": "Mirai: Autoregressive Visual Generation Needs Foresight",
+      "title": "Making medical vision-language models think causally across modalities with retrieval-augmented cross-modal reasoning",
       "authors": [
-        "Yonghao Yu",
-        "Lang Huang",
-        "Zerun Wang",
-        "Runyi Li",
-        "Toshihiko Yamasaki"
+        "Weiqin Yang",
+        "Haowen Xue",
+        "Qingyi Peng",
+        "Hexuan Hu",
+        "Qian Huang",
+        "Tingbo Zhang"
       ],
-      "abstract": "Autoregressive (AR) visual generators model images as sequences of discrete tokens and are trained with next token likelihood. This strict causality supervision optimizes each step only by its immediate next token, which diminishes global coherence and slows convergence. We ask whether foresight, training signals that originate from later tokens, can help AR visual generation. We conduct a series of controlled diagnostics along the injection level, foresight layout, and foresight source axes, unveiling a key insight: aligning foresight to AR models' internal representation on the 2D image grids improves causality modeling. We formulate this insight with Mirai (meaning \"future\" in Japanese), a general framework that injects future information into AR training with no architecture change and no extra inference overhead: Mirai-E uses explicit foresight from multiple future positions of unidirectional representations, whereas Mirai-I leverages implicit foresight from matched bidirectional representations. Extensive experiments show that Mirai significantly accelerates convergence and improves generation quality. For instance, Mirai can speed up LlamaGen-B's convergence by up to 10$\\times$ and reduce the generation FID from 5.34 to 4.34 on the ImageNet class-condition image generation benchmark. Our study highlights that visual autoregressive models need foresight.",
-      "pdf_url": "https://arxiv.org/pdf/2601.14671v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.14671v1",
-      "published": "2026-01-21",
+      "abstract": "Medical vision-language models (VLMs) achieve strong performance in diagnostic reporting and image-text alignment, yet their underlying reasoning mechanisms remain fundamentally correlational, exhibiting reliance on superficial statistical associations that fail to capture the causal pathophysiological mechanisms central to clinical decision-making. This limitation makes them fragile, prone to hallucinations, and sensitive to dataset biases. Retrieval-augmented generation (RAG) offers a partial remedy by grounding predictions in external knowledge. However, conventional RAG depends on semantic similarity, introducing new spurious correlations. We propose Multimodal Causal Retrieval-Augmented Generation, a framework that integrates causal inference principles with multimodal retrieval. It retrieves clinically relevant exemplars and causal graphs from external sources, conditioning model reasoning on counterfactual and interventional evidence rather than correlations alone. Applied to radiology report generation, diagnosis prediction, and visual question answering, it improves factual accuracy, robustness to distribution shifts, and interpretability. Our results highlight causal retrieval as a scalable path toward medical VLMs that think beyond pattern matching, enabling trustworthy multimodal reasoning in high-stakes clinical settings.",
+      "pdf_url": "https://arxiv.org/pdf/2601.18356v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.18356v1",
+      "published": "2026-01-26",
       "categories": [
-        "cs.CV"
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "LLM-ForcedAligner: A Non-Autoregressive and Accurate LLM-Based Forced Aligner for Multilingual and Long-Form Speech",
+      "authors": [
+        "Bingshen Mu",
+        "Xian Shi",
+        "Xiong Wang",
+        "Hexin Liu",
+        "Jin Xu",
+        "Lei Xie"
+      ],
+      "abstract": "Forced alignment (FA) predicts start and end timestamps for words or characters in speech, but existing methods are language-specific and prone to cumulative temporal shifts. The multilingual speech understanding and long-sequence processing abilities of speech large language models (SLLMs) make them promising for FA in multilingual, crosslingual, and long-form speech settings. However, directly applying the next-token prediction paradigm of SLLMs to FA results in hallucinations and slow inference. To bridge the gap, we propose LLM-ForcedAligner, reformulating FA as a slot-filling paradigm: timestamps are treated as discrete indices, and special timestamp tokens are inserted as slots into the transcript. Conditioned on the speech embeddings and the transcript with slots, the SLLM directly predicts the time indices at slots. During training, causal attention masking with non-shifted input and label sequences allows each slot to predict its own timestamp index based on itself and preceding context, with loss computed only at slot positions. Dynamic slot insertion enables FA at arbitrary positions. Moreover, non-autoregressive inference is supported, avoiding hallucinations and improving speed. Experiments across multilingual, crosslingual, and long-form speech scenarios show that LLM-ForcedAligner achieves a 69%~78% relative reduction in accumulated averaging shift compared with prior methods. The checkpoint and inference code will be released later.",
+      "pdf_url": "https://arxiv.org/pdf/2601.18220v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.18220v1",
+      "published": "2026-01-26",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ]
+    },
+    {
+      "title": "\\textsc{NaVIDA}: Vision-Language Navigation with Inverse Dynamics Augmentation",
+      "authors": [
+        "Weiye Zhu",
+        "Zekai Zhang",
+        "Xiangchen Wang",
+        "Hewei Pan",
+        "Teng Wang",
+        "Tiantian Geng",
+        "Rongtao Xu",
+        "Feng Zheng"
+      ],
+      "abstract": "Vision-and-Language Navigation (VLN) requires agents to interpret natural language instructions and act coherently in visually rich environments. However, most existing methods rely on reactive state-action mappings without explicitly modeling how actions causally transform subsequent visual observations. Lacking such vision-action causality, agents cannot anticipate the visual changes induced by its own actions, leading to unstable behaviors, weak generalization, and cumulative error along trajectory. To address these issues, we introduce \\textsc{NaVIDA} (\\textbf{Nav}igation with \\textbf{I}nverse \\textbf{D}ynamics \\textbf{A}ugmentation), a unified VLN framework that couples policy learning with action-grounded visual dynamics and adaptive execution. \\textsc{NaVIDA} augments training with chunk-based inverse-dynamics supervision to learn causal relationship between visual changes and corresponding actions. To structure this supervision and extend the effective planning range, \\textsc{NaVIDA} employs hierarchical probabilistic action chunking (HPAC), which organizes trajectories into multi-step chunks and provides discriminative, longer-range visual-change cues. To further curb error accumulation and stabilize behavior at inference, an entropy-guided mechanism adaptively sets the execution horizon of action chunks. Extensive experiments show that \\textsc{NaVIDA} achieves superior navigation performance compared to state-of-the-art methods with fewer parameters (3B vs. 8B). Real-world robot evaluations further validate the practical feasibility and effectiveness of our approach. Code and data will be available upon acceptance.",
+      "pdf_url": "https://arxiv.org/pdf/2601.18188v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.18188v1",
+      "published": "2026-01-26",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "VidLaDA: Bidirectional Diffusion Large Language Models for Efficient Video Understanding",
+      "authors": [
+        "Zhihao He",
+        "Tieyuan Chen",
+        "Kangyu Wang",
+        "Ziran Qin",
+        "Yang Shao",
+        "Chaofan Gan",
+        "Shijie Li",
+        "Zuxuan Wu",
+        "Weiyao Lin"
+      ],
+      "abstract": "Standard Autoregressive Video LLMs inevitably suffer from causal masking biases that hinder global spatiotemporal modeling, leading to suboptimal understanding efficiency. We propose VidLaDA, a Video LLM based on Diffusion Language Model utilizing bidirectional attention to capture bidirectional dependencies. To further tackle the inference bottleneck of diffusion decoding on massive video tokens, we introduce MARS-Cache. This framework accelerates inference by combining asynchronous visual cache refreshing with frame-wise chunk attention, effectively pruning redundancy while preserving global connectivity via anchor tokens. Extensive experiments show VidLaDA outperforms diffusion baselines and rivals state-of-the-art autoregressive models (e.g., Qwen2.5-VL and LLaVA-Video), with MARS-Cache delivering over 12x speedup without compromising reasoning accuracy. Code and checkpoints are open-sourced at https://github.com/ziHoHe/VidLaDA.",
+      "pdf_url": "https://arxiv.org/pdf/2601.17868v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.17868v1",
+      "published": "2026-01-25",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "S$^3$-Attention:Attention-Aligned Endogenous Retrieval for Memory-Bounded Long-Context Inference",
+      "authors": [
+        "Qingsen Ma",
+        "Dianyun Wang",
+        "Yaoye Wang",
+        "Lechen Ning",
+        "Sujie Zhu",
+        "Xiaohang Zhang",
+        "Jiaming Lyu",
+        "Linhao Ren",
+        "Zhenbo Xu",
+        "Zhaofeng He"
+      ],
+      "abstract": "Large language models are increasingly applied to multi-document and long-form inputs, yet long-context inference remains memory- and noise-inefficient. Key-value (KV) caching scales linearly with context length, while external retrieval methods often return lexically similar but causally irrelevant passages.\n  We present S3-Attention, a memory-first inference-time framework that treats long-context processing as attention-aligned endogenous retrieval. S3-Attention decodes transient key and query projections into top-k sparse feature identifiers using lightweight sparse autoencoders, and constructs a CPU-based inverted index mapping features to token positions or spans during a single streaming scan. This design allows the KV cache to be discarded entirely and bounds GPU memory usage by the scan chunk size.\n  At generation time, feature co-activation is used to retrieve compact evidence spans, optionally fused with BM25 for exact lexical matching. Under a unified LongBench evaluation protocol with fixed prompting, decoding, and matched token budgets, S3-Hybrid closely matches full-context inference across multiple model families and improves robustness in several information-dense settings. We also report an engineering limitation of the current prototype, which incurs higher wall-clock latency than optimized full-KV baselines, motivating future kernel-level optimization.",
+      "pdf_url": "https://arxiv.org/pdf/2601.17702v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.17702v1",
+      "published": "2026-01-25",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Bidirectional causal inference for binary outcomes in the presence of unmeasured confounding",
+      "authors": [
+        "Yafang Deng",
+        "Kang Shuai",
+        "Shanshan Luo"
+      ],
+      "abstract": "Bidirectional causal relationships arising from mutual interactions between variables are commonly observed within biomedical, econometrical, and social science contexts. When such relationships are further complicated by unobserved factors, identifying causal effects in both directions becomes especially challenging. For continuous variables, methods that utilize two instrumental variables from both directions have been proposed to explore bidirectional causal effects in linear models. However, the existing techniques are not applicable when the key variables of interest are binary. To address these issues, we propose a structural equation modeling approach that links observed binary variables to continuous latent variables through a constrained mapping. We further establish identification results for bidirectional causal effects using a pair of instrumental variables. Additionally, we develop an estimation method for the corresponding causal parameters. We also conduct sensitivity analysis under scenarios where certain identification conditions are violated. Finally, we apply our approach to investigate the bidirectional causal relationship between heart disease and diabetes, demonstrating its practical utility in biomedical research.",
+      "pdf_url": "https://arxiv.org/pdf/2601.17695v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.17695v1",
+      "published": "2026-01-25",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Revisiting Modality Invariance in a Multilingual Speech-Text Model via Neuron-Level Analysis",
+      "authors": [
+        "Toshiki Nakai",
+        "Varsha Suresh",
+        "Vera Demberg"
+      ],
+      "abstract": "Multilingual speech-text foundation models aim to process language uniformly across both modality and language, yet it remains unclear whether they internally represent the same language consistently when it is spoken versus written. We investigate this question in SeamlessM4T v2 through three complementary analyses that probe where language and modality information is encoded, how selective neurons causally influence decoding, and how concentrated this influence is across the network. We identify language- and modality-selective neurons using average-precision ranking, investigate their functional role via median-replacement interventions at inference time, and analyze activation-magnitude inequality across languages and modalities. Across experiments, we find evidence of incomplete modality invariance. Although encoder representations become increasingly language-agnostic, this compression makes it more difficult for the shared decoder to recover the language of origin when constructing modality-agnostic representations, particularly when adapting from speech to text. We further observe sharply localized modality-selective structure in cross-attention key and value projections. Finally, speech-conditioned decoding and non-dominant scripts exhibit higher activation concentration, indicating heavier reliance on a small subset of neurons, which may underlie increased brittleness across modalities and languages.",
+      "pdf_url": "https://arxiv.org/pdf/2601.17387v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.17387v1",
+      "published": "2026-01-24",
+      "categories": [
+        "cs.CL"
       ]
     }
   ]
