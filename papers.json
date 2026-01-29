@@ -1,6 +1,40 @@
 {
-  "last_updated": "2026-01-28T00:59:55.541815",
+  "last_updated": "2026-01-29T01:08:08.858232",
   "papers": [
+    {
+      "title": "BabyReasoningBench: Generating Developmentally-Inspired Reasoning Tasks for Evaluating Baby Language Models",
+      "authors": [
+        "Kaustubh D. Dhole"
+      ],
+      "abstract": "Traditional evaluations of reasoning capabilities of language models are dominated by adult-centric benchmarks that presuppose broad world knowledge, complex instruction following, and mature pragmatic competence. These assumptions are mismatched to baby language models trained on developmentally plausible input such as child-directed speech and early-childhood narratives, and they obscure which reasoning abilities (if any) emerge under such constraints. We introduce BabyReasoningBench, a GPT-5.2 generated benchmark of 19 reasoning tasks grounded in classic paradigms from developmental psychology, spanning theory of mind, analogical and relational reasoning, causal inference and intervention selection, and core reasoning primitives that are known to be confounded by memory and pragmatics. We find that two GPT-2 based baby language models (pretrained on 10M and 100M of child-directed speech text) show overall low but uneven performance, with dissociations across task families: scaling improves several causal and physical reasoning tasks, while belief attribution and pragmatics-sensitive tasks remain challenging. BabyReasoningBench provides a developmentally grounded lens for analyzing what kinds of reasoning are supported by child-like training distributions, and for testing mechanistic hypotheses about how such abilities emerge.",
+      "pdf_url": "https://arxiv.org/pdf/2601.18933v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.18933v1",
+      "published": "2026-01-26",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "GraIP: A Benchmarking Framework For Neural Graph Inverse Problems",
+      "authors": [
+        "Semih Cantürk",
+        "Andrei Manolache",
+        "Arman Mielke",
+        "Chendi Qian",
+        "Antoine Siraudin",
+        "Christopher Morris",
+        "Mathias Niepert",
+        "Guy Wolf"
+      ],
+      "abstract": "A wide range of graph learning tasks, such as structure discovery, temporal graph analysis, and combinatorial optimization, focus on inferring graph structures from data, rather than making predictions on given graphs. However, the respective methods to solve such problems are often developed in an isolated, task-specific manner and thus lack a unifying theoretical foundation. Here, we provide a stepping stone towards the formation of such a foundation and further development by introducing the Neural Graph Inverse Problem (GraIP) conceptual framework, which formalizes and reframes a broad class of graph learning tasks as inverse problems. Unlike discriminative approaches that directly predict target variables from given graph inputs, the GraIP paradigm addresses inverse problems, i.e., it relies on observational data and aims to recover the underlying graph structure by reversing the forward process, such as message passing or network dynamics, that produced the observed outputs. We demonstrate the versatility of GraIP across various graph learning tasks, including rewiring, causal discovery, and neural relational inference. We also propose benchmark datasets and metrics for each GraIP domain considered, and characterize and empirically evaluate existing baseline methods used to solve them. Overall, our unifying perspective bridges seemingly disparate applications and provides a principled approach to structural learning in constrained and combinatorial settings while encouraging cross-pollination of existing methods across graph inverse problems.",
+      "pdf_url": "https://arxiv.org/pdf/2601.18917v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.18917v1",
+      "published": "2026-01-26",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "From Fuzzy to Exact: The Halo Architecture for Infinite-Depth Reasoning via Rational Arithmetic",
       "authors": [
@@ -38,9 +72,9 @@
       "authors": [
         "Chen Liang",
         "Donghua Yang",
-        "Yutong Wang",
+        "Yutong Zhao",
         "Tianle Zhang",
-        "Shenghe Zhou",
+        "Shenghang Zhou",
         "Zhiyu Liang",
         "Hengtong Zhang",
         "Hongzhi Wang",
@@ -50,8 +84,8 @@
         "Yifei Li"
       ],
       "abstract": "Structural missingness breaks 'just impute and train': values can be undefined by causal or logical constraints, and the mask may depend on observed variables, unobserved variables (MNAR), and other missingness indicators. It simultaneously brings (i) a catch-22 situation with causal loop, prediction needs the missing features, yet inferring them depends on the missingness mechanism, (ii) under MNAR, the unseen are different, the missing part can come from a shifted distribution, and (iii) plug-in imputation, a single fill-in can lock in uncertainty and yield overconfident, biased decisions. In the Bayesian view, prediction via the posterior predictive distribution integrates over the full model posterior uncertainty, rather than relying on a single point estimate. This framework decouples (i) learning an in-model missing-value posterior from (ii) label prediction by optimizing the predictive posterior distribution, enabling posterior integration. This decoupling yields an in-model almost-free-lunch: once the posterior is learned, prediction is plug-and-play while preserving uncertainty propagation. It achieves SOTA on 43 classification and 15 imputation benchmarks, with finite-sample near Bayes-optimality guarantees under our SCM prior.",
-      "pdf_url": "https://arxiv.org/pdf/2601.18500v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.18500v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.18500v2",
+      "arxiv_url": "http://arxiv.org/abs/2601.18500v2",
       "published": "2026-01-26",
       "categories": [
         "cs.LG"
@@ -158,36 +192,6 @@
       "categories": [
         "cs.CL",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Bidirectional causal inference for binary outcomes in the presence of unmeasured confounding",
-      "authors": [
-        "Yafang Deng",
-        "Kang Shuai",
-        "Shanshan Luo"
-      ],
-      "abstract": "Bidirectional causal relationships arising from mutual interactions between variables are commonly observed within biomedical, econometrical, and social science contexts. When such relationships are further complicated by unobserved factors, identifying causal effects in both directions becomes especially challenging. For continuous variables, methods that utilize two instrumental variables from both directions have been proposed to explore bidirectional causal effects in linear models. However, the existing techniques are not applicable when the key variables of interest are binary. To address these issues, we propose a structural equation modeling approach that links observed binary variables to continuous latent variables through a constrained mapping. We further establish identification results for bidirectional causal effects using a pair of instrumental variables. Additionally, we develop an estimation method for the corresponding causal parameters. We also conduct sensitivity analysis under scenarios where certain identification conditions are violated. Finally, we apply our approach to investigate the bidirectional causal relationship between heart disease and diabetes, demonstrating its practical utility in biomedical research.",
-      "pdf_url": "https://arxiv.org/pdf/2601.17695v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.17695v1",
-      "published": "2026-01-25",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Revisiting Modality Invariance in a Multilingual Speech-Text Model via Neuron-Level Analysis",
-      "authors": [
-        "Toshiki Nakai",
-        "Varsha Suresh",
-        "Vera Demberg"
-      ],
-      "abstract": "Multilingual speech-text foundation models aim to process language uniformly across both modality and language, yet it remains unclear whether they internally represent the same language consistently when it is spoken versus written. We investigate this question in SeamlessM4T v2 through three complementary analyses that probe where language and modality information is encoded, how selective neurons causally influence decoding, and how concentrated this influence is across the network. We identify language- and modality-selective neurons using average-precision ranking, investigate their functional role via median-replacement interventions at inference time, and analyze activation-magnitude inequality across languages and modalities. Across experiments, we find evidence of incomplete modality invariance. Although encoder representations become increasingly language-agnostic, this compression makes it more difficult for the shared decoder to recover the language of origin when constructing modality-agnostic representations, particularly when adapting from speech to text. We further observe sharply localized modality-selective structure in cross-attention key and value projections. Finally, speech-conditioned decoding and non-dominant scripts exhibit higher activation concentration, indicating heavier reliance on a small subset of neurons, which may underlie increased brittleness across modalities and languages.",
-      "pdf_url": "https://arxiv.org/pdf/2601.17387v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.17387v1",
-      "published": "2026-01-24",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]
