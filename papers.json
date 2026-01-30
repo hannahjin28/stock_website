@@ -1,6 +1,89 @@
 {
-  "last_updated": "2026-01-29T01:08:08.858232",
+  "last_updated": "2026-01-30T01:08:14.191413",
   "papers": [
+    {
+      "title": "Causal Inference in Biomedical Imaging via Functional Linear Structural Equation Models",
+      "authors": [
+        "Ting Li",
+        "Ethan Fan",
+        "Tengfei Li",
+        "Hongtu Zhu"
+      ],
+      "abstract": "Understanding the causal effects of organ-specific features from medical imaging on clinical outcomes is essential for biomedical research and patient care. We propose a novel Functional Linear Structural Equation Model (FLSEM) to capture the relationships among clinical outcomes, functional imaging exposures, and scalar covariates like genetics, sex, and age. Traditional methods struggle with the infinite-dimensional nature of exposures and complex covariates. Our FLSEM overcomes these challenges by establishing identifiable conditions using scalar instrumental variables. We develop the Functional Group Support Detection and Root Finding (FGS-DAR) algorithm for efficient variable selection, supported by rigorous theoretical guarantees, including selection consistency and accurate parameter estimation. We further propose a test statistic to test the nullity of the functional coefficient, establishing its null limit distribution. Our approach is validated through extensive simulations and applied to UK Biobank data, demonstrating robust performance in detecting causal relationships from medical imaging.",
+      "pdf_url": "https://arxiv.org/pdf/2601.20610v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.20610v1",
+      "published": "2026-01-28",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Exact Graph Learning via Integer Programming",
+      "authors": [
+        "Lucas Kook",
+        "Søren Wengel Mogensen"
+      ],
+      "abstract": "Learning the dependence structure among variables in complex systems is a central problem across medical, natural, and social sciences. These structures can be naturally represented by graphs, and the task of inferring such graphs from data is known as graph learning or as causal discovery if the graphs are given a causal interpretation. Existing approaches typically rely on restrictive assumptions about the data-generating process, employ greedy oracle algorithms, or solve approximate formulations of the graph learning problem. As a result, they are either sensitive to violations of central assumptions or fail to guarantee globally optimal solutions. We address these limitations by introducing a nonparametric graph learning framework based on nonparametric conditional independence testing and integer programming. We reformulate the graph learning problem as an integer-programming problem and prove that solving the integer-programming problem provides a globally optimal solution to the original graph learning problem. Our method leverages efficient encodings of graphical separation criteria, enabling the exact recovery of larger graphs than was previously feasible. We provide an implementation in the openly available R package 'glip' which supports learning (acyclic) directed (mixed) graphs and chain graphs. From the resulting output one can compute representations of the corresponding Markov equivalence classes or weak equivalence classes. Empirically, we demonstrate that our approach is faster than other existing exact graph learning procedures for a large fraction of instances and graphs of various sizes. GLIP also achieves state-of-the-art performance on simulated data and benchmark datasets across all aforementioned classes of graphs.",
+      "pdf_url": "https://arxiv.org/pdf/2601.20589v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.20589v1",
+      "published": "2026-01-28",
+      "categories": [
+        "stat.ME",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "MuVaC: AVariational Causal Framework for Multimodal Sarcasm Understanding in Dialogues",
+      "authors": [
+        "Diandian Guo",
+        "Fangfang Yuan",
+        "Cong Cao",
+        "Xixun Lin",
+        "Chuan Zhou",
+        "Hao Peng",
+        "Yanan Cao",
+        "Yanbing Liu"
+      ],
+      "abstract": "The prevalence of sarcasm in multimodal dialogues on the social platforms presents a crucial yet challenging task for understanding the true intent behind online content. Comprehensive sarcasm analysis requires two key aspects: Multimodal Sarcasm Detection (MSD) and Multimodal Sarcasm Explanation (MuSE). Intuitively, the act of detection is the result of the reasoning process that explains the sarcasm. Current research predominantly focuses on addressing either MSD or MuSE as a single task. Even though some recent work has attempted to integrate these tasks, their inherent causal dependency is often overlooked. To bridge this gap, we propose MuVaC, a variational causal inference framework that mimics human cognitive mechanisms for understanding sarcasm, enabling robust multimodal feature learning to jointly optimize MSD and MuSE. Specifically, we first model MSD and MuSE from the perspective of structural causal models, establishing variational causal pathways to define the objectives for joint optimization. Next, we design an alignment-then-fusion approach to integrate multimodal features, providing robust fusion representations for sarcasm detection and explanation generation. Finally, we enhance the reasoning trustworthiness by ensuring consistency between detection results and explanations. Experimental results demonstrate the superiority of MuVaC in public datasets, offering a new perspective for understanding multimodal sarcasm.",
+      "pdf_url": "https://arxiv.org/pdf/2601.20451v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.20451v1",
+      "published": "2026-01-28",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "United in Currency, Divided in Growth: Dynamic Effects of Euro Adoption",
+      "authors": [
+        "Harry Aytug"
+      ],
+      "abstract": "Does euro adoption affect long-run economic growth? Existing evidence is mixed, reflecting limited treated countries, long horizons that challenge inference, and heterogeneity across member states. We estimate causal dynamic and heterogeneous treatment effects using Causal Forests with Fixed Effects (CFFE), a machine-learning approach that combines causal forests with two-way fixed effects. Under a conditional parallel-trends assumption, we find that euro adoption reduced annual GDP growth by 0.3-0.4 percentage points on average. Effects emerge shortly after adoption and stabilize after roughly a decade.\n  Average effects mask substantial heterogeneity. Countries with lower initial GDP per capita experience larger and more persistent growth shortfalls than core economies. Weaker consumption and productivity growth contribute to the overall effect, while improvements in net exports partially offset these declines.\n  A two-country New Keynesian DSGE model with hysteresis generates qualitatively similar patterns: one-size-fits-all monetary policy and scarring mechanisms produce larger output losses under monetary union than under flexible exchange rates. By jointly estimating dynamic and heterogeneous treatment effects, the analysis highlights the importance of country characteristics in assessing the long-run consequences of monetary union.",
+      "pdf_url": "https://arxiv.org/pdf/2601.20169v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.20169v1",
+      "published": "2026-01-28",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Decoupling and randomization for double-indexed permutation statistics",
+      "authors": [
+        "Mingxuan Zou",
+        "Jingfan Xu",
+        "Peng Ding",
+        "Fang Han"
+      ],
+      "abstract": "This paper introduces a version of decoupling and randomization to establish concentration inequalities for double-indexed permutation statistics. The results yield, among other applications, a new combinatorial Hanson-Wright inequality and a new combinatorial Bennett inequality. Several illustrative examples from rank-based statistics, graph-based statistics, and causal inference are also provided.",
+      "pdf_url": "https://arxiv.org/pdf/2601.20018v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.20018v1",
+      "published": "2026-01-27",
+      "categories": [
+        "math.ST",
+        "econ.EM",
+        "math.PR"
+      ]
+    },
     {
       "title": "BabyReasoningBench: Generating Developmentally-Inspired Reasoning Tasks for Evaluating Baby Language Models",
       "authors": [
@@ -88,109 +171,6 @@
       "arxiv_url": "http://arxiv.org/abs/2601.18500v2",
       "published": "2026-01-26",
       "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Making medical vision-language models think causally across modalities with retrieval-augmented cross-modal reasoning",
-      "authors": [
-        "Weiqin Yang",
-        "Haowen Xue",
-        "Qingyi Peng",
-        "Hexuan Hu",
-        "Qian Huang",
-        "Tingbo Zhang"
-      ],
-      "abstract": "Medical vision-language models (VLMs) achieve strong performance in diagnostic reporting and image-text alignment, yet their underlying reasoning mechanisms remain fundamentally correlational, exhibiting reliance on superficial statistical associations that fail to capture the causal pathophysiological mechanisms central to clinical decision-making. This limitation makes them fragile, prone to hallucinations, and sensitive to dataset biases. Retrieval-augmented generation (RAG) offers a partial remedy by grounding predictions in external knowledge. However, conventional RAG depends on semantic similarity, introducing new spurious correlations. We propose Multimodal Causal Retrieval-Augmented Generation, a framework that integrates causal inference principles with multimodal retrieval. It retrieves clinically relevant exemplars and causal graphs from external sources, conditioning model reasoning on counterfactual and interventional evidence rather than correlations alone. Applied to radiology report generation, diagnosis prediction, and visual question answering, it improves factual accuracy, robustness to distribution shifts, and interpretability. Our results highlight causal retrieval as a scalable path toward medical VLMs that think beyond pattern matching, enabling trustworthy multimodal reasoning in high-stakes clinical settings.",
-      "pdf_url": "https://arxiv.org/pdf/2601.18356v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.18356v1",
-      "published": "2026-01-26",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "LLM-ForcedAligner: A Non-Autoregressive and Accurate LLM-Based Forced Aligner for Multilingual and Long-Form Speech",
-      "authors": [
-        "Bingshen Mu",
-        "Xian Shi",
-        "Xiong Wang",
-        "Hexin Liu",
-        "Jin Xu",
-        "Lei Xie"
-      ],
-      "abstract": "Forced alignment (FA) predicts start and end timestamps for words or characters in speech, but existing methods are language-specific and prone to cumulative temporal shifts. The multilingual speech understanding and long-sequence processing abilities of speech large language models (SLLMs) make them promising for FA in multilingual, crosslingual, and long-form speech settings. However, directly applying the next-token prediction paradigm of SLLMs to FA results in hallucinations and slow inference. To bridge the gap, we propose LLM-ForcedAligner, reformulating FA as a slot-filling paradigm: timestamps are treated as discrete indices, and special timestamp tokens are inserted as slots into the transcript. Conditioned on the speech embeddings and the transcript with slots, the SLLM directly predicts the time indices at slots. During training, causal attention masking with non-shifted input and label sequences allows each slot to predict its own timestamp index based on itself and preceding context, with loss computed only at slot positions. Dynamic slot insertion enables FA at arbitrary positions. Moreover, non-autoregressive inference is supported, avoiding hallucinations and improving speed. Experiments across multilingual, crosslingual, and long-form speech scenarios show that LLM-ForcedAligner achieves a 69%~78% relative reduction in accumulated averaging shift compared with prior methods. The checkpoint and inference code will be released later.",
-      "pdf_url": "https://arxiv.org/pdf/2601.18220v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.18220v1",
-      "published": "2026-01-26",
-      "categories": [
-        "cs.SD",
-        "eess.AS"
-      ]
-    },
-    {
-      "title": "\\textsc{NaVIDA}: Vision-Language Navigation with Inverse Dynamics Augmentation",
-      "authors": [
-        "Weiye Zhu",
-        "Zekai Zhang",
-        "Xiangchen Wang",
-        "Hewei Pan",
-        "Teng Wang",
-        "Tiantian Geng",
-        "Rongtao Xu",
-        "Feng Zheng"
-      ],
-      "abstract": "Vision-and-Language Navigation (VLN) requires agents to interpret natural language instructions and act coherently in visually rich environments. However, most existing methods rely on reactive state-action mappings without explicitly modeling how actions causally transform subsequent visual observations. Lacking such vision-action causality, agents cannot anticipate the visual changes induced by its own actions, leading to unstable behaviors, weak generalization, and cumulative error along trajectory. To address these issues, we introduce \\textsc{NaVIDA} (\\textbf{Nav}igation with \\textbf{I}nverse \\textbf{D}ynamics \\textbf{A}ugmentation), a unified VLN framework that couples policy learning with action-grounded visual dynamics and adaptive execution. \\textsc{NaVIDA} augments training with chunk-based inverse-dynamics supervision to learn causal relationship between visual changes and corresponding actions. To structure this supervision and extend the effective planning range, \\textsc{NaVIDA} employs hierarchical probabilistic action chunking (HPAC), which organizes trajectories into multi-step chunks and provides discriminative, longer-range visual-change cues. To further curb error accumulation and stabilize behavior at inference, an entropy-guided mechanism adaptively sets the execution horizon of action chunks. Extensive experiments show that \\textsc{NaVIDA} achieves superior navigation performance compared to state-of-the-art methods with fewer parameters (3B vs. 8B). Real-world robot evaluations further validate the practical feasibility and effectiveness of our approach. Code and data will be available upon acceptance.",
-      "pdf_url": "https://arxiv.org/pdf/2601.18188v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.18188v1",
-      "published": "2026-01-26",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "VidLaDA: Bidirectional Diffusion Large Language Models for Efficient Video Understanding",
-      "authors": [
-        "Zhihao He",
-        "Tieyuan Chen",
-        "Kangyu Wang",
-        "Ziran Qin",
-        "Yang Shao",
-        "Chaofan Gan",
-        "Shijie Li",
-        "Zuxuan Wu",
-        "Weiyao Lin"
-      ],
-      "abstract": "Standard Autoregressive Video LLMs inevitably suffer from causal masking biases that hinder global spatiotemporal modeling, leading to suboptimal understanding efficiency. We propose VidLaDA, a Video LLM based on Diffusion Language Model utilizing bidirectional attention to capture bidirectional dependencies. To further tackle the inference bottleneck of diffusion decoding on massive video tokens, we introduce MARS-Cache. This framework accelerates inference by combining asynchronous visual cache refreshing with frame-wise chunk attention, effectively pruning redundancy while preserving global connectivity via anchor tokens. Extensive experiments show VidLaDA outperforms diffusion baselines and rivals state-of-the-art autoregressive models (e.g., Qwen2.5-VL and LLaVA-Video), with MARS-Cache delivering over 12x speedup without compromising reasoning accuracy. Code and checkpoints are open-sourced at https://github.com/ziHoHe/VidLaDA.",
-      "pdf_url": "https://arxiv.org/pdf/2601.17868v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.17868v1",
-      "published": "2026-01-25",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "S$^3$-Attention:Attention-Aligned Endogenous Retrieval for Memory-Bounded Long-Context Inference",
-      "authors": [
-        "Qingsen Ma",
-        "Dianyun Wang",
-        "Yaoye Wang",
-        "Lechen Ning",
-        "Sujie Zhu",
-        "Xiaohang Zhang",
-        "Jiaming Lyu",
-        "Linhao Ren",
-        "Zhenbo Xu",
-        "Zhaofeng He"
-      ],
-      "abstract": "Large language models are increasingly applied to multi-document and long-form inputs, yet long-context inference remains memory- and noise-inefficient. Key-value (KV) caching scales linearly with context length, while external retrieval methods often return lexically similar but causally irrelevant passages.\n  We present S3-Attention, a memory-first inference-time framework that treats long-context processing as attention-aligned endogenous retrieval. S3-Attention decodes transient key and query projections into top-k sparse feature identifiers using lightweight sparse autoencoders, and constructs a CPU-based inverted index mapping features to token positions or spans during a single streaming scan. This design allows the KV cache to be discarded entirely and bounds GPU memory usage by the scan chunk size.\n  At generation time, feature co-activation is used to retrieve compact evidence spans, optionally fused with BM25 for exact lexical matching. Under a unified LongBench evaluation protocol with fixed prompting, decoding, and matched token budgets, S3-Hybrid closely matches full-context inference across multiple model families and improves robustness in several information-dense settings. We also report an engineering limitation of the current prototype, which incurs higher wall-clock latency than optimized full-KV baselines, motivating future kernel-level optimization.",
-      "pdf_url": "https://arxiv.org/pdf/2601.17702v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.17702v1",
-      "published": "2026-01-25",
-      "categories": [
-        "cs.CL",
         "cs.LG"
       ]
     }
