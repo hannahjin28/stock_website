@@ -1,6 +1,148 @@
 {
-  "last_updated": "2026-01-30T01:08:14.191413",
+  "last_updated": "2026-01-31T01:05:23.460540",
   "papers": [
+    {
+      "title": "Causal Autoregressive Diffusion Language Model",
+      "authors": [
+        "Junhao Ruan",
+        "Bei Li",
+        "Yongjing Yin",
+        "Pengcheng Huang",
+        "Xin Chen",
+        "Jingang Wang",
+        "Xunliang Cai",
+        "Tong Xiao",
+        "JingBo Zhu"
+      ],
+      "abstract": "In this work, we propose Causal Autoregressive Diffusion (CARD), a novel framework that unifies the training efficiency of ARMs with the high-throughput inference of diffusion models. CARD reformulates the diffusion process within a strictly causal attention mask, enabling dense, per-token supervision in a single forward pass. To address the optimization instability of causal diffusion, we introduce a soft-tailed masking schema to preserve local context and a context-aware reweighting mechanism derived from signal-to-noise principles. This design enables dynamic parallel decoding, where the model leverages KV-caching to adaptively generate variable-length token sequences based on confidence. Empirically, CARD outperforms existing discrete diffusion baselines while reducing training latency by 3 $\\times$ compared to block diffusion methods. Our results demonstrate that CARD achieves ARM-level data efficiency while unlocking the latency benefits of parallel generation, establishing a robust paradigm for next-generation efficient LLMs.",
+      "pdf_url": "https://arxiv.org/pdf/2601.22031v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.22031v1",
+      "published": "2026-01-29",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Causal World Modeling for Robot Control",
+      "authors": [
+        "Lin Li",
+        "Qihang Zhang",
+        "Yiming Luo",
+        "Shuai Yang",
+        "Ruilin Wang",
+        "Fei Han",
+        "Mingrui Yu",
+        "Zelin Gao",
+        "Nan Xue",
+        "Xing Zhu",
+        "Yujun Shen",
+        "Yinghao Xu"
+      ],
+      "abstract": "This work highlights that video world modeling, alongside vision-language pre-training, establishes a fresh and independent foundation for robot learning. Intuitively, video world models provide the ability to imagine the near future by understanding the causality between actions and visual dynamics. Inspired by this, we introduce LingBot-VA, an autoregressive diffusion framework that learns frame prediction and policy execution simultaneously. Our model features three carefully crafted designs: (1) a shared latent space, integrating vision and action tokens, driven by a Mixture-of-Transformers (MoT) architecture, (2) a closed-loop rollout mechanism, allowing for ongoing acquisition of environmental feedback with ground-truth observations, (3) an asynchronous inference pipeline, parallelizing action prediction and motor execution to support efficient control. We evaluate our model on both simulation benchmarks and real-world scenarios, where it shows significant promise in long-horizon manipulation, data efficiency in post-training, and strong generalizability to novel configurations. The code and model are made publicly available to facilitate the community.",
+      "pdf_url": "https://arxiv.org/pdf/2601.21998v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.21998v1",
+      "published": "2026-01-29",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "FBS: Modeling Native Parallel Reading inside a Transformer",
+      "authors": [
+        "Tongxi Wang"
+      ],
+      "abstract": "Large language models (LLMs) excel across many tasks, yet inference is still dominated by strictly token-by-token autoregression. Existing acceleration methods largely patch this pipeline and miss core human-reading ingredients: content-adaptive foresight, chunk-structure-aware compute allocation, and train--test consistency for preview/skimming. We propose the \\textbf{Fovea-Block-Skip Transformer} (FBS), which injects a causal, trainable loop into Transformers via Parafovea-Attention Window (PAW), Chunk-Head (CH), and Skip-Gate (SG). Across diverse benchmarks, FBS improves the quality-efficiency trade-off without increasing parameters, and ablations show the three modules are complementary.",
+      "pdf_url": "https://arxiv.org/pdf/2601.21708v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.21708v1",
+      "published": "2026-01-29",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Differential Dynamic Causal Nets: Model Construction, Identification and Group Comparisons",
+      "authors": [
+        "Kang You",
+        "Gary Green",
+        "Jian Zhang"
+      ],
+      "abstract": "Pathophysiolpgical modelling of brain systems from microscale to macroscale remains difficult in group comparisons partly because of the infeasibility of modelling the interactions of thousands of neurons at the scales involved. Here, to address the challenge, we present a novel approach to construct differential causal networks directly from electroencephalogram (EEG) data. The proposed network is based on conditionally coupled neuronal circuits which describe the average behaviour of interacting neuron populations that contribute to observed EEG data. In the network, each node represents a parameterised local neural system while directed edges stand for node-wise connections with transmission parameters. The network is hierarchically structured in the sense that node and edge parameters are varying in subjects but follow a mixed-effects model. A novel evolutionary optimisation algorithm for parameter inference in the proposed method is developed using a loss function derived from Chen-Fliess expansions of stochastic differential equations. The method is demonstrated by application to the fitting of coupled Jansen-Rit local models. The performance of the proposed method is evaluated on both synthetic and real EEG data. In the real EEG data analysis, we track changes in the parameters that characterise dynamic causality within brains that demonstrate epileptic activity. We show evidence of network functional disruptions, due to imbalance of excitatory-inhibitory interneurons and altered epileptic brain connectivity, before and during seizure periods.",
+      "pdf_url": "https://arxiv.org/pdf/2601.21478v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.21478v1",
+      "published": "2026-01-29",
+      "categories": [
+        "q-bio.NC",
+        "stat.AP",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Modeling Endogenous Logic: Causal Neuro-Symbolic Reasoning Model for Explainable Multi-Behavior Recommendation",
+      "authors": [
+        "Yuzhe Chen",
+        "Jie Cao",
+        "Youquan Wang",
+        "Haicheng Tao",
+        "Darko B. Vukovic",
+        "Jia Wu"
+      ],
+      "abstract": "Existing multi-behavior recommendations tend to prioritize performance at the expense of explainability, while current explainable methods suffer from limited generalizability due to their reliance on external information. Neuro-Symbolic integration offers a promising avenue for explainability by combining neural networks with symbolic logic rule reasoning. Concurrently, we posit that user behavior chains inherently embody an endogenous logic suitable for explicit reasoning. However, these observational multiple behaviors are plagued by confounders, causing models to learn spurious correlations. By incorporating causal inference into this Neuro-Symbolic framework, we propose a novel Causal Neuro-Symbolic Reasoning model for Explainable Multi-Behavior Recommendation (CNRE). CNRE operationalizes the endogenous logic by simulating a human-like decision-making process. Specifically, CNRE first employs hierarchical preference propagation to capture heterogeneous cross-behavior dependencies. Subsequently, it models the endogenous logic rule implicit in the user's behavior chain based on preference strength, and adaptively dispatches to the corresponding neural-logic reasoning path (e.g., conjunction, disjunction). This process generates an explainable causal mediator that approximates an ideal state isolated from confounding effects. Extensive experiments on three large-scale datasets demonstrate CNRE's significant superiority over state-of-the-art baselines, offering multi-level explainability from model design and decision process to recommendation results.",
+      "pdf_url": "https://arxiv.org/pdf/2601.21335v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.21335v1",
+      "published": "2026-01-29",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Data-Driven Generation of Neutron Star Equations of State Using Variational Autoencoders",
+      "authors": [
+        "Alex Ross",
+        "Tianqi Zhao",
+        "Sanjay Reddy"
+      ],
+      "abstract": "We develop a machine learning model based on a structured variational autoencoder (VAE) framework to reconstruct and generate neutron star (NS) equations of state (EOS). The VAE consists of an encoder network that maps high-dimensional EOS data into a lower-dimensional latent space and a decoder network that reconstructs the full EOS from the latent representation. The latent space includes supervised NS observables derived from the training EOS data, as well as latent random variables corresponding to additional unspecified EOS features learned automatically. Sampling the latent space enables the generation of new, causal, and stable EOS models that satisfy astronomical constraints on the supervised NS observables, while allowing Bayesian inference of the EOS incorporating additional multimessenger data, including gravitational waves from LIGO/Virgo and mass and radius measurements of pulsars. Based on a VAE trained on a Skyrme EOS dataset, we find that a latent space with two supervised NS observables, the maximum mass $(M_{\\max})$ and the canonical radius $(R_{1.4})$, together with one latent random variable controlling the EOS near the crust--core transition, can already reconstruct Skyrme EOSs with high fidelity, achieving mean absolute percentage errors of approximately $(0.15\\%)$ for $(M_{\\max})$ and $(R_{1.4})$ derived from the decoder-reconstructed EOS.",
+      "pdf_url": "https://arxiv.org/pdf/2601.21231v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.21231v1",
+      "published": "2026-01-29",
+      "categories": [
+        "astro-ph.HE",
+        "astro-ph.IM",
+        "astro-ph.SR",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Sycophantic Anchors: Localizing and Quantifying User Agreement in Reasoning Models",
+      "authors": [
+        "Jacek Duszenko"
+      ],
+      "abstract": "Reasoning models frequently agree with incorrect user suggestions -- a behavior known as sycophancy. However, it is unclear where in the reasoning trace this agreement originates and how strong the commitment is. To localize and quantify this behavior, we introduce \\emph{sycophantic anchors} -- sentences that causally lock models into user agreement. Analyzing over 10,000 counterfactual rollouts on a distilled reasoning model, we show that anchors can be reliably detected and quantified mid-inference. Linear probes distinguish sycophantic anchors with 84.6\\% balanced accuracy, while activation-based regressors predict the magnitude of the commitment ($R^2 = 0.74$). We further observe asymmetry where sycophantic anchors are significantly more distinguishable than correct reasoning anchors, and find that sycophancy builds gradually during reasoning, revealing a potential window for intervention. These results offer sentence-level mechanisms for localizing model misalignment mid-inference.",
+      "pdf_url": "https://arxiv.org/pdf/2601.21183v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.21183v1",
+      "published": "2026-01-29",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "MapPFN: Learning Causal Perturbation Maps in Context",
+      "authors": [
+        "Marvin Sextro",
+        "Weronika Kłos",
+        "Gabriel Dernbach"
+      ],
+      "abstract": "Planning effective interventions in biological systems requires treatment-effect models that adapt to unseen biological contexts by identifying their specific underlying mechanisms. Yet single-cell perturbation datasets span only a handful of biological contexts, and existing methods cannot leverage new interventional evidence at inference time to adapt beyond their training data. To meta-learn a perturbation effect estimator, we present MapPFN, a prior-data fitted network (PFN) pretrained on synthetic data generated from a prior over causal perturbations. Given a set of experiments, MapPFN uses in-context learning to predict post-perturbation distributions, without gradient-based optimization. Despite being pretrained on in silico gene knockouts alone, MapPFN identifies differentially expressed genes, matching the performance of models trained on real single-cell data. Our code and data are available at https://github.com/marvinsxtr/MapPFN.",
+      "pdf_url": "https://arxiv.org/pdf/2601.21092v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.21092v1",
+      "published": "2026-01-28",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Causal Inference in Biomedical Imaging via Functional Linear Structural Equation Models",
       "authors": [
@@ -30,147 +172,6 @@
       "published": "2026-01-28",
       "categories": [
         "stat.ME",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "MuVaC: AVariational Causal Framework for Multimodal Sarcasm Understanding in Dialogues",
-      "authors": [
-        "Diandian Guo",
-        "Fangfang Yuan",
-        "Cong Cao",
-        "Xixun Lin",
-        "Chuan Zhou",
-        "Hao Peng",
-        "Yanan Cao",
-        "Yanbing Liu"
-      ],
-      "abstract": "The prevalence of sarcasm in multimodal dialogues on the social platforms presents a crucial yet challenging task for understanding the true intent behind online content. Comprehensive sarcasm analysis requires two key aspects: Multimodal Sarcasm Detection (MSD) and Multimodal Sarcasm Explanation (MuSE). Intuitively, the act of detection is the result of the reasoning process that explains the sarcasm. Current research predominantly focuses on addressing either MSD or MuSE as a single task. Even though some recent work has attempted to integrate these tasks, their inherent causal dependency is often overlooked. To bridge this gap, we propose MuVaC, a variational causal inference framework that mimics human cognitive mechanisms for understanding sarcasm, enabling robust multimodal feature learning to jointly optimize MSD and MuSE. Specifically, we first model MSD and MuSE from the perspective of structural causal models, establishing variational causal pathways to define the objectives for joint optimization. Next, we design an alignment-then-fusion approach to integrate multimodal features, providing robust fusion representations for sarcasm detection and explanation generation. Finally, we enhance the reasoning trustworthiness by ensuring consistency between detection results and explanations. Experimental results demonstrate the superiority of MuVaC in public datasets, offering a new perspective for understanding multimodal sarcasm.",
-      "pdf_url": "https://arxiv.org/pdf/2601.20451v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.20451v1",
-      "published": "2026-01-28",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "United in Currency, Divided in Growth: Dynamic Effects of Euro Adoption",
-      "authors": [
-        "Harry Aytug"
-      ],
-      "abstract": "Does euro adoption affect long-run economic growth? Existing evidence is mixed, reflecting limited treated countries, long horizons that challenge inference, and heterogeneity across member states. We estimate causal dynamic and heterogeneous treatment effects using Causal Forests with Fixed Effects (CFFE), a machine-learning approach that combines causal forests with two-way fixed effects. Under a conditional parallel-trends assumption, we find that euro adoption reduced annual GDP growth by 0.3-0.4 percentage points on average. Effects emerge shortly after adoption and stabilize after roughly a decade.\n  Average effects mask substantial heterogeneity. Countries with lower initial GDP per capita experience larger and more persistent growth shortfalls than core economies. Weaker consumption and productivity growth contribute to the overall effect, while improvements in net exports partially offset these declines.\n  A two-country New Keynesian DSGE model with hysteresis generates qualitatively similar patterns: one-size-fits-all monetary policy and scarring mechanisms produce larger output losses under monetary union than under flexible exchange rates. By jointly estimating dynamic and heterogeneous treatment effects, the analysis highlights the importance of country characteristics in assessing the long-run consequences of monetary union.",
-      "pdf_url": "https://arxiv.org/pdf/2601.20169v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.20169v1",
-      "published": "2026-01-28",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Decoupling and randomization for double-indexed permutation statistics",
-      "authors": [
-        "Mingxuan Zou",
-        "Jingfan Xu",
-        "Peng Ding",
-        "Fang Han"
-      ],
-      "abstract": "This paper introduces a version of decoupling and randomization to establish concentration inequalities for double-indexed permutation statistics. The results yield, among other applications, a new combinatorial Hanson-Wright inequality and a new combinatorial Bennett inequality. Several illustrative examples from rank-based statistics, graph-based statistics, and causal inference are also provided.",
-      "pdf_url": "https://arxiv.org/pdf/2601.20018v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.20018v1",
-      "published": "2026-01-27",
-      "categories": [
-        "math.ST",
-        "econ.EM",
-        "math.PR"
-      ]
-    },
-    {
-      "title": "BabyReasoningBench: Generating Developmentally-Inspired Reasoning Tasks for Evaluating Baby Language Models",
-      "authors": [
-        "Kaustubh D. Dhole"
-      ],
-      "abstract": "Traditional evaluations of reasoning capabilities of language models are dominated by adult-centric benchmarks that presuppose broad world knowledge, complex instruction following, and mature pragmatic competence. These assumptions are mismatched to baby language models trained on developmentally plausible input such as child-directed speech and early-childhood narratives, and they obscure which reasoning abilities (if any) emerge under such constraints. We introduce BabyReasoningBench, a GPT-5.2 generated benchmark of 19 reasoning tasks grounded in classic paradigms from developmental psychology, spanning theory of mind, analogical and relational reasoning, causal inference and intervention selection, and core reasoning primitives that are known to be confounded by memory and pragmatics. We find that two GPT-2 based baby language models (pretrained on 10M and 100M of child-directed speech text) show overall low but uneven performance, with dissociations across task families: scaling improves several causal and physical reasoning tasks, while belief attribution and pragmatics-sensitive tasks remain challenging. BabyReasoningBench provides a developmentally grounded lens for analyzing what kinds of reasoning are supported by child-like training distributions, and for testing mechanistic hypotheses about how such abilities emerge.",
-      "pdf_url": "https://arxiv.org/pdf/2601.18933v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.18933v1",
-      "published": "2026-01-26",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "GraIP: A Benchmarking Framework For Neural Graph Inverse Problems",
-      "authors": [
-        "Semih Cantürk",
-        "Andrei Manolache",
-        "Arman Mielke",
-        "Chendi Qian",
-        "Antoine Siraudin",
-        "Christopher Morris",
-        "Mathias Niepert",
-        "Guy Wolf"
-      ],
-      "abstract": "A wide range of graph learning tasks, such as structure discovery, temporal graph analysis, and combinatorial optimization, focus on inferring graph structures from data, rather than making predictions on given graphs. However, the respective methods to solve such problems are often developed in an isolated, task-specific manner and thus lack a unifying theoretical foundation. Here, we provide a stepping stone towards the formation of such a foundation and further development by introducing the Neural Graph Inverse Problem (GraIP) conceptual framework, which formalizes and reframes a broad class of graph learning tasks as inverse problems. Unlike discriminative approaches that directly predict target variables from given graph inputs, the GraIP paradigm addresses inverse problems, i.e., it relies on observational data and aims to recover the underlying graph structure by reversing the forward process, such as message passing or network dynamics, that produced the observed outputs. We demonstrate the versatility of GraIP across various graph learning tasks, including rewiring, causal discovery, and neural relational inference. We also propose benchmark datasets and metrics for each GraIP domain considered, and characterize and empirically evaluate existing baseline methods used to solve them. Overall, our unifying perspective bridges seemingly disparate applications and provides a principled approach to structural learning in constrained and combinatorial settings while encouraging cross-pollination of existing methods across graph inverse problems.",
-      "pdf_url": "https://arxiv.org/pdf/2601.18917v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.18917v1",
-      "published": "2026-01-26",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "From Fuzzy to Exact: The Halo Architecture for Infinite-Depth Reasoning via Rational Arithmetic",
-      "authors": [
-        "Hansheng Ren"
-      ],
-      "abstract": "Current paradigms in Deep Learning prioritize computational throughput over numerical precision, relying on the assumption that intelligence emerges from statistical correlation at scale. In this paper, we challenge this orthodoxy. We propose the Exactness Hypothesis: that General Intelligence (AGI), specifically high-order causal inference, requires a computational substrate capable of Arbitrary Precision Arithmetic. We argue that the \"hallucinations\" and logical incoherence seen in current Large Language Models (LLMs) are artifacts of IEEE 754 floating-point approximation errors accumulating over deep compositional functions. To mitigate this, we introduce the Halo Architecture, a paradigm shift to Rational Arithmetic ($\\mathbb{Q}$) supported by a novel Exact Inference Unit (EIU). Empirical validation on the Huginn-0125 prototype demonstrates that while 600B-parameter scale BF16 baselines collapse in chaotic systems, Halo maintains zero numerical divergence indefinitely. This work establishes exact arithmetic as a prerequisite for reducing logical uncertainty in System 2 AGI.",
-      "pdf_url": "https://arxiv.org/pdf/2601.18702v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.18702v1",
-      "published": "2026-01-26",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.AR"
-      ]
-    },
-    {
-      "title": "CASSANDRA: Programmatic and Probabilistic Learning and Inference for Stochastic World Modeling",
-      "authors": [
-        "Panagiotis Lymperopoulos",
-        "Abhiramon Rajasekharan",
-        "Ian Berlot-Attwell",
-        "Stéphane Aroca-Ouellette",
-        "Kaheer Suleman"
-      ],
-      "abstract": "Building world models is essential for planning in real-world domains such as businesses. Since such domains have rich semantics, we can leverage world knowledge to effectively model complex action effects and causal relationships from limited data. In this work, we propose CASSANDRA, a neurosymbolic world modeling approach that leverages an LLM as a knowledge prior to construct lightweight transition models for planning. CASSANDRA integrates two components: (1) LLM-synthesized code to model deterministic features, and (2) LLM-guided structure learning of a probabilistic graphical model to capture causal relationships among stochastic variables. We evaluate CASSANDRA in (i) a small-scale coffee-shop simulator and (ii) a complex theme park business simulator, where we demonstrate significant improvements in transition prediction and planning over baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2601.18620v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.18620v1",
-      "published": "2026-01-26",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Nearly Optimal Bayesian Inference for Structural Missingness",
-      "authors": [
-        "Chen Liang",
-        "Donghua Yang",
-        "Yutong Zhao",
-        "Tianle Zhang",
-        "Shenghang Zhou",
-        "Zhiyu Liang",
-        "Hengtong Zhang",
-        "Hongzhi Wang",
-        "Ziqi Li",
-        "Xiyang Zhang",
-        "Zheng Liang",
-        "Yifei Li"
-      ],
-      "abstract": "Structural missingness breaks 'just impute and train': values can be undefined by causal or logical constraints, and the mask may depend on observed variables, unobserved variables (MNAR), and other missingness indicators. It simultaneously brings (i) a catch-22 situation with causal loop, prediction needs the missing features, yet inferring them depends on the missingness mechanism, (ii) under MNAR, the unseen are different, the missing part can come from a shifted distribution, and (iii) plug-in imputation, a single fill-in can lock in uncertainty and yield overconfident, biased decisions. In the Bayesian view, prediction via the posterior predictive distribution integrates over the full model posterior uncertainty, rather than relying on a single point estimate. This framework decouples (i) learning an in-model missing-value posterior from (ii) label prediction by optimizing the predictive posterior distribution, enabling posterior integration. This decoupling yields an in-model almost-free-lunch: once the posterior is learned, prediction is plug-and-play while preserving uncertainty propagation. It achieves SOTA on 43 classification and 15 imputation benchmarks, with finite-sample near Bayes-optimality guarantees under our SCM prior.",
-      "pdf_url": "https://arxiv.org/pdf/2601.18500v2",
-      "arxiv_url": "http://arxiv.org/abs/2601.18500v2",
-      "published": "2026-01-26",
-      "categories": [
         "cs.LG"
       ]
     }
