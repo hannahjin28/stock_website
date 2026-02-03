@@ -1,6 +1,70 @@
 {
-  "last_updated": "2026-02-02T01:12:04.573838",
+  "last_updated": "2026-02-03T01:12:47.529220",
   "papers": [
+    {
+      "title": "RAudit: A Blind Auditing Protocol for Large Language Model Reasoning",
+      "authors": [
+        "Edward Y. Chang",
+        "Longling Geng"
+      ],
+      "abstract": "Inference-time scaling can amplify reasoning pathologies: sycophancy, rung collapse, and premature certainty. We present RAudit, a diagnostic protocol for auditing LLM reasoning without ground truth access. The key constraint is blindness: the auditor evaluates only whether derivation steps support conclusions, enabling detection of trace-output inconsistency and, when latent competence exists, its recovery. RAudit measures process quality via CRIT-based reasonableness scores and varies critique formulation to study how social framing affects model response. We prove bounded correction and $O(\\log(1/ε))$ termination. Experiments on mathematical reasoning (CAP-GSM8K) and causal judgment (CausalL2) reveal four mechanisms explaining model unreliability: (1) Latent Competence Suppression, where models derive correct answers then overwrite them under social pressure; (2) The False Competence Trap, where weaker judges mask sycophancy that stronger judges expose; (3) The Complexity-Vulnerability Tradeoff, where causal tasks induce more than 10 times higher sycophancy than mathematical tasks; and (4) Iatrogenic Critique, where authoritative correction harms weaker models. These findings challenge assumptions that capability implies robustness and that stronger feedback yields better outputs.",
+      "pdf_url": "https://arxiv.org/pdf/2601.23133v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.23133v1",
+      "published": "2026-01-30",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Decomposing Epistemic Uncertainty for Causal Decision Making",
+      "authors": [
+        "Md Musfiqur Rahman",
+        "Ziwei Jiang",
+        "Hilaf Hasson",
+        "Murat Kocaoglu"
+      ],
+      "abstract": "Causal inference from observational data provides strong evidence for the best action in decision-making without performing expensive randomized trials. The effect of an action is usually not identifiable under unobserved confounding, even with an infinite amount of data. Recent work uses neural networks to obtain practical bounds to such causal effects, which is often an intractable problem. However, these approaches may overfit to the dataset and be overconfident in their causal effect estimates. Moreover, there is currently no systematic approach to disentangle how much of the width of causal effect bounds is due to fundamental non-identifiability versus how much is due to finite-sample limitations. We propose a novel framework to address this problem by considering a confidence set around the empirical observational distribution and obtaining the intersection of causal effect bounds for all distributions in this confidence set. This allows us to distinguish the part of the interval that can be reduced by collecting more samples, which we call sample uncertainty, from the part that can only be reduced by observing more variables, such as latent confounders or instrumental variables, but not with more data, which we call non-ID uncertainty. The upper and lower bounds to this intersection are obtained by solving min-max and max-min problems with neural causal models by searching over all distributions that the dataset might have been sampled from, and all SCMs that entail the corresponding distribution. We demonstrate via extensive experiments on synthetic and real-world datasets that our algorithm can determine when collecting more samples will not help determine the best action. This can guide practitioners to collect more variables or lean towards a randomized study for best action identification.",
+      "pdf_url": "https://arxiv.org/pdf/2601.22736v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.22736v1",
+      "published": "2026-01-30",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Score-based Integrated Gradient for Root Cause Explanations of Outliers",
+      "authors": [
+        "Phuoc Nguyen",
+        "Truyen Tran",
+        "Sunil Gupta",
+        "Svetha Venkatesh"
+      ],
+      "abstract": "Identifying the root causes of outliers is a fundamental problem in causal inference and anomaly detection. Traditional approaches based on heuristics or counterfactual reasoning often struggle under uncertainty and high-dimensional dependencies. We introduce SIREN, a novel and scalable method that attributes the root causes of outliers by estimating the score functions of the data likelihood. Attribution is computed via integrated gradients that accumulate score contributions along paths from the outlier toward the normal data distribution. Our method satisfies three of the four classic Shapley value axioms - dummy, efficiency, and linearity - as well as an asymmetry axiom derived from the underlying causal structure. Unlike prior work, SIREN operates directly on the score function, enabling tractable and uncertainty-aware root cause attribution in nonlinear, high-dimensional, and heteroscedastic causal models. Extensive experiments on synthetic random graphs and real-world cloud service and supply chain datasets show that SIREN outperforms state-of-the-art baselines in both attribution accuracy and computational efficiency.",
+      "pdf_url": "https://arxiv.org/pdf/2601.22399v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.22399v1",
+      "published": "2026-01-29",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Causal Imitation Learning Under Measurement Error and Distribution Shift",
+      "authors": [
+        "Shi Bo",
+        "AmirEmad Ghassami"
+      ],
+      "abstract": "We study offline imitation learning (IL) when part of the decision-relevant state is observed only through noisy measurements and the distribution may change between training and deployment. Such settings induce spurious state-action correlations, so standard behavioral cloning (BC) -- whether conditioning on raw measurements or ignoring them -- can converge to systematically biased policies under distribution shift. We propose a general framework for IL under measurement error, inspired by explicitly modeling the causal relationships among the variables, yielding a target that retains a causal interpretation and is robust to distribution shift. Building on ideas from proximal causal inference, we introduce \\texttt{CausIL}, which treats noisy state observations as proxy variables, and we provide identification conditions under which the target policy is recoverable from demonstrations without rewards or interactive expert queries. We develop estimators for both discrete and continuous state spaces; for continuous settings, we use an adversarial procedure over RKHS function classes to learn the required parameters. We evaluate \\texttt{CausIL} on semi-simulated longitudinal data from the PhysioNet/Computing in Cardiology Challenge 2019 cohort and demonstrate improved robustness to distribution shift compared to BC baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2601.22206v1",
+      "arxiv_url": "http://arxiv.org/abs/2601.22206v1",
+      "published": "2026-01-29",
+      "categories": [
+        "cs.LG",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Causal Autoregressive Diffusion Language Model",
       "authors": [
@@ -111,67 +175,6 @@
         "astro-ph.HE",
         "astro-ph.IM",
         "astro-ph.SR",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Sycophantic Anchors: Localizing and Quantifying User Agreement in Reasoning Models",
-      "authors": [
-        "Jacek Duszenko"
-      ],
-      "abstract": "Reasoning models frequently agree with incorrect user suggestions -- a behavior known as sycophancy. However, it is unclear where in the reasoning trace this agreement originates and how strong the commitment is. To localize and quantify this behavior, we introduce \\emph{sycophantic anchors} -- sentences that causally lock models into user agreement. Analyzing over 10,000 counterfactual rollouts on a distilled reasoning model, we show that anchors can be reliably detected and quantified mid-inference. Linear probes distinguish sycophantic anchors with 84.6\\% balanced accuracy, while activation-based regressors predict the magnitude of the commitment ($R^2 = 0.74$). We further observe asymmetry where sycophantic anchors are significantly more distinguishable than correct reasoning anchors, and find that sycophancy builds gradually during reasoning, revealing a potential window for intervention. These results offer sentence-level mechanisms for localizing model misalignment mid-inference.",
-      "pdf_url": "https://arxiv.org/pdf/2601.21183v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.21183v1",
-      "published": "2026-01-29",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "MapPFN: Learning Causal Perturbation Maps in Context",
-      "authors": [
-        "Marvin Sextro",
-        "Weronika Kłos",
-        "Gabriel Dernbach"
-      ],
-      "abstract": "Planning effective interventions in biological systems requires treatment-effect models that adapt to unseen biological contexts by identifying their specific underlying mechanisms. Yet single-cell perturbation datasets span only a handful of biological contexts, and existing methods cannot leverage new interventional evidence at inference time to adapt beyond their training data. To meta-learn a perturbation effect estimator, we present MapPFN, a prior-data fitted network (PFN) pretrained on synthetic data generated from a prior over causal perturbations. Given a set of experiments, MapPFN uses in-context learning to predict post-perturbation distributions, without gradient-based optimization. Despite being pretrained on in silico gene knockouts alone, MapPFN identifies differentially expressed genes, matching the performance of models trained on real single-cell data. Our code and data are available at https://github.com/marvinsxtr/MapPFN.",
-      "pdf_url": "https://arxiv.org/pdf/2601.21092v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.21092v1",
-      "published": "2026-01-28",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Inference in Biomedical Imaging via Functional Linear Structural Equation Models",
-      "authors": [
-        "Ting Li",
-        "Ethan Fan",
-        "Tengfei Li",
-        "Hongtu Zhu"
-      ],
-      "abstract": "Understanding the causal effects of organ-specific features from medical imaging on clinical outcomes is essential for biomedical research and patient care. We propose a novel Functional Linear Structural Equation Model (FLSEM) to capture the relationships among clinical outcomes, functional imaging exposures, and scalar covariates like genetics, sex, and age. Traditional methods struggle with the infinite-dimensional nature of exposures and complex covariates. Our FLSEM overcomes these challenges by establishing identifiable conditions using scalar instrumental variables. We develop the Functional Group Support Detection and Root Finding (FGS-DAR) algorithm for efficient variable selection, supported by rigorous theoretical guarantees, including selection consistency and accurate parameter estimation. We further propose a test statistic to test the nullity of the functional coefficient, establishing its null limit distribution. Our approach is validated through extensive simulations and applied to UK Biobank data, demonstrating robust performance in detecting causal relationships from medical imaging.",
-      "pdf_url": "https://arxiv.org/pdf/2601.20610v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.20610v1",
-      "published": "2026-01-28",
-      "categories": [
-        "stat.ME",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "Exact Graph Learning via Integer Programming",
-      "authors": [
-        "Lucas Kook",
-        "Søren Wengel Mogensen"
-      ],
-      "abstract": "Learning the dependence structure among variables in complex systems is a central problem across medical, natural, and social sciences. These structures can be naturally represented by graphs, and the task of inferring such graphs from data is known as graph learning or as causal discovery if the graphs are given a causal interpretation. Existing approaches typically rely on restrictive assumptions about the data-generating process, employ greedy oracle algorithms, or solve approximate formulations of the graph learning problem. As a result, they are either sensitive to violations of central assumptions or fail to guarantee globally optimal solutions. We address these limitations by introducing a nonparametric graph learning framework based on nonparametric conditional independence testing and integer programming. We reformulate the graph learning problem as an integer-programming problem and prove that solving the integer-programming problem provides a globally optimal solution to the original graph learning problem. Our method leverages efficient encodings of graphical separation criteria, enabling the exact recovery of larger graphs than was previously feasible. We provide an implementation in the openly available R package 'glip' which supports learning (acyclic) directed (mixed) graphs and chain graphs. From the resulting output one can compute representations of the corresponding Markov equivalence classes or weak equivalence classes. Empirically, we demonstrate that our approach is faster than other existing exact graph learning procedures for a large fraction of instances and graphs of various sizes. GLIP also achieves state-of-the-art performance on simulated data and benchmark datasets across all aforementioned classes of graphs.",
-      "pdf_url": "https://arxiv.org/pdf/2601.20589v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.20589v1",
-      "published": "2026-01-28",
-      "categories": [
-        "stat.ME",
         "cs.LG"
       ]
     }
