@@ -1,181 +1,170 @@
 {
-  "last_updated": "2026-02-03T01:12:47.529220",
+  "last_updated": "2026-02-04T01:07:36.184787",
   "papers": [
     {
-      "title": "RAudit: A Blind Auditing Protocol for Large Language Model Reasoning",
+      "title": "C-kNN-LSH: A Nearest-Neighbor Algorithm for Sequential Counterfactual Inference",
       "authors": [
-        "Edward Y. Chang",
-        "Longling Geng"
+        "Jing Wang",
+        "Jie Shen",
+        "Qiaomin Xie",
+        "Jeremy C Weiss"
       ],
-      "abstract": "Inference-time scaling can amplify reasoning pathologies: sycophancy, rung collapse, and premature certainty. We present RAudit, a diagnostic protocol for auditing LLM reasoning without ground truth access. The key constraint is blindness: the auditor evaluates only whether derivation steps support conclusions, enabling detection of trace-output inconsistency and, when latent competence exists, its recovery. RAudit measures process quality via CRIT-based reasonableness scores and varies critique formulation to study how social framing affects model response. We prove bounded correction and $O(\\log(1/ε))$ termination. Experiments on mathematical reasoning (CAP-GSM8K) and causal judgment (CausalL2) reveal four mechanisms explaining model unreliability: (1) Latent Competence Suppression, where models derive correct answers then overwrite them under social pressure; (2) The False Competence Trap, where weaker judges mask sycophancy that stronger judges expose; (3) The Complexity-Vulnerability Tradeoff, where causal tasks induce more than 10 times higher sycophancy than mathematical tasks; and (4) Iatrogenic Critique, where authoritative correction harms weaker models. These findings challenge assumptions that capability implies robustness and that stronger feedback yields better outputs.",
-      "pdf_url": "https://arxiv.org/pdf/2601.23133v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.23133v1",
-      "published": "2026-01-30",
+      "abstract": "Estimating causal effects from longitudinal trajectories is central to understanding the progression of complex conditions and optimizing clinical decision-making, such as comorbidities and long COVID recovery. We introduce \\emph{C-kNN--LSH}, a nearest-neighbor framework for sequential causal inference designed to handle such high-dimensional, confounded situations. By utilizing locality-sensitive hashing, we efficiently identify ``clinical twins'' with similar covariate histories, enabling local estimation of conditional treatment effects across evolving disease states. To mitigate bias from irregular sampling and shifting patient recovery profiles, we integrate neighborhood estimator with a doubly-robust correction.\n  Theoretical analysis guarantees our estimator is consistent and second-order robust to nuisance error.\n  Evaluated on a real-world Long COVID cohort with 13,511 participants, \\emph{C-kNN-LSH} demonstrates superior performance in capturing recovery heterogeneity and estimating policy values compared to existing baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2602.02371v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.02371v1",
+      "published": "2026-02-02",
       "categories": [
-        "cs.AI"
+        "cs.LG",
+        "stat.ML"
       ]
     },
     {
-      "title": "Decomposing Epistemic Uncertainty for Causal Decision Making",
+      "title": "Causal Inference for Preprocessed Outcomes with an Application to Functional Connectivity",
       "authors": [
-        "Md Musfiqur Rahman",
-        "Ziwei Jiang",
-        "Hilaf Hasson",
-        "Murat Kocaoglu"
+        "Zihang Wang",
+        "Razieh Nabi",
+        "Benjamin B. Risk"
       ],
-      "abstract": "Causal inference from observational data provides strong evidence for the best action in decision-making without performing expensive randomized trials. The effect of an action is usually not identifiable under unobserved confounding, even with an infinite amount of data. Recent work uses neural networks to obtain practical bounds to such causal effects, which is often an intractable problem. However, these approaches may overfit to the dataset and be overconfident in their causal effect estimates. Moreover, there is currently no systematic approach to disentangle how much of the width of causal effect bounds is due to fundamental non-identifiability versus how much is due to finite-sample limitations. We propose a novel framework to address this problem by considering a confidence set around the empirical observational distribution and obtaining the intersection of causal effect bounds for all distributions in this confidence set. This allows us to distinguish the part of the interval that can be reduced by collecting more samples, which we call sample uncertainty, from the part that can only be reduced by observing more variables, such as latent confounders or instrumental variables, but not with more data, which we call non-ID uncertainty. The upper and lower bounds to this intersection are obtained by solving min-max and max-min problems with neural causal models by searching over all distributions that the dataset might have been sampled from, and all SCMs that entail the corresponding distribution. We demonstrate via extensive experiments on synthetic and real-world datasets that our algorithm can determine when collecting more samples will not help determine the best action. This can guide practitioners to collect more variables or lean towards a randomized study for best action identification.",
-      "pdf_url": "https://arxiv.org/pdf/2601.22736v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.22736v1",
-      "published": "2026-01-30",
+      "abstract": "In biomedical research, repeated measurements within each subject are often processed to remove artifacts and unwanted sources of variation. The resulting data are used to construct derived outcomes that act as proxies for scientific outcomes that are not directly observable. Although intra-subject processing is widely used, its impact on inter-subject statistical inference has not been systematically studied, and a principled framework for causal analysis in this setting is lacking. In this article, we propose a semiparametric framework for causal inference with derived outcomes obtained after intra-subject processing. This framework applies to settings with a modular structure, where intra-subject analyses are conducted independently across subjects and are followed by inter-subject analyses based on parameters from the intra-subject stage. We develop multiply robust estimators of causal parameters under rate conditions on both intra-subject and inter-subject models, which allows the use of flexible machine learning. We specialize the framework to a mediation setting and focus on the natural direct effect. For high dimensional inference, we employ a step-down procedure that controls the exceedance rate of the false discovery proportion. Simulation studies demonstrate the superior performance of the proposed approach. We apply our method to estimate the impact of stimulant medication on brain connectivity in children with autism spectrum disorder.",
+      "pdf_url": "https://arxiv.org/pdf/2602.02240v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.02240v1",
+      "published": "2026-02-02",
       "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Score-based Integrated Gradient for Root Cause Explanations of Outliers",
-      "authors": [
-        "Phuoc Nguyen",
-        "Truyen Tran",
-        "Sunil Gupta",
-        "Svetha Venkatesh"
-      ],
-      "abstract": "Identifying the root causes of outliers is a fundamental problem in causal inference and anomaly detection. Traditional approaches based on heuristics or counterfactual reasoning often struggle under uncertainty and high-dimensional dependencies. We introduce SIREN, a novel and scalable method that attributes the root causes of outliers by estimating the score functions of the data likelihood. Attribution is computed via integrated gradients that accumulate score contributions along paths from the outlier toward the normal data distribution. Our method satisfies three of the four classic Shapley value axioms - dummy, efficiency, and linearity - as well as an asymmetry axiom derived from the underlying causal structure. Unlike prior work, SIREN operates directly on the score function, enabling tractable and uncertainty-aware root cause attribution in nonlinear, high-dimensional, and heteroscedastic causal models. Extensive experiments on synthetic random graphs and real-world cloud service and supply chain datasets show that SIREN outperforms state-of-the-art baselines in both attribution accuracy and computational efficiency.",
-      "pdf_url": "https://arxiv.org/pdf/2601.22399v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.22399v1",
-      "published": "2026-01-29",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Causal Imitation Learning Under Measurement Error and Distribution Shift",
-      "authors": [
-        "Shi Bo",
-        "AmirEmad Ghassami"
-      ],
-      "abstract": "We study offline imitation learning (IL) when part of the decision-relevant state is observed only through noisy measurements and the distribution may change between training and deployment. Such settings induce spurious state-action correlations, so standard behavioral cloning (BC) -- whether conditioning on raw measurements or ignoring them -- can converge to systematically biased policies under distribution shift. We propose a general framework for IL under measurement error, inspired by explicitly modeling the causal relationships among the variables, yielding a target that retains a causal interpretation and is robust to distribution shift. Building on ideas from proximal causal inference, we introduce \\texttt{CausIL}, which treats noisy state observations as proxy variables, and we provide identification conditions under which the target policy is recoverable from demonstrations without rewards or interactive expert queries. We develop estimators for both discrete and continuous state spaces; for continuous settings, we use an adversarial procedure over RKHS function classes to learn the required parameters. We evaluate \\texttt{CausIL} on semi-simulated longitudinal data from the PhysioNet/Computing in Cardiology Challenge 2019 cohort and demonstrate improved robustness to distribution shift compared to BC baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2601.22206v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.22206v1",
-      "published": "2026-01-29",
-      "categories": [
-        "cs.LG",
         "stat.ME",
         "stat.ML"
       ]
     },
     {
-      "title": "Causal Autoregressive Diffusion Language Model",
+      "title": "Posterior Uncertainty for Targeted Parameters in Bayesian Bootstrap Procedures",
       "authors": [
-        "Junhao Ruan",
-        "Bei Li",
-        "Yongjing Yin",
-        "Pengcheng Huang",
-        "Xin Chen",
-        "Jingang Wang",
-        "Xunliang Cai",
-        "Tong Xiao",
-        "JingBo Zhu"
+        "Magid Sabbagh",
+        "David A. Stephens"
       ],
-      "abstract": "In this work, we propose Causal Autoregressive Diffusion (CARD), a novel framework that unifies the training efficiency of ARMs with the high-throughput inference of diffusion models. CARD reformulates the diffusion process within a strictly causal attention mask, enabling dense, per-token supervision in a single forward pass. To address the optimization instability of causal diffusion, we introduce a soft-tailed masking schema to preserve local context and a context-aware reweighting mechanism derived from signal-to-noise principles. This design enables dynamic parallel decoding, where the model leverages KV-caching to adaptively generate variable-length token sequences based on confidence. Empirically, CARD outperforms existing discrete diffusion baselines while reducing training latency by 3 $\\times$ compared to block diffusion methods. Our results demonstrate that CARD achieves ARM-level data efficiency while unlocking the latency benefits of parallel generation, establishing a robust paradigm for next-generation efficient LLMs.",
-      "pdf_url": "https://arxiv.org/pdf/2601.22031v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.22031v1",
-      "published": "2026-01-29",
+      "abstract": "We propose a general method to carry out a valid Bayesian analysis of a finite-dimensional `targeted' parameter in the presence of a finite-dimensional nuisance parameter. We apply our methods to causal inference based on estimating equations. While much of the literature in Bayesian causal inference has relied on the conventional 'likelihood times prior' framework, a recently proposed method, the 'Linked Bayesian Bootstrap', deviated from this classical setting to obtain valid Bayesian inference using the Dirichlet process and the Bayesian bootstrap. These methods rely on an adjustment based on the propensity score and explain how to handle the uncertainty concerning it when studying the posterior distribution of a treatment effect. We examine theoretically the asymptotic properties of the posterior distribution obtained and show that our proposed method, a generalized version of the 'Linked Bayesian Bootstrap', enjoys desirable frequentist properties. In addition, we show that the credible intervals have asymptotically the correct coverage properties. We discuss the applications of our method to mis-specified and singly-robust models in causal inference.",
+      "pdf_url": "https://arxiv.org/pdf/2602.02216v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.02216v1",
+      "published": "2026-02-02",
       "categories": [
-        "cs.CL"
+        "stat.ME",
+        "math.ST",
+        "stat.CO"
       ]
     },
     {
-      "title": "Causal World Modeling for Robot Control",
+      "title": "Fact or Fake? Assessing the Role of Deepfake Detectors in Multimodal Misinformation Detection",
       "authors": [
-        "Lin Li",
-        "Qihang Zhang",
-        "Yiming Luo",
-        "Shuai Yang",
-        "Ruilin Wang",
-        "Fei Han",
-        "Mingrui Yu",
-        "Zelin Gao",
-        "Nan Xue",
-        "Xing Zhu",
-        "Yujun Shen",
-        "Yinghao Xu"
+        "A S M Sharifuzzaman Sagar",
+        "Mohammed Bennamoun",
+        "Farid Boussaid",
+        "Naeha Sharif",
+        "Lian Xu",
+        "Shaaban Sahmoud",
+        "Ali Kishk"
       ],
-      "abstract": "This work highlights that video world modeling, alongside vision-language pre-training, establishes a fresh and independent foundation for robot learning. Intuitively, video world models provide the ability to imagine the near future by understanding the causality between actions and visual dynamics. Inspired by this, we introduce LingBot-VA, an autoregressive diffusion framework that learns frame prediction and policy execution simultaneously. Our model features three carefully crafted designs: (1) a shared latent space, integrating vision and action tokens, driven by a Mixture-of-Transformers (MoT) architecture, (2) a closed-loop rollout mechanism, allowing for ongoing acquisition of environmental feedback with ground-truth observations, (3) an asynchronous inference pipeline, parallelizing action prediction and motor execution to support efficient control. We evaluate our model on both simulation benchmarks and real-world scenarios, where it shows significant promise in long-horizon manipulation, data efficiency in post-training, and strong generalizability to novel configurations. The code and model are made publicly available to facilitate the community.",
-      "pdf_url": "https://arxiv.org/pdf/2601.21998v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.21998v1",
-      "published": "2026-01-29",
+      "abstract": "In multimodal misinformation, deception usually arises not just from pixel-level manipulations in an image, but from the semantic and contextual claim jointly expressed by the image-text pair. Yet most deepfake detectors, engineered to detect pixel-level forgeries, do not account for claim-level meaning, despite their growing integration in automated fact-checking (AFC) pipelines. This raises a central scientific and practical question: Do pixel-level detectors contribute useful signal for verifying image-text claims, or do they instead introduce misleading authenticity priors that undermine evidence-based reasoning? We provide the first systematic analysis of deepfake detectors in the context of multimodal misinformation detection. Using two complementary benchmarks, MMFakeBench and DGM4, we evaluate: (1) state-of-the-art image-only deepfake detectors, (2) an evidence-driven fact-checking system that performs tool-guided retrieval via Monte Carlo Tree Search (MCTS) and engages in deliberative inference through Multi-Agent Debate (MAD), and (3) a hybrid fact-checking system that injects detector outputs as auxiliary evidence. Results across both benchmark datasets show that deepfake detectors offer limited standalone value, achieving F1 scores in the range of 0.26-0.53 on MMFakeBench and 0.33-0.49 on DGM4, and that incorporating their predictions into fact-checking pipelines consistently reduces performance by 0.04-0.08 F1 due to non-causal authenticity assumptions. In contrast, the evidence-centric fact-checking system achieves the highest performance, reaching F1 scores of approximately 0.81 on MMFakeBench and 0.55 on DGM4. Overall, our findings demonstrate that multimodal claim verification is driven primarily by semantic understanding and external evidence, and that pixel-level artifact signals do not reliably enhance reasoning over real-world image-text misinformation.",
+      "pdf_url": "https://arxiv.org/pdf/2602.01854v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.01854v1",
+      "published": "2026-02-02",
       "categories": [
-        "cs.CV",
-        "cs.RO"
+        "cs.CV"
       ]
     },
     {
-      "title": "FBS: Modeling Native Parallel Reading inside a Transformer",
+      "title": "No Generation without Representation: Efficient Causal Protein Language Models Enable Zero-Shot Fitness Estimation",
       "authors": [
-        "Tongxi Wang"
+        "Furkan Eris"
       ],
-      "abstract": "Large language models (LLMs) excel across many tasks, yet inference is still dominated by strictly token-by-token autoregression. Existing acceleration methods largely patch this pipeline and miss core human-reading ingredients: content-adaptive foresight, chunk-structure-aware compute allocation, and train--test consistency for preview/skimming. We propose the \\textbf{Fovea-Block-Skip Transformer} (FBS), which injects a causal, trainable loop into Transformers via Parafovea-Attention Window (PAW), Chunk-Head (CH), and Skip-Gate (SG). Across diverse benchmarks, FBS improves the quality-efficiency trade-off without increasing parameters, and ablations show the three modules are complementary.",
-      "pdf_url": "https://arxiv.org/pdf/2601.21708v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.21708v1",
-      "published": "2026-01-29",
+      "abstract": "Protein language models (PLMs) face a fundamental divide: masked language models (MLMs) excel at fitness prediction while causal models enable generation, forcing practitioners to maintain separate architectures. We introduce \\textbf{Proust}, a 309M-parameter causal PLM that bridges this gap through architectural innovations adapted from recent LLM research, including grouped-query attention with shared K/V projections, cross-layer value residuals, and depthwise causal convolutions. Trained on 33B tokens in 40 B200 GPU-hours, Proust achieves Spearman $ρ= 0.390$ on ProteinGym substitutions, competitive with MLMs requiring 50--200$\\times$ the compute. On indels, Proust sets a new state-of-the-art, outperforming models up to 20$\\times$ larger. On EVEREST viral fitness benchmarks, it approaches structure-aware methods using sequence alone. These powerful representations position Proust in a sweet spot as it also retains native generative capabilities that MLMs lack by design. Interpretability analysis reveals that per-position entropy variance predicts, to an extent, when retrieval augmentation helps and hurts. Such insights can grow in both quantity and quality at scale and inform capabilities such as test-time scaling. Code and weights are available at https://github.com/Furkan9015/proust-inference",
+      "pdf_url": "https://arxiv.org/pdf/2602.01845v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.01845v1",
+      "published": "2026-02-02",
+      "categories": [
+        "cs.LG",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Optimizing Prompts for Large Language Models: A Causal Approach",
+      "authors": [
+        "Wei Chen",
+        "Yanbin Fang",
+        "Shuran Fu",
+        "Fasheng Xu",
+        "Xuan Wei"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly embedded in enterprise workflows, yet their performance remains highly sensitive to prompt design. Automatic Prompt Optimization (APO) seeks to mitigate this instability, but existing approaches face two persistent challenges. First, commonly used prompt strategies rely on static instructions that perform well on average but fail to adapt to heterogeneous queries. Second, more dynamic approaches depend on offline reward models that are fundamentally correlational, confounding prompt effectiveness with query characteristics. We propose Causal Prompt Optimization (CPO), a framework that reframes prompt design as a problem of causal estimation. CPO operates in two stages. First, it learns an offline causal reward model by applying Double Machine Learning (DML) to semantic embeddings of prompts and queries, isolating the causal effect of prompt variations from confounding query attributes. Second, it utilizes this unbiased reward signal to guide a resource-efficient search for query-specific prompts without relying on costly online evaluation. We evaluate CPO across benchmarks in mathematical reasoning, visualization, and data analytics. CPO consistently outperforms human-engineered prompts and state-of-the-art automated optimizers. The gains are driven primarily by improved robustness on hard queries, where existing methods tend to deteriorate. Beyond performance, CPO fundamentally reshapes the economics of prompt optimization: by shifting evaluation from real-time model execution to an offline causal model, it enables high-precision, per-query customization at a fraction of the inference cost required by online methods. Together, these results establish causal inference as a scalable foundation for reliable and cost-efficient prompt optimization in enterprise LLM deployments.",
+      "pdf_url": "https://arxiv.org/pdf/2602.01711v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.01711v1",
+      "published": "2026-02-02",
       "categories": [
         "cs.AI",
-        "cs.CL"
+        "cs.LG"
       ]
     },
     {
-      "title": "Differential Dynamic Causal Nets: Model Construction, Identification and Group Comparisons",
+      "title": "Difference-in-Differences under Local Dependence on Networks",
       "authors": [
-        "Kang You",
-        "Gary Green",
-        "Jian Zhang"
+        "Akihiro Sato",
+        "Shonosuke Sugasawa"
       ],
-      "abstract": "Pathophysiolpgical modelling of brain systems from microscale to macroscale remains difficult in group comparisons partly because of the infeasibility of modelling the interactions of thousands of neurons at the scales involved. Here, to address the challenge, we present a novel approach to construct differential causal networks directly from electroencephalogram (EEG) data. The proposed network is based on conditionally coupled neuronal circuits which describe the average behaviour of interacting neuron populations that contribute to observed EEG data. In the network, each node represents a parameterised local neural system while directed edges stand for node-wise connections with transmission parameters. The network is hierarchically structured in the sense that node and edge parameters are varying in subjects but follow a mixed-effects model. A novel evolutionary optimisation algorithm for parameter inference in the proposed method is developed using a loss function derived from Chen-Fliess expansions of stochastic differential equations. The method is demonstrated by application to the fitting of coupled Jansen-Rit local models. The performance of the proposed method is evaluated on both synthetic and real EEG data. In the real EEG data analysis, we track changes in the parameters that characterise dynamic causality within brains that demonstrate epileptic activity. We show evidence of network functional disruptions, due to imbalance of excitatory-inhibitory interneurons and altered epileptic brain connectivity, before and during seizure periods.",
-      "pdf_url": "https://arxiv.org/pdf/2601.21478v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.21478v1",
-      "published": "2026-01-29",
+      "abstract": "Estimating causal effects under interference, where the stable unit treatment value assumption is violated, is critical in fields such as regional and public economics. Much of the existing research on causal inference under interference relies on a pre-specified \"exposure mapping\". This paper focuses on difference-in-difference and proposes a nonparametric identification strategy for direct and indirect average treatment effects under local interference on an observed network. In particular, we proposed a new concept of an indirect effect measuring the total outward influence of the intervension. Based on parallel trends assumption conditional on the neighborhood treatment vector, we develop inverse probability weighted and doubly robust estimators. We establish their asymptotic properties, including consistency under misspecification of nuisance models under some regularity conditions. Simulation studies and an empirical application demonstrate the effectiveness of the proposed method.",
+      "pdf_url": "https://arxiv.org/pdf/2602.01631v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.01631v1",
+      "published": "2026-02-02",
       "categories": [
-        "q-bio.NC",
-        "stat.AP",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Preference Elicitation",
+      "authors": [
+        "Edwin V. Bonilla",
+        "He Zhao",
+        "Daniel M. Steinberg"
+      ],
+      "abstract": "We propose causal preference elicitation, a Bayesian framework for expert-in-the-loop causal discovery that actively queries local edge relations to concentrate a posterior over directed acyclic graphs (DAGs). From any black-box observational posterior, we model noisy expert judgments with a three-way likelihood over edge existence and direction. Posterior inference uses a flexible particle approximation, and queries are selected by an efficient expected information gain criterion on the expert's categorical response. Experiments on synthetic graphs, protein signaling data, and a human gene perturbation benchmark show faster posterior concentration and improved recovery of directed effects under tight query budgets.",
+      "pdf_url": "https://arxiv.org/pdf/2602.01483v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.01483v1",
+      "published": "2026-02-01",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "DCD: Decomposition-based Causal Discovery from Autocorrelated and Non-Stationary Temporal Data",
+      "authors": [
+        "Muhammad Hasan Ferdous",
+        "Md Osman Gani"
+      ],
+      "abstract": "Multivariate time series in domains such as finance, climate science, and healthcare often exhibit long-term trends, seasonal patterns, and short-term fluctuations, complicating causal inference under non-stationarity and autocorrelation. Existing causal discovery methods typically operate on raw observations, making them vulnerable to spurious edges and misattributed temporal dependencies. We introduce a decomposition-based causal discovery framework that separates each time series into trend, seasonal, and residual components and performs component-specific causal analysis. Trend components are assessed using stationarity tests, seasonal components using kernel-based dependence measures, and residual components using constraint-based causal discovery. The resulting component-level graphs are integrated into a unified multi-scale causal structure. This approach isolates long- and short-range causal effects, reduces spurious associations, and improves interpretability. Across extensive synthetic benchmarks and real-world climate data, our framework more accurately recovers ground-truth causal structure than state-of-the-art baselines, particularly under strong non-stationarity and temporal autocorrelation.",
+      "pdf_url": "https://arxiv.org/pdf/2602.01433v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.01433v1",
+      "published": "2026-02-01",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
         "stat.ML"
       ]
     },
     {
-      "title": "Modeling Endogenous Logic: Causal Neuro-Symbolic Reasoning Model for Explainable Multi-Behavior Recommendation",
+      "title": "An Odd Estimator for Shapley Values",
       "authors": [
-        "Yuzhe Chen",
-        "Jie Cao",
-        "Youquan Wang",
-        "Haicheng Tao",
-        "Darko B. Vukovic",
-        "Jia Wu"
+        "Fabian Fumagalli",
+        "Landon Butler",
+        "Justin Singh Kang",
+        "Kannan Ramchandran",
+        "R. Teal Witter"
       ],
-      "abstract": "Existing multi-behavior recommendations tend to prioritize performance at the expense of explainability, while current explainable methods suffer from limited generalizability due to their reliance on external information. Neuro-Symbolic integration offers a promising avenue for explainability by combining neural networks with symbolic logic rule reasoning. Concurrently, we posit that user behavior chains inherently embody an endogenous logic suitable for explicit reasoning. However, these observational multiple behaviors are plagued by confounders, causing models to learn spurious correlations. By incorporating causal inference into this Neuro-Symbolic framework, we propose a novel Causal Neuro-Symbolic Reasoning model for Explainable Multi-Behavior Recommendation (CNRE). CNRE operationalizes the endogenous logic by simulating a human-like decision-making process. Specifically, CNRE first employs hierarchical preference propagation to capture heterogeneous cross-behavior dependencies. Subsequently, it models the endogenous logic rule implicit in the user's behavior chain based on preference strength, and adaptively dispatches to the corresponding neural-logic reasoning path (e.g., conjunction, disjunction). This process generates an explainable causal mediator that approximates an ideal state isolated from confounding effects. Extensive experiments on three large-scale datasets demonstrate CNRE's significant superiority over state-of-the-art baselines, offering multi-level explainability from model design and decision process to recommendation results.",
-      "pdf_url": "https://arxiv.org/pdf/2601.21335v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.21335v1",
-      "published": "2026-01-29",
+      "abstract": "The Shapley value is a ubiquitous framework for attribution in machine learning, encompassing feature importance, data valuation, and causal inference. However, its exact computation is generally intractable, necessitating efficient approximation methods. While the most effective and popular estimators leverage the paired sampling heuristic to reduce estimation error, the theoretical mechanism driving this improvement has remained opaque. In this work, we provide an elegant and fundamental justification for paired sampling: we prove that the Shapley value depends exclusively on the odd component of the set function, and that paired sampling orthogonalizes the regression objective to filter out the irrelevant even component. Leveraging this insight, we propose OddSHAP, a novel consistent estimator that performs polynomial regression solely on the odd subspace. By utilizing the Fourier basis to isolate this subspace and employing a proxy model to identify high-impact interactions, OddSHAP overcomes the combinatorial explosion of higher-order approximations. Through an extensive benchmark evaluation, we find that OddSHAP achieves state-of-the-art estimation accuracy.",
+      "pdf_url": "https://arxiv.org/pdf/2602.01399v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.01399v1",
+      "published": "2026-02-01",
       "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Data-Driven Generation of Neutron Star Equations of State Using Variational Autoencoders",
-      "authors": [
-        "Alex Ross",
-        "Tianqi Zhao",
-        "Sanjay Reddy"
-      ],
-      "abstract": "We develop a machine learning model based on a structured variational autoencoder (VAE) framework to reconstruct and generate neutron star (NS) equations of state (EOS). The VAE consists of an encoder network that maps high-dimensional EOS data into a lower-dimensional latent space and a decoder network that reconstructs the full EOS from the latent representation. The latent space includes supervised NS observables derived from the training EOS data, as well as latent random variables corresponding to additional unspecified EOS features learned automatically. Sampling the latent space enables the generation of new, causal, and stable EOS models that satisfy astronomical constraints on the supervised NS observables, while allowing Bayesian inference of the EOS incorporating additional multimessenger data, including gravitational waves from LIGO/Virgo and mass and radius measurements of pulsars. Based on a VAE trained on a Skyrme EOS dataset, we find that a latent space with two supervised NS observables, the maximum mass $(M_{\\max})$ and the canonical radius $(R_{1.4})$, together with one latent random variable controlling the EOS near the crust--core transition, can already reconstruct Skyrme EOSs with high fidelity, achieving mean absolute percentage errors of approximately $(0.15\\%)$ for $(M_{\\max})$ and $(R_{1.4})$ derived from the decoder-reconstructed EOS.",
-      "pdf_url": "https://arxiv.org/pdf/2601.21231v1",
-      "arxiv_url": "http://arxiv.org/abs/2601.21231v1",
-      "published": "2026-01-29",
-      "categories": [
-        "astro-ph.HE",
-        "astro-ph.IM",
-        "astro-ph.SR",
-        "cs.LG"
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
       ]
     }
   ]
