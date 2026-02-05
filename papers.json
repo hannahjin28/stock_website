@@ -1,6 +1,137 @@
 {
-  "last_updated": "2026-02-04T01:07:36.184787",
+  "last_updated": "2026-02-05T01:09:11.151373",
   "papers": [
+    {
+      "title": "Causal Inference for the Effect of Code Coverage on Bug Introduction",
+      "authors": [
+        "Lukas Schulte",
+        "Gordon Fraser",
+        "Steffen Herbold"
+      ],
+      "abstract": "Context: Code coverage is widely used as a software quality assurance measure. However, its effect, and specifically the advisable dose, are disputed in both the research and engineering communities. Prior work reports only correlational associations, leaving results vulnerable to confounding factors. Objective: We aim to quantify the causal effect of code coverage (exposure) on bug introduction (outcome) in the context of mature JavaScript and TypeScript open source projects, addressing both the overall effect and its variance across coverage levels. Method: We construct a causal directed acyclic graph to identify confounders within the software engineering process, modeling key variables from the source code, issue- and review systems, and continuous integration. Using generalized propensity score adjustment, we will apply doubly robust regression-based causal inference for continuous exposure to a novel dataset of bug-introducing and non-bug-introducing changes. We estimate the average treatment effect and dose-response relationship to examine potential non-linear patterns (e.g., thresholds or diminishing returns) within the projects of our dataset.",
+      "pdf_url": "https://arxiv.org/pdf/2602.03585v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.03585v1",
+      "published": "2026-02-03",
+      "categories": [
+        "cs.SE"
+      ]
+    },
+    {
+      "title": "Causal Inference on Networks under Misspecified Exposure Mappings: A Partial Identification Framework",
+      "authors": [
+        "Maresa Schröder",
+        "Miruna Oprescu",
+        "Stefan Feuerriegel",
+        "Nathan Kallus"
+      ],
+      "abstract": "Estimating treatment effects in networks is challenging, as each potential outcome depends on the treatments of all other nodes in the network. To overcome this difficulty, existing methods typically impose an exposure mapping that compresses the treatment assignments in the network into a low-dimensional summary. However, if this mapping is misspecified, standard estimators for direct and spillover effects can be severely biased. We propose a novel partial identification framework for causal inference on networks to assess the robustness of treatment effects under misspecifications of the exposure mapping. Specifically, we derive sharp upper and lower bounds on direct and spillover effects under such misspecifications. As such, our framework presents a novel application of causal sensitivity analysis to exposure mappings. We instantiate our framework for three canonical exposure settings widely used in practice: (i) weighted means of the neighborhood treatments, (ii) threshold-based exposure mappings, and (iii) truncated neighborhood interference in the presence of higher-order spillovers. Furthermore, we develop orthogonal estimators for these bounds and prove that the resulting bound estimates are valid, sharp, and efficient. Our experiments show the bounds remain informative and provide reliable conclusions under misspecification of exposure mappings.",
+      "pdf_url": "https://arxiv.org/pdf/2602.03459v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.03459v1",
+      "published": "2026-02-03",
+      "categories": [
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal structures of turbulent skin-friction drag in wall-bounded turbulent flows",
+      "authors": [
+        "Yunchao Zhao",
+        "Yitong Fan",
+        "Weipeng Li"
+      ],
+      "abstract": "Understanding the mechanism of turbulent skin-friction drag (TSD) generation is of fundamental and practical importance for designing effective drag reduction strategies. However, many previous studies adopted correlation analysis to reveal the causal map between turbulent motions and TSD generation, an approach that is potentially risky as correlation does not necessarily imply causation. In this study, a novel causal inference method called Liang-Kleeman information flow (LKIF) is utilized for the first time to identify the velocity-induced causal structures related to TSD generation in a turbulent channel flow. The statistical properties of the causal structures are comprehensively investigated. The positive and negative causal structures, defined by their signs and respectively associated with an increase and decrease in TSD information entropy, promote and suppress the generation of extreme TSD. Particularly, we find that the underlying physics of causal structures is essentially associated with the processes of streamwise streaks and rolls approaching or receding from the extreme events. Results indicate that the physics-informed LKIF framework can reveal a more explicit and interpretable causal relationship than correlation analysis.",
+      "pdf_url": "https://arxiv.org/pdf/2602.03187v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.03187v1",
+      "published": "2026-02-03",
+      "categories": [
+        "physics.flu-dyn"
+      ]
+    },
+    {
+      "title": "The Trigger in the Haystack: Extracting and Reconstructing LLM Backdoor Triggers",
+      "authors": [
+        "Blake Bullwinkel",
+        "Giorgio Severi",
+        "Keegan Hines",
+        "Amanda Minnich",
+        "Ram Shankar Siva Kumar",
+        "Yonatan Zunger"
+      ],
+      "abstract": "Detecting whether a model has been poisoned is a longstanding problem in AI security. In this work, we present a practical scanner for identifying sleeper agent-style backdoors in causal language models. Our approach relies on two key findings: first, sleeper agents tend to memorize poisoning data, making it possible to leak backdoor examples using memory extraction techniques. Second, poisoned LLMs exhibit distinctive patterns in their output distributions and attention heads when backdoor triggers are present in the input. Guided by these observations, we develop a scalable backdoor scanning methodology that assumes no prior knowledge of the trigger or target behavior and requires only inference operations. Our scanner integrates naturally into broader defensive strategies and does not alter model performance. We show that our method recovers working triggers across multiple backdoor scenarios and a broad range of models and fine-tuning methods.",
+      "pdf_url": "https://arxiv.org/pdf/2602.03085v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.03085v1",
+      "published": "2026-02-03",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Membership Inference Attacks from Causal Principles",
+      "authors": [
+        "Mathieu Even",
+        "Clément Berenfeld",
+        "Linus Bleistein",
+        "Tudor Cebere",
+        "Julie Josse",
+        "Aurélien Bellet"
+      ],
+      "abstract": "Membership Inference Attacks (MIAs) are widely used to quantify training data memorization and assess privacy risks. Standard evaluation requires repeated retraining, which is computationally costly for large models. One-run methods (single training with randomized data inclusion) and zero-run methods (post hoc evaluation) are often used instead, though their statistical validity remains unclear. To address this gap, we frame MIA evaluation as a causal inference problem, defining memorization as the causal effect of including a data point in the training set. This novel formulation reveals and formalizes key sources of bias in existing protocols: one-run methods suffer from interference between jointly included points, while zero-run evaluations popular for LLMs are confounded by non-random membership assignment. We derive causal analogues of standard MIA metrics and propose practical estimators for multi-run, one-run, and zero-run regimes with non-asymptotic consistency guarantees. Experiments on real-world data show that our approach enables reliable memorization measurement even when retraining is impractical and under distribution shift, providing a principled foundation for privacy evaluation in modern AI systems.",
+      "pdf_url": "https://arxiv.org/pdf/2602.02819v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.02819v1",
+      "published": "2026-02-02",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Disentangling spatial interference and spatial confounding biases in causal inference",
+      "authors": [
+        "Isqeel Ogunsola",
+        "Olatunji Johnson"
+      ],
+      "abstract": "Spatial interference and spatial confounding are two major issues inhibiting precise causal estimates when dealing with observational spatial data. Moreover, the definition and interpretation of spatial confounding remain arguable in the literature. In this paper, our goal is to provide clarity in a novel way on misconception and issues around spatial confounding from Directed Acyclic Graph (DAG) perspective and to disentangle both direct, indirect spatial confounding and spatial interference based on bias induced on causal estimates. Also, existing analyses of spatial confounding bias typically rely on Normality assumptions for treatments and confounders, assumptions that are often violated in practice. Relaxing these assumptions, we derive analytical expressions for spatial confounding bias under more general distributional settings using Poisson as example . We showed that the choice of spatial weights, the distribution of the treatment, and the magnitude of interference critically determine the extent of bias due to spatial interference. We further demonstrate that direct and indirect spatial confounding can be disentangled, with both the weight matrix and the nature of exposure playing central roles in determining the magnitude of indirect bias. Theoretical results are supported by simulation studies and an application to real-world spatial data. In future, parametric frameworks for concomitantly adjusting for spatial interference, direct and indirect spatial confounding for both direct and mediated effects estimation will be developed.",
+      "pdf_url": "https://arxiv.org/pdf/2602.02777v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.02777v1",
+      "published": "2026-02-02",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "BinaryPPO: Efficient Policy Optimization for Binary Classification",
+      "authors": [
+        "Punya Syon Pandey",
+        "Zhijing Jin"
+      ],
+      "abstract": "Supervised fine-tuning (SFT) is the standard approach for binary classification tasks such as toxicity detection, factuality verification, and causal inference. However, SFT often performs poorly in real-world settings with label noise, class imbalance, or sparse supervision. We introduce BinaryPPO, an offline reinforcement learning large language model (LLM) framework that reformulates binary classification as a reward maximization problem. Our method leverages a variant of Proximal Policy Optimization (PPO) with a confidence-weighted reward function that penalizes uncertain or incorrect predictions, enabling the model to learn robust decision policies from static datasets without online interaction. Across eight domain-specific benchmarks and multiple models with differing architectures, BinaryPPO improves accuracy by 40-60 percentage points, reaching up to 99%, substantially outperforming supervised baselines. We provide an in-depth analysis of the role of reward shaping, advantage scaling, and policy stability in enabling this improvement. Overall, we demonstrate that confidence-based reward design provides a robust alternative to SFT for binary classification. Our code is available at https://github.com/psyonp/BinaryPPO.",
+      "pdf_url": "https://arxiv.org/pdf/2602.02708v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.02708v1",
+      "published": "2026-02-02",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Selective Information Borrowing for Region-Specific Treatment Effect Inference under Covariate Mismatch in Multi-Regional Clinical Trials",
+      "authors": [
+        "Chenxi Li",
+        "Ke Zhu",
+        "Shu Yang",
+        "Xiaofei Wang"
+      ],
+      "abstract": "Multi-regional clinical trials (MRCTs) are central to global drug development, enabling evaluation of treatment effects across diverse populations. A key challenge is valid and efficient inference for a region-specific estimand when the target region is small and differs from auxiliary regions in baseline covariates or unmeasured factors. We adopt an estimand-based framework and focus on the region-specific average treatment effect (RSATE) in a prespecified target region, which is directly relevant to local regulatory decision-making. Cross-region differences can induce covariate shift, covariate mismatch, and outcome drift, potentially biasing information borrowing and invalidating RSATE inference. To address these issues, we develop a unified causal inference framework with selective information borrowing. First, we introduce an inverse-variance weighting estimator that combines a \"small-sample, rich-covariate\" target-only estimator with a \"large-sample, limited-covariate\" full-borrowing doubly robust estimator, maximizing efficiency under no outcome drift. Second, to accommodate outcome drift, we apply conformal prediction to assess patient-level comparability and adaptively select auxiliary-region patients for borrowing. Third, to ensure rigorous finite-sample inference, we employ a conditional randomization test with exact, model-free, selection-aware type I error control. Simulation studies show the proposed estimator improves efficiency, yielding 10-50% reductions in mean squared error and higher power relative to no-borrowing and full-borrowing approaches, while maintaining valid inference across diverse scenarios. An application to the POWER trial further demonstrates improved precision for RSATE estimation.",
+      "pdf_url": "https://arxiv.org/pdf/2602.02703v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.02703v1",
+      "published": "2026-02-02",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "C-kNN-LSH: A Nearest-Neighbor Algorithm for Sequential Counterfactual Inference",
       "authors": [
@@ -31,139 +162,6 @@
       "published": "2026-02-02",
       "categories": [
         "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Posterior Uncertainty for Targeted Parameters in Bayesian Bootstrap Procedures",
-      "authors": [
-        "Magid Sabbagh",
-        "David A. Stephens"
-      ],
-      "abstract": "We propose a general method to carry out a valid Bayesian analysis of a finite-dimensional `targeted' parameter in the presence of a finite-dimensional nuisance parameter. We apply our methods to causal inference based on estimating equations. While much of the literature in Bayesian causal inference has relied on the conventional 'likelihood times prior' framework, a recently proposed method, the 'Linked Bayesian Bootstrap', deviated from this classical setting to obtain valid Bayesian inference using the Dirichlet process and the Bayesian bootstrap. These methods rely on an adjustment based on the propensity score and explain how to handle the uncertainty concerning it when studying the posterior distribution of a treatment effect. We examine theoretically the asymptotic properties of the posterior distribution obtained and show that our proposed method, a generalized version of the 'Linked Bayesian Bootstrap', enjoys desirable frequentist properties. In addition, we show that the credible intervals have asymptotically the correct coverage properties. We discuss the applications of our method to mis-specified and singly-robust models in causal inference.",
-      "pdf_url": "https://arxiv.org/pdf/2602.02216v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.02216v1",
-      "published": "2026-02-02",
-      "categories": [
-        "stat.ME",
-        "math.ST",
-        "stat.CO"
-      ]
-    },
-    {
-      "title": "Fact or Fake? Assessing the Role of Deepfake Detectors in Multimodal Misinformation Detection",
-      "authors": [
-        "A S M Sharifuzzaman Sagar",
-        "Mohammed Bennamoun",
-        "Farid Boussaid",
-        "Naeha Sharif",
-        "Lian Xu",
-        "Shaaban Sahmoud",
-        "Ali Kishk"
-      ],
-      "abstract": "In multimodal misinformation, deception usually arises not just from pixel-level manipulations in an image, but from the semantic and contextual claim jointly expressed by the image-text pair. Yet most deepfake detectors, engineered to detect pixel-level forgeries, do not account for claim-level meaning, despite their growing integration in automated fact-checking (AFC) pipelines. This raises a central scientific and practical question: Do pixel-level detectors contribute useful signal for verifying image-text claims, or do they instead introduce misleading authenticity priors that undermine evidence-based reasoning? We provide the first systematic analysis of deepfake detectors in the context of multimodal misinformation detection. Using two complementary benchmarks, MMFakeBench and DGM4, we evaluate: (1) state-of-the-art image-only deepfake detectors, (2) an evidence-driven fact-checking system that performs tool-guided retrieval via Monte Carlo Tree Search (MCTS) and engages in deliberative inference through Multi-Agent Debate (MAD), and (3) a hybrid fact-checking system that injects detector outputs as auxiliary evidence. Results across both benchmark datasets show that deepfake detectors offer limited standalone value, achieving F1 scores in the range of 0.26-0.53 on MMFakeBench and 0.33-0.49 on DGM4, and that incorporating their predictions into fact-checking pipelines consistently reduces performance by 0.04-0.08 F1 due to non-causal authenticity assumptions. In contrast, the evidence-centric fact-checking system achieves the highest performance, reaching F1 scores of approximately 0.81 on MMFakeBench and 0.55 on DGM4. Overall, our findings demonstrate that multimodal claim verification is driven primarily by semantic understanding and external evidence, and that pixel-level artifact signals do not reliably enhance reasoning over real-world image-text misinformation.",
-      "pdf_url": "https://arxiv.org/pdf/2602.01854v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.01854v1",
-      "published": "2026-02-02",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "No Generation without Representation: Efficient Causal Protein Language Models Enable Zero-Shot Fitness Estimation",
-      "authors": [
-        "Furkan Eris"
-      ],
-      "abstract": "Protein language models (PLMs) face a fundamental divide: masked language models (MLMs) excel at fitness prediction while causal models enable generation, forcing practitioners to maintain separate architectures. We introduce \\textbf{Proust}, a 309M-parameter causal PLM that bridges this gap through architectural innovations adapted from recent LLM research, including grouped-query attention with shared K/V projections, cross-layer value residuals, and depthwise causal convolutions. Trained on 33B tokens in 40 B200 GPU-hours, Proust achieves Spearman $ρ= 0.390$ on ProteinGym substitutions, competitive with MLMs requiring 50--200$\\times$ the compute. On indels, Proust sets a new state-of-the-art, outperforming models up to 20$\\times$ larger. On EVEREST viral fitness benchmarks, it approaches structure-aware methods using sequence alone. These powerful representations position Proust in a sweet spot as it also retains native generative capabilities that MLMs lack by design. Interpretability analysis reveals that per-position entropy variance predicts, to an extent, when retrieval augmentation helps and hurts. Such insights can grow in both quantity and quality at scale and inform capabilities such as test-time scaling. Code and weights are available at https://github.com/Furkan9015/proust-inference",
-      "pdf_url": "https://arxiv.org/pdf/2602.01845v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.01845v1",
-      "published": "2026-02-02",
-      "categories": [
-        "cs.LG",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "Optimizing Prompts for Large Language Models: A Causal Approach",
-      "authors": [
-        "Wei Chen",
-        "Yanbin Fang",
-        "Shuran Fu",
-        "Fasheng Xu",
-        "Xuan Wei"
-      ],
-      "abstract": "Large Language Models (LLMs) are increasingly embedded in enterprise workflows, yet their performance remains highly sensitive to prompt design. Automatic Prompt Optimization (APO) seeks to mitigate this instability, but existing approaches face two persistent challenges. First, commonly used prompt strategies rely on static instructions that perform well on average but fail to adapt to heterogeneous queries. Second, more dynamic approaches depend on offline reward models that are fundamentally correlational, confounding prompt effectiveness with query characteristics. We propose Causal Prompt Optimization (CPO), a framework that reframes prompt design as a problem of causal estimation. CPO operates in two stages. First, it learns an offline causal reward model by applying Double Machine Learning (DML) to semantic embeddings of prompts and queries, isolating the causal effect of prompt variations from confounding query attributes. Second, it utilizes this unbiased reward signal to guide a resource-efficient search for query-specific prompts without relying on costly online evaluation. We evaluate CPO across benchmarks in mathematical reasoning, visualization, and data analytics. CPO consistently outperforms human-engineered prompts and state-of-the-art automated optimizers. The gains are driven primarily by improved robustness on hard queries, where existing methods tend to deteriorate. Beyond performance, CPO fundamentally reshapes the economics of prompt optimization: by shifting evaluation from real-time model execution to an offline causal model, it enables high-precision, per-query customization at a fraction of the inference cost required by online methods. Together, these results establish causal inference as a scalable foundation for reliable and cost-efficient prompt optimization in enterprise LLM deployments.",
-      "pdf_url": "https://arxiv.org/pdf/2602.01711v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.01711v1",
-      "published": "2026-02-02",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Difference-in-Differences under Local Dependence on Networks",
-      "authors": [
-        "Akihiro Sato",
-        "Shonosuke Sugasawa"
-      ],
-      "abstract": "Estimating causal effects under interference, where the stable unit treatment value assumption is violated, is critical in fields such as regional and public economics. Much of the existing research on causal inference under interference relies on a pre-specified \"exposure mapping\". This paper focuses on difference-in-difference and proposes a nonparametric identification strategy for direct and indirect average treatment effects under local interference on an observed network. In particular, we proposed a new concept of an indirect effect measuring the total outward influence of the intervension. Based on parallel trends assumption conditional on the neighborhood treatment vector, we develop inverse probability weighted and doubly robust estimators. We establish their asymptotic properties, including consistency under misspecification of nuisance models under some regularity conditions. Simulation studies and an empirical application demonstrate the effectiveness of the proposed method.",
-      "pdf_url": "https://arxiv.org/pdf/2602.01631v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.01631v1",
-      "published": "2026-02-02",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Preference Elicitation",
-      "authors": [
-        "Edwin V. Bonilla",
-        "He Zhao",
-        "Daniel M. Steinberg"
-      ],
-      "abstract": "We propose causal preference elicitation, a Bayesian framework for expert-in-the-loop causal discovery that actively queries local edge relations to concentrate a posterior over directed acyclic graphs (DAGs). From any black-box observational posterior, we model noisy expert judgments with a three-way likelihood over edge existence and direction. Posterior inference uses a flexible particle approximation, and queries are selected by an efficient expected information gain criterion on the expert's categorical response. Experiments on synthetic graphs, protein signaling data, and a human gene perturbation benchmark show faster posterior concentration and improved recovery of directed effects under tight query budgets.",
-      "pdf_url": "https://arxiv.org/pdf/2602.01483v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.01483v1",
-      "published": "2026-02-01",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "DCD: Decomposition-based Causal Discovery from Autocorrelated and Non-Stationary Temporal Data",
-      "authors": [
-        "Muhammad Hasan Ferdous",
-        "Md Osman Gani"
-      ],
-      "abstract": "Multivariate time series in domains such as finance, climate science, and healthcare often exhibit long-term trends, seasonal patterns, and short-term fluctuations, complicating causal inference under non-stationarity and autocorrelation. Existing causal discovery methods typically operate on raw observations, making them vulnerable to spurious edges and misattributed temporal dependencies. We introduce a decomposition-based causal discovery framework that separates each time series into trend, seasonal, and residual components and performs component-specific causal analysis. Trend components are assessed using stationarity tests, seasonal components using kernel-based dependence measures, and residual components using constraint-based causal discovery. The resulting component-level graphs are integrated into a unified multi-scale causal structure. This approach isolates long- and short-range causal effects, reduces spurious associations, and improves interpretability. Across extensive synthetic benchmarks and real-world climate data, our framework more accurately recovers ground-truth causal structure than state-of-the-art baselines, particularly under strong non-stationarity and temporal autocorrelation.",
-      "pdf_url": "https://arxiv.org/pdf/2602.01433v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.01433v1",
-      "published": "2026-02-01",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "An Odd Estimator for Shapley Values",
-      "authors": [
-        "Fabian Fumagalli",
-        "Landon Butler",
-        "Justin Singh Kang",
-        "Kannan Ramchandran",
-        "R. Teal Witter"
-      ],
-      "abstract": "The Shapley value is a ubiquitous framework for attribution in machine learning, encompassing feature importance, data valuation, and causal inference. However, its exact computation is generally intractable, necessitating efficient approximation methods. While the most effective and popular estimators leverage the paired sampling heuristic to reduce estimation error, the theoretical mechanism driving this improvement has remained opaque. In this work, we provide an elegant and fundamental justification for paired sampling: we prove that the Shapley value depends exclusively on the odd component of the set function, and that paired sampling orthogonalizes the regression objective to filter out the irrelevant even component. Leveraging this insight, we propose OddSHAP, a novel consistent estimator that performs polynomial regression solely on the odd subspace. By utilizing the Fourier basis to isolate this subspace and employing a proxy model to identify high-impact interactions, OddSHAP overcomes the combinatorial explosion of higher-order approximations. Through an extensive benchmark evaluation, we find that OddSHAP achieves state-of-the-art estimation accuracy.",
-      "pdf_url": "https://arxiv.org/pdf/2602.01399v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.01399v1",
-      "published": "2026-02-01",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
         "stat.ML"
       ]
     }
