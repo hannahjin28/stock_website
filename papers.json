@@ -1,6 +1,74 @@
 {
-  "last_updated": "2026-02-05T01:09:11.151373",
+  "last_updated": "2026-02-06T01:07:56.057145",
   "papers": [
+    {
+      "title": "Addressing Corpus Knowledge Poisoning Attacks on RAG Using Sparse Attention",
+      "authors": [
+        "Sagie Dekel",
+        "Moshe Tennenholtz",
+        "Oren Kurland"
+      ],
+      "abstract": "Retrieval Augmented Generation (RAG) is a highly effective paradigm for keeping LLM-based responses up-to-date and reducing the likelihood of hallucinations. Yet, RAG was recently shown to be quite vulnerable to corpus knowledge poisoning: an attacker injects misleading documents to the corpus to steer an LLMs' output to an undesired response. We argue that the standard causal attention mechanism in LLMs enables harmful cross-document interactions, specifically in cases of attacks. Accordingly, we introduce a novel defense approach for RAG: Sparse Document Attention RAG (SDAG). This is a block-sparse attention mechanism that disallows cross-attention between retrieved documents. SDAG requires a minimal inference-time change to the attention mask; furthermore, no fine-tuning or additional architectural changes are needed. We present an empirical evaluation of LLM-based question answering (QA) with a variety of attack strategies on RAG. We show that our SDAG method substantially outperforms the standard causal attention mechanism in terms of attack success rate. We further demonstrate the clear merits of integrating SDAG with state-of-the-art RAG defense methods. Specifically, the integration results in performance that is statistically significantly better than the state-of-the-art.",
+      "pdf_url": "https://arxiv.org/pdf/2602.04711v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.04711v1",
+      "published": "2026-02-04",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "$C$-$ΔΘ$: Circuit-Restricted Weight Arithmetic for Selective Refusal",
+      "authors": [
+        "Aditya Kasliwal",
+        "Pratinav Seth",
+        "Vinay Kumar Sankarapu"
+      ],
+      "abstract": "Modern deployments require LLMs to enforce safety policies at scale, yet many controls rely on inference-time interventions that add recurring compute cost and serving complexity. Activation steering is widely used, but it requires runtime hooks and scales cost with the number of generations; conditional variants improve selectivity by gating when steering is applied but still retain an inference-time control path. We ask whether selective refusal can be moved entirely offline: can a mechanistic understanding of category-specific refusal be distilled into a circuit-restricted weight update that deploys as a standard checkpoint? We propose C-Δθ: Circuit Restricted Weight Arithmetic, which (i) localizes refusal-causal computation as a sparse circuit using EAP-IG and (ii) computes a constrained weight update ΔθC supported only on that circuit (typically <5% of parameters). Applying ΔθC yields a drop-in edited checkpoint with no inference-time hooks, shifting cost from per-request intervention to a one-time offline update. We evaluate category-targeted selectivity and capability retention on refusal and utility benchmarks.",
+      "pdf_url": "https://arxiv.org/pdf/2602.04521v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.04521v1",
+      "published": "2026-02-04",
+      "categories": [
+        "cs.CL",
+        "cs.ET"
+      ]
+    },
+    {
+      "title": "OAT: Ordered Action Tokenization",
+      "authors": [
+        "Chaoqi Liu",
+        "Xiaoshen Han",
+        "Jiawei Gao",
+        "Yue Zhao",
+        "Haonan Chen",
+        "Yilun Du"
+      ],
+      "abstract": "Autoregressive policies offer a compelling foundation for scalable robot learning by enabling discrete abstraction, token-level reasoning, and flexible inference. However, applying autoregressive modeling to continuous robot actions requires an effective action tokenization scheme. Existing approaches either rely on analytical discretization methods that produce prohibitively long token sequences, or learned latent tokenizers that lack structure, limiting their compatibility with next-token prediction. In this work, we identify three desiderata for action tokenization - high compression, total decodability, and a left-to-right causally ordered token space - and introduce Ordered Action Tokenization (OAT), a learned action tokenizer that satisfies all three. OAT discretizes action chunks into an ordered sequence of tokens using transformer with registers, finite scalar quantization, and ordering-inducing training mechanisms. The resulting token space aligns naturally with autoregressive generation and enables prefix-based detokenization, yielding an anytime trade-off between inference cost and action fidelity. Across more than 20 tasks spanning four simulation benchmarks and real-world settings, autoregressive policies equipped with OAT consistently outperform prior tokenization schemes and diffusion-based baselines, while offering significantly greater flexibility at inference time.",
+      "pdf_url": "https://arxiv.org/pdf/2602.04215v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.04215v1",
+      "published": "2026-02-04",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Efficient Subgroup Analysis via Optimal Trees with Global Parameter Fusion",
+      "authors": [
+        "Zhongming Xie",
+        "Joseph Giorgio",
+        "Jingshen Wang"
+      ],
+      "abstract": "Identifying and making statistical inferences on differential treatment effects (commonly known as subgroup analysis in clinical research) is central to precision health. Subgroup analysis allows practitioners to pinpoint populations for whom a treatment is especially beneficial or protective, thereby advancing targeted interventions. Tree based recursive partitioning methods are widely used for subgroup analysis due to their interpretability. Nevertheless, these approaches encounter significant limitations, including suboptimal partitions induced by greedy heuristics and overfitting from locally estimated splits, especially under limited sample sizes. To address these limitations, we propose a fused optimal causal tree method that leverages mixed integer optimization (MIO) to facilitate precise subgroup identification. Our approach ensures globally optimal partitions and introduces a parameter fusion constraint to facilitate information sharing across related subgroups. This design substantially improves subgroup discovery accuracy and enhances statistical efficiency. We provide theoretical guarantees by rigorously establishing out of sample risk bounds and comparing them with those of classical tree based methods. Empirically, our method consistently outperforms popular baselines in simulations. Finally, we demonstrate its practical utility through a case study on the Health and Aging Brain Study Health Disparities (HABS-HD) dataset, where our approach yields clinically meaningful insights.",
+      "pdf_url": "https://arxiv.org/pdf/2602.04077v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.04077v1",
+      "published": "2026-02-03",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Causal Inference for the Effect of Code Coverage on Bug Introduction",
       "authors": [
@@ -98,71 +166,6 @@
       "published": "2026-02-02",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "BinaryPPO: Efficient Policy Optimization for Binary Classification",
-      "authors": [
-        "Punya Syon Pandey",
-        "Zhijing Jin"
-      ],
-      "abstract": "Supervised fine-tuning (SFT) is the standard approach for binary classification tasks such as toxicity detection, factuality verification, and causal inference. However, SFT often performs poorly in real-world settings with label noise, class imbalance, or sparse supervision. We introduce BinaryPPO, an offline reinforcement learning large language model (LLM) framework that reformulates binary classification as a reward maximization problem. Our method leverages a variant of Proximal Policy Optimization (PPO) with a confidence-weighted reward function that penalizes uncertain or incorrect predictions, enabling the model to learn robust decision policies from static datasets without online interaction. Across eight domain-specific benchmarks and multiple models with differing architectures, BinaryPPO improves accuracy by 40-60 percentage points, reaching up to 99%, substantially outperforming supervised baselines. We provide an in-depth analysis of the role of reward shaping, advantage scaling, and policy stability in enabling this improvement. Overall, we demonstrate that confidence-based reward design provides a robust alternative to SFT for binary classification. Our code is available at https://github.com/psyonp/BinaryPPO.",
-      "pdf_url": "https://arxiv.org/pdf/2602.02708v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.02708v1",
-      "published": "2026-02-02",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Selective Information Borrowing for Region-Specific Treatment Effect Inference under Covariate Mismatch in Multi-Regional Clinical Trials",
-      "authors": [
-        "Chenxi Li",
-        "Ke Zhu",
-        "Shu Yang",
-        "Xiaofei Wang"
-      ],
-      "abstract": "Multi-regional clinical trials (MRCTs) are central to global drug development, enabling evaluation of treatment effects across diverse populations. A key challenge is valid and efficient inference for a region-specific estimand when the target region is small and differs from auxiliary regions in baseline covariates or unmeasured factors. We adopt an estimand-based framework and focus on the region-specific average treatment effect (RSATE) in a prespecified target region, which is directly relevant to local regulatory decision-making. Cross-region differences can induce covariate shift, covariate mismatch, and outcome drift, potentially biasing information borrowing and invalidating RSATE inference. To address these issues, we develop a unified causal inference framework with selective information borrowing. First, we introduce an inverse-variance weighting estimator that combines a \"small-sample, rich-covariate\" target-only estimator with a \"large-sample, limited-covariate\" full-borrowing doubly robust estimator, maximizing efficiency under no outcome drift. Second, to accommodate outcome drift, we apply conformal prediction to assess patient-level comparability and adaptively select auxiliary-region patients for borrowing. Third, to ensure rigorous finite-sample inference, we employ a conditional randomization test with exact, model-free, selection-aware type I error control. Simulation studies show the proposed estimator improves efficiency, yielding 10-50% reductions in mean squared error and higher power relative to no-borrowing and full-borrowing approaches, while maintaining valid inference across diverse scenarios. An application to the POWER trial further demonstrates improved precision for RSATE estimation.",
-      "pdf_url": "https://arxiv.org/pdf/2602.02703v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.02703v1",
-      "published": "2026-02-02",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "C-kNN-LSH: A Nearest-Neighbor Algorithm for Sequential Counterfactual Inference",
-      "authors": [
-        "Jing Wang",
-        "Jie Shen",
-        "Qiaomin Xie",
-        "Jeremy C Weiss"
-      ],
-      "abstract": "Estimating causal effects from longitudinal trajectories is central to understanding the progression of complex conditions and optimizing clinical decision-making, such as comorbidities and long COVID recovery. We introduce \\emph{C-kNN--LSH}, a nearest-neighbor framework for sequential causal inference designed to handle such high-dimensional, confounded situations. By utilizing locality-sensitive hashing, we efficiently identify ``clinical twins'' with similar covariate histories, enabling local estimation of conditional treatment effects across evolving disease states. To mitigate bias from irregular sampling and shifting patient recovery profiles, we integrate neighborhood estimator with a doubly-robust correction.\n  Theoretical analysis guarantees our estimator is consistent and second-order robust to nuisance error.\n  Evaluated on a real-world Long COVID cohort with 13,511 participants, \\emph{C-kNN-LSH} demonstrates superior performance in capturing recovery heterogeneity and estimating policy values compared to existing baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2602.02371v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.02371v1",
-      "published": "2026-02-02",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Causal Inference for Preprocessed Outcomes with an Application to Functional Connectivity",
-      "authors": [
-        "Zihang Wang",
-        "Razieh Nabi",
-        "Benjamin B. Risk"
-      ],
-      "abstract": "In biomedical research, repeated measurements within each subject are often processed to remove artifacts and unwanted sources of variation. The resulting data are used to construct derived outcomes that act as proxies for scientific outcomes that are not directly observable. Although intra-subject processing is widely used, its impact on inter-subject statistical inference has not been systematically studied, and a principled framework for causal analysis in this setting is lacking. In this article, we propose a semiparametric framework for causal inference with derived outcomes obtained after intra-subject processing. This framework applies to settings with a modular structure, where intra-subject analyses are conducted independently across subjects and are followed by inter-subject analyses based on parameters from the intra-subject stage. We develop multiply robust estimators of causal parameters under rate conditions on both intra-subject and inter-subject models, which allows the use of flexible machine learning. We specialize the framework to a mediation setting and focus on the natural direct effect. For high dimensional inference, we employ a step-down procedure that controls the exceedance rate of the false discovery proportion. Simulation studies demonstrate the superior performance of the proposed approach. We apply our method to estimate the impact of stimulant medication on brain connectivity in children with autism spectrum disorder.",
-      "pdf_url": "https://arxiv.org/pdf/2602.02240v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.02240v1",
-      "published": "2026-02-02",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
       ]
     }
   ]
