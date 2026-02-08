@@ -1,171 +1,191 @@
 {
-  "last_updated": "2026-02-06T01:07:56.057145",
+  "last_updated": "2026-02-08T01:30:03.931713",
   "papers": [
     {
-      "title": "Addressing Corpus Knowledge Poisoning Attacks on RAG Using Sparse Attention",
+      "title": "Causal Inference on Stopped Random Walks in Online Advertising",
       "authors": [
-        "Sagie Dekel",
-        "Moshe Tennenholtz",
-        "Oren Kurland"
+        "Jia Yuan Yu"
       ],
-      "abstract": "Retrieval Augmented Generation (RAG) is a highly effective paradigm for keeping LLM-based responses up-to-date and reducing the likelihood of hallucinations. Yet, RAG was recently shown to be quite vulnerable to corpus knowledge poisoning: an attacker injects misleading documents to the corpus to steer an LLMs' output to an undesired response. We argue that the standard causal attention mechanism in LLMs enables harmful cross-document interactions, specifically in cases of attacks. Accordingly, we introduce a novel defense approach for RAG: Sparse Document Attention RAG (SDAG). This is a block-sparse attention mechanism that disallows cross-attention between retrieved documents. SDAG requires a minimal inference-time change to the attention mask; furthermore, no fine-tuning or additional architectural changes are needed. We present an empirical evaluation of LLM-based question answering (QA) with a variety of attack strategies on RAG. We show that our SDAG method substantially outperforms the standard causal attention mechanism in terms of attack success rate. We further demonstrate the clear merits of integrating SDAG with state-of-the-art RAG defense methods. Specifically, the integration results in performance that is statistically significantly better than the state-of-the-art.",
-      "pdf_url": "https://arxiv.org/pdf/2602.04711v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.04711v1",
-      "published": "2026-02-04",
-      "categories": [
-        "cs.IR",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "$C$-$ΔΘ$: Circuit-Restricted Weight Arithmetic for Selective Refusal",
-      "authors": [
-        "Aditya Kasliwal",
-        "Pratinav Seth",
-        "Vinay Kumar Sankarapu"
-      ],
-      "abstract": "Modern deployments require LLMs to enforce safety policies at scale, yet many controls rely on inference-time interventions that add recurring compute cost and serving complexity. Activation steering is widely used, but it requires runtime hooks and scales cost with the number of generations; conditional variants improve selectivity by gating when steering is applied but still retain an inference-time control path. We ask whether selective refusal can be moved entirely offline: can a mechanistic understanding of category-specific refusal be distilled into a circuit-restricted weight update that deploys as a standard checkpoint? We propose C-Δθ: Circuit Restricted Weight Arithmetic, which (i) localizes refusal-causal computation as a sparse circuit using EAP-IG and (ii) computes a constrained weight update ΔθC supported only on that circuit (typically <5% of parameters). Applying ΔθC yields a drop-in edited checkpoint with no inference-time hooks, shifting cost from per-request intervention to a one-time offline update. We evaluate category-targeted selectivity and capability retention on refusal and utility benchmarks.",
-      "pdf_url": "https://arxiv.org/pdf/2602.04521v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.04521v1",
-      "published": "2026-02-04",
-      "categories": [
-        "cs.CL",
-        "cs.ET"
-      ]
-    },
-    {
-      "title": "OAT: Ordered Action Tokenization",
-      "authors": [
-        "Chaoqi Liu",
-        "Xiaoshen Han",
-        "Jiawei Gao",
-        "Yue Zhao",
-        "Haonan Chen",
-        "Yilun Du"
-      ],
-      "abstract": "Autoregressive policies offer a compelling foundation for scalable robot learning by enabling discrete abstraction, token-level reasoning, and flexible inference. However, applying autoregressive modeling to continuous robot actions requires an effective action tokenization scheme. Existing approaches either rely on analytical discretization methods that produce prohibitively long token sequences, or learned latent tokenizers that lack structure, limiting their compatibility with next-token prediction. In this work, we identify three desiderata for action tokenization - high compression, total decodability, and a left-to-right causally ordered token space - and introduce Ordered Action Tokenization (OAT), a learned action tokenizer that satisfies all three. OAT discretizes action chunks into an ordered sequence of tokens using transformer with registers, finite scalar quantization, and ordering-inducing training mechanisms. The resulting token space aligns naturally with autoregressive generation and enables prefix-based detokenization, yielding an anytime trade-off between inference cost and action fidelity. Across more than 20 tasks spanning four simulation benchmarks and real-world settings, autoregressive policies equipped with OAT consistently outperform prior tokenization schemes and diffusion-based baselines, while offering significantly greater flexibility at inference time.",
-      "pdf_url": "https://arxiv.org/pdf/2602.04215v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.04215v1",
-      "published": "2026-02-04",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Efficient Subgroup Analysis via Optimal Trees with Global Parameter Fusion",
-      "authors": [
-        "Zhongming Xie",
-        "Joseph Giorgio",
-        "Jingshen Wang"
-      ],
-      "abstract": "Identifying and making statistical inferences on differential treatment effects (commonly known as subgroup analysis in clinical research) is central to precision health. Subgroup analysis allows practitioners to pinpoint populations for whom a treatment is especially beneficial or protective, thereby advancing targeted interventions. Tree based recursive partitioning methods are widely used for subgroup analysis due to their interpretability. Nevertheless, these approaches encounter significant limitations, including suboptimal partitions induced by greedy heuristics and overfitting from locally estimated splits, especially under limited sample sizes. To address these limitations, we propose a fused optimal causal tree method that leverages mixed integer optimization (MIO) to facilitate precise subgroup identification. Our approach ensures globally optimal partitions and introduces a parameter fusion constraint to facilitate information sharing across related subgroups. This design substantially improves subgroup discovery accuracy and enhances statistical efficiency. We provide theoretical guarantees by rigorously establishing out of sample risk bounds and comparing them with those of classical tree based methods. Empirically, our method consistently outperforms popular baselines in simulations. Finally, we demonstrate its practical utility through a case study on the Health and Aging Brain Study Health Disparities (HABS-HD) dataset, where our approach yields clinically meaningful insights.",
-      "pdf_url": "https://arxiv.org/pdf/2602.04077v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.04077v1",
-      "published": "2026-02-03",
+      "abstract": "We consider a causal inference problem frequently encountered in online advertising systems, where a publisher (e.g., Instagram, TikTok) interacts repeatedly with human users and advertisers by sporadically displaying to each user an advertisement selected through an auction. Each treatment corresponds to a parameter value of the advertising mechanism (e.g., auction reserve-price), and we want to estimate through experiments the corresponding long-term treatment effect (e.g., annual advertising revenue). In our setting, the treatment affects not only the instantaneous revenue from showing an ad, but also changes each user's interaction-trajectory, and each advertiser's bidding policy -- as the latter is constrained by a finite budget. In particular, each a treatment may even affect the size of the population, since users interact longer with a tolerable advertising mechanism. We drop the classical i.i.d. assumption and model the experiment measurements (e.g., advertising revenue) as a stopped random walk, and use a budget-splitting experimental design, the Anscombe Theorem, a Wald-like equation, and a Central Limit Theorem to construct confidence intervals for the long-term treatment effect.",
+      "pdf_url": "https://arxiv.org/pdf/2602.05997v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.05997v1",
+      "published": "2026-02-05",
       "categories": [
         "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Inference for the Effect of Code Coverage on Bug Introduction",
-      "authors": [
-        "Lukas Schulte",
-        "Gordon Fraser",
-        "Steffen Herbold"
-      ],
-      "abstract": "Context: Code coverage is widely used as a software quality assurance measure. However, its effect, and specifically the advisable dose, are disputed in both the research and engineering communities. Prior work reports only correlational associations, leaving results vulnerable to confounding factors. Objective: We aim to quantify the causal effect of code coverage (exposure) on bug introduction (outcome) in the context of mature JavaScript and TypeScript open source projects, addressing both the overall effect and its variance across coverage levels. Method: We construct a causal directed acyclic graph to identify confounders within the software engineering process, modeling key variables from the source code, issue- and review systems, and continuous integration. Using generalized propensity score adjustment, we will apply doubly robust regression-based causal inference for continuous exposure to a novel dataset of bug-introducing and non-bug-introducing changes. We estimate the average treatment effect and dose-response relationship to examine potential non-linear patterns (e.g., thresholds or diminishing returns) within the projects of our dataset.",
-      "pdf_url": "https://arxiv.org/pdf/2602.03585v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.03585v1",
-      "published": "2026-02-03",
-      "categories": [
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "Causal Inference on Networks under Misspecified Exposure Mappings: A Partial Identification Framework",
-      "authors": [
-        "Maresa Schröder",
-        "Miruna Oprescu",
-        "Stefan Feuerriegel",
-        "Nathan Kallus"
-      ],
-      "abstract": "Estimating treatment effects in networks is challenging, as each potential outcome depends on the treatments of all other nodes in the network. To overcome this difficulty, existing methods typically impose an exposure mapping that compresses the treatment assignments in the network into a low-dimensional summary. However, if this mapping is misspecified, standard estimators for direct and spillover effects can be severely biased. We propose a novel partial identification framework for causal inference on networks to assess the robustness of treatment effects under misspecifications of the exposure mapping. Specifically, we derive sharp upper and lower bounds on direct and spillover effects under such misspecifications. As such, our framework presents a novel application of causal sensitivity analysis to exposure mappings. We instantiate our framework for three canonical exposure settings widely used in practice: (i) weighted means of the neighborhood treatments, (ii) threshold-based exposure mappings, and (iii) truncated neighborhood interference in the presence of higher-order spillovers. Furthermore, we develop orthogonal estimators for these bounds and prove that the resulting bound estimates are valid, sharp, and efficient. Our experiments show the bounds remain informative and provide reliable conclusions under misspecification of exposure mappings.",
-      "pdf_url": "https://arxiv.org/pdf/2602.03459v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.03459v1",
-      "published": "2026-02-03",
-      "categories": [
         "cs.LG",
         "stat.ME"
       ]
     },
     {
-      "title": "Causal structures of turbulent skin-friction drag in wall-bounded turbulent flows",
+      "title": "BABE: Biology Arena BEnchmark",
       "authors": [
-        "Yunchao Zhao",
-        "Yitong Fan",
-        "Weipeng Li"
+        "Junting Zhou",
+        "Jin Chen",
+        "Linfeng Hao",
+        "Denghui Cao",
+        "Zheyu Wang",
+        "Qiguang Chen",
+        "Chaoyou Fu",
+        "Jiaze Chen",
+        "Yuchen Wu",
+        "Ge Zhang",
+        "Mingxuan Wang",
+        "Wenhao Huang",
+        "Tong Yang"
       ],
-      "abstract": "Understanding the mechanism of turbulent skin-friction drag (TSD) generation is of fundamental and practical importance for designing effective drag reduction strategies. However, many previous studies adopted correlation analysis to reveal the causal map between turbulent motions and TSD generation, an approach that is potentially risky as correlation does not necessarily imply causation. In this study, a novel causal inference method called Liang-Kleeman information flow (LKIF) is utilized for the first time to identify the velocity-induced causal structures related to TSD generation in a turbulent channel flow. The statistical properties of the causal structures are comprehensively investigated. The positive and negative causal structures, defined by their signs and respectively associated with an increase and decrease in TSD information entropy, promote and suppress the generation of extreme TSD. Particularly, we find that the underlying physics of causal structures is essentially associated with the processes of streamwise streaks and rolls approaching or receding from the extreme events. Results indicate that the physics-informed LKIF framework can reveal a more explicit and interpretable causal relationship than correlation analysis.",
-      "pdf_url": "https://arxiv.org/pdf/2602.03187v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.03187v1",
-      "published": "2026-02-03",
+      "abstract": "The rapid evolution of large language models (LLMs) has expanded their capabilities from basic dialogue to advanced scientific reasoning. However, existing benchmarks in biology often fail to assess a critical skill required of researchers: the ability to integrate experimental results with contextual knowledge to derive meaningful conclusions. To address this gap, we introduce BABE(Biology Arena BEnchmark), a comprehensive benchmark designed to evaluate the experimental reasoning capabilities of biological AI systems. BABE is uniquely constructed from peer-reviewed research papers and real-world biological studies, ensuring that tasks reflect the complexity and interdisciplinary nature of actual scientific inquiry. BABE challenges models to perform causal reasoning and cross-scale inference. Our benchmark provides a robust framework for assessing how well AI systems can reason like practicing scientists, offering a more authentic measure of their potential to contribute to biological research.",
+      "pdf_url": "https://arxiv.org/pdf/2602.05857v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.05857v1",
+      "published": "2026-02-05",
       "categories": [
-        "physics.flu-dyn"
-      ]
-    },
-    {
-      "title": "The Trigger in the Haystack: Extracting and Reconstructing LLM Backdoor Triggers",
-      "authors": [
-        "Blake Bullwinkel",
-        "Giorgio Severi",
-        "Keegan Hines",
-        "Amanda Minnich",
-        "Ram Shankar Siva Kumar",
-        "Yonatan Zunger"
-      ],
-      "abstract": "Detecting whether a model has been poisoned is a longstanding problem in AI security. In this work, we present a practical scanner for identifying sleeper agent-style backdoors in causal language models. Our approach relies on two key findings: first, sleeper agents tend to memorize poisoning data, making it possible to leak backdoor examples using memory extraction techniques. Second, poisoned LLMs exhibit distinctive patterns in their output distributions and attention heads when backdoor triggers are present in the input. Guided by these observations, we develop a scalable backdoor scanning methodology that assumes no prior knowledge of the trigger or target behavior and requires only inference operations. Our scanner integrates naturally into broader defensive strategies and does not alter model performance. We show that our method recovers working triggers across multiple backdoor scenarios and a broad range of models and fine-tuning methods.",
-      "pdf_url": "https://arxiv.org/pdf/2602.03085v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.03085v1",
-      "published": "2026-02-03",
-      "categories": [
-        "cs.CR",
         "cs.AI"
       ]
     },
     {
-      "title": "Membership Inference Attacks from Causal Principles",
+      "title": "NEX: Neuron Explore-Exploit Scoring for Label-Free Chain-of-Thought Selection and Model Ranking",
       "authors": [
-        "Mathieu Even",
-        "Clément Berenfeld",
-        "Linus Bleistein",
-        "Tudor Cebere",
-        "Julie Josse",
-        "Aurélien Bellet"
+        "Kang Chen",
+        "Zhuoka Feng",
+        "Sihan Zhao",
+        "Kai Xiong",
+        "Junjie Nian",
+        "Yaoning Wang",
+        "Changyi Xiao",
+        "Yixin Cao"
       ],
-      "abstract": "Membership Inference Attacks (MIAs) are widely used to quantify training data memorization and assess privacy risks. Standard evaluation requires repeated retraining, which is computationally costly for large models. One-run methods (single training with randomized data inclusion) and zero-run methods (post hoc evaluation) are often used instead, though their statistical validity remains unclear. To address this gap, we frame MIA evaluation as a causal inference problem, defining memorization as the causal effect of including a data point in the training set. This novel formulation reveals and formalizes key sources of bias in existing protocols: one-run methods suffer from interference between jointly included points, while zero-run evaluations popular for LLMs are confounded by non-random membership assignment. We derive causal analogues of standard MIA metrics and propose practical estimators for multi-run, one-run, and zero-run regimes with non-asymptotic consistency guarantees. Experiments on real-world data show that our approach enables reliable memorization measurement even when retraining is impractical and under distribution shift, providing a principled foundation for privacy evaluation in modern AI systems.",
-      "pdf_url": "https://arxiv.org/pdf/2602.02819v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.02819v1",
-      "published": "2026-02-02",
+      "abstract": "Large language models increasingly spend inference compute sampling multiple chain-of-thought traces or searching over merged checkpoints. This shifts the bottleneck from generation to selection, often without supervision on the target distribution. We show entropy-based exploration proxies follow an inverted-U with accuracy, suggesting extra exploration can become redundant and induce overthinking. We propose NEX, a white-box label-free unsupervised scoring framework that views reasoning as alternating E-phase (exploration) and X-phase (exploitation). NEX detects E-phase as spikes in newly activated MLP neurons per token from sparse activation caches, then uses a sticky two-state HMM to infer E-X phases and credits E-introduced neurons by whether they are reused in the following X span. These signals yield interpretable neuron weights and a single Good-Mass Fraction score to rank candidate responses and merged variants without task answers. Across reasoning benchmarks and Qwen3 merge families, NEX computed on a small unlabeled activation set predicts downstream accuracy and identifies better variants; we further validate the E-X signal with human annotations and provide causal evidence via \"Effective-vs-Redundant\" neuron transfer.",
+      "pdf_url": "https://arxiv.org/pdf/2602.05805v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.05805v1",
+      "published": "2026-02-05",
       "categories": [
-        "cs.LG",
-        "stat.ML"
+        "cs.AI"
       ]
     },
     {
-      "title": "Disentangling spatial interference and spatial confounding biases in causal inference",
+      "title": "Causal Front-Door Adjustment for Robust Jailbreak Attacks on LLMs",
       "authors": [
-        "Isqeel Ogunsola",
-        "Olatunji Johnson"
+        "Yao Zhou",
+        "Zeen Song",
+        "Wenwen Qiang",
+        "Fengge Wu",
+        "Shuyi Zhou",
+        "Changwen Zheng",
+        "Hui Xiong"
       ],
-      "abstract": "Spatial interference and spatial confounding are two major issues inhibiting precise causal estimates when dealing with observational spatial data. Moreover, the definition and interpretation of spatial confounding remain arguable in the literature. In this paper, our goal is to provide clarity in a novel way on misconception and issues around spatial confounding from Directed Acyclic Graph (DAG) perspective and to disentangle both direct, indirect spatial confounding and spatial interference based on bias induced on causal estimates. Also, existing analyses of spatial confounding bias typically rely on Normality assumptions for treatments and confounders, assumptions that are often violated in practice. Relaxing these assumptions, we derive analytical expressions for spatial confounding bias under more general distributional settings using Poisson as example . We showed that the choice of spatial weights, the distribution of the treatment, and the magnitude of interference critically determine the extent of bias due to spatial interference. We further demonstrate that direct and indirect spatial confounding can be disentangled, with both the weight matrix and the nature of exposure playing central roles in determining the magnitude of indirect bias. Theoretical results are supported by simulation studies and an application to real-world spatial data. In future, parametric frameworks for concomitantly adjusting for spatial interference, direct and indirect spatial confounding for both direct and mediated effects estimation will be developed.",
-      "pdf_url": "https://arxiv.org/pdf/2602.02777v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.02777v1",
-      "published": "2026-02-02",
+      "abstract": "Safety alignment mechanisms in Large Language Models (LLMs) often operate as latent internal states, obscuring the model's inherent capabilities. Building on this observation, we model the safety mechanism as an unobserved confounder from a causal perspective. Then, we propose the \\textbf{C}ausal \\textbf{F}ront-Door \\textbf{A}djustment \\textbf{A}ttack ({\\textbf{CFA}}$^2$) to jailbreak LLM, which is a framework that leverages Pearl's Front-Door Criterion to sever the confounding associations for robust jailbreaking. Specifically, we employ Sparse Autoencoders (SAEs) to physically strip defense-related features, isolating the core task intent. We further reduce computationally expensive marginalization to a deterministic intervention with low inference complexity. Experiments demonstrate that {CFA}$^2$ achieves state-of-the-art attack success rates while offering a mechanistic interpretation of the jailbreaking process.",
+      "pdf_url": "https://arxiv.org/pdf/2602.05444v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.05444v1",
+      "published": "2026-02-05",
       "categories": [
-        "stat.ME"
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "ProAct: Agentic Lookahead in Interactive Environments",
+      "authors": [
+        "Yangbin Yu",
+        "Mingyu Yang",
+        "Junyou Li",
+        "Yiming Gao",
+        "Feiyu Liu",
+        "Yijun Yang",
+        "Zichuan Lin",
+        "Jiafei Lyu",
+        "Yicheng Liu",
+        "Zhicong Lu",
+        "Deheng Ye",
+        "Jie Jiang"
+      ],
+      "abstract": "Existing Large Language Model (LLM) agents struggle in interactive environments requiring long-horizon planning, primarily due to compounding errors when simulating future states. To address this, we propose ProAct, a framework that enables agents to internalize accurate lookahead reasoning through a two-stage training paradigm. First, we introduce Grounded LookAhead Distillation (GLAD), where the agent undergoes supervised fine-tuning on trajectories derived from environment-based search. By compressing complex search trees into concise, causal reasoning chains, the agent learns the logic of foresight without the computational overhead of inference-time search. Second, to further refine decision accuracy, we propose the Monte-Carlo Critic (MC-Critic), a plug-and-play auxiliary value estimator designed to enhance policy-gradient algorithms like PPO and GRPO. By leveraging lightweight environment rollouts to calibrate value estimates, MC-Critic provides a low-variance signal that facilitates stable policy optimization without relying on expensive model-based value approximation. Experiments on both stochastic (e.g., 2048) and deterministic (e.g., Sokoban) environments demonstrate that ProAct significantly improves planning accuracy. Notably, a 4B parameter model trained with ProAct outperforms all open-source baselines and rivals state-of-the-art closed-source models, while demonstrating robust generalization to unseen environments. The codes and models are available at https://github.com/GreatX3/ProAct",
+      "pdf_url": "https://arxiv.org/pdf/2602.05327v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.05327v1",
+      "published": "2026-02-05",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "FlashBlock: Attention Caching for Efficient Long-Context Block Diffusion",
+      "authors": [
+        "Zhuokun Chen",
+        "Jianfei Cai",
+        "Bohan Zhuang"
+      ],
+      "abstract": "Generating long-form content, such as minute-long videos and extended texts, is increasingly important for modern generative models. Block diffusion improves inference efficiency via KV caching and block-wise causal inference and has been widely adopted in diffusion language models and video generation. However, in long-context settings, block diffusion still incurs substantial overhead from repeatedly computing attention over a growing KV cache. We identify an underexplored property of block diffusion: cross-step redundancy of attention within a block. Our analysis shows that attention outputs from tokens outside the current block remain largely stable across diffusion steps, while block-internal attention varies significantly. Based on this observation, we propose FlashBlock, a cached block-external attention mechanism that reuses stable attention output, reducing attention computation and KV cache access without modifying the diffusion process. Moreover, FlashBlock is orthogonal to sparse attention and can be combined as a complementary residual reuse strategy, substantially improving model accuracy under aggressive sparsification. Experiments on diffusion language models and video generation demonstrate up to 1.44$\\times$ higher token throughput and up to 1.6$\\times$ reduction in attention time, with negligible impact on generation quality. Project page: https://caesarhhh.github.io/FlashBlock/.",
+      "pdf_url": "https://arxiv.org/pdf/2602.05305v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.05305v1",
+      "published": "2026-02-05",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Causal Online Learning of Safe Regions in Cloud Radio Access Networks",
+      "authors": [
+        "Kim Hammar",
+        "Tansu Alpcan",
+        "Emil Lupu"
+      ],
+      "abstract": "Cloud radio access networks (RANs) enable cost-effective management of mobile networks by dynamically scaling their capacity on demand. However, deploying adaptive controllers to implement such dynamic scaling in operational networks is challenging due to the risk of breaching service agreements and operational constraints. To mitigate this challenge, we present a novel method for learning the safe operating region of the RAN, i.e., the set of resource allocations and network configurations for which its specification is fulfilled. The method, which we call (C)ausal (O)nline (L)earning, operates in two online phases: an inference phase and an intervention phase. In the first phase, we passively observe the RAN to infer an initial safe region via causal inference and Gaussian process regression. In the second phase, we gradually expand this region through interventional Bayesian learning. We prove that COL ensures that the learned region is safe with a specified probability and that it converges to the full safe region under standard conditions. We experimentally validate COL on a 5G testbed. The results show that COL quickly learns the safe region while incurring low operational cost and being up to 10x more sample-efficient than current state-of-the-art methods for safe learning.",
+      "pdf_url": "https://arxiv.org/pdf/2602.05280v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.05280v1",
+      "published": "2026-02-05",
+      "categories": [
+        "cs.NI"
+      ]
+    },
+    {
+      "title": "Learning virulence-transmission relationships using causal inference",
+      "authors": [
+        "Sudam Surasinghe",
+        "C. Brandon Ogbunugafor"
+      ],
+      "abstract": "The relationship between traits that influence pathogen virulence and transmission is part of the central canon of the evolution and ecology of infectious disease. However, identifying directional and mechanistic relationships among traits remains a key challenge in various subfields of biology, as models often assume static, fixed links between characteristics. Here, we introduce learning evolutionary trait relationships (LETR), a data-driven framework that applies Granger-causality principles to determine which traits drive others and how these relationships change over time. LETR integrates causal discovery with generative mapping and transfer-operator analysis to link short-term predictability with long-term trait distributions. Using a synthetic myxomatosis virus-host data set, we show that LETR reliably recovers known directional influences, such as virulence driving transmission. Applying the framework to global pandemic (SARS-CoV-2) data, we find that past virulence improves future transmission prediction, while the reverse effect is weak. Invariant-density estimates reveal a long-term trend toward low virulence and transmission, with bimodality in virulence suggesting ecological influences or host heterogeneity. In summary, this study provides a blueprint for learning the relationship between how harmful a pathogen is and how well it spreads, which is highly idiosyncratic and context-dependent. This finding undermines simplistic models and encourages the development of new theory for the constraints underlying pathogen evolution. Further, by uniting causal inference with dynamical modeling, the LETR framework offers a general approach for uncovering mechanistic trait linkages in complex biological systems of various kinds.",
+      "pdf_url": "https://arxiv.org/pdf/2602.05196v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.05196v1",
+      "published": "2026-02-05",
+      "categories": [
+        "q-bio.PE",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "ARGaze: Autoregressive Transformers for Online Egocentric Gaze Estimation",
+      "authors": [
+        "Jia Li",
+        "Wenjie Zhao",
+        "Shijian Deng",
+        "Bolin Lai",
+        "Yuheng Wu",
+        "RUijia Chen",
+        "Jon E. Froehlich",
+        "Yuhang Zhao",
+        "Yapeng Tian"
+      ],
+      "abstract": "Online egocentric gaze estimation predicts where a camera wearer is looking from first-person video using only past and current frames, a task essential for augmented reality and assistive technologies. Unlike third-person gaze estimation, this setting lacks explicit head or eye signals, requiring models to infer current visual attention from sparse, indirect cues such as hand-object interactions and salient scene content. We observe that gaze exhibits strong temporal continuity during goal-directed activities: knowing where a person looked recently provides a powerful prior for predicting where they look next. Inspired by vision-conditioned autoregressive decoding in vision-language models, we propose ARGaze, which reformulates gaze estimation as sequential prediction: at each timestep, a transformer decoder predicts current gaze by conditioning on (i) current visual features and (ii) a fixed-length Gaze Context Window of recent gaze target estimates. This design enforces causality and enables bounded-resource streaming inference. We achieve state-of-the-art performance across multiple egocentric benchmarks under online evaluation, with extensive ablations validating that autoregressive modeling with bounded gaze history is critical for robust prediction. We will release our source code and pre-trained models.",
+      "pdf_url": "https://arxiv.org/pdf/2602.05132v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.05132v1",
+      "published": "2026-02-04",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Causal Representation Meets Stochastic Modeling under Generic Geometry",
+      "authors": [
+        "Jiaxu Ren",
+        "Yixin Wang",
+        "Biwei Huang"
+      ],
+      "abstract": "Learning meaningful causal representations from observations has emerged as a crucial task for facilitating machine learning applications and driving scientific discoveries in fields such as climate science, biology, and physics. This process involves disentangling high-level latent variables and their causal relationships from low-level observations. Previous work in this area that achieves identifiability typically focuses on cases where the observations are either i.i.d. or follow a latent discrete-time process. Nevertheless, many real-world settings require identifying latent variables that are continuous-time stochastic processes (e.g., multivariate point processes). To this end, we develop identifiable causal representation learning for continuous-time latent stochastic point processes. We study its identifiability by analyzing the geometry of the parameter space. Furthermore, we develop MUTATE, an identifiable variational autoencoder framework with a time-adaptive transition module to infer stochastic dynamics. Across simulated and empirical studies, we find that MUTATE can effectively answer scientific questions, such as the accumulation of mutations in genomics and the mechanisms driving neuron spike triggers in response to time-varying dynamics.",
+      "pdf_url": "https://arxiv.org/pdf/2602.05033v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.05033v1",
+      "published": "2026-02-04",
+      "categories": [
+        "cs.LG",
+        "math.AG"
       ]
     }
   ]
