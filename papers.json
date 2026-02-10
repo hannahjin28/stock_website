@@ -1,6 +1,105 @@
 {
-  "last_updated": "2026-02-09T01:14:28.900287",
+  "last_updated": "2026-02-10T01:22:53.030696",
   "papers": [
+    {
+      "title": "Endogenous Resistance to Activation Steering in Language Models",
+      "authors": [
+        "Alex McKenzie",
+        "Keenan Pepper",
+        "Stijn Servaes",
+        "Martin Leitgab",
+        "Murat Cubuktepe",
+        "Mike Vaiana",
+        "Diogo de Lucena",
+        "Judd Rosenblatt",
+        "Michael S. A. Graziano"
+      ],
+      "abstract": "Large language models can resist task-misaligned activation steering during inference, sometimes recovering mid-generation to produce improved responses even when steering remains active. We term this Endogenous Steering Resistance (ESR). Using sparse autoencoder (SAE) latents to steer model activations, we find that Llama-3.3-70B shows substantial ESR, while smaller models from the Llama-3 and Gemma-2 families exhibit the phenomenon less frequently. We identify 26 SAE latents that activate differentially during off-topic content and are causally linked to ESR in Llama-3.3-70B. Zero-ablating these latents reduces the multi-attempt rate by 25%, providing causal evidence for dedicated internal consistency-checking circuits. We demonstrate that ESR can be deliberately enhanced through both prompting and training: meta-prompts instructing the model to self-monitor increase the multi-attempt rate by 4x for Llama-3.3-70B, and fine-tuning on self-correction examples successfully induces ESR-like behavior in smaller models. These findings have dual implications: ESR could protect against adversarial manipulation but might also interfere with beneficial safety interventions that rely on activation steering. Understanding and controlling these resistance mechanisms is important for developing transparent and controllable AI systems. Code is available at github.com/agencyenterprise/endogenous-steering-resistance.",
+      "pdf_url": "https://arxiv.org/pdf/2602.06941v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.06941v1",
+      "published": "2026-02-06",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Can Post-Training Transform LLMs into Causal Reasoners?",
+      "authors": [
+        "Junqi Chen",
+        "Sirui Chen",
+        "Chaochao Lu"
+      ],
+      "abstract": "Causal inference is essential for decision-making but remains challenging for non-experts. While large language models (LLMs) show promise in this domain, their precise causal estimation capabilities are still limited, and the impact of post-training on these abilities is insufficiently explored. This paper examines the extent to which post-training can enhance LLMs' capacity for causal inference. We introduce CauGym, a comprehensive dataset comprising seven core causal tasks for training and five diverse test sets. Using this dataset, we systematically evaluate five post-training approaches: SFT, DPO, KTO, PPO, and GRPO. Across five in-domain and four existing benchmarks, our experiments demonstrate that appropriate post-training enables smaller LLMs to perform causal inference competitively, often surpassing much larger models. Our 14B parameter model achieves 93.5% accuracy on the CaLM benchmark, compared to 55.4% by OpenAI o3. Furthermore, the post-trained LLMs exhibit strong generalization and robustness under real-world conditions such as distribution shifts and noisy data. Collectively, these findings provide the first systematic evidence that targeted post-training can produce reliable and robust LLM-based causal reasoners. Our data and GRPO-model are available at https://github.com/OpenCausaLab/CauGym.",
+      "pdf_url": "https://arxiv.org/pdf/2602.06337v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.06337v1",
+      "published": "2026-02-06",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Latent variation in pathogen strain-specific effects under multiple-versions-of-treatment theory",
+      "authors": [
+        "Bronner P. Gonçalves"
+      ],
+      "abstract": "Evidence-informed policy on infections requires estimates of their effects on health. However, pathogenic variation, whereby occurrence of adverse outcomes depends on the infecting strain, might complicate the study of many infectious agents. Here, we consider the interpretation of epidemiologic studies on effects of infections on health when there is heterogeneity in strain-specific effects and information on strain composition is unavailable. We use potential outcomes and causal inference theory for analyses in the presence of multiple versions of treatment to argue that oft-reported quantities in these studies have a causal interpretation that depends on population frequencies of infecting strains. Moreover, as in other contexts where the treatment-variation-irrelevance assumption might be violated, transportability requires additional considerations, beyond those needed for non-compound exposures. This discussion, that considers potential heterogeneity in strain-specific effects, will facilitate interpretation of these studies, and for the reasons mentioned above, also highlights the value of pathogen subtype data.",
+      "pdf_url": "https://arxiv.org/pdf/2602.06262v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.06262v1",
+      "published": "2026-02-05",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Age-Dependent Causal Effects of Mandibular Dose on Osteoradionecrosis Risk After Head and Neck Radiotherapy",
+      "authors": [
+        "Jingyuan Chen",
+        "Yunze Yang",
+        "Olivia M. Muller",
+        "Lei Zeng",
+        "Zhengliang Liu",
+        "Tianming Liu",
+        "Robert L",
+        "Foote",
+        "Daniel J",
+        "Ma",
+        "Samir H",
+        "Patel",
+        "Zhong Liu",
+        "Wei Liu"
+      ],
+      "abstract": "Distinguishing causal relationships from statistical correlations remains a fundamental challenge in clinical research, limiting the translation of observational findings into interventional treatment guidelines. Here we apply causal machine learning to establish causal effects of radiation dose parameters on mandibular osteoradionecrosis (ORN) in 931 head and neck cancer patients treated with volumetric-modulated arc therapy. Using generalized random forests, we demonstrate that all examined dosimetric factors exhibit significant positive causal effects on ORN development (average treatment effects: 0.092-0.141). Integration with explainable machine learning reveals substantial treatment effect heterogeneity, with patients aged 50-60 years showing the strongest causal dose-response relationships (conditional average treatment effects up to 0.229), while patients over 70 years demonstrate minimal effects. These results suggest that age-stratified treatment optimization and personalized treatment planning for the dosimetric factors could reduce ORN risk. Our findings demonstrate that causal inference methods can transform clinical retrospective radiotherapy data into personalized treatment recommendations, providing a methodological framework applicable to toxicity prediction across oncology and other clinical domains where treatment decisions depend on complex dose-response relationships.",
+      "pdf_url": "https://arxiv.org/pdf/2602.06212v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.06212v1",
+      "published": "2026-02-05",
+      "categories": [
+        "physics.med-ph"
+      ]
+    },
+    {
+      "title": "DeDPO: Debiased Direct Preference Optimization for Diffusion Models",
+      "authors": [
+        "Khiem Pham",
+        "Quang Nguyen",
+        "Tung Nguyen",
+        "Jingsen Zhu",
+        "Michele Santacatterina",
+        "Dimitris Metaxas",
+        "Ramin Zabih"
+      ],
+      "abstract": "Direct Preference Optimization (DPO) has emerged as a predominant alignment method for diffusion models, facilitating off-policy training without explicit reward modeling. However, its reliance on large-scale, high-quality human preference labels presents a severe cost and scalability bottleneck. To overcome this, We propose a semi-supervised framework augmenting limited human data with a large corpus of unlabeled pairs annotated via cost-effective synthetic AI feedback. Our paper introduces Debiased DPO (DeDPO), which uniquely integrates a debiased estimation technique from causal inference into the DPO objective. By explicitly identifying and correcting the systematic bias and noise inherent in synthetic annotators, DeDPO ensures robust learning from imperfect feedback sources, including self-training and Vision-Language Models (VLMs). Experiments demonstrate that DeDPO is robust to the variations in synthetic labeling methods, achieving performance that matches and occasionally exceeds the theoretical upper bound of models trained on fully human-labeled data. This establishes DeDPO as a scalable solution for human-AI alignment using inexpensive synthetic supervision.",
+      "pdf_url": "https://arxiv.org/pdf/2602.06195v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.06195v1",
+      "published": "2026-02-05",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "Causal Inference on Stopped Random Walks in Online Advertising",
       "authors": [
@@ -72,9 +171,9 @@
         "Changwen Zheng",
         "Hui Xiong"
       ],
-      "abstract": "Safety alignment mechanisms in Large Language Models (LLMs) often operate as latent internal states, obscuring the model's inherent capabilities. Building on this observation, we model the safety mechanism as an unobserved confounder from a causal perspective. Then, we propose the \\textbf{C}ausal \\textbf{F}ront-Door \\textbf{A}djustment \\textbf{A}ttack ({\\textbf{CFA}}$^2$) to jailbreak LLM, which is a framework that leverages Pearl's Front-Door Criterion to sever the confounding associations for robust jailbreaking. Specifically, we employ Sparse Autoencoders (SAEs) to physically strip defense-related features, isolating the core task intent. We further reduce computationally expensive marginalization to a deterministic intervention with low inference complexity. Experiments demonstrate that {CFA}$^2$ achieves state-of-the-art attack success rates while offering a mechanistic interpretation of the jailbreaking process.",
-      "pdf_url": "https://arxiv.org/pdf/2602.05444v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.05444v1",
+      "abstract": "Safety alignment mechanisms in Large Language Models (LLMs) often operate as latent internal states, obscuring the model's inherent capabilities. Building on this observation, we model the safety mechanism as an unobserved confounder from a causal perspective. Then, we propose the Causal Front-Door Adjustment Attack (CFA{$^2$}) to jailbreak LLM, which is a framework that leverages Pearl's Front-Door Criterion to sever the confounding associations for robust jailbreaking. Specifically, we employ Sparse Autoencoders (SAEs) to physically strip defense-related features, isolating the core task intent. We further reduce computationally expensive marginalization to a deterministic intervention with low inference complexity. Experiments demonstrate that CFA{$^2$} achieves state-of-the-art attack success rates while offering a mechanistic interpretation of the jailbreaking process.",
+      "pdf_url": "https://arxiv.org/pdf/2602.05444v2",
+      "arxiv_url": "http://arxiv.org/abs/2602.05444v2",
       "published": "2026-02-05",
       "categories": [
         "cs.CL"
@@ -102,90 +201,6 @@
       "published": "2026-02-05",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "FlashBlock: Attention Caching for Efficient Long-Context Block Diffusion",
-      "authors": [
-        "Zhuokun Chen",
-        "Jianfei Cai",
-        "Bohan Zhuang"
-      ],
-      "abstract": "Generating long-form content, such as minute-long videos and extended texts, is increasingly important for modern generative models. Block diffusion improves inference efficiency via KV caching and block-wise causal inference and has been widely adopted in diffusion language models and video generation. However, in long-context settings, block diffusion still incurs substantial overhead from repeatedly computing attention over a growing KV cache. We identify an underexplored property of block diffusion: cross-step redundancy of attention within a block. Our analysis shows that attention outputs from tokens outside the current block remain largely stable across diffusion steps, while block-internal attention varies significantly. Based on this observation, we propose FlashBlock, a cached block-external attention mechanism that reuses stable attention output, reducing attention computation and KV cache access without modifying the diffusion process. Moreover, FlashBlock is orthogonal to sparse attention and can be combined as a complementary residual reuse strategy, substantially improving model accuracy under aggressive sparsification. Experiments on diffusion language models and video generation demonstrate up to 1.44$\\times$ higher token throughput and up to 1.6$\\times$ reduction in attention time, with negligible impact on generation quality. Project page: https://caesarhhh.github.io/FlashBlock/.",
-      "pdf_url": "https://arxiv.org/pdf/2602.05305v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.05305v1",
-      "published": "2026-02-05",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Causal Online Learning of Safe Regions in Cloud Radio Access Networks",
-      "authors": [
-        "Kim Hammar",
-        "Tansu Alpcan",
-        "Emil Lupu"
-      ],
-      "abstract": "Cloud radio access networks (RANs) enable cost-effective management of mobile networks by dynamically scaling their capacity on demand. However, deploying adaptive controllers to implement such dynamic scaling in operational networks is challenging due to the risk of breaching service agreements and operational constraints. To mitigate this challenge, we present a novel method for learning the safe operating region of the RAN, i.e., the set of resource allocations and network configurations for which its specification is fulfilled. The method, which we call (C)ausal (O)nline (L)earning, operates in two online phases: an inference phase and an intervention phase. In the first phase, we passively observe the RAN to infer an initial safe region via causal inference and Gaussian process regression. In the second phase, we gradually expand this region through interventional Bayesian learning. We prove that COL ensures that the learned region is safe with a specified probability and that it converges to the full safe region under standard conditions. We experimentally validate COL on a 5G testbed. The results show that COL quickly learns the safe region while incurring low operational cost and being up to 10x more sample-efficient than current state-of-the-art methods for safe learning.",
-      "pdf_url": "https://arxiv.org/pdf/2602.05280v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.05280v1",
-      "published": "2026-02-05",
-      "categories": [
-        "cs.NI"
-      ]
-    },
-    {
-      "title": "Learning virulence-transmission relationships using causal inference",
-      "authors": [
-        "Sudam Surasinghe",
-        "C. Brandon Ogbunugafor"
-      ],
-      "abstract": "The relationship between traits that influence pathogen virulence and transmission is part of the central canon of the evolution and ecology of infectious disease. However, identifying directional and mechanistic relationships among traits remains a key challenge in various subfields of biology, as models often assume static, fixed links between characteristics. Here, we introduce learning evolutionary trait relationships (LETR), a data-driven framework that applies Granger-causality principles to determine which traits drive others and how these relationships change over time. LETR integrates causal discovery with generative mapping and transfer-operator analysis to link short-term predictability with long-term trait distributions. Using a synthetic myxomatosis virus-host data set, we show that LETR reliably recovers known directional influences, such as virulence driving transmission. Applying the framework to global pandemic (SARS-CoV-2) data, we find that past virulence improves future transmission prediction, while the reverse effect is weak. Invariant-density estimates reveal a long-term trend toward low virulence and transmission, with bimodality in virulence suggesting ecological influences or host heterogeneity. In summary, this study provides a blueprint for learning the relationship between how harmful a pathogen is and how well it spreads, which is highly idiosyncratic and context-dependent. This finding undermines simplistic models and encourages the development of new theory for the constraints underlying pathogen evolution. Further, by uniting causal inference with dynamical modeling, the LETR framework offers a general approach for uncovering mechanistic trait linkages in complex biological systems of various kinds.",
-      "pdf_url": "https://arxiv.org/pdf/2602.05196v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.05196v1",
-      "published": "2026-02-05",
-      "categories": [
-        "q-bio.PE",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "ARGaze: Autoregressive Transformers for Online Egocentric Gaze Estimation",
-      "authors": [
-        "Jia Li",
-        "Wenjie Zhao",
-        "Shijian Deng",
-        "Bolin Lai",
-        "Yuheng Wu",
-        "RUijia Chen",
-        "Jon E. Froehlich",
-        "Yuhang Zhao",
-        "Yapeng Tian"
-      ],
-      "abstract": "Online egocentric gaze estimation predicts where a camera wearer is looking from first-person video using only past and current frames, a task essential for augmented reality and assistive technologies. Unlike third-person gaze estimation, this setting lacks explicit head or eye signals, requiring models to infer current visual attention from sparse, indirect cues such as hand-object interactions and salient scene content. We observe that gaze exhibits strong temporal continuity during goal-directed activities: knowing where a person looked recently provides a powerful prior for predicting where they look next. Inspired by vision-conditioned autoregressive decoding in vision-language models, we propose ARGaze, which reformulates gaze estimation as sequential prediction: at each timestep, a transformer decoder predicts current gaze by conditioning on (i) current visual features and (ii) a fixed-length Gaze Context Window of recent gaze target estimates. This design enforces causality and enables bounded-resource streaming inference. We achieve state-of-the-art performance across multiple egocentric benchmarks under online evaluation, with extensive ablations validating that autoregressive modeling with bounded gaze history is critical for robust prediction. We will release our source code and pre-trained models.",
-      "pdf_url": "https://arxiv.org/pdf/2602.05132v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.05132v1",
-      "published": "2026-02-04",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal Representation Meets Stochastic Modeling under Generic Geometry",
-      "authors": [
-        "Jiaxu Ren",
-        "Yixin Wang",
-        "Biwei Huang"
-      ],
-      "abstract": "Learning meaningful causal representations from observations has emerged as a crucial task for facilitating machine learning applications and driving scientific discoveries in fields such as climate science, biology, and physics. This process involves disentangling high-level latent variables and their causal relationships from low-level observations. Previous work in this area that achieves identifiability typically focuses on cases where the observations are either i.i.d. or follow a latent discrete-time process. Nevertheless, many real-world settings require identifying latent variables that are continuous-time stochastic processes (e.g., multivariate point processes). To this end, we develop identifiable causal representation learning for continuous-time latent stochastic point processes. We study its identifiability by analyzing the geometry of the parameter space. Furthermore, we develop MUTATE, an identifiable variational autoencoder framework with a time-adaptive transition module to infer stochastic dynamics. Across simulated and empirical studies, we find that MUTATE can effectively answer scientific questions, such as the accumulation of mutations in genomics and the mechanisms driving neuron spike triggers in response to time-varying dynamics.",
-      "pdf_url": "https://arxiv.org/pdf/2602.05033v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.05033v1",
-      "published": "2026-02-04",
-      "categories": [
-        "cs.LG",
-        "math.AG"
       ]
     }
   ]
