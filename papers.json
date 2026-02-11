@@ -1,206 +1,176 @@
 {
-  "last_updated": "2026-02-10T01:22:53.030696",
+  "last_updated": "2026-02-11T01:20:40.401447",
   "papers": [
     {
-      "title": "Endogenous Resistance to Activation Steering in Language Models",
+      "title": "State policy heterogeneity analyses: considerations and proposals",
       "authors": [
-        "Alex McKenzie",
-        "Keenan Pepper",
-        "Stijn Servaes",
-        "Martin Leitgab",
-        "Murat Cubuktepe",
-        "Mike Vaiana",
-        "Diogo de Lucena",
-        "Judd Rosenblatt",
-        "Michael S. A. Graziano"
+        "Max Rubinstein",
+        "Megan S. Schuler",
+        "Elizabeth A. Stuart",
+        "Bradley D. Stein",
+        "Max Griswold",
+        "Elizabeth M. Stone",
+        "Beth Ann Griffin"
       ],
-      "abstract": "Large language models can resist task-misaligned activation steering during inference, sometimes recovering mid-generation to produce improved responses even when steering remains active. We term this Endogenous Steering Resistance (ESR). Using sparse autoencoder (SAE) latents to steer model activations, we find that Llama-3.3-70B shows substantial ESR, while smaller models from the Llama-3 and Gemma-2 families exhibit the phenomenon less frequently. We identify 26 SAE latents that activate differentially during off-topic content and are causally linked to ESR in Llama-3.3-70B. Zero-ablating these latents reduces the multi-attempt rate by 25%, providing causal evidence for dedicated internal consistency-checking circuits. We demonstrate that ESR can be deliberately enhanced through both prompting and training: meta-prompts instructing the model to self-monitor increase the multi-attempt rate by 4x for Llama-3.3-70B, and fine-tuning on self-correction examples successfully induces ESR-like behavior in smaller models. These findings have dual implications: ESR could protect against adversarial manipulation but might also interfere with beneficial safety interventions that rely on activation steering. Understanding and controlling these resistance mechanisms is important for developing transparent and controllable AI systems. Code is available at github.com/agencyenterprise/endogenous-steering-resistance.",
-      "pdf_url": "https://arxiv.org/pdf/2602.06941v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.06941v1",
-      "published": "2026-02-06",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Can Post-Training Transform LLMs into Causal Reasoners?",
-      "authors": [
-        "Junqi Chen",
-        "Sirui Chen",
-        "Chaochao Lu"
-      ],
-      "abstract": "Causal inference is essential for decision-making but remains challenging for non-experts. While large language models (LLMs) show promise in this domain, their precise causal estimation capabilities are still limited, and the impact of post-training on these abilities is insufficiently explored. This paper examines the extent to which post-training can enhance LLMs' capacity for causal inference. We introduce CauGym, a comprehensive dataset comprising seven core causal tasks for training and five diverse test sets. Using this dataset, we systematically evaluate five post-training approaches: SFT, DPO, KTO, PPO, and GRPO. Across five in-domain and four existing benchmarks, our experiments demonstrate that appropriate post-training enables smaller LLMs to perform causal inference competitively, often surpassing much larger models. Our 14B parameter model achieves 93.5% accuracy on the CaLM benchmark, compared to 55.4% by OpenAI o3. Furthermore, the post-trained LLMs exhibit strong generalization and robustness under real-world conditions such as distribution shifts and noisy data. Collectively, these findings provide the first systematic evidence that targeted post-training can produce reliable and robust LLM-based causal reasoners. Our data and GRPO-model are available at https://github.com/OpenCausaLab/CauGym.",
-      "pdf_url": "https://arxiv.org/pdf/2602.06337v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.06337v1",
-      "published": "2026-02-06",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Latent variation in pathogen strain-specific effects under multiple-versions-of-treatment theory",
-      "authors": [
-        "Bronner P. Gonçalves"
-      ],
-      "abstract": "Evidence-informed policy on infections requires estimates of their effects on health. However, pathogenic variation, whereby occurrence of adverse outcomes depends on the infecting strain, might complicate the study of many infectious agents. Here, we consider the interpretation of epidemiologic studies on effects of infections on health when there is heterogeneity in strain-specific effects and information on strain composition is unavailable. We use potential outcomes and causal inference theory for analyses in the presence of multiple versions of treatment to argue that oft-reported quantities in these studies have a causal interpretation that depends on population frequencies of infecting strains. Moreover, as in other contexts where the treatment-variation-irrelevance assumption might be violated, transportability requires additional considerations, beyond those needed for non-compound exposures. This discussion, that considers potential heterogeneity in strain-specific effects, will facilitate interpretation of these studies, and for the reasons mentioned above, also highlights the value of pathogen subtype data.",
-      "pdf_url": "https://arxiv.org/pdf/2602.06262v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.06262v1",
-      "published": "2026-02-05",
+      "abstract": "State-level policy studies often conduct heterogeneity analyses that quantify how treatment effects vary across state characteristics. These analyses may be used to inform state-specific policy decisions, or to infer how the effect of a policy changes in combination with other state characteristics. However, in state-level settings with varied contexts and policy landscapes, multiple versions of similar policies, and differential policy implementation, the causal quantities targeted by these analyses may not align with the inferential goals. This paper clarifies these issues by distinguishing several causal estimands relevant to heterogeneity analyses in state-policy settings, including state-specific treatment effects (ITE), conditional average treatment effects (CATE), and controlled direct effects (CDE). We argue that the CATE is often the easiest to identify and estimate, but may not be the most policy relevant target of inference. Moreover, the widespread practice of coarsening distinct policies or implementations into a single indicator further complicates the interpretation of these analyses. Motivated by these limitations, we propose bounding ITEs as an alternative inferential goal, yielding ranges for each state's policy effect under explicit assumptions that quantify deviations from the ideal identifying conditions. These bounds target a well-defined and policy-relevant quantity, the effect for specific states. We develop this approach within a difference-in-differences framework and discuss how sensitivity parameters may be informed using pre-treatment data. Through simulations we demonstrate that bounding state-specific effects can more reliably determine the sign of the ITEs than CATE estimates. We then illustrate this method to examine the effect of the Affordable Care Act Medicaid expansion on high-volume buprenorphine prescribing.",
+      "pdf_url": "https://arxiv.org/pdf/2602.08643v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.08643v1",
+      "published": "2026-02-09",
       "categories": [
         "stat.ME",
         "stat.AP"
       ]
     },
     {
-      "title": "Age-Dependent Causal Effects of Mandibular Dose on Osteoradionecrosis Risk After Head and Neck Radiotherapy",
+      "title": "CauScale: Neural Causal Discovery at Scale",
       "authors": [
-        "Jingyuan Chen",
-        "Yunze Yang",
-        "Olivia M. Muller",
-        "Lei Zeng",
-        "Zhengliang Liu",
-        "Tianming Liu",
-        "Robert L",
-        "Foote",
-        "Daniel J",
-        "Ma",
-        "Samir H",
-        "Patel",
-        "Zhong Liu",
-        "Wei Liu"
+        "Bo Peng",
+        "Sirui Chen",
+        "Jiaguo Tian",
+        "Yu Qiao",
+        "Chaochao Lu"
       ],
-      "abstract": "Distinguishing causal relationships from statistical correlations remains a fundamental challenge in clinical research, limiting the translation of observational findings into interventional treatment guidelines. Here we apply causal machine learning to establish causal effects of radiation dose parameters on mandibular osteoradionecrosis (ORN) in 931 head and neck cancer patients treated with volumetric-modulated arc therapy. Using generalized random forests, we demonstrate that all examined dosimetric factors exhibit significant positive causal effects on ORN development (average treatment effects: 0.092-0.141). Integration with explainable machine learning reveals substantial treatment effect heterogeneity, with patients aged 50-60 years showing the strongest causal dose-response relationships (conditional average treatment effects up to 0.229), while patients over 70 years demonstrate minimal effects. These results suggest that age-stratified treatment optimization and personalized treatment planning for the dosimetric factors could reduce ORN risk. Our findings demonstrate that causal inference methods can transform clinical retrospective radiotherapy data into personalized treatment recommendations, providing a methodological framework applicable to toxicity prediction across oncology and other clinical domains where treatment decisions depend on complex dose-response relationships.",
-      "pdf_url": "https://arxiv.org/pdf/2602.06212v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.06212v1",
-      "published": "2026-02-05",
+      "abstract": "Causal discovery is essential for advancing data-driven fields such as scientific AI and data analysis, yet existing approaches face significant time- and space-efficiency bottlenecks when scaling to large graphs. To address this challenge, we present CauScale, a neural architecture designed for efficient causal discovery that scales inference to graphs with up to 1000 nodes. CauScale improves time efficiency via a reduction unit that compresses data embeddings and improves space efficiency by adopting tied attention weights to avoid maintaining axis-specific attention maps. To keep high causal discovery accuracy, CauScale adopts a two-stream design: a data stream extracts relational evidence from high-dimensional observations, while a graph stream integrates statistical graph priors and preserves key structural signals. CauScale successfully scales to 500-node graphs during training, where prior work fails due to space limitations. Across testing data with varying graph scales and causal mechanisms, CauScale achieves 99.6% mAP on in-distribution data and 84.4% on out-of-distribution data, while delivering 4-13,000 times inference speedups over prior methods. Our project page is at https://github.com/OpenCausaLab/CauScale.",
+      "pdf_url": "https://arxiv.org/pdf/2602.08629v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.08629v1",
+      "published": "2026-02-09",
       "categories": [
-        "physics.med-ph"
-      ]
-    },
-    {
-      "title": "DeDPO: Debiased Direct Preference Optimization for Diffusion Models",
-      "authors": [
-        "Khiem Pham",
-        "Quang Nguyen",
-        "Tung Nguyen",
-        "Jingsen Zhu",
-        "Michele Santacatterina",
-        "Dimitris Metaxas",
-        "Ramin Zabih"
-      ],
-      "abstract": "Direct Preference Optimization (DPO) has emerged as a predominant alignment method for diffusion models, facilitating off-policy training without explicit reward modeling. However, its reliance on large-scale, high-quality human preference labels presents a severe cost and scalability bottleneck. To overcome this, We propose a semi-supervised framework augmenting limited human data with a large corpus of unlabeled pairs annotated via cost-effective synthetic AI feedback. Our paper introduces Debiased DPO (DeDPO), which uniquely integrates a debiased estimation technique from causal inference into the DPO objective. By explicitly identifying and correcting the systematic bias and noise inherent in synthetic annotators, DeDPO ensures robust learning from imperfect feedback sources, including self-training and Vision-Language Models (VLMs). Experiments demonstrate that DeDPO is robust to the variations in synthetic labeling methods, achieving performance that matches and occasionally exceeds the theoretical upper bound of models trained on fully human-labeled data. This establishes DeDPO as a scalable solution for human-AI alignment using inexpensive synthetic supervision.",
-      "pdf_url": "https://arxiv.org/pdf/2602.06195v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.06195v1",
-      "published": "2026-02-05",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal Inference on Stopped Random Walks in Online Advertising",
-      "authors": [
-        "Jia Yuan Yu"
-      ],
-      "abstract": "We consider a causal inference problem frequently encountered in online advertising systems, where a publisher (e.g., Instagram, TikTok) interacts repeatedly with human users and advertisers by sporadically displaying to each user an advertisement selected through an auction. Each treatment corresponds to a parameter value of the advertising mechanism (e.g., auction reserve-price), and we want to estimate through experiments the corresponding long-term treatment effect (e.g., annual advertising revenue). In our setting, the treatment affects not only the instantaneous revenue from showing an ad, but also changes each user's interaction-trajectory, and each advertiser's bidding policy -- as the latter is constrained by a finite budget. In particular, each a treatment may even affect the size of the population, since users interact longer with a tolerable advertising mechanism. We drop the classical i.i.d. assumption and model the experiment measurements (e.g., advertising revenue) as a stopped random walk, and use a budget-splitting experimental design, the Anscombe Theorem, a Wald-like equation, and a Central Limit Theorem to construct confidence intervals for the long-term treatment effect.",
-      "pdf_url": "https://arxiv.org/pdf/2602.05997v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.05997v1",
-      "published": "2026-02-05",
-      "categories": [
-        "stat.ML",
         "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Towards Reliable Social A/B Testing: Spillover-Contained Clustering with Robust Post-Experiment Analysis",
+      "authors": [
+        "Xu Min",
+        "Zhaoxu Yang",
+        "Kaixuan Tan",
+        "Juan Yan",
+        "Xunbin Xiong",
+        "Zihao Zhu",
+        "Kaiyu Zhu",
+        "Fenglin Cui",
+        "Yang Yang",
+        "Sihua Yang",
+        "Jianhui Bu"
+      ],
+      "abstract": "A/B testing is the foundation of decision-making in online platforms, yet social products often suffer from network interference: user interactions cause treatment effects to spill over into the control group. Such spillovers bias causal estimates and undermine experimental conclusions. Existing approaches face key limitations: user-level randomization ignores network structure, while cluster-based methods often rely on general-purpose clustering that is not tailored for spillover containment and has difficulty balancing unbiasedness and statistical power at scale. We propose a spillover-contained experimentation framework with two stages. In the pre-experiment stage, we build social interaction graphs and introduce a Balanced Louvain algorithm that produces stable, size-balanced clusters while minimizing cross-cluster edges, enabling reliable cluster-based randomization. In the post-experiment stage, we develop a tailored CUPAC estimator that leverages pre-experiment behavioral covariates to reduce the variance induced by cluster-level assignment, thereby improving statistical power. Together, these components provide both structural spillover containment and robust statistical inference. We validate our approach through large-scale social sharing experiments on Kuaishou, a platform serving hundreds of millions of users. Results show that our method substantially reduces spillover and yields more accurate assessments of social strategies than traditional user-level designs, establishing a reliable and scalable framework for networked A/B testing.",
+      "pdf_url": "https://arxiv.org/pdf/2602.08569v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.08569v1",
+      "published": "2026-02-09",
+      "categories": [
+        "cs.SI",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Causal Schrödinger Bridges: Constrained Optimal Transport on Structural Manifolds",
+      "authors": [
+        "Rui Wu",
+        "Li YongJun"
+      ],
+      "abstract": "Generative modeling typically seeks the path of least action via deterministic flows (ODE). While effective for in-distribution tasks, we argue that these deterministic paths become brittle under causal interventions, which often require transporting probability mass across low-density regions (\"off-manifold\") where the vector field is ill-defined. This leads to numerical instability and spurious correlations. In this work, we introduce the Causal Schrödinger Bridge (CSB), a framework that reformulates counterfactual inference as Entropic Optimal Transport. Unlike deterministic approaches that require strict invertibility, CSB leverages diffusion processes (SDEs) to robustly \"tunnel\" through support mismatches while strictly enforcing structural admissibility constraints. We prove the Structural Decomposition Theorem, showing that the global high-dimensional bridge factorizes into local, robust transitions. Empirical validation on high-dimensional interventions (Morpho-MNIST) demonstrates that CSB significantly outperforms deterministic baselines in structural consistency, particularly in regimes of strong, out-of-distribution treatments.",
+      "pdf_url": "https://arxiv.org/pdf/2602.08535v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.08535v1",
+      "published": "2026-02-09",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Estimating Aleatoric Uncertainty in the Causal Treatment Effect",
+      "authors": [
+        "Liyuan Xu",
+        "Bijan Mazaheri"
+      ],
+      "abstract": "Previous work on causal inference has primarily focused on averages and conditional averages of treatment effects, with significantly less attention on variability and uncertainty in individual treatment responses. In this paper, we introduce the variance of the treatment effect (VTE) and conditional variance of treatment effect (CVTE) as the natural measure of aleatoric uncertainty inherent in treatment responses, and we demonstrate that these quantities are identifiable from observed data under mild assumptions, even in the presence of unobserved confounders. We further propose nonparametric kernel-based estimators for VTE and CVTE, and our theoretical analysis establishes their convergence. We also test the performance of our method through extensive empirical experiments on both synthetic and semi-simulated datasets, where it demonstrates superior or comparable performance to naive baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2602.08461v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.08461v1",
+      "published": "2026-02-09",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Estimation Strategies for Causal Decomposition Analysis with Allowability Specifications",
+      "authors": [
+        "John W. Jackson",
+        "Ting-Hsuan Chang",
+        "Aster Meche",
+        "Trang Q. Nguyen"
+      ],
+      "abstract": "Causal decomposition analysis (CDA) is an approach for modeling the impact of hypothetical interventions to reduce disparities. It is useful for identifying foci that future interventions, including multilevel and multimodal interventions, could focus on to reduce disparities. Based within the potential outcomes framework, CDA has a causal interpretation when the identifying assumptions are met. CDA also allows an analyst to consider which covariates are allowable (i.e., fair) for defining the disparity in the outcome and in the point of intervention, so that its interpretation is also meaningful. While the incorporation of causal inference and allowability promotes robustness, transparency, and dialogue in disparities research, it can lead to challenges in estimation such as the need to correctly model densities. Also, how CDA differs from commonly used estimators may not be clear, which may limit its uptake. To address these challenges, we provide a tour of estimation strategies for CDA, reviewing existing proposals and introducing novel estimators that overcome key estimation challenges. Among them we introduce what we call \"bridging\" estimators that avoid directly modeling any density, and weighted sequential regression estimators that are multiply robust. Additionally, we provide diagnostics to assess the quality of the nuisance density models and weighting functions they rely on. We formally establish the estimators' robustness to model mis-specification, demonstrate their performance through a simulation study based on real data, and apply them to study disparities in hypertension control using electronic health records in a large healthcare system.",
+      "pdf_url": "https://arxiv.org/pdf/2602.07825v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.07825v1",
+      "published": "2026-02-08",
+      "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "BABE: Biology Arena BEnchmark",
+      "title": "Emergent Structured Representations Support Flexible In-Context Inference in Large Language Models",
       "authors": [
-        "Junting Zhou",
-        "Jin Chen",
-        "Linfeng Hao",
-        "Denghui Cao",
-        "Zheyu Wang",
-        "Qiguang Chen",
-        "Chaoyou Fu",
-        "Jiaze Chen",
-        "Yuchen Wu",
-        "Ge Zhang",
-        "Mingxuan Wang",
-        "Wenhao Huang",
-        "Tong Yang"
+        "Ningyu Xu",
+        "Qi Zhang",
+        "Xipeng Qiu",
+        "Xuanjing Huang"
       ],
-      "abstract": "The rapid evolution of large language models (LLMs) has expanded their capabilities from basic dialogue to advanced scientific reasoning. However, existing benchmarks in biology often fail to assess a critical skill required of researchers: the ability to integrate experimental results with contextual knowledge to derive meaningful conclusions. To address this gap, we introduce BABE(Biology Arena BEnchmark), a comprehensive benchmark designed to evaluate the experimental reasoning capabilities of biological AI systems. BABE is uniquely constructed from peer-reviewed research papers and real-world biological studies, ensuring that tasks reflect the complexity and interdisciplinary nature of actual scientific inquiry. BABE challenges models to perform causal reasoning and cross-scale inference. Our benchmark provides a robust framework for assessing how well AI systems can reason like practicing scientists, offering a more authentic measure of their potential to contribute to biological research.",
-      "pdf_url": "https://arxiv.org/pdf/2602.05857v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.05857v1",
-      "published": "2026-02-05",
+      "abstract": "Large language models (LLMs) exhibit emergent behaviors suggestive of human-like reasoning. While recent work has identified structured, human-like conceptual representations within these models, it remains unclear whether they functionally rely on such representations for reasoning. Here we investigate the internal processing of LLMs during in-context concept inference. Our results reveal a conceptual subspace emerging in middle to late layers, whose representational structure persists across contexts. Using causal mediation analyses, we demonstrate that this subspace is not merely an epiphenomenon but is functionally central to model predictions, establishing its causal role in inference. We further identify a layer-wise progression where attention heads in early-to-middle layers integrate contextual cues to construct and refine the subspace, which is subsequently leveraged by later layers to generate predictions. Together, these findings provide evidence that LLMs dynamically construct and use structured, latent representations in context for inference, offering insights into the computational processes underlying flexible adaptation.",
+      "pdf_url": "https://arxiv.org/pdf/2602.07794v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.07794v1",
+      "published": "2026-02-08",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Disentangled Instrumental Variables for Causal Inference with Networked Observational Data",
+      "authors": [
+        "Zhirong Huang",
+        "Debo Cheng",
+        "Guixian Zhang",
+        "Yi Wang",
+        "Jiuyong Li",
+        "Shichao Zhang"
+      ],
+      "abstract": "Instrumental variables (IVs) are crucial for addressing unobservable confounders, yet their stringent exogeneity assumptions pose significant challenges in networked data. Existing methods typically rely on modelling neighbour information when recovering IVs, thereby inevitably mixing shared environment-induced endogenous correlations and individual-specific exogenous variation, leading the resulting IVs to inherit dependence on unobserved confounders and to violate exogeneity. To overcome this challenge, we propose $\\underline{Dis}$entangled $\\underline{I}$nstrumental $\\underline{V}$ariables (DisIV) framework, a novel method for causal inference based on networked observational data with latent confounders. DisIV exploits network homogeneity as an inductive bias and employs a structural disentanglement mechanism to extract individual-specific components that serve as latent IVs. The causal validity of the extracted IVs is constrained through explicit orthogonality and exclusion conditions. Extensive semi-synthetic experiments on real-world datasets demonstrate that DisIV consistently outperforms state-of-the-art baselines in causal effect estimation under network-induced confounding.",
+      "pdf_url": "https://arxiv.org/pdf/2602.07765v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.07765v1",
+      "published": "2026-02-08",
       "categories": [
         "cs.AI"
       ]
     },
     {
-      "title": "NEX: Neuron Explore-Exploit Scoring for Label-Free Chain-of-Thought Selection and Model Ranking",
+      "title": "Contextualization or Rationalization? The Effect of Causal Priors on Data Visualization Interpretation",
       "authors": [
-        "Kang Chen",
-        "Zhuoka Feng",
-        "Sihan Zhao",
-        "Kai Xiong",
-        "Junjie Nian",
-        "Yaoning Wang",
-        "Changyi Xiao",
-        "Yixin Cao"
+        "Arran Zeyu Wang",
+        "David Borland",
+        "Estella Calcaterra",
+        "David Gotz"
       ],
-      "abstract": "Large language models increasingly spend inference compute sampling multiple chain-of-thought traces or searching over merged checkpoints. This shifts the bottleneck from generation to selection, often without supervision on the target distribution. We show entropy-based exploration proxies follow an inverted-U with accuracy, suggesting extra exploration can become redundant and induce overthinking. We propose NEX, a white-box label-free unsupervised scoring framework that views reasoning as alternating E-phase (exploration) and X-phase (exploitation). NEX detects E-phase as spikes in newly activated MLP neurons per token from sparse activation caches, then uses a sticky two-state HMM to infer E-X phases and credits E-introduced neurons by whether they are reused in the following X span. These signals yield interpretable neuron weights and a single Good-Mass Fraction score to rank candidate responses and merged variants without task answers. Across reasoning benchmarks and Qwen3 merge families, NEX computed on a small unlabeled activation set predicts downstream accuracy and identifies better variants; we further validate the E-X signal with human annotations and provide causal evidence via \"Effective-vs-Redundant\" neuron transfer.",
-      "pdf_url": "https://arxiv.org/pdf/2602.05805v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.05805v1",
-      "published": "2026-02-05",
+      "abstract": "Understanding how individuals interpret charts is a crucial concern for visual data communication. This imperative has motivated a number of studies, including past work demonstrating that causal priors -- a priori beliefs about causal relationships between concepts -- can have significant influences on the perceived strength of variable relationships inferred from visualizations. This paper builds on these previous results, demonstrating that causal priors can also influence the types of patterns that people perceive as the most salient within ambiguous scatterplots that have roughly equal evidence for trend and cluster patterns. Using a mixed-design approach that combines a large-scale online experiment for breadth of findings with an in-person think-aloud study for analytical depth, we investigated how users' interpretations are influenced by the interplay between causal priors and the visualized data patterns. Our analysis suggests two archetypal reasoning behaviors through which people often make their observations: contextualization, in which users accept a visual pattern that aligns with causal priors and use their existing knowledge to enrich interpretation, and rationalization, in which users encounter a pattern that conflicts with causal priors and attempt to explain away the discrepancy by invoking external factors, such as positing confounding variables or data selection bias. These findings provide initial evidence highlighting the critical role of causal priors in shaping high-level visualization comprehension, and introduce a vocabulary for describing how users reason about data that either confirms or challenges prior beliefs of causality.",
+      "pdf_url": "https://arxiv.org/pdf/2602.07748v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.07748v1",
+      "published": "2026-02-08",
       "categories": [
-        "cs.AI"
+        "cs.HC"
       ]
     },
     {
-      "title": "Causal Front-Door Adjustment for Robust Jailbreak Attacks on LLMs",
+      "title": "Inference under First-Order Degeneracy",
       "authors": [
-        "Yao Zhou",
-        "Zeen Song",
-        "Wenwen Qiang",
-        "Fengge Wu",
-        "Shuyi Zhou",
-        "Changwen Zheng",
-        "Hui Xiong"
+        "Xinyue Bei",
+        "Manu Navjeevan"
       ],
-      "abstract": "Safety alignment mechanisms in Large Language Models (LLMs) often operate as latent internal states, obscuring the model's inherent capabilities. Building on this observation, we model the safety mechanism as an unobserved confounder from a causal perspective. Then, we propose the Causal Front-Door Adjustment Attack (CFA{$^2$}) to jailbreak LLM, which is a framework that leverages Pearl's Front-Door Criterion to sever the confounding associations for robust jailbreaking. Specifically, we employ Sparse Autoencoders (SAEs) to physically strip defense-related features, isolating the core task intent. We further reduce computationally expensive marginalization to a deterministic intervention with low inference complexity. Experiments demonstrate that CFA{$^2$} achieves state-of-the-art attack success rates while offering a mechanistic interpretation of the jailbreaking process.",
-      "pdf_url": "https://arxiv.org/pdf/2602.05444v2",
-      "arxiv_url": "http://arxiv.org/abs/2602.05444v2",
-      "published": "2026-02-05",
+      "abstract": "We study inference in models where a transformation of parameters exhibits first-order degeneracy -- that is, its gradient is zero or close to zero, making the standard delta method invalid. A leading example is causal mediation analysis, where the indirect effect is a product of coefficients and the gradient degenerates near the origin. In these local regions of degeneracy the limiting behaviors of plug-in estimators depend on nuisance parameters that are not consistently estimable. We show that this failure is intrinsic -- around points of degeneracy, both regular and quantile-unbiased estimation are impossible. Despite these restrictions, we develop minimum-distance methods that deliver uniformly valid confidence intervals. We establish sufficient conditions under which standard chi-square critical values remain valid, and propose a simple bootstrap procedure when they are not. We demonstrate favorable power in simulations and in an empirical application linking teacher gender attitudes to student outcomes.",
+      "pdf_url": "https://arxiv.org/pdf/2602.07377v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.07377v1",
+      "published": "2026-02-07",
       "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "ProAct: Agentic Lookahead in Interactive Environments",
-      "authors": [
-        "Yangbin Yu",
-        "Mingyu Yang",
-        "Junyou Li",
-        "Yiming Gao",
-        "Feiyu Liu",
-        "Yijun Yang",
-        "Zichuan Lin",
-        "Jiafei Lyu",
-        "Yicheng Liu",
-        "Zhicong Lu",
-        "Deheng Ye",
-        "Jie Jiang"
-      ],
-      "abstract": "Existing Large Language Model (LLM) agents struggle in interactive environments requiring long-horizon planning, primarily due to compounding errors when simulating future states. To address this, we propose ProAct, a framework that enables agents to internalize accurate lookahead reasoning through a two-stage training paradigm. First, we introduce Grounded LookAhead Distillation (GLAD), where the agent undergoes supervised fine-tuning on trajectories derived from environment-based search. By compressing complex search trees into concise, causal reasoning chains, the agent learns the logic of foresight without the computational overhead of inference-time search. Second, to further refine decision accuracy, we propose the Monte-Carlo Critic (MC-Critic), a plug-and-play auxiliary value estimator designed to enhance policy-gradient algorithms like PPO and GRPO. By leveraging lightweight environment rollouts to calibrate value estimates, MC-Critic provides a low-variance signal that facilitates stable policy optimization without relying on expensive model-based value approximation. Experiments on both stochastic (e.g., 2048) and deterministic (e.g., Sokoban) environments demonstrate that ProAct significantly improves planning accuracy. Notably, a 4B parameter model trained with ProAct outperforms all open-source baselines and rivals state-of-the-art closed-source models, while demonstrating robust generalization to unseen environments. The codes and models are available at https://github.com/GreatX3/ProAct",
-      "pdf_url": "https://arxiv.org/pdf/2602.05327v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.05327v1",
-      "published": "2026-02-05",
-      "categories": [
-        "cs.AI"
+        "econ.EM"
       ]
     }
   ]
