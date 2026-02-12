@@ -1,6 +1,57 @@
 {
-  "last_updated": "2026-02-11T01:20:40.401447",
+  "last_updated": "2026-02-12T01:13:36.316029",
   "papers": [
+    {
+      "title": "Doubly Robust Estimation of Desirability of Outcome Ranking (DOOR) Probability with Application to MDRO Studies",
+      "authors": [
+        "Shiyu Shu",
+        "Toshimitsu Hamasaki",
+        "Scott Evans",
+        "Lauren Komarow",
+        "David van Duin",
+        "Guoqing Diao"
+      ],
+      "abstract": "In observational studies, adjusting for confounders is required if a treatment comparison is planned. A crude comparison of the primary endpoint without covariate adjustment will suffer from biases, and the addition of regression models could improve precision by incorporating imbalanced covariates and thus help make correct inference. Desirability of outcome ranking (DOOR) is a patient-centric benefit-risk evaluation methodology designed for randomized clinical trials. Still, robust covariate adjustment methods could further expand the compatibility of this method in observational studies. In DOOR analysis, each participant's outcome is ranked based on pre-specified clinical criteria, where the most desirable rank represents a good outcome with no side effects and the least desirable rank is the worst possible clinical outcome. We develop a causal framework for estimating the population-level DOOR probability, via the inverse probability of treatment weighting method, G-Computation method, and a Doubly Robust method that combines both. The performance of the proposed methodologies is examined through simulations. We also perform a causal analysis of the Multi-Drug Resistant Organism (MDRO) network within the Antibacterial Resistant Leadership Group (ARLG), comparing the benefit:risk between Mono-drug therapy and Combination-drug therapy.",
+      "pdf_url": "https://arxiv.org/pdf/2602.10012v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.10012v1",
+      "published": "2026-02-10",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Hand2World: Autoregressive Egocentric Interaction Generation via Free-Space Hand Gestures",
+      "authors": [
+        "Yuxi Wang",
+        "Wenqi Ouyang",
+        "Tianyi Wei",
+        "Yi Dong",
+        "Zhiqi Shen",
+        "Xingang Pan"
+      ],
+      "abstract": "Egocentric interactive world models are essential for augmented reality and embodied AI, where visual generation must respond to user input with low latency, geometric consistency, and long-term stability. We study egocentric interaction generation from a single scene image under free-space hand gestures, aiming to synthesize photorealistic videos in which hands enter the scene, interact with objects, and induce plausible world dynamics under head motion. This setting introduces fundamental challenges, including distribution shift between free-space gestures and contact-heavy training data, ambiguity between hand motion and camera motion in monocular views, and the need for arbitrary-length video generation. We present Hand2World, a unified autoregressive framework that addresses these challenges through occlusion-invariant hand conditioning based on projected 3D hand meshes, allowing visibility and occlusion to be inferred from scene context rather than encoded in the control signal. To stabilize egocentric viewpoint changes, we inject explicit camera geometry via per-pixel Plücker-ray embeddings, disentangling camera motion from hand motion and preventing background drift. We further develop a fully automated monocular annotation pipeline and distill a bidirectional diffusion model into a causal generator, enabling arbitrary-length synthesis. Experiments on three egocentric interaction benchmarks show substantial improvements in perceptual quality and 3D consistency while supporting camera control and long-horizon interactive generation.",
+      "pdf_url": "https://arxiv.org/pdf/2602.09600v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.09600v1",
+      "published": "2026-02-10",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Estimating causal effects of functional treatments with modified functional treatment policies",
+      "authors": [
+        "Ziren Jiang",
+        "Erjia Cui",
+        "Jared D. Huling"
+      ],
+      "abstract": "Functional data are increasingly prevalent in biomedical research. While functional data analysis has been established for decades, causal inference with functional treatments remains largely unexplored. Existing methods typically focus on estimating the causal average dose response functional (ADRF), which requires strong positivity assumptions and offers limited interpretability. In this work, we target a new causal estimand, the modified functional treatment policy (MFTP), which focuses on estimating the average potential outcome when each individual slightly modifies their treatment trajectory from the observed one. A major challenge for this new estimand is the need to define an average over an infinite-dimensional object with no density. By proposing a novel definition of the population average over a functional variable using a functional principal component analysis (FPCA) decomposition, we establish the causal identifiability of the MFTP estimand. We further derive outcome regression, inverse probability weighting, and doubly robust estimators for the MFTP, and provide theoretical guarantees under mild regularity conditions. The proposed estimators are validated through extensive simulation studies. Applying our MFTP framework to the National Health and Nutrition Examination Survey (NHANES) accelerometer data, we estimate the causal effects of reducing disruptive nighttime activity and low-activity duration on all-cause mortality.",
+      "pdf_url": "https://arxiv.org/pdf/2602.09145v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.09145v1",
+      "published": "2026-02-09",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "State policy heterogeneity analyses: considerations and proposals",
       "authors": [
@@ -117,60 +168,12 @@
         "Xuanjing Huang"
       ],
       "abstract": "Large language models (LLMs) exhibit emergent behaviors suggestive of human-like reasoning. While recent work has identified structured, human-like conceptual representations within these models, it remains unclear whether they functionally rely on such representations for reasoning. Here we investigate the internal processing of LLMs during in-context concept inference. Our results reveal a conceptual subspace emerging in middle to late layers, whose representational structure persists across contexts. Using causal mediation analyses, we demonstrate that this subspace is not merely an epiphenomenon but is functionally central to model predictions, establishing its causal role in inference. We further identify a layer-wise progression where attention heads in early-to-middle layers integrate contextual cues to construct and refine the subspace, which is subsequently leveraged by later layers to generate predictions. Together, these findings provide evidence that LLMs dynamically construct and use structured, latent representations in context for inference, offering insights into the computational processes underlying flexible adaptation.",
-      "pdf_url": "https://arxiv.org/pdf/2602.07794v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.07794v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.07794v2",
+      "arxiv_url": "http://arxiv.org/abs/2602.07794v2",
       "published": "2026-02-08",
       "categories": [
         "cs.CL",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Disentangled Instrumental Variables for Causal Inference with Networked Observational Data",
-      "authors": [
-        "Zhirong Huang",
-        "Debo Cheng",
-        "Guixian Zhang",
-        "Yi Wang",
-        "Jiuyong Li",
-        "Shichao Zhang"
-      ],
-      "abstract": "Instrumental variables (IVs) are crucial for addressing unobservable confounders, yet their stringent exogeneity assumptions pose significant challenges in networked data. Existing methods typically rely on modelling neighbour information when recovering IVs, thereby inevitably mixing shared environment-induced endogenous correlations and individual-specific exogenous variation, leading the resulting IVs to inherit dependence on unobserved confounders and to violate exogeneity. To overcome this challenge, we propose $\\underline{Dis}$entangled $\\underline{I}$nstrumental $\\underline{V}$ariables (DisIV) framework, a novel method for causal inference based on networked observational data with latent confounders. DisIV exploits network homogeneity as an inductive bias and employs a structural disentanglement mechanism to extract individual-specific components that serve as latent IVs. The causal validity of the extracted IVs is constrained through explicit orthogonality and exclusion conditions. Extensive semi-synthetic experiments on real-world datasets demonstrate that DisIV consistently outperforms state-of-the-art baselines in causal effect estimation under network-induced confounding.",
-      "pdf_url": "https://arxiv.org/pdf/2602.07765v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.07765v1",
-      "published": "2026-02-08",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Contextualization or Rationalization? The Effect of Causal Priors on Data Visualization Interpretation",
-      "authors": [
-        "Arran Zeyu Wang",
-        "David Borland",
-        "Estella Calcaterra",
-        "David Gotz"
-      ],
-      "abstract": "Understanding how individuals interpret charts is a crucial concern for visual data communication. This imperative has motivated a number of studies, including past work demonstrating that causal priors -- a priori beliefs about causal relationships between concepts -- can have significant influences on the perceived strength of variable relationships inferred from visualizations. This paper builds on these previous results, demonstrating that causal priors can also influence the types of patterns that people perceive as the most salient within ambiguous scatterplots that have roughly equal evidence for trend and cluster patterns. Using a mixed-design approach that combines a large-scale online experiment for breadth of findings with an in-person think-aloud study for analytical depth, we investigated how users' interpretations are influenced by the interplay between causal priors and the visualized data patterns. Our analysis suggests two archetypal reasoning behaviors through which people often make their observations: contextualization, in which users accept a visual pattern that aligns with causal priors and use their existing knowledge to enrich interpretation, and rationalization, in which users encounter a pattern that conflicts with causal priors and attempt to explain away the discrepancy by invoking external factors, such as positing confounding variables or data selection bias. These findings provide initial evidence highlighting the critical role of causal priors in shaping high-level visualization comprehension, and introduce a vocabulary for describing how users reason about data that either confirms or challenges prior beliefs of causality.",
-      "pdf_url": "https://arxiv.org/pdf/2602.07748v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.07748v1",
-      "published": "2026-02-08",
-      "categories": [
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Inference under First-Order Degeneracy",
-      "authors": [
-        "Xinyue Bei",
-        "Manu Navjeevan"
-      ],
-      "abstract": "We study inference in models where a transformation of parameters exhibits first-order degeneracy -- that is, its gradient is zero or close to zero, making the standard delta method invalid. A leading example is causal mediation analysis, where the indirect effect is a product of coefficients and the gradient degenerates near the origin. In these local regions of degeneracy the limiting behaviors of plug-in estimators depend on nuisance parameters that are not consistently estimable. We show that this failure is intrinsic -- around points of degeneracy, both regular and quantile-unbiased estimation are impossible. Despite these restrictions, we develop minimum-distance methods that deliver uniformly valid confidence intervals. We establish sufficient conditions under which standard chi-square critical values remain valid, and propose a simple bootstrap procedure when they are not. We demonstrate favorable power in simulations and in an empirical application linking teacher gender attitudes to student outcomes.",
-      "pdf_url": "https://arxiv.org/pdf/2602.07377v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.07377v1",
-      "published": "2026-02-07",
-      "categories": [
-        "econ.EM"
       ]
     }
   ]
