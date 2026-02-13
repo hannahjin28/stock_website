@@ -1,6 +1,88 @@
 {
-  "last_updated": "2026-02-12T01:13:36.316029",
+  "last_updated": "2026-02-13T01:16:46.098340",
   "papers": [
+    {
+      "title": "A Doubly Robust Machine Learning Approach for Disentangling Treatment Effect Heterogeneity with Functional Outcomes",
+      "authors": [
+        "Filippo Salmaso",
+        "Lorenzo Testa",
+        "Francesca Chiaromonte"
+      ],
+      "abstract": "Causal inference is paramount for understanding the effects of interventions, yet extracting personalized insights from increasingly complex data remains a significant challenge for modern machine learning. This is the case, in particular, when considering functional outcomes observed over a continuous domain (e.g., time, or space). Estimation of heterogeneous treatment effects, known as CATE, has emerged as a crucial tool for personalized decision-making, but existing meta-learning frameworks are largely limited to scalar outcomes, failing to provide satisfying results in scientific applications that leverage the rich, continuous information encoded in functional data. Here, we introduce FOCaL (Functional Outcome Causal Learning), a novel, doubly robust meta-learner specifically engineered to estimate a functional heterogeneous treatment effect (F-CATE). FOCaL integrates advanced functional regression techniques for both outcome modeling and functional pseudo-outcome reconstruction, thereby enabling the direct and robust estimation of F-CATE. We provide a rigorous theoretical derivation of FOCaL, demonstrate its performance and robustness compared to existing non-robust functional methods through comprehensive simulation studies, and illustrate its practical utility on diverse real-world functional datasets. FOCaL advances the capabilities of machine intelligence to infer nuanced, individualized causal effects from complex data, paving the way for more precise and trustworthy AI systems in personalized medicine, adaptive policy design, and fundamental scientific discovery.",
+      "pdf_url": "https://arxiv.org/pdf/2602.11118v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.11118v1",
+      "published": "2026-02-11",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Causal Effect Estimation with Learned Instrument Representations",
+      "authors": [
+        "Frances Dean",
+        "Jenna Fields",
+        "Radhika Bhalerao",
+        "Marie Charpignon",
+        "Ahmed Alaa"
+      ],
+      "abstract": "Instrumental variable (IV) methods mitigate bias from unobserved confounding in observational causal inference but rely on the availability of a valid instrument, which can often be difficult or infeasible to identify in practice. In this paper, we propose a representation learning approach that constructs instrumental representations from observed covariates, which enable IV-based estimation even in the absence of an explicit instrument. Our model (ZNet) achieves this through an architecture that mirrors the structural causal model of IVs; it decomposes the ambient feature space into confounding and instrumental components, and is trained by enforcing empirical moment conditions corresponding to the defining properties of valid instruments (i.e., relevance, exclusion restriction, and instrumental unconfoundedness). Importantly, ZNet is compatible with a wide range of downstream two-stage IV estimators of causal effects. Our experiments demonstrate that ZNet can (i) recover ground-truth instruments when they already exist in the ambient feature space and (ii) construct latent instruments in the embedding space when no explicit IVs are available. This suggests that ZNet can be used as a ``plug-and-play'' module for causal inference in general observational settings, regardless of whether the (untestable) assumption of unconfoundedness is satisfied.",
+      "pdf_url": "https://arxiv.org/pdf/2602.10370v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.10370v1",
+      "published": "2026-02-10",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Optimizing precision in stepped-wedge designs via machine learning and quadratic inference functions",
+      "authors": [
+        "Liangbo Lyu",
+        "Bingkai Wang"
+      ],
+      "abstract": "Stepped-wedge designs are increasingly used in randomized experiments to accommodate logistical and ethical constraints by staggering treatment roll-out over time. Despite their popularity, existing analytical methods largely rely on parametric models with linear covariate adjustment and prespecified correlation structures, which may limit achievable precision in practice. We propose a new class of estimators for the causal average treatment effect in stepped-wedge designs that optimizes precision through flexible, machine-learning-based covariate adjustment to capture complex outcome-covariate relationships, together with quadratic inference functions to adaptively learn the correlation structure. We establish consistency and asymptotic normality under mild conditions requiring only $L_2$ convergence of nuisance estimators, even under model misspecification, and characterize when the estimator attains the minimal asymptotic variance. Moreover, we prove that the proposed estimator never reduces efficiency relative to an independence working correlation. The proposed method further accommodates treatment-effect heterogeneity across both exposure duration and calendar time. Finally, we demonstrate our methods through simulation studies and reanalyses of two empirical studies that differ substantially in research area and key design parameters.",
+      "pdf_url": "https://arxiv.org/pdf/2602.10348v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.10348v1",
+      "published": "2026-02-10",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Stop Training for the Worst: Progressive Unmasking Accelerates Masked Diffusion Training",
+      "authors": [
+        "Jaeyeon Kim",
+        "Jonathan Geuter",
+        "David Alvarez-Melis",
+        "Sham Kakade",
+        "Sitan Chen"
+      ],
+      "abstract": "Masked Diffusion Models (MDMs) have emerged as a promising approach for generative modeling in discrete spaces. By generating sequences in any order and allowing for parallel decoding, they enable fast inference and strong performance on non-causal tasks. However, this flexibility comes with a training complexity trade-off: MDMs train on an exponentially large set of masking patterns, which is not only computationally expensive, but also creates a train--test mismatch between the random masks used in training and the highly structured masks induced by inference-time unmasking. In this work, we propose Progressive UnMAsking (PUMA), a simple modification of the forward masking process that aligns training-time and inference-time masking patterns, thereby focusing optimization on inference-aligned masks and speeding up training. Empirically, PUMA speeds up pretraining at the 125M scale by $\\approx 2.5\\times$ and offers complementary advantages on top of common recipes like autoregressive initialization. We open-source our codebase at https://github.com/JaeyeonKim01/PUMA.",
+      "pdf_url": "https://arxiv.org/pdf/2602.10314v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.10314v1",
+      "published": "2026-02-10",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "PRISM: Differentially Private Synthetic Data with Structure-Aware Budget Allocation for Prediction",
+      "authors": [
+        "Amir Asiaee",
+        "Chao Yan",
+        "Zachary B. Abrams",
+        "Bradley A. Malin"
+      ],
+      "abstract": "Differential privacy (DP) provides a mathematical guarantee limiting what an adversary can learn about any individual from released data. However, achieving this protection typically requires adding noise, and noise can accumulate when many statistics are measured. Existing DP synthetic data methods treat all features symmetrically, spreading noise uniformly even when the data will serve a specific prediction task.\n  We develop a prediction-centric approach operating in three regimes depending on available structural knowledge. In the causal regime, when the causal parents of $Y$ are known and distribution shift is expected, we target the parents for robustness. In the graphical regime, when a Bayesian network structure is available and the distribution is stable, the Markov blanket of $Y$ provides a sufficient feature set for optimal prediction. In the predictive regime, when no structural knowledge exists, we select features via differentially private methods without claiming to recover causal or graphical structure.\n  We formalize this as PRISM, a mechanism that (i) identifies a predictive feature subset according to the appropriate regime, (ii) constructs targeted summary statistics, (iii) allocates budget to minimize an upper bound on prediction error, and (iv) synthesizes data via graphical-model inference. We prove end-to-end privacy guarantees and risk bounds. Empirically, task-aware allocation improves prediction accuracy compared to generic synthesizers. Under distribution shift, targeting causal parents achieves AUC $\\approx 0.73$ while correlation-based selection collapses to chance ($\\approx 0.49$).",
+      "pdf_url": "https://arxiv.org/pdf/2602.10228v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.10228v1",
+      "published": "2026-02-10",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Doubly Robust Estimation of Desirability of Outcome Ranking (DOOR) Probability with Application to MDRO Studies",
       "authors": [
@@ -89,91 +171,6 @@
         "cs.LG",
         "cs.AI",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Towards Reliable Social A/B Testing: Spillover-Contained Clustering with Robust Post-Experiment Analysis",
-      "authors": [
-        "Xu Min",
-        "Zhaoxu Yang",
-        "Kaixuan Tan",
-        "Juan Yan",
-        "Xunbin Xiong",
-        "Zihao Zhu",
-        "Kaiyu Zhu",
-        "Fenglin Cui",
-        "Yang Yang",
-        "Sihua Yang",
-        "Jianhui Bu"
-      ],
-      "abstract": "A/B testing is the foundation of decision-making in online platforms, yet social products often suffer from network interference: user interactions cause treatment effects to spill over into the control group. Such spillovers bias causal estimates and undermine experimental conclusions. Existing approaches face key limitations: user-level randomization ignores network structure, while cluster-based methods often rely on general-purpose clustering that is not tailored for spillover containment and has difficulty balancing unbiasedness and statistical power at scale. We propose a spillover-contained experimentation framework with two stages. In the pre-experiment stage, we build social interaction graphs and introduce a Balanced Louvain algorithm that produces stable, size-balanced clusters while minimizing cross-cluster edges, enabling reliable cluster-based randomization. In the post-experiment stage, we develop a tailored CUPAC estimator that leverages pre-experiment behavioral covariates to reduce the variance induced by cluster-level assignment, thereby improving statistical power. Together, these components provide both structural spillover containment and robust statistical inference. We validate our approach through large-scale social sharing experiments on Kuaishou, a platform serving hundreds of millions of users. Results show that our method substantially reduces spillover and yields more accurate assessments of social strategies than traditional user-level designs, establishing a reliable and scalable framework for networked A/B testing.",
-      "pdf_url": "https://arxiv.org/pdf/2602.08569v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.08569v1",
-      "published": "2026-02-09",
-      "categories": [
-        "cs.SI",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Causal Schrödinger Bridges: Constrained Optimal Transport on Structural Manifolds",
-      "authors": [
-        "Rui Wu",
-        "Li YongJun"
-      ],
-      "abstract": "Generative modeling typically seeks the path of least action via deterministic flows (ODE). While effective for in-distribution tasks, we argue that these deterministic paths become brittle under causal interventions, which often require transporting probability mass across low-density regions (\"off-manifold\") where the vector field is ill-defined. This leads to numerical instability and spurious correlations. In this work, we introduce the Causal Schrödinger Bridge (CSB), a framework that reformulates counterfactual inference as Entropic Optimal Transport. Unlike deterministic approaches that require strict invertibility, CSB leverages diffusion processes (SDEs) to robustly \"tunnel\" through support mismatches while strictly enforcing structural admissibility constraints. We prove the Structural Decomposition Theorem, showing that the global high-dimensional bridge factorizes into local, robust transitions. Empirical validation on high-dimensional interventions (Morpho-MNIST) demonstrates that CSB significantly outperforms deterministic baselines in structural consistency, particularly in regimes of strong, out-of-distribution treatments.",
-      "pdf_url": "https://arxiv.org/pdf/2602.08535v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.08535v1",
-      "published": "2026-02-09",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Estimating Aleatoric Uncertainty in the Causal Treatment Effect",
-      "authors": [
-        "Liyuan Xu",
-        "Bijan Mazaheri"
-      ],
-      "abstract": "Previous work on causal inference has primarily focused on averages and conditional averages of treatment effects, with significantly less attention on variability and uncertainty in individual treatment responses. In this paper, we introduce the variance of the treatment effect (VTE) and conditional variance of treatment effect (CVTE) as the natural measure of aleatoric uncertainty inherent in treatment responses, and we demonstrate that these quantities are identifiable from observed data under mild assumptions, even in the presence of unobserved confounders. We further propose nonparametric kernel-based estimators for VTE and CVTE, and our theoretical analysis establishes their convergence. We also test the performance of our method through extensive empirical experiments on both synthetic and semi-simulated datasets, where it demonstrates superior or comparable performance to naive baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2602.08461v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.08461v1",
-      "published": "2026-02-09",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Estimation Strategies for Causal Decomposition Analysis with Allowability Specifications",
-      "authors": [
-        "John W. Jackson",
-        "Ting-Hsuan Chang",
-        "Aster Meche",
-        "Trang Q. Nguyen"
-      ],
-      "abstract": "Causal decomposition analysis (CDA) is an approach for modeling the impact of hypothetical interventions to reduce disparities. It is useful for identifying foci that future interventions, including multilevel and multimodal interventions, could focus on to reduce disparities. Based within the potential outcomes framework, CDA has a causal interpretation when the identifying assumptions are met. CDA also allows an analyst to consider which covariates are allowable (i.e., fair) for defining the disparity in the outcome and in the point of intervention, so that its interpretation is also meaningful. While the incorporation of causal inference and allowability promotes robustness, transparency, and dialogue in disparities research, it can lead to challenges in estimation such as the need to correctly model densities. Also, how CDA differs from commonly used estimators may not be clear, which may limit its uptake. To address these challenges, we provide a tour of estimation strategies for CDA, reviewing existing proposals and introducing novel estimators that overcome key estimation challenges. Among them we introduce what we call \"bridging\" estimators that avoid directly modeling any density, and weighted sequential regression estimators that are multiply robust. Additionally, we provide diagnostics to assess the quality of the nuisance density models and weighting functions they rely on. We formally establish the estimators' robustness to model mis-specification, demonstrate their performance through a simulation study based on real data, and apply them to study disparities in hypertension control using electronic health records in a large healthcare system.",
-      "pdf_url": "https://arxiv.org/pdf/2602.07825v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.07825v1",
-      "published": "2026-02-08",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Emergent Structured Representations Support Flexible In-Context Inference in Large Language Models",
-      "authors": [
-        "Ningyu Xu",
-        "Qi Zhang",
-        "Xipeng Qiu",
-        "Xuanjing Huang"
-      ],
-      "abstract": "Large language models (LLMs) exhibit emergent behaviors suggestive of human-like reasoning. While recent work has identified structured, human-like conceptual representations within these models, it remains unclear whether they functionally rely on such representations for reasoning. Here we investigate the internal processing of LLMs during in-context concept inference. Our results reveal a conceptual subspace emerging in middle to late layers, whose representational structure persists across contexts. Using causal mediation analyses, we demonstrate that this subspace is not merely an epiphenomenon but is functionally central to model predictions, establishing its causal role in inference. We further identify a layer-wise progression where attention heads in early-to-middle layers integrate contextual cues to construct and refine the subspace, which is subsequently leveraged by later layers to generate predictions. Together, these findings provide evidence that LLMs dynamically construct and use structured, latent representations in context for inference, offering insights into the computational processes underlying flexible adaptation.",
-      "pdf_url": "https://arxiv.org/pdf/2602.07794v2",
-      "arxiv_url": "http://arxiv.org/abs/2602.07794v2",
-      "published": "2026-02-08",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]
