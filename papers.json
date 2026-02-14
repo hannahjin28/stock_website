@@ -1,6 +1,108 @@
 {
-  "last_updated": "2026-02-13T01:16:46.098340",
+  "last_updated": "2026-02-14T01:09:51.306652",
   "papers": [
+    {
+      "title": "GPT-4o Lacks Core Features of Theory of Mind",
+      "authors": [
+        "John Muchovej",
+        "Amanda Royka",
+        "Shane Lee",
+        "Julian Jara-Ettinger"
+      ],
+      "abstract": "Do Large Language Models (LLMs) possess a Theory of Mind (ToM)? Research into this question has focused on evaluating LLMs against benchmarks and found success across a range of social tasks. However, these evaluations do not test for the actual representations posited by ToM: namely, a causal model of mental states and behavior. Here, we use a cognitively-grounded definition of ToM to develop and test a new evaluation framework. Specifically, our approach probes whether LLMs have a coherent, domain-general, and consistent model of how mental states cause behavior -- regardless of whether that model matches a human-like ToM. We find that even though LLMs succeed in approximating human judgments in a simple ToM paradigm, they fail at a logically equivalent task and exhibit low consistency between their action predictions and corresponding mental state inferences. As such, these findings suggest that the social proficiency exhibited by LLMs is not the result of an domain-general or consistent ToM.",
+      "pdf_url": "https://arxiv.org/pdf/2602.12150v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.12150v1",
+      "published": "2026-02-12",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "U-Former ODE: Fast Probabilistic Forecasting of Irregular Time Series",
+      "authors": [
+        "Ilya Kuleshov",
+        "Alexander Marusov",
+        "Alexey Zaytsev"
+      ],
+      "abstract": "Probabilistic forecasting of irregularly sampled time series is crucial in domains such as healthcare and finance, yet it remains a formidable challenge. Existing Neural Controlled Differential Equation (Neural CDE) approaches, while effective at modelling continuous dynamics, suffer from slow, inherently sequential computation, which restricts scalability and limits access to global context. We introduce UFO (U-Former ODE), a novel architecture that seamlessly integrates the parallelizable, multiscale feature extraction of U-Nets, the powerful global modelling of Transformers, and the continuous-time dynamics of Neural CDEs. By constructing a fully causal, parallelizable model, UFO achieves a global receptive field while retaining strong sensitivity to local temporal dynamics. Extensive experiments on five standard benchmarks -- covering both regularly and irregularly sampled time series -- demonstrate that UFO consistently outperforms ten state-of-the-art neural baselines in predictive accuracy. Moreover, UFO delivers up to 15$\\times$ faster inference compared to conventional Neural CDEs, with consistently strong performance on long and highly multivariate sequences.",
+      "pdf_url": "https://arxiv.org/pdf/2602.11738v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.11738v1",
+      "published": "2026-02-12",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "WebTestPilot: Agentic End-to-End Web Testing against Natural Language Specification by Inferring Oracles with Symbolized GUI Elements",
+      "authors": [
+        "Xiwen Teoh",
+        "Yun Lin",
+        "Duc-Minh Nguyen",
+        "Ruofei Ren",
+        "Wenjie Zhang",
+        "Jin Song Dong"
+      ],
+      "abstract": "Visual language model (VLM) agents show great promise in automating end-to-end (E2E) web testing against requirements in natural language. However, the probabilistic nature of language models can have inherent hallucinations. Therefore, given a detected inconsistency between the requirement and the web application, it is hard to distinguish whether it stems from the hallucination or a real application bug. Addressing this issue presents two core technical challenges: the implicit oracle inference challenge, where the agent must act as its own oracle to implicitly decide if the application's behavior is correct without guidance, and the probabilistic inference challenge, where an LLM's inconsistent reasoning undermines its trustworthiness as an oracle. Existing LLM-based approaches fail to capture such implicit oracles, either by treating any page navigation that doesn't crash as a success, or by checking each state in isolation, thus missing bugs dependent on context from prior steps.\n  We introduce WebTestPilot, an LLM-based agent designed to address these challenges. WebTestPilot uses (1) a symbolization layer which detects and symbolizes critical GUI elements on the web application into symbols (i.e., variables) and (2) translates natural language specification into a sequence of steps, each of which is equipped with inferred pre- and post-conditions over the symbols as an oracle. This oracle captures data, temporal, and causal dependencies, enabling the validation of implicit requirements. To advance research in this area, we build a benchmark of bug-injected web apps for evaluating NL-to-E2E testing. The results show that WebTestPilot achieves a task completion rate of 99%, with 96% precision and 96% recall in bug detection, outperforming the best baseline (+70 precision, +27 recall). The agent generalizes across diverse natural language inputs and model scales.",
+      "pdf_url": "https://arxiv.org/pdf/2602.11724v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.11724v1",
+      "published": "2026-02-12",
+      "categories": [
+        "cs.SE"
+      ]
+    },
+    {
+      "title": "Analytical Search",
+      "authors": [
+        "Yiteng Tu",
+        "Shuo Miao",
+        "Weihang Su",
+        "Yiqun Liu",
+        "Qingyao Ai"
+      ],
+      "abstract": "Analytical information needs, such as trend analysis and causal impact assessment, are prevalent across various domains including law, finance, science, and much more. However, existing information retrieval paradigms, whether based on relevance-oriented document ranking or retrieval-augmented generation (RAG) with large language models (LLMs), often struggle to meet the end-to-end requirements of such tasks at the corpus scale. They either emphasize information finding rather than end-to-end problem solving, or simply treat everything as naive question answering, offering limited control over reasoning, evidence usage, and verifiability. As a result, they struggle to support analytical queries that have diverse utility concepts and high accountability requirements.\n  In this paper, we propose analytical search as a distinct and emerging search paradigm designed to fulfill these analytical information needs. Analytical search reframes search as an evidence-governed, process-oriented analytical workflow that explicitly models analytical intent, retrieves evidence for fusion, and produces verifiable conclusions through structured, multi-step inference. We position analytical search in contrast to existing paradigms, and present a unified system framework that integrates query understanding, recall-oriented retrieval, reasoning-aware fusion, and adaptive verification. We also discuss potential research directions for the construction of analytical search engines. In this way, we highlight the conceptual significance and practical importance of analytical search and call on efforts toward the next generation of search engines that support analytical information needs.",
+      "pdf_url": "https://arxiv.org/pdf/2602.11581v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.11581v1",
+      "published": "2026-02-12",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "CausalAgent: A Conversational Multi-Agent System for End-to-End Causal Inference",
+      "authors": [
+        "Jiawei Zhu",
+        "Wei Chen",
+        "Ruichu Cai"
+      ],
+      "abstract": "Causal inference holds immense value in fields such as healthcare, economics, and social sciences. However, traditional causal analysis workflows impose significant technical barriers, requiring researchers to possess dual backgrounds in statistics and computer science, while manually selecting algorithms, handling data quality issues, and interpreting complex results. To address these challenges, we propose CausalAgent, a conversational multi-agent system for end-to-end causal inference. The system innovatively integrates Multi-Agent Systems (MAS), Retrieval-Augmented Generation (RAG), and the Model Context Protocol (MCP) to achieve automation from data cleaning and causal structure learning to bias correction and report generation through natural language interaction. Users need only upload a dataset and pose questions in natural language to receive a rigorous, interactive analysis report. As a novel user-centered human-AI collaboration paradigm, CausalAgent explicitly models the analysis workflow. By leveraging interactive visualizations, it significantly lowers the barrier to entry for causal analysis while ensuring the rigor and interpretability of the process.",
+      "pdf_url": "https://arxiv.org/pdf/2602.11527v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.11527v1",
+      "published": "2026-02-12",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Causal-JEPA: Learning World Models through Object-Level Latent Interventions",
+      "authors": [
+        "Heejeong Nam",
+        "Quentin Le Lidec",
+        "Lucas Maes",
+        "Yann LeCun",
+        "Randall Balestriero"
+      ],
+      "abstract": "World models require robust relational understanding to support prediction, reasoning, and control. While object-centric representations provide a useful abstraction, they are not sufficient to capture interaction-dependent dynamics. We therefore propose C-JEPA, a simple and flexible object-centric world model that extends masked joint embedding prediction from image patches to object-centric representations. By applying object-level masking that requires an object's state to be inferred from other objects, C-JEPA induces latent interventions with counterfactual-like effects and prevents shortcut solutions, making interaction reasoning essential. Empirically, C-JEPA leads to consistent gains in visual question answering, with an absolute improvement of about 20\\% in counterfactual reasoning compared to the same architecture without object-level masking. On agent control tasks, C-JEPA enables substantially more efficient planning by using only 1\\% of the total latent input features required by patch-based world models, while achieving comparable performance. Finally, we provide a formal analysis demonstrating that object-level masking induces a causal inductive bias via latent interventions. Our code is available at https://github.com/galilai-group/cjepa.",
+      "pdf_url": "https://arxiv.org/pdf/2602.11389v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.11389v1",
+      "published": "2026-02-11",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "A Doubly Robust Machine Learning Approach for Disentangling Treatment Effect Heterogeneity with Functional Outcomes",
       "authors": [
@@ -65,112 +167,6 @@
       "published": "2026-02-10",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "PRISM: Differentially Private Synthetic Data with Structure-Aware Budget Allocation for Prediction",
-      "authors": [
-        "Amir Asiaee",
-        "Chao Yan",
-        "Zachary B. Abrams",
-        "Bradley A. Malin"
-      ],
-      "abstract": "Differential privacy (DP) provides a mathematical guarantee limiting what an adversary can learn about any individual from released data. However, achieving this protection typically requires adding noise, and noise can accumulate when many statistics are measured. Existing DP synthetic data methods treat all features symmetrically, spreading noise uniformly even when the data will serve a specific prediction task.\n  We develop a prediction-centric approach operating in three regimes depending on available structural knowledge. In the causal regime, when the causal parents of $Y$ are known and distribution shift is expected, we target the parents for robustness. In the graphical regime, when a Bayesian network structure is available and the distribution is stable, the Markov blanket of $Y$ provides a sufficient feature set for optimal prediction. In the predictive regime, when no structural knowledge exists, we select features via differentially private methods without claiming to recover causal or graphical structure.\n  We formalize this as PRISM, a mechanism that (i) identifies a predictive feature subset according to the appropriate regime, (ii) constructs targeted summary statistics, (iii) allocates budget to minimize an upper bound on prediction error, and (iv) synthesizes data via graphical-model inference. We prove end-to-end privacy guarantees and risk bounds. Empirically, task-aware allocation improves prediction accuracy compared to generic synthesizers. Under distribution shift, targeting causal parents achieves AUC $\\approx 0.73$ while correlation-based selection collapses to chance ($\\approx 0.49$).",
-      "pdf_url": "https://arxiv.org/pdf/2602.10228v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.10228v1",
-      "published": "2026-02-10",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Doubly Robust Estimation of Desirability of Outcome Ranking (DOOR) Probability with Application to MDRO Studies",
-      "authors": [
-        "Shiyu Shu",
-        "Toshimitsu Hamasaki",
-        "Scott Evans",
-        "Lauren Komarow",
-        "David van Duin",
-        "Guoqing Diao"
-      ],
-      "abstract": "In observational studies, adjusting for confounders is required if a treatment comparison is planned. A crude comparison of the primary endpoint without covariate adjustment will suffer from biases, and the addition of regression models could improve precision by incorporating imbalanced covariates and thus help make correct inference. Desirability of outcome ranking (DOOR) is a patient-centric benefit-risk evaluation methodology designed for randomized clinical trials. Still, robust covariate adjustment methods could further expand the compatibility of this method in observational studies. In DOOR analysis, each participant's outcome is ranked based on pre-specified clinical criteria, where the most desirable rank represents a good outcome with no side effects and the least desirable rank is the worst possible clinical outcome. We develop a causal framework for estimating the population-level DOOR probability, via the inverse probability of treatment weighting method, G-Computation method, and a Doubly Robust method that combines both. The performance of the proposed methodologies is examined through simulations. We also perform a causal analysis of the Multi-Drug Resistant Organism (MDRO) network within the Antibacterial Resistant Leadership Group (ARLG), comparing the benefit:risk between Mono-drug therapy and Combination-drug therapy.",
-      "pdf_url": "https://arxiv.org/pdf/2602.10012v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.10012v1",
-      "published": "2026-02-10",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Hand2World: Autoregressive Egocentric Interaction Generation via Free-Space Hand Gestures",
-      "authors": [
-        "Yuxi Wang",
-        "Wenqi Ouyang",
-        "Tianyi Wei",
-        "Yi Dong",
-        "Zhiqi Shen",
-        "Xingang Pan"
-      ],
-      "abstract": "Egocentric interactive world models are essential for augmented reality and embodied AI, where visual generation must respond to user input with low latency, geometric consistency, and long-term stability. We study egocentric interaction generation from a single scene image under free-space hand gestures, aiming to synthesize photorealistic videos in which hands enter the scene, interact with objects, and induce plausible world dynamics under head motion. This setting introduces fundamental challenges, including distribution shift between free-space gestures and contact-heavy training data, ambiguity between hand motion and camera motion in monocular views, and the need for arbitrary-length video generation. We present Hand2World, a unified autoregressive framework that addresses these challenges through occlusion-invariant hand conditioning based on projected 3D hand meshes, allowing visibility and occlusion to be inferred from scene context rather than encoded in the control signal. To stabilize egocentric viewpoint changes, we inject explicit camera geometry via per-pixel Plücker-ray embeddings, disentangling camera motion from hand motion and preventing background drift. We further develop a fully automated monocular annotation pipeline and distill a bidirectional diffusion model into a causal generator, enabling arbitrary-length synthesis. Experiments on three egocentric interaction benchmarks show substantial improvements in perceptual quality and 3D consistency while supporting camera control and long-horizon interactive generation.",
-      "pdf_url": "https://arxiv.org/pdf/2602.09600v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.09600v1",
-      "published": "2026-02-10",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Estimating causal effects of functional treatments with modified functional treatment policies",
-      "authors": [
-        "Ziren Jiang",
-        "Erjia Cui",
-        "Jared D. Huling"
-      ],
-      "abstract": "Functional data are increasingly prevalent in biomedical research. While functional data analysis has been established for decades, causal inference with functional treatments remains largely unexplored. Existing methods typically focus on estimating the causal average dose response functional (ADRF), which requires strong positivity assumptions and offers limited interpretability. In this work, we target a new causal estimand, the modified functional treatment policy (MFTP), which focuses on estimating the average potential outcome when each individual slightly modifies their treatment trajectory from the observed one. A major challenge for this new estimand is the need to define an average over an infinite-dimensional object with no density. By proposing a novel definition of the population average over a functional variable using a functional principal component analysis (FPCA) decomposition, we establish the causal identifiability of the MFTP estimand. We further derive outcome regression, inverse probability weighting, and doubly robust estimators for the MFTP, and provide theoretical guarantees under mild regularity conditions. The proposed estimators are validated through extensive simulation studies. Applying our MFTP framework to the National Health and Nutrition Examination Survey (NHANES) accelerometer data, we estimate the causal effects of reducing disruptive nighttime activity and low-activity duration on all-cause mortality.",
-      "pdf_url": "https://arxiv.org/pdf/2602.09145v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.09145v1",
-      "published": "2026-02-09",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "State policy heterogeneity analyses: considerations and proposals",
-      "authors": [
-        "Max Rubinstein",
-        "Megan S. Schuler",
-        "Elizabeth A. Stuart",
-        "Bradley D. Stein",
-        "Max Griswold",
-        "Elizabeth M. Stone",
-        "Beth Ann Griffin"
-      ],
-      "abstract": "State-level policy studies often conduct heterogeneity analyses that quantify how treatment effects vary across state characteristics. These analyses may be used to inform state-specific policy decisions, or to infer how the effect of a policy changes in combination with other state characteristics. However, in state-level settings with varied contexts and policy landscapes, multiple versions of similar policies, and differential policy implementation, the causal quantities targeted by these analyses may not align with the inferential goals. This paper clarifies these issues by distinguishing several causal estimands relevant to heterogeneity analyses in state-policy settings, including state-specific treatment effects (ITE), conditional average treatment effects (CATE), and controlled direct effects (CDE). We argue that the CATE is often the easiest to identify and estimate, but may not be the most policy relevant target of inference. Moreover, the widespread practice of coarsening distinct policies or implementations into a single indicator further complicates the interpretation of these analyses. Motivated by these limitations, we propose bounding ITEs as an alternative inferential goal, yielding ranges for each state's policy effect under explicit assumptions that quantify deviations from the ideal identifying conditions. These bounds target a well-defined and policy-relevant quantity, the effect for specific states. We develop this approach within a difference-in-differences framework and discuss how sensitivity parameters may be informed using pre-treatment data. Through simulations we demonstrate that bounding state-specific effects can more reliably determine the sign of the ITEs than CATE estimates. We then illustrate this method to examine the effect of the Affordable Care Act Medicaid expansion on high-volume buprenorphine prescribing.",
-      "pdf_url": "https://arxiv.org/pdf/2602.08643v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.08643v1",
-      "published": "2026-02-09",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "CauScale: Neural Causal Discovery at Scale",
-      "authors": [
-        "Bo Peng",
-        "Sirui Chen",
-        "Jiaguo Tian",
-        "Yu Qiao",
-        "Chaochao Lu"
-      ],
-      "abstract": "Causal discovery is essential for advancing data-driven fields such as scientific AI and data analysis, yet existing approaches face significant time- and space-efficiency bottlenecks when scaling to large graphs. To address this challenge, we present CauScale, a neural architecture designed for efficient causal discovery that scales inference to graphs with up to 1000 nodes. CauScale improves time efficiency via a reduction unit that compresses data embeddings and improves space efficiency by adopting tied attention weights to avoid maintaining axis-specific attention maps. To keep high causal discovery accuracy, CauScale adopts a two-stream design: a data stream extracts relational evidence from high-dimensional observations, while a graph stream integrates statistical graph priors and preserves key structural signals. CauScale successfully scales to 500-node graphs during training, where prior work fails due to space limitations. Across testing data with varying graph scales and causal mechanisms, CauScale achieves 99.6% mAP on in-distribution data and 84.4% on out-of-distribution data, while delivering 4-13,000 times inference speedups over prior methods. Our project page is at https://github.com/OpenCausaLab/CauScale.",
-      "pdf_url": "https://arxiv.org/pdf/2602.08629v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.08629v1",
-      "published": "2026-02-09",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ML"
       ]
     }
   ]
