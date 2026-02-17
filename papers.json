@@ -1,6 +1,122 @@
 {
-  "last_updated": "2026-02-16T01:13:16.198017",
+  "last_updated": "2026-02-17T01:12:28.230220",
   "papers": [
+    {
+      "title": "Barron-Wiener-Laguerre models",
+      "authors": [
+        "Rahul Manavalan",
+        "Filip Tronarp"
+      ],
+      "abstract": "We propose a probabilistic extension of Wiener-Laguerre models for causal operator learning. Classical Wiener-Laguerre models parameterize stable linear dynamics using orthonormal Laguerre bases and apply a static nonlinear map to the resulting features. While structurally efficient and interpretable, they provide only deterministic point estimates. We reinterpret the nonlinear component through the lens of Barron function approximation, viewing two-layer networks, random Fourier features, and extreme learning machines as discretizations of integral representations over parameter measures. This perspective naturally admits Bayesian inference on the nonlinear map and yields posterior predictive uncertainty. By combining Laguerre-parameterized causal dynamics with probabilistic Barron-type nonlinear approximators, we obtain a structured yet expressive class of causal operators equipped with uncertainty quantification. The resulting framework bridges classical system identification and modern measure-based function approximation, providing a principled approach to time-series modeling and nonlinear systems identification.",
+      "pdf_url": "https://arxiv.org/pdf/2602.13098v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.13098v1",
+      "published": "2026-02-13",
+      "categories": [
+        "stat.ME",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Uncertainty in Federated Granger Causality: From Origins to Systemic Consequences",
+      "authors": [
+        "Ayush Mohanty",
+        "Nazal Mohamed",
+        "Nagi Gebraeel"
+      ],
+      "abstract": "Granger Causality (GC) provides a rigorous framework for learning causal structures from time-series data. Recent federated variants of GC have targeted distributed infrastructure applications (e.g., smart grids) with distributed clients that generate high-dimensional data bound by data-sovereignty constraints. However, Federated GC algorithms only yield deterministic point estimates of causality and neglect uncertainty. This paper establishes the first methodology for rigorously quantifying uncertainty and its propagation within federated GC frameworks. We systematically classify sources of uncertainty, explicitly differentiating aleatoric (data noise) from epistemic (model variability) effects. We derive closed-form recursions that model the evolution of uncertainty through client-server interactions and identify four novel cross-covariance components that couple data uncertainties with model parameter uncertainties across the federated architecture. We also define rigorous convergence conditions for these uncertainty recursions and obtain explicit steady-state variances for both server and client model parameters. Our convergence analysis demonstrates that steady-state variances depend exclusively on client data statistics, thus eliminating dependence on initial epistemic priors and enhancing robustness. Empirical evaluations on synthetic benchmarks and real-world industrial datasets demonstrate that explicitly characterizing uncertainty significantly improves the reliability and interpretability of federated causal inference.",
+      "pdf_url": "https://arxiv.org/pdf/2602.13004v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.13004v1",
+      "published": "2026-02-13",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Jointly Optimizing Debiased CTR and Uplift for Coupons Marketing: A Unified Causal Framework",
+      "authors": [
+        "Siyun Yang",
+        "Shixiao Yang",
+        "Jian Wang",
+        "Di Fan",
+        "Kehe Cai",
+        "Haoyan Fu",
+        "Jiaming Zhang",
+        "Wenjin Wu",
+        "Peng Jiang"
+      ],
+      "abstract": "In online advertising, marketing interventions such as coupons introduce significant confounding bias into Click-Through Rate (CTR) prediction. Observed clicks reflect a mixture of users' intrinsic preferences and the uplift induced by these interventions. This causes conventional models to miscalibrate base CTRs, which distorts downstream ranking and billing decisions. Furthermore, marketing interventions often operate as multi-valued treatments with varying magnitudes, introducing additional complexity to CTR prediction.\n  To address these issues, we propose the \\textbf{Uni}fied \\textbf{M}ulti-\\textbf{V}alued \\textbf{T}reatment Network (UniMVT). Specifically, UniMVT disentangles confounding factors from treatment-sensitive representations, enabling a full-space counterfactual inference module to jointly reconstruct the debiased base CTR and intensity-response curves. To handle the complexity of multi-valued treatments, UniMVT employs an auxiliary intensity estimation task to capture treatment propensities and devise a unit uplift objective that normalizes the intervention effect. This ensures comparable estimation across the continuous coupon-value spectrum. UniMVT simultaneously achieves debiased CTR prediction for accurate system calibration and precise uplift estimation for incentive allocation. Extensive experiments on synthetic and industrial datasets demonstrate UniMVT's superiority in both predictive accuracy and calibration. Furthermore, real-world A/B tests confirm that UniMVT significantly improves business metrics through more effective coupon distribution.",
+      "pdf_url": "https://arxiv.org/pdf/2602.12972v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.12972v1",
+      "published": "2026-02-13",
+      "categories": [
+        "cs.SI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Differentially Private Two-Stage Empirical Risk Minimization and Applications to Individualized Treatment Rule",
+      "authors": [
+        "Joowon Lee",
+        "Guanhua Chen"
+      ],
+      "abstract": "Differential Privacy (DP) provides a rigorous framework for deriving privacy-preserving estimators by injecting calibrated noise to mask individual contributions while preserving population-level insights. Its central challenge lies in the privacy-utility trade-off: calibrating noise levels to ensure robust protection without compromising statistical performance. Standard DP methods struggle with a particular class of two-stage problems prevalent in individualized treatment rules (ITRs) and causal inference. In these settings, data-dependent weights are first computed to satisfy distributional constraints, such as covariate balance, before the final parameter of interest is estimated. Current DP approaches often privatize stages independently, which either degrades weight efficacy-leading to biased and inconsistent estimates-or introduces excessive noise to account for worst-case scenarios.\n  To address these challenges, we propose the Differentially Private Two-Stage Empirical Risk Minimization (DP-2ERM), a framework that injects a carefully calibrated noise only into the second stage while maintaining privacy for the entire pipeline and preserving the integrity of the first stage weights. Our theoretical contributions include deterministic bounds on weight perturbations across various widely used weighting methods, and probabilistic bounds on sensitivity for the final estimator. Simulations and real-world applications in ITR demonstrate that DP-2ERM significantly enhances utility over existing methods while providing rigorous privacy guarantees.",
+      "pdf_url": "https://arxiv.org/pdf/2602.12604v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.12604v1",
+      "published": "2026-02-13",
+      "categories": [
+        "math.ST",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Not a Silver Bullet for Loneliness: How Attachment and Age Shape Intimacy with AI Companions",
+      "authors": [
+        "Raffaele Ciriello",
+        "Uri Gal",
+        "Ofir Turel"
+      ],
+      "abstract": "Artificial intelligence (AI) companions are increasingly promoted as solutions for loneliness, often overlooking how personal dispositions and life-stage conditions shape artificial intimacy. Because intimacy is a primary coping mechanism for loneliness that varies by attachment style and age, we examine how different types of users form intimate relationships with AI companions in response to loneliness. Drawing on a hermeneutic literature review and a survey of 277 active AI companion users, we develop and test a model in which loneliness predicts intimacy, moderated by attachment insecurity and conditioned by age. Although the cross-sectional data limits causal inference, the results reveal a differentiated pattern. Loneliness is paradoxically associated with reduced intimacy for securely attached users but with increased intimacy for avoidant and ambivalent users, while anxious users show mixed effects. Older adults report higher intimacy even at lower loneliness levels. These findings challenge portrayals of AI companions as universal remedies for loneliness. Instead, artificial intimacy emerges as a sociotechnical process shaped by psychological dispositions and demographic conditions. The study clarifies who is most likely to form intimate relationships with AI companions and highlights ethical risks in commercial models that may capitalise on user vulnerability.",
+      "pdf_url": "https://arxiv.org/pdf/2602.12476v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.12476v1",
+      "published": "2026-02-12",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Temporal Framework for Causality-Preserving Scheduling of Measurements in Quantum Networks",
+      "authors": [
+        "Jakob Kaltoft Søndergaard",
+        "René Bødker Christensen",
+        "Petar Popovski"
+      ],
+      "abstract": "Distributed quantum protocols rely on classical feedforward information to process measurement outcomes, but heterogeneous hardware and uncertain local timing can make the causal order of measurements ambiguous when inferred solely from arrival times. Even in simple line networks with only Pauli measurements, end nodes cannot distinguish whether a missing outcome is caused by slow measurement or by delayed classical propagation. To resolve this ambiguity, we propose a time-division architecture for quantum networks in which nodes perform measurements in pre-assigned slots, ensuring a unique causal interpretation of outcomes. We formalize this temporal framework and derive the feedforward and adjacency constraints required to preserve measurement causality. For simple network topologies, we present an algorithm that yields optimal measurement schedules. Overall, the proposed time-division model provides a practical coordination layer that bridges the classical network timing with quantum measurement processing, enabling reliable and scalable measurement-based quantum networking.",
+      "pdf_url": "https://arxiv.org/pdf/2602.12459v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.12459v1",
+      "published": "2026-02-12",
+      "categories": [
+        "quant-ph"
+      ]
+    },
+    {
+      "title": "What does RL improve for Visual Reasoning? A Frankenstein-Style Analysis",
+      "authors": [
+        "Xirui Li",
+        "Ming Li",
+        "Tianyi Zhou"
+      ],
+      "abstract": "Reinforcement learning (RL) with verifiable rewards has become a standard post-training stage for boosting visual reasoning in vision-language models, yet it remains unclear what capabilities RL actually improves compared with supervised fine-tuning as cold-start initialization (IN). End-to-end benchmark gains conflate multiple factors, making it difficult to attribute improvements to specific skills. To bridge the gap, we propose a Frankenstein-style analysis framework including: (i) functional localization via causal probing; (ii) update characterization via parameter comparison; and (iii) transferability test via model merging. Instead, RL induces a consistent inference-time shift primarily in mid-to-late layers, and these mid-to-late refinements are both transferable (via merging) and necessary (via freezing) for RL gains. Overall, our results suggest that RL's reliable contribution in visual reasoning is not a uniform enhancement of visual perception, but a systematic refinement of mid-to-late transformer computation that improves vision-to-reasoning alignment and reasoning performance, highlighting the limitations of benchmark-only evaluation for understanding multimodal reasoning improvements.",
+      "pdf_url": "https://arxiv.org/pdf/2602.12395v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.12395v1",
+      "published": "2026-02-12",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "GPT-4o Lacks Core Features of Theory of Mind",
       "authors": [
@@ -50,123 +166,6 @@
       "published": "2026-02-12",
       "categories": [
         "cs.SE"
-      ]
-    },
-    {
-      "title": "Analytical Search",
-      "authors": [
-        "Yiteng Tu",
-        "Shuo Miao",
-        "Weihang Su",
-        "Yiqun Liu",
-        "Qingyao Ai"
-      ],
-      "abstract": "Analytical information needs, such as trend analysis and causal impact assessment, are prevalent across various domains including law, finance, science, and much more. However, existing information retrieval paradigms, whether based on relevance-oriented document ranking or retrieval-augmented generation (RAG) with large language models (LLMs), often struggle to meet the end-to-end requirements of such tasks at the corpus scale. They either emphasize information finding rather than end-to-end problem solving, or simply treat everything as naive question answering, offering limited control over reasoning, evidence usage, and verifiability. As a result, they struggle to support analytical queries that have diverse utility concepts and high accountability requirements.\n  In this paper, we propose analytical search as a distinct and emerging search paradigm designed to fulfill these analytical information needs. Analytical search reframes search as an evidence-governed, process-oriented analytical workflow that explicitly models analytical intent, retrieves evidence for fusion, and produces verifiable conclusions through structured, multi-step inference. We position analytical search in contrast to existing paradigms, and present a unified system framework that integrates query understanding, recall-oriented retrieval, reasoning-aware fusion, and adaptive verification. We also discuss potential research directions for the construction of analytical search engines. In this way, we highlight the conceptual significance and practical importance of analytical search and call on efforts toward the next generation of search engines that support analytical information needs.",
-      "pdf_url": "https://arxiv.org/pdf/2602.11581v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.11581v1",
-      "published": "2026-02-12",
-      "categories": [
-        "cs.IR",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "CausalAgent: A Conversational Multi-Agent System for End-to-End Causal Inference",
-      "authors": [
-        "Jiawei Zhu",
-        "Wei Chen",
-        "Ruichu Cai"
-      ],
-      "abstract": "Causal inference holds immense value in fields such as healthcare, economics, and social sciences. However, traditional causal analysis workflows impose significant technical barriers, requiring researchers to possess dual backgrounds in statistics and computer science, while manually selecting algorithms, handling data quality issues, and interpreting complex results. To address these challenges, we propose CausalAgent, a conversational multi-agent system for end-to-end causal inference. The system innovatively integrates Multi-Agent Systems (MAS), Retrieval-Augmented Generation (RAG), and the Model Context Protocol (MCP) to achieve automation from data cleaning and causal structure learning to bias correction and report generation through natural language interaction. Users need only upload a dataset and pose questions in natural language to receive a rigorous, interactive analysis report. As a novel user-centered human-AI collaboration paradigm, CausalAgent explicitly models the analysis workflow. By leveraging interactive visualizations, it significantly lowers the barrier to entry for causal analysis while ensuring the rigor and interpretability of the process.",
-      "pdf_url": "https://arxiv.org/pdf/2602.11527v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.11527v1",
-      "published": "2026-02-12",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Causal-JEPA: Learning World Models through Object-Level Latent Interventions",
-      "authors": [
-        "Heejeong Nam",
-        "Quentin Le Lidec",
-        "Lucas Maes",
-        "Yann LeCun",
-        "Randall Balestriero"
-      ],
-      "abstract": "World models require robust relational understanding to support prediction, reasoning, and control. While object-centric representations provide a useful abstraction, they are not sufficient to capture interaction-dependent dynamics. We therefore propose C-JEPA, a simple and flexible object-centric world model that extends masked joint embedding prediction from image patches to object-centric representations. By applying object-level masking that requires an object's state to be inferred from other objects, C-JEPA induces latent interventions with counterfactual-like effects and prevents shortcut solutions, making interaction reasoning essential. Empirically, C-JEPA leads to consistent gains in visual question answering, with an absolute improvement of about 20\\% in counterfactual reasoning compared to the same architecture without object-level masking. On agent control tasks, C-JEPA enables substantially more efficient planning by using only 1\\% of the total latent input features required by patch-based world models, while achieving comparable performance. Finally, we provide a formal analysis demonstrating that object-level masking induces a causal inductive bias via latent interventions. Our code is available at https://github.com/galilai-group/cjepa.",
-      "pdf_url": "https://arxiv.org/pdf/2602.11389v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.11389v1",
-      "published": "2026-02-11",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A Doubly Robust Machine Learning Approach for Disentangling Treatment Effect Heterogeneity with Functional Outcomes",
-      "authors": [
-        "Filippo Salmaso",
-        "Lorenzo Testa",
-        "Francesca Chiaromonte"
-      ],
-      "abstract": "Causal inference is paramount for understanding the effects of interventions, yet extracting personalized insights from increasingly complex data remains a significant challenge for modern machine learning. This is the case, in particular, when considering functional outcomes observed over a continuous domain (e.g., time, or space). Estimation of heterogeneous treatment effects, known as CATE, has emerged as a crucial tool for personalized decision-making, but existing meta-learning frameworks are largely limited to scalar outcomes, failing to provide satisfying results in scientific applications that leverage the rich, continuous information encoded in functional data. Here, we introduce FOCaL (Functional Outcome Causal Learning), a novel, doubly robust meta-learner specifically engineered to estimate a functional heterogeneous treatment effect (F-CATE). FOCaL integrates advanced functional regression techniques for both outcome modeling and functional pseudo-outcome reconstruction, thereby enabling the direct and robust estimation of F-CATE. We provide a rigorous theoretical derivation of FOCaL, demonstrate its performance and robustness compared to existing non-robust functional methods through comprehensive simulation studies, and illustrate its practical utility on diverse real-world functional datasets. FOCaL advances the capabilities of machine intelligence to infer nuanced, individualized causal effects from complex data, paving the way for more precise and trustworthy AI systems in personalized medicine, adaptive policy design, and fundamental scientific discovery.",
-      "pdf_url": "https://arxiv.org/pdf/2602.11118v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.11118v1",
-      "published": "2026-02-11",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Causal Effect Estimation with Learned Instrument Representations",
-      "authors": [
-        "Frances Dean",
-        "Jenna Fields",
-        "Radhika Bhalerao",
-        "Marie Charpignon",
-        "Ahmed Alaa"
-      ],
-      "abstract": "Instrumental variable (IV) methods mitigate bias from unobserved confounding in observational causal inference but rely on the availability of a valid instrument, which can often be difficult or infeasible to identify in practice. In this paper, we propose a representation learning approach that constructs instrumental representations from observed covariates, which enable IV-based estimation even in the absence of an explicit instrument. Our model (ZNet) achieves this through an architecture that mirrors the structural causal model of IVs; it decomposes the ambient feature space into confounding and instrumental components, and is trained by enforcing empirical moment conditions corresponding to the defining properties of valid instruments (i.e., relevance, exclusion restriction, and instrumental unconfoundedness). Importantly, ZNet is compatible with a wide range of downstream two-stage IV estimators of causal effects. Our experiments demonstrate that ZNet can (i) recover ground-truth instruments when they already exist in the ambient feature space and (ii) construct latent instruments in the embedding space when no explicit IVs are available. This suggests that ZNet can be used as a ``plug-and-play'' module for causal inference in general observational settings, regardless of whether the (untestable) assumption of unconfoundedness is satisfied.",
-      "pdf_url": "https://arxiv.org/pdf/2602.10370v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.10370v1",
-      "published": "2026-02-10",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Optimizing precision in stepped-wedge designs via machine learning and quadratic inference functions",
-      "authors": [
-        "Liangbo Lyu",
-        "Bingkai Wang"
-      ],
-      "abstract": "Stepped-wedge designs are increasingly used in randomized experiments to accommodate logistical and ethical constraints by staggering treatment roll-out over time. Despite their popularity, existing analytical methods largely rely on parametric models with linear covariate adjustment and prespecified correlation structures, which may limit achievable precision in practice. We propose a new class of estimators for the causal average treatment effect in stepped-wedge designs that optimizes precision through flexible, machine-learning-based covariate adjustment to capture complex outcome-covariate relationships, together with quadratic inference functions to adaptively learn the correlation structure. We establish consistency and asymptotic normality under mild conditions requiring only $L_2$ convergence of nuisance estimators, even under model misspecification, and characterize when the estimator attains the minimal asymptotic variance. Moreover, we prove that the proposed estimator never reduces efficiency relative to an independence working correlation. The proposed method further accommodates treatment-effect heterogeneity across both exposure duration and calendar time. Finally, we demonstrate our methods through simulation studies and reanalyses of two empirical studies that differ substantially in research area and key design parameters.",
-      "pdf_url": "https://arxiv.org/pdf/2602.10348v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.10348v1",
-      "published": "2026-02-10",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Stop Training for the Worst: Progressive Unmasking Accelerates Masked Diffusion Training",
-      "authors": [
-        "Jaeyeon Kim",
-        "Jonathan Geuter",
-        "David Alvarez-Melis",
-        "Sham Kakade",
-        "Sitan Chen"
-      ],
-      "abstract": "Masked Diffusion Models (MDMs) have emerged as a promising approach for generative modeling in discrete spaces. By generating sequences in any order and allowing for parallel decoding, they enable fast inference and strong performance on non-causal tasks. However, this flexibility comes with a training complexity trade-off: MDMs train on an exponentially large set of masking patterns, which is not only computationally expensive, but also creates a train--test mismatch between the random masks used in training and the highly structured masks induced by inference-time unmasking. In this work, we propose Progressive UnMAsking (PUMA), a simple modification of the forward masking process that aligns training-time and inference-time masking patterns, thereby focusing optimization on inference-aligned masks and speeding up training. Empirically, PUMA speeds up pretraining at the 125M scale by $\\approx 2.5\\times$ and offers complementary advantages on top of common recipes like autoregressive initialization. We open-source our codebase at https://github.com/JaeyeonKim01/PUMA.",
-      "pdf_url": "https://arxiv.org/pdf/2602.10314v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.10314v1",
-      "published": "2026-02-10",
-      "categories": [
-        "cs.LG"
       ]
     }
   ]
