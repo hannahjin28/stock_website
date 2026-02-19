@@ -1,171 +1,184 @@
 {
-  "last_updated": "2026-02-17T01:12:28.230220",
+  "last_updated": "2026-02-19T01:13:58.186328",
   "papers": [
     {
-      "title": "Barron-Wiener-Laguerre models",
+      "title": "This human study did not involve human subjects: Validating LLM simulations as behavioral evidence",
       "authors": [
-        "Rahul Manavalan",
-        "Filip Tronarp"
+        "Jessica Hullman",
+        "David Broska",
+        "Huaman Sun",
+        "Aaron Shaw"
       ],
-      "abstract": "We propose a probabilistic extension of Wiener-Laguerre models for causal operator learning. Classical Wiener-Laguerre models parameterize stable linear dynamics using orthonormal Laguerre bases and apply a static nonlinear map to the resulting features. While structurally efficient and interpretable, they provide only deterministic point estimates. We reinterpret the nonlinear component through the lens of Barron function approximation, viewing two-layer networks, random Fourier features, and extreme learning machines as discretizations of integral representations over parameter measures. This perspective naturally admits Bayesian inference on the nonlinear map and yields posterior predictive uncertainty. By combining Laguerre-parameterized causal dynamics with probabilistic Barron-type nonlinear approximators, we obtain a structured yet expressive class of causal operators equipped with uncertainty quantification. The resulting framework bridges classical system identification and modern measure-based function approximation, providing a principled approach to time-series modeling and nonlinear systems identification.",
-      "pdf_url": "https://arxiv.org/pdf/2602.13098v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.13098v1",
-      "published": "2026-02-13",
+      "abstract": "A growing literature uses large language models (LLMs) as synthetic participants to generate cost-effective and nearly instantaneous responses in social science experiments. However, there is limited guidance on when such simulations support valid inference about human behavior. We contrast two strategies for obtaining valid estimates of causal effects and clarify the assumptions under which each is suitable for exploratory versus confirmatory research. Heuristic approaches seek to establish that simulated and observed human behavior are interchangeable through prompt engineering, model fine-tuning, and other repair strategies designed to reduce LLM-induced inaccuracies. While useful for many exploratory tasks, heuristic approaches lack the formal statistical guarantees typically required for confirmatory research. In contrast, statistical calibration combines auxiliary human data with statistical adjustments to account for discrepancies between observed and simulated responses. Under explicit assumptions, statistical calibration preserves validity and provides more precise estimates of causal effects at lower cost than experiments that rely solely on human participants. Yet the potential of both approaches depends on how well LLMs approximate the relevant populations. We consider what opportunities are overlooked when researchers focus myopically on substituting LLMs for human participants in a study.",
+      "pdf_url": "https://arxiv.org/pdf/2602.15785v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.15785v1",
+      "published": "2026-02-17",
       "categories": [
-        "stat.ME",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Uncertainty in Federated Granger Causality: From Origins to Systemic Consequences",
-      "authors": [
-        "Ayush Mohanty",
-        "Nazal Mohamed",
-        "Nagi Gebraeel"
-      ],
-      "abstract": "Granger Causality (GC) provides a rigorous framework for learning causal structures from time-series data. Recent federated variants of GC have targeted distributed infrastructure applications (e.g., smart grids) with distributed clients that generate high-dimensional data bound by data-sovereignty constraints. However, Federated GC algorithms only yield deterministic point estimates of causality and neglect uncertainty. This paper establishes the first methodology for rigorously quantifying uncertainty and its propagation within federated GC frameworks. We systematically classify sources of uncertainty, explicitly differentiating aleatoric (data noise) from epistemic (model variability) effects. We derive closed-form recursions that model the evolution of uncertainty through client-server interactions and identify four novel cross-covariance components that couple data uncertainties with model parameter uncertainties across the federated architecture. We also define rigorous convergence conditions for these uncertainty recursions and obtain explicit steady-state variances for both server and client model parameters. Our convergence analysis demonstrates that steady-state variances depend exclusively on client data statistics, thus eliminating dependence on initial epistemic priors and enhancing robustness. Empirical evaluations on synthetic benchmarks and real-world industrial datasets demonstrate that explicitly characterizing uncertainty significantly improves the reliability and interpretability of federated causal inference.",
-      "pdf_url": "https://arxiv.org/pdf/2602.13004v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.13004v1",
-      "published": "2026-02-13",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Jointly Optimizing Debiased CTR and Uplift for Coupons Marketing: A Unified Causal Framework",
-      "authors": [
-        "Siyun Yang",
-        "Shixiao Yang",
-        "Jian Wang",
-        "Di Fan",
-        "Kehe Cai",
-        "Haoyan Fu",
-        "Jiaming Zhang",
-        "Wenjin Wu",
-        "Peng Jiang"
-      ],
-      "abstract": "In online advertising, marketing interventions such as coupons introduce significant confounding bias into Click-Through Rate (CTR) prediction. Observed clicks reflect a mixture of users' intrinsic preferences and the uplift induced by these interventions. This causes conventional models to miscalibrate base CTRs, which distorts downstream ranking and billing decisions. Furthermore, marketing interventions often operate as multi-valued treatments with varying magnitudes, introducing additional complexity to CTR prediction.\n  To address these issues, we propose the \\textbf{Uni}fied \\textbf{M}ulti-\\textbf{V}alued \\textbf{T}reatment Network (UniMVT). Specifically, UniMVT disentangles confounding factors from treatment-sensitive representations, enabling a full-space counterfactual inference module to jointly reconstruct the debiased base CTR and intensity-response curves. To handle the complexity of multi-valued treatments, UniMVT employs an auxiliary intensity estimation task to capture treatment propensities and devise a unit uplift objective that normalizes the intervention effect. This ensures comparable estimation across the continuous coupon-value spectrum. UniMVT simultaneously achieves debiased CTR prediction for accurate system calibration and precise uplift estimation for incentive allocation. Extensive experiments on synthetic and industrial datasets demonstrate UniMVT's superiority in both predictive accuracy and calibration. Furthermore, real-world A/B tests confirm that UniMVT significantly improves business metrics through more effective coupon distribution.",
-      "pdf_url": "https://arxiv.org/pdf/2602.12972v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.12972v1",
-      "published": "2026-02-13",
-      "categories": [
-        "cs.SI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Differentially Private Two-Stage Empirical Risk Minimization and Applications to Individualized Treatment Rule",
-      "authors": [
-        "Joowon Lee",
-        "Guanhua Chen"
-      ],
-      "abstract": "Differential Privacy (DP) provides a rigorous framework for deriving privacy-preserving estimators by injecting calibrated noise to mask individual contributions while preserving population-level insights. Its central challenge lies in the privacy-utility trade-off: calibrating noise levels to ensure robust protection without compromising statistical performance. Standard DP methods struggle with a particular class of two-stage problems prevalent in individualized treatment rules (ITRs) and causal inference. In these settings, data-dependent weights are first computed to satisfy distributional constraints, such as covariate balance, before the final parameter of interest is estimated. Current DP approaches often privatize stages independently, which either degrades weight efficacy-leading to biased and inconsistent estimates-or introduces excessive noise to account for worst-case scenarios.\n  To address these challenges, we propose the Differentially Private Two-Stage Empirical Risk Minimization (DP-2ERM), a framework that injects a carefully calibrated noise only into the second stage while maintaining privacy for the entire pipeline and preserving the integrity of the first stage weights. Our theoretical contributions include deterministic bounds on weight perturbations across various widely used weighting methods, and probabilistic bounds on sensitivity for the final estimator. Simulations and real-world applications in ITR demonstrate that DP-2ERM significantly enhances utility over existing methods while providing rigorous privacy guarantees.",
-      "pdf_url": "https://arxiv.org/pdf/2602.12604v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.12604v1",
-      "published": "2026-02-13",
-      "categories": [
-        "math.ST",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Not a Silver Bullet for Loneliness: How Attachment and Age Shape Intimacy with AI Companions",
-      "authors": [
-        "Raffaele Ciriello",
-        "Uri Gal",
-        "Ofir Turel"
-      ],
-      "abstract": "Artificial intelligence (AI) companions are increasingly promoted as solutions for loneliness, often overlooking how personal dispositions and life-stage conditions shape artificial intimacy. Because intimacy is a primary coping mechanism for loneliness that varies by attachment style and age, we examine how different types of users form intimate relationships with AI companions in response to loneliness. Drawing on a hermeneutic literature review and a survey of 277 active AI companion users, we develop and test a model in which loneliness predicts intimacy, moderated by attachment insecurity and conditioned by age. Although the cross-sectional data limits causal inference, the results reveal a differentiated pattern. Loneliness is paradoxically associated with reduced intimacy for securely attached users but with increased intimacy for avoidant and ambivalent users, while anxious users show mixed effects. Older adults report higher intimacy even at lower loneliness levels. These findings challenge portrayals of AI companions as universal remedies for loneliness. Instead, artificial intimacy emerges as a sociotechnical process shaped by psychological dispositions and demographic conditions. The study clarifies who is most likely to form intimate relationships with AI companions and highlights ethical risks in commercial models that may capitalise on user vulnerability.",
-      "pdf_url": "https://arxiv.org/pdf/2602.12476v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.12476v1",
-      "published": "2026-02-12",
-      "categories": [
-        "cs.CY",
-        "cs.AI",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Temporal Framework for Causality-Preserving Scheduling of Measurements in Quantum Networks",
-      "authors": [
-        "Jakob Kaltoft Søndergaard",
-        "René Bødker Christensen",
-        "Petar Popovski"
-      ],
-      "abstract": "Distributed quantum protocols rely on classical feedforward information to process measurement outcomes, but heterogeneous hardware and uncertain local timing can make the causal order of measurements ambiguous when inferred solely from arrival times. Even in simple line networks with only Pauli measurements, end nodes cannot distinguish whether a missing outcome is caused by slow measurement or by delayed classical propagation. To resolve this ambiguity, we propose a time-division architecture for quantum networks in which nodes perform measurements in pre-assigned slots, ensuring a unique causal interpretation of outcomes. We formalize this temporal framework and derive the feedforward and adjacency constraints required to preserve measurement causality. For simple network topologies, we present an algorithm that yields optimal measurement schedules. Overall, the proposed time-division model provides a practical coordination layer that bridges the classical network timing with quantum measurement processing, enabling reliable and scalable measurement-based quantum networking.",
-      "pdf_url": "https://arxiv.org/pdf/2602.12459v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.12459v1",
-      "published": "2026-02-12",
-      "categories": [
-        "quant-ph"
-      ]
-    },
-    {
-      "title": "What does RL improve for Visual Reasoning? A Frankenstein-Style Analysis",
-      "authors": [
-        "Xirui Li",
-        "Ming Li",
-        "Tianyi Zhou"
-      ],
-      "abstract": "Reinforcement learning (RL) with verifiable rewards has become a standard post-training stage for boosting visual reasoning in vision-language models, yet it remains unclear what capabilities RL actually improves compared with supervised fine-tuning as cold-start initialization (IN). End-to-end benchmark gains conflate multiple factors, making it difficult to attribute improvements to specific skills. To bridge the gap, we propose a Frankenstein-style analysis framework including: (i) functional localization via causal probing; (ii) update characterization via parameter comparison; and (iii) transferability test via model merging. Instead, RL induces a consistent inference-time shift primarily in mid-to-late layers, and these mid-to-late refinements are both transferable (via merging) and necessary (via freezing) for RL gains. Overall, our results suggest that RL's reliable contribution in visual reasoning is not a uniform enhancement of visual perception, but a systematic refinement of mid-to-late transformer computation that improves vision-to-reasoning alignment and reasoning performance, highlighting the limitations of benchmark-only evaluation for understanding multimodal reasoning improvements.",
-      "pdf_url": "https://arxiv.org/pdf/2602.12395v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.12395v1",
-      "published": "2026-02-12",
-      "categories": [
-        "cs.CV",
         "cs.AI"
       ]
     },
     {
-      "title": "GPT-4o Lacks Core Features of Theory of Mind",
+      "title": "The geometry of online conversations and the causal antecedents of conflictual discourse",
       "authors": [
-        "John Muchovej",
-        "Amanda Royka",
-        "Shane Lee",
-        "Julian Jara-Ettinger"
+        "Carlo Santagiustina",
+        "Caterina Cruciani"
       ],
-      "abstract": "Do Large Language Models (LLMs) possess a Theory of Mind (ToM)? Research into this question has focused on evaluating LLMs against benchmarks and found success across a range of social tasks. However, these evaluations do not test for the actual representations posited by ToM: namely, a causal model of mental states and behavior. Here, we use a cognitively-grounded definition of ToM to develop and test a new evaluation framework. Specifically, our approach probes whether LLMs have a coherent, domain-general, and consistent model of how mental states cause behavior -- regardless of whether that model matches a human-like ToM. We find that even though LLMs succeed in approximating human judgments in a simple ToM paradigm, they fail at a logically equivalent task and exhibit low consistency between their action predictions and corresponding mental state inferences. As such, these findings suggest that the social proficiency exhibited by LLMs is not the result of an domain-general or consistent ToM.",
-      "pdf_url": "https://arxiv.org/pdf/2602.12150v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.12150v1",
-      "published": "2026-02-12",
+      "abstract": "This article investigates the causal antecedents of conflictual language and the geometry of interaction in online threaded conversations related to climate change. We employ three annotation dimensions, inferred through LLM prompting and averaging, to capture complementary aspects of discursive conflict (such as stance: agreement vs disagreement; tone: attacking vs respectful; and emotional versus factual framing) and use data from a threaded online forum to examine how these dimensions respond to temporal, conversational, and arborescent structural features of discussions. We show that, as suggested by the literature, longer delays between successive posts in a thread are associated with replies that are, on average, more respectful, whereas longer delays relative to the parent post are associated with slightly less disagreement but more emotional (less factual) language. Second, we characterize alignment with the local conversational environment and find strong convergence both toward the average stance, tone and emotional framing of older sibling posts replying to the same parent and toward those of the parent post itself, with parent post effects generally stronger than sibling effects. We further show that early branch-level responses condition these alignment dynamics, such that parent-child stance alignment is amplified or attenuated depending on whether a branch is initiated in agreement or disagreement with the discussion's root message. These influences are largely additive for civility-related dimensions (attacking vs respectful, disagree vs agree), whereas for emotional versus factual framing there is a significant interaction: alignment with the parent's emotionality is amplified when older siblings are similarly aligned.",
+      "pdf_url": "https://arxiv.org/pdf/2602.15600v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.15600v1",
+      "published": "2026-02-17",
       "categories": [
+        "cs.SI",
         "cs.AI",
-        "cs.CL",
-        "cs.LG"
+        "econ.EM",
+        "stat.AP"
       ]
     },
     {
-      "title": "U-Former ODE: Fast Probabilistic Forecasting of Irregular Time Series",
+      "title": "CEPAE: Conditional Entropy-Penalized Autoencoders for Time Series Counterfactuals",
       "authors": [
-        "Ilya Kuleshov",
-        "Alexander Marusov",
-        "Alexey Zaytsev"
+        "Tomàs Garriga",
+        "Gerard Sanz",
+        "Eduard Serrahima de Cambra",
+        "Axel Brando"
       ],
-      "abstract": "Probabilistic forecasting of irregularly sampled time series is crucial in domains such as healthcare and finance, yet it remains a formidable challenge. Existing Neural Controlled Differential Equation (Neural CDE) approaches, while effective at modelling continuous dynamics, suffer from slow, inherently sequential computation, which restricts scalability and limits access to global context. We introduce UFO (U-Former ODE), a novel architecture that seamlessly integrates the parallelizable, multiscale feature extraction of U-Nets, the powerful global modelling of Transformers, and the continuous-time dynamics of Neural CDEs. By constructing a fully causal, parallelizable model, UFO achieves a global receptive field while retaining strong sensitivity to local temporal dynamics. Extensive experiments on five standard benchmarks -- covering both regularly and irregularly sampled time series -- demonstrate that UFO consistently outperforms ten state-of-the-art neural baselines in predictive accuracy. Moreover, UFO delivers up to 15$\\times$ faster inference compared to conventional Neural CDEs, with consistently strong performance on long and highly multivariate sequences.",
-      "pdf_url": "https://arxiv.org/pdf/2602.11738v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.11738v1",
-      "published": "2026-02-12",
+      "abstract": "The ability to accurately perform counterfactual inference on time series is crucial for decision-making in fields like finance, healthcare, and marketing, as it allows us to understand the impact of events or treatments on outcomes over time. In this paper, we introduce a new counterfactual inference approach tailored to time series data impacted by market events, which is motivated by an industrial application. Utilizing the abduction-action-prediction procedure and the Structural Causal Model framework, we first adapt methods based on variational autoencoders and adversarial autoencoders, both previously used in counterfactual literature although not in time series settings. Then, we present the Conditional Entropy-Penalized Autoencoder (CEPAE), a novel autoencoder-based approach for counterfactual inference, which employs an entropy penalization loss over the latent space to encourage disentangled data representations. We validate our approach both theoretically and experimentally on synthetic, semi-synthetic, and real-world datasets, showing that CEPAE generally outperforms the other approaches in the evaluated metrics.",
+      "pdf_url": "https://arxiv.org/pdf/2602.15546v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.15546v1",
+      "published": "2026-02-17",
       "categories": [
         "cs.LG"
       ]
     },
     {
-      "title": "WebTestPilot: Agentic End-to-End Web Testing against Natural Language Specification by Inferring Oracles with Symbolized GUI Elements",
+      "title": "Joint analysis for multivariate longitudinal and event time data with a change point anchored at interval-censored event time",
       "authors": [
-        "Xiwen Teoh",
-        "Yun Lin",
-        "Duc-Minh Nguyen",
-        "Ruofei Ren",
-        "Wenjie Zhang",
-        "Jin Song Dong"
+        "Yue Zhan",
+        "Cheng Zheng",
+        "Ying Zhang"
       ],
-      "abstract": "Visual language model (VLM) agents show great promise in automating end-to-end (E2E) web testing against requirements in natural language. However, the probabilistic nature of language models can have inherent hallucinations. Therefore, given a detected inconsistency between the requirement and the web application, it is hard to distinguish whether it stems from the hallucination or a real application bug. Addressing this issue presents two core technical challenges: the implicit oracle inference challenge, where the agent must act as its own oracle to implicitly decide if the application's behavior is correct without guidance, and the probabilistic inference challenge, where an LLM's inconsistent reasoning undermines its trustworthiness as an oracle. Existing LLM-based approaches fail to capture such implicit oracles, either by treating any page navigation that doesn't crash as a success, or by checking each state in isolation, thus missing bugs dependent on context from prior steps.\n  We introduce WebTestPilot, an LLM-based agent designed to address these challenges. WebTestPilot uses (1) a symbolization layer which detects and symbolizes critical GUI elements on the web application into symbols (i.e., variables) and (2) translates natural language specification into a sequence of steps, each of which is equipped with inferred pre- and post-conditions over the symbols as an oracle. This oracle captures data, temporal, and causal dependencies, enabling the validation of implicit requirements. To advance research in this area, we build a benchmark of bug-injected web apps for evaluating NL-to-E2E testing. The results show that WebTestPilot achieves a task completion rate of 99%, with 96% precision and 96% recall in bug detection, outperforming the best baseline (+70 precision, +27 recall). The agent generalizes across diverse natural language inputs and model scales.",
-      "pdf_url": "https://arxiv.org/pdf/2602.11724v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.11724v1",
-      "published": "2026-02-12",
+      "abstract": "Huntington's disease (HD) is an autosomal dominant neurodegenerative disorder characterized by motor dysfunction, psychiatric disturbances, and cognitive decline. The onset of HD is marked by severe motor impairment, which may be predicted by prior cognitive decline and, in turn, exacerbate cognitive deficits. Clinical data, however, are often collected at discrete time points, so the timing of disease onset is subject to interval censoring. To address the challenges posed by such data, we develop a joint model for multivariate longitudinal biomarkers with a change point anchored at an interval-censored event time. The model simultaneously assesses the effects of longitudinal biomarkers on the event time and the changes in biomarker trajectories following the event. We conduct a comprehensive simulation study to demonstrate the finite-sample performance of the proposed method for causal inference. Finally, we apply the method to PREDICT-HD, a multisite observational cohort study of prodromal HD individuals, to ascertain how cognitive impairment and motor dysfunction interact during disease progression.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14991v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.14991v1",
+      "published": "2026-02-16",
       "categories": [
-        "cs.SE"
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Use What You Know: Causal Foundation Models with Partial Graphs",
+      "authors": [
+        "Arik Reuter",
+        "Anish Dhir",
+        "Cristiana Diaconu",
+        "Jake Robertson",
+        "Ole Ossen",
+        "Frank Hutter",
+        "Adrian Weller",
+        "Mark van der Wilk",
+        "Bernhard Schölkopf"
+      ],
+      "abstract": "Estimating causal quantities traditionally relies on bespoke estimators tailored to specific assumptions. Recently proposed Causal Foundation Models (CFMs) promise a more unified approach by amortising causal discovery and inference in a single step. However, in their current state, they do not allow for the incorporation of any domain knowledge, which can lead to suboptimal predictions. We bridge this gap by introducing methods to condition CFMs on causal information, such as the causal graph or more readily available ancestral information. When access to complete causal graph information is too strict a requirement, our approach also effectively leverages partial causal information. We systematically evaluate conditioning strategies and find that injecting learnable biases into the attention mechanism is the most effective method to utilise full and partial causal information. Our experiments show that this conditioning allows a general-purpose CFM to match the performance of specialised models trained on specific causal structures. Overall, our approach addresses a central hurdle on the path towards all-in-one causal foundation models: the capability to answer causal queries in a data-driven manner while effectively leveraging any amount of domain expertise.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14972v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.14972v1",
+      "published": "2026-02-16",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "DriveFine: Refining-Augmented Masked Diffusion VLA for Precise and Robust Driving",
+      "authors": [
+        "Chenxu Dang",
+        "Sining Ang",
+        "Yongkang Li",
+        "Haochen Tian",
+        "Jie Wang",
+        "Guang Li",
+        "Hangjun Ye",
+        "Jie Ma",
+        "Long Chen",
+        "Yan Wang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models for autonomous driving increasingly adopt generative planners trained with imitation learning followed by reinforcement learning. Diffusion-based planners suffer from modality alignment difficulties, low training efficiency, and limited generalization. Token-based planners are plagued by cumulative causal errors and irreversible decoding. In summary, the two dominant paradigms exhibit complementary strengths and weaknesses. In this paper, we propose DriveFine, a masked diffusion VLA model that combines flexible decoding with self-correction capabilities. In particular, we design a novel plug-and-play block-MoE, which seamlessly injects a refinement expert on top of the generation expert. By enabling explicit expert selection during inference and gradient blocking during training, the two experts are fully decoupled, preserving the foundational capabilities and generic patterns of the pretrained weights, which highlights the flexibility and extensibility of the block-MoE design. Furthermore, we design a hybrid reinforcement learning strategy that encourages effective exploration of refinement expert while maintaining training stability. Extensive experiments on NAVSIM v1, v2, and Navhard benchmarks demonstrate that DriveFine exhibits strong efficacy and robustness. The code will be released at https://github.com/MSunDYY/DriveFine.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14577v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.14577v1",
+      "published": "2026-02-16",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Traceable Latent Variable Discovery Based on Multi-Agent Collaboration",
+      "authors": [
+        "Huaming Du",
+        "Tao Hu",
+        "Yijie Huang",
+        "Yu Zhao",
+        "Guisong Liu",
+        "Tao Gu",
+        "Gang Kou",
+        "Carl Yang"
+      ],
+      "abstract": "Revealing the underlying causal mechanisms in the real world is crucial for scientific and technological progress. Despite notable advances in recent decades, the lack of high-quality data and the reliance of traditional causal discovery algorithms (TCDA) on the assumption of no latent confounders, as well as their tendency to overlook the precise semantics of latent variables, have long been major obstacles to the broader application of causal discovery. To address this issue, we propose a novel causal modeling framework, TLVD, which integrates the metadata-based reasoning capabilities of large language models (LLMs) with the data-driven modeling capabilities of TCDA for inferring latent variables and their semantics. Specifically, we first employ a data-driven approach to construct a causal graph that incorporates latent variables. Then, we employ multi-LLM collaboration for latent variable inference, modeling this process as a game with incomplete information and seeking its Bayesian Nash Equilibrium (BNE) to infer the possible specific latent variables. Finally, to validate the inferred latent variables across multiple real-world web-based data sources, we leverage LLMs for evidence exploration to ensure traceability. We comprehensively evaluate TLVD on three de-identified real patient datasets provided by a hospital and two benchmark datasets. Extensive experimental results confirm the effectiveness and reliability of TLVD, with average improvements of 32.67% in Acc, 62.21% in CAcc, and 26.72% in ECit across the five datasets.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14456v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.14456v1",
+      "published": "2026-02-16",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Integrating Unstructured Text into Causal Inference: Empirical Evidence from Real Data",
+      "authors": [
+        "Boning Zhou",
+        "Ziyu Wang",
+        "Han Hong",
+        "Haoqi Hu"
+      ],
+      "abstract": "Causal inference, a critical tool for informing business decisions, traditionally relies heavily on structured data. However, in many real-world scenarios, such data can be incomplete or unavailable. This paper presents a framework that leverages transformer-based language models to perform causal inference using unstructured text. We demonstrate the effectiveness of our framework by comparing causal estimates derived from unstructured text against those obtained from structured data across population, group, and individual levels. Our findings show consistent results between the two approaches, validating the potential of unstructured text in causal inference tasks. Our approach extends the applicability of causal inference methods to scenarios where only textual data is available, enabling data-driven business decision-making when structured tabular data is scarce.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14274v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.14274v1",
+      "published": "2026-02-15",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "EgoSound: Benchmarking Sound Understanding in Egocentric Videos",
+      "authors": [
+        "Bingwen Zhu",
+        "Yuqian Fu",
+        "Qiaole Dong",
+        "Guolei Sun",
+        "Tianwen Qian",
+        "Yuzheng Wu",
+        "Danda Pani Paudel",
+        "Xiangyang Xue",
+        "Yanwei Fu"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) have recently achieved remarkable progress in vision-language understanding. Yet, human perception is inherently multisensory, integrating sight, sound, and motion to reason about the world. Among these modalities, sound provides indispensable cues about spatial layout, off-screen events, and causal interactions, particularly in egocentric settings where auditory and visual signals are tightly coupled. To this end, we introduce EgoSound, the first benchmark designed to systematically evaluate egocentric sound understanding in MLLMs. EgoSound unifies data from Ego4D and EgoBlind, encompassing both sighted and sound-dependent experiences. It defines a seven-task taxonomy spanning intrinsic sound perception, spatial localization, causal inference, and cross-modal reasoning. Constructed through a multi-stage auto-generative pipeline, EgoSound contains 7315 validated QA pairs across 900 videos. Comprehensive experiments on nine state-of-the-art MLLMs reveal that current models exhibit emerging auditory reasoning abilities but remain limited in fine-grained spatial and causal understanding. EgoSound establishes a challenging foundation for advancing multisensory egocentric intelligence, bridging the gap between seeing and truly hearing the world.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14122v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.14122v1",
+      "published": "2026-02-15",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "BRAIN: Bayesian Reasoning via Active Inference for Agentic and Embodied Intelligence in Mobile Networks",
+      "authors": [
+        "Osman Tugay Basaran",
+        "Martin Maier",
+        "Falko Dressler"
+      ],
+      "abstract": "Future sixth-generation (6G) mobile networks will demand artificial intelligence (AI) agents that are not only autonomous and efficient, but also capable of real-time adaptation in dynamic environments and transparent in their decisionmaking. However, prevailing agentic AI approaches in networking, exhibit significant shortcomings in this regard. Conventional deep reinforcement learning (DRL)-based agents lack explainability and often suffer from brittle adaptation, including catastrophic forgetting of past knowledge under non-stationary conditions. In this paper, we propose an alternative solution for these challenges: Bayesian reasoning via Active Inference (BRAIN) agent. BRAIN harnesses a deep generative model of the network environment and minimizes variational free energy to unify perception and action in a single closed-loop paradigm. We implement BRAIN as O-RAN eXtended application (xApp) on GPU-accelerated testbed and demonstrate its advantages over standard DRL baselines. In our experiments, BRAIN exhibits (i) robust causal reasoning for dynamic radio resource allocation, maintaining slice-specific quality of service (QoS) targets (throughput, latency, reliability) under varying traffic loads, (ii) superior adaptability with up to 28.3% higher robustness to sudden traffic shifts versus benchmarks (achieved without any retraining), and (iii) real-time interpretability of its decisions through human-interpretable belief state diagnostics.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14033v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.14033v1",
+      "published": "2026-02-15",
+      "categories": [
+        "cs.IT"
       ]
     }
   ]
