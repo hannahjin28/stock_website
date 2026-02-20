@@ -1,6 +1,71 @@
 {
-  "last_updated": "2026-02-19T01:13:58.186328",
+  "last_updated": "2026-02-20T01:09:28.693427",
   "papers": [
+    {
+      "title": "Causality is Key for Interpretability Claims to Generalise",
+      "authors": [
+        "Shruti Joshi",
+        "Aaron Mueller",
+        "David Klindt",
+        "Wieland Brendel",
+        "Patrik Reizinger",
+        "Dhanya Sridhar"
+      ],
+      "abstract": "Interpretability research on large language models (LLMs) has yielded important insights into model behaviour, yet recurring pitfalls persist: findings that do not generalise, and causal interpretations that outrun the evidence. Our position is that causal inference specifies what constitutes a valid mapping from model activations to invariant high-level structures, the data or assumptions needed to achieve it, and the inferences it can support. Specifically, Pearl's causal hierarchy clarifies what an interpretability study can justify. Observations establish associations between model behaviour and internal components. Interventions (e.g., ablations or activation patching) support claims how these edits affect a behavioural metric (\\eg, average change in token probabilities) over a set of prompts. However, counterfactual claims -- i.e., asking what the model output would have been for the same prompt under an unobserved intervention -- remain largely unverifiable without controlled supervision. We show how causal representation learning (CRL) operationalises this hierarchy, specifying which variables are recoverable from activations and under what assumptions. Together, these motivate a diagnostic framework that helps practitioners select methods and evaluations matching claims to evidence such that findings generalise.",
+      "pdf_url": "https://arxiv.org/pdf/2602.16698v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.16698v1",
+      "published": "2026-02-18",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal and Compositional Abstraction",
+      "authors": [
+        "Robin Lorenz",
+        "Sean Tull"
+      ],
+      "abstract": "Abstracting from a low level to a more explanatory high level of description, and ideally while preserving causal structure, is fundamental to scientific practice, to causal inference problems, and to robust, efficient and interpretable AI. We present a general account of abstractions between low and high level models as natural transformations, focusing on the case of causal models. This provides a new formalisation of causal abstraction, unifying several notions in the literature, including constructive causal abstraction, Q-$τ$ consistency, abstractions based on interchange interventions, and `distributed' causal abstractions. Our approach is formalised in terms of category theory, and uses the general notion of a compositional model with a given set of queries and semantics in a monoidal, cd- or Markov category; causal models and their queries such as interventions being special cases. We identify two basic notions of abstraction: downward abstractions mapping queries from high to low level; and upward abstractions, mapping concrete queries such as Do-interventions from low to high. Although usually presented as the latter, we show how common causal abstractions may, more fundamentally, be understood in terms of the former. Our approach also leads us to consider a new stronger notion of `component-level' abstraction, applying to the individual components of a model. In particular, this yields a novel, strengthened form of constructive causal abstraction at the mechanism-level, for which we prove characterisation results. Finally, we show that abstraction can be generalised to further compositional models, including those with a quantum semantics implemented by quantum circuits, and we take first steps in exploring abstractions between quantum compositional circuit models and high-level classical causal models as a means to explainable quantum AI.",
+      "pdf_url": "https://arxiv.org/pdf/2602.16612v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.16612v1",
+      "published": "2026-02-18",
+      "categories": [
+        "cs.LO",
+        "cs.AI",
+        "math.CT",
+        "quant-ph"
+      ]
+    },
+    {
+      "title": "Federated Graph AGI for Cross-Border Insider Threat Intelligence in Government Financial Schemes",
+      "authors": [
+        "Srikumar Nayak",
+        "James Walmesley"
+      ],
+      "abstract": "Cross-border insider threats pose a critical challenge to government financial schemes, particularly when dealing with distributed, privacy-sensitive data across multiple jurisdictions. Existing approaches face fundamental limitations: they cannot effectively share intelligence across borders due to privacy constraints, lack reasoning capabilities to understand complex multi-step attack patterns, and fail to capture intricate graph-structured relationships in financial networks. We introduce FedGraph-AGI, a novel federated learning framework integrating Artificial General Intelligence (AGI) reasoning with graph neural networks for privacy-preserving cross-border insider threat detection. Our approach combines: (1) federated graph neural networks preserving data sovereignty; (2) Mixture-of-Experts (MoE) aggregation for heterogeneous jurisdictions; and (3) AGI-powered reasoning via Large Action Models (LAM) performing causal inference over graph data. Through experiments on a 50,000-transaction dataset across 10 jurisdictions, FedGraph-AGI achieves 92.3% accuracy, significantly outperforming federated baselines (86.1%) and centralized approaches (84.7%). Our ablation studies reveal AGI reasoning contributes 6.8% improvement, while MoE adds 4.4%. The system maintains epsilon = 1.0 differential privacy while achieving near-optimal performance and scales efficiently to 50+ clients. This represents the first integration of AGI reasoning with federated graph learning for insider threat detection, opening new directions for privacy-preserving cross-border intelligence sharing.",
+      "pdf_url": "https://arxiv.org/pdf/2602.16109v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.16109v1",
+      "published": "2026-02-18",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CE"
+      ]
+    },
+    {
+      "title": "Can Causality Cure Confusion Caused By Correlation (in Software Analytics)?",
+      "authors": [
+        "Amirali Rayegan",
+        "Tim Menzies"
+      ],
+      "abstract": "Background: Symbolic models, particularly decision trees, are widely used in software engineering for explainable analytics in defect prediction, configuration tuning, and software quality assessment. Most of these models rely on correlational split criteria, such as variance reduction or information gain, which identify statistical associations but cannot imply causation between X and Y. Recent empirical studies in software engineering show that both correlational models and causal discovery algorithms suffer from pronounced instability. This instability arises from two complementary issues: 1-Correlation-based methods conflate association with causation. 2-Causal discovery algorithms rely on heuristic approximations to cope with the NP-hard nature of structure learning, causing their inferred graphs to vary widely under minor input perturbations. Together, these issues undermine trust, reproducibility, and the reliability of explanations in real-world SE tasks. Objective: This study investigates whether incorporating causality-aware split criteria into symbolic models can improve their stability and robustness, and whether such gains come at the cost of predictive or optimization performance. We additionally examine how the stability of human expert judgments compares to that of automated models. Method: Using 120+ multi-objective optimization tasks from the MOOT repository of multi-objective optimization tasks, we evaluate stability through a preregistered bootstrap-ensemble protocol that measures variance with win-score assignments. We compare the stability of human causal assessments with correlation-based decision trees (EZR). We would also compare the causality-aware trees, which leverage conditional-entropy split criteria and confounder filtering. Stability and performance differences are analyzed using statistical methods (variance, Gini Impurity, KS test, Cliff's delta)",
+      "pdf_url": "https://arxiv.org/pdf/2602.16091v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.16091v1",
+      "published": "2026-02-17",
+      "categories": [
+        "cs.SE"
+      ]
+    },
     {
       "title": "This human study did not involve human subjects: Validating LLM simulations as behavioral evidence",
       "authors": [
@@ -51,6 +116,21 @@
       ]
     },
     {
+      "title": "Nonparametric Identification and Inference for Counterfactual Distributions with Confounding",
+      "authors": [
+        "Jianle Sun",
+        "Kun Zhang"
+      ],
+      "abstract": "We propose nonparametric identification and semiparametric estimation of joint potential outcome distributions in the presence of confounding. First, in settings with observed confounding, we derive tighter, covariate-informed bounds on the joint distribution by leveraging conditional copulas. To overcome the non-differentiability of bounding min/max operators, we establish the asymptotic properties for both a direct estimator with polynomial margin condition and a smooth approximation with log-sum-exp operator, facilitating valid inference for individual-level effects under the canonical rank-preserving assumption. Second, we tackle the challenge of unmeasured confounding by introducing a causal representation learning framework. By utilizing instrumental variables, we prove the nonparametric identifiability of the latent confounding subspace under injectivity and completeness conditions. We develop a ``triple machine learning\" estimator that employs cross-fitting scheme to sequentially handle the learned representation, nuisance parameters, and target functional. We characterize the asymptotic distribution with variance inflation induced by representation learning error, and provide conditions for semiparametric efficiency. We also propose a practical VAE-based algorithm for confounding representation learning. Simulations and real-world analysis validate the effectiveness of proposed methods. By bridging classical semiparametric theory with modern representation learning, this work provides a robust statistical foundation for distributional and counterfactual inference in complex causal systems.",
+      "pdf_url": "https://arxiv.org/pdf/2602.15916v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.15916v1",
+      "published": "2026-02-17",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
       "title": "Joint analysis for multivariate longitudinal and event time data with a change point anchored at interval-censored event time",
       "authors": [
         "Yue Zhan",
@@ -84,101 +164,6 @@
       "published": "2026-02-16",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "DriveFine: Refining-Augmented Masked Diffusion VLA for Precise and Robust Driving",
-      "authors": [
-        "Chenxu Dang",
-        "Sining Ang",
-        "Yongkang Li",
-        "Haochen Tian",
-        "Jie Wang",
-        "Guang Li",
-        "Hangjun Ye",
-        "Jie Ma",
-        "Long Chen",
-        "Yan Wang"
-      ],
-      "abstract": "Vision-Language-Action (VLA) models for autonomous driving increasingly adopt generative planners trained with imitation learning followed by reinforcement learning. Diffusion-based planners suffer from modality alignment difficulties, low training efficiency, and limited generalization. Token-based planners are plagued by cumulative causal errors and irreversible decoding. In summary, the two dominant paradigms exhibit complementary strengths and weaknesses. In this paper, we propose DriveFine, a masked diffusion VLA model that combines flexible decoding with self-correction capabilities. In particular, we design a novel plug-and-play block-MoE, which seamlessly injects a refinement expert on top of the generation expert. By enabling explicit expert selection during inference and gradient blocking during training, the two experts are fully decoupled, preserving the foundational capabilities and generic patterns of the pretrained weights, which highlights the flexibility and extensibility of the block-MoE design. Furthermore, we design a hybrid reinforcement learning strategy that encourages effective exploration of refinement expert while maintaining training stability. Extensive experiments on NAVSIM v1, v2, and Navhard benchmarks demonstrate that DriveFine exhibits strong efficacy and robustness. The code will be released at https://github.com/MSunDYY/DriveFine.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14577v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.14577v1",
-      "published": "2026-02-16",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Traceable Latent Variable Discovery Based on Multi-Agent Collaboration",
-      "authors": [
-        "Huaming Du",
-        "Tao Hu",
-        "Yijie Huang",
-        "Yu Zhao",
-        "Guisong Liu",
-        "Tao Gu",
-        "Gang Kou",
-        "Carl Yang"
-      ],
-      "abstract": "Revealing the underlying causal mechanisms in the real world is crucial for scientific and technological progress. Despite notable advances in recent decades, the lack of high-quality data and the reliance of traditional causal discovery algorithms (TCDA) on the assumption of no latent confounders, as well as their tendency to overlook the precise semantics of latent variables, have long been major obstacles to the broader application of causal discovery. To address this issue, we propose a novel causal modeling framework, TLVD, which integrates the metadata-based reasoning capabilities of large language models (LLMs) with the data-driven modeling capabilities of TCDA for inferring latent variables and their semantics. Specifically, we first employ a data-driven approach to construct a causal graph that incorporates latent variables. Then, we employ multi-LLM collaboration for latent variable inference, modeling this process as a game with incomplete information and seeking its Bayesian Nash Equilibrium (BNE) to infer the possible specific latent variables. Finally, to validate the inferred latent variables across multiple real-world web-based data sources, we leverage LLMs for evidence exploration to ensure traceability. We comprehensively evaluate TLVD on three de-identified real patient datasets provided by a hospital and two benchmark datasets. Extensive experimental results confirm the effectiveness and reliability of TLVD, with average improvements of 32.67% in Acc, 62.21% in CAcc, and 26.72% in ECit across the five datasets.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14456v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.14456v1",
-      "published": "2026-02-16",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Integrating Unstructured Text into Causal Inference: Empirical Evidence from Real Data",
-      "authors": [
-        "Boning Zhou",
-        "Ziyu Wang",
-        "Han Hong",
-        "Haoqi Hu"
-      ],
-      "abstract": "Causal inference, a critical tool for informing business decisions, traditionally relies heavily on structured data. However, in many real-world scenarios, such data can be incomplete or unavailable. This paper presents a framework that leverages transformer-based language models to perform causal inference using unstructured text. We demonstrate the effectiveness of our framework by comparing causal estimates derived from unstructured text against those obtained from structured data across population, group, and individual levels. Our findings show consistent results between the two approaches, validating the potential of unstructured text in causal inference tasks. Our approach extends the applicability of causal inference methods to scenarios where only textual data is available, enabling data-driven business decision-making when structured tabular data is scarce.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14274v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.14274v1",
-      "published": "2026-02-15",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "EgoSound: Benchmarking Sound Understanding in Egocentric Videos",
-      "authors": [
-        "Bingwen Zhu",
-        "Yuqian Fu",
-        "Qiaole Dong",
-        "Guolei Sun",
-        "Tianwen Qian",
-        "Yuzheng Wu",
-        "Danda Pani Paudel",
-        "Xiangyang Xue",
-        "Yanwei Fu"
-      ],
-      "abstract": "Multimodal Large Language Models (MLLMs) have recently achieved remarkable progress in vision-language understanding. Yet, human perception is inherently multisensory, integrating sight, sound, and motion to reason about the world. Among these modalities, sound provides indispensable cues about spatial layout, off-screen events, and causal interactions, particularly in egocentric settings where auditory and visual signals are tightly coupled. To this end, we introduce EgoSound, the first benchmark designed to systematically evaluate egocentric sound understanding in MLLMs. EgoSound unifies data from Ego4D and EgoBlind, encompassing both sighted and sound-dependent experiences. It defines a seven-task taxonomy spanning intrinsic sound perception, spatial localization, causal inference, and cross-modal reasoning. Constructed through a multi-stage auto-generative pipeline, EgoSound contains 7315 validated QA pairs across 900 videos. Comprehensive experiments on nine state-of-the-art MLLMs reveal that current models exhibit emerging auditory reasoning abilities but remain limited in fine-grained spatial and causal understanding. EgoSound establishes a challenging foundation for advancing multisensory egocentric intelligence, bridging the gap between seeing and truly hearing the world.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14122v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.14122v1",
-      "published": "2026-02-15",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "BRAIN: Bayesian Reasoning via Active Inference for Agentic and Embodied Intelligence in Mobile Networks",
-      "authors": [
-        "Osman Tugay Basaran",
-        "Martin Maier",
-        "Falko Dressler"
-      ],
-      "abstract": "Future sixth-generation (6G) mobile networks will demand artificial intelligence (AI) agents that are not only autonomous and efficient, but also capable of real-time adaptation in dynamic environments and transparent in their decisionmaking. However, prevailing agentic AI approaches in networking, exhibit significant shortcomings in this regard. Conventional deep reinforcement learning (DRL)-based agents lack explainability and often suffer from brittle adaptation, including catastrophic forgetting of past knowledge under non-stationary conditions. In this paper, we propose an alternative solution for these challenges: Bayesian reasoning via Active Inference (BRAIN) agent. BRAIN harnesses a deep generative model of the network environment and minimizes variational free energy to unify perception and action in a single closed-loop paradigm. We implement BRAIN as O-RAN eXtended application (xApp) on GPU-accelerated testbed and demonstrate its advantages over standard DRL baselines. In our experiments, BRAIN exhibits (i) robust causal reasoning for dynamic radio resource allocation, maintaining slice-specific quality of service (QoS) targets (throughput, latency, reliability) under varying traffic loads, (ii) superior adaptability with up to 28.3% higher robustness to sudden traffic shifts versus benchmarks (achieved without any retraining), and (iii) real-time interpretability of its decisions through human-interpretable belief state diagnostics.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14033v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.14033v1",
-      "published": "2026-02-15",
-      "categories": [
-        "cs.IT"
       ]
     }
   ]
