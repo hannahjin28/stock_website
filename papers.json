@@ -1,6 +1,60 @@
 {
-  "last_updated": "2026-02-20T01:09:28.693427",
+  "last_updated": "2026-02-22T01:13:09.126639",
   "papers": [
+    {
+      "title": "GraphThinker: Reinforcing Video Reasoning with Event Graph Thinking",
+      "authors": [
+        "Zixu Cheng",
+        "Da Li",
+        "Jian Hu",
+        "Ziquan Liu",
+        "Wei Li",
+        "Shaogang Gong"
+      ],
+      "abstract": "Video reasoning requires understanding the causal relationships between events in a video. However, such relationships are often implicit and costly to annotate manually. While existing multimodal large language models (MLLMs) often infer event relations through dense captions or video summaries for video reasoning, such modeling still lacks causal understanding. Without explicit causal structure modeling within and across video events, these models suffer from hallucinations during the video reasoning. In this work, we propose GraphThinker, a reinforcement finetuning-based method that constructs structural event-level scene graphs and enhances visual grounding to jointly reduce hallucinations in video reasoning. Specifically, we first employ an MLLM to construct an event-based video scene graph (EVSG) that explicitly models both intra- and inter-event relations, and incorporate these formed scene graphs into the MLLM as an intermediate thinking process. We also introduce a visual attention reward during reinforcement finetuning, which strengthens video grounding and further mitigates hallucinations. We evaluate GraphThinker on two datasets, RexTime and VidHalluc, where it shows superior ability to capture object and event relations with more precise event localization, reducing hallucinations in video reasoning compared to prior methods.",
+      "pdf_url": "https://arxiv.org/pdf/2602.17555v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.17555v1",
+      "published": "2026-02-19",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Continual learning and refinement of causal models through dynamic predicate invention",
+      "authors": [
+        "Enrique Crespo-Fernandez",
+        "Oliver Ray",
+        "Telmo de Menezes e Silva Filho",
+        "Peter Flach"
+      ],
+      "abstract": "Efficiently navigating complex environments requires agents to internalize the underlying logic of their world, yet standard world modelling methods often struggle with sample inefficiency, lack of transparency, and poor scalability. We propose a framework for constructing symbolic causal world models entirely online by integrating continuous model learning and repair into the agent's decision loop, by leveraging the power of Meta-Interpretive Learning and predicate invention to find semantically meaningful and reusable abstractions, allowing an agent to construct a hierarchy of disentangled, high-quality concepts from its observations. We demonstrate that our lifted inference approach scales to domains with complex relational dynamics, where propositional methods suffer from combinatorial explosion, while achieving sample-efficiency orders of magnitude higher than the established PPO neural-network-based baseline.",
+      "pdf_url": "https://arxiv.org/pdf/2602.17217v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.17217v1",
+      "published": "2026-02-19",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Better Think Thrice: Learning to Reason Causally with Double Counterfactual Consistency",
+      "authors": [
+        "Victoria Lin",
+        "Xinnuo Xu",
+        "Rachel Lawrence",
+        "Risa Ueno",
+        "Amit Sharma",
+        "Javier Gonzalez",
+        "Niranjani Prasad"
+      ],
+      "abstract": "Despite their strong performance on reasoning benchmarks, large language models (LLMs) have proven brittle when presented with counterfactual questions, suggesting weaknesses in their causal reasoning ability. While recent work has demonstrated that labeled counterfactual tasks can be useful benchmarks of LLMs' causal reasoning, producing such data at the scale required to cover the vast potential space of counterfactuals is limited. In this work, we introduce double counterfactual consistency (DCC), a lightweight inference-time method for measuring and guiding the ability of LLMs to reason causally. Without requiring labeled counterfactual data, DCC verifies a model's ability to execute two important elements of causal reasoning: causal intervention and counterfactual prediction. Using DCC, we evaluate the causal reasoning abilities of various leading LLMs across a range of reasoning tasks and interventions. Moreover, we demonstrate the effectiveness of DCC as a training-free test-time rejection sampling criterion and show that it can directly improve performance on reasoning tasks across multiple model families.",
+      "pdf_url": "https://arxiv.org/pdf/2602.16787v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.16787v1",
+      "published": "2026-02-18",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ]
+    },
     {
       "title": "Causality is Key for Interpretability Claims to Generalise",
       "authors": [
@@ -111,57 +165,6 @@
       "pdf_url": "https://arxiv.org/pdf/2602.15546v1",
       "arxiv_url": "http://arxiv.org/abs/2602.15546v1",
       "published": "2026-02-17",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Nonparametric Identification and Inference for Counterfactual Distributions with Confounding",
-      "authors": [
-        "Jianle Sun",
-        "Kun Zhang"
-      ],
-      "abstract": "We propose nonparametric identification and semiparametric estimation of joint potential outcome distributions in the presence of confounding. First, in settings with observed confounding, we derive tighter, covariate-informed bounds on the joint distribution by leveraging conditional copulas. To overcome the non-differentiability of bounding min/max operators, we establish the asymptotic properties for both a direct estimator with polynomial margin condition and a smooth approximation with log-sum-exp operator, facilitating valid inference for individual-level effects under the canonical rank-preserving assumption. Second, we tackle the challenge of unmeasured confounding by introducing a causal representation learning framework. By utilizing instrumental variables, we prove the nonparametric identifiability of the latent confounding subspace under injectivity and completeness conditions. We develop a ``triple machine learning\" estimator that employs cross-fitting scheme to sequentially handle the learned representation, nuisance parameters, and target functional. We characterize the asymptotic distribution with variance inflation induced by representation learning error, and provide conditions for semiparametric efficiency. We also propose a practical VAE-based algorithm for confounding representation learning. Simulations and real-world analysis validate the effectiveness of proposed methods. By bridging classical semiparametric theory with modern representation learning, this work provides a robust statistical foundation for distributional and counterfactual inference in complex causal systems.",
-      "pdf_url": "https://arxiv.org/pdf/2602.15916v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.15916v1",
-      "published": "2026-02-17",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Joint analysis for multivariate longitudinal and event time data with a change point anchored at interval-censored event time",
-      "authors": [
-        "Yue Zhan",
-        "Cheng Zheng",
-        "Ying Zhang"
-      ],
-      "abstract": "Huntington's disease (HD) is an autosomal dominant neurodegenerative disorder characterized by motor dysfunction, psychiatric disturbances, and cognitive decline. The onset of HD is marked by severe motor impairment, which may be predicted by prior cognitive decline and, in turn, exacerbate cognitive deficits. Clinical data, however, are often collected at discrete time points, so the timing of disease onset is subject to interval censoring. To address the challenges posed by such data, we develop a joint model for multivariate longitudinal biomarkers with a change point anchored at an interval-censored event time. The model simultaneously assesses the effects of longitudinal biomarkers on the event time and the changes in biomarker trajectories following the event. We conduct a comprehensive simulation study to demonstrate the finite-sample performance of the proposed method for causal inference. Finally, we apply the method to PREDICT-HD, a multisite observational cohort study of prodromal HD individuals, to ascertain how cognitive impairment and motor dysfunction interact during disease progression.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14991v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.14991v1",
-      "published": "2026-02-16",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Use What You Know: Causal Foundation Models with Partial Graphs",
-      "authors": [
-        "Arik Reuter",
-        "Anish Dhir",
-        "Cristiana Diaconu",
-        "Jake Robertson",
-        "Ole Ossen",
-        "Frank Hutter",
-        "Adrian Weller",
-        "Mark van der Wilk",
-        "Bernhard Schölkopf"
-      ],
-      "abstract": "Estimating causal quantities traditionally relies on bespoke estimators tailored to specific assumptions. Recently proposed Causal Foundation Models (CFMs) promise a more unified approach by amortising causal discovery and inference in a single step. However, in their current state, they do not allow for the incorporation of any domain knowledge, which can lead to suboptimal predictions. We bridge this gap by introducing methods to condition CFMs on causal information, such as the causal graph or more readily available ancestral information. When access to complete causal graph information is too strict a requirement, our approach also effectively leverages partial causal information. We systematically evaluate conditioning strategies and find that injecting learnable biases into the attention mechanism is the most effective method to utilise full and partial causal information. Our experiments show that this conditioning allows a general-purpose CFM to match the performance of specialised models trained on specific causal structures. Overall, our approach addresses a central hurdle on the path towards all-in-one causal foundation models: the capability to answer causal queries in a data-driven manner while effectively leveraging any amount of domain expertise.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14972v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.14972v1",
-      "published": "2026-02-16",
       "categories": [
         "cs.LG"
       ]
