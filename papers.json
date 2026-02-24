@@ -1,6 +1,81 @@
 {
-  "last_updated": "2026-02-23T01:12:34.388293",
+  "last_updated": "2026-02-24T01:10:27.897110",
   "papers": [
+    {
+      "title": "SARAH: Spatially Aware Real-time Agentic Humans",
+      "authors": [
+        "Evonne Ng",
+        "Siwei Zhang",
+        "Zhang Chen",
+        "Michael Zollhoefer",
+        "Alexander Richard"
+      ],
+      "abstract": "As embodied agents become central to VR, telepresence, and digital human applications, their motion must go beyond speech-aligned gestures: agents should turn toward users, respond to their movement, and maintain natural gaze. Current methods lack this spatial awareness. We close this gap with the first real-time, fully causal method for spatially-aware conversational motion, deployable on a streaming VR headset. Given a user's position and dyadic audio, our approach produces full-body motion that aligns gestures with speech while orienting the agent according to the user. Our architecture combines a causal transformer-based VAE with interleaved latent tokens for streaming inference and a flow matching model conditioned on user trajectory and audio. To support varying gaze preferences, we introduce a gaze scoring mechanism with classifier-free guidance to decouple learning from control: the model captures natural spatial alignment from data, while users can adjust eye contact intensity at inference time. On the Embody 3D dataset, our method achieves state-of-the-art motion quality at over 300 FPS -- 3x faster than non-causal baselines -- while capturing the subtle spatial dynamics of natural conversation. We validate our approach on a live VR system, bringing spatially-aware conversational agents to real-time deployment. Please see https://evonneng.github.io/sarah/ for details.",
+      "pdf_url": "https://arxiv.org/pdf/2602.18432v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.18432v1",
+      "published": "2026-02-20",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Design-based inference for generalized causal effects in randomized experiments",
+      "authors": [
+        "Xinyuan Chen",
+        "Fan Li"
+      ],
+      "abstract": "Generalized causal effect estimands, including the Mann-Whitney parameter and causal net benefit, provide flexible summaries of treatment effects in randomized experiments with non-Gaussian or multivariate outcomes. We develop a unified design-based inference framework for regression adjustment and variance estimation of a broad class of generalized causal effect estimands defined through pairwise contrast functions. Leveraging the theory of U-statistics and finite-population asymptotics, we establish the consistency and asymptotic normality of regression estimators constructed from individual pairs and per-unit pair averages, even when the working models are misspecified. Consequently, these estimators are model-assisted rather than model-based. In contrast to classical average treatment effect estimands, we show that for nonlinear contrast functions, covariate adjustment preserves consistency but does not admit a universal efficiency guarantee. For inference, we demonstrate that standard heteroskedasticity-robust and cluster-robust variance estimators are generally inconsistent in this setting. As a remedy, we prove that a complete two-way cluster-robust variance estimator, which fully accounts for pairwise dependence and reverse comparisons, is consistent.",
+      "pdf_url": "https://arxiv.org/pdf/2602.18383v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.18383v1",
+      "published": "2026-02-20",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Variational Distributional Neuron",
+      "authors": [
+        "Yves Ruffenach"
+      ],
+      "abstract": "We propose a proof of concept for a variational distributional neuron: a compute unit formulated as a VAE brick, explicitly carrying a prior, an amortized posterior and a local ELBO. The unit is no longer a deterministic scalar but a distribution: computing is no longer about propagating values, but about contracting a continuous space of possibilities under constraints. Each neuron parameterizes a posterior, propagates a reparameterized sample and is regularized by the KL term of a local ELBO - hence, the activation is distributional. This \"contraction\" becomes testable through local constraints and can be monitored via internal measures. The amount of contextual information carried by the unit, as well as the temporal persistence of this information, are locally tuned by distinct constraints. This proposal addresses a structural tension: in sequential generation, causality is predominantly organized in the symbolic space and, even when latents exist, they often remain auxiliary, while the effective dynamics are carried by a largely deterministic decoder. In parallel, probabilistic latent models capture factors of variation and uncertainty, but that uncertainty typically remains borne by global or parametric mechanisms, while units continue to propagate scalars - hence the pivot question: if uncertainty is intrinsic to computation, why does the compute unit not carry it explicitly? We therefore draw two axes: (i) the composition of probabilistic constraints, which must be made stable, interpretable and controllable; and (ii) granularity: if inference is a negotiation of distributions under constraints, should the primitive unit remain deterministic or become distributional? We analyze \"collapse\" modes and the conditions for a \"living neuron\", then extend the contribution over time via autoregressive priors over the latent, per unit.",
+      "pdf_url": "https://arxiv.org/pdf/2602.18250v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.18250v1",
+      "published": "2026-02-20",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causality by Abstraction: Symbolic Rule Learning in Multivariate Timeseries with Large Language Models",
+      "authors": [
+        "Preetom Biswas",
+        "Giulia Pedrielli",
+        "K. Selçuk Candan"
+      ],
+      "abstract": "Inferring causal relations in timeseries data with delayed effects is a fundamental challenge, especially when the underlying system exhibits complex dynamics that cannot be captured by simple functional mappings. Traditional approaches often fail to produce generalized and interpretable explanations, as multiple distinct input trajectories may yield nearly indistinguishable outputs. In this work, we present ruleXplain, a framework that leverages Large Language Models (LLMs) to extract formal explanations for input-output relations in simulation-driven dynamical systems. Our method introduces a constrained symbolic rule language with temporal operators and delay semantics, enabling LLMs to generate verifiable causal rules through structured prompting. ruleXplain relies on the availability of a principled model (e.g., a simulator) that maps multivariate input time series to output time series. Within ruleXplain, the simulator is used to generate diverse counterfactual input trajectories that yield similar target output, serving as candidate explanations. Such counterfactual inputs are clustered and provided as context to the LLM, which is tasked with the generation of symbolic rules encoding the joint temporal trends responsible for the patterns observable in the output times series. A closed-loop refinement process ensures rule consistency and semantic validity. We validate the framework using the PySIRTEM epidemic simulator, mapping testing rate inputs to daily infection counts; and the EnergyPlus building energy simulator, observing temperature and solar irradiance inputs to electricity needs. For validation, we perform three classes of experiments: (1) the efficacy of the ruleset through input reconstruction; (2) ablation studies evaluating the causal encoding of the ruleset; and (3) generalization tests of the extracted rules across unseen output trends with varying phase dynamics.",
+      "pdf_url": "https://arxiv.org/pdf/2602.17829v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.17829v1",
+      "published": "2026-02-19",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Spatial Confounding: A review of concepts, challenges, and current approaches",
+      "authors": [
+        "Isaque Vieira Machado Pim",
+        "Luiz Max Fagundes de Carvalho",
+        "Marcos Oliveira Prates"
+      ],
+      "abstract": "Spatial confounding is a persistent challenge in spatial statistics, influencing the validity of statistical inference in models that analyze spatially-structured data. The concept has been interpreted in various ways but is broadly defined as bias in estimates arising from unmeasured spatial variation. In this paper we review definitions, classical spatial models, and recent methodological advances, including approaches from spatial statistics and causal inference. We provide an unified view of the many available approaches for areal as well as geostatistical data and discuss their relative merits both theoretically and empirically with a head-to-head comparison on real datasets. Finally, we leverage the results of the empirical comparisons to discuss directions for future research.",
+      "pdf_url": "https://arxiv.org/pdf/2602.17792v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.17792v1",
+      "published": "2026-02-19",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "GraphThinker: Reinforcing Video Reasoning with Event Graph Thinking",
       "authors": [
@@ -88,85 +163,6 @@
         "cs.AI",
         "math.CT",
         "quant-ph"
-      ]
-    },
-    {
-      "title": "Federated Graph AGI for Cross-Border Insider Threat Intelligence in Government Financial Schemes",
-      "authors": [
-        "Srikumar Nayak",
-        "James Walmesley"
-      ],
-      "abstract": "Cross-border insider threats pose a critical challenge to government financial schemes, particularly when dealing with distributed, privacy-sensitive data across multiple jurisdictions. Existing approaches face fundamental limitations: they cannot effectively share intelligence across borders due to privacy constraints, lack reasoning capabilities to understand complex multi-step attack patterns, and fail to capture intricate graph-structured relationships in financial networks. We introduce FedGraph-AGI, a novel federated learning framework integrating Artificial General Intelligence (AGI) reasoning with graph neural networks for privacy-preserving cross-border insider threat detection. Our approach combines: (1) federated graph neural networks preserving data sovereignty; (2) Mixture-of-Experts (MoE) aggregation for heterogeneous jurisdictions; and (3) AGI-powered reasoning via Large Action Models (LAM) performing causal inference over graph data. Through experiments on a 50,000-transaction dataset across 10 jurisdictions, FedGraph-AGI achieves 92.3% accuracy, significantly outperforming federated baselines (86.1%) and centralized approaches (84.7%). Our ablation studies reveal AGI reasoning contributes 6.8% improvement, while MoE adds 4.4%. The system maintains epsilon = 1.0 differential privacy while achieving near-optimal performance and scales efficiently to 50+ clients. This represents the first integration of AGI reasoning with federated graph learning for insider threat detection, opening new directions for privacy-preserving cross-border intelligence sharing.",
-      "pdf_url": "https://arxiv.org/pdf/2602.16109v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.16109v1",
-      "published": "2026-02-18",
-      "categories": [
-        "cs.CR",
-        "cs.AI",
-        "cs.CE"
-      ]
-    },
-    {
-      "title": "Can Causality Cure Confusion Caused By Correlation (in Software Analytics)?",
-      "authors": [
-        "Amirali Rayegan",
-        "Tim Menzies"
-      ],
-      "abstract": "Background: Symbolic models, particularly decision trees, are widely used in software engineering for explainable analytics in defect prediction, configuration tuning, and software quality assessment. Most of these models rely on correlational split criteria, such as variance reduction or information gain, which identify statistical associations but cannot imply causation between X and Y. Recent empirical studies in software engineering show that both correlational models and causal discovery algorithms suffer from pronounced instability. This instability arises from two complementary issues: 1-Correlation-based methods conflate association with causation. 2-Causal discovery algorithms rely on heuristic approximations to cope with the NP-hard nature of structure learning, causing their inferred graphs to vary widely under minor input perturbations. Together, these issues undermine trust, reproducibility, and the reliability of explanations in real-world SE tasks. Objective: This study investigates whether incorporating causality-aware split criteria into symbolic models can improve their stability and robustness, and whether such gains come at the cost of predictive or optimization performance. We additionally examine how the stability of human expert judgments compares to that of automated models. Method: Using 120+ multi-objective optimization tasks from the MOOT repository of multi-objective optimization tasks, we evaluate stability through a preregistered bootstrap-ensemble protocol that measures variance with win-score assignments. We compare the stability of human causal assessments with correlation-based decision trees (EZR). We would also compare the causality-aware trees, which leverage conditional-entropy split criteria and confounder filtering. Stability and performance differences are analyzed using statistical methods (variance, Gini Impurity, KS test, Cliff's delta)",
-      "pdf_url": "https://arxiv.org/pdf/2602.16091v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.16091v1",
-      "published": "2026-02-17",
-      "categories": [
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "This human study did not involve human subjects: Validating LLM simulations as behavioral evidence",
-      "authors": [
-        "Jessica Hullman",
-        "David Broska",
-        "Huaman Sun",
-        "Aaron Shaw"
-      ],
-      "abstract": "A growing literature uses large language models (LLMs) as synthetic participants to generate cost-effective and nearly instantaneous responses in social science experiments. However, there is limited guidance on when such simulations support valid inference about human behavior. We contrast two strategies for obtaining valid estimates of causal effects and clarify the assumptions under which each is suitable for exploratory versus confirmatory research. Heuristic approaches seek to establish that simulated and observed human behavior are interchangeable through prompt engineering, model fine-tuning, and other repair strategies designed to reduce LLM-induced inaccuracies. While useful for many exploratory tasks, heuristic approaches lack the formal statistical guarantees typically required for confirmatory research. In contrast, statistical calibration combines auxiliary human data with statistical adjustments to account for discrepancies between observed and simulated responses. Under explicit assumptions, statistical calibration preserves validity and provides more precise estimates of causal effects at lower cost than experiments that rely solely on human participants. Yet the potential of both approaches depends on how well LLMs approximate the relevant populations. We consider what opportunities are overlooked when researchers focus myopically on substituting LLMs for human participants in a study.",
-      "pdf_url": "https://arxiv.org/pdf/2602.15785v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.15785v1",
-      "published": "2026-02-17",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "The geometry of online conversations and the causal antecedents of conflictual discourse",
-      "authors": [
-        "Carlo Santagiustina",
-        "Caterina Cruciani"
-      ],
-      "abstract": "This article investigates the causal antecedents of conflictual language and the geometry of interaction in online threaded conversations related to climate change. We employ three annotation dimensions, inferred through LLM prompting and averaging, to capture complementary aspects of discursive conflict (such as stance: agreement vs disagreement; tone: attacking vs respectful; and emotional versus factual framing) and use data from a threaded online forum to examine how these dimensions respond to temporal, conversational, and arborescent structural features of discussions. We show that, as suggested by the literature, longer delays between successive posts in a thread are associated with replies that are, on average, more respectful, whereas longer delays relative to the parent post are associated with slightly less disagreement but more emotional (less factual) language. Second, we characterize alignment with the local conversational environment and find strong convergence both toward the average stance, tone and emotional framing of older sibling posts replying to the same parent and toward those of the parent post itself, with parent post effects generally stronger than sibling effects. We further show that early branch-level responses condition these alignment dynamics, such that parent-child stance alignment is amplified or attenuated depending on whether a branch is initiated in agreement or disagreement with the discussion's root message. These influences are largely additive for civility-related dimensions (attacking vs respectful, disagree vs agree), whereas for emotional versus factual framing there is a significant interaction: alignment with the parent's emotionality is amplified when older siblings are similarly aligned.",
-      "pdf_url": "https://arxiv.org/pdf/2602.15600v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.15600v1",
-      "published": "2026-02-17",
-      "categories": [
-        "cs.SI",
-        "cs.AI",
-        "econ.EM",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "CEPAE: Conditional Entropy-Penalized Autoencoders for Time Series Counterfactuals",
-      "authors": [
-        "Tomàs Garriga",
-        "Gerard Sanz",
-        "Eduard Serrahima de Cambra",
-        "Axel Brando"
-      ],
-      "abstract": "The ability to accurately perform counterfactual inference on time series is crucial for decision-making in fields like finance, healthcare, and marketing, as it allows us to understand the impact of events or treatments on outcomes over time. In this paper, we introduce a new counterfactual inference approach tailored to time series data impacted by market events, which is motivated by an industrial application. Utilizing the abduction-action-prediction procedure and the Structural Causal Model framework, we first adapt methods based on variational autoencoders and adversarial autoencoders, both previously used in counterfactual literature although not in time series settings. Then, we present the Conditional Entropy-Penalized Autoencoder (CEPAE), a novel autoencoder-based approach for counterfactual inference, which employs an entropy penalization loss over the latent space to encourage disentangled data representations. We validate our approach both theoretically and experimentally on synthetic, semi-synthetic, and real-world datasets, showing that CEPAE generally outperforms the other approaches in the evaluated metrics.",
-      "pdf_url": "https://arxiv.org/pdf/2602.15546v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.15546v1",
-      "published": "2026-02-17",
-      "categories": [
-        "cs.LG"
       ]
     }
   ]
