@@ -1,168 +1,184 @@
 {
-  "last_updated": "2026-02-24T01:10:27.897110",
+  "last_updated": "2026-02-25T01:16:16.220227",
   "papers": [
     {
-      "title": "SARAH: Spatially Aware Real-time Agentic Humans",
+      "title": "Individualized Causal Effects under Network Interference with Combinatorial Treatments",
       "authors": [
-        "Evonne Ng",
-        "Siwei Zhang",
-        "Zhang Chen",
-        "Michael Zollhoefer",
-        "Alexander Richard"
+        "Yunping Lu",
+        "Haoang Chi",
+        "Qirui Hu",
+        "Zhiheng Zhang"
       ],
-      "abstract": "As embodied agents become central to VR, telepresence, and digital human applications, their motion must go beyond speech-aligned gestures: agents should turn toward users, respond to their movement, and maintain natural gaze. Current methods lack this spatial awareness. We close this gap with the first real-time, fully causal method for spatially-aware conversational motion, deployable on a streaming VR headset. Given a user's position and dyadic audio, our approach produces full-body motion that aligns gestures with speech while orienting the agent according to the user. Our architecture combines a causal transformer-based VAE with interleaved latent tokens for streaming inference and a flow matching model conditioned on user trajectory and audio. To support varying gaze preferences, we introduce a gaze scoring mechanism with classifier-free guidance to decouple learning from control: the model captures natural spatial alignment from data, while users can adjust eye contact intensity at inference time. On the Embody 3D dataset, our method achieves state-of-the-art motion quality at over 300 FPS -- 3x faster than non-causal baselines -- while capturing the subtle spatial dynamics of natural conversation. We validate our approach on a live VR system, bringing spatially-aware conversational agents to real-time deployment. Please see https://evonneng.github.io/sarah/ for details.",
-      "pdf_url": "https://arxiv.org/pdf/2602.18432v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.18432v1",
-      "published": "2026-02-20",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Design-based inference for generalized causal effects in randomized experiments",
-      "authors": [
-        "Xinyuan Chen",
-        "Fan Li"
-      ],
-      "abstract": "Generalized causal effect estimands, including the Mann-Whitney parameter and causal net benefit, provide flexible summaries of treatment effects in randomized experiments with non-Gaussian or multivariate outcomes. We develop a unified design-based inference framework for regression adjustment and variance estimation of a broad class of generalized causal effect estimands defined through pairwise contrast functions. Leveraging the theory of U-statistics and finite-population asymptotics, we establish the consistency and asymptotic normality of regression estimators constructed from individual pairs and per-unit pair averages, even when the working models are misspecified. Consequently, these estimators are model-assisted rather than model-based. In contrast to classical average treatment effect estimands, we show that for nonlinear contrast functions, covariate adjustment preserves consistency but does not admit a universal efficiency guarantee. For inference, we demonstrate that standard heteroskedasticity-robust and cluster-robust variance estimators are generally inconsistent in this setting. As a remedy, we prove that a complete two-way cluster-robust variance estimator, which fully accounts for pairwise dependence and reverse comparisons, is consistent.",
-      "pdf_url": "https://arxiv.org/pdf/2602.18383v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.18383v1",
-      "published": "2026-02-20",
-      "categories": [
-        "stat.ME",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "Variational Distributional Neuron",
-      "authors": [
-        "Yves Ruffenach"
-      ],
-      "abstract": "We propose a proof of concept for a variational distributional neuron: a compute unit formulated as a VAE brick, explicitly carrying a prior, an amortized posterior and a local ELBO. The unit is no longer a deterministic scalar but a distribution: computing is no longer about propagating values, but about contracting a continuous space of possibilities under constraints. Each neuron parameterizes a posterior, propagates a reparameterized sample and is regularized by the KL term of a local ELBO - hence, the activation is distributional. This \"contraction\" becomes testable through local constraints and can be monitored via internal measures. The amount of contextual information carried by the unit, as well as the temporal persistence of this information, are locally tuned by distinct constraints. This proposal addresses a structural tension: in sequential generation, causality is predominantly organized in the symbolic space and, even when latents exist, they often remain auxiliary, while the effective dynamics are carried by a largely deterministic decoder. In parallel, probabilistic latent models capture factors of variation and uncertainty, but that uncertainty typically remains borne by global or parametric mechanisms, while units continue to propagate scalars - hence the pivot question: if uncertainty is intrinsic to computation, why does the compute unit not carry it explicitly? We therefore draw two axes: (i) the composition of probabilistic constraints, which must be made stable, interpretable and controllable; and (ii) granularity: if inference is a negotiation of distributions under constraints, should the primitive unit remain deterministic or become distributional? We analyze \"collapse\" modes and the conditions for a \"living neuron\", then extend the contribution over time via autoregressive priors over the latent, per unit.",
-      "pdf_url": "https://arxiv.org/pdf/2602.18250v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.18250v1",
-      "published": "2026-02-20",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causality by Abstraction: Symbolic Rule Learning in Multivariate Timeseries with Large Language Models",
-      "authors": [
-        "Preetom Biswas",
-        "Giulia Pedrielli",
-        "K. Selçuk Candan"
-      ],
-      "abstract": "Inferring causal relations in timeseries data with delayed effects is a fundamental challenge, especially when the underlying system exhibits complex dynamics that cannot be captured by simple functional mappings. Traditional approaches often fail to produce generalized and interpretable explanations, as multiple distinct input trajectories may yield nearly indistinguishable outputs. In this work, we present ruleXplain, a framework that leverages Large Language Models (LLMs) to extract formal explanations for input-output relations in simulation-driven dynamical systems. Our method introduces a constrained symbolic rule language with temporal operators and delay semantics, enabling LLMs to generate verifiable causal rules through structured prompting. ruleXplain relies on the availability of a principled model (e.g., a simulator) that maps multivariate input time series to output time series. Within ruleXplain, the simulator is used to generate diverse counterfactual input trajectories that yield similar target output, serving as candidate explanations. Such counterfactual inputs are clustered and provided as context to the LLM, which is tasked with the generation of symbolic rules encoding the joint temporal trends responsible for the patterns observable in the output times series. A closed-loop refinement process ensures rule consistency and semantic validity. We validate the framework using the PySIRTEM epidemic simulator, mapping testing rate inputs to daily infection counts; and the EnergyPlus building energy simulator, observing temperature and solar irradiance inputs to electricity needs. For validation, we perform three classes of experiments: (1) the efficacy of the ruleset through input reconstruction; (2) ablation studies evaluating the causal encoding of the ruleset; and (3) generalization tests of the extracted rules across unseen output trends with varying phase dynamics.",
-      "pdf_url": "https://arxiv.org/pdf/2602.17829v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.17829v1",
-      "published": "2026-02-19",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Spatial Confounding: A review of concepts, challenges, and current approaches",
-      "authors": [
-        "Isaque Vieira Machado Pim",
-        "Luiz Max Fagundes de Carvalho",
-        "Marcos Oliveira Prates"
-      ],
-      "abstract": "Spatial confounding is a persistent challenge in spatial statistics, influencing the validity of statistical inference in models that analyze spatially-structured data. The concept has been interpreted in various ways but is broadly defined as bias in estimates arising from unmeasured spatial variation. In this paper we review definitions, classical spatial models, and recent methodological advances, including approaches from spatial statistics and causal inference. We provide an unified view of the many available approaches for areal as well as geostatistical data and discuss their relative merits both theoretically and empirically with a head-to-head comparison on real datasets. Finally, we leverage the results of the empirical comparisons to discuss directions for future research.",
-      "pdf_url": "https://arxiv.org/pdf/2602.17792v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.17792v1",
-      "published": "2026-02-19",
+      "abstract": "Modern causal decision-making increasingly demands individualized treatment-effect estimation in networks where interventions are high-dimensional, combinatorial vectors. While network interference, effect heterogeneity, and multi-dimensional treatments have been studied separately, their intersection yields an exponentially large intervention space that makes standard identification tools and low-dimensional exposure mappings untenable. We bridge this gap with a unified framework that constructs a \\emph{global potential-outcome emulator} for unit-level inference. Our method combines (1) rooted network configurations to leverage local smoothness, (2) doubly robust orthogonalization to mitigate confounding from network position and covariates, and (3) sparse spectral learning to efficiently estimate response surfaces over the $2^p$-dimensional treatment space. We also decompose networked effects into own-treatment, structural, and interaction components, and provide finite-sample error bounds and asymptotic consistency guarantees. Overall, we show that individualized causal inference remains feasible in high-dimensional networked settings without collapsing the intervention space.",
+      "pdf_url": "https://arxiv.org/pdf/2602.19738v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.19738v1",
+      "published": "2026-02-23",
       "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "GraphThinker: Reinforcing Video Reasoning with Event Graph Thinking",
+      "title": "Laplacian Multi-scale Flow Matching for Generative Modeling",
       "authors": [
-        "Zixu Cheng",
-        "Da Li",
-        "Jian Hu",
-        "Ziquan Liu",
-        "Wei Li",
-        "Shaogang Gong"
+        "Zelin Zhao",
+        "Petr Molodyk",
+        "Haotian Xue",
+        "Yongxin Chen"
       ],
-      "abstract": "Video reasoning requires understanding the causal relationships between events in a video. However, such relationships are often implicit and costly to annotate manually. While existing multimodal large language models (MLLMs) often infer event relations through dense captions or video summaries for video reasoning, such modeling still lacks causal understanding. Without explicit causal structure modeling within and across video events, these models suffer from hallucinations during the video reasoning. In this work, we propose GraphThinker, a reinforcement finetuning-based method that constructs structural event-level scene graphs and enhances visual grounding to jointly reduce hallucinations in video reasoning. Specifically, we first employ an MLLM to construct an event-based video scene graph (EVSG) that explicitly models both intra- and inter-event relations, and incorporate these formed scene graphs into the MLLM as an intermediate thinking process. We also introduce a visual attention reward during reinforcement finetuning, which strengthens video grounding and further mitigates hallucinations. We evaluate GraphThinker on two datasets, RexTime and VidHalluc, where it shows superior ability to capture object and event relations with more precise event localization, reducing hallucinations in video reasoning compared to prior methods.",
-      "pdf_url": "https://arxiv.org/pdf/2602.17555v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.17555v1",
-      "published": "2026-02-19",
+      "abstract": "In this paper, we present Laplacian multiscale flow matching (LapFlow), a novel framework that enhances flow matching by leveraging multi-scale representations for image generative modeling. Our approach decomposes images into Laplacian pyramid residuals and processes different scales in parallel through a mixture-of-transformers (MoT) architecture with causal attention mechanisms. Unlike previous cascaded approaches that require explicit renoising between scales, our model generates multi-scale representations in parallel, eliminating the need for bridging processes. The proposed multi-scale architecture not only improves generation quality but also accelerates the sampling process and promotes scaling flow matching methods. Through extensive experimentation on CelebA-HQ and ImageNet, we demonstrate that our method achieves superior sample quality with fewer GFLOPs and faster inference compared to single-scale and multi-scale flow matching baselines. The proposed model scales effectively to high-resolution generation (up to 1024$\\times$1024) while maintaining lower computational overhead.",
+      "pdf_url": "https://arxiv.org/pdf/2602.19461v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.19461v1",
+      "published": "2026-02-23",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Federated Causal Representation Learning in State-Space Systems for Decentralized Counterfactual Reasoning",
+      "authors": [
+        "Nazal Mohamed",
+        "Ayush Mohanty",
+        "Nagi Gebraeel"
+      ],
+      "abstract": "Networks of interdependent industrial assets (clients) are tightly coupled through physical processes and control inputs, raising a key question: how would the output of one client change if another client were operated differently? This is difficult to answer because client-specific data are high-dimensional and private, making centralization of raw data infeasible. Each client also maintains proprietary local models that cannot be modified. We propose a federated framework for causal representation learning in state-space systems that captures interdependencies among clients under these constraints. Each client maps high-dimensional observations into low-dimensional latent states that disentangle intrinsic dynamics from control-driven influences. A central server estimates the global state-transition and control structure. This enables decentralized counterfactual reasoning where clients predict how outputs would change under alternative control inputs at others while only exchanging compact latent states. We prove convergence to a centralized oracle and provide privacy guarantees. Our experiments demonstrate scalability, and accurate cross-client counterfactual inference on synthetic and real-world industrial control system datasets.",
+      "pdf_url": "https://arxiv.org/pdf/2602.19414v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.19414v1",
+      "published": "2026-02-23",
+      "categories": [
+        "cs.LG",
+        "eess.SY",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "A Causal Framework for Estimating Heterogeneous Effects of On-Demand Tutoring",
+      "authors": [
+        "Kirk Vanacore",
+        "Danielle R Thomas",
+        "Digory Smith",
+        "Bibi Groot",
+        "Justin Reich",
+        "Rene Kizilcec"
+      ],
+      "abstract": "This paper introduces a scalable causal inference framework for estimating the immediate, session-level effects of on-demand human tutoring embedded within adaptive learning systems. Because students seek assistance at moments of difficulty, conventional evaluation is confounded by self-selection and time-varying knowledge states. We address these challenges by integrating principled analytic sample construction with Deep Knowledge Tracing (DKT) to estimate latent mastery, followed by doubly robust estimation using Causal Forests. Applying this framework to over 5,000 middle-school mathematics tutoring sessions, we find that requesting human tutoring increases next-problem correctness by approximately 4 percentage points and accuracy on the subsequent skill encountered by approximately 3 percentage points, suggesting that the effects of tutoring have proximal transfer across knowledge components. This effect is robust to various forms of model specification and potential unmeasured confounders. Notably, these effects exhibit significant heterogeneity across sessions and students, with session-level effect estimates ranging from $-20.25pp$ to $+19.91pp$. Our follow-up analyses suggest that typical behavioral indicators, such as student talk time, do not consistently correlate with high-impact sessions. Furthermore, treatment effects are larger for students with lower prior mastery and slightly smaller for low-SES students. This framework offers a rigorous, practical template for the evaluation and continuous improvement of on-demand human tutoring, with direct applications for emerging AI tutoring systems.",
+      "pdf_url": "https://arxiv.org/pdf/2602.19296v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.19296v1",
+      "published": "2026-02-22",
+      "categories": [
+        "cs.HC",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Generalized entropy calibration for inference with partially observed data: A unified framework",
+      "authors": [
+        "Mst Moushumi Pervin",
+        "Hengfang Wang",
+        "Jae Kwang Kim"
+      ],
+      "abstract": "Missing data is an universal problem in statistics. We develop a unified framework for estimating parameters defined by general estimating equations under a missing-at-random (MAR) mechanism, based on generalized entropy calibration weighting. We construct weights by minimizing a convex entropy subject to (i) balancing constraints on a data-adaptive calibration function, estimated using flexible machine-learning predictors with cross-fitting, and (ii) a debiasing constraint involving the fitted propensity score (PS) model. The resulting estimator is doubly robust, remaining consistent if either the outcome regression (OR) or the PS model is correctly specified, and attains the semiparametric efficiency bound when both models are correctly specified. Our formulation encompasses classical inverse probability weighting (IPW) and augmented IPW (AIPW) as special cases and accommodates a broad class of entropy functions. We illustrate the versatility of the approach in three important settings: semi-supervised learning with unlabeled outcomes, regression analysis with missing covariates, and causal effect estimation in observational studies. Extensive simulation studies and real-data applications demonstrate that the proposed estimators achieve greater efficiency and numerical stability than existing methods. In particular, the proposed estimator outperforms the classical AIPW estimator under the OR model misspecification.",
+      "pdf_url": "https://arxiv.org/pdf/2602.19203v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.19203v1",
+      "published": "2026-02-22",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Flash-VAED: Plug-and-Play VAE Decoders for Efficient Video Generation",
+      "authors": [
+        "Lunjie Zhu",
+        "Yushi Huang",
+        "Xingtong Ge",
+        "Yufei Xue",
+        "Zhening Liu",
+        "Yumeng Zhang",
+        "Zehong Lin",
+        "Jun Zhang"
+      ],
+      "abstract": "Latent diffusion models have enabled high-quality video synthesis, yet their inference remains costly and time-consuming. As diffusion transformers become increasingly efficient, the latency bottleneck inevitably shifts to VAE decoders. To reduce their latency while maintaining quality, we propose a universal acceleration framework for VAE decoders that preserves full alignment with the original latent distribution. Specifically, we propose (1) an independence-aware channel pruning method to effectively mitigate severe channel redundancy, and (2) a stage-wise dominant operator optimization strategy to address the high inference cost of the widely used causal 3D convolutions in VAE decoders. Based on these innovations, we construct a Flash-VAED family. Moreover, we design a three-phase dynamic distillation framework that efficiently transfers the capabilities of the original VAE decoder to Flash-VAED. Extensive experiments on Wan and LTX-Video VAE decoders demonstrate that our method outperforms baselines in both quality and speed, achieving approximately a 6$\\times$ speedup while maintaining the reconstruction performance up to 96.9%. Notably, Flash-VAED accelerates the end-to-end generation pipeline by up to 36% with negligible quality drops on VBench-2.0.",
+      "pdf_url": "https://arxiv.org/pdf/2602.19161v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.19161v1",
+      "published": "2026-02-22",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "Continual learning and refinement of causal models through dynamic predicate invention",
+      "title": "Test-Time Learning of Causal Structure from Interventional Data",
       "authors": [
-        "Enrique Crespo-Fernandez",
-        "Oliver Ray",
-        "Telmo de Menezes e Silva Filho",
-        "Peter Flach"
+        "Wei Chen",
+        "Rui Ding",
+        "Bojun Huang",
+        "Yang Zhang",
+        "Qiang Fu",
+        "Yuxuan Liang",
+        "Han Shi",
+        "Dongmei Zhang"
       ],
-      "abstract": "Efficiently navigating complex environments requires agents to internalize the underlying logic of their world, yet standard world modelling methods often struggle with sample inefficiency, lack of transparency, and poor scalability. We propose a framework for constructing symbolic causal world models entirely online by integrating continuous model learning and repair into the agent's decision loop, by leveraging the power of Meta-Interpretive Learning and predicate invention to find semantically meaningful and reusable abstractions, allowing an agent to construct a hierarchy of disentangled, high-quality concepts from its observations. We demonstrate that our lifted inference approach scales to domains with complex relational dynamics, where propositional methods suffer from combinatorial explosion, while achieving sample-efficiency orders of magnitude higher than the established PPO neural-network-based baseline.",
-      "pdf_url": "https://arxiv.org/pdf/2602.17217v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.17217v1",
-      "published": "2026-02-19",
+      "abstract": "Supervised causal learning has shown promise in causal discovery, yet it often struggles with generalization across diverse interventional settings, particularly when intervention targets are unknown. To address this, we propose TICL (Test-time Interventional Causal Learning), a novel method that synergizes Test-Time Training with Joint Causal Inference. Specifically, we design a self-augmentation strategy to generate instance-specific training data at test time, effectively avoiding distribution shifts. Furthermore, by integrating joint causal inference, we developed a PC-inspired two-phase supervised learning scheme, which effectively leverages self-augmented training data while ensuring theoretical identifiability. Extensive experiments on bnlearn benchmarks demonstrate TICL's superiority in multiple aspects of causal discovery and intervention target detection.",
+      "pdf_url": "https://arxiv.org/pdf/2602.19131v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.19131v1",
+      "published": "2026-02-22",
       "categories": [
+        "cs.LG",
         "cs.AI"
       ]
     },
     {
-      "title": "Better Think Thrice: Learning to Reason Causally with Double Counterfactual Consistency",
+      "title": "Do LLMs and VLMs Share Neurons for Inference? Evidence and Mechanisms of Cross-Modal Transfer",
       "authors": [
-        "Victoria Lin",
-        "Xinnuo Xu",
-        "Rachel Lawrence",
-        "Risa Ueno",
-        "Amit Sharma",
-        "Javier Gonzalez",
-        "Niranjani Prasad"
+        "Chenhang Cui",
+        "An Zhang",
+        "Yuxin Chen",
+        "Gelei Deng",
+        "Jingnan Zheng",
+        "Zhenkai Liang",
+        "Xiang Wang",
+        "Tat-Seng Chua"
       ],
-      "abstract": "Despite their strong performance on reasoning benchmarks, large language models (LLMs) have proven brittle when presented with counterfactual questions, suggesting weaknesses in their causal reasoning ability. While recent work has demonstrated that labeled counterfactual tasks can be useful benchmarks of LLMs' causal reasoning, producing such data at the scale required to cover the vast potential space of counterfactuals is limited. In this work, we introduce double counterfactual consistency (DCC), a lightweight inference-time method for measuring and guiding the ability of LLMs to reason causally. Without requiring labeled counterfactual data, DCC verifies a model's ability to execute two important elements of causal reasoning: causal intervention and counterfactual prediction. Using DCC, we evaluate the causal reasoning abilities of various leading LLMs across a range of reasoning tasks and interventions. Moreover, we demonstrate the effectiveness of DCC as a training-free test-time rejection sampling criterion and show that it can directly improve performance on reasoning tasks across multiple model families.",
-      "pdf_url": "https://arxiv.org/pdf/2602.16787v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.16787v1",
-      "published": "2026-02-18",
+      "abstract": "Large vision-language models (LVLMs) have rapidly advanced across various domains, yet they still lag behind strong text-only large language models (LLMs) on tasks that require multi-step inference and compositional decision-making. Motivated by their shared transformer architectures, we investigate whether the two model families rely on common internal computation for such inference. At the neuron level, we uncover a surprisingly large overlap: more than half of the top-activated units during multi-step inference are shared between representative LLMs and LVLMs, revealing a modality-invariant inference subspace.\n  Through causal probing via activation amplification, we further show that these shared neurons encode consistent and interpretable concept-level effects, demonstrating their functional contribution to inference. Building on this insight, we propose Shared Neuron Low-Rank Fusion (SNRF), a parameter-efficient framework that transfers mature inference circuitry from LLMs to LVLMs. SNRF profiles cross-model activations to identify shared neurons, computes a low-rank approximation of inter-model weight differences, and injects these updates selectively within the shared-neuron subspace. This mechanism strengthens multimodal inference performance with minimal parameter changes and requires no large-scale multimodal fine-tuning.\n  Across diverse mathematics and perception benchmarks, SNRF consistently enhances LVLM inference performance while preserving perceptual capabilities. Our results demonstrate that shared neurons form an interpretable bridge between LLMs and LVLMs, enabling low-cost transfer of inference ability into multimodal models. Our code is available at [https://github.com/chenhangcuisg-code/Do-LLMs-VLMs-Share-Neurons](https://github.com/chenhangcuisg-code/Do-LLMs-VLMs-Share-Neurons).",
+      "pdf_url": "https://arxiv.org/pdf/2602.19058v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.19058v1",
+      "published": "2026-02-22",
       "categories": [
-        "cs.LG",
         "cs.CL"
       ]
     },
     {
-      "title": "Causality is Key for Interpretability Claims to Generalise",
+      "title": "Incremental Transformer Neural Processes",
       "authors": [
-        "Shruti Joshi",
-        "Aaron Mueller",
-        "David Klindt",
-        "Wieland Brendel",
-        "Patrik Reizinger",
-        "Dhanya Sridhar"
+        "Philip Mortimer",
+        "Cristiana Diaconu",
+        "Tommy Rochussen",
+        "Bruno Mlodozeniec",
+        "Richard E. Turner"
       ],
-      "abstract": "Interpretability research on large language models (LLMs) has yielded important insights into model behaviour, yet recurring pitfalls persist: findings that do not generalise, and causal interpretations that outrun the evidence. Our position is that causal inference specifies what constitutes a valid mapping from model activations to invariant high-level structures, the data or assumptions needed to achieve it, and the inferences it can support. Specifically, Pearl's causal hierarchy clarifies what an interpretability study can justify. Observations establish associations between model behaviour and internal components. Interventions (e.g., ablations or activation patching) support claims how these edits affect a behavioural metric (\\eg, average change in token probabilities) over a set of prompts. However, counterfactual claims -- i.e., asking what the model output would have been for the same prompt under an unobserved intervention -- remain largely unverifiable without controlled supervision. We show how causal representation learning (CRL) operationalises this hierarchy, specifying which variables are recoverable from activations and under what assumptions. Together, these motivate a diagnostic framework that helps practitioners select methods and evaluations matching claims to evidence such that findings generalise.",
-      "pdf_url": "https://arxiv.org/pdf/2602.16698v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.16698v1",
-      "published": "2026-02-18",
+      "abstract": "Neural Processes (NPs), and specifically Transformer Neural Processes (TNPs), have demonstrated remarkable performance across tasks ranging from spatiotemporal forecasting to tabular data modelling. However, many of these applications are inherently sequential, involving continuous data streams such as real-time sensor readings or database updates. In such settings, models should support cheap, incremental updates rather than recomputing internal representations from scratch for every new observation -- a capability existing TNP variants lack. Drawing inspiration from Large Language Models, we introduce the Incremental TNP (incTNP). By leveraging causal masking, Key-Value (KV) caching, and a data-efficient autoregressive training strategy, incTNP matches the predictive performance of standard TNPs while reducing the computational cost of updates from quadratic to linear time complexity. We empirically evaluate our model on a range of synthetic and real-world tasks, including tabular regression and temperature prediction. Our results show that, surprisingly, incTNP delivers performance comparable to -- or better than -- non-causal TNPs while unlocking orders-of-magnitude speedups for sequential inference. Finally, we assess the consistency of the model's updates -- by adapting a metric of ``implicit Bayesianness\", we show that incTNP retains a prediction rule as implicitly Bayesian as standard non-causal TNPs, demonstrating that incTNP achieves the computational benefits of causal masking without sacrificing the consistency required for streaming inference.",
+      "pdf_url": "https://arxiv.org/pdf/2602.18955v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.18955v1",
+      "published": "2026-02-21",
       "categories": [
         "cs.LG"
       ]
     },
     {
-      "title": "Causal and Compositional Abstraction",
+      "title": "Modeling Dynamics, Cell Type Specificity, and Perturbations in Gene Regulatory Networks",
       "authors": [
-        "Robin Lorenz",
-        "Sean Tull"
+        "Junha Shin",
+        "Spencer Halberg-Spencer",
+        "Yuda Liu",
+        "Suvojit Hazra",
+        "Erika Da-Inn Lee",
+        "Sushmita Roy"
       ],
-      "abstract": "Abstracting from a low level to a more explanatory high level of description, and ideally while preserving causal structure, is fundamental to scientific practice, to causal inference problems, and to robust, efficient and interpretable AI. We present a general account of abstractions between low and high level models as natural transformations, focusing on the case of causal models. This provides a new formalisation of causal abstraction, unifying several notions in the literature, including constructive causal abstraction, Q-$τ$ consistency, abstractions based on interchange interventions, and `distributed' causal abstractions. Our approach is formalised in terms of category theory, and uses the general notion of a compositional model with a given set of queries and semantics in a monoidal, cd- or Markov category; causal models and their queries such as interventions being special cases. We identify two basic notions of abstraction: downward abstractions mapping queries from high to low level; and upward abstractions, mapping concrete queries such as Do-interventions from low to high. Although usually presented as the latter, we show how common causal abstractions may, more fundamentally, be understood in terms of the former. Our approach also leads us to consider a new stronger notion of `component-level' abstraction, applying to the individual components of a model. In particular, this yields a novel, strengthened form of constructive causal abstraction at the mechanism-level, for which we prove characterisation results. Finally, we show that abstraction can be generalised to further compositional models, including those with a quantum semantics implemented by quantum circuits, and we take first steps in exploring abstractions between quantum compositional circuit models and high-level classical causal models as a means to explainable quantum AI.",
-      "pdf_url": "https://arxiv.org/pdf/2602.16612v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.16612v1",
-      "published": "2026-02-18",
+      "abstract": "Gene regulatory networks (GRNs) define the regulatory relationships among molecules such as transcription factors, chromatin remodelers, and target genes. GRNs play a critical role in diverse biological processes, including development, disease manifestation, and evolution. However, fully characterizing these networks across multiple cell types and states remains a significant challenge. Recent advances in single-cell omics have dramatically enhanced our ability to measure biological systems at unprecedented resolution. These technologies have opened new avenues for computational methods to infer GRNs, offering deeper insights into cell type-specific mechanisms, causality, and dynamic regulatory processes. This review summarizes the current state of GRN inference from single cell omic datasets, with a particular focus on dynamics and perturbations, and outlines key open challenges that must be addressed to advance the field.",
+      "pdf_url": "https://arxiv.org/pdf/2602.18854v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.18854v1",
+      "published": "2026-02-21",
       "categories": [
-        "cs.LO",
-        "cs.AI",
-        "math.CT",
-        "quant-ph"
+        "q-bio.MN"
       ]
     }
   ]
