@@ -1,6 +1,134 @@
 {
-  "last_updated": "2026-02-26T01:09:29.569957",
+  "last_updated": "2026-02-27T01:08:40.077824",
   "papers": [
+    {
+      "title": "WeaveTime: Stream from Earlier Frames into Emergent Memory in VideoLLMs",
+      "authors": [
+        "Yulin Zhang",
+        "Cheng Shi",
+        "Sibei Yang"
+      ],
+      "abstract": "Recent advances in Multimodal Large Language Models have greatly improved visual understanding and reasoning, yet their quadratic attention and offline training protocols make them ill-suited for streaming settings where frames arrive sequentially and future observations are inaccessible. We diagnose a core limitation of current Video-LLMs, namely Time-Agnosticism, in which videos are treated as an unordered bag of evidence rather than a causally ordered sequence, yielding two failures in streams: temporal order ambiguity, in which the model cannot follow or reason over the correct chronological order, and past-current focus blindness where it fails to distinguish present observations from accumulated history. We present WeaveTime, a simple, efficient, and model agnostic framework that first teaches order and then uses order. We introduce a lightweight Temporal Reconstruction objective-our Streaming Order Perception enhancement-that instills order aware representations with minimal finetuning and no specialized streaming data. At inference, a Past-Current Dynamic Focus Cache performs uncertainty triggered, coarse-to-fine retrieval, expanding history only when needed. Plugged into exsiting Video-LLM without architectural changes, WeaveTime delivers consistent gains on representative streaming benchmarks, improving accuracy while reducing latency. These results establish WeaveTime as a practical path toward time aware stream Video-LLMs under strict online, time causal constraints. Code and weights will be made publicly available. Project Page: https://zhangyl4.github.io/publications/weavetime/",
+      "pdf_url": "https://arxiv.org/pdf/2602.22142v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.22142v1",
+      "published": "2026-02-25",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Design-based theory for causal inference from adaptive experiments",
+      "authors": [
+        "Xinran Li",
+        "Anqi Zhao"
+      ],
+      "abstract": "Adaptive designs dynamically update treatment probabilities using information accumulated during the experiment. Existing theory for causal inference from adaptive experiments primarily assumes the superpopulation framework with independent and identically distributed units, and may not apply when the distribution of units evolves over time. This paper makes two contributions. First, we extend the literature to the finite-population framework, which allows for possibly nonexchangeable units, and establish the design-based theory for causal inference under general adaptive designs using inverse-propensity-weighted (IPW) and augmented IPW (AIPW) estimators. Our theory accommodates nonexchangeable units, both nonconverging and vanishing treatment probabilities, and nonconverging outcome estimators, thereby justifying inference using AIPW estimators with black-box outcome models that integrate advances from machine learning methods. To alleviate the conservativeness inherent in variance estimation under finite-population inference, we also introduce a covariance estimator for the AIPW estimator that becomes sharp when the residuals from the adaptive regression of potential outcomes on covariates are additive across units. Our framework encompasses widely used adaptive designs, such as multi-armed bandits, covariate-adaptive randomization, and sequential rerandomization, advancing the design-based theory for causal inference in these specific settings. Second, as a methodological contribution, we propose an adaptive covariate adjustment approach for analyzing even nonadaptive designs. The martingale structure induced by adaptive adjustment enables valid inference with black-box outcome estimators that would otherwise require strong assumptions under standard nonadaptive analysis.",
+      "pdf_url": "https://arxiv.org/pdf/2602.21998v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.21998v1",
+      "published": "2026-02-25",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "2-Step Agent: A Framework for the Interaction of a Decision Maker with AI Decision Support",
+      "authors": [
+        "Otto Nyberg",
+        "Fausto Carcassi",
+        "Giovanni Cinà"
+      ],
+      "abstract": "Across a growing number of fields, human decision making is supported by predictions from AI models. However, we still lack a deep understanding of the effects of adoption of these technologies. In this paper, we introduce a general computational framework, the 2-Step Agent, which models the effects of AI-assisted decision making. Our framework uses Bayesian methods for causal inference to model 1) how a prediction on a new observation affects the beliefs of a rational Bayesian agent, and 2) how this change in beliefs affects the downstream decision and subsequent outcome. Using this framework, we show by simulations how a single misaligned prior belief can be sufficient for decision support to result in worse downstream outcomes compared to no decision support. Our results reveal several potential pitfalls of AI-driven decision support and highlight the need for thorough model documentation and proper user training.",
+      "pdf_url": "https://arxiv.org/pdf/2602.21889v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.21889v1",
+      "published": "2026-02-25",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "XStreamVGGT: Extremely Memory-Efficient Streaming Vision Geometry Grounded Transformer with KV Cache Compression",
+      "authors": [
+        "Zunhai Su",
+        "Weihao Ye",
+        "Hansen Feng",
+        "Keyu Fan",
+        "Jing Zhang",
+        "Dahai Yu",
+        "Zhengwu Liu",
+        "Ngai Wong"
+      ],
+      "abstract": "Learning-based 3D visual geometry models have significantly advanced with the advent of large-scale transformers. Among these, StreamVGGT leverages frame-wise causal attention to deliver robust and efficient streaming 3D reconstruction. However, it suffers from unbounded growth in the Key-Value (KV) cache due to the massive influx of vision tokens from multi-image and long-video inputs, leading to increased memory consumption and inference latency as input frames accumulate. This ultimately limits its scalability for long-horizon applications. To address this gap, we propose XStreamVGGT, a tuning-free approach that seamlessly integrates pruning and quantization to systematically compress the KV cache, enabling extremely memory-efficient streaming inference. Specifically, redundant KVs generated from multi-frame inputs are initially pruned to conform to a fixed KV memory budget using an efficient token-importance identification mechanism that maintains full compatibility with high-performance attention kernels (e.g., FlashAttention). Additionally, leveraging the inherent distribution patterns of KV tensors, we apply dimension-adaptive KV quantization within the pruning pipeline to further minimize memory overhead while preserving numerical accuracy. Extensive evaluations show that XStreamVGGT achieves mostly negligible performance degradation while substantially reducing memory usage by 4.42$\\times$ and accelerating inference by 5.48$\\times$, enabling practical and scalable streaming 3D applications. The code is available at https://github.com/ywh187/XStreamVGGT/.",
+      "pdf_url": "https://arxiv.org/pdf/2602.21780v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.21780v1",
+      "published": "2026-02-25",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "TiMi: Empower Time Series Transformers with Multimodal Mixture of Experts",
+      "authors": [
+        "Jiafeng Lin",
+        "Yuxuan Wang",
+        "Huakun Luo",
+        "Zhongyi Pei",
+        "Jianmin Wang"
+      ],
+      "abstract": "Multimodal time series forecasting has garnered significant attention for its potential to provide more accurate predictions than traditional single-modality models by leveraging rich information inherent in other modalities. However, due to fundamental challenges in modality alignment, existing methods often struggle to effectively incorporate multimodal data into predictions, particularly textual information that has a causal influence on time series fluctuations, such as emergency reports and policy announcements. In this paper, we reflect on the role of textual information in numerical forecasting and propose Time series transformers with Multimodal Mixture-of-Experts, TiMi, to unleash the causal reasoning capabilities of LLMs. Concretely, TiMi utilizes LLMs to generate inferences on future developments, which serve as guidance for time series forecasting. To seamlessly integrate both exogenous factors and time series into predictions, we introduce a Multimodal Mixture-of-Experts (MMoE) module as a lightweight plug-in to empower Transformer-based time series models for multimodal forecasting, eliminating the need for explicit representation-level alignment. Experimentally, our proposed TiMi demonstrates consistent state-of-the-art performance on sixteen real-world multimodal forecasting benchmarks, outperforming advanced baselines while offering both strong adaptability and interpretability.",
+      "pdf_url": "https://arxiv.org/pdf/2602.21693v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.21693v1",
+      "published": "2026-02-25",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "A Researcher's Guide to Empirical Risk Minimization",
+      "authors": [
+        "Lars van der Laan"
+      ],
+      "abstract": "This guide develops high-probability regret bounds for empirical risk minimization (ERM). The presentation is modular: we state broadly applicable guarantees under high-level conditions and give tools for verifying them for specific losses and function classes. We emphasize that many ERM rate derivations can be organized around a three-step recipe -- a basic inequality, a uniform local concentration bound, and a fixed-point argument -- which yields regret bounds in terms of a critical radius, defined via localized Rademacher complexity, under a mild Bernstein-type variance--risk condition. To make these bounds concrete, we upper bound the critical radius using local maximal inequalities and metric-entropy integrals, recovering familiar rates for VC-subgraph, Sobolev/Hölder, and bounded-variation classes.\n  We also review ERM with nuisance components -- including weighted ERM and Neyman-orthogonal losses -- as they arise in causal inference, missing data, and domain adaptation. Following the orthogonal learning framework, we highlight that these problems often admit regret-transfer bounds linking regret under an estimated loss to population regret under the target loss. These bounds typically decompose regret into (i) statistical error under the estimated (optimized) loss and (ii) approximation error due to nuisance estimation. Under sample splitting or cross-fitting, the first term can be controlled using standard fixed-loss ERM regret bounds, while the second term depends only on nuisance-estimation accuracy. We also treat the in-sample regime, where nuisances and the ERM are fit on the same data, deriving regret bounds and giving sufficient conditions for fast rates.",
+      "pdf_url": "https://arxiv.org/pdf/2602.21501v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.21501v1",
+      "published": "2026-02-25",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "PSF-Med: Measuring and Explaining Paraphrase Sensitivity in Medical Vision Language Models",
+      "authors": [
+        "Binesh Sadanandan",
+        "Vahid Behzadan"
+      ],
+      "abstract": "Medical Vision Language Models (VLMs) can change their answers when clinicians rephrase the same question, which raises deployment risks. We introduce Paraphrase Sensitivity Failure (PSF)-Med, a benchmark of 19,748 chest Xray questions paired with about 92,000 meaningpreserving paraphrases across MIMIC-CXR and PadChest. Across six medical VLMs, we measure yes/no flips for the same image and find flip rates from 8% to 58%. However, low flip rate does not imply visual grounding: text-only baselines show that some models stay consistent even when the image is removed, suggesting they rely on language priors. To study mechanisms in one model, we apply GemmaScope 2 Sparse Autoencoders (SAEs) to MedGemma 4B and analyze FlipBank, a curated set of 158 flip cases. We identify a sparse feature at layer 17 that correlates with prompt framing and predicts decision margin shifts. In causal patching, removing this feature's contribution recovers 45% of the yesminus-no logit margin on average and fully reverses 15% of flips. Acting on this finding, we show that clamping the identified feature at inference reduces flip rates by 31% relative with only a 1.3 percentage-point accuracy cost, while also decreasing text-prior reliance. These results suggest that flip rate alone is not enough; robustness evaluations should test both paraphrase stability and image reliance.",
+      "pdf_url": "https://arxiv.org/pdf/2602.21428v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.21428v1",
+      "published": "2026-02-24",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal Inference with High-Dimensional Treatments",
+      "authors": [
+        "Patrick Kramer",
+        "Edward H. Kennedy",
+        "Isaac M. Opper"
+      ],
+      "abstract": "In this work, we consider causal inference in various high-dimensional treatment settings, including for single multi-valued treatments and vector treatments with binary or continuous components, when the number of treatments can be comparable to or even larger than the number of observations. These settings bring unique challenges: first, the treatment effects of interest are a high-dimensional vector rather than a low-dimensional scalar; second, positivity violations are often unavoidable; and third, estimation can be based on a smaller effective sample size. We first discuss fundamental limits of estimating effects here, showing that consistent estimation is impossible without further assumptions. We go on to propose a novel sparse pseudo-outcome regression framework for arbitrary high-dimensional statistical functionals, which includes generic constrained regression estimators and error guarantees. We use the framework to derive new doubly robust estimators for mean potential outcomes of high-dimensional treatments, though it can also be applied to other scenarios. We analyze the proposed estimators under exact and approximate sparsity assumptions, giving finite-sample risk bounds. Finally, we derive minimax lower bounds to characterize optimal rates of convergence and show our risk bounds are unimprovable.",
+      "pdf_url": "https://arxiv.org/pdf/2602.21423v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.21423v1",
+      "published": "2026-02-24",
+      "categories": [
+        "math.ST",
+        "stat.ME"
+      ]
+    },
     {
       "title": "UDVideoQA: A Traffic Video Question Answering Dataset for Multi-Object Spatio-Temporal Reasoning in Urban Dynamics",
       "authors": [
@@ -42,135 +170,6 @@
       "published": "2026-02-24",
       "categories": [
         "cs.IR"
-      ]
-    },
-    {
-      "title": "Exchangeable Gaussian Processes for Staggered-Adoption Policy Evaluation",
-      "authors": [
-        "Hayk Gevorgyan",
-        "Konstantinos Kalogeropoulos",
-        "Angelos Alexopoulos"
-      ],
-      "abstract": "We study the use of exchangeable multi-task Gaussian processes (GPs) for causal inference in panel data, applying the framework to two settings: one with a single treated unit subject to a once-and-for-all treatment and another with multiple treated units and staggered treatment adoption. Our approach models the joint evolution of outcomes for treated and control units through a GP prior that ensures exchangeability across units while allowing for flexible nonlinear trends over time. The resulting posterior predictive distribution for the untreated potential outcomes of the treated unit provides a counterfactual path, from which we derive pointwise and cumulative treatment effects, along with credible intervals to quantify uncertainty. We implement several variations of the exchangeable GP model using different kernel functions. To assess prediction accuracy, we conduct a placebo-style validation within the pre-intervention window by selecting a ``fake'' intervention date. Ultimately, this study illustrates how exchangeable GPs serve as a flexible tool for policy evaluation in panel data settings and proposes a novel approach to staggered-adoption designs with a large number of treated and control units.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21031v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.21031v1",
-      "published": "2026-02-24",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Characterization-free classification and identification of the environment between two quantum players",
-      "authors": [
-        "Masahito Hayashi",
-        "Longyang Cao",
-        "Baichu Yu",
-        "Yuan-Yuan Zhao"
-      ],
-      "abstract": "Classifying the causal structure of quantum channels is essential for verifying quantum networks and certifying quantum resources. We introduce a characterization-free protocol enabling two isolated players, Alice and Bob, to classify and identify the definite-order strategy adopted by an unknown environment mediating their channels. Without assuming knowledge of their devices or the environment, the players infer the causal order solely from input-output statistics by testing Markovian conditions that we prove are necessary and sufficient for each strategy class. Remarkably, we prove that even with a minimal random channel consisting of two-outcome POVMs and two-state preparations, the protocol retains full performance with probability one. We experimentally demonstrate the protocol on an optical platform, reliably distinguishing between several strategies. Our results provide a strong and robust tool for causal inference in quantum networks.",
-      "pdf_url": "https://arxiv.org/pdf/2602.20997v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.20997v1",
-      "published": "2026-02-24",
-      "categories": [
-        "quant-ph"
-      ]
-    },
-    {
-      "title": "Diagnosing Causal Reasoning in Vision-Language Models via Structured Relevance Graphs",
-      "authors": [
-        "Dhita Putri Pratama",
-        "Soyeon Caren Han",
-        "Yihao Ding"
-      ],
-      "abstract": "Large Vision-Language Models (LVLMs) achieve strong performance on visual question answering benchmarks, yet often rely on spurious correlations rather than genuine causal reasoning. Existing evaluations primarily assess the correctness of the answers, making it unclear whether failures arise from limited reasoning capability or from misidentifying causally relevant information. We introduce Vision-Language Causal Graphs (VLCGs), a structured, query-conditioned representation that explicitly encodes causally relevant objects, attributes, relations, and scene-grounded assumptions. Building on this representation, we present ViLCaR, a diagnostic benchmark comprising tasks for Causal Attribution, Causal Inference, and Question Answering, along with graph-aligned evaluation metrics that assess relevance identification beyond final answer accuracy. Experiments in state-of-the-art LVLMs show that injecting structured relevance information significantly improves attribution and inference consistency compared to zero-shot and standard in-context learning. These findings suggest that current limitations in LVLM causal reasoning stem primarily from insufficient structural guidance rather than a lack of reasoning capacity.",
-      "pdf_url": "https://arxiv.org/pdf/2602.20878v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.20878v1",
-      "published": "2026-02-24",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Statistical Inference in Causal Partial Identification with Smooth Densities",
-      "authors": [
-        "Sirui Lin",
-        "Zijun Gao",
-        "Jose Blanchet",
-        "Peter Glynn"
-      ],
-      "abstract": "Many causal quantities are only partially identifiable due to the inherent missingness of potential outcomes, and the associated partial identification (PI) sets can be obtained by solving an optimal transport (OT) problem. Covariates often provide additional information about the potential outcomes and thus yield tighter PI sets, which can be obtained via conditional optimal transport (COT). However, COT-based PI set estimators are susceptible to the curse of dimensionality in the covariates and outcomes, which precludes the asymptotic normality and hinders statistical inference. In this paper, we exploit smoothness in the marginal densities of covariates and potential outcomes and develop a wavelet-based primal method for COT with multivariate outcomes and covariates. Moreover, for quadratic cost functions, we establish a stability result for COT and prove asymptotic normality of the proposed estimator. This characterization of the asymptotic distribution enables valid statistical inference for the partial identification set. Empirically, we validate the estimation and inference performance of our approach through numerical experiments in comparison with existing benchmarks.",
-      "pdf_url": "https://arxiv.org/pdf/2602.20681v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.20681v1",
-      "published": "2026-02-24",
-      "categories": [
-        "math.ST"
-      ]
-    },
-    {
-      "title": "Recursive Belief Vision Language Model",
-      "authors": [
-        "Vaidehi Bagaria",
-        "Bijo Sebastian",
-        "Nirav Patel"
-      ],
-      "abstract": "Current vision-language-action (VLA) models struggle with long-horizon manipulation under partial observability. Most existing approaches remain observation-driven, relying on short context windows or repeated queries to vision-language models (VLMs). This leads to loss of task progress, action repetition under perceptual aliasing, and high inference latency. Semantic reasoning alone is not the primary bottleneck in long-horizon manipulation. Instead, VLAs lack persistent, action-conditioned state representations and exhibit limited temporal and physical reasoning, making them ill-suited for multi-stage control. This paper introduces RB-VLA, a belief-centric architecture trained with self-supervised world-model objectives that maintains a compact latent state encoding task-relevant history, dynamics, and object interactions. Queried once for high-level intent, the VLM provides task specification, while the belief tracks task progress and enables phase-aware, causally grounded control under partial observability without storing raw observations or scaling memory with time. The belief and intent jointly condition a diffusion policy for robust closed-loop execution. RB-VLA outperforms prior VLAs on long-horizon benchmarks, achieving 52.5% and 37.5% higher success on multi-stage pick-and-place and stacking tasks, respectively, compared to π0. It also reduces inference latency by up to 5x relative to baselines and eliminates memory growth across timesteps observed in existing VLAs. Ablations show that the belief module is the primary driver of performance, increasing success rates from 32.5% to 77.5%. These results demonstrate the effectiveness of belief-based state representations for long-horizon VLA policies.",
-      "pdf_url": "https://arxiv.org/pdf/2602.20659v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.20659v1",
-      "published": "2026-02-24",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CausalReasoningBenchmark: A Real-World Benchmark for Disentangled Evaluation of Causal Identification and Estimation",
-      "authors": [
-        "Ayush Sawarni",
-        "Jiyuan Tan",
-        "Vasilis Syrgkanis"
-      ],
-      "abstract": "Many benchmarks for automated causal inference evaluate a system's performance based on a single numerical output, such as an Average Treatment Effect (ATE). This approach conflates two distinct steps in causal analysis: identification-formulating a valid research design under stated assumptions-and estimation-implementing that design numerically on finite data. We introduce CausalReasoningBenchmark, a benchmark of 173 queries across 138 real-world datasets, curated from 85 peer-reviewed research papers and four widely-used causal-inference textbooks. For each query a system must produce (i) a structured identification specification that names the strategy, the treatment, outcome, and control variables, and all design-specific elements, and (ii) a point estimate with a standard error. By scoring these two components separately, our benchmark enables granular diagnosis: it distinguishes failures in causal reasoning from errors in numerical execution. Baseline results with a state-of-the-art LLM show that, while the model correctly identifies the high-level strategy in 84 % of cases, full identification-specification correctness drops to only 30 %, revealing that the bottleneck lies in the nuanced details of research design rather than in computation. CausalReasoningBenchmark is publicly available on Hugging Face and is designed to foster the development of more robust automated causal-inference systems.",
-      "pdf_url": "https://arxiv.org/pdf/2602.20571v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.20571v1",
-      "published": "2026-02-24",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Leveraging Causal Reasoning Method for Explaining Medical Image Segmentation Models",
-      "authors": [
-        "Limai Jiang",
-        "Ruitao Xie",
-        "Bokai Yang",
-        "Huazhen Huang",
-        "Juan He",
-        "Yufu Huo",
-        "Zikai Wang",
-        "Yang Wei",
-        "Yunpeng Cai"
-      ],
-      "abstract": "Medical image segmentation plays a vital role in clinical decision-making, enabling precise localization of lesions and guiding interventions. Despite significant advances in segmentation accuracy, the black-box nature of most deep models has raised growing concerns about their trustworthiness in high-stakes medical scenarios. Current explanation techniques have primarily focused on classification tasks, leaving the segmentation domain relatively underexplored. We introduced an explanation model for segmentation task which employs the causal inference framework and backpropagates the average treatment effect (ATE) into a quantification metric to determine the influence of input regions, as well as network components, on target segmentation areas. Through comparison with recent segmentation explainability techniques on two representative medical imaging datasets, we demonstrated that our approach provides more faithful explanations than existing approaches. Furthermore, we carried out a systematic causal analysis of multiple foundational segmentation models using our method, which reveals significant heterogeneity in perceptual strategies across different models, and even between different inputs for the same model. Suggesting the potential of our method to provide notable insights for optimizing segmentation models. Our code can be found at https://github.com/lcmmai/PdCR.",
-      "pdf_url": "https://arxiv.org/pdf/2602.20511v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.20511v1",
-      "published": "2026-02-24",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Semi-parametric Bayesian inference under Neyman orthogonality",
-      "authors": [
-        "Magid Sabbagh",
-        "David A. Stephens"
-      ],
-      "abstract": "The validity of two-step or plug-in inference methods is questioned in the Bayesian framework. We study semi-parametric models where the plug-in of a non-parametrically modelled nuisance component is used. We show that when the nuisance and targeted parameters satisfy a Neyman orthogonal score property, the approach of cutting feedback through a two-step procedure is a valid way of conducting Bayesian inference. Our method relies on a non-parametric Bayesian formulation based on the Dirichlet process and the Bayesian bootstrap. We show that the marginal posterior of the targeted parameter exhibits good frequentist properties despite not accounting for the inferential uncertainty of the nuisance parameter. We adopt this approach in Bayesian causal inference problems where the nuisance propensity score model is estimated to obtain marginal inference for the treatment effect parameter, and demonstrate that a plug-in of the propensity score has a negligible effect on marginal posterior inference for the causal contrast. We investigate the absence of Neyman orthogonality and exploit our findings to show that in conventional two-step procedures, the posterior distribution converges under weaker restrictions than those needed in the frequentist sequel. For a simple family of useful scores, we demonstrate that even in the absence of Neyman orthogonality, the posterior distribution is asymptotically unchanged by the estimation of the nuisance parameter, merely provided the latter estimator is consistent.",
-      "pdf_url": "https://arxiv.org/pdf/2602.20371v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.20371v1",
-      "published": "2026-02-23",
-      "categories": [
-        "math.ST",
-        "stat.ME"
       ]
     }
   ]
