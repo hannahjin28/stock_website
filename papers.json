@@ -1,6 +1,112 @@
 {
-  "last_updated": "2026-02-27T01:08:40.077824",
+  "last_updated": "2026-02-28T01:03:19.934457",
   "papers": [
+    {
+      "title": "Identifiability of Treatment Effects with Unobserved Spatially Varying Confounders",
+      "authors": [
+        "Tommy Tang",
+        "Xinran Li",
+        "Bo Li"
+      ],
+      "abstract": "The study of causal effects in the presence of unmeasured spatially varying confounders has garnered increasing attention. However, a general framework for identifiability, which is critical for reliable causal inference from observational data, has yet to be advanced. In this paper, we study a linear model with various parametric model assumptions on the covariance structure between the unmeasured confounder and the exposure of interest. We establish identifiability of the treatment effect for many commonly 20 used spatial models for both discrete and continuous data, under mild conditions on the structure of observation locations and the exposure-confounder association. We also emphasize models or scenarios where identifiability may not hold, under which statistical inference should be conducted with caution.",
+      "pdf_url": "https://arxiv.org/pdf/2602.23291v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.23291v1",
+      "published": "2026-02-26",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "The Counterfactual Combine: A Causal Framework for Player Evaluation",
+      "authors": [
+        "Herbert P. Susmann",
+        "Antonio D'Alessandro"
+      ],
+      "abstract": "Evaluating sports players based on their performance shares core challenges with evaluating healthcare providers based on patient outcomes. Drawing on recent advances in healthcare provider profiling, we cast sports player evaluation within a rigorous causal inference framework and define a flexible class of causal player evaluation estimands. Using stochastic interventions, we compare player success rates on repeated tasks (such as field goal attempts or plate appearance) to counterfactual success rates had those same attempts been randomly reassigned to players according to prespecified reference distributions. This setup encompasses direct and indirect standardization parameters familiar from healthcare provider profiling, and we additionally propose a \"performance above random replacement\" estimand designed for interpretability in sports settings. We develop doubly robust estimators for these evaluation metrics based on modern semiparametric statistical methods, with a focus on Targeted Minimum Loss-based Estimation, and incorporate machine learning methods to capture complex relationships driving player performance. We illustrate our framework in detailed case studies of field goal kickers in the National Football League and batters in Major League Baseball, highlighting how different causal estimands yield distinct interpretations and insights about player performance.",
+      "pdf_url": "https://arxiv.org/pdf/2602.23233v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.23233v1",
+      "published": "2026-02-26",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "CMSA-Net: Causal Multi-scale Aggregation with Adaptive Multi-source Reference for Video Polyp Segmentation",
+      "authors": [
+        "Tong Wang",
+        "Yaolei Qi",
+        "Siwen Wang",
+        "Imran Razzak",
+        "Guanyu Yang",
+        "Yutong Xie"
+      ],
+      "abstract": "Video polyp segmentation (VPS) is an important task in computer-aided colonoscopy, as it helps doctors accurately locate and track polyps during examinations. However, VPS remains challenging because polyps often look similar to surrounding mucosa, leading to weak semantic discrimination. In addition, large changes in polyp position and scale across video frames make stable and accurate segmentation difficult. To address these challenges, we propose a robust VPS framework named CMSA-Net. The proposed network introduces a Causal Multi-scale Aggregation (CMA) module to effectively gather semantic information from multiple historical frames at different scales. By using causal attention, CMA ensures that temporal feature propagation follows strict time order, which helps reduce noise and improve feature reliability. Furthermore, we design a Dynamic Multi-source Reference (DMR) strategy that adaptively selects informative and reliable reference frames based on semantic separability and prediction confidence. This strategy provides strong multi-frame guidance while keeping the model efficient for real-time inference. Extensive experiments on the SUN-SEG dataset demonstrate that CMSA-Net achieves state-of-the-art performance, offering a favorable balance between segmentation accuracy and real-time clinical applicability.",
+      "pdf_url": "https://arxiv.org/pdf/2602.22821v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.22821v1",
+      "published": "2026-02-26",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "AgentSentry: Mitigating Indirect Prompt Injection in LLM Agents via Temporal Causal Diagnostics and Context Purification",
+      "authors": [
+        "Tian Zhang",
+        "Yiwei Xu",
+        "Juan Wang",
+        "Keyan Guo",
+        "Xiaoyang Xu",
+        "Bowen Xiao",
+        "Quanlong Guan",
+        "Jinlin Fan",
+        "Jiawei Liu",
+        "Zhiquan Liu",
+        "Hongxin Hu"
+      ],
+      "abstract": "Large language model (LLM) agents increasingly rely on external tools and retrieval systems to autonomously complete complex tasks. However, this design exposes agents to indirect prompt injection (IPI), where attacker-controlled context embedded in tool outputs or retrieved content silently steers agent actions away from user intent. Unlike prompt-based attacks, IPI unfolds over multi-turn trajectories, making malicious control difficult to disentangle from legitimate task execution. Existing inference-time defenses primarily rely on heuristic detection and conservative blocking of high-risk actions, which can prematurely terminate workflows or broadly suppress tool usage under ambiguous multi-turn scenarios. We propose AgentSentry, a novel inference-time detection and mitigation framework for tool-augmented LLM agents. To the best of our knowledge, AgentSentry is the first inference-time defense to model multi-turn IPI as a temporal causal takeover. It localizes takeover points via controlled counterfactual re-executions at tool-return boundaries and enables safe continuation through causally guided context purification that removes attack-induced deviations while preserving task-relevant evidence. We evaluate AgentSentry on the \\textsc{AgentDojo} benchmark across four task suites, three IPI attack families, and multiple black-box LLMs. AgentSentry eliminates successful attacks and maintains strong utility under attack, achieving an average Utility Under Attack (UA) of 74.55 %, improving UA by 20.8 to 33.6 percentage points over the strongest baselines without degrading benign performance.",
+      "pdf_url": "https://arxiv.org/pdf/2602.22724v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.22724v1",
+      "published": "2026-02-26",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Feasible Fusion: Constrained Joint Estimation under Structural Non-Overlap",
+      "authors": [
+        "Yuxi Du",
+        "Zhiheng Zhang",
+        "Haoxuan Li",
+        "Cong Fang",
+        "Jixing Xu",
+        "Peng Zhen",
+        "Jiecheng Guo"
+      ],
+      "abstract": "Causal inference in modern largescale systems faces growing challenges, including highdimensional covariates, multi-valued treatments, massive observational (OBS) data, and limited randomized controlled trial (RCT) samples due to cost constraints. We formalize treatment-induced structural non-overlap and show that, under this regime, commonly used weighted fusion methods provably fail to satisfy randomized identifying restrictions.To address this issue,we propose a constrained joint estimation framework that minimizes observational risk while enforcing causal validity through orthogonal experimental moment conditions. We further show that structural non-overlap creates a feasibility obstruction for moment enforcement in the original covariate space.We also derive a penalized primaldual algorithm that jointly learns representations and predictors, and establish oracle inequalities decomposing error into overlap recovery, moment violation, and statistical terms.Extensive synthetic experiments demonstrate robust performance under varying degrees of nonoverlap. A largescale ridehailing application shows that our method achieves substantial gains over existing baselines, matching the performance of models trained with significantly more RCT data.",
+      "pdf_url": "https://arxiv.org/pdf/2602.22612v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.22612v1",
+      "published": "2026-02-26",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Motion Diffusion Models for Autoregressive Motion Generation",
+      "authors": [
+        "Qing Yu",
+        "Akihisa Watanabe",
+        "Kent Fujiwara"
+      ],
+      "abstract": "Recent advances in motion diffusion models have substantially improved the realism of human motion synthesis. However, existing approaches either rely on full-sequence diffusion models with bidirectional generation, which limits temporal causality and real-time applicability, or autoregressive models that suffer from instability and cumulative errors. In this work, we present Causal Motion Diffusion Models (CMDM), a unified framework for autoregressive motion generation based on a causal diffusion transformer that operates in a semantically aligned latent space. CMDM builds upon a Motion-Language-Aligned Causal VAE (MAC-VAE), which encodes motion sequences into temporally causal latent representations. On top of this latent representation, an autoregressive diffusion transformer is trained using causal diffusion forcing to perform temporally ordered denoising across motion frames. To achieve fast inference, we introduce a frame-wise sampling schedule with causal uncertainty, where each subsequent frame is predicted from partially denoised previous frames. The resulting framework supports high-quality text-to-motion generation, streaming synthesis, and long-horizon motion generation at interactive rates. Experiments on HumanML3D and SnapMoGen demonstrate that CMDM outperforms existing diffusion and autoregressive models in both semantic fidelity and temporal smoothness, while substantially reducing inference latency.",
+      "pdf_url": "https://arxiv.org/pdf/2602.22594v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.22594v1",
+      "published": "2026-02-26",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "WeaveTime: Stream from Earlier Frames into Emergent Memory in VideoLLMs",
       "authors": [
@@ -64,112 +170,6 @@
       "published": "2026-02-25",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "TiMi: Empower Time Series Transformers with Multimodal Mixture of Experts",
-      "authors": [
-        "Jiafeng Lin",
-        "Yuxuan Wang",
-        "Huakun Luo",
-        "Zhongyi Pei",
-        "Jianmin Wang"
-      ],
-      "abstract": "Multimodal time series forecasting has garnered significant attention for its potential to provide more accurate predictions than traditional single-modality models by leveraging rich information inherent in other modalities. However, due to fundamental challenges in modality alignment, existing methods often struggle to effectively incorporate multimodal data into predictions, particularly textual information that has a causal influence on time series fluctuations, such as emergency reports and policy announcements. In this paper, we reflect on the role of textual information in numerical forecasting and propose Time series transformers with Multimodal Mixture-of-Experts, TiMi, to unleash the causal reasoning capabilities of LLMs. Concretely, TiMi utilizes LLMs to generate inferences on future developments, which serve as guidance for time series forecasting. To seamlessly integrate both exogenous factors and time series into predictions, we introduce a Multimodal Mixture-of-Experts (MMoE) module as a lightweight plug-in to empower Transformer-based time series models for multimodal forecasting, eliminating the need for explicit representation-level alignment. Experimentally, our proposed TiMi demonstrates consistent state-of-the-art performance on sixteen real-world multimodal forecasting benchmarks, outperforming advanced baselines while offering both strong adaptability and interpretability.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21693v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.21693v1",
-      "published": "2026-02-25",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "A Researcher's Guide to Empirical Risk Minimization",
-      "authors": [
-        "Lars van der Laan"
-      ],
-      "abstract": "This guide develops high-probability regret bounds for empirical risk minimization (ERM). The presentation is modular: we state broadly applicable guarantees under high-level conditions and give tools for verifying them for specific losses and function classes. We emphasize that many ERM rate derivations can be organized around a three-step recipe -- a basic inequality, a uniform local concentration bound, and a fixed-point argument -- which yields regret bounds in terms of a critical radius, defined via localized Rademacher complexity, under a mild Bernstein-type variance--risk condition. To make these bounds concrete, we upper bound the critical radius using local maximal inequalities and metric-entropy integrals, recovering familiar rates for VC-subgraph, Sobolev/Hölder, and bounded-variation classes.\n  We also review ERM with nuisance components -- including weighted ERM and Neyman-orthogonal losses -- as they arise in causal inference, missing data, and domain adaptation. Following the orthogonal learning framework, we highlight that these problems often admit regret-transfer bounds linking regret under an estimated loss to population regret under the target loss. These bounds typically decompose regret into (i) statistical error under the estimated (optimized) loss and (ii) approximation error due to nuisance estimation. Under sample splitting or cross-fitting, the first term can be controlled using standard fixed-loss ERM regret bounds, while the second term depends only on nuisance-estimation accuracy. We also treat the in-sample regime, where nuisances and the ERM are fit on the same data, deriving regret bounds and giving sufficient conditions for fast rates.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21501v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.21501v1",
-      "published": "2026-02-25",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "PSF-Med: Measuring and Explaining Paraphrase Sensitivity in Medical Vision Language Models",
-      "authors": [
-        "Binesh Sadanandan",
-        "Vahid Behzadan"
-      ],
-      "abstract": "Medical Vision Language Models (VLMs) can change their answers when clinicians rephrase the same question, which raises deployment risks. We introduce Paraphrase Sensitivity Failure (PSF)-Med, a benchmark of 19,748 chest Xray questions paired with about 92,000 meaningpreserving paraphrases across MIMIC-CXR and PadChest. Across six medical VLMs, we measure yes/no flips for the same image and find flip rates from 8% to 58%. However, low flip rate does not imply visual grounding: text-only baselines show that some models stay consistent even when the image is removed, suggesting they rely on language priors. To study mechanisms in one model, we apply GemmaScope 2 Sparse Autoencoders (SAEs) to MedGemma 4B and analyze FlipBank, a curated set of 158 flip cases. We identify a sparse feature at layer 17 that correlates with prompt framing and predicts decision margin shifts. In causal patching, removing this feature's contribution recovers 45% of the yesminus-no logit margin on average and fully reverses 15% of flips. Acting on this finding, we show that clamping the identified feature at inference reduces flip rates by 31% relative with only a 1.3 percentage-point accuracy cost, while also decreasing text-prior reliance. These results suggest that flip rate alone is not enough; robustness evaluations should test both paraphrase stability and image reliance.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21428v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.21428v1",
-      "published": "2026-02-24",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Inference with High-Dimensional Treatments",
-      "authors": [
-        "Patrick Kramer",
-        "Edward H. Kennedy",
-        "Isaac M. Opper"
-      ],
-      "abstract": "In this work, we consider causal inference in various high-dimensional treatment settings, including for single multi-valued treatments and vector treatments with binary or continuous components, when the number of treatments can be comparable to or even larger than the number of observations. These settings bring unique challenges: first, the treatment effects of interest are a high-dimensional vector rather than a low-dimensional scalar; second, positivity violations are often unavoidable; and third, estimation can be based on a smaller effective sample size. We first discuss fundamental limits of estimating effects here, showing that consistent estimation is impossible without further assumptions. We go on to propose a novel sparse pseudo-outcome regression framework for arbitrary high-dimensional statistical functionals, which includes generic constrained regression estimators and error guarantees. We use the framework to derive new doubly robust estimators for mean potential outcomes of high-dimensional treatments, though it can also be applied to other scenarios. We analyze the proposed estimators under exact and approximate sparsity assumptions, giving finite-sample risk bounds. Finally, we derive minimax lower bounds to characterize optimal rates of convergence and show our risk bounds are unimprovable.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21423v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.21423v1",
-      "published": "2026-02-24",
-      "categories": [
-        "math.ST",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "UDVideoQA: A Traffic Video Question Answering Dataset for Multi-Object Spatio-Temporal Reasoning in Urban Dynamics",
-      "authors": [
-        "Joseph Raj Vishal",
-        "Nagasiri Poluri",
-        "Katha Naik",
-        "Rutuja Patil",
-        "Kashyap Hegde Kota",
-        "Krishna Vinod",
-        "Prithvi Jai Ramesh",
-        "Mohammad Farhadi",
-        "Yezhou Yang",
-        "Bharatesh Chakravarthi"
-      ],
-      "abstract": "Understanding the complex, multi-agent dynamics of urban traffic remains a fundamental challenge for video language models. This paper introduces Urban Dynamics VideoQA, a benchmark dataset that captures the unscripted real-world behavior of dynamic urban scenes. UDVideoQA is curated from 16 hours of traffic footage recorded at multiple city intersections under diverse traffic, weather, and lighting conditions. It employs an event-driven dynamic blur technique to ensure privacy preservation without compromising scene fidelity. Using a unified annotation pipeline, the dataset contains 28K question-answer pairs generated across 8 hours of densely annotated video, averaging one question per second. Its taxonomy follows a hierarchical reasoning level, spanning basic understanding and attribution to event reasoning, reverse reasoning, and counterfactual inference, enabling systematic evaluation of both visual grounding and causal reasoning. Comprehensive experiments benchmark 10 SOTA VideoLMs on UDVideoQA and 8 models on a complementary video question generation benchmark. Results reveal a persistent perception-reasoning gap, showing models that excel in abstract inference often fail with fundamental visual grounding. While models like Gemini Pro achieve the highest zero-shot accuracy, fine-tuning the smaller Qwen2.5-VL 7B model on UDVideoQA bridges this gap, achieving performance comparable to proprietary systems. In VideoQGen, Gemini 2.5 Pro, and Qwen3 Max generate the most relevant and complex questions, though all models exhibit limited linguistic diversity, underscoring the need for human-centric evaluation. The UDVideoQA suite, including the dataset, annotation tools, and benchmarks for both VideoQA and VideoQGen, provides a foundation for advancing robust, privacy-aware, and real-world multimodal reasoning. UDVideoQA is available at https://ud-videoqa.github.io/UD-VideoQA/UD-VideoQA/.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21137v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.21137v1",
-      "published": "2026-02-24",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Turning Semantics into Topology: LLM-Driven Attribute Augmentation for Collaborative Filtering",
-      "authors": [
-        "Junjie Meng",
-        "Ranxu zhang",
-        "Wei Wu",
-        "Rui Zhang",
-        "Chuan Qin",
-        "Qi Zhang",
-        "Qi Liu",
-        "Hui Xiong",
-        "Chao Wang"
-      ],
-      "abstract": "Large Language Models (LLMs) have shown great potential for enhancing recommender systems through their extensive world knowledge and reasoning capabilities. However, effectively translating these semantic signals into traditional collaborative embeddings remains an open challenge. Existing approaches typically fall into two extremes: direct inference methods are computationally prohibitive for large-scale retrieval, while embedding-based methods primarily focus on unilateral feature augmentation rather than holistic collaborative signal enhancement. To bridge this gap, we propose Topology-Augmented Graph Collaborative Filtering (TAGCF), a novel framework that transforms semantic knowledge into topological connectivity. Unlike existing approaches that depend on textual features or direct interaction synthesis, TAGCF employs LLMs to infer interaction intents and underlying causal relationships from user-item pairs, representing these insights as intermediate attribute nodes within an enriched User-Attribute-Item (U-A-I) graph. Furthermore, to effectively model the heterogeneous relations in this augmented structure, we propose Adaptive Relation-weighted Graph Convolution (ARGC), which employs relation-specific prediction networks to dynamically estimate the importance of each relation type. Extensive experiments across multiple benchmark datasets and CF backbones demonstrate consistent improvements, with comprehensive evaluations including cold-start scenarios validating the effectiveness and robustness of our framework. All code will be made publicly available. For anonymous review, our code is available at the following anonymous link: https://anonymous.4open.science/r/AGCF-2441353190/.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21099v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.21099v1",
-      "published": "2026-02-24",
-      "categories": [
-        "cs.IR"
       ]
     }
   ]
