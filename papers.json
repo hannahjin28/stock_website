@@ -1,6 +1,62 @@
 {
-  "last_updated": "2026-03-02T01:10:51.728171",
+  "last_updated": "2026-03-03T01:13:18.925690",
   "papers": [
+    {
+      "title": "Stress-Testing Assumptions: A Guide to Bayesian Sensitivity Analyses in Causal Inference",
+      "authors": [
+        "Arman Oganisian"
+      ],
+      "abstract": "While observational data are routinely used to estimate causal effects of biomedical treatments, doing so requires special methods to adjust for observed confounding. These methods invariably rely on untestable statistical and causal identification assumptions. When these assumptions do not hold, sensitivity analysis methods can be used to characterize how different violations may change our inferences. The Bayesian approach to sensitivity analyses in causal inference has unique advantages as it allows users to encode subjective beliefs about the direction and magnitude of assumption violations via prior distributions and make inferences using the updated posterior. However, uptake of these methods remains low since implementation requires substantial methodological knowledge. Moreover, while implementation with publicly available software is possible, it is not straight-forward. At the same time, there are few papers that provide practical guidance on these fronts. In this paper, we walk through four examples of Bayesian sensitivity analyses: 1) exposure misclassification, 2) unmeasured confounding, and missing not-at-random outcomes with 3) parametric and 4) nonparametric Bayesian models. We show how all of these can be done using a unified Bayesian \"missing data\" approach. We also cover implementation using Stan, a publicly available open-source software for fitting Bayesian models. To the best of our knowledge, this is the first paper that presents a unified approach with code, examples, and methodology in a three-pronged illustration of sensitivity analyses in Bayesian causal inference. Our goal is for the reader to walk away with implementation-level knowledge.",
+      "pdf_url": "https://arxiv.org/pdf/2602.23640v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.23640v1",
+      "published": "2026-02-27",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Moment Matters: Mean and Variance Causal Graph Discovery from Heteroscedastic Observational Data",
+      "authors": [
+        "Yoichi Chikahara"
+      ],
+      "abstract": "Heteroscedasticity -- where the variance of a variable changes with other variables -- is pervasive in real data, and elucidating why it arises from the perspective of statistical moments is crucial in scientific knowledge discovery and decision-making. However, standard causal discovery does not reveal which causes act on the mean versus the variance, as it returns a single moment-agnostic graph, limiting interpretability and downstream intervention design. We propose a Bayesian, moment-driven causal discovery framework that infers separate \\textit{mean} and \\textit{variance} causal graphs from observational heteroscedastic data. We first derive the identification results by establishing sufficient conditions under which these two graphs are separately identifiable. Building on this theory, we develop a variational inference method that learns a posterior distribution over both graphs, enabling principled uncertainty quantification of structural features (e.g., edges, paths, and subgraphs). To address the challenges of parameter optimization in heteroscedastic models with two graph structures, we take a curvature-aware optimization approach and develop a prior incorporation technique that leverages domain knowledge on node orderings, improving sample efficiency. Experiments on synthetic, semi-synthetic, and real data show that our approach accurately recovers mean and variance structures and outperforms state-of-the-art baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2602.23602v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.23602v1",
+      "published": "2026-02-27",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal Identification from Counterfactual Data: Completeness and Bounding Results",
+      "authors": [
+        "Arvind Raghavan",
+        "Elias Bareinboim"
+      ],
+      "abstract": "Previous work establishing completeness results for $\\textit{counterfactual identification}$ has been circumscribed to the setting where the input data belongs to observational or interventional distributions (Layers 1 and 2 of Pearl's Causal Hierarchy), since it was generally presumed impossible to obtain data from counterfactual distributions, which belong to Layer 3. However, recent work (Raghavan & Bareinboim, 2025) has formally characterized a family of counterfactual distributions which can be directly estimated via experimental methods - a notion they call $\\textit{counterfactual realizabilty}$. This leaves open the question of what $\\textit{additional}$ counterfactual quantities now become identifiable, given this new access to (some) Layer 3 data. To answer this question, we develop the CTFIDU+ algorithm for identifying counterfactual queries from an arbitrary set of Layer 3 distributions, and prove that it is complete for this task. Building on this, we establish the theoretical limit of which counterfactuals can be identified from physically realizable distributions, thus implying the $\\textit{fundamental limit to exact causal inference in the non-parametric setting}$. Finally, given the impossibility of identifying certain critical types of counterfactuals, we derive novel analytic bounds for such quantities using realizable counterfactual data, and corroborate using simulations that counterfactual data helps tighten the bounds for non-identifiable quantities in practice.",
+      "pdf_url": "https://arxiv.org/pdf/2602.23541v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.23541v1",
+      "published": "2026-02-26",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Human Supervision as an Information Bottleneck: A Unified Theory of Error Floors in Human-Guided Learning",
+      "authors": [
+        "Alejandro Rodriguez Dominguez"
+      ],
+      "abstract": "Large language models are trained primarily on human-generated data and feedback, yet they exhibit persistent errors arising from annotation noise, subjective preferences, and the limited expressive bandwidth of natural language. We argue that these limitations reflect structural properties of the supervision channel rather than model scale or optimization. We develop a unified theory showing that whenever the human supervision channel is not sufficient for a latent evaluation target, it acts as an information-reducing channel that induces a strictly positive excess-risk floor for any learner dominated by it. We formalize this Human-Bounded Intelligence limit and show that across six complementary frameworks (operator theory, PAC-Bayes, information theory, causal inference, category theory, and game-theoretic analyses of reinforcement learning from human feedback), non-sufficiency yields strictly positive lower bounds arising from the same structural decomposition into annotation noise, preference distortion, and semantic compression. The theory explains why scaling alone cannot eliminate persistent human-aligned errors and characterizes conditions under which auxiliary non-human signals (e.g., retrieval, program execution, tools) increase effective supervision capacity and collapse the floor by restoring information about the latent target. Experiments on real preference data, synthetic known-target tasks, and externally verifiable benchmarks confirm the predicted structural signatures: human-only supervision exhibits a persistent floor, while sufficiently informative auxiliary channels strictly reduce or eliminate excess error.",
+      "pdf_url": "https://arxiv.org/pdf/2602.23446v1",
+      "arxiv_url": "http://arxiv.org/abs/2602.23446v1",
+      "published": "2026-02-26",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Identifiability of Treatment Effects with Unobserved Spatially Varying Confounders",
       "authors": [
@@ -103,71 +159,6 @@
       "pdf_url": "https://arxiv.org/pdf/2602.22594v1",
       "arxiv_url": "http://arxiv.org/abs/2602.22594v1",
       "published": "2026-02-26",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "WeaveTime: Stream from Earlier Frames into Emergent Memory in VideoLLMs",
-      "authors": [
-        "Yulin Zhang",
-        "Cheng Shi",
-        "Sibei Yang"
-      ],
-      "abstract": "Recent advances in Multimodal Large Language Models have greatly improved visual understanding and reasoning, yet their quadratic attention and offline training protocols make them ill-suited for streaming settings where frames arrive sequentially and future observations are inaccessible. We diagnose a core limitation of current Video-LLMs, namely Time-Agnosticism, in which videos are treated as an unordered bag of evidence rather than a causally ordered sequence, yielding two failures in streams: temporal order ambiguity, in which the model cannot follow or reason over the correct chronological order, and past-current focus blindness where it fails to distinguish present observations from accumulated history. We present WeaveTime, a simple, efficient, and model agnostic framework that first teaches order and then uses order. We introduce a lightweight Temporal Reconstruction objective-our Streaming Order Perception enhancement-that instills order aware representations with minimal finetuning and no specialized streaming data. At inference, a Past-Current Dynamic Focus Cache performs uncertainty triggered, coarse-to-fine retrieval, expanding history only when needed. Plugged into exsiting Video-LLM without architectural changes, WeaveTime delivers consistent gains on representative streaming benchmarks, improving accuracy while reducing latency. These results establish WeaveTime as a practical path toward time aware stream Video-LLMs under strict online, time causal constraints. Code and weights will be made publicly available. Project Page: https://zhangyl4.github.io/publications/weavetime/",
-      "pdf_url": "https://arxiv.org/pdf/2602.22142v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.22142v1",
-      "published": "2026-02-25",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Design-based theory for causal inference from adaptive experiments",
-      "authors": [
-        "Xinran Li",
-        "Anqi Zhao"
-      ],
-      "abstract": "Adaptive designs dynamically update treatment probabilities using information accumulated during the experiment. Existing theory for causal inference from adaptive experiments primarily assumes the superpopulation framework with independent and identically distributed units, and may not apply when the distribution of units evolves over time. This paper makes two contributions. First, we extend the literature to the finite-population framework, which allows for possibly nonexchangeable units, and establish the design-based theory for causal inference under general adaptive designs using inverse-propensity-weighted (IPW) and augmented IPW (AIPW) estimators. Our theory accommodates nonexchangeable units, both nonconverging and vanishing treatment probabilities, and nonconverging outcome estimators, thereby justifying inference using AIPW estimators with black-box outcome models that integrate advances from machine learning methods. To alleviate the conservativeness inherent in variance estimation under finite-population inference, we also introduce a covariance estimator for the AIPW estimator that becomes sharp when the residuals from the adaptive regression of potential outcomes on covariates are additive across units. Our framework encompasses widely used adaptive designs, such as multi-armed bandits, covariate-adaptive randomization, and sequential rerandomization, advancing the design-based theory for causal inference in these specific settings. Second, as a methodological contribution, we propose an adaptive covariate adjustment approach for analyzing even nonadaptive designs. The martingale structure induced by adaptive adjustment enables valid inference with black-box outcome estimators that would otherwise require strong assumptions under standard nonadaptive analysis.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21998v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.21998v1",
-      "published": "2026-02-25",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "2-Step Agent: A Framework for the Interaction of a Decision Maker with AI Decision Support",
-      "authors": [
-        "Otto Nyberg",
-        "Fausto Carcassi",
-        "Giovanni Cinà"
-      ],
-      "abstract": "Across a growing number of fields, human decision making is supported by predictions from AI models. However, we still lack a deep understanding of the effects of adoption of these technologies. In this paper, we introduce a general computational framework, the 2-Step Agent, which models the effects of AI-assisted decision making. Our framework uses Bayesian methods for causal inference to model 1) how a prediction on a new observation affects the beliefs of a rational Bayesian agent, and 2) how this change in beliefs affects the downstream decision and subsequent outcome. Using this framework, we show by simulations how a single misaligned prior belief can be sufficient for decision support to result in worse downstream outcomes compared to no decision support. Our results reveal several potential pitfalls of AI-driven decision support and highlight the need for thorough model documentation and proper user training.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21889v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.21889v1",
-      "published": "2026-02-25",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "XStreamVGGT: Extremely Memory-Efficient Streaming Vision Geometry Grounded Transformer with KV Cache Compression",
-      "authors": [
-        "Zunhai Su",
-        "Weihao Ye",
-        "Hansen Feng",
-        "Keyu Fan",
-        "Jing Zhang",
-        "Dahai Yu",
-        "Zhengwu Liu",
-        "Ngai Wong"
-      ],
-      "abstract": "Learning-based 3D visual geometry models have significantly advanced with the advent of large-scale transformers. Among these, StreamVGGT leverages frame-wise causal attention to deliver robust and efficient streaming 3D reconstruction. However, it suffers from unbounded growth in the Key-Value (KV) cache due to the massive influx of vision tokens from multi-image and long-video inputs, leading to increased memory consumption and inference latency as input frames accumulate. This ultimately limits its scalability for long-horizon applications. To address this gap, we propose XStreamVGGT, a tuning-free approach that seamlessly integrates pruning and quantization to systematically compress the KV cache, enabling extremely memory-efficient streaming inference. Specifically, redundant KVs generated from multi-frame inputs are initially pruned to conform to a fixed KV memory budget using an efficient token-importance identification mechanism that maintains full compatibility with high-performance attention kernels (e.g., FlashAttention). Additionally, leveraging the inherent distribution patterns of KV tensors, we apply dimension-adaptive KV quantization within the pruning pipeline to further minimize memory overhead while preserving numerical accuracy. Extensive evaluations show that XStreamVGGT achieves mostly negligible performance degradation while substantially reducing memory usage by 4.42$\\times$ and accelerating inference by 5.48$\\times$, enabling practical and scalable streaming 3D applications. The code is available at https://github.com/ywh187/XStreamVGGT/.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21780v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.21780v1",
-      "published": "2026-02-25",
       "categories": [
         "cs.CV"
       ]
