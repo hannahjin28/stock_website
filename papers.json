@@ -1,166 +1,174 @@
 {
-  "last_updated": "2026-03-03T01:13:18.925690",
+  "last_updated": "2026-03-04T01:08:56.998196",
   "papers": [
     {
-      "title": "Stress-Testing Assumptions: A Guide to Bayesian Sensitivity Analyses in Causal Inference",
+      "title": "Partial Causal Structure Learning for Valid Selective Conformal Inference under Interventions",
       "authors": [
-        "Arman Oganisian"
+        "Amir Asiaee",
+        "Kavey Aryan",
+        "James P. Long"
       ],
-      "abstract": "While observational data are routinely used to estimate causal effects of biomedical treatments, doing so requires special methods to adjust for observed confounding. These methods invariably rely on untestable statistical and causal identification assumptions. When these assumptions do not hold, sensitivity analysis methods can be used to characterize how different violations may change our inferences. The Bayesian approach to sensitivity analyses in causal inference has unique advantages as it allows users to encode subjective beliefs about the direction and magnitude of assumption violations via prior distributions and make inferences using the updated posterior. However, uptake of these methods remains low since implementation requires substantial methodological knowledge. Moreover, while implementation with publicly available software is possible, it is not straight-forward. At the same time, there are few papers that provide practical guidance on these fronts. In this paper, we walk through four examples of Bayesian sensitivity analyses: 1) exposure misclassification, 2) unmeasured confounding, and missing not-at-random outcomes with 3) parametric and 4) nonparametric Bayesian models. We show how all of these can be done using a unified Bayesian \"missing data\" approach. We also cover implementation using Stan, a publicly available open-source software for fitting Bayesian models. To the best of our knowledge, this is the first paper that presents a unified approach with code, examples, and methodology in a three-pronged illustration of sensitivity analyses in Bayesian causal inference. Our goal is for the reader to walk away with implementation-level knowledge.",
-      "pdf_url": "https://arxiv.org/pdf/2602.23640v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.23640v1",
-      "published": "2026-02-27",
+      "abstract": "Selective conformal prediction can yield substantially tighter uncertainty sets when we can identify calibration examples that are exchangeable with the test example. In interventional settings, such as perturbation experiments in genomics, exchangeability often holds only within subsets of interventions that leave a target variable \"unaffected\" (e.g., non-descendants of an intervened node in a causal graph). We study the practical regime where this invariance structure is unknown and must be learned from data. Our contributions are: (i) a contamination-robust conformal coverage theorem that quantifies how misclassification of \"unaffected\" calibration examples degrades coverage via an explicit function $g(δ,n)$ of the contamination fraction and calibration set size, providing a finite-sample lower bound that holds for arbitrary contaminating distributions; (ii) a task-driven partial causal learning formulation that estimates only the binary descendant indicators $Z_{a,i}=\\mathbf{1}\\{i\\in\\mathrm{desc}(a)\\}$ needed for selective calibration, rather than the full causal graph; and (iii) algorithms for descendant discovery via perturbation intersection patterns (differentially affected variable set intersections across interventions), and for approximate distance-to-intervention estimation via local invariant causal prediction. We provide recovery conditions under which contamination is controlled. Experiments on synthetic linear structural equation models (SEMs) validate the bound: under controlled contamination up to $δ=0.30$, the corrected procedure maintains $\\ge 0.95$ coverage while uncorrected selective CP degrades to $0.867$. A proof-of-concept on Replogle K562 CRISPR interference (CRISPRi) perturbation data demonstrates applicability to real genomic screens.",
+      "pdf_url": "https://arxiv.org/pdf/2603.02204v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.02204v1",
+      "published": "2026-03-02",
       "categories": [
-        "stat.ME"
+        "cs.LG",
+        "stat.ML"
       ]
     },
     {
-      "title": "Moment Matters: Mean and Variance Causal Graph Discovery from Heteroscedastic Observational Data",
+      "title": "De-paradox Tree: Breaking Down Simpson's Paradox via A Kernel-Based Partition Algorithm",
       "authors": [
-        "Yoichi Chikahara"
+        "Xian Teng",
+        "Yu-Ru Lin"
       ],
-      "abstract": "Heteroscedasticity -- where the variance of a variable changes with other variables -- is pervasive in real data, and elucidating why it arises from the perspective of statistical moments is crucial in scientific knowledge discovery and decision-making. However, standard causal discovery does not reveal which causes act on the mean versus the variance, as it returns a single moment-agnostic graph, limiting interpretability and downstream intervention design. We propose a Bayesian, moment-driven causal discovery framework that infers separate \\textit{mean} and \\textit{variance} causal graphs from observational heteroscedastic data. We first derive the identification results by establishing sufficient conditions under which these two graphs are separately identifiable. Building on this theory, we develop a variational inference method that learns a posterior distribution over both graphs, enabling principled uncertainty quantification of structural features (e.g., edges, paths, and subgraphs). To address the challenges of parameter optimization in heteroscedastic models with two graph structures, we take a curvature-aware optimization approach and develop a prior incorporation technique that leverages domain knowledge on node orderings, improving sample efficiency. Experiments on synthetic, semi-synthetic, and real data show that our approach accurately recovers mean and variance structures and outperforms state-of-the-art baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2602.23602v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.23602v1",
-      "published": "2026-02-27",
+      "abstract": "Real-world observational datasets and machine learning have revolutionized data-driven decision-making, yet many models rely on empirical associations that may be misleading due to confounding and subgroup heterogeneity. Simpson's paradox exemplifies this challenge, where aggregated and subgroup-level associations contradict each other, leading to misleading conclusions. Existing methods provide limited support for detecting and interpreting such paradoxical associations, especially for practitioners without deep causal expertise. We introduce De-paradox Tree, an interpretable algorithm designed to uncover hidden subgroup patterns behind paradoxical associations under assumed causal structures involving confounders and effect heterogeneity. It employs novel split criteria and balancing-based procedures to adjust for confounders and homogenize heterogeneous effects through recursive partitioning. Compared to state-of-the-art methods, De-paradox Tree builds simpler, more interpretable trees, selects relevant covariates, and identifies nested opposite effects while ensuring robust estimation of causal effects when causally admissible variables are provided. Our approach addresses the limitations of traditional causal inference and machine learning methods by introducing an interpretable framework that supports non-expert practitioners while explicitly acknowledging causal assumptions and scope limitations, enabling more reliable and informed decision-making in complex observational data environments.",
+      "pdf_url": "https://arxiv.org/pdf/2603.02174v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.02174v1",
+      "published": "2026-03-02",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Instrumental and Proximal Causal Inference with Gaussian Processes",
+      "authors": [
+        "Yuqi Zhang",
+        "Krikamol Muandet",
+        "Dino Sejdinovic",
+        "Edwin Fong",
+        "Siu Lun Chau"
+      ],
+      "abstract": "Instrumental variable (IV) and proximal causal learning (Proxy) methods are central frameworks for causal inference in the presence of unobserved confounding. Despite substantial methodological advances, existing approaches rarely provide reliable epistemic uncertainty (EU) quantification. We address this gap through a Deconditional Gaussian Process (DGP) framework for uncertainty-aware causal learning. Our formulation recovers popular kernel estimators as the posterior mean, ensuring predictive precision, while the posterior variance yields principled and well-calibrated EU. Moreover, the probabilistic structure enables systematic model selection via marginal log-likelihood optimization. Empirical results demonstrate strong predictive performance alongside informative EU quantification, evaluated via empirical coverage frequencies and decision-aware accuracy rejection curves. Together, our approach provides a unified, practical solution for causal inference under unobserved confounding with reliable uncertainty.",
+      "pdf_url": "https://arxiv.org/pdf/2603.02159v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.02159v1",
+      "published": "2026-03-02",
       "categories": [
         "stat.ML",
         "cs.LG"
       ]
     },
     {
-      "title": "Causal Identification from Counterfactual Data: Completeness and Bounding Results",
+      "title": "MetaRCA: A Generalizable Root Cause Analysis Framework for Cloud-Native Systems Powered by Meta Causal Knowledge",
       "authors": [
-        "Arvind Raghavan",
-        "Elias Bareinboim"
+        "Shuai Liang",
+        "Pengfei Chen",
+        "Bozhe Tian",
+        "Gou Tan",
+        "Maohong Xu",
+        "Youjun Qu",
+        "Yahui Zhao",
+        "Yiduo Shang",
+        "Chongkang Tan"
       ],
-      "abstract": "Previous work establishing completeness results for $\\textit{counterfactual identification}$ has been circumscribed to the setting where the input data belongs to observational or interventional distributions (Layers 1 and 2 of Pearl's Causal Hierarchy), since it was generally presumed impossible to obtain data from counterfactual distributions, which belong to Layer 3. However, recent work (Raghavan & Bareinboim, 2025) has formally characterized a family of counterfactual distributions which can be directly estimated via experimental methods - a notion they call $\\textit{counterfactual realizabilty}$. This leaves open the question of what $\\textit{additional}$ counterfactual quantities now become identifiable, given this new access to (some) Layer 3 data. To answer this question, we develop the CTFIDU+ algorithm for identifying counterfactual queries from an arbitrary set of Layer 3 distributions, and prove that it is complete for this task. Building on this, we establish the theoretical limit of which counterfactuals can be identified from physically realizable distributions, thus implying the $\\textit{fundamental limit to exact causal inference in the non-parametric setting}$. Finally, given the impossibility of identifying certain critical types of counterfactuals, we derive novel analytic bounds for such quantities using realizable counterfactual data, and corroborate using simulations that counterfactual data helps tighten the bounds for non-identifiable quantities in practice.",
-      "pdf_url": "https://arxiv.org/pdf/2602.23541v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.23541v1",
-      "published": "2026-02-26",
+      "abstract": "The dynamics and complexity of cloud-native systems present significant challenges for Root Cause Analysis (RCA). While causality-based RCA methods have shown significant progress in recent years, their practical adoption is fundamentally limited by three intertwined challenges: poor scalability against system complexity, brittle generalization across different system topologies, and inadequate integration of domain knowledge. These limitations create a vicious cycle, hindering the development of robust and efficient RCA solutions. This paper introduces MetaRCA, a generalizable RCA framework for cloud-native systems. MetaRCA first constructs a Meta Causal Graph (MCG) offline, a reusable knowledge base defined at the metadata level. To build the MCG, we propose an evidence-driven algorithm that systematically fuses knowledge from Large Language Models (LLMs), historical fault reports, and observability data. When a fault occurs, MetaRCA performs a lightweight online inference by dynamically instantiating the MCG into a localized graph based on the current context, and then leverages real-time data to weight and prune causal links for precise root cause localization. Evaluated on 252 public and 59 production failures, MetaRCA demonstrates state-of-the-art performance. It surpasses the strongest baseline by 29 percentage points in service-level and 48 percentage points in metric-level accuracy. This performance advantage widens as system complexity increases, with its overhead scaling near-linearly. Crucially, MetaRCA shows robust cross-system generalization, maintaining over 80% accuracy across diverse systems.",
+      "pdf_url": "https://arxiv.org/pdf/2603.02032v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.02032v1",
+      "published": "2026-03-02",
       "categories": [
-        "cs.AI",
-        "cs.LG"
+        "cs.SE"
       ]
     },
     {
-      "title": "Human Supervision as an Information Bottleneck: A Unified Theory of Error Floors in Human-Guided Learning",
+      "title": "SeaVIS: Sound-Enhanced Association for Online Audio-Visual Instance Segmentation",
       "authors": [
-        "Alejandro Rodriguez Dominguez"
+        "Yingjian Zhu",
+        "Ying Wang",
+        "Yuyang Hong",
+        "Ruohao Guo",
+        "Kun Ding",
+        "Xin Gu",
+        "Bin Fan",
+        "Shiming Xiang"
       ],
-      "abstract": "Large language models are trained primarily on human-generated data and feedback, yet they exhibit persistent errors arising from annotation noise, subjective preferences, and the limited expressive bandwidth of natural language. We argue that these limitations reflect structural properties of the supervision channel rather than model scale or optimization. We develop a unified theory showing that whenever the human supervision channel is not sufficient for a latent evaluation target, it acts as an information-reducing channel that induces a strictly positive excess-risk floor for any learner dominated by it. We formalize this Human-Bounded Intelligence limit and show that across six complementary frameworks (operator theory, PAC-Bayes, information theory, causal inference, category theory, and game-theoretic analyses of reinforcement learning from human feedback), non-sufficiency yields strictly positive lower bounds arising from the same structural decomposition into annotation noise, preference distortion, and semantic compression. The theory explains why scaling alone cannot eliminate persistent human-aligned errors and characterizes conditions under which auxiliary non-human signals (e.g., retrieval, program execution, tools) increase effective supervision capacity and collapse the floor by restoring information about the latent target. Experiments on real preference data, synthetic known-target tasks, and externally verifiable benchmarks confirm the predicted structural signatures: human-only supervision exhibits a persistent floor, while sufficiently informative auxiliary channels strictly reduce or eliminate excess error.",
-      "pdf_url": "https://arxiv.org/pdf/2602.23446v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.23446v1",
-      "published": "2026-02-26",
+      "abstract": "Recently, an audio-visual instance segmentation (AVIS) task has been introduced, aiming to identify, segment and track individual sounding instances in videos. However, prevailing methods primarily adopt the offline paradigm, that cannot associate detected instances across consecutive clips, making them unsuitable for real-world scenarios that involve continuous video streams. To address this limitation, we introduce SeaVIS, the first online framework designed for audio-visual instance segmentation. SeaVIS leverages the Causal Cross Attention Fusion (CCAF) module to enable efficient online processing, which integrates visual features from the current frame with the entire audio history under strict causal constraints. A major challenge for conventional VIS methods is that appearance-based instance association fails to distinguish between an object's sounding and silent states, resulting in the incorrect segmentation of silent objects. To tackle this, we employ an Audio-Guided Contrastive Learning (AGCL) strategy to generate instance prototypes that encode not only visual appearance but also sounding activity. In this way, instances preserved during per-frame prediction that do not emit sound can be effectively suppressed during instance association process, thereby significantly enhancing the audio-following capability of SeaVIS. Extensive experiments conducted on the AVISeg dataset demonstrate that SeaVIS surpasses existing state-of-the-art models across multiple evaluation metrics while maintaining a competitive inference speed suitable for real-time processing.",
+      "pdf_url": "https://arxiv.org/pdf/2603.01431v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.01431v1",
+      "published": "2026-03-02",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Causal Neural Probabilistic Circuits",
+      "authors": [
+        "Weixin Chen",
+        "Han Zhao"
+      ],
+      "abstract": "Concept Bottleneck Models (CBMs) enhance the interpretability of end-to-end neural networks by introducing a layer of concepts and predicting the class label from the concept predictions. A key property of CBMs is that they support interventions, i.e., domain experts can correct mispredicted concept values at test time to improve the final accuracy. However, typical CBMs apply interventions by overwriting only the corrected concept while leaving other concept predictions unchanged, which ignores causal dependencies among concepts. To address this, we propose the Causal Neural Probabilistic Circuit (CNPC), which combines a neural attribute predictor with a causal probabilistic circuit compiled from a causal graph. This circuit supports exact, tractable causal inference that inherently respects causal dependencies. Under interventions, CNPC models the class distribution based on a Product of Experts (PoE) that fuses the attribute predictor's predictive distribution with the interventional marginals computed by the circuit. We theoretically characterize the compositional interventional error of CNPC w.r.t. its modules and identify conditions under which CNPC closely matches the ground-truth interventional class distribution. Experiments on five benchmark datasets in both in-distribution and out-of-distribution settings show that, compared with five baseline models, CNPC achieves higher task accuracy across different numbers of intervened attributes.",
+      "pdf_url": "https://arxiv.org/pdf/2603.01372v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.01372v1",
+      "published": "2026-03-02",
       "categories": [
         "cs.LG",
         "cs.AI"
       ]
     },
     {
-      "title": "Identifiability of Treatment Effects with Unobserved Spatially Varying Confounders",
+      "title": "Stochastic Neural Networks for Causal Inference with Missing Confounders",
       "authors": [
-        "Tommy Tang",
-        "Xinran Li",
-        "Bo Li"
+        "Yaxin Fang",
+        "Faming Liang"
       ],
-      "abstract": "The study of causal effects in the presence of unmeasured spatially varying confounders has garnered increasing attention. However, a general framework for identifiability, which is critical for reliable causal inference from observational data, has yet to be advanced. In this paper, we study a linear model with various parametric model assumptions on the covariance structure between the unmeasured confounder and the exposure of interest. We establish identifiability of the treatment effect for many commonly 20 used spatial models for both discrete and continuous data, under mild conditions on the structure of observation locations and the exposure-confounder association. We also emphasize models or scenarios where identifiability may not hold, under which statistical inference should be conducted with caution.",
-      "pdf_url": "https://arxiv.org/pdf/2602.23291v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.23291v1",
-      "published": "2026-02-26",
+      "abstract": "Unmeasured confounding is a fundamental obstacle to causal inference from observational data. Latent-variable methods address this challenge by imputing unobserved confounders, yet many lack explicit model-based identification guarantees and are difficult to extend to richer causal structures. We propose Confounder Imputation with Stochastic Neural Networks (CI-StoNet), which parameterizes the conditional structure of a causal directed acyclic graph using a stochastic neural network and imputes latent confounders via adaptive stochastic-gradient Hamiltonian Monte Carlo. Under SUTVA and overlap, and assuming that the structural components of the data-generating process are well approximated by a capacity-controlled sparse deep neural network class, we establish model identification and consistent estimation of the mean potential outcome under a fixed intervention within this class. Although the latent confounder is identifiable only up to reparameterizations that preserve the joint treatment-outcome distribution, the causal estimand is invariant across this observationally equivalent class. We further characterize the effect of overlap on estimation accuracy. Empirical results on simulated and benchmark datasets demonstrate accurate performance, and the framework extends naturally to proxy-variable and multiple-cause settings with overlap diagnostics and bootstrap-based uncertainty quantification.",
+      "pdf_url": "https://arxiv.org/pdf/2603.01230v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.01230v1",
+      "published": "2026-03-01",
       "categories": [
-        "stat.ME",
-        "math.ST"
+        "stat.CO"
       ]
     },
     {
-      "title": "The Counterfactual Combine: A Causal Framework for Player Evaluation",
+      "title": "RnG: A Unified Transformer for Complete 3D Modeling from Partial Observations",
       "authors": [
-        "Herbert P. Susmann",
-        "Antonio D'Alessandro"
+        "Mochu Xiang",
+        "Zhelun Shen",
+        "Xuesong Li",
+        "Jiahui Ren",
+        "Jing Zhang",
+        "Chen Zhao",
+        "Shanshan Liu",
+        "Haocheng Feng",
+        "Jingdong Wang",
+        "Yuchao Dai"
       ],
-      "abstract": "Evaluating sports players based on their performance shares core challenges with evaluating healthcare providers based on patient outcomes. Drawing on recent advances in healthcare provider profiling, we cast sports player evaluation within a rigorous causal inference framework and define a flexible class of causal player evaluation estimands. Using stochastic interventions, we compare player success rates on repeated tasks (such as field goal attempts or plate appearance) to counterfactual success rates had those same attempts been randomly reassigned to players according to prespecified reference distributions. This setup encompasses direct and indirect standardization parameters familiar from healthcare provider profiling, and we additionally propose a \"performance above random replacement\" estimand designed for interpretability in sports settings. We develop doubly robust estimators for these evaluation metrics based on modern semiparametric statistical methods, with a focus on Targeted Minimum Loss-based Estimation, and incorporate machine learning methods to capture complex relationships driving player performance. We illustrate our framework in detailed case studies of field goal kickers in the National Football League and batters in Major League Baseball, highlighting how different causal estimands yield distinct interpretations and insights about player performance.",
-      "pdf_url": "https://arxiv.org/pdf/2602.23233v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.23233v1",
-      "published": "2026-02-26",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "CMSA-Net: Causal Multi-scale Aggregation with Adaptive Multi-source Reference for Video Polyp Segmentation",
-      "authors": [
-        "Tong Wang",
-        "Yaolei Qi",
-        "Siwen Wang",
-        "Imran Razzak",
-        "Guanyu Yang",
-        "Yutong Xie"
-      ],
-      "abstract": "Video polyp segmentation (VPS) is an important task in computer-aided colonoscopy, as it helps doctors accurately locate and track polyps during examinations. However, VPS remains challenging because polyps often look similar to surrounding mucosa, leading to weak semantic discrimination. In addition, large changes in polyp position and scale across video frames make stable and accurate segmentation difficult. To address these challenges, we propose a robust VPS framework named CMSA-Net. The proposed network introduces a Causal Multi-scale Aggregation (CMA) module to effectively gather semantic information from multiple historical frames at different scales. By using causal attention, CMA ensures that temporal feature propagation follows strict time order, which helps reduce noise and improve feature reliability. Furthermore, we design a Dynamic Multi-source Reference (DMR) strategy that adaptively selects informative and reliable reference frames based on semantic separability and prediction confidence. This strategy provides strong multi-frame guidance while keeping the model efficient for real-time inference. Extensive experiments on the SUN-SEG dataset demonstrate that CMSA-Net achieves state-of-the-art performance, offering a favorable balance between segmentation accuracy and real-time clinical applicability.",
-      "pdf_url": "https://arxiv.org/pdf/2602.22821v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.22821v1",
-      "published": "2026-02-26",
+      "abstract": "Human perceive the 3D world through 2D observations from limited viewpoints. While recent feed-forward generalizable 3D reconstruction models excel at recovering 3D structures from sparse images, their representations are often confined to observed regions, leaving unseen geometry un-modeled. This raises a key, fundamental challenge: Can we infer a complete 3D structure from partial 2D observations? We present RnG (Reconstruction and Generation), a novel feed-forward Transformer that unifies these two tasks by predicting an implicit, complete 3D representation. At the core of RnG, we propose a reconstruction-guided causal attention mechanism that separates reconstruction and generation at the attention level, and treats the KV-cache as an implicit 3D representation. Then, arbitrary poses can efficiently query this cache to render high-fidelity, novel-view RGBD outputs. As a result, RnG not only accurately reconstructs visible geometry but also generates plausible, coherent unseen geometry and appearance. Our method achieves state-of-the-art performance in both generalizable 3D reconstruction and novel view generation, while operating efficiently enough for real-time interactive applications. Project page: https://npucvr.github.io/RnG",
+      "pdf_url": "https://arxiv.org/pdf/2603.01194v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.01194v1",
+      "published": "2026-03-01",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "AgentSentry: Mitigating Indirect Prompt Injection in LLM Agents via Temporal Causal Diagnostics and Context Purification",
+      "title": "Robust Weighted Triangulation of Causal Effects Under Model Uncertainty",
       "authors": [
-        "Tian Zhang",
-        "Yiwei Xu",
-        "Juan Wang",
-        "Keyan Guo",
-        "Xiaoyang Xu",
-        "Bowen Xiao",
-        "Quanlong Guan",
-        "Jinlin Fan",
-        "Jiawei Liu",
-        "Zhiquan Liu",
-        "Hongxin Hu"
+        "Rohit Bhattacharya",
+        "Ina Ocelli",
+        "Ted Westling"
       ],
-      "abstract": "Large language model (LLM) agents increasingly rely on external tools and retrieval systems to autonomously complete complex tasks. However, this design exposes agents to indirect prompt injection (IPI), where attacker-controlled context embedded in tool outputs or retrieved content silently steers agent actions away from user intent. Unlike prompt-based attacks, IPI unfolds over multi-turn trajectories, making malicious control difficult to disentangle from legitimate task execution. Existing inference-time defenses primarily rely on heuristic detection and conservative blocking of high-risk actions, which can prematurely terminate workflows or broadly suppress tool usage under ambiguous multi-turn scenarios. We propose AgentSentry, a novel inference-time detection and mitigation framework for tool-augmented LLM agents. To the best of our knowledge, AgentSentry is the first inference-time defense to model multi-turn IPI as a temporal causal takeover. It localizes takeover points via controlled counterfactual re-executions at tool-return boundaries and enables safe continuation through causally guided context purification that removes attack-induced deviations while preserving task-relevant evidence. We evaluate AgentSentry on the \\textsc{AgentDojo} benchmark across four task suites, three IPI attack families, and multiple black-box LLMs. AgentSentry eliminates successful attacks and maintains strong utility under attack, achieving an average Utility Under Attack (UA) of 74.55 %, improving UA by 20.8 to 33.6 percentage points over the strongest baselines without degrading benign performance.",
-      "pdf_url": "https://arxiv.org/pdf/2602.22724v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.22724v1",
-      "published": "2026-02-26",
+      "abstract": "A fundamental challenge in causal inference with observational data is correct specification of a causal model. When there is model uncertainty, analysts may seek to use estimates from multiple candidate models that rely on distinct, and possibly partially overlapping, sets of identifying assumptions to infer the causal effect, a process known as triangulation. Principled methods for triangulation, however, remain underdeveloped. Here, we develop a framework for causal effect triangulation that combines model testability methods from causal discovery with statistical inference methods from semiparametric theory, while avoiding explicit model selection and post-selection inference problems. We propose a triangulation functional that combines identified functionals from each model with data-driven measures of model validity. We provide a bound on the distance of the functional from the true causal effect along with conditions under which this distance can be taken to zero. Finally, we derive valid statistical inference for this functional. Our framework formalizes robustness under causal pluralism without requiring agreement across models or commitment to a single specification. We demonstrate its performance through simulations and an empirical application.",
+      "pdf_url": "https://arxiv.org/pdf/2603.01119v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.01119v1",
+      "published": "2026-03-01",
       "categories": [
-        "cs.CR",
+        "stat.ME",
         "cs.AI"
       ]
     },
     {
-      "title": "Feasible Fusion: Constrained Joint Estimation under Structural Non-Overlap",
+      "title": "Navigating Time's Possibilities: Plausible Counterfactual Explanations for Multivariate Time-Series Forecast through Genetic Algorithms",
       "authors": [
-        "Yuxi Du",
-        "Zhiheng Zhang",
-        "Haoxuan Li",
-        "Cong Fang",
-        "Jixing Xu",
-        "Peng Zhen",
-        "Jiecheng Guo"
+        "Gianlucca Zuin",
+        "Adriano Veloso"
       ],
-      "abstract": "Causal inference in modern largescale systems faces growing challenges, including highdimensional covariates, multi-valued treatments, massive observational (OBS) data, and limited randomized controlled trial (RCT) samples due to cost constraints. We formalize treatment-induced structural non-overlap and show that, under this regime, commonly used weighted fusion methods provably fail to satisfy randomized identifying restrictions.To address this issue,we propose a constrained joint estimation framework that minimizes observational risk while enforcing causal validity through orthogonal experimental moment conditions. We further show that structural non-overlap creates a feasibility obstruction for moment enforcement in the original covariate space.We also derive a penalized primaldual algorithm that jointly learns representations and predictors, and establish oracle inequalities decomposing error into overlap recovery, moment violation, and statistical terms.Extensive synthetic experiments demonstrate robust performance under varying degrees of nonoverlap. A largescale ridehailing application shows that our method achieves substantial gains over existing baselines, matching the performance of models trained with significantly more RCT data.",
-      "pdf_url": "https://arxiv.org/pdf/2602.22612v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.22612v1",
-      "published": "2026-02-26",
+      "abstract": "Counterfactual learning has become promising for understanding and modeling causality in complex and dynamic systems. This paper presents a novel method for counterfactual learning in the context of multivariate time series analysis and forecast. The primary objective is to uncover hidden causal relationships and identify potential interventions to achieve desired outcomes. The proposed methodology integrates genetic algorithms and rigorous causality tests to infer and validate counterfactual dependencies within temporal sequences. More specifically, we employ Granger causality to enhance the reliability of identified causal relationships, rigorously assessing their statistical significance. Then, genetic algorithms, in conjunction with quantile regression, are used to exploit these intricate causal relationships to project future scenarios. The synergy between genetic algorithms and causality tests ensures a thorough exploration of the temporal dynamics present in the data, revealing hidden dependencies and enabling the projection of outcomes under hypothetical interventions. We evaluate the performance of our algorithm on real-world data, showcasing its ability to handle complex causal relationships, revealing meaningful counterfactual insights, and allowing for the prediction of outcomes under hypothetical interventions.",
+      "pdf_url": "https://arxiv.org/pdf/2603.00855v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.00855v1",
+      "published": "2026-03-01",
       "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Motion Diffusion Models for Autoregressive Motion Generation",
-      "authors": [
-        "Qing Yu",
-        "Akihisa Watanabe",
-        "Kent Fujiwara"
-      ],
-      "abstract": "Recent advances in motion diffusion models have substantially improved the realism of human motion synthesis. However, existing approaches either rely on full-sequence diffusion models with bidirectional generation, which limits temporal causality and real-time applicability, or autoregressive models that suffer from instability and cumulative errors. In this work, we present Causal Motion Diffusion Models (CMDM), a unified framework for autoregressive motion generation based on a causal diffusion transformer that operates in a semantically aligned latent space. CMDM builds upon a Motion-Language-Aligned Causal VAE (MAC-VAE), which encodes motion sequences into temporally causal latent representations. On top of this latent representation, an autoregressive diffusion transformer is trained using causal diffusion forcing to perform temporally ordered denoising across motion frames. To achieve fast inference, we introduce a frame-wise sampling schedule with causal uncertainty, where each subsequent frame is predicted from partially denoised previous frames. The resulting framework supports high-quality text-to-motion generation, streaming synthesis, and long-horizon motion generation at interactive rates. Experiments on HumanML3D and SnapMoGen demonstrate that CMDM outperforms existing diffusion and autoregressive models in both semantic fidelity and temporal smoothness, while substantially reducing inference latency.",
-      "pdf_url": "https://arxiv.org/pdf/2602.22594v1",
-      "arxiv_url": "http://arxiv.org/abs/2602.22594v1",
-      "published": "2026-02-26",
-      "categories": [
-        "cs.CV"
+        "cs.LG"
       ]
     }
   ]
