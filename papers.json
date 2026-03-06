@@ -1,173 +1,197 @@
 {
-  "last_updated": "2026-03-04T01:08:56.998196",
+  "last_updated": "2026-03-06T01:14:54.169874",
   "papers": [
     {
-      "title": "Partial Causal Structure Learning for Valid Selective Conformal Inference under Interventions",
+      "title": "Spatial Causal Prediction in Video",
       "authors": [
-        "Amir Asiaee",
-        "Kavey Aryan",
-        "James P. Long"
+        "Yanguang Zhao",
+        "Jie Yang",
+        "Shengqiong Wu",
+        "Shutong Hu",
+        "Hongbo Qiu",
+        "Yu Wang",
+        "Guijia Zhang",
+        "Tan Kai Ze",
+        "Hao Fei",
+        "Chia-Wen Lin",
+        "Mong-Li Lee",
+        "Wynne Hsu"
       ],
-      "abstract": "Selective conformal prediction can yield substantially tighter uncertainty sets when we can identify calibration examples that are exchangeable with the test example. In interventional settings, such as perturbation experiments in genomics, exchangeability often holds only within subsets of interventions that leave a target variable \"unaffected\" (e.g., non-descendants of an intervened node in a causal graph). We study the practical regime where this invariance structure is unknown and must be learned from data. Our contributions are: (i) a contamination-robust conformal coverage theorem that quantifies how misclassification of \"unaffected\" calibration examples degrades coverage via an explicit function $g(δ,n)$ of the contamination fraction and calibration set size, providing a finite-sample lower bound that holds for arbitrary contaminating distributions; (ii) a task-driven partial causal learning formulation that estimates only the binary descendant indicators $Z_{a,i}=\\mathbf{1}\\{i\\in\\mathrm{desc}(a)\\}$ needed for selective calibration, rather than the full causal graph; and (iii) algorithms for descendant discovery via perturbation intersection patterns (differentially affected variable set intersections across interventions), and for approximate distance-to-intervention estimation via local invariant causal prediction. We provide recovery conditions under which contamination is controlled. Experiments on synthetic linear structural equation models (SEMs) validate the bound: under controlled contamination up to $δ=0.30$, the corrected procedure maintains $\\ge 0.95$ coverage while uncorrected selective CP degrades to $0.867$. A proof-of-concept on Replogle K562 CRISPR interference (CRISPRi) perturbation data demonstrates applicability to real genomic screens.",
-      "pdf_url": "https://arxiv.org/pdf/2603.02204v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.02204v1",
-      "published": "2026-03-02",
+      "abstract": "Spatial reasoning, the ability to understand spatial relations, causality, and dynamic evolution, is central to human intelligence and essential for real-world applications such as autonomous driving and robotics. Existing studies, however, primarily assess models on visible spatio-temporal understanding, overlooking their ability to infer unseen past or future spatial states. In this work, we introduce Spatial Causal Prediction (SCP), a new task paradigm that challenges models to reason beyond observation and predict spatial causal outcomes. We further construct SCP-Bench, a benchmark comprising 2,500 QA pairs across 1,181 videos spanning diverse viewpoints, scenes, and causal directions, to support systematic evaluation. Through comprehensive experiments on {23} state-of-the-art models, we reveal substantial gaps between human and model performance, limited temporal extrapolation, and weak causal grounding. We further analyze key factors influencing performance and propose perception-enhancement and reasoning-guided strategies toward advancing spatial causal intelligence. The project page is https://guangstrip.github.io/SCP-Bench.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03944v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.03944v1",
+      "published": "2026-03-04",
       "categories": [
-        "cs.LG",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "From Narrow to Panoramic Vision: Attention-Guided Cold-Start Reshapes Multimodal Reasoning",
+      "authors": [
+        "Ruilin Luo",
+        "Chufan Shi",
+        "Yizhen Zhang",
+        "Cheng Yang",
+        "Songtao Jiang",
+        "Tongkun Guan",
+        "Ruizhe Chen",
+        "Ruihang Chu",
+        "Peng Wang",
+        "Mingkun Yang",
+        "Yujiu Yang",
+        "Junyang Lin",
+        "Zhibo Yang"
+      ],
+      "abstract": "The cold-start initialization stage plays a pivotal role in training Multimodal Large Reasoning Models (MLRMs), yet its mechanisms remain insufficiently understood. To analyze this stage, we introduce the Visual Attention Score (VAS), an attention-based metric that quantifies how much a model attends to visual tokens. We find that reasoning performance is strongly correlated with VAS (r=0.9616): models with higher VAS achieve substantially stronger multimodal reasoning. Surprisingly, multimodal cold-start fails to elevate VAS, resulting in attention distributions close to the base model, whereas text-only cold-start leads to a clear increase. We term this counter-intuitive phenomenon Lazy Attention Localization. To validate its causal role, we design training-free interventions that directly modulate attention allocation during inference, performance gains of 1$-$2% without any retraining. Building on these insights, we further propose Attention-Guided Visual Anchoring and Reflection (AVAR), a comprehensive cold-start framework that integrates visual-anchored data synthesis, attention-guided objectives, and visual-anchored reward shaping. Applied to Qwen2.5-VL-7B, AVAR achieves an average gain of 7.0% across 7 multimodal reasoning benchmarks. Ablation studies further confirm that each component of AVAR contributes step-wise to the overall gains. The code, data, and models are available at https://github.com/lrlbbzl/Qwen-AVAR.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03825v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.03825v1",
+      "published": "2026-03-04",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Direct Bayesian Additive Regression Trees for Conditional Average Treatment Effects in Regression Discontinuity Designs",
+      "authors": [
+        "Daisuke Kondo",
+        "Shonosuke Sugasawa"
+      ],
+      "abstract": "Regression discontinuity designs (RDD) are widely used for causal inference. In many empirical applications, treatment effects vary substantially with covariates, and ignoring such heterogeneity can lead to misleading conclusions, which motivates flexible modeling of heterogeneous treatment effects in RDD. To this end, we propose a Bayesian nonparametric approach to estimating heterogeneous treatment effects based on Bayesian Additive Regression Trees (BART). The key feature of our method lies in adopting a general Bayesian framework using a pseudo-model defined through a loss function for fitting local linear models around the cutoff, which gives direct modeling of heterogeneous treatment effects by BART. Optimal selection of the bandwidth parameter for the local model is implemented using the Hyvärinen score. Through numerical experiments, we demonstrate that the proposed approach flexibly captures complicated structures of heterogeneous treatment effects as a function of covariates.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03819v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.03819v1",
+      "published": "2026-03-04",
+      "categories": [
+        "stat.ME",
         "stat.ML"
       ]
     },
     {
-      "title": "De-paradox Tree: Breaking Down Simpson's Paradox via A Kernel-Based Partition Algorithm",
+      "title": "Relational In-Context Learning via Synthetic Pre-training with Structural Prior",
       "authors": [
-        "Xian Teng",
-        "Yu-Ru Lin"
+        "Yanbo Wang",
+        "Jiaxuan You",
+        "Chuan Shi",
+        "Muhan Zhang"
       ],
-      "abstract": "Real-world observational datasets and machine learning have revolutionized data-driven decision-making, yet many models rely on empirical associations that may be misleading due to confounding and subgroup heterogeneity. Simpson's paradox exemplifies this challenge, where aggregated and subgroup-level associations contradict each other, leading to misleading conclusions. Existing methods provide limited support for detecting and interpreting such paradoxical associations, especially for practitioners without deep causal expertise. We introduce De-paradox Tree, an interpretable algorithm designed to uncover hidden subgroup patterns behind paradoxical associations under assumed causal structures involving confounders and effect heterogeneity. It employs novel split criteria and balancing-based procedures to adjust for confounders and homogenize heterogeneous effects through recursive partitioning. Compared to state-of-the-art methods, De-paradox Tree builds simpler, more interpretable trees, selects relevant covariates, and identifies nested opposite effects while ensuring robust estimation of causal effects when causally admissible variables are provided. Our approach addresses the limitations of traditional causal inference and machine learning methods by introducing an interpretable framework that supports non-expert practitioners while explicitly acknowledging causal assumptions and scope limitations, enabling more reliable and informed decision-making in complex observational data environments.",
-      "pdf_url": "https://arxiv.org/pdf/2603.02174v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.02174v1",
-      "published": "2026-03-02",
+      "abstract": "Relational Databases (RDBs) are the backbone of modern business, yet they lack foundation models comparable to those in text or vision. A key obstacle is that high-quality RDBs are private, scarce and structurally heterogeneous, making internet-scale pre-training infeasible. To overcome this data scarcity, We introduce $\\textbf{RDB-PFN}$, the first relational foundation model trained purely via $\\textbf{synthetic data}$. Inspired by Prior-Data Fitted Networks (PFNs) where synthetic data generated from Structural Causal Models (SCMs) enables reasoning on single tables, we design a $\\textbf{Relational Prior Generator}$ to create an infinite stream of diverse RDBs from scratch. Pre-training on $\\textbf{over 2 million}$ synthetic single-table and relational tasks, RDB-PFN learns to adapt to any new database instantly via genuine $\\textbf{in-context learning}$. Experiments verify RDB-PFN achieves strong few-shot performance on 19 real-world relational prediction tasks, outperforming graph-based and single-table foundation-model baselines (given the same DFS-linearized inputs), while using a lightweight architecture and fast inference. The code is available at https://github.com/MuLabPKU/RDBPFN",
+      "pdf_url": "https://arxiv.org/pdf/2603.03805v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.03805v1",
+      "published": "2026-03-04",
       "categories": [
-        "cs.LG"
+        "cs.LG",
+        "cs.AI",
+        "cs.DB"
       ]
     },
     {
-      "title": "Instrumental and Proximal Causal Inference with Gaussian Processes",
+      "title": "Observationally Informed Adaptive Causal Experimental Design",
       "authors": [
-        "Yuqi Zhang",
-        "Krikamol Muandet",
-        "Dino Sejdinovic",
-        "Edwin Fong",
-        "Siu Lun Chau"
+        "Erdun Gao",
+        "Liang Zhang",
+        "Jake Fawkes",
+        "Aoqi Zuo",
+        "Wenqin Liu",
+        "Haoxuan Li",
+        "Mingming Gong",
+        "Dino Sejdinovic"
       ],
-      "abstract": "Instrumental variable (IV) and proximal causal learning (Proxy) methods are central frameworks for causal inference in the presence of unobserved confounding. Despite substantial methodological advances, existing approaches rarely provide reliable epistemic uncertainty (EU) quantification. We address this gap through a Deconditional Gaussian Process (DGP) framework for uncertainty-aware causal learning. Our formulation recovers popular kernel estimators as the posterior mean, ensuring predictive precision, while the posterior variance yields principled and well-calibrated EU. Moreover, the probabilistic structure enables systematic model selection via marginal log-likelihood optimization. Empirical results demonstrate strong predictive performance alongside informative EU quantification, evaluated via empirical coverage frequencies and decision-aware accuracy rejection curves. Together, our approach provides a unified, practical solution for causal inference under unobserved confounding with reliable uncertainty.",
-      "pdf_url": "https://arxiv.org/pdf/2603.02159v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.02159v1",
-      "published": "2026-03-02",
+      "abstract": "Randomized Controlled Trials (RCTs) represent the gold standard for causal inference yet remain a scarce resource. While large-scale observational data is often available, it is utilized only for retrospective fusion, and remains discarded in prospective trial design due to bias concerns. We argue this \"tabula rasa\" data acquisition strategy is fundamentally inefficient. In this work, we propose Active Residual Learning, a new paradigm that leverages the observational model as a foundational prior. This approach shifts the experimental focus from learning target causal quantities from scratch to efficiently estimating the residuals required to correct observational bias. To operationalize this, we introduce the R-Design framework. Theoretically, we establish two key advantages: (1) a structural efficiency gap, proving that estimating smooth residual contrasts admits strictly faster convergence rates than reconstructing full outcomes; and (2) information efficiency, where we quantify the redundancy in standard parameter-based acquisition (e.g., BALD), demonstrating that such baselines waste budget on task-irrelevant nuisance uncertainty. We propose R-EPIG (Residual Expected Predictive Information Gain), a unified criterion that directly targets the causal estimand, minimizing residual uncertainty for estimation or clarifying decision boundaries for policy. Experiments on synthetic and semi-synthetic benchmarks demonstrate that R-Design significantly outperforms baselines, confirming that repairing a biased model is far more efficient than learning one from scratch.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03785v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.03785v1",
+      "published": "2026-03-04",
       "categories": [
         "stat.ML",
         "cs.LG"
       ]
     },
     {
-      "title": "MetaRCA: A Generalizable Root Cause Analysis Framework for Cloud-Native Systems Powered by Meta Causal Knowledge",
+      "title": "Specification-Driven Generation and Evaluation of Discrete-Event World Models via the DEVS Formalism",
       "authors": [
-        "Shuai Liang",
-        "Pengfei Chen",
-        "Bozhe Tian",
-        "Gou Tan",
-        "Maohong Xu",
-        "Youjun Qu",
-        "Yahui Zhao",
-        "Yiduo Shang",
-        "Chongkang Tan"
+        "Zheyu Chen",
+        "Zhuohuan Li",
+        "Chuanhao Li"
       ],
-      "abstract": "The dynamics and complexity of cloud-native systems present significant challenges for Root Cause Analysis (RCA). While causality-based RCA methods have shown significant progress in recent years, their practical adoption is fundamentally limited by three intertwined challenges: poor scalability against system complexity, brittle generalization across different system topologies, and inadequate integration of domain knowledge. These limitations create a vicious cycle, hindering the development of robust and efficient RCA solutions. This paper introduces MetaRCA, a generalizable RCA framework for cloud-native systems. MetaRCA first constructs a Meta Causal Graph (MCG) offline, a reusable knowledge base defined at the metadata level. To build the MCG, we propose an evidence-driven algorithm that systematically fuses knowledge from Large Language Models (LLMs), historical fault reports, and observability data. When a fault occurs, MetaRCA performs a lightweight online inference by dynamically instantiating the MCG into a localized graph based on the current context, and then leverages real-time data to weight and prune causal links for precise root cause localization. Evaluated on 252 public and 59 production failures, MetaRCA demonstrates state-of-the-art performance. It surpasses the strongest baseline by 29 percentage points in service-level and 48 percentage points in metric-level accuracy. This performance advantage widens as system complexity increases, with its overhead scaling near-linearly. Crucially, MetaRCA shows robust cross-system generalization, maintaining over 80% accuracy across diverse systems.",
-      "pdf_url": "https://arxiv.org/pdf/2603.02032v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.02032v1",
-      "published": "2026-03-02",
+      "abstract": "World models are essential for planning and evaluation in agentic systems, yet existing approaches lie at two extremes: hand-engineered simulators that offer consistency and reproducibility but are costly to adapt, and implicit neural models that are flexible but difficult to constrain, verify, and debug over long horizons. We seek a principled middle ground that combines the reliability of explicit simulators with the flexibility of learned models, allowing world models to be adapted during online execution. By targeting a broad class of environments whose dynamics are governed by the ordering, timing, and causality of discrete events, such as queueing and service operations, embodied task planning, and message-mediated multi-agent coordination, we advocate explicit, executable discrete-event world models synthesized directly from natural-language specifications. Our approach adopts the DEVS formalism and introduces a staged LLM-based generation pipeline that separates structural inference of component interactions from component-level event and timing logic. To evaluate generated models without a unique ground truth, simulators emit structured event traces that are validated against specification-derived temporal and semantic constraints, enabling reproducible verification and localized diagnostics. Together, these contributions produce world models that are consistent over long-horizon rollouts, verifiable from observable behavior, and efficient to synthesize on demand during online execution.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03784v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.03784v1",
+      "published": "2026-03-04",
       "categories": [
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "SeaVIS: Sound-Enhanced Association for Online Audio-Visual Instance Segmentation",
-      "authors": [
-        "Yingjian Zhu",
-        "Ying Wang",
-        "Yuyang Hong",
-        "Ruohao Guo",
-        "Kun Ding",
-        "Xin Gu",
-        "Bin Fan",
-        "Shiming Xiang"
-      ],
-      "abstract": "Recently, an audio-visual instance segmentation (AVIS) task has been introduced, aiming to identify, segment and track individual sounding instances in videos. However, prevailing methods primarily adopt the offline paradigm, that cannot associate detected instances across consecutive clips, making them unsuitable for real-world scenarios that involve continuous video streams. To address this limitation, we introduce SeaVIS, the first online framework designed for audio-visual instance segmentation. SeaVIS leverages the Causal Cross Attention Fusion (CCAF) module to enable efficient online processing, which integrates visual features from the current frame with the entire audio history under strict causal constraints. A major challenge for conventional VIS methods is that appearance-based instance association fails to distinguish between an object's sounding and silent states, resulting in the incorrect segmentation of silent objects. To tackle this, we employ an Audio-Guided Contrastive Learning (AGCL) strategy to generate instance prototypes that encode not only visual appearance but also sounding activity. In this way, instances preserved during per-frame prediction that do not emit sound can be effectively suppressed during instance association process, thereby significantly enhancing the audio-following capability of SeaVIS. Extensive experiments conducted on the AVISeg dataset demonstrate that SeaVIS surpasses existing state-of-the-art models across multiple evaluation metrics while maintaining a competitive inference speed suitable for real-time processing.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01431v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.01431v1",
-      "published": "2026-03-02",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal Neural Probabilistic Circuits",
-      "authors": [
-        "Weixin Chen",
-        "Han Zhao"
-      ],
-      "abstract": "Concept Bottleneck Models (CBMs) enhance the interpretability of end-to-end neural networks by introducing a layer of concepts and predicting the class label from the concept predictions. A key property of CBMs is that they support interventions, i.e., domain experts can correct mispredicted concept values at test time to improve the final accuracy. However, typical CBMs apply interventions by overwriting only the corrected concept while leaving other concept predictions unchanged, which ignores causal dependencies among concepts. To address this, we propose the Causal Neural Probabilistic Circuit (CNPC), which combines a neural attribute predictor with a causal probabilistic circuit compiled from a causal graph. This circuit supports exact, tractable causal inference that inherently respects causal dependencies. Under interventions, CNPC models the class distribution based on a Product of Experts (PoE) that fuses the attribute predictor's predictive distribution with the interventional marginals computed by the circuit. We theoretically characterize the compositional interventional error of CNPC w.r.t. its modules and identify conditions under which CNPC closely matches the ground-truth interventional class distribution. Experiments on five benchmark datasets in both in-distribution and out-of-distribution settings show that, compared with five baseline models, CNPC achieves higher task accuracy across different numbers of intervened attributes.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01372v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.01372v1",
-      "published": "2026-03-02",
-      "categories": [
-        "cs.LG",
         "cs.AI"
       ]
     },
     {
-      "title": "Stochastic Neural Networks for Causal Inference with Missing Confounders",
+      "title": "Controllable Generative Sandbox for Causal Inference",
       "authors": [
-        "Yaxin Fang",
-        "Faming Liang"
+        "Qi Zhang",
+        "Harsh Parikh",
+        "Ashley Naimi",
+        "Razieh Nabi",
+        "Christopher Kim",
+        "Timothy Lash"
       ],
-      "abstract": "Unmeasured confounding is a fundamental obstacle to causal inference from observational data. Latent-variable methods address this challenge by imputing unobserved confounders, yet many lack explicit model-based identification guarantees and are difficult to extend to richer causal structures. We propose Confounder Imputation with Stochastic Neural Networks (CI-StoNet), which parameterizes the conditional structure of a causal directed acyclic graph using a stochastic neural network and imputes latent confounders via adaptive stochastic-gradient Hamiltonian Monte Carlo. Under SUTVA and overlap, and assuming that the structural components of the data-generating process are well approximated by a capacity-controlled sparse deep neural network class, we establish model identification and consistent estimation of the mean potential outcome under a fixed intervention within this class. Although the latent confounder is identifiable only up to reparameterizations that preserve the joint treatment-outcome distribution, the causal estimand is invariant across this observationally equivalent class. We further characterize the effect of overlap on estimation accuracy. Empirical results on simulated and benchmark datasets demonstrate accurate performance, and the framework extends naturally to proxy-variable and multiple-cause settings with overlap diagnostics and bootstrap-based uncertainty quantification.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01230v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.01230v1",
-      "published": "2026-03-01",
-      "categories": [
-        "stat.CO"
-      ]
-    },
-    {
-      "title": "RnG: A Unified Transformer for Complete 3D Modeling from Partial Observations",
-      "authors": [
-        "Mochu Xiang",
-        "Zhelun Shen",
-        "Xuesong Li",
-        "Jiahui Ren",
-        "Jing Zhang",
-        "Chen Zhao",
-        "Shanshan Liu",
-        "Haocheng Feng",
-        "Jingdong Wang",
-        "Yuchao Dai"
-      ],
-      "abstract": "Human perceive the 3D world through 2D observations from limited viewpoints. While recent feed-forward generalizable 3D reconstruction models excel at recovering 3D structures from sparse images, their representations are often confined to observed regions, leaving unseen geometry un-modeled. This raises a key, fundamental challenge: Can we infer a complete 3D structure from partial 2D observations? We present RnG (Reconstruction and Generation), a novel feed-forward Transformer that unifies these two tasks by predicting an implicit, complete 3D representation. At the core of RnG, we propose a reconstruction-guided causal attention mechanism that separates reconstruction and generation at the attention level, and treats the KV-cache as an implicit 3D representation. Then, arbitrary poses can efficiently query this cache to render high-fidelity, novel-view RGBD outputs. As a result, RnG not only accurately reconstructs visible geometry but also generates plausible, coherent unseen geometry and appearance. Our method achieves state-of-the-art performance in both generalizable 3D reconstruction and novel view generation, while operating efficiently enough for real-time interactive applications. Project page: https://npucvr.github.io/RnG",
-      "pdf_url": "https://arxiv.org/pdf/2603.01194v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.01194v1",
-      "published": "2026-03-01",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Robust Weighted Triangulation of Causal Effects Under Model Uncertainty",
-      "authors": [
-        "Rohit Bhattacharya",
-        "Ina Ocelli",
-        "Ted Westling"
-      ],
-      "abstract": "A fundamental challenge in causal inference with observational data is correct specification of a causal model. When there is model uncertainty, analysts may seek to use estimates from multiple candidate models that rely on distinct, and possibly partially overlapping, sets of identifying assumptions to infer the causal effect, a process known as triangulation. Principled methods for triangulation, however, remain underdeveloped. Here, we develop a framework for causal effect triangulation that combines model testability methods from causal discovery with statistical inference methods from semiparametric theory, while avoiding explicit model selection and post-selection inference problems. We propose a triangulation functional that combines identified functionals from each model with data-driven measures of model validity. We provide a bound on the distance of the functional from the true causal effect along with conditions under which this distance can be taken to zero. Finally, we derive valid statistical inference for this functional. Our framework formalizes robustness under causal pluralism without requiring agreement across models or commitment to a single specification. We demonstrate its performance through simulations and an empirical application.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01119v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.01119v1",
-      "published": "2026-03-01",
+      "abstract": "Method validation and study design in causal inference rely on synthetic data with known counterfactuals. Existing simulators trade off distributional realism, the ability to capture mixed-type and multimodal tabular data, against causal controllability, including explicit control over overlap, unmeasured confounding, and treatment effect heterogeneity. We introduce CausalMix, a variational generative framework that closes this gap by coupling a mixture of Gaussian latent priors with data-type-specific decoders for continuous, binary, and categorical variables. The model incorporates explicit causal controls: an overlap regularizer shaping propensity-score distributions, alongside direct parameterizations of confounding strength and effect heterogeneity. This unified objective preserves fidelity to the observed data while enabling factorial manipulation of causal mechanisms, allowing overlap, confounding strength, and treatment effect heterogeneity to be varied independently at design time. Across benchmarks, CausalMix achieves state-of-the-art distributional metrics on mixed-type tables while providing stable, fine-grained causal control. We demonstrate practical utility in a comparative safety study of metastatic castration-resistant prostate cancer treatments, using CausalMix to compare estimators under calibrated data-generating processes, tune hyperparameters, and conduct simulation-based power analyses under targeted treatment effect heterogeneity scenarios.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03587v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.03587v1",
+      "published": "2026-03-03",
       "categories": [
         "stat.ME",
-        "cs.AI"
+        "cs.LG",
+        "stat.ML"
       ]
     },
     {
-      "title": "Navigating Time's Possibilities: Plausible Counterfactual Explanations for Multivariate Time-Series Forecast through Genetic Algorithms",
+      "title": "Chain of World: World Model Thinking in Latent Motion",
       "authors": [
-        "Gianlucca Zuin",
-        "Adriano Veloso"
+        "Fuxiang Yang",
+        "Donglin Di",
+        "Lulu Tang",
+        "Xuancheng Zhang",
+        "Lei Fan",
+        "Hao Li",
+        "Chen Wei",
+        "Tonghua Su",
+        "Baorui Ma"
       ],
-      "abstract": "Counterfactual learning has become promising for understanding and modeling causality in complex and dynamic systems. This paper presents a novel method for counterfactual learning in the context of multivariate time series analysis and forecast. The primary objective is to uncover hidden causal relationships and identify potential interventions to achieve desired outcomes. The proposed methodology integrates genetic algorithms and rigorous causality tests to infer and validate counterfactual dependencies within temporal sequences. More specifically, we employ Granger causality to enhance the reliability of identified causal relationships, rigorously assessing their statistical significance. Then, genetic algorithms, in conjunction with quantile regression, are used to exploit these intricate causal relationships to project future scenarios. The synergy between genetic algorithms and causality tests ensures a thorough exploration of the temporal dynamics present in the data, revealing hidden dependencies and enabling the projection of outcomes under hypothetical interventions. We evaluate the performance of our algorithm on real-world data, showcasing its ability to handle complex causal relationships, revealing meaningful counterfactual insights, and allowing for the prediction of outcomes under hypothetical interventions.",
-      "pdf_url": "https://arxiv.org/pdf/2603.00855v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.00855v1",
-      "published": "2026-03-01",
+      "abstract": "Vision-Language-Action (VLA) models are a promising path toward embodied intelligence, yet they often overlook the predictive and temporal-causal structure underlying visual dynamics. World-model VLAs address this by predicting future frames, but waste capacity reconstructing redundant backgrounds. Latent-action VLAs encode frame-to-frame transitions compactly, but lack temporally continuous dynamic modeling and world knowledge. To overcome these limitations, we introduce CoWVLA (Chain-of-World VLA), a new \"Chain of World\" paradigm that unifies world-model temporal reasoning with a disentangled latent motion representation. First, a pretrained video VAE serves as a latent motion extractor, explicitly factorizing video segments into structure and motion latents. Then, during pre-training, the VLA learns from an instruction and an initial frame to infer a continuous latent motion chain and predict the segment's terminal frame. Finally, during co-fine-tuning, this latent dynamic is aligned with discrete action prediction by jointly modeling sparse keyframes and action sequences in a unified autoregressive decoder. This design preserves the world-model benefits of temporal reasoning and world knowledge while retaining the compactness and interpretability of latent actions, enabling efficient visuomotor learning. Extensive experiments on robotic simulation benchmarks show that CoWVLA outperforms existing world-model and latent-action approaches and achieves moderate computational efficiency, highlighting its potential as a more effective VLA pretraining paradigm. The project website can be found at https://fx-hit.github.io/cowvla-io.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03195v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.03195v1",
+      "published": "2026-03-03",
       "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "AI Space Physics: Constitutive boundary semantics for open AI institutions",
+      "authors": [
+        "Oleg Romanchuk",
+        "Roman Bondar"
+      ],
+      "abstract": "Agentic AI deployments increasingly behave as persistent institutions rather than one-shot inference endpoints: they accumulate state, invoke external tools, coordinate multiple runtimes, and modify their future authority surface over time. Existing governance language typically specifies decision-layer constraints but leaves the causal mechanics of boundary crossing underdefined, particularly for transitions that do not immediately change the external world yet expand what the institution can later do.\n  This paper introduces AI Space Physics as a constitutive semantics for open, self-expanding AI institutions. We define a minimal state model with typed boundary channels, horizon-limited reach semantics, and a membrane-witness discipline. The core law family (P-1, P-1a, P-1b, P-1c) requires witness completeness, non-bypass mediation, atomic adjudication-to-effect transitions, and replayable reconstruction of adjudication class. We explicitly separate second-order effects into structural expansion and policy broadening, and treat expansion transitions as governance-relevant even when immediate external deltas are zero.\n  The novelty claim is precise rather than expansive: this work does not introduce mediation as a concept; it reclassifies authority-surface expansion as a first-class boundary event with constitutive witness obligations. In this semantics, expansion without immediate commit remains adjudication-relevant.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03119v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.03119v1",
+      "published": "2026-03-03",
+      "categories": [
+        "cs.AI",
+        "cs.LO"
+      ]
+    },
+    {
+      "title": "Generalized Bayes for Causal Inference",
+      "authors": [
+        "Emil Javurek",
+        "Dennis Frauen",
+        "Yuxin Wang",
+        "Stefan Feuerriegel"
+      ],
+      "abstract": "Uncertainty quantification is central to many applications of causal machine learning, yet principled Bayesian inference for causal effects remains challenging. Standard Bayesian approaches typically require specifying a probabilistic model for the data-generating process, including high-dimensional nuisance components such as propensity scores and outcome regressions. Standard posteriors are thus vulnerable to strong modeling choices, including complex prior elicitation. In this paper, we propose a generalized Bayesian framework for causal inference. Our framework avoids explicit likelihood modeling; instead, we place priors directly on the causal estimands and update these using an identification-driven loss function, which yields generalized posteriors for causal effects. As a result, our framework turns existing loss-based causal estimators into estimators with full uncertainty quantification. Our framework is flexible and applicable to a broad range of causal estimands (e.g., ATE, CATE). Further, our framework can be applied on top of state-of-the-art causal machine learning pipelines (e.g., Neyman-orthogonal meta-learners). For Neyman-orthogonal losses, we show that the generalized posteriors converge to their oracle counterparts and remain robust to first-stage nuisance estimation error. With calibration, we thus obtain valid frequentist uncertainty even when nuisance estimators converge at slower-than-parametric rates. Empirically, we demonstrate that our proposed framework offers causal effect estimation with calibrated uncertainty across several causal inference settings. To the best of our knowledge, this is the first flexible framework for constructing generalized Bayesian posteriors for causal machine learning.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03035v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.03035v1",
+      "published": "2026-03-03",
+      "categories": [
+        "stat.ML",
         "cs.LG"
       ]
     }
