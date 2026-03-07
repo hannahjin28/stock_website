@@ -1,6 +1,95 @@
 {
-  "last_updated": "2026-03-06T01:14:54.169874",
+  "last_updated": "2026-03-07T01:06:40.926340",
   "papers": [
+    {
+      "title": "InfoFlow KV: Information-Flow-Aware KV Recomputation for Long Context",
+      "authors": [
+        "Xin Teng",
+        "Canyu Zhang",
+        "Shaoyi Zheng",
+        "Danyang Zhuo",
+        "Tianyi Zhou",
+        "Shengjie Wang"
+      ],
+      "abstract": "Retrieval-augmented generation (RAG) for long-context question answering is bottlenecked by inference-time prefilling over large retrieved contexts. A common strategy is to precompute key-value (KV) caches for individual documents and selectively recompute a small subset of tokens to restore global causal dependencies, but existing methods rely on heuristics or representation discrepancies without modeling whether selected tokens can effectively influence generation. We cast selective KV recomputation as an information flow problem and show that a simple attention-norm signal from the query reliably identifies tokens that are both semantically relevant and structurally positioned to propagate information, when computed under an inference-consistent RoPE geometry. We therefore reconstruct global positional assignments for retrieved chunks and introduce an information-flow-guided chunk reordering strategy. Experiments on LLM and VLM benchmarks demonstrate consistent gains over prior methods under comparable efficiency budgets.",
+      "pdf_url": "https://arxiv.org/pdf/2603.05353v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.05353v1",
+      "published": "2026-03-05",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Boosting ASR Robustness via Test-Time Reinforcement Learning with Audio-Text Semantic Rewards",
+      "authors": [
+        "Linghan Fang",
+        "Tianxin Xie",
+        "Li Liu"
+      ],
+      "abstract": "Recently, Automatic Speech Recognition (ASR) systems (e.g., Whisper) have achieved remarkable accuracy improvements but remain highly sensitive to real-world unseen data (data with large distribution shifts), including noisy environments and diverse accents. To address this issue, test-time adaptation (TTA) has shown great potential in improving the model adaptability at inference time without ground-truth labels, and existing TTA methods often rely on pseudo-labeling or entropy minimization. However, by treating model confidence as a learning signal, these methods may reinforce high-confidence errors, leading to confirmation bias that undermines adaptation. To overcome these limitations, we present ASR-TRA, a novel Test-time Reinforcement Adaptation framework inspired by causal intervention. More precisely, our method introduces a learnable decoder prompt and utilizes temperature-controlled stochastic decoding to generate diverse transcription candidates. These are scored by a reward model that measures audio-text semantic alignment, and the resulting feedback is used to update both model and prompt parameters via reinforcement learning. Comprehensive experiments on LibriSpeech with synthetic noise and L2 Arctic accented English datasets demonstrate that our method achieves higher accuracy while maintaining lower latency than existing TTA baselines. Ablation studies further confirm the effectiveness of combining audio and language-based rewards, highlighting our method's enhanced stability and interpretability. Overall, our approach provides a practical and robust solution for deploying ASR systems in challenging real-world conditions.",
+      "pdf_url": "https://arxiv.org/pdf/2603.05231v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.05231v1",
+      "published": "2026-03-05",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "C2-Faith: Benchmarking LLM Judges for Causal and Coverage Faithfulness in Chain-of-Thought Reasoning",
+      "authors": [
+        "Avni Mittal",
+        "Rauno Arike"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly used as judges of chain-of-thought (CoT) reasoning, but it remains unclear whether they can reliably assess process faithfulness rather than just answer plausibility. We introduce C2-Faith, a benchmark built from PRM800K that targets two complementary dimensions of faithfulness: causality (does each step logically follow from prior context?) and coverage (are essential intermediate inferences present?). Using controlled perturbations, we create examples with known causal error positions by replacing a single step with an acausal variant, and with controlled coverage deletions at varying deletion rates (scored against reference labels). We evaluate three frontier judges under three tasks: binary causal detection, causal step localization, and coverage scoring. The results show that model rankings depend strongly on task framing, with no single judge dominating all settings; all judges exhibit a substantial gap between detecting an error and localizing it; and coverage judgments are systematically inflated for incomplete reasoning. These findings clarify when LLM judges are dependable and where they fail, and provide practical guidance for selecting judges in process-level evaluation",
+      "pdf_url": "https://arxiv.org/pdf/2603.05167v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.05167v1",
+      "published": "2026-03-05",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Design Behaviour Codes (DBCs): A Taxonomy-Driven Layered Governance Benchmark for Large Language Models",
+      "authors": [
+        "G. Madan Mohan",
+        "Veena Kiran Nambiar",
+        "Kiranmayee Janardhan"
+      ],
+      "abstract": "We introduce the Dynamic Behavioral Constraint (DBC) benchmark, the first empirical framework for evaluating the efficacy of a structured, 150-control behavioral governance layer, the MDBC (Madan DBC) system, applied at inference time to large language models (LLMs). Unlike training time alignment methods (RLHF, DPO) or post-hoc content moderation APIs, DBCs constitute a system prompt level governance layer that is model-agnostic, jurisdiction-mappable, and auditable. We evaluate the DBC Framework across a 30 domain risk taxonomy organized into six clusters (Hallucination and Calibration, Bias and Fairness, Malicious Use, Privacy and Data Protection, Robustness and Reliability, and Misalignment Agency) using an agentic red-team protocol with five adversarial attack strategies (Direct, Roleplay, Few-Shot, Hypothetical, Authority Spoof) across 3 model families. Our three-arm controlled design (Base, Base plus Moderation, Base plus DBC) enables causal attribution of risk reduction. Key findings: the DBC layer reduces the aggregate Risk Exposure Rate (RER) from 7.19 percent (Base) to 4.55 percent (Base plus DBC), representing a 36.8 percent relative risk reduction, compared with 0.6 percent for a standard safety moderation prompt. MDBC Adherence Scores improve from 8.6 by 10 (Base) to 8.7 by 10 (Base plus DBC). EU AI Act compliance (automated scoring) reaches 8.5by 10 under the DBC layer. A three judge evaluation ensemble yields Fleiss kappa greater than 0.70 (substantial agreement), validating our automated pipeline. Cluster ablation identifies the Integrity Protection cluster (MDBC 081 099) as delivering the highest per domain risk reduction, while graybox adversarial attacks achieve a DBC Bypass Rate of 4.83 percent . We release the benchmark code, prompt database, and all evaluation artefacts to enable reproducibility and longitudinal tracking as models evolve.",
+      "pdf_url": "https://arxiv.org/pdf/2603.04837v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.04837v1",
+      "published": "2026-03-05",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Proximal Learning for Trials With External Controls: A Case Study in HIV Prevention",
+      "authors": [
+        "Yilin Song",
+        "Yinxiang Wu",
+        "Raphael J. Landovitz",
+        "Susan Buchbinder",
+        "Srilatha Edupuganti",
+        "Lydia Soto-Torres",
+        "Kendrick Li",
+        "Xu Shi",
+        "Fei Gao",
+        "Deborah Donnell",
+        "Holly Janes",
+        "Ting Ye"
+      ],
+      "abstract": "With the advent of effective pre-exposure prophylaxis agents, active-controlled HIV prevention trials have become a common study design. Nevertheless, estimating absolute efficacy relative to a placebo remains important. In this paper, we introduce a novel application of proximal causal inference methods to estimate the counterfactual cumulative HIV incidence under placebo for participants in an active-controlled trial of cabotegravir, using external control data from a placebo-controlled trial with similar eligibility criteria. We leverage baseline sexually transmitted infection status and geographic region as negative control outcome and exposure variables, respectively. We address two key challenges: unmeasured differences in HIV risk between trials and statistical difficulties arising from low HIV incidence rates in both studies. To overcome these challenges, we develop two proximal inference approaches: (1) a semiparametric inverse probability of censoring weighting estimator, and (2) a two-stage regression-based strategy tailored to low-event-rate settings. Our theoretical and numerical investigations demonstrate these methods yield reliable estimates of the counterfactual one-year cumulative HIV incidence under placebo, and provide robust evidence of the superior efficacy of cabotegravir compared with placebo. These findings highlight the potential of proximal inference methods to estimate placebo-controlled effects in both single-arm and active-controlled trials by leveraging external controls.",
+      "pdf_url": "https://arxiv.org/pdf/2603.04544v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.04544v1",
+      "published": "2026-03-04",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "Spatial Causal Prediction in Video",
       "authors": [
@@ -23,6 +112,24 @@
       "published": "2026-03-04",
       "categories": [
         "cs.CV"
+      ]
+    },
+    {
+      "title": "Dictionary Based Pattern Entropy for Causal Direction Discovery",
+      "authors": [
+        "Harikrishnan N B",
+        "Shubham Bhilare",
+        "Aditi Kathpalia",
+        "Nithin Nagaraj"
+      ],
+      "abstract": "Discovering causal direction from temporal observational data is particularly challenging for symbolic sequences, where functional models and noise assumptions are often unavailable. We propose a novel \\emph{Dictionary Based Pattern Entropy ($DPE$)} framework that infers both the direction of causation and the specific subpatterns driving changes in the effect variable. The framework integrates \\emph{Algorithmic Information Theory} (AIT) and \\emph{Shannon Information Theory}. Causation is interpreted as the emergence of compact, rule based patterns in the candidate cause that systematically constrain the effect. $DPE$ constructs direction-specific dictionaries and quantifies their influence using entropy-based measures, enabling a principled link between deterministic pattern structure and stochastic variability. Causal direction is inferred via a minimum-uncertainty criterion, selecting the direction exhibiting stronger and more consistent pattern-driven organization. As summarized in Table 7, $DPE$ consistently achieves reliable performance across diverse synthetic systems, including delayed bit-flip perturbations, AR(1) coupling, 1D skew-tent maps, and sparse processes, outperforming or matching competing AIT-based methods ($ETC_E$, $ETC_P$, $LZ_P$). In biological and ecological datasets, performance is competitive, while alternative methods show advantages in specific genomic settings. Overall, the results demonstrate that minimizing pattern level uncertainty yields a robust, interpretable, and broadly applicable framework for causal discovery.",
+      "pdf_url": "https://arxiv.org/pdf/2603.04473v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.04473v1",
+      "published": "2026-03-04",
+      "categories": [
+        "stat.ML",
+        "cs.IT",
+        "cs.LG"
       ]
     },
     {
@@ -82,117 +189,6 @@
         "cs.LG",
         "cs.AI",
         "cs.DB"
-      ]
-    },
-    {
-      "title": "Observationally Informed Adaptive Causal Experimental Design",
-      "authors": [
-        "Erdun Gao",
-        "Liang Zhang",
-        "Jake Fawkes",
-        "Aoqi Zuo",
-        "Wenqin Liu",
-        "Haoxuan Li",
-        "Mingming Gong",
-        "Dino Sejdinovic"
-      ],
-      "abstract": "Randomized Controlled Trials (RCTs) represent the gold standard for causal inference yet remain a scarce resource. While large-scale observational data is often available, it is utilized only for retrospective fusion, and remains discarded in prospective trial design due to bias concerns. We argue this \"tabula rasa\" data acquisition strategy is fundamentally inefficient. In this work, we propose Active Residual Learning, a new paradigm that leverages the observational model as a foundational prior. This approach shifts the experimental focus from learning target causal quantities from scratch to efficiently estimating the residuals required to correct observational bias. To operationalize this, we introduce the R-Design framework. Theoretically, we establish two key advantages: (1) a structural efficiency gap, proving that estimating smooth residual contrasts admits strictly faster convergence rates than reconstructing full outcomes; and (2) information efficiency, where we quantify the redundancy in standard parameter-based acquisition (e.g., BALD), demonstrating that such baselines waste budget on task-irrelevant nuisance uncertainty. We propose R-EPIG (Residual Expected Predictive Information Gain), a unified criterion that directly targets the causal estimand, minimizing residual uncertainty for estimation or clarifying decision boundaries for policy. Experiments on synthetic and semi-synthetic benchmarks demonstrate that R-Design significantly outperforms baselines, confirming that repairing a biased model is far more efficient than learning one from scratch.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03785v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.03785v1",
-      "published": "2026-03-04",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Specification-Driven Generation and Evaluation of Discrete-Event World Models via the DEVS Formalism",
-      "authors": [
-        "Zheyu Chen",
-        "Zhuohuan Li",
-        "Chuanhao Li"
-      ],
-      "abstract": "World models are essential for planning and evaluation in agentic systems, yet existing approaches lie at two extremes: hand-engineered simulators that offer consistency and reproducibility but are costly to adapt, and implicit neural models that are flexible but difficult to constrain, verify, and debug over long horizons. We seek a principled middle ground that combines the reliability of explicit simulators with the flexibility of learned models, allowing world models to be adapted during online execution. By targeting a broad class of environments whose dynamics are governed by the ordering, timing, and causality of discrete events, such as queueing and service operations, embodied task planning, and message-mediated multi-agent coordination, we advocate explicit, executable discrete-event world models synthesized directly from natural-language specifications. Our approach adopts the DEVS formalism and introduces a staged LLM-based generation pipeline that separates structural inference of component interactions from component-level event and timing logic. To evaluate generated models without a unique ground truth, simulators emit structured event traces that are validated against specification-derived temporal and semantic constraints, enabling reproducible verification and localized diagnostics. Together, these contributions produce world models that are consistent over long-horizon rollouts, verifiable from observable behavior, and efficient to synthesize on demand during online execution.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03784v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.03784v1",
-      "published": "2026-03-04",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Controllable Generative Sandbox for Causal Inference",
-      "authors": [
-        "Qi Zhang",
-        "Harsh Parikh",
-        "Ashley Naimi",
-        "Razieh Nabi",
-        "Christopher Kim",
-        "Timothy Lash"
-      ],
-      "abstract": "Method validation and study design in causal inference rely on synthetic data with known counterfactuals. Existing simulators trade off distributional realism, the ability to capture mixed-type and multimodal tabular data, against causal controllability, including explicit control over overlap, unmeasured confounding, and treatment effect heterogeneity. We introduce CausalMix, a variational generative framework that closes this gap by coupling a mixture of Gaussian latent priors with data-type-specific decoders for continuous, binary, and categorical variables. The model incorporates explicit causal controls: an overlap regularizer shaping propensity-score distributions, alongside direct parameterizations of confounding strength and effect heterogeneity. This unified objective preserves fidelity to the observed data while enabling factorial manipulation of causal mechanisms, allowing overlap, confounding strength, and treatment effect heterogeneity to be varied independently at design time. Across benchmarks, CausalMix achieves state-of-the-art distributional metrics on mixed-type tables while providing stable, fine-grained causal control. We demonstrate practical utility in a comparative safety study of metastatic castration-resistant prostate cancer treatments, using CausalMix to compare estimators under calibrated data-generating processes, tune hyperparameters, and conduct simulation-based power analyses under targeted treatment effect heterogeneity scenarios.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03587v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.03587v1",
-      "published": "2026-03-03",
-      "categories": [
-        "stat.ME",
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Chain of World: World Model Thinking in Latent Motion",
-      "authors": [
-        "Fuxiang Yang",
-        "Donglin Di",
-        "Lulu Tang",
-        "Xuancheng Zhang",
-        "Lei Fan",
-        "Hao Li",
-        "Chen Wei",
-        "Tonghua Su",
-        "Baorui Ma"
-      ],
-      "abstract": "Vision-Language-Action (VLA) models are a promising path toward embodied intelligence, yet they often overlook the predictive and temporal-causal structure underlying visual dynamics. World-model VLAs address this by predicting future frames, but waste capacity reconstructing redundant backgrounds. Latent-action VLAs encode frame-to-frame transitions compactly, but lack temporally continuous dynamic modeling and world knowledge. To overcome these limitations, we introduce CoWVLA (Chain-of-World VLA), a new \"Chain of World\" paradigm that unifies world-model temporal reasoning with a disentangled latent motion representation. First, a pretrained video VAE serves as a latent motion extractor, explicitly factorizing video segments into structure and motion latents. Then, during pre-training, the VLA learns from an instruction and an initial frame to infer a continuous latent motion chain and predict the segment's terminal frame. Finally, during co-fine-tuning, this latent dynamic is aligned with discrete action prediction by jointly modeling sparse keyframes and action sequences in a unified autoregressive decoder. This design preserves the world-model benefits of temporal reasoning and world knowledge while retaining the compactness and interpretability of latent actions, enabling efficient visuomotor learning. Extensive experiments on robotic simulation benchmarks show that CoWVLA outperforms existing world-model and latent-action approaches and achieves moderate computational efficiency, highlighting its potential as a more effective VLA pretraining paradigm. The project website can be found at https://fx-hit.github.io/cowvla-io.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03195v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.03195v1",
-      "published": "2026-03-03",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "AI Space Physics: Constitutive boundary semantics for open AI institutions",
-      "authors": [
-        "Oleg Romanchuk",
-        "Roman Bondar"
-      ],
-      "abstract": "Agentic AI deployments increasingly behave as persistent institutions rather than one-shot inference endpoints: they accumulate state, invoke external tools, coordinate multiple runtimes, and modify their future authority surface over time. Existing governance language typically specifies decision-layer constraints but leaves the causal mechanics of boundary crossing underdefined, particularly for transitions that do not immediately change the external world yet expand what the institution can later do.\n  This paper introduces AI Space Physics as a constitutive semantics for open, self-expanding AI institutions. We define a minimal state model with typed boundary channels, horizon-limited reach semantics, and a membrane-witness discipline. The core law family (P-1, P-1a, P-1b, P-1c) requires witness completeness, non-bypass mediation, atomic adjudication-to-effect transitions, and replayable reconstruction of adjudication class. We explicitly separate second-order effects into structural expansion and policy broadening, and treat expansion transitions as governance-relevant even when immediate external deltas are zero.\n  The novelty claim is precise rather than expansive: this work does not introduce mediation as a concept; it reclassifies authority-surface expansion as a first-class boundary event with constitutive witness obligations. In this semantics, expansion without immediate commit remains adjudication-relevant.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03119v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.03119v1",
-      "published": "2026-03-03",
-      "categories": [
-        "cs.AI",
-        "cs.LO"
-      ]
-    },
-    {
-      "title": "Generalized Bayes for Causal Inference",
-      "authors": [
-        "Emil Javurek",
-        "Dennis Frauen",
-        "Yuxin Wang",
-        "Stefan Feuerriegel"
-      ],
-      "abstract": "Uncertainty quantification is central to many applications of causal machine learning, yet principled Bayesian inference for causal effects remains challenging. Standard Bayesian approaches typically require specifying a probabilistic model for the data-generating process, including high-dimensional nuisance components such as propensity scores and outcome regressions. Standard posteriors are thus vulnerable to strong modeling choices, including complex prior elicitation. In this paper, we propose a generalized Bayesian framework for causal inference. Our framework avoids explicit likelihood modeling; instead, we place priors directly on the causal estimands and update these using an identification-driven loss function, which yields generalized posteriors for causal effects. As a result, our framework turns existing loss-based causal estimators into estimators with full uncertainty quantification. Our framework is flexible and applicable to a broad range of causal estimands (e.g., ATE, CATE). Further, our framework can be applied on top of state-of-the-art causal machine learning pipelines (e.g., Neyman-orthogonal meta-learners). For Neyman-orthogonal losses, we show that the generalized posteriors converge to their oracle counterparts and remain robust to first-stage nuisance estimation error. With calibration, we thus obtain valid frequentist uncertainty even when nuisance estimators converge at slower-than-parametric rates. Empirically, we demonstrate that our proposed framework offers causal effect estimation with calibrated uncertainty across several causal inference settings. To the best of our knowledge, this is the first flexible framework for constructing generalized Bayesian posteriors for causal machine learning.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03035v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.03035v1",
-      "published": "2026-03-03",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
       ]
     }
   ]
