@@ -1,6 +1,98 @@
 {
-  "last_updated": "2026-03-09T01:11:42.929367",
+  "last_updated": "2026-03-10T01:06:27.994708",
   "papers": [
+    {
+      "title": "Interpretable Aneurysm Classification via 3D Concept Bottleneck Models: Integrating Morphological and Hemodynamic Clinical Features",
+      "authors": [
+        "Toqa Khaled",
+        "Ahmad Al-Kabbany"
+      ],
+      "abstract": "We are concerned with the challenge of reliably classifying and assessing intracranial aneurysms using deep learning without compromising clinical transparency. While traditional black-box models achieve high predictive accuracy, their lack of inherent interpretability remains a significant barrier to clinical adoption and regulatory approval. Explainability is paramount in medical modeling to ensure that AI-driven diagnoses align with established neurosurgical principles. Unlike traditional eXplainable AI (XAI) methods -- such as saliency maps, which often provide post-hoc, non-causal visual correlations -- Concept Bottleneck Models (CBMs) offer a robust alternative by constraining the model's internal logic to human-understandable clinical indices.\n  In this article, we propose an end-to-end 3D Concept Bottleneck framework that maps high-dimensional neuroimaging features to a discrete set of morphological and hemodynamic concepts for aneurysm identification. We implemented this pipeline using a pre-trained 3D ResNet-34 backbone and a 3D DenseNet-121 to extract features from CTA volumes, which were subsequently processed through a soft bottleneck layer representing human-interpretable clinical concepts. The model was optimized using a joint-loss function to balance diagnostic focal loss and concept mean squared error (MSE), validated via stratified five-fold cross-validation.\n  Our results demonstrate a peak task classification accuracy of 93.33% +/- 4.5% for the ResNet-34 architecture and 91.43% +/- 5.8% for the DenseNet-121 model. Furthermore, the implementation of 8-pass Test-Time Augmentation (TTA) yielded a robust mean accuracy of 88.31%, ensuring diagnostic stability during inference. By maintaining an accuracy-generalization gap of less than 0.04, this framework proves that high predictive performance can be achieved without sacrificing interpretability.",
+      "pdf_url": "https://arxiv.org/pdf/2603.07399v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.07399v1",
+      "published": "2026-03-08",
+      "categories": [
+        "cs.CV",
+        "eess.SP"
+      ]
+    },
+    {
+      "title": "VisualScratchpad: Inference-time Visual Concepts Analysis in Vision Language Models",
+      "authors": [
+        "Hyesu Lim",
+        "Jinho Choi",
+        "Taekyung Kim",
+        "Byeongho Heo",
+        "Jaegul Choo",
+        "Dongyoon Han"
+      ],
+      "abstract": "High-performing vision language models still produce incorrect answers, yet their failure modes are often difficult to explain. To make model internals more accessible and enable systematic debugging, we introduce VisualScratchpad, an interactive interface for visual concept analysis during inference. We apply sparse autoencoders to the vision encoder and link the resulting visual concepts to text tokens via text-to-image attention, allowing us to examine which visual concepts are both captured by the vision encoder and utilized by the language model. VisualScratchpad also provides a token-latent heatmap view that suggests a sufficient set of latents for effective concept ablation in causal analysis. Through case studies, we reveal three underexplored failure modes: limited cross-modal alignment, misleading visual concepts, and unused hidden cues. Project page: https://hyesulim.github.io/visual_scratchpad_projectpage/",
+      "pdf_url": "https://arxiv.org/pdf/2603.07335v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.07335v1",
+      "published": "2026-03-07",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Causal Attribution of Coastal Water Clarity Degradation to Nickel Processing Expansion at the Indonesia Morowali Industrial Park, Sulawesi",
+      "authors": [
+        "Sandy Hardian Susanto Herho",
+        "Alfita Puspa Handayani",
+        "Iwan Pramesti Anwar",
+        "Faruq Khadami",
+        "Karina Aprilia Sujatmiko",
+        "Doandy Yonathan Wibisono",
+        "Rusmawan Suwarman",
+        "Dasapta Erwin Irawan"
+      ],
+      "abstract": "Indonesia's nickel ore export ban has driven rapid expansion of smelting and hydrometallurgical processing capacity at the Indonesia Morowali Industrial Park (IMIP), now the world's largest integrated nickel processing complex, on the coast of Central Sulawesi. Whether this industrialization has degraded the adjacent marine environment remains unquantified. We apply Bayesian structural time-series (BSTS) causal inference to a multi-decadal, multi-sensor satellite ocean color record of the diffuse attenuation coefficient at 490 nm, $K_d(490)$, to test for a causal link between IMIP expansion and nearshore turbidity change. A consensus structural breakpoint, a significant posterior causal effect estimated against a Banda Sea counterfactual, and a distribution-free placebo rank test collectively establish that coastal water clarity deteriorated after the transition from initial nickel pig iron production to hyper-expansion of high-pressure acid leaching facilities for battery-grade nickel. Satellite-derived land cover analysis independently corroborates this timing, showing substantial built-area growth and concurrent tree cover loss within the IMIP footprint. The resulting euphotic zone shoaling occurs in oligotrophic waters supporting high marine biodiversity, where even moderate optical degradation may impair coral photosynthesis and compress depth-dependent reef habitat. These findings quantify a marine environmental cost absent from Indonesia's mineral downstreaming policy discourse and demonstrate a transferable, satellite-based quasi-experimental framework for causal impact assessment at coastal industrial sites in data-limited tropical settings.",
+      "pdf_url": "https://arxiv.org/pdf/2603.07331v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.07331v1",
+      "published": "2026-03-07",
+      "categories": [
+        "physics.ao-ph",
+        "physics.soc-ph",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "MedSteer: Counterfactual Endoscopic Synthesis via Training-Free Activation Steering",
+      "authors": [
+        "Trong-Thang Pham",
+        "Loc Nguyen",
+        "Anh Nguyen",
+        "Hien Nguyen",
+        "Ngan Le"
+      ],
+      "abstract": "Generative diffusion models are increasingly used for medical imaging data augmentation, but text prompting cannot produce causal training data. Re-prompting rerolls the entire generation trajectory, altering anatomy, texture, and background. Inversion-based editing methods introduce reconstruction error that causes structural drift. We propose MedSteer, a training-free activation-steering framework for endoscopic synthesis. MedSteer identifies a pathology vector for each contrastive prompt pair in the cross-attention layers of a diffusion transformer. At inference time, it steers image activations along this vector, generating counterfactual pairs from scratch where the only difference is the steered concept. All other structure is preserved by construction. We evaluate MedSteer across three experiments on Kvasir v3 and HyperKvasir. On counterfactual generation across three clinical concept pairs, MedSteer achieves flip rates of 0.800, 0.925, and 0.950, outperforming the best inversion-based baseline in both concept flip rate and structural preservation. On dye disentanglement, MedSteer achieves 75% dye removal against 20% (PnP) and 10% (h-Edit). On downstream polyp detection, augmenting with MedSteer counterfactual pairs achieves ViT AUC of 0.9755 versus 0.9083 for quantity-matched re-prompting, confirming that counterfactual structure drives the gain. Code is at link https://github.com/phamtrongthang123/medsteer",
+      "pdf_url": "https://arxiv.org/pdf/2603.07066v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.07066v1",
+      "published": "2026-03-07",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Masked Unfairness: Hiding Causality within Zero ATE",
+      "authors": [
+        "Zou Yang",
+        "Sophia Xiao",
+        "Bijan Mazaheri"
+      ],
+      "abstract": "Recent work has proposed powerful frameworks, rooted in causal theory, to quantify fairness. Causal inference has primarily emphasized the detection of \\emph{average} treatment effects (ATEs), and subsequent notions of fairness have inherited this focus. In this paper, we build on previous concerns about regulation based on averages. In particular, we formulate the \"causal masking problem\" as a linear program that optimizes an alternative objective, such as maximizing profit or minimizing crime, while retaining a zero ATE (i.e., the ATE between a protected attribute and a decision). By studying the capabilities and limitations of causal masking, we show that optimization under ATE-based regulation may induce significant unequal treatment. We demonstrate that the divergence between true and causally masked fairness is driven by confounding, underscoring the importance of full conditional-independence testing when assessing fairness. Finally, we discuss statistical and information-theoretic limitations that make causally masked solutions very difficult to detect, allowing them to persist for long periods. These results argue that we must regulate fairness at the model-level, rather than at the decision level.",
+      "pdf_url": "https://arxiv.org/pdf/2603.06984v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.06984v1",
+      "published": "2026-03-07",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.GT",
+        "cs.LG",
+        "cs.SI"
+      ]
+    },
     {
       "title": "Place-it-R1: Unlocking Environment-aware Reasoning Potential of MLLM for Video Object Insertion",
       "authors": [
@@ -87,102 +179,6 @@
       "categories": [
         "cs.SD",
         "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "C2-Faith: Benchmarking LLM Judges for Causal and Coverage Faithfulness in Chain-of-Thought Reasoning",
-      "authors": [
-        "Avni Mittal",
-        "Rauno Arike"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly used as judges of chain-of-thought (CoT) reasoning, but it remains unclear whether they can reliably assess process faithfulness rather than just answer plausibility. We introduce C2-Faith, a benchmark built from PRM800K that targets two complementary dimensions of faithfulness: causality (does each step logically follow from prior context?) and coverage (are essential intermediate inferences present?). Using controlled perturbations, we create examples with known causal error positions by replacing a single step with an acausal variant, and with controlled coverage deletions at varying deletion rates (scored against reference labels). We evaluate three frontier judges under three tasks: binary causal detection, causal step localization, and coverage scoring. The results show that model rankings depend strongly on task framing, with no single judge dominating all settings; all judges exhibit a substantial gap between detecting an error and localizing it; and coverage judgments are systematically inflated for incomplete reasoning. These findings clarify when LLM judges are dependable and where they fail, and provide practical guidance for selecting judges in process-level evaluation",
-      "pdf_url": "https://arxiv.org/pdf/2603.05167v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.05167v1",
-      "published": "2026-03-05",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Design Behaviour Codes (DBCs): A Taxonomy-Driven Layered Governance Benchmark for Large Language Models",
-      "authors": [
-        "G. Madan Mohan",
-        "Veena Kiran Nambiar",
-        "Kiranmayee Janardhan"
-      ],
-      "abstract": "We introduce the Dynamic Behavioral Constraint (DBC) benchmark, the first empirical framework for evaluating the efficacy of a structured, 150-control behavioral governance layer, the MDBC (Madan DBC) system, applied at inference time to large language models (LLMs). Unlike training time alignment methods (RLHF, DPO) or post-hoc content moderation APIs, DBCs constitute a system prompt level governance layer that is model-agnostic, jurisdiction-mappable, and auditable. We evaluate the DBC Framework across a 30 domain risk taxonomy organized into six clusters (Hallucination and Calibration, Bias and Fairness, Malicious Use, Privacy and Data Protection, Robustness and Reliability, and Misalignment Agency) using an agentic red-team protocol with five adversarial attack strategies (Direct, Roleplay, Few-Shot, Hypothetical, Authority Spoof) across 3 model families. Our three-arm controlled design (Base, Base plus Moderation, Base plus DBC) enables causal attribution of risk reduction. Key findings: the DBC layer reduces the aggregate Risk Exposure Rate (RER) from 7.19 percent (Base) to 4.55 percent (Base plus DBC), representing a 36.8 percent relative risk reduction, compared with 0.6 percent for a standard safety moderation prompt. MDBC Adherence Scores improve from 8.6 by 10 (Base) to 8.7 by 10 (Base plus DBC). EU AI Act compliance (automated scoring) reaches 8.5by 10 under the DBC layer. A three judge evaluation ensemble yields Fleiss kappa greater than 0.70 (substantial agreement), validating our automated pipeline. Cluster ablation identifies the Integrity Protection cluster (MDBC 081 099) as delivering the highest per domain risk reduction, while graybox adversarial attacks achieve a DBC Bypass Rate of 4.83 percent . We release the benchmark code, prompt database, and all evaluation artefacts to enable reproducibility and longitudinal tracking as models evolve.",
-      "pdf_url": "https://arxiv.org/pdf/2603.04837v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.04837v1",
-      "published": "2026-03-05",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Proximal Learning for Trials With External Controls: A Case Study in HIV Prevention",
-      "authors": [
-        "Yilin Song",
-        "Yinxiang Wu",
-        "Raphael J. Landovitz",
-        "Susan Buchbinder",
-        "Srilatha Edupuganti",
-        "Lydia Soto-Torres",
-        "Kendrick Li",
-        "Xu Shi",
-        "Fei Gao",
-        "Deborah Donnell",
-        "Holly Janes",
-        "Ting Ye"
-      ],
-      "abstract": "With the advent of effective pre-exposure prophylaxis agents, active-controlled HIV prevention trials have become a common study design. Nevertheless, estimating absolute efficacy relative to a placebo remains important. In this paper, we introduce a novel application of proximal causal inference methods to estimate the counterfactual cumulative HIV incidence under placebo for participants in an active-controlled trial of cabotegravir, using external control data from a placebo-controlled trial with similar eligibility criteria. We leverage baseline sexually transmitted infection status and geographic region as negative control outcome and exposure variables, respectively. We address two key challenges: unmeasured differences in HIV risk between trials and statistical difficulties arising from low HIV incidence rates in both studies. To overcome these challenges, we develop two proximal inference approaches: (1) a semiparametric inverse probability of censoring weighting estimator, and (2) a two-stage regression-based strategy tailored to low-event-rate settings. Our theoretical and numerical investigations demonstrate these methods yield reliable estimates of the counterfactual one-year cumulative HIV incidence under placebo, and provide robust evidence of the superior efficacy of cabotegravir compared with placebo. These findings highlight the potential of proximal inference methods to estimate placebo-controlled effects in both single-arm and active-controlled trials by leveraging external controls.",
-      "pdf_url": "https://arxiv.org/pdf/2603.04544v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.04544v1",
-      "published": "2026-03-04",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Spatial Causal Prediction in Video",
-      "authors": [
-        "Yanguang Zhao",
-        "Jie Yang",
-        "Shengqiong Wu",
-        "Shutong Hu",
-        "Hongbo Qiu",
-        "Yu Wang",
-        "Guijia Zhang",
-        "Tan Kai Ze",
-        "Hao Fei",
-        "Chia-Wen Lin",
-        "Mong-Li Lee",
-        "Wynne Hsu"
-      ],
-      "abstract": "Spatial reasoning, the ability to understand spatial relations, causality, and dynamic evolution, is central to human intelligence and essential for real-world applications such as autonomous driving and robotics. Existing studies, however, primarily assess models on visible spatio-temporal understanding, overlooking their ability to infer unseen past or future spatial states. In this work, we introduce Spatial Causal Prediction (SCP), a new task paradigm that challenges models to reason beyond observation and predict spatial causal outcomes. We further construct SCP-Bench, a benchmark comprising 2,500 QA pairs across 1,181 videos spanning diverse viewpoints, scenes, and causal directions, to support systematic evaluation. Through comprehensive experiments on {23} state-of-the-art models, we reveal substantial gaps between human and model performance, limited temporal extrapolation, and weak causal grounding. We further analyze key factors influencing performance and propose perception-enhancement and reasoning-guided strategies toward advancing spatial causal intelligence. The project page is https://guangstrip.github.io/SCP-Bench.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03944v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.03944v1",
-      "published": "2026-03-04",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Dictionary Based Pattern Entropy for Causal Direction Discovery",
-      "authors": [
-        "Harikrishnan N B",
-        "Shubham Bhilare",
-        "Aditi Kathpalia",
-        "Nithin Nagaraj"
-      ],
-      "abstract": "Discovering causal direction from temporal observational data is particularly challenging for symbolic sequences, where functional models and noise assumptions are often unavailable. We propose a novel \\emph{Dictionary Based Pattern Entropy ($DPE$)} framework that infers both the direction of causation and the specific subpatterns driving changes in the effect variable. The framework integrates \\emph{Algorithmic Information Theory} (AIT) and \\emph{Shannon Information Theory}. Causation is interpreted as the emergence of compact, rule based patterns in the candidate cause that systematically constrain the effect. $DPE$ constructs direction-specific dictionaries and quantifies their influence using entropy-based measures, enabling a principled link between deterministic pattern structure and stochastic variability. Causal direction is inferred via a minimum-uncertainty criterion, selecting the direction exhibiting stronger and more consistent pattern-driven organization. As summarized in Table 7, $DPE$ consistently achieves reliable performance across diverse synthetic systems, including delayed bit-flip perturbations, AR(1) coupling, 1D skew-tent maps, and sparse processes, outperforming or matching competing AIT-based methods ($ETC_E$, $ETC_P$, $LZ_P$). In biological and ecological datasets, performance is competitive, while alternative methods show advantages in specific genomic settings. Overall, the results demonstrate that minimizing pattern level uncertainty yields a robust, interpretable, and broadly applicable framework for causal discovery.",
-      "pdf_url": "https://arxiv.org/pdf/2603.04473v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.04473v1",
-      "published": "2026-03-04",
-      "categories": [
-        "stat.ML",
-        "cs.IT",
         "cs.LG"
       ]
     }
