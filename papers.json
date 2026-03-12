@@ -1,185 +1,180 @@
 {
-  "last_updated": "2026-03-10T01:06:27.994708",
+  "last_updated": "2026-03-12T01:04:07.402659",
   "papers": [
     {
-      "title": "Interpretable Aneurysm Classification via 3D Concept Bottleneck Models: Integrating Morphological and Hemodynamic Clinical Features",
+      "title": "SNPgen: Phenotype-Supervised Genotype Representation and Synthetic Data Generation via Latent Diffusion",
       "authors": [
-        "Toqa Khaled",
-        "Ahmad Al-Kabbany"
+        "Andrea Lampis",
+        "Michela Carlotta Massi",
+        "Nicola Pirastu",
+        "Francesca Ieva",
+        "Matteo Matteucci",
+        "Emanuele Di Angelantonio"
       ],
-      "abstract": "We are concerned with the challenge of reliably classifying and assessing intracranial aneurysms using deep learning without compromising clinical transparency. While traditional black-box models achieve high predictive accuracy, their lack of inherent interpretability remains a significant barrier to clinical adoption and regulatory approval. Explainability is paramount in medical modeling to ensure that AI-driven diagnoses align with established neurosurgical principles. Unlike traditional eXplainable AI (XAI) methods -- such as saliency maps, which often provide post-hoc, non-causal visual correlations -- Concept Bottleneck Models (CBMs) offer a robust alternative by constraining the model's internal logic to human-understandable clinical indices.\n  In this article, we propose an end-to-end 3D Concept Bottleneck framework that maps high-dimensional neuroimaging features to a discrete set of morphological and hemodynamic concepts for aneurysm identification. We implemented this pipeline using a pre-trained 3D ResNet-34 backbone and a 3D DenseNet-121 to extract features from CTA volumes, which were subsequently processed through a soft bottleneck layer representing human-interpretable clinical concepts. The model was optimized using a joint-loss function to balance diagnostic focal loss and concept mean squared error (MSE), validated via stratified five-fold cross-validation.\n  Our results demonstrate a peak task classification accuracy of 93.33% +/- 4.5% for the ResNet-34 architecture and 91.43% +/- 5.8% for the DenseNet-121 model. Furthermore, the implementation of 8-pass Test-Time Augmentation (TTA) yielded a robust mean accuracy of 88.31%, ensuring diagnostic stability during inference. By maintaining an accuracy-generalization gap of less than 0.04, this framework proves that high predictive performance can be achieved without sacrificing interpretability.",
-      "pdf_url": "https://arxiv.org/pdf/2603.07399v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.07399v1",
-      "published": "2026-03-08",
+      "abstract": "Polygenic risk scores and other genomic analyses require large individual-level genotype datasets, yet strict data access restrictions impede sharing. Synthetic genotype generation offers a privacy-preserving alternative, but most existing methods operate unconditionally, producing samples without phenotype alignment, or rely on unsupervised compression, creating a gap between statistical fidelity and downstream task utility. We present SNPgen, a two-stage conditional latent diffusion framework for generating phenotype-supervised synthetic genotypes. SNPgen combines GWAS-guided variant selection (1,024-2,048 trait-associated SNPs) with a variational autoencoder for genotype compression and a latent diffusion model conditioned on binary disease labels via classifier-free guidance. Evaluated on 458,724 UK Biobank individuals across four complex diseases (coronary artery disease, breast cancer, type 1 and type 2 diabetes), models trained on synthetic data matched real-data predictive performance in a train-on-synthetic, test-on-real protocol, approaching genome-wide PRS methods that use $2$-$6\\times$ more variants. Privacy analysis confirmed zero identical matches, near-random membership inference (AUC $\\approx 0.50$), preserved linkage disequilibrium structure, and high allele frequency correlation ($r \\geq 0.95$) with source data. A controlled simulation with known causal effects verified faithful recovery of the imposed genetic association structure.",
+      "pdf_url": "https://arxiv.org/pdf/2603.10873v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.10873v1",
+      "published": "2026-03-11",
       "categories": [
-        "cs.CV",
-        "eess.SP"
-      ]
-    },
-    {
-      "title": "VisualScratchpad: Inference-time Visual Concepts Analysis in Vision Language Models",
-      "authors": [
-        "Hyesu Lim",
-        "Jinho Choi",
-        "Taekyung Kim",
-        "Byeongho Heo",
-        "Jaegul Choo",
-        "Dongyoon Han"
-      ],
-      "abstract": "High-performing vision language models still produce incorrect answers, yet their failure modes are often difficult to explain. To make model internals more accessible and enable systematic debugging, we introduce VisualScratchpad, an interactive interface for visual concept analysis during inference. We apply sparse autoencoders to the vision encoder and link the resulting visual concepts to text tokens via text-to-image attention, allowing us to examine which visual concepts are both captured by the vision encoder and utilized by the language model. VisualScratchpad also provides a token-latent heatmap view that suggests a sufficient set of latents for effective concept ablation in causal analysis. Through case studies, we reveal three underexplored failure modes: limited cross-modal alignment, misleading visual concepts, and unused hidden cues. Project page: https://hyesulim.github.io/visual_scratchpad_projectpage/",
-      "pdf_url": "https://arxiv.org/pdf/2603.07335v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.07335v1",
-      "published": "2026-03-07",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Causal Attribution of Coastal Water Clarity Degradation to Nickel Processing Expansion at the Indonesia Morowali Industrial Park, Sulawesi",
-      "authors": [
-        "Sandy Hardian Susanto Herho",
-        "Alfita Puspa Handayani",
-        "Iwan Pramesti Anwar",
-        "Faruq Khadami",
-        "Karina Aprilia Sujatmiko",
-        "Doandy Yonathan Wibisono",
-        "Rusmawan Suwarman",
-        "Dasapta Erwin Irawan"
-      ],
-      "abstract": "Indonesia's nickel ore export ban has driven rapid expansion of smelting and hydrometallurgical processing capacity at the Indonesia Morowali Industrial Park (IMIP), now the world's largest integrated nickel processing complex, on the coast of Central Sulawesi. Whether this industrialization has degraded the adjacent marine environment remains unquantified. We apply Bayesian structural time-series (BSTS) causal inference to a multi-decadal, multi-sensor satellite ocean color record of the diffuse attenuation coefficient at 490 nm, $K_d(490)$, to test for a causal link between IMIP expansion and nearshore turbidity change. A consensus structural breakpoint, a significant posterior causal effect estimated against a Banda Sea counterfactual, and a distribution-free placebo rank test collectively establish that coastal water clarity deteriorated after the transition from initial nickel pig iron production to hyper-expansion of high-pressure acid leaching facilities for battery-grade nickel. Satellite-derived land cover analysis independently corroborates this timing, showing substantial built-area growth and concurrent tree cover loss within the IMIP footprint. The resulting euphotic zone shoaling occurs in oligotrophic waters supporting high marine biodiversity, where even moderate optical degradation may impair coral photosynthesis and compress depth-dependent reef habitat. These findings quantify a marine environmental cost absent from Indonesia's mineral downstreaming policy discourse and demonstrate a transferable, satellite-based quasi-experimental framework for causal impact assessment at coastal industrial sites in data-limited tropical settings.",
-      "pdf_url": "https://arxiv.org/pdf/2603.07331v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.07331v1",
-      "published": "2026-03-07",
-      "categories": [
-        "physics.ao-ph",
-        "physics.soc-ph",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "MedSteer: Counterfactual Endoscopic Synthesis via Training-Free Activation Steering",
-      "authors": [
-        "Trong-Thang Pham",
-        "Loc Nguyen",
-        "Anh Nguyen",
-        "Hien Nguyen",
-        "Ngan Le"
-      ],
-      "abstract": "Generative diffusion models are increasingly used for medical imaging data augmentation, but text prompting cannot produce causal training data. Re-prompting rerolls the entire generation trajectory, altering anatomy, texture, and background. Inversion-based editing methods introduce reconstruction error that causes structural drift. We propose MedSteer, a training-free activation-steering framework for endoscopic synthesis. MedSteer identifies a pathology vector for each contrastive prompt pair in the cross-attention layers of a diffusion transformer. At inference time, it steers image activations along this vector, generating counterfactual pairs from scratch where the only difference is the steered concept. All other structure is preserved by construction. We evaluate MedSteer across three experiments on Kvasir v3 and HyperKvasir. On counterfactual generation across three clinical concept pairs, MedSteer achieves flip rates of 0.800, 0.925, and 0.950, outperforming the best inversion-based baseline in both concept flip rate and structural preservation. On dye disentanglement, MedSteer achieves 75% dye removal against 20% (PnP) and 10% (h-Edit). On downstream polyp detection, augmenting with MedSteer counterfactual pairs achieves ViT AUC of 0.9755 versus 0.9083 for quantity-matched re-prompting, confirming that counterfactual structure drives the gain. Code is at link https://github.com/phamtrongthang123/medsteer",
-      "pdf_url": "https://arxiv.org/pdf/2603.07066v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.07066v1",
-      "published": "2026-03-07",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Masked Unfairness: Hiding Causality within Zero ATE",
-      "authors": [
-        "Zou Yang",
-        "Sophia Xiao",
-        "Bijan Mazaheri"
-      ],
-      "abstract": "Recent work has proposed powerful frameworks, rooted in causal theory, to quantify fairness. Causal inference has primarily emphasized the detection of \\emph{average} treatment effects (ATEs), and subsequent notions of fairness have inherited this focus. In this paper, we build on previous concerns about regulation based on averages. In particular, we formulate the \"causal masking problem\" as a linear program that optimizes an alternative objective, such as maximizing profit or minimizing crime, while retaining a zero ATE (i.e., the ATE between a protected attribute and a decision). By studying the capabilities and limitations of causal masking, we show that optimization under ATE-based regulation may induce significant unequal treatment. We demonstrate that the divergence between true and causally masked fairness is driven by confounding, underscoring the importance of full conditional-independence testing when assessing fairness. Finally, we discuss statistical and information-theoretic limitations that make causally masked solutions very difficult to detect, allowing them to persist for long periods. These results argue that we must regulate fairness at the model-level, rather than at the decision level.",
-      "pdf_url": "https://arxiv.org/pdf/2603.06984v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.06984v1",
-      "published": "2026-03-07",
-      "categories": [
-        "stat.ML",
-        "cs.AI",
-        "cs.GT",
         "cs.LG",
-        "cs.SI"
+        "q-bio.GN"
       ]
     },
     {
-      "title": "Place-it-R1: Unlocking Environment-aware Reasoning Potential of MLLM for Video Object Insertion",
+      "title": "One Token, Two Fates: A Unified Framework via Vision Token Manipulation Against MLLMs Hallucination",
       "authors": [
-        "Bohai Gu",
-        "Taiyi Wu",
-        "Dazhao Du",
-        "Jian Liu",
-        "Shuai Yang",
-        "Xiaotong Zhao",
-        "Alan Zhao",
-        "Song Guo"
+        "Zhan Fa",
+        "Yue Duan",
+        "Jian Zhang",
+        "Lei Qi",
+        "Yinghuan Shi"
       ],
-      "abstract": "Modern video editing techniques have achieved high visual fidelity when inserting video objects. However, they focus on optimizing visual fidelity rather than physical causality, leading to edits that are physically inconsistent with their environment. In this work, we present Place-it-R$1$, an end-to-end framework for video object insertion that unlocks the environment-aware reasoning potential of Multimodal Large Language Models (MLLMs). Our framework leverages the Chain-of-Thought (CoT) reasoning of MLLMs to orchestrate video diffusion, following a Think-then-Place paradigm. To bridge cognitive reasoning and generative execution, we introduce three key innovations: First, MLLM performs physical scene understanding and interaction reasoning, generating environment-aware chain-of-thought tokens and inferring valid insertion regions to explicitly guide the diffusion toward physically plausible insertion. Then, we introduce MLLM-guided Spatial Direct Preference Optimization (DPO), where diffusion outputs are fed back to the MLLM for scoring, enabling visual naturalness. During inference, the MLLM iteratively triggers refinement cycles and elicits adaptive adjustments from the diffusion model, forming a closed-loop that progressively enhances editing quality. Furthermore, we provide two user-selectable modes: a plausibility-oriented flexible mode that permits environment modifications (\\eg, generating support structures) to enhance physical plausibility, and a fidelity-oriented standard mode that preserves scene integrity for maximum fidelity, offering users explicit control over the plausibility-fidelity trade-off. Extensive experiments demonstrate Place-it-R1 achieves physically-coherent video object insertion compared with state-of-the-art solutions and commercial models.",
-      "pdf_url": "https://arxiv.org/pdf/2603.06140v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.06140v1",
-      "published": "2026-03-06",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Inverse-mapped density-dependent relativistic mean-field inference of the neutron-star equation of state with multi-messenger constraints",
-      "authors": [
-        "Wen-Jie Xie",
-        "Cheng-Jun Xia"
-      ],
-      "abstract": "We perform a Bayesian inference of the equation of state (EOS) of cold dense matter within a density-dependent relativistic mean-field (DD-RMF) model. An explicit inverse-mapping procedure reconstructs the density-dependent couplings from a physically interpretable ten-dimensional parameter set while enforcing thermodynamic consistency together with stability and causality conditions. The EOS is constrained by complementary multi-messenger data including chiral effective field theory calculations at low density, heavy-ion collision flow information at intermediate densities, NICER mass-radius posteriors, and the existence of approximately two-solar-mass pulsars. The combined constraints strongly restrict both isoscalar and isovector sectors. In particular, the chiral effective field theory band favors a relatively soft symmetry-energy slope around 38 MeV, corresponding to a compact canonical neutron-star radius of about 11.6 km. To reconcile the intermediate-density softness suggested by heavy-ion data with the high-density stiffness required by massive pulsars, the posterior prefers a moderately large Dirac effective mass at saturation together with correlated high-density limits of the scalar and vector couplings. The resulting sound-speed profile remains causal and shows significant stiffening above the conformal limit at several times nuclear saturation density, indicating strongly interacting matter in neutron-star cores. Evidence diagnostics indicate strong compatibility among the adopted constraints within the present DD-RMF framework.",
-      "pdf_url": "https://arxiv.org/pdf/2603.06128v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.06128v1",
-      "published": "2026-03-06",
-      "categories": [
-        "nucl-th",
-        "astro-ph.HE"
-      ]
-    },
-    {
-      "title": "OVGGT: O(1) Constant-Cost Streaming Visual Geometry Transformer",
-      "authors": [
-        "Si-Yu Lu",
-        "Po-Ting Chen",
-        "Hui-Che Hsu",
-        "Sin-Ye Jhong",
-        "Wen-Huang Cheng",
-        "Yung-Yao Chen"
-      ],
-      "abstract": "Reconstructing 3D geometry from streaming video requires continuous inference under bounded resources. Recent geometric foundation models achieve impressive reconstruction quality through all-to-all attention, yet their quadratic cost confines them to short, offline sequences. Causal-attention variants such as StreamVGGT enable single-pass streaming but accumulate an ever-growing KV cache, exhausting GPU memory within hundreds of frames and precluding the long-horizon deployment that motivates streaming inference in the first place. We present OVGGT, a training-free framework that bounds both memory and compute to a fixed budget regardless of sequence length. Our approach combines Self-Selective Caching, which leverages FFN residual magnitudes to compress the KV cache while remaining fully compatible with FlashAttention, with Dynamic Anchor Protection, which shields coordinate-critical tokens from eviction to suppress geometric drift over extended trajectories. Extensive experiments on indoor, outdoor, and ultra-long sequence benchmarks demonstrate that OVGGT processes arbitrarily long videos within a constant VRAM envelope while achieving state-of-the-art 3D geometric accuracy.",
-      "pdf_url": "https://arxiv.org/pdf/2603.05959v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.05959v1",
-      "published": "2026-03-06",
+      "abstract": "Current training-free methods tackle MLLM hallucination with separate strategies: either enhancing visual signals or suppressing text inertia. However, these separate methods are insufficient due to critical trade-offs: simply enhancing vision often fails against strong language prior, while suppressing language can introduce extra image-irrelevant noise. Moreover, we find their naive combination is also ineffective, necessitating a unified framework. We propose such a framework by focusing on the core asset: the vision token. Our design leverages two key insights: (1) augmented images offer complementary visual semantics, and (2) removing vision tokens (information-gap) isolates hallucination tendencies more precisely than distorting images (modality-gap). Based on these, our framework uses vision tokens in two distinct ways, both operating on latent representations: our Synergistic Visual Calibration (SVC) module incorporates augmented tokens to strengthen visual representations, while our Causal Representation Calibration (CRC) module uses pruned tokens to create latent-space negative samples for correcting internal model biases. By harmonizing these two roles, our framework effectively restores the vision-language balance, significantly reducing object hallucinations, improving POPE accuracy by an average of 2% absolute on LLaVA-1.5 across multiple benchmarks with only a 1.06x inference latency overhead.",
+      "pdf_url": "https://arxiv.org/pdf/2603.10360v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.10360v1",
+      "published": "2026-03-11",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "InfoFlow KV: Information-Flow-Aware KV Recomputation for Long Context",
+      "title": "AR-VLA: True Autoregressive Action Expert for Vision-Language-Action Models",
       "authors": [
-        "Xin Teng",
-        "Canyu Zhang",
-        "Shaoyi Zheng",
-        "Danyang Zhuo",
-        "Tianyi Zhou",
-        "Shengjie Wang"
+        "Yutong Hu",
+        "Jan-Nico Zaech",
+        "Nikolay Nikolov",
+        "Yuanqi Yao",
+        "Sombit Dey",
+        "Giuliano Albanese",
+        "Renaud Detry",
+        "Luc Van Gool",
+        "Danda Paudel"
       ],
-      "abstract": "Retrieval-augmented generation (RAG) for long-context question answering is bottlenecked by inference-time prefilling over large retrieved contexts. A common strategy is to precompute key-value (KV) caches for individual documents and selectively recompute a small subset of tokens to restore global causal dependencies, but existing methods rely on heuristics or representation discrepancies without modeling whether selected tokens can effectively influence generation. We cast selective KV recomputation as an information flow problem and show that a simple attention-norm signal from the query reliably identifies tokens that are both semantically relevant and structurally positioned to propagate information, when computed under an inference-consistent RoPE geometry. We therefore reconstruct global positional assignments for retrieved chunks and introduce an information-flow-guided chunk reordering strategy. Experiments on LLM and VLM benchmarks demonstrate consistent gains over prior methods under comparable efficiency budgets.",
-      "pdf_url": "https://arxiv.org/pdf/2603.05353v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.05353v1",
-      "published": "2026-03-05",
+      "abstract": "We propose a standalone autoregressive (AR) Action Expert that generates actions as a continuous causal sequence while conditioning on refreshable vision-language prefixes. In contrast to existing Vision-Language-Action (VLA) models and diffusion policies that reset temporal context with each new observation and predict actions reactively, our Action Expert maintains its own history through a long-lived memory and is inherently context-aware. This structure addresses the frequency mismatch between fast control and slow reasoning, enabling efficient independent pretraining of kinematic syntax and modular integration with heavy perception backbones, naturally ensuring spatio-temporally consistent action generation across frames. To synchronize these asynchronous hybrid V-L-A modalities, we utilize a re-anchoring mechanism that mathematically accounts for perception staleness during both training and inference. Experiments on simulated and real-robot manipulation tasks demonstrate that the proposed method can effectively replace traditional chunk-based action heads for both specialist and generalist policies. AR-VLA exhibits superior history awareness and substantially smoother action trajectories while maintaining or exceeding the task success rates of state-of-the-art reactive VLAs. Overall, our work introduces a scalable, context-aware action generation schema that provides a robust structural foundation for training effective robotic policies.",
+      "pdf_url": "https://arxiv.org/pdf/2603.10126v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.10126v1",
+      "published": "2026-03-10",
       "categories": [
+        "cs.RO",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Equivariant Asynchronous Diffusion: An Adaptive Denoising Schedule for Accelerated Molecular Conformation Generation",
+      "authors": [
+        "Junyi An",
+        "Chao Qu",
+        "Yun-Fei Shi",
+        "Zhijian Zhou",
+        "Fenglei Cao",
+        "Yuan Qi"
+      ],
+      "abstract": "Recent 3D molecular generation methods primarily use asynchronous auto-regressive or synchronous diffusion models. While auto-regressive models build molecules sequentially, they're limited by a short horizon and a discrepancy between training and inference. Conversely, synchronous diffusion models denoise all atoms at once, offering a molecule-level horizon but failing to capture the causal relationships inherent in hierarchical molecular structures. We introduce Equivariant Asynchronous Diffusion (EAD) to overcome these limitations. EAD is a novel diffusion model that combines the strengths of both approaches: it uses an asynchronous denoising schedule to better capture molecular hierarchy while maintaining a molecule-level horizon. Since these relationships are often complex, we propose a dynamic scheduling mechanism to adaptively determine the denoising timestep. Experimental results show that EAD achieves state-of-the-art performance in 3D molecular generation.",
+      "pdf_url": "https://arxiv.org/pdf/2603.10093v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.10093v1",
+      "published": "2026-03-10",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Benchmarking Dataset for Presence-Only Passive Reconnaissance in Wireless Smart-Grid Communications",
+      "authors": [
+        "Bochra Al Agha",
+        "Razane Tajeddine"
+      ],
+      "abstract": "Benchmarking presence-only passive reconnaissance in smart-grid communications is challenging because the adversary is receive-only, yet nearby observers can still alter propagation through additional shadowing and multipath that reshapes channel coherence. Public smart-grid cybersecurity datasets largely target active protocol- or measurement-layer attacks and rarely provide propagation-driven observables with tiered topology context, which limits reproducible evaluation under strictly passive threat models. This paper introduces an IEEE-inspired, literature-anchored benchmark dataset generator for passive reconnaissance over a tiered Home Area Network (HAN), Neighborhood Area Network (NAN), and Wide Area Network (WAN) communication graph with heterogeneous wireless and wireline links. Node-level time series are produced through a physically consistent channel-to-metrics mapping where channel state information (CSI) is represented via measurement-realistic amplitude and phase proxies that drive inferred signal-to-noise ratio (SNR), packet error behavior, and delay dynamics. Passive attacks are modeled only as windowed excess attenuation and coherence degradation with increased channel innovation, so reliability and latency deviations emerge through the same causal mapping without labels or feature shortcuts. The release provides split-independent realizations with burn-in removal, strictly causal temporal descriptors, adjacency-weighted neighbor aggregates and deviation features, and federated-ready per-node train, validation, and test partitions with train-only normalization metadata. Baseline federated experiments highlight technology-dependent detectability and enable standardized benchmarking of graph-temporal and federated detectors for passive reconnaissance.",
+      "pdf_url": "https://arxiv.org/pdf/2603.09590v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.09590v1",
+      "published": "2026-03-10",
+      "categories": [
+        "cs.CR",
+        "eess.SP"
+      ]
+    },
+    {
+      "title": "Statistical Inference via Generative Models: Flow Matching and Causal Inference",
+      "authors": [
+        "Shinto Eguchi"
+      ],
+      "abstract": "Generative AI has achieved remarkable empirical success, but from the perspective of statistics it often remains opaque: its predictions may be accurate, yet the underlying mechanism is difficult to interpret, analyze, and trust. This book reinterprets generative AI in the language of statistics, using flow matching as a central example. The key idea is that generative models should be understood not merely as devices for producing plausible data, but as methods for the nonparametric learning of high-dimensional probability distributions. From this viewpoint, missing-data imputation becomes principled sampling from learned conditional distributions, counterfactual analysis becomes the estimation of intervention distributions, and distributional dynamics become statistically analyzable objects. Mathematically, flow matching represents distributional deformation through the continuity equation and a time-dependent velocity field, thereby extending score matching from the learning of static score fields to the learning of transport paths themselves. Building on this foundation, the book develops a statistical framework in which generative models are used to estimate nuisance components while inferential validity is maintained through orthogonalization and cross-fitting in the spirit of double/debiased machine learning. Applications to survival analysis, censoring, missingness, and causal inference show how generative models can be integrated into statistical inference for structured high-dimensional problems.",
+      "pdf_url": "https://arxiv.org/pdf/2603.09009v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.09009v1",
+      "published": "2026-03-09",
+      "categories": [
+        "stat.ML",
         "cs.LG"
       ]
     },
     {
-      "title": "Boosting ASR Robustness via Test-Time Reinforcement Learning with Audio-Text Semantic Rewards",
+      "title": "Estimation of heterogeneous principal effects under principal ignorability",
       "authors": [
-        "Linghan Fang",
-        "Tianxin Xie",
-        "Li Liu"
+        "Rui Zhang",
+        "Charles R. Doss",
+        "Jared D. Huling"
       ],
-      "abstract": "Recently, Automatic Speech Recognition (ASR) systems (e.g., Whisper) have achieved remarkable accuracy improvements but remain highly sensitive to real-world unseen data (data with large distribution shifts), including noisy environments and diverse accents. To address this issue, test-time adaptation (TTA) has shown great potential in improving the model adaptability at inference time without ground-truth labels, and existing TTA methods often rely on pseudo-labeling or entropy minimization. However, by treating model confidence as a learning signal, these methods may reinforce high-confidence errors, leading to confirmation bias that undermines adaptation. To overcome these limitations, we present ASR-TRA, a novel Test-time Reinforcement Adaptation framework inspired by causal intervention. More precisely, our method introduces a learnable decoder prompt and utilizes temperature-controlled stochastic decoding to generate diverse transcription candidates. These are scored by a reward model that measures audio-text semantic alignment, and the resulting feedback is used to update both model and prompt parameters via reinforcement learning. Comprehensive experiments on LibriSpeech with synthetic noise and L2 Arctic accented English datasets demonstrate that our method achieves higher accuracy while maintaining lower latency than existing TTA baselines. Ablation studies further confirm the effectiveness of combining audio and language-based rewards, highlighting our method's enhanced stability and interpretability. Overall, our approach provides a practical and robust solution for deploying ASR systems in challenging real-world conditions.",
-      "pdf_url": "https://arxiv.org/pdf/2603.05231v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.05231v1",
-      "published": "2026-03-05",
+      "abstract": "We study estimation and inference for heterogeneous principal causal effects with binary treatments and binary intermediate variables. Principal causal effects are subgroup effects within strata defined by potential values of an intermediate variable, including effects among compliers. We propose a framework for estimating and forming pointwise confidence intervals for heterogeneous principal causal effects under the principal ignorability assumption. Several estimators are developed, and their robustness properties are characterized: one estimator is doubly robust, whereas the other two attain intermediate robustness between double and triple robustness; in contrast, principal causal effects can be estimated in a triply robust manner only. We establish large-sample theory under nonparametric smoothness conditions and analyze the bias contributions of each approach, providing insight into performance beyond the smooth setting, including in high-dimensional regimes. Camden Coalition hotspotting randomized trial are used to illustrate the methods by estimating heterogeneous complier effects.",
+      "pdf_url": "https://arxiv.org/pdf/2603.08963v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.08963v1",
+      "published": "2026-03-09",
       "categories": [
-        "cs.SD",
-        "cs.AI",
-        "cs.LG"
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Efficient semiparametric estimation of marginal treatment effects with genetic instrumental variables",
+      "authors": [
+        "Ashish Patel",
+        "Francis J DiTraglia",
+        "Stephen Burgess"
+      ],
+      "abstract": "Alcohol misuse is a key target of public health strategies aimed at reducing cardiovascular risk. The effect of excessive alcohol consumption on blood pressure may vary systematically with individuals' unobserved propensity to engage in heavy drinking, complicating causal inference with observational data. The marginal treatment effects framework uses an instrumental variable for treatment choice (excessive alcohol consumption) to study how selection into treatment is linked with the treatment effect. We explore the use of a genetic instrument within this framework, which is challenging because genetic compliers (individuals for whom a change in the instrument changes their treatment choice) are likely to be a small proportion of the overall sample. This can lead to greater sampling uncertainty in the tails of the propensity score distribution, i.e., the conditional probability of choosing treatment, and in turn poor estimation of causal estimands that measure heterogeneous treatment effects. We show that the use of efficient influence functions of target estimands improves estimation in terms of robustness to sampling uncertainty in nonparametrically estimated propensity scores. We find evidence of reverse selection on gains: individuals most prone to excessive alcohol consumption experience larger adverse effects on blood pressure.",
+      "pdf_url": "https://arxiv.org/pdf/2603.08871v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.08871v1",
+      "published": "2026-03-09",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "HiAR: Efficient Autoregressive Long Video Generation via Hierarchical Denoising",
+      "authors": [
+        "Kai Zou",
+        "Dian Zheng",
+        "Hongbo Liu",
+        "Tiankai Hang",
+        "Bin Liu",
+        "Nenghai Yu"
+      ],
+      "abstract": "Autoregressive (AR) diffusion offers a promising framework for generating videos of theoretically infinite length. However, a major challenge is maintaining temporal continuity while preventing the progressive quality degradation caused by error accumulation. To ensure continuity, existing methods typically condition on highly denoised contexts; yet, this practice propagates prediction errors with high certainty, thereby exacerbating degradation. In this paper, we argue that a highly clean context is unnecessary. Drawing inspiration from bidirectional diffusion models, which denoise frames at a shared noise level while maintaining coherence, we propose that conditioning on context at the same noise level as the current block provides sufficient signal for temporal consistency while effectively mitigating error propagation. Building on this insight, we propose HiAR, a hierarchical denoising framework that reverses the conventional generation order: instead of completing each block sequentially, it performs causal generation across all blocks at every denoising step, so that each block is always conditioned on context at the same noise level. This hierarchy naturally admits pipelined parallel inference, yielding a 1.8 wall-clock speedup in our 4-step setting. We further observe that self-rollout distillation under this paradigm amplifies a low-motion shortcut inherent to the mode-seeking reverse-KL objective. To counteract this, we introduce a forward-KL regulariser in bidirectional-attention mode, which preserves motion diversity for causal inference without interfering with the distillation loss. On VBench (20s generation), HiAR achieves the best overall score and the lowest temporal drift among all compared methods.",
+      "pdf_url": "https://arxiv.org/pdf/2603.08703v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.08703v1",
+      "published": "2026-03-09",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "CORE-Acu: Structured Reasoning Traces and Knowledge Graph Safety Verification for Acupuncture Clinical Decision Support",
+      "authors": [
+        "Liuyi Xu",
+        "Yun Guo",
+        "Ming Chen",
+        "Zihan Dun",
+        "Yining Qian",
+        "An-Yang Lu",
+        "Shuang Li",
+        "Lijun Liu"
+      ],
+      "abstract": "Large language models (LLMs) show significant potential for clinical decision support (CDS), yet their black-box nature -- characterized by untraceable reasoning and probabilistic hallucinations -- poses severe challenges in acupuncture, a field demanding rigorous interpretability and safety. To address this, we propose CORE-Acu, a neuro-symbolic framework for acupuncture clinical decision support that integrates Structured Chain-of-Thought (S-CoT) with knowledge graph (KG) safety verification. First, we construct the first acupuncture Structured Reasoning Trace dataset and a schema-constrained fine-tuning framework. By enforcing an explicit causal chain from pattern identification to treatment principles, treatment plans, and acupoint selection, we transform implicit Traditional Chinese Medicine (TCM) reasoning into interpretable generation constraints, mitigating the opacity of LLM-based CDS. Furthermore, we construct a TCM safety knowledge graph and establish a ``Generate--Verify--Revise'' closed-loop inference system based on a Symbolic Veto Mechanism, employing deterministic rules to intercept hallucinations and enforce hard safety boundaries. Finally, we introduce the Lexicon-Matched Entity-Reweighted Loss (LMERL), which corrects terminology drift caused by the frequency--importance mismatch in general optimization by adaptively amplifying gradient contributions of high-risk entities during fine-tuning. Experiments on 1,000 held-out cases demonstrate CORE-Acu's superior entity fidelity and reasoning quality. Crucially, CORE-Acu achieved 0/1,000 observed safety violations (95\\% CI: 0--0.37\\%), whereas GPT-4o exhibited an 8.5\\% violation rate under identical rules. These results establish CORE-Acu as a robust neuro-symbolic framework for acupuncture clinical decision support, guaranteeing both reasoning auditability and strict safety compliance.",
+      "pdf_url": "https://arxiv.org/pdf/2603.08321v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.08321v1",
+      "published": "2026-03-09",
+      "categories": [
+        "cs.AI"
       ]
     }
   ]
