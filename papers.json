@@ -1,6 +1,21 @@
 {
-  "last_updated": "2026-03-15T01:20:32.999273",
+  "last_updated": "2026-03-16T01:20:26.671629",
   "papers": [
+    {
+      "title": "The Privacy-Utility Trade-Off of Location Tracking in Ad Personalization",
+      "authors": [
+        "Mohammad Mosaffa",
+        "Omid Rafieian"
+      ],
+      "abstract": "Firms collect vast amounts of behavioral and geographical data on individuals. While behavioral data captures an individual's digital footprint, geographical data reflects their physical footprint. Given the significant privacy risks associated with combining these data sources, it is crucial to understand their respective value and whether they act as complements or substitutes in achieving firms' business objectives. In this paper, we combine economic theory, machine learning, and causal inference to quantify the value of geographical data, the extent to which behavioral data can substitute for it, and the mechanisms through which it benefits firms. Using data from a leading in-app advertising platform in a large Asian country, we document that geographical data is most valuable in the early cold-start stage, when behavioral histories are limited. In this stage, geographical data complements behavioral data, improving targeting performance by almost 20%. As users accumulate richer behavioral histories, however, the role of geographical data shifts: it becomes largely substitutable, as behavioral data alone captures the relevant heterogeneity. These results highlight a central privacy-utility trade-off in ad personalization and inform managerial decisions about when location tracking creates value.",
+      "pdf_url": "https://arxiv.org/pdf/2603.12374v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.12374v1",
+      "published": "2026-03-12",
+      "categories": [
+        "econ.EM",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Frequentist Consistency of Prior-Data Fitted Networks for Causal Inference",
       "authors": [
@@ -90,6 +105,22 @@
       ]
     },
     {
+      "title": "HCP-DCNet: A Hierarchical Causal Primitive Dynamic Composition Network for Self-Improving Causal Understanding",
+      "authors": [
+        "Ming Lei",
+        "Shufan Wu",
+        "Christophe Baehr"
+      ],
+      "abstract": "The ability to understand and reason about cause and effect -- encompassing interventions, counterfactuals, and underlying mechanisms -- is a cornerstone of robust artificial intelligence. While deep learning excels at pattern recognition, it fundamentally lacks a model of causality, making systems brittle under distribution shifts and unable to answer ``what-if'' questions. This paper introduces the \\emph{Hierarchical Causal Primitive Dynamic Composition Network (HCP-DCNet)}, a unified framework that bridges continuous physical dynamics with discrete symbolic causal inference. Departing from monolithic representations, HCP-DCNet decomposes causal scenes into reusable, typed \\emph{causal primitives} organized into four abstraction layers: physical, functional, event, and rule. A dual-channel routing network dynamically composes these primitives into task-specific, fully differentiable \\emph{Causal Execution Graphs (CEGs)}. Crucially, the system employs a \\emph{causal-intervention-driven meta-evolution} strategy, enabling autonomous self-improvement through a constrained Markov decision process. We establish rigorous theoretical guarantees, including type-safe composition, routing convergence, and universal approximation of causal dynamics. Extensive experiments across simulated physical and social environments demonstrate that HCP-DCNet significantly outperforms state-of-the-art baselines in causal discovery, counterfactual reasoning, and compositional generalization. This work provides a principled, scalable, and interpretable architecture for building AI systems with human-like causal abstraction and continual self-refinement capabilities.",
+      "pdf_url": "https://arxiv.org/pdf/2603.12305v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.12305v1",
+      "published": "2026-03-12",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
       "title": "OmniForcing: Unleashing Real-time Joint Audio-Visual Generation",
       "authors": [
         "Yaofeng Su",
@@ -104,8 +135,8 @@
         "Nan Duan"
       ],
       "abstract": "Recent joint audio-visual diffusion models achieve remarkable generation quality but suffer from high latency due to their bidirectional attention dependencies, hindering real-time applications. We propose OmniForcing, the first framework to distill an offline, dual-stream bidirectional diffusion model into a high-fidelity streaming autoregressive generator. However, naively applying causal distillation to such dual-stream architectures triggers severe training instability, due to the extreme temporal asymmetry between modalities and the resulting token sparsity. We address the inherent information density gap by introducing an Asymmetric Block-Causal Alignment with a zero-truncation Global Prefix that prevents multi-modal synchronization drift. The gradient explosion caused by extreme audio token sparsity during the causal shift is further resolved through an Audio Sink Token mechanism equipped with an Identity RoPE constraint. Finally, a Joint Self-Forcing Distillation paradigm enables the model to dynamically self-correct cumulative cross-modal errors from exposure bias during long rollouts. Empowered by a modality-independent rolling KV-cache inference scheme, OmniForcing achieves state-of-the-art streaming generation at $\\sim$25 FPS on a single GPU, maintaining multi-modal synchronization and visual quality on par with the bidirectional teacher.\\textbf{Project Page:} \\href{https://omniforcing.com}{https://omniforcing.com}",
-      "pdf_url": "https://arxiv.org/pdf/2603.11647v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.11647v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.11647v2",
+      "arxiv_url": "http://arxiv.org/abs/2603.11647v2",
       "published": "2026-03-12",
       "categories": [
         "cs.MM",
@@ -144,44 +175,6 @@
       "categories": [
         "cs.AI",
         "cs.CL"
-      ]
-    },
-    {
-      "title": "LLM-Assisted Causal Structure Disambiguation and Factor Extraction for Legal Judgment Prediction",
-      "authors": [
-        "Yuzhi Liang",
-        "Lixiang Ma",
-        "Xinrong Zhu"
-      ],
-      "abstract": "Mainstream methods for Legal Judgment Prediction (LJP) based on Pre-trained Language Models (PLMs) heavily rely on the statistical correlation between case facts and judgment results. This paradigm lacks explicit modeling of legal constituent elements and underlying causal logic, making models prone to learning spurious correlations and suffering from poor robustness. While introducing causal inference can mitigate this issue, existing causal LJP methods face two critical bottlenecks in real-world legal texts: inaccurate legal factor extraction with severe noise, and significant uncertainty in causal structure discovery due to Markov equivalence under sparse features. To address these challenges, we propose an enhanced causal inference framework that integrates Large Language Model (LLM) priors with statistical causal discovery. First, we design a coarse-to-fine hybrid extraction mechanism combining statistical sampling and LLM semantic reasoning to accurately identify and purify standard legal constituent elements. Second, to resolve structural uncertainty, we introduce an LLM-assisted causal structure disambiguation mechanism. By utilizing the LLM as a constrained prior knowledge base, we conduct probabilistic evaluation and pruning on ambiguous causal directions to generate legally compliant candidate causal graphs. Finally, a causal-aware judgment prediction model is constructed by explicitly constraining text attention intensity via the generated causal graphs. Extensive experiments on multiple benchmark datasets, including LEVEN , QA, and CAIL, demonstrate that our proposed method significantly outperforms state-of-the-art baselines in both predictive accuracy and robustness, particularly in distinguishing confusing charges.",
-      "pdf_url": "https://arxiv.org/pdf/2603.11446v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.11446v1",
-      "published": "2026-03-12",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "RCTs & Human Uplift Studies: Methodological Challenges and Practical Solutions for Frontier AI Evaluation",
-      "authors": [
-        "Patricia Paskov",
-        "Kevin Wei",
-        "Shen Zhou Hong",
-        "Dan Bateyko",
-        "Xavier Roberts-Gaal",
-        "Carson Ezell",
-        "Gailius Praninskas",
-        "Valerie Chen",
-        "Umang Bhatt",
-        "Ella Guest"
-      ],
-      "abstract": "Human uplift studies - or studies that measure AI effects on human performance relative to a status quo, typically using randomized controlled trial (RCT) methodology - are increasingly used to inform deployment, governance, and safety decisions for frontier AI systems. While the methods underlying these studies are well-established, their interaction with the distinctive properties of frontier AI systems remains underexamined, particularly when results are used to inform high-stakes decisions. We present findings from interviews with 16 expert practitioners with experience conducting human uplift studies in domains including biosecurity, cybersecurity, education, and labor. Across interviews, experts described a recurring tension between standard causal inference assumptions and the object of study itself. Rapidly evolving AI systems, shifting baselines, heterogeneous and changing user proficiency, and porous real-world settings strain assumptions underlying internal, external, and construct validity, complicating the interpretation and appropriate use of uplift evidence. We synthesize these challenges across key stages of the human uplift research lifecycle and map them to practitioner-reported solutions, clarifying both the limits and the appropriate uses of evidence from human uplift studies in high-stakes decision-making.",
-      "pdf_url": "https://arxiv.org/pdf/2603.11001v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.11001v1",
-      "published": "2026-03-11",
-      "categories": [
-        "cs.CY",
-        "cs.AI"
       ]
     }
   ]
