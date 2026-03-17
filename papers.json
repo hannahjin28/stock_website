@@ -1,6 +1,83 @@
 {
-  "last_updated": "2026-03-16T01:20:26.671629",
+  "last_updated": "2026-03-17T01:12:02.395762",
   "papers": [
+    {
+      "title": "A Kernel-Based Nonparametric Test for Conditional Independence of Functional Data",
+      "authors": [
+        "Yin Tang",
+        "Bing Li"
+      ],
+      "abstract": "Conditional independence is a fundamental concept in many areas of statistical research, including, for example, sufficient dimension reduction, causal inference, and statistical graphical models. In many modern applications, data arise in the form of random functions, making it important to determine whether two random functions are conditionally independent given a third. However, to the best of our knowledge, existing conditional independence tests in the literature apply only to multivariate data, and extensions to the functional setting are not available. To fill this gap, we develop a kernel-based test for conditional independence of random functions based on the conjoined conditional covariance operator (CCCO). We rigorously derive the asymptotic distribution of the CCCO estimator using a recently established sharpened convergence rate for the regression operator (Choi et al., 2026). Based on this result, we construct a test statistic using the spectral decomposition of the operator appearing in the asymptotic distribution. The proposed method is illustrated through applications to an activity and biometrics dataset and a macroeconomic dataset.",
+      "pdf_url": "https://arxiv.org/pdf/2603.13704v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.13704v1",
+      "published": "2026-03-14",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Generalized projection tests for function-valued parameters with applications to testing structural causal assumptions",
+      "authors": [
+        "Rui Wang",
+        "Albert Osom",
+        "Bo Zhang"
+      ],
+      "abstract": "Structural assumptions are central to the causal inference literature. In practice, it is often crucial to assess their validity or to test implications that follow from them. In many settings, such tests can be framed as evaluating whether a function-valued parameter equals zero. In this paper, we propose a class of generalized projection tests based on series estimators for function-valued parameters. We establish conditions under which the proposed tests are valid and illustrate their applicability through examples from the data fusion and instrumental variables literature. Our approach accommodates flexible machine learning methods for estimating nuisance parameters. In contrast to many existing approaches, the limiting distribution of the proposed test statistics is straightforward to compute under the null hypothesis. We apply our method to test the equality of conditional COVID-19 risk across vaccine arms in the COVID-19 Variant Immunologic Landscape (COVAIL) trial.",
+      "pdf_url": "https://arxiv.org/pdf/2603.13681v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.13681v1",
+      "published": "2026-03-14",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Fast Uncertainty Quantification for Kernel-Based Estimators in Large-Scale Causal Inference",
+      "authors": [
+        "Matthew Kosko",
+        "Falco J",
+        "Bargagli-Stoffi",
+        "Lin Wang",
+        "Michele Santacatterina"
+      ],
+      "abstract": "Kernel methods are widely used in causal inference for tasks such as treatment effect estimation, policy evaluation, and policy learning. The bootstrap is a standard tool for uncertainty quantification because of its broad applicability. As increasingly large datasets become available, such as the 2023 U.S. Natality data from the National Vital Statistics System (NVSS), which includes 3,596,017 registered births, the computational demands of these methods increase substantially. Kernel methods are known to scale poorly with sample size, and this limitation is further exacerbated by the repeated re-fitting required by the bootstrap. As a result, bootstrap-based inference for kernel-based estimators can become computationally infeasible in large-scale settings. In this paper, we address these challenges by extending the causal Bag of Little Bootstraps (cBLB) algorithm to kernel methods. Our approach achieves computational scalability by combining subsampling and resampling while preserving first-order uncertainty quantification and asymptotically correct coverage. We evaluate the method across three representative implementations: kernelized augmented outcome-weighted learning, kernel-based minimax weighting, and double machine learning with kernel support vector machines. We show in simulations that our method yields confidence intervals with nominal coverage at a fraction of the computational cost. We further demonstrate its utility in a real-world application by estimating the effect of any amount of smoking on birth weight, as well as the optimal treatment regime, using the NVSS dataset, where the standard bootstrap is prohibitively expensive computationally and effectively infeasible at this scale.",
+      "pdf_url": "https://arxiv.org/pdf/2603.13662v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.13662v1",
+      "published": "2026-03-14",
+      "categories": [
+        "stat.ME",
+        "stat.AP",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Performance-Driven Causal Signal Engineering for Financial Markets under Non-Stationarity",
+      "authors": [
+        "Lucas A. Souza"
+      ],
+      "abstract": "We introduce a performance-driven framework for constructing strictly causal forward-oriented observables in strongly non-stationary time series. The method combines a robustly normalized composite of heterogeneous indicators with a causally computed derivative component, yielding a local phase-leading effect that is amplified near regime transitions while remaining fully causal. A hysteresis-based decision functional maps the observable into discrete system states, with execution delayed by one step to preserve strict temporal ordering. Adaptation is achieved through a walk-forward scheme, in which model parameters are selected using rolling train--validation windows and subsequently applied out-of-sample. In this setting, the validation segment acts as an internal performance screen rather than as a statistical validation set, and no claims of generalization are inferred from it alone. The framework is evaluated on high-frequency financial time series as an experimentally accessible realization of a non-stationary complex system. Under a controlled zero-cost setting, the resulting dynamics exhibit a pronounced risk-reshaping effect, characterized by smoother trajectories and reduced drawdowns relative to direct exposure, and should be interpreted as an upper bound on achievable performance. These results illustrate how causal signal engineering can generate anticipatory structure in non-stationary systems without relying on non-causal information, explicit horizon labeling, or high-capacity predictive models.",
+      "pdf_url": "https://arxiv.org/pdf/2603.13638v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.13638v1",
+      "published": "2026-03-13",
+      "categories": [
+        "q-fin.CP"
+      ]
+    },
+    {
+      "title": "Measuring Extreme Tail Association",
+      "authors": [
+        "Bikramjit Das",
+        "Xiangyu Liu"
+      ],
+      "abstract": "Simultaneous occurrences of extreme events need not imply symmetric or reciprocal tail dependence. However, most existing measures of extremal dependence are inherently symmetric and hence often fail to capture directional influence in tail association. We introduce a rank-based measure of Extreme Tail Association (ETA) for bivariate data quantifying such directional influence of one variable on another in extreme tail regions. The proposed estimator is easily computable, consistent with its population counterpart, and asymptotically normal under mild conditions, allowing for statistical inference. We further develop a formal test for asymmetry in tail association based on a multiplier bootstrap procedure. The practical relevance of the methodology is illustrated using data on extreme price movements in major cryptocurrencies. Beyond providing a flexible tool for extremal association, the proposed framework offers a substantive argument for investigating causal relationships in extreme scenarios.",
+      "pdf_url": "https://arxiv.org/pdf/2603.13614v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.13614v1",
+      "published": "2026-03-13",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ]
+    },
     {
       "title": "The Privacy-Utility Trade-Off of Location Tracking in Ad Personalization",
       "authors": [
@@ -83,98 +160,6 @@
       "published": "2026-03-12",
       "categories": [
         "stat.ME"
-      ]
-    },
-    {
-      "title": "SoulX-LiveAct: Towards Hour-Scale Real-Time Human Animation with Neighbor Forcing and ConvKV Memory",
-      "authors": [
-        "Dingcheng Zhen",
-        "Xu Zheng",
-        "Ruixin Zhang",
-        "Zhiqi Jiang",
-        "Yichao Yan",
-        "Ming Tao",
-        "Shunshun Yin"
-      ],
-      "abstract": "Autoregressive (AR) diffusion models offer a promising framework for sequential generation tasks such as video synthesis by combining diffusion modeling with causal inference. Although they support streaming generation, existing AR diffusion methods struggle to scale efficiently. In this paper, we identify two key challenges in hour-scale real-time human animation. First, most forcing strategies propagate sample-level representations with mismatched diffusion states, causing inconsistent learning signals and unstable convergence. Second, historical representations grow unbounded and lack structure, preventing effective reuse of cached states and severely limiting inference efficiency. To address these challenges, we propose Neighbor Forcing, a diffusion-step-consistent AR formulation that propagates temporally adjacent frames as latent neighbors under the same noise condition. This design provides a distribution-aligned and stable learning signal while preserving drifting throughout the AR chain. Building upon this, we introduce a structured ConvKV memory mechanism that compresses the keys and values in causal attention into a fixed-length representation, enabling constant-memory inference and truly infinite video generation without relying on short-term motion-frame memory. Extensive experiments demonstrate that our approach significantly improves training convergence, hour-scale generation quality, and inference efficiency compared to existing AR diffusion methods. Numerically, LiveAct enables hour-scale real-time human animation and supports 20 FPS real-time streaming inference on as few as two NVIDIA H100 or H200 GPUs. Quantitative results demonstrate that our method attains state-of-the-art performance in lip-sync accuracy, human animation quality, and emotional expressiveness, with the lowest inference cost.",
-      "pdf_url": "https://arxiv.org/pdf/2603.11746v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.11746v1",
-      "published": "2026-03-12",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "HCP-DCNet: A Hierarchical Causal Primitive Dynamic Composition Network for Self-Improving Causal Understanding",
-      "authors": [
-        "Ming Lei",
-        "Shufan Wu",
-        "Christophe Baehr"
-      ],
-      "abstract": "The ability to understand and reason about cause and effect -- encompassing interventions, counterfactuals, and underlying mechanisms -- is a cornerstone of robust artificial intelligence. While deep learning excels at pattern recognition, it fundamentally lacks a model of causality, making systems brittle under distribution shifts and unable to answer ``what-if'' questions. This paper introduces the \\emph{Hierarchical Causal Primitive Dynamic Composition Network (HCP-DCNet)}, a unified framework that bridges continuous physical dynamics with discrete symbolic causal inference. Departing from monolithic representations, HCP-DCNet decomposes causal scenes into reusable, typed \\emph{causal primitives} organized into four abstraction layers: physical, functional, event, and rule. A dual-channel routing network dynamically composes these primitives into task-specific, fully differentiable \\emph{Causal Execution Graphs (CEGs)}. Crucially, the system employs a \\emph{causal-intervention-driven meta-evolution} strategy, enabling autonomous self-improvement through a constrained Markov decision process. We establish rigorous theoretical guarantees, including type-safe composition, routing convergence, and universal approximation of causal dynamics. Extensive experiments across simulated physical and social environments demonstrate that HCP-DCNet significantly outperforms state-of-the-art baselines in causal discovery, counterfactual reasoning, and compositional generalization. This work provides a principled, scalable, and interpretable architecture for building AI systems with human-like causal abstraction and continual self-refinement capabilities.",
-      "pdf_url": "https://arxiv.org/pdf/2603.12305v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.12305v1",
-      "published": "2026-03-12",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "OmniForcing: Unleashing Real-time Joint Audio-Visual Generation",
-      "authors": [
-        "Yaofeng Su",
-        "Yuming Li",
-        "Zeyue Xue",
-        "Jie Huang",
-        "Siming Fu",
-        "Haoran Li",
-        "Ying Li",
-        "Zezhong Qian",
-        "Haoyang Huang",
-        "Nan Duan"
-      ],
-      "abstract": "Recent joint audio-visual diffusion models achieve remarkable generation quality but suffer from high latency due to their bidirectional attention dependencies, hindering real-time applications. We propose OmniForcing, the first framework to distill an offline, dual-stream bidirectional diffusion model into a high-fidelity streaming autoregressive generator. However, naively applying causal distillation to such dual-stream architectures triggers severe training instability, due to the extreme temporal asymmetry between modalities and the resulting token sparsity. We address the inherent information density gap by introducing an Asymmetric Block-Causal Alignment with a zero-truncation Global Prefix that prevents multi-modal synchronization drift. The gradient explosion caused by extreme audio token sparsity during the causal shift is further resolved through an Audio Sink Token mechanism equipped with an Identity RoPE constraint. Finally, a Joint Self-Forcing Distillation paradigm enables the model to dynamically self-correct cumulative cross-modal errors from exposure bias during long rollouts. Empowered by a modality-independent rolling KV-cache inference scheme, OmniForcing achieves state-of-the-art streaming generation at $\\sim$25 FPS on a single GPU, maintaining multi-modal synchronization and visual quality on par with the bidirectional teacher.\\textbf{Project Page:} \\href{https://omniforcing.com}{https://omniforcing.com}",
-      "pdf_url": "https://arxiv.org/pdf/2603.11647v2",
-      "arxiv_url": "http://arxiv.org/abs/2603.11647v2",
-      "published": "2026-03-12",
-      "categories": [
-        "cs.MM",
-        "cs.CV",
-        "cs.SD"
-      ]
-    },
-    {
-      "title": "Multi-Task Anti-Causal Learning for Reconstructing Urban Events from Residents' Reports",
-      "authors": [
-        "Liangkai Zhou",
-        "Susu Xu",
-        "Shuqi Zhong",
-        "Shan Lin"
-      ],
-      "abstract": "Many real-world machine learning tasks are anti-causal: they require inferring latent causes from observed effects. In practice, we often face multiple related tasks where part of the forward causal mechanism is invariant across tasks, while other components are task-specific. We propose Multi-Task Anti-Causal learning (MTAC), a framework for estimating causes from outcomes and confounders by explicitly exploiting such cross-task invariances. MTAC first performs causal discovery to learn a shared causal graph and then instantiates a structured multi-task structural equation model (SEM) that factorizes the outcome-generation process into (i) a task-invariant mechanism and (ii) task-specific mechanisms via a shared backbone with task-specific heads. Building on the learned forward model, MTAC performs maximum A posteriori (MAP)based inference to reconstruct causes by jointly optimizing latent mechanism variables and cause magnitudes under the learned causal structure. We evaluate MTAC on the application of urban event reconstruction from resident reports, spanning three tasks:parking violations, abandoned properties, and unsanitary conditions. On real-world data collected from Manhattan and the city of Newark, MTAC consistently improves reconstruction accuracy over strong baselines, achieving up to 34.61\\% MAE reduction and demonstrating the benefit of learning transferable causal mechanisms across tasks.",
-      "pdf_url": "https://arxiv.org/pdf/2603.11546v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.11546v1",
-      "published": "2026-03-12",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing",
-      "authors": [
-        "Hanchi Sun",
-        "Yixin Liu",
-        "Yonghui Wu",
-        "Lichao Sun"
-      ],
-      "abstract": "Token-choice Mixture-of-Experts (TC-MoE) routes each token to a fixed number of experts, limiting dynamic computation allocation and requiring auxiliary losses to maintain load balance. We propose Expert Threshold (ET) routing, where each expert maintains an exponential moving average (EMA) threshold estimated from the global token distribution. At both training and inference, each token is independently routed to an expert if its score exceeds the expert's threshold, enabling dynamic computation allocation while achieving load balance without auxiliary losses. This fully causal mechanism eliminates dependence on other tokens in the batch, making it well-suited for autoregressive language modeling. In pretraining experiments scaling to 2.4B parameters on FineWeb-Edu, ET achieves 0.067 lower cross-entropy loss than TC-MoE, equivalent to reaching the same performance with 1.6$\\times$ fewer tokens.",
-      "pdf_url": "https://arxiv.org/pdf/2603.11535v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.11535v1",
-      "published": "2026-03-12",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
       ]
     }
   ]
