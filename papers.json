@@ -1,165 +1,192 @@
 {
-  "last_updated": "2026-03-17T01:12:02.395762",
+  "last_updated": "2026-03-18T01:16:02.787959",
   "papers": [
     {
-      "title": "A Kernel-Based Nonparametric Test for Conditional Independence of Functional Data",
+      "title": "InViC: Intent-aware Visual Cues for Medical Visual Question Answering",
       "authors": [
-        "Yin Tang",
-        "Bing Li"
+        "Zhisong Wang",
+        "Ziyang Chen",
+        "Zanting Ye",
+        "Hongze Zhu",
+        "Yefeng Zheng",
+        "Yong Xia"
       ],
-      "abstract": "Conditional independence is a fundamental concept in many areas of statistical research, including, for example, sufficient dimension reduction, causal inference, and statistical graphical models. In many modern applications, data arise in the form of random functions, making it important to determine whether two random functions are conditionally independent given a third. However, to the best of our knowledge, existing conditional independence tests in the literature apply only to multivariate data, and extensions to the functional setting are not available. To fill this gap, we develop a kernel-based test for conditional independence of random functions based on the conjoined conditional covariance operator (CCCO). We rigorously derive the asymptotic distribution of the CCCO estimator using a recently established sharpened convergence rate for the regression operator (Choi et al., 2026). Based on this result, we construct a test statistic using the spectral decomposition of the operator appearing in the asymptotic distribution. The proposed method is illustrated through applications to an activity and biometrics dataset and a macroeconomic dataset.",
-      "pdf_url": "https://arxiv.org/pdf/2603.13704v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.13704v1",
-      "published": "2026-03-14",
+      "abstract": "Medical visual question answering (Med-VQA) aims to answer clinically relevant questions grounded in medical images. However, existing multimodal large language models (MLLMs) often exhibit shortcut answering, producing plausible responses by exploiting language priors or dataset biases while insufficiently attending to visual evidence. This behavior undermines clinical reliability, especially when subtle imaging findings are decisive. We propose a lightweight plug-in framework, termed Intent-aware Visual Cues (InViC), to explicitly enhance image-based answer generation in medical VQA. InViC introduces a Cue Tokens Extraction (CTE) module that distills dense visual tokens into a compact set of K question-conditioned cue tokens, which serve as structured visual intermediaries injected into the LLM decoder to promote intent-aligned visual evidence. To discourage bypassing of visual information, we further design a two-stage fine-tuning strategy with a cue-bottleneck attention mask. In Stage I, we employ an attention mask to block the LLM's direct view of raw visual features, thereby funneling all visual evidence through the cue pathway. In Stage II, standard causal attention is restored to train the LLM to jointly exploit the visual and cue tokens. We evaluate InViC on three public Med-VQA benchmarks (VQA-RAD, SLAKE, and ImageCLEF VQA-Med 2019) across multiple representative MLLMs. InViC consistently improves over zero-shot inference and standard LoRA fine-tuning, demonstrating that intent-aware visual cues with bottlenecked training is a practical and effective strategy for improving trustworthy Med-VQA.",
+      "pdf_url": "https://arxiv.org/pdf/2603.16372v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.16372v1",
+      "published": "2026-03-17",
       "categories": [
-        "stat.ME"
+        "cs.CV"
       ]
     },
     {
-      "title": "Generalized projection tests for function-valued parameters with applications to testing structural causal assumptions",
+      "title": "Behavioral Steering in a 35B MoE Language Model via SAE-Decoded Probe Vectors: One Agency Axis, Not Five Traits",
       "authors": [
-        "Rui Wang",
-        "Albert Osom",
-        "Bo Zhang"
+        "Jia Qing Yap"
       ],
-      "abstract": "Structural assumptions are central to the causal inference literature. In practice, it is often crucial to assess their validity or to test implications that follow from them. In many settings, such tests can be framed as evaluating whether a function-valued parameter equals zero. In this paper, we propose a class of generalized projection tests based on series estimators for function-valued parameters. We establish conditions under which the proposed tests are valid and illustrate their applicability through examples from the data fusion and instrumental variables literature. Our approach accommodates flexible machine learning methods for estimating nuisance parameters. In contrast to many existing approaches, the limiting distribution of the proposed test statistics is straightforward to compute under the null hypothesis. We apply our method to test the equality of conditional COVID-19 risk across vaccine arms in the COVID-19 Variant Immunologic Landscape (COVAIL) trial.",
-      "pdf_url": "https://arxiv.org/pdf/2603.13681v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.13681v1",
-      "published": "2026-03-14",
+      "abstract": "We train nine sparse autoencoders (SAEs) on the residual stream of Qwen 3.5-35B-A3B, a 35-billion-parameter Mixture-of-Experts model with a hybrid GatedDeltaNet/attention architecture, and use them to identify and steer five agentic behavioral traits. Our method trains linear probes on SAE latent activations, then projects the probe weights back through the SAE decoder to obtain continuous steering vectors in the model's native activation space. This bypasses the SAE's top-k discretization, enabling fine-grained behavioral intervention at inference time with no retraining. Across 1,800 agent rollouts (50 scenarios times 36 conditions), we find that autonomy steering at multiplier 2 achieves Cohen's d = 1.01 (p < 0.0001), shifting the model from asking the user for help 78% of the time to proactively executing code and searching the web. Cross-trait analysis, however, reveals that all five steering vectors primarily modulate a single dominant agency axis (the disposition to act independently versus defer to the user), with trait specific effects appearing only as secondary modulations in tool-type composition and dose-response shape. The tool-use vector steers behavior (d = 0.39); the risk-calibration vector produces only suppression. We additionally show that steering only during autoregressive decoding has zero effect (p > 0.35), providing causal evidence that behavioral commitments are computed during prefill in GatedDeltaNet architectures.",
+      "pdf_url": "https://arxiv.org/pdf/2603.16335v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.16335v1",
+      "published": "2026-03-17",
       "categories": [
-        "stat.ME",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "Fast Uncertainty Quantification for Kernel-Based Estimators in Large-Scale Causal Inference",
-      "authors": [
-        "Matthew Kosko",
-        "Falco J",
-        "Bargagli-Stoffi",
-        "Lin Wang",
-        "Michele Santacatterina"
-      ],
-      "abstract": "Kernel methods are widely used in causal inference for tasks such as treatment effect estimation, policy evaluation, and policy learning. The bootstrap is a standard tool for uncertainty quantification because of its broad applicability. As increasingly large datasets become available, such as the 2023 U.S. Natality data from the National Vital Statistics System (NVSS), which includes 3,596,017 registered births, the computational demands of these methods increase substantially. Kernel methods are known to scale poorly with sample size, and this limitation is further exacerbated by the repeated re-fitting required by the bootstrap. As a result, bootstrap-based inference for kernel-based estimators can become computationally infeasible in large-scale settings. In this paper, we address these challenges by extending the causal Bag of Little Bootstraps (cBLB) algorithm to kernel methods. Our approach achieves computational scalability by combining subsampling and resampling while preserving first-order uncertainty quantification and asymptotically correct coverage. We evaluate the method across three representative implementations: kernelized augmented outcome-weighted learning, kernel-based minimax weighting, and double machine learning with kernel support vector machines. We show in simulations that our method yields confidence intervals with nominal coverage at a fraction of the computational cost. We further demonstrate its utility in a real-world application by estimating the effect of any amount of smoking on birth weight, as well as the optimal treatment regime, using the NVSS dataset, where the standard bootstrap is prohibitively expensive computationally and effectively infeasible at this scale.",
-      "pdf_url": "https://arxiv.org/pdf/2603.13662v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.13662v1",
-      "published": "2026-03-14",
-      "categories": [
-        "stat.ME",
-        "stat.AP",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Performance-Driven Causal Signal Engineering for Financial Markets under Non-Stationarity",
-      "authors": [
-        "Lucas A. Souza"
-      ],
-      "abstract": "We introduce a performance-driven framework for constructing strictly causal forward-oriented observables in strongly non-stationary time series. The method combines a robustly normalized composite of heterogeneous indicators with a causally computed derivative component, yielding a local phase-leading effect that is amplified near regime transitions while remaining fully causal. A hysteresis-based decision functional maps the observable into discrete system states, with execution delayed by one step to preserve strict temporal ordering. Adaptation is achieved through a walk-forward scheme, in which model parameters are selected using rolling train--validation windows and subsequently applied out-of-sample. In this setting, the validation segment acts as an internal performance screen rather than as a statistical validation set, and no claims of generalization are inferred from it alone. The framework is evaluated on high-frequency financial time series as an experimentally accessible realization of a non-stationary complex system. Under a controlled zero-cost setting, the resulting dynamics exhibit a pronounced risk-reshaping effect, characterized by smoother trajectories and reduced drawdowns relative to direct exposure, and should be interpreted as an upper bound on achievable performance. These results illustrate how causal signal engineering can generate anticipatory structure in non-stationary systems without relying on non-causal information, explicit horizon labeling, or high-capacity predictive models.",
-      "pdf_url": "https://arxiv.org/pdf/2603.13638v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.13638v1",
-      "published": "2026-03-13",
-      "categories": [
-        "q-fin.CP"
-      ]
-    },
-    {
-      "title": "Measuring Extreme Tail Association",
-      "authors": [
-        "Bikramjit Das",
-        "Xiangyu Liu"
-      ],
-      "abstract": "Simultaneous occurrences of extreme events need not imply symmetric or reciprocal tail dependence. However, most existing measures of extremal dependence are inherently symmetric and hence often fail to capture directional influence in tail association. We introduce a rank-based measure of Extreme Tail Association (ETA) for bivariate data quantifying such directional influence of one variable on another in extreme tail regions. The proposed estimator is easily computable, consistent with its population counterpart, and asymptotically normal under mild conditions, allowing for statistical inference. We further develop a formal test for asymmetry in tail association based on a multiplier bootstrap procedure. The practical relevance of the methodology is illustrated using data on extreme price movements in major cryptocurrencies. Beyond providing a flexible tool for extremal association, the proposed framework offers a substantive argument for investigating causal relationships in extreme scenarios.",
-      "pdf_url": "https://arxiv.org/pdf/2603.13614v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.13614v1",
-      "published": "2026-03-13",
-      "categories": [
-        "stat.ME",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "The Privacy-Utility Trade-Off of Location Tracking in Ad Personalization",
-      "authors": [
-        "Mohammad Mosaffa",
-        "Omid Rafieian"
-      ],
-      "abstract": "Firms collect vast amounts of behavioral and geographical data on individuals. While behavioral data captures an individual's digital footprint, geographical data reflects their physical footprint. Given the significant privacy risks associated with combining these data sources, it is crucial to understand their respective value and whether they act as complements or substitutes in achieving firms' business objectives. In this paper, we combine economic theory, machine learning, and causal inference to quantify the value of geographical data, the extent to which behavioral data can substitute for it, and the mechanisms through which it benefits firms. Using data from a leading in-app advertising platform in a large Asian country, we document that geographical data is most valuable in the early cold-start stage, when behavioral histories are limited. In this stage, geographical data complements behavioral data, improving targeting performance by almost 20%. As users accumulate richer behavioral histories, however, the role of geographical data shifts: it becomes largely substitutable, as behavioral data alone captures the relevant heterogeneity. These results highlight a central privacy-utility trade-off in ad personalization and inform managerial decisions about when location tracking creates value.",
-      "pdf_url": "https://arxiv.org/pdf/2603.12374v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.12374v1",
-      "published": "2026-03-12",
-      "categories": [
-        "econ.EM",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Frequentist Consistency of Prior-Data Fitted Networks for Causal Inference",
-      "authors": [
-        "Valentyn Melnychuk",
-        "Vahid Balazadeh",
-        "Stefan Feuerriegel",
-        "Rahul G. Krishnan"
-      ],
-      "abstract": "Foundation models based on prior-data fitted networks (PFNs) have shown strong empirical performance in causal inference by framing the task as an in-context learning problem.However, it is unclear whether PFN-based causal estimators provide uncertainty quantification that is consistent with classical frequentist estimators. In this work, we address this gap by analyzing the frequentist consistency of PFN-based estimators for the average treatment effect (ATE). (1) We show that existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias: the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency. (2) As a remedy, we suggest employing a calibration procedure based on a one-step posterior correction (OSPC). We show that the OSPC helps to restore frequentist consistency and can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs (i.e., both the calibrated PFN-based estimators and the classical semi-parametric efficient estimators converge in distribution with growing data size). (3) Finally, we implement OSPC through tailoring martingale posteriors on top of the PFNs. In this way, we are able to recover functional nuisance posteriors from PFNs, required by the OSPC. In multiple (semi-)synthetic experiments, PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that (i) asymptotically matches frequentist uncertainty and (ii) is well calibrated in finite samples in comparison to other Bayesian ATE estimators.",
-      "pdf_url": "https://arxiv.org/pdf/2603.12037v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.12037v1",
-      "published": "2026-03-12",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Think While Watching: Online Streaming Segment-Level Memory for Multi-Turn Video Reasoning in Multimodal Large Language Models",
-      "authors": [
-        "Lu Wang",
-        "Zhuoran Jin",
-        "Yupu Hao",
-        "Yubo Chen",
-        "Kang Liu",
-        "Yulong Ao",
-        "Jun Zhao"
-      ],
-      "abstract": "Multimodal large language models (MLLMs) have shown strong performance on offline video understanding, but most are limited to offline inference or have weak online reasoning, making multi-turn interaction over continuously arriving video streams difficult. Existing streaming methods typically use an interleaved perception-generation paradigm, which prevents concurrent perception and generation and leads to early memory decay as streams grow, hurting long-range dependency modeling. We propose Think While Watching, a memory-anchored streaming video reasoning framework that preserves continuous segment-level memory during multi-turn interaction. We build a three-stage, multi-round chain-of-thought dataset and adopt a stage-matched training strategy, while enforcing strict causality through a segment-level streaming causal mask and streaming positional encoding. During inference, we introduce an efficient pipeline that overlaps watching and thinking and adaptively selects the best attention backend. Under both single-round and multi-round streaming input protocols, our method achieves strong results. Built on Qwen3-VL, it improves single-round accuracy by 2.6% on StreamingBench and by 3.79% on OVO-Bench. In the multi-round setting, it maintains performance while reducing output tokens by 56%. Code is available at: https://github.com/wl666hhh/Think_While_Watching/",
-      "pdf_url": "https://arxiv.org/pdf/2603.11896v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.11896v1",
-      "published": "2026-03-12",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
+        "cs.LG",
         "cs.CL"
       ]
     },
     {
-      "title": "Data Fusion with Distributional Equivalence Test-then-pool",
+      "title": "Locate-then-Sparsify: Attribution Guided Sparse Strategy for Visual Hallucination Mitigation",
       "authors": [
-        "Linying Yang",
-        "Xing Liu",
-        "Robin J. Evans"
+        "TianTian Dang",
+        "Chao Bi",
+        "Shufan Shen",
+        "Jinzhe Liu",
+        "Qingming Huang",
+        "Shuhui Wang"
       ],
-      "abstract": "Randomized controlled trials (RCTs) are the gold standard for causal inference, yet practical constraints often limit the size of the concurrent control arm. Borrowing control data from previous trials offers a potential efficiency gain, but naive borrowing can induce bias when historical and current populations differ. Existing test-then-pool (TTP) procedures address this concern by testing for equality of control outcomes between historical and concurrent trials before borrowing; however, standard implementations may suffer from reduced power or inadequate control of the Type-I error rate.\n  We develop a new TTP framework that fuses control arms while rigorously controlling the Type-I error rate of the final treatment effect test. Our method employs kernel two-sample testing via maximum mean discrepancy (MMD) to capture distributional differences, and equivalence testing to avoid introducing uncontrolled bias, providing a more flexible and informative criterion for pooling. To ensure valid inference, we introduce partial bootstrap and partial permutation procedures for approximating null distributions in the presence of heterogeneous controls. We further establish the overall validity and consistency. We provide empirical studies demonstrating that the proposed approach achieves higher power than standard TTP methods while maintaining nominal error control, highlighting its value as a principled tool for leveraging historical controls in modern clinical trials.",
-      "pdf_url": "https://arxiv.org/pdf/2603.11867v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.11867v1",
-      "published": "2026-03-12",
+      "abstract": "Despite the significant advancements in Large Vision-Language Models (LVLMs), their tendency to generate hallucinations undermines reliability and restricts broader practical deployment. Among the hallucination mitigation methods, feature steering emerges as a promising approach that reduces erroneous outputs in LVLMs without increasing inference costs. However, current methods apply uniform feature steering across all layers. This heuristic strategy ignores inter-layer differences, potentially disrupting layers unrelated to hallucinations and ultimately leading to performance degradation on general tasks. In this paper, we propose a plug-and-play framework called Locate-Then-Sparsify for Feature Steering (LTS-FS), which controls the steering intensity according to the hallucination relevance of each layer. We first construct a synthetic dataset comprising token-level and sentence-level hallucination cases. Based on this dataset, we introduce an attribution method based on causal interventions to quantify the hallucination relevance of each layer. With the attribution scores across layers, we propose a layerwise strategy that converts these scores into feature steering intensities for individual layers, enabling more precise adjustments specifically on hallucination-relevant layers. Extensive experiments across multiple LVLMs and benchmarks demonstrate that our LTS-FS framework effectively mitigates hallucination while preserving strong performance.",
+      "pdf_url": "https://arxiv.org/pdf/2603.16284v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.16284v1",
+      "published": "2026-03-17",
       "categories": [
-        "stat.ME",
-        "stat.ML"
+        "cs.CV",
+        "cs.LG"
       ]
     },
     {
-      "title": "Causal Influence Maximization with Steady-State Guarantees",
+      "title": "VIGOR: VIdeo Geometry-Oriented Reward for Temporal Generative Alignment",
       "authors": [
-        "Renjie Cao",
-        "Zhuoxin Yan",
-        "Xinyan Su",
-        "Zhiheng Zhang"
+        "Tengjiao Yin",
+        "Jinglei Shi",
+        "Heng Guo",
+        "Xi Wang"
       ],
-      "abstract": "Influence maximization in networks is a central problem in machine learning and causal inference, where an intervention on a subset of individuals triggers a diffusion process through the network. Existing approaches typically optimize short-horizon rewards or rely on strong parametric assumptions, offering limited guarantees for longrun causal outcomes. In this work, we address the problem of selecting a seed set to maximize the total steady-state potential outcome under budget constraints. Theoretically, we demonstrate that under a low-probability propagation assumption, the high-dimensional path-dependent dynamics can be compressed into a low-dimensional exposure mapping with a bounded second-order approximation error. Leveraging this structural reduction, we propose CIM, a two-stage framework that first learns shape-constrained exposureresponse functions from observational data and then optimizes the objective via a greedy strategy. Our approach bridges causal inference with network optimization, providing provable guarantees for both the estimation of outcome functions and the approximation ratio of the influence maximization.",
-      "pdf_url": "https://arxiv.org/pdf/2603.11761v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.11761v1",
-      "published": "2026-03-12",
+      "abstract": "Video diffusion models lack explicit geometric supervision during training, leading to inconsistency artifacts such as object deformation, spatial drift, and depth violations in generated videos. To address this limitation, we propose a geometry-based reward model that leverages pretrained geometric foundation models to evaluate multi-view consistency through cross-frame reprojection error. Unlike previous geometric metrics that measure inconsistency in pixel space, where pixel intensity may introduce additional noise, our approach conducts error computation in a pointwise fashion, yielding a more physically grounded and robust error metric. Furthermore, we introduce a geometry-aware sampling strategy that filters out low-texture and non-semantic regions, focusing evaluation on geometrically meaningful areas with reliable correspondences to improve robustness. We apply this reward model to align video diffusion models through two complementary pathways: post-training of a bidirectional model via SFT or Reinforcement Learning and inference-time optimization of a Causal Video Model (e.g., Streaming video generator) via test-time scaling with our reward as a path verifier. Experimental results validate the effectiveness of our design, demonstrating that our geometry-based reward provides superior robustness compared to other variants. By enabling efficient inference-time scaling, our method offers a practical solution for enhancing open-source video models without requiring extensive computational resources for retraining.",
+      "pdf_url": "https://arxiv.org/pdf/2603.16271v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.16271v1",
+      "published": "2026-03-17",
       "categories": [
-        "stat.ME"
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Prior-data Fitted Networks for Causal Inference: a Simulation Study with Real-world Scenarios",
+      "authors": [
+        "Francisco Mourao",
+        "David Hajage",
+        "Daria Bystrova",
+        "Bertrand Bouvarel",
+        "Nathanaël Lapidus",
+        "Fabrice Carrat",
+        "Benjamin Glemain"
+      ],
+      "abstract": "Prior-data fitted networks (PFNs) represent a paradigm shift in tabular data prediction. We present the principles of this new paradigm and evaluate two PFNs for estimating the average treatment effect (ATE) of a binary treatment on a binary outcome, using simulated clinical scenarios based on real-world data. We assessed TabPFN, a predictive PFN, in combination with causal inference procedures such as g-computation and inverse probability of treatment weighting (IPTW), as well as CausalPFN, a PFN specifically designed for causal inference that directly provides an ATE estimate with its uncertainty interval. Confidence intervals for the TabPFN-based methods were derived using bootstrap resampling. We found that computation times for TabPFN were too long for causal inference applications relating to the need for bootstrap methods to compute uncertainty. Moreover, g-computation with TabPFN produced a biased estimator, which was partially corrected by fitting separate models for each treatment group (T-learner approach). CausalPFN, by contrast, was computationally efficient but exhibited poor coverage of the 95\\% uncertainty interval for the ATE, due to both estimation bias and its uncertainty quantification procedure. Beyond automating model specification, some PFNs variants -- like CausalPFN -- attempt to automate causal modeling, but in the settings we evaluated its estimates were biased. However, their application in routine causal inference tasks needs further investigation.",
+      "pdf_url": "https://arxiv.org/pdf/2603.15928v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.15928v1",
+      "published": "2026-03-16",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Evaluating Causal Discovery Algorithms for Path-Specific Fairness and Utility in Healthcare",
+      "authors": [
+        "Nitish Nagesh",
+        "Elahe Khatibi",
+        "Thomas Hughes",
+        "Mahdi Bagheri",
+        "Pratik Gajane",
+        "Amir M. Rahmani"
+      ],
+      "abstract": "Causal discovery in health data faces evaluation challenges when ground truth is unknown. We address this by collaborating with experts to construct proxy ground-truth graphs, establishing benchmarks for synthetic Alzheimer's disease and heart failure clinical records data. We evaluate the Peter-Clark, Greedy Equivalence Search, and Fast Causal Inference algorithms on structural recovery and path-specific fairness decomposition, going beyond composite fairness scores. On synthetic data, Peter-Clark achieved the best structural recovery. On heart failure data, Fast Causal Inference achieved the highest utility. For path-specific effects, ejection fraction contributed 3.37 percentage points to the indirect effect in the ground truth. These differences drove variations in the fairness-utility ratio across algorithms. Our results highlight the need for graph-aware fairness evaluation and fine-grained path-specific analysis when deploying causal discovery in clinical applications.",
+      "pdf_url": "https://arxiv.org/pdf/2603.15926v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.15926v1",
+      "published": "2026-03-16",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "InterveneBench: Benchmarking LLMs for Intervention Reasoning and Causal Study Design in Real Social Systems",
+      "authors": [
+        "Shaojie Shi",
+        "Zhengyu Shi",
+        "Lingran Zheng",
+        "Xinyu Su",
+        "Anna Xie",
+        "Bohao Lv",
+        "Rui Xu",
+        "Zijian Chen",
+        "Zhichao Chen",
+        "Guolei Liu",
+        "Naifu Zhang",
+        "Mingjian Dong",
+        "Zhuo Quan",
+        "Bohao Chen",
+        "Teqi Hao",
+        "Yuan Qi",
+        "Yinghui Xu",
+        "Libo Wu"
+      ],
+      "abstract": "Causal inference in social science relies on end-to-end, intervention-centered research-design reasoning grounded in real-world policy interventions, but current benchmarks fail to evaluate this capability of large language models (LLMs). We present InterveneBench, a benchmark designed to assess such reasoning in realistic social settings. Each instance in InterveneBench is derived from an empirical social science study and requires models to reason about policy interventions and identification assumptions without access to predefined causal graphs or structural equations. InterveneBench comprises 744 peer-reviewed studies across diverse policy domains. Experimental results show that state-of-the-art LLMs struggle under this setting. To address this limitation, we further propose a multi-agent framework, STRIDES. It achieves significant performance improvements over state-of-the-art reasoning models. Our code and data are available at https://github.com/Sii-yuning/STRIDES.",
+      "pdf_url": "https://arxiv.org/pdf/2603.15542v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.15542v1",
+      "published": "2026-03-16",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Spatio-temporal probabilistic forecast using MMAF-guided learning",
+      "authors": [
+        "Leonardo Bardi",
+        "Imma Valentina Curato",
+        "Lorenzo Proietti"
+      ],
+      "abstract": "We employ stochastic feed-forward neural networks with Gaussian-distributed weights to determine a probabilistic forecast for spatio-temporal raster datasets. The networks are trained using MMAF-guided learning, a generalized Bayesian methodology in which the observed data are preprocessed using an embedding designed to produce a low-dimensional representation that captures their dependence and causal structure. The design of the embedding is theory-guided by the assumption that a spatio-temporal Ornstein-Uhlenbeck process with finite second-order moments generates the observed data. The trained networks, in inference mode, are then used to generate ensemble forecasts by applying different initial conditions at different horizons. Experiments conducted on both synthetic and real data demonstrate that our forecasts remain calibrated across multiple time horizons. Moreover, we show that on such data, simple feed-forward architectures can achieve performance comparable to, and in some cases better than, convolutional or diffusion deep learning architectures used in probabilistic forecasting tasks.",
+      "pdf_url": "https://arxiv.org/pdf/2603.15055v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.15055v1",
+      "published": "2026-03-16",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Clue Matters: Leveraging Latent Visual Clues to Empower Video Reasoning",
+      "authors": [
+        "Kaixin zhang",
+        "Xiaohe Li",
+        "Jiahao Li",
+        "Haohua Wu",
+        "Xinyu Zhao",
+        "Zide Fan",
+        "Lei Wang"
+      ],
+      "abstract": "Multi-modal Large Language Models (MLLMs) have significantly advanced video reasoning, yet Video Question Answering (VideoQA) remains challenging due to its demand for temporal causal reasoning and evidence-grounded answer generation. Prevailing end-to-end MLLM frameworks lack explicit structured reasoning between visual perception and answer derivation, causing severe hallucinations and poor interpretability. Existing methods also fail to address three core gaps: faithful visual clue extraction, utility-aware clue filtering, and end-to-end clue-answer alignment. Inspired by hierarchical human visual cognition, we propose ClueNet, a clue-aware video reasoning framework with a two-stage supervised fine-tuning paradigm without extensive base model modifications. Decoupled supervision aligns clue extraction and chain-based reasoning, while inference supervision with an adaptive clue filter refines high-order reasoning, alongside lightweight modules for efficient inference. Experiments on NExT-QA, STAR, and MVBench show that ClueNet outperforms state-of-the-art methods by $\\ge$ 1.1%, with superior generalization, hallucination mitigation, inference efficiency, and cross-backbone compatibility. This work bridges the perception-to-generation gap in MLLM video understanding, providing an interpretable, faithful reasoning paradigm for high-stakes VideoQA applications.",
+      "pdf_url": "https://arxiv.org/pdf/2603.15008v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.15008v1",
+      "published": "2026-03-16",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Learning Question-Aware Keyframe Selection with Synthetic Supervision for Video Question Answering",
+      "authors": [
+        "Minchan Kwon",
+        "Hyounguk Shon",
+        "Junmo Kim"
+      ],
+      "abstract": "Large multimodal models (LMMs) have recently demonstrated remarkable performance in video question answering (VideoQA), yet reasoning over video remains challenging due to high inference cost and diluted information. Keyframe selection offers efficiency and sharper reasoning but suffers from sparse supervision and redundant frame choices when relying only on image-text similarity. We present a question-aware keyframe selection framework with two components: pseudo keyframe labels derived from LMMs that provide informative supervision and a coverage regularization that promotes diverse, complementary evidence across time. Experiments on NExT-QA show that our method significantly improves accuracy, especially for temporal and causal question types, establishing keyframe selection as an effective and learnable module for VideoQA.",
+      "pdf_url": "https://arxiv.org/pdf/2603.14953v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.14953v1",
+      "published": "2026-03-16",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
       ]
     }
   ]
