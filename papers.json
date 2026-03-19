@@ -1,192 +1,185 @@
 {
-  "last_updated": "2026-03-18T01:16:02.787959",
+  "last_updated": "2026-03-19T01:15:45.621591",
   "papers": [
     {
-      "title": "InViC: Intent-aware Visual Cues for Medical Visual Question Answering",
+      "title": "Mutually Causal Semantic Distillation Network for Zero-Shot Learning",
       "authors": [
-        "Zhisong Wang",
-        "Ziyang Chen",
-        "Zanting Ye",
-        "Hongze Zhu",
-        "Yefeng Zheng",
-        "Yong Xia"
+        "Shiming Chen",
+        "Shuhuang Chen",
+        "Guo-Sen Xie",
+        "Xinge You"
       ],
-      "abstract": "Medical visual question answering (Med-VQA) aims to answer clinically relevant questions grounded in medical images. However, existing multimodal large language models (MLLMs) often exhibit shortcut answering, producing plausible responses by exploiting language priors or dataset biases while insufficiently attending to visual evidence. This behavior undermines clinical reliability, especially when subtle imaging findings are decisive. We propose a lightweight plug-in framework, termed Intent-aware Visual Cues (InViC), to explicitly enhance image-based answer generation in medical VQA. InViC introduces a Cue Tokens Extraction (CTE) module that distills dense visual tokens into a compact set of K question-conditioned cue tokens, which serve as structured visual intermediaries injected into the LLM decoder to promote intent-aligned visual evidence. To discourage bypassing of visual information, we further design a two-stage fine-tuning strategy with a cue-bottleneck attention mask. In Stage I, we employ an attention mask to block the LLM's direct view of raw visual features, thereby funneling all visual evidence through the cue pathway. In Stage II, standard causal attention is restored to train the LLM to jointly exploit the visual and cue tokens. We evaluate InViC on three public Med-VQA benchmarks (VQA-RAD, SLAKE, and ImageCLEF VQA-Med 2019) across multiple representative MLLMs. InViC consistently improves over zero-shot inference and standard LoRA fine-tuning, demonstrating that intent-aware visual cues with bottlenecked training is a practical and effective strategy for improving trustworthy Med-VQA.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16372v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.16372v1",
-      "published": "2026-03-17",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Behavioral Steering in a 35B MoE Language Model via SAE-Decoded Probe Vectors: One Agency Axis, Not Five Traits",
-      "authors": [
-        "Jia Qing Yap"
-      ],
-      "abstract": "We train nine sparse autoencoders (SAEs) on the residual stream of Qwen 3.5-35B-A3B, a 35-billion-parameter Mixture-of-Experts model with a hybrid GatedDeltaNet/attention architecture, and use them to identify and steer five agentic behavioral traits. Our method trains linear probes on SAE latent activations, then projects the probe weights back through the SAE decoder to obtain continuous steering vectors in the model's native activation space. This bypasses the SAE's top-k discretization, enabling fine-grained behavioral intervention at inference time with no retraining. Across 1,800 agent rollouts (50 scenarios times 36 conditions), we find that autonomy steering at multiplier 2 achieves Cohen's d = 1.01 (p < 0.0001), shifting the model from asking the user for help 78% of the time to proactively executing code and searching the web. Cross-trait analysis, however, reveals that all five steering vectors primarily modulate a single dominant agency axis (the disposition to act independently versus defer to the user), with trait specific effects appearing only as secondary modulations in tool-type composition and dose-response shape. The tool-use vector steers behavior (d = 0.39); the risk-calibration vector produces only suppression. We additionally show that steering only during autoregressive decoding has zero effect (p > 0.35), providing causal evidence that behavioral commitments are computed during prefill in GatedDeltaNet architectures.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16335v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.16335v1",
-      "published": "2026-03-17",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Locate-then-Sparsify: Attribution Guided Sparse Strategy for Visual Hallucination Mitigation",
-      "authors": [
-        "TianTian Dang",
-        "Chao Bi",
-        "Shufan Shen",
-        "Jinzhe Liu",
-        "Qingming Huang",
-        "Shuhui Wang"
-      ],
-      "abstract": "Despite the significant advancements in Large Vision-Language Models (LVLMs), their tendency to generate hallucinations undermines reliability and restricts broader practical deployment. Among the hallucination mitigation methods, feature steering emerges as a promising approach that reduces erroneous outputs in LVLMs without increasing inference costs. However, current methods apply uniform feature steering across all layers. This heuristic strategy ignores inter-layer differences, potentially disrupting layers unrelated to hallucinations and ultimately leading to performance degradation on general tasks. In this paper, we propose a plug-and-play framework called Locate-Then-Sparsify for Feature Steering (LTS-FS), which controls the steering intensity according to the hallucination relevance of each layer. We first construct a synthetic dataset comprising token-level and sentence-level hallucination cases. Based on this dataset, we introduce an attribution method based on causal interventions to quantify the hallucination relevance of each layer. With the attribution scores across layers, we propose a layerwise strategy that converts these scores into feature steering intensities for individual layers, enabling more precise adjustments specifically on hallucination-relevant layers. Extensive experiments across multiple LVLMs and benchmarks demonstrate that our LTS-FS framework effectively mitigates hallucination while preserving strong performance.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16284v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.16284v1",
-      "published": "2026-03-17",
+      "abstract": "Zero-shot learning (ZSL) aims to recognize the unseen classes in the open-world guided by the side-information (e.g., attributes). Its key task is how to infer the latent semantic knowledge between visual and attribute features on seen classes, and thus conducting a desirable semantic knowledge transfer from seen classes to unseen ones. Prior works simply utilize unidirectional attention within a weakly-supervised manner to learn the spurious and limited latent semantic representations, which fail to effectively discover the intrinsic semantic knowledge (e.g., attribute semantic) between visual and attribute features. To solve the above challenges, we propose a mutually causal semantic distillation network (termed MSDN++) to distill the intrinsic and sufficient semantic representations for ZSL. MSDN++ consists of an attribute$\\rightarrow$visual causal attention sub-net that learns attribute-based visual features, and a visual$\\rightarrow$attribute causal attention sub-net that learns visual-based attribute features. The causal attentions encourages the two sub-nets to learn causal vision-attribute associations for representing reliable features with causal visual/attribute learning. With the guidance of semantic distillation loss, the two mutual attention sub-nets learn collaboratively and teach each other throughout the training process. Extensive experiments on three widely-used benchmark datasets (e.g., CUB, SUN, AWA2, and FLO) show that our MSDN++ yields significant improvements over the strong baselines, leading to new state-of-the-art performances.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17412v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.17412v1",
+      "published": "2026-03-18",
       "categories": [
         "cs.CV",
         "cs.LG"
       ]
     },
     {
-      "title": "VIGOR: VIdeo Geometry-Oriented Reward for Temporal Generative Alignment",
+      "title": "The Causal Uncertainty Principle: Manifold Tearing and the Topological Limits of Counterfactual Interventions",
       "authors": [
-        "Tengjiao Yin",
-        "Jinglei Shi",
-        "Heng Guo",
-        "Xi Wang"
+        "Rui Wu",
+        "Hong Xie",
+        "Yongjun Li"
       ],
-      "abstract": "Video diffusion models lack explicit geometric supervision during training, leading to inconsistency artifacts such as object deformation, spatial drift, and depth violations in generated videos. To address this limitation, we propose a geometry-based reward model that leverages pretrained geometric foundation models to evaluate multi-view consistency through cross-frame reprojection error. Unlike previous geometric metrics that measure inconsistency in pixel space, where pixel intensity may introduce additional noise, our approach conducts error computation in a pointwise fashion, yielding a more physically grounded and robust error metric. Furthermore, we introduce a geometry-aware sampling strategy that filters out low-texture and non-semantic regions, focusing evaluation on geometrically meaningful areas with reliable correspondences to improve robustness. We apply this reward model to align video diffusion models through two complementary pathways: post-training of a bidirectional model via SFT or Reinforcement Learning and inference-time optimization of a Causal Video Model (e.g., Streaming video generator) via test-time scaling with our reward as a path verifier. Experimental results validate the effectiveness of our design, demonstrating that our geometry-based reward provides superior robustness compared to other variants. By enabling efficient inference-time scaling, our method offers a practical solution for enhancing open-source video models without requiring extensive computational resources for retraining.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16271v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.16271v1",
+      "abstract": "Judea Pearl's do-calculus provides a foundation for causal inference, but its translation to continuous generative models remains fraught with geometric challenges. We establish the fundamental limits of such interventions. We define the Counterfactual Event Horizon and prove the Manifold Tearing Theorem: deterministic flows inevitably develop finite-time singularities under extreme interventions. We establish the Causal Uncertainty Principle for the trade-off between intervention extremity and identity preservation. Finally, we introduce Geometry-Aware Causal Flow (GACF), a scalable algorithm that utilizes a topological radar to bypass manifold tearing, validated on high-dimensional scRNA-seq data.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17385v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.17385v1",
+      "published": "2026-03-18",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "OnlineHMR: Video-based Online World-Grounded Human Mesh Recovery",
+      "authors": [
+        "Yiwen Zhao",
+        "Ce Zheng",
+        "Yufu Wang",
+        "Hsueh-Han Daniel Yang",
+        "Liting Wen",
+        "Laszlo A. Jeni"
+      ],
+      "abstract": "Human mesh recovery (HMR) models 3D human body from monocular videos, with recent works extending it to world-coordinate human trajectory and motion reconstruction. However, most existing methods remain offline, relying on future frames or global optimization, which limits their applicability in interactive feedback and perception-action loop scenarios such as AR/VR and telepresence. To address this, we propose OnlineHMR, a fully online framework that jointly satisfies four essential criteria of online processing, including system-level causality, faithfulness, temporal consistency, and efficiency. Built upon a two-branch architecture, OnlineHMR enables streaming inference via a causal key-value cache design and a curated sliding-window learning strategy. Meanwhile, a human-centric incremental SLAM provides online world-grounded alignment under physically plausible trajectory correction. Experimental results show that our method achieves performance comparable to existing chunk-based approaches on the standard EMDB benchmark and highly dynamic custom videos, while uniquely supporting online processing. Page and code are available at https://tsukasane.github.io/Video-OnlineHMR/.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17355v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.17355v1",
+      "published": "2026-03-18",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Improving causal inference in interrupted time series analysis: the triple difference design",
+      "authors": [
+        "Ariel Linden"
+      ],
+      "abstract": "Background: Interrupted time series analysis (ITSA) is widely used to evaluate health policy and intervention effects. While multiple-group ITSA (MG-ITSA) improves causal inference by incorporating a control group, residual confounding from unmeasured time-varying factors may remain. The triple-difference interrupted time series (DDD-ITSA) design extends this approach by adding a second control group to further isolate treatment effects, but it remains underutilized and lacks formal guidance.\n  Methods: We formalize the DDD-ITSA framework, specify the regression model, define key parameters for estimating level and trend effects, and clarify interpretation of the triple-difference estimand. We illustrate the approach using a worked example evaluating California's Proposition 99 cigarette tax and its impact on per-capita cigarette sales.\n  Results: In the example, all groups were balanced on pre-intervention level and trend. The triple-difference estimand indicated a statistically significant annual reduction of -1.76 per-capita cigarette packs in California relative to the secondary control (P = 0.020; 95 percent CI: -3.24, -0.28), consistent with results from the primary comparison. Differences between control groups were not significant.\n  Conclusions: DDD-ITSA strengthens causal inference when two-group comparisons may be confounded by leveraging an additional control group to remove remaining biases and assess heterogeneity. Implementation is facilitated by updates to the itsa Stata package. Careful attention to control selection, baseline balance, and autocorrelation remains essential.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17281v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.17281v1",
+      "published": "2026-03-18",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "GigaWorld-Policy: An Efficient Action-Centered World--Action Model",
+      "authors": [
+        "Angen Ye",
+        "Boyuan Wang",
+        "Chaojun Ni",
+        "Guan Huang",
+        "Guosheng Zhao",
+        "Hao Li",
+        "Hengtao Li",
+        "Jie Li",
+        "Jindi Lv",
+        "Jingyu Liu",
+        "Min Cao",
+        "Peng Li",
+        "Qiuping Deng",
+        "Wenjun Mei",
+        "Xiaofeng Wang",
+        "Xinze Chen",
+        "Xinyu Zhou",
+        "Yang Wang",
+        "Yifan Chang",
+        "Yifan Li",
+        "Yukun Zhou",
+        "Yun Ye",
+        "Zhichao Liu",
+        "Zheng Zhu"
+      ],
+      "abstract": "World-Action Models (WAM) initialized from pre-trained video generation backbones have demonstrated remarkable potential for robot policy learning. However, existing approaches face two critical bottlenecks that hinder performance and deployment. First, jointly reasoning over future visual dynamics and corresponding actions incurs substantial inference overhead. Second, joint modeling often entangles visual and motion representations, making motion prediction accuracy heavily dependent on the quality of future video forecasts. To address these issues, we introduce GigaWorld-Policy, an action-centered WAM that learns 2D pixel-action dynamics while enabling efficient action decoding, with optional video generation. Specifically, we formulate policy training into two coupled components: the model predicts future action sequences conditioned on the current observation, and simultaneously generates future videos conditioned on the predicted actions and the same observation. The policy is supervised by both action prediction and video generation, providing richer learning signals and encouraging physically plausible actions through visual-dynamics constraints. With a causal design that prevents future-video tokens from influencing action tokens, explicit future-video generation is optional at inference time, allowing faster action prediction during deployment. To support this paradigm, we curate a diverse, large-scale robot dataset to pre-train an action-centered video generation model, which is then adapted as the backbone for robot policy learning. Experimental results on real-world robotic platforms show that GigaWorld-Policy runs 9x faster than the leading WAM baseline, Motus, while improving task success rates by 7%. Moreover, compared with pi-0.5, GigaWorld-Policy improves performance by 95% on RoboTwin 2.0.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17240v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.17240v1",
+      "published": "2026-03-18",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Neuron-Level Emotion Control in Speech-Generative Large Audio-Language Models",
+      "authors": [
+        "Xiutian Zhao",
+        "Ismail Rasim Ulgen",
+        "Philipp Koehn",
+        "Björn Schuller",
+        "Berrak Sisman"
+      ],
+      "abstract": "Large audio-language models (LALMs) can produce expressive speech, yet reliable emotion control remains elusive: conversions often miss the target affect and may degrade linguistic fidelity through refusals, hallucinations, or paraphrase. We present, to our knowledge, the first neuron-level study of emotion control in speech-generative LALMs and demonstrate that compact emotion-sensitive neurons (ESNs) are causally actionable, enabling training-free emotion steering at inference time. ESNs are identified via success-filtered activation aggregation enforcing both emotion realization and content preservation. Across three LALMs (Qwen2.5-Omni-7B, MiniCPM-o 4.5, Kimi-Audio), ESN interventions yield emotion-specific gains that generalize to unseen speakers and are supported by automatic and human evaluation. Controllability depends on selector design, mask sparsity, filtering, and intervention strength. Our results establish a mechanistic framework for training-free emotion control in speech generation.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17231v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.17231v1",
+      "published": "2026-03-18",
+      "categories": [
+        "cs.CL",
+        "eess.AS"
+      ]
+    },
+    {
+      "title": "An End-to-End Framework for Functionality-Embedded Provenance Graph Construction and Threat Interpretation",
+      "authors": [
+        "Kushankur Ghosh",
+        "Mehar Klair",
+        "Kian Kyars",
+        "Euijin Choo",
+        "Jörg Sander"
+      ],
+      "abstract": "Provenance graphs model causal system-level interactions from logs, enabling anomaly detectors to learn normal behavior and detect deviations as attacks. However, existing approaches rely on brittle, manually engineered rules to build provenance graphs, lack functional context for system entities, and provide limited support for analyst investigation. We present Auto-Prov, an adaptive, end-to-end framework that leverages large language models (LLMs) to automatically construct provenance graphs from heterogeneous and evolving logs, embed system-level functional attributes into the graph, enable provenance graph-based anomaly detectors to learn from these enriched graphs, and summarize the detected attacks to assist an analyst's investigation. Auto-Prov clusters unseen log types and efficiently extracts provenance edges and entity-level information via automatically generated rules. It further infers system-level functional context for both known and previously unseen system entities using a combination of LLM inference and behavior-based estimation. Attacks detected by provenance-graph-based anomaly detectors trained on Auto-Prov's graphs are then summarized into natural-language text. We evaluate Auto-Prov with four state-of-the-art provenance graph-based detectors across diverse logs. Results show that Auto-Prov consistently enhances detection performance, generalizes across heterogeneous log formats, and produces stable, interpretable attack summaries that remain robust under system evolution.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17100v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.17100v1",
+      "published": "2026-03-17",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Edge-Efficient Two-Stream Multimodal Architecture for Non-Intrusive Bathroom Fall Detection",
+      "authors": [
+        "Haitian Wang",
+        "Yiren Wang",
+        "Xinyu Wang",
+        "Sheldon Fung",
+        "Atif Mansoor"
+      ],
+      "abstract": "Falls in wet bathroom environments are a major safety risk for seniors living alone. Recent work has shown that mmWave-only, vibration-only, and existing multimodal schemes, such as vibration-triggered radar activation, early feature concatenation, and decision-level score fusion, can support privacy-preserving, non-intrusive fall detection. However, these designs still treat motion and impact as loosely coupled streams, depending on coarse temporal alignment and amplitude thresholds, and do not explicitly encode the causal link between radar-observed collapse and floor impact or address timing drift, object drop confounders, and latency and energy constraints on low-power edge devices. To this end, we propose a two-stream architecture that encodes radar signals with a Motion--Mamba branch for long-range motion patterns and processes floor vibration with an Impact--Griffin branch that emphasizes impact transients and cross-axis coupling. Cross-conditioned fusion uses low-rank bilinear interaction and a Switch--MoE head to align motion and impact tokens and suppress object-drop confounders. The model keeps inference cost suitable for real-time execution on a Raspberry Pi 4B gateway. We construct a bathroom fall detection benchmark dataset with frame-level annotations, comprising more than 3~h of synchronized mmWave radar and triaxial vibration recordings across eight scenarios under running water, together with subject-independent training, validation, and test splits. On the test split, our model attains 96.1% accuracy, 94.8% precision, 88.0% recall, a 91.1% macro F1 score, and an AUC of 0.968. Compared with the strongest baseline, it improves accuracy by 2.0 percentage points and fall recall by 1.3 percentage points, while reducing latency from 35.9 ms to 15.8 ms and lowering energy per 2.56 s window from 14200 mJ to 10750 mJ on the Raspberry Pi 4B gateway.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17069v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.17069v1",
       "published": "2026-03-17",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "Prior-data Fitted Networks for Causal Inference: a Simulation Study with Real-world Scenarios",
+      "title": "Spatial Causal Tensor Completion for Multiple Exposures and Outcomes: An Application to the Health Effects of PFAS Pollution",
       "authors": [
-        "Francisco Mourao",
-        "David Hajage",
-        "Daria Bystrova",
-        "Bertrand Bouvarel",
-        "Nathanaël Lapidus",
-        "Fabrice Carrat",
-        "Benjamin Glemain"
+        "Xiaodan Zhou",
+        "Brian J Reich",
+        "Shu Yang"
       ],
-      "abstract": "Prior-data fitted networks (PFNs) represent a paradigm shift in tabular data prediction. We present the principles of this new paradigm and evaluate two PFNs for estimating the average treatment effect (ATE) of a binary treatment on a binary outcome, using simulated clinical scenarios based on real-world data. We assessed TabPFN, a predictive PFN, in combination with causal inference procedures such as g-computation and inverse probability of treatment weighting (IPTW), as well as CausalPFN, a PFN specifically designed for causal inference that directly provides an ATE estimate with its uncertainty interval. Confidence intervals for the TabPFN-based methods were derived using bootstrap resampling. We found that computation times for TabPFN were too long for causal inference applications relating to the need for bootstrap methods to compute uncertainty. Moreover, g-computation with TabPFN produced a biased estimator, which was partially corrected by fitting separate models for each treatment group (T-learner approach). CausalPFN, by contrast, was computationally efficient but exhibited poor coverage of the 95\\% uncertainty interval for the ATE, due to both estimation bias and its uncertainty quantification procedure. Beyond automating model specification, some PFNs variants -- like CausalPFN -- attempt to automate causal modeling, but in the settings we evaluated its estimates were biased. However, their application in routine causal inference tasks needs further investigation.",
-      "pdf_url": "https://arxiv.org/pdf/2603.15928v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.15928v1",
-      "published": "2026-03-16",
+      "abstract": "Per- and polyfluoroalkyl substances (PFAS) are typically encountered as mixtures of distinct chemicals with distinct effects on multiple health outcomes. Estimating joint causal effects using spatially-dependent observed data is challenging. We propose a spatial causal tensor completion framework that jointly models multiple exposures and outcomes within a low-rank tensor structure, while adjusting for observed confounders and latent spatial confounders. This method combines a low-rank tensor representation to pool information across exposures and outcomes with a spectral adjustment step that incorporates graph-Laplacian eigenvectors to approximate unmeasured spatial confounders, implemented via a projected-gradient descent algorithm. This framework enables causal inference in the presence of unmeasured spatial confounding and pervasive missingness of potential outcomes. We establish theoretical guarantees for the estimator and evaluate its finite-sample performance through extensive simulations. In an application to national PFAS monitoring data, our approach yields more conservative and credible causal relationships between PFOA and PFOS exposure and 13 chronic disease outcomes compared with existing alternatives.",
+      "pdf_url": "https://arxiv.org/pdf/2603.16854v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.16854v1",
+      "published": "2026-03-17",
       "categories": [
-        "stat.AP"
+        "stat.ME"
       ]
     },
     {
-      "title": "Evaluating Causal Discovery Algorithms for Path-Specific Fairness and Utility in Healthcare",
+      "title": "Semiparametric Inference under Dual Positivity Boundaries:Nested Identification with Administrative Censoring and Confounded Treatment",
       "authors": [
-        "Nitish Nagesh",
-        "Elahe Khatibi",
-        "Thomas Hughes",
-        "Mahdi Bagheri",
-        "Pratik Gajane",
-        "Amir M. Rahmani"
+        "Lin Li"
       ],
-      "abstract": "Causal discovery in health data faces evaluation challenges when ground truth is unknown. We address this by collaborating with experts to construct proxy ground-truth graphs, establishing benchmarks for synthetic Alzheimer's disease and heart failure clinical records data. We evaluate the Peter-Clark, Greedy Equivalence Search, and Fast Causal Inference algorithms on structural recovery and path-specific fairness decomposition, going beyond composite fairness scores. On synthetic data, Peter-Clark achieved the best structural recovery. On heart failure data, Fast Causal Inference achieved the highest utility. For path-specific effects, ejection fraction contributed 3.37 percentage points to the indirect effect in the ground truth. These differences drove variations in the fairness-utility ratio across algorithms. Our results highlight the need for graph-aware fairness evaluation and fine-grained path-specific analysis when deploying causal discovery in clinical applications.",
-      "pdf_url": "https://arxiv.org/pdf/2603.15926v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.15926v1",
-      "published": "2026-03-16",
+      "abstract": "When a long-term outcome is administratively censored for a substantial fraction of a study cohort while a short-term intermediate variable remains broadly available, the target causal parameter can be identified through a nested functional that integrates the outcome regression over the conditional intermediate distribution, avoiding inverse censoring weights entirely. In observational studies where treatment is also confounded, this nested identification creates a semiparametric structure with two distinct positivity boundaries -- one from the censoring mechanism and one from the treatment assignment -- that enter the efficient influence function in fundamentally different roles. The censoring boundary is removed from the identification by the nested functional but remains in the efficient score; the treatment boundary appears in both. We develop the inference theory for this dual-boundary structure. Three results are established.",
+      "pdf_url": "https://arxiv.org/pdf/2603.16833v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.16833v1",
+      "published": "2026-03-17",
       "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "InterveneBench: Benchmarking LLMs for Intervention Reasoning and Causal Study Design in Real Social Systems",
-      "authors": [
-        "Shaojie Shi",
-        "Zhengyu Shi",
-        "Lingran Zheng",
-        "Xinyu Su",
-        "Anna Xie",
-        "Bohao Lv",
-        "Rui Xu",
-        "Zijian Chen",
-        "Zhichao Chen",
-        "Guolei Liu",
-        "Naifu Zhang",
-        "Mingjian Dong",
-        "Zhuo Quan",
-        "Bohao Chen",
-        "Teqi Hao",
-        "Yuan Qi",
-        "Yinghui Xu",
-        "Libo Wu"
-      ],
-      "abstract": "Causal inference in social science relies on end-to-end, intervention-centered research-design reasoning grounded in real-world policy interventions, but current benchmarks fail to evaluate this capability of large language models (LLMs). We present InterveneBench, a benchmark designed to assess such reasoning in realistic social settings. Each instance in InterveneBench is derived from an empirical social science study and requires models to reason about policy interventions and identification assumptions without access to predefined causal graphs or structural equations. InterveneBench comprises 744 peer-reviewed studies across diverse policy domains. Experimental results show that state-of-the-art LLMs struggle under this setting. To address this limitation, we further propose a multi-agent framework, STRIDES. It achieves significant performance improvements over state-of-the-art reasoning models. Our code and data are available at https://github.com/Sii-yuning/STRIDES.",
-      "pdf_url": "https://arxiv.org/pdf/2603.15542v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.15542v1",
-      "published": "2026-03-16",
-      "categories": [
-        "cs.CY",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Spatio-temporal probabilistic forecast using MMAF-guided learning",
-      "authors": [
-        "Leonardo Bardi",
-        "Imma Valentina Curato",
-        "Lorenzo Proietti"
-      ],
-      "abstract": "We employ stochastic feed-forward neural networks with Gaussian-distributed weights to determine a probabilistic forecast for spatio-temporal raster datasets. The networks are trained using MMAF-guided learning, a generalized Bayesian methodology in which the observed data are preprocessed using an embedding designed to produce a low-dimensional representation that captures their dependence and causal structure. The design of the embedding is theory-guided by the assumption that a spatio-temporal Ornstein-Uhlenbeck process with finite second-order moments generates the observed data. The trained networks, in inference mode, are then used to generate ensemble forecasts by applying different initial conditions at different horizons. Experiments conducted on both synthetic and real data demonstrate that our forecasts remain calibrated across multiple time horizons. Moreover, we show that on such data, simple feed-forward architectures can achieve performance comparable to, and in some cases better than, convolutional or diffusion deep learning architectures used in probabilistic forecasting tasks.",
-      "pdf_url": "https://arxiv.org/pdf/2603.15055v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.15055v1",
-      "published": "2026-03-16",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
+        "stat.ME",
         "math.ST"
-      ]
-    },
-    {
-      "title": "Clue Matters: Leveraging Latent Visual Clues to Empower Video Reasoning",
-      "authors": [
-        "Kaixin zhang",
-        "Xiaohe Li",
-        "Jiahao Li",
-        "Haohua Wu",
-        "Xinyu Zhao",
-        "Zide Fan",
-        "Lei Wang"
-      ],
-      "abstract": "Multi-modal Large Language Models (MLLMs) have significantly advanced video reasoning, yet Video Question Answering (VideoQA) remains challenging due to its demand for temporal causal reasoning and evidence-grounded answer generation. Prevailing end-to-end MLLM frameworks lack explicit structured reasoning between visual perception and answer derivation, causing severe hallucinations and poor interpretability. Existing methods also fail to address three core gaps: faithful visual clue extraction, utility-aware clue filtering, and end-to-end clue-answer alignment. Inspired by hierarchical human visual cognition, we propose ClueNet, a clue-aware video reasoning framework with a two-stage supervised fine-tuning paradigm without extensive base model modifications. Decoupled supervision aligns clue extraction and chain-based reasoning, while inference supervision with an adaptive clue filter refines high-order reasoning, alongside lightweight modules for efficient inference. Experiments on NExT-QA, STAR, and MVBench show that ClueNet outperforms state-of-the-art methods by $\\ge$ 1.1%, with superior generalization, hallucination mitigation, inference efficiency, and cross-backbone compatibility. This work bridges the perception-to-generation gap in MLLM video understanding, providing an interpretable, faithful reasoning paradigm for high-stakes VideoQA applications.",
-      "pdf_url": "https://arxiv.org/pdf/2603.15008v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.15008v1",
-      "published": "2026-03-16",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Learning Question-Aware Keyframe Selection with Synthetic Supervision for Video Question Answering",
-      "authors": [
-        "Minchan Kwon",
-        "Hyounguk Shon",
-        "Junmo Kim"
-      ],
-      "abstract": "Large multimodal models (LMMs) have recently demonstrated remarkable performance in video question answering (VideoQA), yet reasoning over video remains challenging due to high inference cost and diluted information. Keyframe selection offers efficiency and sharper reasoning but suffers from sparse supervision and redundant frame choices when relying only on image-text similarity. We present a question-aware keyframe selection framework with two components: pseudo keyframe labels derived from LMMs that provide informative supervision and a coverage regularization that promotes diverse, complementary evidence across time. Experiments on NExT-QA show that our method significantly improves accuracy, especially for temporal and causal question types, establishing keyframe selection as an effective and learnable module for VideoQA.",
-      "pdf_url": "https://arxiv.org/pdf/2603.14953v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.14953v1",
-      "published": "2026-03-16",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
       ]
     }
   ]
