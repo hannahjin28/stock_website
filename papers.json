@@ -1,6 +1,78 @@
 {
-  "last_updated": "2026-03-19T01:15:45.621591",
+  "last_updated": "2026-03-20T01:11:34.224150",
   "papers": [
+    {
+      "title": "CausalRM: Causal-Theoretic Reward Modeling for RLHF from Observational User Feedbacks",
+      "authors": [
+        "Hao Wang",
+        "Licheng Pan",
+        "Zhichao Chen",
+        "Chunyuan Zheng",
+        "Zhixuan Chu",
+        "Xiaoxi Li",
+        "Yuan Lu",
+        "Xinggao Liu",
+        "Haoxuan Li",
+        "Zhouchen Lin"
+      ],
+      "abstract": "Despite the success of reinforcement learning from human feedback (RLHF) in aligning language models, current reward modeling heavily relies on experimental feedback data collected from human annotators under controlled and costly conditions. In this work, we introduce observational reward modeling -- learning reward models with observational user feedback (e.g., clicks, copies, and upvotes) -- as a scalable and cost-effective alternative. We identify two fundamental challenges in this setting: (1) observational feedback is noisy due to annotation errors, which deviates it from true user preference; (2) observational feedback is biased by user preference, where users preferentially provide feedback on responses they feel strongly about, which creats a distribution shift between training and inference data. To address these challenges, we propose CausalRM, a causal-theoretic reward modeling framework that aims to learn unbiased reward models from observational feedback. To tackle challenge (1), CausalRM introduces a noise-aware surrogate loss term that is provably equivalent to the primal loss under noise-free conditions by explicitly modeling the annotation error generation process. To tackle challenge (2), CausalRM uses propensity scores -- the probability of a user providing feedback for a given response -- to reweight training samples, yielding a loss function that eliminates user preference bias. Extensive experiments across diverse LLM backbones and benchmark datasets validate that CausalRM effectively learns accurate reward signals from noisy and biased observational feedback and delivers substantial performance improvements on downstream RLHF tasks -- including a 49.2% gain on WildGuardMix and a 32.7% improvement on HarmBench. Code is available on our project website.",
+      "pdf_url": "https://arxiv.org/pdf/2603.18736v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.18736v1",
+      "published": "2026-03-19",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Recovering Sparse Neural Connectivity from Partial Measurements: A Covariance-Based Approach with Granger-Causality Refinement",
+      "authors": [
+        "Quilee Simeon"
+      ],
+      "abstract": "Inferring the connectivity of neural circuits from incomplete observations is a fundamental challenge in neuroscience. We present a covariance-based method for estimating the weight matrix of a recurrent neural network from sparse, partial measurements across multiple recording sessions. By accumulating pairwise covariance estimates across sessions where different subsets of neurons are observed, we reconstruct the full connectivity matrix without requiring simultaneous recording of all neurons. A Granger-causality refinement step enforces biological constraints via projected gradient descent. Through systematic experiments on synthetic networks modeling small brain circuits, we characterize a fundamental control-estimation tradeoff: stimulation aids identifiability but disrupts intrinsic dynamics, with the optimal level depending on measurement density. We discover that the ``incorrect'' linear approximation acts as implicit regularization -- outperforming the oracle estimator with known nonlinearity at all operating regimes -- and provide an exact characterization via the Stein--Price identity.",
+      "pdf_url": "https://arxiv.org/pdf/2603.18497v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.18497v1",
+      "published": "2026-03-19",
+      "categories": [
+        "q-bio.QM",
+        "cs.NE"
+      ]
+    },
+    {
+      "title": "Multi-Domain Causal Empirical Bayes Under Linear Mixing",
+      "authors": [
+        "Bohan Wu",
+        "Julius von Kügelgen",
+        "David M. Blei"
+      ],
+      "abstract": "Causal representation learning (CRL) aims to learn low-dimensional causal latent variables from high-dimensional observations. While identifiability has been extensively studied for CRL, estimation has been less explored. In this paper, we explore the use of empirical Bayes (EB) to estimate causal representations. In particular, we consider the problem of learning from data from multiple domains, where differences between domains are modeled by interventions in a shared underlying causal model. Multi-domain CRL naturally poses a simultaneous inference problem that EB is designed to tackle. Here, we propose an EB $f$-modeling algorithm that improves the quality of learned causal variables by exploiting invariant structure within and across domains. Specifically, we consider a linear measurement model and interventional priors arising from a shared acyclic SCM. When the graph and intervention targets are known, we develop an EM-style algorithm based on causally structured score matching. We further discuss EB $\\rmg$-modeling in the context of existing CRL approaches. In experiments on synthetic data, our proposed method achieves more accurate estimation than other methods for CRL.",
+      "pdf_url": "https://arxiv.org/pdf/2603.18404v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.18404v1",
+      "published": "2026-03-19",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "EDM-ARS: A Domain-Specific Multi-Agent System for Automated Educational Data Mining Research",
+      "authors": [
+        "Chenguang Pan",
+        "Zhou Zhang",
+        "Weixuan Xiao",
+        "Chengyuan Yao"
+      ],
+      "abstract": "In this technical report, we present the Educational Data Mining Automated Research System (EDM-ARS), a domain-specific multi-agent pipeline that automates end-to-end educational data mining (EDM) research. We conceptualize EDM-ARS as a general framework for domain-aware automated research pipelines, where educational expertise is embedded into each stage of the research lifecycle. As a first instantiation of this framework, we focus on predictive modeling tasks. Within this scope, EDM-ARS orchestrates five specialized LLM-powered agents (ProblemFormulator, DataEngineer, Analyst, Critic, and Writer) through a state-machine coordinator that supports revision loops, checkpoint-based recovery, and sandboxed code execution. Given a research prompt and a dataset, EDM-ARS produces a complete LaTeX manuscript with real Semantic Scholar citations, validated machine learning analyses, and automated methodological peer review. We also provide a detailed description of the system architecture, the three-tier data registry design that encodes educational domain expertise, the specification of each agent, the inter-agent communication protocol, and mechanisms for error-handling and self-correction. Finally, we discuss current limitations, including single-dataset scope and formulaic paper output, and outline a phased roadmap toward causal inference, transfer learning, psychometric, and multi-dataset generalization. EDM-ARS is released as an open-source project to support the educational research community.",
+      "pdf_url": "https://arxiv.org/pdf/2603.18273v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.18273v1",
+      "published": "2026-03-18",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Mutually Causal Semantic Distillation Network for Zero-Shot Learning",
       "authors": [
@@ -116,70 +188,6 @@
       "categories": [
         "cs.CL",
         "eess.AS"
-      ]
-    },
-    {
-      "title": "An End-to-End Framework for Functionality-Embedded Provenance Graph Construction and Threat Interpretation",
-      "authors": [
-        "Kushankur Ghosh",
-        "Mehar Klair",
-        "Kian Kyars",
-        "Euijin Choo",
-        "Jörg Sander"
-      ],
-      "abstract": "Provenance graphs model causal system-level interactions from logs, enabling anomaly detectors to learn normal behavior and detect deviations as attacks. However, existing approaches rely on brittle, manually engineered rules to build provenance graphs, lack functional context for system entities, and provide limited support for analyst investigation. We present Auto-Prov, an adaptive, end-to-end framework that leverages large language models (LLMs) to automatically construct provenance graphs from heterogeneous and evolving logs, embed system-level functional attributes into the graph, enable provenance graph-based anomaly detectors to learn from these enriched graphs, and summarize the detected attacks to assist an analyst's investigation. Auto-Prov clusters unseen log types and efficiently extracts provenance edges and entity-level information via automatically generated rules. It further infers system-level functional context for both known and previously unseen system entities using a combination of LLM inference and behavior-based estimation. Attacks detected by provenance-graph-based anomaly detectors trained on Auto-Prov's graphs are then summarized into natural-language text. We evaluate Auto-Prov with four state-of-the-art provenance graph-based detectors across diverse logs. Results show that Auto-Prov consistently enhances detection performance, generalizes across heterogeneous log formats, and produces stable, interpretable attack summaries that remain robust under system evolution.",
-      "pdf_url": "https://arxiv.org/pdf/2603.17100v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.17100v1",
-      "published": "2026-03-17",
-      "categories": [
-        "cs.CR",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Edge-Efficient Two-Stream Multimodal Architecture for Non-Intrusive Bathroom Fall Detection",
-      "authors": [
-        "Haitian Wang",
-        "Yiren Wang",
-        "Xinyu Wang",
-        "Sheldon Fung",
-        "Atif Mansoor"
-      ],
-      "abstract": "Falls in wet bathroom environments are a major safety risk for seniors living alone. Recent work has shown that mmWave-only, vibration-only, and existing multimodal schemes, such as vibration-triggered radar activation, early feature concatenation, and decision-level score fusion, can support privacy-preserving, non-intrusive fall detection. However, these designs still treat motion and impact as loosely coupled streams, depending on coarse temporal alignment and amplitude thresholds, and do not explicitly encode the causal link between radar-observed collapse and floor impact or address timing drift, object drop confounders, and latency and energy constraints on low-power edge devices. To this end, we propose a two-stream architecture that encodes radar signals with a Motion--Mamba branch for long-range motion patterns and processes floor vibration with an Impact--Griffin branch that emphasizes impact transients and cross-axis coupling. Cross-conditioned fusion uses low-rank bilinear interaction and a Switch--MoE head to align motion and impact tokens and suppress object-drop confounders. The model keeps inference cost suitable for real-time execution on a Raspberry Pi 4B gateway. We construct a bathroom fall detection benchmark dataset with frame-level annotations, comprising more than 3~h of synchronized mmWave radar and triaxial vibration recordings across eight scenarios under running water, together with subject-independent training, validation, and test splits. On the test split, our model attains 96.1% accuracy, 94.8% precision, 88.0% recall, a 91.1% macro F1 score, and an AUC of 0.968. Compared with the strongest baseline, it improves accuracy by 2.0 percentage points and fall recall by 1.3 percentage points, while reducing latency from 35.9 ms to 15.8 ms and lowering energy per 2.56 s window from 14200 mJ to 10750 mJ on the Raspberry Pi 4B gateway.",
-      "pdf_url": "https://arxiv.org/pdf/2603.17069v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.17069v1",
-      "published": "2026-03-17",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Spatial Causal Tensor Completion for Multiple Exposures and Outcomes: An Application to the Health Effects of PFAS Pollution",
-      "authors": [
-        "Xiaodan Zhou",
-        "Brian J Reich",
-        "Shu Yang"
-      ],
-      "abstract": "Per- and polyfluoroalkyl substances (PFAS) are typically encountered as mixtures of distinct chemicals with distinct effects on multiple health outcomes. Estimating joint causal effects using spatially-dependent observed data is challenging. We propose a spatial causal tensor completion framework that jointly models multiple exposures and outcomes within a low-rank tensor structure, while adjusting for observed confounders and latent spatial confounders. This method combines a low-rank tensor representation to pool information across exposures and outcomes with a spectral adjustment step that incorporates graph-Laplacian eigenvectors to approximate unmeasured spatial confounders, implemented via a projected-gradient descent algorithm. This framework enables causal inference in the presence of unmeasured spatial confounding and pervasive missingness of potential outcomes. We establish theoretical guarantees for the estimator and evaluate its finite-sample performance through extensive simulations. In an application to national PFAS monitoring data, our approach yields more conservative and credible causal relationships between PFOA and PFOS exposure and 13 chronic disease outcomes compared with existing alternatives.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16854v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.16854v1",
-      "published": "2026-03-17",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Semiparametric Inference under Dual Positivity Boundaries:Nested Identification with Administrative Censoring and Confounded Treatment",
-      "authors": [
-        "Lin Li"
-      ],
-      "abstract": "When a long-term outcome is administratively censored for a substantial fraction of a study cohort while a short-term intermediate variable remains broadly available, the target causal parameter can be identified through a nested functional that integrates the outcome regression over the conditional intermediate distribution, avoiding inverse censoring weights entirely. In observational studies where treatment is also confounded, this nested identification creates a semiparametric structure with two distinct positivity boundaries -- one from the censoring mechanism and one from the treatment assignment -- that enter the efficient influence function in fundamentally different roles. The censoring boundary is removed from the identification by the nested functional but remains in the efficient score; the treatment boundary appears in both. We develop the inference theory for this dual-boundary structure. Three results are established.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16833v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.16833v1",
-      "published": "2026-03-17",
-      "categories": [
-        "stat.ME",
-        "math.ST"
       ]
     }
   ]
