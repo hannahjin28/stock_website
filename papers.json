@@ -1,6 +1,54 @@
 {
-  "last_updated": "2026-03-22T01:15:37.452433",
+  "last_updated": "2026-03-23T01:16:12.933241",
   "papers": [
+    {
+      "title": "Invariant quantile regression for heterogeneous environments",
+      "authors": [
+        "Bo Fu",
+        "Dandan Jiang"
+      ],
+      "abstract": "In this paper, we propose an invariant quantile regression (IQR) framework specifically designed for multi-environment datasets, which captures the invariance across different environments. This model is closely related to transfer learning, causal inference, and fair machine learning, and is motivated by scenarios in which the conditional probability of the response given covariates varies, while certain key features remain invariant. This perspective differs notably from previous works that restrict attention to the conditional mean, which is often insufficient in heterogeneous environments and the resulting estimators can become sensitive to ``bad\" environments or changes in noise distributional shape. In contrast, quantile-based invariance naturally accommodates heterogeneity, and aligns more closely with structural causal models, in which variables invariant across environments at one or multiple quantile levels naturally indicate potential and stable causal predictors. Moreover, the set of endogenous variables under the IQR framework can be larger than that under the conditional mean framework typically, which in turn promotes more effective exclusion of spurious (no-causal) predictors provided that endogenous variables are not incorporated. To achieve this, we introduce a Kernel-Smoothed Focused Invariance Quantile Regression (KSFIQR) estimator, which leverages the underlying invariance structure and heterogeneity among environments, ensuring stable estimation across multiple environments. We establish the causal discovery properties of our method, demonstrate its ability to overcome the ``curse of endogeneity\", and derive an $\\ell_2$ error bound for our estimator in the low-dimensional regime, all in a non-asymptotic framework. From an algorithmic perspective, we implement the L-BFGS-B method and the Gumbel trick, with our numerical studies validating the proposed approach.",
+      "pdf_url": "https://arxiv.org/pdf/2603.19745v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.19745v1",
+      "published": "2026-03-20",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Estimating within-cluster and between-cluster spillover effects in randomized saturation designs",
+      "authors": [
+        "Sizhu Lu",
+        "Lei Shi",
+        "Peng Ding"
+      ],
+      "abstract": "Randomized saturation designs are two-stage experiments: they first randomly assign treatment probabilities over the clusters and then randomly assign the treatment to the units within the clusters. The existing literature on randomized saturation designs focuses on estimating within-cluster spillover effects by assuming away between-cluster spillover effects. However, the units may interact across clusters in many practical randomized saturation designs. A leading example is that some units are geographically close to each other, so spillover effects arise across clusters. Based on the potential outcomes framework, we formulate the causal inference problem of estimating within-cluster and between-cluster spillover effects in randomized saturation designs. We clarify the causal estimands and establish the statistical theory for estimation and inference. We also apply our method to analyze a recent randomized saturation design of cash transfer on household expenditure in Kenya.",
+      "pdf_url": "https://arxiv.org/pdf/2603.19573v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.19573v1",
+      "published": "2026-03-20",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "StreetForward: Perceiving Dynamic Street with Feedforward Causal Attention",
+      "authors": [
+        "Zhongrui Yu",
+        "Zhao Wang",
+        "Yijia Xie",
+        "Yida Wang",
+        "Xueyang Zhang",
+        "Yifei Zhan",
+        "Kun Zhan"
+      ],
+      "abstract": "Feedforward reconstruction is crucial for autonomous driving applications, where rapid scene reconstruction enables efficient utilization of large-scale driving datasets in closed-loop simulation and other downstream tasks, eliminating the need for time-consuming per-scene optimization. We present StreetForward, a pose-free and tracker-free feedforward framework for dynamic street reconstruction. Building upon the alternating attention mechanism from Visual Geometry Grounded Transformer (VGGT), we propose a simple yet effective temporal mask attention module that captures dynamic motion information from image sequences and produces motion-aware latent representations. Static content and dynamic instances are represented uniformly with 3D Gaussian Splatting, and are optimized jointly by cross-frame rendering with spatio-temporal consistency, allowing the model to infer per-pixel velocities and produce high-fidelity novel views at new poses and times. We train and evaluate our model on the Waymo Open Dataset, demonstrating superior performance on novel view synthesis and depth estimation compared to existing methods. Furthermore, zero-shot inference on CARLA and other datasets validates the generalization capability of our approach. More visualizations are available on our project page: https://streetforward.github.io.",
+      "pdf_url": "https://arxiv.org/pdf/2603.19552v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.19552v1",
+      "published": "2026-03-20",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "Teleological Inference in Structural Causal Models via Intentional Interventions",
       "authors": [
@@ -113,56 +161,6 @@
       "published": "2026-03-18",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Mutually Causal Semantic Distillation Network for Zero-Shot Learning",
-      "authors": [
-        "Shiming Chen",
-        "Shuhuang Chen",
-        "Guo-Sen Xie",
-        "Xinge You"
-      ],
-      "abstract": "Zero-shot learning (ZSL) aims to recognize the unseen classes in the open-world guided by the side-information (e.g., attributes). Its key task is how to infer the latent semantic knowledge between visual and attribute features on seen classes, and thus conducting a desirable semantic knowledge transfer from seen classes to unseen ones. Prior works simply utilize unidirectional attention within a weakly-supervised manner to learn the spurious and limited latent semantic representations, which fail to effectively discover the intrinsic semantic knowledge (e.g., attribute semantic) between visual and attribute features. To solve the above challenges, we propose a mutually causal semantic distillation network (termed MSDN++) to distill the intrinsic and sufficient semantic representations for ZSL. MSDN++ consists of an attribute$\\rightarrow$visual causal attention sub-net that learns attribute-based visual features, and a visual$\\rightarrow$attribute causal attention sub-net that learns visual-based attribute features. The causal attentions encourages the two sub-nets to learn causal vision-attribute associations for representing reliable features with causal visual/attribute learning. With the guidance of semantic distillation loss, the two mutual attention sub-nets learn collaboratively and teach each other throughout the training process. Extensive experiments on three widely-used benchmark datasets (e.g., CUB, SUN, AWA2, and FLO) show that our MSDN++ yields significant improvements over the strong baselines, leading to new state-of-the-art performances.",
-      "pdf_url": "https://arxiv.org/pdf/2603.17412v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.17412v1",
-      "published": "2026-03-18",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "The Causal Uncertainty Principle: Manifold Tearing and the Topological Limits of Counterfactual Interventions",
-      "authors": [
-        "Rui Wu",
-        "Hong Xie",
-        "Yongjun Li"
-      ],
-      "abstract": "Judea Pearl's do-calculus provides a foundation for causal inference, but its translation to continuous generative models remains fraught with geometric challenges. We establish the fundamental limits of such interventions. We define the Counterfactual Event Horizon and prove the Manifold Tearing Theorem: deterministic flows inevitably develop finite-time singularities under extreme interventions. We establish the Causal Uncertainty Principle for the trade-off between intervention extremity and identity preservation. Finally, we introduce Geometry-Aware Causal Flow (GACF), a scalable algorithm that utilizes a topological radar to bypass manifold tearing, validated on high-dimensional scRNA-seq data.",
-      "pdf_url": "https://arxiv.org/pdf/2603.17385v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.17385v1",
-      "published": "2026-03-18",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "OnlineHMR: Video-based Online World-Grounded Human Mesh Recovery",
-      "authors": [
-        "Yiwen Zhao",
-        "Ce Zheng",
-        "Yufu Wang",
-        "Hsueh-Han Daniel Yang",
-        "Liting Wen",
-        "Laszlo A. Jeni"
-      ],
-      "abstract": "Human mesh recovery (HMR) models 3D human body from monocular videos, with recent works extending it to world-coordinate human trajectory and motion reconstruction. However, most existing methods remain offline, relying on future frames or global optimization, which limits their applicability in interactive feedback and perception-action loop scenarios such as AR/VR and telepresence. To address this, we propose OnlineHMR, a fully online framework that jointly satisfies four essential criteria of online processing, including system-level causality, faithfulness, temporal consistency, and efficiency. Built upon a two-branch architecture, OnlineHMR enables streaming inference via a causal key-value cache design and a curated sliding-window learning strategy. Meanwhile, a human-centric incremental SLAM provides online world-grounded alignment under physically plausible trajectory correction. Experimental results show that our method achieves performance comparable to existing chunk-based approaches on the standard EMDB benchmark and highly dynamic custom videos, while uniquely supporting online processing. Page and code are available at https://tsukasane.github.io/Video-OnlineHMR/.",
-      "pdf_url": "https://arxiv.org/pdf/2603.17355v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.17355v1",
-      "published": "2026-03-18",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
