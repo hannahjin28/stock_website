@@ -1,6 +1,127 @@
 {
-  "last_updated": "2026-03-23T01:16:12.933241",
+  "last_updated": "2026-03-24T01:09:17.718419",
   "papers": [
+    {
+      "title": "From Causal Discovery to Dynamic Causal Inference in Neural Time Series",
+      "authors": [
+        "Valentina Kuskova",
+        "Dmitry Zaytsev",
+        "Michael Coppedge"
+      ],
+      "abstract": "Time-varying causal models provide a powerful framework for studying dynamic scientific systems, yet most existing approaches assume that the underlying causal network is known a priori - an assumption rarely satisfied in real-world domains where causal structure is uncertain, evolving, or only indirectly observable. This limits the applicability of dynamic causal inference in many scientific settings. We propose Dynamic Causal Network Autoregression (DCNAR), a two-stage neural causal modeling framework that integrates data-driven causal discovery with time-varying causal inference. In the first stage, a neural autoregressive causal discovery model learns a sparse directed causal network from multivariate time series. In the second stage, this learned structure is used as a structural prior for a time-varying neural network autoregression, enabling dynamic estimation of causal influence without requiring pre-specified network structure. We evaluate the scientific validity of DCNAR using behavioral diagnostics that assess causal necessity, temporal stability, and sensitivity to structural change, rather than predictive accuracy alone. Experiments on multi-country panel time-series data demonstrate that learned causal networks yield more stable and behaviorally meaningful dynamic causal inferences than coefficient-based or structure-free alternatives, even when forecasting performance is comparable. These results position DCNAR as a general framework for using AI as a scientific instrument for dynamic causal reasoning under structural uncertainty.",
+      "pdf_url": "https://arxiv.org/pdf/2603.20980v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.20980v1",
+      "published": "2026-03-21",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.AP",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Causally-Guided Diffusion for Stable Feature Selection",
+      "authors": [
+        "Arun Vignesh Malarkkan",
+        "Xinyuan Wang",
+        "Kunpeng Liu",
+        "Denghui Zhang",
+        "Yanjie Fu"
+      ],
+      "abstract": "Feature selection is fundamental to robust data-centric AI, but most existing methods optimize predictive performance under a single data distribution. This often selects spurious features that fail under distribution shifts. Motivated by principles from causal invariance, we study feature selection from a stability perspective and introduce Causally-Guided Diffusion for Stable Feature Selection (CGDFS). In CGDFS, we formalized feature selection as approximate posterior inference over feature subsets, whose posterior mass favors low prediction error and low cross-environment variance. Our framework combines three key insights: First, we formulate feature selection as stability-aware posterior sampling. Here, causal invariance serves as a soft inductive bias rather than explicit causal discovery. Second, we train a diffusion model as a learned prior over plausible continuous selection masks, combined with a stability-aware likelihood that rewards invariance across environments. This diffusion prior captures structural dependencies among features and enables scalable exploration of the combinatorially large selection space. Third, we perform guided annealed Langevin sampling that combines the diffusion prior with the stability objective, which yields a tractable, uncertainty-aware posterior inference that avoids discrete optimization and produces robust feature selections. We evaluate CGDFS on open-source real-world datasets exhibiting distribution shifts. Across both classification and regression tasks, CGDFS consistently selects more stable and transferable feature subsets, which leads to improved out-of-distribution performance and greater selection robustness compared to sparsity-based, tree-based, and stability-selection baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2603.20930v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.20930v1",
+      "published": "2026-03-21",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.IT"
+      ]
+    },
+    {
+      "title": "Efficient Counterfactual Reasoning in ProbLog via Single World Intervention Programs",
+      "authors": [
+        "Saimun Habib",
+        "Vaishak Belle",
+        "Fengxiang He"
+      ],
+      "abstract": "Probabilistic Logic Programming (PLP) languages, like ProbLog, naturally support reasoning under uncertainty, while maintaining a declarative and interpretable framework. Meanwhile, counterfactual reasoning (i.e., answering ``what if'' questions) is critical for ensuring AI systems are robust and trustworthy; however, integrating this capability into PLP can be computationally prohibitive and unstable in accuracy. This paper addresses this challenge, by proposing an efficient program transformation for counterfactuals as Single World Intervention Programs (SWIPs) in ProbLog. By systematically splitting ProbLog clauses to observed and fixed components relevant to a counterfactual, we create a transformed program that (1) does not asymptotically exceed the computational complexity of existing methods, and is strictly smaller in common cases, and (2) reduces counterfactual reasoning to marginal inference over a simpler program. We formally prove the correctness of our approach, which relies on a weaker set independence assumptions and is consistent with conditional independencies, showing the resulting marginal probabilities match the counterfactual distributions of the underlying Structural Causal Model in wide domains. Our method achieves a 35\\% reduction in inference time versus existing methods in extensive experiments. This work makes complex counterfactual reasoning more computationally tractable and reliable, providing a crucial step towards developing more robust and explainable AI systems. The code is at https://github.com/EVIEHub/swip.",
+      "pdf_url": "https://arxiv.org/pdf/2603.20505v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.20505v1",
+      "published": "2026-03-20",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "CREG: Compass Relational Evidence for Interpreting Spatial Reasoning in Vision-Language Models",
+      "authors": [
+        "Kaizhen Tan"
+      ],
+      "abstract": "Vision-language models (VLMs) perform strongly on spatial reasoning benchmarks, yet how they encode directional relations remains poorly understood. Existing attribution methods such as GradCAM and attention rollout reveal where a model attends, but not what direction it infers between objects. We introduce CREG (Compass Relational Evidence Graph), a training-free interpretability framework that projects multi-layer contrastive Grad-times-Act attributions into a reference-centered polar coordinate system, producing a directional evidence distribution over compass sectors. To evaluate directional explanations, we propose three metrics: Direction Alignment Error (DAE), Edge Accuracy (EA), and Causal Occlusion Score (COS). On Qwen2-VL-7B across VSR and COCO-Pairs, CREG consistently outperforms standard attribution baselines; on COCO-Pairs, prediction-targeted CREG achieves a DAE of 55.5 degrees and an EA of 0.553, improving over attention rollout by 16.1 degrees in angular error and 0.120 in EA. Causal occlusion experiments on 540 samples across both datasets further support the faithfulness of these directional explanations, with COS greater than or equal to +0.42. The gains are smaller on Qwen2-VL-2B, suggesting that CREG benefits from the more structured spatial representations that emerge at larger scales. Overall, our results show that contrastive, multi-layer attribution can expose directional evidence more faithfully than standard saliency-based explanations in VLM spatial reasoning.",
+      "pdf_url": "https://arxiv.org/pdf/2603.20475v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.20475v1",
+      "published": "2026-03-20",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Double Machine Learning for Static Panel Data with Instrumental Variables: New Method and Applications",
+      "authors": [
+        "Anna Baiardi",
+        "Paul S. Clarke",
+        "Andrea A. Naghi",
+        "Annalivia Polselli"
+      ],
+      "abstract": "Panel data methods are widely used in empirical analysis to address unobserved heterogeneity, but causal inference remains challenging when treatments are endogenous and confounding variables high-dimensional and potentially nonlinear. Standard instrumental variables (IV) estimators, such as two-stage least squares (2SLS), become unreliable when instrument validity requires flexibly conditioning on many covariates with potentially non-linear effects. This paper develops a Double Machine Learning estimator for static panel models with endogenous treatments (panel IV DML), and introduces weak-identification diagnostics for it. We revisit three influential migration studies that use shift-share instruments. In these settings, instrument validity depends on a rich covariate adjustment. In one application, panel IV DML strengthens the predictive power of the instrument and broadly confirms 2SLS results. In the other cases, flexible adjustment makes the instruments weak, leading to substantially more cautious causal inference than conventional 2SLS. Monte Carlo evidence supports these findings, showing that panel IV DML improves estimation accuracy under strong instruments and delivers more reliable inference under weak identification.",
+      "pdf_url": "https://arxiv.org/pdf/2603.20464v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.20464v1",
+      "published": "2026-03-20",
+      "categories": [
+        "econ.EM",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "CoVR-R:Reason-Aware Composed Video Retrieval",
+      "authors": [
+        "Omkar Thawakar",
+        "Dmitry Demidov",
+        "Vaishnav Potlapalli",
+        "Sai Prasanna Teja Reddy Bogireddy",
+        "Viswanatha Reddy Gajjala",
+        "Alaa Mostafa Lasheen",
+        "Rao Muhammad Anwer",
+        "Fahad Khan"
+      ],
+      "abstract": "Composed Video Retrieval (CoVR) aims to find a target video given a reference video and a textual modification. Prior work assumes the modification text fully specifies the visual changes, overlooking after-effects and implicit consequences (e.g., motion, state transitions, viewpoint or duration cues) that emerge from the edit. We argue that successful CoVR requires reasoning about these after-effects. We introduce a reasoning-first, zero-shot approach that leverages large multimodal models to (i) infer causal and temporal consequences implied by the edit, and (ii) align the resulting reasoned queries to candidate videos without task-specific finetuning. To evaluate reasoning in CoVR, we also propose CoVR-Reason, a benchmark that pairs each (reference, edit, target) triplet with structured internal reasoning traces and challenging distractors that require predicting after-effects rather than keyword matching. Experiments show that our zero-shot method outperforms strong retrieval baselines on recall at K and particularly excels on implicit-effect subsets. Our automatic and human analysis confirm higher step consistency and effect factuality in our retrieved results. Our findings show that incorporating reasoning into general-purpose multimodal models enables effective CoVR by explicitly accounting for causal and temporal after-effects. This reduces dependence on task-specific supervision, improves generalization to challenging implicit-effect cases, and enhances interpretability of retrieval outcomes. These results point toward a scalable and principled framework for explainable video search. The model, code, and benchmark are available at https://github.com/mbzuai-oryx/CoVR-R.",
+      "pdf_url": "https://arxiv.org/pdf/2603.20190v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.20190v1",
+      "published": "2026-03-20",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Kolmogorov-Arnold causal generative models",
+      "authors": [
+        "Alejandro Almodóvar",
+        "Mar Elizo",
+        "Patricia A. Apellániz",
+        "Santiago Zazo",
+        "Juan Parras"
+      ],
+      "abstract": "Causal generative models provide a principled framework for answering observational, interventional, and counterfactual queries from observational data. However, many deep causal models rely on highly expressive architectures with opaque mechanisms, limiting auditability in high-stakes domains. We propose KaCGM, a causal generative model for mixed-type tabular data where each structural equation is parameterized by a Kolmogorov--Arnold Network (KAN). This decomposition enables direct inspection of learned causal mechanisms, including symbolic approximations and visualization of parent--child relationships, while preserving query-agnostic generative semantics. We introduce a validation pipeline based on distributional matching and independence diagnostics of inferred exogenous variables, allowing assessment using observational data alone. Experiments on synthetic and semi-synthetic benchmarks show competitive performance against state-of-the-art methods. A real-world cardiovascular case study further demonstrates the extraction of simplified structural equations and interpretable causal effects. These results suggest that expressive causal generative modeling and functional transparency can be achieved jointly, supporting trustworthy deployment in tabular decision-making settings. Code: https://github.com/aalmodovares/kacgm",
+      "pdf_url": "https://arxiv.org/pdf/2603.20184v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.20184v1",
+      "published": "2026-03-20",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Invariant quantile regression for heterogeneous environments",
       "authors": [
@@ -47,120 +168,6 @@
       "published": "2026-03-20",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Teleological Inference in Structural Causal Models via Intentional Interventions",
-      "authors": [
-        "Dario Compagno",
-        "Fabio Massimo Zennaro"
-      ],
-      "abstract": "Structural causal models (SCMs) were conceived to formulate and answer causal questions. This paper shows that SCMs can also be used to formulate and answer teleological questions, concerning the intentions of a state-aware, goal-directed agent intervening in a causal system. We review limitations of previous approaches to modeling such agents, and then introduce intentional interventions, a new time-agnostic operator that induces a twin SCM we call a structural final model (SFM). SFMs treat observed values as the outcome of intentional interventions and relate them to the counterfactual conditions of those interventions (what would have happened had the agent not intervened). We show how SFMs can be used to empirically detect agents and to discover their intentions.",
-      "pdf_url": "https://arxiv.org/pdf/2603.18968v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.18968v1",
-      "published": "2026-03-19",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A Bayesian Reinterpretation of Cornfield-Type Sensitivity Analysis: From Thresholds to Probabilities",
-      "authors": [
-        "Tommaso Costa"
-      ],
-      "abstract": "Sensitivity analysis for unmeasured confounding in observational studies is commonly based on threshold quantities, such as the Cornfield condition or the E-value, which quantify how strong a confounder must be to explain away an observed association. However, these approaches do not address a fundamental inferential question: how plausible is it that such a confounder exists? In this work, we propose a Bayesian reformulation of Cornfield-type sensitivity analysis in which the strength of unmeasured confounding is treated as a random variable. Within this framework, the E-value is reinterpreted as a threshold, and the central inferential quantity becomes the posterior probability that confounding exceeds this threshold. This transforms sensitivity analysis from a descriptive diagnostic into a probabilistic assessment of robustness. We develop a simple generative model linking observed effect estimates to true causal effects and confounding bias, and we specify prior distributions reflecting plausible confounding mechanisms. The resulting framework yields posterior measures of evidential vulnerability that are directly interpretable and applicable to summary-level data. Illustrations based on empirical case studies show that the proposed approach preserves the interpretability of the E-value while providing a more nuanced and decision-relevant characterization of robustness. More broadly, the framework aligns sensitivity analysis with Bayesian principles of inference under uncertainty, offering a coherent alternative to purely threshold-based reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2603.18928v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.18928v1",
-      "published": "2026-03-19",
-      "categories": [
-        "stat.OT"
-      ]
-    },
-    {
-      "title": "Neural Galerkin Normalizing Flow for Transition Probability Density Functions of Diffusion Models",
-      "authors": [
-        "Riccardo Saporiti",
-        "Fabio Nobile"
-      ],
-      "abstract": "We propose a new Neural Galerkin Normalizing Flow framework to approximate the transition probability density function of a diffusion process by solving the corresponding Fokker-Planck equation with an atomic initial distribution, parametrically with respect to the location of the initial mass. By using Normalizing Flows, we look for the solution as a transformation of the transition probability density function of a reference stochastic process, ensuring that our approximation is structure-preserving and automatically satisfies positivity and mass conservation constraints. By extending Neural Galerkin schemes to the context of Normalizing Flows, we derive a system of ODEs for the time evolution of the Normalizing Flow's parameters. Adaptive sampling routines are used to evaluate the Fokker-Planck residual in meaningful locations, which is of vital importance to address high-dimensional PDEs. Numerical results show that this strategy captures key features of the true solution and enforces the causal relationship between the initial datum and the density function at subsequent times. After completing an offline training phase, online evaluation becomes significantly more cost-effective than solving the PDE from scratch. The proposed method serves as a promising surrogate model, which could be deployed in many-query problems associated with stochastic differential equations, like Bayesian inference, simulation, and diffusion bridge generation.",
-      "pdf_url": "https://arxiv.org/pdf/2603.18907v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.18907v1",
-      "published": "2026-03-19",
-      "categories": [
-        "cs.LG",
-        "math.NA"
-      ]
-    },
-    {
-      "title": "CausalRM: Causal-Theoretic Reward Modeling for RLHF from Observational User Feedbacks",
-      "authors": [
-        "Hao Wang",
-        "Licheng Pan",
-        "Zhichao Chen",
-        "Chunyuan Zheng",
-        "Zhixuan Chu",
-        "Xiaoxi Li",
-        "Yuan Lu",
-        "Xinggao Liu",
-        "Haoxuan Li",
-        "Zhouchen Lin"
-      ],
-      "abstract": "Despite the success of reinforcement learning from human feedback (RLHF) in aligning language models, current reward modeling heavily relies on experimental feedback data collected from human annotators under controlled and costly conditions. In this work, we introduce observational reward modeling -- learning reward models with observational user feedback (e.g., clicks, copies, and upvotes) -- as a scalable and cost-effective alternative. We identify two fundamental challenges in this setting: (1) observational feedback is noisy due to annotation errors, which deviates it from true user preference; (2) observational feedback is biased by user preference, where users preferentially provide feedback on responses they feel strongly about, which creats a distribution shift between training and inference data. To address these challenges, we propose CausalRM, a causal-theoretic reward modeling framework that aims to learn unbiased reward models from observational feedback. To tackle challenge (1), CausalRM introduces a noise-aware surrogate loss term that is provably equivalent to the primal loss under noise-free conditions by explicitly modeling the annotation error generation process. To tackle challenge (2), CausalRM uses propensity scores -- the probability of a user providing feedback for a given response -- to reweight training samples, yielding a loss function that eliminates user preference bias. Extensive experiments across diverse LLM backbones and benchmark datasets validate that CausalRM effectively learns accurate reward signals from noisy and biased observational feedback and delivers substantial performance improvements on downstream RLHF tasks -- including a 49.2% gain on WildGuardMix and a 32.7% improvement on HarmBench. Code is available on our project website.",
-      "pdf_url": "https://arxiv.org/pdf/2603.18736v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.18736v1",
-      "published": "2026-03-19",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Recovering Sparse Neural Connectivity from Partial Measurements: A Covariance-Based Approach with Granger-Causality Refinement",
-      "authors": [
-        "Quilee Simeon"
-      ],
-      "abstract": "Inferring the connectivity of neural circuits from incomplete observations is a fundamental challenge in neuroscience. We present a covariance-based method for estimating the weight matrix of a recurrent neural network from sparse, partial measurements across multiple recording sessions. By accumulating pairwise covariance estimates across sessions where different subsets of neurons are observed, we reconstruct the full connectivity matrix without requiring simultaneous recording of all neurons. A Granger-causality refinement step enforces biological constraints via projected gradient descent. Through systematic experiments on synthetic networks modeling small brain circuits, we characterize a fundamental control-estimation tradeoff: stimulation aids identifiability but disrupts intrinsic dynamics, with the optimal level depending on measurement density. We discover that the ``incorrect'' linear approximation acts as implicit regularization -- outperforming the oracle estimator with known nonlinearity at all operating regimes -- and provide an exact characterization via the Stein--Price identity.",
-      "pdf_url": "https://arxiv.org/pdf/2603.18497v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.18497v1",
-      "published": "2026-03-19",
-      "categories": [
-        "q-bio.QM",
-        "cs.NE"
-      ]
-    },
-    {
-      "title": "Multi-Domain Causal Empirical Bayes Under Linear Mixing",
-      "authors": [
-        "Bohan Wu",
-        "Julius von Kügelgen",
-        "David M. Blei"
-      ],
-      "abstract": "Causal representation learning (CRL) aims to learn low-dimensional causal latent variables from high-dimensional observations. While identifiability has been extensively studied for CRL, estimation has been less explored. In this paper, we explore the use of empirical Bayes (EB) to estimate causal representations. In particular, we consider the problem of learning from data from multiple domains, where differences between domains are modeled by interventions in a shared underlying causal model. Multi-domain CRL naturally poses a simultaneous inference problem that EB is designed to tackle. Here, we propose an EB $f$-modeling algorithm that improves the quality of learned causal variables by exploiting invariant structure within and across domains. Specifically, we consider a linear measurement model and interventional priors arising from a shared acyclic SCM. When the graph and intervention targets are known, we develop an EM-style algorithm based on causally structured score matching. We further discuss EB $\\rmg$-modeling in the context of existing CRL approaches. In experiments on synthetic data, our proposed method achieves more accurate estimation than other methods for CRL.",
-      "pdf_url": "https://arxiv.org/pdf/2603.18404v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.18404v1",
-      "published": "2026-03-19",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "EDM-ARS: A Domain-Specific Multi-Agent System for Automated Educational Data Mining Research",
-      "authors": [
-        "Chenguang Pan",
-        "Zhou Zhang",
-        "Weixuan Xiao",
-        "Chengyuan Yao"
-      ],
-      "abstract": "In this technical report, we present the Educational Data Mining Automated Research System (EDM-ARS), a domain-specific multi-agent pipeline that automates end-to-end educational data mining (EDM) research. We conceptualize EDM-ARS as a general framework for domain-aware automated research pipelines, where educational expertise is embedded into each stage of the research lifecycle. As a first instantiation of this framework, we focus on predictive modeling tasks. Within this scope, EDM-ARS orchestrates five specialized LLM-powered agents (ProblemFormulator, DataEngineer, Analyst, Critic, and Writer) through a state-machine coordinator that supports revision loops, checkpoint-based recovery, and sandboxed code execution. Given a research prompt and a dataset, EDM-ARS produces a complete LaTeX manuscript with real Semantic Scholar citations, validated machine learning analyses, and automated methodological peer review. We also provide a detailed description of the system architecture, the three-tier data registry design that encodes educational domain expertise, the specification of each agent, the inter-agent communication protocol, and mechanisms for error-handling and self-correction. Finally, we discuss current limitations, including single-dataset scope and formulaic paper output, and outline a phased roadmap toward causal inference, transfer learning, psychometric, and multi-dataset generalization. EDM-ARS is released as an open-source project to support the educational research community.",
-      "pdf_url": "https://arxiv.org/pdf/2603.18273v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.18273v1",
-      "published": "2026-03-18",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]
