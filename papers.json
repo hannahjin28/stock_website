@@ -1,173 +1,189 @@
 {
-  "last_updated": "2026-03-24T01:09:17.718419",
+  "last_updated": "2026-03-25T01:14:38.502969",
   "papers": [
     {
-      "title": "From Causal Discovery to Dynamic Causal Inference in Neural Time Series",
+      "title": "SLARM: Streaming and Language-Aligned Reconstruction Model for Dynamic Scenes",
       "authors": [
-        "Valentina Kuskova",
-        "Dmitry Zaytsev",
-        "Michael Coppedge"
+        "Zhicheng Qiu",
+        "Jiarui Meng",
+        "Tong-an Luo",
+        "Yican Huang",
+        "Xuan Feng",
+        "Xuanfu Li",
+        "ZHan Xu"
       ],
-      "abstract": "Time-varying causal models provide a powerful framework for studying dynamic scientific systems, yet most existing approaches assume that the underlying causal network is known a priori - an assumption rarely satisfied in real-world domains where causal structure is uncertain, evolving, or only indirectly observable. This limits the applicability of dynamic causal inference in many scientific settings. We propose Dynamic Causal Network Autoregression (DCNAR), a two-stage neural causal modeling framework that integrates data-driven causal discovery with time-varying causal inference. In the first stage, a neural autoregressive causal discovery model learns a sparse directed causal network from multivariate time series. In the second stage, this learned structure is used as a structural prior for a time-varying neural network autoregression, enabling dynamic estimation of causal influence without requiring pre-specified network structure. We evaluate the scientific validity of DCNAR using behavioral diagnostics that assess causal necessity, temporal stability, and sensitivity to structural change, rather than predictive accuracy alone. Experiments on multi-country panel time-series data demonstrate that learned causal networks yield more stable and behaviorally meaningful dynamic causal inferences than coefficient-based or structure-free alternatives, even when forecasting performance is comparable. These results position DCNAR as a general framework for using AI as a scientific instrument for dynamic causal reasoning under structural uncertainty.",
-      "pdf_url": "https://arxiv.org/pdf/2603.20980v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.20980v1",
-      "published": "2026-03-21",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.AP",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Causally-Guided Diffusion for Stable Feature Selection",
-      "authors": [
-        "Arun Vignesh Malarkkan",
-        "Xinyuan Wang",
-        "Kunpeng Liu",
-        "Denghui Zhang",
-        "Yanjie Fu"
-      ],
-      "abstract": "Feature selection is fundamental to robust data-centric AI, but most existing methods optimize predictive performance under a single data distribution. This often selects spurious features that fail under distribution shifts. Motivated by principles from causal invariance, we study feature selection from a stability perspective and introduce Causally-Guided Diffusion for Stable Feature Selection (CGDFS). In CGDFS, we formalized feature selection as approximate posterior inference over feature subsets, whose posterior mass favors low prediction error and low cross-environment variance. Our framework combines three key insights: First, we formulate feature selection as stability-aware posterior sampling. Here, causal invariance serves as a soft inductive bias rather than explicit causal discovery. Second, we train a diffusion model as a learned prior over plausible continuous selection masks, combined with a stability-aware likelihood that rewards invariance across environments. This diffusion prior captures structural dependencies among features and enables scalable exploration of the combinatorially large selection space. Third, we perform guided annealed Langevin sampling that combines the diffusion prior with the stability objective, which yields a tractable, uncertainty-aware posterior inference that avoids discrete optimization and produces robust feature selections. We evaluate CGDFS on open-source real-world datasets exhibiting distribution shifts. Across both classification and regression tasks, CGDFS consistently selects more stable and transferable feature subsets, which leads to improved out-of-distribution performance and greater selection robustness compared to sparsity-based, tree-based, and stability-selection baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2603.20930v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.20930v1",
-      "published": "2026-03-21",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.IT"
-      ]
-    },
-    {
-      "title": "Efficient Counterfactual Reasoning in ProbLog via Single World Intervention Programs",
-      "authors": [
-        "Saimun Habib",
-        "Vaishak Belle",
-        "Fengxiang He"
-      ],
-      "abstract": "Probabilistic Logic Programming (PLP) languages, like ProbLog, naturally support reasoning under uncertainty, while maintaining a declarative and interpretable framework. Meanwhile, counterfactual reasoning (i.e., answering ``what if'' questions) is critical for ensuring AI systems are robust and trustworthy; however, integrating this capability into PLP can be computationally prohibitive and unstable in accuracy. This paper addresses this challenge, by proposing an efficient program transformation for counterfactuals as Single World Intervention Programs (SWIPs) in ProbLog. By systematically splitting ProbLog clauses to observed and fixed components relevant to a counterfactual, we create a transformed program that (1) does not asymptotically exceed the computational complexity of existing methods, and is strictly smaller in common cases, and (2) reduces counterfactual reasoning to marginal inference over a simpler program. We formally prove the correctness of our approach, which relies on a weaker set independence assumptions and is consistent with conditional independencies, showing the resulting marginal probabilities match the counterfactual distributions of the underlying Structural Causal Model in wide domains. Our method achieves a 35\\% reduction in inference time versus existing methods in extensive experiments. This work makes complex counterfactual reasoning more computationally tractable and reliable, providing a crucial step towards developing more robust and explainable AI systems. The code is at https://github.com/EVIEHub/swip.",
-      "pdf_url": "https://arxiv.org/pdf/2603.20505v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.20505v1",
-      "published": "2026-03-20",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CREG: Compass Relational Evidence for Interpreting Spatial Reasoning in Vision-Language Models",
-      "authors": [
-        "Kaizhen Tan"
-      ],
-      "abstract": "Vision-language models (VLMs) perform strongly on spatial reasoning benchmarks, yet how they encode directional relations remains poorly understood. Existing attribution methods such as GradCAM and attention rollout reveal where a model attends, but not what direction it infers between objects. We introduce CREG (Compass Relational Evidence Graph), a training-free interpretability framework that projects multi-layer contrastive Grad-times-Act attributions into a reference-centered polar coordinate system, producing a directional evidence distribution over compass sectors. To evaluate directional explanations, we propose three metrics: Direction Alignment Error (DAE), Edge Accuracy (EA), and Causal Occlusion Score (COS). On Qwen2-VL-7B across VSR and COCO-Pairs, CREG consistently outperforms standard attribution baselines; on COCO-Pairs, prediction-targeted CREG achieves a DAE of 55.5 degrees and an EA of 0.553, improving over attention rollout by 16.1 degrees in angular error and 0.120 in EA. Causal occlusion experiments on 540 samples across both datasets further support the faithfulness of these directional explanations, with COS greater than or equal to +0.42. The gains are smaller on Qwen2-VL-2B, suggesting that CREG benefits from the more structured spatial representations that emerge at larger scales. Overall, our results show that contrastive, multi-layer attribution can expose directional evidence more faithfully than standard saliency-based explanations in VLM spatial reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2603.20475v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.20475v1",
-      "published": "2026-03-20",
+      "abstract": "We propose SLARM, a feed-forward model that unifies dynamic scene reconstruction, semantic understanding, and real-time streaming inference. SLARM captures complex, non-uniform motion through higher-order motion modeling, trained solely on differentiable renderings without any flow supervision. Besides, SLARM distills semantic features from LSeg to obtain language-aligned representations. This design enables semantic querying via natural language, and the tight coupling between semantics and geometry further enhances the accuracy and robustness of dynamic reconstruction. Moreover, SLARM processes image sequences using window-based causal attention, achieving stable, low-latency streaming inference without accumulating memory cost. Within this unified framework, SLARM achieves state-of-the-art results in dynamic estimation, rendering quality, and scene parsing, improving motion accuracy by 21%, reconstruction PSNR by 1.6 dB, and segmentation mIoU by 20% over existing methods.",
+      "pdf_url": "https://arxiv.org/pdf/2603.22893v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.22893v1",
+      "published": "2026-03-24",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "Double Machine Learning for Static Panel Data with Instrumental Variables: New Method and Applications",
+      "title": "Color When It Counts: Grayscale-Guided Online Triggering for Always-On Streaming Video Sensing",
       "authors": [
-        "Anna Baiardi",
-        "Paul S. Clarke",
-        "Andrea A. Naghi",
-        "Annalivia Polselli"
+        "Weitong Cai",
+        "Hang Zhang",
+        "Yukai Huang",
+        "Shitong Sun",
+        "Jiankang Deng",
+        "Songcen Xu",
+        "Jifei Song",
+        "Zhensong Zhang"
       ],
-      "abstract": "Panel data methods are widely used in empirical analysis to address unobserved heterogeneity, but causal inference remains challenging when treatments are endogenous and confounding variables high-dimensional and potentially nonlinear. Standard instrumental variables (IV) estimators, such as two-stage least squares (2SLS), become unreliable when instrument validity requires flexibly conditioning on many covariates with potentially non-linear effects. This paper develops a Double Machine Learning estimator for static panel models with endogenous treatments (panel IV DML), and introduces weak-identification diagnostics for it. We revisit three influential migration studies that use shift-share instruments. In these settings, instrument validity depends on a rich covariate adjustment. In one application, panel IV DML strengthens the predictive power of the instrument and broadly confirms 2SLS results. In the other cases, flexible adjustment makes the instruments weak, leading to substantially more cautious causal inference than conventional 2SLS. Monte Carlo evidence supports these findings, showing that panel IV DML improves estimation accuracy under strong instruments and delivers more reliable inference under weak identification.",
-      "pdf_url": "https://arxiv.org/pdf/2603.20464v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.20464v1",
-      "published": "2026-03-20",
+      "abstract": "Always-on sensing is essential for next-generation edge/wearable AI systems, yet continuous high-fidelity RGB video capture remains prohibitively expensive for resource-constrained mobile and edge platforms. We present a new paradigm for efficient streaming video understanding: grayscale-always, color-on-demand. Through preliminary studies, we discover that color is not always necessary. Sparse RGB frames suffice for comparable performance when temporal structure is preserved via continuous grayscale streams. Building on this insight, we propose ColorTrigger, an online training-free trigger that selectively activates color capture based on windowed grayscale affinity analysis. Designed for real-time edge deployment, ColorTrigger uses lightweight quadratic programming to detect chromatic redundancy causally, coupled with credit-budgeted control and dynamic token routing to jointly reduce sensing and inference costs. On streaming video understanding benchmarks, ColorTrigger achieves 91.6% of full-color baseline performance while using only 8.1% RGB frames, demonstrating substantial color redundancy in natural videos and enabling practical always-on video sensing on resource-constrained devices.",
+      "pdf_url": "https://arxiv.org/pdf/2603.22466v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.22466v1",
+      "published": "2026-03-23",
       "categories": [
-        "econ.EM",
+        "cs.CV",
+        "cs.AI",
+        "cs.HC",
+        "cs.MM"
+      ]
+    },
+    {
+      "title": "MinerU-Diffusion: Rethinking Document OCR as Inverse Rendering via Diffusion Decoding",
+      "authors": [
+        "Hejun Dong",
+        "Junbo Niu",
+        "Bin Wang",
+        "Weijun Zeng",
+        "Wentao Zhang",
+        "Conghui He"
+      ],
+      "abstract": "Optical character recognition (OCR) has evolved from line-level transcription to structured document parsing, requiring models to recover long-form sequences containing layout, tables, and formulas. Despite recent advances in vision-language models, most existing systems rely on autoregressive decoding, which introduces sequential latency and amplifies error propagation in long documents. In this work, we revisit document OCR from an inverse rendering perspective, arguing that left-to-right causal generation is an artifact of serialization rather than an intrinsic property of the task. Motivated by this insight, we propose MinerU-Diffusion, a unified diffusion-based framework that replaces autoregressive sequential decoding with parallel diffusion denoising under visual conditioning. MinerU-Diffusion employs a block-wise diffusion decoder and an uncertainty-driven curriculum learning strategy to enable stable training and efficient long-sequence inference. Extensive experiments demonstrate that MinerU-Diffusion consistently improves robustness while achieving up to 3.2x faster decoding compared to autoregressive baselines. Evaluations on the proposed Semantic Shuffle benchmark further confirm its reduced dependence on linguistic priors and stronger visual OCR capability.",
+      "pdf_url": "https://arxiv.org/pdf/2603.22458v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.22458v1",
+      "published": "2026-03-23",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "On the Number of Conditional Independence Tests in Constraint-based Causal Discovery",
+      "authors": [
+        "Marc Franquesa Monés",
+        "Jiaqi Zhang",
+        "Caroline Uhler"
+      ],
+      "abstract": "Learning causal relations from observational data is a fundamental problem with wide-ranging applications across many fields. Constraint-based methods infer the underlying causal structure by performing conditional independence tests. However, existing algorithms such as the prominent PC algorithm need to perform a large number of independence tests, which in the worst case is exponential in the maximum degree of the causal graph. Despite extensive research, it remains unclear if there exist algorithms with better complexity without additional assumptions. Here, we establish an algorithm that achieves a better complexity of $p^{\\mathcal{O}(s)}$ tests, where $p$ is the number of nodes in the graph and $s$ denotes the maximum undirected clique size of the underlying essential graph. Complementing this result, we prove that any constraint-based algorithm must perform at least $2^{Ω(s)}$ conditional independence tests, establishing that our proposed algorithm achieves exponent-optimality up to a logarithmic factor in terms of the number of conditional independence tests needed. Finally, we validate our theoretical findings through simulations, on semi-synthetic gene-expression data, and real-world data, demonstrating the efficiency of our algorithm compared to existing methods in terms of number of conditional independence tests needed.",
+      "pdf_url": "https://arxiv.org/pdf/2603.21844v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.21844v1",
+      "published": "2026-03-23",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
         "stat.ME",
         "stat.ML"
       ]
     },
     {
-      "title": "CoVR-R:Reason-Aware Composed Video Retrieval",
+      "title": "The Reasoning Error About Reasoning: Why Different Types of Reasoning Require Different Representational Structures",
       "authors": [
-        "Omkar Thawakar",
-        "Dmitry Demidov",
-        "Vaishnav Potlapalli",
-        "Sai Prasanna Teja Reddy Bogireddy",
-        "Viswanatha Reddy Gajjala",
-        "Alaa Mostafa Lasheen",
-        "Rao Muhammad Anwer",
-        "Fahad Khan"
+        "Yiling Wu"
       ],
-      "abstract": "Composed Video Retrieval (CoVR) aims to find a target video given a reference video and a textual modification. Prior work assumes the modification text fully specifies the visual changes, overlooking after-effects and implicit consequences (e.g., motion, state transitions, viewpoint or duration cues) that emerge from the edit. We argue that successful CoVR requires reasoning about these after-effects. We introduce a reasoning-first, zero-shot approach that leverages large multimodal models to (i) infer causal and temporal consequences implied by the edit, and (ii) align the resulting reasoned queries to candidate videos without task-specific finetuning. To evaluate reasoning in CoVR, we also propose CoVR-Reason, a benchmark that pairs each (reference, edit, target) triplet with structured internal reasoning traces and challenging distractors that require predicting after-effects rather than keyword matching. Experiments show that our zero-shot method outperforms strong retrieval baselines on recall at K and particularly excels on implicit-effect subsets. Our automatic and human analysis confirm higher step consistency and effect factuality in our retrieved results. Our findings show that incorporating reasoning into general-purpose multimodal models enables effective CoVR by explicitly accounting for causal and temporal after-effects. This reduces dependence on task-specific supervision, improves generalization to challenging implicit-effect cases, and enhances interpretability of retrieval outcomes. These results point toward a scalable and principled framework for explainable video search. The model, code, and benchmark are available at https://github.com/mbzuai-oryx/CoVR-R.",
-      "pdf_url": "https://arxiv.org/pdf/2603.20190v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.20190v1",
-      "published": "2026-03-20",
+      "abstract": "Different types of reasoning impose different structural demands on representational systems, yet no systematic account of these demands exists across psychology, AI, and philosophy of mind. I propose a framework identifying four structural properties of representational systems: operability, consistency, structural preservation, and compositionality. These properties are demanded to different degrees by different forms of reasoning, from induction through analogy and causal inference to deduction and formal logic. Each property excludes a distinct class of reasoning failure. The analysis reveals a principal structural boundary: reasoning types below it can operate on associative, probabilistic representations, while those above it require all four properties to be fully satisfied. Scaling statistical learning without structural reorganization is insufficient to cross this boundary, because the structural guarantees required by deductive reasoning cannot be approximated through probabilistic means. Converging evidence from AI evaluation, developmental psychology, and cognitive neuroscience supports the framework at different levels of directness. Three testable predictions are derived, including compounding degradation, selective vulnerability to targeted structural disruption, and irreducibility under scaling. The framework is a necessary-condition account, agnostic about representational format, that aims to reorganize existing debates rather than close them.",
+      "pdf_url": "https://arxiv.org/pdf/2603.21736v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.21736v1",
+      "published": "2026-03-23",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "SemEval-2026 Task 12: Abductive Event Reasoning: Towards Real-World Event Causal Inference for Large Language Models",
+      "authors": [
+        "Pengfei Cao",
+        "Mingxuan Yang",
+        "Yubo Chen",
+        "Chenlong Zhang",
+        "Mingxuan Liu",
+        "Kang Liu",
+        "Jun Zhao"
+      ],
+      "abstract": "Understanding why real-world events occur is important for both natural language processing and practical decision-making, yet direct-cause inference remains underexplored in evidence-rich settings. To address this gap, we organized SemEval-2026 Task 12: Abductive Event Reasoning (AER).\\footnote{The task data is available at https://github.com/sooo66/semeval2026-task12-dataset.git} The task asks systems to identify the most plausible direct cause of a target event from supporting evidence. We formulate AER as an evidence-grounded multiple-choice benchmark that captures key challenges of real-world causal reasoning, including distributed evidence, indirect background factors, and semantically related but non-causal distractors. The shared task attracted 122 participants and received 518 submissions. This paper presents the task formulation, dataset construction pipeline, evaluation setup, and system results. AER provides a focused benchmark for abductive reasoning over real-world events and highlights challenges for future work on causal reasoning and multi-document understanding.",
+      "pdf_url": "https://arxiv.org/pdf/2603.21720v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.21720v1",
+      "published": "2026-03-23",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "When Visuals Aren't the Problem: Evaluating Vision-Language Models on Misleading Data Visualizations",
+      "authors": [
+        "Harsh Nishant Lalai",
+        "Raj Sanjay Shah",
+        "Hanspeter Pfister",
+        "Sashank Varma",
+        "Grace Guo"
+      ],
+      "abstract": "Visualizations help communicate data insights, but deceptive data representations can distort their interpretation and propagate misinformation. While recent Vision Language Models (VLMs) perform well on many chart understanding tasks, their ability to detect misleading visualizations, especially when deception arises from subtle reasoning errors in captions, remains poorly understood. Here, we evaluate VLMs on misleading visualization-caption pairs grounded in a fine-grained taxonomy of reasoning errors (e.g., Cherry-picking, Causal inference) and visualization design errors (e.g., Truncated axis, Dual axis, inappropriate encodings). To this end, we develop a benchmark that combines real-world visualization with human-authored, curated misleading captions designed to elicit specific reasoning and visualization error types, enabling controlled analysis across error categories and modalities of misleadingness. Evaluating many commercial and open-source VLMs, we find that models detect visual design errors substantially more reliably than reasoning-based misinformation, and frequently misclassify non-misleading visualizations as deceptive. Overall, our work fills a gap between coarse detection of misleading content and the attribution of the specific reasoning or visualization errors that give rise to it.",
+      "pdf_url": "https://arxiv.org/pdf/2603.22368v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.22368v1",
+      "published": "2026-03-23",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Relax Forcing: Relaxed KV-Memory for Consistent Long Video Generation",
+      "authors": [
+        "Zengqun Zhao",
+        "Yanzuo Lu",
+        "Ziquan Liu",
+        "Jifei Song",
+        "Jiankang Deng",
+        "Ioannis Patras"
+      ],
+      "abstract": "Autoregressive (AR) video diffusion has recently emerged as a promising paradigm for long video generation, enabling causal synthesis beyond the limits of bidirectional models. To address training-inference mismatch, a series of self-forcing strategies have been proposed to improve rollout stability by conditioning the model on its own predictions during training. While these approaches substantially mitigate exposure bias, extending generation to minute-scale horizons remains challenging due to progressive temporal degradation. In this work, we show that this limitation is not primarily caused by insufficient memory, but by how temporal memory is utilised during inference. Through empirical analysis, we find that increasing memory does not consistently improve long-horizon generation, and that the temporal placement of historical context significantly influences motion dynamics while leaving visual quality largely unchanged. These findings suggest that temporal memory should not be treated as a homogeneous buffer. Motivated by this insight, we introduce Relax Forcing, a structured temporal memory mechanism for AR diffusion. Instead of attending to the dense generated history, Relax Forcing decomposes temporal context into three functional roles: Sink for global stability, Tail for short-term continuity, and dynamically selected History for structural motion guidance, and selectively incorporates only the most relevant past information. This design mitigates error accumulation during extrapolation while preserving motion evolution. Experiments on VBench-Long demonstrate that Relax Forcing improves motion dynamics and overall temporal consistency while reducing attention overhead. Our results suggest that structured temporal memory is essential for scalable long video generation, complementing existing forcing-based training strategies.",
+      "pdf_url": "https://arxiv.org/pdf/2603.21366v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.21366v1",
+      "published": "2026-03-22",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "Kolmogorov-Arnold causal generative models",
+      "title": "TIDE: Token-Informed Depth Execution for Per-Token Early Exit in LLM Inference",
       "authors": [
-        "Alejandro Almodóvar",
-        "Mar Elizo",
-        "Patricia A. Apellániz",
-        "Santiago Zazo",
-        "Juan Parras"
+        "Jaber Jaber",
+        "Osama Jaber"
       ],
-      "abstract": "Causal generative models provide a principled framework for answering observational, interventional, and counterfactual queries from observational data. However, many deep causal models rely on highly expressive architectures with opaque mechanisms, limiting auditability in high-stakes domains. We propose KaCGM, a causal generative model for mixed-type tabular data where each structural equation is parameterized by a Kolmogorov--Arnold Network (KAN). This decomposition enables direct inspection of learned causal mechanisms, including symbolic approximations and visualization of parent--child relationships, while preserving query-agnostic generative semantics. We introduce a validation pipeline based on distributional matching and independence diagnostics of inferred exogenous variables, allowing assessment using observational data alone. Experiments on synthetic and semi-synthetic benchmarks show competitive performance against state-of-the-art methods. A real-world cardiovascular case study further demonstrates the extraction of simplified structural equations and interpretable causal effects. These results suggest that expressive causal generative modeling and functional transparency can be achieved jointly, supporting trustworthy deployment in tabular decision-making settings. Code: https://github.com/aalmodovares/kacgm",
-      "pdf_url": "https://arxiv.org/pdf/2603.20184v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.20184v1",
-      "published": "2026-03-20",
+      "abstract": "Large language models run every token through every layer, regardless of difficulty. We present TIDE, a post-training system that attaches tiny learned routers at periodic checkpoint layers and, at inference time, selects the earliest layer whose hidden state has converged for each token. TIDE requires no model retraining, works with any HuggingFace causal LM, auto-detects GPU architecture, and supports float32, float16, and bfloat16 through fused CUDA kernels. On an NVIDIA A100 with DeepSeek R1 Distill 8B, TIDE achieves 100% prefill exit rate (5% of tokens exit at layer 11, the remaining at layer 31), reduces prefill latency by 7.2%, and increases single-batch throughput by 6.6%. During autoregressive decoding, 98-99% of tokens exit early while the model correctly solves a multi-step math problem with 95 unique output tokens. On Qwen3 8B (36 layers), throughput improves by 8.1% at batch size 8. Calibration on 2,000 WikiText samples takes under 3 minutes and produces a ~4 MB router checkpoint. The system comprises 1,308 lines of Python and 1,081 lines of CUDA/C++ with 74 passing tests. Code: https://github.com/RightNow-AI/TIDE",
+      "pdf_url": "https://arxiv.org/pdf/2603.21365v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.21365v1",
+      "published": "2026-03-22",
       "categories": [
         "cs.LG",
-        "stat.ML"
+        "cs.CL"
       ]
     },
     {
-      "title": "Invariant quantile regression for heterogeneous environments",
+      "title": "COINBench: Moving Beyond Individual Perspectives to Collective Intent Understanding",
       "authors": [
-        "Bo Fu",
-        "Dandan Jiang"
+        "Xiaozhe Li",
+        "Tianyi Lyu",
+        "Siyi Yang",
+        "Yizhao Yang",
+        "Yuxi Gong",
+        "Jinxuan Huang",
+        "Ligao Zhang",
+        "Zhuoyi Huang",
+        "Qingwen Liu"
       ],
-      "abstract": "In this paper, we propose an invariant quantile regression (IQR) framework specifically designed for multi-environment datasets, which captures the invariance across different environments. This model is closely related to transfer learning, causal inference, and fair machine learning, and is motivated by scenarios in which the conditional probability of the response given covariates varies, while certain key features remain invariant. This perspective differs notably from previous works that restrict attention to the conditional mean, which is often insufficient in heterogeneous environments and the resulting estimators can become sensitive to ``bad\" environments or changes in noise distributional shape. In contrast, quantile-based invariance naturally accommodates heterogeneity, and aligns more closely with structural causal models, in which variables invariant across environments at one or multiple quantile levels naturally indicate potential and stable causal predictors. Moreover, the set of endogenous variables under the IQR framework can be larger than that under the conditional mean framework typically, which in turn promotes more effective exclusion of spurious (no-causal) predictors provided that endogenous variables are not incorporated. To achieve this, we introduce a Kernel-Smoothed Focused Invariance Quantile Regression (KSFIQR) estimator, which leverages the underlying invariance structure and heterogeneity among environments, ensuring stable estimation across multiple environments. We establish the causal discovery properties of our method, demonstrate its ability to overcome the ``curse of endogeneity\", and derive an $\\ell_2$ error bound for our estimator in the low-dimensional regime, all in a non-asymptotic framework. From an algorithmic perspective, we implement the L-BFGS-B method and the Gumbel trick, with our numerical studies validating the proposed approach.",
-      "pdf_url": "https://arxiv.org/pdf/2603.19745v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.19745v1",
-      "published": "2026-03-20",
+      "abstract": "Understanding human intent is a high-level cognitive challenge for Large Language Models (LLMs), requiring sophisticated reasoning over noisy, conflicting, and non-linear discourse. While LLMs excel at following individual instructions, their ability to distill Collective Intent - the process of extracting consensus, resolving contradictions, and inferring latent trends from multi-source public discussions - remains largely unexplored. To bridge this gap, we introduce COIN-BENCH, a dynamic, real-world, live-updating benchmark specifically designed to evaluate LLMs on collective intent understanding within the consumer domain. Unlike traditional benchmarks that focus on transactional outcomes, COIN-BENCH operationalizes intent as a hierarchical cognitive structure, ranging from explicit scenarios to deep causal reasoning. We implement a robust evaluation pipeline that combines a rule-based method with an LLM-as-the-Judge approach. This framework incorporates COIN-TREE for hierarchical cognitive structuring and retrieval-augmented verification (COIN-RAG) to ensure expert-level precision in analyzing raw, collective human discussions. An extensive evaluation of 20 state-of-the-art LLMs across four dimensions - depth, breadth, informativeness, and correctness - reveals that while current models can handle surface-level aggregation, they still struggle with the analytical depth required for complex intent synthesis. COIN-BENCH establishes a new standard for advancing LLMs from passive instruction followers to expert-level analytical agents capable of deciphering the collective voice of the real world. See our project page on COIN-BENCH.",
+      "pdf_url": "https://arxiv.org/pdf/2603.21329v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.21329v1",
+      "published": "2026-03-22",
       "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Estimating within-cluster and between-cluster spillover effects in randomized saturation designs",
-      "authors": [
-        "Sizhu Lu",
-        "Lei Shi",
-        "Peng Ding"
-      ],
-      "abstract": "Randomized saturation designs are two-stage experiments: they first randomly assign treatment probabilities over the clusters and then randomly assign the treatment to the units within the clusters. The existing literature on randomized saturation designs focuses on estimating within-cluster spillover effects by assuming away between-cluster spillover effects. However, the units may interact across clusters in many practical randomized saturation designs. A leading example is that some units are geographically close to each other, so spillover effects arise across clusters. Based on the potential outcomes framework, we formulate the causal inference problem of estimating within-cluster and between-cluster spillover effects in randomized saturation designs. We clarify the causal estimands and establish the statistical theory for estimation and inference. We also apply our method to analyze a recent randomized saturation design of cash transfer on household expenditure in Kenya.",
-      "pdf_url": "https://arxiv.org/pdf/2603.19573v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.19573v1",
-      "published": "2026-03-20",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "StreetForward: Perceiving Dynamic Street with Feedforward Causal Attention",
-      "authors": [
-        "Zhongrui Yu",
-        "Zhao Wang",
-        "Yijia Xie",
-        "Yida Wang",
-        "Xueyang Zhang",
-        "Yifei Zhan",
-        "Kun Zhan"
-      ],
-      "abstract": "Feedforward reconstruction is crucial for autonomous driving applications, where rapid scene reconstruction enables efficient utilization of large-scale driving datasets in closed-loop simulation and other downstream tasks, eliminating the need for time-consuming per-scene optimization. We present StreetForward, a pose-free and tracker-free feedforward framework for dynamic street reconstruction. Building upon the alternating attention mechanism from Visual Geometry Grounded Transformer (VGGT), we propose a simple yet effective temporal mask attention module that captures dynamic motion information from image sequences and produces motion-aware latent representations. Static content and dynamic instances are represented uniformly with 3D Gaussian Splatting, and are optimized jointly by cross-frame rendering with spatio-temporal consistency, allowing the model to infer per-pixel velocities and produce high-fidelity novel views at new poses and times. We train and evaluate our model on the Waymo Open Dataset, demonstrating superior performance on novel view synthesis and depth estimation compared to existing methods. Furthermore, zero-shot inference on CARLA and other datasets validates the generalization capability of our approach. More visualizations are available on our project page: https://streetforward.github.io.",
-      "pdf_url": "https://arxiv.org/pdf/2603.19552v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.19552v1",
-      "published": "2026-03-20",
-      "categories": [
-        "cs.CV"
+        "cs.IR",
+        "cs.AI"
       ]
     }
   ]
