@@ -1,6 +1,74 @@
 {
-  "last_updated": "2026-03-25T01:14:38.502969",
+  "last_updated": "2026-03-26T01:19:58.166039",
   "papers": [
+    {
+      "title": "Causality-Driven Disentangled Representation Learning in Multiplex Graphs",
+      "authors": [
+        "Saba Nasiri",
+        "Selin Aviyente",
+        "Dorina Thanou"
+      ],
+      "abstract": "Learning representations from multiplex graphs, i.e., multi-layer networks where nodes interact through multiple relation types, is challenging due to the entanglement of shared (common) and layer-specific (private) information, which limits generalization and interpretability. In this work, we introduce a causal inference-based framework that disentangles common and private components in a self-supervised manner. CaDeM jointly (i) aligns shared embeddings across layers, (ii) enforces private embeddings to capture layer-specific signals, and (iii) applies backdoor adjustment to ensure that the common embeddings capture only global information while being separated from the private representations. Experiments on synthetic and real-world datasets demonstrate consistent improvements over existing baselines, highlighting the effectiveness of our approach for robust and interpretable multiplex graph representation learning.",
+      "pdf_url": "https://arxiv.org/pdf/2603.24105v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.24105v1",
+      "published": "2026-03-25",
+      "categories": [
+        "cs.LG",
+        "cs.SI"
+      ]
+    },
+    {
+      "title": "Praxium: Diagnosing Cloud Anomalies with AI-based Telemetry and Dependency Analysis",
+      "authors": [
+        "Rohan Kumar",
+        "Jason Li",
+        "Zongshun Zhang",
+        "Syed Mohammad Qasim",
+        "Gianluca Stringhini",
+        "Ayse Kivilcim Coskun"
+      ],
+      "abstract": "As the modern microservice architecture for cloud applications grows in popularity, cloud services are becoming increasingly complex and more vulnerable to misconfiguration and software bugs. Traditional approaches rely on expert input to diagnose and fix microservice anomalies, which lacks scalability in the face of the continuous integration and continuous deployment (CI/CD) paradigm. Microservice rollouts, containing new software installations, have complex interactions with the components of an application. Consequently, this added difficulty in attributing anomalous behavior to any specific installation or rollout results in potentially slower resolution times. To address the gaps in current diagnostic methods, this paper introduces Praxium, a framework for anomaly detection and root cause inference. Praxium aids administrators in evaluating target metric performance in the context of dependency installation information provided by a software discovery tool, PraxiPaaS. Praxium continuously monitors telemetry data to identify anomalies, then conducts root cause analysis via causal impact on recent software installations, in order to provide site reliability engineers (SRE) relevant information about an observed anomaly. In this paper, we demonstrate that Praxium is capable of effective anomaly detection and root cause inference, and we provide an analysis on effective anomaly detection hyperparameter tuning as needed in a practical setting. Across 75 total trials using four synthetic anomalies, anomaly detection consistently performs at >0.97 macro-F1. In addition, we show that causal impact analysis reliably infers the correct root cause of anomalies, even as package installations occur at increasingly shorter intervals.",
+      "pdf_url": "https://arxiv.org/pdf/2603.23890v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.23890v1",
+      "published": "2026-03-25",
+      "categories": [
+        "cs.SE",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Wasserstein Parallel Transport for Predicting the Dynamics of Statistical Systems",
+      "authors": [
+        "Tristan Luca Saidi",
+        "Gonzalo Mena",
+        "Larry Wasserman",
+        "Florian Gunsilius"
+      ],
+      "abstract": "Many scientific systems, such as cellular populations or economic cohorts, are naturally described by probability distributions that evolve over time. Predicting how such a system would have evolved under different forces or initial conditions is fundamental to causal inference, domain adaptation, and counterfactual prediction. However, the space of distributions often lacks the vector space structure on which classical methods rely. To address this, we introduce a general notion of parallel dynamics at a distributional level. We base this principle on parallel transport of tangent dynamics along optimal transport geodesics and call it ``Wasserstein Parallel Trends''. By replacing the vector subtraction of classic methods with geodesic parallel transport, we can provide counterfactual comparisons of distributional dynamics in applications such as causal inference, domain adaptation, and batch-effect correction in experimental settings. The main mathematical contribution is a novel notion of fanning scheme on the Wasserstein manifold that allows us to efficiently approximate parallel transport along geodesics while also providing the first theoretical guarantees for parallel transport in the Wasserstein space. We also show that Wasserstein Parallel Trends recovers the classic parallel trends assumption for averages as a special case and derive closed-form parallel transport for Gaussian measures. We deploy the method on synthetic data and two single-cell RNA sequencing datasets to impute gene-expression dynamics across biological systems.",
+      "pdf_url": "https://arxiv.org/pdf/2603.23736v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.23736v1",
+      "published": "2026-03-24",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.PR",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Tail-Calibrated Estimation of Extreme Quantile Treatment Effects",
+      "authors": [
+        "Mengran Li",
+        "Daniela Castro-Camilo"
+      ],
+      "abstract": "Extreme quantile treatment effects (eQTEs) measure the causal impact of a treatment on the tails of an outcome distribution and are central for studying rare, high-impact events. Standard QTE methods often fail in extreme regimes due to data sparsity, while existing eQTE methods rely on restrictive tail assumptions or on interior-quantile theory. We propose the Tail-Calibrated Inverse Estimating Equation (TIEE) framework, which combines information across quantile levels and anchors the tail using extreme value models within a unified estimating equation approach. We establish asymptotic properties of the resulting estimator and evaluate its performance through simulation under different tail behaviours and model misspecifications. An application to extreme precipitation in the Austrian Alps illustrates how TIEE enables observational causal attribution for very rare events under anthropogenic warming. More broadly, the proposed framework establishes a new foundation for causal inference on rare, high-impact outcomes, with relevance across environmental risk, economics, and public health.",
+      "pdf_url": "https://arxiv.org/pdf/2603.23309v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.23309v1",
+      "published": "2026-03-24",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "SLARM: Streaming and Language-Aligned Reconstruction Model for Dynamic Scenes",
       "authors": [
@@ -13,8 +81,8 @@
         "ZHan Xu"
       ],
       "abstract": "We propose SLARM, a feed-forward model that unifies dynamic scene reconstruction, semantic understanding, and real-time streaming inference. SLARM captures complex, non-uniform motion through higher-order motion modeling, trained solely on differentiable renderings without any flow supervision. Besides, SLARM distills semantic features from LSeg to obtain language-aligned representations. This design enables semantic querying via natural language, and the tight coupling between semantics and geometry further enhances the accuracy and robustness of dynamic reconstruction. Moreover, SLARM processes image sequences using window-based causal attention, achieving stable, low-latency streaming inference without accumulating memory cost. Within this unified framework, SLARM achieves state-of-the-art results in dynamic estimation, rendering quality, and scene parsing, improving motion accuracy by 21%, reconstruction PSNR by 1.6 dB, and segmentation mIoU by 20% over existing methods.",
-      "pdf_url": "https://arxiv.org/pdf/2603.22893v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.22893v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.22893v2",
+      "arxiv_url": "http://arxiv.org/abs/2603.22893v2",
       "published": "2026-03-24",
       "categories": [
         "cs.CV"
@@ -110,79 +178,6 @@
       "published": "2026-03-23",
       "categories": [
         "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "When Visuals Aren't the Problem: Evaluating Vision-Language Models on Misleading Data Visualizations",
-      "authors": [
-        "Harsh Nishant Lalai",
-        "Raj Sanjay Shah",
-        "Hanspeter Pfister",
-        "Sashank Varma",
-        "Grace Guo"
-      ],
-      "abstract": "Visualizations help communicate data insights, but deceptive data representations can distort their interpretation and propagate misinformation. While recent Vision Language Models (VLMs) perform well on many chart understanding tasks, their ability to detect misleading visualizations, especially when deception arises from subtle reasoning errors in captions, remains poorly understood. Here, we evaluate VLMs on misleading visualization-caption pairs grounded in a fine-grained taxonomy of reasoning errors (e.g., Cherry-picking, Causal inference) and visualization design errors (e.g., Truncated axis, Dual axis, inappropriate encodings). To this end, we develop a benchmark that combines real-world visualization with human-authored, curated misleading captions designed to elicit specific reasoning and visualization error types, enabling controlled analysis across error categories and modalities of misleadingness. Evaluating many commercial and open-source VLMs, we find that models detect visual design errors substantially more reliably than reasoning-based misinformation, and frequently misclassify non-misleading visualizations as deceptive. Overall, our work fills a gap between coarse detection of misleading content and the attribution of the specific reasoning or visualization errors that give rise to it.",
-      "pdf_url": "https://arxiv.org/pdf/2603.22368v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.22368v1",
-      "published": "2026-03-23",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Relax Forcing: Relaxed KV-Memory for Consistent Long Video Generation",
-      "authors": [
-        "Zengqun Zhao",
-        "Yanzuo Lu",
-        "Ziquan Liu",
-        "Jifei Song",
-        "Jiankang Deng",
-        "Ioannis Patras"
-      ],
-      "abstract": "Autoregressive (AR) video diffusion has recently emerged as a promising paradigm for long video generation, enabling causal synthesis beyond the limits of bidirectional models. To address training-inference mismatch, a series of self-forcing strategies have been proposed to improve rollout stability by conditioning the model on its own predictions during training. While these approaches substantially mitigate exposure bias, extending generation to minute-scale horizons remains challenging due to progressive temporal degradation. In this work, we show that this limitation is not primarily caused by insufficient memory, but by how temporal memory is utilised during inference. Through empirical analysis, we find that increasing memory does not consistently improve long-horizon generation, and that the temporal placement of historical context significantly influences motion dynamics while leaving visual quality largely unchanged. These findings suggest that temporal memory should not be treated as a homogeneous buffer. Motivated by this insight, we introduce Relax Forcing, a structured temporal memory mechanism for AR diffusion. Instead of attending to the dense generated history, Relax Forcing decomposes temporal context into three functional roles: Sink for global stability, Tail for short-term continuity, and dynamically selected History for structural motion guidance, and selectively incorporates only the most relevant past information. This design mitigates error accumulation during extrapolation while preserving motion evolution. Experiments on VBench-Long demonstrate that Relax Forcing improves motion dynamics and overall temporal consistency while reducing attention overhead. Our results suggest that structured temporal memory is essential for scalable long video generation, complementing existing forcing-based training strategies.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21366v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.21366v1",
-      "published": "2026-03-22",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "TIDE: Token-Informed Depth Execution for Per-Token Early Exit in LLM Inference",
-      "authors": [
-        "Jaber Jaber",
-        "Osama Jaber"
-      ],
-      "abstract": "Large language models run every token through every layer, regardless of difficulty. We present TIDE, a post-training system that attaches tiny learned routers at periodic checkpoint layers and, at inference time, selects the earliest layer whose hidden state has converged for each token. TIDE requires no model retraining, works with any HuggingFace causal LM, auto-detects GPU architecture, and supports float32, float16, and bfloat16 through fused CUDA kernels. On an NVIDIA A100 with DeepSeek R1 Distill 8B, TIDE achieves 100% prefill exit rate (5% of tokens exit at layer 11, the remaining at layer 31), reduces prefill latency by 7.2%, and increases single-batch throughput by 6.6%. During autoregressive decoding, 98-99% of tokens exit early while the model correctly solves a multi-step math problem with 95 unique output tokens. On Qwen3 8B (36 layers), throughput improves by 8.1% at batch size 8. Calibration on 2,000 WikiText samples takes under 3 minutes and produces a ~4 MB router checkpoint. The system comprises 1,308 lines of Python and 1,081 lines of CUDA/C++ with 74 passing tests. Code: https://github.com/RightNow-AI/TIDE",
-      "pdf_url": "https://arxiv.org/pdf/2603.21365v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.21365v1",
-      "published": "2026-03-22",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "COINBench: Moving Beyond Individual Perspectives to Collective Intent Understanding",
-      "authors": [
-        "Xiaozhe Li",
-        "Tianyi Lyu",
-        "Siyi Yang",
-        "Yizhao Yang",
-        "Yuxi Gong",
-        "Jinxuan Huang",
-        "Ligao Zhang",
-        "Zhuoyi Huang",
-        "Qingwen Liu"
-      ],
-      "abstract": "Understanding human intent is a high-level cognitive challenge for Large Language Models (LLMs), requiring sophisticated reasoning over noisy, conflicting, and non-linear discourse. While LLMs excel at following individual instructions, their ability to distill Collective Intent - the process of extracting consensus, resolving contradictions, and inferring latent trends from multi-source public discussions - remains largely unexplored. To bridge this gap, we introduce COIN-BENCH, a dynamic, real-world, live-updating benchmark specifically designed to evaluate LLMs on collective intent understanding within the consumer domain. Unlike traditional benchmarks that focus on transactional outcomes, COIN-BENCH operationalizes intent as a hierarchical cognitive structure, ranging from explicit scenarios to deep causal reasoning. We implement a robust evaluation pipeline that combines a rule-based method with an LLM-as-the-Judge approach. This framework incorporates COIN-TREE for hierarchical cognitive structuring and retrieval-augmented verification (COIN-RAG) to ensure expert-level precision in analyzing raw, collective human discussions. An extensive evaluation of 20 state-of-the-art LLMs across four dimensions - depth, breadth, informativeness, and correctness - reveals that while current models can handle surface-level aggregation, they still struggle with the analytical depth required for complex intent synthesis. COIN-BENCH establishes a new standard for advancing LLMs from passive instruction followers to expert-level analytical agents capable of deciphering the collective voice of the real world. See our project page on COIN-BENCH.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21329v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.21329v1",
-      "published": "2026-03-22",
-      "categories": [
-        "cs.IR",
         "cs.AI"
       ]
     }
