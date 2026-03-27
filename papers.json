@@ -1,6 +1,151 @@
 {
-  "last_updated": "2026-03-26T01:19:58.166039",
+  "last_updated": "2026-03-27T01:19:19.739331",
   "papers": [
+    {
+      "title": "Causal-INSIGHT: Probing Temporal Models to Extract Causal Structure",
+      "authors": [
+        "Benjamin Redden",
+        "Hui Wang",
+        "Shuyan Li"
+      ],
+      "abstract": "Understanding directed temporal interactions in multivariate time series is essential for interpreting complex dynamical systems and the predictive models trained on them. We present Causal-INSIGHT, a model-agnostic, post-hoc interpretation framework for extracting model-implied (predictor-dependent), directed, time-lagged influence structure from trained temporal predictors. Rather than inferring causal structure at the level of the data-generating process, Causal-INSIGHT analyzes how a fixed, pre-trained predictor responds to systematic, intervention-inspired input clamping applied at inference time.\n  From these responses, we construct directed temporal influence signals that reflect the dependencies the predictor relies on for prediction, and introduce Qbic, a sparsity-aware graph selection criterion that balances predictive fidelity and structural complexity without requiring ground-truth graph labels. Experiments across synthetic, simulated, and realistic benchmarks show that Causal-INSIGHT generalizes across diverse backbone architectures, maintains competitive structural accuracy, and yields significant improvements in temporal delay localization when applied to existing predictors.",
+      "pdf_url": "https://arxiv.org/pdf/2603.25473v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.25473v1",
+      "published": "2026-03-26",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "A Causal Framework for Evaluating ICU Discharge Strategies",
+      "authors": [
+        "Sagar Nagaraj Simha",
+        "Juliette Ortholand",
+        "Dave Dongelmans",
+        "Jessica D. Workum",
+        "Olivier W. M. Thijssens",
+        "Ameen Abu-Hanna",
+        "Giovanni Cinà"
+      ],
+      "abstract": "In this applied paper, we address the difficult open problem of when to discharge patients from the Intensive Care Unit. This can be conceived as an optimal stopping scenario with three added challenges: 1) the evaluation of a stopping strategy from observational data is itself a complex causal inference problem, 2) the composite objective is to minimize the length of intervention and maximize the outcome, but the two cannot be collapsed to a single dimension, and 3) the recording of variables stops when the intervention is discontinued. Our contributions are two-fold. First, we generalize the implementation of the g-formula Python package, providing a framework to evaluate stopping strategies for problems with the aforementioned structure, including positivity and coverage checks. Second, with a fully open-source pipeline, we apply this approach to MIMIC-IV, a public ICU dataset, demonstrating the potential for strategies that improve upon current care.",
+      "pdf_url": "https://arxiv.org/pdf/2603.25397v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.25397v1",
+      "published": "2026-03-26",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Quantifying plasticity: a network-based framework linking structure to dynamical regimes",
+      "authors": [
+        "Igor Branchi"
+      ],
+      "abstract": "Plasticity is a fundamental property of complex systems, such as the brain or an organism. Yet it typically remains a descriptive concept inferred retrospectively from observed outcomes, such as modifications in activity or morphology. Here, the network-based operationalization of plasticity is further formalized as the ratio between system size and connectivity strength among system elements. Within this framework, system size determines the dimensionality of the accessible state space, while connectivity strength tunes the system's regime. An optimal range of plasticity -- balancing capacity for change and capacity to maintain coherence -- emerges at intermediate connectivity strength. Notably, this balance coincides with the critical regime, which provides a theoretically motivated benchmark that enables a normalized unit of measure, termed effective plasticity, and comparisons of adaptive efficacy across diverse systems. Plasticity is thus transformed into a predictive tool that quantifies a system's capacity for change before it occurs. Its validity is supported across disciplines and, in particular, by evidence from psychopathology where it anticipates transitions between mental states. At a mechanistic level, plasticity acts as a structural tuning parameter for criticality, reframing their relationship as causal, with plasticity driving criticality rather than merely accompanying it. Furthermore, this network-based operationalization explains how larger systems can more robustly maintain critical dynamics. Crucially, the proposed perspective distinguishes functional regime shifts from thermodynamic phase changes, identifying plasticity as the system-level regulator that shapes and constrains the dynamic repertoire. This framework is applicable across domains, including ecology, economics, and social systems, and may foster cross-disciplinary integration within complexity science.",
+      "pdf_url": "https://arxiv.org/pdf/2603.25180v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.25180v1",
+      "published": "2026-03-26",
+      "categories": [
+        "q-bio.NC",
+        "cond-mat.dis-nn",
+        "cond-mat.stat-mech",
+        "nlin.AO",
+        "physics.bio-ph"
+      ]
+    },
+    {
+      "title": "Sparse Visual Thought Circuits in Vision-Language Models",
+      "authors": [
+        "Yunpeng Zhou"
+      ],
+      "abstract": "Sparse autoencoders (SAEs) improve interpretability in multimodal models, but it remains unclear whether SAE features form modular, composable units for reasoning-an assumption underlying many intervention-based steering methods. We test this modularity hypothesis and find it often fails: intervening on a task-selective feature set can modestly improve reasoning accuracy, while intervening on the union of two such sets reliably induces output drift (large unintended changes in predictions) and degrades accuracy, even under norm-matched perturbations. This non modular circuit interference is consistent with shared internal pathways where feature unions amplify activation shifts. We develop a reproducible causal pipeline to localize and test these sparse visual thought circuits in Qwen3-VL-8B. On a controlled synthetic benchmark with seven task types and three difficulty levels, linear probes identify a mid decoder locus for task type information. We train SAEs at this layer, construct task-selective sets via an explicit rule, and perform inference time scaling and ablation while quantifying accuracy and drift. Our findings-validated with bootstrapped subsamples and permutation controls, and replicated across multiple VLM families and five diverse datasets clarify the boundaries of SAE feature composability and provide a rigorous diagnostic framework for more reliable VLM control.",
+      "pdf_url": "https://arxiv.org/pdf/2603.25075v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.25075v1",
+      "published": "2026-03-26",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Treatment effect estimation under convergent network interference",
+      "authors": [
+        "Bryan Park",
+        "Stefan Wager"
+      ],
+      "abstract": "Under network interference, the treatment given to one unit may also affect the outcomes of its neighboring units in an exposure graph. Existing large-sample theory has focused on settings where either the exposure graph is sparse, or the exposure graph is randomly generated using a random graph model. The question of how to analyze treatment effect estimation in network interference models with dense, non-random exposure graphs has remained open to date. Here, we address this gap and prove a central limit theorem for possibly dense, non-random models by extending the graph limit framework pioneered by Lovász and Szegedy to the setting of causal inference under network interference. Our result implies that the uncertainty for average direct effect estimation is to first-order driven by random treatment assignment, and so asymptotic results derived under the random graph model correctly predict statistical behavior in non-random network interference designs.",
+      "pdf_url": "https://arxiv.org/pdf/2603.25032v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.25032v1",
+      "published": "2026-03-26",
+      "categories": [
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Bayesian Propensity Score-Augmented Latent Factor Models for Causal Inference with Time-Series Cross-Sectional Data",
+      "authors": [
+        "Licheng Liu"
+      ],
+      "abstract": "We propose a Bayesian propensity score-augmented latent factor model for causal inference with time-series cross-sectional data. The framework explicitly models the treatment assignment mechanism by incorporating latent factor loadings, while the outcome model flexibly incorporates the propensity score, for example through stratification. Relative to existing approaches, the proposed method provides greater flexibility and captures additional heterogeneity across propensity-score strata, enabling more credible comparisons between treated and control units within each stratum. For estimation and inference, we adopt an approximate Bayesian procedure to address the model feedback problem common in Bayesian propensity score analysis. We demonstrate the performance of the proposed method through Monte Carlo simulations and an empirical application examining the effect of political connections on firm value.",
+      "pdf_url": "https://arxiv.org/pdf/2603.25010v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.25010v1",
+      "published": "2026-03-26",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Interpretable Causal Graphical Models for Equilibrium Systems with Confounding",
+      "authors": [
+        "Kai Z. Teh",
+        "Kayvan Sadeghi",
+        "Terry Soo"
+      ],
+      "abstract": "In applications, quantities of interest are often modelled in equilibrium or an equilibrium solution is sought. The presence of confounding makes causal inference in this setting challenging. We provide interpretable graphical models for equilibrium systems with confounding using anterial graphs (Lauritzen and Sadeghi, 2018), a class of graphs containing directed acyclic graphs, ancestral graphs, and chain graphs. In this setting, we provide valid graphical representations of both counterfactual variables and observational variables, which we relate to counterfactual graphs (Shpitser and Pearl, 2007) and single-world intervention graphs (Richardson and Robins,2013). As an application of this graphical representation, we provide an element-wise procedure of selecting adjustment sets that flexibly include and exclude given covariates.",
+      "pdf_url": "https://arxiv.org/pdf/2603.24859v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.24859v1",
+      "published": "2026-03-25",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Causal Discovery on Dependent Mixed Data with Applications to Gene Regulatory Network Inference",
+      "authors": [
+        "Alex Chen",
+        "Qing Zhou"
+      ],
+      "abstract": "Causal discovery aims to infer causal relationships among variables from observational data, typically represented by a directed acyclic graph (DAG). Most existing methods assume independent and identically distributed observations, an assumption often violated in modern applications. In addition, many datasets contain a mixture of continuous and discrete variables, which further complicates causal modeling when dependence across samples is present. To address these challenges, we propose a de-correlation framework for causal discovery from dependent mixed data. Our approach formulates a structural equation model with latent variables that accommodates both continuous and discrete variables while allowing correlated Gaussian errors across units. We estimate the dependence structure among samples via a pairwise maximum likelihood estimator for the covariance matrix and develop an EM algorithm to impute latent variables underlying discrete observations. A de-correlation transformation of the recovered latent data enables the use of standard causal discovery algorithms to learn the underlying causal graph. Simulation studies demonstrate that the proposed method substantially improves causal graph recovery compared with applying standard methods directly to the original dependent data. We apply our approach to single-cell RNA sequencing data to infer gene regulatory networks governing embryonic stem cell differentiation. The inferred regulatory networks show significantly improved predictive likelihood on test data, and many high-confidence edges are supported by known regulatory interactions reported in the literature.",
+      "pdf_url": "https://arxiv.org/pdf/2603.24783v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.24783v1",
+      "published": "2026-03-25",
+      "categories": [
+        "stat.ME",
+        "q-bio.GN",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Causal Transfer in Medical Image Analysis",
+      "authors": [
+        "Mohammed M. Abdelsamea",
+        "Daniel Tweneboah Anyimadu",
+        "Tasneem Selim",
+        "Saif Alzubi",
+        "Lei Zhang",
+        "Ahmed Karam Eldaly",
+        "Xujiong Ye"
+      ],
+      "abstract": "Medical imaging models frequently fail when deployed across hospitals, scanners, populations, or imaging protocols due to domain shift, limiting their clinical reliability. While transfer learning and domain adaptation address such shifts statistically, they often rely on spurious correlations that break under changing conditions. On the other hand, causal inference provides a principled way to identify invariant mechanisms that remain stable across environments. This survey introduces and systematises Causal Transfer Learning (CTL) for medical image analysis. This paradigm integrates causal reasoning with cross-domain representation learning to enable robust and generalisable clinical AI. We frame domain shift as a causal problem and analyse how structural causal models, invariant risk minimisation, and counterfactual reasoning can be embedded within transfer learning pipelines. We studied spanning classification, segmentation, reconstruction, anomaly detection, and multimodal imaging, and organised them by task, shift type, and causal assumption. A unified taxonomy is proposed that connects causal frameworks and transfer mechanisms. We further summarise datasets, benchmarks, and empirical gains, highlighting when and why causal transfer outperforms correlation-based domain adaptation. Finally, we discuss how CTL supports fairness, robustness, and trustworthy deployment in multi-institutional and federated settings, and outline open challenges and research directions for clinically reliable medical imaging AI.",
+      "pdf_url": "https://arxiv.org/pdf/2603.24388v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.24388v1",
+      "published": "2026-03-25",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "Causality-Driven Disentangled Representation Learning in Multiplex Graphs",
       "authors": [
@@ -15,170 +160,6 @@
       "categories": [
         "cs.LG",
         "cs.SI"
-      ]
-    },
-    {
-      "title": "Praxium: Diagnosing Cloud Anomalies with AI-based Telemetry and Dependency Analysis",
-      "authors": [
-        "Rohan Kumar",
-        "Jason Li",
-        "Zongshun Zhang",
-        "Syed Mohammad Qasim",
-        "Gianluca Stringhini",
-        "Ayse Kivilcim Coskun"
-      ],
-      "abstract": "As the modern microservice architecture for cloud applications grows in popularity, cloud services are becoming increasingly complex and more vulnerable to misconfiguration and software bugs. Traditional approaches rely on expert input to diagnose and fix microservice anomalies, which lacks scalability in the face of the continuous integration and continuous deployment (CI/CD) paradigm. Microservice rollouts, containing new software installations, have complex interactions with the components of an application. Consequently, this added difficulty in attributing anomalous behavior to any specific installation or rollout results in potentially slower resolution times. To address the gaps in current diagnostic methods, this paper introduces Praxium, a framework for anomaly detection and root cause inference. Praxium aids administrators in evaluating target metric performance in the context of dependency installation information provided by a software discovery tool, PraxiPaaS. Praxium continuously monitors telemetry data to identify anomalies, then conducts root cause analysis via causal impact on recent software installations, in order to provide site reliability engineers (SRE) relevant information about an observed anomaly. In this paper, we demonstrate that Praxium is capable of effective anomaly detection and root cause inference, and we provide an analysis on effective anomaly detection hyperparameter tuning as needed in a practical setting. Across 75 total trials using four synthetic anomalies, anomaly detection consistently performs at >0.97 macro-F1. In addition, we show that causal impact analysis reliably infers the correct root cause of anomalies, even as package installations occur at increasingly shorter intervals.",
-      "pdf_url": "https://arxiv.org/pdf/2603.23890v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.23890v1",
-      "published": "2026-03-25",
-      "categories": [
-        "cs.SE",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Wasserstein Parallel Transport for Predicting the Dynamics of Statistical Systems",
-      "authors": [
-        "Tristan Luca Saidi",
-        "Gonzalo Mena",
-        "Larry Wasserman",
-        "Florian Gunsilius"
-      ],
-      "abstract": "Many scientific systems, such as cellular populations or economic cohorts, are naturally described by probability distributions that evolve over time. Predicting how such a system would have evolved under different forces or initial conditions is fundamental to causal inference, domain adaptation, and counterfactual prediction. However, the space of distributions often lacks the vector space structure on which classical methods rely. To address this, we introduce a general notion of parallel dynamics at a distributional level. We base this principle on parallel transport of tangent dynamics along optimal transport geodesics and call it ``Wasserstein Parallel Trends''. By replacing the vector subtraction of classic methods with geodesic parallel transport, we can provide counterfactual comparisons of distributional dynamics in applications such as causal inference, domain adaptation, and batch-effect correction in experimental settings. The main mathematical contribution is a novel notion of fanning scheme on the Wasserstein manifold that allows us to efficiently approximate parallel transport along geodesics while also providing the first theoretical guarantees for parallel transport in the Wasserstein space. We also show that Wasserstein Parallel Trends recovers the classic parallel trends assumption for averages as a special case and derive closed-form parallel transport for Gaussian measures. We deploy the method on synthetic data and two single-cell RNA sequencing datasets to impute gene-expression dynamics across biological systems.",
-      "pdf_url": "https://arxiv.org/pdf/2603.23736v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.23736v1",
-      "published": "2026-03-24",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "math.PR",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "Tail-Calibrated Estimation of Extreme Quantile Treatment Effects",
-      "authors": [
-        "Mengran Li",
-        "Daniela Castro-Camilo"
-      ],
-      "abstract": "Extreme quantile treatment effects (eQTEs) measure the causal impact of a treatment on the tails of an outcome distribution and are central for studying rare, high-impact events. Standard QTE methods often fail in extreme regimes due to data sparsity, while existing eQTE methods rely on restrictive tail assumptions or on interior-quantile theory. We propose the Tail-Calibrated Inverse Estimating Equation (TIEE) framework, which combines information across quantile levels and anchors the tail using extreme value models within a unified estimating equation approach. We establish asymptotic properties of the resulting estimator and evaluate its performance through simulation under different tail behaviours and model misspecifications. An application to extreme precipitation in the Austrian Alps illustrates how TIEE enables observational causal attribution for very rare events under anthropogenic warming. More broadly, the proposed framework establishes a new foundation for causal inference on rare, high-impact outcomes, with relevance across environmental risk, economics, and public health.",
-      "pdf_url": "https://arxiv.org/pdf/2603.23309v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.23309v1",
-      "published": "2026-03-24",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "SLARM: Streaming and Language-Aligned Reconstruction Model for Dynamic Scenes",
-      "authors": [
-        "Zhicheng Qiu",
-        "Jiarui Meng",
-        "Tong-an Luo",
-        "Yican Huang",
-        "Xuan Feng",
-        "Xuanfu Li",
-        "ZHan Xu"
-      ],
-      "abstract": "We propose SLARM, a feed-forward model that unifies dynamic scene reconstruction, semantic understanding, and real-time streaming inference. SLARM captures complex, non-uniform motion through higher-order motion modeling, trained solely on differentiable renderings without any flow supervision. Besides, SLARM distills semantic features from LSeg to obtain language-aligned representations. This design enables semantic querying via natural language, and the tight coupling between semantics and geometry further enhances the accuracy and robustness of dynamic reconstruction. Moreover, SLARM processes image sequences using window-based causal attention, achieving stable, low-latency streaming inference without accumulating memory cost. Within this unified framework, SLARM achieves state-of-the-art results in dynamic estimation, rendering quality, and scene parsing, improving motion accuracy by 21%, reconstruction PSNR by 1.6 dB, and segmentation mIoU by 20% over existing methods.",
-      "pdf_url": "https://arxiv.org/pdf/2603.22893v2",
-      "arxiv_url": "http://arxiv.org/abs/2603.22893v2",
-      "published": "2026-03-24",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Color When It Counts: Grayscale-Guided Online Triggering for Always-On Streaming Video Sensing",
-      "authors": [
-        "Weitong Cai",
-        "Hang Zhang",
-        "Yukai Huang",
-        "Shitong Sun",
-        "Jiankang Deng",
-        "Songcen Xu",
-        "Jifei Song",
-        "Zhensong Zhang"
-      ],
-      "abstract": "Always-on sensing is essential for next-generation edge/wearable AI systems, yet continuous high-fidelity RGB video capture remains prohibitively expensive for resource-constrained mobile and edge platforms. We present a new paradigm for efficient streaming video understanding: grayscale-always, color-on-demand. Through preliminary studies, we discover that color is not always necessary. Sparse RGB frames suffice for comparable performance when temporal structure is preserved via continuous grayscale streams. Building on this insight, we propose ColorTrigger, an online training-free trigger that selectively activates color capture based on windowed grayscale affinity analysis. Designed for real-time edge deployment, ColorTrigger uses lightweight quadratic programming to detect chromatic redundancy causally, coupled with credit-budgeted control and dynamic token routing to jointly reduce sensing and inference costs. On streaming video understanding benchmarks, ColorTrigger achieves 91.6% of full-color baseline performance while using only 8.1% RGB frames, demonstrating substantial color redundancy in natural videos and enabling practical always-on video sensing on resource-constrained devices.",
-      "pdf_url": "https://arxiv.org/pdf/2603.22466v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.22466v1",
-      "published": "2026-03-23",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.HC",
-        "cs.MM"
-      ]
-    },
-    {
-      "title": "MinerU-Diffusion: Rethinking Document OCR as Inverse Rendering via Diffusion Decoding",
-      "authors": [
-        "Hejun Dong",
-        "Junbo Niu",
-        "Bin Wang",
-        "Weijun Zeng",
-        "Wentao Zhang",
-        "Conghui He"
-      ],
-      "abstract": "Optical character recognition (OCR) has evolved from line-level transcription to structured document parsing, requiring models to recover long-form sequences containing layout, tables, and formulas. Despite recent advances in vision-language models, most existing systems rely on autoregressive decoding, which introduces sequential latency and amplifies error propagation in long documents. In this work, we revisit document OCR from an inverse rendering perspective, arguing that left-to-right causal generation is an artifact of serialization rather than an intrinsic property of the task. Motivated by this insight, we propose MinerU-Diffusion, a unified diffusion-based framework that replaces autoregressive sequential decoding with parallel diffusion denoising under visual conditioning. MinerU-Diffusion employs a block-wise diffusion decoder and an uncertainty-driven curriculum learning strategy to enable stable training and efficient long-sequence inference. Extensive experiments demonstrate that MinerU-Diffusion consistently improves robustness while achieving up to 3.2x faster decoding compared to autoregressive baselines. Evaluations on the proposed Semantic Shuffle benchmark further confirm its reduced dependence on linguistic priors and stronger visual OCR capability.",
-      "pdf_url": "https://arxiv.org/pdf/2603.22458v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.22458v1",
-      "published": "2026-03-23",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "On the Number of Conditional Independence Tests in Constraint-based Causal Discovery",
-      "authors": [
-        "Marc Franquesa Monés",
-        "Jiaqi Zhang",
-        "Caroline Uhler"
-      ],
-      "abstract": "Learning causal relations from observational data is a fundamental problem with wide-ranging applications across many fields. Constraint-based methods infer the underlying causal structure by performing conditional independence tests. However, existing algorithms such as the prominent PC algorithm need to perform a large number of independence tests, which in the worst case is exponential in the maximum degree of the causal graph. Despite extensive research, it remains unclear if there exist algorithms with better complexity without additional assumptions. Here, we establish an algorithm that achieves a better complexity of $p^{\\mathcal{O}(s)}$ tests, where $p$ is the number of nodes in the graph and $s$ denotes the maximum undirected clique size of the underlying essential graph. Complementing this result, we prove that any constraint-based algorithm must perform at least $2^{Ω(s)}$ conditional independence tests, establishing that our proposed algorithm achieves exponent-optimality up to a logarithmic factor in terms of the number of conditional independence tests needed. Finally, we validate our theoretical findings through simulations, on semi-synthetic gene-expression data, and real-world data, demonstrating the efficiency of our algorithm compared to existing methods in terms of number of conditional independence tests needed.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21844v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.21844v1",
-      "published": "2026-03-23",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "The Reasoning Error About Reasoning: Why Different Types of Reasoning Require Different Representational Structures",
-      "authors": [
-        "Yiling Wu"
-      ],
-      "abstract": "Different types of reasoning impose different structural demands on representational systems, yet no systematic account of these demands exists across psychology, AI, and philosophy of mind. I propose a framework identifying four structural properties of representational systems: operability, consistency, structural preservation, and compositionality. These properties are demanded to different degrees by different forms of reasoning, from induction through analogy and causal inference to deduction and formal logic. Each property excludes a distinct class of reasoning failure. The analysis reveals a principal structural boundary: reasoning types below it can operate on associative, probabilistic representations, while those above it require all four properties to be fully satisfied. Scaling statistical learning without structural reorganization is insufficient to cross this boundary, because the structural guarantees required by deductive reasoning cannot be approximated through probabilistic means. Converging evidence from AI evaluation, developmental psychology, and cognitive neuroscience supports the framework at different levels of directness. Three testable predictions are derived, including compounding degradation, selective vulnerability to targeted structural disruption, and irreducibility under scaling. The framework is a necessary-condition account, agnostic about representational format, that aims to reorganize existing debates rather than close them.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21736v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.21736v1",
-      "published": "2026-03-23",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "SemEval-2026 Task 12: Abductive Event Reasoning: Towards Real-World Event Causal Inference for Large Language Models",
-      "authors": [
-        "Pengfei Cao",
-        "Mingxuan Yang",
-        "Yubo Chen",
-        "Chenlong Zhang",
-        "Mingxuan Liu",
-        "Kang Liu",
-        "Jun Zhao"
-      ],
-      "abstract": "Understanding why real-world events occur is important for both natural language processing and practical decision-making, yet direct-cause inference remains underexplored in evidence-rich settings. To address this gap, we organized SemEval-2026 Task 12: Abductive Event Reasoning (AER).\\footnote{The task data is available at https://github.com/sooo66/semeval2026-task12-dataset.git} The task asks systems to identify the most plausible direct cause of a target event from supporting evidence. We formulate AER as an evidence-grounded multiple-choice benchmark that captures key challenges of real-world causal reasoning, including distributed evidence, indirect background factors, and semantically related but non-causal distractors. The shared task attracted 122 participants and received 518 submissions. This paper presents the task formulation, dataset construction pipeline, evaluation setup, and system results. AER provides a focused benchmark for abductive reasoning over real-world events and highlights challenges for future work on causal reasoning and multi-document understanding.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21720v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.21720v1",
-      "published": "2026-03-23",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]
