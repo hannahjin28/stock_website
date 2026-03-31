@@ -1,6 +1,158 @@
 {
-  "last_updated": "2026-03-28T01:14:12.305249",
+  "last_updated": "2026-03-31T01:21:06.408619",
   "papers": [
+    {
+      "title": "Grounding Social Perception in Intuitive Physics",
+      "authors": [
+        "Lance Ying",
+        "Aydan Y. Huang",
+        "Aviv Netanyahu",
+        "Andrei Barbu",
+        "Boris Katz",
+        "Joshua B. Tenenbaum",
+        "Tianmin Shu"
+      ],
+      "abstract": "People infer rich social information from others' actions. These inferences are often constrained by the physical world: what agents can do, what obstacles permit, and how the physical actions of agents causally change an environment and other agents' mental states and behavior. We propose that such rich social perception is more than visual pattern matching, but rather a reasoning process grounded in an integration of intuitive psychology with intuitive physics. To test this hypothesis, we introduced PHASE (PHysically grounded Abstract Social Events), a large dataset of procedurally generated animations, depicting physically simulated two-agent interactions on a 2D surface. Each animation follows the style of the Heider and Simmel movie, with systematic variation in environment geometry, object dynamics, agent capacities, goals, and relationships (friendly/adversarial/neutral). We then present a computational model, SIMPLE, a physics-grounded Bayesian inverse planning model that integrates planning, probabilistic planning, and physics simulation to infer agents' goals and relations from their trajectories. Our experimental results showed that SIMPLE achieved high accuracy and agreement with human judgments across diverse scenarios, while feedforward baseline models -- including strong vision-language models -- and physics-agnostic inverse planning failed to achieve human-level performance and did not align with human judgments. These results suggest that our model provides a computational account for how people understand physically grounded social scenes by inverting a generative model of physics and agents.",
+      "pdf_url": "https://arxiv.org/pdf/2603.27410v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.27410v1",
+      "published": "2026-03-28",
+      "categories": [
+        "q-bio.NC",
+        "cs.AI",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Diagnosing and Repairing Unsafe Channels in Vision-Language Models via Causal Discovery and Dual-Modal Safety Subspace Projection",
+      "authors": [
+        "Jinhu Fu",
+        "Yihang Lou",
+        "Qingyi Si",
+        "Shudong Zhang",
+        "Yan Bai",
+        "Sen Su"
+      ],
+      "abstract": "Large Vision-Language Models (LVLMs) have achieved impressive performance across multimodal understanding and reasoning tasks, yet their internal safety mechanisms remain opaque and poorly controlled. In this work, we present a comprehensive framework for diagnosing and repairing unsafe channels within LVLMs (CARE). We first perform causal mediation analysis to identify neurons and layers that are causally responsible for unsafe behaviors. Based on these findings, we introduce a dual-modal safety subspace projection method that learns generalized safety subspaces for both visual and textual modalities through generalized eigen-decomposition between benign and malicious activations. During inference, activations are dynamically projected toward these safety subspaces via a hybrid fusion mechanism that adaptively balances visual and textual corrections, effectively suppressing unsafe features while preserving semantic fidelity. Extensive experiments on multiple safety benchmarks demonstrate that our causal-subspace repair framework significantly enhances safety robustness without degrading general multimodal capabilities, outperforming prior activation steering and alignment-based baselines. Additionally, our method exhibits good transferability, defending against unseen attacks.",
+      "pdf_url": "https://arxiv.org/pdf/2603.27240v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.27240v1",
+      "published": "2026-03-28",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "The First Issue Matters: Linking Task-Level Characteristics to Long-Term Newcomer Retention in OSS",
+      "authors": [
+        "Yichen Hao",
+        "Weiwei Xu",
+        "Kai Gao",
+        "Xiaofang Zhang"
+      ],
+      "abstract": "Sustaining newcomer participation is critical for the long-term health of open-source communities. Although prior research has explored various task recommendation approaches to help newcomers resolve their first-issue, these methods overlook how characteristics of first-issues may influence newcomers' long-term retention, limiting our understanding of whether initial success leads to sustained participation and hindering effective onboarding design. In this paper, we conduct a large-scale empirical study to examine how first-issue characteristics affect newcomer retention. We combine predictive analysis, interpretability techniques, and causal inference to estimate the causal effects of issue characteristics on retention outcomes. The prediction task supports the interpretation and shows that interaction-related characteristics exhibit stronger associations with retention than intrinsic issue attributes. The causal analysis further reveals that issues reported by moderately experienced contributors, accompanied by moderate discussion intensity and participation from project members, and neutral or slightly negative comment sentiment, have higher retention potential. These findings provide actionable insights for OSS maintainers on designing issue management practices that better support long-term newcomer retention.",
+      "pdf_url": "https://arxiv.org/pdf/2603.27136v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.27136v1",
+      "published": "2026-03-28",
+      "categories": [
+        "cs.SE",
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "Socioeconomic Drivers of Physical Morbidity Across U.S. Counties: A Spatial Causal Inference Approach",
+      "authors": [
+        "Ranadeep Daw",
+        "Hunter Evans",
+        "Indrabati Bhattacharya"
+      ],
+      "abstract": "Identifying the causal effects of socioeconomic determinants on population health is of many great interests - from statistical methodology development to public health practitioners and policy developments. The statistical side of the problem needs to address several questions: spatial autocorrelation in both exposures and outcomes, confounding between treatments and covariates, and the need for geographically logical inference. We address these jointly by using spectral basis functions - Moran Eigenvector Maps and ICAR precision matrix eigenvectors - within a doubly robust generalized propensity score estimator for continuous treatments. Applied to 2022 county health data across the U.S. counties, the framework identifies the effect of six chosen predictors on the average physically unhealthy days per month. Possible further applications and methodological extensions are also discussed as future directions from this research.",
+      "pdf_url": "https://arxiv.org/pdf/2603.27095v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.27095v1",
+      "published": "2026-03-28",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Debiasing Large Language Models toward Social Factors in Online Behavior Analytics through Prompt Knowledge Tuning",
+      "authors": [
+        "Hossein Salemi",
+        "Jitin Krishnan",
+        "Hemant Purohit"
+      ],
+      "abstract": "Attribution theory explains how individuals interpret and attribute others' behavior in a social context by employing personal (dispositional) and impersonal (situational) causality. Large Language Models (LLMs), trained on human-generated corpora, may implicitly mimic this social attribution process in social contexts. However, the extent to which LLMs utilize these causal attributions in their reasoning remains underexplored. Although using reasoning paradigms, such as Chain-of-Thought (CoT), has shown promising results in various tasks, ignoring social attribution in reasoning could lead to biased responses by LLMs in social contexts. In this study, we investigate the impact of incorporating a user's goal as knowledge to infer dispositional causality and message context to infer situational causality on LLM performance. To this end, we introduce a scalable method to mitigate such biases by enriching the instruction prompts for LLMs with two prompt aids using social-attribution knowledge, based on the context and goal of a social media message. This method improves the model performance while reducing the social-attribution bias of the LLM in the reasoning on zero-shot classification tasks for behavior analytics applications. We empirically show the benefits of our method across two tasks-intent detection and theme detection on social media in the disaster domain-when considering the variability of disaster types and multiple languages of social media. Our experiments highlight the biases of three open-source LLMs: Llama3, Mistral, and Gemma, toward social attribution, and show the effectiveness of our mitigation strategies.",
+      "pdf_url": "https://arxiv.org/pdf/2603.27057v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.27057v1",
+      "published": "2026-03-28",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "UNIFERENCE: A Discrete Event Simulation Framework for Developing Distributed AI Models",
+      "authors": [
+        "Doğaç Eldenk",
+        "Stephen Xia"
+      ],
+      "abstract": "Developing and evaluating distributed inference algorithms remains difficult due to the lack of standardized tools for modeling heterogeneous devices and networks. Existing studies often rely on ad-hoc testbeds or proprietary infrastructure, making results hard to reproduce and limiting exploration of hypothetical hardware or network configurations. We present UNIFERENCE, a discrete-event simulation (DES) framework designed for developing, benchmarking, and deploying distributed AI models within a unified environment. UNIFERENCE models device and network behavior through lightweight logical processes that synchronize only on communication primitives, eliminating rollbacks while preserving the causal order. It integrates seamlessly with PyTorch Distributed, enabling the same codebase to transition from simulation to real deployment. Our evaluation demonstrates that UNIFERENCE profiles runtime with up to 98.6% accuracy compared to real physical deployments across diverse backends and hardware setups. By bridging simulation and deployment, UNIFERENCE provides an accessible, reproducible platform for studying distributed inference algorithms and exploring future system designs, from high-performance clusters to edge-scale devices. The framework is open-sourced at https://github.com/Dogacel/Uniference.",
+      "pdf_url": "https://arxiv.org/pdf/2603.26469v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.26469v1",
+      "published": "2026-03-27",
+      "categories": [
+        "cs.DC",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "From Human Cognition to Neural Activations: Probing the Computational Primitives of Spatial Reasoning in LLMs",
+      "authors": [
+        "Jiyuan An",
+        "Liner Yang",
+        "Mengyan Wang",
+        "Luming Lu",
+        "Weihua An",
+        "Erhong Yang"
+      ],
+      "abstract": "As spatial intelligence becomes an increasingly important capability for foundation models, it remains unclear whether large language models' (LLMs) performance on spatial reasoning benchmarks reflects structured internal spatial representations or reliance on linguistic heuristics. We address this question from a mechanistic perspective by examining how spatial information is internally represented and used. Drawing on computational theories of human spatial cognition, we decompose spatial reasoning into three primitives, relational composition, representational transformation, and stateful spatial updating, and design controlled task families for each. We evaluate multilingual LLMs in English, Chinese, and Arabic under single pass inference, and analyze internal representations using linear probing, sparse autoencoder based feature analysis, and causal interventions. We find that task relevant spatial information is encoded in intermediate layers and can causally influence behavior, but these representations are transient, fragmented across task families, and weakly integrated into final predictions. Cross linguistic analysis further reveals mechanistic degeneracy, where similar behavioral performance arises from distinct internal pathways. Overall, our results suggest that current LLMs exhibit limited and context dependent spatial representations rather than robust, general purpose spatial reasoning, highlighting the need for mechanistic evaluation beyond benchmark accuracy.",
+      "pdf_url": "https://arxiv.org/pdf/2603.26323v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.26323v1",
+      "published": "2026-03-27",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ANVIL: Accelerator-Native Video Interpolation via Codec Motion Vector Priors",
+      "authors": [
+        "Shibo Liu"
+      ],
+      "abstract": "Mobile displays refresh at 90-120 Hz, yet most video is encoded at 24-30 frames per second; real-time frame-rate doubling requires each synthesized frame within 33.3 ms on mobile neural processing units. We show that mainstream flow-based video frame interpolation faces three structural deployment barriers on mobile accelerators: spatial sampling operators exceed the frame budget or lack hardware support, iterative flow refinement collapses under 8-bit post-training quantization, and memory-bound operators dominate the inference graph. ANVIL addresses these barriers by reusing motion vectors already computed by the H.264 decoder to prealign input frames, removing learned optical flow, spatial sampling, and iterative accumulation from the accelerator graph. The remaining residual is refined by a convolution-dominated network whose inference graph is composed almost entirely of compute-bound operators. On a Snapdragon 8 Gen 3 device, ANVIL achieves 12.8 ms 1080p network inference in 8-bit integer precision; an open-source Android player sustains 28.4 ms median end-to-end latency per interpolated frame pair over 54,623 consecutively logged samples during 30-minute continuous playback. Per-operator causal analysis identifies quantized accumulation on recurrent flow states as a key mechanism behind integer quantization failure in iterative methods. The current design targets H.264 playback scenarios with decoder-exposed motion vectors.",
+      "pdf_url": "https://arxiv.org/pdf/2603.26835v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.26835v1",
+      "published": "2026-03-27",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Anytime-Valid Inference Under Outcome Delay: A Design-Based Approach",
+      "authors": [
+        "Michael Lindon",
+        "Nathan Kallus"
+      ],
+      "abstract": "Delayed outcomes are ubiquitous in online experimentation. When such a temporal dimension is present, treatment influences not only the outcome value but also the outcome timing, which can move in opposite directions. Motivated by the desire to continuously monitor the performance of treatment arms, we develop an anytime-valid approach to inference in the delayed outcome setting. To accommodate nonstationarity and staggered entry, we adopt a design-based framework where both the outcome timing and value are fixed potential outcomes, and randomness is introduced by treatment assignment only. We target the sample cumulative reward as a function of time, a causal estimand that avoids modeling the unobserved future, which would require strong assumptions violated by the nonstationarity and heterogeneity of our setting. We characterize exactly which augmented estimators admit a martingale structure under a specific single-arm filtration: the augmentation must activate at the event time and remain constant thereafter. This permits variance reduction via covariate adjustment while preserving the martingale property required for anytime-valid inference. We prove a fundamental negative result for the treatment effect: the estimation error is not a martingale under any filtration, arising from cross-arm covariance induced by randomized assignment. We resolve this using a union bound, showing it yields tighter intervals than the standard variance upper bound when treatment induces asymmetry in outcome arrival rates.",
+      "pdf_url": "https://arxiv.org/pdf/2603.25971v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.25971v1",
+      "published": "2026-03-26",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ]
+    },
     {
       "title": "ShotStream: Streaming Multi-Shot Video Generation for Interactive Storytelling",
       "authors": [
@@ -17,151 +169,6 @@
       "pdf_url": "https://arxiv.org/pdf/2603.25746v1",
       "arxiv_url": "http://arxiv.org/abs/2603.25746v1",
       "published": "2026-03-26",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Causal-INSIGHT: Probing Temporal Models to Extract Causal Structure",
-      "authors": [
-        "Benjamin Redden",
-        "Hui Wang",
-        "Shuyan Li"
-      ],
-      "abstract": "Understanding directed temporal interactions in multivariate time series is essential for interpreting complex dynamical systems and the predictive models trained on them. We present Causal-INSIGHT, a model-agnostic, post-hoc interpretation framework for extracting model-implied (predictor-dependent), directed, time-lagged influence structure from trained temporal predictors. Rather than inferring causal structure at the level of the data-generating process, Causal-INSIGHT analyzes how a fixed, pre-trained predictor responds to systematic, intervention-inspired input clamping applied at inference time.\n  From these responses, we construct directed temporal influence signals that reflect the dependencies the predictor relies on for prediction, and introduce Qbic, a sparsity-aware graph selection criterion that balances predictive fidelity and structural complexity without requiring ground-truth graph labels. Experiments across synthetic, simulated, and realistic benchmarks show that Causal-INSIGHT generalizes across diverse backbone architectures, maintains competitive structural accuracy, and yields significant improvements in temporal delay localization when applied to existing predictors.",
-      "pdf_url": "https://arxiv.org/pdf/2603.25473v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.25473v1",
-      "published": "2026-03-26",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "A Causal Framework for Evaluating ICU Discharge Strategies",
-      "authors": [
-        "Sagar Nagaraj Simha",
-        "Juliette Ortholand",
-        "Dave Dongelmans",
-        "Jessica D. Workum",
-        "Olivier W. M. Thijssens",
-        "Ameen Abu-Hanna",
-        "Giovanni Cinà"
-      ],
-      "abstract": "In this applied paper, we address the difficult open problem of when to discharge patients from the Intensive Care Unit. This can be conceived as an optimal stopping scenario with three added challenges: 1) the evaluation of a stopping strategy from observational data is itself a complex causal inference problem, 2) the composite objective is to minimize the length of intervention and maximize the outcome, but the two cannot be collapsed to a single dimension, and 3) the recording of variables stops when the intervention is discontinued. Our contributions are two-fold. First, we generalize the implementation of the g-formula Python package, providing a framework to evaluate stopping strategies for problems with the aforementioned structure, including positivity and coverage checks. Second, with a fully open-source pipeline, we apply this approach to MIMIC-IV, a public ICU dataset, demonstrating the potential for strategies that improve upon current care.",
-      "pdf_url": "https://arxiv.org/pdf/2603.25397v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.25397v1",
-      "published": "2026-03-26",
-      "categories": [
-        "stat.ME",
-        "cs.AI",
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Quantifying plasticity: a network-based framework linking structure to dynamical regimes",
-      "authors": [
-        "Igor Branchi"
-      ],
-      "abstract": "Plasticity is a fundamental property of complex systems, such as the brain or an organism. Yet it typically remains a descriptive concept inferred retrospectively from observed outcomes, such as modifications in activity or morphology. Here, the network-based operationalization of plasticity is further formalized as the ratio between system size and connectivity strength among system elements. Within this framework, system size determines the dimensionality of the accessible state space, while connectivity strength tunes the system's regime. An optimal range of plasticity -- balancing capacity for change and capacity to maintain coherence -- emerges at intermediate connectivity strength. Notably, this balance coincides with the critical regime, which provides a theoretically motivated benchmark that enables a normalized unit of measure, termed effective plasticity, and comparisons of adaptive efficacy across diverse systems. Plasticity is thus transformed into a predictive tool that quantifies a system's capacity for change before it occurs. Its validity is supported across disciplines and, in particular, by evidence from psychopathology where it anticipates transitions between mental states. At a mechanistic level, plasticity acts as a structural tuning parameter for criticality, reframing their relationship as causal, with plasticity driving criticality rather than merely accompanying it. Furthermore, this network-based operationalization explains how larger systems can more robustly maintain critical dynamics. Crucially, the proposed perspective distinguishes functional regime shifts from thermodynamic phase changes, identifying plasticity as the system-level regulator that shapes and constrains the dynamic repertoire. This framework is applicable across domains, including ecology, economics, and social systems, and may foster cross-disciplinary integration within complexity science.",
-      "pdf_url": "https://arxiv.org/pdf/2603.25180v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.25180v1",
-      "published": "2026-03-26",
-      "categories": [
-        "q-bio.NC",
-        "cond-mat.dis-nn",
-        "cond-mat.stat-mech",
-        "nlin.AO",
-        "physics.bio-ph"
-      ]
-    },
-    {
-      "title": "Sparse Visual Thought Circuits in Vision-Language Models",
-      "authors": [
-        "Yunpeng Zhou"
-      ],
-      "abstract": "Sparse autoencoders (SAEs) improve interpretability in multimodal models, but it remains unclear whether SAE features form modular, composable units for reasoning-an assumption underlying many intervention-based steering methods. We test this modularity hypothesis and find it often fails: intervening on a task-selective feature set can modestly improve reasoning accuracy, while intervening on the union of two such sets reliably induces output drift (large unintended changes in predictions) and degrades accuracy, even under norm-matched perturbations. This non modular circuit interference is consistent with shared internal pathways where feature unions amplify activation shifts. We develop a reproducible causal pipeline to localize and test these sparse visual thought circuits in Qwen3-VL-8B. On a controlled synthetic benchmark with seven task types and three difficulty levels, linear probes identify a mid decoder locus for task type information. We train SAEs at this layer, construct task-selective sets via an explicit rule, and perform inference time scaling and ablation while quantifying accuracy and drift. Our findings-validated with bootstrapped subsamples and permutation controls, and replicated across multiple VLM families and five diverse datasets clarify the boundaries of SAE feature composability and provide a rigorous diagnostic framework for more reliable VLM control.",
-      "pdf_url": "https://arxiv.org/pdf/2603.25075v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.25075v1",
-      "published": "2026-03-26",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Treatment effect estimation under convergent network interference",
-      "authors": [
-        "Bryan Park",
-        "Stefan Wager"
-      ],
-      "abstract": "Under network interference, the treatment given to one unit may also affect the outcomes of its neighboring units in an exposure graph. Existing large-sample theory has focused on settings where either the exposure graph is sparse, or the exposure graph is randomly generated using a random graph model. The question of how to analyze treatment effect estimation in network interference models with dense, non-random exposure graphs has remained open to date. Here, we address this gap and prove a central limit theorem for possibly dense, non-random models by extending the graph limit framework pioneered by Lovász and Szegedy to the setting of causal inference under network interference. Our result implies that the uncertainty for average direct effect estimation is to first-order driven by random treatment assignment, and so asymptotic results derived under the random graph model correctly predict statistical behavior in non-random network interference designs.",
-      "pdf_url": "https://arxiv.org/pdf/2603.25032v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.25032v1",
-      "published": "2026-03-26",
-      "categories": [
-        "math.ST"
-      ]
-    },
-    {
-      "title": "Bayesian Propensity Score-Augmented Latent Factor Models for Causal Inference with Time-Series Cross-Sectional Data",
-      "authors": [
-        "Licheng Liu"
-      ],
-      "abstract": "We propose a Bayesian propensity score-augmented latent factor model for causal inference with time-series cross-sectional data. The framework explicitly models the treatment assignment mechanism by incorporating latent factor loadings, while the outcome model flexibly incorporates the propensity score, for example through stratification. Relative to existing approaches, the proposed method provides greater flexibility and captures additional heterogeneity across propensity-score strata, enabling more credible comparisons between treated and control units within each stratum. For estimation and inference, we adopt an approximate Bayesian procedure to address the model feedback problem common in Bayesian propensity score analysis. We demonstrate the performance of the proposed method through Monte Carlo simulations and an empirical application examining the effect of political connections on firm value.",
-      "pdf_url": "https://arxiv.org/pdf/2603.25010v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.25010v1",
-      "published": "2026-03-26",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Interpretable Causal Graphical Models for Equilibrium Systems with Confounding",
-      "authors": [
-        "Kai Z. Teh",
-        "Kayvan Sadeghi",
-        "Terry Soo"
-      ],
-      "abstract": "In applications, quantities of interest are often modelled in equilibrium or an equilibrium solution is sought. The presence of confounding makes causal inference in this setting challenging. We provide interpretable graphical models for equilibrium systems with confounding using anterial graphs (Lauritzen and Sadeghi, 2018), a class of graphs containing directed acyclic graphs, ancestral graphs, and chain graphs. In this setting, we provide valid graphical representations of both counterfactual variables and observational variables, which we relate to counterfactual graphs (Shpitser and Pearl, 2007) and single-world intervention graphs (Richardson and Robins,2013). As an application of this graphical representation, we provide an element-wise procedure of selecting adjustment sets that flexibly include and exclude given covariates.",
-      "pdf_url": "https://arxiv.org/pdf/2603.24859v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.24859v1",
-      "published": "2026-03-25",
-      "categories": [
-        "stat.ME",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "Causal Discovery on Dependent Mixed Data with Applications to Gene Regulatory Network Inference",
-      "authors": [
-        "Alex Chen",
-        "Qing Zhou"
-      ],
-      "abstract": "Causal discovery aims to infer causal relationships among variables from observational data, typically represented by a directed acyclic graph (DAG). Most existing methods assume independent and identically distributed observations, an assumption often violated in modern applications. In addition, many datasets contain a mixture of continuous and discrete variables, which further complicates causal modeling when dependence across samples is present. To address these challenges, we propose a de-correlation framework for causal discovery from dependent mixed data. Our approach formulates a structural equation model with latent variables that accommodates both continuous and discrete variables while allowing correlated Gaussian errors across units. We estimate the dependence structure among samples via a pairwise maximum likelihood estimator for the covariance matrix and develop an EM algorithm to impute latent variables underlying discrete observations. A de-correlation transformation of the recovered latent data enables the use of standard causal discovery algorithms to learn the underlying causal graph. Simulation studies demonstrate that the proposed method substantially improves causal graph recovery compared with applying standard methods directly to the original dependent data. We apply our approach to single-cell RNA sequencing data to infer gene regulatory networks governing embryonic stem cell differentiation. The inferred regulatory networks show significantly improved predictive likelihood on test data, and many high-confidence edges are supported by known regulatory interactions reported in the literature.",
-      "pdf_url": "https://arxiv.org/pdf/2603.24783v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.24783v1",
-      "published": "2026-03-25",
-      "categories": [
-        "stat.ME",
-        "q-bio.GN",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Causal Transfer in Medical Image Analysis",
-      "authors": [
-        "Mohammed M. Abdelsamea",
-        "Daniel Tweneboah Anyimadu",
-        "Tasneem Selim",
-        "Saif Alzubi",
-        "Lei Zhang",
-        "Ahmed Karam Eldaly",
-        "Xujiong Ye"
-      ],
-      "abstract": "Medical imaging models frequently fail when deployed across hospitals, scanners, populations, or imaging protocols due to domain shift, limiting their clinical reliability. While transfer learning and domain adaptation address such shifts statistically, they often rely on spurious correlations that break under changing conditions. On the other hand, causal inference provides a principled way to identify invariant mechanisms that remain stable across environments. This survey introduces and systematises Causal Transfer Learning (CTL) for medical image analysis. This paradigm integrates causal reasoning with cross-domain representation learning to enable robust and generalisable clinical AI. We frame domain shift as a causal problem and analyse how structural causal models, invariant risk minimisation, and counterfactual reasoning can be embedded within transfer learning pipelines. We studied spanning classification, segmentation, reconstruction, anomaly detection, and multimodal imaging, and organised them by task, shift type, and causal assumption. A unified taxonomy is proposed that connects causal frameworks and transfer mechanisms. We further summarise datasets, benchmarks, and empirical gains, highlighting when and why causal transfer outperforms correlation-based domain adaptation. Finally, we discuss how CTL supports fairness, robustness, and trustworthy deployment in multi-institutional and federated settings, and outline open challenges and research directions for clinically reliable medical imaging AI.",
-      "pdf_url": "https://arxiv.org/pdf/2603.24388v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.24388v1",
-      "published": "2026-03-25",
       "categories": [
         "cs.CV"
       ]
