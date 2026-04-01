@@ -1,176 +1,170 @@
 {
-  "last_updated": "2026-03-31T01:21:06.408619",
+  "last_updated": "2026-04-01T01:27:43.650592",
   "papers": [
     {
-      "title": "Grounding Social Perception in Intuitive Physics",
+      "title": "CausalPulse: An Industrial-Grade Neurosymbolic Multi-Agent Copilot for Causal Diagnostics in Smart Manufacturing",
       "authors": [
-        "Lance Ying",
-        "Aydan Y. Huang",
-        "Aviv Netanyahu",
-        "Andrei Barbu",
-        "Boris Katz",
-        "Joshua B. Tenenbaum",
-        "Tianmin Shu"
+        "Chathurangi Shyalika",
+        "Utkarshani Jaimini",
+        "Cory Henson",
+        "Amit Sheth"
       ],
-      "abstract": "People infer rich social information from others' actions. These inferences are often constrained by the physical world: what agents can do, what obstacles permit, and how the physical actions of agents causally change an environment and other agents' mental states and behavior. We propose that such rich social perception is more than visual pattern matching, but rather a reasoning process grounded in an integration of intuitive psychology with intuitive physics. To test this hypothesis, we introduced PHASE (PHysically grounded Abstract Social Events), a large dataset of procedurally generated animations, depicting physically simulated two-agent interactions on a 2D surface. Each animation follows the style of the Heider and Simmel movie, with systematic variation in environment geometry, object dynamics, agent capacities, goals, and relationships (friendly/adversarial/neutral). We then present a computational model, SIMPLE, a physics-grounded Bayesian inverse planning model that integrates planning, probabilistic planning, and physics simulation to infer agents' goals and relations from their trajectories. Our experimental results showed that SIMPLE achieved high accuracy and agreement with human judgments across diverse scenarios, while feedforward baseline models -- including strong vision-language models -- and physics-agnostic inverse planning failed to achieve human-level performance and did not align with human judgments. These results suggest that our model provides a computational account for how people understand physically grounded social scenes by inverting a generative model of physics and agents.",
-      "pdf_url": "https://arxiv.org/pdf/2603.27410v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.27410v1",
-      "published": "2026-03-28",
+      "abstract": "Modern manufacturing environments demand real-time, trustworthy, and interpretable root-cause insights to sustain productivity and quality. Traditional analytics pipelines often treat anomaly detection, causal inference, and root-cause analysis as isolated stages, limiting scalability and explainability. In this work, we present CausalPulse, an industry-grade multi-agent copilot that automates causal diagnostics in smart manufacturing. It unifies anomaly detection, causal discovery, and reasoning through a neurosymbolic architecture built on standardized agentic protocols. CausalPulse is being deployed in a Robert Bosch manufacturing plant, integrating seamlessly with existing monitoring workflows and supporting real-time operation at production scale. Evaluations on both public (Future Factories) and proprietary (Planar Sensor Element) datasets show high reliability, achieving overall success rates of 98.0% and 98.73%. Per-criterion success rates reached 98.75% for planning and tool use, 97.3% for self-reflection, and 99.2% for collaboration. Runtime experiments report end-to-end latency of 50-60s per diagnostic workflow with near-linear scalability (R^2=0.97), confirming real-time readiness. Comparison with existing industrial copilots highlights distinct advantages in modularity, extensibility, and deployment maturity. These results demonstrate how CausalPulse's modular, human-in-the-loop design enables reliable, interpretable, and production-ready automation for next-generation manufacturing.",
+      "pdf_url": "https://arxiv.org/pdf/2603.29755v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.29755v1",
+      "published": "2026-03-31",
       "categories": [
-        "q-bio.NC",
-        "cs.AI",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Diagnosing and Repairing Unsafe Channels in Vision-Language Models via Causal Discovery and Dual-Modal Safety Subspace Projection",
-      "authors": [
-        "Jinhu Fu",
-        "Yihang Lou",
-        "Qingyi Si",
-        "Shudong Zhang",
-        "Yan Bai",
-        "Sen Su"
-      ],
-      "abstract": "Large Vision-Language Models (LVLMs) have achieved impressive performance across multimodal understanding and reasoning tasks, yet their internal safety mechanisms remain opaque and poorly controlled. In this work, we present a comprehensive framework for diagnosing and repairing unsafe channels within LVLMs (CARE). We first perform causal mediation analysis to identify neurons and layers that are causally responsible for unsafe behaviors. Based on these findings, we introduce a dual-modal safety subspace projection method that learns generalized safety subspaces for both visual and textual modalities through generalized eigen-decomposition between benign and malicious activations. During inference, activations are dynamically projected toward these safety subspaces via a hybrid fusion mechanism that adaptively balances visual and textual corrections, effectively suppressing unsafe features while preserving semantic fidelity. Extensive experiments on multiple safety benchmarks demonstrate that our causal-subspace repair framework significantly enhances safety robustness without degrading general multimodal capabilities, outperforming prior activation steering and alignment-based baselines. Additionally, our method exhibits good transferability, defending against unseen attacks.",
-      "pdf_url": "https://arxiv.org/pdf/2603.27240v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.27240v1",
-      "published": "2026-03-28",
-      "categories": [
-        "cs.CV",
         "cs.AI"
       ]
     },
     {
-      "title": "The First Issue Matters: Linking Task-Level Characteristics to Long-Term Newcomer Retention in OSS",
+      "title": "Linear models for causal inference under network interference",
       "authors": [
-        "Yichen Hao",
-        "Weiwei Xu",
-        "Kai Gao",
-        "Xiaofang Zhang"
+        "Eric Tong",
+        "Salvador V. Balkus"
       ],
-      "abstract": "Sustaining newcomer participation is critical for the long-term health of open-source communities. Although prior research has explored various task recommendation approaches to help newcomers resolve their first-issue, these methods overlook how characteristics of first-issues may influence newcomers' long-term retention, limiting our understanding of whether initial success leads to sustained participation and hindering effective onboarding design. In this paper, we conduct a large-scale empirical study to examine how first-issue characteristics affect newcomer retention. We combine predictive analysis, interpretability techniques, and causal inference to estimate the causal effects of issue characteristics on retention outcomes. The prediction task supports the interpretation and shows that interaction-related characteristics exhibit stronger associations with retention than intrinsic issue attributes. The causal analysis further reveals that issues reported by moderately experienced contributors, accompanied by moderate discussion intensity and participation from project members, and neutral or slightly negative comment sentiment, have higher retention potential. These findings provide actionable insights for OSS maintainers on designing issue management practices that better support long-term newcomer retention.",
-      "pdf_url": "https://arxiv.org/pdf/2603.27136v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.27136v1",
-      "published": "2026-03-28",
+      "abstract": "In causal inference, interference occurs when the treatment of one unit may affect the outcomes of other units. The goal of this work is to serve as a guide to the use of linear outcome modeling for estimating causal effects in settings where interference may pose a challenge to identification and estimation, such as spatial and network data. We demonstrate that, under a linear model, causal effects of binary and continuous treatments can be identified in terms of regression coefficients under totally and partially known interference structures. Our work constructs unbiased and consistent point and variance estimators for these effects under one or more possible fixed or random interference networks. A chief advantage is that this approach can be implemented using standard linear regression software, and is easily augmented with random effects and heteroscedastic or autocorrelation consistent standard errors. Numerical experiments and an example data analysis demonstrate the efficacy of this approach in eliminating interference bias.",
+      "pdf_url": "https://arxiv.org/pdf/2603.29168v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.29168v1",
+      "published": "2026-03-31",
       "categories": [
-        "cs.SE",
-        "cs.CY"
+        "stat.ME"
       ]
     },
     {
-      "title": "Socioeconomic Drivers of Physical Morbidity Across U.S. Counties: A Spatial Causal Inference Approach",
+      "title": "LatentPilot: Scene-Aware Vision-and-Language Navigation by Dreaming Ahead with Latent Visual Reasoning",
       "authors": [
-        "Ranadeep Daw",
-        "Hunter Evans",
-        "Indrabati Bhattacharya"
+        "Haihong Hao",
+        "Lei Chen",
+        "Mingfei Han",
+        "Changlin Li",
+        "Dong An",
+        "Yuqiang Yang",
+        "Zhihui Li",
+        "Xiaojun Chang"
       ],
-      "abstract": "Identifying the causal effects of socioeconomic determinants on population health is of many great interests - from statistical methodology development to public health practitioners and policy developments. The statistical side of the problem needs to address several questions: spatial autocorrelation in both exposures and outcomes, confounding between treatments and covariates, and the need for geographically logical inference. We address these jointly by using spectral basis functions - Moran Eigenvector Maps and ICAR precision matrix eigenvectors - within a doubly robust generalized propensity score estimator for continuous treatments. Applied to 2022 county health data across the U.S. counties, the framework identifies the effect of six chosen predictors on the average physically unhealthy days per month. Possible further applications and methodological extensions are also discussed as future directions from this research.",
-      "pdf_url": "https://arxiv.org/pdf/2603.27095v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.27095v1",
-      "published": "2026-03-28",
+      "abstract": "Existing vision-and-language navigation (VLN) models primarily reason over past and current visual observations, while largely ignoring the future visual dynamics induced by actions. As a result, they often lack an effective understanding of the causal relationship between actions and how the visual world changes, limiting robust decision-making. Humans, in contrast, can imagine the near future by leveraging action-dynamics causality, which improves both environmental understanding and navigation choices. Inspired by this capability, we propose LatentPilot, a new paradigm that exploits future observations during training as a valuable data source to learn action-conditioned visual dynamics, while requiring no access to future frames at inference. Concretely, we propose a flywheel-style training mechanism that iteratively collects on-policy trajectories and retrains the model to better match the agent's behavior distribution, with an expert takeover triggered when the agent deviates excessively. LatentPilot further learns visual latent tokens without explicit supervision; these latent tokens attend globally in a continuous latent space and are carried across steps, serving as both the current output and the next input, thereby enabling the agent to dream ahead and reason about how actions will affect subsequent observations. Experiments on R2R-CE, RxR-CE, and R2R-PE benchmarks achieve new SOTA results, and real-robot tests across diverse environments demonstrate LatentPilot's superior understanding of environment-action dynamics in scene. Project page:https://abdd.top/latentpilot/",
+      "pdf_url": "https://arxiv.org/pdf/2603.29165v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.29165v1",
+      "published": "2026-03-31",
       "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "SemLoc: Structured Grounding of Free-Form LLM Reasoning for Fault Localization",
+      "authors": [
+        "Zhaorui Yang",
+        "Haichao Zhu",
+        "Qian Zhang",
+        "Rajiv Gupta",
+        "Ashish Kundu"
+      ],
+      "abstract": "Fault localization identifies program locations responsible for observed failures. Existing techniques rank suspicious code using syntactic spectra--signals derived from execution structure such as statement coverage, control-flow divergence, or dependency reachability. These signals collapse for semantic bugs, where failing and passing executions follow identical code paths and differ only in whether semantic intent is satisfied. Recent LLM-based approaches introduce semantic reasoning but produce stochastic, unverifiable outputs that cannot be systematically cross-referenced across tests or distinguish root causes from cascading effects.\n  We present SemLoc, a fault localization framework based on structured semantic grounding. SemLoc converts free-form LLM reasoning into a closed intermediate representation that binds each inferred property to a typed program anchor, enabling runtime checking and attribution to program structure. It executes instrumented programs to construct a semantic violation spectrum--a constraint-by-test matrix--from which suspiciousness scores are derived analogously to coverage-based methods. A counterfactual verification step further prunes over-approximate constraints and isolates primary causal violations.\n  We evaluate SemLoc on SemFault-250, a corpus of 250 Python programs with single semantic faults. SemLoc outperforms five coverage-, reduction-, and LLM-based baselines, achieving Top-1 accuracy of 42.8% and Top-3 of 68%, while reducing inspection to 7.6% of executable lines. Counterfactual verification provides an additional 12% accuracy gain and identifies primary causal semantic constraints.",
+      "pdf_url": "https://arxiv.org/pdf/2603.29109v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.29109v1",
+      "published": "2026-03-31",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "The Model Says Walk: How Surface Heuristics Override Implicit Constraints in LLM Reasoning",
+      "authors": [
+        "Yubo Li",
+        "Lu Zhang",
+        "Tianchong Jiang",
+        "Ramayya Krishnan",
+        "Rema Padman"
+      ],
+      "abstract": "Large language models systematically fail when a salient surface cue conflicts with an unstated feasibility constraint. We study this through a diagnose-measure-bridge-treat framework. Causal-behavioral analysis of the ``car wash problem'' across six models reveals approximately context-independent sigmoid heuristics: the distance cue exerts 8.7 to 38 times more influence than the goal, and token-level attribution shows patterns more consistent with keyword associations than compositional inference. The Heuristic Override Benchmark (HOB) -- 500 instances spanning 4 heuristic by 5 constraint families with minimal pairs and explicitness gradients -- demonstrates generality across 14 models: under strict evaluation (10/10 correct), no model exceeds 75%, and presence constraints are hardest (44%). A minimal hint (e.g., emphasizing the key object) recovers +15 pp on average, suggesting the failure lies in constraint inference rather than missing knowledge; 12/14 models perform worse when the constraint is removed (up to -39 pp), revealing conservative bias. Parametric probes confirm that the sigmoid pattern generalizes to cost, efficiency, and semantic-similarity heuristics; goal-decomposition prompting recovers +6 to 9 pp by forcing models to enumerate preconditions before answering. Together, these results characterize heuristic override as a systematic reasoning vulnerability and provide a benchmark for measuring progress toward resolving it.",
+      "pdf_url": "https://arxiv.org/pdf/2603.29025v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.29025v1",
+      "published": "2026-03-30",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Bell's Inequality, Causal Bounds, and Quantum Bayesian Computation: A Unified Framework",
+      "authors": [
+        "Nick Polson",
+        "Vadim Sokolov",
+        "Daniel Zantedeschi"
+      ],
+      "abstract": "Bell inequalities characterize the boundary of the local-realist correlation polytope -- the set of joint probability distributions achievable by classical hidden-variable models. Quantum mechanics exceeds this boundary through non-commutativity, reaching the Tsirelson bound $2\\sqrt{2}$ for CHSH. We show that this polytope structure is not specific to quantum foundations: it appears identically in the causal inference literature, where the instrumental inequality, the Balke--Pearl linear programming bounds, and the Tian--Pearl probabilities of causation all arise as facets of the same marginal compatibility polytope. Fine's theorem -- that CHSH inequalities hold if and only if a joint distribution exists -- is precisely the pivot: the instrumental variable model in causal inference is structurally equivalent to the Bell local hidden-variable model, with the instrument playing the role of the measurement setting and the latent confounder playing the role of the hidden variable $λ$. We develop this correspondence in detail, extending it to algorithmic (Kolmogorov complexity) and entropic formulations of Bell inequalities, the NPA semidefinite programming hierarchy, and the MIP$^*$=RE undecidability result. We further show that the Born-rule / Bayes-rule duality underlying quantum Bayesian computation exploits the same non-commutativity that enables Bell violation, providing polynomial speedups for posterior inference. The framework yields a concrete dictionary between quantum information theory, causal econometrics, and Bayesian computation, and suggests new directions including NPA-based quantum causal inference algorithms and quantum architectures for function approximation.",
+      "pdf_url": "https://arxiv.org/pdf/2603.28973v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.28973v1",
+      "published": "2026-03-30",
+      "categories": [
+        "quant-ph",
+        "stat.CO"
+      ]
+    },
+    {
+      "title": "Working Paper: Towards a Category-theoretic Comparative Framework for Artificial General Intelligence",
+      "authors": [
+        "Pablo de los Riscos",
+        "Fernando J. Corbacho",
+        "Michael A. Arbib"
+      ],
+      "abstract": "AGI has become the Holly Grail of AI with the promise of level intelligence and the major Tech companies around the world are investing unprecedented amounts of resources in its pursuit. Yet, there does not exist a single formal definition and only some empirical AGI benchmarking frameworks currently exist. The main purpose of this paper is to develop a general, algebraic and category theoretic framework for describing, comparing and analysing different possible AGI architectures. Thus, this Category theoretic formalization would also allow to compare different possible candidate AGI architectures, such as, RL, Universal AI, Active Inference, CRL, Schema based Learning, etc. It will allow to unambiguously expose their commonalities and differences, and what is even more important, expose areas for future research. From the applied Category theoretic point of view, we take as inspiration Machines in a Category to provide a modern view of AGI Architectures in a Category. More specifically, this first position paper provides, on one hand, a first exercise on RL, Causal RL and SBL Architectures in a Category, and on the other hand, it is a first step on a broader research program that seeks to provide a unified formal foundation for AGI systems, integrating architectural structure, informational organization, agent realization, agent and environment interaction, behavioural development over time, and the empirical evaluation of properties. This framework is also intended to support the definition of architectural properties, both syntactic and informational, as well as semantic properties of agents and their assessment in environments with explicitly characterized features. We claim that Category Theory and AGI will have a very symbiotic relation.",
+      "pdf_url": "https://arxiv.org/pdf/2603.28906v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.28906v1",
+      "published": "2026-03-30",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "A Covariant Phase Space Approach to Einstein-AEther Gravity",
+      "authors": [
+        "Walter Arata",
+        "Stefano Liberati",
+        "Giulio Neri"
+      ],
+      "abstract": "Black hole thermodynamics in Lorentz-violating gravity is subtle because different excitations propagate at different speeds and hence identify different causal horizons. We revisit Einstein--AEther gravity using the covariant phase space formalism with boundaries and derive a consistent first law for stationary black holes. For a mode of propagation speed $c_s$, we introduce a disformal frame in which the corresponding causal horizon is a Killing horizon, so that the standard Wald-type derivation can be carried out. The result is then mapped back to the original frame, where it mantains the same structure. The associated horizon charge contains, besides the usual Komar term, an irreducible entropic AEther contribution that can be interpreted as heat due to the AEther flux across the horizon; accordingly, the total entropy splits into a gravitational part and an AEther part. We further develop an extended-thermodynamics framework in which the couplings of the theory are allowed to vary, obtaining generalized Smarr relations. Finally, we analyze the probe-mode limit $c_s \\to +\\infty$, clarifying its connection to universal-horizon thermodynamics and resolving the apparent tension in the literature between approaches that (i) fix the entropy to be proportional to the area and infer a corresponding temperature, and (ii) impose the Hawking temperature associated with modes peeling from the universal horizon and infer the entropy. Once the independent AEther contribution is properly taken into account, the two prescriptions are reconciled.",
+      "pdf_url": "https://arxiv.org/pdf/2603.28851v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.28851v1",
+      "published": "2026-03-30",
+      "categories": [
+        "gr-qc",
+        "hep-th",
+        "math-ph"
+      ]
+    },
+    {
+      "title": "Statistical Models for the Inference of Within-person Relations: A Random Intercept Cross-Lagged Panel Model and Its Interpretation",
+      "authors": [
+        "Satoshi Usami"
+      ],
+      "abstract": "The cross-lagged panel model (CLPM) has been widely used, particularly in psychology, to infer longitudinal relations among variables. At the same time, controlling for between-person heterogeneity and capturing within-person relations as processes of within-person change are regarded as key components to causal inference based on longitudinal data. Since Hamaker, Kuiper, and Grasman (2015) criticized the CLPM for its limitations in inferring within-person relations, the random intercept cross-lagged panel model (RI-CLPM), which incorporates stable trait factors representing stable individual differences, has rapidly spread, especially in psychology. At the same time, although many statistical models are available for inferring within-person relations, the distinctions among them have not been clearly delineated, and discussions over the interpretation and selection of statistical models remain active. In this paper, I position the RI-CLPM as one useful method for inferring within-person relations, explain its practical issues, and organize its mathematical and conceptual relationships with other statistical models, as well as potential problems that may arise in their application. In particular, I point out that a distinctive feature of the stable trait factors in the RI-CLPM, in representing between-person heterogeneity, is the assumption that they are uncorrelated with within-person variability, and that this point serves as an important link to the mathematical relationship with the dynamic panel model, another promising alternative.",
+      "pdf_url": "https://arxiv.org/pdf/2603.28656v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.28656v1",
+      "published": "2026-03-30",
+      "categories": [
+        "stat.ME",
         "stat.AP"
       ]
     },
     {
-      "title": "Debiasing Large Language Models toward Social Factors in Online Behavior Analytics through Prompt Knowledge Tuning",
+      "title": "Video Generation Models as World Models: Efficient Paradigms, Architectures and Algorithms",
       "authors": [
-        "Hossein Salemi",
-        "Jitin Krishnan",
-        "Hemant Purohit"
+        "Muyang He",
+        "Hanzhong Guo",
+        "Junxiong Lin",
+        "Yizhou Yu"
       ],
-      "abstract": "Attribution theory explains how individuals interpret and attribute others' behavior in a social context by employing personal (dispositional) and impersonal (situational) causality. Large Language Models (LLMs), trained on human-generated corpora, may implicitly mimic this social attribution process in social contexts. However, the extent to which LLMs utilize these causal attributions in their reasoning remains underexplored. Although using reasoning paradigms, such as Chain-of-Thought (CoT), has shown promising results in various tasks, ignoring social attribution in reasoning could lead to biased responses by LLMs in social contexts. In this study, we investigate the impact of incorporating a user's goal as knowledge to infer dispositional causality and message context to infer situational causality on LLM performance. To this end, we introduce a scalable method to mitigate such biases by enriching the instruction prompts for LLMs with two prompt aids using social-attribution knowledge, based on the context and goal of a social media message. This method improves the model performance while reducing the social-attribution bias of the LLM in the reasoning on zero-shot classification tasks for behavior analytics applications. We empirically show the benefits of our method across two tasks-intent detection and theme detection on social media in the disaster domain-when considering the variability of disaster types and multiple languages of social media. Our experiments highlight the biases of three open-source LLMs: Llama3, Mistral, and Gemma, toward social attribution, and show the effectiveness of our mitigation strategies.",
-      "pdf_url": "https://arxiv.org/pdf/2603.27057v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.27057v1",
-      "published": "2026-03-28",
+      "abstract": "The rapid evolution of video generation has enabled models to simulate complex physical dynamics and long-horizon causalities, positioning them as potential world simulators. However, a critical gap still remains between the theoretical capacity for world simulation and the heavy computational costs of spatiotemporal modeling. To address this, we comprehensively and systematically review video generation frameworks and techniques that consider efficiency as a crucial requirement for practical world modeling. We introduce a novel taxonomy in three dimensions: efficient modeling paradigms, efficient network architectures, and efficient inference algorithms. We further show that bridging this efficiency gap directly empowers interactive applications such as autonomous driving, embodied AI, and game simulation. Finally, we identify emerging research frontiers in efficient video-based world modeling, arguing that efficiency is a fundamental prerequisite for evolving video generators into general-purpose, real-time, and robust world simulators.",
+      "pdf_url": "https://arxiv.org/pdf/2603.28489v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.28489v1",
+      "published": "2026-03-30",
       "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "UNIFERENCE: A Discrete Event Simulation Framework for Developing Distributed AI Models",
-      "authors": [
-        "Doğaç Eldenk",
-        "Stephen Xia"
-      ],
-      "abstract": "Developing and evaluating distributed inference algorithms remains difficult due to the lack of standardized tools for modeling heterogeneous devices and networks. Existing studies often rely on ad-hoc testbeds or proprietary infrastructure, making results hard to reproduce and limiting exploration of hypothetical hardware or network configurations. We present UNIFERENCE, a discrete-event simulation (DES) framework designed for developing, benchmarking, and deploying distributed AI models within a unified environment. UNIFERENCE models device and network behavior through lightweight logical processes that synchronize only on communication primitives, eliminating rollbacks while preserving the causal order. It integrates seamlessly with PyTorch Distributed, enabling the same codebase to transition from simulation to real deployment. Our evaluation demonstrates that UNIFERENCE profiles runtime with up to 98.6% accuracy compared to real physical deployments across diverse backends and hardware setups. By bridging simulation and deployment, UNIFERENCE provides an accessible, reproducible platform for studying distributed inference algorithms and exploring future system designs, from high-performance clusters to edge-scale devices. The framework is open-sourced at https://github.com/Dogacel/Uniference.",
-      "pdf_url": "https://arxiv.org/pdf/2603.26469v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.26469v1",
-      "published": "2026-03-27",
-      "categories": [
-        "cs.DC",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "From Human Cognition to Neural Activations: Probing the Computational Primitives of Spatial Reasoning in LLMs",
-      "authors": [
-        "Jiyuan An",
-        "Liner Yang",
-        "Mengyan Wang",
-        "Luming Lu",
-        "Weihua An",
-        "Erhong Yang"
-      ],
-      "abstract": "As spatial intelligence becomes an increasingly important capability for foundation models, it remains unclear whether large language models' (LLMs) performance on spatial reasoning benchmarks reflects structured internal spatial representations or reliance on linguistic heuristics. We address this question from a mechanistic perspective by examining how spatial information is internally represented and used. Drawing on computational theories of human spatial cognition, we decompose spatial reasoning into three primitives, relational composition, representational transformation, and stateful spatial updating, and design controlled task families for each. We evaluate multilingual LLMs in English, Chinese, and Arabic under single pass inference, and analyze internal representations using linear probing, sparse autoencoder based feature analysis, and causal interventions. We find that task relevant spatial information is encoded in intermediate layers and can causally influence behavior, but these representations are transient, fragmented across task families, and weakly integrated into final predictions. Cross linguistic analysis further reveals mechanistic degeneracy, where similar behavioral performance arises from distinct internal pathways. Overall, our results suggest that current LLMs exhibit limited and context dependent spatial representations rather than robust, general purpose spatial reasoning, highlighting the need for mechanistic evaluation beyond benchmark accuracy.",
-      "pdf_url": "https://arxiv.org/pdf/2603.26323v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.26323v1",
-      "published": "2026-03-27",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "ANVIL: Accelerator-Native Video Interpolation via Codec Motion Vector Priors",
-      "authors": [
-        "Shibo Liu"
-      ],
-      "abstract": "Mobile displays refresh at 90-120 Hz, yet most video is encoded at 24-30 frames per second; real-time frame-rate doubling requires each synthesized frame within 33.3 ms on mobile neural processing units. We show that mainstream flow-based video frame interpolation faces three structural deployment barriers on mobile accelerators: spatial sampling operators exceed the frame budget or lack hardware support, iterative flow refinement collapses under 8-bit post-training quantization, and memory-bound operators dominate the inference graph. ANVIL addresses these barriers by reusing motion vectors already computed by the H.264 decoder to prealign input frames, removing learned optical flow, spatial sampling, and iterative accumulation from the accelerator graph. The remaining residual is refined by a convolution-dominated network whose inference graph is composed almost entirely of compute-bound operators. On a Snapdragon 8 Gen 3 device, ANVIL achieves 12.8 ms 1080p network inference in 8-bit integer precision; an open-source Android player sustains 28.4 ms median end-to-end latency per interpolated frame pair over 54,623 consecutively logged samples during 30-minute continuous playback. Per-operator causal analysis identifies quantized accumulation on recurrent flow states as a key mechanism behind integer quantization failure in iterative methods. The current design targets H.264 playback scenarios with decoder-exposed motion vectors.",
-      "pdf_url": "https://arxiv.org/pdf/2603.26835v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.26835v1",
-      "published": "2026-03-27",
-      "categories": [
-        "eess.IV",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Anytime-Valid Inference Under Outcome Delay: A Design-Based Approach",
-      "authors": [
-        "Michael Lindon",
-        "Nathan Kallus"
-      ],
-      "abstract": "Delayed outcomes are ubiquitous in online experimentation. When such a temporal dimension is present, treatment influences not only the outcome value but also the outcome timing, which can move in opposite directions. Motivated by the desire to continuously monitor the performance of treatment arms, we develop an anytime-valid approach to inference in the delayed outcome setting. To accommodate nonstationarity and staggered entry, we adopt a design-based framework where both the outcome timing and value are fixed potential outcomes, and randomness is introduced by treatment assignment only. We target the sample cumulative reward as a function of time, a causal estimand that avoids modeling the unobserved future, which would require strong assumptions violated by the nonstationarity and heterogeneity of our setting. We characterize exactly which augmented estimators admit a martingale structure under a specific single-arm filtration: the augmentation must activate at the event time and remain constant thereafter. This permits variance reduction via covariate adjustment while preserving the martingale property required for anytime-valid inference. We prove a fundamental negative result for the treatment effect: the estimation error is not a martingale under any filtration, arising from cross-arm covariance induced by randomized assignment. We resolve this using a union bound, showing it yields tighter intervals than the standard variance upper bound when treatment induces asymmetry in outcome arrival rates.",
-      "pdf_url": "https://arxiv.org/pdf/2603.25971v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.25971v1",
-      "published": "2026-03-26",
-      "categories": [
-        "stat.ME",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "ShotStream: Streaming Multi-Shot Video Generation for Interactive Storytelling",
-      "authors": [
-        "Yawen Luo",
-        "Xiaoyu Shi",
-        "Junhao Zhuang",
-        "Yutian Chen",
-        "Quande Liu",
-        "Xintao Wang",
-        "Pengfei Wan",
-        "Tianfan Xue"
-      ],
-      "abstract": "Multi-shot video generation is crucial for long narrative storytelling, yet current bidirectional architectures suffer from limited interactivity and high latency. We propose ShotStream, a novel causal multi-shot architecture that enables interactive storytelling and efficient on-the-fly frame generation. By reformulating the task as next-shot generation conditioned on historical context, ShotStream allows users to dynamically instruct ongoing narratives via streaming prompts. We achieve this by first fine-tuning a text-to-video model into a bidirectional next-shot generator, which is then distilled into a causal student via Distribution Matching Distillation. To overcome the challenges of inter-shot consistency and error accumulation inherent in autoregressive generation, we introduce two key innovations. First, a dual-cache memory mechanism preserves visual coherence: a global context cache retains conditional frames for inter-shot consistency, while a local context cache holds generated frames within the current shot for intra-shot consistency. And a RoPE discontinuity indicator is employed to explicitly distinguish the two caches to eliminate ambiguity. Second, to mitigate error accumulation, we propose a two-stage distillation strategy. This begins with intra-shot self-forcing conditioned on ground-truth historical shots and progressively extends to inter-shot self-forcing using self-generated histories, effectively bridging the train-test gap. Extensive experiments demonstrate that ShotStream generates coherent multi-shot videos with sub-second latency, achieving 16 FPS on a single GPU. It matches or exceeds the quality of slower bidirectional models, paving the way for real-time interactive storytelling. Training and inference code, as well as the models, are available on our",
-      "pdf_url": "https://arxiv.org/pdf/2603.25746v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.25746v1",
-      "published": "2026-03-26",
-      "categories": [
-        "cs.CV"
+        "eess.IV"
       ]
     }
   ]
