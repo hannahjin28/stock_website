@@ -1,6 +1,125 @@
 {
-  "last_updated": "2026-04-01T01:27:43.650592",
+  "last_updated": "2026-04-02T01:18:03.835518",
   "papers": [
+    {
+      "title": "DVGT-2: Vision-Geometry-Action Model for Autonomous Driving at Scale",
+      "authors": [
+        "Sicheng Zuo",
+        "Zixun Xie",
+        "Wenzhao Zheng",
+        "Shaoqing Xu",
+        "Fang Li",
+        "Hanbing Li",
+        "Long Chen",
+        "Zhi-Xin Yang",
+        "Jiwen Lu"
+      ],
+      "abstract": "End-to-end autonomous driving has evolved from the conventional paradigm based on sparse perception into vision-language-action (VLA) models, which focus on learning language descriptions as an auxiliary task to facilitate planning. In this paper, we propose an alternative Vision-Geometry-Action (VGA) paradigm that advocates dense 3D geometry as the critical cue for autonomous driving. As vehicles operate in a 3D world, we think dense 3D geometry provides the most comprehensive information for decision-making. However, most existing geometry reconstruction methods (e.g., DVGT) rely on computationally expensive batch processing of multi-frame inputs and cannot be applied to online planning. To address this, we introduce a streaming Driving Visual Geometry Transformer (DVGT-2), which processes inputs in an online manner and jointly outputs dense geometry and trajectory planning for the current frame. We employ temporal causal attention and cache historical features to support on-the-fly inference. To further enhance efficiency, we propose a sliding-window streaming strategy and use historical caches within a certain interval to avoid repetitive computations. Despite the faster speed, DVGT-2 achieves superior geometry reconstruction performance on various datasets. The same trained DVGT-2 can be directly applied to planning across diverse camera configurations without fine-tuning, including closed-loop NAVSIM and open-loop nuScenes benchmarks.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00813v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.00813v1",
+      "published": "2026-04-01",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "Estimating causal effects of continuous-time dynamic treatments with unmeasured confounders",
+      "authors": [
+        "Haiyan Zhu",
+        "Yingchun Zhou"
+      ],
+      "abstract": "Modern medical research demands specialized causal inference methods evaluating complex continuous-time dynamic treatment regimens using observational data. For instance, obtaining the causal effects of intravenous administration, a continuous process involving dynamic adjustments of the treatment dose, can guide clinicians on drug use. However, the existing causal inference frameworks in longitudinal studies typically assume that time advances in discrete time steps. Therefore, this paper proposes a new methodology to estimate the causal effects of continuous-time dynamic treatments in the presence of unmeasured confounding. Unmeasured confounding is incorporated into estimating continuous-time Marginal Structural Models from a Bayesian perspective. Simulation demonstrates that compared to existing methods, the proposed approach can provide approximately unbiased estimates for target causal parameters across three degrees of confounding. The proposed method is applied to analyze the causal relationship between the intravenous oxytocin administration process and postpartum hemorrhage, leading to meaningful results that may guide clinicians in using oxytocin.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00544v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.00544v1",
+      "published": "2026-04-01",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Conformal Inference for Counterfactuals and Individual Treatment Effects with Experiment Attrition",
+      "authors": [
+        "Xiangyu Song"
+      ],
+      "abstract": "Attrition in survey and field experiments presents a challenge for social science research. Common approaches to deal with this problem -- such as complete case analysis, multiple imputation, and weighting methods -- rely on strong assumptions that may not hold in practice. This paper introduces a new method that combines recent advances in statistical inference with established tools for handling missing data. The approach produces prediction intervals for treatment effects that are both robust and precise. Evidence from simulation studies shows that the method achieves better coverage and produces narrower intervals than common alternatives. The reanalysis of two recently published experiment studies illustrates how this framework allows researchers to compare treatment effects across participants who remain in the study, those who drop out, and the full sample. Taken together, these results highlight how the proposed approach provides a stronger foundation for causal inference in the presence of attrition.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00504v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.00504v1",
+      "published": "2026-04-01",
+      "categories": [
+        "stat.ME",
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Causal Inference for Unobservable Multivariate Outcomes, with Applications to Brain Effective Connectivity",
+      "authors": [
+        "Haiyue Song",
+        "Ani Eloyan",
+        "Youjin Lee"
+      ],
+      "abstract": "Evaluating the causal effect of an intervention on multivariate outcomes is challenging when the outcomes are interdependent and derived rather than directly observed. Effective connectivity, which summarizes the directional neural communication between brain regions, is one such derived relational outcome. Estimating how external interventions affect effective connectivity introduces two layers of causal inference problems: identifying directional relationships among brain regions from high-dimensional neuroimaging time series and estimating the causal effect of the intervention on these derived relationships. Each layer introduces distinct biases. The first arises from within-outcome dependencies unrelated to the intervention; to address this, we propose a sample-splitting method for estimating meaningful, and potentially causally informative, effective connectivity measures. The second arises from confounding between the intervention and the derived outcomes; to address this, we apply inverse probability weighting methods and incorporate multiple testing when causal effects on multiple components of the outcomes are of interest. We demonstrate, through theoretical results and simulations, that the proposed methods are asymptotically valid under certain conditions with effective type-I and familywise error control. Finally, we apply the proposed methods to examine the causal effect of amyloid on effective connectivity using the resting-state fMRI data from the Alzheimer's Disease Neuroimaging Initiative database.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00390v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.00390v1",
+      "published": "2026-04-01",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "An Asymptotically Causal Metamodel for Neutron Star Equations of State",
+      "authors": [
+        "Gabriele Montefusco",
+        "Marco Antonelli",
+        "Francesca Gulminelli"
+      ],
+      "abstract": "Nuclear metamodels - phenomenological parametrizations of the energy of nuclear matter - are convenient tools to explore the space of realistic neutron star configurations constrained by astrophysical and nuclear data. While much recent work has focused on composition-agnostic barotropic models, the metamodel approach is designed to describe the composition dependence of the relevant thermodynamic potential. We revise a previously proposed non-relativistic metamodel by introducing a more controlled high-density behaviour, improving both its causal properties and its accuracy in reproducing the pressure and the beta-equilibrium composition of microscopically motivated equations of state. Since causality is automatically enforced at high density, the fraction of discarded models due to superluminal sound speeds is substantially reduced, facilitating metamodel-based explorations of equilibrium neutron star configurations. We further assess our framework by performing a Bayesian inference of neutron star properties beyond standard observables such as masses and radii, exploiting the metamodel's ability to probe composition-dependent quantities including the dUrca threshold and the Ledoux criterion for g-mode stability.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00196v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.00196v1",
+      "published": "2026-03-31",
+      "categories": [
+        "nucl-th",
+        "astro-ph.HE"
+      ]
+    },
+    {
+      "title": "Q-Mask: Query-driven Causal Masks for Text Anchoring in OCR-Oriented Vision-Language Models",
+      "authors": [
+        "Longwei Xu",
+        "Feng Feng",
+        "Shaojie Zhang",
+        "Xin Chen",
+        "Hang Li",
+        "Anan Du",
+        "Hailong Yu",
+        "Pei Fu",
+        "Zhenbo Luo",
+        "Jian Luan"
+      ],
+      "abstract": "Optical Character Recognition (OCR) is increasingly regarded as a foundational capability for modern vision-language models (VLMs), enabling them not only to read text in images but also to support downstream reasoning in real-world visual question answering (VQA). However, practical applications further require reliable text anchors, i.e., accurately grounding queried text to its corresponding spatial region. To systematically evaluate this capability, we introduce TextAnchor-Bench (TABench), a benchmark for fine-grained text-region grounding, which reveals that both general-purpose and OCR-specific VLMs still struggle to establish accurate and stable text anchors. To address this limitation, we propose Q-Mask, a precise OCR framework built upon a causal query-driven mask decoder (CQMD). Inspired by chain-of-thought reasoning, Q-Mask performs causal visual decoding that sequentially generates query-conditioned visual masks before producing the final OCR output. This visual CoT paradigm disentangles where the text is from what the text is, enforcing grounded evidence acquisition prior to recognition and enabling explicit text anchor construction during inference. To train CQMD, we construct TextAnchor-26M, a large-scale dataset of image-text pairs annotated with fine-grained masks corresponding to specific textual elements, encouraging stable text-region correspondences and injecting strong spatial priors into VLM training. Extensive experiments demonstrate that Q-Mask substantially improves text anchoring and understanding across diverse visual scenes.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00161v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.00161v1",
+      "published": "2026-03-31",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Counterfactual Analysis of Brain Network Dynamics",
+      "authors": [
+        "Moo K. Chung",
+        "Luigi Maccotta",
+        "Aaron Struck"
+      ],
+      "abstract": "Causal inference in brain networks has traditionally relied on regression-based models such as Granger causality, structural equation modeling, and dynamic causal modeling. While effective for identifying directed associations, these methods remain descriptive and acyclic, leaving open the fundamental question of intervention: what would the causal organization become if a pathway were disrupted or externally modulated? We introduce a unified framework for counterfactual causal analysis that models both pathological disruptions and therapeutic interventions as an energy-perturbation problem on network flows. Grounded in Hodge theory, directed communication is decomposed into dissipative and persistent (harmonic) components, enabling systematic analysis of how causal organization reconfigures under hypothetical perturbations. This formulation provides a principled foundation for quantifying network resilience, compensation, and control in complex brain systems.",
+      "pdf_url": "https://arxiv.org/pdf/2603.29843v1",
+      "arxiv_url": "http://arxiv.org/abs/2603.29843v1",
+      "published": "2026-03-31",
+      "categories": [
+        "q-bio.NC"
+      ]
+    },
     {
       "title": "CausalPulse: An Industrial-Grade Neurosymbolic Multi-Agent Copilot for Causal Diagnostics in Smart Manufacturing",
       "authors": [
@@ -51,120 +170,6 @@
         "cs.CV",
         "cs.AI",
         "cs.RO"
-      ]
-    },
-    {
-      "title": "SemLoc: Structured Grounding of Free-Form LLM Reasoning for Fault Localization",
-      "authors": [
-        "Zhaorui Yang",
-        "Haichao Zhu",
-        "Qian Zhang",
-        "Rajiv Gupta",
-        "Ashish Kundu"
-      ],
-      "abstract": "Fault localization identifies program locations responsible for observed failures. Existing techniques rank suspicious code using syntactic spectra--signals derived from execution structure such as statement coverage, control-flow divergence, or dependency reachability. These signals collapse for semantic bugs, where failing and passing executions follow identical code paths and differ only in whether semantic intent is satisfied. Recent LLM-based approaches introduce semantic reasoning but produce stochastic, unverifiable outputs that cannot be systematically cross-referenced across tests or distinguish root causes from cascading effects.\n  We present SemLoc, a fault localization framework based on structured semantic grounding. SemLoc converts free-form LLM reasoning into a closed intermediate representation that binds each inferred property to a typed program anchor, enabling runtime checking and attribution to program structure. It executes instrumented programs to construct a semantic violation spectrum--a constraint-by-test matrix--from which suspiciousness scores are derived analogously to coverage-based methods. A counterfactual verification step further prunes over-approximate constraints and isolates primary causal violations.\n  We evaluate SemLoc on SemFault-250, a corpus of 250 Python programs with single semantic faults. SemLoc outperforms five coverage-, reduction-, and LLM-based baselines, achieving Top-1 accuracy of 42.8% and Top-3 of 68%, while reducing inspection to 7.6% of executable lines. Counterfactual verification provides an additional 12% accuracy gain and identifies primary causal semantic constraints.",
-      "pdf_url": "https://arxiv.org/pdf/2603.29109v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.29109v1",
-      "published": "2026-03-31",
-      "categories": [
-        "cs.SE",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "The Model Says Walk: How Surface Heuristics Override Implicit Constraints in LLM Reasoning",
-      "authors": [
-        "Yubo Li",
-        "Lu Zhang",
-        "Tianchong Jiang",
-        "Ramayya Krishnan",
-        "Rema Padman"
-      ],
-      "abstract": "Large language models systematically fail when a salient surface cue conflicts with an unstated feasibility constraint. We study this through a diagnose-measure-bridge-treat framework. Causal-behavioral analysis of the ``car wash problem'' across six models reveals approximately context-independent sigmoid heuristics: the distance cue exerts 8.7 to 38 times more influence than the goal, and token-level attribution shows patterns more consistent with keyword associations than compositional inference. The Heuristic Override Benchmark (HOB) -- 500 instances spanning 4 heuristic by 5 constraint families with minimal pairs and explicitness gradients -- demonstrates generality across 14 models: under strict evaluation (10/10 correct), no model exceeds 75%, and presence constraints are hardest (44%). A minimal hint (e.g., emphasizing the key object) recovers +15 pp on average, suggesting the failure lies in constraint inference rather than missing knowledge; 12/14 models perform worse when the constraint is removed (up to -39 pp), revealing conservative bias. Parametric probes confirm that the sigmoid pattern generalizes to cost, efficiency, and semantic-similarity heuristics; goal-decomposition prompting recovers +6 to 9 pp by forcing models to enumerate preconditions before answering. Together, these results characterize heuristic override as a systematic reasoning vulnerability and provide a benchmark for measuring progress toward resolving it.",
-      "pdf_url": "https://arxiv.org/pdf/2603.29025v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.29025v1",
-      "published": "2026-03-30",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Bell's Inequality, Causal Bounds, and Quantum Bayesian Computation: A Unified Framework",
-      "authors": [
-        "Nick Polson",
-        "Vadim Sokolov",
-        "Daniel Zantedeschi"
-      ],
-      "abstract": "Bell inequalities characterize the boundary of the local-realist correlation polytope -- the set of joint probability distributions achievable by classical hidden-variable models. Quantum mechanics exceeds this boundary through non-commutativity, reaching the Tsirelson bound $2\\sqrt{2}$ for CHSH. We show that this polytope structure is not specific to quantum foundations: it appears identically in the causal inference literature, where the instrumental inequality, the Balke--Pearl linear programming bounds, and the Tian--Pearl probabilities of causation all arise as facets of the same marginal compatibility polytope. Fine's theorem -- that CHSH inequalities hold if and only if a joint distribution exists -- is precisely the pivot: the instrumental variable model in causal inference is structurally equivalent to the Bell local hidden-variable model, with the instrument playing the role of the measurement setting and the latent confounder playing the role of the hidden variable $λ$. We develop this correspondence in detail, extending it to algorithmic (Kolmogorov complexity) and entropic formulations of Bell inequalities, the NPA semidefinite programming hierarchy, and the MIP$^*$=RE undecidability result. We further show that the Born-rule / Bayes-rule duality underlying quantum Bayesian computation exploits the same non-commutativity that enables Bell violation, providing polynomial speedups for posterior inference. The framework yields a concrete dictionary between quantum information theory, causal econometrics, and Bayesian computation, and suggests new directions including NPA-based quantum causal inference algorithms and quantum architectures for function approximation.",
-      "pdf_url": "https://arxiv.org/pdf/2603.28973v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.28973v1",
-      "published": "2026-03-30",
-      "categories": [
-        "quant-ph",
-        "stat.CO"
-      ]
-    },
-    {
-      "title": "Working Paper: Towards a Category-theoretic Comparative Framework for Artificial General Intelligence",
-      "authors": [
-        "Pablo de los Riscos",
-        "Fernando J. Corbacho",
-        "Michael A. Arbib"
-      ],
-      "abstract": "AGI has become the Holly Grail of AI with the promise of level intelligence and the major Tech companies around the world are investing unprecedented amounts of resources in its pursuit. Yet, there does not exist a single formal definition and only some empirical AGI benchmarking frameworks currently exist. The main purpose of this paper is to develop a general, algebraic and category theoretic framework for describing, comparing and analysing different possible AGI architectures. Thus, this Category theoretic formalization would also allow to compare different possible candidate AGI architectures, such as, RL, Universal AI, Active Inference, CRL, Schema based Learning, etc. It will allow to unambiguously expose their commonalities and differences, and what is even more important, expose areas for future research. From the applied Category theoretic point of view, we take as inspiration Machines in a Category to provide a modern view of AGI Architectures in a Category. More specifically, this first position paper provides, on one hand, a first exercise on RL, Causal RL and SBL Architectures in a Category, and on the other hand, it is a first step on a broader research program that seeks to provide a unified formal foundation for AGI systems, integrating architectural structure, informational organization, agent realization, agent and environment interaction, behavioural development over time, and the empirical evaluation of properties. This framework is also intended to support the definition of architectural properties, both syntactic and informational, as well as semantic properties of agents and their assessment in environments with explicitly characterized features. We claim that Category Theory and AGI will have a very symbiotic relation.",
-      "pdf_url": "https://arxiv.org/pdf/2603.28906v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.28906v1",
-      "published": "2026-03-30",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A Covariant Phase Space Approach to Einstein-AEther Gravity",
-      "authors": [
-        "Walter Arata",
-        "Stefano Liberati",
-        "Giulio Neri"
-      ],
-      "abstract": "Black hole thermodynamics in Lorentz-violating gravity is subtle because different excitations propagate at different speeds and hence identify different causal horizons. We revisit Einstein--AEther gravity using the covariant phase space formalism with boundaries and derive a consistent first law for stationary black holes. For a mode of propagation speed $c_s$, we introduce a disformal frame in which the corresponding causal horizon is a Killing horizon, so that the standard Wald-type derivation can be carried out. The result is then mapped back to the original frame, where it mantains the same structure. The associated horizon charge contains, besides the usual Komar term, an irreducible entropic AEther contribution that can be interpreted as heat due to the AEther flux across the horizon; accordingly, the total entropy splits into a gravitational part and an AEther part. We further develop an extended-thermodynamics framework in which the couplings of the theory are allowed to vary, obtaining generalized Smarr relations. Finally, we analyze the probe-mode limit $c_s \\to +\\infty$, clarifying its connection to universal-horizon thermodynamics and resolving the apparent tension in the literature between approaches that (i) fix the entropy to be proportional to the area and infer a corresponding temperature, and (ii) impose the Hawking temperature associated with modes peeling from the universal horizon and infer the entropy. Once the independent AEther contribution is properly taken into account, the two prescriptions are reconciled.",
-      "pdf_url": "https://arxiv.org/pdf/2603.28851v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.28851v1",
-      "published": "2026-03-30",
-      "categories": [
-        "gr-qc",
-        "hep-th",
-        "math-ph"
-      ]
-    },
-    {
-      "title": "Statistical Models for the Inference of Within-person Relations: A Random Intercept Cross-Lagged Panel Model and Its Interpretation",
-      "authors": [
-        "Satoshi Usami"
-      ],
-      "abstract": "The cross-lagged panel model (CLPM) has been widely used, particularly in psychology, to infer longitudinal relations among variables. At the same time, controlling for between-person heterogeneity and capturing within-person relations as processes of within-person change are regarded as key components to causal inference based on longitudinal data. Since Hamaker, Kuiper, and Grasman (2015) criticized the CLPM for its limitations in inferring within-person relations, the random intercept cross-lagged panel model (RI-CLPM), which incorporates stable trait factors representing stable individual differences, has rapidly spread, especially in psychology. At the same time, although many statistical models are available for inferring within-person relations, the distinctions among them have not been clearly delineated, and discussions over the interpretation and selection of statistical models remain active. In this paper, I position the RI-CLPM as one useful method for inferring within-person relations, explain its practical issues, and organize its mathematical and conceptual relationships with other statistical models, as well as potential problems that may arise in their application. In particular, I point out that a distinctive feature of the stable trait factors in the RI-CLPM, in representing between-person heterogeneity, is the assumption that they are uncorrelated with within-person variability, and that this point serves as an important link to the mathematical relationship with the dynamic panel model, another promising alternative.",
-      "pdf_url": "https://arxiv.org/pdf/2603.28656v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.28656v1",
-      "published": "2026-03-30",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Video Generation Models as World Models: Efficient Paradigms, Architectures and Algorithms",
-      "authors": [
-        "Muyang He",
-        "Hanzhong Guo",
-        "Junxiong Lin",
-        "Yizhou Yu"
-      ],
-      "abstract": "The rapid evolution of video generation has enabled models to simulate complex physical dynamics and long-horizon causalities, positioning them as potential world simulators. However, a critical gap still remains between the theoretical capacity for world simulation and the heavy computational costs of spatiotemporal modeling. To address this, we comprehensively and systematically review video generation frameworks and techniques that consider efficiency as a crucial requirement for practical world modeling. We introduce a novel taxonomy in three dimensions: efficient modeling paradigms, efficient network architectures, and efficient inference algorithms. We further show that bridging this efficiency gap directly empowers interactive applications such as autonomous driving, embodied AI, and game simulation. Finally, we identify emerging research frontiers in efficient video-based world modeling, arguing that efficiency is a fundamental prerequisite for evolving video generators into general-purpose, real-time, and robust world simulators.",
-      "pdf_url": "https://arxiv.org/pdf/2603.28489v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.28489v1",
-      "published": "2026-03-30",
-      "categories": [
-        "eess.IV"
       ]
     }
   ]
