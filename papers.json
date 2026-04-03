@@ -1,6 +1,98 @@
 {
-  "last_updated": "2026-04-02T01:18:03.835518",
+  "last_updated": "2026-04-03T01:20:50.062937",
   "papers": [
+    {
+      "title": "Cross-Modal Visuo-Tactile Object Perception",
+      "authors": [
+        "Anirvan Dutta",
+        "Simone Tasciotti",
+        "Claudia Cusseddu",
+        "Ang Li",
+        "Panayiota Poirazi",
+        "Julijana Gjorgjieva",
+        "Etienne Burdet",
+        "Patrick van der Smagt",
+        "Mohsen Kaboli"
+      ],
+      "abstract": "Estimating physical properties is critical for safe and efficient autonomous robotic manipulation, particularly during contact-rich interactions. In such settings, vision and tactile sensing provide complementary information about object geometry, pose, inertia, stiffness, and contact dynamics, such as stick-slip behavior. However, these properties are only indirectly observable and cannot always be modeled precisely (e.g., deformation in non-rigid objects coupled with nonlinear contact friction), making the estimation problem inherently complex and requiring sustained exploitation of visuo-tactile sensory information during action. Existing visuo-tactile perception frameworks have primarily emphasized forceful sensor fusion or static cross-modal alignment, with limited consideration of how uncertainty and beliefs about object properties evolve over time. Inspired by human multi-sensory perception and active inference, we propose the Cross-Modal Latent Filter (CMLF) to learn a structured, causal latent state-space of physical object properties. CMLF supports bidirectional transfer of cross-modal priors between vision and touch and integrates sensory evidence through a Bayesian inference process that evolves over time. Real-world robotic experiments demonstrate that CMLF improves the efficiency and robustness of latent physical properties estimation under uncertainty compared to baseline approaches. Beyond performance gains, the model exhibits perceptual coupling phenomena analogous to those observed in humans, including susceptibility to cross-modal illusions and similar trajectories in learning cross-sensory associations. Together, these results constitutes a significant step toward generalizable, robust and physically consistent cross-modal integration for robotic multi-sensory perception.",
+      "pdf_url": "https://arxiv.org/pdf/2604.02108v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.02108v1",
+      "published": "2026-04-02",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Causal Scene Narration with Runtime Safety Supervision for Vision-Language-Action Driving",
+      "authors": [
+        "Yun Li",
+        "Yidu Zhang",
+        "Simon Thompson",
+        "Ehsan Javanmardi",
+        "Manabu Tsukada"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models for autonomous driving must integrate diverse textual inputs, including navigation commands, hazard warnings, and traffic state descriptions, yet current systems often present these as disconnected fragments, forcing the model to discover on its own which environmental constraints are relevant to the current maneuver. We introduce Causal Scene Narration (CSN), which restructures VLA text inputs through intent-constraint alignment, quantitative grounding, and structured separation, at inference time with zero GPU cost. We complement CSN with Simplex-based runtime safety supervision and training-time alignment via Plackett-Luce DPO with negative log-likelihood (NLL) regularization. A multi-town closed-loop CARLA evaluation shows that CSN improves Driving Score by +31.1% on original LMDrive and +24.5% on the preference-aligned variant. A controlled ablation reveals that causal structure accounts for 39.1% of this gain, with the remainder attributable to information content alone. A perception noise ablation confirms that CSN's benefit is robust to realistic sensing errors. Semantic safety supervision improves Infraction Score, while reactive Time-To-Collision monitoring degrades performance, demonstrating that intent-aware monitoring is needed for VLA systems.",
+      "pdf_url": "https://arxiv.org/pdf/2604.01723v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.01723v1",
+      "published": "2026-04-02",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ZEUS: Accelerating Diffusion Models with Only Second-Order Predictor",
+      "authors": [
+        "Yixiao Wang",
+        "Ting Jiang",
+        "Zishan Shao",
+        "Hancheng Ye",
+        "Jingwei Sun",
+        "Mingyuan Ma",
+        "Jianyi Zhang",
+        "Yiran Chen",
+        "Hai Li"
+      ],
+      "abstract": "Denoising generative models deliver high-fidelity generation but remain bottlenecked by inference latency due to the many iterative denoiser calls required during sampling. Training-free acceleration methods reduce latency by either sparsifying the model architecture or shortening the sampling trajectory. Current training-free acceleration methods are more complex than necessary: higher-order predictors amplify error under aggressive speedups, and architectural modifications hinder deployment. Beyond 2x acceleration, step skipping creates structural scarcity -- at most one fresh evaluation per local window -- leaving the computed output and its backward difference as the only causally grounded information. Based on this, we propose ZEUS, an acceleration method that predicts reduced denoiser evaluations using a second-order predictor, and stabilizes aggressive consecutive skipping with an interleaved scheme that avoids back-to-back extrapolations. ZEUS adds essentially zero overhead, no feature caches, and no architectural modifications, and it is compatible with different backbones, prediction objectives, and solver choices. Across image and video generation, ZEUS consistently improves the speed-fidelity performance over recent training-free baselines, achieving up to 3.2x end-to-end speedup while maintaining perceptual quality. Our code is available at: https://github.com/Ting-Justin-Jiang/ZEUS.",
+      "pdf_url": "https://arxiv.org/pdf/2604.01552v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.01552v1",
+      "published": "2026-04-02",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Wired for Overconfidence: A Mechanistic Perspective on Inflated Verbalized Confidence in LLMs",
+      "authors": [
+        "Tianyi Zhao",
+        "Yinhan He",
+        "Wendy Zheng",
+        "Yujie Zhang",
+        "Chen Chen"
+      ],
+      "abstract": "Large language models are often not just wrong, but \\emph{confidently wrong}: when they produce factually incorrect answers, they tend to verbalize overly high confidence rather than signal uncertainty. Such verbalized overconfidence can mislead users and weaken confidence scores as a reliable uncertainty signal, yet its internal mechanisms remain poorly understood. We present a circuit-level mechanistic analysis of this inflated verbalized confidence in LLMs, organized around three axes: capturing verbalized confidence as a differentiable internal signal, identifying the circuits that causally inflate it, and leveraging these insights for targeted inference-time recalibration. Across two instruction-tuned LLMs on three datasets, we find that a compact set of MLP blocks and attention heads, concentrated in middle-to-late layers, consistently writes the confidence-inflation signal at the final token position. We further show that targeted inference-time interventions on these circuits substantially improve calibration. Together, our results suggest that verbalized overconfidence in LLMs is driven by identifiable internal circuits and can be mitigated through targeted intervention.",
+      "pdf_url": "https://arxiv.org/pdf/2604.01457v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.01457v1",
+      "published": "2026-04-01",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "The Digital Twin Counterfactual Framework: A Validation Architecture for Simulated Potential Outcomes",
+      "authors": [
+        "Olav Laudy"
+      ],
+      "abstract": "The fundamental problem of causal inference - that the counterfactual outcome for any individual is never observed - has shaped the entire methodology of the field. Every existing approach substitutes assumptions for missing data: ignorability, parallel trends, exclusion restrictions. None produces the counterfactual itself. This paper proposes the Digital Twin Counterfactual Framework (DTCF): rather than estimating the counterfactual statistically, we simulate it using a digital twin and subject the simulation to a hierarchical validation regime. We formalize the digital twin simulator as a stochastic mapping within the potential outcomes framework and introduce a hierarchy of twin fidelity assumptions - from marginal fidelity through joint fidelity to structural fidelity - each unlocking a progressively richer class of estimands. The central contribution is threefold. First, a five-level validation architecture converts the unfalsifiable claim that the simulator produces correct counterfactuals into falsifiable tests against observable data. Second, a formal decomposition separates causal quantities into those that are marginally validated (ATE, CATE, QTE - testable through observable-arm comparison) and those that are copula-dependent (the ITE distribution, probability of benefit/harm, variance of treatment effects - permanently reliant on the unobservable within-individual dependence structure). Third, bounding, sensitivity, and uncertainty quantification tools make the copula dependence explicit. The DTCF does not resolve the fundamental problem of causal inference. What it provides is a framework in which marginal causal claims become increasingly testable, joint causal claims become explicitly assumption-indexed, and the gap between the two is formally characterized.",
+      "pdf_url": "https://arxiv.org/pdf/2604.01325v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.01325v1",
+      "published": "2026-04-01",
+      "categories": [
+        "cs.AI",
+        "stat.ME"
+      ]
+    },
     {
       "title": "DVGT-2: Vision-Geometry-Action Model for Autonomous Driving at Scale",
       "authors": [
@@ -81,95 +173,6 @@
       "categories": [
         "nucl-th",
         "astro-ph.HE"
-      ]
-    },
-    {
-      "title": "Q-Mask: Query-driven Causal Masks for Text Anchoring in OCR-Oriented Vision-Language Models",
-      "authors": [
-        "Longwei Xu",
-        "Feng Feng",
-        "Shaojie Zhang",
-        "Xin Chen",
-        "Hang Li",
-        "Anan Du",
-        "Hailong Yu",
-        "Pei Fu",
-        "Zhenbo Luo",
-        "Jian Luan"
-      ],
-      "abstract": "Optical Character Recognition (OCR) is increasingly regarded as a foundational capability for modern vision-language models (VLMs), enabling them not only to read text in images but also to support downstream reasoning in real-world visual question answering (VQA). However, practical applications further require reliable text anchors, i.e., accurately grounding queried text to its corresponding spatial region. To systematically evaluate this capability, we introduce TextAnchor-Bench (TABench), a benchmark for fine-grained text-region grounding, which reveals that both general-purpose and OCR-specific VLMs still struggle to establish accurate and stable text anchors. To address this limitation, we propose Q-Mask, a precise OCR framework built upon a causal query-driven mask decoder (CQMD). Inspired by chain-of-thought reasoning, Q-Mask performs causal visual decoding that sequentially generates query-conditioned visual masks before producing the final OCR output. This visual CoT paradigm disentangles where the text is from what the text is, enforcing grounded evidence acquisition prior to recognition and enabling explicit text anchor construction during inference. To train CQMD, we construct TextAnchor-26M, a large-scale dataset of image-text pairs annotated with fine-grained masks corresponding to specific textual elements, encouraging stable text-region correspondences and injecting strong spatial priors into VLM training. Extensive experiments demonstrate that Q-Mask substantially improves text anchoring and understanding across diverse visual scenes.",
-      "pdf_url": "https://arxiv.org/pdf/2604.00161v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.00161v1",
-      "published": "2026-03-31",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Counterfactual Analysis of Brain Network Dynamics",
-      "authors": [
-        "Moo K. Chung",
-        "Luigi Maccotta",
-        "Aaron Struck"
-      ],
-      "abstract": "Causal inference in brain networks has traditionally relied on regression-based models such as Granger causality, structural equation modeling, and dynamic causal modeling. While effective for identifying directed associations, these methods remain descriptive and acyclic, leaving open the fundamental question of intervention: what would the causal organization become if a pathway were disrupted or externally modulated? We introduce a unified framework for counterfactual causal analysis that models both pathological disruptions and therapeutic interventions as an energy-perturbation problem on network flows. Grounded in Hodge theory, directed communication is decomposed into dissipative and persistent (harmonic) components, enabling systematic analysis of how causal organization reconfigures under hypothetical perturbations. This formulation provides a principled foundation for quantifying network resilience, compensation, and control in complex brain systems.",
-      "pdf_url": "https://arxiv.org/pdf/2603.29843v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.29843v1",
-      "published": "2026-03-31",
-      "categories": [
-        "q-bio.NC"
-      ]
-    },
-    {
-      "title": "CausalPulse: An Industrial-Grade Neurosymbolic Multi-Agent Copilot for Causal Diagnostics in Smart Manufacturing",
-      "authors": [
-        "Chathurangi Shyalika",
-        "Utkarshani Jaimini",
-        "Cory Henson",
-        "Amit Sheth"
-      ],
-      "abstract": "Modern manufacturing environments demand real-time, trustworthy, and interpretable root-cause insights to sustain productivity and quality. Traditional analytics pipelines often treat anomaly detection, causal inference, and root-cause analysis as isolated stages, limiting scalability and explainability. In this work, we present CausalPulse, an industry-grade multi-agent copilot that automates causal diagnostics in smart manufacturing. It unifies anomaly detection, causal discovery, and reasoning through a neurosymbolic architecture built on standardized agentic protocols. CausalPulse is being deployed in a Robert Bosch manufacturing plant, integrating seamlessly with existing monitoring workflows and supporting real-time operation at production scale. Evaluations on both public (Future Factories) and proprietary (Planar Sensor Element) datasets show high reliability, achieving overall success rates of 98.0% and 98.73%. Per-criterion success rates reached 98.75% for planning and tool use, 97.3% for self-reflection, and 99.2% for collaboration. Runtime experiments report end-to-end latency of 50-60s per diagnostic workflow with near-linear scalability (R^2=0.97), confirming real-time readiness. Comparison with existing industrial copilots highlights distinct advantages in modularity, extensibility, and deployment maturity. These results demonstrate how CausalPulse's modular, human-in-the-loop design enables reliable, interpretable, and production-ready automation for next-generation manufacturing.",
-      "pdf_url": "https://arxiv.org/pdf/2603.29755v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.29755v1",
-      "published": "2026-03-31",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Linear models for causal inference under network interference",
-      "authors": [
-        "Eric Tong",
-        "Salvador V. Balkus"
-      ],
-      "abstract": "In causal inference, interference occurs when the treatment of one unit may affect the outcomes of other units. The goal of this work is to serve as a guide to the use of linear outcome modeling for estimating causal effects in settings where interference may pose a challenge to identification and estimation, such as spatial and network data. We demonstrate that, under a linear model, causal effects of binary and continuous treatments can be identified in terms of regression coefficients under totally and partially known interference structures. Our work constructs unbiased and consistent point and variance estimators for these effects under one or more possible fixed or random interference networks. A chief advantage is that this approach can be implemented using standard linear regression software, and is easily augmented with random effects and heteroscedastic or autocorrelation consistent standard errors. Numerical experiments and an example data analysis demonstrate the efficacy of this approach in eliminating interference bias.",
-      "pdf_url": "https://arxiv.org/pdf/2603.29168v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.29168v1",
-      "published": "2026-03-31",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "LatentPilot: Scene-Aware Vision-and-Language Navigation by Dreaming Ahead with Latent Visual Reasoning",
-      "authors": [
-        "Haihong Hao",
-        "Lei Chen",
-        "Mingfei Han",
-        "Changlin Li",
-        "Dong An",
-        "Yuqiang Yang",
-        "Zhihui Li",
-        "Xiaojun Chang"
-      ],
-      "abstract": "Existing vision-and-language navigation (VLN) models primarily reason over past and current visual observations, while largely ignoring the future visual dynamics induced by actions. As a result, they often lack an effective understanding of the causal relationship between actions and how the visual world changes, limiting robust decision-making. Humans, in contrast, can imagine the near future by leveraging action-dynamics causality, which improves both environmental understanding and navigation choices. Inspired by this capability, we propose LatentPilot, a new paradigm that exploits future observations during training as a valuable data source to learn action-conditioned visual dynamics, while requiring no access to future frames at inference. Concretely, we propose a flywheel-style training mechanism that iteratively collects on-policy trajectories and retrains the model to better match the agent's behavior distribution, with an expert takeover triggered when the agent deviates excessively. LatentPilot further learns visual latent tokens without explicit supervision; these latent tokens attend globally in a continuous latent space and are carried across steps, serving as both the current output and the next input, thereby enabling the agent to dream ahead and reason about how actions will affect subsequent observations. Experiments on R2R-CE, RxR-CE, and R2R-PE benchmarks achieve new SOTA results, and real-robot tests across diverse environments demonstrate LatentPilot's superior understanding of environment-action dynamics in scene. Project page:https://abdd.top/latentpilot/",
-      "pdf_url": "https://arxiv.org/pdf/2603.29165v1",
-      "arxiv_url": "http://arxiv.org/abs/2603.29165v1",
-      "published": "2026-03-31",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.RO"
       ]
     }
   ]
