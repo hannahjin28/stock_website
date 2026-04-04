@@ -1,6 +1,41 @@
 {
-  "last_updated": "2026-04-03T01:20:50.062937",
+  "last_updated": "2026-04-04T01:14:46.229681",
   "papers": [
+    {
+      "title": "VOID: Video Object and Interaction Deletion",
+      "authors": [
+        "Saman Motamed",
+        "William Harvey",
+        "Benjamin Klein",
+        "Luc Van Gool",
+        "Zhuoning Yuan",
+        "Ta-Ying Cheng"
+      ],
+      "abstract": "Existing video object removal methods excel at inpainting content \"behind\" the object and correcting appearance-level artifacts such as shadows and reflections. However, when the removed object has more significant interactions, such as collisions with other objects, current models fail to correct them and produce implausible results. We present VOID, a video object removal framework designed to perform physically-plausible inpainting in these complex scenarios. To train the model, we generate a new paired dataset of counterfactual object removals using Kubric and HUMOTO, where removing an object requires altering downstream physical interactions. During inference, a vision-language model identifies regions of the scene affected by the removed object. These regions are then used to guide a video diffusion model that generates physically consistent counterfactual outcomes. Experiments on both synthetic and real data show that our approach better preserves consistent scene dynamics after object removal compared to prior video object removal methods. We hope this framework sheds light on how to make video editing models better simulators of the world through high-level causal reasoning.",
+      "pdf_url": "https://arxiv.org/pdf/2604.02296v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.02296v1",
+      "published": "2026-04-02",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Smoothing the Landscape: Causal Structure Learning via Diffusion Denoising Objectives",
+      "authors": [
+        "Hao Zhu",
+        "Di Zhou",
+        "Donna Slonim"
+      ],
+      "abstract": "Understanding causal dependencies in observational data is critical for informing decision-making. These relationships are often modeled as Bayesian Networks (BNs) and Directed Acyclic Graphs (DAGs). Existing methods, such as NOTEARS and DAG-GNN, often face issues with scalability and stability in high-dimensional data, especially when there is a feature-sample imbalance. Here, we show that the denoising score matching objective of diffusion models could smooth the gradients for faster, more stable convergence. We also propose an adaptive k-hop acyclicity constraint that improves runtime over existing solutions that require matrix inversion. We name this framework Denoising Diffusion Causal Discovery (DDCD). Unlike generative diffusion models, DDCD utilizes the reverse denoising process to infer a parameterized causal structure rather than to generate data. We demonstrate the competitive performance of DDCDs on synthetic benchmarking data. We also show that our methods are practically useful by conducting qualitative analyses on two real-world examples. Code is available at this url: https://github.com/haozhu233/ddcd.",
+      "pdf_url": "https://arxiv.org/pdf/2604.02250v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.02250v1",
+      "published": "2026-04-02",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Cross-Modal Visuo-Tactile Object Perception",
       "authors": [
@@ -142,37 +177,6 @@
       "categories": [
         "stat.ME",
         "econ.EM"
-      ]
-    },
-    {
-      "title": "Causal Inference for Unobservable Multivariate Outcomes, with Applications to Brain Effective Connectivity",
-      "authors": [
-        "Haiyue Song",
-        "Ani Eloyan",
-        "Youjin Lee"
-      ],
-      "abstract": "Evaluating the causal effect of an intervention on multivariate outcomes is challenging when the outcomes are interdependent and derived rather than directly observed. Effective connectivity, which summarizes the directional neural communication between brain regions, is one such derived relational outcome. Estimating how external interventions affect effective connectivity introduces two layers of causal inference problems: identifying directional relationships among brain regions from high-dimensional neuroimaging time series and estimating the causal effect of the intervention on these derived relationships. Each layer introduces distinct biases. The first arises from within-outcome dependencies unrelated to the intervention; to address this, we propose a sample-splitting method for estimating meaningful, and potentially causally informative, effective connectivity measures. The second arises from confounding between the intervention and the derived outcomes; to address this, we apply inverse probability weighting methods and incorporate multiple testing when causal effects on multiple components of the outcomes are of interest. We demonstrate, through theoretical results and simulations, that the proposed methods are asymptotically valid under certain conditions with effective type-I and familywise error control. Finally, we apply the proposed methods to examine the causal effect of amyloid on effective connectivity using the resting-state fMRI data from the Alzheimer's Disease Neuroimaging Initiative database.",
-      "pdf_url": "https://arxiv.org/pdf/2604.00390v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.00390v1",
-      "published": "2026-04-01",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "An Asymptotically Causal Metamodel for Neutron Star Equations of State",
-      "authors": [
-        "Gabriele Montefusco",
-        "Marco Antonelli",
-        "Francesca Gulminelli"
-      ],
-      "abstract": "Nuclear metamodels - phenomenological parametrizations of the energy of nuclear matter - are convenient tools to explore the space of realistic neutron star configurations constrained by astrophysical and nuclear data. While much recent work has focused on composition-agnostic barotropic models, the metamodel approach is designed to describe the composition dependence of the relevant thermodynamic potential. We revise a previously proposed non-relativistic metamodel by introducing a more controlled high-density behaviour, improving both its causal properties and its accuracy in reproducing the pressure and the beta-equilibrium composition of microscopically motivated equations of state. Since causality is automatically enforced at high density, the fraction of discarded models due to superluminal sound speeds is substantially reduced, facilitating metamodel-based explorations of equilibrium neutron star configurations. We further assess our framework by performing a Bayesian inference of neutron star properties beyond standard observables such as masses and radii, exploiting the metamodel's ability to probe composition-dependent quantities including the dUrca threshold and the Ledoux criterion for g-mode stability.",
-      "pdf_url": "https://arxiv.org/pdf/2604.00196v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.00196v1",
-      "published": "2026-03-31",
-      "categories": [
-        "nucl-th",
-        "astro-ph.HE"
       ]
     }
   ]
