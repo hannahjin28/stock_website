@@ -1,6 +1,88 @@
 {
-  "last_updated": "2026-04-05T01:24:11.913395",
+  "last_updated": "2026-04-06T01:24:17.801271",
   "papers": [
+    {
+      "title": "Beyond the Parameters: A Technical Survey of Contextual Enrichment in Large Language Models: From In-Context Prompting to Causal Retrieval-Augmented Generation",
+      "authors": [
+        "Prakhar Bansal",
+        "Shivangi Agarwal"
+      ],
+      "abstract": "Large language models (LLMs) encode vast world knowledge in their parameters, yet they remain fundamentally limited by static knowledge, finite context windows, and weakly structured causal reasoning. This survey provides a unified account of augmentation strategies along a single axis: the degree of structured context supplied at inference time. We cover in-context learning and prompt engineering, Retrieval-Augmented Generation (RAG), GraphRAG, and CausalRAG. Beyond conceptual comparison, we provide a transparent literature-screening protocol, a claim-audit framework, and a structured cross-paper evidence synthesis that distinguishes higher-confidence findings from emerging results. The paper concludes with a deployment-oriented decision framework and concrete research priorities for trustworthy retrieval-augmented NLP.",
+      "pdf_url": "https://arxiv.org/pdf/2604.03174v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.03174v1",
+      "published": "2026-04-03",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Causal Inference for Quantifying Noisy Neighbor Effects in Multi-Tenant Cloud Environments",
+      "authors": [
+        "Philipe S. Schiavo",
+        "João P. S. Milanezi",
+        "Moisés R. N. Ribeiro",
+        "Víctor M. G. Martínez",
+        "João Henrique Corrêa",
+        "José Marcos Nogueira",
+        "Fernando Frota Redigolo",
+        "Tereza C. Carvalho",
+        "Flávio de Oliveira Silva"
+      ],
+      "abstract": "Resource sharing in multi-tenant cloud environments enables cost efficiency but introduces the Noisy Neighbor problem, i.e., co-located workloads that unpredictably degrade each other's performance. Despite extensive research on detecting such effects, there are no explainable methodologies for quantifying the severity of impact and establishing causal relationships among tenants. We propose an analytical that combines controlled experimentation with multi-stage causal inference and validates it across 10 independent rounds in a Kubernetes testbed. Our methodology not only quantifies severe performance degradations (e.g., up to 67\\% in I/O-bound workloads under combined stress) but also statistically establishes causality through Granger causality analysis, revealing a 75\\% increase in causal links when the noisy neighbor activates. Furthermore, we identify unique \"degradation signatures\" for each resource contention vector (i.e., CPU, memory, disk, network), enabling diagnostic capabilities that go beyond anomaly detection. This work transforms the Noisy Neighbor from an elusive problem into a quantifiable, diagnosable phenomenon, providing cloud operators with actionable insights for SLA management and smart resource allocation.",
+      "pdf_url": "https://arxiv.org/pdf/2604.03145v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.03145v1",
+      "published": "2026-04-03",
+      "categories": [
+        "cs.NI",
+        "cs.DC"
+      ]
+    },
+    {
+      "title": "DeltaLogic: Minimal Premise Edits Reveal Belief-Revision Failures in Logical Reasoning Models",
+      "authors": [
+        "Amit Dhanda"
+      ],
+      "abstract": "Reasoning benchmarks typically evaluate whether a model derives the correct answer from a fixed premise set, but they under-measure a closely related capability that matters in dynamic environments: belief revision under minimal evidence change. We introduce DeltaLogic, a benchmark transformation protocol that converts natural-language reasoning examples into short revision episodes. Each episode first asks for an initial conclusion under premises P, then applies a minimal edit δ(P), and finally asks whether the previous conclusion should remain stable or be revised. We instantiate DeltaLogic from FOLIO and ProofWriter and evaluate small causal language models with constrained label scoring. On a completed 30-episode Qwen evaluation subset, stronger initial reasoning still does not imply stronger revision behavior: Qwen3-1.7B reaches 0.667 initial accuracy but only 0.467 revision accuracy, with inertia rising to 0.600 on episodes where the gold label should change, while Qwen3-0.6B collapses into near universal abstention. There, Qwen3-4B preserves the same inertial failure pattern (0.650 initial, 0.450 revised, 0.600 inertia), whereas Phi-4-mini-instruct is substantially stronger (0.950 initial, 0.850 revised) but still exhibits non-trivial abstention and control instability. These results suggest that logical competence under fixed premises does not imply disciplined belief revision after local evidence edits. DeltaLogic therefore targets a distinct and practically important reasoning capability that complements existing logical inference and belief-updating benchmarks.",
+      "pdf_url": "https://arxiv.org/pdf/2604.02733v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.02733v1",
+      "published": "2026-04-03",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Causal-Audit: A Framework for Risk Assessment of Assumption Violations in Time-Series Causal Discovery",
+      "authors": [
+        "Marco Ruiz",
+        "Miguel Arana-Catania",
+        "David R. Ardila",
+        "Rodrigo Ventura"
+      ],
+      "abstract": "Time-series causal discovery methods rely on assumptions such as stationarity, regular sampling, and bounded temporal dependence. When these assumptions are violated, structure learning can produce confident but misleading causal graphs without warning. We introduce Causal-Audit, a framework that formalizes assumption validation as calibrated risk assessment. The framework computes effect-size diagnostics across five assumption families (stationarity, irregularity, persistence, nonlinearity, and confounding proxies), aggregates them into four calibrated risk scores with uncertainty intervals, and applies an abstention-aware decision policy that recommends methods (e.g., PCMCI+, VAR-based Granger causality) only when evidence supports reliable inference. The semi-automatic diagnostic stage can also be used independently for structured assumption auditing in individual studies. Evaluation on a synthetic atlas of 500 data-generating processes (DGPs) spanning 10 violation families demonstrates well-calibrated risk scores (AUROC > 0.95), a 62% false positive reduction among recommended datasets, and 78% abstention on severe-violation cases. On 21 external evaluations from TimeGraph (18 categories) and CausalTime (3 domains), recommend-or-abstain decisions are consistent with benchmark specifications in all cases. An open-source implementation of our framework is available.",
+      "pdf_url": "https://arxiv.org/pdf/2604.02488v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.02488v1",
+      "published": "2026-04-02",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "When simulations look right but causal effects go wrong: Large language models as behavioral simulators",
+      "authors": [
+        "Zonghan Li",
+        "Feng Ji"
+      ],
+      "abstract": "Behavioral simulation is increasingly used to anticipate responses to interventions. Large language models (LLMs) enable researchers to specify population characteristics and intervention context in natural language, but it remains unclear to what extent LLMs can use these inputs to infer intervention effects. We evaluated three LLMs on 11 climate-psychology interventions using a dataset of 59,508 participants from 62 countries, and replicated the main analysis in two additional datasets (12 and 27 countries). LLMs reproduced observed patterns in attitudinal outcomes (e.g., climate beliefs and policy support) reasonably well, and prompting refinements improved this descriptive fit. However, descriptive fit did not reliably translate into causal fidelity (i.e., accurate estimates of intervention effects), and these two dimensions of accuracy followed different error structures. This descriptive-causal divergence held across the three datasets, but varied across intervention logics, with larger errors for interventions that depended on evoking internal experience than on directly conveying reasons or social cues. It was more pronounced for behavioral outcomes, where LLMs imposed stronger attitude-behavior coupling than in human data. Countries and population groups appearing well captured descriptively were not necessarily those with lower causal errors. Relying on descriptive fit alone may therefore create unwarranted confidence in simulation results, misleading conclusions about intervention effects and masking population disparities that matter for fairness.",
+      "pdf_url": "https://arxiv.org/pdf/2604.02458v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.02458v1",
+      "published": "2026-04-02",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.ET"
+      ]
+    },
     {
       "title": "VOID: Video Object and Interaction Deletion",
       "authors": [
@@ -95,88 +177,6 @@
       "published": "2026-04-02",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Wired for Overconfidence: A Mechanistic Perspective on Inflated Verbalized Confidence in LLMs",
-      "authors": [
-        "Tianyi Zhao",
-        "Yinhan He",
-        "Wendy Zheng",
-        "Yujie Zhang",
-        "Chen Chen"
-      ],
-      "abstract": "Large language models are often not just wrong, but \\emph{confidently wrong}: when they produce factually incorrect answers, they tend to verbalize overly high confidence rather than signal uncertainty. Such verbalized overconfidence can mislead users and weaken confidence scores as a reliable uncertainty signal, yet its internal mechanisms remain poorly understood. We present a circuit-level mechanistic analysis of this inflated verbalized confidence in LLMs, organized around three axes: capturing verbalized confidence as a differentiable internal signal, identifying the circuits that causally inflate it, and leveraging these insights for targeted inference-time recalibration. Across two instruction-tuned LLMs on three datasets, we find that a compact set of MLP blocks and attention heads, concentrated in middle-to-late layers, consistently writes the confidence-inflation signal at the final token position. We further show that targeted inference-time interventions on these circuits substantially improve calibration. Together, our results suggest that verbalized overconfidence in LLMs is driven by identifiable internal circuits and can be mitigated through targeted intervention.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01457v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.01457v1",
-      "published": "2026-04-01",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "The Digital Twin Counterfactual Framework: A Validation Architecture for Simulated Potential Outcomes",
-      "authors": [
-        "Olav Laudy"
-      ],
-      "abstract": "The fundamental problem of causal inference - that the counterfactual outcome for any individual is never observed - has shaped the entire methodology of the field. Every existing approach substitutes assumptions for missing data: ignorability, parallel trends, exclusion restrictions. None produces the counterfactual itself. This paper proposes the Digital Twin Counterfactual Framework (DTCF): rather than estimating the counterfactual statistically, we simulate it using a digital twin and subject the simulation to a hierarchical validation regime. We formalize the digital twin simulator as a stochastic mapping within the potential outcomes framework and introduce a hierarchy of twin fidelity assumptions - from marginal fidelity through joint fidelity to structural fidelity - each unlocking a progressively richer class of estimands. The central contribution is threefold. First, a five-level validation architecture converts the unfalsifiable claim that the simulator produces correct counterfactuals into falsifiable tests against observable data. Second, a formal decomposition separates causal quantities into those that are marginally validated (ATE, CATE, QTE - testable through observable-arm comparison) and those that are copula-dependent (the ITE distribution, probability of benefit/harm, variance of treatment effects - permanently reliant on the unobservable within-individual dependence structure). Third, bounding, sensitivity, and uncertainty quantification tools make the copula dependence explicit. The DTCF does not resolve the fundamental problem of causal inference. What it provides is a framework in which marginal causal claims become increasingly testable, joint causal claims become explicitly assumption-indexed, and the gap between the two is formally characterized.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01325v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.01325v1",
-      "published": "2026-04-01",
-      "categories": [
-        "cs.AI",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "DVGT-2: Vision-Geometry-Action Model for Autonomous Driving at Scale",
-      "authors": [
-        "Sicheng Zuo",
-        "Zixun Xie",
-        "Wenzhao Zheng",
-        "Shaoqing Xu",
-        "Fang Li",
-        "Hanbing Li",
-        "Long Chen",
-        "Zhi-Xin Yang",
-        "Jiwen Lu"
-      ],
-      "abstract": "End-to-end autonomous driving has evolved from the conventional paradigm based on sparse perception into vision-language-action (VLA) models, which focus on learning language descriptions as an auxiliary task to facilitate planning. In this paper, we propose an alternative Vision-Geometry-Action (VGA) paradigm that advocates dense 3D geometry as the critical cue for autonomous driving. As vehicles operate in a 3D world, we think dense 3D geometry provides the most comprehensive information for decision-making. However, most existing geometry reconstruction methods (e.g., DVGT) rely on computationally expensive batch processing of multi-frame inputs and cannot be applied to online planning. To address this, we introduce a streaming Driving Visual Geometry Transformer (DVGT-2), which processes inputs in an online manner and jointly outputs dense geometry and trajectory planning for the current frame. We employ temporal causal attention and cache historical features to support on-the-fly inference. To further enhance efficiency, we propose a sliding-window streaming strategy and use historical caches within a certain interval to avoid repetitive computations. Despite the faster speed, DVGT-2 achieves superior geometry reconstruction performance on various datasets. The same trained DVGT-2 can be directly applied to planning across diverse camera configurations without fine-tuning, including closed-loop NAVSIM and open-loop nuScenes benchmarks.",
-      "pdf_url": "https://arxiv.org/pdf/2604.00813v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.00813v1",
-      "published": "2026-04-01",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "Estimating causal effects of continuous-time dynamic treatments with unmeasured confounders",
-      "authors": [
-        "Haiyan Zhu",
-        "Yingchun Zhou"
-      ],
-      "abstract": "Modern medical research demands specialized causal inference methods evaluating complex continuous-time dynamic treatment regimens using observational data. For instance, obtaining the causal effects of intravenous administration, a continuous process involving dynamic adjustments of the treatment dose, can guide clinicians on drug use. However, the existing causal inference frameworks in longitudinal studies typically assume that time advances in discrete time steps. Therefore, this paper proposes a new methodology to estimate the causal effects of continuous-time dynamic treatments in the presence of unmeasured confounding. Unmeasured confounding is incorporated into estimating continuous-time Marginal Structural Models from a Bayesian perspective. Simulation demonstrates that compared to existing methods, the proposed approach can provide approximately unbiased estimates for target causal parameters across three degrees of confounding. The proposed method is applied to analyze the causal relationship between the intravenous oxytocin administration process and postpartum hemorrhage, leading to meaningful results that may guide clinicians in using oxytocin.",
-      "pdf_url": "https://arxiv.org/pdf/2604.00544v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.00544v1",
-      "published": "2026-04-01",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Conformal Inference for Counterfactuals and Individual Treatment Effects with Experiment Attrition",
-      "authors": [
-        "Xiangyu Song"
-      ],
-      "abstract": "Attrition in survey and field experiments presents a challenge for social science research. Common approaches to deal with this problem -- such as complete case analysis, multiple imputation, and weighting methods -- rely on strong assumptions that may not hold in practice. This paper introduces a new method that combines recent advances in statistical inference with established tools for handling missing data. The approach produces prediction intervals for treatment effects that are both robust and precise. Evidence from simulation studies shows that the method achieves better coverage and produces narrower intervals than common alternatives. The reanalysis of two recently published experiment studies illustrates how this framework allows researchers to compare treatment effects across participants who remain in the study, those who drop out, and the full sample. Taken together, these results highlight how the proposed approach provides a stronger foundation for causal inference in the presence of attrition.",
-      "pdf_url": "https://arxiv.org/pdf/2604.00504v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.00504v1",
-      "published": "2026-04-01",
-      "categories": [
-        "stat.ME",
-        "econ.EM"
       ]
     }
   ]
