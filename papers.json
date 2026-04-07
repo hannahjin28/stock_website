@@ -1,6 +1,50 @@
 {
-  "last_updated": "2026-04-06T01:24:17.801271",
+  "last_updated": "2026-04-07T01:21:36.439896",
   "papers": [
+    {
+      "title": "Causality Laundering: Denial-Feedback Leakage in Tool-Calling LLM Agents",
+      "authors": [
+        "Mohammad Hossein Chinaei"
+      ],
+      "abstract": "Tool-calling LLM agents can read private data, invoke external services, and trigger real-world actions, creating a security problem at the point of tool execution. We identify a denial-feedback leakage pattern, which we term causality laundering, in which an adversary probes a protected action, learns from the denial outcome, and exfiltrates the inferred information through a later seemingly benign tool call. This attack is not captured by flat provenance tracking alone because the leaked information arises from causal influence of the denied action, not direct data flow. We present the Agentic Reference Monitor (ARM), a runtime enforcement layer that mediates every tool invocation by consulting a provenance graph over tool calls, returned data, field-level provenance, and denied actions. ARM propagates trust through an integrity lattice and augments the graph with counterfactual edges from denied-action nodes, enabling enforcement over both transitive data dependencies and denial-induced causal influence. In a controlled evaluation on three representative attack scenarios, ARM blocks causality laundering, transitive taint propagation, and mixed-provenance field misuse that a flat provenance baseline misses, while adding sub-millisecond policy evaluation overhead. These results suggest that denial-aware causal provenance is a useful abstraction for securing tool-calling agent systems.",
+      "pdf_url": "https://arxiv.org/pdf/2604.04035v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.04035v1",
+      "published": "2026-04-05",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LangFIR: Discovering Sparse Language-Specific Features from Monolingual Data for Language Steering",
+      "authors": [
+        "Sing Hieng Wong",
+        "Hassan Sajjad",
+        "A. B. Siddique"
+      ],
+      "abstract": "Large language models (LLMs) show strong multilingual capabilities, yet reliably controlling the language of their outputs remains difficult. Representation-level steering addresses this by adding language-specific vectors to model activations at inference time, but identifying language-specific directions in the residual stream often relies on multilingual or parallel data that can be expensive to obtain. Sparse autoencoders (SAEs) decompose residual activations into interpretable, sparse feature directions and offer a natural basis for this search, yet existing SAE-based approaches face the same data constraint. We introduce LangFIR (Language Feature Identification via Random-token Filtering), a method that discovers language-specific SAE features using only a small amount of monolingual data and random-token sequences. Many SAE features consistently activated by target-language inputs do not encode language identity. Random-token sequences surface these language-agnostic features, allowing LangFIR to filter them out and isolate a sparse set of language-specific features. We show that these features are extremely sparse, highly selective for their target language, and causally important: directional ablation increases cross-entropy loss only for the corresponding language. Using these features to construct steering vectors for multilingual generation control, LangFIR achieves the best average accuracy BLEU across three models (Gemma 3 1B, Gemma 3 4B, and Llama 3.1 8B), three datasets, and twelve target languages, outperforming the strongest monolingual baseline by up to and surpassing methods that rely on parallel data. Our results suggest that language identity in multilingual LLMs is localized in a sparse set of feature directions discoverable with monolingual data. Code is available at https://anonymous.4open.science/r/LangFIR-C0F5/.",
+      "pdf_url": "https://arxiv.org/pdf/2604.03532v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.03532v1",
+      "published": "2026-04-04",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Hume's Representational Conditions for Causal Judgment: What Bayesian Formalization Abstracted Away",
+      "authors": [
+        "Yiling Wu"
+      ],
+      "abstract": "Hume's account of causal judgment presupposes three representational conditions: experiential grounding (ideas must trace to impressions), structured retrieval (association must operate through organized networks exceeding pairwise connection), and vivacity transfer (inference must produce felt conviction, not merely updated probability). This paper extracts these conditions from Hume's texts and argues that they are integral to his causal psychology. It then traces their fate through the formalization trajectory from Hume to Bayesian epistemology and predictive processing, showing that later frameworks preserve the updating structure of Hume's insight while abstracting away these further representational conditions. Large language models serve as an illustrative contemporary case: they exhibit a form of statistical updating without satisfying the three conditions, thereby making visible requirements that were previously background assumptions in Hume's framework.",
+      "pdf_url": "https://arxiv.org/pdf/2604.03387v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.03387v1",
+      "published": "2026-04-03",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Beyond the Parameters: A Technical Survey of Contextual Enrichment in Large Language Models: From In-Context Prompting to Causal Retrieval-Augmented Generation",
       "authors": [
@@ -116,67 +160,6 @@
       "categories": [
         "cs.LG",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Cross-Modal Visuo-Tactile Object Perception",
-      "authors": [
-        "Anirvan Dutta",
-        "Simone Tasciotti",
-        "Claudia Cusseddu",
-        "Ang Li",
-        "Panayiota Poirazi",
-        "Julijana Gjorgjieva",
-        "Etienne Burdet",
-        "Patrick van der Smagt",
-        "Mohsen Kaboli"
-      ],
-      "abstract": "Estimating physical properties is critical for safe and efficient autonomous robotic manipulation, particularly during contact-rich interactions. In such settings, vision and tactile sensing provide complementary information about object geometry, pose, inertia, stiffness, and contact dynamics, such as stick-slip behavior. However, these properties are only indirectly observable and cannot always be modeled precisely (e.g., deformation in non-rigid objects coupled with nonlinear contact friction), making the estimation problem inherently complex and requiring sustained exploitation of visuo-tactile sensory information during action. Existing visuo-tactile perception frameworks have primarily emphasized forceful sensor fusion or static cross-modal alignment, with limited consideration of how uncertainty and beliefs about object properties evolve over time. Inspired by human multi-sensory perception and active inference, we propose the Cross-Modal Latent Filter (CMLF) to learn a structured, causal latent state-space of physical object properties. CMLF supports bidirectional transfer of cross-modal priors between vision and touch and integrates sensory evidence through a Bayesian inference process that evolves over time. Real-world robotic experiments demonstrate that CMLF improves the efficiency and robustness of latent physical properties estimation under uncertainty compared to baseline approaches. Beyond performance gains, the model exhibits perceptual coupling phenomena analogous to those observed in humans, including susceptibility to cross-modal illusions and similar trajectories in learning cross-sensory associations. Together, these results constitutes a significant step toward generalizable, robust and physically consistent cross-modal integration for robotic multi-sensory perception.",
-      "pdf_url": "https://arxiv.org/pdf/2604.02108v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.02108v1",
-      "published": "2026-04-02",
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Scene Narration with Runtime Safety Supervision for Vision-Language-Action Driving",
-      "authors": [
-        "Yun Li",
-        "Yidu Zhang",
-        "Simon Thompson",
-        "Ehsan Javanmardi",
-        "Manabu Tsukada"
-      ],
-      "abstract": "Vision-Language-Action (VLA) models for autonomous driving must integrate diverse textual inputs, including navigation commands, hazard warnings, and traffic state descriptions, yet current systems often present these as disconnected fragments, forcing the model to discover on its own which environmental constraints are relevant to the current maneuver. We introduce Causal Scene Narration (CSN), which restructures VLA text inputs through intent-constraint alignment, quantitative grounding, and structured separation, at inference time with zero GPU cost. We complement CSN with Simplex-based runtime safety supervision and training-time alignment via Plackett-Luce DPO with negative log-likelihood (NLL) regularization. A multi-town closed-loop CARLA evaluation shows that CSN improves Driving Score by +31.1% on original LMDrive and +24.5% on the preference-aligned variant. A controlled ablation reveals that causal structure accounts for 39.1% of this gain, with the remainder attributable to information content alone. A perception noise ablation confirms that CSN's benefit is robust to realistic sensing errors. Semantic safety supervision improves Infraction Score, while reactive Time-To-Collision monitoring degrades performance, demonstrating that intent-aware monitoring is needed for VLA systems.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01723v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.01723v1",
-      "published": "2026-04-02",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "ZEUS: Accelerating Diffusion Models with Only Second-Order Predictor",
-      "authors": [
-        "Yixiao Wang",
-        "Ting Jiang",
-        "Zishan Shao",
-        "Hancheng Ye",
-        "Jingwei Sun",
-        "Mingyuan Ma",
-        "Jianyi Zhang",
-        "Yiran Chen",
-        "Hai Li"
-      ],
-      "abstract": "Denoising generative models deliver high-fidelity generation but remain bottlenecked by inference latency due to the many iterative denoiser calls required during sampling. Training-free acceleration methods reduce latency by either sparsifying the model architecture or shortening the sampling trajectory. Current training-free acceleration methods are more complex than necessary: higher-order predictors amplify error under aggressive speedups, and architectural modifications hinder deployment. Beyond 2x acceleration, step skipping creates structural scarcity -- at most one fresh evaluation per local window -- leaving the computed output and its backward difference as the only causally grounded information. Based on this, we propose ZEUS, an acceleration method that predicts reduced denoiser evaluations using a second-order predictor, and stabilizes aggressive consecutive skipping with an interleaved scheme that avoids back-to-back extrapolations. ZEUS adds essentially zero overhead, no feature caches, and no architectural modifications, and it is compatible with different backbones, prediction objectives, and solver choices. Across image and video generation, ZEUS consistently improves the speed-fidelity performance over recent training-free baselines, achieving up to 3.2x end-to-end speedup while maintaining perceptual quality. Our code is available at: https://github.com/Ting-Justin-Jiang/ZEUS.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01552v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.01552v1",
-      "published": "2026-04-02",
-      "categories": [
-        "cs.LG"
       ]
     }
   ]
