@@ -1,6 +1,171 @@
 {
-  "last_updated": "2026-04-09T01:14:53.666819",
+  "last_updated": "2026-04-10T01:23:58.850699",
   "papers": [
+    {
+      "title": "LPM 1.0: Video-based Character Performance Model",
+      "authors": [
+        "Ailing Zeng",
+        "Casper Yang",
+        "Chauncey Ge",
+        "Eddie Zhang",
+        "Garvey Xu",
+        "Gavin Lin",
+        "Gilbert Gu",
+        "Jeremy Pi",
+        "Leo Li",
+        "Mingyi Shi",
+        "Sheng Bi",
+        "Steven Tang",
+        "Thorn Hang",
+        "Tobey Guo",
+        "Vincent Li",
+        "Xin Tong",
+        "Yikang Li",
+        "Yuchen Sun",
+        "Yue",
+        "Zhao",
+        "Yuhan Lu",
+        "Yuwei Li",
+        "Zane Zhang",
+        "Zeshi Yang",
+        "Zi Ye"
+      ],
+      "abstract": "Performance, the externalization of intent, emotion, and personality through visual, vocal, and temporal behavior, is what makes a character alive. Learning such performance from video is a promising alternative to traditional 3D pipelines. However, existing video models struggle to jointly achieve high expressiveness, real-time inference, and long-horizon identity stability, a tension we call the performance trilemma. Conversation is the most comprehensive performance scenario, as characters simultaneously speak, listen, react, and emote while maintaining identity over time. To address this, we present LPM 1.0 (Large Performance Model), focusing on single-person full-duplex audio-visual conversational performance. Concretely, we build a multimodal human-centric dataset through strict filtering, speaking-listening audio-video pairing, performance understanding, and identity-aware multi-reference extraction; train a 17B-parameter Diffusion Transformer (Base LPM) for highly controllable, identity-consistent performance through multimodal conditioning; and distill it into a causal streaming generator (Online LPM) for low-latency, infinite-length interaction. At inference, given a character image with identity-aware references, LPM 1.0 generates listening videos from user audio and speaking videos from synthesized audio, with text prompts for motion control, all at real-time speed with identity-stable, infinite-length generation. LPM 1.0 thus serves as a visual engine for conversational agents, live streaming characters, and game NPCs. To systematically evaluate this setting, we propose LPM-Bench, the first benchmark for interactive character performance. LPM 1.0 achieves state-of-the-art results across all evaluated dimensions while maintaining real-time inference.",
+      "pdf_url": "https://arxiv.org/pdf/2604.07823v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.07823v1",
+      "published": "2026-04-09",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.MM"
+      ]
+    },
+    {
+      "title": "ESOM: Efficiently Understanding Streaming Video Anomalies with Open-world Dynamic Definitions",
+      "authors": [
+        "Zihao Liu",
+        "Xiaoyu Wu",
+        "Wenna Li",
+        "Jianqin Wu",
+        "Linlin Yang"
+      ],
+      "abstract": "Open-world video anomaly detection (OWVAD) aims to detect and explain abnormal events under different anomaly definitions, which is important for applications such as intelligent surveillance and live-streaming content moderation. Recent MLLM-based methods have shown promising open-world generalization, but still suffer from three major limitations: inefficiency for practical deployment, lack of streaming processing adaptation, and limited support for dynamic anomaly definitions in both modeling and evaluation. To address these issues, this paper proposes ESOM, an efficient streaming OWVAD model that operates in a training-free manner. ESOM includes a Definition Normalization module to structure user prompts for reducing hallucination, an Inter-frame-matched Intra-frame Token Merging module to compress redundant visual tokens, a Hybrid Streaming Memory module for efficient causal inference, and a Probabilistic Scoring module that converts interval-level textual outputs into frame-level anomaly scores. In addition, this paper introduces OpenDef-Bench, a new benchmark with clean surveillance videos and diverse natural anomaly definitions for evaluating performance under varying conditions. Extensive experiments show that ESOM achieves real-time efficiency on a single GPU and state-of-the-art performance in anomaly temporal localization, classification, and description generation. The code and benchmark will be released at https://github.com/Kamino666/ESOM_OpenDef-Bench.",
+      "pdf_url": "https://arxiv.org/pdf/2604.07772v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.07772v1",
+      "published": "2026-04-09",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Fixed-Effects Models for Causal Inference in Longitudinal Cluster Randomized and Quasi-Experimental Trials",
+      "authors": [
+        "Kenneth M. Lee",
+        "Fan Li"
+      ],
+      "abstract": "This article investigates the model-robustness of fixed-effects models for analyzing a broad class of longitudinal cluster trials (CTs) such as stepped-wedge, parallel-with-baseline and crossover designs, encompassing both randomized (CRTs) and quasi-experimental (CQTs) designs. We clarify a longstanding misconception in biostatistics, demonstrating that fixed-effects models, traditionally perceived as targeting only finite-sample conditional estimands, can effectively target super-population marginal estimands through an M-estimation framework. We comprehensively prove that linear and log-link fixed-effects models with correctly specified treatment effect structures can broadly yield consistent and asymptotically normal estimators for nonparametrically defined treatment effect estimands in longitudinal CRTs, even under arbitrary misspecification of other model components. We identify that the constant treatment effect estimator generally targets the period-average treatment effect for the overlap population (P-ATO); accordingly, some CRT designs don't even require correct specification of the treatment effect structure for model-robustness. We further characterize conditions where fixed-effects models can maintain consistency by adjusting for both cluster-level and individual-level time-invariant confounding in longitudinal CQTs. Altogether, supported by simulation and a case study re-analysis, we establish fixed-effects models as a robust and potentially preferable alternative to mixed-effects models for longitudinal CT analysis.",
+      "pdf_url": "https://arxiv.org/pdf/2604.07756v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.07756v1",
+      "published": "2026-04-09",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "MIPT-SSM: Scaling Language Models with $O(1)$ Inference Cache via Phase Transitions",
+      "authors": [
+        "Yasong Fan"
+      ],
+      "abstract": "We present MIPT-SSM, a neural sequence architecture built on the physics of Measurement-Induced Phase Transitions (MIPT). The central idea is a learned measurement rate $p_{t}\\in(0,1)$ that routes computation between two regimes: wave phase $(p_{t}\\rightarrow0)$, where information propagates as distributed complex-phase interference; and particle phase $(p_{t}\\rightarrow1)$ where the state collapses onto the current token, enabling precise local storage. These two regimes are provably incompatible in a single linear operator one of the few \"no-go theorems\" in sequence modeling and $p_{t}$ is our way around it. The model is predicted to exhibit a phase transition at critical sequence length $N^{*}\\approx1024$, where the information density ratio $N/D$ crosses unity, consistent with our memory scaling observations. On AG News (four-class classification), MIPT achieves 0.905 accuracy versus Transformer's 0.736 (+16.6%), stable across 3 seeds. At $N=8192$ MIPT requires 810 MB versus Transformer's 34,651 MB a 42.8x memory reduction. On exact-recall (\"needle-in-a-haystack\"), our causal sparse KV cache achieves 0.968 accuracy. Remarkably, under unbounded cache capacity, the $p_{t}$ gate autonomously learns to store only the single critical token (averaging $1.0/512$ slots used), filtering out all noise and achieving a 99.8% sparsity rate. On language modeling (WikiText-103, 31M parameters), MIPT-LM with $K=64$ cache reaches PPL 92.1 versus Transformer's 90.5 (gap: 1.8%) while inference KV cache shrinks from $O(N)$ to $O(64)$.",
+      "pdf_url": "https://arxiv.org/pdf/2604.07716v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.07716v1",
+      "published": "2026-04-09",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Towards Counterfactual Explanation and Assertion Inference for CPS Debugging",
+      "authors": [
+        "Zaid Ghazal",
+        "Hadiza Yusuf",
+        "Khouloud Gaaloul"
+      ],
+      "abstract": "Verification and validation of cyber-physical systems (CPS) via large-scale simulation often surface failures that are hard to interpret, especially when triggered by interactions between continuous and discrete behaviors at specific events or times. Existing debugging techniques can localize anomalies to specific model components, but they provide little insight into the input-signal values and timing conditions that trigger violations, or the minimal, precisely timed changes that could have prevented the failure. In this article, we introduce DeCaF, a counterfactual-guided explanation and assertion-based characterization framework for CPS debugging. Given a failing test input, DeCaF generates counterfactual changes to the input signals that transform the test from failing to passing. These changes are designed to be minimal, necessary, and sufficient to precisely restore correctness. Then, it infers assertions as logical predicates over inputs that generalize recovery conditions in an interpretable form engineers can reason about, without requiring access to internal model details. Our approach combines three counterfactual generators with two causal models, and infers success assertions. Across three CPS case studies, DeCaF achieves its best success rate with KD-Tree Nearest Neighbors combined with M5 model tree, while Genetic Algorithm combined with Random Forest provides the strongest balance between success and causal precision.",
+      "pdf_url": "https://arxiv.org/pdf/2604.07679v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.07679v1",
+      "published": "2026-04-09",
+      "categories": [
+        "cs.SE",
+        "cs.LG",
+        "eess.SY"
+      ]
+    },
+    {
+      "title": "SYN-DIGITS: A Synthetic Control Framework for Calibrated Digital Twin Simulation",
+      "authors": [
+        "Grace Jiarui Fan",
+        "Chengpiao Huang",
+        "Tianyi Peng",
+        "Kaizheng Wang",
+        "Yuhang Wu"
+      ],
+      "abstract": "AI-based persona simulation -- often referred to as digital twin simulation -- is increasingly used for market research, recommender systems, and social sciences. Despite their flexibility, large language models (LLMs) often exhibit systematic bias and miscalibration relative to real human behavior, limiting their reliability. Inspired by synthetic control methods from causal inference, we propose SYN-DIGITS (SYNthetic Control Framework for Calibrated DIGItal Twin Simulation), a principled and lightweight calibration framework that learns latent structure from digital-twin responses and transfers it to align predictions with human ground truth. SYN-DIGITS operates as a post-processing layer on top of any LLM-based simulator and thus is model-agnostic. We develop a latent factor model that formalizes when and why calibration succeeds through latent space alignment conditions, and we systematically evaluate ten calibration methods across thirteen persona constructions, three LLMs, and two datasets. SYN-DIGITS supports both individual-level and distributional simulation for previously unseen questions and unobserved populations, with provable error guarantees. Experiments show that SYN-DIGITS achieves up to 50% relative improvements in individual-level correlation and 50--90% relative reductions in distributional discrepancy compared to uncalibrated baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2604.07513v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.07513v1",
+      "published": "2026-04-08",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "MoRight: Motion Control Done Right",
+      "authors": [
+        "Shaowei Liu",
+        "Xuanchi Ren",
+        "Tianchang Shen",
+        "Huan Ling",
+        "Saurabh Gupta",
+        "Shenlong Wang",
+        "Sanja Fidler",
+        "Jun Gao"
+      ],
+      "abstract": "Generating motion-controlled videos--where user-specified actions drive physically plausible scene dynamics under freely chosen viewpoints--demands two capabilities: (1) disentangled motion control, allowing users to separately control the object motion and adjust camera viewpoint; and (2) motion causality, ensuring that user-driven actions trigger coherent reactions from other objects rather than merely displacing pixels. Existing methods fall short on both fronts: they entangle camera and object motion into a single tracking signal and treat motion as kinematic displacement without modeling causal relationships between object motion. We introduce MoRight, a unified framework that addresses both limitations through disentangled motion modeling. Object motion is specified in a canonical static-view and transferred to an arbitrary target camera viewpoint via temporal cross-view attention, enabling disentangled camera and object control. We further decompose motion into active (user-driven) and passive (consequence) components, training the model to learn motion causality from data. At inference, users can either supply active motion and MoRight predicts consequences (forward reasoning), or specify desired passive outcomes and MoRight recovers plausible driving actions (inverse reasoning), all while freely adjusting the camera viewpoint. Experiments on three benchmarks demonstrate state-of-the-art performance in generation quality, motion controllability, and interaction awareness.",
+      "pdf_url": "https://arxiv.org/pdf/2604.07348v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.07348v1",
+      "published": "2026-04-08",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "Dual-Rerank: Fusing Causality and Utility for Industrial Generative Reranking",
+      "authors": [
+        "Chao Zhang",
+        "Shuai Lin",
+        "ChengLei Dai",
+        "Ye Qian",
+        "Fan Mingyang",
+        "Yi Zhang",
+        "Yi Wang",
+        "Jingwei Zhuo"
+      ],
+      "abstract": "Kuaishou serves over 400 million daily active users, processing hundreds of millions of search queries daily against a repository of tens of billions of short videos. As the final decision layer, the reranking stage determines user experience by optimizing whole-page utility. While traditional score-and-sort methods fail to capture combinatorial dependencies, Generative Reranking offers a superior paradigm by directly modeling the permutation probability. However, deploying Generative Reranking in such a high-stakes environment faces a fundamental dual dilemma: 1) the structural trade-off where Autoregressive (AR) models offer superior Sequential modeling but suffer from prohibitive latency, versus Non-Autoregressive (NAR) models that enable efficiency but lack dependency capturing; 2) the optimization gap where Supervised Learning faces challenges in directly optimizing whole-page utility, while Reinforcement Learning (RL) struggles with instability in high-throughput data streams. To resolve this, we propose Dual-Rerank, a unified framework designed for industrial reranking that bridges the structural gap via Sequential Knowledge Distillation and addresses the optimization gap using List-wise Decoupled Reranking Optimization (LDRO) for stable online RL. Extensive A/B testing on production traffic demonstrates that Dual-Rerank achieves State-of-the-Art performance, significantly improving User satisfaction and Watch Time while drastically reducing inference latency compared to AR baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2604.07420v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.07420v1",
+      "published": "2026-04-08",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Fast-dVLM: Efficient Block-Diffusion VLM via Direct Conversion from Autoregressive VLM",
       "authors": [
@@ -37,136 +202,6 @@
       "published": "2026-04-08",
       "categories": [
         "q-bio.GN"
-      ]
-    },
-    {
-      "title": "In-Context Learning in Speech Language Models: Analyzing the Role of Acoustic Features, Linguistic Structure, and Induction Heads",
-      "authors": [
-        "Charlotte Pouw",
-        "Hosein Mohebbi",
-        "Afra Alishahi",
-        "Willem Zuidema"
-      ],
-      "abstract": "In-Context Learning (ICL) has been extensively studied in text-only Language Models, but remains largely unexplored in the speech domain. Here, we investigate how linguistic and acoustic features affect ICL in Speech Language Models. We focus on the Text-to-Speech (TTS) task, which allows us to analyze ICL from two angles: (1) how accurately the model infers the task from the demonstrations (i.e., generating the correct spoken content), and (2) to what extent the model mimics the acoustic characteristics of the demonstration speech in its output. We find that speaking rate strongly affects ICL performance and is also mimicked in the output, whereas pitch range and intensity have little impact on performance and are not consistently reproduced. Finally, we investigate the role of induction heads in speech-based ICL and show that these heads play a causal role: ablating the top-k induction heads completely removes the model's ICL ability, mirroring findings from text-based ICL.",
-      "pdf_url": "https://arxiv.org/pdf/2604.06356v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.06356v1",
-      "published": "2026-04-07",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Learn to Rank: Visual Attribution by Learning Importance Ranking",
-      "authors": [
-        "David Schinagl",
-        "Christian Fruhwirth-Reisinger",
-        "Alexander Prutsch",
-        "Samuel Schulter",
-        "Horst Possegger"
-      ],
-      "abstract": "Interpreting the decisions of complex computer vision models is crucial to establish trust and accountability, especially in safety-critical domains. An established approach to interpretability is generating visual attribution maps that highlight regions of the input most relevant to the model's prediction. However, existing methods face a three-way trade-off. Propagation-based approaches are efficient, but they can be biased and architecture-specific. Meanwhile, perturbation-based methods are causally grounded, yet they are expensive and for vision transformers often yield coarse, patch-level explanations. Learning-based explainers are fast but usually optimize surrogate objectives or distill from heuristic teachers. We propose a learning scheme that instead optimizes deletion and insertion metrics directly. Since these metrics depend on non-differentiable sorting and ranking, we frame them as permutation learning and replace the hard sorting with a differentiable relaxation using Gumbel-Sinkhorn. This enables end-to-end training through attribution-guided perturbations of the target model. During inference, our method produces dense, pixel-level attributions in a single forward pass with optional, few-step gradient refinement. Our experiments demonstrate consistent quantitative improvements and sharper, boundary-aligned explanations, particularly for transformer-based vision models.",
-      "pdf_url": "https://arxiv.org/pdf/2604.05819v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.05819v1",
-      "published": "2026-04-07",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Reconstruction of fast-rotating neutron star observables with the neural network",
-      "authors": [
-        "Wen Liu",
-        "Lingxiao Wang",
-        "Zhenyu Zhu"
-      ],
-      "abstract": "Rotation can significantly affect neutron-star (NS) properties, but accurate modeling of rapidly rotating NSs requires solving a two-dimensional, axially symmetric system, making traditional calculations too expensive for inference analyses that demand a large amount of model evaluations. We develop a causal convolutional neural networks that preserve the chronological-like dependence of NS properties on the equation of state (EoS) and rapidly reconstruct observables for static, Keplerian, and rotating configurations. Using \\texttt{RNS}, we generate a dataset of NS observables and use it to train our networks. We validate our networks with three representative EoS (SFHo, SLy4, and DD2) and find that the they accurately reproduce the \\texttt{RNS} results. The trained networks evaluate NS configurations for a single EoS in $\\sim 50$ms, providing a substantial speedup over typical \\texttt{RNS} runtimes of $\\sim 30$ min and enabling efficient inference analyses involving rapidly rotating NSs.",
-      "pdf_url": "https://arxiv.org/pdf/2604.05428v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.05428v1",
-      "published": "2026-04-07",
-      "categories": [
-        "astro-ph.HE",
-        "gr-qc"
-      ]
-    },
-    {
-      "title": "Non-monotonic causal discovery with Kolmogorov-Arnold Fuzzy Cognitive Maps",
-      "authors": [
-        "Jose L. Salmeron"
-      ],
-      "abstract": "Fuzzy Cognitive Maps constitute a neuro-symbolic paradigm for modeling complex dynamic systems, widely adopted for their inherent interpretability and recurrent inference capabilities. However, the standard FCM formulation, characterized by scalar synaptic weights and monotonic activation functions, is fundamentally constrained in modeling non-monotonic causal dependencies, thereby limiting its efficacy in systems governed by saturation effects or periodic dynamics. To overcome this topological restriction, this research proposes the Kolmogorov-Arnold Fuzzy Cognitive Map (KA-FCM), a novel architecture that redefines the causal transmission mechanism. Drawing upon the Kolmogorov-Arnold representation theorem, static scalar weights are replaced with learnable, univariate B-spline functions located on the model edges. This fundamental modification shifts the non-linearity from the nodes' aggregation phase directly to the causal influence phase. This modification allows for the modeling of arbitrary, non-monotonic causal relationships without increasing the graph density or introducing hidden layers. The proposed architecture is validated against both baselines (standard FCM trained with Particle Swarm Optimization) and universal black-box approximators (Multi-Layer Perceptron) across three distinct domains: non-monotonic inference (Yerkes-Dodson law), symbolic regression, and chaotic time-series forecasting. Experimental results demonstrate that KA-FCMs significantly outperform conventional architectures and achieve competitive accuracy relative to MLPs, while preserving graph- based interpretability and enabling the explicit extraction of mathematical laws from the learned edges.",
-      "pdf_url": "https://arxiv.org/pdf/2604.05136v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.05136v1",
-      "published": "2026-04-06",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A Demon that remembers: An agential approach towards quantum thermodynamics of temporal correlations",
-      "authors": [
-        "Ruo Cheng Huang"
-      ],
-      "abstract": "This thesis develops a decision-theoretic framework for extracting thermodynamic work from temporal correlations in quantum systems. We model a classical agent -- lacking quantum memory -- performing adaptive work extraction through continuous inference and decision-making under uncertainty. By introducing $ρ^*$-ideal protocols, we demonstrate that exploiting memory effects allows adaptive strategies to surpass non-adaptive bounds. We formalize this via the Time-Ordered Free Energy (TOFE), a novel upper bound for causal, adaptive operations that reveals a thermodynamic gap linked to adaptive ordered discord. Additionally, we tackle work extraction from unknown sources using reinforcement learning. By adapting multi-armed bandit algorithms, we show an agent can simultaneously learn an unknown i.i.d. quantum state and extract work, achieving polylogarithmic cumulative dissipation that significantly outperforms standard tomography. Overall, this work lays the foundation for predictive and learning-based quantum thermodynamics.",
-      "pdf_url": "https://arxiv.org/pdf/2604.04462v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.04462v1",
-      "published": "2026-04-06",
-      "categories": [
-        "quant-ph"
-      ]
-    },
-    {
-      "title": "Structured Causal Video Reasoning via Multi-Objective Alignment",
-      "authors": [
-        "Zinuo Li",
-        "Yongxin Guo",
-        "Jun Liu",
-        "Jiawei Zhan",
-        "Xi Jiang",
-        "Chengjie Wang",
-        "Mohammed Bennamoun",
-        "Farid Boussaid",
-        "Feng Zheng",
-        "Qiuhong Ke"
-      ],
-      "abstract": "Human understanding of video dynamics is typically grounded in a structured mental representation of entities, actions, and temporal relations, rather than relying solely on immediate deductive reasoning. In contrast, existing Video-LLMs largely depend on unstructured video reasoning, where critical visual evidence is embedded in verbose textual descriptions and temporal causality is often weakly modeled. This leads to inefficient processes and fragile causal inference. To bridge this cognitive gap, we propose constructing a compact representation of salient events and their causal relationships, which we name Structured Event Facts, prior to the reasoning stage. This structured prior serves as an explicit constraint to promote concise and causally grounded reasoning, while also making intermediate evidence easier to verify. To effectively train models on such structured facts, we introduce CausalFact-60K and a four-stage training pipeline comprising facts alignment, format warm-start, thinking warm-start, and reinforcement learning-based post-training. During RL stage, we find that this framework introduces competing objectives, as structural completeness and causal fidelity must be balanced against reasoning length, making it difficult to optimize. We address this challenge by formulating the optimization as a Multi-Objective Reinforcement Learning (MORL) problem and explicitly optimizing toward the Pareto-Frontier to balance these trade-offs. As a result, we introduce Factum-4B, which yields more reliable reasoning and delivers stronger performance on challenging video understanding tasks requiring fine-grained temporal inference.",
-      "pdf_url": "https://arxiv.org/pdf/2604.04415v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.04415v1",
-      "published": "2026-04-06",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "InferenceEvolve: Towards Automated Causal Effect Estimators through Self-Evolving AI",
-      "authors": [
-        "Can Wang",
-        "Hongyu Zhao",
-        "Yiqun Chen"
-      ],
-      "abstract": "Causal inference is central to scientific discovery, yet choosing appropriate methods remains challenging because of the complexity of both statistical methodology and real-world data. Inspired by the success of artificial intelligence in accelerating scientific discovery, we introduce InferenceEvolve, an evolutionary framework that uses large language models to discover and iteratively refine causal methods. Across widely used benchmarks, InferenceEvolve yields estimators that consistently outperform established baselines: against 58 human submissions in a recent community competition, our best evolved estimator lay on the Pareto frontier across two evaluation metrics. We also developed robust proxy objectives for settings without semi-synthetic outcomes, with competitive results. Analysis of the evolutionary trajectories shows that agents progressively discover sophisticated strategies tailored to unrevealed data-generating mechanisms. These findings suggest that language-model-guided evolution can optimize structured scientific programs such as causal inference, even when outcomes are only partially observed.",
-      "pdf_url": "https://arxiv.org/pdf/2604.04274v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.04274v1",
-      "published": "2026-04-05",
-      "categories": [
-        "cs.AI",
-        "cs.CE",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Causality Laundering: Denial-Feedback Leakage in Tool-Calling LLM Agents",
-      "authors": [
-        "Mohammad Hossein Chinaei"
-      ],
-      "abstract": "Tool-calling LLM agents can read private data, invoke external services, and trigger real-world actions, creating a security problem at the point of tool execution. We identify a denial-feedback leakage pattern, which we term causality laundering, in which an adversary probes a protected action, learns from the denial outcome, and exfiltrates the inferred information through a later seemingly benign tool call. This attack is not captured by flat provenance tracking alone because the leaked information arises from causal influence of the denied action, not direct data flow. We present the Agentic Reference Monitor (ARM), a runtime enforcement layer that mediates every tool invocation by consulting a provenance graph over tool calls, returned data, field-level provenance, and denied actions. ARM propagates trust through an integrity lattice and augments the graph with counterfactual edges from denied-action nodes, enabling enforcement over both transitive data dependencies and denial-induced causal influence. In a controlled evaluation on three representative attack scenarios, ARM blocks causality laundering, transitive taint propagation, and mixed-provenance field misuse that a flat provenance baseline misses, while adding sub-millisecond policy evaluation overhead. These results suggest that denial-aware causal provenance is a useful abstraction for securing tool-calling agent systems.",
-      "pdf_url": "https://arxiv.org/pdf/2604.04035v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.04035v1",
-      "published": "2026-04-05",
-      "categories": [
-        "cs.CR",
-        "cs.AI"
       ]
     }
   ]
