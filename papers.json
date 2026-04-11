@@ -1,6 +1,37 @@
 {
-  "last_updated": "2026-04-10T01:23:58.850699",
+  "last_updated": "2026-04-11T01:18:04.233252",
   "papers": [
+    {
+      "title": "SUPERNOVA: Eliciting General Reasoning in LLMs with Reinforcement Learning on Natural Instructions",
+      "authors": [
+        "Ashima Suvarna",
+        "Kendrick Phan",
+        "Mehrab Beikzadeh",
+        "Hritik Bansal",
+        "Saadia Gabriel"
+      ],
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has significantly improved large language model (LLM) reasoning in formal domains such as mathematics and code. Despite these advancements, LLMs still struggle with general reasoning tasks requiring capabilities such as causal inference and temporal understanding. Extending RLVR to general reasoning is fundamentally constrained by the lack of high-quality, verifiable training data that spans diverse reasoning skills. To address this challenge, we propose SUPERNOVA, a data curation framework for RLVR aimed at enhancing general reasoning. Our key insight is that instruction-tuning datasets containing expert-annotated ground-truth encode rich reasoning patterns that can be systematically adapted for RLVR. To study this, we conduct 100+ controlled RL experiments to analyze how data design choices impact downstream reasoning performance. In particular, we investigate three key factors: (i) source task selection, (ii) task mixing strategies, and (iii) synthetic interventions for improving data quality. Our analysis reveals that source task selection is non-trivial and has a significant impact on downstream reasoning performance. Moreover, selecting tasks based on their performance for individual target tasks outperforms strategies based on overall average performance. Finally, models trained on SUPERNOVA outperform strong baselines (e.g., Qwen3.5) on challenging reasoning benchmarks including BBEH, Zebralogic, and MMLU-Pro. In particular, training on SUPERNOVA yields relative improvements of up to 52.8\\% on BBEH across model sizes, demonstrating the effectiveness of principled data curation for RLVR. Our findings provide practical insights for curating human-annotated resources to extend RLVR to general reasoning. The code and data is available at https://github.com/asuvarna31/supernova.",
+      "pdf_url": "https://arxiv.org/pdf/2604.08477v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.08477v1",
+      "published": "2026-04-09",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Semiparametric Causal Mediation Analysis for Linear Models with Non-Gaussian Errors: Applications to Drug Treatment and Social Program Evaluation",
+      "authors": [
+        "Mijeong Kim"
+      ],
+      "abstract": "\\textbf{Background:} Mediation analysis is widely used to investigate how treatments and programs exert their effects, but standard ordinary least squares (OLS) inference can be unreliable when regression errors are non-Gaussian. In medical and public-health studies, this can affect whether indirect and direct effects are judged clinically or scientifically meaningful. \\textbf{Methods:} We developed a semiparametric causal mediation framework for linear models allowing possibly non-Gaussian errors, covering both standard models and models with treatment--mediator interaction. The method combines semiparametric efficient regression estimation, a reproducible multi-start fitting algorithm for numerical stability, and stacked estimating equations for confidence-interval construction without requiring Gaussian error assumptions. \\textbf{Results:} Across Gaussian, skewed, and mixture-error simulations, the semiparametric estimator reduced root mean squared error and confidence-interval length relative to OLS, with the largest gains under non-Gaussian errors. In a near-boundary power design, the OLS confidence interval achieved 18.3\\% empirical power, whereas the semiparametric confidence interval identified significant effects in all replications. In the \\textit{uis} drug-treatment data, it yielded sharper treatment-specific effect estimates under clear treatment--mediator interaction. In the \\textit{jobs} social-program data, the semiparametric analysis produced shorter confidence intervals for mediated effects and detected nonzero mediation where OLS did not. \\textbf{Conclusions:} Semiparametric mediation analysis can improve the precision and reliability of effect decomposition in studies with non-Gaussian outcomes, offering a practical alternative to OLS when indirect and direct effects may inform clinical or policy decision-making.",
+      "pdf_url": "https://arxiv.org/pdf/2604.08346v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.08346v1",
+      "published": "2026-04-09",
+      "categories": [
+        "stat.ME"
+      ]
+    },
     {
       "title": "LPM 1.0: Video-based Character Performance Model",
       "authors": [
@@ -164,44 +195,6 @@
       "categories": [
         "cs.IR",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Fast-dVLM: Efficient Block-Diffusion VLM via Direct Conversion from Autoregressive VLM",
-      "authors": [
-        "Chengyue Wu",
-        "Shiyi Lan",
-        "Yonggan Fu",
-        "Sensen Gao",
-        "Jin Wang",
-        "Jincheng Yu",
-        "Jose M. Alvarez",
-        "Pavlo Molchanov",
-        "Ping Luo",
-        "Song Han",
-        "Ligeng Zhu",
-        "Enze Xie"
-      ],
-      "abstract": "Vision-language models (VLMs) predominantly rely on autoregressive decoding, which generates tokens one at a time and fundamentally limits inference throughput. This limitation is especially acute in physical AI scenarios such as robotics and autonomous driving, where VLMs are deployed on edge devices at batch size one, making AR decoding memory-bandwidth-bound and leaving hardware parallelism underutilized. While block-wise discrete diffusion has shown promise for parallel text generation, extending it to VLMs remains challenging due to the need to jointly handle continuous visual representations and discrete text tokens while preserving pretrained multimodal capabilities. We present Fast-dVLM, a block-diffusion-based VLM that enables KV-cache-compatible parallel decoding and speculative block decoding for inference acceleration. We systematically compare two AR-to-diffusion conversion strategies: a two-stage approach that first adapts the LLM backbone with text-only diffusion fine-tuning before multimodal training, and a direct approach that converts the full AR VLM in one stage. Under comparable training budgets, direct conversion proves substantially more efficient by leveraging the already multimodally aligned VLM; we therefore adopt it as our recommended recipe. We introduce a suite of multimodal diffusion adaptations, block size annealing, causal context attention, auto-truncation masking, and vision efficient concatenation, that collectively enable effective block diffusion in the VLM setting. Extensive experiments across 11 multimodal benchmarks show Fast-dVLM matches its autoregressive counterpart in generation quality. With SGLang integration and FP8 quantization, Fast-dVLM achieves over 6x end-to-end inference speedup over the AR baseline.",
-      "pdf_url": "https://arxiv.org/pdf/2604.06832v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.06832v1",
-      "published": "2026-04-08",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "ECLIPSE: A Composable Pipeline for Predicting ecDNA Formation, Evolution, and Therapeutic Vulnerabilities in Cancer",
-      "authors": [
-        "Bryan Cheng",
-        "Jasper Zhang"
-      ],
-      "abstract": "Extrachromosomal DNA (ecDNA) represents one of the most pressing challenges in cancer biology: circular DNA structures that amplify oncogenes, evade targeted therapies, and drive tumor evolution in ~30% of aggressive cancers. Despite its clinical importance, computational ecDNA research has been built on broken foundations. We discover that existing benchmarks suffer from circular reasoning -- models trained on features that already require knowing ecDNA status -- artificially inflating performance from AUROC 0.724 to 0.967. We introduce ECLIPSE, the first methodologically sound framework for ecDNA analysis, comprising three modules that transform how we predict, model, and target these structures. ecDNA-Former achieves AUROC 0.812 using only standard genomic features, demonstrating for the first time that ecDNA status is predictable without specialized sequencing, and that careful feature curation matters more than complex architectures. CircularODE captures ecDNA's unique stochastic dynamics through physics-constrained neural SDEs, achieving r > 0.997 on experimental data via zero-shot transfer. VulnCausal applies causal inference to identify therapeutic vulnerabilities, achieving 80x enrichment over chance and 3.7x higher validation than standard approaches by filtering spurious correlations. Together, these modules establish rigorous baselines for an emerging application area and reveal a broader lesson: in high-stakes biomedical ML, methodological rigor -- eliminating leakage, encoding domain physics, addressing confounding -- outweighs architectural innovation. ECLIPSE provides both the tools and the template for principled computational oncology.",
-      "pdf_url": "https://arxiv.org/pdf/2604.06569v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.06569v1",
-      "published": "2026-04-08",
-      "categories": [
-        "q-bio.GN"
       ]
     }
   ]
