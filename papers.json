@@ -1,200 +1,182 @@
 {
-  "last_updated": "2026-04-12T01:27:33.598457",
+  "last_updated": "2026-04-16T01:43:44.859097",
   "papers": [
     {
-      "title": "SUPERNOVA: Eliciting General Reasoning in LLMs with Reinforcement Learning on Natural Instructions",
+      "title": "Right Regions, Wrong Labels: Semantic Label Flips in Segmentation under Correlation Shift",
       "authors": [
-        "Ashima Suvarna",
-        "Kendrick Phan",
-        "Mehrab Beikzadeh",
-        "Hritik Bansal",
-        "Saadia Gabriel"
+        "Akshit Achara",
+        "Yovin Yathathugoda",
+        "Nick Byrne",
+        "Michela Antonelli",
+        "Esther Puyol Anton",
+        "Alexander Hammers",
+        "Andrew P. King"
       ],
-      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has significantly improved large language model (LLM) reasoning in formal domains such as mathematics and code. Despite these advancements, LLMs still struggle with general reasoning tasks requiring capabilities such as causal inference and temporal understanding. Extending RLVR to general reasoning is fundamentally constrained by the lack of high-quality, verifiable training data that spans diverse reasoning skills. To address this challenge, we propose SUPERNOVA, a data curation framework for RLVR aimed at enhancing general reasoning. Our key insight is that instruction-tuning datasets containing expert-annotated ground-truth encode rich reasoning patterns that can be systematically adapted for RLVR. To study this, we conduct 100+ controlled RL experiments to analyze how data design choices impact downstream reasoning performance. In particular, we investigate three key factors: (i) source task selection, (ii) task mixing strategies, and (iii) synthetic interventions for improving data quality. Our analysis reveals that source task selection is non-trivial and has a significant impact on downstream reasoning performance. Moreover, selecting tasks based on their performance for individual target tasks outperforms strategies based on overall average performance. Finally, models trained on SUPERNOVA outperform strong baselines (e.g., Qwen3.5) on challenging reasoning benchmarks including BBEH, Zebralogic, and MMLU-Pro. In particular, training on SUPERNOVA yields relative improvements of up to 52.8\\% on BBEH across model sizes, demonstrating the effectiveness of principled data curation for RLVR. Our findings provide practical insights for curating human-annotated resources to extend RLVR to general reasoning. The code and data is available at https://github.com/asuvarna31/supernova.",
-      "pdf_url": "https://arxiv.org/pdf/2604.08477v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.08477v1",
-      "published": "2026-04-09",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Semiparametric Causal Mediation Analysis for Linear Models with Non-Gaussian Errors: Applications to Drug Treatment and Social Program Evaluation",
-      "authors": [
-        "Mijeong Kim"
-      ],
-      "abstract": "\\textbf{Background:} Mediation analysis is widely used to investigate how treatments and programs exert their effects, but standard ordinary least squares (OLS) inference can be unreliable when regression errors are non-Gaussian. In medical and public-health studies, this can affect whether indirect and direct effects are judged clinically or scientifically meaningful. \\textbf{Methods:} We developed a semiparametric causal mediation framework for linear models allowing possibly non-Gaussian errors, covering both standard models and models with treatment--mediator interaction. The method combines semiparametric efficient regression estimation, a reproducible multi-start fitting algorithm for numerical stability, and stacked estimating equations for confidence-interval construction without requiring Gaussian error assumptions. \\textbf{Results:} Across Gaussian, skewed, and mixture-error simulations, the semiparametric estimator reduced root mean squared error and confidence-interval length relative to OLS, with the largest gains under non-Gaussian errors. In a near-boundary power design, the OLS confidence interval achieved 18.3\\% empirical power, whereas the semiparametric confidence interval identified significant effects in all replications. In the \\textit{uis} drug-treatment data, it yielded sharper treatment-specific effect estimates under clear treatment--mediator interaction. In the \\textit{jobs} social-program data, the semiparametric analysis produced shorter confidence intervals for mediated effects and detected nonzero mediation where OLS did not. \\textbf{Conclusions:} Semiparametric mediation analysis can improve the precision and reliability of effect decomposition in studies with non-Gaussian outcomes, offering a practical alternative to OLS when indirect and direct effects may inform clinical or policy decision-making.",
-      "pdf_url": "https://arxiv.org/pdf/2604.08346v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.08346v1",
-      "published": "2026-04-09",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "LPM 1.0: Video-based Character Performance Model",
-      "authors": [
-        "Ailing Zeng",
-        "Casper Yang",
-        "Chauncey Ge",
-        "Eddie Zhang",
-        "Garvey Xu",
-        "Gavin Lin",
-        "Gilbert Gu",
-        "Jeremy Pi",
-        "Leo Li",
-        "Mingyi Shi",
-        "Sheng Bi",
-        "Steven Tang",
-        "Thorn Hang",
-        "Tobey Guo",
-        "Vincent Li",
-        "Xin Tong",
-        "Yikang Li",
-        "Yuchen Sun",
-        "Yue",
-        "Zhao",
-        "Yuhan Lu",
-        "Yuwei Li",
-        "Zane Zhang",
-        "Zeshi Yang",
-        "Zi Ye"
-      ],
-      "abstract": "Performance, the externalization of intent, emotion, and personality through visual, vocal, and temporal behavior, is what makes a character alive. Learning such performance from video is a promising alternative to traditional 3D pipelines. However, existing video models struggle to jointly achieve high expressiveness, real-time inference, and long-horizon identity stability, a tension we call the performance trilemma. Conversation is the most comprehensive performance scenario, as characters simultaneously speak, listen, react, and emote while maintaining identity over time. To address this, we present LPM 1.0 (Large Performance Model), focusing on single-person full-duplex audio-visual conversational performance. Concretely, we build a multimodal human-centric dataset through strict filtering, speaking-listening audio-video pairing, performance understanding, and identity-aware multi-reference extraction; train a 17B-parameter Diffusion Transformer (Base LPM) for highly controllable, identity-consistent performance through multimodal conditioning; and distill it into a causal streaming generator (Online LPM) for low-latency, infinite-length interaction. At inference, given a character image with identity-aware references, LPM 1.0 generates listening videos from user audio and speaking videos from synthesized audio, with text prompts for motion control, all at real-time speed with identity-stable, infinite-length generation. LPM 1.0 thus serves as a visual engine for conversational agents, live streaming characters, and game NPCs. To systematically evaluate this setting, we propose LPM-Bench, the first benchmark for interactive character performance. LPM 1.0 achieves state-of-the-art results across all evaluated dimensions while maintaining real-time inference.",
-      "pdf_url": "https://arxiv.org/pdf/2604.07823v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.07823v1",
-      "published": "2026-04-09",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.MM"
-      ]
-    },
-    {
-      "title": "ESOM: Efficiently Understanding Streaming Video Anomalies with Open-world Dynamic Definitions",
-      "authors": [
-        "Zihao Liu",
-        "Xiaoyu Wu",
-        "Wenna Li",
-        "Jianqin Wu",
-        "Linlin Yang"
-      ],
-      "abstract": "Open-world video anomaly detection (OWVAD) aims to detect and explain abnormal events under different anomaly definitions, which is important for applications such as intelligent surveillance and live-streaming content moderation. Recent MLLM-based methods have shown promising open-world generalization, but still suffer from three major limitations: inefficiency for practical deployment, lack of streaming processing adaptation, and limited support for dynamic anomaly definitions in both modeling and evaluation. To address these issues, this paper proposes ESOM, an efficient streaming OWVAD model that operates in a training-free manner. ESOM includes a Definition Normalization module to structure user prompts for reducing hallucination, an Inter-frame-matched Intra-frame Token Merging module to compress redundant visual tokens, a Hybrid Streaming Memory module for efficient causal inference, and a Probabilistic Scoring module that converts interval-level textual outputs into frame-level anomaly scores. In addition, this paper introduces OpenDef-Bench, a new benchmark with clean surveillance videos and diverse natural anomaly definitions for evaluating performance under varying conditions. Extensive experiments show that ESOM achieves real-time efficiency on a single GPU and state-of-the-art performance in anomaly temporal localization, classification, and description generation. The code and benchmark will be released at https://github.com/Kamino666/ESOM_OpenDef-Bench.",
-      "pdf_url": "https://arxiv.org/pdf/2604.07772v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.07772v1",
-      "published": "2026-04-09",
+      "abstract": "The robustness of machine learning models can be compromised by spurious correlations between non-causal features in the input data and target labels. A common way to test for such correlations is to train on data where the label is strongly tied to some non-causal cue, then evaluate on examples where that tie no longer holds. This idea is well established for classification tasks, but for semantic segmentation the specific failure modes are not well understood. We show that a model may achieve reasonable overlap while assigning the wrong semantic label, swapping one plausible foreground class for another, even when object boundaries are largely correct. We focus on this semantic label-flip behaviour and quantify it with a simple diagnostic (Flip) that counts how often ground truth foreground pixels are assigned the wrong foreground identity while remaining predicted as foreground. In a setting where category and scene are correlated during training, increasing the correlation consistently widens the gap between common and rare test conditions and increases these within-object label swaps on counterfactual groups. Overall, our results motivate assessing segmentation robustness under distribution shift beyond overlap by decomposing foreground errors into correct pixels, flipped-identity pixels, and missed-to-background pixels. We also propose an entropy-based, ground truth label-free `flip-risk' score, which is computed from foreground identity uncertainty, and show that it can flag flip-prone cases at inference time. Code is available at https://github.com/acharaakshit/label-flips.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13326v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.13326v1",
+      "published": "2026-04-14",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "Fixed-Effects Models for Causal Inference in Longitudinal Cluster Randomized and Quasi-Experimental Trials",
+      "title": "Counterfactual Peptide Editing for Causal TCR--pMHC Binding Inference",
       "authors": [
-        "Kenneth M. Lee",
+        "Sanjar Khudoyberdiev",
+        "Arman Bekov"
+      ],
+      "abstract": "Neural models for TCR-pMHC binding prediction are susceptible to shortcut learning: they exploit spurious correlations in training data -- such as peptide length bias or V-gene co-occurrence -- rather than the physical binding interface. This renders predictions brittle under family-held-out and distance-aware evaluation, where such shortcuts do not transfer. We introduce \\emph{Counterfactual Invariant Prediction} (CIP), a training framework that generates biologically constrained counterfactual peptide edits and enforces invariance to edits at non-anchor positions while amplifying sensitivity at MHC anchor residues. CIP augments the base classifier with two auxiliary objectives: (1) an invariance loss penalizing prediction changes under conservative non-anchor substitutions, and (2) a contrastive loss encouraging large prediction changes under anchor-position disruptions. Evaluated on a curated VDJdb-IEDB benchmark under family-held-out, distance-aware, and random splits, CIP achieves AUROC 0.831 and counterfactual consistency (CFC) 0.724 under the challenging family-held-out protocol -- a 39.7\\% reduction in shortcut index relative to the unconstrained baseline. Ablations confirm that anchor-aware edit generation is the dominant driver of OOD gains, providing a practical recipe for causally-grounded TCR specificity modeling.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13256v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.13256v1",
+      "published": "2026-04-14",
+      "categories": [
+        "cs.LG",
+        "cs.GR"
+      ]
+    },
+    {
+      "title": "Nonparametric efficient inference for network quantile causal effects under partial interference",
+      "authors": [
+        "Chao Cheng",
         "Fan Li"
       ],
-      "abstract": "This article investigates the model-robustness of fixed-effects models for analyzing a broad class of longitudinal cluster trials (CTs) such as stepped-wedge, parallel-with-baseline and crossover designs, encompassing both randomized (CRTs) and quasi-experimental (CQTs) designs. We clarify a longstanding misconception in biostatistics, demonstrating that fixed-effects models, traditionally perceived as targeting only finite-sample conditional estimands, can effectively target super-population marginal estimands through an M-estimation framework. We comprehensively prove that linear and log-link fixed-effects models with correctly specified treatment effect structures can broadly yield consistent and asymptotically normal estimators for nonparametrically defined treatment effect estimands in longitudinal CRTs, even under arbitrary misspecification of other model components. We identify that the constant treatment effect estimator generally targets the period-average treatment effect for the overlap population (P-ATO); accordingly, some CRT designs don't even require correct specification of the treatment effect structure for model-robustness. We further characterize conditions where fixed-effects models can maintain consistency by adjusting for both cluster-level and individual-level time-invariant confounding in longitudinal CQTs. Altogether, supported by simulation and a case study re-analysis, we establish fixed-effects models as a robust and potentially preferable alternative to mixed-effects models for longitudinal CT analysis.",
-      "pdf_url": "https://arxiv.org/pdf/2604.07756v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.07756v1",
-      "published": "2026-04-09",
+      "abstract": "Interference arises when the treatment assigned to one individual affects the outcomes of other individuals. Commonly, individuals are naturally grouped into clusters, and interference occurs only among individuals within the same cluster, a setting referred to as partial interference. We study network causal effects on outcome quantiles in the presence of partial interference. We develop a general nonparametric efficiency theory for estimating these network quantile causal effects, which leads to a nonparametrically efficient estimator. The proposed estimator is consistent and asymptotically normal with parametric convergence rates, while allowing for flexible, data-adaptive estimation of complex nuisance functions. We leverage a three-way cross-fitting procedure that avoids direct estimation of the conditional outcome distribution. Simulations demonstrate adequate finite-sample performance of the proposed estimators, and we apply the methods to a clustered observational study.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13008v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.13008v1",
+      "published": "2026-04-14",
+      "categories": [
+        "stat.ME",
+        "stat.AP",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Causal Diffusion Models for Counterfactual Outcome Distributions in Longitudinal Data",
+      "authors": [
+        "Farbod Alinezhad",
+        "Jianfei Cao",
+        "Gary J. Young",
+        "Brady Post"
+      ],
+      "abstract": "Predicting counterfactual outcomes in longitudinal data, where sequential treatment decisions heavily depend on evolving patient states, is critical yet notoriously challenging due to complex time-dependent confounding and inadequate uncertainty quantification in existing methods. We introduce the Causal Diffusion Model (CDM), the first denoising diffusion probabilistic approach explicitly designed to generate full probabilistic distributions of counterfactual outcomes under sequential interventions. CDM employs a novel residual denoising architecture with relational self-attention, capturing intricate temporal dependencies and multimodal outcome trajectories without requiring explicit adjustments (e.g., inverse-probability weighting or adversarial balancing) for confounding. In rigorous evaluation on a pharmacokinetic-pharmacodynamic tumor-growth simulator widely adopted in prior work, CDM consistently outperforms state-of-the-art longitudinal causal inference methods, achieving a 15-30% relative improvement in distributional accuracy (1-Wasserstein distance) while maintaining competitive or superior point-estimate accuracy (RMSE) under high-confounding regimes. By unifying uncertainty quantification and robust counterfactual prediction in complex, sequentially confounded settings, without tailored deconfounding, CDM offers a flexible, high-impact tool for decision support in medicine, policy evaluation, and other longitudinal domains.",
+      "pdf_url": "https://arxiv.org/pdf/2604.12992v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.12992v1",
+      "published": "2026-04-14",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "On causal inference with marked point process data",
+      "authors": [
+        "Pål Christie Ryalen",
+        "Mats Julius Stensrud",
+        "Kjetil Røysland"
+      ],
+      "abstract": "We define dynamic treatment regimes and associated potential outcomes for data described by marked point processes (MPPs). These definitions motivate MPP analogues of the commonly used consistency, exchangeability, and positivity conditions that are sufficient for identifying effects in MPP data structures. The conditions are formulated based on martingale theory, which allows us to derive explicit identifying assumptions for data described by stochastic processes. The definitions and conditions align with well-established discrete-time results in important special cases. Thus, this work bridges the large literatures on survival (event history) analysis with counting processes in continuous time and causal inference with variables in discrete-time. After formulating a set of identification conditions, we derive and characterize marginal g-formulas. The g-formulas are generally different from those studied in related works, though they coincide in important special cases. We relate our findings to previous work on causal inference with (counting) processes, the classical survival literature, and the discrete-time causal inference literature.",
+      "pdf_url": "https://arxiv.org/pdf/2604.12977v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.12977v1",
+      "published": "2026-04-14",
       "categories": [
         "stat.ME"
       ]
     },
     {
-      "title": "MIPT-SSM: Scaling Language Models with $O(1)$ Inference Cache via Phase Transitions",
+      "title": "Fundamental Limits and Optimal Methods for Sharp Analytical Causal Bounds in Instrumental Variable Models",
       "authors": [
-        "Yasong Fan"
+        "Arefe Boushehrian",
+        "Mohammad Reza Badri",
+        "Sina Akbari",
+        "Negar Kiyavash"
       ],
-      "abstract": "We present MIPT-SSM, a neural sequence architecture built on the physics of Measurement-Induced Phase Transitions (MIPT). The central idea is a learned measurement rate $p_{t}\\in(0,1)$ that routes computation between two regimes: wave phase $(p_{t}\\rightarrow0)$, where information propagates as distributed complex-phase interference; and particle phase $(p_{t}\\rightarrow1)$ where the state collapses onto the current token, enabling precise local storage. These two regimes are provably incompatible in a single linear operator one of the few \"no-go theorems\" in sequence modeling and $p_{t}$ is our way around it. The model is predicted to exhibit a phase transition at critical sequence length $N^{*}\\approx1024$, where the information density ratio $N/D$ crosses unity, consistent with our memory scaling observations. On AG News (four-class classification), MIPT achieves 0.905 accuracy versus Transformer's 0.736 (+16.6%), stable across 3 seeds. At $N=8192$ MIPT requires 810 MB versus Transformer's 34,651 MB a 42.8x memory reduction. On exact-recall (\"needle-in-a-haystack\"), our causal sparse KV cache achieves 0.968 accuracy. Remarkably, under unbounded cache capacity, the $p_{t}$ gate autonomously learns to store only the single critical token (averaging $1.0/512$ slots used), filtering out all noise and achieving a 99.8% sparsity rate. On language modeling (WikiText-103, 31M parameters), MIPT-LM with $K=64$ cache reaches PPL 92.1 versus Transformer's 90.5 (gap: 1.8%) while inference KV cache shrinks from $O(N)$ to $O(64)$.",
-      "pdf_url": "https://arxiv.org/pdf/2604.07716v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.07716v1",
-      "published": "2026-04-09",
+      "abstract": "Bounding causal effects analytically, rather than numerically, is appealing for its interpretability and conceptual clarity. Existing sharp methods rely on optimization-based approaches such as the Balke-Pearl framework, whose computational complexity grows rapidly. An alternative line of work derives bounds heuristically using probability laws and generic inequalities, and some recent papers have claimed or conjectured that this approach can yield sharp analytical bounds with substantially lower complexity. In this paper, we show that this perceived advantage is illusory. In particular, in a discrete instrumental variable setting, we show that any sharp analytical bound for the average treatment effect must be expressible as a maximum (minimum) over a collection of linear terms whose cardinality grows exponentially in the number of values taken by the outcome. In parallel, we show that the number of instrumental variable inequalities itself also grows exponentially. Consequently, bounds and inequalities expressed using only polynomially many such terms cannot be sharp. As a constructive complement, the paper is accompanied by codes implemented in python and R to derive sharp analytical bounds and sharp inequalities with optimal efficiency, matching the lower bounds proven in this paper. These codes are available online.",
+      "pdf_url": "https://arxiv.org/pdf/2604.12802v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.12802v1",
+      "published": "2026-04-14",
       "categories": [
-        "cs.LG"
+        "stat.ME"
       ]
     },
     {
-      "title": "Towards Counterfactual Explanation and Assertion Inference for CPS Debugging",
+      "title": "MISID: A Multimodal Multi-turn Dataset for Complex Intent Recognition in Strategic Deception Games",
       "authors": [
-        "Zaid Ghazal",
-        "Hadiza Yusuf",
-        "Khouloud Gaaloul"
+        "Shufang Lin",
+        "Muyang Chen",
+        "Xiabing Zhou",
+        "Rongrong Zhang",
+        "Dayou Zhang",
+        "Fangxin Wang"
       ],
-      "abstract": "Verification and validation of cyber-physical systems (CPS) via large-scale simulation often surface failures that are hard to interpret, especially when triggered by interactions between continuous and discrete behaviors at specific events or times. Existing debugging techniques can localize anomalies to specific model components, but they provide little insight into the input-signal values and timing conditions that trigger violations, or the minimal, precisely timed changes that could have prevented the failure. In this article, we introduce DeCaF, a counterfactual-guided explanation and assertion-based characterization framework for CPS debugging. Given a failing test input, DeCaF generates counterfactual changes to the input signals that transform the test from failing to passing. These changes are designed to be minimal, necessary, and sufficient to precisely restore correctness. Then, it infers assertions as logical predicates over inputs that generalize recovery conditions in an interpretable form engineers can reason about, without requiring access to internal model details. Our approach combines three counterfactual generators with two causal models, and infers success assertions. Across three CPS case studies, DeCaF achieves its best success rate with KD-Tree Nearest Neighbors combined with M5 model tree, while Genetic Algorithm combined with Random Forest provides the strongest balance between success and causal precision.",
-      "pdf_url": "https://arxiv.org/pdf/2604.07679v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.07679v1",
-      "published": "2026-04-09",
+      "abstract": "Understanding human intent in complex multi-turn interactions remains a fundamental challenge in human-computer interaction and behavioral analysis. While existing intent recognition datasets focus mainly on single utterances or simple dialogues, real-world scenarios often involve sophisticated strategic interactions where participants must maintain complex deceptive narratives over extended periods. To address this gap, we introduce MISID, a comprehensive multimodal, multi-turn, and multi-participant benchmark for intent recognition. Sourced from high-stakes social strategy games, MISID features a fine-grained, two-tier multi-dimensional annotation scheme tailored for long-context discourse analysis and evidence-based causal tracking. Our systematic evaluation of state-of-the-art Multimodal Large Language Models (MLLMs) on MISID reveals critical deficiencies in complex scenarios, including text-prior visual hallucination, impaired cross-modal synergy, and limited capacity in chaining causal cues. Consequently, we propose FRACTAM as a baseline framework. Using a ``Decouple-Anchor-Reason'' paradigm, FRACTAM reduces text bias by extracting pure unimodal factual representations, employs two-stage retrieval for long-range factual anchoring, and constructs explicit cross-modal evidence chains. Extensive experiments demonstrate that FRACTAM enhances mainstream models' performance in complex strategic tasks, improving hidden intent detection and inference while maintaining robust perceptual accuracy. Our dataset is available at https://naislab.cn/datasets/MISID.",
+      "pdf_url": "https://arxiv.org/pdf/2604.12700v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.12700v1",
+      "published": "2026-04-14",
       "categories": [
-        "cs.SE",
-        "cs.LG",
-        "eess.SY"
+        "cs.AI"
       ]
     },
     {
-      "title": "SYN-DIGITS: A Synthetic Control Framework for Calibrated Digital Twin Simulation",
+      "title": "Causal inference for spatiotemporal point processes in the presence of outcome spillover and carryover",
       "authors": [
-        "Grace Jiarui Fan",
-        "Chengpiao Huang",
-        "Tianyi Peng",
-        "Kaizheng Wang",
-        "Yuhang Wu"
+        "Conor Kresin",
+        "Duncan A. Clark",
+        "Louis Davis",
+        "Martin Hazelton"
       ],
-      "abstract": "AI-based persona simulation -- often referred to as digital twin simulation -- is increasingly used for market research, recommender systems, and social sciences. Despite their flexibility, large language models (LLMs) often exhibit systematic bias and miscalibration relative to real human behavior, limiting their reliability. Inspired by synthetic control methods from causal inference, we propose SYN-DIGITS (SYNthetic Control Framework for Calibrated DIGItal Twin Simulation), a principled and lightweight calibration framework that learns latent structure from digital-twin responses and transfers it to align predictions with human ground truth. SYN-DIGITS operates as a post-processing layer on top of any LLM-based simulator and thus is model-agnostic. We develop a latent factor model that formalizes when and why calibration succeeds through latent space alignment conditions, and we systematically evaluate ten calibration methods across thirteen persona constructions, three LLMs, and two datasets. SYN-DIGITS supports both individual-level and distributional simulation for previously unseen questions and unobserved populations, with provable error guarantees. Experiments show that SYN-DIGITS achieves up to 50% relative improvements in individual-level correlation and 50--90% relative reductions in distributional discrepancy compared to uncalibrated baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2604.07513v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.07513v1",
-      "published": "2026-04-08",
+      "abstract": "We develop a framework for causal inference with continuous spatiotemporal point-process outcomes under cell-level interventions and outcome spillover. Potential outcomes are indexed by full treatment allocations, and the observed post-treatment process is represented as an unlabelled superposition of latent control and treatment components. On the observed design support, expected post-treatment event counts in any spacetime region under a given treatment allocation are identified under consistency, exchangeability, and positivity; off-support contrasts are identified relative to a regime-stable structural point-process model. Estimation is likelihood-based and implemented with stochastic EM. To understand when this is feasible, we analyse a predictable blockwise hard-EM surrogate and show nonasymptotic contraction of estimation error to a statistical floor governed by locally ambiguous regions. This yields plug-in guarantees for cell-level and global causal functionals, and clarifies the additional array conditions needed for unnormalised growing-window contrasts. The framework covers history dependent spatiotemporal point processes including Poisson and Hawkes models, with applications to settings such as epidemiology, seismology, and finance. We provide an application assessing the causal effect of injecting wastewater into the ground on seismic activity in Oklahoma.",
+      "pdf_url": "https://arxiv.org/pdf/2604.12124v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.12124v1",
+      "published": "2026-04-13",
       "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL",
-        "cs.CY"
+        "stat.ME"
       ]
     },
     {
-      "title": "MoRight: Motion Control Done Right",
+      "title": "Online Reasoning Video Object Segmentation",
       "authors": [
-        "Shaowei Liu",
-        "Xuanchi Ren",
-        "Tianchang Shen",
-        "Huan Ling",
-        "Saurabh Gupta",
-        "Shenlong Wang",
-        "Sanja Fidler",
-        "Jun Gao"
+        "Jinyuan Liu",
+        "Yang Wang",
+        "Zeyu Zhao",
+        "Weixin Li",
+        "Song Wang",
+        "Ruize Han"
       ],
-      "abstract": "Generating motion-controlled videos--where user-specified actions drive physically plausible scene dynamics under freely chosen viewpoints--demands two capabilities: (1) disentangled motion control, allowing users to separately control the object motion and adjust camera viewpoint; and (2) motion causality, ensuring that user-driven actions trigger coherent reactions from other objects rather than merely displacing pixels. Existing methods fall short on both fronts: they entangle camera and object motion into a single tracking signal and treat motion as kinematic displacement without modeling causal relationships between object motion. We introduce MoRight, a unified framework that addresses both limitations through disentangled motion modeling. Object motion is specified in a canonical static-view and transferred to an arbitrary target camera viewpoint via temporal cross-view attention, enabling disentangled camera and object control. We further decompose motion into active (user-driven) and passive (consequence) components, training the model to learn motion causality from data. At inference, users can either supply active motion and MoRight predicts consequences (forward reasoning), or specify desired passive outcomes and MoRight recovers plausible driving actions (inverse reasoning), all while freely adjusting the camera viewpoint. Experiments on three benchmarks demonstrate state-of-the-art performance in generation quality, motion controllability, and interaction awareness.",
-      "pdf_url": "https://arxiv.org/pdf/2604.07348v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.07348v1",
-      "published": "2026-04-08",
+      "abstract": "Reasoning video object segmentation predicts pixel-level masks in videos from natural-language queries that may involve implicit and temporally grounded references. However, existing methods are developed and evaluated in an offline regime, where the entire video is available at inference time and future frames can be exploited for retrospective disambiguation, deviating from real-world deployments that require strictly causal, frame-by-frame decisions. We study Online Reasoning Video Object Segmentation (ORVOS), where models must incrementally interpret queries using only past and current frames without revisiting previous predictions, while handling referent shifts as events unfold. To support evaluation, we introduce ORVOSB, a benchmark with frame-level causal annotations and referent-shift labels, comprising 210 videos, 12,907 annotated frames, and 512 queries across five reasoning categories. We further propose a baseline with continually-updated segmentation prompts and a structured temporal token reservoir for long-horizon reasoning under bounded computation. Experiments show that existing methods struggle under strict causality and referent shifts, while our baseline establishes a strong foundation for future research.",
+      "pdf_url": "https://arxiv.org/pdf/2604.11411v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.11411v1",
+      "published": "2026-04-13",
       "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.GR",
-        "cs.LG",
-        "cs.RO"
+        "cs.CV"
       ]
     },
     {
-      "title": "Dual-Rerank: Fusing Causality and Utility for Industrial Generative Reranking",
+      "title": "Introspective Diffusion Language Models",
       "authors": [
-        "Chao Zhang",
-        "Shuai Lin",
-        "ChengLei Dai",
-        "Ye Qian",
-        "Fan Mingyang",
-        "Yi Zhang",
-        "Yi Wang",
-        "Jingwei Zhuo"
+        "Yifan Yu",
+        "Yuqing Jian",
+        "Junxiong Wang",
+        "Zhongzhu Zhou",
+        "Donglin Zhuang",
+        "Xinyu Fang",
+        "Sri Yanamandra",
+        "Xiaoxia Wu",
+        "Qingyang Wu",
+        "Shuaiwen Leon Song",
+        "Tri Dao",
+        "Ben Athiwaratkun",
+        "James Zou",
+        "Fan Lai",
+        "Chenfeng Xu"
       ],
-      "abstract": "Kuaishou serves over 400 million daily active users, processing hundreds of millions of search queries daily against a repository of tens of billions of short videos. As the final decision layer, the reranking stage determines user experience by optimizing whole-page utility. While traditional score-and-sort methods fail to capture combinatorial dependencies, Generative Reranking offers a superior paradigm by directly modeling the permutation probability. However, deploying Generative Reranking in such a high-stakes environment faces a fundamental dual dilemma: 1) the structural trade-off where Autoregressive (AR) models offer superior Sequential modeling but suffer from prohibitive latency, versus Non-Autoregressive (NAR) models that enable efficiency but lack dependency capturing; 2) the optimization gap where Supervised Learning faces challenges in directly optimizing whole-page utility, while Reinforcement Learning (RL) struggles with instability in high-throughput data streams. To resolve this, we propose Dual-Rerank, a unified framework designed for industrial reranking that bridges the structural gap via Sequential Knowledge Distillation and addresses the optimization gap using List-wise Decoupled Reranking Optimization (LDRO) for stable online RL. Extensive A/B testing on production traffic demonstrates that Dual-Rerank achieves State-of-the-Art performance, significantly improving User satisfaction and Watch Time while drastically reducing inference latency compared to AR baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2604.07420v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.07420v1",
-      "published": "2026-04-08",
+      "abstract": "Diffusion language models promise parallel generation, yet still lag behind autoregressive (AR) models in quality. We stem this gap to a failure of introspective consistency: AR models agree with their own generations, while DLMs often do not. We define the introspective acceptance rate, which measures whether a model accepts its previously generated tokens. This reveals why AR training has a structural advantage: causal masking and logit shifting implicitly enforce introspective consistency. Motivated by this observation, we introduce Introspective Diffusion Language Model (I-DLM), a paradigm that retains diffusion-style parallel decoding while inheriting the introspective consistency of AR training. I-DLM uses a novel introspective strided decoding (ISD) algorithm, which enables the model to verify previously generated tokens while advancing new ones in the same forward pass. From a systems standpoint, we build I-DLM inference engine on AR-inherited optimizations and further customize it with a stationary-batch scheduler. To the best of our knowledge, I-DLM is the first DLM to match the quality of its same-scale AR counterpart while outperforming prior DLMs in both model quality and practical serving efficiency across 15 benchmarks. It reaches 69.6 on AIME-24 and 45.7 on LiveCodeBench-v6, exceeding LLaDA-2.1-mini (16B) by more than 26 and 15 points, respectively. Beyond quality, I-DLM is designed for the growing demand of large-concurrency serving, delivering about 3x higher throughput than prior state-of-the-art DLMs.",
+      "pdf_url": "https://arxiv.org/pdf/2604.11035v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.11035v1",
+      "published": "2026-04-13",
       "categories": [
-        "cs.IR",
-        "cs.LG"
+        "cs.AI"
       ]
     }
   ]
