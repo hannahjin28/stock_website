@@ -1,6 +1,132 @@
 {
-  "last_updated": "2026-04-16T01:43:44.859097",
+  "last_updated": "2026-04-19T01:43:25.217590",
   "papers": [
+    {
+      "title": "How Do LLMs and VLMs Understand Viewpoint Rotation Without Vision? An Interpretability Study",
+      "authors": [
+        "Zhen Yang",
+        "Ping Jian",
+        "Zhongbin Guo",
+        "Zuming Zhang",
+        "Chengzhi Li",
+        "Yonghong Deng",
+        "Xinyue Zhang",
+        "Wenpeng Lu"
+      ],
+      "abstract": "Over the past year, spatial intelligence has drawn increasing attention. Many prior works study it from the perspective of visual-spatial intelligence, where models have access to visuospatial information from visual inputs. However, in the absence of visual information, whether linguistic intelligence alone is sufficient to endow models with spatial intelligence, and how models perform relevant tasks with text-only inputs still remain unexplored. Therefore, in this paper, we focus on a fundamental and critical capability in spatial intelligence from a linguistic perspective: viewpoint rotation understanding (VRU). Specifically, LLMs and VLMs are asked to infer their final viewpoint and predict the corresponding observation in an environment given textual description of viewpoint rotation and observation over multiple steps. We find that both LLMs and VLMs perform poorly on our proposed dataset while human can easily achieve 100% accuracy, indicating a substantial gap between current model capabilities and the requirements of spatial intelligence. To uncover the underlying mechanisms, we conduct a layer-wise probing analysis and head-wise causal intervention. Our findings reveal that although models encode viewpoint information in the hidden states, they appear to struggle to bind the viewpoint position with corresponding observation, resulting in a hallucination in final layers. Finally, we selectively fine-tune the key attention heads identified by causal intervention to improve VRU performance. Experimental results demonstrate that such selective fine-tuning achieves improved VRU performance while avoiding catastrophic forgetting of generic abilities. Our dataset and code will be released at https://github.com/Young-Zhen/VRU_Interpret .",
+      "pdf_url": "https://arxiv.org/pdf/2604.15294v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.15294v1",
+      "published": "2026-04-16",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ClimateCause: Complex and Implicit Causal Structures in Climate Reports",
+      "authors": [
+        "Liesbeth Allein",
+        "Nataly Pineda-Castañeda",
+        "Andrea Rocci",
+        "Marie-Francine Moens"
+      ],
+      "abstract": "Understanding climate change requires reasoning over complex causal networks. Yet, existing causal discovery datasets predominantly capture explicit, direct causal relations. We introduce ClimateCause, a manually expert-annotated dataset of higher-order causal structures from science-for-policy climate reports, including implicit and nested causality. Cause-effect expressions are normalized and disentangled into individual causal relations to facilitate graph construction, with unique annotations for cause-effect correlation, relation type, and spatiotemporal context. We further demonstrate ClimateCause's value for quantifying readability based on the semantic complexity of causal graphs underlying a statement. Finally, large language model benchmarking on correlation inference and causal chain reasoning highlights the latter as a key challenge.",
+      "pdf_url": "https://arxiv.org/pdf/2604.14856v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.14856v1",
+      "published": "2026-04-16",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "SGA-MCTS: Decoupling Planning from Execution via Training-Free Atomic Experience Retrieval",
+      "authors": [
+        "Xin Xie",
+        "Dongyun Xue",
+        "Wuguannan Yao",
+        "Mingxiao Feng",
+        "Wengang Zhou",
+        "Xiang Qi",
+        "Houqiang Li",
+        "Peng Zhang"
+      ],
+      "abstract": "LLM-powered systems require complex multi-step decision-making abilities to solve real-world tasks, yet current planning approaches face a trade-off between the high latency of inference-time search and the limited generalization of supervised fine-tuning. To address this limitation, we introduce \\textbf{SGA-MCTS}, a framework that casts LLM planning as non-parametric retrieval. Offline, we leverage Monte Carlo Tree Search (MCTS) to explore the solution space and distill high-fidelity trajectories into State-Goal-Action (SGA) atoms. These atoms are de-lexicalized primitives that abstract concrete entities into symbolic slots, preserving reusable causal logic while discarding domain-specific noise. Online, a retrieval-augmented agent employs a hybrid symbolic-semantic mechanism to fetch relevant SGAs and re-ground them into the current context as soft reasoning hints. Empirical results on complex benchmarks demonstrate that this paradigm enables frozen, open-weights models to match the performance of SOTA systems (e.g., GPT-5) without task-specific fine-tuning. By effectively amortizing the heavy computational cost of search, SGA-MCTS achieves System 2 reasoning depth at System 1 inference speeds, rendering autonomous planning both scalable and real-time feasible.",
+      "pdf_url": "https://arxiv.org/pdf/2604.14712v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.14712v1",
+      "published": "2026-04-16",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "CausalDetox: Causal Head Selection and Intervention for Language Model Detoxification",
+      "authors": [
+        "Yian Wang",
+        "Yuen Chen",
+        "Agam Goyal",
+        "Hari Sundaram"
+      ],
+      "abstract": "Large language models (LLMs) frequently generate toxic content, posing significant risks for safe deployment. Current mitigation strategies often degrade generation quality or require costly human annotation. We propose CAUSALDETOX, a framework that identifies and intervenes on the specific attention heads causally responsible for toxic generation. Using the Probability of Necessity and Sufficiency (PNS), we isolate a minimal set of heads that are necessary and sufficient for toxicity. We utilize these components via two complementary strategies: (1) Local Inference-Time Intervention, which constructs dynamic, input-specific steering vectors for context-aware detoxification, and (2) PNS-Guided Fine-Tuning, which permanently unlearns toxic representations. We also introduce PARATOX, a novel benchmark of aligned toxic/non-toxic sentence pairs enabling controlled counterfactual evaluation. Experiments on ToxiGen, ImplicitHate, and ParaDetox show that CAUSALDETOX achieves up to 5.34% greater toxicity reduction compared to baselines while preserving linguistic fluency, and offers a 7x speedup in head selection.",
+      "pdf_url": "https://arxiv.org/pdf/2604.14602v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.14602v1",
+      "published": "2026-04-16",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Geometric Routing Enables Causal Expert Control in Mixture of Experts",
+      "authors": [
+        "Ivan Ternovtsii",
+        "Yurii Bilak"
+      ],
+      "abstract": "Sparse Mixture-of-Experts (MoE) models scale parameters while fixing active computation per token, but the specialization of individual experts remains opaque. In a companion paper we showed that routing topology is quality-neutral: five structurally different configurations converge to statistically equivalent language modeling quality. Here we show that expert identity is nonetheless causally meaningful: individual rank-1 experts are monosemantic by construction, and cosine-similarity routing in a low-dimensional metric space makes their specialization directly inspectable.\n  We present four lines of evidence. First, projecting expert output vectors through the unembedding matrix yields a Semantic Dictionary: 15% of experts are monosemantic specialists spanning 10 categories (temporal, geographic, cardinal, discourse, emotional, financial, military, scientific). Second, routing exhibits a frequency-to-syntax gradient: early layers separate tokens by word frequency, deeper layers by syntactic class (Zipf-confound controls, all $p < 0.001$). Third, causal interventions confirm these labels: steering toward a temporal expert's centroid increases P(temporal) by +321% (median across 44 prompts); suppressing a geographic expert drops P(geographic) by -23%; rewriting an expert's output vector halves target-category probability, and effects compose additively across layers. Fourth, the interventions are not unique to cosine routing: linear routers support comparable steering, but only cosine routing provides geometric transparency -- expert specialization is readable directly from the centroid matrix.\n  MoE expert-level specialization is a first-class interpretability primitive: architecturally monosemantic, causally validated, and controllable at inference with zero overhead.",
+      "pdf_url": "https://arxiv.org/pdf/2604.14434v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.14434v1",
+      "published": "2026-04-15",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Joint Bayesian Inference of Genetic Effect Sizes and PK Parameters in Nonlinear Mixed-Effects Models",
+      "authors": [
+        "Julien Martinelli",
+        "Ibtissem Rebai",
+        "David W. Haas",
+        "Julie Bertrand"
+      ],
+      "abstract": "High-dimensional genetic covariate selection in population pharmacokinetic (PK) models is challenging due to the cohort's restricted size and high correlation among single-nucleotide polymorphisms (SNPs). We propose a fully Bayesian, single-stage framework that jointly infers nonlinear mixed effect model (NLMEM) parameters and SNP effect sizes, providing coherent posterior uncertainty and inclusion summaries within a single model fit. We compare five sparsity-inducing priors -- Spike-and-Slab, Hierarchical Lasso, Regularized Horseshoe, R2--D2, and the $\\ell_1$-ball -- calibrated through effect-size and sparsity targets. In simulations, all priors showed low false-discovery rates around $0$--$0.08$ under the null, and recovered the causal signal under the alternative, with peak $F_1$ scores around $0.8$--$0.85$ under reasonable inclusion cutoffs. Spike-and-Slab was especially attractive because it provides analytical posterior inclusion probabilities directly, while among priors requiring tolerance-based proxy inclusion summaries, the $\\ell_1$-ball combined similarly strong recovery with the most stable behavior across tolerance values. On genetic and PK data from the ANRS 12154 study in 129 Cambodians living with HIV and receiving nevirapine, posterior predictive checks indicated adequate calibration and PK parameter inference remained stable across priors. While the dominant signal was robust across priors, additional candidate SNPs showed only partial agreement in ranking and more prior-sensitive effect-size estimates. These results support Bayesian variable selection within joint NLMEM as a principled approach for pharmacogenetic analyses when uncertainty quantification and regularization are central.",
+      "pdf_url": "https://arxiv.org/pdf/2604.14364v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.14364v1",
+      "published": "2026-04-15",
+      "categories": [
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Awakening Dormant Experts:Counterfactual Routing to Mitigate MoE Hallucinations",
+      "authors": [
+        "Wentao Hu",
+        "Yanbo Zhai",
+        "Xiaohui Hu",
+        "Mingkuan Zhao",
+        "Shanhong yu",
+        "Xue Liu",
+        "Kaidong Yu",
+        "Shuangyong Song",
+        "Xuelong Li"
+      ],
+      "abstract": "Sparse Mixture-of-Experts (MoE) models have achieved remarkable scalability, yet they remain vulnerable to hallucinations, particularly when processing long-tail knowledge. We identify that this fragility stems from static Top-$k$ routing: routers tend to favor high-frequency patterns over rare factual associations. Consequently, ``specialist experts'' possessing critical long-tail knowledge are often assigned low gating scores and remain ``dormant'' -- under-prioritized for specific tokens despite their proven causal importance on other inputs. To address this, we propose Counterfactual Routing (CoR), a training-free inference framework designed to awaken these dormant experts. CoR integrates layer-wise perturbation analysis with the Counterfactual Expert Impact (CEI) metric to dynamically shift computational resources from syntax-dominant to knowledge-intensive layers while maintaining a constant total activation count, effectively retrieving causally decisive experts via virtual ablation. Extensive experiments on TruthfulQA, FACTOR, and TriviaQA demonstrate that CoR improves factual accuracy by 3.1\\% on average without increasing the inference budget, establishing a superior Pareto frontier compared to static scaling strategies.",
+      "pdf_url": "https://arxiv.org/pdf/2604.14246v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.14246v1",
+      "published": "2026-04-15",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Right Regions, Wrong Labels: Semantic Label Flips in Segmentation under Correlation Shift",
       "authors": [
@@ -49,134 +175,6 @@
         "stat.ME",
         "stat.AP",
         "stat.ML"
-      ]
-    },
-    {
-      "title": "Causal Diffusion Models for Counterfactual Outcome Distributions in Longitudinal Data",
-      "authors": [
-        "Farbod Alinezhad",
-        "Jianfei Cao",
-        "Gary J. Young",
-        "Brady Post"
-      ],
-      "abstract": "Predicting counterfactual outcomes in longitudinal data, where sequential treatment decisions heavily depend on evolving patient states, is critical yet notoriously challenging due to complex time-dependent confounding and inadequate uncertainty quantification in existing methods. We introduce the Causal Diffusion Model (CDM), the first denoising diffusion probabilistic approach explicitly designed to generate full probabilistic distributions of counterfactual outcomes under sequential interventions. CDM employs a novel residual denoising architecture with relational self-attention, capturing intricate temporal dependencies and multimodal outcome trajectories without requiring explicit adjustments (e.g., inverse-probability weighting or adversarial balancing) for confounding. In rigorous evaluation on a pharmacokinetic-pharmacodynamic tumor-growth simulator widely adopted in prior work, CDM consistently outperforms state-of-the-art longitudinal causal inference methods, achieving a 15-30% relative improvement in distributional accuracy (1-Wasserstein distance) while maintaining competitive or superior point-estimate accuracy (RMSE) under high-confounding regimes. By unifying uncertainty quantification and robust counterfactual prediction in complex, sequentially confounded settings, without tailored deconfounding, CDM offers a flexible, high-impact tool for decision support in medicine, policy evaluation, and other longitudinal domains.",
-      "pdf_url": "https://arxiv.org/pdf/2604.12992v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.12992v1",
-      "published": "2026-04-14",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "On causal inference with marked point process data",
-      "authors": [
-        "Pål Christie Ryalen",
-        "Mats Julius Stensrud",
-        "Kjetil Røysland"
-      ],
-      "abstract": "We define dynamic treatment regimes and associated potential outcomes for data described by marked point processes (MPPs). These definitions motivate MPP analogues of the commonly used consistency, exchangeability, and positivity conditions that are sufficient for identifying effects in MPP data structures. The conditions are formulated based on martingale theory, which allows us to derive explicit identifying assumptions for data described by stochastic processes. The definitions and conditions align with well-established discrete-time results in important special cases. Thus, this work bridges the large literatures on survival (event history) analysis with counting processes in continuous time and causal inference with variables in discrete-time. After formulating a set of identification conditions, we derive and characterize marginal g-formulas. The g-formulas are generally different from those studied in related works, though they coincide in important special cases. We relate our findings to previous work on causal inference with (counting) processes, the classical survival literature, and the discrete-time causal inference literature.",
-      "pdf_url": "https://arxiv.org/pdf/2604.12977v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.12977v1",
-      "published": "2026-04-14",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Fundamental Limits and Optimal Methods for Sharp Analytical Causal Bounds in Instrumental Variable Models",
-      "authors": [
-        "Arefe Boushehrian",
-        "Mohammad Reza Badri",
-        "Sina Akbari",
-        "Negar Kiyavash"
-      ],
-      "abstract": "Bounding causal effects analytically, rather than numerically, is appealing for its interpretability and conceptual clarity. Existing sharp methods rely on optimization-based approaches such as the Balke-Pearl framework, whose computational complexity grows rapidly. An alternative line of work derives bounds heuristically using probability laws and generic inequalities, and some recent papers have claimed or conjectured that this approach can yield sharp analytical bounds with substantially lower complexity. In this paper, we show that this perceived advantage is illusory. In particular, in a discrete instrumental variable setting, we show that any sharp analytical bound for the average treatment effect must be expressible as a maximum (minimum) over a collection of linear terms whose cardinality grows exponentially in the number of values taken by the outcome. In parallel, we show that the number of instrumental variable inequalities itself also grows exponentially. Consequently, bounds and inequalities expressed using only polynomially many such terms cannot be sharp. As a constructive complement, the paper is accompanied by codes implemented in python and R to derive sharp analytical bounds and sharp inequalities with optimal efficiency, matching the lower bounds proven in this paper. These codes are available online.",
-      "pdf_url": "https://arxiv.org/pdf/2604.12802v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.12802v1",
-      "published": "2026-04-14",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "MISID: A Multimodal Multi-turn Dataset for Complex Intent Recognition in Strategic Deception Games",
-      "authors": [
-        "Shufang Lin",
-        "Muyang Chen",
-        "Xiabing Zhou",
-        "Rongrong Zhang",
-        "Dayou Zhang",
-        "Fangxin Wang"
-      ],
-      "abstract": "Understanding human intent in complex multi-turn interactions remains a fundamental challenge in human-computer interaction and behavioral analysis. While existing intent recognition datasets focus mainly on single utterances or simple dialogues, real-world scenarios often involve sophisticated strategic interactions where participants must maintain complex deceptive narratives over extended periods. To address this gap, we introduce MISID, a comprehensive multimodal, multi-turn, and multi-participant benchmark for intent recognition. Sourced from high-stakes social strategy games, MISID features a fine-grained, two-tier multi-dimensional annotation scheme tailored for long-context discourse analysis and evidence-based causal tracking. Our systematic evaluation of state-of-the-art Multimodal Large Language Models (MLLMs) on MISID reveals critical deficiencies in complex scenarios, including text-prior visual hallucination, impaired cross-modal synergy, and limited capacity in chaining causal cues. Consequently, we propose FRACTAM as a baseline framework. Using a ``Decouple-Anchor-Reason'' paradigm, FRACTAM reduces text bias by extracting pure unimodal factual representations, employs two-stage retrieval for long-range factual anchoring, and constructs explicit cross-modal evidence chains. Extensive experiments demonstrate that FRACTAM enhances mainstream models' performance in complex strategic tasks, improving hidden intent detection and inference while maintaining robust perceptual accuracy. Our dataset is available at https://naislab.cn/datasets/MISID.",
-      "pdf_url": "https://arxiv.org/pdf/2604.12700v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.12700v1",
-      "published": "2026-04-14",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Causal inference for spatiotemporal point processes in the presence of outcome spillover and carryover",
-      "authors": [
-        "Conor Kresin",
-        "Duncan A. Clark",
-        "Louis Davis",
-        "Martin Hazelton"
-      ],
-      "abstract": "We develop a framework for causal inference with continuous spatiotemporal point-process outcomes under cell-level interventions and outcome spillover. Potential outcomes are indexed by full treatment allocations, and the observed post-treatment process is represented as an unlabelled superposition of latent control and treatment components. On the observed design support, expected post-treatment event counts in any spacetime region under a given treatment allocation are identified under consistency, exchangeability, and positivity; off-support contrasts are identified relative to a regime-stable structural point-process model. Estimation is likelihood-based and implemented with stochastic EM. To understand when this is feasible, we analyse a predictable blockwise hard-EM surrogate and show nonasymptotic contraction of estimation error to a statistical floor governed by locally ambiguous regions. This yields plug-in guarantees for cell-level and global causal functionals, and clarifies the additional array conditions needed for unnormalised growing-window contrasts. The framework covers history dependent spatiotemporal point processes including Poisson and Hawkes models, with applications to settings such as epidemiology, seismology, and finance. We provide an application assessing the causal effect of injecting wastewater into the ground on seismic activity in Oklahoma.",
-      "pdf_url": "https://arxiv.org/pdf/2604.12124v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.12124v1",
-      "published": "2026-04-13",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Online Reasoning Video Object Segmentation",
-      "authors": [
-        "Jinyuan Liu",
-        "Yang Wang",
-        "Zeyu Zhao",
-        "Weixin Li",
-        "Song Wang",
-        "Ruize Han"
-      ],
-      "abstract": "Reasoning video object segmentation predicts pixel-level masks in videos from natural-language queries that may involve implicit and temporally grounded references. However, existing methods are developed and evaluated in an offline regime, where the entire video is available at inference time and future frames can be exploited for retrospective disambiguation, deviating from real-world deployments that require strictly causal, frame-by-frame decisions. We study Online Reasoning Video Object Segmentation (ORVOS), where models must incrementally interpret queries using only past and current frames without revisiting previous predictions, while handling referent shifts as events unfold. To support evaluation, we introduce ORVOSB, a benchmark with frame-level causal annotations and referent-shift labels, comprising 210 videos, 12,907 annotated frames, and 512 queries across five reasoning categories. We further propose a baseline with continually-updated segmentation prompts and a structured temporal token reservoir for long-horizon reasoning under bounded computation. Experiments show that existing methods struggle under strict causality and referent shifts, while our baseline establishes a strong foundation for future research.",
-      "pdf_url": "https://arxiv.org/pdf/2604.11411v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.11411v1",
-      "published": "2026-04-13",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Introspective Diffusion Language Models",
-      "authors": [
-        "Yifan Yu",
-        "Yuqing Jian",
-        "Junxiong Wang",
-        "Zhongzhu Zhou",
-        "Donglin Zhuang",
-        "Xinyu Fang",
-        "Sri Yanamandra",
-        "Xiaoxia Wu",
-        "Qingyang Wu",
-        "Shuaiwen Leon Song",
-        "Tri Dao",
-        "Ben Athiwaratkun",
-        "James Zou",
-        "Fan Lai",
-        "Chenfeng Xu"
-      ],
-      "abstract": "Diffusion language models promise parallel generation, yet still lag behind autoregressive (AR) models in quality. We stem this gap to a failure of introspective consistency: AR models agree with their own generations, while DLMs often do not. We define the introspective acceptance rate, which measures whether a model accepts its previously generated tokens. This reveals why AR training has a structural advantage: causal masking and logit shifting implicitly enforce introspective consistency. Motivated by this observation, we introduce Introspective Diffusion Language Model (I-DLM), a paradigm that retains diffusion-style parallel decoding while inheriting the introspective consistency of AR training. I-DLM uses a novel introspective strided decoding (ISD) algorithm, which enables the model to verify previously generated tokens while advancing new ones in the same forward pass. From a systems standpoint, we build I-DLM inference engine on AR-inherited optimizations and further customize it with a stationary-batch scheduler. To the best of our knowledge, I-DLM is the first DLM to match the quality of its same-scale AR counterpart while outperforming prior DLMs in both model quality and practical serving efficiency across 15 benchmarks. It reaches 69.6 on AIME-24 and 45.7 on LiveCodeBench-v6, exceeding LLaDA-2.1-mini (16B) by more than 26 and 15 points, respectively. Beyond quality, I-DLM is designed for the growing demand of large-concurrency serving, delivering about 3x higher throughput than prior state-of-the-art DLMs.",
-      "pdf_url": "https://arxiv.org/pdf/2604.11035v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.11035v1",
-      "published": "2026-04-13",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]
