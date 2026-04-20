@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-19T01:43:25.217590",
+  "last_updated": "2026-04-20T01:45:26.852159",
   "papers": [
     {
       "title": "How Do LLMs and VLMs Understand Viewpoint Rotation Without Vision? An Interpretability Study",
@@ -18,6 +18,21 @@
       "arxiv_url": "http://arxiv.org/abs/2604.15294v1",
       "published": "2026-04-16",
       "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference",
+      "authors": [
+        "Ranjith Chodavarapu",
+        "Lei Xu"
+      ],
+      "abstract": "KV caching is a ubiquitous optimization in autoregressive transformer inference, long presumed to be numerically equivalent to cache-free computation. This assumption fails under standard FP16 precision: cache-ON and cache-OFF execution paths employ different floating-point accumulation orderings which, due to FP16 non-associativity, produce a deterministic divergence in decoded token sequences. Across three open-weight models (LLaMA-2-7B, Mistral-7B-v0.3, Gemma-2-2B) evaluated on GSM8K, we observe a 100\\% token divergence rate across all sampling strategies, including greedy decoding, which rules out sampling randomness as a cause, and also with cache-ON yielding higher accuracy in 8 of 9 conditions, where the accuracy difference serves as an indicator that the divergence direction is systematic rather than random. Controlled FP32 falsification reduces divergence by eight orders of magnitude, eliminates token flips, and drops the flip rate to exactly 0.0\\%, confirming FP16 non-associativity as the sole causal driver. Layer-wise drift profiling reveals architecturally predictable propagation patterns: models using Grouped-Query Attention exhibit sharp divergence at the first layer, while Gemma's larger head dimension and sliding window attention produce uniform accumulation across all layers. Finally, activation patching of the entire residual stream fails to recover the cache-free trajectory, localizing the causal variable to the stateful KV cache. These findings establish that FP16 KV cache inference is fundamentally non-equivalent to recomputation and provide a mechanistic framework for understanding numerical instability in modern LLM inference systems.",
+      "pdf_url": "https://arxiv.org/pdf/2604.15409v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.15409v1",
+      "published": "2026-04-16",
+      "categories": [
+        "cs.LG",
         "cs.AI"
       ]
     },
@@ -159,22 +174,6 @@
       "categories": [
         "cs.LG",
         "cs.GR"
-      ]
-    },
-    {
-      "title": "Nonparametric efficient inference for network quantile causal effects under partial interference",
-      "authors": [
-        "Chao Cheng",
-        "Fan Li"
-      ],
-      "abstract": "Interference arises when the treatment assigned to one individual affects the outcomes of other individuals. Commonly, individuals are naturally grouped into clusters, and interference occurs only among individuals within the same cluster, a setting referred to as partial interference. We study network causal effects on outcome quantiles in the presence of partial interference. We develop a general nonparametric efficiency theory for estimating these network quantile causal effects, which leads to a nonparametrically efficient estimator. The proposed estimator is consistent and asymptotically normal with parametric convergence rates, while allowing for flexible, data-adaptive estimation of complex nuisance functions. We leverage a three-way cross-fitting procedure that avoids direct estimation of the conditional outcome distribution. Simulations demonstrate adequate finite-sample performance of the proposed estimators, and we apply the methods to a clustered observational study.",
-      "pdf_url": "https://arxiv.org/pdf/2604.13008v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.13008v1",
-      "published": "2026-04-14",
-      "categories": [
-        "stat.ME",
-        "stat.AP",
-        "stat.ML"
       ]
     }
   ]
