@@ -1,179 +1,220 @@
 {
-  "last_updated": "2026-04-20T01:45:26.852159",
+  "last_updated": "2026-04-23T01:46:03.336831",
   "papers": [
     {
-      "title": "How Do LLMs and VLMs Understand Viewpoint Rotation Without Vision? An Interpretability Study",
+      "title": "Efficient Symbolic Computations for Identifying Causal Effects",
       "authors": [
-        "Zhen Yang",
-        "Ping Jian",
-        "Zhongbin Guo",
-        "Zuming Zhang",
-        "Chengzhi Li",
-        "Yonghong Deng",
-        "Xinyue Zhang",
-        "Wenpeng Lu"
+        "Benjamin Hollering",
+        "Pratik Misra",
+        "Nils Sturma"
       ],
-      "abstract": "Over the past year, spatial intelligence has drawn increasing attention. Many prior works study it from the perspective of visual-spatial intelligence, where models have access to visuospatial information from visual inputs. However, in the absence of visual information, whether linguistic intelligence alone is sufficient to endow models with spatial intelligence, and how models perform relevant tasks with text-only inputs still remain unexplored. Therefore, in this paper, we focus on a fundamental and critical capability in spatial intelligence from a linguistic perspective: viewpoint rotation understanding (VRU). Specifically, LLMs and VLMs are asked to infer their final viewpoint and predict the corresponding observation in an environment given textual description of viewpoint rotation and observation over multiple steps. We find that both LLMs and VLMs perform poorly on our proposed dataset while human can easily achieve 100% accuracy, indicating a substantial gap between current model capabilities and the requirements of spatial intelligence. To uncover the underlying mechanisms, we conduct a layer-wise probing analysis and head-wise causal intervention. Our findings reveal that although models encode viewpoint information in the hidden states, they appear to struggle to bind the viewpoint position with corresponding observation, resulting in a hallucination in final layers. Finally, we selectively fine-tune the key attention heads identified by causal intervention to improve VRU performance. Experimental results demonstrate that such selective fine-tuning achieves improved VRU performance while avoiding catastrophic forgetting of generic abilities. Our dataset and code will be released at https://github.com/Young-Zhen/VRU_Interpret .",
-      "pdf_url": "https://arxiv.org/pdf/2604.15294v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.15294v1",
-      "published": "2026-04-16",
+      "abstract": "Determining identifiability of causal effects from observational data under latent confounding is a central challenge in causal inference. For linear structural causal models, identifiability of causal effects is decidable through symbolic computation. However, standard approaches based on Gröbner bases become computationally infeasible beyond small settings due to their doubly exponential complexity. In this work, we study how to practically use symbolic computation for deciding rational identifiability. In particular, we present an efficient algorithm that provably finds the lowest degree identifying formulas. For a causal effect of interest, if there exists an identification formula of a prespecified maximal degree, our algorithm returns such a formula in quasi-polynomial time.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20516v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.20516v1",
+      "published": "2026-04-22",
       "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Dual Causal Inference: Integrating Backdoor Adjustment and Instrumental Variable Learning for Medical VQA",
+      "authors": [
+        "Zibo Xu",
+        "Qiang Li",
+        "Ke Lu",
+        "Jin Wang",
+        "Weizhi Nie",
+        "Yuting Su"
+      ],
+      "abstract": "Medical Visual Question Answering (MedVQA) aims to generate clinically reliable answers conditioned on complex medical images and questions. However, existing methods often overfit to superficial cross-modal correlations, neglecting the intrinsic biases embedded in multimodal medical data. Consequently, models become vulnerable to cross-modal confounding effects, severely hindering their ability to provide trustworthy diagnostic reasoning. To address this limitation, we propose a novel Dual Causal Inference (DCI) framework for MedVQA. To the best of our knowledge, DCI is the first unified architecture that integrates Backdoor Adjustment (BDA) and Instrumental Variable (IV) learning to jointly tackle both observable and unobserved confounders. Specifically, we formulate a Structural Causal Model (SCM) where observable cross-modal biases (e.g., frequent visual and textual co-occurrences) are mitigated via BDA, while unobserved confounders are compensated using an IV learned from a shared latent space. To guarantee the validity of the IV, we design mutual information constraints that maximize its dependence on the fused multimodal representations while minimizing its associations with the unobserved confounders and target answers. Through this dual mechanism, DCI extracts deconfounded representations that capture genuine causal relationships. Extensive experiments on four benchmark datasets, SLAKE, SLAKE-CP, VQA-RAD, and PathVQA, demonstrate that our method consistently outperforms existing approaches, particularly in out-of-distribution (OOD) generalization. Furthermore, qualitative analyses confirm that DCI significantly enhances the interpretability and robustness of cross-modal reasoning by explicitly disentangling true causal effects from spurious cross-modal shortcuts.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20306v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.20306v1",
+      "published": "2026-04-22",
+      "categories": [
+        "cs.CV",
         "cs.AI"
       ]
     },
     {
-      "title": "The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference",
+      "title": "X-Cache: Cross-Chunk Block Caching for Few-Step Autoregressive World Models Inference",
       "authors": [
-        "Ranjith Chodavarapu",
-        "Lei Xu"
+        "Yixiao Zeng",
+        "Jianlei Zheng",
+        "Chaoda Zheng",
+        "Shijia Chen",
+        "Mingdian Liu",
+        "Tongping Liu",
+        "Tengwei Luo",
+        "Yu Zhang",
+        "Boyang Wang",
+        "Linkun Xu",
+        "Siyuan Lu",
+        "Bo Tian",
+        "Xianming Liu"
       ],
-      "abstract": "KV caching is a ubiquitous optimization in autoregressive transformer inference, long presumed to be numerically equivalent to cache-free computation. This assumption fails under standard FP16 precision: cache-ON and cache-OFF execution paths employ different floating-point accumulation orderings which, due to FP16 non-associativity, produce a deterministic divergence in decoded token sequences. Across three open-weight models (LLaMA-2-7B, Mistral-7B-v0.3, Gemma-2-2B) evaluated on GSM8K, we observe a 100\\% token divergence rate across all sampling strategies, including greedy decoding, which rules out sampling randomness as a cause, and also with cache-ON yielding higher accuracy in 8 of 9 conditions, where the accuracy difference serves as an indicator that the divergence direction is systematic rather than random. Controlled FP32 falsification reduces divergence by eight orders of magnitude, eliminates token flips, and drops the flip rate to exactly 0.0\\%, confirming FP16 non-associativity as the sole causal driver. Layer-wise drift profiling reveals architecturally predictable propagation patterns: models using Grouped-Query Attention exhibit sharp divergence at the first layer, while Gemma's larger head dimension and sliding window attention produce uniform accumulation across all layers. Finally, activation patching of the entire residual stream fails to recover the cache-free trajectory, localizing the causal variable to the stateful KV cache. These findings establish that FP16 KV cache inference is fundamentally non-equivalent to recomputation and provide a mechanistic framework for understanding numerical instability in modern LLM inference systems.",
-      "pdf_url": "https://arxiv.org/pdf/2604.15409v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.15409v1",
-      "published": "2026-04-16",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "ClimateCause: Complex and Implicit Causal Structures in Climate Reports",
-      "authors": [
-        "Liesbeth Allein",
-        "Nataly Pineda-Castañeda",
-        "Andrea Rocci",
-        "Marie-Francine Moens"
-      ],
-      "abstract": "Understanding climate change requires reasoning over complex causal networks. Yet, existing causal discovery datasets predominantly capture explicit, direct causal relations. We introduce ClimateCause, a manually expert-annotated dataset of higher-order causal structures from science-for-policy climate reports, including implicit and nested causality. Cause-effect expressions are normalized and disentangled into individual causal relations to facilitate graph construction, with unique annotations for cause-effect correlation, relation type, and spatiotemporal context. We further demonstrate ClimateCause's value for quantifying readability based on the semantic complexity of causal graphs underlying a statement. Finally, large language model benchmarking on correlation inference and causal chain reasoning highlights the latter as a key challenge.",
-      "pdf_url": "https://arxiv.org/pdf/2604.14856v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.14856v1",
-      "published": "2026-04-16",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "SGA-MCTS: Decoupling Planning from Execution via Training-Free Atomic Experience Retrieval",
-      "authors": [
-        "Xin Xie",
-        "Dongyun Xue",
-        "Wuguannan Yao",
-        "Mingxiao Feng",
-        "Wengang Zhou",
-        "Xiang Qi",
-        "Houqiang Li",
-        "Peng Zhang"
-      ],
-      "abstract": "LLM-powered systems require complex multi-step decision-making abilities to solve real-world tasks, yet current planning approaches face a trade-off between the high latency of inference-time search and the limited generalization of supervised fine-tuning. To address this limitation, we introduce \\textbf{SGA-MCTS}, a framework that casts LLM planning as non-parametric retrieval. Offline, we leverage Monte Carlo Tree Search (MCTS) to explore the solution space and distill high-fidelity trajectories into State-Goal-Action (SGA) atoms. These atoms are de-lexicalized primitives that abstract concrete entities into symbolic slots, preserving reusable causal logic while discarding domain-specific noise. Online, a retrieval-augmented agent employs a hybrid symbolic-semantic mechanism to fetch relevant SGAs and re-ground them into the current context as soft reasoning hints. Empirical results on complex benchmarks demonstrate that this paradigm enables frozen, open-weights models to match the performance of SOTA systems (e.g., GPT-5) without task-specific fine-tuning. By effectively amortizing the heavy computational cost of search, SGA-MCTS achieves System 2 reasoning depth at System 1 inference speeds, rendering autonomous planning both scalable and real-time feasible.",
-      "pdf_url": "https://arxiv.org/pdf/2604.14712v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.14712v1",
-      "published": "2026-04-16",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CausalDetox: Causal Head Selection and Intervention for Language Model Detoxification",
-      "authors": [
-        "Yian Wang",
-        "Yuen Chen",
-        "Agam Goyal",
-        "Hari Sundaram"
-      ],
-      "abstract": "Large language models (LLMs) frequently generate toxic content, posing significant risks for safe deployment. Current mitigation strategies often degrade generation quality or require costly human annotation. We propose CAUSALDETOX, a framework that identifies and intervenes on the specific attention heads causally responsible for toxic generation. Using the Probability of Necessity and Sufficiency (PNS), we isolate a minimal set of heads that are necessary and sufficient for toxicity. We utilize these components via two complementary strategies: (1) Local Inference-Time Intervention, which constructs dynamic, input-specific steering vectors for context-aware detoxification, and (2) PNS-Guided Fine-Tuning, which permanently unlearns toxic representations. We also introduce PARATOX, a novel benchmark of aligned toxic/non-toxic sentence pairs enabling controlled counterfactual evaluation. Experiments on ToxiGen, ImplicitHate, and ParaDetox show that CAUSALDETOX achieves up to 5.34% greater toxicity reduction compared to baselines while preserving linguistic fluency, and offers a 7x speedup in head selection.",
-      "pdf_url": "https://arxiv.org/pdf/2604.14602v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.14602v1",
-      "published": "2026-04-16",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Geometric Routing Enables Causal Expert Control in Mixture of Experts",
-      "authors": [
-        "Ivan Ternovtsii",
-        "Yurii Bilak"
-      ],
-      "abstract": "Sparse Mixture-of-Experts (MoE) models scale parameters while fixing active computation per token, but the specialization of individual experts remains opaque. In a companion paper we showed that routing topology is quality-neutral: five structurally different configurations converge to statistically equivalent language modeling quality. Here we show that expert identity is nonetheless causally meaningful: individual rank-1 experts are monosemantic by construction, and cosine-similarity routing in a low-dimensional metric space makes their specialization directly inspectable.\n  We present four lines of evidence. First, projecting expert output vectors through the unembedding matrix yields a Semantic Dictionary: 15% of experts are monosemantic specialists spanning 10 categories (temporal, geographic, cardinal, discourse, emotional, financial, military, scientific). Second, routing exhibits a frequency-to-syntax gradient: early layers separate tokens by word frequency, deeper layers by syntactic class (Zipf-confound controls, all $p < 0.001$). Third, causal interventions confirm these labels: steering toward a temporal expert's centroid increases P(temporal) by +321% (median across 44 prompts); suppressing a geographic expert drops P(geographic) by -23%; rewriting an expert's output vector halves target-category probability, and effects compose additively across layers. Fourth, the interventions are not unique to cosine routing: linear routers support comparable steering, but only cosine routing provides geometric transparency -- expert specialization is readable directly from the centroid matrix.\n  MoE expert-level specialization is a first-class interpretability primitive: architecturally monosemantic, causally validated, and controllable at inference with zero overhead.",
-      "pdf_url": "https://arxiv.org/pdf/2604.14434v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.14434v1",
-      "published": "2026-04-15",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Joint Bayesian Inference of Genetic Effect Sizes and PK Parameters in Nonlinear Mixed-Effects Models",
-      "authors": [
-        "Julien Martinelli",
-        "Ibtissem Rebai",
-        "David W. Haas",
-        "Julie Bertrand"
-      ],
-      "abstract": "High-dimensional genetic covariate selection in population pharmacokinetic (PK) models is challenging due to the cohort's restricted size and high correlation among single-nucleotide polymorphisms (SNPs). We propose a fully Bayesian, single-stage framework that jointly infers nonlinear mixed effect model (NLMEM) parameters and SNP effect sizes, providing coherent posterior uncertainty and inclusion summaries within a single model fit. We compare five sparsity-inducing priors -- Spike-and-Slab, Hierarchical Lasso, Regularized Horseshoe, R2--D2, and the $\\ell_1$-ball -- calibrated through effect-size and sparsity targets. In simulations, all priors showed low false-discovery rates around $0$--$0.08$ under the null, and recovered the causal signal under the alternative, with peak $F_1$ scores around $0.8$--$0.85$ under reasonable inclusion cutoffs. Spike-and-Slab was especially attractive because it provides analytical posterior inclusion probabilities directly, while among priors requiring tolerance-based proxy inclusion summaries, the $\\ell_1$-ball combined similarly strong recovery with the most stable behavior across tolerance values. On genetic and PK data from the ANRS 12154 study in 129 Cambodians living with HIV and receiving nevirapine, posterior predictive checks indicated adequate calibration and PK parameter inference remained stable across priors. While the dominant signal was robust across priors, additional candidate SNPs showed only partial agreement in ranking and more prior-sensitive effect-size estimates. These results support Bayesian variable selection within joint NLMEM as a principled approach for pharmacogenetic analyses when uncertainty quantification and regularization are central.",
-      "pdf_url": "https://arxiv.org/pdf/2604.14364v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.14364v1",
-      "published": "2026-04-15",
-      "categories": [
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Awakening Dormant Experts:Counterfactual Routing to Mitigate MoE Hallucinations",
-      "authors": [
-        "Wentao Hu",
-        "Yanbo Zhai",
-        "Xiaohui Hu",
-        "Mingkuan Zhao",
-        "Shanhong yu",
-        "Xue Liu",
-        "Kaidong Yu",
-        "Shuangyong Song",
-        "Xuelong Li"
-      ],
-      "abstract": "Sparse Mixture-of-Experts (MoE) models have achieved remarkable scalability, yet they remain vulnerable to hallucinations, particularly when processing long-tail knowledge. We identify that this fragility stems from static Top-$k$ routing: routers tend to favor high-frequency patterns over rare factual associations. Consequently, ``specialist experts'' possessing critical long-tail knowledge are often assigned low gating scores and remain ``dormant'' -- under-prioritized for specific tokens despite their proven causal importance on other inputs. To address this, we propose Counterfactual Routing (CoR), a training-free inference framework designed to awaken these dormant experts. CoR integrates layer-wise perturbation analysis with the Counterfactual Expert Impact (CEI) metric to dynamically shift computational resources from syntax-dominant to knowledge-intensive layers while maintaining a constant total activation count, effectively retrieving causally decisive experts via virtual ablation. Extensive experiments on TruthfulQA, FACTOR, and TriviaQA demonstrate that CoR improves factual accuracy by 3.1\\% on average without increasing the inference budget, establishing a superior Pareto frontier compared to static scaling strategies.",
-      "pdf_url": "https://arxiv.org/pdf/2604.14246v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.14246v1",
-      "published": "2026-04-15",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Right Regions, Wrong Labels: Semantic Label Flips in Segmentation under Correlation Shift",
-      "authors": [
-        "Akshit Achara",
-        "Yovin Yathathugoda",
-        "Nick Byrne",
-        "Michela Antonelli",
-        "Esther Puyol Anton",
-        "Alexander Hammers",
-        "Andrew P. King"
-      ],
-      "abstract": "The robustness of machine learning models can be compromised by spurious correlations between non-causal features in the input data and target labels. A common way to test for such correlations is to train on data where the label is strongly tied to some non-causal cue, then evaluate on examples where that tie no longer holds. This idea is well established for classification tasks, but for semantic segmentation the specific failure modes are not well understood. We show that a model may achieve reasonable overlap while assigning the wrong semantic label, swapping one plausible foreground class for another, even when object boundaries are largely correct. We focus on this semantic label-flip behaviour and quantify it with a simple diagnostic (Flip) that counts how often ground truth foreground pixels are assigned the wrong foreground identity while remaining predicted as foreground. In a setting where category and scene are correlated during training, increasing the correlation consistently widens the gap between common and rare test conditions and increases these within-object label swaps on counterfactual groups. Overall, our results motivate assessing segmentation robustness under distribution shift beyond overlap by decomposing foreground errors into correct pixels, flipped-identity pixels, and missed-to-background pixels. We also propose an entropy-based, ground truth label-free `flip-risk' score, which is computed from foreground identity uncertainty, and show that it can flag flip-prone cases at inference time. Code is available at https://github.com/acharaakshit/label-flips.",
-      "pdf_url": "https://arxiv.org/pdf/2604.13326v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.13326v1",
-      "published": "2026-04-14",
+      "abstract": "Real-time world simulation is becoming a key infrastructure for scalable evaluation and online reinforcement learning of autonomous driving systems. Recent driving world models built on autoregressive video diffusion achieve high-fidelity, controllable multi-camera generation, but their inference cost remains a bottleneck for interactive deployment. However, existing diffusion caching methods are designed for offline video generation with multiple denoising steps, and do not transfer to this scenario. Few-step distilled models have no inter-step redundancy left for these methods to reuse, and sequence-level parallelization techniques require future conditioning that closed-loop interactive generation does not provide. We present X-Cache, a training-free acceleration method that caches along a different axis: across consecutive generation chunks rather than across denoising steps. X-Cache maintains per-block residual caches that persist across chunks, and applies a dual-metric gating mechanism over a structure- and action-aware block-input fingerprint to independently decide whether each block should recompute or reuse its cached residual. To prevent approximation errors from permanently contaminating the autoregressive KV cache, X-Cache identifies KV update chunks (the forward passes that write clean keys and values into the persistent cache) and unconditionally forces full computation on these chunks, cutting off error propagation. We implement X-Cache on X-world, a production multi-camera action-conditioned driving world model built on multi-block causal DiT with few-step denoising and rolling KV cache. X-Cache achieves 71% block skip rate with 2.6x wall-clock speedup while maintaining minimum degradation.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20289v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.20289v1",
+      "published": "2026-04-22",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "Counterfactual Peptide Editing for Causal TCR--pMHC Binding Inference",
+      "title": "Recent Advances in Causal Analysis of the Stochastic Frontier Model",
       "authors": [
-        "Sanjar Khudoyberdiev",
-        "Arman Bekov"
+        "Samuele Centorrino",
+        "Christopher F. Parmeter"
       ],
-      "abstract": "Neural models for TCR-pMHC binding prediction are susceptible to shortcut learning: they exploit spurious correlations in training data -- such as peptide length bias or V-gene co-occurrence -- rather than the physical binding interface. This renders predictions brittle under family-held-out and distance-aware evaluation, where such shortcuts do not transfer. We introduce \\emph{Counterfactual Invariant Prediction} (CIP), a training framework that generates biologically constrained counterfactual peptide edits and enforces invariance to edits at non-anchor positions while amplifying sensitivity at MHC anchor residues. CIP augments the base classifier with two auxiliary objectives: (1) an invariance loss penalizing prediction changes under conservative non-anchor substitutions, and (2) a contrastive loss encouraging large prediction changes under anchor-position disruptions. Evaluated on a curated VDJdb-IEDB benchmark under family-held-out, distance-aware, and random splits, CIP achieves AUROC 0.831 and counterfactual consistency (CFC) 0.724 under the challenging family-held-out protocol -- a 39.7\\% reduction in shortcut index relative to the unconstrained baseline. Ablations confirm that anchor-aware edit generation is the dominant driver of OOD gains, providing a practical recipe for causally-grounded TCR specificity modeling.",
-      "pdf_url": "https://arxiv.org/pdf/2604.13256v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.13256v1",
-      "published": "2026-04-14",
+      "abstract": "Causal inference methods (instrumental variables, difference-in-differences, regression discontinuity, etc.) are primary tools used across many social science milieus. One area where their application has lagged however, is in the study of productivity and efficiency. A main reason for this is that the nature of the stochastic frontier model does not immediately lend itself to a causal framework when interest hinges on an error component of the model. This paper reviews the nascent literature on attempts to merge the stochastic frontier literature with causal inference methods. We discuss modeling approaches and empirical issues that are likely to be relevant for applied researchers in this area. This review shows how this model can be easily put within the confines of causal analysis, reviews existing work that has already made inroads in this area, addresses challenges that have yet to be met and discusses core findings.",
+      "pdf_url": "https://arxiv.org/pdf/2604.19693v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.19693v1",
+      "published": "2026-04-21",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "Causality in Liquid Water as a Hallmark of Emergent Glassy Dynamics",
+      "authors": [
+        "Leon Huet",
+        "Vittorio Del Tatto",
+        "Debarshi Banerjee",
+        "Alessandro Laio",
+        "Ali A. Hassanali"
+      ],
+      "abstract": "In molecular liquids such as water, time-delayed influences between microscopic or mesoscopic variables are typically probed using time-correlation functions, which are symmetric under detailed balance and therefore blind to dynamical asymmetries. Here, we characterize waters dynamics using a causal inference metric that captures asymmetric couplings between collective variables. Analyzing equilibrium molecular dynamics simulations at ambient conditions and in the high-density liquid (HDL) regime of supercooled water, we uncover pronounced asymmetries in the couplings between orientational and translational degrees of freedom across multiple time and length scales. At room temperature, rotational modes remain largely decoupled from translations. In contrast, in the supercooled HDL regime, translational motions emerge as the primary drivers of the dynamics, suggesting facilitation-like relaxation mechanisms characteristic of glassy systems. These results reveal a qualitative reorganization of dynamical couplings across thermodynamic conditions, implying that molecular liquids at thermal equilibrium can exhibit an emergent directionality in their fluctuation couplings. As a consequence, our analysis reveals that external perturbations acting on specific degrees of freedom can induce a stronger arrow of time in the causal relations between translational and orientational modes.",
+      "pdf_url": "https://arxiv.org/pdf/2604.19491v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.19491v1",
+      "published": "2026-04-21",
+      "categories": [
+        "physics.chem-ph"
+      ]
+    },
+    {
+      "title": "Stochastic Intervention",
+      "authors": [
+        "Rohit Chaudhuri"
+      ],
+      "abstract": "This article discusses the application of stochastic intervention to find the optimal treatment distribution yielding a high value of expected potential outcome under the setting where the number of treatments is allowed to vary with $n$. The primary motivation is to obtain a novel summarization of the effect of various treatments which would guide practitioners towards better decision regarding which intervention to choose.",
+      "pdf_url": "https://arxiv.org/pdf/2604.19352v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.19352v1",
+      "published": "2026-04-21",
+      "categories": [
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Inductive Subgraphs as Shortcuts: Causal Disentanglement for Heterophilic Graph Learning",
+      "authors": [
+        "Xiangmeng Wang",
+        "Qian Li",
+        "Haiyang Xia",
+        "Hao Miao",
+        "Qing Li",
+        "Guandong Xu"
+      ],
+      "abstract": "Heterophily is a prevalent property of real-world graphs and is well known to impair the performance of homophilic Graph Neural Networks (GNNs). Prior work has attempted to adapt GNNs to heterophilic graphs through non-local neighbor extension or architecture refinement. However, the fundamental reasons behind misclassifications remain poorly understood. In this work, we take a novel perspective by examining recurring inductive subgraphs, empirically and theoretically showing that they act as spurious shortcuts that mislead GNNs and reinforce non-causal correlations in heterophilic graphs. To address this, we adopt a causal inference perspective to analyze and correct the biased learning behavior induced by shortcut inductive subgraphs. We propose a debiased causal graph that explicitly blocks confounding and spillover paths responsible for these shortcuts. Guided by this causal graph, we introduce Causal Disentangled GNN (CD-GNN), a principled framework that disentangles spurious inductive subgraphs from true causal subgraphs by explicitly blocking non-causal paths. By focusing on genuine causal signals, CD-GNN substantially improves the robustness and accuracy of node classification in heterophilic graphs. Extensive experiments on real-world datasets not only validate our theoretical findings but also demonstrate that our proposed CD-GNN outperforms state-of-the-art heterophily-aware baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2604.19186v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.19186v1",
+      "published": "2026-04-21",
       "categories": [
         "cs.LG",
-        "cs.GR"
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Cell-Based Representation of Relational Binding in Language Models",
+      "authors": [
+        "Qin Dai",
+        "Benjamin Heinzerling",
+        "Kentaro Inui"
+      ],
+      "abstract": "Understanding a discourse requires tracking entities and the relations that hold between them. While Large Language Models (LLMs) perform well on relational reasoning, the mechanism by which they bind entities, relations, and attributes remains unclear. We study discourse-level relational binding and show that LLMs encode it via a Cell-based Binding Representation (CBR): a low-dimensional linear subspace in which each ``cell'' corresponds to an entity--relation index pair, and bound attributes are retrieved from the corresponding cell during inference. Using controlled multi-sentence data annotated with entity and relation indices, we identify the CBR subspace by decoding these indices from attribute-token activations with Partial Least Squares regression. Across domains and two model families, the indices are linearly decodable and form a grid-like geometry in the projected space. We further find that context-specific CBR representations are related by translation vectors in activation space, enabling cross-context transfer. Finally, activation patching shows that manipulating this subspace systematically changes relational predictions and that perturbing it disrupts performance, providing causal evidence that LLMs rely on CBR for relational binding.",
+      "pdf_url": "https://arxiv.org/pdf/2604.19052v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.19052v1",
+      "published": "2026-04-21",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "OneVL: One-Step Latent Reasoning and Planning with Vision-Language Explanation",
+      "authors": [
+        "Jinghui Lu",
+        "Jiayi Guan",
+        "Zhijian Huang",
+        "Jinlong Li",
+        "Guang Li",
+        "Lingdong Kong",
+        "Yingyan Li",
+        "Han Wang",
+        "Shaoqing Xu",
+        "Yuechen Luo",
+        "Fang Li",
+        "Chenxu Dang",
+        "Junli Wang",
+        "Tao Xu",
+        "Jing Wu",
+        "Jianhua Wu",
+        "Xiaoshuai Hao",
+        "Wen Zhang",
+        "Tianyi Jiang",
+        "Lingfeng Zhang",
+        "Lei Zhou",
+        "Yingbo Tang",
+        "Jie Wang",
+        "Yinfeng Gao",
+        "Xizhou Bu",
+        "Haochen Tian",
+        "Yihang Qiu",
+        "Feiyang Jia",
+        "Lin Liu",
+        "Yigu Ge",
+        "Hanbing Li",
+        "Yuannan Shen",
+        "Jianwei Cui",
+        "Hongwei Xie",
+        "Bing Wang",
+        "Haiyang Sun",
+        "Jingwei Zhao",
+        "Jiahui Huang",
+        "Pei Liu",
+        "Zeyu Zhu",
+        "Yuncheng Jiang",
+        "Zibin Guo",
+        "Chuhong Gong",
+        "Hanchao Leng",
+        "Kun Ma",
+        "Naiyang Wang",
+        "Guang Chen",
+        "Kuiyuan Yang",
+        "Hangjun Ye",
+        "Long Chen"
+      ],
+      "abstract": "Chain-of-Thought (CoT) reasoning has become a powerful driver of trajectory prediction in VLA-based autonomous driving, yet its autoregressive nature imposes a latency cost that is prohibitive for real-time deployment. Latent CoT methods attempt to close this gap by compressing reasoning into continuous hidden states, but consistently fall short of their explicit counterparts. We suggest that this is due to purely linguistic latent representations compressing a symbolic abstraction of the world, rather than the causal dynamics that actually govern driving. Thus, we present OneVL (One-step latent reasoning and planning with Vision-Language explanations), a unified VLA and World Model framework that routes reasoning through compact latent tokens supervised by dual auxiliary decoders. Alongside a language decoder that reconstructs text CoT, we introduce a visual world model decoder that predicts future-frame tokens, forcing the latent space to internalize the causal dynamics of road geometry, agent motion, and environmental change. A three-stage training pipeline progressively aligns these latents with trajectory, language, and visual objectives, ensuring stable joint optimization. At inference, the auxiliary decoders are discarded and all latent tokens are prefilled in a single parallel pass, matching the speed of answer-only prediction. Across four benchmarks, OneVL becomes the first latent CoT method to surpass explicit CoT, delivering state-of-the-art accuracy at answer-only latency, and providing direct evidence that tighter compression, when guided in both language and world-model supervision, produces more generalizable representations than verbose token-by-token reasoning. Project Page: https://xiaomi-embodied-intelligence.github.io/OneVL",
+      "pdf_url": "https://arxiv.org/pdf/2604.18486v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.18486v1",
+      "published": "2026-04-20",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "A Generalized Synthetic Control Method for Baseline Estimation in Demand Response Services",
+      "authors": [
+        "Jonas Sievers",
+        "Mardavij Roozbehani"
+      ],
+      "abstract": "Baseline estimation is critical to Demand Response (DR) settlement in electricity markets, yet existing machine learning methods remain limited in predictive performance, while methodologies from causal inference and counterfactual prediction are still underutilized in this domain. We introduce a Generalized Synthetic Control Method that builds on the classical Synthetic Control Method (SCM) from econometrics. While SCM provides a powerful framework for counterfactual estimation, classical SCM remains a static estimator: it fits the treated unit as a combination of contemporaneous donor units and therefore ignores predictable temporal structure in the residual error. We develop a generalized SCM framework that transforms baseline estimation into a dynamic counterfactual prediction problem by augmenting the donor representation with exogenous features, lagged treated load, and selected lagged donor signals. This enriched representation allows the estimator to capture autoregressive dependence, delayed donor-response patterns, and error-correction effects beyond the scope of standard SCM. The framework further accommodates nonlinear predictors when linear weighting is inadequate, with the greatest benefit arising in limited-data settings. Experiments on the Ausgrid smart-meter dataset show consistent improvements over classical SCM and strong benchmark methods, with the dominant performance gains driven by dynamic augmentation.",
+      "pdf_url": "https://arxiv.org/pdf/2604.18469v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.18469v1",
+      "published": "2026-04-20",
+      "categories": [
+        "cs.AI"
       ]
     }
   ]
