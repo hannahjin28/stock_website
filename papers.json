@@ -1,6 +1,110 @@
 {
-  "last_updated": "2026-04-23T01:46:03.336831",
+  "last_updated": "2026-04-24T01:43:15.320440",
   "papers": [
+    {
+      "title": "A Robust Framework for Two-Sample Mendelian Randomization under Population Heterogeneity",
+      "authors": [
+        "Dingke Tang",
+        "Xuming he",
+        "Shu Yang"
+      ],
+      "abstract": "Mendelian randomization is a powerful tool for causal inference in observational studies. The two-sample summary-data design, which estimates genetic associations with exposures and outcomes in separate cohorts, is the most widely used Mendelian randomization approach in large-scale genomic studies. However, this approach relies on a strong assumption of population homogeneity across the two samples. In practice, available samples often differ in ancestry, demographics, socioeconomic factors, covariate adjustment, and measurement protocols. Violations of the homogeneity assumption can bias causal effect estimates and undermine the credibility of Mendelian randomization findings. We introduce a robust, model-free Mendelian randomization framework that directly addresses population heterogeneity in the two-sample summary-data setting. Our method avoids parametric assumptions about population differences and is designed to address real-world challenges, including measurement error, weak instruments, and pleiotropy. We show that the proposed estimator is consistent and asymptotically normal under heterogeneous designs, and may offer efficiency gains over the classic estimator even in homogeneous settings. Through numerical simulations and a real data analysis for estimating the causal effect of body mass index on high-density lipoprotein cholesterol across ancestrally diverse populations, we demonstrate the practical utility, stability, and robustness of our approach.",
+      "pdf_url": "https://arxiv.org/pdf/2604.21757v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.21757v1",
+      "published": "2026-04-23",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "A Riesz Representer Perspective on Targeted Learning",
+      "authors": [
+        "Salvador V. Balkus",
+        "Christian Testa",
+        "Nima S. Hejazi"
+      ],
+      "abstract": "As research in causal inference has sought to address more complex scientific questions, the number of specialized estimands in the field has proliferated. Recognition that many of these estimands share a common linear form has generated interest in simplifying estimation procedures using Riesz representers. In this work, we construct a targeted minimum loss-based estimation procedure for nested linear functionals, leveraging Riesz representers of a general recursive form. The proposed method unifies asymptotically efficient estimation for a variety of statistical estimands that originate in causal inference, including the effects of time-varying treatments under treatment-confounder feedback and direct and indirect effects from causal mediation analysis. We demonstrate how our proposal reduces the need for laborious and technically challenging mathematical derivations when constructing estimators of common statistical estimands under complex forms of censoring and sampling. We investigate and validate the properties of the proposed procedures in numerical experiments, discuss open-source software facilitating their implementation, and illustrate their application in a re-analysis of data from an HIV vaccine efficacy trial.",
+      "pdf_url": "https://arxiv.org/pdf/2604.21721v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.21721v1",
+      "published": "2026-04-23",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Causal Disentanglement for Full-Reference Image Quality Assessment",
+      "authors": [
+        "Zhen Zhang",
+        "Jielei Chu",
+        "Tian Zhang",
+        "Weide Liu",
+        "Fengmao Lv",
+        "Tianrui Li",
+        "Jun Cheng",
+        "Yuming Fang"
+      ],
+      "abstract": "Existing deep network-based full-reference image quality assessment (FR-IQA) models typically work by performing pairwise comparisons of deep features from the reference and distorted images. In this paper, we approach this problem from a different perspective and propose a novel FR-IQA paradigm based on causal inference and decoupled representation learning. Unlike typical feature comparison-based FR-IQA models, our approach formulates degradation estimation as a causal disentanglement process guided by intervention on latent representations. We first decouple degradation and content representations by exploiting the content invariance between the reference and distorted images. Second, inspired by the human visual masking effect, we design a masking module to model the causal relationship between image content and degradation features, thereby extracting content-influenced degradation features from distorted images. Finally, quality scores are predicted from these degradation features using either supervised regression or label-free dimensionality reduction. Extensive experiments demonstrate that our method achieves highly competitive performance on standard IQA benchmarks across fully supervised, few-label, and label-free settings. Furthermore, we evaluate the approach on diverse non-standard natural image domains with scarce data, including underwater, radiographic, medical, neutron, and screen-content images. Benefiting from its ability to perform scenario-specific training and prediction without labeled IQA data, our method exhibits superior cross-domain generalization compared to existing training-free FR-IQA models.",
+      "pdf_url": "https://arxiv.org/pdf/2604.21654v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.21654v1",
+      "published": "2026-04-23",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "VARestorer: One-Step VAR Distillation for Real-World Image Super-Resolution",
+      "authors": [
+        "Yixuan Zhu",
+        "Shilin Ma",
+        "Haolin Wang",
+        "Ao Li",
+        "Yanzhe Jing",
+        "Yansong Tang",
+        "Lei Chen",
+        "Jiwen Lu",
+        "Jie Zhou"
+      ],
+      "abstract": "Recent advancements in visual autoregressive models (VAR) have demonstrated their effectiveness in image generation, highlighting their potential for real-world image super-resolution (Real-ISR). However, adapting VAR for ISR presents critical challenges. The next-scale prediction mechanism, constrained by causal attention, fails to fully exploit global low-quality (LQ) context, resulting in blurry and inconsistent high-quality (HQ) outputs. Additionally, error accumulation in the iterative prediction severely degrades coherence in ISR task. To address these issues, we propose VARestorer, a simple yet effective distillation framework that transforms a pre-trained text-to-image VAR model into a one-step ISR model. By leveraging distribution matching, our method eliminates the need for iterative refinement, significantly reducing error propagation and inference time. Furthermore, we introduce pyramid image conditioning with cross-scale attention, which enables bidirectional scale-wise interactions and fully utilizes the input image information while adapting to the autoregressive mechanism. This prevents later LQ tokens from being overlooked in the transformer. By fine-tuning only 1.2\\% of the model parameters through parameter-efficient adapters, our method maintains the expressive power of the original VAR model while significantly enhancing efficiency. Extensive experiments show that VARestorer achieves state-of-the-art performance with 72.32 MUSIQ and 0.7669 CLIPIQA on DIV2K dataset, while accelerating inference by 10 times compared to conventional VAR inference.",
+      "pdf_url": "https://arxiv.org/pdf/2604.21450v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.21450v1",
+      "published": "2026-04-23",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Time, Causality, and Observability Failures in Distributed AI Inference Systems",
+      "authors": [
+        "Ankur Sharma",
+        "Deep Shah",
+        "David Lariviere",
+        "Hesham ElBakoury"
+      ],
+      "abstract": "Distributed AI inference pipelines rely heavily on timestamp-based observability to understand system behavior. This work demonstrates that even small clock skew between nodes can cause observability to become causally incorrect while the system itself remains functionally correct and performant. We present controlled experiments on a multi-node AI inference pipeline, where clock skew is introduced at a single stage. Results show that no violations are observed under synchronized conditions and up to 3 ms skew, while clear causality violations emerge by 5 ms. Despite this, system throughput and output correctness remain largely unaffected. We further observe that violation behavior is not strictly static. In longer runs, negative span rates may stabilize or decrease over time, indicating that effective skew evolves due to relative clock drift between nodes. Experiments were conducted using Kafka and ZeroMQ transports, with consistent results across both. Aeron is under active exploration but is not yet included in the completed validation set. These findings suggest that observability correctness depends not only on system functionality but also on precise time alignment, and that timing must be treated as a first-class concern in distributed AI systems.",
+      "pdf_url": "https://arxiv.org/pdf/2604.21361v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.21361v1",
+      "published": "2026-04-23",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Participatory provenance as representational auditing for AI-mediated public consultation",
+      "authors": [
+        "Sachit Mahajan"
+      ],
+      "abstract": "Artificial intelligence is increasingly deployed to synthesize large-scale public input in policy consultations and participatory processes. Yet no formal framework exists for auditing whether these summaries faithfully represent the source population, an accountability gap that existing approaches to AI explainability, grounding and hallucination detection do not address because they focus on output quality rather than input fidelity. Here, participatory provenance is introduced: a measurement framework grounded in optimal transport theory, causal inference and semantic analysis that tracks how individual public submissions are transformed, filtered or lost through AI-mediated summarization. Applied to Canada's 2025-2026 national AI Strategy consultation ($n = 5{,}253$ respondents across two independent policy topics), the framework reveals that both official government summaries underperform a random-participant baseline ($-9.1\\%$ and $-8.0\\%$ coverage degradation), with $16.9\\%$ and $15.3\\%$ of participants effectively excluded. Exclusion concentrates in clusters expressing dissent, scepticism and critique of AI ($33$-$88\\%$ exclusion rates). Brevity, semantic isolation and rhetorical register independently predict representational outcome. An accompanying open-source interactive tool, the Co-creation Provenance Lab, enables policymakers to audit and iteratively improve summaries, establishing genuine human-in-the-loop oversight at scale.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20711v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.20711v1",
+      "published": "2026-04-22",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ]
+    },
     {
       "title": "Efficient Symbolic Computations for Identifying Causal Effects",
       "authors": [
@@ -62,159 +166,23 @@
       ]
     },
     {
-      "title": "Recent Advances in Causal Analysis of the Stochastic Frontier Model",
+      "title": "The Path Not Taken: Duality in Reasoning about Program Execution",
       "authors": [
-        "Samuele Centorrino",
-        "Christopher F. Parmeter"
+        "Eshgin Hasanov",
+        "Md Mahadi Hassan Sibat",
+        "Santu Karmaker",
+        "Aashish Yadavally"
       ],
-      "abstract": "Causal inference methods (instrumental variables, difference-in-differences, regression discontinuity, etc.) are primary tools used across many social science milieus. One area where their application has lagged however, is in the study of productivity and efficiency. A main reason for this is that the nature of the stochastic frontier model does not immediately lend itself to a causal framework when interest hinges on an error component of the model. This paper reviews the nascent literature on attempts to merge the stochastic frontier literature with causal inference methods. We discuss modeling approaches and empirical issues that are likely to be relevant for applied researchers in this area. This review shows how this model can be easily put within the confines of causal analysis, reviews existing work that has already made inroads in this area, addresses challenges that have yet to be met and discusses core findings.",
-      "pdf_url": "https://arxiv.org/pdf/2604.19693v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.19693v1",
-      "published": "2026-04-21",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "Causality in Liquid Water as a Hallmark of Emergent Glassy Dynamics",
-      "authors": [
-        "Leon Huet",
-        "Vittorio Del Tatto",
-        "Debarshi Banerjee",
-        "Alessandro Laio",
-        "Ali A. Hassanali"
-      ],
-      "abstract": "In molecular liquids such as water, time-delayed influences between microscopic or mesoscopic variables are typically probed using time-correlation functions, which are symmetric under detailed balance and therefore blind to dynamical asymmetries. Here, we characterize waters dynamics using a causal inference metric that captures asymmetric couplings between collective variables. Analyzing equilibrium molecular dynamics simulations at ambient conditions and in the high-density liquid (HDL) regime of supercooled water, we uncover pronounced asymmetries in the couplings between orientational and translational degrees of freedom across multiple time and length scales. At room temperature, rotational modes remain largely decoupled from translations. In contrast, in the supercooled HDL regime, translational motions emerge as the primary drivers of the dynamics, suggesting facilitation-like relaxation mechanisms characteristic of glassy systems. These results reveal a qualitative reorganization of dynamical couplings across thermodynamic conditions, implying that molecular liquids at thermal equilibrium can exhibit an emergent directionality in their fluctuation couplings. As a consequence, our analysis reveals that external perturbations acting on specific degrees of freedom can induce a stronger arrow of time in the causal relations between translational and orientational modes.",
-      "pdf_url": "https://arxiv.org/pdf/2604.19491v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.19491v1",
-      "published": "2026-04-21",
-      "categories": [
-        "physics.chem-ph"
-      ]
-    },
-    {
-      "title": "Stochastic Intervention",
-      "authors": [
-        "Rohit Chaudhuri"
-      ],
-      "abstract": "This article discusses the application of stochastic intervention to find the optimal treatment distribution yielding a high value of expected potential outcome under the setting where the number of treatments is allowed to vary with $n$. The primary motivation is to obtain a novel summarization of the effect of various treatments which would guide practitioners towards better decision regarding which intervention to choose.",
-      "pdf_url": "https://arxiv.org/pdf/2604.19352v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.19352v1",
-      "published": "2026-04-21",
-      "categories": [
-        "math.ST"
-      ]
-    },
-    {
-      "title": "Inductive Subgraphs as Shortcuts: Causal Disentanglement for Heterophilic Graph Learning",
-      "authors": [
-        "Xiangmeng Wang",
-        "Qian Li",
-        "Haiyang Xia",
-        "Hao Miao",
-        "Qing Li",
-        "Guandong Xu"
-      ],
-      "abstract": "Heterophily is a prevalent property of real-world graphs and is well known to impair the performance of homophilic Graph Neural Networks (GNNs). Prior work has attempted to adapt GNNs to heterophilic graphs through non-local neighbor extension or architecture refinement. However, the fundamental reasons behind misclassifications remain poorly understood. In this work, we take a novel perspective by examining recurring inductive subgraphs, empirically and theoretically showing that they act as spurious shortcuts that mislead GNNs and reinforce non-causal correlations in heterophilic graphs. To address this, we adopt a causal inference perspective to analyze and correct the biased learning behavior induced by shortcut inductive subgraphs. We propose a debiased causal graph that explicitly blocks confounding and spillover paths responsible for these shortcuts. Guided by this causal graph, we introduce Causal Disentangled GNN (CD-GNN), a principled framework that disentangles spurious inductive subgraphs from true causal subgraphs by explicitly blocking non-causal paths. By focusing on genuine causal signals, CD-GNN substantially improves the robustness and accuracy of node classification in heterophilic graphs. Extensive experiments on real-world datasets not only validate our theoretical findings but also demonstrate that our proposed CD-GNN outperforms state-of-the-art heterophily-aware baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2604.19186v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.19186v1",
-      "published": "2026-04-21",
+      "abstract": "Large language models (LLMs) have shown remarkable capabilities across diverse coding tasks. However, their adoption requires a true understanding of program execution rather than relying on surface-level patterns. Existing benchmarks primarily focus on predicting program properties tied to specific inputs (e.g., code coverage, program outputs). As a result, they provide a narrow view of dynamic code reasoning and are prone to data contamination. We argue that understanding program execution requires evaluating its inherent duality through two complementary reasoning tasks: (i) predicting a program's observed behavior for a given input, and (ii) inferring how the input must be mutated toward a specific behavioral objective. Both tasks jointly probe a model's causal understanding of execution flow. We instantiate this duality in DexBench, a benchmark comprising 445 paired instances, and evaluate 13 LLMs. Our results demonstrate that dual-path reasoning provides a robust and discriminative proxy for dynamic code understanding.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20917v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.20917v1",
+      "published": "2026-04-22",
       "categories": [
         "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Cell-Based Representation of Relational Binding in Language Models",
-      "authors": [
-        "Qin Dai",
-        "Benjamin Heinzerling",
-        "Kentaro Inui"
-      ],
-      "abstract": "Understanding a discourse requires tracking entities and the relations that hold between them. While Large Language Models (LLMs) perform well on relational reasoning, the mechanism by which they bind entities, relations, and attributes remains unclear. We study discourse-level relational binding and show that LLMs encode it via a Cell-based Binding Representation (CBR): a low-dimensional linear subspace in which each ``cell'' corresponds to an entity--relation index pair, and bound attributes are retrieved from the corresponding cell during inference. Using controlled multi-sentence data annotated with entity and relation indices, we identify the CBR subspace by decoding these indices from attribute-token activations with Partial Least Squares regression. Across domains and two model families, the indices are linearly decodable and form a grid-like geometry in the projected space. We further find that context-specific CBR representations are related by translation vectors in activation space, enabling cross-context transfer. Finally, activation patching shows that manipulating this subspace systematically changes relational predictions and that perturbing it disrupts performance, providing causal evidence that LLMs rely on CBR for relational binding.",
-      "pdf_url": "https://arxiv.org/pdf/2604.19052v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.19052v1",
-      "published": "2026-04-21",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "OneVL: One-Step Latent Reasoning and Planning with Vision-Language Explanation",
-      "authors": [
-        "Jinghui Lu",
-        "Jiayi Guan",
-        "Zhijian Huang",
-        "Jinlong Li",
-        "Guang Li",
-        "Lingdong Kong",
-        "Yingyan Li",
-        "Han Wang",
-        "Shaoqing Xu",
-        "Yuechen Luo",
-        "Fang Li",
-        "Chenxu Dang",
-        "Junli Wang",
-        "Tao Xu",
-        "Jing Wu",
-        "Jianhua Wu",
-        "Xiaoshuai Hao",
-        "Wen Zhang",
-        "Tianyi Jiang",
-        "Lingfeng Zhang",
-        "Lei Zhou",
-        "Yingbo Tang",
-        "Jie Wang",
-        "Yinfeng Gao",
-        "Xizhou Bu",
-        "Haochen Tian",
-        "Yihang Qiu",
-        "Feiyang Jia",
-        "Lin Liu",
-        "Yigu Ge",
-        "Hanbing Li",
-        "Yuannan Shen",
-        "Jianwei Cui",
-        "Hongwei Xie",
-        "Bing Wang",
-        "Haiyang Sun",
-        "Jingwei Zhao",
-        "Jiahui Huang",
-        "Pei Liu",
-        "Zeyu Zhu",
-        "Yuncheng Jiang",
-        "Zibin Guo",
-        "Chuhong Gong",
-        "Hanchao Leng",
-        "Kun Ma",
-        "Naiyang Wang",
-        "Guang Chen",
-        "Kuiyuan Yang",
-        "Hangjun Ye",
-        "Long Chen"
-      ],
-      "abstract": "Chain-of-Thought (CoT) reasoning has become a powerful driver of trajectory prediction in VLA-based autonomous driving, yet its autoregressive nature imposes a latency cost that is prohibitive for real-time deployment. Latent CoT methods attempt to close this gap by compressing reasoning into continuous hidden states, but consistently fall short of their explicit counterparts. We suggest that this is due to purely linguistic latent representations compressing a symbolic abstraction of the world, rather than the causal dynamics that actually govern driving. Thus, we present OneVL (One-step latent reasoning and planning with Vision-Language explanations), a unified VLA and World Model framework that routes reasoning through compact latent tokens supervised by dual auxiliary decoders. Alongside a language decoder that reconstructs text CoT, we introduce a visual world model decoder that predicts future-frame tokens, forcing the latent space to internalize the causal dynamics of road geometry, agent motion, and environmental change. A three-stage training pipeline progressively aligns these latents with trajectory, language, and visual objectives, ensuring stable joint optimization. At inference, the auxiliary decoders are discarded and all latent tokens are prefilled in a single parallel pass, matching the speed of answer-only prediction. Across four benchmarks, OneVL becomes the first latent CoT method to surpass explicit CoT, delivering state-of-the-art accuracy at answer-only latency, and providing direct evidence that tighter compression, when guided in both language and world-model supervision, produces more generalizable representations than verbose token-by-token reasoning. Project Page: https://xiaomi-embodied-intelligence.github.io/OneVL",
-      "pdf_url": "https://arxiv.org/pdf/2604.18486v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.18486v1",
-      "published": "2026-04-20",
-      "categories": [
-        "cs.CV",
+        "cs.AI",
         "cs.CL",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "A Generalized Synthetic Control Method for Baseline Estimation in Demand Response Services",
-      "authors": [
-        "Jonas Sievers",
-        "Mardavij Roozbehani"
-      ],
-      "abstract": "Baseline estimation is critical to Demand Response (DR) settlement in electricity markets, yet existing machine learning methods remain limited in predictive performance, while methodologies from causal inference and counterfactual prediction are still underutilized in this domain. We introduce a Generalized Synthetic Control Method that builds on the classical Synthetic Control Method (SCM) from econometrics. While SCM provides a powerful framework for counterfactual estimation, classical SCM remains a static estimator: it fits the treated unit as a combination of contemporaneous donor units and therefore ignores predictable temporal structure in the residual error. We develop a generalized SCM framework that transforms baseline estimation into a dynamic counterfactual prediction problem by augmenting the donor representation with exogenous features, lagged treated load, and selected lagged donor signals. This enriched representation allows the estimator to capture autoregressive dependence, delayed donor-response patterns, and error-correction effects beyond the scope of standard SCM. The framework further accommodates nonlinear predictors when linear weighting is inadequate, with the greatest benefit arising in limited-data settings. Experiments on the Ausgrid smart-meter dataset show consistent improvements over classical SCM and strong benchmark methods, with the dominant performance gains driven by dynamic augmentation.",
-      "pdf_url": "https://arxiv.org/pdf/2604.18469v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.18469v1",
-      "published": "2026-04-20",
-      "categories": [
-        "cs.AI"
+        "cs.PL",
+        "cs.SE"
       ]
     }
   ]
