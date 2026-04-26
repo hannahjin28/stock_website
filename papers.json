@@ -1,11 +1,27 @@
 {
-  "last_updated": "2026-04-24T01:43:15.320440",
+  "last_updated": "2026-04-26T01:45:04.482278",
   "papers": [
+    {
+      "title": "Causality-Encoded Diffusion Models for Interventional Sampling and Edge Inference",
+      "authors": [
+        "Li Chen",
+        "Xiaotong Shen",
+        "Wei Pan"
+      ],
+      "abstract": "Standard diffusion models are flexible estimators of complex distributions, but they do not encode causal structures and therefore do not by themselves support causal analysis. We propose a causality-encoded diffusion framework that incorporates a known directed acyclic graph by training conditional diffusion models consistent with the graph factorisation. The resulting sampler approximately recovers the observational distribution and enables interventional sampling by fixing intervened variables while propagating effects through the graph during reverse diffusion. Building on this interventional simulator, we develop a resampling-based test for directed edges that generates null replicates under a candidate graph. We establish convergence guarantees for observational and interventional distribution estimation, with rates governed by the maximum local dimension rather than the ambient dimension, and prove asymptotic control of type I error for the edge test. Simulations show improved interventional distribution recovery relative to baselines, with near-nominal size and favourable power in inference. An application to flow cytometry data demonstrates practical utility of the proposed method in assessing disputed signalling linkages.",
+      "pdf_url": "https://arxiv.org/pdf/2604.21843v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.21843v1",
+      "published": "2026-04-23",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
     {
       "title": "A Robust Framework for Two-Sample Mendelian Randomization under Population Heterogeneity",
       "authors": [
         "Dingke Tang",
-        "Xuming he",
+        "Xuming He",
         "Shu Yang"
       ],
       "abstract": "Mendelian randomization is a powerful tool for causal inference in observational studies. The two-sample summary-data design, which estimates genetic associations with exposures and outcomes in separate cohorts, is the most widely used Mendelian randomization approach in large-scale genomic studies. However, this approach relies on a strong assumption of population homogeneity across the two samples. In practice, available samples often differ in ancestry, demographics, socioeconomic factors, covariate adjustment, and measurement protocols. Violations of the homogeneity assumption can bias causal effect estimates and undermine the credibility of Mendelian randomization findings. We introduce a robust, model-free Mendelian randomization framework that directly addresses population heterogeneity in the two-sample summary-data setting. Our method avoids parametric assumptions about population differences and is designed to address real-world challenges, including measurement error, weak instruments, and pleiotropy. We show that the proposed estimator is consistent and asymptotically normal under heterogeneous designs, and may offer efficiency gains over the classic estimator even in homogeneous settings. Through numerical simulations and a real data analysis for estimating the causal effect of body mass index on high-density lipoprotein cholesterol across ancestrally diverse populations, we demonstrate the practical utility, stability, and robustness of our approach.",
@@ -163,26 +179,6 @@
       "published": "2026-04-22",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "The Path Not Taken: Duality in Reasoning about Program Execution",
-      "authors": [
-        "Eshgin Hasanov",
-        "Md Mahadi Hassan Sibat",
-        "Santu Karmaker",
-        "Aashish Yadavally"
-      ],
-      "abstract": "Large language models (LLMs) have shown remarkable capabilities across diverse coding tasks. However, their adoption requires a true understanding of program execution rather than relying on surface-level patterns. Existing benchmarks primarily focus on predicting program properties tied to specific inputs (e.g., code coverage, program outputs). As a result, they provide a narrow view of dynamic code reasoning and are prone to data contamination. We argue that understanding program execution requires evaluating its inherent duality through two complementary reasoning tasks: (i) predicting a program's observed behavior for a given input, and (ii) inferring how the input must be mutated toward a specific behavioral objective. Both tasks jointly probe a model's causal understanding of execution flow. We instantiate this duality in DexBench, a benchmark comprising 445 paired instances, and evaluate 13 LLMs. Our results demonstrate that dual-path reasoning provides a robust and discriminative proxy for dynamic code understanding.",
-      "pdf_url": "https://arxiv.org/pdf/2604.20917v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.20917v1",
-      "published": "2026-04-22",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL",
-        "cs.PL",
-        "cs.SE"
       ]
     }
   ]
