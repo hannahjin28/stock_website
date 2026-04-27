@@ -1,6 +1,71 @@
 {
-  "last_updated": "2026-04-26T01:45:04.482278",
+  "last_updated": "2026-04-27T01:49:09.807034",
   "papers": [
+    {
+      "title": "Causal Identification under Interference: The Role of Treatment Assignment Independence",
+      "authors": [
+        "Julius Owusu",
+        "Monika Avila Márquez"
+      ],
+      "abstract": "Empirical researchers routinely invoke the no-interference or \\textit{individualistic treatment response} (ITR) assumption to identify causal effects in observational studies, despite concerns that interference across units may arise in many economic settings. This paper studies the causal content of standard ITR-based identification formulas when arbitrary interference is present. We show that, under restrictions on dependence between treatment assignments across units, conventional ITR-based identification formulas -- including those underlying selection-on-observables, instrumental variables, regression discontinuity designs, and difference-in-differences -- identify well-defined causal objects: types of \\textit{average direct effects} (ADEs). These results do not require knowledge of the interference structure or specification of exposure mappings. We also propose a sensitivity analysis framework that quantifies the robustness of statistical inference to violations of treatment-assignment independence under arbitrary interference.",
+      "pdf_url": "https://arxiv.org/pdf/2604.22532v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.22532v1",
+      "published": "2026-04-24",
+      "categories": [
+        "econ.EM"
+      ]
+    },
+    {
+      "title": "From Local to Cluster: A Unified Framework for Causal Discovery with Latent Variables",
+      "authors": [
+        "Zongyu Li"
+      ],
+      "abstract": "Latent variables pose a fundamental challenge to causal discovery and inference. Conventional local methods focus on direct neighbors but fail to provide macro level insights. Cluster level methods enable macro causal reasoning but either assume clusters are known a priori or require causal sufficiency. Moreover, directly applying single variable causal discovery methods to cluster level problems violates causal sufficiency and leads to incorrect results. To overcome these limitations, this paper proposes L2C (Local to Cluster Causal Abstraction), a unified framework that bridges local structure learning and cluster level causal discovery. Unlike prior work that requires a complete manual assignment of micro variables to clusters, L2C discovers the partition automatically from local causal patterns. Our solution leverages a cluster reduction theorem to reduce any cluster to at most three nodes without loss of causal information, applies local causal discovery to identify direct causes, effects, and V structures in the presence of latent variables, and performs macro level causal inference via cluster level calculus on the learned cluster graph. L2C does not assume causal sufficiency, as latent variables are handled through local discovery. Theoretical analysis shows that L2C ensures soundness, atomic completeness, and computational efficiency. Extensive experiments on synthetic and real world data demonstrate that L2C accurately recovers ground truth clusters and achieves superior macro causal effect identification compared to existing baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2604.22416v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.22416v1",
+      "published": "2026-04-24",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Preference Heads in Large Language Models: A Mechanistic Framework for Interpretable Personalization",
+      "authors": [
+        "Weixu Zhang",
+        "Ye Yuan",
+        "Changjiang Han",
+        "Yuxing Tian",
+        "Zipeng Sun",
+        "Linfeng Du",
+        "Jikun Kang",
+        "Hong Kang",
+        "Xue Liu",
+        "Haolun Wu"
+      ],
+      "abstract": "Large Language Models (LLMs) exhibit strong implicit personalization ability, yet most existing approaches treat this behavior as a black box, relying on prompt engineering or fine tuning on user data. In this work, we adopt a mechanistic interpretability perspective and hypothesize the existence of a sparse set of Preference Heads, attention heads that encode user specific stylistic and topical preferences and exert a causal influence on generation. We introduce Differential Preference Steering (DPS), a training free framework that (1) identifies Preference Heads through causal masking analysis and (2) leverages them for controllable and interpretable personalization at inference time. DPS computes a Preference Contribution Score (PCS) for each attention head, directly measuring its causal impact on user aligned outputs. During decoding, we contrast model predictions with and without Preference Heads, amplifying the difference between personalized and generic logits to selectively strengthen preference aligned continuations. Experiments on widely used personalization benchmarks across multiple LLMs demonstrate consistent gains in personalization fidelity while preserving content coherence and low computational overhead. Beyond empirical improvements, DPS provides a mechanistic explanation of where and how personalization emerges within transformer architectures. Our implementation is publicly available.",
+      "pdf_url": "https://arxiv.org/pdf/2604.22345v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.22345v1",
+      "published": "2026-04-24",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "RAG-Reflect: Agentic Retrieval-Augmented Generation with Reflections for Comment-Driven Code Maintenance on Stack Overflow",
+      "authors": [
+        "Mehedi Hasan Shanto",
+        "Muhammad Asaduzzaman",
+        "Alioune Ngom"
+      ],
+      "abstract": "User comments on online programming platforms such as Stack Overflow play a vital role in maintaining the correctness and relevance of shared code examples. However, the majority of comments express gratitude or clarification, while only a small fraction highlight actionable issues that drive meaningful edits. This paper demonstrates how agentic AI principles can revolutionize software maintenance tasks by presenting RAG-Reflect, a modular framework that achieves fine-tuned-level performance for valid comment-edit prediction without task-specific training. Valid Comment-Edit Prediction (VCP) is the task of determining whether a user comment directly triggered a subsequent code edit. The framework integrates large language models (LLMs) with retrieval-augmented reasoning and self-reflection mechanisms. RAG-Reflect operates through a three-stage runtime workflow built on a one-time pattern analysis phase. During initialization, an Interpretation module analyzes the knowledge base to generate validation rules. At inference time, the system (1) retrieves contextual examples, (2) reasons about comment-edit causality, and (3) reflects on decisions using the pre-established rules. We evaluate RAG-Reflect on the publicly available SOUP benchmark, achieving Precision = 0.81, Recall = 0.74, and F1 = 0.78, outperforming traditional baselines (e.g., Logistic Regression, XGBoost, different prompting techniques) and closely approaching the performance of fine-tuned models (F1 = 0.773) without retraining. Our ablation and stage-level analyses show that both retrieval and reflection modules substantially enhance performance.",
+      "pdf_url": "https://arxiv.org/pdf/2604.22217v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.22217v1",
+      "published": "2026-04-24",
+      "categories": [
+        "cs.SE"
+      ]
+    },
     {
       "title": "Causality-Encoded Diffusion Models for Interventional Sampling and Edge Inference",
       "authors": [
@@ -105,80 +170,6 @@
       "published": "2026-04-23",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Participatory provenance as representational auditing for AI-mediated public consultation",
-      "authors": [
-        "Sachit Mahajan"
-      ],
-      "abstract": "Artificial intelligence is increasingly deployed to synthesize large-scale public input in policy consultations and participatory processes. Yet no formal framework exists for auditing whether these summaries faithfully represent the source population, an accountability gap that existing approaches to AI explainability, grounding and hallucination detection do not address because they focus on output quality rather than input fidelity. Here, participatory provenance is introduced: a measurement framework grounded in optimal transport theory, causal inference and semantic analysis that tracks how individual public submissions are transformed, filtered or lost through AI-mediated summarization. Applied to Canada's 2025-2026 national AI Strategy consultation ($n = 5{,}253$ respondents across two independent policy topics), the framework reveals that both official government summaries underperform a random-participant baseline ($-9.1\\%$ and $-8.0\\%$ coverage degradation), with $16.9\\%$ and $15.3\\%$ of participants effectively excluded. Exclusion concentrates in clusters expressing dissent, scepticism and critique of AI ($33$-$88\\%$ exclusion rates). Brevity, semantic isolation and rhetorical register independently predict representational outcome. An accompanying open-source interactive tool, the Co-creation Provenance Lab, enables policymakers to audit and iteratively improve summaries, establishing genuine human-in-the-loop oversight at scale.",
-      "pdf_url": "https://arxiv.org/pdf/2604.20711v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.20711v1",
-      "published": "2026-04-22",
-      "categories": [
-        "cs.AI",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Efficient Symbolic Computations for Identifying Causal Effects",
-      "authors": [
-        "Benjamin Hollering",
-        "Pratik Misra",
-        "Nils Sturma"
-      ],
-      "abstract": "Determining identifiability of causal effects from observational data under latent confounding is a central challenge in causal inference. For linear structural causal models, identifiability of causal effects is decidable through symbolic computation. However, standard approaches based on Gröbner bases become computationally infeasible beyond small settings due to their doubly exponential complexity. In this work, we study how to practically use symbolic computation for deciding rational identifiability. In particular, we present an efficient algorithm that provably finds the lowest degree identifying formulas. For a causal effect of interest, if there exists an identification formula of a prespecified maximal degree, our algorithm returns such a formula in quasi-polynomial time.",
-      "pdf_url": "https://arxiv.org/pdf/2604.20516v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.20516v1",
-      "published": "2026-04-22",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Dual Causal Inference: Integrating Backdoor Adjustment and Instrumental Variable Learning for Medical VQA",
-      "authors": [
-        "Zibo Xu",
-        "Qiang Li",
-        "Ke Lu",
-        "Jin Wang",
-        "Weizhi Nie",
-        "Yuting Su"
-      ],
-      "abstract": "Medical Visual Question Answering (MedVQA) aims to generate clinically reliable answers conditioned on complex medical images and questions. However, existing methods often overfit to superficial cross-modal correlations, neglecting the intrinsic biases embedded in multimodal medical data. Consequently, models become vulnerable to cross-modal confounding effects, severely hindering their ability to provide trustworthy diagnostic reasoning. To address this limitation, we propose a novel Dual Causal Inference (DCI) framework for MedVQA. To the best of our knowledge, DCI is the first unified architecture that integrates Backdoor Adjustment (BDA) and Instrumental Variable (IV) learning to jointly tackle both observable and unobserved confounders. Specifically, we formulate a Structural Causal Model (SCM) where observable cross-modal biases (e.g., frequent visual and textual co-occurrences) are mitigated via BDA, while unobserved confounders are compensated using an IV learned from a shared latent space. To guarantee the validity of the IV, we design mutual information constraints that maximize its dependence on the fused multimodal representations while minimizing its associations with the unobserved confounders and target answers. Through this dual mechanism, DCI extracts deconfounded representations that capture genuine causal relationships. Extensive experiments on four benchmark datasets, SLAKE, SLAKE-CP, VQA-RAD, and PathVQA, demonstrate that our method consistently outperforms existing approaches, particularly in out-of-distribution (OOD) generalization. Furthermore, qualitative analyses confirm that DCI significantly enhances the interpretability and robustness of cross-modal reasoning by explicitly disentangling true causal effects from spurious cross-modal shortcuts.",
-      "pdf_url": "https://arxiv.org/pdf/2604.20306v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.20306v1",
-      "published": "2026-04-22",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "X-Cache: Cross-Chunk Block Caching for Few-Step Autoregressive World Models Inference",
-      "authors": [
-        "Yixiao Zeng",
-        "Jianlei Zheng",
-        "Chaoda Zheng",
-        "Shijia Chen",
-        "Mingdian Liu",
-        "Tongping Liu",
-        "Tengwei Luo",
-        "Yu Zhang",
-        "Boyang Wang",
-        "Linkun Xu",
-        "Siyuan Lu",
-        "Bo Tian",
-        "Xianming Liu"
-      ],
-      "abstract": "Real-time world simulation is becoming a key infrastructure for scalable evaluation and online reinforcement learning of autonomous driving systems. Recent driving world models built on autoregressive video diffusion achieve high-fidelity, controllable multi-camera generation, but their inference cost remains a bottleneck for interactive deployment. However, existing diffusion caching methods are designed for offline video generation with multiple denoising steps, and do not transfer to this scenario. Few-step distilled models have no inter-step redundancy left for these methods to reuse, and sequence-level parallelization techniques require future conditioning that closed-loop interactive generation does not provide. We present X-Cache, a training-free acceleration method that caches along a different axis: across consecutive generation chunks rather than across denoising steps. X-Cache maintains per-block residual caches that persist across chunks, and applies a dual-metric gating mechanism over a structure- and action-aware block-input fingerprint to independently decide whether each block should recompute or reuse its cached residual. To prevent approximation errors from permanently contaminating the autoregressive KV cache, X-Cache identifies KV update chunks (the forward passes that write clean keys and values into the persistent cache) and unconditionally forces full computation on these chunks, cutting off error propagation. We implement X-Cache on X-world, a production multi-camera action-conditioned driving world model built on multi-block causal DiT with few-step denoising and rolling KV cache. X-Cache achieves 71% block skip rate with 2.6x wall-clock speedup while maintaining minimum degradation.",
-      "pdf_url": "https://arxiv.org/pdf/2604.20289v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.20289v1",
-      "published": "2026-04-22",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]
