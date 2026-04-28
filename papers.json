@@ -1,6 +1,131 @@
 {
-  "last_updated": "2026-04-27T01:49:09.807034",
+  "last_updated": "2026-04-28T01:56:31.413896",
   "papers": [
+    {
+      "title": "Multivariate incremental effects for continuous treatments: Studying the health effects of environmental mixtures",
+      "authors": [
+        "Zhuochao Huang",
+        "Kejin Dong",
+        "Tuo Lin",
+        "Joseph Antonelli"
+      ],
+      "abstract": "Evaluating the causal health effects of multivariate, continuous exposures, such as air pollution mixtures, is a critical public health challenge. A primary obstacle is the frequent violation of the positivity assumption, which renders the effects of standard deterministic interventions unidentified or heavily reliant on unreliable model extrapolation. In this paper, we develop a novel causal inference framework to address this challenge. We extend exponential tilting to multivariate exposures and address the critical question of how to compare different intervention directions fairly. This establishes a systematic framework for defining and evaluating various policy-relevant causal estimands, allowing researchers to address diverse scientific questions. We develop numerous methodological advancements, including efficient one-step estimation strategies, a Riemannian BFGS algorithm to solve a constrained manifold optimization problem, semiparametric efficiency bounds for causal estimands, minimax rates for estimators, and establishing asymptotic normality. We demonstrate our framework's utility by applying it to a nationwide environmental health dataset to identify the optimal strategy for reducing adverse health outcomes associated with a PM$_{2.5}$ chemical mixture.",
+      "pdf_url": "https://arxiv.org/pdf/2604.23534v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.23534v1",
+      "published": "2026-04-26",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "PILOT: One Physics-Integrated Generation Framework to Unify 2D and 3D Radio Map Construction",
+      "authors": [
+        "Weiming Huang",
+        "Hao Sun",
+        "Junting Chen"
+      ],
+      "abstract": "Unified 2D and 3D radio map construction supports network planning, wireless digital twins, and unmanned aerial vehicle (UAV) applications. In urban environments, blockage, reflection, and diffraction make accurate construction expensive for physics-based solvers. Autoregressive next-token prediction offers a single sequential formulation that can cover both 2D and 3D generation, but standard raster ordering ignores the spatial structure of radio propagation. When generation follows propagation, each token is predicted from propagation-relevant history rather than spatially arbitrary context, which provides more causally informative conditioning and lowers conditional uncertainty. We propose PILOT, a pretrained autoregressive framework that replaces raster scan with a wavefront sequence expanding outward from the transmitter. Each prediction step is guided by an environment-aware instruction that spatially aligns environment features with the queried radio map region. The same framework extends to 3D radio maps through height-slice stacking while a gradient loss enforces vertical continuity. On standard 2D benchmarks, PILOT achieves the lowest NMSE among all baselines. For volumetric generation, it reduces NMSE by 78% relative to the diffusion baseline at roughly $2500\\times$ faster inference. It also outperforms methods that rely on 10% sparse measurements and achieves the best zero-shot results in the cross-domain evaluation.",
+      "pdf_url": "https://arxiv.org/pdf/2604.23533v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.23533v1",
+      "published": "2026-04-26",
+      "categories": [
+        "eess.SP",
+        "cs.NI"
+      ]
+    },
+    {
+      "title": "Estimating Causal Attribution of Anthropogenic Forcing on High-Temperature Extremes Using a Latent Gaussian Spatial Model",
+      "authors": [
+        "Ritik Roshan Giri",
+        "Arnab Hazra"
+      ],
+      "abstract": "Climate change has become a significant global concern due to its capacity to cause substantial disruption to daily life by increasing the frequency and intensity of extreme weather events. Given the rising trend of human interventions in the climate system over recent decades, this study aims to quantify the relative contribution of anthropogenic forcing to the increasing likelihood of climate extremes, with a particular emphasis on high-temperature extremes. Our analysis focuses on annual temperature maxima from the IPSL-CM6A model in the CMIP6 experiment. We propose a novel causal inference framework that focuses on differences in return levels derived from annual temperature maxima between the factual and counterfactual worlds. While jointly modeling the annual maxima from the two worlds using a bivariate generalized extreme value distribution, we model the spatially-varying coefficients using a latent Gaussian framework. Specifically, given that the data are available over a $1^\\circ \\times 1^\\circ$ grid, we employ the multivariate intrinsic conditional autoregressive model for the latent layer in the proposed hierarchical model, ensuring proper posterior distributions. We implement a recently developed highly-efficient approximate Bayesian inference technique, `Max-and-smooth', that uses a Laplace approximation of the likelihood and then performs Gibbs sampling based on the approximate posterior. The results include posterior estimates of the causal effect of anthropogenic forcing on high-temperature extremes, along with the trends in this effect, over the factual world. Furthermore, we estimate credible regions for a significant causal effect to facilitate hotspot detection across the mainland United States.",
+      "pdf_url": "https://arxiv.org/pdf/2604.23438v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.23438v1",
+      "published": "2026-04-25",
+      "categories": [
+        "stat.AP",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Active Inference: A method for Phenotyping Agency in AI systems?",
+      "authors": [
+        "Philip Wilson",
+        "Axel Constant",
+        "Mahault Albarracin",
+        "Nicolás Hinrichs",
+        "Jasmine Moore",
+        "Daniel Polani",
+        "Karl Friston"
+      ],
+      "abstract": "The proliferation of agentic artificial intelligence has outpaced the conceptual tools needed to characterize agency in computational systems. Prevailing definitions mainly rely on autonomy and goal-directedness. Here, we argue for a minimal notion open to principled inspection given three criteria: intentionality as action grounded in beliefs and desires, rationality as normatively coherent action entailed by a world model, and explainability as action causally traceable to internal states; we subsequently instantiate these as a partially observable Markov decision process under a variational framework wherein posterior beliefs, prior preferences, and the minimization of expected free energy jointly constitute an agentic action chain. Using a canonical T-maze paradigm, we evidence how empowerment, formulated as the channel capacity between actions and anticipated observations, serves as an operational metric that distinguishes zero-, intermediate-, and high-agency phenotypes through structural manipulations of the generative model. We conclude by arguing that as agents engage in epistemic foraging to resolve ambiguity, the governance controls that remain effective must shift systematically from external constraints to the internal modulation of prior preferences, offering a principled, variational bridge from computational phenotyping to AI governance strategy",
+      "pdf_url": "https://arxiv.org/pdf/2604.23278v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.23278v1",
+      "published": "2026-04-25",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "StoryTR: Narrative-Centric Video Temporal Retrieval with Theory of Mind Reasoning",
+      "authors": [
+        "Xuanyue Zhong",
+        "Yuqiang Xie",
+        "Guanqun Bi",
+        "Jiangping Yang",
+        "Guibin Chen"
+      ],
+      "abstract": "Current video moment retrieval excels at action-centric tasks but struggles with narrative content. Models can see \\textit{what is happening} but fail to reason \\textit{why it matters}. This semantic gap stems from the lack of \\textbf{Theory of Mind (ToM)}: the cognitive ability to infer implicit intentions, mental states, and narrative causality from surface-level observations. We introduce \\textbf{StoryTR}, the first video moment retrieval benchmark requiring ToM reasoning, comprising 8.1k samples from narrative short-form videos (shorts/reels). These videos present an ideal testbed. Their high information density encodes meaning through subtle multimodal cues. For instance, a glance paired with a sigh carries entirely different semantics than the glance alone. Yet multimodal perception alone is insufficient; ToM is required to decode that a character ``smiling'' may actually be ``concealing hostility.'' To teach models this reasoning capability, we propose an \\textbf{Agentic Data Pipeline} that generates training data with explicit three-tier ToM chains (intent decoding, narrative reasoning, boundary localization). Experiments reveal the severity of the reasoning gap: Gemini-3.0-Pro achieves only 0.53 Avg IoU on StoryTR. However, our 7B \\textbf{Shorts-Moment} model, trained on ToM-guided data, improves +15.1\\% relative IoU over baselines, demonstrating that \\textit{narrative reasoning capability matters more than parameter scale}.",
+      "pdf_url": "https://arxiv.org/pdf/2604.23198v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.23198v1",
+      "published": "2026-04-25",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "MOCA: A Transformer-based Modular Causal Inference Framework with One-way Cross-attention and Cutting Feedback",
+      "authors": [
+        "Lei Wang",
+        "Debashis Ghosh"
+      ],
+      "abstract": "Causal effect estimation from observational data requires careful adjustment for confounding. Classical estimators such as inverse probability weighting and augmented inverse probability weighting are effective under favorable model specification, but may become unstable when treatment assignment and outcome mechanisms are complex, non-linear, and high-dimensional. Machine learning and representation learning approaches improve flexibility, yet joint training can allow outcome-related information to influence treatment-side representations, which is undesirable from a causal perspective. We propose MOCA (Modular One-way Causal Attention), a transformer-based framework that separates treatment and outcome modeling through a modular design, and performs confounder adjustment using a one-way attention mechanism. A cutting-feedback strategy, implemented via gradient detachment, prevents the outcome loss from updating the treatment module. This design preserves directional information flow while retaining the representational power of transformer architectures for causal inference. Across multiple simulated scenarios, including linear, nonlinear, heavy-tailed, hidden confounding, and high-dimensional settings, MOCA shows competitive or improved performance relative to IPW, AIPW, X-learner, TARNet, and DragonNet. We further illustrate the method on the Infant Health and Development Program dataset and the Dehejia-Wahba dataset as real-world benchmarks. These results suggest that modular attention with one-way information flow provides a promising and interpretable direction for causal inference with modern deep learning models.",
+      "pdf_url": "https://arxiv.org/pdf/2604.23107v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.23107v1",
+      "published": "2026-04-25",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "DeepImagine: Learning Biomedical Reasoning via Successive Counterfactual Imagining",
+      "authors": [
+        "Youze Zheng",
+        "Jianyou Wang",
+        "Yuhan Chen",
+        "Matthew Feng",
+        "Longtian Bao",
+        "Hanyuan Zhang",
+        "Maxim Khan",
+        "Aditya K. Sehgal",
+        "Christopher D. Rosin",
+        "Umber Dube",
+        "Ramamohan Paturi"
+      ],
+      "abstract": "Predicting the outcomes of prospective clinical trials remains a major challenge for large language models. Prior work has shown that both traditional correlational predictors, such as random forests and logistic regression, and strong commercial LLMs achieve limited performance on this task. In this paper, we propose DeepImagine, a framework for teaching LLMs biomedical reasoning through successive counterfactual imagining. The central idea is to approximate hidden causal mechanisms of clinical trials by training models to infer how observed trial results would change under controlled perturbations of experimental conditions, such as dosage, outcome measures, study arms, geography, and other trial attributes. To support this objective, we construct both natural and approximate counterfactual pairs from real clinical trials with reported outcomes. For settings where strict counterfactual supervision is available, such as paired outcome measures or dose-ranging study arms within the same trial, we train models with supervised fine-tuning. For broader settings where only approximate counterfactual pairs can be retrieved, we optimize models with reinforcement learning using verifiable rewards based on downstream benchmark correctness. We further augment training with synthetic reasoning traces that provide causally plausible explanations for local counterfactual transitions. Using this pipeline, we train language models under 10B parameters, including Qwen3.5-9B, and evaluate them on clinical trial outcome prediction. We aim to show that DeepImagine consistently improves over untuned language models and traditional correlational baselines. Finally, we aim to show that the learned reasoning trajectories provide interpretable signals about how models represent trial-level mechanisms, suggesting a practical path toward more mechanistic and scientifically useful biomedical language models.",
+      "pdf_url": "https://arxiv.org/pdf/2604.23054v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.23054v1",
+      "published": "2026-04-24",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Causal Identification under Interference: The Role of Treatment Assignment Independence",
       "authors": [
@@ -49,127 +174,6 @@
       "published": "2026-04-24",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "RAG-Reflect: Agentic Retrieval-Augmented Generation with Reflections for Comment-Driven Code Maintenance on Stack Overflow",
-      "authors": [
-        "Mehedi Hasan Shanto",
-        "Muhammad Asaduzzaman",
-        "Alioune Ngom"
-      ],
-      "abstract": "User comments on online programming platforms such as Stack Overflow play a vital role in maintaining the correctness and relevance of shared code examples. However, the majority of comments express gratitude or clarification, while only a small fraction highlight actionable issues that drive meaningful edits. This paper demonstrates how agentic AI principles can revolutionize software maintenance tasks by presenting RAG-Reflect, a modular framework that achieves fine-tuned-level performance for valid comment-edit prediction without task-specific training. Valid Comment-Edit Prediction (VCP) is the task of determining whether a user comment directly triggered a subsequent code edit. The framework integrates large language models (LLMs) with retrieval-augmented reasoning and self-reflection mechanisms. RAG-Reflect operates through a three-stage runtime workflow built on a one-time pattern analysis phase. During initialization, an Interpretation module analyzes the knowledge base to generate validation rules. At inference time, the system (1) retrieves contextual examples, (2) reasons about comment-edit causality, and (3) reflects on decisions using the pre-established rules. We evaluate RAG-Reflect on the publicly available SOUP benchmark, achieving Precision = 0.81, Recall = 0.74, and F1 = 0.78, outperforming traditional baselines (e.g., Logistic Regression, XGBoost, different prompting techniques) and closely approaching the performance of fine-tuned models (F1 = 0.773) without retraining. Our ablation and stage-level analyses show that both retrieval and reflection modules substantially enhance performance.",
-      "pdf_url": "https://arxiv.org/pdf/2604.22217v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.22217v1",
-      "published": "2026-04-24",
-      "categories": [
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "Causality-Encoded Diffusion Models for Interventional Sampling and Edge Inference",
-      "authors": [
-        "Li Chen",
-        "Xiaotong Shen",
-        "Wei Pan"
-      ],
-      "abstract": "Standard diffusion models are flexible estimators of complex distributions, but they do not encode causal structures and therefore do not by themselves support causal analysis. We propose a causality-encoded diffusion framework that incorporates a known directed acyclic graph by training conditional diffusion models consistent with the graph factorisation. The resulting sampler approximately recovers the observational distribution and enables interventional sampling by fixing intervened variables while propagating effects through the graph during reverse diffusion. Building on this interventional simulator, we develop a resampling-based test for directed edges that generates null replicates under a candidate graph. We establish convergence guarantees for observational and interventional distribution estimation, with rates governed by the maximum local dimension rather than the ambient dimension, and prove asymptotic control of type I error for the edge test. Simulations show improved interventional distribution recovery relative to baselines, with near-nominal size and favourable power in inference. An application to flow cytometry data demonstrates practical utility of the proposed method in assessing disputed signalling linkages.",
-      "pdf_url": "https://arxiv.org/pdf/2604.21843v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.21843v1",
-      "published": "2026-04-23",
-      "categories": [
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "A Robust Framework for Two-Sample Mendelian Randomization under Population Heterogeneity",
-      "authors": [
-        "Dingke Tang",
-        "Xuming He",
-        "Shu Yang"
-      ],
-      "abstract": "Mendelian randomization is a powerful tool for causal inference in observational studies. The two-sample summary-data design, which estimates genetic associations with exposures and outcomes in separate cohorts, is the most widely used Mendelian randomization approach in large-scale genomic studies. However, this approach relies on a strong assumption of population homogeneity across the two samples. In practice, available samples often differ in ancestry, demographics, socioeconomic factors, covariate adjustment, and measurement protocols. Violations of the homogeneity assumption can bias causal effect estimates and undermine the credibility of Mendelian randomization findings. We introduce a robust, model-free Mendelian randomization framework that directly addresses population heterogeneity in the two-sample summary-data setting. Our method avoids parametric assumptions about population differences and is designed to address real-world challenges, including measurement error, weak instruments, and pleiotropy. We show that the proposed estimator is consistent and asymptotically normal under heterogeneous designs, and may offer efficiency gains over the classic estimator even in homogeneous settings. Through numerical simulations and a real data analysis for estimating the causal effect of body mass index on high-density lipoprotein cholesterol across ancestrally diverse populations, we demonstrate the practical utility, stability, and robustness of our approach.",
-      "pdf_url": "https://arxiv.org/pdf/2604.21757v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.21757v1",
-      "published": "2026-04-23",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "A Riesz Representer Perspective on Targeted Learning",
-      "authors": [
-        "Salvador V. Balkus",
-        "Christian Testa",
-        "Nima S. Hejazi"
-      ],
-      "abstract": "As research in causal inference has sought to address more complex scientific questions, the number of specialized estimands in the field has proliferated. Recognition that many of these estimands share a common linear form has generated interest in simplifying estimation procedures using Riesz representers. In this work, we construct a targeted minimum loss-based estimation procedure for nested linear functionals, leveraging Riesz representers of a general recursive form. The proposed method unifies asymptotically efficient estimation for a variety of statistical estimands that originate in causal inference, including the effects of time-varying treatments under treatment-confounder feedback and direct and indirect effects from causal mediation analysis. We demonstrate how our proposal reduces the need for laborious and technically challenging mathematical derivations when constructing estimators of common statistical estimands under complex forms of censoring and sampling. We investigate and validate the properties of the proposed procedures in numerical experiments, discuss open-source software facilitating their implementation, and illustrate their application in a re-analysis of data from an HIV vaccine efficacy trial.",
-      "pdf_url": "https://arxiv.org/pdf/2604.21721v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.21721v1",
-      "published": "2026-04-23",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Causal Disentanglement for Full-Reference Image Quality Assessment",
-      "authors": [
-        "Zhen Zhang",
-        "Jielei Chu",
-        "Tian Zhang",
-        "Weide Liu",
-        "Fengmao Lv",
-        "Tianrui Li",
-        "Jun Cheng",
-        "Yuming Fang"
-      ],
-      "abstract": "Existing deep network-based full-reference image quality assessment (FR-IQA) models typically work by performing pairwise comparisons of deep features from the reference and distorted images. In this paper, we approach this problem from a different perspective and propose a novel FR-IQA paradigm based on causal inference and decoupled representation learning. Unlike typical feature comparison-based FR-IQA models, our approach formulates degradation estimation as a causal disentanglement process guided by intervention on latent representations. We first decouple degradation and content representations by exploiting the content invariance between the reference and distorted images. Second, inspired by the human visual masking effect, we design a masking module to model the causal relationship between image content and degradation features, thereby extracting content-influenced degradation features from distorted images. Finally, quality scores are predicted from these degradation features using either supervised regression or label-free dimensionality reduction. Extensive experiments demonstrate that our method achieves highly competitive performance on standard IQA benchmarks across fully supervised, few-label, and label-free settings. Furthermore, we evaluate the approach on diverse non-standard natural image domains with scarce data, including underwater, radiographic, medical, neutron, and screen-content images. Benefiting from its ability to perform scenario-specific training and prediction without labeled IQA data, our method exhibits superior cross-domain generalization compared to existing training-free FR-IQA models.",
-      "pdf_url": "https://arxiv.org/pdf/2604.21654v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.21654v1",
-      "published": "2026-04-23",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "VARestorer: One-Step VAR Distillation for Real-World Image Super-Resolution",
-      "authors": [
-        "Yixuan Zhu",
-        "Shilin Ma",
-        "Haolin Wang",
-        "Ao Li",
-        "Yanzhe Jing",
-        "Yansong Tang",
-        "Lei Chen",
-        "Jiwen Lu",
-        "Jie Zhou"
-      ],
-      "abstract": "Recent advancements in visual autoregressive models (VAR) have demonstrated their effectiveness in image generation, highlighting their potential for real-world image super-resolution (Real-ISR). However, adapting VAR for ISR presents critical challenges. The next-scale prediction mechanism, constrained by causal attention, fails to fully exploit global low-quality (LQ) context, resulting in blurry and inconsistent high-quality (HQ) outputs. Additionally, error accumulation in the iterative prediction severely degrades coherence in ISR task. To address these issues, we propose VARestorer, a simple yet effective distillation framework that transforms a pre-trained text-to-image VAR model into a one-step ISR model. By leveraging distribution matching, our method eliminates the need for iterative refinement, significantly reducing error propagation and inference time. Furthermore, we introduce pyramid image conditioning with cross-scale attention, which enables bidirectional scale-wise interactions and fully utilizes the input image information while adapting to the autoregressive mechanism. This prevents later LQ tokens from being overlooked in the transformer. By fine-tuning only 1.2\\% of the model parameters through parameter-efficient adapters, our method maintains the expressive power of the original VAR model while significantly enhancing efficiency. Extensive experiments show that VARestorer achieves state-of-the-art performance with 72.32 MUSIQ and 0.7669 CLIPIQA on DIV2K dataset, while accelerating inference by 10 times compared to conventional VAR inference.",
-      "pdf_url": "https://arxiv.org/pdf/2604.21450v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.21450v1",
-      "published": "2026-04-23",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Time, Causality, and Observability Failures in Distributed AI Inference Systems",
-      "authors": [
-        "Ankur Sharma",
-        "Deep Shah",
-        "David Lariviere",
-        "Hesham ElBakoury"
-      ],
-      "abstract": "Distributed AI inference pipelines rely heavily on timestamp-based observability to understand system behavior. This work demonstrates that even small clock skew between nodes can cause observability to become causally incorrect while the system itself remains functionally correct and performant. We present controlled experiments on a multi-node AI inference pipeline, where clock skew is introduced at a single stage. Results show that no violations are observed under synchronized conditions and up to 3 ms skew, while clear causality violations emerge by 5 ms. Despite this, system throughput and output correctness remain largely unaffected. We further observe that violation behavior is not strictly static. In longer runs, negative span rates may stabilize or decrease over time, indicating that effective skew evolves due to relative clock drift between nodes. Experiments were conducted using Kafka and ZeroMQ transports, with consistent results across both. Aeron is under active exploration but is not yet included in the completed validation set. These findings suggest that observability correctness depends not only on system functionality but also on precise time alignment, and that timing must be treated as a first-class concern in distributed AI systems.",
-      "pdf_url": "https://arxiv.org/pdf/2604.21361v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.21361v1",
-      "published": "2026-04-23",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]
