@@ -1,6 +1,118 @@
 {
-  "last_updated": "2026-04-28T01:56:31.413896",
+  "last_updated": "2026-04-29T01:59:06.716848",
   "papers": [
+    {
+      "title": "A Continuous-Time Ensemble Kalman-Bucy Smoother for Causal Inference and Model Discovery",
+      "authors": [
+        "Zhang Jiang",
+        "Marios Andreou",
+        "Sebastian Reich",
+        "Nan Chen"
+      ],
+      "abstract": "Data assimilation (DA) integrates observational information with model predictions to improve state estimation in complex systems. While filtering provides the basis for online forecasts by using only past and present observations, it can exhibit delays and biases when the underlying dynamics evolve rapidly or undergo regime transitions. Smoothing, which additionally incorporates future observations, provides a natural pipeline for hindcasting and reanalysis that yields an uncertainty reduction beyond the filter. This paper introduces an ensemble Kalman-Bucy smoother (EnKBS) for continuous-time DA of nonlinear dynamical systems, where the smoother's conditional distributions are reconstructed using ensemble moments. The result is a derivative-free framework that does not require explicit computation of tangent-linear or adjoint models, which converges to the exact smoother solution at the infinite-ensemble limit for a wide class of complex systems. Incorporating standard regularization techniques for high-dimensional systems, such as covariance localization and inflation, the skill of the EnKBS is demonstrated in various important scientific problems. By integrating future observations, which reveal the underlying causal mechanisms for retrospective state updates, the EnKBS is used for Bayesian-based inference of causal relationships and their temporal influence range in a dyadic trigger-feedback model and the development of a causality-driven iterative learning algorithm that identifies the structure and recovers the hidden parameters of a nonlinear reduced-order model mimicking midlatitude atmospheric circulation. Notably, both tasks remain effective with an ensemble size of $O(10)$ under partial observations, suggesting that EnKBS can support the instantaneous discovery of high-dimensional complex systems over time.",
+      "pdf_url": "https://arxiv.org/pdf/2604.25157v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.25157v1",
+      "published": "2026-04-28",
+      "categories": [
+        "math.NA",
+        "eess.SY",
+        "physics.ao-ph",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "A Physics Informed Bayesian Neural Network for the Neutron Star Equation of State",
+      "authors": [
+        "J. D. Baker",
+        "C. A. Bertulani",
+        "R. V. Lobato"
+      ],
+      "abstract": "We present a physics-informed Bayesian neural-network framework to infer neutron-star equations of state from theoretical priors and to propagate the associated uncertainties to stellar observables. Trained on a large and representative ensemble of hadronic EoSs, the model learns $P(ε)$ via stochastic variational inference, incorporating soft constraints at saturation density and from perturbative QCD, together with penalties enforcing monotonicity and causality. The accepted core EoSs are matched to an SLy4 crust and evolved through a unified Tolman-Oppenheimer-Volkoff-plus-tidal solver to generate posterior predictions in the mass-radius ($M$-$R$) and mass-tidal-deformability ($M$-$Λ$) planes. The inferred posterior is consistent with NICER radius measurements and the observed $2.0\\,M_\\odot$ maximum-mass constraint, yielding $R_{1.4}=12.1^{+1.4}_{-0.9}\\,\\mathrm{km}$, $Λ_{1.4}=580^{+520}_{-240}$, and $M_{\\mathrm{max}}\\simeq 2.11\\pm0.05\\,M_\\odot$ (90\\% CI). The resulting canonical tidal deformability can be assessed \\emph{a posteriori} against current gravitational-wave constraints. Overall, this framework provides a flexible, non-parametric mapping from microphysical EoS uncertainties to neutron-star observables.",
+      "pdf_url": "https://arxiv.org/pdf/2604.24949v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.24949v1",
+      "published": "2026-04-27",
+      "categories": [
+        "astro-ph.HE",
+        "nucl-th"
+      ]
+    },
+    {
+      "title": "PhysNote: Self-Knowledge Notes for Evolvable Physical Reasoning in Vision-Language Model",
+      "authors": [
+        "Sinin Zhang",
+        "Yunfei Xie",
+        "Yuxuan Cheng",
+        "Haoyu Zhang",
+        "Tong Zhang"
+      ],
+      "abstract": "Vision-Language Models (VLMs) have demonstrated strong performance on textbook-style physics problems, yet they frequently fail when confronted with dynamic real-world scenarios that require temporal consistency and causal reasoning across frames. We identify two fundamental challenges underlying these failures: (1) spatio-temporal identity drift, where objects lose their physical identity across successive frames and break causal chains, and (2) volatility of inference-time insights, where a model may occasionally produce correct physical reasoning but never consolidates it for future reuse. To address these challenges, we propose PhysNote, an agentic framework that enables VLMs to externalize and refine physical knowledge through self-generated \"Knowledge Notes.\" PhysNote stabilizes dynamic perception through spatio-temporal canonicalization, organizes self-generated insights into a hierarchical knowledge repository, and drives an iterative reasoning loop that grounds hypotheses in visual evidence before consolidating verified knowledge. Experiments on PhysBench demonstrate that PhysNote achieves 56.68% overall accuracy, a 4.96% improvement over the best multi-agent baseline, with consistent gains across all four physical reasoning domains.",
+      "pdf_url": "https://arxiv.org/pdf/2604.24443v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.24443v1",
+      "published": "2026-04-27",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Closing the Loop: A Software Framework for AI to Support Business Decision Making",
+      "authors": [
+        "Jeffrey Wong",
+        "Antoine Creux"
+      ],
+      "abstract": "Create an idea, prototype it, evaluate if users like it, then learn. It is the circle of business. If AI can operate in all parts of the circle, it will enable rapid iteration and learning speeds for businesses. Experiment platforms that deploy experiments to evaluate return on investment for businesses are abundant, but systems that help businesses learn personalization, mechanisms, and what to ideate next, are rare. Among technologies that do exist, they cannot be well orchestrated in a single software interface that can be safely and efficiently leveraged by an AI agent. These challenges make it difficult to teach an AI agent how to learn within a robust experimentation framework, and difficult for an AI agent to operate and iterate for the business.\n  We offer a two part solution: one half that is rooted in mathematical reductions to contain complexity, and one half that is rooted in software design to optimize for orchestration, software safety, and multiplicity. Our solution, a software framework, moves beyond the simple treatment effect computed as a difference in means. To create a better understanding of a business and its customers, we enrich causal analysis with heterogeneous effects, policy algorithms, mediation analysis, and forecasts of effects. To have an AI complete the iteration cycle faster, we further enrich the analysis with variance reduction and anytime valid inference. The enrichments are made compatible across different types of experiments, and are presented in a single software interface that is usable in an AI agent.\n  We evaluate the approach on various objectives in experiment analysis, and show that the framework improves code correctness, reduces lines of code, and is more performant than a baseline analysis constructed by a vanilla agent.",
+      "pdf_url": "https://arxiv.org/pdf/2604.24116v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.24116v1",
+      "published": "2026-04-27",
+      "categories": [
+        "cs.SE",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Neyman Jackknife: Design-Based Variance Estimation for Causal Inference under Interference",
+      "authors": [
+        "Bryan Park",
+        "Stefan Wager"
+      ],
+      "abstract": "We propose a framework, the Neyman Jackknife, for conservative variance estimation in finite-population causal inference under interference. Our approach provides a general, flexible blueprint that enables conservative variance estimation whenever we are able to recompute our target estimator with some treatment assignments omitted. In classical settings, our approach recovers estimators closely related to the Neyman estimator under SUTVA and the Newey-West HAC variance estimator for time series. Numerical experiments suggest that our general-purpose framework yields variance estimators that can match or even surpass the performance of baselines that were purpose-built for specific applications.",
+      "pdf_url": "https://arxiv.org/pdf/2604.24017v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.24017v1",
+      "published": "2026-04-27",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "MR-CCC: Bayesian Mendelian Randomization for Causal Cell--Cell Communication",
+      "authors": [
+        "Bitan Sarkar",
+        "Yang Ni"
+      ],
+      "abstract": "Cell--cell communication (CCC) is commonly inferred from ligand--receptor co-expression, an associational paradigm that cannot distinguish causal signaling from shared regulation or confounding. We propose MR-CCC, a Bayesian Mendelian randomization framework that uses cis-eQTLs as instruments for ligand and receptor expression and explicitly models receptor-modulated ligand effects through an interaction term, so the causal effect of a ligand can vary with receptor abundance. A spike--and--slab prior yields posterior inclusion probabilities quantifying evidence for causal signaling, and an efficient Gibbs sampler provides scalable inference. Benchmarked against naive regression, MVMR, and MR-BMA, MR-CCC controls false discoveries under confounding while retaining high power, and uniquely estimates both the ligand main and receptor-modulated interaction effects. Applied to the OneK1K NK cells $\\to$ monocytes axis, MR-CCC identifies eight discoveries across GABA, interferon, interleukin, and prostaglandin signaling, including a stoichiometry-dependent dissociation of the two IL-18 receptor chains and co-discovery of both obligate IFN-$γ$ receptor subunits.",
+      "pdf_url": "https://arxiv.org/pdf/2604.23917v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.23917v1",
+      "published": "2026-04-27",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Generative Synthetic Data for Causal Inference: Pitfalls, Remedies, and Opportunities",
+      "authors": [
+        "Yichen Xu"
+      ],
+      "abstract": "Synthetic data offers a promising tool for privacy-preserving data release, augmentation, and simulation, but its use in causal inference requires preserving more than predictive fidelity. We show that fully generative tabular synthesizers, including GAN- and LLM-based models, can achieve strong train-on-synthetic-test-on-real performance while substantially distorting causal estimands such as the average treatment effect (ATE). We formalize this failure through sensitivity and tradeoff results showing that ATE preservation requires control of both the generated covariate law and the treatment-effect contrast in the outcome regression. Motivated by this observation, we propose a hybrid synthetic-data framework that generates covariates separately from the treatment and outcome mechanisms, using distance-to-closest-record diagnostics to monitor covariate synthesis and separately learned nuisance models to construct (W, A, Y) triplets. We further study targeted synthetic augmentation for practical positivity problems and characterize when added overlap support helps by improving conditional-effect estimation more than it shifts the covariate distribution. Finally, we develop a synthetic simulation engine for pre-analysis estimator evaluation, enabling finite-sample comparison of OR, IPW, AIPW, and TMLE under realistic covariate structure. Across experiments, hybrid synthetic data substantially improve ATE preservation relative to fully generative baselines and provide a practical diagnostic tool for robust causal analysis.",
+      "pdf_url": "https://arxiv.org/pdf/2604.23904v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.23904v1",
+      "published": "2026-04-26",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
     {
       "title": "Multivariate incremental effects for continuous treatments: Studying the health effects of environmental mixtures",
       "authors": [
@@ -47,133 +159,6 @@
       "categories": [
         "stat.AP",
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Active Inference: A method for Phenotyping Agency in AI systems?",
-      "authors": [
-        "Philip Wilson",
-        "Axel Constant",
-        "Mahault Albarracin",
-        "Nicolás Hinrichs",
-        "Jasmine Moore",
-        "Daniel Polani",
-        "Karl Friston"
-      ],
-      "abstract": "The proliferation of agentic artificial intelligence has outpaced the conceptual tools needed to characterize agency in computational systems. Prevailing definitions mainly rely on autonomy and goal-directedness. Here, we argue for a minimal notion open to principled inspection given three criteria: intentionality as action grounded in beliefs and desires, rationality as normatively coherent action entailed by a world model, and explainability as action causally traceable to internal states; we subsequently instantiate these as a partially observable Markov decision process under a variational framework wherein posterior beliefs, prior preferences, and the minimization of expected free energy jointly constitute an agentic action chain. Using a canonical T-maze paradigm, we evidence how empowerment, formulated as the channel capacity between actions and anticipated observations, serves as an operational metric that distinguishes zero-, intermediate-, and high-agency phenotypes through structural manipulations of the generative model. We conclude by arguing that as agents engage in epistemic foraging to resolve ambiguity, the governance controls that remain effective must shift systematically from external constraints to the internal modulation of prior preferences, offering a principled, variational bridge from computational phenotyping to AI governance strategy",
-      "pdf_url": "https://arxiv.org/pdf/2604.23278v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.23278v1",
-      "published": "2026-04-25",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "StoryTR: Narrative-Centric Video Temporal Retrieval with Theory of Mind Reasoning",
-      "authors": [
-        "Xuanyue Zhong",
-        "Yuqiang Xie",
-        "Guanqun Bi",
-        "Jiangping Yang",
-        "Guibin Chen"
-      ],
-      "abstract": "Current video moment retrieval excels at action-centric tasks but struggles with narrative content. Models can see \\textit{what is happening} but fail to reason \\textit{why it matters}. This semantic gap stems from the lack of \\textbf{Theory of Mind (ToM)}: the cognitive ability to infer implicit intentions, mental states, and narrative causality from surface-level observations. We introduce \\textbf{StoryTR}, the first video moment retrieval benchmark requiring ToM reasoning, comprising 8.1k samples from narrative short-form videos (shorts/reels). These videos present an ideal testbed. Their high information density encodes meaning through subtle multimodal cues. For instance, a glance paired with a sigh carries entirely different semantics than the glance alone. Yet multimodal perception alone is insufficient; ToM is required to decode that a character ``smiling'' may actually be ``concealing hostility.'' To teach models this reasoning capability, we propose an \\textbf{Agentic Data Pipeline} that generates training data with explicit three-tier ToM chains (intent decoding, narrative reasoning, boundary localization). Experiments reveal the severity of the reasoning gap: Gemini-3.0-Pro achieves only 0.53 Avg IoU on StoryTR. However, our 7B \\textbf{Shorts-Moment} model, trained on ToM-guided data, improves +15.1\\% relative IoU over baselines, demonstrating that \\textit{narrative reasoning capability matters more than parameter scale}.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23198v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.23198v1",
-      "published": "2026-04-25",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MOCA: A Transformer-based Modular Causal Inference Framework with One-way Cross-attention and Cutting Feedback",
-      "authors": [
-        "Lei Wang",
-        "Debashis Ghosh"
-      ],
-      "abstract": "Causal effect estimation from observational data requires careful adjustment for confounding. Classical estimators such as inverse probability weighting and augmented inverse probability weighting are effective under favorable model specification, but may become unstable when treatment assignment and outcome mechanisms are complex, non-linear, and high-dimensional. Machine learning and representation learning approaches improve flexibility, yet joint training can allow outcome-related information to influence treatment-side representations, which is undesirable from a causal perspective. We propose MOCA (Modular One-way Causal Attention), a transformer-based framework that separates treatment and outcome modeling through a modular design, and performs confounder adjustment using a one-way attention mechanism. A cutting-feedback strategy, implemented via gradient detachment, prevents the outcome loss from updating the treatment module. This design preserves directional information flow while retaining the representational power of transformer architectures for causal inference. Across multiple simulated scenarios, including linear, nonlinear, heavy-tailed, hidden confounding, and high-dimensional settings, MOCA shows competitive or improved performance relative to IPW, AIPW, X-learner, TARNet, and DragonNet. We further illustrate the method on the Infant Health and Development Program dataset and the Dehejia-Wahba dataset as real-world benchmarks. These results suggest that modular attention with one-way information flow provides a promising and interpretable direction for causal inference with modern deep learning models.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23107v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.23107v1",
-      "published": "2026-04-25",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "DeepImagine: Learning Biomedical Reasoning via Successive Counterfactual Imagining",
-      "authors": [
-        "Youze Zheng",
-        "Jianyou Wang",
-        "Yuhan Chen",
-        "Matthew Feng",
-        "Longtian Bao",
-        "Hanyuan Zhang",
-        "Maxim Khan",
-        "Aditya K. Sehgal",
-        "Christopher D. Rosin",
-        "Umber Dube",
-        "Ramamohan Paturi"
-      ],
-      "abstract": "Predicting the outcomes of prospective clinical trials remains a major challenge for large language models. Prior work has shown that both traditional correlational predictors, such as random forests and logistic regression, and strong commercial LLMs achieve limited performance on this task. In this paper, we propose DeepImagine, a framework for teaching LLMs biomedical reasoning through successive counterfactual imagining. The central idea is to approximate hidden causal mechanisms of clinical trials by training models to infer how observed trial results would change under controlled perturbations of experimental conditions, such as dosage, outcome measures, study arms, geography, and other trial attributes. To support this objective, we construct both natural and approximate counterfactual pairs from real clinical trials with reported outcomes. For settings where strict counterfactual supervision is available, such as paired outcome measures or dose-ranging study arms within the same trial, we train models with supervised fine-tuning. For broader settings where only approximate counterfactual pairs can be retrieved, we optimize models with reinforcement learning using verifiable rewards based on downstream benchmark correctness. We further augment training with synthetic reasoning traces that provide causally plausible explanations for local counterfactual transitions. Using this pipeline, we train language models under 10B parameters, including Qwen3.5-9B, and evaluate them on clinical trial outcome prediction. We aim to show that DeepImagine consistently improves over untuned language models and traditional correlational baselines. Finally, we aim to show that the learned reasoning trajectories provide interpretable signals about how models represent trial-level mechanisms, suggesting a practical path toward more mechanistic and scientifically useful biomedical language models.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23054v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.23054v1",
-      "published": "2026-04-24",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Causal Identification under Interference: The Role of Treatment Assignment Independence",
-      "authors": [
-        "Julius Owusu",
-        "Monika Avila Márquez"
-      ],
-      "abstract": "Empirical researchers routinely invoke the no-interference or \\textit{individualistic treatment response} (ITR) assumption to identify causal effects in observational studies, despite concerns that interference across units may arise in many economic settings. This paper studies the causal content of standard ITR-based identification formulas when arbitrary interference is present. We show that, under restrictions on dependence between treatment assignments across units, conventional ITR-based identification formulas -- including those underlying selection-on-observables, instrumental variables, regression discontinuity designs, and difference-in-differences -- identify well-defined causal objects: types of \\textit{average direct effects} (ADEs). These results do not require knowledge of the interference structure or specification of exposure mappings. We also propose a sensitivity analysis framework that quantifies the robustness of statistical inference to violations of treatment-assignment independence under arbitrary interference.",
-      "pdf_url": "https://arxiv.org/pdf/2604.22532v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.22532v1",
-      "published": "2026-04-24",
-      "categories": [
-        "econ.EM"
-      ]
-    },
-    {
-      "title": "From Local to Cluster: A Unified Framework for Causal Discovery with Latent Variables",
-      "authors": [
-        "Zongyu Li"
-      ],
-      "abstract": "Latent variables pose a fundamental challenge to causal discovery and inference. Conventional local methods focus on direct neighbors but fail to provide macro level insights. Cluster level methods enable macro causal reasoning but either assume clusters are known a priori or require causal sufficiency. Moreover, directly applying single variable causal discovery methods to cluster level problems violates causal sufficiency and leads to incorrect results. To overcome these limitations, this paper proposes L2C (Local to Cluster Causal Abstraction), a unified framework that bridges local structure learning and cluster level causal discovery. Unlike prior work that requires a complete manual assignment of micro variables to clusters, L2C discovers the partition automatically from local causal patterns. Our solution leverages a cluster reduction theorem to reduce any cluster to at most three nodes without loss of causal information, applies local causal discovery to identify direct causes, effects, and V structures in the presence of latent variables, and performs macro level causal inference via cluster level calculus on the learned cluster graph. L2C does not assume causal sufficiency, as latent variables are handled through local discovery. Theoretical analysis shows that L2C ensures soundness, atomic completeness, and computational efficiency. Extensive experiments on synthetic and real world data demonstrate that L2C accurately recovers ground truth clusters and achieves superior macro causal effect identification compared to existing baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2604.22416v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.22416v1",
-      "published": "2026-04-24",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Preference Heads in Large Language Models: A Mechanistic Framework for Interpretable Personalization",
-      "authors": [
-        "Weixu Zhang",
-        "Ye Yuan",
-        "Changjiang Han",
-        "Yuxing Tian",
-        "Zipeng Sun",
-        "Linfeng Du",
-        "Jikun Kang",
-        "Hong Kang",
-        "Xue Liu",
-        "Haolun Wu"
-      ],
-      "abstract": "Large Language Models (LLMs) exhibit strong implicit personalization ability, yet most existing approaches treat this behavior as a black box, relying on prompt engineering or fine tuning on user data. In this work, we adopt a mechanistic interpretability perspective and hypothesize the existence of a sparse set of Preference Heads, attention heads that encode user specific stylistic and topical preferences and exert a causal influence on generation. We introduce Differential Preference Steering (DPS), a training free framework that (1) identifies Preference Heads through causal masking analysis and (2) leverages them for controllable and interpretable personalization at inference time. DPS computes a Preference Contribution Score (PCS) for each attention head, directly measuring its causal impact on user aligned outputs. During decoding, we contrast model predictions with and without Preference Heads, amplifying the difference between personalized and generic logits to selectively strengthen preference aligned continuations. Experiments on widely used personalization benchmarks across multiple LLMs demonstrate consistent gains in personalization fidelity while preserving content coherence and low computational overhead. Beyond empirical improvements, DPS provides a mechanistic explanation of where and how personalization emerges within transformer architectures. Our implementation is publicly available.",
-      "pdf_url": "https://arxiv.org/pdf/2604.22345v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.22345v1",
-      "published": "2026-04-24",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]
