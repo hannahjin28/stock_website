@@ -1,6 +1,125 @@
 {
-  "last_updated": "2026-04-29T01:59:06.716848",
+  "last_updated": "2026-04-30T01:58:19.337100",
   "papers": [
+    {
+      "title": "Bridge: Basis-Driven Causal Inference Marries VFMs for Domain Generalization",
+      "authors": [
+        "Mingbo Hong",
+        "Feng Liu",
+        "Caroline Gevaert",
+        "George Vosselman",
+        "Hao Cheng"
+      ],
+      "abstract": "Detectors often suffer from degraded performance, primarily due to the distributional gap between the source and target domains. This issue is especially evident in single-source domains with limited data, as models tend to rely on confounders (e.g., illumination, co-occurrence, and style) from the source domain, leading to spurious correlations that hinder generalization. To this end, this paper proposes a novel Basis-driven framework for domain generalization, namely \\textbf{\\textit{Bridge}}, that incorporates causal inference into object detection. By learning the low-rank bases for front-door adjustment, \\textbf{\\textit{Bridge}} blocks confounders' effects to mitigate spurious correlations, while simultaneously refining representations by filtering redundant and task-irrelevant components. \\textbf{\\textit{Bridge}} can be seamlessly integrated with both discriminative (e.g., DINOv2/3, SAM) and generative (e.g., Stable Diffusion) Vision Foundation Models (VFMs). Extensive experiments across multiple domain generalization object detection datasets, i.e., Cross-Camera, Adverse Weather, Real-to-Artistic, Diverse Weather Datasets, and Diverse Weather DroneVehicle (our newly augmented real-world UAV-based benchmark), underscore the superiority of our proposed method over previous state-of-the-art approaches. The project page is available at: https://mingbohong.github.io/Bridge/.",
+      "pdf_url": "https://arxiv.org/pdf/2604.26820v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.26820v1",
+      "published": "2026-04-29",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Flexible semiparametric modeling with application to Causal Inference",
+      "authors": [
+        "Kun Ren",
+        "Wen Su",
+        "Li Liu",
+        "Ian W. McKeague",
+        "Xingqiu Zhao"
+      ],
+      "abstract": "This paper proposes a flexible new framework for constructing Neyman-orthogonal scores in semiparametric models involving infinite-dimensional nuisance parameters. While locally estimation is vital for integrating machine learning into econometrics, deriving orthogonal scores for complex models remains a major challenge. We provide explicit construction strategies for broad classes of settings. The proposed framework ensures asymptotic normality of target parameter estimators in a way that does not depend on the method used to construct the nuisance parameter estimators, provided they are $o_p(n^{-\\1/4})$-consistent. We apply the proposed methodology to causal inference with a binary instrumental variable, developing a novel, robust estimator for treatment effects. Numerical studies demonstrate that our approach significantly outperforms naive alternatives in finite samples. An empirical application to the Oregon Health Insurance Experiment illustrates the framework's utility in providing robust causal evidence.",
+      "pdf_url": "https://arxiv.org/pdf/2604.26729v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.26729v1",
+      "published": "2026-04-29",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "A simple strategy for valid inference in target trial emulations",
+      "authors": [
+        "Mats Julius Stensrud"
+      ],
+      "abstract": "Target trial emulation has improved comparative effectiveness research by making the causal question, assumptions, and analysis plan explicit. However, target trial protocols are usually developed iteratively. After examining the data, investigators revise the protocol to reflect which target trials the observational data can realistically support. While this iterative procedure is part of normal scientific practice, it raises concerns about selective choices and invalid statistical inference. A simple procedure can address these concerns. This procedure is based on sample splitting. In the initial split, investigators explore the data to define a target trial protocol. When these choices are made, the target trial protocol is implemented on the second split. Although the investigators made data-informed choices to select the target trial protocol, the inference has the usual coverage guarantees. The procedure is created to mirror how trialists move from pilot studies to a phase 3 trial. First, they use data from pilots and early-phase trials to learn and decide on a final protocol. Then they implement this protocol and analyze a new set of data in a phase 3 trial.",
+      "pdf_url": "https://arxiv.org/pdf/2604.26471v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.26471v1",
+      "published": "2026-04-29",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Observable Neural ODEs for Identifiable Causal Forecasting in Continuous Time",
+      "authors": [
+        "Jennifer Wendland",
+        "Nicolas Freitag",
+        "Maik Kschischo"
+      ],
+      "abstract": "Causal inference in continuous-time sequential decision problems is challenged by hidden confounders. We show that, in latent state-space models with time-varying interventions, observability of the latent dynamics from observed data is necessary for identifying dynamic treatment effects, linking control-theoretic observability to causal identifiability, even when hidden confounders affect both treatments and outcomes. We derive a continuous-time adjustment formula expressing potential outcome distributions under treatment trajectories via the measurement model, latent dynamics, and the filtering distribution over latent states given observed histories. We propose Observable Neural ODEs (ObsNODEs), Neural ODE models in observable normal form for causal forecasting. ObsNODEs learn continuous-time dynamics with states reconstructible from observations, enabling outcome prediction under alternative treatment paths. Experiments on synthetic cancer data, semi-synthetic data based on MIMIC-IV, and real-world sepsis data show strong performance over recent sequence models.",
+      "pdf_url": "https://arxiv.org/pdf/2604.26070v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.26070v1",
+      "published": "2026-04-28",
+      "categories": [
+        "cs.LG",
+        "math.OC",
+        "math.ST",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Quantum Bayesian Networks: Compositionality and Typing via Linear Logic",
+      "authors": [
+        "Rémi Di Guardia",
+        "Thomas Ehrhard",
+        "Claudia Faggian"
+      ],
+      "abstract": "Quantum Bayesian networks provide a mathematical formalism to describe causal relations, to analyse correlations, and to predict the probabilities of measurement outcomes, in systems involving both classical and quantum data. They generalize Pearl's Bayesian networks-prominent graphical models for classical probabilistic reasoning and inference.\n  Our paper brings compositional principles and a typing discipline into this setting. A key feature of our compositional semantics is that when all causes are classical, it coincides with the standard factor-based semantics of Bayesian networks, while in the purely quantum case it reduces to tensor networks. We then propose a typed formalism based on linear logic proof-nets, where types ensure well-behaved composition of systems.",
+      "pdf_url": "https://arxiv.org/pdf/2604.26059v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.26059v1",
+      "published": "2026-04-28",
+      "categories": [
+        "cs.LO"
+      ]
+    },
+    {
+      "title": "From Syntax to Emotion: A Mechanistic Analysis of Emotion Inference in LLMs",
+      "authors": [
+        "Bangzhao Shu",
+        "Arinjay Singh",
+        "Mai ElSherief"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly used in emotionally sensitive human-AI applications, yet little is known about how emotion recognition is internally represented. In this work, we investigate the internal mechanisms of emotion recognition in LLMs using sparse autoencoders (SAEs). By analyzing sparse feature activations across layers, we identify a consistent three-phase information flow, in which emotion-related features emerge only in the final phase. We further show that emotion representations comprise both shared features across emotions and emotion-specific features. Using phase-stratified causal tracing, we identify a small set of features that strongly influence emotion predictions, and show that both their number and causal impact vary across emotions; in particular, Disgust is more weakly and diffusely represented than other emotions. Finally, we propose an interpretable and data-efficient causal feature steering method that significantly improves emotion recognition performance across multiple models while largely preserving language modeling ability, and demonstrate that these improvements generalize across multiple emotion recognition datasets. Overall, our findings provide a systematic analysis of the internal mechanisms underlying emotion recognition in LLMs and introduce an efficient, interpretable, and controllable approach for improving model performance.",
+      "pdf_url": "https://arxiv.org/pdf/2604.25866v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.25866v1",
+      "published": "2026-04-28",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Mutual Forcing: Dual-Mode Self-Evolution for Fast Autoregressive Audio-Video Character Generation",
+      "authors": [
+        "Yupeng Zhou",
+        "Lianghua Huang",
+        "Zhifan Wu",
+        "Jiabao Wang",
+        "Yupeng Shi",
+        "Biao Jiang",
+        "Daquan Zhou",
+        "Yu Liu",
+        "Ming-Ming Cheng",
+        "Qibin Hou"
+      ],
+      "abstract": "In this work, we propose Mutual Forcing, a framework for fast autoregressive audio-video generation with long-horizon audio-video synchronization. Our approach addresses two key challenges: joint audio-video modeling and fast autoregressive generation. To ease joint audio-video optimization, we adopt a two-stage training strategy: we first train uni-modal generators and then couple them into a unified audio-video model for joint training on paired data. For streaming generation, we ask whether a native fast causal audio-video model can be trained directly, instead of following existing streaming distillation pipelines that typically train a bidirectional model first and then convert it into a causal generator through multiple distillation stages. Our answer is Mutual Forcing, which builds directly on native autoregressive model and integrates few-step and multi-step generation within a single weight-shared model, enabling self-distillation and improved training-inference consistency. The multi-step mode improves the few-step mode via self-distillation, while the few-step mode generates historical context during training to improve training-inference consistency; because the two modes share parameters, these two effects reinforce each other within a single model. Compared with prior approaches such as Self-Forcing, Mutual Forcing removes the need for an additional bidirectional teacher model, supports more flexible training sequence lengths, reduces training overhead, and allows the model to improve directly from real paired data rather than a fixed teacher. Experiments show that Mutual Forcing matches or surpasses strong baselines that require around 50 sampling steps while using only 4 to 8 steps, demonstrating substantial advantages in both efficiency and quality. The project page is available at https://mutualforcing.github.io.",
+      "pdf_url": "https://arxiv.org/pdf/2604.25819v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.25819v1",
+      "published": "2026-04-28",
+      "categories": [
+        "cs.CV",
+        "cs.SD"
+      ]
+    },
     {
       "title": "A Continuous-Time Ensemble Kalman-Bucy Smoother for Causal Inference and Model Discovery",
       "authors": [
@@ -52,113 +171,6 @@
       "published": "2026-04-27",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Closing the Loop: A Software Framework for AI to Support Business Decision Making",
-      "authors": [
-        "Jeffrey Wong",
-        "Antoine Creux"
-      ],
-      "abstract": "Create an idea, prototype it, evaluate if users like it, then learn. It is the circle of business. If AI can operate in all parts of the circle, it will enable rapid iteration and learning speeds for businesses. Experiment platforms that deploy experiments to evaluate return on investment for businesses are abundant, but systems that help businesses learn personalization, mechanisms, and what to ideate next, are rare. Among technologies that do exist, they cannot be well orchestrated in a single software interface that can be safely and efficiently leveraged by an AI agent. These challenges make it difficult to teach an AI agent how to learn within a robust experimentation framework, and difficult for an AI agent to operate and iterate for the business.\n  We offer a two part solution: one half that is rooted in mathematical reductions to contain complexity, and one half that is rooted in software design to optimize for orchestration, software safety, and multiplicity. Our solution, a software framework, moves beyond the simple treatment effect computed as a difference in means. To create a better understanding of a business and its customers, we enrich causal analysis with heterogeneous effects, policy algorithms, mediation analysis, and forecasts of effects. To have an AI complete the iteration cycle faster, we further enrich the analysis with variance reduction and anytime valid inference. The enrichments are made compatible across different types of experiments, and are presented in a single software interface that is usable in an AI agent.\n  We evaluate the approach on various objectives in experiment analysis, and show that the framework improves code correctness, reduces lines of code, and is more performant than a baseline analysis constructed by a vanilla agent.",
-      "pdf_url": "https://arxiv.org/pdf/2604.24116v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.24116v1",
-      "published": "2026-04-27",
-      "categories": [
-        "cs.SE",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Neyman Jackknife: Design-Based Variance Estimation for Causal Inference under Interference",
-      "authors": [
-        "Bryan Park",
-        "Stefan Wager"
-      ],
-      "abstract": "We propose a framework, the Neyman Jackknife, for conservative variance estimation in finite-population causal inference under interference. Our approach provides a general, flexible blueprint that enables conservative variance estimation whenever we are able to recompute our target estimator with some treatment assignments omitted. In classical settings, our approach recovers estimators closely related to the Neyman estimator under SUTVA and the Newey-West HAC variance estimator for time series. Numerical experiments suggest that our general-purpose framework yields variance estimators that can match or even surpass the performance of baselines that were purpose-built for specific applications.",
-      "pdf_url": "https://arxiv.org/pdf/2604.24017v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.24017v1",
-      "published": "2026-04-27",
-      "categories": [
-        "stat.ME",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "MR-CCC: Bayesian Mendelian Randomization for Causal Cell--Cell Communication",
-      "authors": [
-        "Bitan Sarkar",
-        "Yang Ni"
-      ],
-      "abstract": "Cell--cell communication (CCC) is commonly inferred from ligand--receptor co-expression, an associational paradigm that cannot distinguish causal signaling from shared regulation or confounding. We propose MR-CCC, a Bayesian Mendelian randomization framework that uses cis-eQTLs as instruments for ligand and receptor expression and explicitly models receptor-modulated ligand effects through an interaction term, so the causal effect of a ligand can vary with receptor abundance. A spike--and--slab prior yields posterior inclusion probabilities quantifying evidence for causal signaling, and an efficient Gibbs sampler provides scalable inference. Benchmarked against naive regression, MVMR, and MR-BMA, MR-CCC controls false discoveries under confounding while retaining high power, and uniquely estimates both the ligand main and receptor-modulated interaction effects. Applied to the OneK1K NK cells $\\to$ monocytes axis, MR-CCC identifies eight discoveries across GABA, interferon, interleukin, and prostaglandin signaling, including a stoichiometry-dependent dissociation of the two IL-18 receptor chains and co-discovery of both obligate IFN-$γ$ receptor subunits.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23917v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.23917v1",
-      "published": "2026-04-27",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Generative Synthetic Data for Causal Inference: Pitfalls, Remedies, and Opportunities",
-      "authors": [
-        "Yichen Xu"
-      ],
-      "abstract": "Synthetic data offers a promising tool for privacy-preserving data release, augmentation, and simulation, but its use in causal inference requires preserving more than predictive fidelity. We show that fully generative tabular synthesizers, including GAN- and LLM-based models, can achieve strong train-on-synthetic-test-on-real performance while substantially distorting causal estimands such as the average treatment effect (ATE). We formalize this failure through sensitivity and tradeoff results showing that ATE preservation requires control of both the generated covariate law and the treatment-effect contrast in the outcome regression. Motivated by this observation, we propose a hybrid synthetic-data framework that generates covariates separately from the treatment and outcome mechanisms, using distance-to-closest-record diagnostics to monitor covariate synthesis and separately learned nuisance models to construct (W, A, Y) triplets. We further study targeted synthetic augmentation for practical positivity problems and characterize when added overlap support helps by improving conditional-effect estimation more than it shifts the covariate distribution. Finally, we develop a synthetic simulation engine for pre-analysis estimator evaluation, enabling finite-sample comparison of OR, IPW, AIPW, and TMLE under realistic covariate structure. Across experiments, hybrid synthetic data substantially improve ATE preservation relative to fully generative baselines and provide a practical diagnostic tool for robust causal analysis.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23904v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.23904v1",
-      "published": "2026-04-26",
-      "categories": [
-        "stat.ME",
-        "cs.AI",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Multivariate incremental effects for continuous treatments: Studying the health effects of environmental mixtures",
-      "authors": [
-        "Zhuochao Huang",
-        "Kejin Dong",
-        "Tuo Lin",
-        "Joseph Antonelli"
-      ],
-      "abstract": "Evaluating the causal health effects of multivariate, continuous exposures, such as air pollution mixtures, is a critical public health challenge. A primary obstacle is the frequent violation of the positivity assumption, which renders the effects of standard deterministic interventions unidentified or heavily reliant on unreliable model extrapolation. In this paper, we develop a novel causal inference framework to address this challenge. We extend exponential tilting to multivariate exposures and address the critical question of how to compare different intervention directions fairly. This establishes a systematic framework for defining and evaluating various policy-relevant causal estimands, allowing researchers to address diverse scientific questions. We develop numerous methodological advancements, including efficient one-step estimation strategies, a Riemannian BFGS algorithm to solve a constrained manifold optimization problem, semiparametric efficiency bounds for causal estimands, minimax rates for estimators, and establishing asymptotic normality. We demonstrate our framework's utility by applying it to a nationwide environmental health dataset to identify the optimal strategy for reducing adverse health outcomes associated with a PM$_{2.5}$ chemical mixture.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23534v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.23534v1",
-      "published": "2026-04-26",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "PILOT: One Physics-Integrated Generation Framework to Unify 2D and 3D Radio Map Construction",
-      "authors": [
-        "Weiming Huang",
-        "Hao Sun",
-        "Junting Chen"
-      ],
-      "abstract": "Unified 2D and 3D radio map construction supports network planning, wireless digital twins, and unmanned aerial vehicle (UAV) applications. In urban environments, blockage, reflection, and diffraction make accurate construction expensive for physics-based solvers. Autoregressive next-token prediction offers a single sequential formulation that can cover both 2D and 3D generation, but standard raster ordering ignores the spatial structure of radio propagation. When generation follows propagation, each token is predicted from propagation-relevant history rather than spatially arbitrary context, which provides more causally informative conditioning and lowers conditional uncertainty. We propose PILOT, a pretrained autoregressive framework that replaces raster scan with a wavefront sequence expanding outward from the transmitter. Each prediction step is guided by an environment-aware instruction that spatially aligns environment features with the queried radio map region. The same framework extends to 3D radio maps through height-slice stacking while a gradient loss enforces vertical continuity. On standard 2D benchmarks, PILOT achieves the lowest NMSE among all baselines. For volumetric generation, it reduces NMSE by 78% relative to the diffusion baseline at roughly $2500\\times$ faster inference. It also outperforms methods that rely on 10% sparse measurements and achieves the best zero-shot results in the cross-domain evaluation.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23533v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.23533v1",
-      "published": "2026-04-26",
-      "categories": [
-        "eess.SP",
-        "cs.NI"
-      ]
-    },
-    {
-      "title": "Estimating Causal Attribution of Anthropogenic Forcing on High-Temperature Extremes Using a Latent Gaussian Spatial Model",
-      "authors": [
-        "Ritik Roshan Giri",
-        "Arnab Hazra"
-      ],
-      "abstract": "Climate change has become a significant global concern due to its capacity to cause substantial disruption to daily life by increasing the frequency and intensity of extreme weather events. Given the rising trend of human interventions in the climate system over recent decades, this study aims to quantify the relative contribution of anthropogenic forcing to the increasing likelihood of climate extremes, with a particular emphasis on high-temperature extremes. Our analysis focuses on annual temperature maxima from the IPSL-CM6A model in the CMIP6 experiment. We propose a novel causal inference framework that focuses on differences in return levels derived from annual temperature maxima between the factual and counterfactual worlds. While jointly modeling the annual maxima from the two worlds using a bivariate generalized extreme value distribution, we model the spatially-varying coefficients using a latent Gaussian framework. Specifically, given that the data are available over a $1^\\circ \\times 1^\\circ$ grid, we employ the multivariate intrinsic conditional autoregressive model for the latent layer in the proposed hierarchical model, ensuring proper posterior distributions. We implement a recently developed highly-efficient approximate Bayesian inference technique, `Max-and-smooth', that uses a Laplace approximation of the likelihood and then performs Gibbs sampling based on the approximate posterior. The results include posterior estimates of the causal effect of anthropogenic forcing on high-temperature extremes, along with the trends in this effect, over the factual world. Furthermore, we estimate credible regions for a significant causal effect to facilitate hotspot detection across the mainland United States.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23438v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.23438v1",
-      "published": "2026-04-25",
-      "categories": [
-        "stat.AP",
-        "stat.ME"
       ]
     }
   ]
