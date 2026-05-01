@@ -1,6 +1,69 @@
 {
-  "last_updated": "2026-04-30T01:58:19.337100",
+  "last_updated": "2026-05-01T02:00:20.606950",
   "papers": [
+    {
+      "title": "Debiasing Reward Models via Causally Motivated Inference-Time Intervention",
+      "authors": [
+        "Kazutoshi Shinoda",
+        "Kosuke Nishida",
+        "Kyosuke Nishida"
+      ],
+      "abstract": "Reward models (RMs) play a central role in aligning large language models (LLMs) with human preferences. However, RMs are often sensitive to spurious features such as response length. Existing inference-time approaches for mitigating these biases typically focus exclusively on response length, resulting in performance trade-offs. In this paper, we propose causally motivated intervention for mitigating multiple types of biases in RMs at inference time. Our method first identifies neurons whose activations are strongly correlated with predefined bias attributes, and applies neuron-level intervention that suppresses these signals. We evaluate our method on RM benchmarks and observe reductions in sensitivity to spurious features across diverse bias types, without inducing performance trade-offs. Moreover, when used for preference annotation, small RMs (2B and 7B) with our method, which edits less than 2% of all the neurons in RMs, enable LLMs to improve alignment, achieving performance comparable to that of a state-of-the-art 70B RM on AlpacaEval and MT-Bench. Further analysis reveals that bias signals are primarily encoded by neurons in early layers, shedding light on the internal mechanisms of bias exploitation in RMs.",
+      "pdf_url": "https://arxiv.org/pdf/2604.27495v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.27495v1",
+      "published": "2026-04-30",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Bayesian X-Learner: Calibrated Posterior Inference for Heterogeneous Treatment Effects under Heavy-Tailed Outcomes",
+      "authors": [
+        "Eichi Uehara"
+      ],
+      "abstract": "Conditional Average Treatment Effect (CATE) estimation in practice demands three properties simultaneously: heterogeneous effects $τ(x)$, calibrated uncertainty over them, and robustness to the heavy tails that contaminate real outcome data. Meta-learners (Künzel et al., 2019) give (i); causal forests and BART give (i)-(ii) with Gaussian-tail assumptions; no widely used tool gives all three. We present Bayesian X-Learner, an X-Learner built on cross-fitted doubly robust pseudo-outcomes (Kennedy, 2020) with a full MCMC posterior over $τ(x)$ via a Welsch redescending pseudo-likelihood. On Hill's IHDP benchmark the default configuration attains mean $\\sqrt{\\varepsilon_{\\mathrm{PEHE}}} = 0.56$ on 5 replications (lowest mean; differences from S-/T-/X-learners, full-config Causal BART, and a causal forest baseline are not significant at $α=0.05$, and rank ordering is unstable at 10 replications -- IHDP comparisons are competitive rather than dominant). On contaminated \"whale\" DGPs with up to 20-25% tail density, a one-flag extension (contamination_severity) that selects a Huber-$δ$ nuisance loss per Huber's minimax-$δ$ relation recovers RMSE $\\approx 0.13$ with tight credible intervals (single-cross-fit 30-seed coverage 83% [Wilson 66%, 93%] at 20% density; modular-Bayes pooling with Bayesian-bootstrap nuisance draws restores nominal 95% coverage).",
+      "pdf_url": "https://arxiv.org/pdf/2604.27394v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.27394v1",
+      "published": "2026-04-30",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "A Novel Computational Framework for Causal Inference: Tree-Based Discretization with ILP-Based Matching",
+      "authors": [
+        "Tianyu Yang",
+        "Md. Noor-E-Alam"
+      ],
+      "abstract": "Causal inference is essential for data-driven decision-making, as it aims to uncover causal relationships from observational data. However, identifying causality remains challenging due to the potential for confounding and the distinction between correlation and causation. While recent advances in causal machine learning and matching algorithms have improved estimation accuracy, these methods often face trade-offs between interpretability and computational efficiency. This paper proposes a novel approach that combines a tree-based discretization technique, tailored for causal inference, with an integer linear programming-based matching algorithm. The discretization ensures approximately linear relationships for control datasets within strata, enabling effective matching, while the optimization framework optimizes for global balance. The resulting algorithm yields computational efficiency and less biased ATT estimates compared to state-of-the-art algorithms. Empirical evaluations demonstrate the proposed method's practical advantages over existing techniques in causal inference scenarios.",
+      "pdf_url": "https://arxiv.org/pdf/2604.27307v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.27307v1",
+      "published": "2026-04-30",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Bayesian Nonparametric Causal Inference for Quantile Residual Life: An Application to Alzheimer's Disease",
+      "authors": [
+        "Woojung Bae",
+        "Taekwon Hong",
+        "Sang Kyu Lee",
+        "Dongrak Choi",
+        "Jong-Hyeon Jeong"
+      ],
+      "abstract": "In Alzheimer's disease research, for individuals who remain dementia-free through a given follow-up time, an important clinical question is how much longer they are likely to remain dementia-free. Quantiles of this remaining time provide clinically interpretable prognostic milestones and can help characterize prognostic heterogeneity across baseline groups. We address this question in the Alzheimer's Disease Neuroimaging Initiative (ADNI), focusing on baseline amyloid status as the exposure. Estimation is challenging because amyloid status is observed rather than randomized, requiring adjustment for confounding, and because time to dementia onset is heterogeneous and heavily right-censored. We estimate causal contrasts in quantile residual life using a Bayesian nonparametric enriched Dirichlet process mixture model for the joint distribution of event times, exposure, and baseline covariates, with inference via Bayesian g-computation. The approach accommodates ignorable missing baseline covariates through data augmentation, supports inference across clinically relevant landmark times, and allows sensitivity analysis for residual unmeasured confounding. Simulation studies show good performance under complex heterogeneity and heavy censoring. In ADNI, elevated baseline amyloid was associated with shorter quantiles of remaining dementia-free time than non-elevated baseline amyloid among individuals who remained dementia-free through relevant landmark times, overall and within baseline diagnostic subgroups.",
+      "pdf_url": "https://arxiv.org/pdf/2604.27198v1",
+      "arxiv_url": "http://arxiv.org/abs/2604.27198v1",
+      "published": "2026-04-29",
+      "categories": [
+        "stat.AP",
+        "stat.ME"
+      ]
+    },
     {
       "title": "Bridge: Basis-Driven Causal Inference Marries VFMs for Domain Generalization",
       "authors": [
@@ -95,82 +158,6 @@
       "published": "2026-04-28",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Mutual Forcing: Dual-Mode Self-Evolution for Fast Autoregressive Audio-Video Character Generation",
-      "authors": [
-        "Yupeng Zhou",
-        "Lianghua Huang",
-        "Zhifan Wu",
-        "Jiabao Wang",
-        "Yupeng Shi",
-        "Biao Jiang",
-        "Daquan Zhou",
-        "Yu Liu",
-        "Ming-Ming Cheng",
-        "Qibin Hou"
-      ],
-      "abstract": "In this work, we propose Mutual Forcing, a framework for fast autoregressive audio-video generation with long-horizon audio-video synchronization. Our approach addresses two key challenges: joint audio-video modeling and fast autoregressive generation. To ease joint audio-video optimization, we adopt a two-stage training strategy: we first train uni-modal generators and then couple them into a unified audio-video model for joint training on paired data. For streaming generation, we ask whether a native fast causal audio-video model can be trained directly, instead of following existing streaming distillation pipelines that typically train a bidirectional model first and then convert it into a causal generator through multiple distillation stages. Our answer is Mutual Forcing, which builds directly on native autoregressive model and integrates few-step and multi-step generation within a single weight-shared model, enabling self-distillation and improved training-inference consistency. The multi-step mode improves the few-step mode via self-distillation, while the few-step mode generates historical context during training to improve training-inference consistency; because the two modes share parameters, these two effects reinforce each other within a single model. Compared with prior approaches such as Self-Forcing, Mutual Forcing removes the need for an additional bidirectional teacher model, supports more flexible training sequence lengths, reduces training overhead, and allows the model to improve directly from real paired data rather than a fixed teacher. Experiments show that Mutual Forcing matches or surpasses strong baselines that require around 50 sampling steps while using only 4 to 8 steps, demonstrating substantial advantages in both efficiency and quality. The project page is available at https://mutualforcing.github.io.",
-      "pdf_url": "https://arxiv.org/pdf/2604.25819v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.25819v1",
-      "published": "2026-04-28",
-      "categories": [
-        "cs.CV",
-        "cs.SD"
-      ]
-    },
-    {
-      "title": "A Continuous-Time Ensemble Kalman-Bucy Smoother for Causal Inference and Model Discovery",
-      "authors": [
-        "Zhang Jiang",
-        "Marios Andreou",
-        "Sebastian Reich",
-        "Nan Chen"
-      ],
-      "abstract": "Data assimilation (DA) integrates observational information with model predictions to improve state estimation in complex systems. While filtering provides the basis for online forecasts by using only past and present observations, it can exhibit delays and biases when the underlying dynamics evolve rapidly or undergo regime transitions. Smoothing, which additionally incorporates future observations, provides a natural pipeline for hindcasting and reanalysis that yields an uncertainty reduction beyond the filter. This paper introduces an ensemble Kalman-Bucy smoother (EnKBS) for continuous-time DA of nonlinear dynamical systems, where the smoother's conditional distributions are reconstructed using ensemble moments. The result is a derivative-free framework that does not require explicit computation of tangent-linear or adjoint models, which converges to the exact smoother solution at the infinite-ensemble limit for a wide class of complex systems. Incorporating standard regularization techniques for high-dimensional systems, such as covariance localization and inflation, the skill of the EnKBS is demonstrated in various important scientific problems. By integrating future observations, which reveal the underlying causal mechanisms for retrospective state updates, the EnKBS is used for Bayesian-based inference of causal relationships and their temporal influence range in a dyadic trigger-feedback model and the development of a causality-driven iterative learning algorithm that identifies the structure and recovers the hidden parameters of a nonlinear reduced-order model mimicking midlatitude atmospheric circulation. Notably, both tasks remain effective with an ensemble size of $O(10)$ under partial observations, suggesting that EnKBS can support the instantaneous discovery of high-dimensional complex systems over time.",
-      "pdf_url": "https://arxiv.org/pdf/2604.25157v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.25157v1",
-      "published": "2026-04-28",
-      "categories": [
-        "math.NA",
-        "eess.SY",
-        "physics.ao-ph",
-        "stat.ME",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "A Physics Informed Bayesian Neural Network for the Neutron Star Equation of State",
-      "authors": [
-        "J. D. Baker",
-        "C. A. Bertulani",
-        "R. V. Lobato"
-      ],
-      "abstract": "We present a physics-informed Bayesian neural-network framework to infer neutron-star equations of state from theoretical priors and to propagate the associated uncertainties to stellar observables. Trained on a large and representative ensemble of hadronic EoSs, the model learns $P(ε)$ via stochastic variational inference, incorporating soft constraints at saturation density and from perturbative QCD, together with penalties enforcing monotonicity and causality. The accepted core EoSs are matched to an SLy4 crust and evolved through a unified Tolman-Oppenheimer-Volkoff-plus-tidal solver to generate posterior predictions in the mass-radius ($M$-$R$) and mass-tidal-deformability ($M$-$Λ$) planes. The inferred posterior is consistent with NICER radius measurements and the observed $2.0\\,M_\\odot$ maximum-mass constraint, yielding $R_{1.4}=12.1^{+1.4}_{-0.9}\\,\\mathrm{km}$, $Λ_{1.4}=580^{+520}_{-240}$, and $M_{\\mathrm{max}}\\simeq 2.11\\pm0.05\\,M_\\odot$ (90\\% CI). The resulting canonical tidal deformability can be assessed \\emph{a posteriori} against current gravitational-wave constraints. Overall, this framework provides a flexible, non-parametric mapping from microphysical EoS uncertainties to neutron-star observables.",
-      "pdf_url": "https://arxiv.org/pdf/2604.24949v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.24949v1",
-      "published": "2026-04-27",
-      "categories": [
-        "astro-ph.HE",
-        "nucl-th"
-      ]
-    },
-    {
-      "title": "PhysNote: Self-Knowledge Notes for Evolvable Physical Reasoning in Vision-Language Model",
-      "authors": [
-        "Sinin Zhang",
-        "Yunfei Xie",
-        "Yuxuan Cheng",
-        "Haoyu Zhang",
-        "Tong Zhang"
-      ],
-      "abstract": "Vision-Language Models (VLMs) have demonstrated strong performance on textbook-style physics problems, yet they frequently fail when confronted with dynamic real-world scenarios that require temporal consistency and causal reasoning across frames. We identify two fundamental challenges underlying these failures: (1) spatio-temporal identity drift, where objects lose their physical identity across successive frames and break causal chains, and (2) volatility of inference-time insights, where a model may occasionally produce correct physical reasoning but never consolidates it for future reuse. To address these challenges, we propose PhysNote, an agentic framework that enables VLMs to externalize and refine physical knowledge through self-generated \"Knowledge Notes.\" PhysNote stabilizes dynamic perception through spatio-temporal canonicalization, organizes self-generated insights into a hierarchical knowledge repository, and drives an iterative reasoning loop that grounds hypotheses in visual evidence before consolidating verified knowledge. Experiments on PhysBench demonstrate that PhysNote achieves 56.68% overall accuracy, a 4.96% improvement over the best multi-agent baseline, with consistent gains across all four physical reasoning domains.",
-      "pdf_url": "https://arxiv.org/pdf/2604.24443v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.24443v1",
-      "published": "2026-04-27",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]
