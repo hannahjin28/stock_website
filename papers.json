@@ -1,6 +1,37 @@
 {
-  "last_updated": "2026-05-03T01:51:44.028070",
+  "last_updated": "2026-05-04T01:52:39.870355",
   "papers": [
+    {
+      "title": "Estimating Treatment and Spillover Effects with the Ego-Cluster Experimental Design",
+      "authors": [
+        "Xiao Liu",
+        "Feifang Hu",
+        "Jingfei Zhang"
+      ],
+      "abstract": "Network interference occurs when a unit's outcome depends not only on its own treatment but also on the treatments received by connected units in the network. Experimental designs and analysis methods that ignore such interference can yield biased estimators of causal effects. In this paper, we develop a new experimental design for the estimation and inference of global treatment effect and spillover effect under a model-based framework and ego-cluster randomization. Under this design, the network is partitioned into a collection of ego-clusters, each consisting of a focal unit (the ego) and its network neighbors (the alters), with randomization conducted at the cluster level. We propose model-based estimators for the global treatment effect and spillover effect and establish their consistency and asymptotic normality, with asymptotic variances determined by the ego-cluster structure. Building on these theoretical results, we introduce an ego-clustering algorithm that sequentially selects egos and assigns alters to minimize asymptotic variances. Simulation studies and two empirical applications demonstrate that the proposed procedure yields accurate inference and efficiency improvements over existing network experimental designs.",
+      "pdf_url": "https://arxiv.org/pdf/2605.00534v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.00534v1",
+      "published": "2026-05-01",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Advancing Edge Classification through High-Dimensional Causal Modeling of Node-Edge Interplay",
+      "authors": [
+        "Duanyu Feng",
+        "Li Ding",
+        "Hongru Liang",
+        "Wenqiang Lei"
+      ],
+      "abstract": "Edge classification, a crucial task for graph applications, remains relatively under-explored compared to link prediction. Current methods often overlook the potential causal influences of node features on edge features, leading to a loss of relevant prior information. In this work, we present an empirical exploration using the Causal Edge Classification Framework (CECF). Unlike conventional causal inference methods, CECF is the first framework to apply causal inference principles to the edge classification task and to explore modeling edge features as a high-dimensional treatment within a causal framework. Based on the node embedding of Graph Neural Network (GNN), CECF seeks to learn a balanced representation of high-dimensional edge features by mitigating the potential influence of node features. Then, a cross-attention network captures the complex dependencies between node and edge features for final edge classification.Extensive experiments demonstrate that CECF not only achieves superior performance but also serves as a flexible, plug-and-play enhancement for existing methods.We also provide empirical analyses, offering insights into when and how this high-dimensional causal modeling framework works for the edge classification.",
+      "pdf_url": "https://arxiv.org/pdf/2605.00374v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.00374v1",
+      "published": "2026-05-01",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists",
       "authors": [
@@ -11,6 +42,7 @@
         "Yiling Duan",
         "Yumou Liu",
         "Jiabao Pan",
+        "Qiyuan Zhu",
         "Xuanhe Zhou",
         "Jingxuan Wei",
         "Siyuan Li",
@@ -19,8 +51,8 @@
         "Cheng Tan"
       ],
       "abstract": "Existing research infrastructure is fundamentally document-centric, providing citation links between papers but lacking explicit representations of methodological evolution. In particular, it does not capture the structured relationships that explain how and why research methods emerge, adapt, and build upon one another. With the rise of AI-driven research agents as a new class of consumers of scientific knowledge, this limitation becomes increasingly consequential, as such agents cannot reliably reconstruct method evolution topologies from unstructured text. We introduce Intern-Atlas, a methodological evolution graph that automatically identifies method-level entities, infers lineage relationships among methodologies, and captures the bottlenecks that drive transitions between successive innovations. Built from 1,030,314 papers spanning AI conferences, journals, and arXiv preprints, the resulting graph comprises 9,410,201 semantically typed edges, each grounded in verbatim source evidence, forming a queryable causal network of methodological development. To operationalize this structure, we further propose a self-guided temporal tree search algorithm for constructing evolution chains that trace the progression of methods over time. We evaluate the quality of the resulting graph against expert-curated ground-truth evolution chains and observe strong alignment. In addition, we demonstrate that Intern-Atlas enables downstream applications in idea evaluation and automated idea generation. We position methodological evolution graphs as a foundational data layer for the emerging automated scientific discovery.",
-      "pdf_url": "https://arxiv.org/pdf/2604.28158v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.28158v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.28158v2",
+      "arxiv_url": "http://arxiv.org/abs/2604.28158v2",
       "published": "2026-04-30",
       "categories": [
         "cs.AI"
@@ -135,39 +167,6 @@
       "categories": [
         "stat.ME",
         "stat.AP"
-      ]
-    },
-    {
-      "title": "Observable Neural ODEs for Identifiable Causal Forecasting in Continuous Time",
-      "authors": [
-        "Jennifer Wendland",
-        "Nicolas Freitag",
-        "Maik Kschischo"
-      ],
-      "abstract": "Causal inference in continuous-time sequential decision problems is challenged by hidden confounders. We show that, in latent state-space models with time-varying interventions, observability of the latent dynamics from observed data is necessary for identifying dynamic treatment effects, linking control-theoretic observability to causal identifiability, even when hidden confounders affect both treatments and outcomes. We derive a continuous-time adjustment formula expressing potential outcome distributions under treatment trajectories via the measurement model, latent dynamics, and the filtering distribution over latent states given observed histories. We propose Observable Neural ODEs (ObsNODEs), Neural ODE models in observable normal form for causal forecasting. ObsNODEs learn continuous-time dynamics with states reconstructible from observations, enabling outcome prediction under alternative treatment paths. Experiments on synthetic cancer data, semi-synthetic data based on MIMIC-IV, and real-world sepsis data show strong performance over recent sequence models.",
-      "pdf_url": "https://arxiv.org/pdf/2604.26070v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.26070v1",
-      "published": "2026-04-28",
-      "categories": [
-        "cs.LG",
-        "math.OC",
-        "math.ST",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "Quantum Bayesian Networks: Compositionality and Typing via Linear Logic",
-      "authors": [
-        "Rémi Di Guardia",
-        "Thomas Ehrhard",
-        "Claudia Faggian"
-      ],
-      "abstract": "Quantum Bayesian networks provide a mathematical formalism to describe causal relations, to analyse correlations, and to predict the probabilities of measurement outcomes, in systems involving both classical and quantum data. They generalize Pearl's Bayesian networks-prominent graphical models for classical probabilistic reasoning and inference.\n  Our paper brings compositional principles and a typing discipline into this setting. A key feature of our compositional semantics is that when all causes are classical, it coincides with the standard factor-based semantics of Bayesian networks, while in the purely quantum case it reduces to tensor networks. We then propose a typed formalism based on linear logic proof-nets, where types ensure well-behaved composition of systems.",
-      "pdf_url": "https://arxiv.org/pdf/2604.26059v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.26059v1",
-      "published": "2026-04-28",
-      "categories": [
-        "cs.LO"
       ]
     }
   ]
