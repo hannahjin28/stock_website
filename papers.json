@@ -1,6 +1,124 @@
 {
-  "last_updated": "2026-05-04T01:52:39.870355",
+  "last_updated": "2026-05-05T01:53:18.905712",
   "papers": [
+    {
+      "title": "Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation",
+      "authors": [
+        "Jiafeng Liu",
+        "Yuanliang Dong",
+        "Hongjia Liu",
+        "Yuqing Cheng",
+        "Zhancheng Guo",
+        "Huijing Liang",
+        "Wenbo Zhan",
+        "Yuming Sun",
+        "Xiaobing Li",
+        "Feng Yu",
+        "Maosong Sun"
+      ],
+      "abstract": "A common design pattern in high-quality music generation is to handle structure and fidelity in different representation spaces: a generator first models high-level structure, followed by diffusion-based or neural decoding stages that reconstruct fine details. In this work, we explore an alternative view: both may be progressively modeled within a single deep acoustic-token hierarchy. To study this, we build a 64-layer residual vector quantization (RVQ) acoustic representation and propose a two-stage coarse-to-fine generation framework. A backbone model first generates coarse acoustic tokens for the full track, and a super-resolution model then completes finer tokens within the same acoustic token space. The super-resolution stage works at full-track scale and refines tokens layer by layer while running in parallel over time, leading to a fixed 62-step inference process. To jointly improve lyric alignment and fine-detail reconstruction, we further introduce hybrid-attention training: the alignment objective uses causal attention, while layer-wise refinement uses full attention. A key finding is that text--vocal alignment can emerge within pure acoustic-token language modeling, without requiring a separate semantic token stage. Moreover, initializing the super-resolution model from the trained backbone significantly improves convergence and final quality. Taken together, our results suggest that high-quality music generation can be effectively pursued without separating structure and fidelity into heterogeneous representation spaces. Instead, both can be progressively modeled within a unified acoustic-token hierarchy, pointing toward a simpler and more unified path to high-quality music generation.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01790v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.01790v1",
+      "published": "2026-05-03",
+      "categories": [
+        "cs.SD",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "TrajShield: Trajectory-Level Safety Mediation for Defending Text-to-Video Models Against Jailbreak Attacks",
+      "authors": [
+        "Quanchen Zou",
+        "Nizhang Li",
+        "Wenxin Zhang",
+        "Jiaye Lin",
+        "Yangchen Zeng",
+        "Xiangzheng Zhang",
+        "Zonghao Ying"
+      ],
+      "abstract": "Text-to-Video (T2V) models have demonstrated remarkable capability in generating temporally coherent videos from natural language prompts, yet they also risk producing unsafe content such as violence or explicit material. Existing prompt-level defenses are largely inherited from text-to-image safety and operate on the lexical surface of the input, making them vulnerable to jailbreak attacks that disguise harmful intent through rephrasing or adversarial prompting. Moreover, T2V generation introduces a distinctive challenge overlooked by prior work: temporally emergent risk, where a seemingly benign prompt leads to unsafe content through the generator's temporal extrapolation toward narrative coherence. We propose \\method{}, a training-free, inference-time defense framework that reformulates T2V safety as a causal intervention in a temporally structured semantic space. TrajShield handles explicit unsafe prompts, jailbreak attacks, and temporally emergent risks in a unified manner by simulating the implied trajectory of a prompt, localizing the causal origin of potential risk, and applying a minimally invasive rewrite that neutralizes the risk while preserving safety-irrelevant semantics. Experiments on T2VSafetyBench across 14 safety categories and multiple T2V backends demonstrate that TrajShield achieves state-of-the-art defenseive performance while maintaining high semantic fidelity, substantially outperforming existing defenses, with an average ASR reduction of 52.44\\%.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01761v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.01761v1",
+      "published": "2026-05-03",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Adaptive Targeted Maximum Likelihood Estimation of the Mean Potential Outcome under a Treatment Rule",
+      "authors": [
+        "Yichen Xu",
+        "Mark J. van der Laan"
+      ],
+      "abstract": "Estimating the mean counterfactual outcome under a treatment rule is a central problem in causal inference and policy evaluation. Standard estimators, including inverse probability weighting (IPW), augmented IPW (AIPW), and targeted maximum likelihood estimation (TMLE), can become unstable under practical positivity violations because their targeting or weighting steps depend on inverse propensity scores. We propose an adaptive targeted maximum likelihood estimation (A-TMLE) framework that uses a data-adaptive working model for the conditional average treatment effect (CATE). This working model induces a projected policy-value parameter, which coincides with the nonparametric mean potential outcome when the CATE is well represented by the adaptive basis. We derive the efficient influence function for the projected parameter and characterize its second-order remainder. We also introduce a regularized TMLE that targets the nonparametric policy value using a stabilized targeting covariate obtained by projecting the standard TMLE clever covariate onto the score space induced by the CATE working model. We quantify the first-order plug-in bias of regularized TMLE relative to the nonparametric target. The resulting targeting steps avoid direct inverse propensity score weighting, improving stability under limited overlap. In simulations, A-TMLE and regularized TMLE achieve lower mean squared error and improved coverage compared with IPW, AIPW, and standard TMLE under practical positivity violations, while remaining competitive when treatment overlap is strong. A real-data application to the Right Heart Catheterization study illustrates that the adaptive estimators produce stable policy-value estimates with substantially shorter confidence intervals than IPW and AIPW.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01671v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.01671v1",
+      "published": "2026-05-03",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Minimum Specification Perturbation: Robustness as Distance-to-Falsification in Causal Inference",
+      "authors": [
+        "Hoang Dang",
+        "Luan Pham",
+        "Minh Nguyen"
+      ],
+      "abstract": "Empirical causal claims depend on many analyst decisions, from selecting covariates to choosing estimators. Existing robustness tools summarize how results vary across these choices, but, to the best of our knowledge, do not answer: \\textbf{How many analyst decisions must change to reach a specification, which is a set of choices, whose confidence interval (CI) contains zero?} We introduce \\emph{Minimum Specification Perturbation (MSP)}, the smallest number of changes. MSP is small under the null, grows with effect strength and captures distance-to-falsification information that dispersion-based summaries cannot report; when making decisions under weak effects, an MSP-based rule yields lower false-positive rates than dispersion-based rules. We show that Fragility Index and MSP measure orthogonal vulnerabilities: fragility to influential observations need not imply fragility to specification choices. On the LaLonde benchmark, MSP = 1 implies that one decision change makes the CI contain zero. We further provide exact permutation calibration under randomization and characterize computation, showing tractable cases under additive structure and NP-hardness in general.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01579v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.01579v1",
+      "published": "2026-05-02",
+      "categories": [
+        "stat.ME",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Grounding Multi-Hop Reasoning in Structural Causal Models via Group Relative Policy Optimization",
+      "authors": [
+        "Yunhan Bu",
+        "Quan Zhang",
+        "Huaping Zhang",
+        "Guotong Geng",
+        "Chunxiao Gao",
+        "Askar Hamdulla",
+        "Juan Wang",
+        "Qiuchi Li",
+        "Baohua Zhang",
+        "Shuai Lei",
+        "Yunbo Cao",
+        "Zhunchen Luo"
+      ],
+      "abstract": "Multi-Hop Fact Verification (MHFV) necessitates complex reasoning across disparate evidence, posing significant challenges for Large Language Models (LLMs) which often suffer from hallucinations and fractured logical chains. Existing methods, while improving transparency via Chain-of-Thought (CoT), lack explicit modeling of the causal dependencies between evidence and claims. In this work, we introduce a novel framework that grounds reasoning in a Structural Causal Model (SCM), treating verification as a constructive causal inference process. We empirically identify an \"inverted U-shaped\" correlation between reasoning chain length and accuracy, revealing that excessive structural complexity degrades performance. To address this, we propose a Rule-based Reinforcement Learning strategy using Group Relative Policy Optimization (GRPO). This approach dynamically optimizes the trade-off between structural depth and conciseness. Extensive experiments on HoVer and EX-FEVER demonstrate that our SCM-GRPO framework significantly outperforms state-of-the-art baselines, offering a reliable and interpretable solution for complex fact verification.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01482v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.01482v1",
+      "published": "2026-05-02",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "E-MIA: Exam-Style Black-Box Membership Inference Attacks against RAG Systems",
+      "authors": [
+        "Zelin Guan",
+        "Shengda Zhuo",
+        "Zeyan Li",
+        "Jinchun He",
+        "Wangjie Qiu",
+        "Zhiming Zheng",
+        "Shuqiang Huang"
+      ],
+      "abstract": "Retrieval-Augmented Generation (RAG) equips large language models (LLMs) with external evidence by retrieving documents at inference time, but it also turns the retrieval corpusinto a sensitive asset. Under a black-box setting, an adversary given a candidate document can infer whether it has been ingested into the RAG knowledge base (i.e., document-level membership inference) solely from query response interactions, thereby leaking corpus coverage and the existence of sensitive topics. Existing RAG MIA methods either rely on soft signals such as semantic similarity, which often yield overlapping member/non-member score distributions and unstable thresholds, or employ explicit confirmation probes whose intent is conspicuous and thus prone to refusal and detection. We propose E-MIA, which converts verifiable hard evidence in the target document (e.g., fine-grained details, proper nouns/technical terms, definitional statements, metadata cues, and causal/constraint relations) into an exam with four objectively gradable question types (FB/SC/MC/T/F), and uses the aggregated exam score across multiple evidence targeted questions as the membership signal. Experiments across multiple datasets and diverse RAG configurations demonstrate that E-MIA improves member/non-member separability in stringent settings while preserving natural, stealthy queries, and we further analyze the impact of question composition and exam length on attack effectiveness.",
+      "pdf_url": "https://arxiv.org/pdf/2605.00955v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.00955v1",
+      "published": "2026-05-01",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Estimating Treatment and Spillover Effects with the Ego-Cluster Experimental Design",
       "authors": [
@@ -72,101 +190,6 @@
       "categories": [
         "cs.CL",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Bayesian X-Learner: Calibrated Posterior Inference for Heterogeneous Treatment Effects under Heavy-Tailed Outcomes",
-      "authors": [
-        "Eichi Uehara"
-      ],
-      "abstract": "Conditional Average Treatment Effect (CATE) estimation in practice demands three properties simultaneously: heterogeneous effects $τ(x)$, calibrated uncertainty over them, and robustness to the heavy tails that contaminate real outcome data. Meta-learners (Künzel et al., 2019) give (i); causal forests and BART give (i)-(ii) with Gaussian-tail assumptions; no widely used tool gives all three. We present Bayesian X-Learner, an X-Learner built on cross-fitted doubly robust pseudo-outcomes (Kennedy, 2020) with a full MCMC posterior over $τ(x)$ via a Welsch redescending pseudo-likelihood. On Hill's IHDP benchmark the default configuration attains mean $\\sqrt{\\varepsilon_{\\mathrm{PEHE}}} = 0.56$ on 5 replications (lowest mean; differences from S-/T-/X-learners, full-config Causal BART, and a causal forest baseline are not significant at $α=0.05$, and rank ordering is unstable at 10 replications -- IHDP comparisons are competitive rather than dominant). On contaminated \"whale\" DGPs with up to 20-25% tail density, a one-flag extension (contamination_severity) that selects a Huber-$δ$ nuisance loss per Huber's minimax-$δ$ relation recovers RMSE $\\approx 0.13$ with tight credible intervals (single-cross-fit 30-seed coverage 83% [Wilson 66%, 93%] at 20% density; modular-Bayes pooling with Bayesian-bootstrap nuisance draws restores nominal 95% coverage).",
-      "pdf_url": "https://arxiv.org/pdf/2604.27394v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.27394v1",
-      "published": "2026-04-30",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "A Novel Computational Framework for Causal Inference: Tree-Based Discretization with ILP-Based Matching",
-      "authors": [
-        "Tianyu Yang",
-        "Md. Noor-E-Alam"
-      ],
-      "abstract": "Causal inference is essential for data-driven decision-making, as it aims to uncover causal relationships from observational data. However, identifying causality remains challenging due to the potential for confounding and the distinction between correlation and causation. While recent advances in causal machine learning and matching algorithms have improved estimation accuracy, these methods often face trade-offs between interpretability and computational efficiency. This paper proposes a novel approach that combines a tree-based discretization technique, tailored for causal inference, with an integer linear programming-based matching algorithm. The discretization ensures approximately linear relationships for control datasets within strata, enabling effective matching, while the optimization framework optimizes for global balance. The resulting algorithm yields computational efficiency and less biased ATT estimates compared to state-of-the-art algorithms. Empirical evaluations demonstrate the proposed method's practical advantages over existing techniques in causal inference scenarios.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27307v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.27307v1",
-      "published": "2026-04-30",
-      "categories": [
-        "stat.ML",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Bayesian Nonparametric Causal Inference for Quantile Residual Life: An Application to Alzheimer's Disease",
-      "authors": [
-        "Woojung Bae",
-        "Taekwon Hong",
-        "Sang Kyu Lee",
-        "Dongrak Choi",
-        "Jong-Hyeon Jeong"
-      ],
-      "abstract": "In Alzheimer's disease research, for individuals who remain dementia-free through a given follow-up time, an important clinical question is how much longer they are likely to remain dementia-free. Quantiles of this remaining time provide clinically interpretable prognostic milestones and can help characterize prognostic heterogeneity across baseline groups. We address this question in the Alzheimer's Disease Neuroimaging Initiative (ADNI), focusing on baseline amyloid status as the exposure. Estimation is challenging because amyloid status is observed rather than randomized, requiring adjustment for confounding, and because time to dementia onset is heterogeneous and heavily right-censored. We estimate causal contrasts in quantile residual life using a Bayesian nonparametric enriched Dirichlet process mixture model for the joint distribution of event times, exposure, and baseline covariates, with inference via Bayesian g-computation. The approach accommodates ignorable missing baseline covariates through data augmentation, supports inference across clinically relevant landmark times, and allows sensitivity analysis for residual unmeasured confounding. Simulation studies show good performance under complex heterogeneity and heavy censoring. In ADNI, elevated baseline amyloid was associated with shorter quantiles of remaining dementia-free time than non-elevated baseline amyloid among individuals who remained dementia-free through relevant landmark times, overall and within baseline diagnostic subgroups.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27198v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.27198v1",
-      "published": "2026-04-29",
-      "categories": [
-        "stat.AP",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Bridge: Basis-Driven Causal Inference Marries VFMs for Domain Generalization",
-      "authors": [
-        "Mingbo Hong",
-        "Feng Liu",
-        "Caroline Gevaert",
-        "George Vosselman",
-        "Hao Cheng"
-      ],
-      "abstract": "Detectors often suffer from degraded performance, primarily due to the distributional gap between the source and target domains. This issue is especially evident in single-source domains with limited data, as models tend to rely on confounders (e.g., illumination, co-occurrence, and style) from the source domain, leading to spurious correlations that hinder generalization. To this end, this paper proposes a novel Basis-driven framework for domain generalization, namely \\textbf{\\textit{Bridge}}, that incorporates causal inference into object detection. By learning the low-rank bases for front-door adjustment, \\textbf{\\textit{Bridge}} blocks confounders' effects to mitigate spurious correlations, while simultaneously refining representations by filtering redundant and task-irrelevant components. \\textbf{\\textit{Bridge}} can be seamlessly integrated with both discriminative (e.g., DINOv2/3, SAM) and generative (e.g., Stable Diffusion) Vision Foundation Models (VFMs). Extensive experiments across multiple domain generalization object detection datasets, i.e., Cross-Camera, Adverse Weather, Real-to-Artistic, Diverse Weather Datasets, and Diverse Weather DroneVehicle (our newly augmented real-world UAV-based benchmark), underscore the superiority of our proposed method over previous state-of-the-art approaches. The project page is available at: https://mingbohong.github.io/Bridge/.",
-      "pdf_url": "https://arxiv.org/pdf/2604.26820v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.26820v1",
-      "published": "2026-04-29",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Flexible semiparametric modeling with application to Causal Inference",
-      "authors": [
-        "Kun Ren",
-        "Wen Su",
-        "Li Liu",
-        "Ian W. McKeague",
-        "Xingqiu Zhao"
-      ],
-      "abstract": "This paper proposes a flexible new framework for constructing Neyman-orthogonal scores in semiparametric models involving infinite-dimensional nuisance parameters. While locally estimation is vital for integrating machine learning into econometrics, deriving orthogonal scores for complex models remains a major challenge. We provide explicit construction strategies for broad classes of settings. The proposed framework ensures asymptotic normality of target parameter estimators in a way that does not depend on the method used to construct the nuisance parameter estimators, provided they are $o_p(n^{-\\1/4})$-consistent. We apply the proposed methodology to causal inference with a binary instrumental variable, developing a novel, robust estimator for treatment effects. Numerical studies demonstrate that our approach significantly outperforms naive alternatives in finite samples. An empirical application to the Oregon Health Insurance Experiment illustrates the framework's utility in providing robust causal evidence.",
-      "pdf_url": "https://arxiv.org/pdf/2604.26729v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.26729v1",
-      "published": "2026-04-29",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "A simple strategy for valid inference in target trial emulations",
-      "authors": [
-        "Mats Julius Stensrud"
-      ],
-      "abstract": "Target trial emulation has improved comparative effectiveness research by making the causal question, assumptions, and analysis plan explicit. However, target trial protocols are usually developed iteratively. After examining the data, investigators revise the protocol to reflect which target trials the observational data can realistically support. While this iterative procedure is part of normal scientific practice, it raises concerns about selective choices and invalid statistical inference. A simple procedure can address these concerns. This procedure is based on sample splitting. In the initial split, investigators explore the data to define a target trial protocol. When these choices are made, the target trial protocol is implemented on the second split. Although the investigators made data-informed choices to select the target trial protocol, the inference has the usual coverage guarantees. The procedure is created to mirror how trialists move from pilot studies to a phase 3 trial. First, they use data from pilots and early-phase trials to learn and decide on a final protocol. Then they implement this protocol and analyze a new set of data in a phase 3 trial.",
-      "pdf_url": "https://arxiv.org/pdf/2604.26471v1",
-      "arxiv_url": "http://arxiv.org/abs/2604.26471v1",
-      "published": "2026-04-29",
-      "categories": [
-        "stat.ME",
-        "stat.AP"
       ]
     }
   ]
