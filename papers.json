@@ -1,6 +1,103 @@
 {
-  "last_updated": "2026-05-06T01:52:04.843819",
+  "last_updated": "2026-05-07T01:56:38.886906",
   "papers": [
+    {
+      "title": "Impossibility of Distribution-Free Predictive Inference for Individual Treatment Effects",
+      "authors": [
+        "Chongguang Tao",
+        "Zheng Zhou",
+        "Yuhong Yang"
+      ],
+      "abstract": "Uncertainty quantification for individual treatment effects (ITEs) is a daunting challenge in causal inference. Motivated by recent advances in conformal prediction, several works aim to construct distribution-free prediction sets for ITEs with desired coverage under standard assumptions such as strong ignorability and overlap. In this paper, we show that such goals are fundamentally unattainable in the presence of continuous covariates. Specifically, we establish finite-sample and asymptotic impossibility results demonstrating that any distribution-free prediction set achieving desired coverage for ITEs must be trivial, in the sense that it has infinite expected length. Our analysis relies on a connection between ITE inference and the hardness of conditional independence testing, and highlights the intrinsic limitations imposed by the missing data nature of causal inference. These results provide a new perspective on existing methods, clarifying that their apparent success necessarily relies on additional structural assumptions beyond standard causal assumptions.",
+      "pdf_url": "https://arxiv.org/pdf/2605.05051v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.05051v1",
+      "published": "2026-05-06",
+      "categories": [
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "When Does Gene Regulatory Network Inference Break? A Controlled Diagnostic Study of Causal and Correlational Methods on Single-Cell Data",
+      "authors": [
+        "Miguel Fernandez-de-Retana",
+        "Ruben Sanchez-Corcuera",
+        "Unai Zulaika",
+        "Aritz Bilbao-Jayo",
+        "Aitor Almeida"
+      ],
+      "abstract": "Despite theoretical advantages, causal methods for Gene Regulatory Network (GRN) inference from single-cell RNA-seq data consistently fail to match or outperform correlation-based baselines in many realistic benchmarks, a persistent puzzle which casts doubt on the value of causality for this task. We argue that existing benchmarks are insufficiently controlled to answer this question because they evaluate on real or semi-real data where multiple pathologies co-occur, confounding failure modes, and obscuring the specific conditions under which different inference methods excel or fail. To address this gap, we introduce a controlled diagnostic framework that isolates seven biologically motivated pathologies (dropout, latent confounders, cell-type mixing, feedback loops, network density, sample size, and pseudotime drift) and measure how six representative methods spanning three inference paradigms degrade as each pathology intensifies. Across 6,120 controlled experiments, we find that causal methods genuinely dominate in clean and structurally favorable regimes, but specific pathologies (notably dropout and latent confounders) selectively neutralize their advantages. We further introduce an error-type decomposition that reveals methods with similar aggregate accuracy commit qualitatively different errors. To probe whether single-pathology effects persist when multiple stressors co-occur, we perform an interaction sweep over the three most impactful pathologies and find that their joint effects are sub-additive, while also exposing density-conditional cross-overs invisible to single-dial analysis. Our findings offer a nuanced understanding of when and why different methods succeed or fail for GRN inference, providing actionable insights for method development and practical guidance for practitioners.",
+      "pdf_url": "https://arxiv.org/pdf/2605.04930v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.04930v1",
+      "published": "2026-05-06",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-bio.GN",
+        "q-bio.QM",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "Cognitive Alignment Drives Attention: Modeling and Supporting Socially Shared Regulation in Pair Programming",
+      "authors": [
+        "Anahita Golrang",
+        "Kshitij Sharma"
+      ],
+      "abstract": "Grounded in socially shared regulation of learning (SSRL), this paper investigates how joint mental effort (JME) and joint visual attention (JVA) serve as process-level indicators of shared regulation in pair programming and how AI-driven adaptive feedback can strengthen these processes.\n  We present three eye-tracking studies involving 182 dyads engaged in collaborative debugging tasks. Study 1 examines natural collaboration and shows that high-performing dyads exhibit significantly higher JME and JVA, a greater prevalence of productive high-JME-high-JVA episodes, and a stable causal relationship in which JME predicts JVA. Study 2 evaluates reactive adaptive feedback based on real-time deviations in JME and/or JVA. Results show that combined feedback targeting both dimensions yields the strongest improvements in performance, regulatory coherence, and cognitive-to-attentional causality, outperforming single-channel feedback. Study 3 introduces proactive, forecast-based feedback using machine-learning predictions of future collaboration states. Proactive support further enhances performance and sustains shared regulation by anticipating breakdowns before they manifest.\n  Across studies, causal modeling reveals that cognitive alignment systematically drives attentional coordination in successful collaboration, while mismatches between effort and attention characterize unproductive regulation. Methodologically, this work integrates dual eye-tracking, pupillometry, episode-based analysis, and causal inference to capture SSRL as a dynamic, emergent process. Conceptually, the findings position AI not as an automated controller, but as an intelligence-augmenting co-regulator that supports learners' capacity to coordinate effort, attention, and understanding together.",
+      "pdf_url": "https://arxiv.org/pdf/2605.04639v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.04639v1",
+      "published": "2026-05-06",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Distilling Bayesian Belief States into Language Models for Auditable Negotiation",
+      "authors": [
+        "Zongqi Cui",
+        "Baihan Lin"
+      ],
+      "abstract": "Negotiation agents must infer what their counterpart values, update those beliefs over dialogue turns, and choose actions under uncertainty. End-to-end large language models (LLMs) can imitate negotiation dialogue, but their opponent beliefs are usually implicit and difficult to inspect. We propose BOND (Bayesian Opponent-belief Negotiation Distillation), a framework for auditable negotiation. BOND consists of an LLM-based Bayesian teacher that scores dialogue contexts against the six possible opponent priority orderings, updates a posterior over those orderings, and uses the posterior for menu-based decision making, as well as a smaller 8B student language model that emits both negotiation actions and normalized posterior beliefs as tagged text. In the CaSiNo negotiation dataset, BOND outperforms the state-of-the-art and achieves mean Brier score 0.085 over opponent-priority posteriors. The distilled student preserves much of this belief signal, achieving Brier 0.114, below the uniform six-ordering reference of 5/36, approximately 0.139. Compared with a 70B structured-CoT baseline, the significantly smaller 8B student model yields substantially better elicited posterior calibration. We further showcase auditability through posterior trajectories, belief-versus-policy error decomposition, and posterior-prefix interventions. These diagnostics reveal that distillation preserves a scoreable belief report more strongly than causal belief-conditioned control, making weak belief-action coupling visible, not hidden.",
+      "pdf_url": "https://arxiv.org/pdf/2605.04507v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.04507v1",
+      "published": "2026-05-06",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "A Zero-Inflated Beta Mixture Model for Marginal Mediation Analysis with Compositional Microbiome Mediators",
+      "authors": [
+        "Seungjun Ahn",
+        "Quran Wu",
+        "Alicia Yang",
+        "Zhigang Li"
+      ],
+      "abstract": "The role of the microbiome in disease pathogenesis is an emerging field with strong evidence suggesting that dysbiosis is associated with precancerous and cancerous states. Microbiome data present substantial challenges for causal mediation analysis due to sparsity, compositional constraints, and latent heterogeneity. To address these issues, we propose a zero-inflated beta mixture (ZIBM) method for mediation analysis with compositional microbiome mediators. The proposed method accommodates excess zeros through a zero-inflation component and captures heterogeneity in non-zero relative abundances using a beta mixture distribution. Within the potential-outcomes framework, the ZIBM provides estimates of marginal microbiome-mediated causal effects, and model parameters are estimated using an expectation-maximization algorithm. Simulation studies demonstrate that the ZIBM yields more accurate estimation and reliable inference under conditions commonly observed in microbiome data, compared with existing approaches. An application to a real microbiome study further illustrates its practical utility. These results indicate that the proposed method provides a more flexible and robust statistical framework for mediation analysis involving compositional microbiome data.",
+      "pdf_url": "https://arxiv.org/pdf/2605.04372v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.04372v1",
+      "published": "2026-05-06",
+      "categories": [
+        "stat.ME",
+        "q-bio.QM",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "NoisyCausal: A Benchmark for Evaluating Causal Reasoning Under Structured Noise",
+      "authors": [
+        "Zhi Xu",
+        "Yun Fu"
+      ],
+      "abstract": "Causal reasoning in natural language requires identifying relevant variables, understanding their interactions, and reasoning about effects and interventions, often under noisy or ambiguous conditions. While large language models (LLMs) exhibit strong general reasoning abilities, they struggle to disentangle correlation from causation, particularly when observations are partially incorrect or irrelevant information is present. In this work, we introduce NoisyCausal, a new benchmark designed to evaluate causal reasoning under structured noise. Each instance is generated from a ground-truth causal graph and contextualized with a natural language scenario by injecting controllable forms of noise, such as irrelevant distractors, value perturbations, confounding, and partial observability. Moreover, we propose a modular reasoning framework that combines LLMs with explicit causal structure to address these challenges. Our method prompts the LLM to extract variables, construct a causal graph from context, and then reformulates the reasoning task as a structured prompt grounded in this graph. Rather than relying on statistical patterns alone, the LLM is guided by symbolic structure, enabling more interpretable and robust inference. Experimental results show that our method significantly outperforms standard prompting and reasoning baselines on NoisyCausal. Furthermore, it generalizes well to external benchmarks such as Cladder without task-specific tuning. Our findings highlight the importance of combining causal abstractions with language-driven reasoning to achieve faithful and robust causal understanding in LLMs.",
+      "pdf_url": "https://arxiv.org/pdf/2605.04313v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.04313v1",
+      "published": "2026-05-05",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "The Multiplicative Quasi-Instrumental Variable Model",
       "authors": [
@@ -61,126 +158,6 @@
       "categories": [
         "math.ST",
         "stat.ME"
-      ]
-    },
-    {
-      "title": "Externally Controlled Trials: A Review of Design and Borrowing Through a Causal Lens",
-      "authors": [
-        "Ke Zhu",
-        "Rima Izem",
-        "Peng Yang",
-        "Ying Yuan",
-        "Herbert Pang",
-        "Mark van der Laan",
-        "Lei Nie",
-        "Birol Emir",
-        "Pallavi Mishra-Kalyani",
-        "Hana Lee",
-        "Shu Yang"
-      ],
-      "abstract": "Externally controlled trials (ECTs) are increasingly used when randomized controls are infeasible, unethical, or insufficient, including applications in rare diseases, oncology, pediatrics, and post-approval effectiveness research. Although methodological work has expanded rapidly across causal inference, Bayesian dynamic borrowing, and hybrid trial designs, the literature remains fragmented. We adopt a six-step scientific roadmap to organize modern ECT methodology in two primary settings: (i) single-arm trials that evaluate efficacy through comparison with external controls, and (ii) hybrid controlled trials that augment the internal control arm with external controls drawn from real-world data or historical studies. The roadmap clarifies causal estimands, identifiability assumptions, and how statistical parameters arise from identification, and shows how modeling and borrowing strategies trade off efficiency and robustness, especially under covariate shift and outcome drift. Within this framework, we synthesize and evaluate recent Bayesian and frequentist developments, compare their strengths, limitations, operating characteristics, and available software, and emphasize the role of sensitivity analysis. By re-framing ECT methodology through a causal lens, this work establishes a coherent foundation for integrating external data into regulatory and clinical decision-making and highlights core challenges and opportunities for future research.",
-      "pdf_url": "https://arxiv.org/pdf/2605.03282v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.03282v1",
-      "published": "2026-05-05",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Principles and Guidelines for Randomized Controlled Trials in AI Evaluation",
-      "authors": [
-        "Christopher Kelly",
-        "Angelica Chowdhury",
-        "Alexandra Campili",
-        "Bimpe Ayoola",
-        "Devin Barbour",
-        "Thomas Chen Dawson",
-        "Ze Shen Chin",
-        "Rokas Gipiškis"
-      ],
-      "abstract": "This work establishes a foundational framework for standardizing AI evaluation RCTs (sometimes called human uplift studies). Drawing on established experimental practices from disciplines with established RCT traditions, including software engineering, economics, clinical and health sciences, and psychology, we adopt the (Shadish et al., 2002) four-validity framework and extend it with a fifth principle on transparency, repeatability, and verification adapted from the Transparency and Openness Promotion (TOP) Guidelines (Center for Open Science, 2025). We operationalize all five principles into 33 guidelines adapted for AI evaluation RCT contexts, expressed as requirements with rationales, implementation instructions, and evidence bases. We position the principles and guidelines as serving three key roles for AI evaluation RCTs: a design tool for planning studies, an evaluation rubric for assessing existing work, and a blueprint for standard setting as the field converges on norms. Our framework extends prior work by centering evaluation on human performance rather than model output alone, formalizing causal inference through RCT methodology for AI contexts, integrating heterogeneity analysis and practical significance assessment, implementing a graded transparency and repeatability framework, and addressing AI-specific challenges including model versioning, human-AI interaction dynamics, contamination and spillover effects, and equitable impact assessment.",
-      "pdf_url": "https://arxiv.org/pdf/2605.02050v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.02050v1",
-      "published": "2026-05-03",
-      "categories": [
-        "cs.CY",
-        "cs.AI",
-        "cs.HC",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation",
-      "authors": [
-        "Jiafeng Liu",
-        "Yuanliang Dong",
-        "Hongjia Liu",
-        "Yuqing Cheng",
-        "Zhancheng Guo",
-        "Huijing Liang",
-        "Wenbo Zhan",
-        "Yuming Sun",
-        "Xiaobing Li",
-        "Feng Yu",
-        "Maosong Sun"
-      ],
-      "abstract": "A common design pattern in high-quality music generation is to handle structure and fidelity in different representation spaces: a generator first models high-level structure, followed by diffusion-based or neural decoding stages that reconstruct fine details. In this work, we explore an alternative view: both may be progressively modeled within a single deep acoustic-token hierarchy. To study this, we build a 64-layer residual vector quantization (RVQ) acoustic representation and propose a two-stage coarse-to-fine generation framework. A backbone model first generates coarse acoustic tokens for the full track, and a super-resolution model then completes finer tokens within the same acoustic token space. The super-resolution stage works at full-track scale and refines tokens layer by layer while running in parallel over time, leading to a fixed 62-step inference process. To jointly improve lyric alignment and fine-detail reconstruction, we further introduce hybrid-attention training: the alignment objective uses causal attention, while layer-wise refinement uses full attention. A key finding is that text--vocal alignment can emerge within pure acoustic-token language modeling, without requiring a separate semantic token stage. Moreover, initializing the super-resolution model from the trained backbone significantly improves convergence and final quality. Taken together, our results suggest that high-quality music generation can be effectively pursued without separating structure and fidelity into heterogeneous representation spaces. Instead, both can be progressively modeled within a unified acoustic-token hierarchy, pointing toward a simpler and more unified path to high-quality music generation.",
-      "pdf_url": "https://arxiv.org/pdf/2605.01790v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.01790v1",
-      "published": "2026-05-03",
-      "categories": [
-        "cs.SD",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "TrajShield: Trajectory-Level Safety Mediation for Defending Text-to-Video Models Against Jailbreak Attacks",
-      "authors": [
-        "Quanchen Zou",
-        "Nizhang Li",
-        "Wenxin Zhang",
-        "Jiaye Lin",
-        "Yangchen Zeng",
-        "Xiangzheng Zhang",
-        "Zonghao Ying"
-      ],
-      "abstract": "Text-to-Video (T2V) models have demonstrated remarkable capability in generating temporally coherent videos from natural language prompts, yet they also risk producing unsafe content such as violence or explicit material. Existing prompt-level defenses are largely inherited from text-to-image safety and operate on the lexical surface of the input, making them vulnerable to jailbreak attacks that disguise harmful intent through rephrasing or adversarial prompting. Moreover, T2V generation introduces a distinctive challenge overlooked by prior work: temporally emergent risk, where a seemingly benign prompt leads to unsafe content through the generator's temporal extrapolation toward narrative coherence. We propose \\method{}, a training-free, inference-time defense framework that reformulates T2V safety as a causal intervention in a temporally structured semantic space. TrajShield handles explicit unsafe prompts, jailbreak attacks, and temporally emergent risks in a unified manner by simulating the implied trajectory of a prompt, localizing the causal origin of potential risk, and applying a minimally invasive rewrite that neutralizes the risk while preserving safety-irrelevant semantics. Experiments on T2VSafetyBench across 14 safety categories and multiple T2V backends demonstrate that TrajShield achieves state-of-the-art defenseive performance while maintaining high semantic fidelity, substantially outperforming existing defenses, with an average ASR reduction of 52.44\\%.",
-      "pdf_url": "https://arxiv.org/pdf/2605.01761v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.01761v1",
-      "published": "2026-05-03",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Adaptive Targeted Maximum Likelihood Estimation of the Mean Potential Outcome under a Treatment Rule",
-      "authors": [
-        "Yichen Xu",
-        "Mark J. van der Laan"
-      ],
-      "abstract": "Estimating the mean counterfactual outcome under a treatment rule is a central problem in causal inference and policy evaluation. Standard estimators, including inverse probability weighting (IPW), augmented IPW (AIPW), and targeted maximum likelihood estimation (TMLE), can become unstable under practical positivity violations because their targeting or weighting steps depend on inverse propensity scores. We propose an adaptive targeted maximum likelihood estimation (A-TMLE) framework that uses a data-adaptive working model for the conditional average treatment effect (CATE). This working model induces a projected policy-value parameter, which coincides with the nonparametric mean potential outcome when the CATE is well represented by the adaptive basis. We derive the efficient influence function for the projected parameter and characterize its second-order remainder. We also introduce a regularized TMLE that targets the nonparametric policy value using a stabilized targeting covariate obtained by projecting the standard TMLE clever covariate onto the score space induced by the CATE working model. We quantify the first-order plug-in bias of regularized TMLE relative to the nonparametric target. The resulting targeting steps avoid direct inverse propensity score weighting, improving stability under limited overlap. In simulations, A-TMLE and regularized TMLE achieve lower mean squared error and improved coverage compared with IPW, AIPW, and standard TMLE under practical positivity violations, while remaining competitive when treatment overlap is strong. A real-data application to the Right Heart Catheterization study illustrates that the adaptive estimators produce stable policy-value estimates with substantially shorter confidence intervals than IPW and AIPW.",
-      "pdf_url": "https://arxiv.org/pdf/2605.01671v2",
-      "arxiv_url": "http://arxiv.org/abs/2605.01671v2",
-      "published": "2026-05-03",
-      "categories": [
-        "stat.ME",
-        "math.ST"
-      ]
-    },
-    {
-      "title": "Minimum Specification Perturbation: Robustness as Distance-to-Falsification in Causal Inference",
-      "authors": [
-        "Hoang Dang",
-        "Luan Pham",
-        "Minh Nguyen"
-      ],
-      "abstract": "Empirical causal claims depend on many analyst decisions, from selecting covariates to choosing estimators. Existing robustness tools summarize how results vary across these choices, but, to the best of our knowledge, do not answer: \\textbf{How many analyst decisions must change to reach a specification, which is a set of choices, whose confidence interval (CI) contains zero?} We introduce \\emph{Minimum Specification Perturbation (MSP)}, the smallest number of changes. MSP is small under the null, grows with effect strength and captures distance-to-falsification information that dispersion-based summaries cannot report; when making decisions under weak effects, an MSP-based rule yields lower false-positive rates than dispersion-based rules. We show that Fragility Index and MSP measure orthogonal vulnerabilities: fragility to influential observations need not imply fragility to specification choices. On the LaLonde benchmark, MSP = 1 implies that one decision change makes the CI contain zero. We further provide exact permutation calibration under randomization and characterize computation, showing tractable cases under additive structure and NP-hardness in general.",
-      "pdf_url": "https://arxiv.org/pdf/2605.01579v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.01579v1",
-      "published": "2026-05-02",
-      "categories": [
-        "stat.ME",
-        "cs.LG"
       ]
     }
   ]
