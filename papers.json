@@ -1,189 +1,174 @@
 {
-  "last_updated": "2026-05-10T01:55:00.744902",
+  "last_updated": "2026-05-15T02:07:20.913647",
   "papers": [
     {
-      "title": "Concept-Based Abductive and Contrastive Explanations for Behaviors of Vision Models",
+      "title": "RAVEN: Real-time Autoregressive Video Extrapolation with Consistency-model GRPO",
       "authors": [
-        "Ronaldo Canizales",
-        "Divya Gopinath",
-        "Corina Păsăreanu",
-        "Ravi Mangal"
+        "Yanzuo Lu",
+        "Ronglai Zuo",
+        "Jiankang Deng"
       ],
-      "abstract": "*Concept-based explanations* offer a promising approach for explaining the predictions of deep neural networks in terms of high-level, human-understandable concepts. However, existing methods either do not establish a causal connection between the concepts and model predictions or are limited in expressivity and only able to infer causal explanations involving single concepts. At the same time, the parallel line of work on *formal abductive and contrastive explanations* computes the minimal set of input features causally relevant for model outcomes but only considers low-level features such as pixels. Merging these two threads, in this work, we propose the notion of *concept-based abductive and contrastive explanations* that capture the minimal sets of high-level concepts causally relevant for model outcomes. We then present a family of algorithms that enumerate all minimal explanations while using *concept erasure* procedures to establish causal relationships. By appropriately aggregating such explanations, we are not only able to understand model predictions on individual images but also on collections of images where the model exhibits a user-specified, common *behavior*. We evaluate our approach on multiple models, datasets, and behaviors, and demonstrate its effectiveness in computing helpful, user-friendly explanations.",
-      "pdf_url": "https://arxiv.org/pdf/2605.06640v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.06640v1",
-      "published": "2026-05-07",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Crafting Reversible SFT Behaviors in Large Language Models",
-      "authors": [
-        "Yuping Lin",
-        "Pengfei He",
-        "Yue Xing",
-        "Yingqian Cui",
-        "Jiayuan Ding",
-        "Subhabrata Mukherjee",
-        "Hui Liu",
-        "Zhen Xiang"
-      ],
-      "abstract": "Supervised fine-tuning (SFT) induces new behaviors in large language models, yet imposes no structural constraint on how these behaviors are distributed within the model. Existing behavior interpretation methods, such as circuit attribution approaches, identify sparse subnetworks correlated with SFT-induced behaviors post-hoc. However, such correlations do not imply *causal necessity*, limiting the ability to selectively control SFT-induced behaviors at inference time. We pursue an alternative by asking: can an SFT-induced behavior be deliberately compressed into a sparse, mechanistically necessary subnetwork, termed a *carrier*, while remaining controllable at inference time without weight modification? We propose (a) **Loss-Constrained Dual Descent (LCDD)**, which constructs such carriers by jointly optimizing routing masks and model weights under an explicit utility budget, and (b) **SFT-Eraser**, a soft prompt optimized via activation matching on extracted carrier channels, to reverse the SFT-induced behavior. Across safety, fixed-response, and style behaviors on multiple model families, LCDD yields sparse carriers that preserve target behaviors while enabling strong reversion when triggered by SFT-Eraser. Ablations further establish that the sparse structure is the key precondition for reversal: the same trigger optimization fails on standard SFT models, confirming that structure rather than trigger design is the operative factor. These results provide direct evidence that the learned carriers are causally necessary for the behaviors, pointing to a new direction for systematically localizing and selectively suppressing SFT-induced behaviors in deployed models.",
-      "pdf_url": "https://arxiv.org/pdf/2605.06632v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.06632v1",
-      "published": "2026-05-07",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "DARTS: Targeting Prognostic Covariates in Budget-Constrained Sequential Experiments",
-      "authors": [
-        "Kateryna Husar",
-        "Alexander Volfovsky"
-      ],
-      "abstract": "Randomized controlled trials typically assume that prognostic covariates are known and available at no cost. In practice, obtaining high-dimensional pretreatment data is costly, forcing a trade-off between covariate-adaptive precision and a measurement budget. We introduce Dynamic Adaptive Rerandomization via Thompson Sampling (DARTS), which treats covariate acquisition as a sequential optimization problem embedded within a design-based causal inference task. A budgeted combinatorial Thompson sampler learns which covariates are most prognostic across successive batches; selected covariates then drive rerandomization and regression adjustment to reduce batch-level average treatment effect variance. Our primary theoretical contribution is a decoupling result: adaptive covariate selection based on past batches preserves batch-level randomization validity, and the cumulative inverse-variance weighted estimator achieves at least nominal asymptotic coverage. We further derive a Bayes risk bound for the acquisition layer that matches the minimax lower bound up to logarithmic factors. Empirically, DARTS systematically concentrates the budget on informative features, significantly closing the efficiency gap to oracle designs while maintaining strict inferential validity.",
-      "pdf_url": "https://arxiv.org/pdf/2605.06608v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.06608v1",
-      "published": "2026-05-07",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Temporal Causal Models as a Model of Computation",
-      "authors": [
-        "Maksim Gladyshev",
-        "Natasha Alechina",
-        "Brian Logan"
-      ],
-      "abstract": "Causal models, also known as Structural Equation Models (SEM), are a well-known formalism for representing and reasoning about causal dependencies between events. In this paper, we show that Temporal SEMs (TSEMs), which extend SEMs to support causal reasoning in temporal settings, can be interpreted as a model of computation. We prove that TSEMs can encode Linear Bounded Automata, and thus causal settings representable in context sensitive languages. We also prove that TSEMs with countably many variables are Turing complete. These results establish a formal connection between causal reasoning and classical models of computation, enabling the integration of counterfactual reasoning techniques from causal inference into the theory of computation.",
-      "pdf_url": "https://arxiv.org/pdf/2605.06292v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.06292v1",
-      "published": "2026-05-07",
-      "categories": [
-        "cs.FL"
-      ]
-    },
-    {
-      "title": "When to Trust Imagination: Adaptive Action Execution for World Action Models",
-      "authors": [
-        "Rui Wang",
-        "Yue Zhang",
-        "Jiehong Lin",
-        "Kuncheng Luo",
-        "Jianan Wang",
-        "Zhongrui Wang",
-        "Xiaojuan Qi"
-      ],
-      "abstract": "World Action Models (WAMs) have recently emerged as a promising paradigm for robotic manipulation by jointly predicting future visual observations and future actions. However, current WAMs typically execute a fixed number of predicted actions after each model inference, leaving the robot blind to whether the imagined future remains consistent with the actual physical rollout. In this work, we formulate adaptive WAM execution as a future-reality verification problem: the robot should execute longer when the WAM-predicted future remains reliable, and replan earlier when reality deviates from imagination. To this end, we propose Future Forward Dynamics Causal Attention (FFDC), a lightweight verifier that jointly reasons over predicted future actions, predicted visual dynamics, real observations, and language instructions to estimate whether the remaining action rollout can still be trusted. FFDC enables adaptive action chunk sizes as an emergent consequence of prediction-observation consistency, preserving the efficiency of long-horizon execution while restoring responsiveness in contact-rich or difficult phases. We further introduce Mixture-of-Horizon Training to improve long-horizon trajectory coverage for adaptive execution. Experiments on the RoboTwin benchmark and in the real world demonstrate that our method achieves a strong robustness-efficiency trade-off: on RoboTwin, it reduces WAM forward passes by 69.10% and execution time by 34.02%, while improving success rate by 2.54% over the short-chunk baseline; in real-world experiments, it improves success rate by 35%.",
-      "pdf_url": "https://arxiv.org/pdf/2605.06222v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.06222v1",
-      "published": "2026-05-07",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Event-Causal RAG: A Retrieval-Augmented Generation Framework for Long Video Reasoning in Complex Scenarios",
-      "authors": [
-        "Peizheng Yan",
-        "Yu Zhao",
-        "Liang Xie",
-        "Juntong Qi",
-        "Mingming Wang",
-        "Erwei Yin"
-      ],
-      "abstract": "Recent large vision-language models have achieved strong performance on short- and medium-length video understanding, yet they remain inadequate for ultra-long or even infinite video reasoning, where models must preserve coherent memory over extended durations and infer causal dependencies across temporally distant events. Existing end-to-end video understanding methods are fundamentally limited by the $O(n^2)$ complexity of self-attention, while recent retrieval-augmented generation (RAG) approaches still suffer from fragmented clip-level memory, weak modeling of temporal and causal structure, and high storage and online inference costs. We present Event-Causal RAG, a lightweight retrieval-augmented framework for infinite long-video reasoning. Instead of indexing fixed-length clips, our method segments streaming videos into semantically coherent events and represents each event as a structured State-Event-State (SES) graph, capturing the event together with its surrounding state transitions. These graphs are merged into a global Event Knowledge Graph and stored in a dual-store memory that supports both semantic matching and causal-topological retrieval. On top of this memory, we design a bidirectional retrieval strategy to efficiently identify the most relevant event causal chains and provide them, together with the associated video evidence, to a backbone video foundation model for answer generation. Experiments on long-video understanding benchmarks demonstrate that Event-Causal RAG consistently outperforms strong clip-based retrieval baselines and long-context video models, particularly on questions requiring multi-event integration and causal inference across long temporal gaps, while also achieving improved memory efficiency and robust streaming performance.",
-      "pdf_url": "https://arxiv.org/pdf/2605.06185v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.06185v1",
-      "published": "2026-05-07",
-      "categories": [
-        "cs.AI",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "MemReranker: Reasoning-Aware Reranking for Agent Memory Retrieval",
-      "authors": [
-        "Chunyu Li",
-        "Jingyi Kang",
-        "Ding Chen",
-        "Mengyuan Zhang",
-        "Jiajun Shen",
-        "Bo Tang",
-        "Xuanhe Zhou",
-        "Feiyu Xiong",
-        "Zhiyu Li"
-      ],
-      "abstract": "In agent memory systems, the reranking model serves as the critical bridge connecting user queries with long-term memory. Most systems adopt the \"retrieve-then-rerank\" two-stage paradigm, but generic reranking models rely on semantic similarity matching and lack genuine reasoning capabilities, leading to a problem where recalled results are semantically highly relevant yet do not contain the key information needed to answer the question. This deficiency manifests in memory scenarios as three specific problems. First, relevance scores are miscalibrated, making threshold-based filtering difficult. Second, ranking degrades when facing temporal constraints, causal reasoning, and other complex queries. Third, the model cannot leverage dialogue context for semantic disambiguation. This report introduces MemReranker, a reranking model family (0.6B/4B) built on Qwen3-Reranker through multi-stage LLM knowledge distillation. Multi-teacher pairwise comparisons generate calibrated soft labels, BCE pointwise distillation establishes well-distributed scores, and InfoNCE contrastive learning enhances hard-sample discrimination. Training data combines general corpora with memory-specific multi-turn dialogue data covering temporal constraints, causal reasoning, and coreference resolution. On the memory retrieval benchmark, MemReranker-0.6B substantially outperforms BGE-Reranker and matches open-source 4B/8B models as well as GPT-4o-mini on key metrics. MemReranker-4B further achieves 0.737 MAP, with several metrics on par with Gemini-3-Flash, while maintaining inference latency at only 10--20\\% of large models. On finance and healthcare vertical-domain benchmarks, the models preserve generalization capabilities on par with mainstream large-parameter rerankers.",
-      "pdf_url": "https://arxiv.org/pdf/2605.06132v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.06132v1",
-      "published": "2026-05-07",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Correcting heterogeneous diagnostic bias when developing clinical prediction models using causal hidden Markov models",
-      "authors": [
-        "Jose Benitez-Aurioles",
-        "Ricardo Silva",
-        "Brian McMillan",
-        "Matthew Sperrin"
-      ],
-      "abstract": "In routine care, individuals identified a priori as high-risk are usually tested for conditions more frequently. Protected attributes, such as sex or ethnicity may also determine testing frequency. Such heterogeneous detection rates across a population induce label error. This causes systematic model error for specific groups and biases performance metrics during validation.\n  This paper proposes a method to correct for such bias in prediction models due to differential diagnostic delay. We use a causal inference framework to define our target estimand: an individual's diagnosis probability in a counterfactual scenario where their diagnosis rate matches that of a reference group. We model the longitudinal process as a hidden Markov model, in which confirmatory test results are emissions from a latent progressive disease stage. We validate our approach in simulated data and apply it to a case study of chronic kidney disease prediction using electronic health records.\n  In simulations, our method reduces prediction bias and improves calibration-in-the-large, correcting the Observed:Expected ratio in the underdiagnosed group from 1.34 (standard deviation: 0.09) in a model developed without any correction for underdiagnosis bias to 1.02 (0.09). Violations of assumptions in the simulation affected the estimation of model parameters, but the proposed approach nonetheless remained better calibrated than the standard model. In the clinical case study, we identify diabetes as the main driver of observability, with an odds ratio of 10.36 (95% confidence interval, 9.80 - 11.02) in 6-month urine albumin-creatinine ratio testing rate. Using our approach to predict the counterfactual diagnostic rate in patients without diabetes, we improved the Observed:Expected ratio of a developed clinical prediction model from 1.55 (1.51 - 1.59) to 1.01 (0.98 - 1.04).",
-      "pdf_url": "https://arxiv.org/pdf/2605.06059v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.06059v1",
-      "published": "2026-05-07",
-      "categories": [
-        "stat.AP",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "RealCam: Real-Time Novel-View Video Generation with Interactive Camera Control",
-      "authors": [
-        "Youcan Xu",
-        "Jiaxin Shi",
-        "Zhen Wang",
-        "Wensong Song",
-        "Feifei Shao",
-        "Chen Liang",
-        "Jun Xiao",
-        "Long Chen"
-      ],
-      "abstract": "Camera-controlled video-to-video (V2V) generation enables dynamic viewpoint synthesis from monocular footage, holding immense potential for interactive filmmaking and live broadcasting. However, existing implicit synthesis methods fundamentally rely on non-causal, full-sequence processing and rigid prefix-style temporal concatenation. This architectural paradigm mandates bidirectional attention, resulting in prohibitive computational latency, quadratic complexity scaling, and inherent incompatibility with real-time streaming or variable-length inputs. To overcome these limitations, we introduce \\texttt{RealCam}, a novel autoregressive framework for interactive, real-time camera-controlled V2V generation. We first design a high-fidelity teacher model grounded in a \\textbf{Cross-frame In-context Learning} paradigm. By interleaving source and target frames into synchronized contextual pairs, our design inherently enables length-agnostic generalization and naturally facilitates causal adaptation, breaking the rigid prefix bottleneck. We then distill this teacher into a few-step causal student via Self-Forcing with Distribution Matching Distillation, enabling efficient, on-the-fly streaming synthesis. Furthermore, to mitigate severe loop inconsistency in closed-loop trajectories, we propose \\textbf{Loop-Closed Data Augmentation (LoopAug)}, a novel paradigm that synthesizes globally consistent loop sequences from existing multiview datasets. Extensive experiments demonstrate that \\texttt{RealCam} achieves state-of-the-art visual fidelity and temporal consistency while enabling truly interactive camera control with orders-of-magnitude faster inference than existing paradigms. Our project page is at https://xyc-fly.github.io/RealCam/.",
-      "pdf_url": "https://arxiv.org/pdf/2605.06051v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.06051v1",
-      "published": "2026-05-07",
+      "abstract": "Causal autoregressive video diffusion models support real-time streaming generation by extrapolating future chunks from previously generated content. Distilling such generators from high-fidelity bidirectional teachers yields competitive few-step models, yet a persistent gap between the history distributions encountered during training and those arising at inference constrains generation quality over long horizons. We introduce the Real-time Autoregressive Video Extrapolation Network (RAVEN), a training-time test framework that repacks each self rollout into an interleaved sequence of clean historical endpoints and noisy denoising states. This formulation aligns training attention with inference-time extrapolation and allows downstream chunk losses to supervise the history representations on which future predictions depend. We further propose Consistency-model Group Relative Policy Optimization (CM-GRPO), which reformulates a consistency sampling step as a conditional Gaussian transition and applies online Reinforcement Learning (RL) directly to this kernel, avoiding the Euler-Maruyama auxiliary process adopted in prior flow-model RL formulations. Experiments demonstrate that RAVEN surpasses recent causal video distillation baselines across quality, semantic, and dynamic degree evaluations, and that CM-GRPO provides further gains when combined with RAVEN.",
+      "pdf_url": "https://arxiv.org/pdf/2605.15190v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.15190v1",
+      "published": "2026-05-14",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "TabCF: Distributional Control Function Estimation with Tabular Foundation Models",
+      "title": "Causal Foundation Models with Continuous Treatments",
       "authors": [
-        "Geping Chen",
-        "Chunlin Li",
-        "Tianzhong Yang",
-        "Zhengyuan Zhu",
-        "Jing Zhou"
+        "Christopher Stith",
+        "Medha Barath",
+        "Vahid Balazadeh",
+        "Jesse C. Cresswell",
+        "Rahul G. Krishnan"
       ],
-      "abstract": "Instrumental variable (IV) and control function (CF) methods are powerful tools for causal effect estimation in the presence of unmeasured confounding, yet most existing approaches target only mean effects and/or demand substantial fitting and tuning effort. In this paper, we introduce a simple method, TabCF, for control function regression using tabular foundation models, which enables accurate, fast, identification-transparent, and tuning-light causal estimation of distributional quantities, such as interventional means and quantiles; we also propose a copula-based approximation for multivariate outcomes. TabCF performs favorably against representative methods across a broad range of small- to medium-sized synthetic and real data scenarios. The central message is two-fold: for practitioners, it highlights that TabCF is an effective tool for distributional causal inference; for researchers, it suggests that the proposed approach could be considered a strong baseline for future method development. Code is available at https://github.com/GepingChen/TabCF.",
-      "pdf_url": "https://arxiv.org/pdf/2605.05993v1",
-      "arxiv_url": "http://arxiv.org/abs/2605.05993v1",
-      "published": "2026-05-07",
+      "abstract": "Causal inference, estimating causal effects from observational data, is a fundamental tool in many disciplines. Of particular importance across a variety of domains is the continuous treatment setting, where the variable of intervention has a continuous range. This setting is far less explored and represents a substantial shift from the binary treatment setting, with models needing to represent effects across a continuum of treatment values. In this paper, we present the first causal foundation model for the continuous treatment setting. Our model meta-learns the ability to predict causal effects across a wide variety of unseen tasks without additional training or fine-tuning. First, we design a novel prior over data-generating processes with continuous treatment variables in order to generate a rich causal training corpus. We then train a transformer to reconstruct individual treatment-response curves given only observational data, leveraging in-context learning to amortize expensive Bayesian posterior inference. Our model achieves state-of-the-art performance on individual treatment-response curve reconstruction tasks compared to causal models which are trained specifically for those tasks.",
+      "pdf_url": "https://arxiv.org/pdf/2605.15133v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.15133v1",
+      "published": "2026-05-14",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Unlocking Complex Visual Generation via Closed-Loop Verified Reasoning",
+      "authors": [
+        "Hanbo Cheng",
+        "Limin Lin",
+        "Ruo Zhang",
+        "Yicheng Pan",
+        "Jun Du"
+      ],
+      "abstract": "Despite rapid advancements, current text-to-image (T2I) models predominantly rely on a single-step generation paradigm, which struggles with complex semantics and faces diminishing returns from parameter scaling.\n  While recent multi-step reasoning approaches show promise, they are hindered by ungrounded planning hallucinations lacking verification, monolithic post-hoc reflection, long-context optimization instabilities, and prohibitive inference latency. To overcome these bottlenecks, we propose the Closed-Loop Visual Reasoning (CLVR) framework, a comprehensive system that deeply couples visual-language logical planning with pixel-level diffusion generation. CLVR introduces an automated data engine with step-level visual verification to synthesize reliable reasoning trajectories, and proposes Proxy Prompt Reinforcement Learning (PPRL) to resolve long-context optimization instabilities by distilling interleaved multimodal histories into explicit reward signals for accurate causal attribution. Furthermore, to mitigate the severe latency bottleneck caused by iterative denoising, we propose $Δ$-Space Weight Merge (DSWM), a theoretically grounded method that fuses alignment weights with off-the-shelf distillation priors, reducing the per-step inference cost to just 4 NFEs without requiring expensive re-distillation. Extensive experiments demonstrate that CLVR outperforms existing open-source baselines across multiple benchmarks and approaches the performance of proprietary commercial models, unlocking general test-time scaling capabilities for complex visual generation.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14876v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.14876v1",
+      "published": "2026-05-14",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Towards In-Depth Root Cause Localization for Microservices with Multi-Agent Recursion-of-Thought",
+      "authors": [
+        "Lingzhe Zhang",
+        "Tong Jia",
+        "Kangjin Wang",
+        "Chiming Duan",
+        "Minghua He",
+        "Rongqian Wang",
+        "Xi Peng",
+        "Meiling Wang",
+        "Gong Zhang",
+        "Renhai Chen",
+        "Ying Li"
+      ],
+      "abstract": "As modern microservice systems grow increasingly complex due to dynamic interactions and evolving runtime environments, they experience failures with rising frequency. Ensuring system reliability therefore critically depends on accurate root cause localization (RCL). While numerous traditional machine learning and deep learning approaches have been explored for this task, they often suffer from limited interpretability and poor transferability across deployments. More recently, large language model (LLM)-based methods have been proposed to address these issues. However, existing LLM-based approaches still face two fundamental limitations: context explosion, which dilutes critical evidence and degrades localization accuracy, and serial reasoning structures, which hinder deep causal exploration and impair inference efficiency. In this paper, we conduct a comprehensive study of both how human SREs perform root cause localization in practice and why existing LLM-based methods fall short. Motivated by these findings, we introduce RCLAgent, an in-depth root cause localization framework for microservice systems that realizes multi-agent recursion-of-thought with parallel reasoning. RCLAgent decomposes the diagnostic process along the trace graph by assigning each span to a Dedicated Agent and organizing agents recursively and in parallel according to the graph topology, with the final diagnosis obtained by synthesizing the Root-Level Diagnosis Report and the Global Evidence Graph. Extensive experiments on multiple public benchmarks demonstrate that RCLAgent consistently outperforms state-of-the-art methods in both localization accuracy and inference efficiency.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14866v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.14866v1",
+      "published": "2026-05-14",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Privacy Auditing with Zero (0) Training Run",
+      "authors": [
+        "Tudor Cebere",
+        "Mathieu Even",
+        "Linus Bleistein",
+        "Aurélien Bellet"
+      ],
+      "abstract": "Privacy auditing provides empirical lower bounds on the differential privacy parameters of learning algorithms. Existing methods, however, require interventional access to the training pipeline, either to retrain multiple times or to randomize data inclusion. This is often infeasible for large deployed systems such as foundation models. We introduce Zero-Run privacy auditing, a post-hoc framework for auditing models using two fixed datasets: examples known to be training-set members and examples known to be non-members. In this observational regime, membership is no longer randomized; instead, member and non-member data often differ in distribution, so membership inference scores may reflect a distribution shift rather than algorithmic leakage. Drawing on ideas from causal inference, we formalize this confounding effect and propose two complementary corrections that yield valid privacy audits. Our first approach models the combined effect of distribution shift and algorithmic leakage as an adaptive composition, producing conservative global corrections. Our second approach conditions on observed data and adjusts pointwise membership guesses, yielding sharper instance-dependent bounds. Experiments on synthetic data and large-scale models show that Zero-Run auditing enables practical privacy evaluation when retraining or controlled data insertion is infeasible.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14591v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.14591v1",
+      "published": "2026-05-14",
+      "categories": [
+        "cs.CR"
+      ]
+    },
+    {
+      "title": "Does RAG Know When Retrieval Is Wrong? Diagnosing Context Compliance under Knowledge Conflict",
+      "authors": [
+        "Yihang Chen",
+        "Pin Qian",
+        "Su Wang",
+        "Sipeng Zhang",
+        "Huan Xu",
+        "Shuhuai Lin",
+        "Xinpeng Wei"
+      ],
+      "abstract": "The Context-Compliance Regime in Retrieval-Augmented Generation (RAG) occurs when retrieved context dominates\n  the final answer even when it conflicts with the model's parametric knowledge. Accuracy alone does not reveal\n  how retrieved context causally shapes answers under such conflict. We introduce Context-Driven Decomposition\n  (CDD), a belief-decomposition probe that operates at inference time and serves as an intervention mechanism for\n  controlled retrieval conflict. Across Epi-Scale stress tests, TruthfulQA misconception injection, and cross-\n  model reruns, CDD exposes three patterns. P1: context compliance is measurable in an upper-bound adversarial\n  setting, where Standard RAG reaches 15.0% accuracy on TruthfulQA misconception injection (N=500). P2:\n  adversarial accuracy gains transfer across model families: CDD improves accuracy on Gemini-2.5-Flash and on\n  Claude Haiku/Sonnet/Opus, but rationale-answer causal coupling does not transfer. CDD reaches 64.1% mistake-\n  injection causal sensitivity on Gemini-2.5-Flash, while sensitivities for all three Claude variants fall in the\n  [-3%, +7%] range, suggesting that the Claude-side accuracy gains operate through a mechanism distinct from the\n  explicit conflict-resolution trace. P3: explicit conflict decomposition improves robustness under temporal\n  drift and noisy distractors, with CDD reaching 71.3% on temporal shifts and 69.9% on distractor evidence on the\n  full Epi-Scale adversarial benchmark. These three patterns identify context-compliance as a structural axis\n  along which standard RAG can be probed and intervened on, distinct from retrieval-quality or single-method\n  robustness questions, and motivate releasing Epi-Scale for systematic study across model families and retrieval\n  pipelines.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14473v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.14473v1",
+      "published": "2026-05-14",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Exemplar Partitioning for Mechanistic Interpretability",
+      "authors": [
+        "Jessica Rumbelow"
+      ],
+      "abstract": "We introduce Exemplar Partitioning (EP), an unsupervised method for constructing interpretable feature dictionaries from large language model activations with $\\sim 10^{3}\\times$ fewer tokens than comparable sparse autoencoders (SAEs). An EP dictionary is a Voronoi partition of activation space, built by leader-clustering streamed activations within a distance threshold. Each region is anchored by an observed exemplar that serves as both its membership criterion and intervention direction; dictionary size is not prespecified, but determined by the activation geometry at that threshold. Because exemplars are observed rather than learned, dictionaries built from the same data stream are directly comparable across layers, models, and training checkpoints.\n  We characterise EP as an interpretability object via targeted demonstrations of properties newly accessible through this construction, plus one head-to-head benchmark. In Gemma-2-2B, EP dictionary regions are interpretable and support causal interventions: refusal in instruction-tuned Gemma concentrates in a region whose exemplar ablation can collapse held-out refusal. Cross-checkpoint matching between base and instruction-tuned dictionaries separates the directions preserved through finetuning from those introduced by it. EP regions and Gemma Scope SAE features decompose activation space differently but agree on a shared core: $\\sim 20\\%$ of EP regions match an SAE feature at $F_{1} > 0.5$, and EP one-hot probes retain $\\sim 97\\%$ of raw-activation probe accuracy at $\\ell_{0} = 1$. Nearest-exemplar distance provides a free out-of-distribution signal at inference. On AxBench latent concept detection at Gemma-2-2B-it L20, EP at $p_{1}$ reaches mean AUROC $0.881$, $+0.126$ over the canonical GemmaScope SAE leaderboard entry and within $0.030$ of SAE-A's $0.911$, at $\\sim 10^{3}\\times$ less build compute.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14347v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.14347v1",
+      "published": "2026-05-14",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Smooth Multi-Policy Causal Effect Estimation in Longitudinal Settings",
+      "authors": [
+        "Wenxin Chen",
+        "Weishen Pan",
+        "Kyra Gan",
+        "Fei Wang"
+      ],
+      "abstract": "Comparative evaluation of multiple dynamic treatment policies is essential for healthcare and policy decisions, yet conventional longitudinal causal inference methods estimate each in isolation, preventing information sharing across counterfactuals. We demonstrate that this separate estimation paradigm induces a structurally uncontrolled second-order bias, inflating finite-sample variance even after standard debiasing with longitudinal targeted maximum likelihood estimation(LTMLE). To address this, we propose a policy-aware reparameterization of Iterative Conditional Expectation (ICE) Q-functions that enables joint estimation through shared representations. We implement this approach in the Policy-Encoded Q Network (PEQ-Net), an architecture centered on a shared policy encoder. The encoder is trained using kernel mean embeddings, ensuring that the learned representation space reflects population-level policy dissimilarities. After applying an LTMLE correction step, we prove this design imposes a structural constraint on the second-order remainder, thereby stabilizing finite-sample variance. Experiments on semi-synthetic datasets demonstrate that PEQ-Net consistently outperforms existing ICE-based methods, achieving substantial reductions in root-mean-square error, particularly when evaluating closely related policies.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14284v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.14284v1",
+      "published": "2026-05-14",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Double/debiased machine learning of quantile treatment effects on long-term outcomes in clinical trials",
+      "authors": [
+        "Ziyang Liu",
+        "Niwen Zhou",
+        "Peng Wu",
+        "Xu Guo"
+      ],
+      "abstract": "Long-term outcomes are often unavailable in randomized clinical trials, although short-term surrogate outcomes are commonly observed. External observational data may contain the long-term outcome, but causal comparisons based on such data alone are vulnerable to confounding. Existing surrogate-based data integration methods for long-term outcomes have focused primarily on average treatment effects. We study estimation of quantile treatment effects for long-term outcomes in the trial population by combining randomized trial data with external observational data. Under treatment randomization, positivity, and a surrogate-based transportability assumption, we establish identification and develop a doubly robust estimator for inference. The estimator accommodates flexible machine learning methods for nuisance estimation, remains consistent if either the score-related or outcome regression-related nuisance functions are consistently estimated, and is asymptotically normal under regularity conditions. Simulation and real-data results demonstrate that the proposed method performs well in finite samples and can reveal heterogeneous long-term treatment effects across quantiles.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14275v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.14275v1",
+      "published": "2026-05-14",
+      "categories": [
+        "math.ST"
+      ]
+    },
+    {
+      "title": "Causal Learning with the Invariance Principle",
+      "authors": [
+        "Francesco Montagna",
+        "Francesco Locatello"
+      ],
+      "abstract": "Causal discovery, the problem of inferring the direction of causality, is generally ill-posed. We use the language of structural causal models (SCM) to show that assuming that the causal relations are acyclic and invariant across multiple environments (e.g., the way minimum wage affects employment rate is stable across different geographical regions), \\textit{only} two auxiliary environments are sufficient to infer the causal graph for arbitrary nonlinear mechanisms. Moreover, we demonstrate that this implies identifiability of the SCM functional mechanisms: as a corollary, we show that \\textit{two} auxiliary environments are sufficient to guarantee correct counterfactual inference. We empirically support our theoretical results on synthetic data.",
+      "pdf_url": "https://arxiv.org/pdf/2605.13589v1",
+      "arxiv_url": "http://arxiv.org/abs/2605.13589v1",
+      "published": "2026-05-13",
       "categories": [
         "stat.ML",
-        "cs.LG",
-        "stat.ME",
-        "stat.OT"
+        "cs.LG"
       ]
     }
   ]
